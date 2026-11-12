@@ -1,0 +1,64 @@
+{
+ "id": "how-high-is-it",
+ "name": "How high is it?",
+ "version": "1.0.1",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/how-high-is-it",
+ "author": "NotTouchedGrass",
+ "description": "Shows information about fall distance (fall and mace damage) on hud",
+ "needs": [
+  "Mixin",
+  "net.minecraft.client.server.IntegratedServer",
+  "net.minecraft.world.damagesource.DamageTypes",
+  "net.minecraft.world.entity.monster.zombie.Zombie",
+  "net.minecraft.world.item.MaceItem",
+  "Minecraft.getSingleplayerServer()",
+  "ClientLevel.clip()",
+  "Registry.get()",
+  "RegistryAccess.lookupOrThrow()",
+  "EntityTypes.ZOMBIE",
+  "Player.fallDistance",
+  "Player.getWeaponItem()",
+  "Item.getAttackDamageBonus()",
+  "EnchantmentHelper.getItemEnchantmentLevel()",
+  "EnchantmentHelper.modifyFallBasedDamage()",
+  "Enchantments.FEATHER_FALLING",
+  "Enchantments.PROTECTION"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "howhighisit-fabric-26.2-1.0.1.jar",
+  "published": "2026-06-16"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1,
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "minecraft"
+ ],
+ "lacks": 16
+}

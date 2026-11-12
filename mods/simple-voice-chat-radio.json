@@ -1,0 +1,75 @@
+{
+ "id": "simple-voice-chat-radio",
+ "name": "Simple Voice Chat Radio",
+ "version": "2.2.2+26.3.fabric",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/simple-voice-chat-radio",
+ "author": "henkelmax",
+ "description": "A server-side Simple Voice Chat addon mod for Fabric adding a radio block capable of streaming mp3 radio streams.",
+ "needs": [
+  "Mixin",
+  "com.mojang.authlib.GameProfile",
+  "com.mojang.authlib.minecraft.MinecraftProfileTexture",
+  "com.mojang.authlib.minecraft.MinecraftProfileTexture.Type",
+  "com.mojang.authlib.properties.Property",
+  "com.mojang.authlib.properties.PropertyMap",
+  "com.mojang.util.UUIDTypeAdapter",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
+  "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
+  "net.minecraft.core.UUIDUtil",
+  "net.minecraft.server.permissions.Permissions",
+  "net.minecraft.world.item.component.ItemLore",
+  "net.minecraft.world.item.component.ResolvableProfile",
+  "org.apache.logging.log4j.LogManager",
+  "org.apache.logging.log4j.Logger",
+  "ServerLifecycleEvents.SERVER_STOPPING",
+  "CommandSourceStack.getPlayerOrException()",
+  "BlockPos.toShortString()",
+  "DataComponents.CUSTOM_NAME",
+  "DataComponents.LORE",
+  "DataComponents.PROFILE",
+  "MutableComponent.withStyle()",
+  "MinecraftServer.execute()",
+  "ServerLevel.sendParticles()",
+  "Util.NIL_UUID",
+  "Items.PLAYER_HEAD",
+  "CustomData.copyTag()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "SVC-Radio-2.2.2+26.3.fabric.jar",
+  "published": "2026-11-02"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "voicechat": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabricloader",
+  "java",
+  "minecraft",
+  "voicechat"
+ ],
+ "lacks": 26
+}

@@ -1,0 +1,60 @@
+{
+ "id": "chat-transform",
+ "name": "Chat-Transform",
+ "version": "26.3.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/chat-transform",
+ "author": "JFronny",
+ "description": "Apply substitutions (katakana, hiragana, owo, ...) to chat messages",
+ "needs": [
+  "Mixin",
+  "net.fabricmc.api.DedicatedServerModInitializer",
+  "net.fabricmc.fabric.api.message.v1.ServerMessageDecoratorEvent",
+  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
+  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
+  "net.minecraft.network.chat.ClickEvent.RunCommand",
+  "net.minecraft.network.chat.ComponentContents",
+  "net.minecraft.network.chat.contents.PlainTextContents",
+  "net.minecraft.network.chat.contents.PlainTextContents.LiteralContents",
+  "net.minecraft.network.chat.contents.TranslatableContents",
+  "net.minecraft.server.network.ServerGamePacketListenerImpl",
+  "net.minecraft.server.permissions.Permissions",
+  "CommandSourceStack.sendSystemMessage()",
+  "Component.getContents()",
+  "Component.getSiblings()",
+  "Component.translatableWithFallback()",
+  "MutableComponent.create()",
+  "MutableComponent.setStyle()",
+  "MutableComponent.withStyle()",
+  "Style.withClickEvent()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "chat-transform-26.3.0.jar",
+  "published": "2026-09-15"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "entrypoints": {
+  "server": 1,
+  "libjf:config": 1,
+  "libjf:config_naming": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabricloader",
+  "libjf-config-core-v2",
+  "minecraft"
+ ],
+ "lacks": 19
+}

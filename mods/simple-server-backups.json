@@ -1,0 +1,62 @@
+{
+ "id": "simple-server-backups",
+ "name": "Simple Server Backups",
+ "version": "1.2.1",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/simple-server-backups",
+ "author": "pal1",
+ "description": "Complete and secure backups for your server, using in-game commands, with permissions and automatic backups.",
+ "needs": [
+  "com.mojang.authlib.GameProfile",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
+  "net.minecraft.server.permissions.Permissions",
+  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.world.level.storage.LevelResource",
+  "ServerTickEvents.END_SERVER_TICK",
+  "CommandSourceStack.getServer()",
+  "Commands.performPrefixedCommand()",
+  "Commands.sendCommands()",
+  "MinecraftServer.createCommandSourceStack()",
+  "MinecraftServer.execute()",
+  "MinecraftServer.getCommands()",
+  "MinecraftServer.getPlayerList()",
+  "MinecraftServer.getWorldPath()",
+  "ServerPlayer.getGameProfile()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "simple-server-backups-1.2.1-26.3.jar",
+  "published": "2026-09-16"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": false,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "lacks": 15
+}

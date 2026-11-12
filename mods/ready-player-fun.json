@@ -1,0 +1,60 @@
+{
+ "id": "ready-player-fun",
+ "name": "Ready Player Fun",
+ "version": "26.3-3.1.0.5-FABRIC",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/ready-player-fun",
+ "author": "wendall911",
+ "description": "Add the ability to \"pause\" the server while no players are logged in. Supports time, weather and season. (server-side only)",
+ "needs": [
+  "Mixin",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndLevelTick",
+  "net.minecraft.server.players.PlayerList",
+  "ServerLifecycleEvents.SERVER_STOPPING",
+  "ServerTickEvents.END_LEVEL_TICK",
+  "MinecraftServer.getPlayerList()",
+  "MinecraftServer.overworld()",
+  "ServerLevel.getDefaultClockTime()",
+  "ServerLevel.getSeed()",
+  "ServerPlayer.sendSystemMessage()"
+ ],
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "readyplayerfun-26.3-fabric-3.1.0.5-FABRIC.jar",
+  "published": "2026-10-01"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "whitenoise-config": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft",
+  "whitenoise"
+ ],
+ "lacks": 10
+}

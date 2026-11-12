@@ -1,0 +1,82 @@
+{
+ "id": "glow-my-teammates",
+ "name": "Glow My Teammates",
+ "version": "1.2.1+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/glow-my-teammates",
+ "author": "ZnianXgang",
+ "description": "Make teammates glow for each other — and decide exactly who sees that glow, on which entities, and whether the locator bar follows the same rules.",
+ "needs": [
+  "Mixin",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
+  "net.fabricmc.fabric.api.permission.v1.PermissionPredicates",
+  "net.minecraft.network.syncher.EntityDataAccessor",
+  "net.minecraft.network.syncher.EntityDataSerializers",
+  "net.minecraft.server.ServerScoreboard",
+  "net.minecraft.server.level.ChunkTrackingView",
+  "net.minecraft.server.network.ServerGamePacketListenerImpl",
+  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.server.waypoints.ServerWaypointManager",
+  "net.minecraft.world.level.storage.LevelResource",
+  "net.minecraft.world.scores.PlayerTeam",
+  "net.minecraft.world.waypoints.WaypointTransmitter",
+  "ServerLifecycleEvents.SERVER_STARTED",
+  "ServerLifecycleEvents.SERVER_STOPPING",
+  "ServerTickEvents.END_SERVER_TICK",
+  "CommandSourceStack.getServer()",
+  "SynchedEntityData.get()",
+  "MinecraftServer.getAllLevels()",
+  "MinecraftServer.getPlayerList()",
+  "MinecraftServer.getScoreboard()",
+  "MinecraftServer.getWorldPath()",
+  "ServerLevel.getAllEntities()",
+  "ServerLevel.getEntity()",
+  "ServerLevel.getGameRules()",
+  "ServerLevel.getWaypointManager()",
+  "ServerPlayer.connection",
+  "ServerPlayer.getChunkTrackingView()",
+  "Entity.chunkPosition()",
+  "Entity.getEntityData()",
+  "Entity.getTeam()",
+  "LivingEntity.isCurrentlyGlowing()",
+  "GameRules.LOCATOR_BAR",
+  "GameRules.get()"
+ ],
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "glow-my-teammates-1.2.1+26.3.jar",
+  "published": "2026-09-16"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "minecraft"
+ ],
+ "lacks": 35
+}

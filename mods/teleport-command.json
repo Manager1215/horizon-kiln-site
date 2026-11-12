@@ -1,0 +1,83 @@
+{
+ "id": "teleport-command",
+ "name": "Teleport Command",
+ "version": "1.0.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/teleport-command",
+ "author": "TOP_G2026",
+ "description": "Teleport Commands is a high-performance, Server-Side ONLY teleportation suite for Minecraft. It provides a complete set of player-friendly teleport commands with safety checks, configurable delays, and persistent data storage—no client mods required.",
+ "needs": [
+  "Mixin",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
+  "net.minecraft.network.chat.ClickEvent.RunCommand",
+  "net.minecraft.network.chat.HoverEvent",
+  "net.minecraft.network.chat.HoverEvent.ShowText",
+  "net.minecraft.server.level.ServerPlayer.RespawnConfig",
+  "net.minecraft.server.players.PlayerList",
+  "ServerLifecycleEvents.SERVER_STOPPING",
+  "ServerTickEvents.END_SERVER_TICK",
+  "CommandSourceStack.getPlayerOrException()",
+  "CommandSourceStack.getServer()",
+  "EntityArgument.getPlayer()",
+  "EntityArgument.player()",
+  "BlockPos.MutableBlockPos.set()",
+  "MutableComponent.withStyle()",
+  "Style.withClickEvent()",
+  "Style.withHoverEvent()",
+  "MinecraftServer.getPlayerList()",
+  "MinecraftServer.levelKeys()",
+  "ServerChunkCache.addTicketAndLoadWithRadius()",
+  "ServerLevel.getHeight()",
+  "ServerLevel.getRespawnData()",
+  "ServerPlayer.createCommandSourceStack()",
+  "ServerPlayer.getGameProfile()",
+  "ServerPlayer.getRespawnConfig()",
+  "ServerPlayer.sendSystemMessage()",
+  "TicketType.UNKNOWN",
+  "NameAndId.<init>()",
+  "Player.teleportTo()",
+  "Blocks.FIRE",
+  "BlockState.getCollisionShape()",
+  "LevelData.RespawnData.dimension()",
+  "LevelData.RespawnData.pos()",
+  "VoxelShape.isEmpty()"
+ ],
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "teleport-commands-1.0.3.jar",
+  "published": "2026-09-25"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabric-command-api-v2",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "lacks": 34
+}

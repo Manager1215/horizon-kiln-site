@@ -1,0 +1,80 @@
+{
+ "id": "customizable-hearts",
+ "name": "Customizable Hearts",
+ "version": "1.0.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/customizable-hearts",
+ "author": "NeoAorus",
+ "description": "A server-side Fabric mod for customizing player and mob health, damage, shared life, linked damage, and XP-based bonus hearts.",
+ "needs": [
+  "Mixin",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
+  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
+  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
+  "net.minecraft.server.network.ServerGamePacketListenerImpl",
+  "net.minecraft.server.permissions.Permissions",
+  "net.minecraft.server.players.PlayerList",
+  "ServerTickEvents.END_SERVER_TICK",
+  "Minecraft.execute()",
+  "Minecraft.setScreenAndShow()",
+  "CommandSourceStack.getPlayerOrException()",
+  "CommandSourceStack.getServer()",
+  "CommandSourceStack.isPlayer()",
+  "EntityArgument.getPlayer()",
+  "EntityArgument.player()",
+  "RegistryFriendlyByteBuf.readVarInt()",
+  "RegistryFriendlyByteBuf.writeBoolean()",
+  "RegistryFriendlyByteBuf.writeDouble()",
+  "RegistryFriendlyByteBuf.writeVarInt()",
+  "MinecraftServer.execute()",
+  "MinecraftServer.getAllLevels()",
+  "MinecraftServer.getPlayerList()",
+  "MinecraftServer.getTickCount()",
+  "MinecraftServer.overworld()",
+  "ServerLevel.getAllEntities()",
+  "ServerPlayer.damageSources()",
+  "ServerPlayer.isDeadOrDying()",
+  "ServerPlayer.permissions()",
+  "DamageSource.getEntity()",
+  "DamageSources.generic()",
+  "LivingEntity.isDeadOrDying()",
+  "AttributeInstance.addOrUpdateTransientModifier()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "customizable-hearts-mc26.3-1.0.0.jar",
+  "published": "2026-09-27"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "lacks": 31
+}

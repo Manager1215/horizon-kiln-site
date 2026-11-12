@@ -1,0 +1,78 @@
+{
+ "id": "cooperative-end-access",
+ "name": "Cooperative End Access",
+ "version": "0.2.2-fabric",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/cooperative-end-access",
+ "author": "Mizuhara",
+ "description": "Softly restrict the End with vanilla-ish gameplay mechanics that make sure your SMP's dragon fight is always a group activity!",
+ "needs": [
+  "com.mojang.authlib.GameProfile",
+  "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
+  "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
+  "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
+  "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
+  "net.minecraft.core.particles.PowerParticleOption",
+  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.world.level.block.EndPortalFrameBlock",
+  "ServerLifecycleEvents.SERVER_STARTED",
+  "ServerLifecycleEvents.SERVER_STOPPING",
+  "ServerTickEvents.END_SERVER_TICK",
+  "ParticleTypes.DRAGON_BREATH",
+  "MinecraftServer.getAllLevels()",
+  "MinecraftServer.getPlayerList()",
+  "MinecraftServer.getTickCount()",
+  "ServerLevel.sendParticles()",
+  "ServerPlayer.drop()",
+  "ServerPlayer.getGameProfile()",
+  "ServerPlayer.isDeadOrDying()",
+  "ServerPlayer.sendSystemMessage()",
+  "SoundEvents.END_PORTAL_FRAME_FILL",
+  "SoundEvents.NOTE_BLOCK_BASS",
+  "EntityTypes.ENDER_DRAGON",
+  "ItemEntity.setNoPickUpDelay()",
+  "Items.ENDER_EYE",
+  "Blocks.END_PORTAL",
+  "Blocks.END_PORTAL_FRAME"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "CooperativeEndAccess-fabric-0.2.2+26.3.jar",
+  "published": "2026-09-23"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": false,
+ "depends": [
+  "adventure-platform-fabric",
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "lacks": 30
+}

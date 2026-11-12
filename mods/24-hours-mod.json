@@ -1,0 +1,72 @@
+{
+ "id": "24-hours-mod",
+ "name": "24 Hours MOD",
+ "version": "1.6.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/24-hours-mod",
+ "author": "BadutZY",
+ "description": "Make Minecraft day like a real day.",
+ "needs": [
+  "Mixin",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
+  "net.minecraft.world.clock.ServerClockManager",
+  "net.minecraft.world.clock.WorldClocks",
+  "net.minecraft.world.level.storage.WorldData",
+  "ServerLifecycleEvents.SERVER_STARTED",
+  "ServerLifecycleEvents.SERVER_STOPPING",
+  "ServerTickEvents.END_SERVER_TICK",
+  "CommandSourceStack.getServer()",
+  "RegistryAccess.Frozen.getOrThrow()",
+  "MinecraftServer.clockManager()",
+  "MinecraftServer.getAllLevels()",
+  "MinecraftServer.getTickCount()",
+  "MinecraftServer.getWorldData()",
+  "MinecraftServer.registryAccess()",
+  "ServerLevel.getGameRules()",
+  "ServerLevel.getOverworldClockTime()",
+  "Level.getOverworldClockTime()",
+  "GameRules.ADVANCE_TIME",
+  "GameRules.get()",
+  "GameRules.set()"
+ ],
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "24-hours-1.6.0.jar",
+  "published": "2026-10-17"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "lacks": 22
+}

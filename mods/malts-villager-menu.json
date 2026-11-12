@@ -1,0 +1,79 @@
+{
+ "id": "malts-villager-menu",
+ "name": "Malt's Villager Menu",
+ "version": "v1.0.1-fabric-26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/malts-villager-menu",
+ "author": "jhughes-dev",
+ "description": "Adds a menu for villager inventory and status like grudges, gossip and your reputation. In creative, you can edit the values, or change the inventory.",
+ "needs": [
+  "an access widener",
+  "Mixin",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
+  "net.fabricmc.fabric.api.event.player.UseEntityCallback",
+  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.world.SimpleContainer",
+  "net.minecraft.world.SimpleMenuProvider",
+  "net.minecraft.world.entity.ai.gossip.GossipContainer",
+  "net.minecraft.world.entity.ai.gossip.GossipType",
+  "net.minecraft.world.entity.npc.villager.Villager",
+  "net.minecraft.world.entity.npc.villager.VillagerData",
+  "net.minecraft.world.flag.FeatureFlags",
+  "net.minecraft.world.inventory.MenuType.MenuSupplier",
+  "ServerTickEvents.END_SERVER_TICK",
+  "Minecraft.setScreenAndShow()",
+  "LocalPlayer.closeContainer()",
+  "RegistryFriendlyByteBuf.readUtf()",
+  "RegistryFriendlyByteBuf.readVarInt()",
+  "RegistryFriendlyByteBuf.writeBoolean()",
+  "RegistryFriendlyByteBuf.writeByte()",
+  "RegistryFriendlyByteBuf.writeUtf()",
+  "RegistryFriendlyByteBuf.writeVarInt()",
+  "MinecraftServer.getPlayerList()",
+  "ServerLevel.getEntity()",
+  "ServerPlayer.distanceToSqr()",
+  "Player.distanceToSqr()",
+  "MenuType.<init>()",
+  "Items.LEAD",
+  "Items.NAME_TAG",
+  "Items.VILLAGER_SPAWN_EGG",
+  "MerchantOffers.isEmpty()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "villagermenu-fabric-1.0.1+26.3.jar",
+  "published": "2026-09-27"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "lacks": 29
+}

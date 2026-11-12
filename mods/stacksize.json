@@ -1,0 +1,66 @@
+{
+ "id": "stacksize",
+ "name": "StackSize",
+ "version": "v1.4",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/stacksize",
+ "author": "Lamibee",
+ "description": "Allows you to adjust max stack sizes with a Fabric mod.",
+ "needs": [
+  "Mixin",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
+  "net.minecraft.commands.arguments.item.ItemPredicateArgument",
+  "net.minecraft.commands.arguments.item.ItemPredicateArgument.Result",
+  "net.minecraft.server.permissions.Permissions",
+  "net.minecraft.server.players.PlayerList",
+  "ServerLifecycleEvents.SERVER_STARTED",
+  "ServerTickEvents.END_SERVER_TICK",
+  "Minecraft.execute()",
+  "CommandSourceStack.sendSystemMessage()",
+  "RegistryFriendlyByteBuf.readUtf()",
+  "RegistryFriendlyByteBuf.readVarInt()",
+  "RegistryFriendlyByteBuf.writeInt()",
+  "RegistryFriendlyByteBuf.writeUtf()",
+  "RegistryFriendlyByteBuf.writeVarInt()",
+  "MinecraftServer.getPlayerList()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "stacksize-mc26_x-1.4.jar",
+  "published": "2026-10-22"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "server": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "lacks": 16
+}

@@ -1,0 +1,69 @@
+{
+ "id": "instant-gratification-durability-multiplier",
+ "name": "IG: Durability Multiplier",
+ "version": "1.2.16+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/instant-gratification-durability-multiplier",
+ "author": "dasikigaijin",
+ "description": "Complete control over item durability in Minecraft 26.1+. Multiply durability by any factor or make items completely unbreakable — all through GameRules. Works automatically with modded items via vanilla tags. Part of the Instant Gratification Collection.",
+ "needs": [
+  "Mixin",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
+  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
+  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
+  "net.minecraft.server.network.ServerGamePacketListenerImpl",
+  "net.minecraft.server.players.PlayerList",
+  "ServerLifecycleEvents.SERVER_STARTING",
+  "ServerLifecycleEvents.SERVER_STOPPING",
+  "DataComponents.MAX_DAMAGE",
+  "FriendlyByteBuf.readUtf()",
+  "FriendlyByteBuf.readVarInt()",
+  "FriendlyByteBuf.writeBoolean()",
+  "FriendlyByteBuf.writeUtf()",
+  "FriendlyByteBuf.writeVarInt()",
+  "CustomPacketPayload.codec()",
+  "MinecraftServer.getPlayerList()",
+  "Item.components()",
+  "GameRuleCategory.register()"
+ ],
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "durability-multiplier-1.2.16+26.3.jar",
+  "published": "2026-09-08"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": true,
+ "depends": [
+  "dasik-library",
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "lacks": 18
+}

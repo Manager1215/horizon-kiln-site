@@ -1,0 +1,72 @@
+{
+ "id": "packetward",
+ "name": "PacketWard",
+ "version": "26.3-1.0.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/packetward",
+ "author": "ThePaul_T",
+ "description": "Stops known hostile connections before they reach Minecraft, saving your server's resources for actual players.",
+ "needs": [
+  "Mixin",
+  "io.netty.channel.Channel",
+  "io.netty.channel.ChannelConfig",
+  "io.netty.channel.ChannelHandler",
+  "io.netty.channel.ChannelHandlerContext",
+  "io.netty.channel.ChannelInitializer",
+  "io.netty.channel.ChannelPipeline",
+  "io.netty.channel.EventLoop",
+  "net.fabricmc.api.DedicatedServerModInitializer",
+  "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents",
+  "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents.QueryStart",
+  "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking",
+  "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginSynchronizer",
+  "org.apache.logging.log4j.LogManager",
+  "org.apache.logging.log4j.Logger",
+  "org.apache.logging.log4j.core.Appender",
+  "org.apache.logging.log4j.core.Filter",
+  "org.apache.logging.log4j.core.Filter.Result",
+  "org.apache.logging.log4j.core.LogEvent",
+  "org.apache.logging.log4j.core.Logger",
+  "org.apache.logging.log4j.core.LoggerContext",
+  "org.apache.logging.log4j.core.appender.AbstractAppender",
+  "org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender",
+  "org.apache.logging.log4j.core.appender.AppenderSet",
+  "org.apache.logging.log4j.core.appender.OutputStreamManager",
+  "org.apache.logging.log4j.core.config.Configuration",
+  "org.apache.logging.log4j.core.filter.AbstractFilter",
+  "org.apache.logging.log4j.core.script.AbstractScript",
+  "org.apache.logging.log4j.core.script.ScriptManager",
+  "org.apache.logging.log4j.core.script.ScriptRef",
+  "org.apache.logging.log4j.core.util.Builder",
+  "Connection.getRemoteAddress()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "packetward-fabric-26.3-1.0.0.jar",
+  "published": "2026-09-16"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "entrypoints": {
+  "server": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft",
+  "polylib"
+ ],
+ "lacks": 31
+}

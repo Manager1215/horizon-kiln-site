@@ -1,0 +1,76 @@
+{
+ "id": "mace-limiterrr",
+ "name": "Mace Limiter",
+ "version": "1.0.1",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/mace-limiterrr",
+ "author": "makarest",
+ "description": "specific commands that configure mace restrictions on a sevrer",
+ "needs": [
+  "Mixin",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.BeforeSave",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
+  "net.minecraft.nbt.NbtAccounter",
+  "net.minecraft.nbt.NbtIo",
+  "net.minecraft.network.chat.ClickEvent.SuggestCommand",
+  "net.minecraft.server.permissions.PermissionCheck",
+  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.world.level.storage.LevelResource",
+  "ServerLifecycleEvents.BEFORE_SAVE",
+  "ServerLifecycleEvents.SERVER_STARTING",
+  "ServerLifecycleEvents.SERVER_STOPPING",
+  "CommandSourceStack.getServer()",
+  "Commands.LEVEL_GAMEMASTERS",
+  "Commands.getDispatcher()",
+  "Commands.sendCommands()",
+  "MutableComponent.setStyle()",
+  "Style.withClickEvent()",
+  "MinecraftServer.getCommands()",
+  "MinecraftServer.getPlayerList()",
+  "MinecraftServer.getWorldPath()",
+  "MinecraftServer.isSameThread()",
+  "MinecraftServer.services()",
+  "ServerPlayer.getEnderChestInventory()",
+  "Util.NIL_UUID",
+  "Items.MACE",
+  "CustomData.copyTag()",
+  "CustomData.isEmpty()"
+ ],
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "macelimiter-1.0.0+26.3.jar",
+  "published": "2026-09-26"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "lacks": 28
+}

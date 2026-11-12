@@ -1,0 +1,80 @@
+{
+ "id": "eternal-firework-rocket",
+ "name": "Eternal Firework Rocket",
+ "version": "1.1.0+mc26.3-fabric",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/eternal-firework-rocket",
+ "author": "xiaoze_qwq_",
+ "description": "A non-consumable firework rocket has been added, which can only be obtained in the End City or by command.\n增加了不会消耗的仅飞行用烟花火箭，只能在末地城或用指令获取。",
+ "needs": [
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
+  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
+  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
+  "net.minecraft.network.syncher.SynchedEntityData.Builder",
+  "net.minecraft.server.network.ServerGamePacketListenerImpl",
+  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.world.item.ItemCooldowns",
+  "net.minecraft.world.item.component.Fireworks",
+  "net.minecraft.world.level.storage.LevelResource",
+  "net.minecraft.world.level.storage.loot.functions.SetComponentsFunction",
+  "ServerLifecycleEvents.SERVER_STARTED",
+  "ServerTickEvents.END_SERVER_TICK",
+  "DataComponents.FIREWORKS",
+  "MinecraftServer.getPlayerList()",
+  "MinecraftServer.getWorldPath()",
+  "ServerPlayer.isFallFlying()",
+  "ServerPlayer.permissions()",
+  "SoundEvents.FIREWORK_ROCKET_LAUNCH",
+  "Entity.<init>()",
+  "Entity.tick()",
+  "LivingEntity.getHandHoldingItemAngle()",
+  "LivingEntity.getLookAngle()",
+  "LivingEntity.isAlive()",
+  "LivingEntity.isFallFlying()",
+  "LivingEntity.setDeltaMovement()",
+  "Player.getCooldowns()",
+  "Player.isFallFlying()",
+  "Items.FIREWORK_ROCKET",
+  "Level.addFreshEntity()",
+  "LootPool.Builder.apply()",
+  "LootPool.Builder.when()"
+ ],
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "eternal-firework-rocket-26.3-1.1.0+26.3.jar",
+  "published": "2026-10-01"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": false,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "lacks": 32
+}

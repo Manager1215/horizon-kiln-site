@@ -1,0 +1,71 @@
+{
+ "id": "the-complete-drop-randomizer-mod",
+ "name": "The Complete Drop Randomizer Mod",
+ "version": "1.0.2",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/the-complete-drop-randomizer-mod",
+ "author": "HarryTheeWizard",
+ "description": "Every drop in the game is randomized from the full item registry. No cap, no curated list, fresh every world.",
+ "needs": [
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
+  "net.fabricmc.fabric.api.loot.v3.LootTableEvents.Replace",
+  "net.minecraft.server.packs.repository.PackRepository",
+  "net.minecraft.server.permissions.LevelBasedPermissionSet",
+  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.world.level.storage.loot.entries.NestedLootTable",
+  "net.minecraft.world.level.storage.loot.functions.ApplyBonusCount",
+  "net.minecraft.world.level.storage.loot.functions.EnchantedCountIncreaseFunction",
+  "net.minecraft.world.level.storage.loot.functions.EnchantedCountIncreaseFunction.Builder",
+  "net.minecraft.world.level.storage.loot.providers.number.floats.ConstantValue",
+  "net.minecraft.world.level.storage.loot.providers.number.floats.UniformGenerator",
+  "net.minecraft.world.level.storage.loot.providers.number.ints.ConstantValue",
+  "ServerLifecycleEvents.SERVER_STARTED",
+  "ServerLifecycleEvents.SERVER_STARTING",
+  "LootTableEvents.REPLACE",
+  "CommandSourceStack.getServer()",
+  "HolderLookup.RegistryLookup.getOrThrow()",
+  "MinecraftServer.getPackRepository()",
+  "MinecraftServer.getPlayerList()",
+  "MinecraftServer.getResourceManager()",
+  "MinecraftServer.overworld()",
+  "MinecraftServer.reloadResources()",
+  "Enchantments.FORTUNE"
+ ],
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "randomizer-mod-1.0.2.jar",
+  "published": "2026-10-14"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": false,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "lacks": 24
+}

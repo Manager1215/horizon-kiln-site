@@ -1,0 +1,72 @@
+{
+ "id": "ig-potion-stacker-addon",
+ "name": "IG: Potion Stacker Addon",
+ "version": "1.1.4+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/ig-potion-stacker-addon",
+ "author": "dasikigaijin",
+ "description": "Tired of potions and stews cluttering your inventory slots and taking up valuable backpack space? Potion Stacker Addon is a dedicated addon for Stack Size Adjuster that allows regular potions, splash",
+ "needs": [
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
+  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
+  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.world.item.PotionItem",
+  "net.minecraft.world.level.storage.ServerLevelData",
+  "net.minecraft.world.level.storage.WorldData",
+  "ServerLifecycleEvents.SERVER_STARTED",
+  "PacketSender.sendPacket()",
+  "Minecraft.execute()",
+  "MinecraftServer.getGameRules()",
+  "MinecraftServer.getPlayerList()",
+  "MinecraftServer.getWorldData()",
+  "AbstractContainerMenu.broadcastFullState()",
+  "InventoryMenu.broadcastFullState()",
+  "Items.BEETROOT_SOUP",
+  "Items.MUSHROOM_STEW",
+  "Items.RABBIT_STEW",
+  "Items.SUSPICIOUS_STEW",
+  "GameRules.get()",
+  "GameRules.set()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "potion-stacker-addon-1.1.4+26.3.jar",
+  "published": "2026-10-23"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": false,
+ "depends": [
+  "dasik-library",
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft",
+  "stack-size-adjuster"
+ ],
+ "lacks": 21
+}

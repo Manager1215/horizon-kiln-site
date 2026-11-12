@@ -1,0 +1,64 @@
+{
+ "id": "block-variant-swapper",
+ "name": "Block Variant Swapper",
+ "version": "fabric-26.3-1.0.2",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/block-variant-swapper",
+ "author": "Neamow",
+ "description": "A lightweight mod that lets you swap a held block between its variants - planks to stairs, slabs, fences, doors, etc. - on the fly, without opening a crafting table or stonecutter.",
+ "needs": [
+  "Mixin",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
+  "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
+  "net.minecraft.server.network.ServerGamePacketListenerImpl",
+  "net.minecraft.world.item.crafting.ShapelessRecipe",
+  "net.minecraft.world.item.crafting.display.SlotDisplay.ItemSlotDisplay",
+  "net.minecraft.world.level.storage.WorldData",
+  "ServerLifecycleEvents.END_DATA_PACK_RELOAD",
+  "ServerLifecycleEvents.SERVER_STARTING",
+  "MinecraftServer.execute()",
+  "MinecraftServer.getWorldData()",
+  "ServerPlayer.connection",
+  "ItemStack.transmuteCopy()",
+  "RecipeManager.finalizeRecipeLoading()"
+ ],
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "blockvariantswapper-fabric-26.3-1.0.2.jar",
+  "published": "2026-10-14"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1,
+  "jei_mod_plugin": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "lacks": 14
+}

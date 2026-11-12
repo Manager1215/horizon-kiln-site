@@ -1,0 +1,67 @@
+{
+ "id": "fresh-market",
+ "name": "Fresh Market",
+ "version": "1.0.2",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/fresh-market",
+ "author": "Medzair",
+ "description": "A mod that refreshes the trades of villages every Minecraft  day, so it will be worth checking their trades on new days",
+ "needs": [
+  "Mixin",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndLevelTick",
+  "net.minecraft.world.entity.npc.villager.Villager",
+  "net.minecraft.world.entity.npc.villager.VillagerData",
+  "net.minecraft.world.entity.npc.villager.VillagerProfession",
+  "net.minecraft.world.item.trading.MerchantOffer",
+  "net.minecraft.world.item.trading.VillagerTrade",
+  "net.minecraft.world.item.trading.VillagerTrades",
+  "ServerTickEvents.END_LEVEL_TICK",
+  "Registry.get()",
+  "RegistryAccess.lookupOrThrow()",
+  "Registries.VILLAGER_TRADE",
+  "MinecraftServer.registryAccess()",
+  "ServerLevel.getEntitiesOfClass()",
+  "ServerLevel.getOverworldClockTime()",
+  "MerchantOffers.add()",
+  "LootContextParamSets.VILLAGER_TRADE",
+  "LootContextParams.ADDITIONAL_COST_COMPONENT_ALLOWED",
+  "LootContextParams.THIS_ENTITY"
+ ],
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "fresh-market-1.0.2.jar",
+  "published": "2026-11-01"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "lacks": 18
+}

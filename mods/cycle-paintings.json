@@ -1,0 +1,72 @@
+{
+ "id": "cycle-paintings",
+ "name": "Cycle Paintings",
+ "version": "26.3.0-5.0-fabric+forge+neo",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/cycle-paintings",
+ "author": "Serilum",
+ "description": "🖼️ Easily cycle through placed paintings by right-clicking them with another painting in hand.",
+ "needs": [
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
+  "net.fabricmc.fabric.api.event.player.UseEntityCallback",
+  "net.minecraft.IdentifierException",
+  "net.minecraft.core.particles.DustParticleOptions",
+  "net.minecraft.tags.PaintingVariantTags",
+  "net.minecraft.world.entity.decoration.painting.Painting",
+  "net.minecraft.world.entity.decoration.painting.PaintingVariant",
+  "ServerLifecycleEvents.SERVER_STARTING",
+  "Registry.getTagOrEmpty()",
+  "Registry.wrapAsHolder()",
+  "RegistryAccess.lookupOrThrow()",
+  "RegistryAccess.Frozen.lookupOrThrow()",
+  "Registries.PAINTING_VARIANT",
+  "MinecraftServer.registryAccess()",
+  "ServerLevel.sendParticles()",
+  "ProblemReporter.DISCARDING",
+  "Player.isCrouching()",
+  "Player.swing()",
+  "Items.PAINTING",
+  "SwingAnimation.DEFAULT",
+  "BlockEntity.getUpdateTag()",
+  "AABB.getCenter()",
+  "Vec3.relative()"
+ ],
+ "roadmap": "Code next to data (0.3), Machines (0.4)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "cyclepaintings-26.3.0-5.0.jar",
+  "published": "2026-11-03"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "modmenu": 1
+ },
+ "mixins": false,
+ "depends": [
+  "collective",
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "lacks": 23
+}

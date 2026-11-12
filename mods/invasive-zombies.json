@@ -1,0 +1,83 @@
+{
+ "id": "invasive-zombies",
+ "name": "Invasive Zombies",
+ "version": "2.0.2",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/invasive-zombies",
+ "author": "saurehefepegorino",
+ "description": "🧟 Zombies can now break configurable blocks!",
+ "needs": [
+  "Mixin",
+  "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
+  "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterEntityChange",
+  "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
+  "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.Unload",
+  "net.minecraft.IdentifierException",
+  "net.minecraft.core.particles.BlockParticleOption",
+  "net.minecraft.tags.ItemTags",
+  "net.minecraft.world.entity.ai.control.LookControl",
+  "net.minecraft.world.entity.ai.goal.Goal",
+  "net.minecraft.world.entity.ai.goal.Goal.Flag",
+  "net.minecraft.world.entity.ai.goal.GoalSelector",
+  "net.minecraft.world.entity.ai.navigation.GroundPathNavigation",
+  "net.minecraft.world.entity.ai.navigation.PathNavigation",
+  "net.minecraft.world.entity.monster.zombie.Zombie",
+  "net.minecraft.world.entity.npc.villager.Villager",
+  "net.minecraft.world.level.pathfinder.Node",
+  "net.minecraft.world.level.pathfinder.Path",
+  "JsonSyntaxException.getMessage()",
+  "ServerLevelEvents.UNLOAD",
+  "BlockPos.distSqr()",
+  "ParticleTypes.BLOCK",
+  "ServerLevel.sendParticles()",
+  "BlockTags.DOORS",
+  "LivingEntity.distanceToSqr()",
+  "LivingEntity.isAlive()",
+  "Mob.swingForAttack()",
+  "Player.isAlive()",
+  "Level.destroyBlock()",
+  "Level.getEntitiesOfClass()",
+  "Level.hasChunk()",
+  "SoundType.getHitSound()",
+  "BlockState.getSoundType()",
+  "AABB.inflate()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "invasivezombies-2.0.2-mc26.3.jar",
+  "published": "2026-10-25"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "modmenu": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "lacks": 34
+}

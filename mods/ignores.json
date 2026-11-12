@@ -1,0 +1,60 @@
+{
+ "id": "ignores",
+ "name": "Ignore",
+ "version": "1.2.1+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/ignores",
+ "author": "TreeOfSelf",
+ "description": "A simple drop-in solution to allow players to ignore other players. This exists because the vanilla mute won't work on NoChatReports servers.",
+ "needs": [
+  "Mixin",
+  "com.mojang.authlib.GameProfile",
+  "net.minecraft.server.players.PlayerList",
+  "CommandSourceStack.getPlayerOrException()",
+  "CommandSourceStack.getServer()",
+  "ListTag.add()",
+  "MinecraftServer.getDataStorage()",
+  "MinecraftServer.getPlayerList()",
+  "MinecraftServer.overworld()",
+  "MinecraftServer.services()",
+  "ServerPlayer.getGameProfile()",
+  "ServerPlayer.sendSystemMessage()",
+  "NameAndId.<init>()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "panda-ignore-1.2.1+26.3.jar",
+  "published": "2026-10-19"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "lacks": 12
+}

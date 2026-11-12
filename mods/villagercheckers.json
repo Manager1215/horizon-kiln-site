@@ -1,0 +1,75 @@
+{
+ "id": "villagercheckers",
+ "name": "Villager Checkers",
+ "version": "0.1.2",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/villagercheckers",
+ "author": "johnnyscriptt",
+ "description": "Play checkers against villagers! A Play Checkers button on the trade screen starts a full game - their skill scales with trading level, from a Novice who walks into every trap to a Master who converts won endings.",
+ "needs": [
+  "Mixin",
+  "com.mojang.authlib.GameProfile",
+  "net.fabricmc.fabric.api.client.screen.v1.Screens",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
+  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
+  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
+  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
+  "net.minecraft.client.gui.screens.inventory.MerchantScreen",
+  "net.minecraft.server.network.ServerGamePacketListenerImpl",
+  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.world.entity.npc.villager.Villager",
+  "net.minecraft.world.entity.npc.villager.VillagerData",
+  "net.minecraft.world.inventory.MerchantMenu",
+  "ServerLifecycleEvents.SERVER_STOPPING",
+  "ServerTickEvents.END_SERVER_TICK",
+  "GuiGraphicsExtractor.nextStratum()",
+  "Screen.mouseClicked()",
+  "MinecraftServer.getPlayerList()",
+  "ServerPlayer.closeContainer()",
+  "ServerPlayer.getGameProfile()",
+  "SoundEvents.NOTE_BLOCK_BASS",
+  "SoundEvents.UI_TOAST_CHALLENGE_COMPLETE",
+  "SoundEvents.VILLAGER_CELEBRATE",
+  "SoundEvents.VILLAGER_NO",
+  "SoundEvents.VILLAGER_YES",
+  "LivingEntity.isRemoved()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "villagercheckers-0.1.2.jar",
+  "published": "2026-10-22"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "lacks": 26
+}

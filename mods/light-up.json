@@ -1,0 +1,65 @@
+{
+ "id": "light-up",
+ "name": "Light Up!",
+ "version": "1.0.4",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/light-up",
+ "author": "noramibu",
+ "description": "A server-side fabric mod to light up areas to prevent mob spawning or better visibility.",
+ "needs": [
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
+  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
+  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
+  "net.minecraft.commands.arguments.blocks.BlockInput",
+  "net.minecraft.commands.arguments.blocks.BlockStateArgument",
+  "net.minecraft.server.network.ServerGamePacketListenerImpl",
+  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.world.level.LightLayer",
+  "ServerTickEvents.END_SERVER_TICK",
+  "BlockPos.asLong()",
+  "MinecraftServer.getPlayerList()",
+  "Level.getBrightness()",
+  "Level.getHeight()",
+  "Level.getMaxLocalRawBrightness()",
+  "Level.getMinY()",
+  "Level.isEmptyBlock()",
+  "BlockState.isCollisionShapeFullBlock()"
+ ],
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "light-up-fabric-1.0.4.jar",
+  "published": "2026-09-15"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": false,
+ "depends": [
+  "fabric-api",
+  "fabric-permissions-api-v0",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "lacks": 17
+}

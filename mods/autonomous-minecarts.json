@@ -1,0 +1,65 @@
+{
+ "id": "autonomous-minecarts",
+ "name": "autonomous-minecarts",
+ "version": "1.1.11+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/autonomous-minecarts",
+ "author": "ac101m",
+ "description": "A fabric mod which allows minecarts to autonomously load chunks.",
+ "needs": [
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.BeforeSave",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndLevelTick",
+  "net.minecraft.world.level.storage.LevelResource",
+  "ServerLifecycleEvents.BEFORE_SAVE",
+  "ServerLifecycleEvents.SERVER_STARTING",
+  "ServerTickEvents.END_LEVEL_TICK",
+  "BuiltInRegistries.TICKET_TYPE",
+  "MinecraftServer.getAllLevels()",
+  "MinecraftServer.getWorldPath()",
+  "ServerChunkCache.hasActiveTickets()",
+  "ServerLevel.getEntities()",
+  "Entity.isAlive()",
+  "Entity.RemovalReason.shouldSave()",
+  "AbstractMinecart.chunkPosition()",
+  "AbstractMinecart.getRemovalReason()",
+  "EntityTypeTest.forClass()"
+ ],
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "autonomous-minecarts-1.1.11+26.3.jar",
+  "published": "2026-09-23"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": false,
+ "depends": [
+  "fabric-api",
+  "fabric-language-kotlin",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "lacks": 17
+}

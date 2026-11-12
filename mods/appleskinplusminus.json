@@ -1,0 +1,66 @@
+{
+ "id": "appleskinplusminus",
+ "name": "Appleskin+LungeFix",
+ "version": "1.3-26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/appleskinplusminus",
+ "author": "jetcuh",
+ "description": "Always on saturation and exhaustion HUD visualization, with no language changes and a minimal layout. Not compatible with AppleSkin, remove AppleSkin first.",
+ "needs": [
+  "Mixin",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndLevelTick",
+  "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
+  "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
+  "net.minecraft.client.gui.components.debug.DebugScreenEntries",
+  "net.minecraft.client.gui.components.debug.DebugScreenEntry",
+  "org.apache.logging.log4j.LogManager",
+  "org.apache.logging.log4j.Logger",
+  "ServerTickEvents.END_LEVEL_TICK",
+  "FabricLoader.getEntrypointContainers()",
+  "Minecraft.execute()",
+  "GuiGraphicsExtractor.blit()",
+  "Hud.getGuiTicks()",
+  "FriendlyByteBuf.writeBoolean()",
+  "FriendlyByteBuf.writeFloat()",
+  "CustomPacketPayload.codec()",
+  "ServerLevel.getGameRules()",
+  "FoodData.setSaturation()",
+  "GameRules.NATURAL_HEALTH_REGENERATION",
+  "GameRules.get()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "appleskin+--1.3-26.3-v1.3-26.3.jar",
+  "published": "2026-09-25"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1,
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader"
+ ],
+ "lacks": 19
+}

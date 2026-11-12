@@ -1,0 +1,62 @@
+{
+ "id": "votelistener",
+ "name": "VoteListener",
+ "version": "1.1.2+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/votelistener",
+ "author": "DrexHD",
+ "description": "A vote listener for fabric using NuVotifier-Fabric",
+ "needs": [
+  "Mixin",
+  "net.fabricmc.api.DedicatedServerModInitializer",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.AfterSave",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
+  "net.minecraft.TracingExecutor",
+  "net.minecraft.core.UUIDUtil",
+  "net.minecraft.nbt.NbtAccounter",
+  "net.minecraft.nbt.NbtIo",
+  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.world.level.storage.LevelResource",
+  "ServerLifecycleEvents.AFTER_SAVE",
+  "ServerLifecycleEvents.SERVER_STARTING",
+  "CommandSourceStack.withEntity()",
+  "CommandSourceStack.withSuppressedOutput()",
+  "Commands.performPrefixedCommand()",
+  "MinecraftServer.createCommandSourceStack()",
+  "MinecraftServer.getCommands()",
+  "MinecraftServer.getPlayerList()",
+  "MinecraftServer.getWorldPath()",
+  "MinecraftServer.services()",
+  "MinecraftServer.submit()",
+  "ServerPlayer.nameAndId()",
+  "Util.nonCriticalIoPool()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "votelistener-1.1.2+26.3.jar",
+  "published": "2026-09-28"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "entrypoints": {
+  "server": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "nuvotifier-fabric"
+ ],
+ "lacks": 22
+}

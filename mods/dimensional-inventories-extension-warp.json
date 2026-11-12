@@ -1,0 +1,72 @@
+{
+ "id": "dimensional-inventories-extension-warp",
+ "name": "Dimensional Inventories Extension: Warp",
+ "version": "1.0.2+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/dimensional-inventories-extension-warp",
+ "author": "rofumer",
+ "description": "An extension for Dimensional Inventories that adds warp commands to teleport players between dimension pools.",
+ "needs": [
+  "Mixin",
+  "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
+  "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
+  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
+  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
+  "net.minecraft.server.level.ServerPlayerGameMode",
+  "net.minecraft.server.network.ServerGamePacketListenerImpl",
+  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.world.level.storage.LevelResource",
+  "ServerLifecycleEvents.SERVER_STARTED",
+  "ServerTickEvents.END_SERVER_TICK",
+  "CommandSourceStack.getPlayerOrException()",
+  "CommandSourceStack.getServer()",
+  "MinecraftServer.getPlayerList()",
+  "MinecraftServer.getWorldPath()",
+  "ServerLevel.getHeight()",
+  "ServerLevel.getMinY()",
+  "ServerLevel.getRespawnData()",
+  "ServerPlayer.gameMode",
+  "ServerPlayer.teleport()",
+  "LevelData.RespawnData.pos()"
+ ],
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "dimensional-inventories-extension-warp-1.0.2+26.3.jar",
+  "published": "2026-09-24"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1,
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "dimensional-inventories",
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "lacks": 22
+}

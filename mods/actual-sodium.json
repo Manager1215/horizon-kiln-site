@@ -1,0 +1,64 @@
+{
+ "id": "actual-sodium",
+ "name": "Actual Sodium",
+ "version": "26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/actual-sodium",
+ "author": "duzzl",
+ "description": "This simple Fabric mod turns you into Sodium. If you touch water, you die instantly. If you stand in the rain, you die fairly quickly too.",
+ "needs": [
+  "Mixin",
+  "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Leave",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndLevelTick",
+  "net.minecraft.core.particles.GeyserParticleOptions",
+  "ServerPlayerEvents.LEAVE",
+  "ServerTickEvents.END_LEVEL_TICK",
+  "Registry.getOrThrow()",
+  "RegistryAccess.lookupOrThrow()",
+  "ParticleTypes.GEYSER",
+  "ServerLevel.getBiome()",
+  "ServerLevel.getSeaLevel()",
+  "ServerLevel.isRainingAt()",
+  "ServerLevel.sendParticles()",
+  "ServerPlayer.isDeadOrDying()",
+  "SoundEvents.GEYSER_ERUPTION_ACTIVE",
+  "SoundEvents.GEYSER_ERUPTION_START",
+  "Biome.getPrecipitationAt()"
+ ],
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "file": "actual_sodium-26.3.jar",
+  "published": "2026-09-16"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-05",
+  "kiln": "development build 2026-11-05 (afb67d1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "lacks": 16
+}
