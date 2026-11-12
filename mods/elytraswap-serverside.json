@@ -1,0 +1,68 @@
+{
+  "id": "elytraswap-serverside",
+  "name": "Elytraswap Serverside",
+  "version": "1.0.0",
+  "status": "planned",
+  "statusLabel": "Planned",
+  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "url": "https://modrinth.com/mod/elytraswap-serverside",
+  "author": "MagicJinn",
+  "description": "Automatic elytra and chestplate swapping, entirely on the server",
+  "needs": [
+    "Registry.get()",
+    "RegistryAccess.lookupOrThrow()",
+    "DataComponents.CUSTOM_NAME",
+    "DataComponents.GLIDER",
+    "ClientboundSetEquipmentPacket.getEntity()",
+    "ClientboundSetEquipmentPacket.getSlots()",
+    "ServerPlayer.connection",
+    "ServerPlayer.isDeadOrDying()",
+    "ServerPlayer.isFallFlying()",
+    "ServerPlayer.isSilent()",
+    "ServerPlayer.registryAccess()",
+    "ServerPlayer.setSilent()",
+    "ServerPlayer.tickCount",
+    "ServerGamePacketListenerImpl.send()",
+    "LivingEntity.canGlideUsing()",
+    "Inventory.createInventoryUpdatePacket()",
+    "InventoryMenu.broadcastFullState()",
+    "EnchantmentHelper.getItemEnchantmentLevel()",
+    "Enchantments.BINDING_CURSE",
+    "Enchantments.MENDING",
+    "Enchantments.PROTECTION"
+  ],
+  "roadmap": "Code next to data (0.3), Machines (0.4)",
+  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+  "library": false,
+  "scanned": {
+    "date": "2026-11-11",
+    "kiln": "0.4.1",
+    "file": "elytraswap-serverside-1.0.0.jar",
+    "published": "2026-09-30"
+  },
+  "reports": {
+    "works": 0,
+    "partly": 0,
+    "broken": 0,
+    "latest": []
+  },
+  "run": {
+    "passed": false,
+    "date": "2026-11-10",
+    "kiln": "0.4.1",
+    "ticks": 0,
+    "hud": false,
+    "why": "Java did not start"
+  },
+  "entrypoints": {
+    "main": 1
+  },
+  "mixins": true,
+  "depends": [
+    "fabric-api",
+    "fabricloader",
+    "java",
+    "minecraft"
+  ],
+  "lacks": 21
+}

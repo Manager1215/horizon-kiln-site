@@ -1,0 +1,73 @@
+{
+  "id": "lower-shelves",
+  "name": "Lower Shelves",
+  "version": "1.0.7",
+  "status": "works",
+  "statusLabel": "Works",
+  "statusMeaning": "Tried in the game with Kiln.",
+  "url": "https://modrinth.com/mod/lower-shelves",
+  "author": "blackspider",
+  "description": "Right Click a Shelf and it lower's its items to the bottom.",
+  "needs": [],
+  "roadmap": "",
+  "evidence": "",
+  "library": false,
+  "scanned": {
+    "date": "2026-11-11",
+    "kiln": "0.4.1",
+    "file": "Lower_Shelf-1.0.6-26.2.jar",
+    "published": "2026-09-15"
+  },
+  "reports": {
+    "works": 0,
+    "partly": 0,
+    "broken": 0,
+    "latest": []
+  },
+  "run": {
+    "passed": false,
+    "date": "2026-11-05",
+    "kiln": "0.3.0",
+    "ticks": 0,
+    "hud": false,
+    "why": "Java did not start"
+  },
+  "entrypoints": {
+    "client": 1,
+    "main": 1
+  },
+  "mixins": false,
+  "depends": [
+    "fabric-api",
+    "fabricloader",
+    "minecraft"
+  ],
+  "lacks": 6,
+  "works": "Sneak and right-click a wooden shelf with an empty hand to toggle its 'align items to bottom' setting (it runs a data modify command on the server).",
+  "note": "From Modrinth, unchanged. Not yet: It needs the server's UseBlockCallback when the player uses a block; if Kiln doesn't fire it yet, the shelf stays as it was; the mod works without it",
+  "checked": {
+    "kiln": "0.3.0",
+    "commit": "2af5bb1edbbf84ca829bec511b7e37844ac299c1",
+    "date": "2026-11-07",
+    "horizon": "Nightly 2026-11-04 · 3fb4c31",
+    "by": "kiln/proof.py on the Linux PC"
+  },
+  "development": {
+    "name": "Lower Shelves",
+    "version": "1.0.7",
+    "status": "doesnt-work",
+    "statusLabel": "Doesn't work",
+    "statusMeaning": "Tried in the game with Kiln; it does not work yet.",
+    "works": "Sneaking and using a wooden shelf with an empty hand does nothing: the shelf stays 'align items to bottom' off. The mod starts, and nothing fails.",
+    "note": "From Modrinth, unchanged. Kiln fires the UseBlockCallback its one feature runs from, but the mod then reads the game's shelf block entity and runs /data through the server's command dispatcher, which Kiln's Java doesn't have yet. Marked working on 2026-11-08 by mistake: that try's check passed for any shelf.",
+    "url": "https://modrinth.com/mod/lower-shelves",
+    "checked": {
+      "kiln": "main",
+      "commit": "f604db8e9c758a6e84a7a2a551b17254d58d3d72",
+      "date": "2026-11-10",
+      "horizon": "Nightly 2026-11-04 · 3fb4c31",
+      "by": "kiln/proof.py on the Linux PC"
+    },
+    "build": "development build 2026-11-10 (f604db8)"
+  }
+}

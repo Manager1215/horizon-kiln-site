@@ -1,0 +1,51 @@
+{
+  "0.4.1": {
+    "summary": "Kiln 0.4.1 fixes 0.4.0's known issues: a mod's translated chat lines show again, and a mod's packet that Java answers late is handled instead of dropped. The five structure mods 0.4.0 listed as broken weren't.",
+    "items": [
+      "A mod's translated chat lines show again: Quick Resource Pack's R says \"No resource pack configured\".",
+      "A mod's packet that Java answers late, on a busy computer, is handled when the answer comes, instead of dropped.",
+      "Not broken after all: Epic Structures Dungeons, Nice Mob Variants, Thirtyfangss Kingdom, Survivors' Elegy and MOTS Structures work; the automatic try misjudged them.",
+      "Still on Horizon Nightly 2026-11-04 (--version nightly-2026-11-04-3fb4c31); the testbench 139 of 139 in the game."
+    ]
+  },
+  "0.4.0": {
+    "summary": "Kiln 0.4.0 applies Java mods' mixins with the Mixin library itself, runs Tech Reborn's machines through their cables and hands one machine's output to the next, carries mods' own packets between the player, the server and a friend on LAN, and lets mods' keys be bound in Options > Mods.",
+    "items": [
+      "Mixin, every kind: mods' mixins are applied by FabricMC's Mixin and MixinExtras, as under Fabric. The game's methods mods hook most run where the game runs them, the HUD's layers among them, and mods that are only mixins (Minimal Armor HUD) run.",
+      "Machines: Tech Reborn's cables carry a solar panel's energy to a machine, and a machine hands its output to the next by itself.",
+      "Networking: mods' own packets go between the player and the server, in single player and to a friend on LAN; a server finds the players it sends to, and hears them join and leave.",
+      "Mods' keys: each Java mod's keys are on its page in Options > Mods, where you bind them.",
+      "Structure mods read as Minecraft reads them: ids without a namespace, 26.3's block states, and pack overlays made for 26.3 (Mingen, Small Structures).",
+      "A mod's chat lines keep their colours, and \"No Java found\" says what to install and where to point Kiln.",
+      "Measured: the testbench's 139 probes all pass in the game, and 154 of the 160 mods known to work were tried again in the game on 0.4.0. The six that broke since 0.3.0 are known issues for 0.4.1 (CHANGELOG.md).",
+      "Kiln comes without mods, and the speedrun timer is no longer part of Kiln's release.",
+      "Still on Horizon Nightly 2026-11-04 (--version nightly-2026-11-04-3fb4c31), as 0.3.0."
+    ]
+  },
+  "0.3.0": {
+    "summary": "Kiln 0.3.0 runs a block mod from Modrinth whose blocks Horizon's mod browser carries, declares the blocks and items the browser leaves out so a LAN guest sees them, gives each Java mod its own switch in Options > Mods, and runs Tech Reborn's first machines. With Kiln Speedrun Timer 0.2.0, on Horizon Nightly 2026-11-04 · 3fb4c31; tested in the game on macOS (Apple Silicon), Kiln's tests also on Linux.",
+    "items": [
+      "A block mod from Modrinth: SpongeSucc (Lava Sponge), installed through Horizon's mod browser (its blocks) with its jar in kiln/mods (its code). A lava sponge placed beside lava takes it up and turns into a hot lava sponge.",
+      "Each Java mod in Options > Mods, with its own switch: a mod turned off is left out from the next world you enter, as if its jar weren't in kiln/mods.",
+      "Blocks and items declared in code: the ones Horizon's mod browser leaves out of a mod (Tech Reborn's machines and items) are declared the way Horizon's own native mods declare theirs, so a friend joining your world over LAN, with the same Kiln and mods, sees them.",
+      "Tech Reborn's first machines run their own code: the iron furnace smelts, a solar panel powers the electric furnace, machines open their own screens, the grinder grinds by Tech Reborn's recipes, a thermal generator burns lava from a bucket, the industrial grinder and sawmill work with water.",
+      "More mods from Modrinth, unchanged: Armour Durability HUD and Better Than Mending.",
+      "Measured: the testbench's 139 probes all pass in the game (0.2.0: 38), each answering from Horizon's game.",
+      "Mods that should work, in levels never added up (docs/MODS.md): 7 work, tried in the game on 0.3.0; 276 should work because their code ran on Kiln's test stand with nothing failing; 194 are data only (structures). None of the 470 was tried one by one.",
+      "Kiln builds on Horizon Nightly 2026-11-04 now (--version nightly-2026-11-04-3fb4c31), no longer on 2026-11-01."
+    ]
+  },
+  "0.2.0": {
+    "summary": "Kiln 0.2.0 runs a mod from Modrinth unchanged, brings structure mods into Horizon's worlds, and runs the code of mods Horizon's mod browser marks Partly. With Kiln Speedrun Timer 0.2.0, on Horizon Nightly 2026-11-01 · c9d474d; tested on macOS (Apple Silicon) and on Windows 11 from a fresh install.",
+    "items": [
+      "A mod from Modrinth, unchanged: Show FPS 2.0.0 runs through Kiln, its FPS counter on the HUD. Kiln runs mods' main entrypoints too, as Fabric does.",
+      "Structure mods: a mod whose structures are data generates them in Horizon's worlds (Illager Warship 1.0.0; thirteen popular structure mods together in the Overworld, the Nether and the End). Kiln brings only their structures, not terrain.",
+      "Mods Horizon's mod browser marks Partly: install the mod in the browser (its data) and put its jar in kiln/mods (its code). Heart Crystals works: using a crystal raises max health, kept with the world and through respawns.",
+      "Kiln on Horizon's single-player server: mods' items with a use of their own, players joining, changing dimension and respawning, saved data kept with the world, changes to the game's loot tables, and mods' blocks running their own code when clicked, ticked, stood on, placed and broken.",
+      "Minecraft's libraries for mods: Gson, Guava, fastutil, SLF4J, JOML, Brigadier and DataFixerUpper, in the versions Minecraft 26.3 ships, with their licenses.",
+      "Timer: the split key reaches Finish only with finish=manual; with dragon (the default) or leave_end the dragon or the way back from the End finishes the run.",
+      "Measured: a testbench of 139 probes over Minecraft and the Fabric API (38 pass through Kiln; 0.1.1: 18), and tools/kiln-scan.py, which says what a mod's jar needs that Kiln doesn't have yet.",
+      "Kiln's description in Options > Mods says what it runs now; INSTALL.md has Windows' build command and where Kiln's folder is there."
+    ]
+  }
+}

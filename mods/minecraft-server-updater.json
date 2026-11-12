@@ -1,0 +1,95 @@
+{
+  "id": "minecraft-server-updater",
+  "name": "MSU",
+  "version": "0.2.1-beta.3",
+  "status": "planned",
+  "statusLabel": "Planned",
+  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "url": "https://modrinth.com/mod/minecraft-server-updater",
+  "author": "ET_",
+  "description": "This mod aims to automate the update process of mods on fabric servers",
+  "needs": [
+    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+    "ServerLifecycleEvents.SERVER_STARTED",
+    "Commands.LEVEL_ADMINS",
+    "Commands.hasPermission()",
+    "MinecraftServer.execute()",
+    "MinecraftServer.getServerDirectory()",
+    "MinecraftServer.halt()",
+    "MinecraftServer.isSameThread()",
+    "MinecraftServer.saveEverything()",
+    "PlayerList.broadcastSystemMessage()"
+  ],
+  "roadmap": "Code next to data (0.3)",
+  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+  "library": false,
+  "scanned": {
+    "date": "2026-11-11",
+    "kiln": "0.4.1",
+    "file": "minecraft-server-updater+fabric-0.2.1-beta.3.jar",
+    "published": "2026-10-16"
+  },
+  "reports": {
+    "works": 0,
+    "partly": 0,
+    "broken": 0,
+    "latest": []
+  },
+  "run": {
+    "passed": false,
+    "date": "2026-11-05",
+    "kiln": "0.3.0",
+    "ticks": 0,
+    "hud": false,
+    "why": "Java did not start"
+  },
+  "entrypoints": {
+    "main": 1
+  },
+  "mixins": false,
+  "depends": [
+    "fabric-api",
+    "fabric-command-api-v2",
+    "fabric-lifecycle-events-v1",
+    "fabricloader"
+  ],
+  "lacks": 10,
+  "development": {
+    "status": "planned",
+    "statusLabel": "Planned",
+    "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+    "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+    "needs": [
+      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+      "net.minecraft.server.players.PlayerList",
+      "ServerLifecycleEvents.SERVER_STARTED",
+      "Commands.LEVEL_ADMINS",
+      "Commands.hasPermission()",
+      "MinecraftServer.execute()",
+      "MinecraftServer.getPlayerList()",
+      "MinecraftServer.getServerDirectory()",
+      "MinecraftServer.halt()",
+      "MinecraftServer.isSameThread()",
+      "MinecraftServer.saveEverything()"
+    ],
+    "roadmap": "Code next to data (0.3)",
+    "run": {
+      "passed": false,
+      "date": "2026-11-05",
+      "kiln": "development build 2026-11-05 (afb67d1)",
+      "ticks": 0,
+      "hud": false,
+      "why": "Java did not start"
+    },
+    "url": "https://modrinth.com/mod/minecraft-server-updater",
+    "version": "0.2.1-beta.3",
+    "lacks": 11,
+    "scanned": {
+      "date": "2026-11-05",
+      "kiln": "development build 2026-11-05 (afb67d1)",
+      "file": "minecraft-server-updater+fabric-0.2.1-beta.3.jar",
+      "published": "2026-10-16"
+    },
+    "build": "development build 2026-11-05 (afb67d1)"
+  }
+}

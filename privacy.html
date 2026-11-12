@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your data — Kiln</title>
+<meta name="description" content="What horizon-kiln.cc keeps about visitors and accounts, for how long, and how to delete an account with its reports.">
+<link rel="canonical" href="https://horizon-kiln.cc/privacy.html">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3eee6">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#15110d">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="archivo-expanded.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js");</script>
+<script src="site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="doc header-row">
+    <a class="brand" href="index.html" aria-label="Kiln, home page">Kiln</a>
+    <nav class="site-nav" aria-label="Sections">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#browser">Mod browser</a>
+      <a href="index.html#news">What's new</a>
+      <a href="index.html#roadmap">Roadmap</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="mods.html">Mods</a>
+      <a href="https://github.com/Manager1215/horizon-kiln">GitHub</a>
+    </nav>
+    <a class="account-link" href="/account/signin" data-account-link>Sign in</a>
+  </div>
+  <div class="heat-line" aria-hidden="true"></div>
+</header>
+
+<main id="main" class="doc">
+  <div class="sheet account-sheet">
+    <div class="sheet-head">
+      <h1 class="sheet-title">Your data</h1>
+      <p class="sheet-note">What this site keeps about you, for how long, and how to delete it.</p>
+    </div>
+    <div class="sheet-body">
+      <section class="acct-section" aria-labelledby="d-visit">
+        <h2 id="d-visit">Visiting the site</h2>
+        <ul class="data-list">
+          <li><strong>The web server's log</strong> notes each request: the address it came from, the time, the page, the page that linked to it, and the browser's name. It is deleted after 14 days. For the account pages, the log leaves out the linking page and everything after the &ldquo;?&rdquo; in a page's address, where links from letters carry their one-time keys.</li>
+          <li><strong>No cookie</strong> is set while you only read. The site's one cookie is described below.</li>
+        </ul>
+      </section>
+
+      <section class="acct-section" aria-labelledby="d-account">
+        <h2 id="d-account">An account</h2>
+        <ul class="data-list">
+          <li><strong>The name</strong> you chose, which shows with your reports, and <strong>the date</strong> the account was made.</li>
+          <li><strong>Signing in with an e-mail address:</strong> the address, never shown to anyone, and the password as a scrypt hash, from which the password cannot be read back.</li>
+          <li><strong>Signing in with GitHub, Google, Discord or Modrinth:</strong> which service, and the id your account has there. Not your address and not your name there. That service knows you signed in here; its own rules cover what it keeps.</li>
+          <li><strong>Reports:</strong> the mod, whether it ran, the Kiln build, the mod version, your text, and when you wrote and last changed it. They are public, with your name and the date.</li>
+          <li><strong>A sign-up that is never confirmed</strong> is deleted after 48 hours.</li>
+        </ul>
+      </section>
+
+      <section class="acct-section" aria-labelledby="d-cookie">
+        <h2 id="d-cookie">The cookie</h2>
+        <p>One cookie, <code>__Host-kiln</code>, holds a random key that keeps you signed in; the server keeps only a hash of it. It is set when you sign in, or for 15 minutes while you sign in with another service or choose a new password. It lasts 30 days from your last visit, and signing out removes it. Scripts on the page cannot read it, and it does not go along with a form that another site sends here.</p>
+      </section>
+
+      <section class="acct-section" aria-labelledby="d-limits">
+        <h2 id="d-limits">Limits and letters</h2>
+        <ul class="data-list">
+          <li><strong>Limits</strong> on signing up, signing in and writing slow down robots and password guessing. For them the server keeps a hash of the address a request came from, with a salt that changes every day, and a hash of the e-mail address being tried, each for at most two days.</li>
+          <li><strong>Letters</strong> go out only to confirm an address or to choose a new password. They are sent from horizonkiln@gmail.com through Gmail, which keeps a copy in that mailbox's Sent folder.</li>
+        </ul>
+      </section>
+
+      <section class="acct-section" aria-labelledby="d-moderation">
+        <h2 id="d-moderation">Moderation</h2>
+        <p>Reports are for how a mod ran in Horizon with Kiln. The Kiln team deletes reports that are something else, such as spam or abuse, and can ban an account that keeps sending them. A banned account cannot sign in, and its reports are hidden; the account itself is kept so the ban holds. The server keeps a log of these steps, with who took them and the report or the account's name, for one year.</p>
+      </section>
+
+      <section class="acct-section" aria-labelledby="d-delete">
+        <h2 id="d-delete">Deleting it</h2>
+        <p>On <a href="/account/">your account's page</a>, &ldquo;Delete the account&rdquo; removes the account, all its reports, its e-mail address and password hash, its links to other services and its sessions, at once. We make no backups of the account database, so nothing comes back. If you cannot sign in any more, write to horizonkiln@gmail.com, and we delete the account once we can tell it is yours.</p>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="doc footer-grid">
+    <div>
+      <p class="footer-brand">Kiln</p>
+      <p>Java mods in Horizon.</p>
+      <p>License: <a href="https://github.com/Manager1215/horizon-kiln/blob/main/LICENSE">GPL-3.0</a> (0.1.0-alpha was MIT).</p>
+      <p>The GPL keeps Kiln open, not people away: to use its work in your project, or just to talk, write to <a href="mailto:horizonkiln@gmail.com">horizonkiln@gmail.com</a> or Discord <strong>manager1215</strong>.</p>
+    </div>
+    <nav aria-label="Project links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mods.html">Supported mods</a></li>
+        <li><a href="https://github.com/Manager1215/horizon-kiln">Source on GitHub</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Documents">
+      <ul>
+        <li><a href="https://github.com/Manager1215/horizon-kiln/releases">Releases</a></li>
+        <li><a href="https://github.com/Manager1215/horizon-kiln/blob/main/INSTALL.md">Install guide (INSTALL.md)</a></li>
+        <li><a href="https://github.com/horizon-rust/horizon">Horizon</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="doc">
+    <p class="disclaimer">Not affiliated with Horizon, Mojang or Microsoft. Minecraft is a trademark of Mojang/Microsoft. The timer is not an official speedrun.com timer.</p>
+    <p class="disclaimer">The one cookie here keeps you signed in, and is set only when you sign in. <a href="privacy.html" aria-current="page">Your data</a>.</p>
+  </div>
+</footer>
+</body>
+</html>

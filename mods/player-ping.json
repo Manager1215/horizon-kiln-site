@@ -1,0 +1,55 @@
+{
+  "id": "player-ping",
+  "name": "PlayerPing",
+  "version": "1.2.0",
+  "status": "planned",
+  "statusLabel": "Planned",
+  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "url": "https://modrinth.com/mod/player-ping",
+  "author": "Phoenix_28",
+  "description": "Port of the original Player-Ping plugin made by HoneyBerries.",
+  "needs": [
+    "net.fabricmc.api.DedicatedServerModInitializer",
+    "net.minecraft.world.scores.PlayerTeam",
+    "CommandSourceStack.getServer()",
+    "CommandSourceStack.getTextName()",
+    "EntityArgument.getPlayer()",
+    "EntityArgument.player()",
+    "MutableComponent.withStyle()",
+    "ServerboundPongPacket.getId()",
+    "MinecraftServer.getTickCount()",
+    "ServerPlayer.connection",
+    "ServerPlayer.getTeam()",
+    "ServerGamePacketListenerImpl.getRemoteAddress()",
+    "ServerGamePacketListenerImpl.latency()",
+    "ServerGamePacketListenerImpl.send()",
+    "PlayerList.broadcastAll()",
+    "PlayerList.getOpNames()"
+  ],
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+  "library": false,
+  "scanned": {
+    "date": "2026-11-11",
+    "kiln": "0.4.1",
+    "file": "player-ping-26.x-1.2.0.jar",
+    "published": "2026-11-06"
+  },
+  "reports": {
+    "works": 0,
+    "partly": 0,
+    "broken": 0,
+    "latest": []
+  },
+  "entrypoints": {
+    "server": 1
+  },
+  "mixins": true,
+  "depends": [
+    "fabric-api",
+    "fabricloader",
+    "java",
+    "minecraft"
+  ],
+  "lacks": 16
+}

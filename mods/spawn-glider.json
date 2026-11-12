@@ -1,0 +1,106 @@
+{
+  "id": "spawn-glider",
+  "name": "Spawn Glider",
+  "version": "1.0.0",
+  "status": "planned",
+  "statusLabel": "Planned",
+  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "url": "https://modrinth.com/mod/spawn-glider",
+  "author": "uOrb",
+  "description": "Adds a Glider that is like a Elytra with boost that is given to the player in the set location. Spawn Elytra",
+  "needs": [
+    "net.minecraft.commands.arguments.coordinates.Vec3Argument",
+    "net.minecraft.world.entity.player.Input",
+    "net.minecraft.world.item.component.Fireworks",
+    "CommandSourceStack.getServer()",
+    "DataComponents.FIREWORKS",
+    "ServerPlayer.getLastClientInput()",
+    "ServerPlayer.isFallFlying()",
+    "ServerPlayer.setInvulnerable()",
+    "ServerPlayer.startFallFlying()",
+    "PermissionLevel.byId()",
+    "Items.FIREWORK_ROCKET",
+    "CustomData.copyTag()",
+    "CustomData.update()"
+  ],
+  "roadmap": "Code next to data (0.3)",
+  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+  "library": false,
+  "scanned": {
+    "date": "2026-11-11",
+    "kiln": "0.4.1",
+    "file": "spawn-glider-1.0.0.jar",
+    "published": "2026-10-31"
+  },
+  "reports": {
+    "works": 0,
+    "partly": 0,
+    "broken": 0,
+    "latest": []
+  },
+  "run": {
+    "passed": false,
+    "date": "2026-11-05",
+    "kiln": "0.3.0",
+    "ticks": 0,
+    "hud": false,
+    "why": "Java did not start"
+  },
+  "entrypoints": {
+    "main": 1
+  },
+  "mixins": true,
+  "depends": [
+    "fabric-api",
+    "fabricloader",
+    "java",
+    "minecraft"
+  ],
+  "lacks": 13,
+  "development": {
+    "status": "planned",
+    "statusLabel": "Planned",
+    "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+    "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+    "needs": [
+      "Mixin",
+      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
+      "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
+      "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
+      "net.minecraft.commands.arguments.coordinates.Vec3Argument",
+      "net.minecraft.server.network.ServerGamePacketListenerImpl",
+      "net.minecraft.server.players.PlayerList",
+      "net.minecraft.world.item.component.Fireworks",
+      "ServerTickEvents.END_SERVER_TICK",
+      "CommandSourceStack.getServer()",
+      "DataComponents.FIREWORKS",
+      "MinecraftServer.getPlayerList()",
+      "ServerPlayer.isFallFlying()",
+      "ServerPlayer.setInvulnerable()",
+      "ServerPlayer.startFallFlying()",
+      "PermissionLevel.byId()",
+      "Items.FIREWORK_ROCKET",
+      "CustomData.copyTag()",
+      "CustomData.update()"
+    ],
+    "roadmap": "Code next to data (0.3), Mixin (0.5)",
+    "run": {
+      "passed": false,
+      "date": "2026-11-05",
+      "kiln": "development build 2026-11-05 (afb67d1)",
+      "ticks": 0,
+      "hud": false,
+      "why": "Java did not start"
+    },
+    "url": "https://modrinth.com/mod/spawn-glider",
+    "version": "1.0.0",
+    "lacks": 18,
+    "scanned": {
+      "date": "2026-11-05",
+      "kiln": "development build 2026-11-05 (afb67d1)",
+      "file": "spawn-glider-1.0.0.jar",
+      "published": "2026-10-31"
+    },
+    "build": "development build 2026-11-05 (afb67d1)"
+  }
+}

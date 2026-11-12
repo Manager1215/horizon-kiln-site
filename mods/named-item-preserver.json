@@ -1,0 +1,103 @@
+{
+  "id": "named-item-preserver",
+  "name": "Named Item Preserver",
+  "version": "0.1.3",
+  "status": "planned",
+  "statusLabel": "Planned",
+  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "url": "https://modrinth.com/mod/named-item-preserver",
+  "author": "rafal-molotkiewicz",
+  "description": "Makes item naming mechanically meaningful by preventing natural despawn of named items, while preserving all vanilla loss mechanics like lava and the void.",
+  "needs": [
+    "Mixin: 4 points inside the game's methods",
+    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+    "net.minecraft.world.item.component.BundleContents",
+    "ServerLifecycleEvents.SERVER_STARTED",
+    "DataComponents.BUNDLE_CONTENTS",
+    "MinecraftServer.execute()",
+    "ServerPlayer.getGameProfile()",
+    "NameAndId.<init>()",
+    "PlayerList.isOp()",
+    "Entity.getDisplayName()",
+    "ItemEntity.getCustomName()",
+    "ItemEntity.getItem()",
+    "ItemEntity.isCustomNameVisible()",
+    "ItemEntity.isRemoved()",
+    "ItemEntity.setCustomName()",
+    "ItemEntity.setCustomNameVisible()",
+    "ItemStack.getCustomName()",
+    "ItemStack.getItemName()",
+    "ItemContainerContents.nonEmptyItemCopyStream()"
+  ],
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
+  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+  "library": false,
+  "scanned": {
+    "date": "2026-11-11",
+    "kiln": "0.4.1",
+    "file": "named-item-preserver-0.1.3.jar",
+    "published": "2026-10-01"
+  },
+  "reports": {
+    "works": 0,
+    "partly": 0,
+    "broken": 0,
+    "latest": []
+  },
+  "run": {
+    "passed": false,
+    "date": "2026-11-05",
+    "kiln": "0.3.0",
+    "ticks": 0,
+    "hud": false,
+    "why": "Java did not start"
+  },
+  "entrypoints": {
+    "main": 1,
+    "client": 1,
+    "fabric-datagen": 1
+  },
+  "mixins": true,
+  "depends": [
+    "fabric-api",
+    "fabricloader",
+    "java",
+    "minecraft"
+  ],
+  "lacks": 18,
+  "development": {
+    "status": "planned",
+    "statusLabel": "Planned",
+    "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+    "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+    "needs": [
+      "Mixin",
+      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+      "net.minecraft.server.players.PlayerList",
+      "ServerLifecycleEvents.SERVER_STARTED",
+      "MinecraftServer.execute()",
+      "MinecraftServer.getPlayerList()",
+      "ServerPlayer.getGameProfile()",
+      "NameAndId.<init>()"
+    ],
+    "roadmap": "Code next to data (0.3), Mixin (0.5)",
+    "run": {
+      "passed": false,
+      "date": "2026-11-05",
+      "kiln": "development build 2026-11-05 (afb67d1)",
+      "ticks": 0,
+      "hud": false,
+      "why": "Java did not start"
+    },
+    "url": "https://modrinth.com/mod/named-item-preserver",
+    "version": "0.1.3",
+    "lacks": 7,
+    "scanned": {
+      "date": "2026-11-05",
+      "kiln": "development build 2026-11-05 (afb67d1)",
+      "file": "named-item-preserver-0.1.3.jar",
+      "published": "2026-10-01"
+    },
+    "build": "development build 2026-11-05 (afb67d1)"
+  }
+}

@@ -1,0 +1,92 @@
+# Rebuilds the mod catalogue pages and uploads the site.
+# Inputs: the catalogue branch of Manager1215/horizon-kiln, and this repo's catalogue-dev and
+# hand-checks branches, which the Kiln repos push to. Runs when they send a dispatch, every
+# morning as a fallback, and by hand.
+name: Site data
+
+on:
+  repository_dispatch:
+    types: [catalogue]
+  schedule:
+    - cron: "40 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - name: Fetch the release catalogue
+        id: release
+        run: |
+          if git ls-remote --exit-code --heads https://github.com/Manager1215/horizon-kiln.git catalogue >/dev/null 2>&1; then
+            git clone -q --depth 1 --branch catalogue https://github.com/Manager1215/horizon-kiln.git /tmp/catalogue
+            echo "folder=/tmp/catalogue" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch the dev catalogue
+        id: dev
+        run: |
+          if git fetch -q --depth 1 origin refs/heads/catalogue-dev:refs/remotes/origin/catalogue-dev 2>/dev/null; then
+            git worktree add -q --detach /tmp/catalogue-dev origin/catalogue-dev
+            echo "folder=/tmp/catalogue-dev" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch the hand checks
+        id: hand
+        run: |
+          if git fetch -q --depth 1 origin refs/heads/hand-checks:refs/remotes/origin/hand-checks 2>/dev/null; then
+            mkdir -p /tmp/hand-checks
+            git show origin/hand-checks:hand-checks.json > /tmp/hand-checks/hand-checks.json
+            echo "file=/tmp/hand-checks/hand-checks.json" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build and validate
+        run: |
+          python3 .github/scripts/build-data.py \
+            ${{ steps.release.outputs.folder && format('--catalogue {0}', steps.release.outputs.folder) || '' }} \
+            ${{ steps.dev.outputs.folder && format('--catalogue-dev {0}', steps.dev.outputs.folder) || '' }} \
+            ${{ steps.hand.outputs.file && format('--hand-checks {0}', steps.hand.outputs.file) || '' }} \
+            --out .
+          python3 .github/scripts/build-pages.py --out .
+
+      - name: Commit
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add mods.json mods stats.json changelog.json sitemap.xml robots.txt
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -q -m "Data: catalogue and changelog, $(date -u +%Y-%m-%d)"
+            git push -q origin HEAD:main
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # The deploy user's key is locked to rrsync on the web root, so it can't do anything else.
+      - name: Upload
+        if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        run: |
+          if [ -z "$DEPLOY_HOST" ]; then echo "No deploy secrets, skipping upload."; exit 0; fi
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/deploy && chmod 600 ~/.ssh/deploy
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          rsync -rlt --delete -e "ssh -i ~/.ssh/deploy" \
+            --exclude '.*' --exclude README.md --exclude server/ \
+            ./ "$DEPLOY_HOST:"

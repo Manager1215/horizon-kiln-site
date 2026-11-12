@@ -1,0 +1,88 @@
+{
+  "id": "revert-zombie-reinforcement",
+  "name": "Revert Zombie Reinforcement",
+  "version": "2.0.0+26.3",
+  "status": "planned",
+  "statusLabel": "Planned",
+  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "url": "https://modrinth.com/mod/revert-zombie-reinforcement",
+  "author": "Strange-Quark",
+  "description": "Restores pre-1.21.2 zombie reinforcement behavior. Reinforcements now always spawn regular zombies, not subtypes like drowned or husks.",
+  "needs": [
+    "Mixin: 1 point inside the game's methods",
+    "net.minecraft.world.entity.monster.zombie.Zombie",
+    "BuiltInRegistries.GAME_RULE",
+    "ServerLevel.getGameRules()",
+    "EntityTypes.ZOMBIE",
+    "FeatureFlagSet.of()",
+    "GameRuleCategory.MOBS",
+    "GameRuleTypeVisitor.visitBoolean()",
+    "GameRules.get()"
+  ],
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
+  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+  "library": false,
+  "scanned": {
+    "date": "2026-11-11",
+    "kiln": "0.4.1",
+    "file": "revertzombiereinforcement-2.0.0+26.3-fabric.jar",
+    "published": "2026-11-03"
+  },
+  "reports": {
+    "works": 0,
+    "partly": 0,
+    "broken": 0,
+    "latest": []
+  },
+  "run": {
+    "passed": false,
+    "date": "2026-11-05",
+    "kiln": "0.3.0",
+    "ticks": 0,
+    "hud": false,
+    "why": "Java did not start"
+  },
+  "entrypoints": {
+    "main": 1
+  },
+  "mixins": true,
+  "depends": [
+    "fabric-api",
+    "fabricloader",
+    "java",
+    "minecraft"
+  ],
+  "lacks": 8,
+  "development": {
+    "status": "planned",
+    "statusLabel": "Planned",
+    "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+    "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+    "needs": [
+      "Mixin",
+      "BuiltInRegistries.GAME_RULE",
+      "FeatureFlagSet.of()",
+      "GameRuleCategory.MOBS",
+      "GameRuleTypeVisitor.visitBoolean()"
+    ],
+    "roadmap": "Code next to data (0.3), Mixin (0.5)",
+    "run": {
+      "passed": false,
+      "date": "2026-11-05",
+      "kiln": "development build 2026-11-05 (afb67d1)",
+      "ticks": 0,
+      "hud": false,
+      "why": "Java did not start"
+    },
+    "url": "https://modrinth.com/mod/revert-zombie-reinforcement",
+    "version": "2.0.0+26.3",
+    "lacks": 4,
+    "scanned": {
+      "date": "2026-11-05",
+      "kiln": "development build 2026-11-05 (afb67d1)",
+      "file": "revertzombiereinforcement-2.0.0+26.3-fabric.jar",
+      "published": "2026-11-03"
+    },
+    "build": "development build 2026-11-05 (afb67d1)"
+  }
+}

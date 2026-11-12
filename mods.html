@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supported mods — Kiln</title>
+<meta name="description" content="Java (Fabric) mods and what Kiln can do with each one today: tried in the game, should work, planned, or not checked yet. Searchable, with a filter by status.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3eee6">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#15110d">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Supported mods — Kiln">
+<meta property="og:description" content="Java (Fabric) mods and what Kiln can do with each one today.">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="archivo-expanded.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js");</script>
+<script src="site.js" defer></script>
+<script src="mods.js" defer></script>
+<noscript><style>[data-mods-loading] { display: none; }</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="doc header-row">
+    <a class="brand" href="index.html" aria-label="Kiln, home page">Kiln</a>
+    <nav class="site-nav" aria-label="Sections">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#browser">Mod browser</a>
+      <a href="index.html#news">What's new</a>
+      <a href="index.html#roadmap">Roadmap</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="mods.html" aria-current="page">Mods</a>
+      <a href="https://github.com/Manager1215/horizon-kiln">GitHub</a>
+    </nav>
+    <a class="account-link" href="/account/signin" data-account-link>Sign in</a>
+  </div>
+  <div class="heat-line" aria-hidden="true"></div>
+</header>
+
+<main id="main" class="doc" data-mods-page>
+  <div class="page-head">
+    <h1 class="page-title">Supported mods</h1>
+    <p class="lead">Java (Fabric) mods and what Kiln can do with each one today. Each entry says exactly how far it has been checked, nothing more; the list grows with each Kiln release.</p>
+    <p class="page-meta" data-mods-meta></p>
+  </div>
+
+  <form class="toolbar" data-mods-toolbar hidden>
+    <div class="field search">
+      <label for="mods-search">Search by name</label>
+      <div class="search-box">
+        <input id="mods-search" type="search" autocomplete="off" spellcheck="false" placeholder="Mod name">
+      </div>
+    </div>
+    <fieldset class="field field-status">
+      <legend>Status</legend>
+      <div class="filter" data-mods-filter></div>
+    </fieldset>
+    <p class="switch"><label><input type="checkbox" data-mods-dev> Count the current development build instead of the release</label></p>
+  </form>
+
+  <p class="results" data-mods-results aria-live="polite"></p>
+
+  <details class="legend">
+    <summary>What the statuses mean</summary>
+    <dl class="legend-list">
+      <div><dt><span class="mark mark-ok">Works</span></dt><dd>Tried in the game with Kiln. The entry says what works.</dd></div>
+      <div><dt><span class="mark mark-next mark-ok">next: Works</span></dt><dd>A second, quieter mark: what the current development build does when it differs from the release. The switch above counts that build instead; see the <a href="index.html#faq-dev">FAQ</a>.</dd></div>
+      <div><dt><span class="mark mark-maybe">Should work</span></dt><dd>An automatic test ran the mod on Kiln&rsquo;s <a href="index.html#faq-stand">test stand</a> (its own code, with a scripted minute of play in place of the game) and nothing broke, and everything it called is written in Kiln: it most likely works. Nobody has checked it in the game by hand yet; that is &ldquo;Works&rdquo;.</dd></div>
+      <div><dt><span class="mark mark-planned">Planned</span></dt><dd>Calls something that is on Kiln's roadmap. Parts of it may already run.</dd></div>
+      <div><dt><span class="mark mark-none">No plans yet</span></dt><dd>Calls something that is not on Kiln's roadmap yet. Parts of it may already run.</dd></div>
+      <div><dt><span class="mark mark-unknown">Not checked</span></dt><dd>In the catalogue, not checked yet.</dd></div>
+      <div><dt><span class="mark mark-bad">Doesn't work</span></dt><dd>Tried in the game with Kiln; it does not work yet.</dd></div>
+      <div><dt><span class="mark mark-dev">In development</span></dt><dd>Kiln is being built with this mod. Not released.</dd></div>
+    </dl>
+  </details>
+
+  <noscript>
+    <p class="notice">The list is read from <a href="mods.json">mods.json</a> and needs JavaScript to be searched and filtered. Without it, open that file directly.</p>
+  </noscript>
+
+  <ol class="mod-list" data-mods-list aria-label="Supported mods">
+    <li class="mod-empty" data-mods-loading><p>Loading the list of mods.</p></li>
+  </ol>
+
+  <div class="list-foot">
+    <button class="btn-quiet" type="button" data-mods-more hidden>Show more</button>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="doc footer-grid">
+    <div>
+      <p class="footer-brand">Kiln</p>
+      <p>Java mods in Horizon.</p>
+      <p>License: <a href="https://github.com/Manager1215/horizon-kiln/blob/main/LICENSE">GPL-3.0</a> (0.1.0-alpha was MIT).</p>
+      <p>The GPL keeps Kiln open, not people away: to use its work in your project, or just to talk, write to <a href="mailto:horizonkiln@gmail.com">horizonkiln@gmail.com</a> or Discord <strong>manager1215</strong>.</p>
+    </div>
+    <nav aria-label="Project links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="https://github.com/Manager1215/horizon-kiln">Source on GitHub</a></li>
+        <li><a href="https://github.com/Manager1215/horizon-kiln/releases">Releases</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Documents">
+      <ul>
+        <li><a href="https://github.com/Manager1215/horizon-kiln/blob/main/INSTALL.md">Install guide (INSTALL.md)</a></li>
+        <li><a href="https://github.com/Manager1215/horizon-kiln/blob/main/ROADMAP.md">Roadmap (ROADMAP.md)</a></li>
+        <li><a href="https://github.com/horizon-rust/horizon">Horizon</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="doc">
+    <p class="disclaimer">Not affiliated with Horizon, Mojang or Microsoft. Minecraft is a trademark of Mojang/Microsoft. The timer is not an official speedrun.com timer.</p>
+    <p class="disclaimer">The one cookie here keeps you signed in, and is set only when you sign in. <a href="privacy.html">Your data</a>.</p>
+  </div>
+</footer>
+</body>
+</html>

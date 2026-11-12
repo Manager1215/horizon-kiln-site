@@ -1,0 +1,106 @@
+{
+  "id": "scripts-chunk-loaders",
+  "name": "Script's Chunk Loaders",
+  "version": "mc26.3-0.12.0",
+  "status": "planned",
+  "statusLabel": "Planned",
+  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "url": "https://modrinth.com/mod/scripts-chunk-loaders",
+  "author": "scriptcoded",
+  "description": "Make minecarts act as chunk loaders using redstone.",
+  "needs": [
+    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+    "net.minecraft.server.level.ChunkMap",
+    "net.minecraft.server.level.Ticket",
+    "net.minecraft.world.entity.EntitySelector",
+    "net.minecraft.world.entity.vehicle.minecart.MinecartChest",
+    "net.minecraft.world.level.block.entity.BlockEntityTypes",
+    "ServerLifecycleEvents.SERVER_STARTED",
+    "DataComponents.CUSTOM_NAME",
+    "BuiltInRegistries.TICKET_TYPE",
+    "ServerChunkCache.addTicket()",
+    "ServerLevel.getEntitiesOfClass()",
+    "ServerLevel.getForceLoadedChunks()",
+    "ServerLevel.sendParticles()",
+    "Entity.<init>()",
+    "Entity.chunkPosition()",
+    "Entity.remove()",
+    "EntityTypes.CHEST_MINECART",
+    "Items.AMETHYST_SHARD",
+    "Items.GLOWSTONE",
+    "Items.SHROOMLIGHT",
+    "DispenserBlockEntity.getItem()"
+  ],
+  "roadmap": "Code next to data (0.3), Machines (0.4)",
+  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+  "library": false,
+  "scanned": {
+    "date": "2026-11-11",
+    "kiln": "0.4.1",
+    "file": "scripts-chunk-loaders-mc26.3-0.12.0.jar",
+    "published": "2026-09-15"
+  },
+  "reports": {
+    "works": 0,
+    "partly": 0,
+    "broken": 0,
+    "latest": []
+  },
+  "run": {
+    "passed": false,
+    "date": "2026-11-05",
+    "kiln": "0.3.0",
+    "ticks": 0,
+    "hud": false,
+    "why": "Java did not start"
+  },
+  "entrypoints": {
+    "main": 1
+  },
+  "mixins": true,
+  "depends": [
+    "fabric-api",
+    "fabricloader",
+    "java",
+    "minecraft"
+  ],
+  "lacks": 21,
+  "development": {
+    "status": "planned",
+    "statusLabel": "Planned",
+    "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+    "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+    "needs": [
+      "Mixin",
+      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndLevelTick",
+      "net.minecraft.server.level.ChunkMap",
+      "net.minecraft.server.level.Ticket",
+      "ServerLifecycleEvents.SERVER_STARTED",
+      "ServerTickEvents.END_LEVEL_TICK",
+      "BuiltInRegistries.TICKET_TYPE",
+      "ServerChunkCache.addTicket()",
+      "ServerLevel.getForceLoadedChunks()",
+      "Entity.chunkPosition()"
+    ],
+    "roadmap": "Code next to data (0.3), Mixin (0.5)",
+    "run": {
+      "passed": false,
+      "date": "2026-11-05",
+      "kiln": "development build 2026-11-05 (afb67d1)",
+      "ticks": 0,
+      "hud": false,
+      "why": "Java did not start"
+    },
+    "url": "https://modrinth.com/mod/scripts-chunk-loaders",
+    "version": "mc26.3-0.12.0",
+    "lacks": 10,
+    "scanned": {
+      "date": "2026-11-05",
+      "kiln": "development build 2026-11-05 (afb67d1)",
+      "file": "scripts-chunk-loaders-mc26.3-0.12.0.jar",
+      "published": "2026-09-15"
+    },
+    "build": "development build 2026-11-05 (afb67d1)"
+  }
+}

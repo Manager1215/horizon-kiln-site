@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiln — Java mods in Horizon</title>
+<meta name="description" content="Kiln runs Java (Fabric) mods in Horizon, the Rust rewrite of Minecraft: Java Edition 26.3. A native Horizon mod, open source under GPL-3.0.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3eee6">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#15110d">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kiln — Java mods in Horizon">
+<meta property="og:description" content="Kiln runs Java (Fabric) mods in Horizon, the Rust rewrite of Minecraft: Java Edition 26.3. Open source.">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="archivo-expanded.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js");</script>
+<script src="site.js" defer></script>
+<script src="mods.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="doc header-row">
+    <a class="brand" href="#top" aria-label="Kiln, back to top">Kiln</a>
+    <nav class="site-nav" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#browser">Mod browser</a>
+      <a href="#news">What's new</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="mods.html">Mods</a>
+      <a href="https://github.com/Manager1215/horizon-kiln">GitHub</a>
+    </nav>
+    <a class="account-link" href="/account/signin" data-account-link>Sign in</a>
+  </div>
+  <div class="heat-line" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+
+  <section class="doc hero" id="top" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="hero-meta"><span class="mark mark-fire" data-latest-mark>Release 0.4.1</span> Tested in the game on Linux; 0.3.0 on macOS (Apple Silicon), 0.2.0 also on Windows 11.</p>
+      <h1 class="hero-title" id="hero-title">Kiln</h1>
+      <p class="hero-tagline">Java mods in Horizon</p>
+      <p class="hero-sub">Kiln runs Java (Fabric) mods in <a href="https://github.com/horizon-rust/horizon">Horizon</a>, the Rust rewrite of Minecraft: Java Edition 26.3, the way Proton runs Windows games on Linux: the mod's code runs as it is, and its calls to Minecraft's classes and the Fabric API become calls into Horizon.</p>
+      <div class="actions">
+        <a class="btn-fire" href="https://github.com/Manager1215/horizon-kiln/releases">Download<span class="visually-hidden"> from GitHub Releases</span></a>
+        <a class="link-plain" href="https://github.com/Manager1215/horizon-kiln/blob/main/INSTALL.md">Install guide</a>
+        <a class="link-plain" href="https://github.com/Manager1215/horizon-kiln">Source code</a>
+      </div>
+      <p class="hero-note"><span data-latest-note>Latest public release 0.4.1, 9 November 2026.</span> Every release proof of 0.4.0 ran in the game on Linux.</p>
+    </div>
+    <figure class="hero-art">
+      <svg class="kiln-art" viewBox="0 0 440 380" role="img" aria-label="A stone kiln with a fire burning in its arched mouth. A box labelled .jar stands beside it, and sparks rise from the chimney." xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gFire" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0" stop-color="#ff3d00"/>
+            <stop offset=".55" stop-color="#ff8a1f"/>
+            <stop offset="1" stop-color="#ffd166"/>
+          </linearGradient>
+          <linearGradient id="gCore" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0" stop-color="#ff9a2e"/>
+            <stop offset="1" stop-color="#fff3c4"/>
+          </linearGradient>
+          <radialGradient id="gGlow">
+            <stop offset="0" stop-color="#ff7a1f" stop-opacity=".75"/>
+            <stop offset="1" stop-color="#ff7a1f" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="gFirelight" cx="220" cy="312" r="200" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#ff7a1f" stop-opacity=".6"/>
+            <stop offset=".45" stop-color="#ff7a1f" stop-opacity=".2"/>
+            <stop offset="1" stop-color="#ff7a1f" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="gShade" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="var(--art-shade)" stop-opacity=".3"/>
+            <stop offset=".32" stop-color="var(--art-shade)" stop-opacity="0"/>
+            <stop offset=".68" stop-color="var(--art-shade)" stop-opacity="0"/>
+            <stop offset="1" stop-color="var(--art-shade)" stop-opacity=".34"/>
+          </linearGradient>
+          <linearGradient id="gLip" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0" stop-color="#ff8a1f" stop-opacity=".95"/>
+            <stop offset="1" stop-color="#ff8a1f" stop-opacity="0"/>
+          </linearGradient>
+          <pattern id="pStone" width="64" height="36" patternUnits="userSpaceOnUse">
+            <rect x="2" y="2" width="28" height="14" rx="3" fill="var(--art-stone)"/>
+            <rect x="34" y="2" width="28" height="14" rx="3" fill="var(--art-stone)"/>
+            <rect x="-14" y="20" width="28" height="14" rx="3" fill="var(--art-stone)"/>
+            <rect x="18" y="20" width="28" height="14" rx="3" fill="var(--art-stone)"/>
+            <rect x="50" y="20" width="28" height="14" rx="3" fill="var(--art-stone)"/>
+          </pattern>
+          <clipPath id="cDome"><path d="M90 318V200a130 130 0 0 1 260 0v118z"/></clipPath>
+          <clipPath id="cMouth"><path d="M162 318v-66a58 58 0 0 1 116 0v66z"/></clipPath>
+        </defs>
+
+        <rect x="16" y="318" width="408" height="20" rx="6" fill="var(--art-ground)"/>
+        <rect x="16" y="334" width="408" height="10" rx="5" fill="var(--art-ground-2)"/>
+        <g class="art-lit">
+          <ellipse class="art-glow" cx="220" cy="326" rx="190" ry="34" fill="url(#gGlow)"/>
+        </g>
+
+        <rect x="198" y="64" width="44" height="100" fill="var(--art-stone-2)"/>
+        <rect x="198" y="64" width="44" height="100" fill="url(#pStone)"/>
+        <rect x="190" y="54" width="60" height="14" rx="3" fill="var(--art-stone)"/>
+
+        <path d="M90 318V200a130 130 0 0 1 260 0v118z" fill="var(--art-stone-2)"/>
+        <rect x="90" y="70" width="260" height="248" fill="url(#pStone)" clip-path="url(#cDome)"/>
+        <path d="M90 318V200a130 130 0 0 1 260 0v118z" fill="url(#gShade)"/>
+        <g class="art-lit">
+          <path d="M90 318V200a130 130 0 0 1 260 0v118z" fill="url(#gFirelight)"/>
+        </g>
+        <path d="M90 200a130 130 0 0 1 260 0" fill="none" stroke="var(--art-edge)" stroke-width="3" opacity=".7"/>
+
+        <path d="M162 318v-66a58 58 0 0 1 116 0v66z" fill="var(--art-dark)"/>
+        <g class="art-lit">
+          <g clip-path="url(#cMouth)">
+            <ellipse cx="220" cy="304" rx="84" ry="62" fill="url(#gGlow)"/>
+            <g transform="translate(39 60)">
+              <path class="flame" d="M180 256C150 256 140 230 150 210C155 220 162 222 166 214C160 195 166 180 182 166C182 185 196 192 200 204C206 196 206 188 202 182C218 196 222 230 208 246C200 256 190 258 180 256Z" fill="url(#gFire)"/>
+              <path class="flame flame-core" d="M180 254C164 252 158 236 164 224C166 232 172 234 174 228C170 216 174 206 184 198C184 210 192 214 194 222C198 216 198 212 196 208C206 220 204 244 194 250C190 254 184 256 180 254Z" fill="url(#gCore)"/>
+            </g>
+          </g>
+          <path d="M162 318v-66a58 58 0 0 1 116 0v66" fill="none" stroke="url(#gLip)" stroke-width="5" opacity=".85"/>
+          <g fill="#ffb347">
+            <circle class="ember" cx="212" cy="46" r="2.6"/>
+            <circle class="ember" cx="228" cy="40" r="2"/>
+            <circle class="ember" cx="236" cy="50" r="1.6"/>
+            <circle class="ember" cx="205" cy="36" r="1.6"/>
+            <circle class="ember" cx="221" cy="30" r="1.3"/>
+          </g>
+          <g fill="none" stroke="var(--art-wisp)" stroke-width="2" stroke-linecap="round" opacity=".55">
+            <path class="wisp" d="M208 46c-7-7 7-13 0-22"/>
+            <path class="wisp" d="M232 42c7-7-7-13 0-22"/>
+          </g>
+        </g>
+
+        <g transform="translate(34 262)">
+          <rect x="0" y="8" width="48" height="48" rx="7" fill="var(--art-jar)" stroke="var(--art-jar-line)" stroke-width="2"/>
+          <path d="M0 22h48" stroke="var(--art-jar-line)" stroke-width="2"/>
+          <circle cx="24" cy="15" r="2" fill="var(--art-jar-line)"/>
+          <text x="24" y="45" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12.5" font-weight="700" fill="var(--art-jar-text)">.jar</text>
+        </g>
+      </svg>
+    </figure>
+  </section>
+
+  <section id="how" class="doc sheet" aria-labelledby="how-title">
+    <div class="sheet-head">
+      <h2 class="sheet-title" id="how-title">How it works</h2>
+      <p class="sheet-note">You need the Horizon launcher with 26.3 prepared, and Java 25. The steps are in <a href="https://github.com/Manager1215/horizon-kiln/blob/main/INSTALL.md">INSTALL.md</a> in the repository, where they stay current.</p>
+    </div>
+    <div class="sheet-body">
+      <p class="lead">Kiln is a native Horizon mod. It starts Java beside the game, not inside it, runs each mod's entrypoints from its <code>fabric.mod.json</code>, gives mods the game's state every tick, and draws what they draw on the HUD.</p>
+
+      <ol class="steps">
+        <li>
+          <span class="step-n" aria-hidden="true">1</span>
+          <div>
+            <h3>Install Kiln once</h3>
+            <p>The Horizon launcher builds Kiln into the game, after you agree to it. Native Horizon mods run without a sandbox, so read the code first.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-n" aria-hidden="true">2</span>
+          <div>
+            <h3>Drop in your mods</h3>
+            <p>Put <code>.jar</code> mods into <code>&lt;game folder&gt;/kiln/mods/</code>.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-n" aria-hidden="true">3</span>
+          <div>
+            <h3>Play</h3>
+            <p>Kiln runs each mod's entrypoints, gives it the game's state every tick, and draws what it draws on the HUD.</p>
+          </div>
+        </li>
+      </ol>
+
+      <figure class="flow-figure">
+        <ol class="flow" aria-label="The path from a Fabric mod to Horizon">
+          <li>
+            <svg class="picto" viewBox="0 0 80 64" aria-hidden="true" focusable="false">
+              <rect x="16" y="10" width="48" height="48" rx="6" fill="var(--art-jar)" stroke="var(--art-jar-line)" stroke-width="2"/>
+              <path d="M16 24h48" stroke="var(--art-jar-line)" stroke-width="2"/>
+              <circle cx="40" cy="17" r="2" fill="var(--art-jar-line)"/>
+              <text x="40" y="47" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="700" fill="var(--art-jar-text)">.jar</text>
+            </svg>
+            <strong>Fabric mod</strong>
+            <span>a <code>.jar</code>, unchanged</span>
+          </li>
+          <li>
+            <svg class="picto" viewBox="0 0 80 64" aria-hidden="true" focusable="false">
+              <rect x="4" y="56" width="72" height="6" rx="2" fill="var(--art-ground)"/>
+              <rect x="34" y="12" width="12" height="20" fill="var(--art-stone-2)"/>
+              <path d="M14 56V36a26 26 0 0 1 52 0v20z" fill="var(--art-stone)"/>
+              <path d="M30 56V46a10 10 0 0 1 20 0v10z" fill="var(--art-dark)"/>
+              <path class="flame" d="M40 55c-5-1-7-5-5-9 1 2 2 3 3 2-1-4 1-6 4-8-1 4 2 5 3 7 1-2 1-3 0-4 3 2 4 7 2 10-1 2-4 3-7 2z" fill="url(#gFire)"/>
+            </svg>
+            <strong>Kiln</strong>
+            <span>Java, beside the game</span>
+          </li>
+          <li>
+            <svg class="picto" viewBox="0 0 80 64" aria-hidden="true" focusable="false">
+              <path d="M24 44a16 16 0 0 1 32 0z" fill="var(--fire)"/>
+              <rect x="4" y="44" width="72" height="18" rx="3" fill="var(--art-ground)"/>
+              <path d="M4 44h72" stroke="var(--art-edge)" stroke-width="2"/>
+            </svg>
+            <strong>Horizon</strong>
+            <span>Rust</span>
+          </li>
+        </ol>
+        <figcaption class="flow-caption">The mod's code runs as it is. Its calls to Minecraft's classes and the Fabric API become calls into Horizon.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="browser" class="doc sheet" aria-labelledby="browser-title">
+    <div class="sheet-head">
+      <h2 class="sheet-title" id="browser-title">Kiln + Horizon's mod browser</h2>
+      <p class="sheet-note"><span class="mark mark-maybe">Partly</span> is the mod browser's mark for mods whose features need Java code: the launcher imported the data, the code did not come along. With Kiln installed, that code runs too, as far as Kiln covers today.</p>
+    </div>
+    <div class="sheet-body">
+      <p class="lead"><strong>Horizon brings the data, Kiln the code.</strong> Kiln and Horizon's mod browser work together, each taking one half of a Java mod.</p>
+      <div class="halves">
+        <div>
+          <h3>Data: Horizon</h3>
+          <p>Horizon's launcher carries a Java mod's data into a Horizon content mod.</p>
+          <p class="items">Blocks, items, recipes, structures.</p>
+        </div>
+        <div>
+          <h3>Code: Kiln</h3>
+          <p>Mods whose features need Java code are marked Partly in the mod browser. Kiln runs that code, beside the game.</p>
+          <p class="items">Entrypoints, the game's state every tick, HUD drawing; on the single-player server, items, events, saved data, loot and blocks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="news" class="doc sheet" aria-labelledby="news-title">
+    <div class="sheet-head">
+      <h2 class="sheet-title" id="news-title">What's new</h2>
+      <p class="sheet-note">The latest releases, in short. The full history is in <a href="https://github.com/Manager1215/horizon-kiln/blob/main/CHANGELOG.md">CHANGELOG.md</a>; the files are on <a href="https://github.com/Manager1215/horizon-kiln/releases">Releases</a>.</p>
+    </div>
+    <div class="sheet-body">
+      <ol class="releases" data-changelog>
+        <li class="release">
+          <div class="release-head">
+            <p class="release-version">0.4.0</p>
+            <p class="release-date"><time datetime="2026-11-08">8 November 2026</time></p>
+          </div>
+          <div class="release-body">
+            <p class="release-summary">Kiln 0.4.0 applies Java mods' mixins with the Mixin library itself, runs Tech Reborn's machines through their cables and hands one machine's output to the next, carries mods' own packets between the player, the server and a friend on LAN, and lets mods' keys be bound in Options &gt; Mods.</p>
+            <details class="release-more">
+              <summary><span class="when-closed">Show more</span><span class="when-open">Show less</span></summary>
+              <div class="release-more-body">
+                <ul class="release-items">
+                  <li>Mixin, every kind: mods' mixins are applied by FabricMC's Mixin and MixinExtras, as under Fabric. The game's methods mods hook most run where the game runs them, the HUD's layers among them, and mods that are only mixins (Minimal Armor HUD) run.</li>
+                  <li>Machines: Tech Reborn's cables carry a solar panel's energy to a machine, and a machine hands its output to the next by itself.</li>
+                  <li>Networking: mods' own packets go between the player and the server, in single player and to a friend on LAN; a server finds the players it sends to, and hears them join and leave.</li>
+                  <li>Mods' keys: each Java mod's keys are on its page in Options &gt; Mods, where you bind them.</li>
+                  <li>Structure mods read as Minecraft reads them: ids without a namespace, 26.3's block states, and pack overlays made for 26.3 (Mingen, Small Structures).</li>
+                  <li>A mod's chat lines keep their colours, and "No Java found" says what to install and where to point Kiln.</li>
+                  <li>Measured: the testbench's 139 probes all pass in the game, and 154 of the 160 mods known to work were tried again in the game on 0.4.0. The six that broke since 0.3.0 are known issues for 0.4.1 (CHANGELOG.md).</li>
+                  <li>Kiln comes without mods, and the speedrun timer is no longer part of Kiln's release.</li>
+                  <li>Still on Horizon Nightly 2026-11-04 (--version nightly-2026-11-04-3fb4c31), as 0.3.0.</li>
+                </ul>
+                <p class="release-links"><a href="https://github.com/Manager1215/horizon-kiln/releases/tag/v0.4.0">Release notes</a></p>
+                <p class="release-others-title">Smaller releases</p>
+                <ul class="release-small-list">
+                  <li><span class="release-small-version">0.3.0</span> <time class="release-small-date" datetime="2026-11-04">4 November 2026</time><br>Kiln 0.3.0 runs a block mod from Modrinth whose blocks Horizon's mod browser carries, declares the blocks and items the browser leaves out so a LAN guest sees them, gives each Java mod its own switch in Options &gt; Mods, and runs Tech Reborn's first machines. <a href="https://github.com/Manager1215/horizon-kiln/releases/tag/v0.3.0">Release notes</a></li>
+                  <li><span class="release-small-version">0.2.0</span> <time class="release-small-date" datetime="2026-11-04">4 November 2026</time><br>Kiln 0.2.0 runs a mod from Modrinth unchanged, brings structure mods into Horizon's worlds, and runs the code of mods Horizon's mod browser marks Partly. <a href="https://github.com/Manager1215/horizon-kiln/releases/tag/v0.2.0">Release notes</a></li>
+                  <li><span class="release-small-version">0.1.1-alpha</span> <time class="release-small-date" datetime="2026-11-02">2 November 2026</time><br>Kiln 0.1.1 and Kiln Speedrun Timer 0.1.1-alpha: the fixes since the first alpha, proven on Horizon Nightly 2026-11-01 · c9d474d (0.1.0 was pinned to 2026-10-29 · 5e391eb). <a href="https://github.com/Manager1215/horizon-kiln/releases/tag/v0.1.1-alpha">Release notes</a></li>
+                  <li><span class="release-small-version">0.1.0-alpha</span> <time class="release-small-date" datetime="2026-10-29">29 October 2026</time><br>First alpha: Kiln 0.1.0 and Kiln Speedrun Timer 0.1.0-alpha. <a href="https://github.com/Manager1215/horizon-kiln/releases/tag/v0.1.0-alpha">Release notes</a></li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="roadmap" class="doc sheet" aria-labelledby="roadmap-title">
+    <div class="sheet-head">
+      <h2 class="sheet-title" id="roadmap-title">Roadmap</h2>
+      <p class="sheet-note">The goal is Tech Reborn, an industrial mod, running unchanged. The details are in <a href="https://github.com/Manager1215/horizon-kiln/blob/main/ROADMAP.md">ROADMAP.md</a>. No dates are promised.</p>
+    </div>
+    <div class="sheet-body wide">
+      <ol class="gauge">
+        <li>
+          <p class="g-version">0.1</p>
+          <h3 class="g-title">Alpha</h3>
+          <p>0.1.0-alpha and 0.1.1-alpha are out. Entrypoints, the game's state every tick, the HUD.</p>
+        </li>
+        <li>
+          <p class="g-version">0.2</p>
+          <h3 class="g-title">Measure it</h3>
+          <p>0.2.0 is out. Minecraft's libraries for mods, a testbench of 139 probes, the first mods from Modrinth.</p>
+        </li>
+        <li>
+          <p class="g-version">0.3</p>
+          <h3 class="g-title">Code next to data</h3>
+          <p>0.3.0 is out. Mods' code next to Horizon's import of their data: a block mod from Modrinth, content declared in code for LAN guests, each Java mod's switch, Tech Reborn's first machines.</p>
+        </li>
+        <li class="is-current" aria-current="step">
+          <p class="g-version">0.4 <span class="g-now">now</span></p>
+          <h3 class="g-title">Machines</h3>
+          <p>0.4.0 is out. Tech Reborn's cables and one machine's output into the next, mods' own packets in single player and on LAN, mods' keys.</p>
+        </li>
+        <li>
+          <p class="g-version">0.5</p>
+          <h3 class="g-title">Mixin</h3>
+          <p>Started in 0.4.0: mods' mixins applied by the Mixin library itself. Next: mixins at Horizon's own hooks, and mods' own screens and settings pages.</p>
+        </li>
+        <li>
+          <p class="g-version">1.0</p>
+          <h3 class="g-title">Tech Reborn</h3>
+          <p>An industrial mod, running unchanged.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="faq" class="doc sheet" aria-labelledby="faq-title">
+    <div class="sheet-head">
+      <h2 class="sheet-title" id="faq-title">FAQ</h2>
+      <p class="sheet-note">The short answers. The code and INSTALL.md in the repository have the long ones.</p>
+    </div>
+    <div class="sheet-body faq-list">
+      <details class="faq">
+        <summary>Is it safe?</summary>
+        <div class="faq-body">
+          <p>Native Horizon mods run without a sandbox, with your rights, and Kiln is one of them. The launcher builds it only after you explicitly agree. Kiln is open source: read the code first. The Java mods it runs also run with your rights, as any Java mod does.</p>
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Which mods work?</summary>
+        <div class="faq-body">
+          <p>Fabric mods for 26.3 that use what Kiln already covers. The <a href="mods.html">list of mods</a> grows with each release and says how far each one has been checked. There is no Mixin support yet; it is on the roadmap for 0.5.</p>
+        </div>
+      </details>
+      <details class="faq" id="faq-stand">
+        <summary>What is Kiln&rsquo;s test stand?</summary>
+        <div class="faq-body">
+          <p>Before anyone tries a mod in the game, Kiln runs it automatically on a test stand: the mod&rsquo;s own code, in a real Java, the way Kiln runs it in the game, with a scripted minute of play in place of Horizon (a new world, a key press, a trip to the Nether, a pause). That shows the mod starts and nothing breaks. It doesn&rsquo;t show that each of its features appears in the game: a feature may need something the script doesn&rsquo;t have. So a mod that passes is &ldquo;Should work&rdquo;; only a mod someone tried in the game is &ldquo;Works&rdquo;.</p>
+        </div>
+      </details>
+      <details class="faq" id="faq-dev">
+        <summary>What are the development builds?</summary>
+        <div class="faq-body">
+          <p>Kiln is developed in the open, and most days bring mods to life that the last release does not run yet. The catalogue shows two layers for each mod: what the latest release does, and what the current development build does, named by its date and commit. The release layer is the default; the switch on the <a href="mods.html">mods page</a> counts the development build instead. A development build is the main branch as it is that day, not a release: it can break, and it comes with no promise. Nightly builds of it are planned; until they exist, a development build means building Kiln from the source at that commit.</p>
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Can a mod break my game?</summary>
+        <div class="faq-body">
+          <p>Kiln runs Java mods in a Java process of their own, beside the game. A mod that fails loses its own feature, and Kiln says so; a mod that hangs makes Kiln stop Java, and Horizon goes on. A mod that keeps data in your world, a machine for example, writes it into your save, so back up the worlds you care about before you try one.</p>
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Does Kiln change or decompile a mod?</summary>
+        <div class="faq-body">
+          <p>No. A mod's jar runs as it is, in a Java process beside the game: nothing in it is decompiled, translated or patched. What a mod calls in Minecraft and the Fabric API is answered by Kiln's own stand-ins, which share only the names of those classes and methods; Kiln's repository holds no Minecraft code, assets or files. A mod's own license applies as it does with Fabric, and Kiln redistributes no mods.</p>
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Does it run on Windows or Linux?</summary>
+        <div class="faq-body">
+          <p>Linux: 0.4.0 was tested in the game on Linux (Arch), every release proof and 160 mods. macOS: 0.3.0 was tested in the game on Apple Silicon. Windows: 0.2.0 was tested on Windows 11 from a fresh install; 0.3.0 and 0.4.0 not yet.</p>
+        </div>
+      </details>
+      <details class="faq" id="faq-accounts">
+        <summary>Accounts and reports</summary>
+        <div class="faq-body">
+          <p>Each mod&rsquo;s page collects reports from players: whether the mod ran for you in Horizon (it works, partly, or it doesn&rsquo;t), with which Kiln build and which version of the mod, and what you saw, in up to 400 characters. Reports come from accounts and show at once, with the account&rsquo;s name and the date. There is one per mod and build, and you can change or delete yours at any time; reports by the Kiln team carry a mark. To write one, <a href="/account/signup">make an account</a> with an e-mail address and a password. Deleting the account, on its page, deletes its reports with it; <a href="privacy.html">Your data</a> says what is kept and for how long.</p>
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Is it official?</summary>
+        <div class="faq-body">
+          <p>No. Kiln is not affiliated with Horizon, Mojang or Microsoft. It is an independent open-source project.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="contact" class="doc sheet" aria-labelledby="contact-title">
+    <div class="sheet-head">
+      <h2 class="sheet-title" id="contact-title">Contact</h2>
+      <p class="sheet-note">Kiln is built in the open. Write where it fits; a report with the right details is answered fastest.</p>
+    </div>
+    <div class="sheet-body">
+      <dl class="contacts">
+        <div>
+          <dt>A mod that does not run, or a bug</dt>
+          <dd><a href="https://github.com/Manager1215/horizon-kiln/issues">Open an issue on GitHub</a>. Say which Kiln and which mod version you ran, what you expected, and attach <code>kiln/java.log</code> from your game folder: it holds what Java said.</dd>
+        </div>
+        <div>
+          <dt>Mail</dt>
+          <dd><a href="mailto:horizonkiln@gmail.com">horizonkiln@gmail.com</a> for everything else: questions, ideas, a mod you would like to see run.</dd>
+        </div>
+        <div>
+          <dt>Discord</dt>
+          <dd>A Discord server is being set up. Until it opens, message <strong>manager1215</strong> on Discord, or write by mail or on GitHub.</dd>
+        </div>
+        <div>
+          <dt>Source and releases</dt>
+          <dd>Everything is on <a href="https://github.com/Manager1215/horizon-kiln">GitHub</a>: the code, <a href="https://github.com/Manager1215/horizon-kiln/releases">Releases</a>, and the documents.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="doc footer-grid">
+    <div>
+      <p class="footer-brand">Kiln</p>
+      <p>Java mods in Horizon.</p>
+      <p>License: <a href="https://github.com/Manager1215/horizon-kiln/blob/main/LICENSE">GPL-3.0</a> (0.1.0-alpha was MIT).</p>
+      <p>The GPL keeps Kiln open, not people away: to use its work in your project, or just to talk, write to <a href="mailto:horizonkiln@gmail.com">horizonkiln@gmail.com</a> or Discord <strong>manager1215</strong>.</p>
+    </div>
+    <nav aria-label="Project links">
+      <ul>
+        <li><a href="mods.html">Supported mods</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://github.com/Manager1215/horizon-kiln">Source on GitHub</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Documents">
+      <ul>
+        <li><a href="https://github.com/Manager1215/horizon-kiln/releases">Releases</a></li>
+        <li><a href="https://github.com/Manager1215/horizon-kiln/blob/main/INSTALL.md">Install guide (INSTALL.md)</a></li>
+        <li><a href="https://github.com/Manager1215/horizon-kiln/blob/main/ROADMAP.md">Roadmap (ROADMAP.md)</a></li>
+        <li><a href="https://github.com/horizon-rust/horizon">Horizon</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="doc">
+    <p class="disclaimer">Not affiliated with Horizon, Mojang or Microsoft. Minecraft is a trademark of Mojang/Microsoft. The timer is not an official speedrun.com timer.</p>
+    <p class="disclaimer">The one cookie here keeps you signed in, and is set only when you sign in. <a href="privacy.html">Your data</a>.</p>
+  </div>
+</footer>
+</body>
+</html>

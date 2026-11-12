@@ -1,0 +1,62 @@
+{
+  "id": "mod-sync",
+  "name": "ModSync",
+  "version": "fabric-3.1+26.3",
+  "status": "planned",
+  "statusLabel": "Planned",
+  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "url": "https://modrinth.com/mod/mod-sync",
+  "author": "dark_yoddha",
+  "description": "A simple setup which allows admins to control the mods being used by the client.",
+  "needs": [
+    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
+    "net.fabricmc.loader.api.metadata.ModOrigin",
+    "net.minecraft.server.packs.repository.PackRepository",
+    "org.lwjgl.BufferUtils",
+    "org.lwjgl.opengl.GL11",
+    "ModContainer.getOrigin()",
+    "Minecraft.execute()",
+    "Minecraft.gameDirectory",
+    "Minecraft.getCurrentServer()",
+    "Minecraft.getResourcePackRepository()",
+    "Minecraft.setScreenAndShow()",
+    "ClientPacketListener.getConnection()",
+    "ServerData.ip",
+    "Connection.disconnect()"
+  ],
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "evidence": "Not run: Java did not start.",
+  "library": false,
+  "scanned": {
+    "date": "2026-11-11",
+    "kiln": "0.4.1",
+    "file": "Modsync-3.1.jar",
+    "published": "2026-11-05"
+  },
+  "reports": {
+    "works": 0,
+    "partly": 0,
+    "broken": 0,
+    "latest": []
+  },
+  "run": {
+    "passed": false,
+    "date": "2026-11-06",
+    "kiln": "0.3.0",
+    "ticks": 0,
+    "hud": false,
+    "why": "Java did not start"
+  },
+  "entrypoints": {
+    "client": 1,
+    "main": 1
+  },
+  "mixins": true,
+  "depends": [
+    "fabric-api",
+    "fabricloader",
+    "java",
+    "minecraft"
+  ],
+  "lacks": 14
+}

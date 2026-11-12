@@ -1,0 +1,3 @@
+#!/bin/sh
+# Moderation and checks for the accounts service, run as its own user: kiln-accounts help
+exec sudo -u kiln-accounts env KILN_ENV_FILE=/etc/kiln-accounts/env /usr/bin/python3 -I /usr/local/bin/kiln-accounts.py "$@"

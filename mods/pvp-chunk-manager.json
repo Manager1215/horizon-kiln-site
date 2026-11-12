@@ -1,0 +1,104 @@
+{
+  "id": "pvp-chunk-manager",
+  "name": "PvP Chunk manager",
+  "version": "1.0.0",
+  "status": "planned",
+  "statusLabel": "Planned",
+  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "url": "https://modrinth.com/mod/pvp-chunk-manager",
+  "author": "TOP_G2026",
+  "description": "Per-chunk PvP control with exempt zones, combat tagging and border enforcement.",
+  "needs": [
+    "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
+    "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrownEnderpearl",
+    "net.minecraft.world.scores.PlayerTeam",
+    "CommandSourceStack.getPlayerOrException()",
+    "DataComponents.CUSTOM_NAME",
+    "MinecraftServer.getGameRules()",
+    "ServerLevel.getHeightmapPos()",
+    "ServerPlayer.drop()",
+    "ServerPlayer.getTeam()",
+    "ServerPlayer.kill()",
+    "ServerPlayer.permissions()",
+    "ServerPlayer.teleportTo()",
+    "PermissionLevel.byId()",
+    "Player.getTeam()",
+    "Items.DIAMOND_HOE",
+    "GameRules.PVP",
+    "GameRules.get()"
+  ],
+  "roadmap": "Code next to data (0.3)",
+  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+  "library": false,
+  "scanned": {
+    "date": "2026-11-11",
+    "kiln": "0.4.1",
+    "file": "pvp-chunck-manager-1.0.0.jar",
+    "published": "2026-09-25"
+  },
+  "reports": {
+    "works": 0,
+    "partly": 0,
+    "broken": 0,
+    "latest": []
+  },
+  "run": {
+    "passed": false,
+    "date": "2026-11-05",
+    "kiln": "0.3.0",
+    "ticks": 0,
+    "hud": false,
+    "why": "Java did not start"
+  },
+  "entrypoints": {
+    "main": 1,
+    "client": 1,
+    "fabric-datagen": 1
+  },
+  "mixins": true,
+  "depends": [
+    "fabric-api",
+    "fabricloader",
+    "java",
+    "minecraft"
+  ],
+  "lacks": 17,
+  "development": {
+    "status": "planned",
+    "statusLabel": "Planned",
+    "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+    "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+    "needs": [
+      "Mixin",
+      "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
+      "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
+      "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
+      "net.minecraft.server.network.ServerGamePacketListenerImpl",
+      "CommandSourceStack.getPlayerOrException()",
+      "DataComponents.CUSTOM_NAME",
+      "ServerPlayer.drop()",
+      "ServerPlayer.permissions()",
+      "PermissionLevel.byId()",
+      "Items.DIAMOND_HOE"
+    ],
+    "roadmap": "Code next to data (0.3), Mixin (0.5)",
+    "run": {
+      "passed": false,
+      "date": "2026-11-05",
+      "kiln": "development build 2026-11-05 (afb67d1)",
+      "ticks": 0,
+      "hud": false,
+      "why": "Java did not start"
+    },
+    "url": "https://modrinth.com/mod/pvp-chunk-manager",
+    "version": "1.0.0",
+    "lacks": 10,
+    "scanned": {
+      "date": "2026-11-05",
+      "kiln": "development build 2026-11-05 (afb67d1)",
+      "file": "pvp-chunck-manager-1.0.0.jar",
+      "published": "2026-09-25"
+    },
+    "build": "development build 2026-11-05 (afb67d1)"
+  }
+}

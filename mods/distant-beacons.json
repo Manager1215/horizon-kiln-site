@@ -1,0 +1,77 @@
+{
+  "id": "distant-beacons",
+  "name": "Distant Beacons",
+  "version": "1.1-26.3-Voxy",
+  "status": "planned",
+  "statusLabel": "Planned",
+  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "url": "https://modrinth.com/mod/distant-beacons",
+  "author": "xewowa4144",
+  "description": "Always render Beacon Beams. See your beacons beam from a million blocks away, no matter the render distance!",
+  "needs": [
+    "Mixin: 1 point inside the game's methods",
+    "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
+    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents.Load",
+    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
+    "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
+    "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
+    "net.minecraft.client.renderer.blockentity.BeaconRenderer",
+    "net.minecraft.world.level.block.entity.BeaconBeamOwner",
+    "net.minecraft.world.level.block.entity.BeaconBeamOwner.Section",
+    "net.minecraft.world.level.block.entity.BeaconBlockEntity",
+    "org.lwjgl.opengl.GL11C",
+    "org.lwjgl.opengl.GL20C",
+    "org.lwjgl.opengl.GL44C",
+    "org.lwjgl.opengl.GL45C",
+    "org.lwjgl.system.MemoryStack",
+    "org.lwjgl.system.MemoryUtil",
+    "VertexConsumer.addVertex()",
+    "LevelRenderEvents.COLLECT_SUBMITS",
+    "ServerBlockEntityEvents.BLOCK_ENTITY_LOAD",
+    "ServerLifecycleEvents.SERVER_STARTED",
+    "ServerLifecycleEvents.SERVER_STOPPING",
+    "Options.getEffectiveRenderDistance()",
+    "GameRenderer.mainCamera()",
+    "RenderTypes.lightning()",
+    "MinecraftServer.getAllLevels()",
+    "MinecraftServer.getDataStorage()",
+    "Blocks.BEACON"
+  ],
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "evidence": "Not run: Java did not start.",
+  "library": false,
+  "scanned": {
+    "date": "2026-11-11",
+    "kiln": "0.4.1",
+    "file": "distant-beacons-1.1-voxy.jar",
+    "published": "2026-09-17"
+  },
+  "reports": {
+    "works": 0,
+    "partly": 0,
+    "broken": 0,
+    "latest": []
+  },
+  "run": {
+    "passed": false,
+    "date": "2026-11-07",
+    "kiln": "0.3.0",
+    "ticks": 0,
+    "hud": false,
+    "why": "Java did not start"
+  },
+  "entrypoints": {
+    "main": 1,
+    "client": 1,
+    "modmenu": 1
+  },
+  "mixins": true,
+  "depends": [
+    "fabric-api",
+    "fabricloader",
+    "java",
+    "minecraft"
+  ],
+  "lacks": 27
+}

@@ -1,0 +1,101 @@
+{
+  "id": "fire-suppressing-cauldrons",
+  "name": "Fire Suppressing Cauldrons",
+  "version": "2.0.0",
+  "status": "planned",
+  "statusLabel": "Planned",
+  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "url": "https://modrinth.com/mod/fire-suppressing-cauldrons",
+  "author": "fastcall22",
+  "description": "Server-side fabric mod that prevents fire from spreading within 100+ blocks of cauldrons. For use by technical players in servers that have fire tick enabled.",
+  "needs": [
+    "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
+    "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.IntegerRuleBuilder",
+    "net.minecraft.world.entity.ai.village.poi.PoiManager",
+    "net.minecraft.world.entity.ai.village.poi.PoiManager.Occupancy",
+    "net.minecraft.world.entity.ai.village.poi.PoiTypes",
+    "BlockPos.distSqr()",
+    "MinecraftServer.getTickCount()",
+    "ServerLevel.getGameRules()",
+    "ServerLevel.getPoiManager()",
+    "GameRuleCategory.UPDATES",
+    "GameRules.get()"
+  ],
+  "roadmap": "Code next to data (0.3)",
+  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+  "library": false,
+  "scanned": {
+    "date": "2026-11-11",
+    "kiln": "0.4.1",
+    "file": "firesuppressor-2.0.0+26.3.jar",
+    "published": "2026-10-09"
+  },
+  "reports": {
+    "works": 0,
+    "partly": 0,
+    "broken": 0,
+    "latest": []
+  },
+  "run": {
+    "passed": false,
+    "date": "2026-11-05",
+    "kiln": "0.3.0",
+    "ticks": 0,
+    "hud": false,
+    "why": "Java did not start"
+  },
+  "entrypoints": {
+    "main": 1
+  },
+  "mixins": true,
+  "depends": [
+    "fabric-game-rule-api-v1",
+    "fabric-lifecycle-events-v1",
+    "fabric-registry-sync-v0",
+    "fabricloader",
+    "java",
+    "minecraft"
+  ],
+  "lacks": 11,
+  "development": {
+    "status": "planned",
+    "statusLabel": "Planned",
+    "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+    "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+    "needs": [
+      "Mixin",
+      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
+      "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
+      "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.IntegerRuleBuilder",
+      "net.minecraft.world.entity.ai.village.poi.PoiManager",
+      "net.minecraft.world.entity.ai.village.poi.PoiManager.Occupancy",
+      "net.minecraft.world.entity.ai.village.poi.PoiTypes",
+      "ServerTickEvents.END_SERVER_TICK",
+      "BlockPos.distSqr()",
+      "MinecraftServer.getTickCount()",
+      "ServerLevel.getGameRules()",
+      "ServerLevel.getPoiManager()",
+      "GameRuleCategory.UPDATES",
+      "GameRules.get()"
+    ],
+    "roadmap": "Code next to data (0.3), Mixin (0.5)",
+    "run": {
+      "passed": false,
+      "date": "2026-11-05",
+      "kiln": "development build 2026-11-05 (afb67d1)",
+      "ticks": 0,
+      "hud": false,
+      "why": "Java did not start"
+    },
+    "url": "https://modrinth.com/mod/fire-suppressing-cauldrons",
+    "version": "2.0.0",
+    "lacks": 13,
+    "scanned": {
+      "date": "2026-11-05",
+      "kiln": "development build 2026-11-05 (afb67d1)",
+      "file": "firesuppressor-2.0.0+26.3.jar",
+      "published": "2026-10-09"
+    },
+    "build": "development build 2026-11-05 (afb67d1)"
+  }
+}

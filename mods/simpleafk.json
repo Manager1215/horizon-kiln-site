@@ -1,0 +1,121 @@
+{
+  "id": "simpleafk",
+  "name": "SimpleAFK",
+  "version": "1.5.2",
+  "status": "planned",
+  "statusLabel": "Planned",
+  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "url": "https://modrinth.com/mod/simpleafk",
+  "author": "legenden",
+  "description": "SimpleAFK is a mod that enables simple server AFK management",
+  "needs": [
+    "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
+    "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
+    "net.fabricmc.fabric.api.event.player.UseEntityCallback",
+    "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
+    "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
+    "net.minecraft.core.UUIDUtil",
+    "net.minecraft.server.players.SleepStatus",
+    "CommandSourceStack.getPlayerOrException()",
+    "CommandSourceStack.getServer()",
+    "CommandSourceStack.sendSystemMessage()",
+    "EntityArgument.getPlayer()",
+    "EntityArgument.player()",
+    "MinecraftServer.overworld()",
+    "ServerPlayer.connection",
+    "ServerPlayer.getDisplayName()",
+    "ServerPlayer.isSleeping()",
+    "ServerPlayer.sendSystemMessage()",
+    "ServerGamePacketListenerImpl.disconnect()",
+    "PlayerList.broadcastSystemMessage()",
+    "Player.<init>()"
+  ],
+  "roadmap": "Code next to data (0.3)",
+  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+  "library": false,
+  "scanned": {
+    "date": "2026-11-11",
+    "kiln": "0.4.1",
+    "file": "simpleafk-fabric-26.3-1.5.2.jar",
+    "published": "2026-10-27"
+  },
+  "reports": {
+    "works": 0,
+    "partly": 0,
+    "broken": 0,
+    "latest": []
+  },
+  "run": {
+    "passed": false,
+    "date": "2026-11-05",
+    "kiln": "0.3.0",
+    "ticks": 0,
+    "hud": false,
+    "why": "Java did not start"
+  },
+  "entrypoints": {
+    "main": 1
+  },
+  "mixins": true,
+  "depends": [
+    "fabric-api",
+    "fabricloader",
+    "forgeconfigapiport",
+    "java",
+    "minecraft"
+  ],
+  "lacks": 20,
+  "development": {
+    "status": "planned",
+    "statusLabel": "Planned",
+    "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+    "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+    "needs": [
+      "Mixin",
+      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
+      "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
+      "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
+      "net.fabricmc.fabric.api.event.player.UseEntityCallback",
+      "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
+      "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
+      "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
+      "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
+      "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
+      "net.minecraft.core.UUIDUtil",
+      "net.minecraft.server.network.ServerGamePacketListenerImpl",
+      "net.minecraft.server.players.PlayerList",
+      "ServerTickEvents.END_SERVER_TICK",
+      "CommandSourceStack.getPlayerOrException()",
+      "CommandSourceStack.getServer()",
+      "CommandSourceStack.sendSystemMessage()",
+      "EntityArgument.getPlayer()",
+      "EntityArgument.player()",
+      "MinecraftServer.getPlayerList()",
+      "MinecraftServer.overworld()",
+      "ServerPlayer.connection",
+      "ServerPlayer.getDisplayName()",
+      "ServerPlayer.getLookAngle()",
+      "ServerPlayer.isSleeping()",
+      "ServerPlayer.sendSystemMessage()"
+    ],
+    "roadmap": "Code next to data (0.3), Mixin (0.5)",
+    "run": {
+      "passed": false,
+      "date": "2026-11-05",
+      "kiln": "development build 2026-11-05 (afb67d1)",
+      "ticks": 0,
+      "hud": false,
+      "why": "Java did not start"
+    },
+    "url": "https://modrinth.com/mod/simpleafk",
+    "version": "1.5.2",
+    "lacks": 25,
+    "scanned": {
+      "date": "2026-11-05",
+      "kiln": "development build 2026-11-05 (afb67d1)",
+      "file": "simpleafk-fabric-26.3-1.5.2.jar",
+      "published": "2026-10-27"
+    },
+    "build": "development build 2026-11-05 (afb67d1)"
+  }
+}
