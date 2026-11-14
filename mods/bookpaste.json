@@ -9,42 +9,33 @@
  "author": "SvyatON",
  "description": "Paste large texts into writable books and signs with automatic page splitting",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
-  "net.minecraft.client.gui.components.Tooltip",
+  "Mixin: 4 points inside the game's methods",
+  "net.minecraft.client.gui.components.MultiLineEditBox",
+  "net.minecraft.client.gui.screens.inventory.AbstractSignEditScreen",
+  "net.minecraft.client.gui.screens.inventory.BookEditScreen",
   "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.network.protocol.game.ServerboundEditBookPacket",
+  "net.minecraft.world.item.component.WritableBookContent",
   "org.lwjgl.sdl.SDLKeyboard",
   "org.lwjgl.sdl.SDLMouse",
   "InputConstants.getKey()",
   "InputConstants.isKeyDown()",
   "InputConstants.Type.getOrCreate()",
   "Window.handle()",
-  "ClientPlayNetworking.canSend()",
-  "ServerPlayNetworking.canSend()",
-  "KeyMapping.getDefaultKey()",
-  "KeyMapping.getTranslatedKeyMessage()",
   "KeyMapping.resetMapping()",
   "KeyMapping.setKey()",
   "Minecraft.getSingleplayerServer()",
-  "Minecraft.setScreenAndShow()",
-  "Options.save()",
   "Font.split()",
-  "Button.Builder.tooltip()",
-  "EditBox.setEditable()",
-  "EditBox.setTextColor()",
-  "EditBox.setTooltip()",
-  "MinecraftServer.execute()",
-  "MinecraftServer.getPlayerList()"
+  "ByteBufCodecs.readCount()",
+  "ByteBufCodecs.writeCount()",
+  "MinecraftServer.execute()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "bookpaste-fabric-2.2+26.3.jar",
   "published": "2026-10-30"
  },
@@ -56,8 +47,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -76,5 +67,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 28
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 19
 }

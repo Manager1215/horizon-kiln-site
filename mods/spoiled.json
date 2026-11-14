@@ -1,0 +1,77 @@
+{
+ "id": "spoiled",
+ "name": "Spoiled",
+ "version": "13.0.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/spoiled",
+ "author": "Mrbysco",
+ "description": "Spoiling your food supply since 2020",
+ "needs": [
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
+  "net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition",
+  "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditionType",
+  "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions",
+  "net.minecraft.resources.RegistryOps.RegistryInfoLookup",
+  "net.minecraft.server.level.ChunkHolder",
+  "net.minecraft.server.level.ChunkMap",
+  "net.minecraft.world.entity.decoration.HangingEntity",
+  "net.minecraft.world.entity.decoration.ItemFrame",
+  "net.minecraft.world.item.crafting.RecipeBookCategories",
+  "net.minecraft.world.level.block.state.properties.ChestType",
+  "ServerLifecycleEvents.SERVER_STARTING",
+  "DataComponents.FOOD",
+  "Registries.RECIPE_SERIALIZER",
+  "ServerChunkCache.chunkMap",
+  "ServerLevel.getAllEntities()",
+  "Entity.isAlive()",
+  "Player.addItem()",
+  "Level.addFreshEntity()",
+  "LevelReader.hasChunksAt()",
+  "BlockStateProperties.CHEST_TYPE",
+  "ChunkAccess.getBlockEntitiesPos()"
+ ],
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "Spoiled-fabric-26.3-13.0.0.jar",
+  "published": "2026-11-14"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "fabric-datagen": 1,
+  "main": 1,
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "forgeconfigapiport",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 22
+}

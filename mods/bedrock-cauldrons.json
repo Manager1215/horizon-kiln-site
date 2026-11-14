@@ -9,19 +9,15 @@
  "author": "tomalbrc",
  "description": "Potion and dye support for Cauldrons! Serverside through polymer. Requires a resource-pack",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.tags.ItemTags",
-  "net.minecraft.world.item.alchemy.PotionContents",
-  "net.minecraft.world.item.alchemy.Potions",
   "net.minecraft.world.item.component.DyedItemColor",
+  "net.minecraft.world.level.chunk.storage.SerializableChunkData",
   "net.minecraft.world.level.gameevent.GameEvent.Context",
   "ServerLifecycleEvents.SERVER_STARTED",
   "DataComponents.DYE",
   "DataComponents.DYED_COLOR",
   "DataComponents.ITEM_MODEL",
-  "DataComponents.POTION_CONTENTS",
   "ParticleTypes.ENTITY_EFFECT",
   "ServerLevel.sendParticles()",
   "SoundEvents.BOTTLE_EMPTY",
@@ -31,21 +27,18 @@
   "ItemStack.consume()",
   "Items.ARROW",
   "Items.GLASS_BOTTLE",
-  "Items.LINGERING_POTION",
   "Items.PAPER",
-  "Items.POTION",
-  "Items.SPLASH_POTION",
   "Items.TIPPED_ARROW",
   "Level.gameEvent()",
   "BlockBehaviour.Properties.ofLegacyCopy()",
   "GameEvent.BLOCK_CHANGE"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "bedrock-cauldrons-1.1.1+26.3.jar",
   "published": "2026-10-14"
  },
@@ -57,8 +50,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -73,5 +66,9 @@
   "minecraft",
   "polymer-core"
  ],
- "lacks": 29
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 23
 }

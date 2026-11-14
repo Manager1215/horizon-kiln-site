@@ -1,7 +1,7 @@
 {
  "id": "boss-bar-begone",
  "name": "Boss Bar Begone",
- "version": "1.0.2+26.3",
+ "version": "1.0.3+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,19 +9,22 @@
  "author": "Bahanos",
  "description": "A lightweight client-side mod that lets you selectively hide boss bars by name using a simple JSON config.",
  "needs": [
-  "Mixin",
-  "net.minecraft.network.chat.contents.TranslatableContents",
-  "Component.getContents()",
-  "Component.getSiblings()"
+  "Mixin: 1 point inside the game's methods",
+  "net.minecraft.client.gui.components.BossHealthOverlay",
+  "net.minecraft.client.gui.components.LerpingBossEvent",
+  "Component.getSiblings()",
+  "BossEvent.shouldCreateWorldFog()",
+  "BossEvent.shouldDarkenScreen()",
+  "BossEvent.shouldPlayBossMusic()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "bossbarbegone-mc26.3-fabric-1.0.2.jar",
-  "published": "2026-10-26"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "bossbarbegone-mc26.3-fabric-1.0.3.jar",
+  "published": "2026-11-06"
  },
  "reports": {
   "works": 0,
@@ -31,8 +34,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -47,5 +50,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 3
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 6
 }

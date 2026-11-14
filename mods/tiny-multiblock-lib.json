@@ -9,16 +9,27 @@
  "author": "Nikdo53",
  "description": "A Tiny Lib for easy creation of Multiblocks with a built-in ghost system. Made to be packaged with other mods",
  "needs": [
-  "Mixin",
+  "Mixin: 7 points inside the game's methods",
   "com.mojang.blaze3d.vertex.DefaultVertexFormat",
   "com.mojang.blaze3d.vertex.QuadInstance",
+  "net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadEmitter",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionEvents.EndExtraction",
+  "net.fabricmc.fabric.impl.client.indigo.renderer.render.AltModelBlockRendererImpl",
+  "net.fabricmc.fabric.impl.client.renderer.VanillaBlockModelPartEncoder",
   "net.fabricmc.loader.impl.launch.FabricLauncher",
   "net.fabricmc.loader.impl.launch.FabricLauncherBase",
   "net.minecraft.client.multiplayer.ClientLevel.ClientLevelData",
   "net.minecraft.client.renderer.LevelRenderer",
+  "net.minecraft.client.renderer.block.ModelBlockRenderer",
+  "net.minecraft.client.renderer.extract.LevelExtractor",
+  "net.minecraft.client.renderer.feature.FeatureRendererMap",
+  "net.minecraft.client.renderer.feature.MovingBlockFeatureRenderer",
+  "net.minecraft.client.renderer.feature.MovingBlockFeatureRenderer.Submit",
+  "net.minecraft.client.renderer.feature.RenderTypeFeatureRenderer.Group",
   "net.minecraft.client.renderer.feature.submit.TranslucentSubmit",
   "net.minecraft.client.renderer.rendertype.RenderSetup",
+  "net.minecraft.network.protocol.game.ServerGamePacketListener",
+  "net.minecraft.server.network.ServerPlayerConnection",
   "net.minecraft.world.item.PlaceOnWaterBlockItem",
   "net.minecraft.world.level.LightLayer",
   "net.minecraft.world.level.block.Block.UpdateFlags",
@@ -39,25 +50,14 @@
   "VertexConsumer.addVertexWith2DPose()",
   "VertexConsumer.putBakedQuad()",
   "VertexConsumer.putBakedQuadWithGlint()",
-  "VertexConsumer.putBlockBakedQuad()",
-  "VertexConsumer.setColor()",
-  "VertexConsumer.setLight()",
-  "VertexConsumer.setNormal()",
-  "VertexConsumer.setNormal()",
-  "VertexConsumer.setOverlay()",
-  "RenderPipeline.getPrimitiveTopology()",
-  "RenderPipeline.getVertexFormatBinding()",
-  "CharSet.isEmpty()",
-  "LevelExtractionContext.levelRenderer()",
-  "LevelExtractionEvents.END_EXTRACTION",
-  "and 39 more"
+  "and 50 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "tiny-multiblock-lib-fabric-26.3-4.0.1.jar",
   "published": "2026-09-18"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 167
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
+ },
+ "lacks": 177
 }

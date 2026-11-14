@@ -9,7 +9,8 @@
  "author": "_gid",
  "description": "Server-side mod to make a button under a water-carrying block extinguish fire, burning mobs and players underneath",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
+  "net.minecraft.world.level.block.FireBlock",
   "net.minecraft.world.level.block.state.properties.AttachFace",
   "BlockPos.MutableBlockPos.set()",
   "ServerLevel.levelEvent()",
@@ -17,6 +18,7 @@
   "BlockTags.BLOCKS_MOTION",
   "Entity.getBbHeight()",
   "Entity.getBoundingBox()",
+  "LevelReader.getHeight()",
   "BlockStateProperties.ATTACH_FACE",
   "AABB.maxY"
  ],
@@ -24,8 +26,8 @@
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "firesprinkler-fabric-26.0.3.jar",
   "published": "2026-09-19"
  },
@@ -42,5 +44,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 9
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 11
 }

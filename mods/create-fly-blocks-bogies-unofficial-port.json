@@ -1,0 +1,70 @@
+{
+ "id": "create-fly-blocks-bogies-unofficial-port",
+ "name": "Create Fly: Blocks & Bogies (Unofficial Port)",
+ "version": "1.0.8.2+fly-mc26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/create-fly-blocks-bogies-unofficial-port",
+ "author": "chaevsfe",
+ "description": "This is the Unofficial Fabric version of Create: Blocks & Bogies. For Create Fly",
+ "needs": [
+  "net.minecraft.server.ReloadableServerResources",
+  "InputConstants.grabMouse()",
+  "InputConstants.releaseMouse()",
+  "PoseStack.last()",
+  "PoseStack.Pose.normal()",
+  "PoseStack.Pose.pose()",
+  "ResourceManagerHelper.registerBuiltinResourcePack()",
+  "ScreenRectangle.intersection()",
+  "ScreenRectangle.transformAxisAligned()",
+  "PictureInPictureRenderer.close()",
+  "RenderTypes.cutoutMovingBlock()",
+  "TextureAtlasSprite.getV0()",
+  "TextureAtlasSprite.getV1()",
+  "MutableComponent.plainCopy()",
+  "Blocks.GOLD_BLOCK",
+  "SoundType.NETHERITE_BLOCK"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "BlocksAndBogies-1.0.8.2+fly-mc26.3.jar",
+  "published": "2026-11-09"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1,
+  "create_plugin": 1
+ },
+ "mixins": true,
+ "depends": [
+  "create",
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 16
+}

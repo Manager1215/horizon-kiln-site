@@ -9,14 +9,15 @@
  "author": "seal1",
  "description": "Stops water from evaporating in the nether",
  "needs": [
-  "Mixin"
+  "Mixin: 3 points inside the game's methods",
+  "net.minecraft.world.level.block.IceBlock"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "water_in_nether-fabric-26.1-2.0.0.jar",
   "published": "2026-08-27"
  },
@@ -33,5 +34,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 1
 }

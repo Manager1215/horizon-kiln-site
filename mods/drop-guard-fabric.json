@@ -9,10 +9,9 @@
  "author": "Invisiblezappie",
  "description": "Prevent important items from being accidentally dropped with configurable item protection that follows them between inventory slots.",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.gui.components.Tooltip",
+  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
+  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.ItemPickerMenu",
   "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.core.component.DataComponentPatch.SplitResult",
   "org.lwjgl.sdl.SDLMouse",
   "org.lwjgl.sdl.SDLScancode",
@@ -21,34 +20,27 @@
   "InputConstants.isKeyDown()",
   "InputConstants.Key.getDisplayName()",
   "InputConstants.Type.getOrCreate()",
-  "KeyMapping.getTranslatedKeyMessage()",
   "KeyMapping.setKey()",
-  "Minecraft.gameMode",
   "Minecraft.isGameLoadFinished()",
   "Minecraft.isWindowActive()",
-  "Font.plainSubstrByWidth()",
   "Font.split()",
   "Gui.overlay()",
   "GuiGraphicsExtractor.blit()",
   "GuiGraphicsExtractor.setTooltipForNextFrame()",
   "GuiGraphicsExtractor.text()",
-  "Button.getMessage()",
-  "Button.setTooltip()",
-  "EditBox.setHint()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseReleased()",
-  "Screen.mouseScrolled()",
+  "MultiPlayerGameMode.dropItem()",
+  "LocalPlayer.isAlive()",
   "DataComponentPatch.CODEC",
   "DataComponentPatch.split()",
-  "DataComponents.DAMAGE"
+  "DataComponents.DAMAGE",
+  "ItemStack.isStackable()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "drop-guard-2.9.4+mc26.3.jar",
   "published": "2026-10-16"
  },
@@ -60,8 +52,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -77,5 +69,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 32
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 25
 }

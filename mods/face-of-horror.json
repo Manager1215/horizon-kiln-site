@@ -9,7 +9,7 @@
  "author": "exoenrgy",
  "description": "You never know who's watching you from the shadows...",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "com.mojang.blaze3d.Blaze3D",
   "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking",
   "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking.LoginQueryRequestHandler",
@@ -20,7 +20,6 @@
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.networking.v1.FriendlyByteBufs",
   "net.fabricmc.fabric.api.networking.v1.LoginPacketSender",
   "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents",
@@ -28,36 +27,37 @@
   "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking",
   "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginQueryResponseHandler",
   "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginSynchronizer",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.particle.Particle",
   "net.minecraft.client.particle.ParticleProvider",
   "net.minecraft.client.particle.ParticleRenderType",
   "net.minecraft.client.player.ClientInput",
   "net.minecraft.client.renderer.texture.DynamicTexture",
+  "net.minecraft.client.resources.ClientPackSource",
   "net.minecraft.core.UUIDUtil",
   "net.minecraft.network.syncher.EntityDataAccessor",
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
   "net.minecraft.server.PlayerAdvancements",
   "net.minecraft.server.ServerAdvancementManager",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.server.network.ServerLoginPacketListenerImpl",
+  "net.minecraft.server.packs.PackLocationInfo",
   "net.minecraft.server.packs.PackResources.ResourceOutput",
-  "net.minecraft.server.permissions.Permissions",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.server.packs.PackSelectionConfig",
+  "net.minecraft.server.packs.repository.BuiltInPackSource",
+  "net.minecraft.server.packs.repository.Pack",
+  "net.minecraft.server.packs.repository.Pack.Position",
+  "net.minecraft.server.packs.repository.Pack.ResourcesSupplier",
+  "net.minecraft.server.packs.repository.PackSource",
   "net.minecraft.util.Util.OS",
-  "and 71 more"
+  "and 69 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "faceofhorror-3.3-fabric-26.x.jar",
   "published": "2026-10-26"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 192
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 156
 }

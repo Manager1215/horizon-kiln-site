@@ -1,0 +1,62 @@
+{
+ "id": "dura-pulse",
+ "name": "DURA PULSE",
+ "version": "2.0.1+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/dura-pulse",
+ "author": "Blackwors",
+ "description": "Animated durability HUD for tools, armor and effects with a drag & drop editor, Safe Mode, auto totem & refill and elytra warnings. 100% client-side.",
+ "needs": [
+  "net.minecraft.client.gui.screens.LoadingOverlay",
+  "Options.darkMojangStudiosBackground()",
+  "Font.split()",
+  "GuiGraphicsExtractor.blit()",
+  "GuiGraphicsExtractor.blitSprite()",
+  "GuiGraphicsExtractor.text()",
+  "SoundEvents.ANVIL_LAND",
+  "SoundEvents.BELL_BLOCK",
+  "Util.getMillis()",
+  "Util.getNanos()",
+  "Items.TOTEM_OF_UNDYING"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "DuraPulse-2.0.1+26.3.jar",
+  "published": "2026-11-06"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 11
+}

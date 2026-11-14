@@ -1,0 +1,81 @@
+{
+ "id": "pet-teleport",
+ "name": "Pet Teleport",
+ "version": "2.0.0+mc26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/pet-teleport",
+ "author": "WenderMods",
+ "description": "A mod that let's you teleport your pets even if they are lost in unloaded chunks",
+ "needs": [
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
+  "net.minecraft.world.entity.EntityDimensions",
+  "net.minecraft.world.level.storage.LevelResource",
+  "ServerLifecycleEvents.SERVER_STARTED",
+  "ServerLifecycleEvents.SERVER_STOPPING",
+  "MinecraftServer.getAllLevels()",
+  "MinecraftServer.getTickCount()",
+  "MinecraftServer.getWorldPath()",
+  "ServerLevel.areEntitiesLoaded()",
+  "ServerLevel.getAllEntities()",
+  "ServerLevel.getEntity()",
+  "ServerLevel.noCollision()",
+  "ServerPlayer.getBbHeight()",
+  "ServerPlayer.getVehicle()",
+  "TicketType.PORTAL",
+  "Entity.addTag()",
+  "Entity.entityTags()",
+  "Entity.getCustomName()",
+  "Entity.getDimensions()",
+  "Entity.getPassengers()",
+  "Entity.getPose()",
+  "Entity.getRemovalReason()",
+  "Entity.hasCustomName()",
+  "Entity.isAlive()",
+  "Entity.isPassenger()",
+  "Entity.resetFallDistance()",
+  "Entity.stopRiding()",
+  "EntityReference.getUUID()",
+  "OwnableEntity.getOwnerReference()"
+ ],
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "pet-teleport-fabric-2.0.0+mc26.3.jar",
+  "published": "2026-10-08"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": false,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 30
+}

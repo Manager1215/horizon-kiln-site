@@ -7,7 +7,7 @@
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
  "url": "https://modrinth.com/mod/fisherman-coast",
  "author": "NAIZO",
- "description": "Seven fishing places built for every kind of shore, named fishermen with their own trades, Crab Pots with bait, Fishing Nets, and Messages in a Bottle that lead to sunken trawlers. Formerly The Fisherman House.",
+ "description": "Seven fishing places for every kind of shore, with named fishermen, Crab Pots, Fishing Nets and Messages in a Bottle that lead to sunken trawlers.",
  "needs": [
   "net.minecraft.advancements.triggers.ConsumeItemTrigger",
   "net.minecraft.advancements.triggers.CriteriaTriggers",
@@ -25,9 +25,6 @@
   "net.minecraft.world.level.levelgen.structure.pieces.StructurePiecesBuilder",
   "net.minecraft.world.level.levelgen.structure.templatesystem.BlockIgnoreProcessor",
   "net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings",
-  "CommandSourceStack.getPosition()",
-  "Commands.LEVEL_GAMEMASTERS",
-  "Commands.hasPermission()",
   "BlockPos.asLong()",
   "BlockPos.betweenClosed()",
   "BlockPos.containing()",
@@ -49,14 +46,17 @@
   "ServerLevel.getEntitiesOfClass()",
   "ServerLevel.getMaxY()",
   "ServerLevel.getMinY()",
+  "ServerLevel.isRainingAt()",
+  "ServerLevel.sendParticles()",
+  "ServerLevel.structureManager()",
   "and 36 more"
  ],
  "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fisherman_house-fabric-26.3-2.0.0.jar",
   "published": "2026-10-26"
  },
@@ -68,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 83
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 78
 }

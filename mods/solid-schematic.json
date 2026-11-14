@@ -9,17 +9,24 @@
  "author": "l4glegend",
  "description": "This Mod makes your Schematic Placements look like real Blocks, it's perfect for fake Bases.",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
+  "com.mojang.renderpearl.backend.opengl.GlDebug",
+  "net.minecraft.client.gui.components.CommandSuggestions",
+  "net.minecraft.client.renderer.WeatherEffectRenderer",
+  "net.minecraft.client.renderer.chunk.RenderSectionRegion",
+  "net.minecraft.client.renderer.chunk.SectionCompiler",
+  "net.minecraft.client.renderer.state.level.WeatherRenderState",
+  "net.minecraft.world.level.LightLayer",
   "net.minecraft.world.level.block.Mirror",
   "InputConstants.isKeyDown()",
   "Minecraft.getBlockColors()",
   "Minecraft.levelRenderer",
   "GuiGraphicsExtractor.nextStratum()",
-  "Screen.mouseClicked()",
-  "Screen.mouseMoved()",
   "ClientLevel.addEntity()",
+  "ClientLevel.getBrightness()",
   "ClientLevel.removeEntity()",
   "GameRenderer.mainCamera()",
+  "BlockAndTintGetter.getBrightness()",
   "BlockPos.asLong()",
   "BlockPos.getX()",
   "BlockPos.getY()",
@@ -28,7 +35,6 @@
   "SectionPos.asLong()",
   "ListTag.add()",
   "ListTag.getFloatOr()",
-  "MutableComponent.withStyle()",
   "Entity.discard()",
   "Entity.load()",
   "Entity.setDeltaMovement()",
@@ -38,18 +44,20 @@
   "Entity.setXRot()",
   "Entity.setYRot()",
   "Level.getChunkAt()",
+  "BlockState.emissiveRendering()",
   "BlockState.getLightDampening()",
+  "BlockState.getShadeBrightness()",
+  "BlockState.isCollisionShapeFullBlock()",
+  "BlockState.isViewBlocking()",
   "BlockState.mirror()",
-  "LevelChunk.getBlockEntities()",
-  "LevelChunk.getBlockEntity()",
-  "LevelChunk.removeBlockEntity()"
+  "and 3 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "L4gLegend's Solid Schematic-1.0.13+mc26.3.jar",
   "published": "2026-10-12"
  },
@@ -61,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -79,5 +87,9 @@
   "minecraft",
   "sodium"
  ],
- "lacks": 33
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert)"
+ },
+ "lacks": 43
 }

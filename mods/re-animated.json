@@ -9,32 +9,41 @@
  "author": "pycodder",
  "description": "This mod animates all UI in the game!",
  "needs": [
-  "Mixin",
+  "Mixin: 5 points inside the game's methods",
   "net.fabricmc.fabric.api.client.screen.v1.Screens",
   "net.fabricmc.loader.api.metadata.ModOrigin",
   "net.fabricmc.loader.api.metadata.ModOrigin.Kind",
-  "net.minecraft.client.gui.components.StringWidget",
-  "net.minecraft.client.gui.components.Tooltip",
+  "net.minecraft.client.gui.components.LogoRenderer",
+  "net.minecraft.client.gui.components.WidgetSprites",
+  "net.minecraft.client.gui.components.tabs.Tab",
+  "net.minecraft.client.gui.components.tabs.TabManager",
+  "net.minecraft.client.gui.components.tabs.TabNavigationBar",
+  "net.minecraft.client.gui.components.toasts.ToastManager.ToastInstance",
+  "net.minecraft.client.gui.screens.advancements.AdvancementTab",
+  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
+  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.gui.screens.options.VideoSettingsScreen",
+  "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
   "ModContainer.getOrigin()",
-  "KeyMapping.getTranslatedKeyMessage()",
   "KeyMapping.matches()",
-  "Minecraft.execute()",
-  "Minecraft.setScreenAndShow()",
-  "Button.setAlpha()",
-  "Button.setTooltip()",
-  "Button.Builder.tooltip()",
+  "GuiGraphicsExtractor.blit()",
+  "GuiGraphicsExtractor.blitSprite()",
+  "ScreenRectangle.bottom()",
+  "ScreenRectangle.left()",
+  "ScreenRectangle.right()",
+  "ScreenRectangle.top()",
   "ConfirmLinkScreen.confirmLinkNow()",
-  "Screen.mouseClicked()",
-  "Screen.mouseScrolled()",
-  "LocalPlayer.closeContainer()"
+  "LocalPlayer.closeContainer()",
+  "WindowRenderState.guiScale",
+  "WindowRenderState.height",
+  "WindowRenderState.width"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "reanimated-26.3+1.8.jar",
   "published": "2026-10-21"
  },
@@ -46,8 +55,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -64,5 +73,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 18
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 27
 }

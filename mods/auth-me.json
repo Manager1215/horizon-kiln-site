@@ -2,23 +2,53 @@
  "id": "auth-me",
  "name": "Auth Me",
  "version": "v9.3.0+26.3",
- "status": "planned",
- "statusLabel": "Planned",
- "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "status": "no-plans",
+ "statusLabel": "No plans yet",
+ "statusMeaning": "Calls something that is not on Kiln's roadmap yet. Parts of it may already run.",
  "url": "https://modrinth.com/mod/auth-me",
  "author": "axieum",
  "description": "Authenticate yourself and re-validate your session",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
+  "com.mojang.authlib.exceptions.AuthenticationException",
+  "com.mojang.authlib.minecraft.SessionService",
+  "com.mojang.authlib.minecraft.UserApiService",
+  "com.mojang.authlib.services.FriendsService",
+  "com.mojang.authlib.services.MinecraftServicesDiscoveryService",
   "com.mojang.blaze3d.Blaze3D",
-  "GsonHelper.parse()"
+  "com.mojang.realmsclient.RealmsAvailability",
+  "com.mojang.realmsclient.RealmsAvailability.Result",
+  "com.mojang.realmsclient.client.RealmsClient",
+  "com.mojang.realmsclient.gui.RealmsDataFetcher",
+  "com.mojang.realmsclient.gui.screens.RealmsGenericErrorScreen",
+  "net.minecraft.client.gui.components.ImageButton",
+  "net.minecraft.client.gui.components.WidgetSprites",
+  "net.minecraft.client.gui.screens.DisconnectedScreen",
+  "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
+  "net.minecraft.client.gui.screens.social.PlayerSocialManager",
+  "net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler",
+  "net.minecraft.client.multiplayer.ProfileKeyPairManager",
+  "net.minecraft.client.multiplayer.chat.report.ReportingContext",
+  "net.minecraft.client.resources.SplashManager",
+  "net.minecraft.realms.RealmsScreen",
+  "net.minecraft.server.dedicated.DedicatedServer",
+  "InputConstants.isKeyDown()",
+  "Minecraft.gameDirectory",
+  "Minecraft.getReportingContext()",
+  "Minecraft.services()",
+  "Gui.splashManager()",
+  "ConfirmLinkScreen.confirmLink()",
+  "ConfirmScreen.setDelay()",
+  "Services.sessionService()",
+  "GsonHelper.parse()",
+  "Util.nonCriticalIoPool()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "authme-fabric-9.3.0+26.3.jar",
   "published": "2026-09-19"
  },
@@ -30,8 +60,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -47,5 +77,9 @@
   "minecraft",
   "resourcefulconfig"
  ],
- "lacks": 2
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 32
 }

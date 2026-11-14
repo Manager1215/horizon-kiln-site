@@ -9,27 +9,23 @@
  "author": "enderlanky",
  "description": "Adds exceedingly rare, supermassive ore deposits that make mining worthwhile",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "com.mojang.blaze3d.Blaze3D",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.Unload",
+  "net.fabricmc.fabric.impl.biome.modification.BiomeModificationImpl",
   "net.minecraft.advancements.predicates.MinMaxBounds.Ints",
-  "net.minecraft.commands.arguments.blocks.BlockInput",
-  "net.minecraft.commands.arguments.blocks.BlockStateArgument",
   "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
-  "net.minecraft.commands.arguments.coordinates.Coordinates",
   "net.minecraft.core.HolderSet.ListBacked",
   "net.minecraft.core.HolderSet.Named",
-  "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
+  "net.minecraft.server.level.ChunkHolder",
+  "net.minecraft.server.level.ChunkMap",
   "net.minecraft.server.level.WorldGenRegion",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.level.StructureManager",
   "net.minecraft.world.level.block.AmethystBlock",
   "net.minecraft.world.level.block.CampfireBlock",
-  "net.minecraft.world.level.block.DoublePlantBlock",
   "net.minecraft.world.level.block.GrowingPlantBlock",
   "net.minecraft.world.level.levelgen.LegacyRandomSource",
+  "net.minecraft.world.level.levelgen.NoiseGeneratorSettings",
   "net.minecraft.world.level.levelgen.WorldgenRandom",
   "net.minecraft.world.level.levelgen.feature.AbstractOreFeature",
   "net.minecraft.world.level.levelgen.feature.BlockReplacement",
@@ -50,14 +46,18 @@
   "Registry.get()",
   "BuiltInRegistries.FEATURE_TYPE",
   "Registries.STRUCTURE",
-  "and 37 more"
+  "ListTag.stream()",
+  "ServerLevel.structureManager()",
+  "PlayerList.getViewDistance()",
+  "BlockTags.BLOCKS_MOTION",
+  "and 32 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "adlods-26.3.0.0-fabric-build.0062.jar",
   "published": "2026-09-19"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 77
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; generates in the world"
+ },
+ "lacks": 72
 }

@@ -9,22 +9,45 @@
  "author": "evanbones",
  "description": "Satisfactory inspired ziplines in Minecraft!",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
-  "PacketSender.sendPacket()",
-  "Minecraft.execute()",
-  "FriendlyByteBuf.writeBoolean()",
-  "FriendlyByteBuf.writeDouble()",
-  "FriendlyByteBuf.writeInt()",
-  "Level.getEntitiesOfClass()"
+  "Mixin: 2 points inside the game's methods",
+  "net.minecraft.client.model.HumanoidModel",
+  "net.minecraft.client.renderer.entity.layers.ItemInHandLayer",
+  "net.minecraft.client.renderer.entity.state.ArmedEntityRenderState",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
+  "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState",
+  "net.minecraft.client.renderer.state.level.PlayerRenderState",
+  "net.minecraft.world.item.ItemCooldowns",
+  "net.minecraft.world.item.ItemUseAnimation",
+  "Axis.YN",
+  "Axis.ZP",
+  "Options.damageTiltStrength()",
+  "ModelPart.y",
+  "ModelPart.z",
+  "HumanoidArm.getOpposite()",
+  "Player.fallDistance",
+  "Player.getBoundingBox()",
+  "Player.getCooldowns()",
+  "Player.getUseItem()",
+  "Player.isLocalPlayer()",
+  "Player.isUsingItem()",
+  "Player.resetFallDistance()",
+  "Player.setDeltaMovement()",
+  "Player.setPos()",
+  "Player.startUsingItem()",
+  "Player.stopUsingItem()",
+  "Player.tickCount",
+  "Level.getBlockCollisions()",
+  "Level.getEntitiesOfClass()",
+  "AABB.move()",
+  "VoxelShape.isEmpty()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "zipline-1.5.3+26.3-fabric.jar",
   "published": "2026-09-26"
  },
@@ -36,8 +59,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -54,5 +77,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 8
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 31
 }

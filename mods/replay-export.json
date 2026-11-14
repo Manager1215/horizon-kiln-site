@@ -10,7 +10,6 @@
  "description": "An addon to the Replay Mod that allows it to export into Blender and other 3D software.",
  "needs": [
   "an access widener",
-  "Mixin",
   "com.mojang.blaze3d.vertex.QuadInstance",
   "com.mojang.math.Transformation",
   "net.fabricmc.fabric.api.client.model.loading.v1.ExtraModelKey",
@@ -20,6 +19,8 @@
   "net.minecraft.CrashReport",
   "net.minecraft.CrashReportCategory",
   "net.minecraft.ReportedException",
+  "net.minecraft.client.DeltaTracker.Timer",
+  "net.minecraft.client.gui.screens.Overlay",
   "net.minecraft.client.model.ArmedModel",
   "net.minecraft.client.model.EntityModel",
   "net.minecraft.client.model.HumanoidModel",
@@ -49,16 +50,14 @@
   "net.minecraft.client.renderer.blockentity.ShulkerBoxRenderer.ShulkerBoxModel",
   "net.minecraft.client.renderer.blockentity.SkullBlockRenderer",
   "net.minecraft.client.renderer.blockentity.state.BellRenderState",
-  "net.minecraft.client.renderer.blockentity.state.ChestRenderState",
-  "net.minecraft.client.renderer.blockentity.state.ChestRenderState.ChestMaterialType",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "worldexport-1.5.1.jar",
   "published": "2026-10-20"
  },
@@ -70,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 197
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 229
 }

@@ -9,34 +9,56 @@
  "author": "DeveloperKubilay",
  "description": "Don’t mess with the server Play Minecraft with your friends in 2 clicks via P2P",
  "needs": [
-  "Mixin",
+  "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
+  "net.minecraft.client.GameNarrator",
+  "net.minecraft.client.gui.screens.ConnectScreen",
+  "net.minecraft.client.gui.screens.DirectJoinServerScreen",
+  "net.minecraft.client.gui.screens.DisconnectedScreen",
+  "net.minecraft.client.gui.screens.ManageServerScreen",
+  "net.minecraft.client.gui.screens.ProgressScreen",
+  "net.minecraft.client.gui.screens.WorldOptionsScreen",
+  "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
+  "net.minecraft.client.gui.screens.options.InWorldGameRulesScreen",
+  "net.minecraft.client.multiplayer.ServerData.State",
+  "net.minecraft.client.multiplayer.ServerStatusPinger",
   "net.minecraft.client.multiplayer.resolver.ServerAddress",
   "net.minecraft.client.server.IntegratedServer",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.network.protocol.status.ServerStatus",
+  "net.minecraft.network.protocol.status.ServerStatus.Players",
+  "net.minecraft.server.MinecraftServer.MultiplayerScope",
   "net.minecraft.world.level.storage.WorldData",
   "JsonArray.forEach()",
   "ServerLifecycleEvents.SERVER_STARTED",
   "ServerLifecycleEvents.SERVER_STOPPING",
+  "Minecraft.getNarrator()",
   "Minecraft.getSingleplayerServer()",
+  "MouseHandler.grabMouse()",
+  "ClientLevel.enabledFeatures()",
   "ServerData.copyFrom()",
   "ServerData.ip",
+  "ServerData.motd",
   "ServerData.name",
+  "ServerData.ping",
+  "ServerData.playerList",
+  "ServerData.players",
+  "ServerData.setState()",
+  "ServerData.status",
   "ServerData.type()",
-  "MinecraftServer.getLocalIp()",
-  "MinecraftServer.getPlayerList()",
-  "MinecraftServer.getPort()",
-  "MinecraftServer.isDedicatedServer()"
+  "CommonComponents.GUI_BACK",
+  "CommonComponents.GUI_CANCEL",
+  "CommonComponents.GUI_DONE",
+  "and 17 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Safra-fabric-26.3-3.2.jar",
-  "published": "2026-09-19"
+  "published": "2026-11-08"
  },
  "reports": {
   "works": 0,
@@ -46,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -65,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 18
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 57
 }

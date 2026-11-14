@@ -10,8 +10,6 @@
  "description": "Soar through the skies and explore the world's beauty with your brand-new hang glider!",
  "needs": [
   "an access widener",
-  "Mixin",
-  "net.minecraft.client.CameraType",
   "net.minecraft.client.model.EntityModel",
   "net.minecraft.client.model.HumanoidModel",
   "net.minecraft.client.model.HumanoidModel.ArmPose",
@@ -20,19 +18,21 @@
   "net.minecraft.client.model.geom.builders.CubeListBuilder",
   "net.minecraft.client.model.geom.builders.MeshDefinition",
   "net.minecraft.client.model.geom.builders.PartDefinition",
+  "net.minecraft.client.player.RemotePlayer",
+  "net.minecraft.client.renderer.entity.layers.ItemInHandLayer",
+  "net.minecraft.client.renderer.entity.layers.PlayerItemInHandLayer",
   "net.minecraft.client.renderer.entity.layers.RenderLayer",
   "net.minecraft.client.renderer.entity.player.AvatarRenderer",
   "net.minecraft.client.renderer.entity.state.AvatarRenderState",
   "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperty",
   "net.minecraft.client.renderer.state.level.PlayerRenderState",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.world.entity.EntityTypeIds",
+  "net.minecraft.world.entity.Pose",
   "net.minecraft.world.entity.WalkAnimationState",
-  "Options.getCameraType()",
-  "Options.setCameraType()",
   "GuiGraphicsExtractor.getSprite()",
   "ModelPart.getChild()",
   "LayerDefinition.create()",
+  "AbstractClientPlayer.<init>()",
   "EntityRendererProvider.Context.bakeLayer()",
   "ItemStackRenderState.clear()",
   "RenderTypes.armorCutoutNoCull()",
@@ -41,24 +41,23 @@
   "DataComponents.GLIDER",
   "Identifier.withPath()",
   "ServerPlayer.connection",
+  "ServerGamePacketListenerImpl.aboveGroundTickCount",
+  "ServerGamePacketListenerImpl.aboveGroundVehicleTickCount",
   "Mth.rotLerp()",
+  "LivingEntity.<init>()",
   "Player.fallDistance",
   "Player.getRandom()",
   "Player.getViewVector()",
   "Player.isDescending()",
   "Player.isPassenger()",
-  "Player.setDeltaMovement()",
-  "Player.setYRot()",
-  "Player.walkAnimation",
-  "Player.yHeadRot",
-  "and 5 more"
+  "and 9 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "hangglider-v26.3.0-mc26.3.x+fabric.jar",
   "published": "2026-09-26"
  },
@@ -70,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +87,9 @@
   "minecraft",
   "puzzleslib"
  ],
- "lacks": 45
+ "softOff": {
+  "class": "partial",
+  "why": "data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 49
 }

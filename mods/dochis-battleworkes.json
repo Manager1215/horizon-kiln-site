@@ -7,22 +7,17 @@
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
  "url": "https://modrinth.com/mod/dochis-battleworkes",
  "author": "great_dochi",
- "description": "This is a battle-focused addon for DRM.",
+ "description": "Create custom mob and DNPC battles with visual tools for attack patterns, hitboxes, skills, and boss phases.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndLevelTick",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.loader.api.MappingResolver",
   "net.fabricmc.loader.api.metadata.CustomValue",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.components.WidgetTooltipHolder",
   "net.minecraft.client.gui.screens.options.SoundOptionsScreen",
   "net.minecraft.client.particle.Particle",
@@ -35,7 +30,6 @@
   "net.minecraft.client.sounds.MusicManager",
   "net.minecraft.commands.arguments.blocks.BlockStateParser",
   "net.minecraft.commands.arguments.blocks.BlockStateParser.BlockResult",
-  "net.minecraft.commands.arguments.coordinates.Vec3Argument",
   "net.minecraft.core.particles.BlockParticleOption",
   "net.minecraft.core.particles.DustColorTransitionOptions",
   "net.minecraft.core.particles.DustParticleOptions",
@@ -44,20 +38,26 @@
   "net.minecraft.core.particles.ShriekParticleOption",
   "net.minecraft.network.protocol.game.ServerboundPunchPacket",
   "net.minecraft.network.syncher.EntityDataAccessor",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.permissions.LevelBasedPermissionSet",
   "net.minecraft.world.entity.ai.control.LookControl",
   "net.minecraft.world.entity.ai.control.MoveControl",
+  "net.minecraft.world.entity.ai.control.MoveControl.Operation",
+  "net.minecraft.world.entity.ai.goal.Goal",
+  "net.minecraft.world.entity.ai.goal.Goal.Flag",
+  "net.minecraft.world.entity.ai.goal.GoalSelector",
+  "net.minecraft.world.entity.ai.goal.WrappedGoal",
   "net.minecraft.world.entity.ai.navigation.PathNavigation",
   "net.minecraft.world.entity.monster.Monster",
-  "and 64 more"
+  "net.minecraft.world.entity.projectile.EvokerFangs",
+  "net.minecraft.world.entity.projectile.ProjectileDeflection",
+  "net.minecraft.world.flag.FeatureFlags",
+  "and 62 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "dochi_battleworks-0.1.6-fabric-26.3.jar",
   "published": "2026-10-28"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 213
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 174
 }

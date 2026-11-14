@@ -9,7 +9,6 @@
  "author": "rinnarii",
  "description": "This mod adds various HUD tips that are useful for the Prison Industries server.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents",
   "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.Command",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
@@ -19,10 +18,14 @@
   "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.BeforeMouseClick",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.BeforeMouseDrag",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.BeforeMouseRelease",
+  "net.fabricmc.fabric.api.client.screen.v1.Screens",
+  "net.minecraft.client.gui.screens.ConnectScreen",
   "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
   "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
   "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipPositioner",
   "net.minecraft.client.gui.screens.inventory.tooltip.TooltipRenderUtil",
+  "net.minecraft.client.multiplayer.ServerData.ServerPackStatus",
+  "net.minecraft.client.multiplayer.resolver.ServerAddress",
   "net.minecraft.world.entity.Display",
   "net.minecraft.world.entity.Display.BlockDisplay",
   "net.minecraft.world.entity.Display.TextDisplay",
@@ -30,33 +33,29 @@
   "InputConstants.isKeyDown()",
   "KeyMappingHelper.getBoundKeyOf()",
   "KeyMapping.matches()",
-  "Minecraft.execute()",
   "Minecraft.getCurrentServer()",
-  "Minecraft.hitResult",
   "Minecraft.isLocalServer()",
   "MouseHandler.grabMouse()",
-  "Font.plainSubstrByWidth()",
   "GuiGraphicsExtractor.tooltip()",
   "ServerData.ip",
+  "ServerData.setResourcePackStatus()",
   "LocalPlayer.distanceToSqr()",
   "LocalPlayer.getBoundingBox()",
   "DefaultedRegistry.getId()",
   "DataComponents.LORE",
-  "MutableComponent.setStyle()",
   "SoundEvents.AMETHYST_BLOCK_RESONATE",
   "Util.getMillis()",
   "Items.PAPER",
   "Level.getEntitiesOfClass()",
   "AABB.maxY",
-  "AABB.ofSize()",
-  "HitResult.getType()"
+  "AABB.ofSize()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "prison-industries-hud-3.2.1.jar",
   "published": "2026-10-25"
  },
@@ -68,8 +67,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +84,9 @@
   "java",
   "minecraft"
  ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
  "lacks": 40
 }

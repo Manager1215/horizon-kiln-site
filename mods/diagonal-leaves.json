@@ -9,14 +9,16 @@
  "author": "Lightdrew",
  "description": "Alters leaves' distance check's logic, allowing diagonal connections, too.",
  "needs": [
-  "Mixin"
+  "BlockPos.MutableBlockPos.setWithOffset()",
+  "LeavesBlock.DISTANCE",
+  "LeavesBlock.getOptionalDistanceAt()"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "diagonal_leaves-fabric-1.0.0+26.3.jar",
   "published": "2026-10-20"
  },
@@ -28,8 +30,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -42,5 +44,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 3
 }

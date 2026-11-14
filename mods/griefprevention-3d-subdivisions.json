@@ -1,7 +1,7 @@
 {
  "id": "griefprevention-3d-subdivisions",
  "name": "GriefPrevention3D",
- "version": "19.0.5",
+ "version": "19.0.7",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,18 +9,57 @@
  "author": "castledking",
  "description": "A fork of GriefPrevention that adds 3D subdivisions",
  "needs": [
-  "Mixin",
+  "Mixin: 22 points inside the game's methods",
+  "com.mojang.math.Transformation",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
+  "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
+  "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
+  "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
+  "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
+  "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Canceled",
+  "net.fabricmc.fabric.api.event.player.UseEntityCallback",
+  "net.fabricmc.loader.api.MappingResolver",
   "net.fabricmc.loader.api.VersionParsingException",
-  "net.fabricmc.loader.api.metadata.version.VersionPredicate"
+  "net.fabricmc.loader.api.metadata.version.VersionPredicate",
+  "net.minecraft.class_10138",
+  "net.minecraft.class_12090",
+  "net.minecraft.class_124",
+  "net.minecraft.class_1268",
+  "net.minecraft.class_1269",
+  "net.minecraft.class_1269.class_9857",
+  "net.minecraft.class_1269.class_9859",
+  "net.minecraft.class_1269.class_9860",
+  "net.minecraft.class_1282",
+  "net.minecraft.class_1293",
+  "net.minecraft.class_1294",
+  "net.minecraft.class_1295",
+  "net.minecraft.class_1297",
+  "net.minecraft.class_1297.class_5529",
+  "net.minecraft.class_1299",
+  "net.minecraft.class_1308",
+  "net.minecraft.class_1309",
+  "net.minecraft.class_1321",
+  "net.minecraft.class_1429",
+  "net.minecraft.class_1511",
+  "net.minecraft.class_1528",
+  "net.minecraft.class_1530",
+  "net.minecraft.class_1531",
+  "net.minecraft.class_1536",
+  "net.minecraft.class_1538",
+  "net.minecraft.class_1540",
+  "net.minecraft.class_1542",
+  "net.minecraft.class_1548",
+  "and 80 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "GriefPrevention3D.jar",
-  "published": "2026-11-01"
+  "published": "2026-11-09"
  },
  "reports": {
   "works": 0,
@@ -30,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -50,5 +89,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 2
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 335
 }

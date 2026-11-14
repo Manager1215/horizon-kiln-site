@@ -10,27 +10,23 @@
  "description": "This mod allows choosing which side of the F3 screen debug entries are shown",
  "needs": [
   "an access widener",
-  "Mixin",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
-  "net.minecraft.client.gui.components.CycleButton.OnValueChange",
+  "Mixin: 5 points inside the game's methods",
+  "net.minecraft.client.gui.components.DebugScreenOverlay.1",
   "net.minecraft.client.gui.components.debug.DebugEntryNoop",
   "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-  "net.minecraft.client.gui.components.debug.DebugScreenEntries",
-  "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
-  "net.minecraft.client.gui.components.debug.DebugScreenEntryStatus",
   "net.minecraft.client.gui.screens.debug.DebugOptionsScreen",
   "net.minecraft.client.gui.screens.debug.DebugOptionsScreen.OptionEntry",
   "net.minecraft.util.StrictJsonParser",
   "org.apache.commons.io.FileUtils",
-  "Minecraft.debugEntries"
+  "DebugScreenEntries.getEntry()",
+  "DebugScreenEntryList.LOGGER"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "f3-sides-1.1+26.3.jar",
   "published": "2026-09-15"
  },
@@ -47,5 +43,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 13
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 9
 }

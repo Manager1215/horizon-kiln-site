@@ -14,24 +14,19 @@
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
   "net.minecraft.core.particles.PowerParticleOption",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.level.block.EndPortalFrameBlock",
   "ServerLifecycleEvents.SERVER_STARTED",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerTickEvents.END_SERVER_TICK",
   "ParticleTypes.DRAGON_BREATH",
   "MinecraftServer.getAllLevels()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.getTickCount()",
   "ServerLevel.sendParticles()",
   "ServerPlayer.drop()",
   "ServerPlayer.getGameProfile()",
   "ServerPlayer.isDeadOrDying()",
-  "ServerPlayer.sendSystemMessage()",
   "SoundEvents.END_PORTAL_FRAME_FILL",
   "SoundEvents.NOTE_BLOCK_BASS",
   "EntityTypes.ENDER_DRAGON",
@@ -44,8 +39,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "CooperativeEndAccess-fabric-0.2.2+26.3.jar",
   "published": "2026-09-23"
  },
@@ -57,8 +52,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -74,5 +69,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 30
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 25
 }

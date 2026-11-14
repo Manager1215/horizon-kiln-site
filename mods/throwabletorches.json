@@ -1,7 +1,7 @@
 {
  "id": "throwabletorches",
  "name": "ThrowableTorches",
- "version": "1.1.0",
+ "version": "1.1.1",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,17 +10,21 @@
  "description": "Throw your torches! Left‑click to hurl a torch that arcs through the air and sticks wherever it lands.",
  "needs": [
   "an access widener",
-  "Mixin",
   "net.minecraft.client.renderer.entity.EntityRenderers",
   "net.minecraft.client.renderer.entity.ThrownItemRenderer",
+  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
+  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
+  "net.minecraft.server.level.ServerPlayerGameMode",
   "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile",
   "net.minecraft.world.level.block.WallTorchBlock",
-  "LivingEntity.swing()",
+  "ClientPacketListener.send()",
+  "ServerPlayer.getEyeY()",
+  "ServerPlayer.getRandom()",
+  "SoundEvents.SNOWBALL_THROW",
   "ItemEntity.setDefaultPickUpDelay()",
   "Items.REDSTONE_TORCH",
   "Items.SOUL_TORCH",
   "Items.TORCH",
-  "SwingAnimation.DEFAULT",
   "Level.addFreshEntity()",
   "Blocks.REDSTONE_TORCH",
   "Blocks.REDSTONE_WALL_TORCH",
@@ -28,18 +32,16 @@
   "Blocks.SOUL_WALL_TORCH",
   "Blocks.TORCH",
   "Blocks.WALL_TORCH",
-  "SoundType.getPlaceSound()",
-  "BlockState.canBeReplaced()",
-  "BlockState.getSoundType()"
+  "BlockState.canBeReplaced()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "throwabletorches-fabric-26.3-1.1.0.jar",
-  "published": "2026-09-16"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "throwabletorches-fabric-26.3-1.1.1.jar",
+  "published": "2026-11-06"
  },
  "reports": {
   "works": 0,
@@ -49,8 +51,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -67,5 +69,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 20
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 23
 }

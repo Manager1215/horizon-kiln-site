@@ -9,27 +9,17 @@
  "author": "mr_GrANTt",
  "description": "This mod adds a new menu to creative that allows you to automatically create banners!",
  "needs": [
-  "Mixin",
   "net.minecraft.commands.synchronization.SuggestionProviders",
   "net.minecraft.network.protocol.game.ServerboundSetCreativeModeSlotPacket",
   "net.minecraft.world.SimpleContainer",
-  "net.minecraft.world.inventory.ContainerInput",
   "net.minecraft.world.item.BannerItem",
   "net.minecraft.world.level.block.entity.BannerPatternLayers",
   "net.minecraft.world.level.block.entity.BannerPatternLayers.Layer",
   "KeyMapping.matches()",
-  "Options.keyDrop",
-  "Options.keyHotbarSlots",
-  "Options.keyInventory",
-  "Options.keyPickItem",
-  "Options.keySwapOffhand",
-  "AbstractContainerScreen.mouseDragged()",
-  "AbstractContainerScreen.mouseScrolled()",
   "ClientPacketListener.send()",
   "LocalPlayer.canDropItems()",
   "LocalPlayer.drop()",
   "LocalPlayer.registryAccess()",
-  "CommandSourceStack.sendSystemMessage()",
   "Holder.getRegisteredName()",
   "NonNullList.addAll()",
   "RegistryAccess.lookupOrThrow()",
@@ -47,12 +37,12 @@
   "Items.CREEPER_BANNER_PATTERN",
   "Level.enabledFeatures()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "[26.3] banner-alphabet-1.0.0.jar",
   "published": "2026-11-03"
  },
@@ -65,5 +55,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
- "lacks": 36
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 27
 }

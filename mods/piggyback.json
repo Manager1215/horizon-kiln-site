@@ -10,15 +10,38 @@
  "description": "Allow player riding each other and replace the default player sitting mechanic with a piggyback-style ride. Carry your friends on your back for fun, teamwork, or pure chaos!",
  "needs": [
   "an access widener",
-  "Mixin",
-  "net.minecraft.SharedConstants"
+  "Mixin: 3 points inside the game's methods",
+  "net.minecraft.SharedConstants",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.RenderLayerParent",
+  "net.minecraft.client.renderer.entity.player.AvatarRenderer",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
+  "net.minecraft.world.entity.Entity.MoveFunction",
+  "net.minecraft.world.entity.EntityDimensions",
+  "net.minecraft.world.level.entity.EntityAccess",
+  "AbstractClientPlayer.getPassengers()",
+  "ServerPlayer.connection",
+  "ServerGamePacketListenerImpl.send()",
+  "Avatar.getVehicle()",
+  "Entity.isCrouching()",
+  "Entity.setPos()",
+  "Entity.setYBodyRot()",
+  "Entity.setYRot()",
+  "Entity.stopRiding()",
+  "EntityTypes.PLAYER",
+  "LivingEntity.<init>()",
+  "Player.<init>()",
+  "Player.getFirstPassenger()",
+  "Player.startRiding()",
+  "Player.yBodyRot"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "piggyback-fabric-26.3-1.1.1.jar",
   "published": "2026-09-30"
  },
@@ -30,8 +53,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -48,5 +71,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 1
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 24
 }

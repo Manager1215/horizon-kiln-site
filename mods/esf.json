@@ -9,7 +9,6 @@
  "author": "Traben",
  "description": "Allows for entity sound variation using OptiFine format property rules",
  "needs": [
-  "Mixin",
   "net.minecraft.client.resources.sounds.Sound",
   "net.minecraft.client.resources.sounds.Sound.Type",
   "net.minecraft.client.resources.sounds.SoundEventRegistration",
@@ -40,12 +39,12 @@
   "AABB.contains()",
   "AABB.intersects()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "entity_sound_features-0.8.2-26.1-fabric.jar",
   "published": "2026-09-01"
  },
@@ -58,5 +57,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
  "lacks": 29
 }

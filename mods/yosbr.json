@@ -10,16 +10,14 @@
  "description": "Your options shall be respected.",
  "needs": [
   "net.fabricmc.loader.api.LanguageAdapter",
-  "net.fabricmc.loader.api.LanguageAdapterException",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger"
+  "net.fabricmc.loader.api.LanguageAdapterException"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "yosbr-0.1.2.jar",
   "published": "2023-06-12"
  },
@@ -34,5 +32,9 @@
  "depends": [
   "fabricloader"
  ],
- "lacks": 4
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 2
 }

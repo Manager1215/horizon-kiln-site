@@ -10,13 +10,11 @@
  "description": "Keep My Options saves, loads, and syncs your Minecraft settings and resource packs across different instances. Create profiles, make backups, and switch between your preferred setups with one click.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.client.Options.FieldAccess",
   "net.minecraft.client.Screenshot",
   "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
-  "net.minecraft.client.gui.components.ObjectSelectionList",
-  "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
-  "net.minecraft.client.gui.components.Tooltip",
+  "net.minecraft.client.gui.components.LockIconButton",
   "net.minecraft.client.gui.screens.options.OptionsScreen",
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.client.resources.language.LanguageInfo",
@@ -26,38 +24,31 @@
   "NativeImage.read()",
   "ModContainer.findPath()",
   "ModMetadata.getIconPath()",
-  "Minecraft.execute()",
   "Minecraft.gameDirectory",
   "Minecraft.getResourcePackRepository()",
   "Minecraft.reloadResourcePacks()",
   "OptionInstance.codec()",
   "OptionInstance.toString",
   "Options.gamma()",
-  "Options.keyMappings",
   "Options.languageCode",
-  "Options.load()",
   "Options.processOptions()",
-  "Options.save()",
   "Options.updateResourcePacks()",
-  "Font.plainSubstrByWidth()",
   "Font.split()",
   "Gui.overlay()",
   "GuiGraphicsExtractor.blit()",
   "GuiGraphicsExtractor.text()",
   "GuiGraphicsExtractor.textRendererForWidget()",
-  "Button.onPress()",
-  "Button.Builder.tooltip()",
   "LanguageManager.getLanguage()",
   "LanguageManager.setSelected()",
-  "Component.translatableWithFallback()",
-  "MutableComponent.setStyle()"
+  "Component.getSiblings()",
+  "Component.translatableWithFallback()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "keep-my-options-fabric-26.3-1.1.0.jar",
   "published": "2026-10-30"
  },
@@ -69,8 +60,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +77,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 40
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 31
 }

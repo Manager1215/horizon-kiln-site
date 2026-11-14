@@ -1,0 +1,92 @@
+{
+ "id": "seed-scout",
+ "name": "SeedScout",
+ "version": "0.3.0+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/seed-scout",
+ "author": "cjh1126",
+ "description": "A client-side Fabric mod that puts a Chunkbase-style seed map inside the game.",
+ "needs": [
+  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
+  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
+  "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.Chat",
+  "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
+  "net.minecraft.SharedConstants",
+  "net.minecraft.client.renderer.rendertype.RenderSetup",
+  "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
+  "net.minecraft.client.renderer.texture.DynamicTexture",
+  "net.minecraft.client.server.IntegratedServer",
+  "net.minecraft.resources.RegistryDataLoader",
+  "net.minecraft.resources.RegistryDataLoader.RegistryData",
+  "net.minecraft.server.packs.VanillaPackResources",
+  "net.minecraft.server.packs.repository.PackRepository",
+  "net.minecraft.server.packs.repository.ServerPacksSource",
+  "net.minecraft.server.packs.resources.MultiPackResourceManager",
+  "net.minecraft.world.level.biome.FeatureSorter",
+  "net.minecraft.world.level.biome.FeatureSorter.StepFeatureData",
+  "net.minecraft.world.level.biome.MultiNoiseBiomeSource",
+  "net.minecraft.world.level.biome.MultiNoiseBiomeSourceParameterLists",
+  "net.minecraft.world.level.biome.TheEndBiomeSource",
+  "net.minecraft.world.level.chunk.ChunkGeneratorStructureState",
+  "net.minecraft.world.level.levelgen.LegacyRandomSource",
+  "net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator",
+  "net.minecraft.world.level.levelgen.NoiseGeneratorSettings",
+  "net.minecraft.world.level.levelgen.NoiseSettings",
+  "net.minecraft.world.level.levelgen.RandomState",
+  "net.minecraft.world.level.levelgen.WorldgenRandom",
+  "net.minecraft.world.level.levelgen.XoroshiroRandomSource",
+  "net.minecraft.world.level.levelgen.heightproviders.HeightProvider",
+  "net.minecraft.world.level.levelgen.structure.SinglePieceStructure",
+  "net.minecraft.world.level.levelgen.structure.StructureSet",
+  "net.minecraft.world.level.levelgen.structure.StructureSet.StructureSelectionEntry",
+  "net.minecraft.world.level.levelgen.structure.placement.ConcentricRingsStructurePlacement",
+  "net.minecraft.world.level.levelgen.structure.placement.RandomSpreadStructurePlacement",
+  "net.minecraft.world.level.levelgen.structure.placement.StructurePlacement",
+  "net.minecraft.world.level.levelgen.structure.structures.JigsawStructure",
+  "net.minecraft.world.level.levelgen.structure.structures.MineshaftStructure",
+  "net.minecraft.world.level.levelgen.structure.structures.OceanMonumentStructure",
+  "net.minecraft.world.level.levelgen.structure.structures.StrongholdStructure",
+  "net.minecraft.world.level.levelgen.structure.structures.WoodlandMansionStructure",
+  "and 60 more"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "seedscout-0.3.0+26.3.jar",
+  "published": "2026-11-09"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1
+ },
+ "mixins": false,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 103
+}

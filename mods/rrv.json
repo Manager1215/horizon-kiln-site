@@ -10,15 +10,13 @@
  "description": "A recipe viewer for the latest versions of Minecraft, rebuilt from EIV and designed to be configured.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "com.mojang.blaze3d.Blaze3D",
   "com.mojang.blaze3d.platform.cursor.CursorTypes",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseScroll",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.fabric.api.recipe.v1.ingredient.DefaultCustomIngredients",
   "net.fabricmc.fabric.api.tag.client.v1.ClientTags",
   "net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRenderHandler",
@@ -26,19 +24,16 @@
   "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
   "net.minecraft.TracingExecutor",
   "net.minecraft.advancements.predicates.entity.EntityPartialComponentsPredicate",
-  "net.minecraft.client.gui.components.Button.Plain",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
+  "net.minecraft.advancements.predicates.entity.EntityPredicate",
+  "net.minecraft.advancements.triggers.InventoryChangeTrigger",
+  "net.minecraft.advancements.triggers.InventoryChangeTrigger.TriggerInstance",
   "net.minecraft.client.gui.components.CycleButton.DisplayState",
-  "net.minecraft.client.gui.components.CycleButton.OnValueChange",
   "net.minecraft.client.gui.components.EditBox.TextFormatter",
   "net.minecraft.client.gui.components.MultiLineTextWidget",
   "net.minecraft.client.gui.components.ScrollableLayout",
   "net.minecraft.client.gui.components.ScrollableLayout.Container",
   "net.minecraft.client.gui.components.SpriteIconButton",
   "net.minecraft.client.gui.components.SpriteIconButton.CenteredIcon",
-  "net.minecraft.client.gui.components.StringWidget",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.components.WidgetSprites",
   "net.minecraft.client.gui.layouts.GridLayout",
   "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
@@ -46,19 +41,24 @@
   "net.minecraft.client.gui.layouts.LayoutSettings",
   "net.minecraft.client.gui.layouts.LinearLayout",
   "net.minecraft.client.gui.layouts.SpacerElement",
+  "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
   "net.minecraft.client.gui.screens.inventory.AnvilScreen",
   "net.minecraft.client.gui.screens.inventory.BlastFurnaceScreen",
   "net.minecraft.client.gui.screens.inventory.CraftingScreen",
   "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
+  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.ItemPickerMenu",
+  "net.minecraft.client.gui.screens.inventory.EffectsInInventory",
   "net.minecraft.client.gui.screens.inventory.FurnaceScreen",
+  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
+  "net.minecraft.client.gui.screens.inventory.SmithingScreen",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "reliable-recipe-viewer-8.11.3+26.3-fabric.jar",
   "published": "2026-11-03"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -90,5 +90,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 480
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 450
 }

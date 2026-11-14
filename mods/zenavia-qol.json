@@ -9,7 +9,7 @@
  "author": ".corail44",
  "description": "Quality of Life client mod for the Infecté game mode on the Zenavia Minecraft server.",
  "needs": [
-  "Mixin",
+  "Mixin: 9 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.Blaze3D",
   "com.mojang.blaze3d.platform.cursor.CursorType",
@@ -22,9 +22,7 @@
   "net.fabricmc.loader.api.metadata.CustomValue",
   "net.fabricmc.loader.api.metadata.CustomValue.CvObject",
   "net.fabricmc.loader.api.metadata.CustomValue.CvType",
-  "net.minecraft.client.CameraType",
   "net.minecraft.client.Screenshot",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.components.WidgetSprites",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
   "net.minecraft.client.gui.layouts.LinearLayout",
@@ -38,26 +36,28 @@
   "net.minecraft.client.model.monster.zombie.DrownedModel",
   "net.minecraft.client.model.monster.zombie.ZombieModel",
   "net.minecraft.client.multiplayer.ClientChunkCache",
+  "net.minecraft.client.player.ClientInput",
+  "net.minecraft.client.player.KeyboardInput",
+  "net.minecraft.client.renderer.entity.AbstractBoatRenderer",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
   "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.renderer.entity.state.BoatRenderState",
   "net.minecraft.client.renderer.entity.state.EndermanRenderState",
   "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
+  "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
   "net.minecraft.client.renderer.entity.state.PiglinRenderState",
   "net.minecraft.client.renderer.entity.state.SkeletonRenderState",
   "net.minecraft.client.renderer.entity.state.ZombieRenderState",
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.client.server.IntegratedServer",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
-  "and 67 more"
+  "and 75 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "zenavia-qol-mc26.3-2.0.0.jar",
   "published": "2026-10-15"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +85,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 179
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own; has network channels"
+ },
+ "lacks": 159
 }

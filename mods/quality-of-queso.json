@@ -9,23 +9,25 @@
  "author": "Dillon8775",
  "description": "A Fabric/(Neo)Forge mod that adds various different QoL features, including container searching, precise inventory management, cool visual effects, and so much more!",
  "needs": [
-  "Mixin",
+  "Mixin: 15 points inside the game's methods",
   "com.mojang.blaze3d.Blaze3D",
   "com.mojang.blaze3d.platform.cursor.CursorType",
   "com.mojang.blaze3d.platform.cursor.CursorTypes",
+  "net.minecraft.client.AttackIndicatorStatus",
+  "net.minecraft.client.ClientClockManager",
+  "net.minecraft.client.ClientClockManager.ClientClockInstance",
   "net.minecraft.client.OptionInstance.CaptionBasedToString",
-  "net.minecraft.client.OptionInstance.IntRange",
   "net.minecraft.client.OptionInstance.SliderableValueSet",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
-  "net.minecraft.client.OptionInstance.ValueSet",
   "net.minecraft.client.OptionInstance.ValueUpdateListener",
   "net.minecraft.client.gui.components.EditBox.TextFormatter",
-  "net.minecraft.client.gui.components.Tooltip",
+  "net.minecraft.client.gui.components.SpriteIconButton",
   "net.minecraft.client.gui.components.WidgetSprites",
   "net.minecraft.client.gui.components.debug.DebugEntryCategory",
   "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
   "net.minecraft.client.gui.components.debug.DebugScreenEntry",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
+  "net.minecraft.client.gui.layouts.LinearLayout",
   "net.minecraft.client.gui.screens.inventory.AbstractFurnaceScreen",
   "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
   "net.minecraft.client.gui.screens.inventory.AnvilScreen",
@@ -48,16 +50,14 @@
   "net.minecraft.client.gui.screens.inventory.StonecutterScreen",
   "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
   "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-  "net.minecraft.client.multiplayer.SessionSearchTrees",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "qualityofqueso-1.7.21_fabric-mc26.3.jar",
   "published": "2026-11-02"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -90,5 +90,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 198
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes"
+ },
+ "lacks": 231
 }

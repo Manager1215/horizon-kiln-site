@@ -9,18 +9,15 @@
  "author": "BloodRed",
  "description": "A simple freelook mod which won't affect performance of your device.",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.CameraType",
-  "Options.getCameraType()",
-  "Options.sensitivity()",
-  "Options.setCameraType()"
+  "Mixin: 1 point inside the game's methods",
+  "Options.sensitivity()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "decentfreelook-1.3+26.3.jar",
   "published": "2026-09-16"
  },
@@ -32,8 +29,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -48,5 +45,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 4
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 1
 }

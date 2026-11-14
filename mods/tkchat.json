@@ -9,14 +9,10 @@
  "author": "tkkr",
  "description": "Homemade chat plugin for Velocity that has many features - including cross-server group/global/direct messages and mute integration with LibertyBans.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.api.DedicatedServerModInitializer",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowGameMessage",
-  "net.minecraft.network.chat.contents.TranslatableContents",
-  "RegistryFriendlyByteBuf.readBytes()",
-  "RegistryFriendlyByteBuf.writeBytes()",
-  "Component.getContents()",
   "ServerPlayer.getBlockX()",
   "ServerPlayer.getBlockY()",
   "ServerPlayer.getBlockZ()"
@@ -25,8 +21,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "tkChat-Fabric-26.3-0.10.0.jar",
   "published": "2026-09-27"
  },
@@ -47,5 +43,9 @@
   "minecraft",
   "signedvelocity"
  ],
- "lacks": 10
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 6
 }

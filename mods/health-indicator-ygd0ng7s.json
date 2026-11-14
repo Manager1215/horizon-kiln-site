@@ -10,22 +10,37 @@
  "description": "A Fabric client mod that displays health, armor, and absorption indicators above entities' heads.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.RenderLayerParent",
+  "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
   "net.minecraft.world.entity.decoration.ArmorStand",
   "net.minecraft.world.entity.monster.Monster",
   "InputConstants.Type.getOrCreate()",
+  "PoseStack.last()",
+  "PoseStack.Pose.pose()",
+  "VertexConsumer.addVertex()",
+  "VertexConsumer.setLight()",
+  "VertexConsumer.setOverlay()",
+  "Camera.rotation()",
   "KeyMapping.resetMapping()",
   "KeyMapping.setKey()",
-  "Minecraft.setScreenAndShow()",
   "ClientLevel.getEntities()",
-  "DamageSource.getEntity()"
+  "ClientLevel.getScoreboard()",
+  "GameRenderer.mainCamera()",
+  "RenderTypes.armorCutoutNoCull()",
+  "RenderTypes.entityTranslucent()",
+  "FormattedCharSequence.forward()",
+  "LivingEntity.distanceToSqr()",
+  "LivingEntity.getAbsorptionAmount()",
+  "LivingEntity.getBbHeight()",
+  "Scoreboard.getDisplayObjective()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "health-indicator-plus-3.3.1+26.3.jar",
   "published": "2026-09-16"
  },
@@ -37,8 +52,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -55,5 +70,9 @@
   "minecraft",
   "yet_another_config_lib_v3"
  ],
- "lacks": 8
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 24
 }

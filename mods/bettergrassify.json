@@ -9,7 +9,6 @@
  "author": "UltimatChamp",
  "description": "Gamers can finally touch grass!?\n\nOptiFine's Fancy and Fast better grass implemented on Fabric and NeoForge!",
  "needs": [
-  "Mixin",
   "com.mojang.blaze3d.vertex.VertexSorting",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin.Context",
@@ -26,7 +25,6 @@
   "net.minecraft.client.OptionInstance.CaptionBasedToString",
   "net.minecraft.client.OptionInstance.Enum",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
-  "net.minecraft.client.OptionInstance.ValueSet",
   "net.minecraft.client.OptionInstance.ValueUpdateListener",
   "net.minecraft.client.gui.components.OptionsList",
   "net.minecraft.client.gui.screens.options.OptionsSubScreen",
@@ -41,7 +39,6 @@
   "net.minecraft.world.level.block.PathBlock",
   "net.minecraft.world.level.block.SnowLayerBlock",
   "Minecraft.reloadResourcePacks()",
-  "Minecraft.setScreenAndShow()",
   "OptionInstance.<init>()",
   "OptionInstance.BOOLEAN_VALUES",
   "OptionInstance.cachedConstantTooltip()",
@@ -50,14 +47,16 @@
   "Blocks.POWDER_SNOW",
   "Blocks.SNOW",
   "Blocks.SNOW_BLOCK",
-  "and 8 more"
+  "BlockState.getSeed()",
+  "BlockState.getShape()",
+  "and 6 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "BetterGrassify-1.8.8+fabric.26.3.jar",
   "published": "2026-09-16"
  },
@@ -70,5 +69,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
- "lacks": 48
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 46
 }

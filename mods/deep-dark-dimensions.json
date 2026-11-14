@@ -9,7 +9,11 @@
  "author": "TOP_G2026",
  "description": "Deep Dark Dimension is a full-scale dimension mod that adds the entire Sculk World dimension with 8 custom biomes, 13 new mobs, bosses, weapons, armor, machines, a trading profession, and hundreds of blocks.",
  "needs": [
-  "Mixin",
+  "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
+  "com.mojang.blaze3d.vertex.BufferBuilder",
+  "com.mojang.blaze3d.vertex.ByteBufferBuilder",
+  "com.mojang.blaze3d.vertex.DefaultVertexFormat",
+  "com.mojang.blaze3d.vertex.MeshData",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
@@ -27,6 +31,8 @@
   "net.minecraft.client.model.geom.builders.CubeListBuilder",
   "net.minecraft.client.model.geom.builders.MeshDefinition",
   "net.minecraft.client.model.geom.builders.PartDefinition",
+  "net.minecraft.client.renderer.DynamicGpuData",
+  "net.minecraft.client.renderer.SkyRenderer",
   "net.minecraft.client.renderer.entity.ArmorModelSet",
   "net.minecraft.client.renderer.entity.ArrowRenderer",
   "net.minecraft.client.renderer.entity.HumanoidMobRenderer",
@@ -39,25 +45,18 @@
   "net.minecraft.client.renderer.entity.state.SalmonRenderState",
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
-  "net.minecraft.server.permissions.Permissions",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.util.BlockUtil",
   "net.minecraft.util.BlockUtil.FoundRectangle",
   "net.minecraft.world.SimpleContainer",
-  "net.minecraft.world.SimpleMenuProvider",
-  "net.minecraft.world.damagesource.DamageTypes",
-  "net.minecraft.world.entity.EntityDimensions",
-  "net.minecraft.world.entity.SpawnPlacementTypes",
-  "net.minecraft.world.entity.SpawnPlacements",
-  "net.minecraft.world.entity.SpawnPlacements.SpawnPredicate",
   "and 80 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ardas-sculks-1.0.0-mc26.3.jar",
   "published": "2026-11-02"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 281
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
+ },
+ "lacks": 293
 }

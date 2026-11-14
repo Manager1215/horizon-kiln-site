@@ -9,14 +9,12 @@
  "author": "IGxxd",
  "description": "Mod to instant reroll/refresh/Recycle trade using name on sign",
  "needs": [
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
   "net.minecraft.tags.EnchantmentTags",
   "net.minecraft.world.entity.ai.Brain",
   "net.minecraft.world.entity.ai.memory.MemoryModuleType",
   "net.minecraft.world.entity.npc.villager.Villager",
   "net.minecraft.world.entity.npc.villager.VillagerData",
   "net.minecraft.world.entity.npc.villager.VillagerProfession",
-  "net.minecraft.world.item.alchemy.PotionContents",
   "net.minecraft.world.item.component.SuspiciousStewEffects",
   "net.minecraft.world.item.component.SuspiciousStewEffects.Entry",
   "net.minecraft.world.item.enchantment.EnchantmentInstance",
@@ -30,8 +28,6 @@
   "net.minecraft.world.level.block.entity.SignText",
   "net.minecraft.world.level.block.entity.SignText.Mutable",
   "Object2IntMap.Entry.getKey()",
-  "CommandSourceStack.getServer()",
-  "CommandSourceStack.isPlayer()",
   "Holder.Reference.is()",
   "Holder.Reference.tags()",
   "HolderSet.iterator()",
@@ -41,22 +37,26 @@
   "Registry.listElements()",
   "RegistryAccess.lookupOrThrow()",
   "RegistryAccess.Frozen.lookupOrThrow()",
-  "DataComponents.POTION_CONTENTS",
   "DataComponents.STORED_ENCHANTMENTS",
   "DataComponents.SUSPICIOUS_STEW_EFFECTS",
   "Registries.TRADE_SET",
   "Registries.VILLAGER_PROFESSION",
-  "MutableComponent.withStyle()",
-  "Style.withClickEvent()",
   "MinecraftServer.registryAccess()",
-  "and 40 more"
+  "ServerLevel.getEntitiesOfClass()",
+  "ServerLevel.getEntityInAnyDimension()",
+  "ServerLevel.sendParticles()",
+  "ServerPlayer.addItem()",
+  "ServerPlayer.drop()",
+  "ServerPlayer.getBoundingBox()",
+  "SoundEvents.VILLAGER_NO",
+  "and 33 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "librarian-filter-universal-26.3-1.0.1.jar",
   "published": "2026-11-01"
  },
@@ -68,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -84,5 +84,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 80
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 73
 }

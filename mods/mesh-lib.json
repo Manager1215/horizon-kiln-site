@@ -9,7 +9,6 @@
  "author": "OffsetMonkey538",
  "description": "Allows easily hosting an HTTP server on Minecraft. Works on Fabric, NeoForge and PaperMC.",
  "needs": [
-  "Mixin",
   "io.netty.bootstrap.ServerBootstrap",
   "io.netty.channel.Channel",
   "io.netty.channel.ChannelFuture",
@@ -43,12 +42,12 @@
   "io.netty.handler.stream.ChunkedWriteHandler",
   "net.fabricmc.api.DedicatedServerModInitializer"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "mesh-lib-fabric-26.1-2.1.2+fabric+26.1.jar",
   "published": "2026-09-27"
  },
@@ -69,5 +68,9 @@
   "minecraft",
   "monkeylib538"
  ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
  "lacks": 32
 }

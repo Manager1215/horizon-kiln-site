@@ -1,7 +1,7 @@
 {
  "id": "zfastnoise",
  "name": "Fast Noise",
- "version": "1.1.2+26.3",
+ "version": "1.1.3+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,7 +10,7 @@
  "description": "Vanilla Worldgen optimization mod",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.SharedConstants",
   "net.minecraft.util.BitStorage",
   "net.minecraft.util.SimpleBitStorage",
@@ -26,6 +26,7 @@
   "net.minecraft.world.level.chunk.Palette.Factory",
   "net.minecraft.world.level.chunk.PalettedContainer.Data",
   "net.minecraft.world.level.chunk.SingleValuePalette",
+  "net.minecraft.world.level.chunk.status.ChunkStatusTasks",
   "net.minecraft.world.level.levelgen.Aquifer",
   "net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator",
   "net.minecraft.world.level.levelgen.NoiseChunk",
@@ -50,17 +51,16 @@
   "PalettedContainer.<init>()",
   "PalettedContainer.data",
   "PalettedContainer.strategy",
-  "ChunkStatus.heightmapsAfter()",
   "and 1 more"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "zfastnoise-1.1.2+26.3.jar",
-  "published": "2026-10-30"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "zfastnoise-1.1.3+26.3.jar",
+  "published": "2026-11-13"
  },
  "reports": {
   "works": 0,
@@ -76,5 +76,9 @@
   "minecraft",
   "zconfig"
  ],
+ "softOff": {
+  "class": "restart",
+  "why": "@overwrite and @redirect and @wrap-method into the game's classes"
+ },
  "lacks": 41
 }

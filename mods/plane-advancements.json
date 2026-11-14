@@ -9,8 +9,12 @@
  "author": "Nettakrim",
  "description": "Rearranges Advancements to make better use of space, and look a little more like the old Acheivements",
  "needs": [
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "net.minecraft.TracingExecutor",
+  "net.minecraft.advancements.AdvancementNode",
+  "net.minecraft.client.gui.screens.advancements.AdvancementTab",
+  "net.minecraft.client.gui.screens.advancements.AdvancementWidget",
+  "net.minecraft.client.gui.screens.advancements.AdvancementsScreen",
   "net.minecraft.core.component.DataComponentPatch.Builder",
   "AdvancementHolder.<init>()",
   "AdvancementRequirements.EMPTY",
@@ -22,12 +26,12 @@
   "GsonHelper.writeValue()",
   "Util.backgroundExecutor()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "plane_advancements-1.6-mc26.3.jar",
   "published": "2026-09-23"
  },
@@ -39,8 +43,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -55,5 +59,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 11
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method into the game's classes; runs threads of its own"
+ },
+ "lacks": 15
 }

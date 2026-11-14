@@ -9,16 +9,46 @@
  "author": "medecoole",
  "description": "Be sturdy in Style! (Armor Decoration Mod)",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
+  "net.minecraft.client.model.HumanoidModel",
+  "net.minecraft.client.model.monster.zombie.ZombieModel",
+  "net.minecraft.client.model.object.armorstand.ArmorStandModel",
+  "net.minecraft.client.model.player.PlayerModel",
+  "net.minecraft.client.renderer.entity.AgeableMobRenderer",
+  "net.minecraft.client.renderer.entity.ArmorStandRenderer",
+  "net.minecraft.client.renderer.entity.HumanoidMobRenderer",
+  "net.minecraft.client.renderer.entity.HuskRenderer",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.WitherSkeletonRenderer",
+  "net.minecraft.client.renderer.entity.layers.CapeLayer",
+  "net.minecraft.client.renderer.entity.layers.CustomHeadLayer",
+  "net.minecraft.client.renderer.entity.layers.CustomHeadLayer.Transforms",
+  "net.minecraft.client.renderer.entity.layers.RenderLayer",
+  "net.minecraft.client.renderer.entity.player.AvatarRenderer",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
+  "net.minecraft.client.renderer.entity.state.ZombieRenderState",
+  "net.minecraft.tags.ItemTags",
+  "net.minecraft.world.entity.monster.piglin.Piglin",
+  "net.minecraft.world.entity.monster.skeleton.AbstractSkeleton",
+  "net.minecraft.world.entity.monster.zombie.Zombie",
+  "net.minecraft.world.inventory.ClickAction",
+  "net.minecraft.world.item.component.DyedItemColor",
+  "ModelPart.translateAndRotate()",
+  "EntityRendererProvider.Context.getItemModelResolver()",
+  "ModelManager.getItemModel()",
+  "DataComponents.DYED_COLOR",
+  "Mob.getRandom()",
   "Item.Properties.equippable()",
-  "Items.HARNESS"
+  "Items.HARNESS",
+  "Level.getDifficulty()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "sturdy_styles-1.2.0.jar",
   "published": "2026-09-25"
  },
@@ -30,8 +60,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -47,5 +77,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 2
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 32
 }

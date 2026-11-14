@@ -9,42 +9,26 @@
  "author": "nicolas-reig",
  "description": "This is a simple client mod to stop worrying about eating all the time, that selects the food and eats it. It detects whenever the foodbar falls a certain threshold, selects food in your hotbar, and starts eating it.",
  "needs": [
-  "net.minecraft.client.gui.components.StringWidget",
-  "net.minecraft.client.gui.components.Tooltip",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.world.food.FoodProperties",
-  "net.minecraft.world.inventory.ContainerInput",
   "InputConstants.getKey()",
   "InputConstants.Key.getDisplayName()",
-  "KeyMapping.getTranslatedKeyMessage()",
   "KeyMapping.resetMapping()",
-  "KeyMapping.saveString()",
   "KeyMapping.setDown()",
   "KeyMapping.setKey()",
-  "Minecraft.gameMode",
-  "Minecraft.hitResult",
-  "Options.keyAttack",
-  "Options.keyUse",
-  "Options.save()",
-  "Button.setTooltip()",
-  "EditBox.setHint()",
-  "EditBox.setTooltip()",
-  "Screen.mouseScrolled()",
   "LocalPlayer.getUsedItemHand()",
   "LocalPlayer.isUsingItem()",
   "LocalPlayer.stopUsingItem()",
   "DataComponents.CONSUMABLE",
   "DataComponents.FOOD",
   "Player.getAbsorptionAmount()",
-  "BlockState.getMenuProvider()",
-  "HitResult.getType()"
+  "BlockState.getMenuProvider()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "auto-eater-1.5.1.jar",
   "published": "2026-09-23"
  },
@@ -56,8 +40,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -73,5 +57,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 29
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 13
 }

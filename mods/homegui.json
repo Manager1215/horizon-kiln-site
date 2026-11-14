@@ -9,7 +9,6 @@
  "author": "maxlananass",
  "description": "Stop typing /home every 30 seconds. HomeGui adds a click-to-teleport interface for all your saved homes — favorites, search, history, keyboard shortcuts, and 5 color themes. Works with EssentialsX, CMI, and any server that uses a home system.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.Chat",
   "net.minecraft.client.GameNarrator",
   "net.minecraft.client.server.IntegratedServer",
@@ -18,17 +17,14 @@
   "Minecraft.getCurrentServer()",
   "Minecraft.getNarrator()",
   "Minecraft.getSingleplayerServer()",
-  "Screen.charTyped()",
-  "Screen.mouseClicked()",
-  "Screen.mouseScrolled()",
   "ServerData.ip"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "homegui-4.2.1-fabric-26.3.jar",
   "published": "2026-10-28"
  },
@@ -40,8 +36,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -56,5 +52,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 12
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 9
 }

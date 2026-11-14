@@ -9,18 +9,16 @@
  "author": "Murqin",
  "description": "Stop players and mobs from destroying your precious crops!",
  "needs": [
-  "Mixin",
-  "net.minecraft.server.permissions.LevelBasedPermissionSet",
-  "PermissionLevel.byId()",
-  "PermissionLevel.isEqualOrHigherThan()",
-  "PermissionSet.ALL_PERMISSIONS"
+  "net.minecraft.world.level.block.AttachedStemBlock",
+  "net.minecraft.world.level.block.FarmlandBlock",
+  "net.minecraft.world.level.block.StemBlock"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "nocroptrample-fabric-1.6-26.3.jar",
   "published": "2026-09-16"
  },
@@ -32,8 +30,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -49,5 +47,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 4
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 3
 }

@@ -1,7 +1,7 @@
 {
  "id": "ultimate-mob-farms",
  "name": "Ultimate Mob Farms",
- "version": "1.2.2+fabric+26.3",
+ "version": "1.4.0+fabric+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,57 +9,57 @@
  "author": "OffsetMonkey538",
  "description": "All the soul based mob farming technology you'd ever need! Craftable spawners, compact single block mob farms, mob transport and killing, item collection and more.",
  "needs": [
-  "Mixin",
+  "Mixin: 4 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.math.OctahedralGroup",
   "net.minecraft.IdentifierException",
   "net.minecraft.client.color.item.ItemTintSource",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
-  "net.minecraft.client.gui.components.CycleButton.OnValueChange",
   "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
+  "net.minecraft.client.gui.screens.packs.PackSelectionScreen",
   "net.minecraft.client.particle.ParticleProvider",
   "net.minecraft.client.particle.SingleQuadParticle",
   "net.minecraft.client.particle.SingleQuadParticle.Layer",
   "net.minecraft.client.particle.SpriteSet",
+  "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.core.particles.DustParticleOptions",
   "net.minecraft.network.VarInt",
   "net.minecraft.network.chat.ComponentSerialization",
+  "net.minecraft.server.packs.repository.Pack",
   "net.minecraft.util.profiling.ProfilerFiller",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.inventory.ContainerLevelAccess",
   "net.minecraft.world.level.Spawner",
   "net.minecraft.world.level.block.Mirror",
+  "net.minecraft.world.level.block.SpawnerBlock",
   "net.minecraft.world.level.block.state.BlockBehaviour.StatePredicate",
   "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
+  "net.minecraft.world.level.entity.EntityAccess",
   "ImmutableList.size()",
   "ImmutableList.stream()",
   "ImmutableMap.forEach()",
   "ImmutableMap.size()",
+  "NativeImage.read()",
   "PoseStack.last()",
   "PoseStack.Pose.rotate()",
   "Axis.YN",
   "ModContainer.findPath()",
   "ModMetadata.getIconPath()",
-  "Minecraft.gameMode",
+  "Options.particles()",
   "AbstractContainerScreen.containerTick()",
   "AbstractContainerScreen.extractContents()",
   "AbstractContainerScreen.extractSlot()",
   "ClientLevel.getEntitiesOfClass()",
-  "BlockEntityRenderer.extractRenderState()",
-  "EntityRenderDispatcher.extractEntity()",
-  "EntityRenderDispatcher.submit()",
-  "and 43 more"
+  "MultiPlayerGameMode.handleInventoryButtonClick()",
+  "and 44 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "ultimate-mob-farms-fabric-26.3-1.2.2+fabric+26.3.jar",
-  "published": "2026-11-03"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "ultimate-mob-farms-fabric-26.3-1.4.0+fabric+26.3.jar",
+  "published": "2026-11-10"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -90,5 +90,9 @@
   "minecraft",
   "monkeylib538"
  ],
- "lacks": 151
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 171
 }

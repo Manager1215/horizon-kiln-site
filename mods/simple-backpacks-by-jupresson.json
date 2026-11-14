@@ -9,7 +9,7 @@
  "author": "Jupresson",
  "description": "Small, medium and large backpacks. Dye them any color, then craft the next tier around one and your items and color carry over. No library mod, no extra menus!",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition",
   "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditionType",
   "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions",
@@ -21,11 +21,10 @@
   "net.minecraft.world.item.crafting.display.SlotDisplay.ItemSlotDisplay",
   "net.minecraft.world.level.storage.loot.entries.EmptyLootItem",
   "NonNullList.iterator()",
-  "DataComponents.BUNDLE_CONTENTS",
   "SoundEvents.ARMOR_EQUIP_LEATHER",
   "ItemEntity.getItem()",
+  "Player.createItemStackToDrop()",
   "Player.drop()",
-  "Player.isRemoved()",
   "MenuType.GENERIC_9x1",
   "MenuType.GENERIC_9x2",
   "MenuType.GENERIC_9x3",
@@ -35,7 +34,6 @@
   "Item.canFitInsideContainerItems()",
   "ItemStack.limitSize()",
   "ItemUtils.onContainerDestroyed()",
-  "ItemContainerContents.nonEmptyItemCopyStream()",
   "CraftingRecipe.CraftingBookInfo.MAP_CODEC",
   "CraftingRecipe.CraftingBookInfo.STREAM_CODEC",
   "Ingredient.display()",
@@ -47,8 +45,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "simplebackpacks-fabric-26.3-5.2.1.jar",
   "published": "2026-09-19"
  },
@@ -60,8 +58,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -77,5 +75,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 32
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 30
 }

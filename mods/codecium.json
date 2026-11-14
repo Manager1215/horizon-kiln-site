@@ -9,18 +9,25 @@
  "author": "ErrorCraft",
  "description": "A Fabric mod that vastly improves codec error messages.",
  "needs": [
-  "Mixin",
+  "Mixin: 62 points inside the game's methods",
   "net.minecraft.IdentifierException",
   "net.minecraft.commands.arguments.ResourceOrIdArgument",
   "net.minecraft.commands.arguments.ResourceOrIdArgument.InlineResult",
-  "net.minecraft.core.HolderSet.Named"
+  "net.minecraft.commands.arguments.item.ItemParser.State",
+  "net.minecraft.commands.arguments.item.ItemPredicateArgument.ComponentWrapper",
+  "net.minecraft.commands.arguments.item.ItemPredicateArgument.PredicateWrapper",
+  "net.minecraft.core.HolderSet.Named",
+  "net.minecraft.core.registries.codec.HolderSetCodec",
+  "net.minecraft.core.registries.codec.RegistryFileCodec",
+  "net.minecraft.core.registries.codec.RegistryFixedCodec",
+  "net.minecraft.nbt.NbtOps.1"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "codecium-1.2.2+26.3.jar",
   "published": "2026-07-22"
  },
@@ -37,5 +44,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 4
+ "softOff": {
+  "class": "restart",
+  "why": "@overwrite and @redirect into the game's classes"
+ },
+ "lacks": 11
 }

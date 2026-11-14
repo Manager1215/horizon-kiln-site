@@ -9,24 +9,18 @@
  "author": "DuelMonster",
  "description": "MinersAdvantage - Making mining easier...",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.vertex.DefaultVertexFormat",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.client.renderer.rendertype.LayeringTransform",
   "net.minecraft.client.renderer.rendertype.RenderSetup",
   "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
   "net.minecraft.server.level.ServerPlayerGameMode",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.entity.AreaEffectCloud",
   "net.minecraft.world.item.ShearsItem",
@@ -38,8 +32,6 @@
   "Window.getAppropriateLineWidth()",
   "BlendFunction.TRANSLUCENT",
   "RenderPipeline.builder()",
-  "ServerTickEvents.END_SERVER_TICK",
-  "Minecraft.hitResult",
   "RenderPipelines.MATRICES_FOG_SNIPPET",
   "RenderType.create()",
   "BlockPos.distSqr()",
@@ -50,14 +42,21 @@
   "MinecraftServer.getAllLevels()",
   "MinecraftServer.getSingleplayerProfile()",
   "MinecraftServer.getTickCount()",
-  "and 44 more"
+  "ServerLevel.getNearestPlayer()",
+  "ServerPlayer.addItem()",
+  "ServerPlayer.connection",
+  "ServerPlayer.gameMode",
+  "ServerPlayer.getBoundingBox()",
+  "ServerPlayer.isAlive()",
+  "ServerPlayer.isUsingItem()",
+  "and 39 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "MinersAdvantage_2.31.0+26.3-fabric-2.31.0.jar",
   "published": "2026-11-01"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 126
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 110
 }

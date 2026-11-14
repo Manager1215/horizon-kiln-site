@@ -10,16 +10,17 @@
  "description": "Allows you to play Minecraft in a borderless fullscreen window.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 11 points inside the game's methods",
   "com.mojang.blaze3d.platform.Monitor",
   "com.mojang.blaze3d.platform.MonitorManager",
   "com.mojang.blaze3d.platform.VideoMode",
   "net.minecraft.client.OptionInstance.CaptionBasedToString",
   "net.minecraft.client.OptionInstance.Enum",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
-  "net.minecraft.client.OptionInstance.ValueSet",
   "net.minecraft.client.OptionInstance.ValueUpdateListener",
   "net.minecraft.client.gui.screens.Overlay",
+  "net.minecraft.client.gui.screens.options.VideoSettingsScreen",
+  "net.minecraft.client.main.Main",
   "org.lwjgl.sdl.SDLEvents",
   "org.lwjgl.sdl.SDLHints",
   "org.lwjgl.sdl.SDLProperties",
@@ -43,15 +44,14 @@
   "Options.exclusiveFullscreen()",
   "Options.fullscreen()",
   "Options.macFullscreenMenuVisibility()",
-  "Options.pauseOnLostFocus",
-  "Options.save()"
+  "Options.pauseOnLostFocus"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "cwb-5.0.0+26.3.jar",
   "published": "2026-10-24"
  },
@@ -71,5 +71,9 @@
   "java",
   "minecraft"
  ],
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
  "lacks": 34
 }

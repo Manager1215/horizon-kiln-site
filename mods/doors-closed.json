@@ -9,14 +9,15 @@
  "author": "Estecka",
  "description": "Villagers always close doors they walk through.",
  "needs": [
-  "Mixin"
+  "Mixin: 1 point inside the game's methods",
+  "net.minecraft.world.entity.ai.behavior.InteractWithDoor"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "doors-closed-1.0.1+26.1.2.jar",
   "published": "2026-08-03"
  },
@@ -33,5 +34,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 1
 }

@@ -1,7 +1,7 @@
 {
  "id": "automationera",
  "name": "自动化时代 AutomationEra",
- "version": "0.2.0-26.3",
+ "version": "0.2.0pre-26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,9 +9,7 @@
  "author": "albertchen857",
  "description": "Add  advancements about redstone machines/farms and embedded machine intros with REI/EMI",
  "needs": [
-  "Mixin",
   "com.mojang.blaze3d.Blaze3D",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
   "net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition",
   "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditionType",
@@ -20,12 +18,9 @@
   "net.minecraft.SharedConstants",
   "net.minecraft.advancements.predicates.LocationPredicate",
   "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.nbt.NbtIo",
   "net.minecraft.resources.RegistryOps.RegistryInfoLookup",
   "net.minecraft.server.PlayerAdvancements",
   "net.minecraft.server.ServerAdvancementManager",
-  "net.minecraft.server.players.PlayerList",
-  "net.minecraft.stats.ServerStatsCounter",
   "net.minecraft.world.entity.npc.villager.Villager",
   "net.minecraft.world.entity.vehicle.boat.Boat",
   "net.minecraft.world.level.block.ShulkerBoxBlock",
@@ -34,30 +29,34 @@
   "VertexConsumer.setLight()",
   "VertexConsumer.setNormal()",
   "VertexConsumer.setOverlay()",
-  "ClientPlayNetworking.canSend()",
-  "ServerTickEvents.END_SERVER_TICK",
   "AdvancementProgress.getRemainingCriteria()",
   "KeyMapping.matches()",
   "Minecraft.getCurrentServer()",
-  "Font.plainSubstrByWidth()",
   "Font.split()",
   "GuiGraphicsExtractor.text()",
-  "AbstractSelectionList.Entry.getContentBottom()",
-  "AbstractSelectionList.Entry.getContentHeight()",
-  "AbstractSelectionList.Entry.getContentRight()",
-  "AbstractSelectionList.Entry.getContentWidth()",
-  "AbstractSelectionList.Entry.getContentX()",
-  "AbstractSelectionList.Entry.getContentXMiddle()",
-  "AbstractSelectionList.Entry.getContentY()",
-  "AbstractSelectionList.Entry.getContentYMiddle()",
-  "and 40 more"
+  "AbstractSelectionList.Entry.getRectangle()",
+  "ServerData.ip",
+  "RenderTypes.translucentMovingBlock()",
+  "PictureInPictureRenderState.getBounds()",
+  "TextureAtlasSprite.getU0()",
+  "TextureAtlasSprite.getU1()",
+  "TextureAtlasSprite.getV0()",
+  "TextureAtlasSprite.getV1()",
+  "BuiltInRegistries.TRIGGER_TYPES",
+  "ListTag.add()",
+  "ListTag.getInt()",
+  "ListTag.iterator()",
+  "NbtIo.readCompressed()",
+  "NbtIo.readCompressed()",
+  "Component.translatableWithFallback()",
+  "and 36 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "automationera-0.2.0-26.3.jar",
   "published": "2026-11-04"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 445
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 399
 }

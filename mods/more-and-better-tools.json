@@ -9,14 +9,28 @@
  "author": "retroad1",
  "description": "More and better tools for better gameplay",
  "needs": [
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
+  "net.minecraft.client.model.object.projectile.TridentModel",
+  "net.minecraft.client.renderer.entity.ThrownTridentRenderer",
+  "net.minecraft.client.renderer.entity.state.ThrownTridentRenderState",
+  "net.minecraft.client.renderer.item.SpecialModelWrapper",
+  "net.minecraft.client.renderer.special.NoDataSpecialModelRenderer",
+  "net.minecraft.client.renderer.special.TridentSpecialRenderer",
+  "net.minecraft.network.syncher.EntityDataSerializers",
+  "net.minecraft.network.syncher.SynchedEntityData.Builder",
   "net.minecraft.world.entity.projectile.arrow.ThrownTrident",
   "net.minecraft.world.item.SmithingTemplateItem",
   "net.minecraft.world.item.TridentItem",
   "net.minecraft.world.level.material.PushReaction",
   "BiomeModifications.addFeature()",
   "FabricCreativeModeTabOutput.insertAfter()",
+  "ModelPart.getExtentsForGui()",
+  "OrderedSubmitNodeCollector.submitModel()",
+  "ItemStackRenderState.LayerRenderState.setupSpecialModel()",
+  "RenderTypes.entitySolidGlint()",
+  "SynchedEntityData.defineId()",
   "SynchedEntityData.get()",
+  "SynchedEntityData.set()",
   "SoundEvents.ARMOR_EQUIP_NETHERITE",
   "BlockTags.INCORRECT_FOR_NETHERITE_TOOL",
   "Item.BASE_ATTACK_DAMAGE_ID",
@@ -36,20 +50,14 @@
   "Items.NETHERITE_SPEAR",
   "Items.NETHERITE_SWORD",
   "Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE",
-  "Items.TRIDENT",
-  "ArmorType.getDurability()",
-  "Biomes.END_HIGHLANDS",
-  "SoundType.LODESTONE",
-  "SoundType.NETHERITE_BLOCK",
-  "BlockBehaviour.Properties.pushReaction()",
-  "LootPool.Builder.when()"
+  "and 7 more"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "mbtools-1.2.5.jar",
   "published": "2026-09-25"
  },
@@ -61,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -80,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 33
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; generates in the world"
+ },
+ "lacks": 47
 }

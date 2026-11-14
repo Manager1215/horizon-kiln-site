@@ -9,14 +9,34 @@
  "author": "Quackerx",
  "description": "Simply stops you from getting kicked when entering a chunkban. And let's you create books like booktrolling mod.",
  "needs": [
-  "Mixin"
+  "Mixin: 4 points inside the game's methods",
+  "net.minecraft.client.gui.screens.inventory.BookEditScreen",
+  "net.minecraft.nbt.NbtAccounter",
+  "net.minecraft.network.CompressionDecoder",
+  "net.minecraft.network.PacketDecoder",
+  "net.minecraft.network.VarInt",
+  "net.minecraft.network.protocol.game.ServerboundEditBookPacket",
+  "ClientLevel.getSectionsCount()",
+  "ClientPacketListener.send()",
+  "Registry.asHolderIdMap()",
+  "Registry.byIdOrThrow()",
+  "Registry.getOrThrow()",
+  "RegistryAccess.lookupOrThrow()",
+  "Registries.BIOME",
+  "FriendlyByteBuf.readNbt()",
+  "ByteBufCodecs.registry()",
+  "Biomes.PLAINS",
+  "Block.BLOCK_STATE_REGISTRY",
+  "LevelChunkSection.read()",
+  "Strategy.createForBiomes()",
+  "Strategy.createForBlockStates()"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "anti-chunkban-26.3.jar",
   "published": "2026-10-15"
  },
@@ -28,8 +48,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -44,5 +64,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 20
 }

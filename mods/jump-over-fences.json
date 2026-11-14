@@ -1,0 +1,60 @@
+{
+ "id": "jump-over-fences",
+ "name": "Jump Over Fences",
+ "version": "1.14.1",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/jump-over-fences",
+ "author": "kreezxil",
+ "description": "you can jump over blocks, why not fences?",
+ "needs": [
+  "net.minecraft.client.player.ClientInput",
+  "net.minecraft.world.entity.player.Input",
+  "LocalPlayer.input",
+  "BlockTags.FENCES",
+  "BlockTags.FENCE_GATES",
+  "BlockTags.WALLS"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "Jump-Over-Fences-1.14.1-MC26.3-Fabric.jar",
+  "published": "2026-11-09"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": true,
+ "depends": [
+  "cloth-config",
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels"
+ },
+ "lacks": 6
+}

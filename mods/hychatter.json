@@ -1,0 +1,86 @@
+{
+ "id": "hychatter",
+ "name": "HyChatter",
+ "version": "1.0.0-26.3+_fabric",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/hychatter",
+ "author": "Tomeko",
+ "description": "Minecraft mod for Hypixel adding chat related features like autogg, chat coordinates waypoints and more!",
+ "needs": [
+  "com.mojang.authlib.GameProfile",
+  "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowChat",
+  "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
+  "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.ModifyGame",
+  "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents",
+  "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.AllowChat",
+  "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.AllowCommand",
+  "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.Command",
+  "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.ModifyChat",
+  "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.ModifyCommand",
+  "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.AfterTranslucentTerrain",
+  "net.minecraft.client.multiplayer.chat.GuiMessage.Line",
+  "net.minecraft.network.chat.ComponentSerialization",
+  "PoseStack.mulPose()",
+  "PoseStack.Pose.pose()",
+  "VertexConsumer.addVertex()",
+  "VertexConsumer.setColor()",
+  "VertexConsumer.setNormal()",
+  "ClientReceiveMessageEvents.ALLOW_CHAT",
+  "ClientReceiveMessageEvents.ALLOW_GAME",
+  "ClientReceiveMessageEvents.MODIFY_GAME",
+  "LevelRenderEvents.AFTER_TRANSLUCENT_TERRAIN",
+  "Camera.xRot()",
+  "Camera.yRot()",
+  "Minecraft.getGameProfile()",
+  "Options.textBackgroundOpacity()",
+  "GameRenderer.mainCamera()",
+  "RenderTypes.beaconBeam()",
+  "RenderTypes.debugFilledBox()",
+  "Component.getSiblings()",
+  "Component.plainCopy()",
+  "MutableComponent.getSiblings()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "HyChatter-1.0.0-26.3+_fabric.jar",
+  "published": "2026-11-11"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "hypixel-mod-api",
+  "java",
+  "minecraft",
+  "oneconfig"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 32
+}

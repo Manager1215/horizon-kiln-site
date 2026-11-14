@@ -9,14 +9,42 @@
  "author": "RedLifedev",
  "description": "A Ray tracing implementation to have Sound Physics in Minecraft. I believe this is more accurate + sounds better than Sound Physics mod.",
  "needs": [
-  "Mixin"
+  "Mixin: 1 point inside the game's methods",
+  "com.mojang.blaze3d.audio.Channel",
+  "net.minecraft.client.resources.sounds.Sound",
+  "net.minecraft.client.resources.sounds.TickableSoundInstance",
+  "net.minecraft.client.sounds.ChannelAccess",
+  "net.minecraft.client.sounds.ChannelAccess.ChannelHandle",
+  "net.minecraft.client.sounds.WeighedSoundEvents",
+  "org.lwjgl.openal.AL10",
+  "org.lwjgl.openal.AL11",
+  "org.lwjgl.openal.ALC10",
+  "org.lwjgl.openal.EXTEfx",
+  "SoundInstance.getAudioStream()",
+  "SoundInstance.getOrResolve()",
+  "SoundInstance.getSound()",
+  "SoundInstance.getSoundEvent()",
+  "Direction.getUnitVec3i()",
+  "BlockTags.DAMPENS_VIBRATIONS",
+  "BlockTags.OCCLUDES_VIBRATION_SIGNALS",
+  "Player.getBoundingBox()",
+  "ClipContext.getBlockShape()",
+  "Level.clip()",
+  "Block.getExplosionResistance()",
+  "Blocks.BARRIER",
+  "BlockState.getShape()",
+  "AABB.contains()",
+  "AABB.getCenter()",
+  "Shapes.empty()",
+  "VoxelShape.bounds()",
+  "VoxelShape.isEmpty()"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "sound_physics_perfected-1.17.7+26.3-fabric.jar",
   "published": "2026-10-15"
  },
@@ -28,8 +56,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -47,5 +75,9 @@
   "minecraft",
   "yet_another_config_lib_v3"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 28
 }

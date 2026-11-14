@@ -9,20 +9,21 @@
  "author": "NIKIMAK",
  "description": "Mod for new chat history and pop-up messages from chat.",
  "needs": [
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowChat",
   "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
+  "net.minecraft.client.gui.ActiveTextCollector",
+  "net.minecraft.client.gui.ActiveTextCollector.Parameters",
+  "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
+  "net.minecraft.client.gui.TextAlignment",
+  "net.minecraft.client.gui.components.ChatComponent.DisplayMode",
+  "net.minecraft.client.gui.components.CommandSuggestions",
   "net.minecraft.client.resources.DefaultPlayerSkin",
-  "net.minecraft.network.chat.ComponentContents",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
   "net.minecraft.network.chat.PlayerChatMessage",
-  "net.minecraft.network.chat.contents.TranslatableContents",
   "net.minecraft.util.StringDecomposer",
   "ClientReceiveMessageEvents.ALLOW_CHAT",
   "ClientReceiveMessageEvents.ALLOW_GAME",
-  "Minecraft.execute()",
   "Minecraft.getSkinManager()",
   "Minecraft.services()",
   "Options.chatHeightFocused()",
@@ -30,26 +31,28 @@
   "Options.chatOpacity()",
   "Options.chatWidth()",
   "Options.getBackgroundColor()",
+  "Options.getBackgroundColor()",
   "Options.textBackgroundOpacity()",
+  "Font.plainSubstrByWidth()",
   "Font.split()",
   "GuiGraphicsExtractor.blit()",
   "GuiGraphicsExtractor.text()",
+  "GuiGraphicsExtractor.textRenderer()",
+  "GuiGraphicsExtractor.textRenderer()",
   "ChatComponent.getHeight()",
   "ChatComponent.getWidth()",
+  "Screen.defaultHandleGameClickEvent()",
   "PlayerInfo.getProfile()",
   "PlayerInfo.getSkin()",
   "SkinManager.get()",
-  "Component.getContents()",
-  "MutableComponent.setStyle()",
-  "Style.withHoverEvent()",
   "Util.nonCriticalIoPool()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "nichat-2.6.0.jar",
   "published": "2026-11-04"
  },
@@ -61,8 +64,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -80,5 +83,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 33
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 36
 }

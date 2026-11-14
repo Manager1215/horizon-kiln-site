@@ -1,7 +1,7 @@
 {
  "id": "nbt-for-give",
  "name": "NBT For Give",
- "version": "1.5.0",
+ "version": "1.5.1",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,13 +9,9 @@
  "author": "KOTNK_XD",
  "description": "Copy any item as a precise /give command, inspect its components, or restore it from clipboard",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.commands.arguments.item.ItemParser",
   "net.minecraft.core.component.DataComponentPatch.SplitResult",
-  "Minecraft.execute()",
-  "Minecraft.gameMode",
-  "ClientPacketListener.sendChat()",
+  "ChatComponent.addRecentChat()",
   "ItemInput.createItemStack()",
   "DataComponentPatch.split()",
   "TypedDataComponent.encodeValue()",
@@ -24,14 +20,14 @@
   "TagParser.parseFully()",
   "ItemEntity.getItem()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "nbt-for-give-1.5.0-mc26.3.jar",
-  "published": "2026-10-04"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "nbt-for-give-1.5.1-mc26.2–26.3.jar",
+  "published": "2026-11-09"
  },
  "reports": {
   "works": 0,
@@ -41,8 +37,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -57,5 +53,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 13
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 10
 }

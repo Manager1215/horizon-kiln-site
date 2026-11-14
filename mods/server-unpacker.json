@@ -1,0 +1,56 @@
+{
+ "id": "server-unpacker",
+ "name": "Server Unpacker",
+ "version": "2.3.2",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/server-unpacker",
+ "author": "Soumeh",
+ "description": "Extract Server Resource Packs",
+ "needs": [
+  "net.minecraft.client.resources.server.DownloadedPackSource",
+  "net.minecraft.client.resources.server.PackReloadConfig",
+  "net.minecraft.client.resources.server.PackReloadConfig.IdAndPath",
+  "NativeImage.read()",
+  "NativeImage.writeToFile()",
+  "Minecraft.getCurrentServer()",
+  "ServerData.ip"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "server-unpacker-2.3.2.jar",
+  "published": "2026-05-22"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 7
+}

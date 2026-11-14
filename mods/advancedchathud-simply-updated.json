@@ -9,13 +9,13 @@
  "author": "Nordes",
  "description": "An update of the original Advanced Chat HUD(With fixes). A brand new chat HUD design for Minecraft with tons of features.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.platform.cursor.CursorTypes",
+  "net.minecraft.client.gui.components.ComponentRenderUtils",
   "net.minecraft.client.gui.screens.LevelLoadingScreen",
-  "org.apache.logging.log4j.Level",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
+  "net.minecraft.client.multiplayer.chat.GuiMessage.Line",
+  "net.minecraft.util.profiling.Profiler",
   "GuiGraphicsExtractor.blit()",
   "GuiGraphicsExtractor.blit()",
   "GuiGraphicsExtractor.requestCursor()",
@@ -23,16 +23,14 @@
   "Hud.getGuiTicks()",
   "PlayerInfo.getProfile()",
   "Component.getVisualOrderText()",
-  "Style.getClickEvent()",
-  "Style.getHoverEvent()",
   "Util.getMillis()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "AdvancedChatHUD-26.3-1.9.0.jar",
   "published": "2026-09-18"
  },
@@ -44,8 +42,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -61,5 +59,9 @@
   "malilib",
   "minecraft"
  ],
- "lacks": 16
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 14
 }

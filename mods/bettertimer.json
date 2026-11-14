@@ -1,0 +1,66 @@
+{
+ "id": "bettertimer",
+ "name": "BetterTimer",
+ "version": "2.0.0+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/bettertimer",
+ "author": "EinFabo",
+ "description": "A per-world timer for challenges and speedruns: 3 styles, 7 animated effects, an hourly celebration, a live-preview settings screen and drag-and-drop positioning. Client-side.",
+ "needs": [
+  "com.mojang.blaze3d.platform.cursor.CursorTypes",
+  "net.minecraft.client.server.IntegratedServer",
+  "net.minecraft.world.level.storage.LevelResource",
+  "net.minecraft.world.level.storage.WorldData",
+  "Minecraft.getCurrentServer()",
+  "Minecraft.getSingleplayerServer()",
+  "Font.split()",
+  "GuiGraphicsExtractor.centeredText()",
+  "GuiGraphicsExtractor.requestCursor()",
+  "NarrationElementOutput.add()",
+  "ServerData.ip",
+  "CommonComponents.optionStatus()",
+  "SoundEvents.NOTE_BLOCK_BASS",
+  "Util.getMillis()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "MCtimerMod-2.0.0+26.3.jar",
+  "published": "2026-11-09"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": false,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 14
+}

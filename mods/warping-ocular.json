@@ -9,15 +9,15 @@
  "author": "MagmaXY",
  "description": "Have you ever thought about how practically useless the spyglass is in modern Minecraft? This mod aims to fix that and turn it into a truly functional item.",
  "needs": [
-  "Mixin",
   "net.minecraft.core.HolderSet.Direct",
   "net.minecraft.world.item.ItemCooldowns",
   "net.minecraft.world.item.ItemUseAnimation",
   "net.minecraft.world.item.SpyglassItem",
   "net.minecraft.world.item.enchantment.Repairable",
-  "Options.keyAttack",
+  "GuiGraphicsExtractor.blit()",
   "LocalPlayer.getUseItem()",
   "LocalPlayer.isUsingItem()",
+  "GameRenderer.clearSpectatedEntityPostEffect()",
   "HolderSet.direct()",
   "Registry.get()",
   "RegistryAccess.Frozen.lookupOrThrow()",
@@ -38,15 +38,14 @@
   "Item.Properties.enchantable()",
   "Items.AMETHYST_SHARD",
   "Items.ENDER_PEARL",
-  "EnchantmentHelper.getItemEnchantmentLevel()",
-  "HitResult.getType()"
+  "EnchantmentHelper.getItemEnchantmentLevel()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "warping-ocular-fabric+26.3.jar",
   "published": "2026-09-20"
  },
@@ -58,8 +57,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -75,5 +74,9 @@
   "java",
   "minecraft"
  ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
  "lacks": 30
 }

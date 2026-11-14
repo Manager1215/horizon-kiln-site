@@ -9,7 +9,7 @@
  "author": "PotatoWolfie",
  "description": "The mod that adds a useless cactus with a sense of fashion.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "com.mojang.blaze3d.vertex.SheetedDecalTextureGenerator",
   "com.mojang.math.OctahedralGroup",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
@@ -19,7 +19,6 @@
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
@@ -40,24 +39,25 @@
   "net.minecraft.client.animation.KeyframeAnimations",
   "net.minecraft.client.model.EntityModel",
   "net.minecraft.client.model.HumanoidModel",
+  "net.minecraft.client.model.QuadrupedModel",
   "net.minecraft.client.model.animal.equine.AbstractEquineModel",
   "net.minecraft.client.model.animal.equine.BabyHorseModel",
   "net.minecraft.client.model.animal.equine.EquineSaddleModel",
   "net.minecraft.client.model.animal.equine.HorseModel",
+  "net.minecraft.client.model.animal.golem.SnowGolemModel",
+  "net.minecraft.client.model.animal.pig.PigModel",
   "net.minecraft.client.model.geom.ModelLayers",
   "net.minecraft.client.model.geom.PartPose",
   "net.minecraft.client.model.geom.builders.CubeDeformation",
   "net.minecraft.client.model.geom.builders.CubeListBuilder",
-  "net.minecraft.client.model.geom.builders.MeshDefinition",
-  "net.minecraft.client.model.geom.builders.PartDefinition",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "arlo-the-little-guy-1.1.0-26.3.jar",
   "published": "2026-10-02"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 304
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+ },
+ "lacks": 307
 }

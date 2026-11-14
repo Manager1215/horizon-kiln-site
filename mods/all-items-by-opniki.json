@@ -2,37 +2,19 @@
  "id": "all-items-by-opniki",
  "name": "All Items by OPNiki",
  "version": "1.1.0",
- "status": "planned",
- "statusLabel": "Planned",
- "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "status": "works",
+ "statusLabel": "Works",
+ "statusMeaning": "Tried in the game with Kiln.",
  "url": "https://modrinth.com/mod/all-items-by-opniki",
  "author": "OPNiki",
  "description": "Collect every item in the game, one at a time, in random order. Automatic detection, an overview grid, and a skip command for anything unobtainable.",
- "needs": [
-  "net.minecraft.client.multiplayer.chat.ChatListener",
-  "net.minecraft.client.server.IntegratedServer",
-  "net.minecraft.world.item.alchemy.Potion",
-  "net.minecraft.world.item.alchemy.PotionContents",
-  "net.minecraft.world.level.storage.LevelResource",
-  "Minecraft.getSingleplayerServer()",
-  "Gui.chatListener()",
-  "GuiGraphicsExtractor.setTooltipForNextFrame()",
-  "DefaultedRegistry.iterator()",
-  "HolderLookup.RegistryLookup.listElements()",
-  "Registry.iterator()",
-  "Registry.wrapAsHolder()",
-  "RegistryAccess.lookupOrThrow()",
-  "DataComponents.POTION_CONTENTS",
-  "DataComponents.STORED_ENCHANTMENTS",
-  "BuiltInRegistries.POTION",
-  "SoundEvents.UI_TOAST_CHALLENGE_COMPLETE"
- ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
- "evidence": "Not run: Java did not start.",
+ "needs": [],
+ "roadmap": "",
+ "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "item-challenge-1.1.0.jar",
   "published": "2026-10-09"
  },
@@ -44,8 +26,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -60,5 +42,18 @@
   "java",
   "minecraft"
  ],
- "lacks": 17
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 12,
+ "works": "A client challenge, /challenge start [seed], that picks every item in random order and shows the current one in a panel at the top centre of the HUD (name, number, total); collecting it moves on, /challenge skip skips it.",
+ "note": "From Modrinth, unchanged. Not yet: The overview grid (/challenge list) is its own screen, which Kiln doesn't open; the item icon in the panel is drawn with GuiGraphicsExtractor.item and may not show; the mod works without it",
+ "checked": {
+  "kiln": "0.4.0",
+  "commit": "65f811ecccb786188bda6e89778f5faecccb264d",
+  "date": "2026-11-08",
+  "horizon": "Nightly 2026-11-04 · 3fb4c31",
+  "by": "kiln/proof.py on the Linux PC"
+ }
 }

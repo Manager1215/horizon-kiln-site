@@ -10,7 +10,7 @@
  "description": "A configurable mod that changes what happens when lava meets water or ice, allowing for the (re)generation of ores and other resources.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.event.registry.DynamicRegistries",
   "net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags",
   "net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator",
@@ -28,24 +28,30 @@
   "net.minecraft.world.level.levelgen.placement.CountPlacement",
   "net.minecraft.world.level.levelgen.placement.HeightRangePlacement",
   "net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest",
+  "net.minecraft.world.level.material.LavaFluid",
   "ImmutableList.stream()",
   "RegistryAccess.lookupOrThrow()",
   "LevelAccessor.getBiome()",
   "LevelAccessor.getRandom()",
   "LevelAccessor.registryAccess()",
+  "LevelAccessor.setBlockAndUpdate()",
   "Biome.getGenerationSettings()",
   "BiomeGenerationSettings.features()",
+  "Blocks.BASALT",
   "Blocks.COBBLED_DEEPSLATE",
   "Blocks.DEEPSLATE",
   "Blocks.NETHERRACK",
+  "Blocks.OBSIDIAN",
+  "Blocks.SOUL_SOIL",
+  "LiquidBlock.POSSIBLE_FLOW_DIRECTIONS",
   "PlacedFeature.getFeatures()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "flowstone-6.7+26.3.jar",
   "published": "2026-09-18"
  },
@@ -57,8 +63,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -73,5 +79,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 28
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 34
 }

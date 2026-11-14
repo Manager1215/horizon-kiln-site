@@ -10,25 +10,33 @@
  "description": "A Mod that allows you to break Bedrock (and some other fancy stuff) while being slightly balanced",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
+  "net.minecraft.world.inventory.AnvilMenu",
+  "net.minecraft.world.inventory.DataSlot",
+  "net.minecraft.world.inventory.ItemCombinerMenu",
+  "net.minecraft.world.inventory.ResultContainer",
   "net.minecraft.world.item.SmithingTemplateItem",
   "net.minecraft.world.level.storage.loot.entries.EmptyLootItem",
   "net.minecraft.world.level.storage.loot.predicates.LootItemKilledByPlayerCondition",
+  "DataComponents.CUSTOM_NAME",
+  "DataComponents.MAX_DAMAGE",
   "BlockTags.INCORRECT_FOR_NETHERITE_TOOL",
   "Player.gameMode()",
+  "Player.getDestroySpeed()",
   "Items.BEDROCK",
+  "BlockGetter.getMinY()",
   "SoundType.AMETHYST",
   "MapColor.GOLD",
   "LootPool.Builder.when()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Yeeterite-4.1.2-1.26.3.jar",
   "published": "2026-09-22"
  },
@@ -40,8 +48,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -57,5 +65,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 11
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 19
 }

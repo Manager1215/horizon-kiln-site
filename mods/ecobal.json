@@ -9,51 +9,21 @@
  "author": "official.andy",
  "description": "EcoBal is a Economy API for fabric mods.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
-  "net.minecraft.commands.arguments.GameProfileArgument",
-  "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
-  "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.permissions.LevelBasedPermissionSet",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.level.storage.LevelResource",
   "ServerLifecycleEvents.SERVER_STARTING",
-  "ServerTickEvents.END_SERVER_TICK",
   "ChatFormatting.getByCode()",
-  "CommandSourceStack.getPlayerOrException()",
-  "CommandSourceStack.getServer()",
-  "CommandSourceStack.getTextName()",
-  "EntityArgument.getPlayer()",
-  "EntityArgument.player()",
-  "MutableComponent.setStyle()",
-  "Style.withClickEvent()",
-  "Style.withHoverEvent()",
-  "Style.withObfuscated()",
-  "Style.withStrikethrough()",
-  "Style.withUnderlined()",
   "TextColor.parseColor()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.getTickCount()",
   "MinecraftServer.getWorldPath()",
-  "ServerPlayer.createCommandSourceStack()",
-  "ServerPlayer.sendSystemMessage()",
-  "PermissionSet.ALL_PERMISSIONS",
-  "PermissionSet.union()"
+  "ServerPlayer.createCommandSourceStack()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "EcoBal-1.0.2.jar",
   "published": "2026-09-15"
  },
@@ -65,8 +35,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -82,5 +52,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 37
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 8
 }

@@ -10,14 +10,12 @@
  "description": "A really basic veinminer and timber (tree chop) in one. Alternative to VeinMiner/FTB Ultamine and Vanillatweaks' timber",
  "needs": [
   "an access widener",
-  "Mixin",
   "net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags",
   "net.minecraft.core.particles.BlockParticleOption",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
+  "net.minecraft.server.level.ServerPlayerGameMode",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.level.gameevent.GameEvent.Context",
   "Window.getAppropriateLineWidth()",
-  "ServerPlayNetworking.canSend()",
   "ClientLevel.addDestroyBlockEffect()",
   "BlockPos.asLong()",
   "BlockPos.betweenClosed()",
@@ -25,40 +23,32 @@
   "BlockPos.getX()",
   "BlockPos.getY()",
   "BlockPos.getZ()",
-  "Registry.wrapAsHolder()",
   "ParticleTypes.BLOCK",
-  "RegistryFriendlyByteBuf.readEnum()",
-  "RegistryFriendlyByteBuf.readVarInt()",
-  "RegistryFriendlyByteBuf.writeEnum()",
-  "RegistryFriendlyByteBuf.writeLong()",
-  "RegistryFriendlyByteBuf.writeVarInt()",
-  "CustomPacketPayload.codec()",
   "ServerLevel.gameEvent()",
   "ServerLevel.sendParticles()",
   "ServerPlayer.connection",
   "ServerPlayer.hasCorrectToolForDrops()",
-  "Stats.BLOCK_MINED",
+  "ServerGamePacketListenerImpl.send()",
   "ARGB.colorFromFloat()",
   "RandomSource.nextLong()",
   "ItemStack.isCorrectToolForDrops()",
   "ItemStack.mineBlock()",
-  "Block.dropResources()",
   "Block.getDrops()",
   "Block.stateById()",
   "LeavesBlock.DISTANCE",
   "LeavesBlock.PERSISTENT",
-  "SoundType.getBreakSound()",
-  "BlockState.getSoundType()",
   "BlockState.spawnAfterBreak()",
   "BlockState.tags()",
-  "and 3 more"
+  "GameEvent.BLOCK_DESTROY",
+  "BoundingBox.inflatedBy()",
+  "BoundingBox.isInside()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "VeinAndTimber-1.0.0+mc26.3-Fabric.jar",
   "published": "2026-10-27"
  },
@@ -70,8 +60,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +76,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 43
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 32
 }

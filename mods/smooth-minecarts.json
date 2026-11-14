@@ -9,16 +9,41 @@
  "author": "SequentialEntropy",
  "description": "Minecarts can smoothly turn gradual curves & slopes!",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
-  "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.IntegerRuleBuilder"
+  "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.IntegerRuleBuilder",
+  "net.minecraft.world.level.block.BaseRailBlock",
+  "net.minecraft.world.level.block.PoweredRailBlock",
+  "net.minecraft.world.level.block.state.properties.RailShape",
+  "BlockPos.containing()",
+  "Direction.getUnitVec3i()",
+  "Vec3i.ZERO",
+  "Vec3i.above()",
+  "ServerLevel.getGameRules()",
+  "BlockTags.RAILS",
+  "Mth.rotLerp()",
+  "AbstractMinecart.activateMinecart()",
+  "AbstractMinecart.applyEffectsFromBlocks()",
+  "AbstractMinecart.exits()",
+  "AbstractMinecart.getCurrentBlockPosOrRailBelow()",
+  "AbstractMinecart.isFlipped()",
+  "AbstractMinecart.isOnRails()",
+  "AbstractMinecart.oldPosition()",
+  "AbstractMinecart.resetFallDistance()",
+  "AbstractMinecart.setOldPosAndRot()",
+  "AbstractMinecart.setOnRails()",
+  "AbstractMinecart.useExperimentalMovement()",
+  "NewMinecartBehavior.adjustToRails()",
+  "NewMinecartBehavior.lerpSteps",
+  "Blocks.ACTIVATOR_RAIL",
+  "GameRules.get()",
+  "Vec3.horizontal()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "smooth-minecarts-0.3.0+26.1.jar",
   "published": "2026-07-09"
  },
@@ -30,8 +55,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -47,5 +72,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 2
+ "softOff": {
+  "class": "restart",
+  "why": "@overwrite into the game's classes"
+ },
+ "lacks": 28
 }

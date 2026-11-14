@@ -9,14 +9,19 @@
  "author": "2No2Name",
  "description": "Rail Placement Fix allows you to place rails more precisely. Sneak and look at the corner of a block to place curved rails. Place sloped rails like top-side slabs when sneaking.",
  "needs": [
-  "Mixin"
+  "Mixin: 3 points inside the game's methods",
+  "net.minecraft.world.level.block.BaseRailBlock",
+  "net.minecraft.world.level.block.RailState",
+  "net.minecraft.world.level.block.state.properties.RailShape",
+  "BlockPos.offset()",
+  "BlockPos.subtract()"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "rail-placement-fix-1.2.0.jar",
   "published": "2026-04-01"
  },
@@ -28,8 +33,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -41,5 +46,9 @@
  "depends": [
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 5
 }

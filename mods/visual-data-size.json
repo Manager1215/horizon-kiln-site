@@ -1,7 +1,7 @@
 {
  "id": "visual-data-size",
  "name": "Visual Data Size",
- "version": "1.3.1",
+ "version": "1.3.2",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,12 +9,9 @@
  "author": "TM_DE",
  "description": "A client-side fabric mod that displays the exact byte-size and nested tag count of items in advanced tooltips.",
  "needs": [
-  "net.minecraft.nbt.NbtIo",
-  "net.minecraft.network.chat.contents.TranslatableContents",
   "CompoundTag.values()",
+  "NbtIo.write()",
   "Tag.write()",
-  "Component.getContents()",
-  "MutableComponent.withStyle()",
   "ProblemReporter.Collector.getReport()",
   "ProblemReporter.Collector.isEmpty()",
   "TagValueOutput.store()",
@@ -24,10 +21,10 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "visualdatasize-1.3.1.jar",
-  "published": "2026-09-27"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "visualdatasize-1.3.2.jar",
+  "published": "2026-11-11"
  },
  "reports": {
   "works": 0,
@@ -37,8 +34,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -54,5 +51,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 10
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 7
 }

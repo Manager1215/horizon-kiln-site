@@ -9,7 +9,7 @@
  "author": "oxkitsune",
  "description": "A glowing fungal cave biome full of giant mushrooms, truffle-hunting hogs and the spore-ridden things that live among them.",
  "needs": [
-  "Mixin",
+  "Mixin: 10 points inside the game's methods",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
@@ -21,8 +21,16 @@
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
   "net.fabricmc.fabric.api.object.builder.v1.world.poi.PoiHelper",
   "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
+  "net.minecraft.advancements.predicates.entity.EntityPredicate",
+  "net.minecraft.advancements.predicates.entity.EntityPredicate.Builder",
+  "net.minecraft.advancements.triggers.BredAnimalsTrigger",
+  "net.minecraft.advancements.triggers.BredAnimalsTrigger.TriggerInstance",
+  "net.minecraft.advancements.triggers.ConsumeItemTrigger",
+  "net.minecraft.advancements.triggers.ConsumeItemTrigger.TriggerInstance",
   "net.minecraft.advancements.triggers.CriteriaTriggers",
   "net.minecraft.advancements.triggers.ItemUsedOnLocationTrigger",
+  "net.minecraft.advancements.triggers.KilledTrigger",
+  "net.minecraft.advancements.triggers.KilledTrigger.TriggerInstance",
   "net.minecraft.advancements.triggers.PlayerTrigger",
   "net.minecraft.client.model.AdultAndBabyModelPair",
   "net.minecraft.client.model.EntityModel",
@@ -42,22 +50,14 @@
   "net.minecraft.client.particle.SingleQuadParticle.Layer",
   "net.minecraft.client.particle.SpriteSet",
   "net.minecraft.client.renderer.entity.AbstractCubeMobRenderer",
-  "net.minecraft.client.renderer.entity.AbstractZombieRenderer",
-  "net.minecraft.client.renderer.entity.ArmorModelSet",
-  "net.minecraft.client.renderer.entity.AxolotlRenderer",
-  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
-  "net.minecraft.client.renderer.entity.MobRenderer",
-  "net.minecraft.client.renderer.entity.NoopRenderer",
-  "net.minecraft.client.renderer.entity.layers.RenderLayer",
-  "net.minecraft.client.renderer.entity.state.AxolotlRenderState",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Underbloom-0.2.0.jar",
   "published": "2026-11-01"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 387
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 467
 }

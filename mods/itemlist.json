@@ -10,53 +10,24 @@
  "description": "Multi-loader mod, that allows users to create item lists for builds within Minecraft. Removing the need to have a multi-display setup.",
  "needs": [
   "com.mojang.authlib.GameProfile",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.core.UUIDUtil",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.level.block.AbstractChestBlock",
   "net.minecraft.world.level.block.BarrelBlock",
   "net.minecraft.world.level.block.ChestBlock",
   "net.minecraft.world.level.block.ShulkerBoxBlock",
   "net.minecraft.world.level.block.state.properties.ChestType",
-  "ServerTickEvents.END_SERVER_TICK",
-  "Minecraft.execute()",
-  "Minecraft.setScreenAndShow()",
-  "Font.plainSubstrByWidth()",
   "GuiGraphicsExtractor.nextStratum()",
-  "EditBox.setHint()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseReleased()",
-  "Screen.mouseScrolled()",
   "PlayerInfo.getProfile()",
-  "CommandSourceStack.getPlayerOrException()",
-  "CommandSourceStack.getServer()",
-  "EntityArgument.getPlayer()",
-  "EntityArgument.player()",
   "DefaultedRegistry.iterator()",
-  "FriendlyByteBuf.readBlockPos()",
-  "FriendlyByteBuf.readIdentifier()",
-  "FriendlyByteBuf.readUUID()",
-  "FriendlyByteBuf.readUtf()",
-  "FriendlyByteBuf.readVarInt()",
-  "FriendlyByteBuf.writeBlockPos()",
-  "FriendlyByteBuf.writeBoolean()",
-  "FriendlyByteBuf.writeIdentifier()",
-  "FriendlyByteBuf.writeUUID()",
-  "FriendlyByteBuf.writeUtf()",
-  "FriendlyByteBuf.writeVarInt()",
-  "MinecraftServer.getPlayerList()",
-  "and 2 more"
+  "MinecraftServer.overworld()",
+  "Items.BARRIER"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "itemlist-26.3 - 1.7.0+fabric.jar",
   "published": "2026-09-19"
  },
@@ -68,8 +39,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +56,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 42
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 12
 }

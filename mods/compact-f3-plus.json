@@ -9,25 +9,20 @@
  "author": "nikenmar",
  "description": "replaces the vanilla F3 with a clean, minimal hud overlay.",
  "needs": [
-  "Mixin",
   "io.netty.channel.Channel",
   "io.netty.channel.ChannelInboundHandlerAdapter",
   "io.netty.channel.ChannelPipeline",
   "net.minecraft.SharedConstants",
-  "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
   "net.minecraft.client.resources.sounds.Sound",
   "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.server.ServerTickRateManager",
   "net.minecraft.server.level.ChunkResult",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.TickRateManager",
   "net.minecraft.world.level.LightLayer",
   "net.minecraft.world.level.levelgen.WorldgenRandom",
   "Camera.getCullFrustum()",
   "Minecraft.crosshairPickEntity",
-  "Minecraft.debugEntries",
   "Minecraft.getSingleplayerServer()",
-  "Minecraft.hitResult",
   "Minecraft.isLocalServer()",
   "ClientLevel.clip()",
   "ClientLevel.getBrightness()",
@@ -50,14 +45,18 @@
   "ServerLevel.getEntities()",
   "ServerLevel.getMoonBrightness()",
   "ServerLevel.getOverworldClockTime()",
-  "and 13 more"
+  "ServerLevel.getSeed()",
+  "PlayerList.getViewDistance()",
+  "DifficultyInstance.getEffectiveDifficulty()",
+  "DifficultyInstance.getSpecialMultiplier()",
+  "and 8 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "compactf3plus-1.2.5-fabric-26.x.jar",
   "published": "2026-10-15"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 53
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 48
 }

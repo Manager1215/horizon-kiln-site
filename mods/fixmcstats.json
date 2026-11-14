@@ -1,7 +1,7 @@
 {
  "id": "fixmcstats",
  "name": "FixMCStats",
- "version": "fabric-2.6.0",
+ "version": "fabric-2.6.1",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,29 +9,57 @@
  "author": "elmital",
  "description": "Mod that aims to fix multiple issues with the Minecraft statistics 🤓",
  "needs": [
-  "Mixin",
+  "Mixin: 27 points inside the game's methods",
+  "net.minecraft.advancements.triggers.CriteriaTriggers",
+  "net.minecraft.advancements.triggers.ShotCrossbowTrigger",
+  "net.minecraft.client.gui.components.ItemDisplayWidget",
+  "net.minecraft.client.gui.screens.achievement.StatsScreen",
+  "net.minecraft.client.gui.screens.achievement.StatsScreen.GeneralStatisticsList",
+  "net.minecraft.client.gui.screens.achievement.StatsScreen.ItemStatisticsList",
+  "net.minecraft.client.gui.screens.achievement.StatsScreen.ItemStatisticsList.Entry",
+  "net.minecraft.client.gui.screens.achievement.StatsScreen.ItemStatisticsList.ItemRow",
+  "net.minecraft.client.gui.screens.achievement.StatsScreen.ItemStatisticsList.ItemRow.ItemRowWidget",
+  "net.minecraft.client.gui.screens.achievement.StatsScreen.ItemStatisticsList.ItemRowComparator",
+  "net.minecraft.client.gui.screens.achievement.StatsScreen.MobsStatisticsList.MobRow",
   "net.minecraft.commands.arguments.StringRepresentableArgument",
   "net.minecraft.commands.synchronization.ArgumentTypeInfo",
   "net.minecraft.commands.synchronization.ArgumentTypeInfo.Template",
   "net.minecraft.commands.synchronization.SingletonArgumentInfo",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.server.permissions.Permissions",
+  "net.minecraft.core.UUIDUtil",
+  "net.minecraft.tags.DamageTypeTags",
   "net.minecraft.util.CommonColors",
-  "Commands.CommandSelection.includeDedicated",
-  "BuiltInRegistries.CUSTOM_STAT",
-  "MutableComponent.withStyle()",
-  "Style.withClickEvent()",
-  "StatFormatter.DISTANCE",
-  "StatType.get()"
+  "net.minecraft.world.entity.Attackable",
+  "net.minecraft.world.entity.animal.camel.Camel",
+  "net.minecraft.world.entity.animal.equine.Donkey",
+  "net.minecraft.world.entity.animal.equine.Mule",
+  "net.minecraft.world.entity.animal.goat.Goat",
+  "net.minecraft.world.entity.animal.happyghast.HappyGhast",
+  "net.minecraft.world.entity.decoration.ArmorStand",
+  "net.minecraft.world.entity.monster.Creeper",
+  "net.minecraft.world.entity.monster.Monster",
+  "net.minecraft.world.entity.projectile.FireworkRocketEntity",
+  "net.minecraft.world.inventory.BrewingStandMenu",
+  "net.minecraft.world.inventory.BrewingStandMenu.PotionSlot",
+  "net.minecraft.world.inventory.ContainerLevelAccess",
+  "net.minecraft.world.inventory.DataSlot",
+  "net.minecraft.world.inventory.ItemCombinerMenu",
+  "net.minecraft.world.inventory.ItemCombinerMenuSlotDefinition",
+  "net.minecraft.world.inventory.ItemCombinerMenuSlotDefinition.SlotDefinition",
+  "net.minecraft.world.inventory.ResultContainer",
+  "net.minecraft.world.inventory.ResultSlot",
+  "net.minecraft.world.inventory.SmithingMenu",
+  "net.minecraft.world.inventory.StonecutterMenu",
+  "net.minecraft.world.item.CrossbowItem",
+  "and 30 more"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "fix-mc-stats-fabric-26.3-2.6.0.jar",
-  "published": "2026-10-30"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "fix-mc-stats-fabric-26.3-2.6.1.jar",
+  "published": "2026-11-10"
  },
  "reports": {
   "works": 0,
@@ -41,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -58,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 13
+ "softOff": {
+  "class": "restart",
+  "why": "@modify-args and @redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
+ },
+ "lacks": 70
 }

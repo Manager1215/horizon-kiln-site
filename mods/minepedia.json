@@ -9,36 +9,25 @@
  "author": "Minehendrix",
  "description": "Bring the Bedrock edition Encyclopedia to Minecraft: Java Edition",
  "needs": [
-  "Mixin",
   "net.minecraft.client.gui.components.MultiLineTextWidget",
-  "net.minecraft.client.gui.components.ObjectSelectionList",
-  "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
-  "net.minecraft.client.gui.components.StringWidget",
+  "net.minecraft.client.gui.components.SpriteIconButton",
+  "net.minecraft.client.gui.components.SpriteIconButton.Builder",
   "net.minecraft.client.gui.layouts.GridLayout",
   "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
   "net.minecraft.client.gui.layouts.LayoutSettings",
   "net.minecraft.client.gui.layouts.LinearLayout",
-  "KeyMapping.getTranslatedKeyMessage()",
-  "Minecraft.setScreenAndShow()",
-  "Options.keyAttack",
-  "Options.keyHotbarSlots",
-  "Options.keyInventory",
-  "Options.keyUse",
   "Options.languageCode",
-  "AbstractScrollArea.defaultSettings()",
-  "AbstractScrollArea.mouseScrolled()",
   "NarrationElementOutput.add()",
   "Screen.MENU_BACKGROUND",
-  "MutableComponent.setStyle()",
   "ARGB.colorFromFloat()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Minepedia-1.7.jar",
   "published": "2026-09-30"
  },
@@ -50,8 +39,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -68,5 +57,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 22
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 12
 }

@@ -9,14 +9,55 @@
  "author": "ItzStanleex",
  "description": "Faster resource pack loading, and no more freeze when you join a server with a big pack. Client-side only, no Fabric API needed.",
  "needs": [
-  "Mixin"
+  "Mixin: 6 points inside the game's methods",
+  "com.mojang.blaze3d.font.GlyphInfo",
+  "com.mojang.blaze3d.font.GlyphProvider",
+  "com.mojang.blaze3d.font.GlyphProvider.Conditional",
+  "com.mojang.blaze3d.font.SpaceProvider",
+  "com.mojang.blaze3d.font.TrueTypeGlyphProvider",
+  "com.mojang.blaze3d.font.UnbakedGlyph",
+  "com.mojang.blaze3d.platform.TextureUtil",
+  "net.minecraft.SharedConstants",
+  "net.minecraft.client.gui.font.AllMissingGlyphProvider",
+  "net.minecraft.client.gui.font.FontManager",
+  "net.minecraft.client.gui.font.FontOption",
+  "net.minecraft.client.gui.font.FontOption.Filter",
+  "net.minecraft.client.gui.font.FontSet",
+  "net.minecraft.client.gui.font.glyphs.SpecialGlyphs",
+  "net.minecraft.client.gui.font.providers.BitmapProvider",
+  "net.minecraft.client.gui.font.providers.UnihexProvider",
+  "net.minecraft.client.gui.screens.LoadingOverlay",
+  "net.minecraft.client.renderer.texture.MipmapGenerator",
+  "net.minecraft.client.resources.model.BlockStateModelLoader",
+  "net.minecraft.client.resources.model.BlockStateModelLoader.LoadedModels",
+  "net.minecraft.client.resources.model.ClientItemInfoLoader",
+  "net.minecraft.client.resources.model.ClientItemInfoLoader.LoadedClientInfos",
+  "net.minecraft.client.resources.model.ModelBakery.InternerImpl",
+  "net.minecraft.client.resources.server.DownloadedPackSource",
+  "net.minecraft.client.resources.server.PackReloadConfig",
+  "net.minecraft.client.resources.server.PackReloadConfig.IdAndPath",
+  "net.minecraft.server.packs.FilePackResources",
+  "net.minecraft.server.packs.FilePackResources.FileResourcesSupplier",
+  "net.minecraft.server.packs.FilePackResources.SharedZipFileAccess",
+  "net.minecraft.server.packs.PackLocationInfo",
+  "net.minecraft.server.packs.PackResources.ResourceOutput",
+  "net.minecraft.server.packs.repository.FolderRepositorySource",
+  "net.minecraft.server.packs.repository.Pack",
+  "net.minecraft.server.packs.repository.Pack.Metadata",
+  "net.minecraft.server.packs.repository.Pack.ResourcesSupplier",
+  "net.minecraft.server.packs.repository.PackRepository",
+  "net.minecraft.server.packs.resources.ProfiledReloadInstance",
+  "net.minecraft.server.packs.resources.ProfiledReloadInstance.State",
+  "net.minecraft.server.packs.resources.ReloadableResourceManager",
+  "net.minecraft.util.FileUtil",
+  "and 20 more"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "FastPackLoad-fabric-26.2-26.3-1.2.1.jar",
   "published": "2026-10-29"
  },
@@ -28,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -43,5 +84,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 60
 }

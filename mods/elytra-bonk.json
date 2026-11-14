@@ -9,22 +9,21 @@
  "author": "Apehum",
  "description": "Mod that plays a bonk sound when you fly into a wall with an elytra",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.world.damagesource.DamageTypes",
   "ClientboundSoundPacket.getSound()",
   "ClientboundSoundPacket.getSource()",
   "ClientboundSoundPacket.getX()",
   "ClientboundSoundPacket.getY()",
   "ClientboundSoundPacket.getZ()",
-  "SoundEvents.PLAYER_HURT",
-  "DamageSource.is()"
+  "SoundEvents.PLAYER_HURT"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "elytra-bonk-fabric-1.0.1+26.1.jar",
   "published": "2026-06-08"
  },
@@ -40,5 +39,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 8
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 7
 }

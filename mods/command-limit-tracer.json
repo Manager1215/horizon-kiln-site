@@ -9,9 +9,11 @@
  "author": "Misode",
  "description": "Shows more debug information when reaching the command limit",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.minecraft.commands.execution.CommandQueueEntry",
+  "net.minecraft.commands.execution.ExecutionContext",
   "net.minecraft.commands.execution.Frame",
+  "net.minecraft.commands.execution.tasks.CallFunction",
   "net.minecraft.commands.execution.tasks.ContinuationTask",
   "net.minecraft.commands.execution.tasks.ContinuationTask.TaskProvider",
   "net.minecraft.commands.functions.InstantiatedFunction"
@@ -20,8 +22,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "commandlimittracer-0.3.0.jar",
   "published": "2026-06-14"
  },
@@ -37,5 +39,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 5
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 7
 }

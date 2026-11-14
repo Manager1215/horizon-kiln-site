@@ -10,23 +10,26 @@
  "description": "Style your server's chat as you want!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 12 points inside the game's methods",
   "net.fabricmc.fabric.api.permission.v1.PermissionNode",
   "net.fabricmc.fabric.api.util.TriState",
   "net.fabricmc.loader.api.metadata.ContactInformation",
   "net.fabricmc.loader.api.metadata.Person",
+  "net.minecraft.commands.arguments.MessageArgument",
+  "net.minecraft.commands.arguments.MessageArgument.Message",
   "net.minecraft.network.chat.ChatDecorator",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
+  "net.minecraft.network.chat.OutgoingChatMessage",
+  "net.minecraft.network.chat.OutgoingChatMessage.Disguised",
+  "net.minecraft.network.chat.OutgoingChatMessage.Player",
   "net.minecraft.network.chat.PlayerChatMessage",
-  "net.minecraft.network.chat.contents.PlainTextContents",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.server.PlayerAdvancements",
+  "net.minecraft.server.commands.EmoteCommands",
+  "net.minecraft.server.commands.MsgCommand",
+  "net.minecraft.server.commands.SayCommand",
+  "net.minecraft.server.commands.TeamMsgCommand",
+  "net.minecraft.util.filefix.fixes.PlayerStorageFileFix",
   "net.minecraft.world.scores.PlayerTeam",
   "net.minecraft.world.scores.TeamColor",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "Object2BooleanMap.Entry.getKey()",
   "ModContainer.findPath()",
   "ModContainer.getPath()",
@@ -35,13 +38,10 @@
   "ModMetadata.getContributors()",
   "CommandSourceStack.checkPermission()",
   "CommandSourceStack.checkPermission()",
-  "CommandSourceStack.getDisplayName()",
-  "CommandSourceStack.getEntity()",
-  "CommandSourceStack.getServer()",
-  "CommandSourceStack.isPlayer()",
   "CommandSourceStack.registryAccess()",
-  "EntitySelector.findPlayers()",
+  "CommandSourceStack.sendChatMessage()",
   "RegistryAccess.lookupOrThrow()",
+  "RegistryAccess.Frozen.lookupOrThrow()",
   "Registries.CHAT_TYPE",
   "ChatType.CHAT",
   "ChatType.EMOTE_COMMAND",
@@ -51,14 +51,14 @@
   "ChatType.TEAM_MSG_COMMAND_INCOMING",
   "ChatType.TEAM_MSG_COMMAND_OUTGOING",
   "ChatType.bind()",
-  "and 19 more"
+  "and 26 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "styled-chat-2.14.0+26.3.jar",
   "published": "2026-09-11"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +85,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 59
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; @modify-arg Kiln doesn't guard; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 66
 }

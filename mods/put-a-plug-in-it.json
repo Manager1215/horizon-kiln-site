@@ -9,22 +9,23 @@
  "author": "dipilodopilasaur",
  "description": "A small mod that fixes Memory Leak issues, optimizes Memory Usage, and increases version/loader support for features of other Memory Leak Fix/Memory Optimization mods",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
+  "Mixin: 5 points inside the game's methods",
+  "com.mojang.blaze3d.platform.TextureUtil",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.texture.TextureUtil",
   "net.minecraft.world.entity.ai.Brain",
   "net.minecraft.world.entity.ai.memory.MemoryModuleType",
+  "net.minecraft.world.level.entity.EntityTickList",
   "org.lwjgl.opengl.GL11C",
-  "ServerTickEvents.END_SERVER_TICK",
-  "Commands.LEVEL_GAMEMASTERS",
-  "Commands.hasPermission()",
+  "org.lwjgl.system.MemoryUtil",
   "LivingEntity.getBrain()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "papi-fabric-26.3-1.3.0.jar",
   "published": "2026-10-07"
  },
@@ -36,8 +37,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -51,5 +52,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 8
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 9
 }

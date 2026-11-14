@@ -9,7 +9,7 @@
  "author": "ThatGravyBoat",
  "description": "Resourceful Config is a mod that allows for developers to make cross-platform configs",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "com.mojang.blaze3d.Blaze3D",
   "com.mojang.blaze3d.platform.TextInputManager",
   "com.mojang.blaze3d.platform.cursor.CursorType",
@@ -26,8 +26,6 @@
   "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
   "net.minecraft.client.gui.components.IMEPreeditOverlay",
   "net.minecraft.client.gui.components.MultiLineTextWidget",
-  "net.minecraft.client.gui.components.StringWidget",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.components.Whence",
   "net.minecraft.client.gui.layouts.EqualSpacingLayout",
   "net.minecraft.client.gui.layouts.EqualSpacingLayout.Orientation",
@@ -40,24 +38,26 @@
   "net.minecraft.client.input.PreeditEvent",
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.core.UUIDUtil",
-  "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
   "net.minecraft.server.dedicated.DedicatedServer",
   "net.minecraft.util.StringDecomposer",
   "net.minecraft.util.StringUtil",
   "org.apache.commons.io.IOUtils",
   "BiMap.containsKey()",
   "BiMap.containsValue()",
-  "and 58 more"
+  "BiMap.get()",
+  "InputConstants.Key.getDisplayName()",
+  "InputConstants.Type.getOrCreate()",
+  "NativeImage.getHeight()",
+  "NativeImage.getPixel()",
+  "NativeImage.getWidth()",
+  "and 36 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ResourcefulConfig-6.0.2.jar",
   "published": "2026-10-07"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 106
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 76
 }

@@ -9,31 +9,36 @@
  "author": "Denizoz",
  "description": "A client-side Fabric mod that replaces spiders and cave spiders with cute, non-spider creatures for players with arachnophobia.",
  "needs": [
-  "Mixin",
+  "net.minecraft.client.gui.components.OptionsList",
+  "net.minecraft.client.gui.screens.options.OptionsSubScreen",
+  "net.minecraft.client.gui.screens.options.VideoSettingsScreen",
   "net.minecraft.client.model.geom.ModelLayers",
   "net.minecraft.client.model.monster.slime.SlimeModel",
   "net.minecraft.client.renderer.entity.CaveSpiderRenderer",
+  "net.minecraft.client.renderer.entity.EntityRenderers",
   "net.minecraft.client.renderer.entity.MobRenderer",
   "net.minecraft.client.renderer.entity.SlimeRenderer",
   "net.minecraft.client.renderer.entity.SpiderRenderer",
   "net.minecraft.client.renderer.entity.layers.SlimeOuterLayer",
   "net.minecraft.client.renderer.entity.state.SlimeRenderState",
   "net.minecraft.world.entity.monster.spider.Spider",
-  "Minecraft.execute()",
-  "Minecraft.isSameThread()",
   "Minecraft.reloadResourcePacks()",
   "EntityRendererProvider.Context.bakeLayer()",
   "EntityRendererProvider.Context.getModelSet()",
+  "SoundEvents.SPIDER_AMBIENT",
+  "SoundEvents.SPIDER_DEATH",
+  "SoundEvents.SPIDER_HURT",
+  "SoundEvents.SPIDER_STEP",
   "EntityTypes.CAVE_SPIDER",
   "EntityTypes.SPIDER",
   "AABB.inflate()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "no_more_arachnophobia-fabric-1.2.1+26.3.jar",
   "published": "2026-10-22"
  },
@@ -45,8 +50,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -60,5 +65,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 17
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 23
 }

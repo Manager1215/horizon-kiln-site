@@ -1,7 +1,7 @@
 {
  "id": "smbs",
  "name": "Simple Mob Buff System",
- "version": "1.1.2+26.3",
+ "version": "1.2.0+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,28 +9,57 @@
  "author": "pajic",
  "description": "Makes mobs rarely spawn with buffs and drop rewards based on how strong they are",
  "needs": [
-  "an access widener",
-  "Mixin",
+  "Mixin: 4 points inside the game's methods",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
+  "net.minecraft.core.HolderSet.Named",
+  "net.minecraft.world.entity.AreaEffectCloud",
+  "net.minecraft.world.entity.DropChances",
+  "net.minecraft.world.entity.monster.spider.Spider",
+  "net.minecraft.world.entity.monster.spider.Spider.SpiderEffectsGroupData",
+  "net.minecraft.world.entity.monster.zombie.Zombie",
+  "net.minecraft.world.level.block.entity.SculkCatalystBlockEntity",
+  "net.minecraft.world.level.block.entity.SculkCatalystBlockEntity.CatalystListener",
+  "net.minecraft.world.level.gameevent.GameEvent.Context",
   "AttachmentRegistry.create()",
+  "Holder.Reference.is()",
+  "Registry.get()",
   "Registry.listTagIds()",
   "RegistryAccess.lookupOrThrow()",
+  "ParticleTypes.ENTITY_EFFECT",
   "Component.translatableWithFallback()",
-  "MobEffect.addAttributeModifier()",
-  "Entity.getAttachedOrSet()",
+  "SynchedEntityData.get()",
+  "SynchedEntityData.set()",
+  "ServerLevel.getCurrentDifficultyAt()",
+  "ServerLevel.getGameRules()",
+  "Util.getRandomSafe()",
+  "Util.shuffle()",
+  "DifficultyInstance.getEffectiveDifficulty()",
+  "Entity.<init>()",
+  "Entity.getAttachedOrElse()",
   "Entity.setAttached()",
+  "EntityType.builtInRegistryHolder()",
+  "LivingEntity.<init>()",
+  "Mob.getDropChances()",
+  "Mob.getOnPos()",
+  "AttributeInstance.addOrReplacePermanentModifier()",
+  "AttributeInstance.hasModifier()",
   "Attributes.FOLLOW_RANGE",
-  "LevelAccessor.registryAccess()"
+  "Items.ENCHANTED_BOOK",
+  "Enchantment.getMaxLevel()",
+  "Enchantment.getMinLevel()",
+  "LevelAccessor.registryAccess()",
+  "ServerLevelAccessor.getRandom()",
+  "GameRules.MOB_DROPS",
+  "and 1 more"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "smbs-fabric-1.1.2+26.3.jar",
-  "published": "2026-09-19"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "smbs-fabric-1.2.0+26.3.jar",
+  "published": "2026-11-05"
  },
  "reports": {
   "works": 0,
@@ -40,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -58,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 11
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method and @wrap-operation into the game's classes"
+ },
+ "lacks": 41
 }

@@ -10,25 +10,23 @@
  "description": "Improves explorer map creation upon loot-table processing",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.commands.synchronization.SuggestionProviders",
   "net.minecraft.core.HolderSet.Direct",
   "net.minecraft.core.HolderSet.Named",
+  "net.minecraft.world.item.EmptyMapItem",
   "net.minecraft.world.item.MapItem",
   "net.minecraft.world.item.component.ItemLore",
+  "net.minecraft.world.item.trading.VillagerTrade",
   "net.minecraft.world.level.levelgen.SingleThreadedRandomSource",
   "net.minecraft.world.level.storage.loot.functions.ExplorationMapFunction",
   "net.minecraft.world.level.storage.loot.functions.FilteredFunction",
   "Minecraft.getSingleplayerServer()",
-  "CommandSourceStack.sendSystemMessage()",
-  "Commands.LEVEL_GAMEMASTERS",
-  "Commands.hasPermission()",
   "BlockPos.<init>()",
   "Holder.getRegisteredName()",
   "HolderSet.direct()",
   "Registry.get()",
-  "Registry.wrapAsHolder()",
   "RegistryAccess.lookupOrThrow()",
   "DataComponents.CUSTOM_NAME",
   "DataComponents.LORE",
@@ -51,14 +49,16 @@
   "GameRuleCategory.DROPS",
   "GameRuleCategory.MISC",
   "GameRuleCategory.MOBS",
-  "and 4 more"
+  "GameRuleCategory.PLAYER",
+  "GameRules.get()",
+  "and 2 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "bettermaps+26.2-0.9.1.jar",
   "published": "2026-09-23"
  },
@@ -75,5 +75,9 @@
   "minecraft",
   "unruled_api"
  ],
- "lacks": 44
+ "softOff": {
+  "class": "partial",
+  "why": "data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 42
 }

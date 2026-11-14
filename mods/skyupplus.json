@@ -10,7 +10,7 @@
  "description": "🇵🇱 Mod mający na celu urozmaicenie rozgrywki na serwerze SkyUP.pl | 🇬🇧 Client side mod aiming to enhance your gameplay on the SkyUP.pl server",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
@@ -19,9 +19,19 @@
   "net.minecraft.client.gui.components.BossHealthOverlay",
   "net.minecraft.client.gui.components.LerpingBossEvent",
   "net.minecraft.client.gui.components.PlayerFaceExtractor",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
+  "net.minecraft.client.multiplayer.ServerData.ServerPackStatus",
+  "net.minecraft.client.resources.ClientPackSource",
+  "net.minecraft.server.packs.FilePackResources",
+  "net.minecraft.server.packs.FilePackResources.FileResourcesSupplier",
+  "net.minecraft.server.packs.PackLocationInfo",
+  "net.minecraft.server.packs.PackSelectionConfig",
+  "net.minecraft.server.packs.repository.Pack",
+  "net.minecraft.server.packs.repository.Pack.Position",
+  "net.minecraft.server.packs.repository.Pack.ResourcesSupplier",
+  "net.minecraft.server.packs.repository.PackRepository",
+  "net.minecraft.server.packs.repository.PackSource",
+  "net.minecraft.server.packs.repository.RepositorySource",
   "net.minecraft.world.entity.decoration.ArmorStand",
-  "net.minecraft.world.inventory.ContainerInput",
   "net.minecraft.world.item.component.ItemLore",
   "net.minecraft.world.level.block.entity.BarrelBlockEntity",
   "net.minecraft.world.level.block.entity.ChestBlockEntity",
@@ -33,32 +43,22 @@
   "ImmutableList.get()",
   "ClientReceiveMessageEvents.ALLOW_GAME",
   "KeyMapping.setDown()",
-  "Minecraft.execute()",
-  "Minecraft.gameMode",
+  "Minecraft.gameDirectory",
   "Minecraft.getCurrentServer()",
-  "Minecraft.isSameThread()",
-  "Options.keyAttack",
-  "Options.keyUse",
   "GuiGraphicsExtractor.blit()",
   "GuiGraphicsExtractor.blit()",
   "Hud.getBossOverlay()",
-  "Hud.setSubtitle()",
-  "Hud.setTimes()",
-  "Hud.setTitle()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseReleased()",
   "ClientLevel.getScoreboard()",
-  "ClientLevel.hasChunk()",
+  "ServerData.getResourcePackStatus()",
   "ServerData.ip",
-  "and 38 more"
+  "and 34 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "skyupplus-e32-v4.jar",
   "published": "2026-10-25"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 78
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 74
 }

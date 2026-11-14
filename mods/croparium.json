@@ -10,7 +10,7 @@
  "description": "Mining using hands is extremely unhealthy! This mod make resources growable!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "com.mojang.blaze3d.platform.cursor.CursorType",
   "com.mojang.blaze3d.platform.cursor.CursorTypes",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
@@ -20,8 +20,6 @@
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndLevelTick",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
   "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents",
@@ -32,33 +30,35 @@
   "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
   "net.minecraft.client.gui.components.ImageButton",
   "net.minecraft.client.gui.components.WidgetSprites",
-  "net.minecraft.commands.arguments.blocks.BlockInput",
-  "net.minecraft.commands.arguments.blocks.BlockStateArgument",
   "net.minecraft.core.dispenser.OptionalDispenseItemBehavior",
   "net.minecraft.server.PlayerAdvancements",
   "net.minecraft.server.ServerAdvancementManager",
   "net.minecraft.server.TickTask",
-  "net.minecraft.server.permissions.LevelBasedPermissionSet",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.damagesource.DamageTypes",
   "net.minecraft.world.entity.ai.attributes.AttributeMap",
   "net.minecraft.world.flag.FeatureFlags",
-  "net.minecraft.world.inventory.ContainerInput",
   "net.minecraft.world.inventory.ContainerLevelAccess",
   "net.minecraft.world.inventory.MenuType.MenuSupplier",
+  "net.minecraft.world.item.BoneMealItem",
   "net.minecraft.world.item.ItemUseAnimation",
+  "net.minecraft.world.item.crafting.RepairItemRecipe",
   "net.minecraft.world.level.block.Mirror",
   "net.minecraft.world.level.block.state.BlockBehaviour.PostProcess",
   "net.minecraft.world.level.block.state.BlockBehaviour.StatePredicate",
-  "and 63 more"
+  "net.minecraft.world.level.material.PushReaction",
+  "CommandSyntaxException.printStackTrace()",
+  "AttachmentRegistry.create()",
+  "FluidRenderingRegistry.register()",
+  "ServerPlayerEvents.JOIN",
+  "and 56 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "cp_lib-5.1.1-lite-beta-fabric-26.3.jar",
   "published": "2026-10-14"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 180
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 154
 }

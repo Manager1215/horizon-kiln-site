@@ -9,11 +9,9 @@
  "author": "Estecka",
  "description": "Light-weight mod for changing the default values of gamerules.",
  "needs": [
-  "Mixin",
   "net.minecraft.client.gui.screens.worldselection.WorldCreationGameRulesScreen",
   "net.minecraft.world.flag.FeatureFlagRegistry",
   "net.minecraft.world.flag.FeatureFlags",
-  "Minecraft.setScreenAndShow()",
   "Registry.listElementIds()",
   "BuiltInRegistries.GAME_RULE",
   "GameRule.serialize()",
@@ -21,12 +19,12 @@
   "GameRules.get()",
   "GameRules.set()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "preferred-gamerules-2.0.1+26.2.jar",
   "published": "2026-09-16"
  },
@@ -45,5 +43,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 10
+ "softOff": {
+  "class": "restart",
+  "why": "@overwrite into the game's classes"
+ },
+ "lacks": 9
 }

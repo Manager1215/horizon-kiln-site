@@ -9,19 +9,28 @@
  "author": "fentbuscoding",
  "description": "A Fabric mod that replaces Minecraft's global weather with localized weather zones. Each 256×256 block region gets its own weather, rain, snow, and thunderstorms happen independently across the world with biome-aware rules, smooth transitions, and blocky",
  "needs": [
-  "Mixin",
+  "Mixin: 4 points inside the game's methods",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
+  "net.minecraft.client.renderer.CloudRenderer",
+  "net.minecraft.client.renderer.SkyRenderer",
+  "net.minecraft.client.renderer.fog.FogData",
+  "net.minecraft.client.renderer.fog.environment.AtmosphericFogEnvironment",
+  "net.minecraft.client.renderer.state.level.SkyRenderState",
+  "net.minecraft.server.commands.WeatherCommand",
+  "net.minecraft.world.attribute.BedRule",
+  "net.minecraft.world.attribute.BedRule.Rule",
+  "net.minecraft.world.level.saveddata.WeatherData",
   "net.minecraft.world.level.storage.LevelResource",
+  "net.minecraft.world.level.storage.loot.predicates.WeatherCheck",
   "PoseStack.Pose.pose()",
   "VertexConsumer.addVertex()",
   "LevelRenderEvents.COLLECT_SUBMITS",
-  "ServerTickEvents.END_SERVER_TICK",
   "Options.getEffectiveRenderDistance()",
   "ClientLevel.getHeight()",
   "ClientLevel.setRainLevel()",
   "ClientLevel.setThunderLevel()",
   "RenderTypes.debugFilledBox()",
+  "BlockPos.containing()",
   "MinecraftServer.getAllLevels()",
   "MinecraftServer.getWorldPath()",
   "MinecraftServer.overworld()",
@@ -30,22 +39,25 @@
   "ServerLevel.getHeight()",
   "ServerLevel.getHeightmapPos()",
   "ServerLevel.getMinY()",
+  "ServerLevel.getSeaLevel()",
+  "ServerLevel.getWeatherData()",
   "ServerLevel.isRainingAt()",
+  "ServerLevel.setRainLevel()",
+  "ServerLevel.setThunderLevel()",
   "ServerPlayer.chunkPosition()",
   "ServerPlayer.isSleeping()",
   "SoundEvents.LIGHTNING_BOLT_THUNDER",
   "SoundEvents.WEATHER_RAIN",
-  "Biome.getBaseTemperature()",
-  "Biome.hasPrecipitation()",
-  "GameRules.ADVANCE_WEATHER",
-  "GameRules.get()"
+  "ContextMap.getOrThrow()",
+  "ContextMap.has()",
+  "and 6 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "localweather-1.4.3+26.3.jar",
   "published": "2026-10-28"
  },
@@ -57,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -74,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 29
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; has network channels"
+ },
+ "lacks": 46
 }

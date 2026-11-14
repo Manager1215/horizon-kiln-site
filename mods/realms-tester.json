@@ -2,22 +2,54 @@
  "id": "realms-tester",
  "name": "Realms Tester",
  "version": "1.1.0+26.3-fabric",
- "status": "planned",
- "statusLabel": "Planned",
- "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "status": "no-plans",
+ "statusLabel": "No plans yet",
+ "statusMeaning": "Calls something that is not on Kiln's roadmap yet. Parts of it may already run.",
  "url": "https://modrinth.com/mod/realms-tester",
  "author": "enchanted-games",
  "description": "A utility for resource pack or mod developers which gives you fake realms for easier testing of the realms screens",
  "needs": [
   "an access widener",
-  "Mixin"
+  "com.mojang.realmsclient.client.RealmsClient",
+  "com.mojang.realmsclient.client.RealmsClient.CompatibleVersionResponse",
+  "com.mojang.realmsclient.client.RealmsError",
+  "com.mojang.realmsclient.client.RealmsError.CustomError",
+  "com.mojang.realmsclient.dto.Backup",
+  "com.mojang.realmsclient.dto.BackupList",
+  "com.mojang.realmsclient.dto.InviteCode",
+  "com.mojang.realmsclient.dto.InviteCodeList",
+  "com.mojang.realmsclient.dto.PendingInvite",
+  "com.mojang.realmsclient.dto.PendingInvitesList",
+  "com.mojang.realmsclient.dto.PlayerInfo",
+  "com.mojang.realmsclient.dto.PreferredRegionsDto",
+  "com.mojang.realmsclient.dto.RealmTierConfigurationDto",
+  "com.mojang.realmsclient.dto.RealmTierConfigurationDto.RealmTierRangeDto",
+  "com.mojang.realmsclient.dto.RealmsNews",
+  "com.mojang.realmsclient.dto.RealmsNotification",
+  "com.mojang.realmsclient.dto.RealmsServer",
+  "com.mojang.realmsclient.dto.RealmsServer.Compatibility",
+  "com.mojang.realmsclient.dto.RealmsServer.State",
+  "com.mojang.realmsclient.dto.RealmsServer.WorldType",
+  "com.mojang.realmsclient.dto.RealmsServerList",
+  "com.mojang.realmsclient.dto.RealmsServerPlayerLists",
+  "com.mojang.realmsclient.dto.RealmsSetting",
+  "com.mojang.realmsclient.dto.RealmsSlot",
+  "com.mojang.realmsclient.dto.RealmsWorldOptions",
+  "com.mojang.realmsclient.dto.Subscription",
+  "com.mojang.realmsclient.dto.Subscription.SubscriptionType",
+  "com.mojang.realmsclient.dto.WorldTemplate",
+  "com.mojang.realmsclient.dto.WorldTemplate.WorldTemplateType",
+  "com.mojang.realmsclient.dto.WorldTemplatePaginatedList",
+  "com.mojang.realmsclient.exception.RealmsServiceException",
+  "net.minecraft.SharedConstants",
+  "net.minecraft.world.item.component.ResolvableProfile"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "eg_realms_tester-1.1.0+26.3-fabric.jar",
   "published": "2026-10-31"
  },
@@ -29,8 +61,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -43,5 +75,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 33
 }

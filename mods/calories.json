@@ -9,16 +9,13 @@
  "author": "OnlyJugs",
  "description": "A mod adding a calories based hunger system and a lot more.",
  "needs": [
-  "Mixin",
+  "Mixin: 7 points inside the game's methods",
   "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndLevelTick",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
+  "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.minecraft.advancements.triggers.CriteriaTriggers",
   "net.minecraft.advancements.triggers.PlayerTrigger",
@@ -30,6 +27,7 @@
   "net.minecraft.client.model.geom.builders.CubeListBuilder",
   "net.minecraft.client.model.geom.builders.MeshDefinition",
   "net.minecraft.client.model.geom.builders.PartDefinition",
+  "net.minecraft.client.player.FirstPersonHandsAndItems",
   "net.minecraft.client.renderer.entity.MobRenderer",
   "net.minecraft.client.renderer.entity.layers.RenderLayer",
   "net.minecraft.client.renderer.entity.state.HoldingEntityRenderState",
@@ -40,24 +38,26 @@
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
   "net.minecraft.server.ServerTickRateManager",
   "net.minecraft.server.level.ServerPlayer.RespawnConfig",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.tags.GameEventTags",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.attribute.BedRule",
   "net.minecraft.world.clock.ClockInstance",
   "net.minecraft.world.clock.ServerClockManager",
   "net.minecraft.world.clock.WorldClocks",
+  "net.minecraft.world.effect.HealOrHarmMobEffect",
+  "net.minecraft.world.effect.MobEffectUtil",
+  "net.minecraft.world.effect.PoisonMobEffect",
+  "net.minecraft.world.effect.RegenerationMobEffect",
+  "net.minecraft.world.entity.AreaEffectCloud",
   "net.minecraft.world.entity.ContainerUser",
-  "net.minecraft.world.entity.EntityEvent",
-  "net.minecraft.world.entity.EntityEvent.Value",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "[26.3] Jugs' Calories [1.5.0].jar",
   "published": "2026-10-04"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 405
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-method into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
+ },
+ "lacks": 401
 }

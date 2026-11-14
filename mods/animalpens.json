@@ -10,13 +10,11 @@
  "description": "Reduce lag and keep your animals neatly stored while maintaining full interactivity!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 8 points inside the game's methods",
   "net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry",
   "net.fabricmc.fabric.api.item.v1.BlockTransformerEvents",
   "net.fabricmc.fabric.api.item.v1.BlockTransformerEvents.Modify",
   "net.fabricmc.fabric.api.item.v1.ResourceSource",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.minecraft.advancements.predicates.ItemPredicate",
   "net.minecraft.advancements.predicates.ItemPredicate.Builder",
@@ -35,10 +33,6 @@
   "net.minecraft.core.particles.SpellParticleOption",
   "net.minecraft.core.registries.codec.RegistryCodecs",
   "net.minecraft.resources.RegistryOps.RegistryInfoLookup",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.permissions.PermissionCheck",
-  "net.minecraft.server.permissions.PermissionCheck.Require",
-  "net.minecraft.server.permissions.Permissions",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.util.BinaryAnimator",
   "net.minecraft.util.CommonColors",
@@ -46,19 +40,25 @@
   "net.minecraft.world.entity.AnimationState",
   "net.minecraft.world.entity.Bucketable",
   "net.minecraft.world.entity.DropChances",
+  "net.minecraft.world.entity.EntityEquipment",
   "net.minecraft.world.entity.EntitySpawnRequest",
   "net.minecraft.world.entity.Pose",
   "net.minecraft.world.entity.WalkAnimationState",
   "net.minecraft.world.entity.ambient.Bat",
+  "net.minecraft.world.entity.animal.allay.Allay",
   "net.minecraft.world.entity.animal.axolotl.Axolotl",
-  "and 75 more"
+  "net.minecraft.world.entity.animal.cow.MushroomCow",
+  "net.minecraft.world.entity.animal.equine.AbstractChestedHorse",
+  "net.minecraft.world.entity.animal.equine.AbstractHorse",
+  "net.minecraft.world.entity.animal.equine.Horse",
+  "and 76 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "animal_pen-fabric-26.3-2.5.2.jar",
   "published": "2026-10-22"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -90,5 +90,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 251
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 241
 }

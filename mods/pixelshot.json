@@ -10,36 +10,29 @@
  "description": "High-resolution screenshots, and an orthographic camera all in one. A continuation of Mineshot by BarracudaATA.",
  "needs": [
   "an access widener",
-  "Mixin",
-  "net.minecraft.client.CameraType",
+  "Mixin: 3 points inside the game's methods",
   "net.minecraft.client.GameNarrator",
   "net.minecraft.client.Screenshot",
   "net.minecraft.client.gui.components.ImageButton",
-  "net.minecraft.client.gui.components.StringWidget",
   "net.minecraft.client.gui.components.WidgetSprites",
   "net.minecraft.client.renderer.CloudRenderer",
   "net.minecraft.client.renderer.LevelRenderer",
+  "net.minecraft.client.renderer.ScreenEffectRenderer",
   "net.minecraft.client.renderer.SectionOcclusionGraph",
   "net.minecraft.client.renderer.fog.FogData",
   "RenderTarget.resize()",
   "Window.setHeight()",
   "Window.setWidth()",
   "Camera.detached",
-  "Minecraft.execute()",
   "Minecraft.gameDirectory",
-  "Minecraft.grabPanoramixScreenshot()",
   "Minecraft.levelRenderer",
-  "Options.getCameraType()",
-  "Options.setCameraType()",
   "Hud.toggle()",
-  "EditBox.insertText()",
-  "Screen.addRenderableWidget()",
   "GameRenderer.extract()",
   "GameRenderer.mainCamera()",
   "GameRenderer.renderLevel()",
   "GameRenderer.setRenderBlockOutline()",
   "GameRenderer.update()",
-  "Direction.getNearest()",
+  "CameraRenderState.isPanoramicMode",
   "Direction.getRotation()",
   "CommonComponents.GUI_DONE",
   "CommonComponents.OPTION_OFF",
@@ -52,8 +45,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "pixelshot-v26.3.0-mc26.3.x+Fabric.jar",
   "published": "2026-09-20"
  },
@@ -65,8 +58,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -83,5 +76,9 @@
   "minecraft",
   "puzzleslib"
  ],
- "lacks": 36
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 29
 }

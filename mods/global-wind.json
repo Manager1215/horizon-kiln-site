@@ -9,25 +9,30 @@
  "author": "Depixelation",
  "description": "Simple mod that adds directional wind based on world time.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
-  "Minecraft.execute()",
-  "RegistryFriendlyByteBuf.writeDouble()",
+  "net.minecraft.client.particle.Particle",
+  "net.minecraft.world.level.LightLayer",
+  "ClientLevel.getOverworldClockTime()",
+  "ClientLevel.playPlayerSound()",
+  "LocalPlayer.isInLava()",
+  "LocalPlayer.needsSync",
+  "LocalPlayer.onClimbable()",
+  "LocalPlayer.push()",
   "MinecraftServer.execute()",
-  "ServerLevel.getSeed()"
+  "ServerLevel.getSeed()",
+  "Entity.needsSync",
+  "Entity.push()",
+  "LivingEntity.onClimbable()",
+  "Level.getBrightness()",
+  "Level.getOverworldClockTime()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "globalwind-1.2.4+26.1-.jar",
   "published": "2026-10-19"
  },
@@ -39,8 +44,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -56,5 +61,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 11
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels"
+ },
+ "lacks": 17
 }

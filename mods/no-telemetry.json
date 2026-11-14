@@ -9,22 +9,23 @@
  "author": "kb1000",
  "description": "Disable the telemetry introduced in 21w38a",
  "needs": [
-  "Mixin",
+  "Mixin: 4 points inside the game's methods",
   "com.mojang.authlib.minecraft.TelemetrySession",
+  "com.mojang.authlib.yggdrasil.YggdrasilUserApiService",
   "com.mojang.authlib.yggdrasil.response.UserAttributesResponse",
   "com.mojang.authlib.yggdrasil.response.UserAttributesResponse.Privileges",
   "net.fabricmc.loader.api.SemanticVersion",
   "net.fabricmc.loader.api.VersionParsingException",
   "net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger"
+  "net.minecraft.client.gui.screens.options.OptionsScreen",
+  "net.minecraft.client.telemetry.ClientTelemetryManager"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "no-telemetry-1.10.0.jar",
   "published": "2026-01-09"
  },
@@ -43,5 +44,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 8
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 9
 }

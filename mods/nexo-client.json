@@ -9,8 +9,16 @@
  "author": "Lokifisch",
  "description": "A little Client Project with cool new Fetures.",
  "needs": [
-  "Mixin",
+  "Mixin: 7 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
+  "com.mojang.authlib.exceptions.AuthenticationException",
+  "com.mojang.authlib.minecraft.SessionService",
+  "com.mojang.authlib.minecraft.UserApiService",
+  "com.mojang.authlib.minecraft.UserApiService.UserProperties",
+  "com.mojang.authlib.services.FriendsService",
+  "com.mojang.authlib.services.MinecraftServicesDiscoveryService",
+  "com.mojang.authlib.services.ProfileResult",
+  "com.mojang.blaze3d.Blaze3D",
   "io.netty.bootstrap.Bootstrap",
   "io.netty.channel.Channel",
   "io.netty.channel.ChannelFuture",
@@ -42,22 +50,14 @@
   "io.netty.incubator.codec.quic.QuicStreamChannel",
   "io.netty.incubator.codec.quic.QuicStreamChannelConfig",
   "io.netty.incubator.codec.quic.QuicStreamType",
-  "net.fabricmc.fabric.api.client.rendering.v1.hud.HudStatusBarHeightRegistry",
-  "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.BeforeGizmos",
-  "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
-  "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AllowKeyPress",
-  "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
-  "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.BeforeMouseClick",
-  "net.fabricmc.fabric.api.event.client.player.ClientPlayerBlockBreakEvents",
-  "net.fabricmc.fabric.api.event.client.player.ClientPlayerBlockBreakEvents.After",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "nexomod-legit-0.7.1.jar",
   "published": "2026-10-23"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 234
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 241
 }

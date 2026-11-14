@@ -9,11 +9,16 @@
  "author": "creoii",
  "description": "Sculk blocks generate & place in any direction",
  "needs": [
-  "Mixin",
+  "Mixin: 6 points inside the game's methods",
   "net.minecraft.client.particle.ShriekParticle",
   "net.minecraft.client.particle.ShriekParticle.Provider",
   "net.minecraft.client.particle.SingleQuadParticle",
+  "net.minecraft.client.renderer.LevelEventHandler",
+  "net.minecraft.core.particles.ShriekParticleOption",
+  "net.minecraft.world.level.block.CalibratedSculkSensorBlock",
   "net.minecraft.world.level.block.Mirror",
+  "net.minecraft.world.level.block.SculkBlock",
+  "net.minecraft.world.level.block.SculkSensorBlock",
   "net.minecraft.world.level.block.SculkShriekerBlock",
   "net.minecraft.world.level.block.SculkSpreader",
   "net.minecraft.world.level.block.SculkSpreader.ChargeCursor",
@@ -30,8 +35,6 @@
   "Block.column()",
   "Blocks.SCULK_SENSOR",
   "Blocks.SCULK_SHRIEKER",
-  "SoundType.getPlaceSound()",
-  "BlockState.getSoundType()",
   "GameEvent.STEP",
   "FluidState.is()",
   "AABB.inflate()",
@@ -42,8 +45,8 @@
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "rotatable-sculk-fabric-1.0.4+26.3.jar",
   "published": "2026-11-05"
  },
@@ -60,5 +63,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 27
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes"
+ },
+ "lacks": 30
 }

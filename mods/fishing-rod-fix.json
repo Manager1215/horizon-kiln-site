@@ -9,10 +9,9 @@
  "author": "andrewchik",
  "description": "This mod provides fix for old fishing line rendering bug",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.CameraType",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
+  "Mixin: 4 points inside the game's methods",
   "net.minecraft.client.renderer.entity.FishingHookRenderer",
+  "net.minecraft.client.renderer.entity.layers.ItemInHandLayer",
   "net.minecraft.client.renderer.entity.state.AvatarRenderState",
   "net.minecraft.client.renderer.entity.state.FishingHookRenderState",
   "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState",
@@ -23,8 +22,6 @@
   "net.minecraft.world.TickRateManager",
   "net.minecraft.world.entity.LivingEntity.SwingDescription",
   "net.minecraft.world.entity.Pose",
-  "net.minecraft.world.entity.projectile.FishingHook",
-  "net.minecraft.world.item.FishingRodItem",
   "NativeImage.getPixel()",
   "NativeImage.getWidth()",
   "PoseStack.last()",
@@ -33,13 +30,10 @@
   "Camera.isDetached()",
   "Camera.isPanoramicMode()",
   "Camera.rotation()",
-  "Minecraft.gameMode",
   "Minecraft.getEntityRenderDispatcher()",
-  "Options.getCameraType()",
   "ClientLevel.tickRateManager()",
+  "MultiPlayerGameMode.isSpectator()",
   "AbstractClientPlayer.fishing",
-  "LocalPlayer.fishing",
-  "LocalPlayer.getMainArm()",
   "LocalPlayer.isSleeping()",
   "LocalPlayer.xo",
   "LocalPlayer.yo",
@@ -50,14 +44,20 @@
   "GameRenderState.optionsRenderState",
   "OptionsRenderState.bobView",
   "OptionsRenderState.screenEffectScale",
-  "and 23 more"
+  "CameraRenderState.cameraEntityPartialTicks",
+  "CameraRenderState.hudFov",
+  "CameraRenderState.projectionMatrix",
+  "LevelRenderState.playerRenderState",
+  "SpriteContents.getUniqueFrames()",
+  "SpriteContents.isAnimated()",
+  "and 17 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fishingrodfix-26.3-v0.6.jar",
   "published": "2026-09-24"
  },
@@ -74,5 +74,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 63
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 57
 }

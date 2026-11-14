@@ -9,28 +9,27 @@
  "author": "Jahus",
  "description": "Is a player not entitled to his loot? Now, every player gets his own loot when opening a chest. Destroying a chest to prevent others from looting it is shameful. Fair per-player loot for SMP and multiplayer servers. No more first-come-first-served looting.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.world.entity.ContainerUser",
   "net.minecraft.world.level.block.BarrelBlock",
   "net.minecraft.world.level.block.ChestBlock",
+  "net.minecraft.world.level.block.HopperBlock",
   "net.minecraft.world.level.block.entity.BarrelBlockEntity",
   "net.minecraft.world.level.block.entity.ChestBlockEntity",
   "net.minecraft.world.level.block.state.properties.ChestType",
   "ResourceKey.codec()",
   "MinecraftServer.execute()",
-  "MinecraftServer.getPlayerList()",
-  "ServerLevel.destroyBlock()",
   "ServerPlayer.closeContainer()",
+  "BlockItem.updatePlacementContext()",
   "RandomizableContainerBlockEntity.unpackLootTable()"
  ],
- "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "freshloot-2.0.0+26.3.jar",
   "published": "2026-09-26"
  },
@@ -42,8 +41,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -58,5 +57,9 @@
   "java",
   "minecraft"
  ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
  "lacks": 14
 }

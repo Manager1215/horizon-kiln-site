@@ -9,7 +9,6 @@
  "author": "GameChaos",
  "description": "Rewrite of a rewrite of a rewrite of squake which brings source/goldsrc/quake-style movement to minecraft for Fabric mod loader, written in Kotlin.",
  "needs": [
-  "Mixin",
   "net.minecraft.client.player.ClientInput",
   "net.minecraft.core.particles.BlockParticleOption",
   "net.minecraft.world.entity.player.Input",
@@ -20,8 +19,8 @@
   "ParticleTypes.BLOCK",
   "BuiltInRegistries.CUSTOM_STAT",
   "StatType.get()",
-  "Stats.CUSTOM",
   "Entity.collideBoundingBox()",
+  "LivingEntity.<init>()",
   "Player.awardStat()",
   "Player.calculateEntityAnimation()",
   "Player.getBbWidth()",
@@ -32,9 +31,7 @@
   "Player.getRandom()",
   "Player.getSpeed()",
   "Player.getVehicle()",
-  "Player.horizontalCollision",
   "Player.isCrouching()",
-  "Player.isFallFlying()",
   "Player.isInLava()",
   "Player.isNoGravity()",
   "Player.isUsingItem()",
@@ -50,14 +47,15 @@
   "Blocks.LADDER",
   "Blocks.POWDER_SNOW",
   "BlockState.getRenderShape()",
-  "and 2 more"
+  "AABB.expandTowards()",
+  "AABB.minY"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "goldsqource-2.1.1+26.3.jar",
   "published": "2026-09-17"
  },
@@ -69,8 +67,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +87,9 @@
   "minecraft",
   "yet_another_config_lib_v3"
  ],
- "lacks": 42
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert)"
+ },
+ "lacks": 40
 }

@@ -9,25 +9,18 @@
  "author": "ChengZhiFy",
  "description": "A Team Chest Addon for Yet Another Bingo",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "ServerLifecycleEvents.SERVER_STARTED",
-  "CommandSourceStack.getServer()",
-  "Commands.LEVEL_GAMEMASTERS",
-  "Commands.hasPermission()",
-  "EntityArgument.getPlayer()",
-  "EntityArgument.player()",
   "Component.translatableWithFallback()",
   "Component.translatableWithFallback()",
-  "ServerPlayer.sendSystemMessage()",
   "ServerPlayer.teleportTo()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "YetAnotherBingo-TeamChest-mc26.3-1.3.3.jar",
   "published": "2026-10-02"
  },
@@ -39,8 +32,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -58,5 +51,9 @@
   "minecraft",
   "yet-another-minecraft-bingo"
  ],
- "lacks": 11
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 5
 }

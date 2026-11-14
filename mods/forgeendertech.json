@@ -10,7 +10,7 @@
  "description": "Core library powering Endertech mods",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
   "net.fabricmc.fabric.api.client.renderer.v1.mesh.MutableQuadView",
@@ -36,11 +36,13 @@
   "net.minecraft.client.particle.ParticleResources.SpriteParticleRegistration",
   "net.minecraft.client.renderer.block.ModelBlockRenderer",
   "net.minecraft.client.renderer.entity.EntityRenderers",
+  "net.minecraft.client.renderer.item.SpecialModelWrapper",
   "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperties",
   "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperties",
   "net.minecraft.client.renderer.special.SpecialModelRenderers",
   "net.minecraft.client.resources.model.ModelBakery",
   "net.minecraft.client.resources.model.ModelBakery.BakingResult",
+  "net.minecraft.client.resources.model.ModelManager.ReloadState",
   "net.minecraft.client.resources.model.SimpleModelWrapper",
   "net.minecraft.client.resources.model.geometry.BakedQuad.MaterialFlags",
   "net.minecraft.client.resources.model.geometry.QuadCollection.Builder",
@@ -49,16 +51,14 @@
   "net.minecraft.commands.arguments.RangeArgument.Floats",
   "net.minecraft.commands.arguments.RangeArgument.Ints",
   "net.minecraft.commands.arguments.TeamColorArgument",
-  "net.minecraft.core.HolderSet.ListBacked",
-  "net.minecraft.core.HolderSet.Named",
-  "and 75 more"
+  "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "forgeendertech-26.3.0.1-fabric-build.0125.jar",
   "published": "2026-10-10"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 233
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+ },
+ "lacks": 213
 }

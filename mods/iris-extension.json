@@ -9,15 +9,32 @@
  "author": "Merlin1809",
  "description": "An extension for the Minecraft shader loader Iris with some useful features for shader developers.",
  "needs": [
-  "Mixin",
-  "Minecraft.execute()"
+  "net.minecraft.world.TickRateManager",
+  "net.minecraft.world.level.dimension.end.EnderDragonFight",
+  "KeyMapping.get()",
+  "ClientLevel.tickRateManager()",
+  "GameRenderer.mainCamera()",
+  "ServerBossEvent.getPlayers()",
+  "ServerBossEvent.getProgress()",
+  "ServerLevel.getDragonFight()",
+  "Player.fishing",
+  "Player.getAttackStrengthScale()",
+  "Player.getLastDeathLocation()",
+  "Player.getVehicle()",
+  "Player.isCrouching()",
+  "Player.isFreezing()",
+  "Player.isScoping()",
+  "Player.isSleeping()",
+  "Player.isVisuallyCrawling()",
+  "ItemStack.hasFoil()",
+  "Vec3.toVector3f()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "IrisExtension-fabric-1.0.3-mc26.3.jar",
   "published": "2026-09-23"
  },
@@ -29,8 +46,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -47,5 +64,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 1
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 19
 }

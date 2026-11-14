@@ -9,7 +9,6 @@
  "author": "mandohimself",
  "description": "Forces sprint no matter what. Disables your ability to stop sprinting",
  "needs": [
-  "Mixin",
   "net.fabricmc.loader.api.metadata.ModOrigin",
   "net.fabricmc.loader.api.metadata.ModOrigin.Kind",
   "net.minecraft.client.multiplayer.ServerList",
@@ -17,16 +16,14 @@
   "ModContainer.getOrigin()",
   "ServerData.ip",
   "LocalPlayer.input",
-  "LocalPlayer.isCrouching()",
-  "LocalPlayer.setSprinting()",
-  "MutableComponent.withStyle()"
+  "LocalPlayer.isCrouching()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "autosprint-1.2.jar",
   "published": "2026-09-18"
  },
@@ -38,8 +35,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -56,5 +53,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 10
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 8
 }

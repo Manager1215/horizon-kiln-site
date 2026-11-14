@@ -9,22 +9,20 @@
  "author": "Zerw",
  "description": "A smooth spectator-style freecam. Fly the camera freely while your player stays frozen, then glide back into gameplay with a smooth transition.",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-  "net.minecraft.client.CameraType",
   "net.minecraft.client.player.ClientInput",
+  "net.minecraft.client.player.KeyboardInput",
   "net.minecraft.client.player.RemotePlayer",
   "net.minecraft.world.entity.Marker",
   "net.minecraft.world.entity.Pose",
   "net.minecraft.world.entity.WalkAnimationState",
+  "net.minecraft.world.entity.player.Input",
   "Camera.setEntity()",
   "Minecraft.setCameraEntity()",
   "Options.bobView()",
-  "Options.getCameraType()",
-  "Options.setCameraType()",
   "ClientLevel.addEntity()",
   "ClientLevel.removeEntity()",
   "LocalPlayer.fallDistance",
@@ -50,14 +48,15 @@
   "LocalPlayer.xRotO",
   "LocalPlayer.xo",
   "LocalPlayer.yBob",
-  "and 14 more"
+  "LocalPlayer.yBobO",
+  "and 12 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "SmoothFreecam-26.3.jar",
   "published": "2026-09-24"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +84,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 54
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 52
 }

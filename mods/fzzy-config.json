@@ -16,8 +16,6 @@
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.loader.api.metadata.CustomValue",
   "net.fabricmc.loader.api.metadata.CustomValue.CvArray",
   "net.fabricmc.loader.api.metadata.CustomValue.CvType",
@@ -28,35 +26,37 @@
   "net.minecraft.client.gui.ComponentPath",
   "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
   "net.minecraft.client.gui.TextAlignment",
-  "net.minecraft.client.gui.components.AbstractStringWidget",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-  "net.minecraft.client.gui.components.CycleButton",
   "net.minecraft.client.gui.components.ImageWidget",
   "net.minecraft.client.gui.components.MultiLineTextWidget",
-  "net.minecraft.client.gui.components.StringWidget",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
   "net.minecraft.client.gui.layouts.LayoutSettings",
   "net.minecraft.client.gui.layouts.LinearLayout",
   "net.minecraft.client.gui.navigation.FocusNavigationEvent",
   "net.minecraft.client.gui.navigation.FocusNavigationEvent.ArrowNavigation",
   "net.minecraft.client.gui.navigation.FocusNavigationEvent.TabNavigation",
-  "net.minecraft.client.gui.navigation.ScreenDirection",
   "net.minecraft.client.gui.screens.Screen.NarratableSearchResult",
   "net.minecraft.client.gui.screens.inventory.tooltip.BelowOrAboveWidgetTooltipPositioner",
   "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipPositioner",
   "net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner",
   "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
   "net.minecraft.client.searchtree.SuffixArray",
-  "and 80 more"
+  "net.minecraft.client.server.IntegratedServer",
+  "net.minecraft.core.Holder.Kind",
+  "net.minecraft.core.HolderSet.Named",
+  "net.minecraft.core.RegistrationInfo",
+  "net.minecraft.core.RegistrySetBuilder",
+  "net.minecraft.core.WritableRegistry",
+  "net.minecraft.data.registries.VanillaRegistries",
+  "net.minecraft.network.Utf8String",
+  "net.minecraft.network.VarInt",
+  "and 69 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fzzy_config-0.7.7+fix3+26.3.jar",
   "published": "2026-10-03"
  },
@@ -68,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 270
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+ },
+ "lacks": 171
 }

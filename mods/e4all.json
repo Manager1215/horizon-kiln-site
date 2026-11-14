@@ -1,0 +1,92 @@
+{
+ "id": "e4all",
+ "name": "e4all",
+ "version": "2.3.0-fabric-modern",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/e4all",
+ "author": "JustPixel",
+ "description": "The e4mc fork that lets anyone join your LAN world from anywhere, even with offline accounts. Supports Simple Voice Chat, Android, and more!",
+ "needs": [
+  "Mixin: 18 points inside the game's methods",
+  "com.mojang.authlib.GameProfile",
+  "io.netty.bootstrap.Bootstrap",
+  "io.netty.bootstrap.ServerBootstrap",
+  "io.netty.channel.AbstractChannel",
+  "io.netty.channel.AbstractChannel.AbstractUnsafe",
+  "io.netty.channel.AbstractServerChannel",
+  "io.netty.channel.Channel",
+  "io.netty.channel.Channel.Unsafe",
+  "io.netty.channel.ChannelConfig",
+  "io.netty.channel.ChannelDuplexHandler",
+  "io.netty.channel.ChannelFuture",
+  "io.netty.channel.ChannelFutureListener",
+  "io.netty.channel.ChannelHandler",
+  "io.netty.channel.ChannelHandlerContext",
+  "io.netty.channel.ChannelId",
+  "io.netty.channel.ChannelInboundHandlerAdapter",
+  "io.netty.channel.ChannelInitializer",
+  "io.netty.channel.ChannelMetadata",
+  "io.netty.channel.ChannelOption",
+  "io.netty.channel.ChannelOutboundBuffer",
+  "io.netty.channel.ChannelPipeline",
+  "io.netty.channel.ChannelPromise",
+  "io.netty.channel.ConnectTimeoutException",
+  "io.netty.channel.DefaultChannelConfig",
+  "io.netty.channel.DefaultChannelId",
+  "io.netty.channel.DefaultChannelPipeline",
+  "io.netty.channel.DefaultChannelPromise",
+  "io.netty.channel.DefaultEventLoopGroup",
+  "io.netty.channel.EventLoop",
+  "io.netty.channel.EventLoopGroup",
+  "io.netty.channel.MessageSizeEstimator",
+  "io.netty.channel.MessageSizeEstimator.Handle",
+  "io.netty.channel.MultiThreadIoEventLoopGroup",
+  "io.netty.channel.PendingWriteQueue",
+  "io.netty.channel.RecvByteBufAllocator",
+  "io.netty.channel.RecvByteBufAllocator.Handle",
+  "io.netty.channel.SimpleChannelInboundHandler",
+  "io.netty.channel.VoidChannelPromise",
+  "io.netty.channel.epoll.EpollDatagramChannel",
+  "io.netty.channel.epoll.EpollEventLoopGroup",
+  "and 42 more"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "e4all-fabric-2.3.0-modern.jar",
+  "published": "2026-10-27"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "voicechat": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 122
+}

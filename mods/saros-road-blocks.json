@@ -10,8 +10,6 @@
  "description": "Adds asphalt with slope/stair variants, crash barriers, street lights, and road marking tools for building realistic roads, highways, and on-ramps.",
  "needs": [
   "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.minecraft.server.permissions.Permissions",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.level.block.Mirror",
@@ -22,10 +20,8 @@
   "VertexConsumer.addVertex()",
   "VertexConsumer.setLight()",
   "VertexConsumer.setOverlay()",
-  "ServerTickEvents.END_SERVER_TICK",
   "AbstractContainerScreen.extractContents()",
   "RenderTypes.entityTranslucent()",
-  "CommandSourceStack.sendSystemMessage()",
   "MinecraftServer.execute()",
   "MinecraftServer.overworld()",
   "ServerLevel.getBiome()",
@@ -49,14 +45,14 @@
   "MapColor.COLOR_BLACK",
   "MapColor.COLOR_GRAY",
   "MapColor.COLOR_LIGHT_GRAY",
-  "and 1 more"
+  "Shapes.empty()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Saros-Road-Blocks-Fabric-26.3-5.14.jar",
   "published": "2026-09-19"
  },
@@ -68,8 +64,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +81,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 41
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 37
 }

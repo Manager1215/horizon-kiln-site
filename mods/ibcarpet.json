@@ -9,14 +9,26 @@
  "author": "TKperson",
  "description": "A carpet extension mod and a port of JoaCarpet's insane behavior feature to the newer version of Minecraft. This is used to manipulate item entity RNG.",
  "needs": [
-  "Mixin"
+  "Mixin: 5 points inside the game's methods",
+  "net.minecraft.world.level.block.piston.PistonBaseBlock",
+  "net.minecraft.world.level.levelgen.RandomSupport",
+  "net.minecraft.world.level.levelgen.RandomSupport.Seed128bit",
+  "net.minecraft.world.level.levelgen.Xoroshiro128PlusPlus",
+  "ServerLevel.getGameRules()",
+  "EntityTypes.ITEM",
+  "ItemEntity.setDefaultPickUpDelay()",
+  "ItemEntity.setPos()",
+  "Level.addFreshEntity()",
+  "BlockState.spawnAfterBreak()",
+  "GameRules.BLOCK_DROPS",
+  "GameRules.get()"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ibcarpet-26.3-26.09.18.jar",
   "published": "2026-09-18"
  },
@@ -28,8 +40,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -45,5 +57,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 12
 }

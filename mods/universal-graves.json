@@ -10,14 +10,13 @@
  "description": "Customisable grave mod for Fabric!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 20 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
   "com.mojang.math.Transformation",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.IntegerRuleBuilder",
   "net.fabricmc.fabric.api.util.TriState",
@@ -25,24 +24,25 @@
   "net.fabricmc.loader.api.metadata.ContactInformation",
   "net.fabricmc.loader.api.metadata.Person",
   "net.minecraft.SharedConstants",
-  "net.minecraft.commands.arguments.GameProfileArgument",
-  "net.minecraft.commands.arguments.GameProfileArgument.Result",
   "net.minecraft.core.UUIDUtil",
+  "net.minecraft.core.component.DataComponentPatch.Builder",
   "net.minecraft.nbt.TagType",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
   "net.minecraft.network.chat.ComponentSerialization",
   "net.minecraft.network.chat.FontDescription",
   "net.minecraft.network.chat.FontDescription.Resource",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
-  "net.minecraft.network.chat.contents.PlainTextContents",
-  "net.minecraft.network.chat.contents.PlainTextContents.LiteralContents",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.network.protocol.game.ClientboundLevelChunkPacketData.BlockEntityInfo",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.util.Brightness",
+  "net.minecraft.util.EncoderCache.2",
   "net.minecraft.util.datafix.DataFixers",
+  "net.minecraft.util.datafix.fixes.ItemStackComponentizationFix",
+  "net.minecraft.util.datafix.fixes.ItemStackComponentizationFix.ItemStackData",
   "net.minecraft.util.datafix.fixes.References",
+  "net.minecraft.util.datafix.schemas.V1460",
+  "net.minecraft.util.filefix.FileFix",
+  "net.minecraft.util.filefix.access.FileRelation",
+  "net.minecraft.util.filefix.fixes.DimensionStorageFileFix",
+  "net.minecraft.util.filefix.operations.FileFixOperations",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.damagesource.DamageTypes",
   "net.minecraft.world.entity.Display",
@@ -51,14 +51,14 @@
   "net.minecraft.world.entity.Display.TextDisplay.Align",
   "net.minecraft.world.entity.EntityDimensions",
   "net.minecraft.world.entity.Pose",
-  "and 66 more"
+  "and 67 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "graves-3.13.0+26.3.jar",
   "published": "2026-09-10"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -90,5 +90,9 @@
   "polymer-resource-pack",
   "polymer-virtual-entity"
  ],
- "lacks": 200
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 184
 }

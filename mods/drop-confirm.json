@@ -9,15 +9,20 @@
  "author": "xorwyrm",
  "description": "Think twice before you drop. Adds a confirmation to dropping items in order to save them from dangerous situations.",
  "needs": [
-  "Mixin",
-  "RegistryOps.create()"
+  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
+  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
+  "Font.split()",
+  "GuiGraphicsExtractor.centeredText()",
+  "MultiPlayerGameMode.dropItem()",
+  "SoundEvents.BUNDLE_DROP_CONTENTS",
+  "ItemStack.getRarity()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "drop_confirm-6.2.0.jar",
   "published": "2026-09-19"
  },
@@ -29,8 +34,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -50,5 +55,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 1
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 7
 }

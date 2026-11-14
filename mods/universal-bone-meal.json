@@ -10,8 +10,10 @@
  "description": "Stop the bonemeal discrimination! Grow all plants, no limitations.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
+  "net.minecraft.core.HolderLookup.RegistryLookup.Delegate",
   "net.minecraft.core.registries.codec.RegistryCodecs",
+  "net.minecraft.server.ReloadableServerResources",
   "net.minecraft.util.valueproviders.IntProviders",
   "net.minecraft.world.level.block.ChorusFlowerBlock",
   "net.minecraft.world.level.block.NetherVines",
@@ -39,7 +41,6 @@
   "ResourceKey.codec()",
   "ServerLevel.getMaxY()",
   "ServerLevel.getMinY()",
-  "ServerLevel.isEmptyBlock()",
   "ParticleUtils.spawnParticleInBlock()",
   "ParticleUtils.spawnParticles()",
   "StringRepresentable.EnumCodec.fieldOf()",
@@ -50,15 +51,14 @@
   "BlockState.isCollisionShapeFullBlock()",
   "BlockState.propagatesSkylightDown()",
   "BlockState.updateNeighbourShapes()",
-  "PlacedFeature.place()",
-  "and 1 more"
+  "and 2 more"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "universalbonemeal-v26.3.1-mc26.3.x+fabric.jar",
   "published": "2026-09-25"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +89,9 @@
   "multiloaderdataextensions",
   "puzzleslib"
  ],
- "lacks": 41
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels; generates in the world"
+ },
+ "lacks": 42
 }

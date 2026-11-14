@@ -1,7 +1,7 @@
 {
  "id": "simply-cozy",
- "name": "Simply Cozy - Halloween Update",
- "version": "1.9.58",
+ "name": "Simply Cozy",
+ "version": "1.9.59",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,7 +9,7 @@
  "author": "Hyperlinkhyper",
  "description": "This mod adds loads of cozy features to minecraft. Crops, Decorations and more!",
  "needs": [
-  "Mixin",
+  "Mixin: 4 points inside the game's methods",
   "com.mojang.blaze3d.platform.cursor.CursorType",
   "com.mojang.blaze3d.platform.cursor.CursorTypes",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
@@ -18,18 +18,18 @@
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.item.v1.BlockTransformerHelper",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.fabric.api.object.builder.v1.world.poi.PoiHelper",
   "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
+  "net.minecraft.client.gui.screens.inventory.EffectsInInventory",
   "net.minecraft.client.model.object.boat.BoatModel",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.client.particle.ParticleProvider",
   "net.minecraft.client.particle.SingleQuadParticle",
   "net.minecraft.client.particle.SingleQuadParticle.Layer",
   "net.minecraft.client.particle.SpriteSet",
+  "net.minecraft.client.player.ClientInput",
+  "net.minecraft.client.player.KeyboardInput",
+  "net.minecraft.client.renderer.blockentity.ShulkerBoxRenderer",
   "net.minecraft.client.renderer.entity.BoatRenderer",
   "net.minecraft.client.renderer.entity.EntityRenderers",
   "net.minecraft.client.renderer.special.SpecialModelRenderer.Unbaked",
@@ -43,23 +43,23 @@
   "net.minecraft.client.sounds.WeighedSoundEvents",
   "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
   "net.minecraft.core.particles.DustParticleOptions",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.permissions.Permissions",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.util.valueproviders.ConstantFloat",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.SimpleMenuProvider",
+  "net.minecraft.world.entity.decoration.ArmorStand",
+  "net.minecraft.world.entity.decoration.painting.Painting",
+  "net.minecraft.world.entity.npc.villager.VillagerProfession",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "B - Simply Cozy 1.9.58.jar",
-  "published": "2026-11-04"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "B - Simply Cozy 1.9.59.jar",
+  "published": "2026-11-08"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 426
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
+ },
+ "lacks": 418
 }

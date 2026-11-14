@@ -1,0 +1,92 @@
+{
+ "id": "shellbound-for-airship",
+ "name": "ShellBound for AirShip",
+ "version": "2.0.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/shellbound-for-airship",
+ "author": "saluf",
+ "description": "Add an elegant airship drifting through the sky.",
+ "needs": [
+  "Mixin: 4 points inside the game's methods",
+  "net.minecraft.advancements.AdvancementNode",
+  "net.minecraft.client.gui.components.toasts.AdvancementToast",
+  "net.minecraft.client.gui.screens.advancements.AdvancementWidget",
+  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
+  "net.minecraft.resources.RegistryLoadTask.PendingRegistration",
+  "net.minecraft.world.entity.animal.allay.Allay",
+  "net.minecraft.world.entity.animal.chicken.Chicken",
+  "net.minecraft.world.entity.animal.sheep.Sheep",
+  "net.minecraft.world.entity.animal.wolf.Wolf",
+  "net.minecraft.world.entity.decoration.LeashFenceKnotEntity",
+  "net.minecraft.world.entity.monster.illager.Evoker",
+  "net.minecraft.world.entity.monster.illager.Pillager",
+  "net.minecraft.world.entity.monster.zombie.Zombie",
+  "net.minecraft.world.entity.npc.villager.Villager",
+  "net.minecraft.world.entity.npc.villager.VillagerData",
+  "net.minecraft.world.entity.npc.villager.VillagerProfession",
+  "net.minecraft.world.entity.npc.villager.VillagerType",
+  "net.minecraft.world.item.enchantment.EnchantmentInstance",
+  "net.minecraft.world.item.trading.ItemCost",
+  "net.minecraft.world.item.trading.MerchantOffer",
+  "net.minecraft.world.level.block.Mirror",
+  "net.minecraft.world.level.block.SignBlock",
+  "net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings",
+  "net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessor",
+  "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate",
+  "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.StructureBlockInfo",
+  "ObjectIterator.hasNext()",
+  "ObjectIterator.next()",
+  "ObjectIterator.remove()",
+  "GuiGraphicsExtractor.fakeItem()",
+  "BlockPos.mutable()",
+  "BlockPos.offset()",
+  "BlockPos.MutableBlockPos.set()",
+  "Holder.is()",
+  "Registry.getOrThrow()",
+  "RegistryAccess.lookupOrThrow()",
+  "BuiltInRegistries.FEATURE_TYPE",
+  "BuiltInRegistries.LOOT_FUNCTION_TYPE",
+  "BuiltInRegistries.STRUCTURE_PROCESSOR",
+  "BuiltInRegistries.VILLAGER_PROFESSION",
+  "and 46 more"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "shellbound-for-airship-2.0.0-26.3.jar",
+  "published": "2026-11-13"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 101
+}

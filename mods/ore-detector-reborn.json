@@ -10,11 +10,7 @@
  "description": "Adds an attunable ore detector that scans through stone for diamond, netherite, and various modded ore. Craft the detector and x-ray goggles using Trial Chamber loot, crush the ore into dust, brew the liquid from it, then pour it into the detector",
  "needs": [
   "an access widener",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.core.UUIDUtil",
-  "net.minecraft.gizmos.GizmoStyle",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.SimpleMenuProvider",
   "net.minecraft.world.flag.FeatureFlags",
@@ -25,20 +21,15 @@
   "net.minecraft.world.inventory.SimpleContainerData",
   "net.minecraft.world.item.ItemCooldowns",
   "net.minecraft.world.item.ItemUseAnimation",
-  "net.minecraft.world.item.alchemy.PotionContents",
-  "net.minecraft.world.item.alchemy.Potions",
   "net.minecraft.world.item.equipment.Equippable.Builder",
   "net.minecraft.world.level.storage.loot.entries.NestedLootTable",
   "FabricCreativeModeTabOutput.accept()",
   "GuiGraphicsExtractor.blitSprite()",
   "HolderLookup.Provider.getOrThrow()",
-  "DataComponents.POTION_CONTENTS",
   "DataComponents.REPAIR_COST",
-  "Gizmos.cuboid()",
   "Gizmos.cuboid()",
   "Component.translatableWithFallback()",
   "MinecraftServer.overworld()",
-  "ServerPlayer.sendSystemMessage()",
   "SoundEvents.ARMOR_EQUIP_LEATHER",
   "SoundEvents.BOTTLE_EMPTY",
   "SoundEvents.GRINDSTONE_USE",
@@ -50,14 +41,23 @@
   "MenuType.<init>()",
   "Item.inventoryTick()",
   "Item.Properties.repairable()",
-  "and 31 more"
+  "Items.AMETHYST_SHARD",
+  "Items.GLASS_BOTTLE",
+  "Items.LAPIS_LAZULI",
+  "Items.QUARTZ",
+  "Equippable.builder()",
+  "Blocks.AMETHYST_BLOCK",
+  "Blocks.ANCIENT_DEBRIS",
+  "Blocks.BUDDING_AMETHYST",
+  "Blocks.COAL_ORE",
+  "and 21 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ore_detector_reborn-fabric-26.3-3.0.0.jar",
   "published": "2026-09-22"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 71
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 61
 }

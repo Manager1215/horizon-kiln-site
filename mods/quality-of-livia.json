@@ -9,18 +9,26 @@
  "author": "capt_daddy",
  "description": "Minimal client-side adjustments to match the modified server of Livia SMP",
  "needs": [
-  "Mixin",
-  "ClientPlayNetworking.canSend()",
+  "Mixin: 2 points inside the game's methods",
+  "net.minecraft.client.gui.screens.inventory.AnvilScreen",
+  "net.minecraft.world.entity.Pose",
+  "net.minecraft.world.inventory.AnvilMenu",
+  "net.minecraft.world.inventory.ItemCombinerMenu",
+  "net.minecraft.world.item.trading.MerchantOffer",
   "KeyMapping.resetMapping()",
-  "KeyMapping.saveString()",
-  "KeyMapping.setKey()"
+  "KeyMapping.setKey()",
+  "LocalPlayer.isCrouching()",
+  "LocalPlayer.tickCount",
+  "Player.getPose()",
+  "ItemStack.getEnchantments()",
+  "BlockStateProvider.getOptionalState()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "livia-client-26.3.1.jar",
   "published": "2026-10-23"
  },
@@ -32,8 +40,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -49,5 +57,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 4
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; has network channels"
+ },
+ "lacks": 12
 }

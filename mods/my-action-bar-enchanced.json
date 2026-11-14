@@ -1,7 +1,7 @@
 {
  "id": "my-action-bar-enchanced",
  "name": "My Action Bar: Enhanced",
- "version": "26.3.2",
+ "version": "26.3.4",
  "status": "no-plans",
  "statusLabel": "No plans yet",
  "statusMeaning": "Calls something that is not on Kiln's roadmap yet. Parts of it may already run.",
@@ -9,54 +9,29 @@
  "author": "MrKazanek",
  "description": "A mod that lets you customize the information displayed in your action bar. Choose which elements to show or hide, so you can focus on the information that matters most while playing.",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "com.mojang.text2speech.Narrator",
   "net.fabricmc.loader.api.metadata.Person",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-  "net.minecraft.client.gui.components.Tooltip",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-  "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
   "net.minecraft.network.chat.contents.objects.PlayerSprite",
   "net.minecraft.world.item.component.ResolvableProfile",
   "ModMetadata.getAuthors()",
-  "Minecraft.execute()",
-  "Minecraft.gameMode",
-  "Minecraft.setScreenAndShow()",
-  "Button.Builder.tooltip()",
-  "Button.Builder.width()",
-  "Checkbox.getBoxSize()",
-  "Checkbox.setHeight()",
-  "Checkbox.Builder.tooltip()",
-  "EditBox.setEditable()",
-  "EditBox.setHint()",
-  "EditBox.setTooltip()",
-  "Screen.rebuildWidgets()",
   "ClientLevel.getOverworldClockTime()",
   "LocalPlayer.getBlockX()",
   "LocalPlayer.getBlockY()",
   "LocalPlayer.getBlockZ()",
   "LocalPlayer.getGameProfile()",
   "Component.object()",
-  "MutableComponent.withStyle()",
-  "Style.withClickEvent()",
-  "Style.withHoverEvent()",
-  "Style.withStrikethrough()",
-  "Style.withUnderlined()",
   "Biome.coldEnoughToSnow()",
   "Biome.hasPrecipitation()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "myactionbar-26.3.2.jar",
-  "published": "2026-11-02"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "myactionbar-26.3.4.jar",
+  "published": "2026-11-11"
  },
  "reports": {
   "works": 0,
@@ -66,8 +41,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -82,5 +57,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 38
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 14
 }

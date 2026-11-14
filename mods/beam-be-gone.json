@@ -9,7 +9,8 @@
  "author": "Ramixin",
  "description": "Turns the beacon beam invisible when passing through tinted glass",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
+  "net.minecraft.client.renderer.blockentity.BeaconRenderer",
   "net.minecraft.client.renderer.blockentity.state.BeaconRenderState",
   "net.minecraft.client.renderer.blockentity.state.BeaconRenderState.Section",
   "net.minecraft.world.level.block.entity.BeaconBeamOwner",
@@ -20,8 +21,8 @@
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Beam be Gone-2.0.0-universal.jar",
   "published": "2026-07-07"
  },
@@ -37,5 +38,9 @@
   "fabric-api",
   "minecraft"
  ],
- "lacks": 5
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 6
 }

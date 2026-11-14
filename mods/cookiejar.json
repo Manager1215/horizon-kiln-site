@@ -9,20 +9,15 @@
  "author": "Tisawesomeness",
  "description": "Developer tool to view and edit cookies",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.TracingExecutor",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
   "net.minecraft.client.gui.components.ImageButton",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.components.WidgetSprites",
+  "net.minecraft.client.gui.screens.options.OptionsScreen",
   "net.minecraft.client.multiplayer.resolver.ServerAddress",
   "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.nbt.NbtIo",
   "org.apache.commons.codec.DecoderException",
   "org.apache.commons.codec.binary.Hex",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "org.lwjgl.sdl.SDLDialog",
   "org.lwjgl.sdl.SDLError",
   "org.lwjgl.sdl.SDL_DialogFileCallback",
@@ -30,12 +25,9 @@
   "org.lwjgl.sdl.SDL_DialogFileFilter.Buffer",
   "org.lwjgl.system.MemoryStack",
   "org.lwjgl.system.MemoryUtil",
-  "Button.setTooltip()",
-  "Button.Builder.tooltip()",
   "EditBox.moveCursorTo()",
-  "EditBox.setHint()",
-  "EditBox.setTextColor()",
   "ClientCommonPacketListenerImpl.send()",
+  "NbtIo.readCompressed()",
   "Connection.getPacketListener()",
   "Util.nonCriticalIoPool()"
  ],
@@ -43,8 +35,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "cookiejar-0.2.7+26.3.jar",
   "published": "2026-09-17"
  },
@@ -56,8 +48,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -71,5 +63,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 28
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 20
 }

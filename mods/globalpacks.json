@@ -9,8 +9,9 @@
  "author": "JTK222",
  "description": "Ship default Data- & Resourcepacks with Modpacks!",
  "needs": [
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "net.minecraft.SharedConstants",
+  "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen",
   "net.minecraft.server.packs.FilePackResources",
   "net.minecraft.server.packs.FilePackResources.FileResourcesSupplier",
   "net.minecraft.server.packs.PackLocationInfo",
@@ -21,17 +22,17 @@
   "net.minecraft.server.packs.repository.Pack",
   "net.minecraft.server.packs.repository.Pack.Position",
   "net.minecraft.server.packs.repository.Pack.ResourcesSupplier",
+  "net.minecraft.server.packs.repository.PackRepository",
   "net.minecraft.server.packs.repository.PackSource",
   "net.minecraft.server.packs.repository.RepositorySource",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger"
+  "net.minecraft.server.packs.repository.ServerPacksSource"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "globalpacks-fabric-26.3-26.3.1.jar",
   "published": "2026-09-16"
  },
@@ -47,5 +48,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 15
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 16
 }

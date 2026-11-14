@@ -9,23 +9,18 @@
  "author": "xpncvr",
  "description": "Autocomplete commonly and previously used commands",
  "needs": [
-  "Mixin",
+  "net.minecraft.client.CommandHistory",
   "net.minecraft.client.gui.components.CommandSuggestions",
   "net.minecraft.client.gui.components.CommandSuggestions.SuggestionsList",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "Minecraft.gameDirectory",
-  "EditBox.setCursorPosition()",
-  "EditBox.setHighlightPos()",
-  "EditBox.setSuggestion()",
-  "KeyEvent.isCycleFocus()"
+  "EditBox.setHighlightPos()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "betterautocomplete-1.0.0.jar",
   "published": "2026-09-19"
  },
@@ -41,5 +36,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 9
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 5
 }

@@ -1,0 +1,74 @@
+{
+ "id": "solarbound",
+ "name": "Solarbound",
+ "version": "0.3.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/solarbound",
+ "author": "DataGhost57",
+ "description": "Syncs game time with your real location.",
+ "needs": [
+  "Mixin: 2 points inside the game's methods",
+  "net.fabricmc.fabric.api.client.screen.v1.Screens",
+  "net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents",
+  "net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents.AllowResettingTime",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
+  "net.minecraft.client.gui.screens.options.OptionsScreen",
+  "net.minecraft.client.renderer.SkyRenderer",
+  "net.minecraft.client.renderer.state.level.SkyRenderState",
+  "net.minecraft.world.clock.ServerClockManager",
+  "net.minecraft.world.clock.ServerClockManager.ServerClockInstance",
+  "net.minecraft.world.clock.WorldClocks",
+  "net.minecraft.world.level.storage.LevelResource",
+  "PoseStack.rotate()",
+  "ServerLifecycleEvents.SERVER_STARTING",
+  "Registry.getOrThrow()",
+  "RegistryAccess.Frozen.lookupOrThrow()",
+  "Registries.WORLD_CLOCK",
+  "MinecraftServer.clockManager()",
+  "MinecraftServer.getWorldPath()",
+  "MinecraftServer.isSingleplayerOwner()",
+  "MinecraftServer.registryAccess()",
+  "ServerPlayer.permissions()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "solarbound-0.3.0.jar",
+  "published": "2026-10-21"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 21
+}

@@ -9,18 +9,19 @@
  "author": "nwrenger",
  "description": "A vanilla-preserving and lightweight performance mod that dynamically adjusts view distance, simulation distance, and the mob cap based on the server's load.",
  "needs": [
-  "Mixin",
-  "net.minecraft.server.players.PlayerList",
   "Options.simulationDistance()",
   "MinecraftServer.getAverageTickTimeNanos()",
-  "MinecraftServer.getPlayerList()"
+  "PlayerList.getSimulationDistance()",
+  "PlayerList.getViewDistance()",
+  "PlayerList.setSimulationDistance()",
+  "PlayerList.setViewDistance()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "dynamic-performance-0.2.0+26.1-fabric.jar",
   "published": "2026-07-12"
  },
@@ -32,8 +33,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -48,5 +49,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 4
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 6
 }

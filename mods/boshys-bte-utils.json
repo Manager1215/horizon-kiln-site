@@ -9,7 +9,6 @@
  "author": "BoshyWashy7",
  "description": "Boshy's BTE Utils is a mod that makes building inside of the Build the Earth project easier by allowing users to visualise their TPLL points with markers, along with other features such as image overlays, automatic TPLL by KML files, and more!",
  "needs": [
-  "Mixin",
   "com.mojang.blaze3d.vertex.DefaultVertexFormat",
   "com.mojang.blaze3d.vertex.VertexSorting",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
@@ -21,17 +20,11 @@
   "net.minecraft.client.renderer.StagedVertexBuffer.Draw",
   "net.minecraft.client.renderer.StagedVertexBuffer.ExecuteInfo",
   "net.minecraft.client.renderer.texture.DynamicTexture",
-  "net.minecraft.network.chat.ClickEvent.OpenFile",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
-  "org.apache.logging.log4j.Level",
-  "org.apache.logging.log4j.LogManager",
   "org.apache.logging.log4j.core.LogEvent",
   "org.apache.logging.log4j.core.LoggerContext",
   "org.apache.logging.log4j.core.appender.AbstractAppender",
   "org.apache.logging.log4j.core.config.Configuration",
   "org.apache.logging.log4j.core.config.LoggerConfig",
-  "org.apache.logging.log4j.message.Message",
   "ProjectionType.vertexSorting()",
   "NativeImage.getHeight()",
   "NativeImage.getPixel()",
@@ -50,14 +43,20 @@
   "BlendFunction.TRANSLUCENT",
   "DepthStencilState.DEFAULT",
   "RenderPipeline.builder()",
-  "and 26 more"
+  "RenderPipeline.getPrimitiveTopology()",
+  "RenderPipeline.getVertexFormatBinding()",
+  "LevelExtractionEvents.END_EXTRACTION",
+  "LevelRenderEvents.AFTER_TRANSLUCENT_TERRAIN",
+  "Options.getEffectiveRenderDistance()",
+  "LocalPlayer.getEyePosition()",
+  "and 15 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Boshys-BTE-Utils-Fabric_26.3-2.2+56.jar",
   "published": "2026-10-06"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 66
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 55
 }

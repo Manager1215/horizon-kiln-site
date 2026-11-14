@@ -10,7 +10,7 @@
  "description": "A technology NeoForge/Fabric mod with many machines.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.event.registry.DynamicRegistries",
   "net.fabricmc.fabric.api.event.registry.DynamicRegistries.SyncOption",
@@ -30,7 +30,6 @@
   "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
   "net.minecraft.client.gui.TextAlignment",
   "net.minecraft.client.gui.screens.inventory.PageButton",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.client.renderer.entity.EntityRenderers",
   "net.minecraft.client.renderer.entity.MinecartRenderer",
   "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperties",
@@ -38,12 +37,10 @@
   "net.minecraft.core.HolderSet.Named",
   "net.minecraft.core.dispenser.ShearsDispenseItemBehavior",
   "net.minecraft.core.registries.codec.RegistryFixedCodec",
-  "net.minecraft.network.chat.ClickEvent.ChangePage",
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
   "net.minecraft.network.chat.ComponentSerialization",
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
+  "net.minecraft.server.level.ServerPlayerGameMode",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.util.profiling.ProfilerFiller",
   "net.minecraft.util.valueproviders.ConstantInt",
@@ -51,14 +48,17 @@
   "net.minecraft.world.clock.ServerClockManager",
   "net.minecraft.world.clock.ServerClockManager.ServerClockInstance",
   "net.minecraft.world.entity.EntitySelector",
+  "net.minecraft.world.entity.SlotProvider",
+  "net.minecraft.world.entity.npc.villager.VillagerProfession",
+  "net.minecraft.world.flag.FeatureFlags",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "energizedpower-3.0.7+26.3.x-fabric.jar",
   "published": "2026-11-04"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -92,5 +92,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 270
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+ },
+ "lacks": 240
 }

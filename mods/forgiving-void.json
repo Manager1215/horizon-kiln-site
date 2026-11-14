@@ -9,7 +9,6 @@
  "author": "BlayTheNinth",
  "description": "Makes the void hate you a little less (and vice-versa). Fall down and come back out on top.",
  "needs": [
-  "Mixin",
   "net.minecraft.world.entity.projectile.arrow.ThrownTrident",
   "SynchedEntityData.get()",
   "ServerPlayer.connection",
@@ -22,17 +21,17 @@
   "Entity.stopRiding()",
   "Entity.teleportTo()",
   "Entity.yo",
-  "LivingEntity.isFallFlying()",
+  "LivingEntity.getDisplayName()",
   "Level.getHeight()",
   "Level.getMinY()",
   "Blocks.COBWEB"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "forgivingvoid-fabric-26.3-26.3.0.2.jar",
   "published": "2026-09-25"
  },
@@ -44,8 +43,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -62,5 +61,9 @@
   "java",
   "minecraft"
  ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
  "lacks": 16
 }

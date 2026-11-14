@@ -1,7 +1,7 @@
 {
  "id": "scythes-vanilla",
  "name": "Scythes Vanilla Mod",
- "version": "1.5.7",
+ "version": "1.6.0",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,11 +9,10 @@
  "author": "Drift007_",
  "description": "Adds vanilla-style scythes with area damage, extended reach, and a unique life-steal enchantment. A perfect balance between swords and axes.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDamage",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
   "net.minecraft.core.HolderSet.Direct",
@@ -21,45 +20,46 @@
   "net.minecraft.core.particles.BlockParticleOption",
   "net.minecraft.server.PlayerAdvancements",
   "net.minecraft.server.ServerAdvancementManager",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.tags.DamageTypeTags",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.entity.monster.Enemy",
+  "net.minecraft.world.entity.monster.piglin.Piglin",
+  "net.minecraft.world.entity.monster.piglin.PiglinBrute",
+  "net.minecraft.world.entity.monster.skeleton.WitherSkeleton",
   "net.minecraft.world.entity.monster.warden.Warden",
+  "net.minecraft.world.entity.monster.zombie.Zombie",
+  "net.minecraft.world.inventory.AnvilMenu",
+  "net.minecraft.world.inventory.GrindstoneMenu",
+  "net.minecraft.world.inventory.ItemCombinerMenu",
+  "net.minecraft.world.inventory.ResultContainer",
   "net.minecraft.world.item.ItemCooldowns",
   "net.minecraft.world.item.SmithingTemplateItem",
+  "net.minecraft.world.item.crafting.SimpleSmithingRecipe",
+  "net.minecraft.world.item.crafting.SmithingRecipeInput",
   "net.minecraft.world.level.storage.loot.functions.SetEnchantmentsFunction",
   "net.minecraft.world.level.storage.loot.functions.SetEnchantmentsFunction.Builder",
-  "ServerTickEvents.END_SERVER_TICK",
-  "DefaultedRegistry.wrapAsHolder()",
   "HolderGetter.getOrThrow()",
   "HolderLookup.RegistryLookup.getOrThrow()",
   "HolderSet.direct()",
   "Registry.getOrThrow()",
-  "Registry.wrapAsHolder()",
   "RegistryAccess.lookupOrThrow()",
   "DataComponents.BLOCKS_ATTACKS",
+  "DataComponents.ITEM_MODEL",
   "DataComponents.STORED_ENCHANTMENTS",
   "ParticleTypes.BLOCK",
   "BuiltInRegistries.acquireBootstrapRegistrationLookup()",
+  "CommonComponents.space()",
   "MinecraftServer.getAdvancements()",
-  "MinecraftServer.getPlayerList()",
-  "ServerLevel.getEntitiesOfClass()",
-  "ServerLevel.sendParticles()",
-  "ServerPlayer.causeFallDamage()",
-  "ServerPlayer.connection",
-  "ServerPlayer.damageSources()",
-  "ServerPlayer.fallDistance",
-  "and 40 more"
+  "and 48 more"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "scythes_vanilla-1.5.7.jar",
-  "published": "2026-10-17"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "scythes_vanilla-1.6.0.jar",
+  "published": "2026-11-11"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 113
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 123
 }

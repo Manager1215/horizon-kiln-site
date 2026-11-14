@@ -1,0 +1,87 @@
+{
+ "id": "show-my-maps",
+ "name": "Show My Maps",
+ "version": "1.2.0+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/show-my-maps",
+ "author": "DragonX1901",
+ "description": "See what a filled map shows without putting it in your hand — as the item icon, in tooltips, in chests, and on the ground.",
+ "needs": [
+  "net.fabricmc.fabric.api.client.rendering.v1.ClientTooltipComponentCallback",
+  "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
+  "net.minecraft.client.renderer.entity.ItemEntityRenderer",
+  "net.minecraft.client.renderer.entity.state.ItemEntityRenderState",
+  "net.minecraft.client.renderer.state.MapRenderState",
+  "net.minecraft.client.server.IntegratedServer",
+  "net.minecraft.world.item.MapItem",
+  "net.minecraft.world.level.saveddata.maps.MapItemSavedData.HoldingPlayer",
+  "net.minecraft.world.level.storage.WorldData",
+  "RenderStateDataKey.create()",
+  "Minecraft.getCurrentServer()",
+  "Minecraft.getMapRenderer()",
+  "Minecraft.getSingleplayerServer()",
+  "GuiGraphicsExtractor.map()",
+  "ClientLevel.getMapData()",
+  "ClientLevel.overrideMapData()",
+  "ServerData.ip",
+  "MapRenderer.extractRenderState()",
+  "MapRenderer.render()",
+  "NonNullList.iterator()",
+  "DataComponents.MAP_ID",
+  "MinecraftServer.getTickCount()",
+  "ServerPlayer.connection",
+  "ServerGamePacketListenerImpl.send()",
+  "ItemEntity.getItem()",
+  "ItemEntity.getSpin()",
+  "MapColor.getColorFromPackedId()",
+  "MapItemSavedData.colors",
+  "MapItemSavedData.createForClient()",
+  "MapItemSavedData.dimension",
+  "MapItemSavedData.getHoldingPlayer()",
+  "MapItemSavedData.getUpdatePacket()",
+  "MapItemSavedData.locked",
+  "MapItemSavedData.scale"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "SHOW_MY_MAPS-1.2.0+26.3.jar",
+  "published": "2026-11-08"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "fabric-datagen": 1,
+  "client": 1,
+  "main": 1,
+  "modmenu": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 34
+}

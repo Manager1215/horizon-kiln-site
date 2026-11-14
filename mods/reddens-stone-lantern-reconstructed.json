@@ -9,28 +9,20 @@
  "author": "King_Thenuja",
  "description": "An Updated version of Redden's Stone Lanterns but for more versions and loaders",
  "needs": [
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.PlayerPickItemEvents",
   "net.fabricmc.fabric.api.event.player.PlayerPickItemEvents.PickItemFromBlock",
   "net.minecraft.server.level.ServerPlayerGameMode",
   "net.minecraft.world.level.material.PushReaction",
-  "ServerTickEvents.END_SERVER_TICK",
   "ServerPlayer.gameMode",
   "SoundEvents.FLINTANDSTEEL_USE",
   "ItemEntity.setPickUpDelay()",
   "Level.onBlockEntityAdded()",
   "Level.setBlockEntity()",
   "LevelAccessor.destroyBlock()",
-  "LevelAccessor.isEmptyBlock()",
   "LevelAccessor.registryAccess()",
   "LevelAccessor.setBlock()",
   "ScheduledTickAccess.scheduleTick()",
   "Block.updateShape()",
-  "SoundType.getBreakSound()",
-  "SoundType.getFallSound()",
-  "SoundType.getHitSound()",
-  "SoundType.getPlaceSound()",
-  "SoundType.getStepSound()",
   "BlockEntity.loadStatic()",
   "BlockEntity.saveCustomOnly()",
   "BlockEntity.saveWithFullMetadata()",
@@ -45,8 +37,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ReddensStoneLanternsReconstructed-FABRIC-26.3-1.2.jar",
   "published": "2026-09-28"
  },
@@ -58,8 +50,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -74,5 +66,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 31
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 23
 }

@@ -9,15 +9,20 @@
  "author": "Embin",
  "description": "Allows you to sprint whilst riding a Happy Ghast, increasing it's movement speed.",
  "needs": [
-  "Mixin",
-  "ExtraCodecs.floatRange()"
+  "net.minecraft.world.entity.ai.attributes.AttributeMap",
+  "net.minecraft.world.entity.animal.happyghast.HappyGhast",
+  "ExtraCodecs.floatRange()",
+  "LivingEntity.<init>()",
+  "AttributeInstance.addTransientModifier()",
+  "AttributeInstance.removeModifier()",
+  "Attributes.FLYING_SPEED"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "sprintghast-1.0.1.jar",
   "published": "2026-08-29"
  },
@@ -29,8 +34,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -44,5 +49,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 1
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 7
 }

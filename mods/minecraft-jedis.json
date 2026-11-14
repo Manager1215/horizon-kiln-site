@@ -9,8 +9,6 @@
  "author": "Axionize",
  "description": "Up-to-date Jedis Redis client wrapped as a universal Forge/Fabric/Bukkit library for plugins like Grim.",
  "needs": [
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "org.slf4j.impl.StaticLoggerBinder",
   "org.slf4j.impl.StaticMDCBinder",
   "org.slf4j.impl.StaticMarkerBinder"
@@ -19,8 +17,8 @@
  "evidence": "",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "jedis-8.0.0-beta1+2026-06-06-all.jar",
   "published": "2026-10-16"
  },
@@ -33,5 +31,9 @@
  "entrypoints": {},
  "mixins": false,
  "depends": [],
- "lacks": 5
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 3
 }

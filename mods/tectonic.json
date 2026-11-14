@@ -1,7 +1,7 @@
 {
  "id": "tectonic",
  "name": "Tectonic",
- "version": "3.0.32-fabric-26.3",
+ "version": "3.1.0+beta2-fabric-26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,21 +10,29 @@
  "description": "Terrain shaping brought to new heights, grander and more varied than ever before!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition",
   "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditionType",
   "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
-  "net.minecraft.network.chat.ClickEvent.SuggestCommand",
+  "net.minecraft.SharedConstants",
+  "net.minecraft.client.gui.screens.worldselection.WorldCreationUiState",
+  "net.minecraft.client.gui.screens.worldselection.WorldCreationUiState.WorldTypeEntry",
   "net.minecraft.network.chat.ComponentUtils",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
   "net.minecraft.resources.RegistryOps.RegistryInfoLookup",
   "net.minecraft.util.InclusiveRange",
   "net.minecraft.util.Interval",
+  "net.minecraft.world.level.biome.Biome.TemperatureModifier.2",
+  "net.minecraft.world.level.chunk.storage.IOWorker",
+  "net.minecraft.world.level.chunk.storage.SerializableChunkData",
+  "net.minecraft.world.level.levelgen.Aquifer",
+  "net.minecraft.world.level.levelgen.Aquifer.FluidPicker",
+  "net.minecraft.world.level.levelgen.Aquifer.FluidStatus",
   "net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator",
   "net.minecraft.world.level.levelgen.NoiseGeneratorSettings",
+  "net.minecraft.world.level.levelgen.NoiseSettings",
+  "net.minecraft.world.level.levelgen.Noises",
   "net.minecraft.world.level.levelgen.RandomState",
   "net.minecraft.world.level.levelgen.densityfunction.DensityBuffer",
   "net.minecraft.world.level.levelgen.densityfunction.DensityFunction",
@@ -43,24 +51,16 @@
   "net.minecraft.world.level.levelgen.densityfunction.op.ClampFunction.Sampler",
   "net.minecraft.world.level.levelgen.synth.Noise",
   "net.minecraft.world.level.levelgen.synth.NormalNoise",
-  "CommandSourceStack.getPosition()",
-  "CommandSourceStack.sendSystemMessage()",
-  "Commands.LEVEL_GAMEMASTERS",
-  "Commands.hasPermission()",
-  "BlockPos.atY()",
-  "BlockPos.containing()",
-  "BlockPos.spiralAround()",
-  "HolderLookup.RegistryLookup.getOrThrow()",
-  "and 18 more"
+  "and 30 more"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "tectonic-3.0.32-fabric-26.3.jar",
-  "published": "2026-10-25"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "tectonic-3.1.0+beta2-fabric-26.3.jar",
+  "published": "2026-11-07"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "lithostitched",
   "minecraft"
  ],
- "lacks": 58
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert)"
+ },
+ "lacks": 70
 }

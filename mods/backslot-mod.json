@@ -9,25 +9,43 @@
  "author": "medecoole",
  "description": "This mod adds Another inventory Slot: The Backslot!",
  "needs": [
-  "Mixin",
+  "Mixin: 6 points inside the game's methods",
   "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
   "net.fabricmc.fabric.impl.resource.pack.ModPackResourcesUtil",
-  "net.minecraft.server.permissions.Permissions",
-  "Options.keyHotbarSlots",
-  "EntityArgument.getPlayer()",
-  "EntityArgument.player()",
+  "net.minecraft.client.gui.screens.options.OptionsScreen",
+  "net.minecraft.client.model.player.PlayerModel",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.layers.CapeLayer",
+  "net.minecraft.client.renderer.entity.layers.RenderLayer",
+  "net.minecraft.client.renderer.entity.player.AvatarRenderer",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.world.entity.Attackable",
+  "net.minecraft.world.entity.Bucketable",
+  "net.minecraft.world.item.BannerItem",
+  "net.minecraft.world.item.ShieldItem",
+  "net.minecraft.world.item.TridentItem",
+  "Axis.YN",
+  "Axis.ZN",
+  "Axis.ZP",
+  "KeyMapping.matches()",
+  "ModelPart.translateAndRotate()",
+  "EntityRendererProvider.Context.getItemModelResolver()",
+  "ModelManager.getItemModel()",
   "DefaultedRegistry.iterator()",
   "Holder.Reference.is()",
-  "ServerPlayer.sendSystemMessage()",
+  "DataComponents.CUSTOM_NAME",
+  "Entity.<init>()",
+  "Player.drop()",
   "Player.getDisplayName()",
+  "Player.hasItemInSlot()",
   "ItemStack.inventoryTick()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "backslot-1.2.2.jar",
   "published": "2026-09-19"
  },
@@ -39,8 +57,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -57,5 +75,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 11
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels"
+ },
+ "lacks": 29
 }

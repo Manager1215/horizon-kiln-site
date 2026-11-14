@@ -9,7 +9,6 @@
  "author": "JIAN_FISH_q14433686arch",
  "description": "Unofficial community port of Sacramentix's Chiseled Enchanting Table to Minecraft 26.1.2\\26.2 (Fabric). No-RNG enchanting via a custom table that unlocks enchantments from nearby chiseled bookshelves. Not affiliated with the original author.",
  "needs": [
-  "Mixin",
   "com.mojang.blaze3d.platform.TextInputManager",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin.Context",
@@ -24,16 +23,12 @@
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
   "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents",
   "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyCallback",
   "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyContext",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.fabric.api.permission.v1.PermissionPredicates",
   "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
   "net.minecraft.SharedConstants",
@@ -50,14 +45,18 @@
   "net.minecraft.client.renderer.item.CuboidItemModelWrapper",
   "net.minecraft.client.renderer.item.CuboidItemModelWrapper.Unbaked",
   "net.minecraft.client.server.IntegratedServer",
+  "net.minecraft.core.HolderSet.Named",
+  "net.minecraft.core.Registry.PendingTags",
+  "net.minecraft.network.chat.ComponentSerialization",
+  "net.minecraft.server.PlayerAdvancements",
   "and 80 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "chiseled-enchanting-table-1.1.0.jar",
   "published": "2026-10-28"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 335
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 279
 }

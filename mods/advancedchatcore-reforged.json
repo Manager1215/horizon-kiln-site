@@ -9,18 +9,17 @@
  "author": "flyingfinger.te",
  "description": "Core library and chat framework for the AdvancedChat module suite — required by the other AdvancedChat mods. Refurbished Minecraft 26.x version of DarkKronicle AdvancedChatCore.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.loader.api.metadata.CustomValue",
   "net.fabricmc.loader.api.metadata.CustomValue.CvType",
   "net.minecraft.client.gui.ActiveTextCollector",
   "net.minecraft.client.gui.ActiveTextCollector.ClickableStyleFinder",
+  "net.minecraft.client.gui.components.ChatComponent.ChatMethod",
   "net.minecraft.client.gui.components.ChatComponent.DisplayMode",
   "net.minecraft.client.gui.components.CommandSuggestions",
   "net.minecraft.client.gui.components.ComponentRenderUtils",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.network.chat.ComponentContents",
-  "net.minecraft.network.chat.contents.PlainTextContents",
+  "net.minecraft.client.gui.screens.InBedChatScreen",
   "net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket",
   "net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket.Action",
   "net.minecraft.util.ArrayListDeque",
@@ -28,7 +27,6 @@
   "org.apache.commons.csv.CSVParser",
   "org.apache.commons.csv.CSVRecord",
   "org.apache.commons.io.FileUtils",
-  "org.apache.logging.log4j.Logger",
   "ImmutableList.stream()",
   "InputConstants.getKey()",
   "InputConstants.isKeyDown()",
@@ -50,14 +48,16 @@
   "ChatComponent.getLinesPerPage()",
   "ChatComponent.getRecentChat()",
   "ChatComponent.resetChatScroll()",
-  "and 33 more"
+  "ChatComponent.scrollChat()",
+  "EditBox.deleteCharsToPos()",
+  "and 13 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "AdvancedChatCore-1.6.7-26.3.jar",
   "published": "2026-10-11"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "malilib",
   "minecraft"
  ],
- "lacks": 73
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 53
 }

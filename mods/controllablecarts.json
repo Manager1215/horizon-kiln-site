@@ -9,7 +9,6 @@
  "author": "telecter",
  "description": "Adds player controllable Minecarts.",
  "needs": [
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.minecraft.client.model.geom.ModelLayers",
   "net.minecraft.client.player.ClientInput",
   "net.minecraft.client.renderer.entity.EntityRenderers",
@@ -18,11 +17,9 @@
   "net.minecraft.world.entity.player.Input",
   "net.minecraft.world.entity.vehicle.minecart.Minecart",
   "net.minecraft.world.item.MinecartItem",
-  "ServerTickEvents.END_SERVER_TICK",
   "LocalPlayer.getVehicle()",
   "LocalPlayer.input",
   "Direction.getUnitVec3()",
-  "CustomPacketPayload.createType()",
   "MinecraftServer.getAllLevels()",
   "ServerLevel.getAllEntities()",
   "ServerPlayer.getVehicle()",
@@ -40,8 +37,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "controllablecarts-1.0.0+26.3.jar",
   "published": "2026-10-04"
  },
@@ -53,8 +50,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -70,5 +67,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 26
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 23
 }

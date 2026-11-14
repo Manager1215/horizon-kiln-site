@@ -9,16 +9,11 @@
  "author": "wildbeast42",
  "description": "A simple visual mod that spices up your game with custom crosshair colors & shapes!",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.util.CommonColors",
   "net.minecraft.world.entity.monster.Enemy",
   "net.minecraft.world.entity.projectile.ProjectileUtil",
   "net.minecraft.world.phys.EntityHitResult",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
-  "Minecraft.gameMode",
-  "Minecraft.hitResult",
+  "MultiPlayerGameMode.getDestroyStage()",
   "LocalPlayer.getAttackStrengthScale()",
   "LocalPlayer.getBoundingBox()",
   "LocalPlayer.getDestroySpeed()",
@@ -29,15 +24,14 @@
   "Entity.isSpectator()",
   "ItemStack.isCorrectToolForDrops()",
   "AABB.expandTowards()",
-  "AABB.inflate()",
-  "HitResult.getType()"
+  "AABB.inflate()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "crosshairfx-1.0.8+26.3.jar",
   "published": "2026-10-13"
  },
@@ -50,5 +44,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
- "lacks": 21
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 16
 }

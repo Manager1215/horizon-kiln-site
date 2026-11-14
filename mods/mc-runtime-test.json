@@ -9,7 +9,6 @@
  "author": "okafke",
  "description": "Helps mod developers with testing client-sided mods.",
  "needs": [
-  "Mixin",
   "net.minecraft.client.gui.screens.ErrorScreen",
   "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen",
   "net.minecraft.client.server.IntegratedServer",
@@ -25,7 +24,6 @@
   "net.minecraft.gametest.framework.StructureGridSpawner",
   "net.minecraft.gametest.framework.TestFinder",
   "net.minecraft.gametest.framework.TestFinder.Builder",
-  "net.minecraft.server.players.PlayerList",
   "Minecraft.disconnectWithProgressScreen()",
   "Minecraft.getSingleplayerServer()",
   "Gui.overlay()",
@@ -33,21 +31,19 @@
   "LocalPlayer.getBlockZ()",
   "LocalPlayer.respawn()",
   "LocalPlayer.tickCount",
-  "CommandSourceStack.getServer()",
   "Registry.getOrThrow()",
   "RegistryAccess.Frozen.lookupOrThrow()",
   "Registries.TEST_INSTANCE",
   "MinecraftServer.createCommandSourceStack()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.registryAccess()",
   "MinecraftServer.submit()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "mc-runtime-test-26.3-5.0.1-fabric-release.jar",
   "published": "2026-10-21"
  },
@@ -64,5 +60,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 31
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 28
 }

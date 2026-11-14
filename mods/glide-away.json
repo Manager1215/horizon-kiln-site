@@ -9,7 +9,7 @@
  "author": "Patbox",
  "description": "Get your Hang Glider and glide away from the dangers! A server side Fabric mod!",
  "needs": [
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.BooleanRuleBuilder",
@@ -21,11 +21,14 @@
   "net.minecraft.network.syncher.EntityDataAccessor",
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.tags.DamageTypeTags",
+  "net.minecraft.util.datafix.fixes.References",
+  "net.minecraft.util.datafix.schemas.V1460",
   "net.minecraft.world.entity.EntityDimensions",
   "net.minecraft.world.entity.Pose",
+  "net.minecraft.world.entity.projectile.FireworkRocketEntity",
   "net.minecraft.world.entity.projectile.hurtingprojectile.windcharge.WindCharge",
+  "net.minecraft.world.item.FireworkRocketItem",
   "net.minecraft.world.item.ItemCooldowns",
   "net.minecraft.world.item.component.CustomModelData",
   "net.minecraft.world.item.component.DyedItemColor",
@@ -33,7 +36,6 @@
   "BlockPos.MutableBlockPos.move()",
   "Direction.getUnitVec3i()",
   "Holder.is()",
-  "Registry.wrapAsHolder()",
   "RegistryAccess.lookupOrThrow()",
   "DataComponents.BASE_COLOR",
   "DataComponents.CUSTOM_MODEL_DATA",
@@ -48,16 +50,14 @@
   "SynchedEntityData.get()",
   "SynchedEntityData.set()",
   "SynchedEntityData.DataValue.create()",
-  "ServerLevel.getGameRules()",
-  "ServerLevel.isRainingAt()",
-  "and 39 more"
+  "and 42 more"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "glideaway-1.11.0+26.3-rc-1.jar",
   "published": "2026-09-11"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +89,9 @@
   "polymer-resource-pack",
   "polymer-virtual-entity"
  ],
- "lacks": 85
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; generates in the world"
+ },
+ "lacks": 86
 }

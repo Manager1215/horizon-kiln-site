@@ -9,7 +9,6 @@
  "author": "downloadableduck",
  "description": "Adds a variety of Jeff-themed tools and gear to your game.",
  "needs": [
-  "Mixin",
   "net.minecraft.world.food.FoodProperties",
   "net.minecraft.world.food.FoodProperties.Builder",
   "net.minecraft.world.item.component.Consumable",
@@ -21,16 +20,15 @@
   "BlockTags.ANVIL",
   "Item.Properties.food()",
   "ArmorType.getDurability()",
-  "SoundType.ANVIL",
   "SoundType.LADDER",
   "SoundType.MUD"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "jeffmod-1.1.1-26.3.jar",
   "published": "2026-09-17"
  },
@@ -42,8 +40,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -59,5 +57,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 14
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 13
 }

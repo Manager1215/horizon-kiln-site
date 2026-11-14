@@ -9,17 +9,17 @@
  "author": "kenshineto",
  "description": "Minecraft's Best Hide and Seek and Block Hunt Plugin",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.core.RegistrationInfo",
+  "net.minecraft.core.WritableRegistry",
+  "net.minecraft.network.protocol.game.ServerboundChatCommandPacket",
+  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
+  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
   "net.minecraft.server.ServerScoreboard",
   "net.minecraft.server.level.ServerPlayerGameMode",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.entity.Display",
   "net.minecraft.world.entity.Display.BlockDisplay",
   "net.minecraft.world.entity.projectile.FireworkRocketEntity",
-  "net.minecraft.world.inventory.ChestMenu",
-  "net.minecraft.world.item.alchemy.PotionContents",
   "net.minecraft.world.item.component.FireworkExplosion",
   "net.minecraft.world.item.component.FireworkExplosion.Shape",
   "net.minecraft.world.item.component.Fireworks",
@@ -36,12 +36,13 @@
   "net.minecraft.world.scores.PlayerScoreEntry",
   "net.minecraft.world.scores.PlayerTeam",
   "net.minecraft.world.scores.ScoreAccess",
-  "net.minecraft.world.scores.ScoreHolder",
   "net.minecraft.world.scores.Team",
   "net.minecraft.world.scores.Team.CollisionRule",
   "net.minecraft.world.scores.Team.Visibility",
+  "ObjectList.set()",
   "ChatFormatting.getByCode()",
   "Holder.getRegisteredName()",
+  "Holder.Reference.isBound()",
   "MappedRegistry.register()",
   "Registry.get()",
   "Registry.getOrThrow()",
@@ -49,15 +50,14 @@
   "RegistryAccess.Frozen.lookupOrThrow()",
   "DataComponents.CUSTOM_NAME",
   "DataComponents.FIREWORKS",
-  "DataComponents.LORE",
-  "and 50 more"
+  "and 49 more"
  ],
- "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "KenshinsHideAndSeek-2.3.0+fabric.jar",
   "published": "2026-10-11"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "org_jetbrains_kotlin_kotlin-stdlib",
   "packetevents"
  ],
- "lacks": 118
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 109
 }

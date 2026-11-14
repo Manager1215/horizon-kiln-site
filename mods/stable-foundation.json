@@ -9,26 +9,29 @@
  "author": "Double_Pi",
  "description": "Protect your blocks with custom items, making them require multiple breaks until finally broken!",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
   "net.fabricmc.fabric.api.event.player.BlockEvents",
   "net.fabricmc.fabric.api.event.player.BlockEvents.UseItemOnCallback",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
+  "net.minecraft.world.level.block.piston.PistonBaseBlock",
   "AttachmentRegistry.create()",
+  "BlockTags.AIR",
   "ItemStack.consume()",
   "CustomData.copyTag()",
+  "Level.getChunk()",
   "Level.getChunkAt()",
+  "ChunkAccess.getAttachedOrElse()",
   "LevelChunk.getAttachedOrCreate()",
   "LevelChunk.getAttachedOrElse()",
   "LevelChunk.setAttached()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "strong_foundations-26.3-0.0.1.jar",
   "published": "2026-09-16"
  },
@@ -40,8 +43,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -56,5 +59,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 12
+ "softOff": {
+  "class": "partial",
+  "why": "data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 16
 }

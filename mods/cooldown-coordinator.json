@@ -9,14 +9,15 @@
  "author": "gniftygnome",
  "description": "Fabric library to help mods coordinate item movement cooldowns",
  "needs": [
-  "Mixin"
+  "Mixin: 2 points inside the game's methods",
+  "net.minecraft.world.level.block.entity.HopperBlockEntity"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "cooldown-coordinator-0.10.0.jar",
   "published": "2026-08-11"
  },
@@ -28,8 +29,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -43,5 +44,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 1
 }

@@ -10,7 +10,6 @@
  "description": "Adds new vanilla styled fences, walls and gates!",
  "needs": [
   "net.minecraft.world.level.block.Mirror",
-  "net.minecraft.world.level.block.state.properties.DoorHingeSide",
   "net.minecraft.world.level.material.PushReaction",
   "SoundEvents.WOODEN_DOOR_CLOSE",
   "SoundEvents.WOODEN_DOOR_OPEN",
@@ -27,7 +26,6 @@
   "SoundType.POPLAR_LEAVES",
   "SoundType.SCAFFOLDING",
   "BlockBehaviour.Properties.forceSolidOn()",
-  "BlockStateProperties.DOOR_HINGE",
   "WoodType.ACACIA",
   "WoodType.BAMBOO",
   "WoodType.BIRCH",
@@ -49,14 +47,15 @@
   "MapColor.COLOR_PINK",
   "MapColor.COLOR_RED",
   "MapColor.COLOR_YELLOW",
-  "and 2 more"
+  "MapColor.TERRACOTTA_WHITE",
+  "Shapes.empty()"
  ],
  "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "mcw-fences-1.2.1-mc26.3fabric.jar",
   "published": "2026-09-29"
  },
@@ -68,8 +67,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +84,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 42
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 40
 }

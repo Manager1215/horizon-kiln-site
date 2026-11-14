@@ -9,7 +9,6 @@
  "author": "balamah",
  "description": "A new dimension, which is hidden under the layer of bedrock",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
@@ -21,6 +20,8 @@
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
   "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
+  "net.minecraft.advancements.triggers.CriteriaTriggers",
+  "net.minecraft.advancements.triggers.SummonedEntityTrigger",
   "net.minecraft.client.animation.AnimationChannel",
   "net.minecraft.client.animation.AnimationChannel.Interpolation",
   "net.minecraft.client.animation.AnimationChannel.Interpolations",
@@ -48,18 +49,16 @@
   "net.minecraft.client.model.geom.builders.CubeDeformation",
   "net.minecraft.client.model.geom.builders.CubeListBuilder",
   "net.minecraft.client.model.geom.builders.MeshDefinition",
-  "net.minecraft.client.model.geom.builders.PartDefinition",
-  "net.minecraft.client.model.monster.blaze.BlazeModel",
   "and 80 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "void-dimension-1.0.9.jar",
-  "published": "2026-10-25"
+  "published": "2026-11-11"
  },
  "reports": {
   "works": 0,
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 414
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 424
 }

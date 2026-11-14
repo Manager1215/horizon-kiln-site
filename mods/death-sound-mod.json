@@ -9,22 +9,18 @@
  "author": "WellWellWellGuy",
  "description": "Playes a wither death sound when a player dies within your simulation distance. You can also change the sound to whatever you want, via gui or commands!",
  "needs": [
-  "Mixin",
   "com.mojang.blaze3d.Blaze3D",
-  "net.minecraft.client.gui.components.Tooltip",
+  "net.minecraft.client.gui.screens.options.OptionsScreen",
+  "net.minecraft.client.particle.ParticleEngine",
   "net.minecraft.core.particles.ShriekParticleOption",
   "Minecraft.gameDirectory",
+  "Minecraft.particleEngine",
   "Minecraft.reloadResourcePacks()",
-  "Minecraft.setScreenAndShow()",
-  "Button.setAlpha()",
-  "Button.Builder.tooltip()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseReleased()",
   "ClientLevel.addEntity()",
+  "LocalPlayer.distanceTo()",
   "LocalPlayer.getEyeY()",
-  "LocalPlayer.getLookAngle()",
-  "SoundManager.stop()",
+  "ClientboundEntityEventPacket.getEntity()",
+  "ClientboundEntityEventPacket.getEventId()",
   "SoundEvents.AMETHYST_BLOCK_BREAK",
   "SoundEvents.ANVIL_LAND",
   "SoundEvents.BELL_RESONATE",
@@ -39,17 +35,17 @@
   "SoundEvents.TRIAL_SPAWNER_OMINOUS_ACTIVATE",
   "SoundEvents.VILLAGER_NO",
   "SoundEvents.WARDEN_HEARTBEAT",
-  "SoundEvents.WITHER_SPAWN",
+  "LightningBolt.setId()",
   "LightningBolt.setPos()",
   "LightningBolt.setSilent()",
   "LightningBolt.setVisualOnly()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "deathsound-1.2.3-26.3+.jar",
   "published": "2026-10-02"
  },
@@ -61,8 +57,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -77,5 +73,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 33
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own"
+ },
+ "lacks": 30
 }

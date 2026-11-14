@@ -9,13 +9,11 @@
  "author": "DingleTheRat",
  "description": "An economy mod that adds coins, wallets, shops, and much more! With enough coins, you can get some pretty good stuff.",
  "needs": [
-  "Mixin",
   "com.mojang.math.Transformation",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.object.builder.v1.world.poi.PoiHelper",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.entity.Display",
   "net.minecraft.world.entity.Display.BlockDisplay",
@@ -25,20 +23,21 @@
   "net.minecraft.world.flag.FeatureFlags",
   "net.minecraft.world.inventory.ClickAction",
   "net.minecraft.world.inventory.ContainerData",
+  "net.minecraft.world.inventory.CraftingMenu",
   "net.minecraft.world.inventory.HopperMenu",
   "net.minecraft.world.inventory.MenuType.MenuSupplier",
   "net.minecraft.world.inventory.SimpleContainerData",
   "net.minecraft.world.item.BundleItem",
-  "net.minecraft.world.item.component.BundleContents",
   "net.minecraft.world.item.component.ItemLore",
   "net.minecraft.world.level.LightLayer",
+  "net.minecraft.world.level.block.ChestBlock",
   "net.minecraft.world.level.block.entity.Hopper",
+  "net.minecraft.world.level.block.entity.HopperBlockEntity",
   "net.minecraft.world.phys.shapes.BooleanOp",
   "ServerLifecycleEvents.SERVER_STARTED",
   "GuiGraphicsExtractor.blitSprite()",
   "BlockEntityRenderer.extractRenderState()",
   "NonNullList.stream()",
-  "DataComponents.BUNDLE_CONTENTS",
   "DataComponents.CUSTOM_NAME",
   "DataComponents.ENCHANTMENT_GLINT_OVERRIDE",
   "DataComponents.LORE",
@@ -46,18 +45,18 @@
   "Registries.POINT_OF_INTEREST_TYPE",
   "Registries.TRADE_SET",
   "Registries.VILLAGER_PROFESSION",
-  "MutableComponent.withStyle()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.overworld()",
   "ServerPlayer.createItemStackToDrop()",
-  "and 36 more"
+  "ServerPlayer.drop()",
+  "SoundEvents.BUNDLE_INSERT",
+  "and 33 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "moneytalks-1.4.1.jar",
   "published": "2026-10-05"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 76
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 73
 }

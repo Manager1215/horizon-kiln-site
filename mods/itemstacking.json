@@ -9,16 +9,24 @@
  "author": "mrmizzi",
  "description": "Stop item lag on your survival server! Stacks blocks and items beyond the standard 64 limit on the ground with customizable visual tags, smart hopper support, and automatic water-flow merging.",
  "needs": [
-  "Mixin",
-  "net.minecraft.server.permissions.Permissions",
-  "ChatFormatting.getByCode()"
+  "net.minecraft.world.level.block.entity.HopperBlockEntity",
+  "ChatFormatting.getByCode()",
+  "Entity.<init>()",
+  "ItemEntity.discard()",
+  "ItemEntity.getBoundingBox()",
+  "ItemEntity.getItem()",
+  "ItemEntity.isAlive()",
+  "ItemEntity.tickCount",
+  "Player.take()",
+  "Level.getEntitiesOfClass()",
+  "AABB.inflate()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ItemStacking-fabric-1.1.2+26.3.jar",
   "published": "2026-11-01"
  },
@@ -30,8 +38,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -46,5 +54,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 2
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 11
 }

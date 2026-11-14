@@ -9,14 +9,10 @@
  "author": "squeek502",
  "description": "Food/hunger-related HUD improvements",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndLevelTick",
   "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
   "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-  "net.minecraft.client.gui.components.debug.DebugScreenEntries",
   "net.minecraft.client.gui.components.debug.DebugScreenEntry",
   "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
-  "net.minecraft.network.chat.contents.PlainTextContents",
   "net.minecraft.util.StringDecomposer",
   "net.minecraft.util.Util.OS",
   "net.minecraft.world.food.FoodProperties",
@@ -25,22 +21,17 @@
   "net.minecraft.world.item.component.Consumables",
   "net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect",
   "net.minecraft.world.item.consume_effects.ConsumeEffect",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "InputConstants.isKeyDown()",
-  "ServerTickEvents.END_LEVEL_TICK",
   "FabricLoader.getEntrypointContainers()",
-  "Minecraft.execute()",
   "GuiGraphicsExtractor.blit()",
   "GuiGraphicsExtractor.blitSprite()",
   "Hud.getGuiTicks()",
+  "DebugScreenEntries.register()",
   "DataComponents.CONSUMABLE",
   "DataComponents.FOOD",
-  "FriendlyByteBuf.writeBoolean()",
-  "FriendlyByteBuf.writeFloat()",
-  "CustomPacketPayload.codec()",
   "ServerLevel.getGameRules()",
   "Util.getPlatform()",
+  "Entity.<init>()",
   "Player.canEat()",
   "Player.getAbsorptionAmount()",
   "Player.isHurt()",
@@ -51,12 +42,12 @@
   "GameRules.NATURAL_HEALTH_REGENERATION",
   "GameRules.get()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "appleskin-fabric-mc26.3-3.0.10.jar",
   "published": "2026-09-17"
  },
@@ -68,8 +59,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +76,9 @@
   "fabric-api",
   "fabricloader"
  ],
- "lacks": 40
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 32
 }

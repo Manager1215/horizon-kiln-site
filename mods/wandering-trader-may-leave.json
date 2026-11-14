@@ -9,35 +9,32 @@
  "author": "Serilum",
  "description": "💨 Adds a button to the Wandering Trader's screen which makes it disappear without violence.",
  "needs": [
-  "Mixin",
-  "net.minecraft.server.permissions.Permissions",
+  "net.minecraft.client.gui.components.WidgetSprites",
+  "net.minecraft.client.gui.screens.inventory.MerchantScreen",
   "net.minecraft.world.entity.animal.equine.TraderLlama",
   "net.minecraft.world.entity.npc.wanderingtrader.WanderingTrader",
   "net.minecraft.world.entity.npc.wanderingtrader.WanderingTraderSpawner",
-  "net.minecraft.world.item.alchemy.PotionContents",
-  "net.minecraft.world.item.alchemy.Potions",
   "net.minecraft.world.item.trading.Merchant",
-  "CommandSourceStack.isPlayer()",
-  "FriendlyByteBuf.writeDouble()",
-  "FriendlyByteBuf.writeInt()",
+  "GuiGraphicsExtractor.blitSprite()",
   "MinecraftServer.getDataStorage()",
   "SoundEvents.WANDERING_TRADER_DISAPPEARED",
   "Entity.discard()",
   "Entity.distanceTo()",
+  "Entity.distanceToSqr()",
   "LivingEntity.discard()",
   "LivingEntity.isAlive()",
   "LivingEntity.playSound()",
   "LivingEntity.startUsingItem()",
-  "Items.POTION",
+  "Level.getEntities()",
   "Level.getEntitiesOfClass()",
   "Level.getEntity()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "wanderingtradermayleave-26.3.0-2.0.jar",
   "published": "2026-10-21"
  },
@@ -49,8 +46,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -68,5 +65,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 21
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 19
 }

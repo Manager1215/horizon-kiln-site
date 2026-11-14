@@ -10,24 +10,21 @@
  "description": "Seasons with changing colors, shifting temperatures, and more!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.minecraft.client.renderer.BiomeColors",
   "net.minecraft.client.renderer.extract.LevelExtractor",
+  "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperties",
   "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty",
   "net.minecraft.commands.arguments.StringRepresentableArgument",
   "net.minecraft.commands.synchronization.ArgumentTypeInfos",
   "net.minecraft.commands.synchronization.SingletonArgumentInfo",
   "net.minecraft.core.HolderSet.Named",
   "net.minecraft.server.level.ChunkMap",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.level.FoliageColor",
   "net.minecraft.world.level.LightLayer",
   "net.minecraft.world.level.block.IceBlock",
   "net.minecraft.world.level.saveddata.WeatherData",
-  "org.apache.logging.log4j.LogManager",
   "Minecraft.levelExtractor",
-  "Commands.LEVEL_GAMEMASTERS",
-  "Commands.hasPermission()",
   "DefaultedRegistry.get()",
   "Holder.is()",
   "Holder.Reference.is()",
@@ -36,10 +33,6 @@
   "Registries.BIOME",
   "Registries.COMMAND_ARGUMENT_TYPE",
   "Registries.GAME_RULE",
-  "FriendlyByteBuf.readUtf()",
-  "FriendlyByteBuf.writeInt()",
-  "FriendlyByteBuf.writeUtf()",
-  "MinecraftServer.getPlayerList()",
   "ServerChunkCache.chunkMap",
   "ServerChunkCache.getDataStorage()",
   "ServerLevel.RAIN_DELAY",
@@ -51,14 +44,21 @@
   "ServerLevel.getSeaLevel()",
   "ServerLevel.getWeatherData()",
   "ServerLevel.shouldTickBlocksAt()",
-  "and 24 more"
+  "Level.<init>()",
+  "Level.getBiome()",
+  "Level.getHeightmapPos()",
+  "Level.getSeaLevel()",
+  "LevelReader.getBiome()",
+  "LevelReader.getBrightness()",
+  "LevelReader.getSeaLevel()",
+  "and 15 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "SereneSeasons-fabric-26.3-26.1.2.0.7.jar",
   "published": "2026-09-21"
  },
@@ -79,5 +79,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 64
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own; generates in the world"
+ },
+ "lacks": 55
 }

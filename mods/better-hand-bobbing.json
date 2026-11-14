@@ -9,16 +9,18 @@
  "author": "Kai",
  "description": "This mod separates the hand bobbing from view bobbing to it's own setting.\n\nIt's useful for players who have motion sickness but still want to see the hand moving.",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.minecraft.client.OptionInstance.ValueUpdateListener",
-  "OptionInstance.createBoolean()"
+  "net.minecraft.client.gui.screens.options.AccessibilityOptionsScreen",
+  "OptionInstance.createBoolean()",
+  "Options.bobView()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "BetterHandBobbing-1.9.2.jar",
   "published": "2026-09-18"
  },
@@ -30,8 +32,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -47,5 +49,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 2
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 4
 }

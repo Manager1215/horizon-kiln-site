@@ -1,7 +1,7 @@
 {
  "id": "konfig",
  "name": "Konfig",
- "version": "0.10.2+26.3",
+ "version": "0.10.3+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,32 +9,17 @@
  "author": "iamkaf",
  "description": "Ergonomic multiloader configuration library with sync support.",
  "needs": [
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.permissions.Permissions",
-  "ClientPlayNetworking.canSend()",
-  "ServerPlayNetworking.canSend()",
-  "FriendlyByteBuf.readUtf()",
-  "FriendlyByteBuf.readVarInt()",
-  "FriendlyByteBuf.readVarLong()",
-  "FriendlyByteBuf.writeBoolean()",
-  "FriendlyByteBuf.writeUtf()",
-  "FriendlyByteBuf.writeVarInt()",
-  "FriendlyByteBuf.writeVarLong()",
   "MinecraftServer.isSingleplayerOwner()",
-  "ServerPlayer.nameAndId()",
   "ServerPlayer.permissions()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "konfig-fabric-0.10.2+26.3.jar",
-  "published": "2026-10-10"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "konfig-fabric-0.10.3+26.3.jar",
+  "published": "2026-11-08"
  },
  "reports": {
   "works": 0,
@@ -44,8 +29,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -61,5 +46,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 17
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels"
+ },
+ "lacks": 2
 }

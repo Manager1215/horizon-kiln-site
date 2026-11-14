@@ -9,12 +9,9 @@
  "author": "BarefootBird",
  "description": "Features to help players with the hypixel skyblock m4 dungeon",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
+  "net.minecraft.client.particle.ParticleEngine",
   "net.minecraft.core.particles.DustParticleOptions",
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
   "net.minecraft.network.protocol.game.ClientboundPlayerInfoUpdatePacket.Entry",
   "net.minecraft.network.protocol.game.ServerboundUseItemPacket",
   "net.minecraft.world.entity.ambient.Bat",
@@ -28,20 +25,10 @@
   "net.minecraft.world.entity.monster.skeleton.Skeleton",
   "net.minecraft.world.entity.monster.skeleton.WitherSkeleton",
   "net.minecraft.world.entity.monster.zombie.Zombie",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
-  "Minecraft.execute()",
   "Minecraft.gameDirectory",
-  "Hud.setTimes()",
-  "Hud.setTitle()",
   "ClientLevel.getEntities()",
   "AbstractClientPlayer.isUsingItem()",
   "LocalPlayer.getViewVector()",
-  "MutableComponent.setStyle()",
-  "MutableComponent.withStyle()",
-  "Style.withClickEvent()",
-  "Style.withHoverEvent()",
-  "Style.withUnderlined()",
   "ClientboundEntityEventPacket.getEntity()",
   "ClientboundEntityEventPacket.getEventId()",
   "ClientboundPlayerInfoUpdatePacket.entries()",
@@ -50,14 +37,26 @@
   "Entity.xo",
   "Entity.yo",
   "Entity.zo",
-  "and 18 more"
+  "Inventory.contains()",
+  "Player.getBoundingBox()",
+  "Player.getGameProfile()",
+  "ItemStack.getDisplayName()",
+  "Blocks.COAL_BLOCK",
+  "Blocks.COARSE_DIRT",
+  "Blocks.SEA_LANTERN",
+  "Blocks.STAINED_GLASS",
+  "BlockState.isSolid()",
+  "AABB.clip()",
+  "AABB.maxX",
+  "AABB.maxY",
+  "and 5 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "BirdAddon-0.0.14-26.3.jar",
   "published": "2026-10-29"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "minecraft",
   "odin"
  ],
- "lacks": 58
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 45
 }

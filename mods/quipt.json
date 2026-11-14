@@ -9,25 +9,28 @@
  "author": "QuickScythe1",
  "description": "QUIPT (Quick's Univeral Integrated Plugin Toolkit) is an ambitious project that aims to provide a handful of tools to both server owners and developers.",
  "needs": [
-  "Mixin",
+  "Mixin: 4 points inside the game's methods",
+  "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
+  "net.minecraft.class_2170",
+  "net.minecraft.class_2316",
+  "net.minecraft.class_2641",
+  "net.minecraft.class_2641.class_7232",
+  "net.minecraft.class_3222",
+  "net.minecraft.class_3324",
+  "net.minecraft.class_7218",
   "net.minecraft.network.chat.ComponentSerialization",
-  "net.minecraft.server.permissions.Permission.Atom",
   "ServerLifecycleEvents.SERVER_STOPPING",
   "FabricLoader.getEntrypointContainers()",
-  "CommandSourceStack.sendSystemMessage()",
-  "FriendlyByteBuf.readBytes()",
-  "FriendlyByteBuf.writeBytes()",
-  "MinecraftServer.execute()",
-  "PermissionLevel.byId()"
+  "MinecraftServer.execute()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fabric-2.0.0-beta.9-MC26.1.2-dev.jar",
   "published": "2026-10-18"
  },
@@ -39,8 +42,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -56,5 +59,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 11
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own; has network channels"
+ },
+ "lacks": 14
 }

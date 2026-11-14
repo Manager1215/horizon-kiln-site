@@ -9,22 +9,18 @@
  "author": "LyrenXh",
  "description": "High-performance CPvP utility that automatically places and detonates End Crystals with customizable delay.",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.world.entity.boss.enderdragon.EndCrystal",
   "Minecraft.crosshairPickEntity",
-  "Minecraft.gameMode",
-  "Options.keyUse",
+  "MultiPlayerGameMode.attack()",
   "LocalPlayer.distanceToSqr()",
-  "LocalPlayer.swingAndResetAttackStrength()",
-  "SwingAnimation.DEFAULT"
+  "LocalPlayer.swingAndResetAttackStrength()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fast-crystal-mc-26.3-1.0.0.jar",
   "published": "2026-10-09"
  },
@@ -36,8 +32,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -53,5 +49,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 8
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 5
 }

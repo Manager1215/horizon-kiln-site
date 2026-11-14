@@ -2,27 +2,21 @@
  "id": "quick-resource-pack",
  "name": "quick resource pack",
  "version": "1.2.0-mc26.3",
- "status": "planned",
- "statusLabel": "Planned",
- "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "status": "works",
+ "statusLabel": "Works",
+ "statusMeaning": "Tried in the game with Kiln.",
  "url": "https://modrinth.com/mod/quick-resource-pack",
  "author": "emqnuele",
- "description": "a simple mod that lets you set a keybind to switch on/off a specific texture pack you choose",
- "needs": [
-  "net.minecraft.server.packs.repository.Pack",
-  "net.minecraft.server.packs.repository.PackRepository",
-  "Minecraft.execute()",
-  "Minecraft.getResourcePackRepository()",
-  "Minecraft.reloadResourcePacks()"
- ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
- "evidence": "Not run: Java did not start.",
+ "description": "Toggle resource packs and texture packs with a hotkey, no loading screen. Pack wheel, key slots, profiles, and auto-switching per server, world or dimension.",
+ "needs": [],
+ "roadmap": "",
+ "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "quick-resource-pack-1.2.0-mc26.3.jar",
-  "published": "2026-10-11"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "quick-resource-pack-2.0.0-mc26.3.jar",
+  "published": "2026-11-09"
  },
  "reports": {
   "works": 0,
@@ -32,8 +26,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -42,13 +36,25 @@
   "client": 1,
   "modmenu": 1
  },
- "mixins": false,
+ "mixins": true,
  "depends": [
-  "cloth-config",
   "fabric-api",
   "fabricloader",
   "java",
   "minecraft"
  ],
- "lacks": 5
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 53,
+ "works": "R toggles one chosen resource pack on and off and says '<pack> enabled/disabled' in chat; with no pack chosen it says 'No resource pack configured'. The pack is chosen in its own menu or Cloth Config screen.",
+ "note": "From Modrinth, unchanged. Not yet: choosing the pack needs its own menu or settings screen, which don't open (its menu key has no default), so the try only checks R's answer with no pack chosen; the mod works without it",
+ "checked": {
+  "kiln": "main",
+  "commit": "26bb61827252402ea9d58e5165984164160bf854",
+  "date": "2026-11-09",
+  "horizon": "Nightly 2026-11-04 · 3fb4c31",
+  "by": "kiln/proof.py on the Linux PC"
+ }
 }

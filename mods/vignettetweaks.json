@@ -9,17 +9,20 @@
  "author": "awruff",
  "description": "Allows you to customize the strength of Vignette and add colorful tints for various conditions.",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
+  "GuiGraphicsExtractor.blit()",
+  "RenderPipelines.VIGNETTE",
+  "ARGB.colorFromFloat()",
   "Player.getAirSupply()",
   "Player.getMaxAirSupply()",
   "Items.TOTEM_OF_UNDYING"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "vignettetweaks-2.1.4+26.3.jar",
   "published": "2026-11-05"
  },
@@ -31,8 +34,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -48,5 +51,9 @@
   "minecraft",
   "oneconfigv1"
  ],
- "lacks": 3
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 6
 }

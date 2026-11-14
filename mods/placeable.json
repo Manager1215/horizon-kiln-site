@@ -9,19 +9,32 @@
  "author": "Nico4play",
  "description": "Allows you to place vegetation on almost all blocks.",
  "needs": [
-  "Mixin",
+  "net.minecraft.world.level.block.BambooSaplingBlock",
+  "net.minecraft.world.level.block.BigDripleafBlock",
+  "net.minecraft.world.level.block.BigDripleafStemBlock",
+  "net.minecraft.world.level.block.DryVegetationBlock",
+  "net.minecraft.world.level.block.MushroomBlock",
+  "net.minecraft.world.level.block.StemBlock",
+  "net.minecraft.world.level.block.SupportType",
+  "BlockPos.offset()",
+  "Direction.getUnitVec3i()",
   "BlockTags.FENCES",
+  "BlockTags.JUNGLE_LOGS",
+  "BlockTags.SUPPORTS_BAMBOO",
   "BlockTags.WALLS",
   "LevelReader.getChunk()",
+  "Blocks.BAMBOO_SAPLING",
   "Blocks.DIRT_PATH",
+  "HorizontalDirectionalBlock.FACING",
+  "BlockState.isFaceSturdy()",
   "ChunkAccess.getPersistedStatus()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "placeable-1.1.2+mc26.3.jar",
   "published": "2026-09-19"
  },
@@ -33,8 +46,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -48,5 +61,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 5
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 19
 }

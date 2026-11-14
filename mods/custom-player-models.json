@@ -10,7 +10,7 @@
  "description": "Customize your minecraft avatar!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 10 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.minecraft.MinecraftProfileTexture",
   "com.mojang.authlib.minecraft.MinecraftProfileTextures",
@@ -27,12 +27,14 @@
   "net.fabricmc.fabric.api.client.screen.v1.Screens",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
   "net.minecraft.SharedConstants",
   "net.minecraft.TracingExecutor",
   "net.minecraft.client.ClientBrandRetriever",
+  "net.minecraft.client.DeltaTracker.Timer",
+  "net.minecraft.client.entity.ClientMannequin",
+  "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
   "net.minecraft.client.gui.components.ChatComponent.ChatMethod",
   "net.minecraft.client.gui.screens.ChatScreen.ChatConstructor",
   "net.minecraft.client.gui.screens.options.SkinCustomizationScreen",
@@ -47,18 +49,16 @@
   "net.minecraft.client.multiplayer.ClientRegistryLayer",
   "net.minecraft.client.player.ClientInput",
   "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
-  "net.minecraft.client.renderer.entity.ArmorModelSet",
-  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
-  "net.minecraft.client.renderer.feature.ModelFeatureRenderer.Submit",
-  "net.minecraft.client.renderer.oit.OitPipelineSet",
+  "net.minecraft.client.renderer.blockentity.SkullBlockRenderer",
+  "net.minecraft.client.renderer.blockentity.state.SkullBlockRenderState",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "CustomPlayerModels-Fabric-26.3-0.6.27f.jar",
   "published": "2026-10-15"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 252
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; runs threads of its own; has network channels"
+ },
+ "lacks": 258
 }

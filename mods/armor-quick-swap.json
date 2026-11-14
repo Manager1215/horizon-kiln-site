@@ -10,37 +10,28 @@
  "description": "Instant armor swapping from your inventory or armor stands. Works anywhere, client or server.",
  "needs": [
   "an access widener",
-  "Mixin",
   "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
   "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.SlotWrapper",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-  "net.minecraft.world.entity.EquipmentSlot.Type",
   "net.minecraft.world.entity.decoration.ArmorStand",
-  "net.minecraft.world.inventory.ContainerInput",
   "net.minecraft.world.phys.EntityHitResult",
-  "Minecraft.gameMode",
+  "MultiPlayerGameMode.interact()",
   "LocalPlayer.hasInfiniteMaterials()",
-  "LocalPlayer.swing()",
   "NonNullList.iterator()",
   "EntityTypes.ARMOR_STAND",
   "EquipmentSlot.getFilterBit()",
-  "EquipmentSlot.getType()",
   "Inventory.getSelectionSize()",
   "Player.getEquipmentSlotForItem()",
   "Player.hasInfiniteMaterials()",
   "Player.isSecondaryUseActive()",
-  "Player.swing()",
-  "ItemStack.getInteractAnimation()",
   "ItemStack.isStackable()",
-  "Items.NAME_TAG",
-  "HitResult.getType()"
+  "Items.NAME_TAG"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "armorquickswap-v26.3.0-mc26.3.x+fabric.jar",
   "published": "2026-09-27"
  },
@@ -52,8 +43,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -70,5 +61,9 @@
   "minecraft",
   "puzzleslib"
  ],
- "lacks": 23
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 15
 }

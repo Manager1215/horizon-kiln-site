@@ -9,14 +9,33 @@
  "author": "lockpick36",
  "description": "Русификатор Шахта и Ремесла(Майнкрафта) с сильным внимании на культурную адаптацию достижений и сплешей и дебагг оверлей на кнопку F3.",
  "needs": [
-  "Mixin"
+  "Mixin: 3 points inside the game's methods",
+  "net.minecraft.SharedConstants",
+  "net.minecraft.client.OptionInstance.CaptionBasedToString",
+  "net.minecraft.client.OptionInstance.TooltipSupplier",
+  "net.minecraft.client.gui.ActiveTextCollector",
+  "net.minecraft.client.gui.ActiveTextCollector.Parameters",
+  "net.minecraft.client.gui.TextAlignment",
+  "net.minecraft.client.gui.components.OptionsList",
+  "net.minecraft.client.gui.components.SplashRenderer",
+  "net.minecraft.client.gui.screens.LevelLoadingScreen",
+  "net.minecraft.client.gui.screens.LoadingOverlay",
+  "net.minecraft.client.gui.screens.options.OptionsScreen",
+  "net.minecraft.client.gui.screens.options.OptionsSubScreen",
+  "net.minecraft.client.resources.SplashManager",
+  "Minecraft.getOverlay()",
+  "OptionInstance.noTooltip()",
+  "GuiGraphicsExtractor.textRenderer()",
+  "TextureManager.registerAndLoad()",
+  "Component.getVisualOrderText()",
+  "Util.getMillis()"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Russian_Language_Extended-2.5.0.jar",
   "published": "2026-09-28"
  },
@@ -28,8 +47,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -43,5 +62,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 19
 }

@@ -9,7 +9,6 @@
  "author": "petersv5",
  "description": "This Fabric mod for Minecraft enables Bedrock players connecting via Geyser and Floodgate to a Java Minecraft server to pose armor stands in-game.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
   "net.minecraft.core.Rotations",
   "net.minecraft.world.entity.decoration.ArmorStand",
@@ -17,12 +16,12 @@
   "SynchedEntityData.set()",
   "MinecraftServer.execute()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "bedrock_armor_stand_control-1.2.0.jar",
   "published": "2026-10-11"
  },
@@ -34,8 +33,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -51,5 +50,9 @@
   "java",
   "minecraft"
  ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
  "lacks": 6
 }

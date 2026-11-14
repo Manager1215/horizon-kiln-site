@@ -10,25 +10,14 @@
  "description": "Automatically sends greeting messages to players based on configured conditions.",
  "needs": [
   "net.fabricmc.api.DedicatedServerModInitializer",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
-  "ServerTickEvents.END_SERVER_TICK",
-  "Commands.LEVEL_ADMINS",
-  "Commands.hasPermission()",
-  "Commands.performPrefixedCommand()",
-  "MinecraftServer.createCommandSourceStack()",
-  "MinecraftServer.getCommands()",
-  "MinecraftServer.getPlayerList()"
+  "MinecraftServer.createCommandSourceStack()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "auto-greeting-server-1.2.0.jar",
   "published": "2026-09-21"
  },
@@ -48,5 +37,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 13
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 2
 }

@@ -9,7 +9,12 @@
  "author": "Fesuoy1",
  "description": "Shuffles sounds, textures and block/item models, etc.",
  "needs": [
-  "Mixin",
+  "net.minecraft.client.OptionInstance.TooltipSupplier",
+  "net.minecraft.client.gui.components.ScrollableLayout",
+  "net.minecraft.client.gui.layouts.GridLayout",
+  "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
+  "net.minecraft.client.gui.layouts.LayoutSettings",
+  "net.minecraft.client.gui.layouts.LinearLayout",
   "net.minecraft.client.gui.render.GuiItemAtlas",
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.client.renderer.texture.MipmapGenerator",
@@ -17,10 +22,14 @@
   "net.minecraft.client.renderer.texture.ReloadableTexture",
   "net.minecraft.client.renderer.texture.SpriteContents.AnimationState",
   "net.minecraft.client.resources.language.ClientLanguage",
+  "net.minecraft.client.resources.model.ModelBakery",
+  "net.minecraft.client.resources.model.ModelManager.ReloadState",
   "net.minecraft.client.resources.model.cuboid.CuboidModelElement",
   "net.minecraft.client.resources.model.cuboid.MissingCuboidModel",
   "net.minecraft.client.resources.model.cuboid.UnbakedCuboidGeometry",
   "net.minecraft.client.resources.sounds.Sound",
+  "net.minecraft.client.sounds.SoundManager.Preparations",
+  "net.minecraft.client.sounds.WeighedSoundEvents",
   "net.minecraft.client.sounds.Weighted",
   "net.minecraft.world.level.levelgen.PositionalRandomFactory",
   "net.minecraft.world.level.levelgen.RandomSupport",
@@ -35,23 +44,19 @@
   "NativeImage.setPixel()",
   "GpuBuffer.slice()",
   "Minecraft.reloadResourcePacks()",
+  "CycleButton.Builder.withTooltip()",
+  "ClientPacketListener.getCommands()",
   "SpriteContents.UBO_SIZE",
   "TextureAtlas.LOCATION_ITEMS",
   "TextureAtlasSprite.createAnimationState()",
-  "TextureAtlasSprite.isAnimated()",
-  "TextureAtlasSprite.uploadSpriteUbo()",
-  "TextureManager.registerAndLoad()",
-  "Language.inject()",
-  "Mth.roundToward()",
-  "RandomSource.fork()",
-  "RandomSource.forkPositional()"
+  "and 9 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fesuoy_randomizer-2.1.1-26.3+fabric.jar",
   "published": "2026-09-16"
  },
@@ -63,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -79,5 +84,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 35
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 49
 }

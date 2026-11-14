@@ -1,27 +1,28 @@
 {
  "id": "biome-spawn-point",
  "name": "Biome Spawn Point",
- "version": "26.3.0-3.0-fabric+forge+neo",
+ "version": "26.3.0-4.1-fabric+forge+neo",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
  "url": "https://modrinth.com/mod/biome-spawn-point",
  "author": "Serilum",
- "description": "🌲 Allows specifying which biome players will spawn in on new world creation.",
+ "description": "🌲 Allows specifying which biome and dimension players will spawn in on new world creation.",
  "needs": [
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.minecraft.commands.arguments.ResourceOrTagKeyArgument",
   "net.minecraft.commands.arguments.ResourceOrTagKeyArgument.Result",
-  "net.minecraft.server.permissions.Permissions",
   "net.minecraft.world.level.levelgen.WorldGenSettings",
   "net.minecraft.world.level.levelgen.WorldOptions",
-  "CommandSourceStack.getServer()",
+  "ServerLifecycleEvents.SERVER_STARTED",
   "SharedSuggestionProvider.suggestResource()",
   "SharedSuggestionProvider.suggestResource()",
+  "Holder.is()",
   "Registry.get()",
-  "Registry.iterator()",
   "RegistryAccess.lookupOrThrow()",
   "RegistryAccess.Frozen.lookupOrThrow()",
   "Registries.BIOME",
+  "Registries.LEVEL_STEM",
   "MinecraftServer.getWorldGenSettings()",
   "MinecraftServer.overworld()",
   "MinecraftServer.registryAccess()",
@@ -29,16 +30,20 @@
   "ServerLevel.getRespawnData()",
   "ServerLevel.getSeed()",
   "ServerLevel.setRespawnData()",
-  "LevelData.RespawnData.of()"
+  "BiomeSource.possibleBiomes()",
+  "ChunkGenerator.getBiomeSource()",
+  "LevelStem.OVERWORLD",
+  "LevelData.RespawnData.of()",
+  "LevelData.RespawnData.pos()"
  ],
  "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "biomespawnpoint-26.3.0-3.0.jar",
-  "published": "2026-10-14"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "biomespawnpoint-26.3.0-4.1.jar",
+  "published": "2026-11-07"
  },
  "reports": {
   "works": 0,
@@ -48,8 +53,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -58,7 +63,7 @@
   "main": 1,
   "modmenu": 1
  },
- "mixins": false,
+ "mixins": true,
  "depends": [
   "collective",
   "fabric-api",
@@ -66,5 +71,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 21
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 26
 }

@@ -9,22 +9,33 @@
  "author": "evanbones",
  "description": "A mod that adds a simple, immersive, and balanced Glider to the game!",
  "needs": [
-  "Mixin",
+  "net.minecraft.client.model.HumanoidModel",
+  "net.minecraft.client.player.FirstPersonHandsAndItems",
+  "net.minecraft.client.renderer.entity.player.AvatarRenderer",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
+  "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState",
+  "net.minecraft.client.resources.sounds.AbstractTickableSoundInstance",
+  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
+  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
+  "net.minecraft.server.level.ServerPlayerGameMode",
   "net.minecraft.world.item.component.DyedItemColor",
   "net.minecraft.world.item.equipment.Equippable.Builder",
-  "ClientPlayNetworking.canSend()",
-  "KeyMapping.isUnbound()",
-  "KeyMapping.saveString()",
-  "Options.keyMappings",
   "LocalPlayer.tickCount",
+  "ModelManager.getItemModel()",
   "DataComponents.DYED_COLOR",
-  "FriendlyByteBuf.writeBoolean()",
   "MinecraftServer.execute()",
+  "ServerPlayer.connection",
   "SoundEvents.ARMOR_EQUIP_LEATHER",
+  "SoundEvents.ELYTRA_FLYING",
+  "Player.fallDistance",
   "Player.getBoundingBox()",
-  "Player.isFallFlying()",
+  "Player.getUseItem()",
   "Player.isPassenger()",
+  "Player.isUsingItem()",
   "Player.onClimbable()",
+  "Player.setDeltaMovement()",
+  "Player.stopUsingItem()",
   "Player.yOld",
   "Item.Properties.repairable()",
   "Equippable.builder()",
@@ -32,12 +43,12 @@
   "AABB.inflate()",
   "AABB.move()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "reliable_gliders-2.1.0+26.3-fabric.jar",
   "published": "2026-11-02"
  },
@@ -49,8 +60,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -68,5 +79,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 21
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 33
 }

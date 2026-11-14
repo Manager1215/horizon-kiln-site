@@ -1,7 +1,7 @@
 {
  "id": "easy-freecam",
  "name": "Freecam",
- "version": "2.0+26.3",
+ "version": "3.0+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,39 +9,42 @@
  "author": "Elpu7",
  "description": "A simple, easy-to-use Freecam mod.",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
+  "Mixin: 3 points inside the game's methods",
+  "net.minecraft.client.gui.layouts.GridLayout",
+  "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
+  "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
+  "net.minecraft.client.gui.layouts.LayoutSettings",
+  "net.minecraft.client.gui.layouts.LinearLayout",
+  "net.minecraft.client.gui.screens.options.OptionsSubScreen",
+  "net.minecraft.client.player.ClientInput",
   "net.minecraft.world.entity.player.Input",
   "net.minecraft.world.item.ItemUseAnimation",
   "net.minecraft.world.item.component.Consumable",
   "Window.handle()",
   "Camera.blockPosition()",
-  "Minecraft.gameMode",
   "Minecraft.smartCull",
+  "OptionInstance.createButton()",
+  "MultiPlayerGameMode.stopDestroyBlock()",
   "LocalPlayer.applyInput()",
   "LocalPlayer.getEyeY()",
   "LocalPlayer.input",
   "LocalPlayer.isDeadOrDying()",
-  "LocalPlayer.isFallFlying()",
   "LocalPlayer.isPassenger()",
-  "LocalPlayer.setSprinting()",
   "LocalPlayer.xxa",
   "LocalPlayer.yya",
   "LocalPlayer.zza",
   "DataComponents.CONSUMABLE",
   "DataComponents.FOOD",
-  "Player.isFallFlying()",
-  "Items.FIREWORK_ROCKET",
-  "Vec2.ZERO"
+  "Items.FIREWORK_ROCKET"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "Easy-freecam-2.0+26.3.jar",
-  "published": "2026-09-16"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "Easy-freecam-3.0+26.3-fabric.jar",
+  "published": "2026-11-11"
  },
  "reports": {
   "works": 0,
@@ -51,23 +54,27 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
  },
  "entrypoints": {
   "client": 1,
-  "modmenu": 1,
-  "main": 1
+  "modmenu": 1
  },
  "mixins": true,
  "depends": [
+  "elib",
   "fabric-api",
   "fabricloader",
   "java",
   "minecraft"
  ],
- "lacks": 23
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 26
 }

@@ -9,7 +9,7 @@
  "author": "NamelessJu",
  "description": "A mod for improved Scatha farming on Hypixel SkyBlock",
  "needs": [
-  "Mixin",
+  "Mixin: 17 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
@@ -21,24 +21,16 @@
   "net.minecraft.client.Screenshot",
   "net.minecraft.client.gui.ActiveTextCollector",
   "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
-  "net.minecraft.client.gui.components.Button.Plain",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
-  "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-  "net.minecraft.client.gui.components.CycleButton.ValueListSupplier",
   "net.minecraft.client.gui.components.EditBox.TextFormatter",
   "net.minecraft.client.gui.components.IMEPreeditOverlay",
   "net.minecraft.client.gui.components.MultiLineTextWidget",
-  "net.minecraft.client.gui.components.StringWidget",
+  "net.minecraft.client.gui.components.PlayerTabOverlay",
   "net.minecraft.client.gui.components.StringWidget.TextOverflow",
   "net.minecraft.client.gui.components.TextCursorUtils",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.components.WidgetSprites",
-  "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
   "net.minecraft.client.gui.layouts.FrameLayout",
   "net.minecraft.client.gui.layouts.GridLayout",
+  "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
   "net.minecraft.client.gui.layouts.Layout",
   "net.minecraft.client.gui.layouts.LayoutSettings",
@@ -50,14 +42,22 @@
   "net.minecraft.client.gui.screens.inventory.ContainerScreen",
   "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
   "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipPositioner",
+  "net.minecraft.client.gui.screens.inventory.tooltip.MenuTooltipPositioner",
+  "net.minecraft.client.gui.screens.options.OptionsScreen",
+  "net.minecraft.client.gui.screens.options.controls.KeyBindsList",
+  "net.minecraft.client.gui.screens.options.controls.KeyBindsList.Entry",
+  "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
+  "net.minecraft.client.input.PreeditEvent",
+  "net.minecraft.client.multiplayer.chat.ChatListener",
+  "net.minecraft.client.renderer.entity.ArmorStandRenderer",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Scatha-Pro v2.6 (MC 26.3).jar",
   "published": "2026-10-22"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 246
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; runs threads of its own; has network channels"
+ },
+ "lacks": 191
 }

@@ -9,17 +9,18 @@
  "author": "maDU59_",
  "description": "Slightly improves the speed of Iris' shadow mapper. Built-in in Iris since Iris 1.11.2",
  "needs": [
-  "Mixin",
+  "net.minecraft.client.renderer.blockentity.AbstractSignRenderer",
+  "net.minecraft.client.renderer.blockentity.BannerRenderer",
   "net.minecraft.world.level.block.entity.BannerPatternLayers",
   "Sheets.BANNER_PATTERN_BASE",
   "Sheets.SHIELD_PATTERN_BASE"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fastershadowmapper+26.3-1.0.7.jar",
   "published": "2026-09-20"
  },
@@ -37,5 +38,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 3
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 5
 }

@@ -1,0 +1,81 @@
+{
+ "id": "bring-back-nightmares",
+ "name": "Bring Back Nightmares !",
+ "version": "0.1.1-RELEASE",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/bring-back-nightmares",
+ "author": "mallowwww",
+ "description": "Brings back the classic bed mechanics with some modern improvements",
+ "needs": [
+  "net.minecraft.SharedConstants",
+  "net.minecraft.server.players.SleepStatus",
+  "net.minecraft.world.attribute.BedRule",
+  "net.minecraft.world.entity.ai.navigation.PathNavigation",
+  "net.minecraft.world.entity.monster.Monster",
+  "net.minecraft.world.entity.monster.skeleton.Skeleton",
+  "net.minecraft.world.entity.monster.spider.Spider",
+  "net.minecraft.world.entity.monster.zombie.Zombie",
+  "net.minecraft.world.entity.npc.villager.Villager",
+  "net.minecraft.world.entity.player.Player.BedSleepingProblem",
+  "net.minecraft.world.level.block.AbstractBedBlock",
+  "net.minecraft.world.level.block.BedBlock",
+  "net.minecraft.world.level.block.state.properties.BedPart",
+  "ServerPlayer.stopSleepInBed()",
+  "RandomSource.nextIntBetweenInclusive()",
+  "EntityTypes.SKELETON",
+  "EntityTypes.SPIDER",
+  "EntityTypes.ZOMBIE",
+  "LivingEntity.isSleeping()",
+  "PathfinderMob.getNavigation()",
+  "PathfinderMob.remove()",
+  "PathfinderMob.setTarget()",
+  "PathfinderMob.teleportTo()",
+  "Player.isSleepingLongEnough()",
+  "Player.startSleepInBed()",
+  "Player.startSleeping()",
+  "Level.getEntitiesOfClass()",
+  "BlockState.entityCanStandOn()",
+  "BlockState.getCollisionShape()",
+  "VoxelShape.isEmpty()"
+ ],
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "bringbacknightmares-fabric-26.3-0.1.1-RELEASE.jar",
+  "published": "2026-11-02"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 30
+}

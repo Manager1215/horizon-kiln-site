@@ -1,0 +1,91 @@
+{
+ "id": "more-bed-variants",
+ "name": "More Bed Variants",
+ "version": "2.2.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/more-bed-variants",
+ "author": "LieOnLion",
+ "description": "All Beds for every kind of wood (incl. improved Bed Block Rendering)",
+ "needs": [
+  "an access widener",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.StartDataPackReload",
+  "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
+  "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
+  "net.minecraft.references.BlockItemId",
+  "net.minecraft.world.entity.ai.village.poi.PoiTypes",
+  "net.minecraft.world.level.block.AbstractBedBlock",
+  "net.minecraft.world.level.block.BedBlock",
+  "net.minecraft.world.level.block.state.properties.BedPart",
+  "ImmutableList.stream()",
+  "ServerLifecycleEvents.SERVER_STARTED",
+  "ServerLifecycleEvents.SERVER_STARTING",
+  "ServerLifecycleEvents.START_DATA_PACK_RELOAD",
+  "BlockPos.east()",
+  "BlockPos.north()",
+  "BlockPos.south()",
+  "BlockPos.west()",
+  "Registry.get()",
+  "BuiltInRegistries.POINT_OF_INTEREST_TYPE",
+  "MinecraftServer.isDedicatedServer()",
+  "DyeColor.getMapColor()",
+  "Items.BED",
+  "Blocks.BED",
+  "ColorCollection.NAMES",
+  "ColorCollection.VALUES",
+  "ColorCollection.create()",
+  "ColorCollection.map()",
+  "ColorCollection.registerBlockItems()",
+  "ColorCollection.zipMap()",
+  "HorizontalDirectionalBlock.FACING",
+  "HorizontalDirectionalBlock.skipRendering()",
+  "SoundType.BAMBOO_WOOD",
+  "SoundType.CHERRY_WOOD",
+  "SoundType.NETHER_WOOD",
+  "SoundType.WOOL",
+  "BlockBehaviour.Properties.mapColor()",
+  "MapColor.WOOL"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "MoreBedVariants-2.2.0+26.3-Fabric.jar",
+  "published": "2026-11-14"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 38
+}

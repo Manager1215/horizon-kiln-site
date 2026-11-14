@@ -9,7 +9,7 @@
  "author": "cozycharm",
  "description": "A complete upgrade of pet wolves ✰ Pet wolves have personality, helpful abilities, and can be respawned!",
  "needs": [
-  "Mixin",
+  "Mixin: 4 points inside the game's methods",
   "net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityCombatEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityCombatEvents.AfterKilledOtherEntity",
@@ -18,25 +18,21 @@
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.Unload",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
   "net.minecraft.SharedConstants",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.model.animal.wolf.WolfModel",
   "net.minecraft.client.model.geom.PartPose",
   "net.minecraft.client.model.geom.builders.CubeListBuilder",
   "net.minecraft.client.model.geom.builders.MeshDefinition",
   "net.minecraft.client.model.geom.builders.PartDefinition",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.client.renderer.entity.EntityRenderers",
   "net.minecraft.client.renderer.entity.WolfRenderer",
   "net.minecraft.client.renderer.entity.layers.RenderLayer",
   "net.minecraft.client.renderer.entity.state.WolfRenderState",
   "net.minecraft.core.HolderSet.Direct",
   "net.minecraft.core.UUIDUtil",
+  "net.minecraft.nbt.NbtAccounter",
   "net.minecraft.network.chat.ComponentSerialization",
   "net.minecraft.network.chat.FontDescription",
   "net.minecraft.network.chat.FontDescription.Resource",
@@ -44,20 +40,24 @@
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
   "net.minecraft.server.network.Filterable",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.tags.DamageTypeTags",
+  "net.minecraft.util.DirectoryLock",
   "net.minecraft.util.datafix.DataFixers",
   "net.minecraft.util.datafix.fixes.References",
   "net.minecraft.util.random.WeightedList.Builder",
+  "net.minecraft.world.SimpleContainer",
+  "net.minecraft.world.damagesource.DamageTypes",
+  "net.minecraft.world.entity.EntityEvent",
+  "net.minecraft.world.entity.EntitySelector",
+  "net.minecraft.world.entity.NeutralMob",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "cozys-improved-wolves-fabric-mc26.3-v2.1.1.jar",
   "published": "2026-10-26"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -91,5 +91,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 320
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-method into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 301
 }

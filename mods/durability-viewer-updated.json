@@ -9,48 +9,21 @@
  "author": "fantahund",
  "description": "Armor and Tool durability HUD",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.gui.components.Tooltip",
-  "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
   "net.minecraft.world.item.ArrowItem",
   "net.minecraft.world.item.ProjectileWeaponItem",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
-  "Minecraft.debugEntries",
   "Minecraft.getCurrentServer()",
   "Options.mainHand()",
-  "Font.plainSubstrByWidth()",
-  "AbstractSelectionList.Entry.getContentBottom()",
-  "AbstractSelectionList.Entry.getContentHeight()",
-  "AbstractSelectionList.Entry.getContentRight()",
-  "AbstractSelectionList.Entry.getContentWidth()",
-  "AbstractSelectionList.Entry.getContentX()",
-  "AbstractSelectionList.Entry.getContentXMiddle()",
-  "AbstractSelectionList.Entry.getContentY()",
-  "AbstractSelectionList.Entry.getContentYMiddle()",
   "AbstractSelectionList.Entry.getRectangle()",
-  "AbstractSelectionList.Entry.isMouseOver()",
-  "AbstractSelectionList.Entry.setHeight()",
-  "AbstractSelectionList.Entry.setWidth()",
-  "AbstractWidget.charTyped()",
-  "AbstractWidget.keyPressed()",
-  "AbstractWidget.mouseDragged()",
-  "AbstractWidget.mouseReleased()",
-  "AbstractWidget.setMessage()",
-  "AbstractWidget.setRectangle()",
-  "AbstractWidget.setTooltip()",
-  "Screen.extractMenuBackground()",
-  "Screen.getFont()",
   "ServerData.name",
   "NonNullList.iterator()",
   "Blocks.CHEST"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "durabilityviewer-fabric-26.3-1.13.1.jar",
   "published": "2026-09-24"
  },
@@ -62,8 +35,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -78,5 +51,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 34
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 8
 }

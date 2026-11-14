@@ -1,0 +1,93 @@
+{
+ "id": "money-point",
+ "name": "Money Point",
+ "version": "1.0.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/money-point",
+ "author": "gqwg2003",
+ "description": "Portable terminal with an upgrade wheel and a point economy for every item in the game. ^_~",
+ "needs": [
+  "com.mojang.authlib.GameProfile",
+  "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
+  "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
+  "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
+  "net.minecraft.network.chat.ComponentSerialization",
+  "net.minecraft.tags.EnchantmentTags",
+  "net.minecraft.world.SimpleContainer",
+  "net.minecraft.world.SimpleMenuProvider",
+  "net.minecraft.world.flag.FeatureFlags",
+  "net.minecraft.world.inventory.ContainerData",
+  "net.minecraft.world.inventory.MenuType.MenuSupplier",
+  "net.minecraft.world.inventory.SimpleContainerData",
+  "net.minecraft.world.item.GameMasterBlockItem",
+  "net.minecraft.world.item.SpawnEggItem",
+  "net.minecraft.world.item.crafting.ShapelessRecipe",
+  "net.minecraft.world.item.crafting.SmithingTransformRecipe",
+  "net.minecraft.world.item.crafting.TransmuteRecipe",
+  "net.minecraft.world.item.crafting.TransmuteResult",
+  "net.minecraft.world.item.enchantment.EnchantmentInstance",
+  "Object2IntMap.Entry.getKey()",
+  "AttachmentRegistry.builder()",
+  "ServerLifecycleEvents.END_DATA_PACK_RELOAD",
+  "ServerLifecycleEvents.SERVER_STARTED",
+  "ServerLifecycleEvents.SERVER_STOPPING",
+  "EditBox.canConsumeInput()",
+  "AbstractContainerScreen.containerTick()",
+  "AbstractContainerScreen.extractSlot()",
+  "AbstractContainerScreen.getTooltipFromContainerItem()",
+  "PlayerInfo.getProfile()",
+  "LocalPlayer.getAttachedOrElse()",
+  "LocalPlayer.getGameProfile()",
+  "DefaultedRegistry.getTagOrEmpty()",
+  "DefaultedRegistry.iterator()",
+  "Holder.is()",
+  "Holder.Reference.is()",
+  "NonNullList.iterator()",
+  "Registry.get()",
+  "and 30 more"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "moneypoint-1.0.0.jar",
+  "published": "2026-10-20"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 70
+}

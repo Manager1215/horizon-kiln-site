@@ -1,7 +1,7 @@
 {
  "id": "starter-structure",
  "name": "Starter Structure",
- "version": "26.3.0-5.0-fabric+forge+neo",
+ "version": "26.3.0-6.0-fabric+forge+neo",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,9 +9,11 @@
  "author": "Serilum",
  "description": "🏛️ Allows the creation of buildings on initial world generation at spawn via schematic files.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
+  "net.minecraft.commands.arguments.blocks.BlockStateParser",
+  "net.minecraft.commands.arguments.blocks.BlockStateParser.BlockResult",
+  "net.minecraft.data.worldgen.Pools",
   "net.minecraft.server.level.ServerPlayer.RespawnConfig",
   "net.minecraft.world.entity.EntitySpawnRequest",
   "net.minecraft.world.entity.decoration.ItemFrame",
@@ -19,37 +21,44 @@
   "net.minecraft.world.level.block.JigsawBlock",
   "net.minecraft.world.level.block.StructureBlock",
   "net.minecraft.world.level.block.StructureVoidBlock",
+  "net.minecraft.world.level.block.entity.JigsawBlockEntity",
   "net.minecraft.world.level.block.entity.SignBlockEntity",
   "net.minecraft.world.level.levelgen.WorldGenSettings",
   "net.minecraft.world.level.levelgen.WorldOptions",
-  "BlockPos.betweenClosed()",
+  "BlockPos.distSqr()",
+  "BlockPos.toShortString()",
   "RegistryAccess.lookupOrThrow()",
   "MinecraftServer.execute()",
   "MinecraftServer.getWorldGenSettings()",
+  "ServerLevel.addFreshEntityWithPassengers()",
   "ServerLevel.getChunkAt()",
   "ServerLevel.getMaxY()",
   "ServerLevel.getMinY()",
   "ServerLevel.getRespawnData()",
+  "ServerLevel.holderLookup()",
   "ServerLevel.setRespawnData()",
   "ServerPlayer.getRespawnConfig()",
   "ServerPlayer.teleportTo()",
+  "BlockTags.SUBSTRATE_OVERWORLD",
   "Entity.entityTags()",
+  "Entity.getIndirectPassengers()",
   "Entity.setPos()",
   "EntityType.create()",
-  "Player.teleportTo()",
-  "LevelChunk.getBlockEntities()",
-  "LevelData.RespawnData.dimension()",
-  "LevelData.RespawnData.of()",
-  "LevelData.RespawnData.pos()"
+  "Blocks.STRUCTURE_VOID",
+  "BlockState.canBeReplaced()",
+  "BlockState.getCollisionShape()",
+  "BlockState.isCollisionShapeFullBlock()",
+  "BlockState.updateNeighbourShapes()",
+  "and 5 more"
  ],
- "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "starterstructure-26.3.0-5.0.jar",
-  "published": "2026-10-21"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "starterstructure-26.3.0-6.0.jar",
+  "published": "2026-11-10"
  },
  "reports": {
   "works": 0,
@@ -59,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -77,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 31
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 45
 }

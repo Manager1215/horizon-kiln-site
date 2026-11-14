@@ -1,0 +1,93 @@
+{
+ "id": "jar-of-bees",
+ "name": "Jar of Bees",
+ "version": "1.0.0+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/jar-of-bees",
+ "author": "testable09",
+ "description": "A jar full of angry bees. Point it at a mob and the swarm stings it to death, then flies back home. Includes Bee Storm and Guard modes.",
+ "needs": [
+  "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
+  "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
+  "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
+  "net.minecraft.client.renderer.entity.BeeRenderer",
+  "net.minecraft.client.renderer.entity.EntityRenderers",
+  "net.minecraft.world.damagesource.DamageTypes",
+  "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
+  "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
+  "net.minecraft.world.entity.animal.bee.Bee",
+  "net.minecraft.world.entity.monster.Enemy",
+  "net.minecraft.world.entity.projectile.ProjectileUtil",
+  "net.minecraft.world.item.ItemCooldowns",
+  "net.minecraft.world.phys.EntityHitResult",
+  "ServerLevel.clip()",
+  "ServerLevel.getEntitiesOfClass()",
+  "ServerLevel.sendParticles()",
+  "SoundEvents.BEEHIVE_ENTER",
+  "SoundEvents.BEEHIVE_WORK",
+  "SoundEvents.BEE_STING",
+  "SoundEvents.BOTTLE_EMPTY",
+  "DamageSources.source()",
+  "Entity.isAlive()",
+  "Entity.isSpectator()",
+  "EntityType.Builder.eyeHeight()",
+  "LivingEntity.addEffect()",
+  "LivingEntity.damageCooldownTime",
+  "LivingEntity.distanceToSqr()",
+  "LivingEntity.distanceToSqr()",
+  "LivingEntity.getBbHeight()",
+  "LivingEntity.getBbWidth()",
+  "LivingEntity.getBoundingBox()",
+  "LivingEntity.getDisplayName()",
+  "LivingEntity.isAlive()",
+  "LivingEntity.isSpectator()",
+  "LivingEntity.needsSync",
+  "Player.distanceToSqr()",
+  "Player.getBoundingBox()",
+  "Player.getCooldowns()",
+  "Player.getLastHurtByMob()",
+  "Player.getRandom()",
+  "and 7 more"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "jar-of-bees-1.0.0+26.3.jar",
+  "published": "2026-10-05"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": false,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 47
+}

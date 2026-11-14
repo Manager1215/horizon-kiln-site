@@ -9,7 +9,12 @@
  "author": "Inbound",
  "description": "Its a freecam but you control it with a FPV controller. Fully clientside.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
+  "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
+  "net.minecraft.client.gui.components.debug.DebugScreenEntry",
+  "net.minecraft.client.player.ClientInput",
+  "net.minecraft.client.player.KeyboardInput",
+  "net.minecraft.world.entity.player.Input",
   "net.minecraft.world.level.block.StainedGlassPaneBlock",
   "org.lwjgl.sdl.SDLError",
   "org.lwjgl.sdl.SDLGUID",
@@ -29,16 +34,12 @@
   "Entity.getBoundingBox()",
   "Entity.isPickable()",
   "Level.getEntities()",
-  "Level.getWorldBorder()",
-  "Level.hasChunkAt()",
   "Blocks.BARRIER",
   "Blocks.CAVE_VINES",
   "Blocks.CAVE_VINES_PLANT",
   "Blocks.GLASS_PANE",
-  "Blocks.TWISTING_VINES",
   "Blocks.TWISTING_VINES_PLANT",
   "Blocks.VINE",
-  "Blocks.WEEPING_VINES",
   "Blocks.WEEPING_VINES_PLANT",
   "BlockState.getCollisionShape()",
   "WorldBorder.getCollisionShape()",
@@ -49,15 +50,14 @@
   "AABB.maxY",
   "AABB.maxZ",
   "AABB.minX",
-  "AABB.minY",
-  "and 6 more"
+  "and 7 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fpvfreecam-fabric-26.3-0.5.1.jar",
   "published": "2026-09-17"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "modmenu",
   "yet_another_config_lib_v3"
  ],
- "lacks": 46
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 47
 }

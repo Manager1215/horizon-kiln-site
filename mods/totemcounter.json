@@ -9,21 +9,34 @@
  "author": "uku",
  "description": "counts the amounts of skill issues (totem pops)",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
+  "com.mojang.authlib.GameProfile",
+  "net.minecraft.client.gui.components.PlayerTabOverlay",
+  "net.minecraft.client.gui.contextualbar.ExperienceBar",
+  "net.minecraft.client.renderer.entity.DisplayRenderer",
+  "net.minecraft.client.renderer.entity.DisplayRenderer.TextDisplayRenderer",
+  "net.minecraft.client.renderer.entity.state.TextDisplayEntityRenderState",
+  "net.minecraft.world.entity.Display",
+  "net.minecraft.world.entity.Display.TextDisplay",
+  "net.minecraft.world.entity.Display.TextDisplay.CachedInfo",
+  "net.minecraft.world.entity.Display.TextDisplay.CachedLine",
+  "GuiGraphicsExtractor.blit()",
   "ClientLevel.getPlayerByUUID()",
+  "PlayerInfo.getProfile()",
   "NonNullList.stream()",
-  "MutableComponent.setStyle()",
-  "MutableComponent.withStyle()",
-  "MutableComponent.withStyle()",
+  "Component.getVisualOrderText()",
+  "ClientboundEntityEventPacket.getEntity()",
   "Player.getDisplayName()",
-  "Items.TOTEM_OF_UNDYING"
+  "Player.isAlive()",
+  "Items.TOTEM_OF_UNDYING",
+  "Level.getPlayerByUUID()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "totemcounter-fabric-1.14.0+mc26.3.jar",
   "published": "2026-09-15"
  },
@@ -35,8 +48,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -52,5 +65,9 @@
   "minecraft",
   "ukulib"
  ],
- "lacks": 7
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 20
 }

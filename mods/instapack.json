@@ -1,0 +1,69 @@
+{
+ "id": "instapack",
+ "name": "InstaPack",
+ "version": "1.0.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/instapack",
+ "author": "_4rubka_",
+ "description": "Server resource packs and resource reloads that take seconds instead of minutes",
+ "needs": [
+  "Mixin: 4 points inside the game's methods",
+  "net.minecraft.client.gui.font.FontManager",
+  "net.minecraft.client.gui.screens.LoadingOverlay",
+  "net.minecraft.client.resources.SplashManager",
+  "net.minecraft.client.resources.server.DownloadedPackSource",
+  "net.minecraft.client.resources.server.PackDownloader",
+  "net.minecraft.client.resources.server.PackReloadConfig",
+  "net.minecraft.client.resources.server.PackReloadConfig.Callbacks",
+  "net.minecraft.client.resources.server.PackReloadConfig.IdAndPath",
+  "net.minecraft.server.packs.DownloadQueue",
+  "net.minecraft.server.packs.DownloadQueue.BatchResult",
+  "net.minecraft.server.packs.DownloadQueue.DownloadRequest",
+  "net.minecraft.server.packs.FilePackResources",
+  "net.minecraft.server.packs.PackResources.ResourceOutput",
+  "net.minecraft.server.packs.PathPackResources",
+  "net.minecraft.server.packs.PathPackResources.PathResourcesSupplier",
+  "net.minecraft.server.packs.repository.Pack",
+  "net.minecraft.server.packs.repository.Pack.ResourcesSupplier",
+  "net.minecraft.server.packs.repository.PackRepository",
+  "net.minecraft.server.packs.resources.ReloadInstance",
+  "net.minecraft.server.packs.resources.ReloadableResourceManager",
+  "Minecraft.gameDirectory",
+  "Minecraft.getDownloadedPackSource()",
+  "Minecraft.getResourcePackRepository()",
+  "Minecraft.reloadResourcePacks()",
+  "Gui.overlay()",
+  "Identifier.tryBuild()",
+  "PackType.getDirectory()",
+  "Util.backgroundExecutor()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "instapack-fabric-26.3-1.0.0.jar",
+  "published": "2026-10-08"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "entrypoints": {},
+ "mixins": true,
+ "depends": [
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 28
+}

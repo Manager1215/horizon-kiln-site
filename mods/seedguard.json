@@ -9,10 +9,13 @@
  "author": "DrexHD",
  "description": "Protects your world seed by altering feature and structure placement, preventing seed cracking.",
  "needs": [
-  "Mixin",
+  "Mixin: 7 points inside the game's methods",
+  "net.minecraft.world.level.chunk.ChunkGeneratorStructureState",
   "net.minecraft.world.level.levelgen.PositionalRandomFactory",
+  "net.minecraft.world.level.levelgen.RandomState",
   "net.minecraft.world.level.levelgen.WorldgenRandom",
   "net.minecraft.world.level.levelgen.structure.StructureSet",
+  "net.minecraft.world.level.levelgen.structure.placement.AbstractSpreadingStructurePlacement",
   "net.minecraft.world.level.storage.LevelResource",
   "Object2LongMap.putAll()",
   "Reference2IntMap.putAll()",
@@ -20,7 +23,6 @@
   "Registry.listElements()",
   "RegistryAccess.Frozen.lookupOrThrow()",
   "Registries.STRUCTURE_SET",
-  "RegistryOps.create()",
   "MinecraftServer.getWorldPath()",
   "MinecraftServer.registryAccess()",
   "Feature.CODEC"
@@ -29,8 +31,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "seedguard+26.3-1.0.1.jar",
   "published": "2026-09-20"
  },
@@ -45,5 +47,9 @@
  "depends": [
   "fabricloader"
  ],
- "lacks": 14
+ "softOff": {
+  "class": "restart",
+  "why": "@modify-args and @redirect and @wrap-operation into the game's classes"
+ },
+ "lacks": 16
 }

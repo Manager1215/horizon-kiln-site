@@ -9,17 +9,27 @@
  "author": "Stachelbeere1248",
  "description": "Zombies Utils API implementation | a library mod for Hypixel Zombies",
  "needs": [
-  "Mixin",
-  "org.apache.logging.log4j.LogBuilder",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger"
+  "com.mojang.authlib.GameProfile",
+  "com.mojang.authlib.properties.Property",
+  "com.mojang.authlib.properties.PropertyMap",
+  "net.minecraft.network.protocol.common.CommonPacketTypes",
+  "net.minecraft.world.item.component.ResolvableProfile",
+  "net.minecraft.world.scores.PlayerTeam",
+  "Holder.getRegisteredName()",
+  "DataComponents.PROFILE",
+  "ClientboundSoundPacket.getSound()",
+  "Entity.tickCount",
+  "Items.ARROW",
+  "Items.SUNFLOWER",
+  "Scoreboard.getDisplayObjective()",
+  "Scoreboard.getPlayerTeams()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "zombiesutils-core-3.1.1.jar",
   "published": "2026-10-17"
  },
@@ -31,8 +41,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -48,5 +58,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 3
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 14
 }

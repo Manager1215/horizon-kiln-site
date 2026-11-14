@@ -9,16 +9,11 @@
  "author": "Wesley1808",
  "description": "A fast random teleport command that doesn't cause lagspikes.",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.permission.v1.PermissionContextOwner",
   "net.fabricmc.fabric.api.permission.v1.PermissionPredicates",
-  "net.minecraft.commands.arguments.DimensionArgument",
   "net.minecraft.server.level.ChunkHolder",
   "net.minecraft.server.level.ChunkResult",
   "net.minecraft.server.level.ServerPlayerGameMode",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.entity.EntitySelector",
   "net.minecraft.world.entity.ai.Brain",
   "net.minecraft.world.entity.ai.memory.MemoryModuleType",
@@ -26,10 +21,6 @@
   "net.minecraft.world.entity.monster.Monster",
   "net.minecraft.world.entity.monster.warden.AngerManagement",
   "net.minecraft.world.entity.monster.warden.Warden",
-  "ServerTickEvents.END_SERVER_TICK",
-  "CommandSourceStack.getPlayerOrException()",
-  "EntityArgument.getPlayer()",
-  "EntityArgument.player()",
   "BlockPos.containing()",
   "BlockPos.MutableBlockPos.move()",
   "BlockPos.MutableBlockPos.set()",
@@ -38,26 +29,34 @@
   "BuiltInRegistries.TICKET_TYPE",
   "Registries.BIOME",
   "MinecraftServer.execute()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.isDedicatedServer()",
   "ServerLevel.getBiome()",
   "ServerLevel.getEntities()",
   "ServerLevel.getLogicalHeight()",
-  "ServerLevel.getWorldBorder()",
   "ServerLevel.noCollision()",
   "ServerPlayer.connection",
   "ServerPlayer.createCommandSourceStack()",
   "ServerPlayer.distanceTo()",
   "ServerPlayer.gameMode",
   "ServerPlayer.getBoundingBox()",
-  "and 31 more"
+  "ServerPlayer.isAlive()",
+  "ServerPlayer.teleportTo()",
+  "ServerGamePacketListenerImpl.resetPosition()",
+  "BiomeTags.IS_BEACH",
+  "BiomeTags.IS_DEEP_OCEAN",
+  "BiomeTags.IS_OCEAN",
+  "BiomeTags.IS_RIVER",
+  "BlockTags.CAMPFIRES",
+  "BlockTags.ENTITIES_CAN_TELEPORT_TO",
+  "BlockTags.FIRE",
+  "and 17 more"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "FastRTP-1.5.10-26.3.jar",
   "published": "2026-09-15"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -84,5 +83,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 71
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own"
+ },
+ "lacks": 57
 }

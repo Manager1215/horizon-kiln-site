@@ -10,36 +10,36 @@
  "description": "Disguise any entity as mobs, players, or blocks visuals only, behavior stays.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.minecraft.SessionService",
   "com.mojang.authlib.properties.PropertyMap",
   "com.mojang.authlib.services.ProfileResult",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.loader.api.MappingResolver",
   "net.minecraft.client.player.RemotePlayer",
   "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.layers.ParrotOnShoulderLayer",
+  "net.minecraft.client.renderer.entity.player.AvatarRenderer",
   "net.minecraft.client.renderer.entity.state.AvatarRenderState",
   "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
   "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
-  "net.minecraft.commands.arguments.IdentifierArgument",
+  "net.minecraft.client.renderer.extract.LevelExtractor",
   "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.nbt.NbtIo",
   "net.minecraft.network.syncher.EntityDataAccessor",
   "net.minecraft.network.syncher.EntityDataSerializers",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.server.level.ChunkMap.TrackedEntity",
   "net.minecraft.world.entity.LivingEntity.SwingDescription",
   "net.minecraft.world.entity.LivingEntity.SwingState",
   "net.minecraft.world.entity.Pose",
+  "net.minecraft.world.entity.WalkAnimationState",
   "net.minecraft.world.entity.decoration.HangingEntity",
   "net.minecraft.world.entity.item.FallingBlockEntity",
   "net.minecraft.world.entity.monster.Creeper",
   "net.minecraft.world.entity.monster.cubemob.AbstractCubeMob",
   "net.minecraft.world.entity.monster.piglin.Piglin",
+  "net.minecraft.world.entity.player.PlayerSkin.Patch",
   "net.minecraft.world.entity.projectile.ProjectileUtil",
   "net.minecraft.world.entity.raid.Raider",
   "net.minecraft.world.level.storage.LevelResource",
@@ -57,8 +57,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "morphica-26.3.jar",
   "published": "2026-10-23"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 135
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes; has network channels"
+ },
+ "lacks": 138
 }

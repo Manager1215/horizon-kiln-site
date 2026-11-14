@@ -9,14 +9,55 @@
  "author": "Space Walker",
  "description": "A Fabric port of NarcolepticFrog's Redstone Multimeter mod",
  "needs": [
-  "Mixin"
+  "Mixin: 34 points inside the game's methods",
+  "com.mojang.blaze3d.framegraph.FrameGraphBuilder",
+  "com.mojang.blaze3d.framegraph.FramePass",
+  "net.minecraft.IdentifierException",
+  "net.minecraft.client.gui.screens.options.controls.ControlsScreen",
+  "net.minecraft.client.renderer.LevelRenderer",
+  "net.minecraft.client.renderer.LevelTargetBundle",
+  "net.minecraft.client.resources.language.ClientLanguage",
+  "net.minecraft.client.server.IntegratedServer",
+  "net.minecraft.client.tutorial.TutorialSteps",
+  "net.minecraft.network.protocol.PacketUtils",
+  "net.minecraft.server.ServerTickRateManager",
+  "net.minecraft.util.StringUtil",
+  "net.minecraft.world.level.BlockEventData",
+  "net.minecraft.world.level.NaturalSpawner",
+  "net.minecraft.world.level.NaturalSpawner.SpawnState",
+  "net.minecraft.world.level.block.BellBlock",
+  "net.minecraft.world.level.block.ComparatorBlock",
+  "net.minecraft.world.level.block.CopperBulbBlock",
+  "net.minecraft.world.level.block.CrafterBlock",
+  "net.minecraft.world.level.block.DaylightDetectorBlock",
+  "net.minecraft.world.level.block.DetectorRailBlock",
+  "net.minecraft.world.level.block.DiodeBlock",
+  "net.minecraft.world.level.block.EndPortalFrameBlock",
+  "net.minecraft.world.level.block.HopperBlock",
+  "net.minecraft.world.level.block.LecternBlock",
+  "net.minecraft.world.level.block.LeverBlock",
+  "net.minecraft.world.level.block.LightningRodBlock",
+  "net.minecraft.world.level.block.NoteBlock",
+  "net.minecraft.world.level.block.ObserverBlock",
+  "net.minecraft.world.level.block.PoweredRailBlock",
+  "net.minecraft.world.level.block.RedStoneOreBlock",
+  "net.minecraft.world.level.block.RedstoneLampBlock",
+  "net.minecraft.world.level.block.RedstoneTorchBlock",
+  "net.minecraft.world.level.block.RedstoneWallTorchBlock",
+  "net.minecraft.world.level.block.RedstoneWireBlock",
+  "net.minecraft.world.level.block.RepeaterBlock",
+  "net.minecraft.world.level.block.SculkSensorBlock",
+  "net.minecraft.world.level.block.TargetBlock",
+  "net.minecraft.world.level.block.TrappedChestBlock",
+  "net.minecraft.world.level.block.TripWireBlock",
+  "and 69 more"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "redstone-multimeter-fabric-mc26.3-1.17.0.jar",
   "published": "2026-10-18"
  },
@@ -28,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -42,5 +83,9 @@
  "depends": [
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 109
 }

@@ -9,7 +9,6 @@
  "author": "Tricangel",
  "description": "Adds items to help run a post office.",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.client.rendering.v1.ClientTooltipComponentCallback",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
@@ -36,10 +35,12 @@
   "net.minecraft.network.chat.ComponentUtils",
   "net.minecraft.server.network.Filterable",
   "net.minecraft.server.network.FilteredText",
+  "net.minecraft.tags.ItemTags",
   "net.minecraft.util.StringUtil",
   "net.minecraft.world.entity.animal.equine.Horse",
   "net.minecraft.world.inventory.ClickAction",
   "net.minecraft.world.inventory.DispenserMenu",
+  "net.minecraft.world.inventory.ShulkerBoxSlot",
   "net.minecraft.world.item.TooltipFlag.Default",
   "net.minecraft.world.item.component.ResolvableProfile",
   "net.minecraft.world.item.component.WritableBookContent",
@@ -48,16 +49,14 @@
   "net.minecraft.world.level.block.SelectableSlotContainer",
   "net.minecraft.world.level.block.entity.SkullBlockEntity",
   "net.minecraft.world.level.storage.loot.LootParams.DynamicDrop",
-  "PoseStack.translate()",
-  "Axis.ZP",
-  "and 58 more"
+  "and 60 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "spamton-26.3-r1.jar",
   "published": "2026-09-23"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 135
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 128
 }

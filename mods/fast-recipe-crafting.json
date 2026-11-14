@@ -1,0 +1,58 @@
+{
+ "id": "fast-recipe-crafting",
+ "name": "Fast Recipe Crafting",
+ "version": "1.0.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/fast-recipe-crafting",
+ "author": "CardeJIbka",
+ "description": "A mod that lets you double-click or hold a recipe in the book to craft it instantly — hold Shift to fill max ingredients.",
+ "needs": [
+  "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
+  "net.minecraft.client.gui.screens.recipebook.RecipeCollection",
+  "net.minecraft.world.inventory.AbstractFurnaceMenu",
+  "org.lwjgl.sdl.SDLMouse",
+  "InputConstants.isKeyDown()",
+  "MultiPlayerGameMode.handlePlaceRecipe()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "fastrecipecrafting-26.3-fabric-1.0.0.jar",
+  "published": "2026-11-08"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 6
+}

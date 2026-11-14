@@ -9,35 +9,26 @@
  "author": "syorito-hatsuki",
  "description": "BlueMap addon that allow to use custom skin server",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.server.Bootstrap",
   "ServerPlayerEvents.JOIN",
   "ServerLifecycleEvents.SERVER_STARTED",
-  "Commands.LEVEL_ADMINS",
-  "Commands.hasPermission()",
-  "MutableComponent.withStyle()",
-  "Style.withClickEvent()",
-  "Style.withHoverEvent()",
-  "Style.withUnderlined()",
   "Style.withoutShadow()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.services()",
-  "ServerPlayer.getGameProfile()"
+  "ServerPlayer.getGameProfile()",
+  "PlayerList.getPlayer()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "bluemap-custom-skin-server-2026.9.2.jar",
   "published": "2026-09-29"
  },
@@ -49,8 +40,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -66,5 +57,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 21
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 12
 }

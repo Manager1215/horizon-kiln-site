@@ -10,9 +10,7 @@
  "description": "Getting tired of the constant chest monsters and overflowing storage systems? Ultimate Compression is a mod created to reduce storage requirements by compressing almost all vanilla Minecraft blocks & items! The mod also includes custom tools and armor created with the compressed variants of ingots and their respective ores, with increased durability and effects.",
  "needs": [
   "net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.minecraft.client.renderer.BiomeColors",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.level.FoliageColor",
   "net.minecraft.world.level.block.FallingBlock",
@@ -21,8 +19,6 @@
   "net.minecraft.world.level.storage.loot.providers.number.floats.ResolvableFloat.Constant",
   "net.minecraft.world.level.storage.loot.providers.number.ints.ResolvableInt.Constant",
   "BiomeModifications.addFeature()",
-  "ServerTickEvents.END_SERVER_TICK",
-  "MinecraftServer.getPlayerList()",
   "ServerPlayer.tickCount",
   "SoundEvents.ARMOR_EQUIP_COPPER",
   "SoundEvents.ARMOR_EQUIP_NETHERITE",
@@ -49,14 +45,18 @@
   "SoundType.SNOW",
   "SoundType.SOUL_SAND",
   "SoundType.SOUL_SOIL",
-  "and 31 more"
+  "SoundType.TUFF",
+  "SoundType.WOOL",
+  "BlockBehaviour.Properties.isSuffocating()",
+  "BlockBehaviour.Properties.isViewBlocking()",
+  "and 29 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ultimatecompression-26.3-3.5.0_fabric.jar",
   "published": "2026-09-15"
  },
@@ -68,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 76
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 72
 }

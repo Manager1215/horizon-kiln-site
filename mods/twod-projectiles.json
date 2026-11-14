@@ -9,14 +9,36 @@
  "author": "Gauraaaaaaaa",
  "description": "Makes projectiles (arrows, firework rockets, trident, etc.) look 2D!",
  "needs": [
-  "Mixin"
+  "Mixin: 5 points inside the game's methods",
+  "net.minecraft.client.renderer.entity.ArrowRenderer",
+  "net.minecraft.client.renderer.entity.FireworkEntityRenderer",
+  "net.minecraft.client.renderer.entity.ThrownItemRenderer",
+  "net.minecraft.client.renderer.entity.ThrownTridentRenderer",
+  "net.minecraft.client.renderer.entity.layers.ArrowLayer",
+  "net.minecraft.client.renderer.entity.layers.StuckInBodyLayer",
+  "net.minecraft.client.renderer.entity.state.ArrowRenderState",
+  "net.minecraft.client.renderer.entity.state.FireworkRocketRenderState",
+  "net.minecraft.client.renderer.entity.state.ThrownItemRenderState",
+  "net.minecraft.client.renderer.entity.state.ThrownTridentRenderState",
+  "net.minecraft.world.entity.projectile.FireworkRocketEntity",
+  "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
+  "net.minecraft.world.entity.projectile.arrow.Arrow",
+  "net.minecraft.world.entity.projectile.arrow.ThrownTrident",
+  "Axis.ZP",
+  "Axis.of()",
+  "EntityRendererProvider.Context.getItemModelResolver()",
+  "ItemModelResolver.updateForNonLiving()",
+  "Entity.getXRot()",
+  "Entity.getYRot()",
+  "Items.ARROW",
+  "Items.TIPPED_ARROW"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "twod_projectiles-fabric-26.3-1.1.1.jar",
   "published": "2026-11-02"
  },
@@ -28,8 +50,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -45,5 +67,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 22
 }

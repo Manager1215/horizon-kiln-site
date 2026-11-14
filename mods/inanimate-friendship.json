@@ -9,13 +9,17 @@
  "author": "maity",
  "description": "Server-side rebalance of the Allay and Copper Golem",
  "needs": [
-  "Mixin",
+  "Mixin: 8 points inside the game's methods",
   "net.minecraft.world.entity.ai.Brain",
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
+  "net.minecraft.world.entity.ai.behavior.TransportItemsBetweenContainers",
   "net.minecraft.world.entity.ai.memory.MemoryModuleType",
   "net.minecraft.world.entity.ai.memory.MemoryStatus",
+  "net.minecraft.world.entity.ai.sensing.NearestItemSensor",
   "net.minecraft.world.entity.animal.allay.Allay",
+  "net.minecraft.world.entity.animal.allay.Allay.VibrationUser",
+  "net.minecraft.world.entity.animal.allay.AllayAi",
   "net.minecraft.world.entity.animal.golem.CopperGolem",
   "ServerLevel.sendParticles()",
   "SoundEvents.ALLAY_ITEM_GIVEN",
@@ -28,8 +32,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "inanimate-friendship-v1-mc26.3.jar",
   "published": "2026-09-17"
  },
@@ -44,5 +48,9 @@
  "depends": [
   "minecraft"
  ],
- "lacks": 13
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 17
 }

@@ -9,21 +9,23 @@
  "author": "philiipp06",
  "description": "Client-side Fabric tool for permitted world capture, customizable HUD widgets and Movement Tool badges, recovery, target-version export and optional movement assistance.",
  "needs": [
-  "Mixin",
+  "Mixin: 10 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "net.minecraft.SharedConstants",
+  "net.minecraft.client.gui.components.SpriteIconButton",
+  "net.minecraft.client.gui.screens.GenericMessageScreen",
+  "net.minecraft.client.gui.screens.LoadingOverlay",
+  "net.minecraft.client.gui.screens.Overlay",
   "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
   "net.minecraft.client.multiplayer.ClientChunkCache",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.client.player.ClientInput",
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.client.server.IntegratedServer",
-  "net.minecraft.gizmos.GizmoStyle",
   "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.nbt.NbtIo",
   "net.minecraft.network.chat.ComponentSerialization",
   "net.minecraft.network.protocol.game.ServerboundClientCommandPacket",
   "net.minecraft.network.protocol.game.ServerboundClientCommandPacket.Action",
+  "net.minecraft.server.packs.resources.ReloadInstance",
   "net.minecraft.world.entity.player.Input",
   "net.minecraft.world.level.LightLayer",
   "net.minecraft.world.level.block.ChestBlock",
@@ -36,6 +38,7 @@
   "net.minecraft.world.level.storage.LevelResource",
   "net.minecraft.world.level.storage.WorldData",
   "net.minecraft.world.phys.EntityHitResult",
+  "net.minecraft.world.phys.shapes.EntityCollisionContext",
   "NativeImage.fillRect()",
   "NativeImage.getHeight()",
   "NativeImage.getPixel()",
@@ -44,20 +47,17 @@
   "NativeImage.setPixel()",
   "Object2IntMap.Entry.getKey()",
   "AdvancementProgress.CODEC",
-  "KeyMapping.getTranslatedKeyMessage()",
-  "KeyMapping.isUnbound()",
-  "Minecraft.execute()",
-  "Minecraft.gameMode",
   "Minecraft.getCurrentServer()",
   "Minecraft.getSingleplayerServer()",
-  "and 46 more"
+  "Minecraft.isLocalPlayer()",
+  "and 49 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "worldbinder-1.7.0+mc26.1-26.3-fabric.jar",
   "published": "2026-10-28"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 203
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 192
 }

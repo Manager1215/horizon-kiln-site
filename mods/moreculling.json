@@ -1,7 +1,7 @@
 {
  "id": "moreculling",
  "name": "More Culling",
- "version": "1.9.1",
+ "version": "1.9.2",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,16 +10,57 @@
  "description": "A mod that changes how multiple types of culling are handled in order to improve performance",
  "needs": [
   "an access widener",
-  "Mixin"
+  "Mixin: 13 points inside the game's methods",
+  "com.mojang.blaze3d.vertex.DefaultVertexFormat",
+  "com.mojang.blaze3d.vertex.QuadInstance",
+  "com.mojang.blaze3d.vertex.SheetedDecalTextureGenerator",
+  "com.mojang.math.OctahedralGroup",
+  "com.mojang.math.Transformation",
+  "net.fabricmc.fabric.api.client.model.loading.v1.wrapper.WrapperBlockStateModel",
+  "net.fabricmc.fabric.api.client.renderer.v1.mesh.Mesh",
+  "net.fabricmc.fabric.api.client.renderer.v1.mesh.MutableMesh",
+  "net.fabricmc.fabric.impl.client.indigo.renderer.mesh.EncodingFormat",
+  "net.fabricmc.fabric.impl.client.indigo.renderer.mesh.MutableQuadViewImpl",
+  "net.minecraft.client.GameNarrator",
+  "net.minecraft.client.model.geom.builders.UVPair",
+  "net.minecraft.client.renderer.WeatherEffectRenderer",
+  "net.minecraft.client.renderer.block.dispatch.SingleVariant",
+  "net.minecraft.client.renderer.block.dispatch.WeightedVariants",
+  "net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel",
+  "net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel.Selector",
+  "net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel.SharedBakedState",
+  "net.minecraft.client.renderer.block.model.BlockModel",
+  "net.minecraft.client.renderer.blockentity.AbstractSignRenderer",
+  "net.minecraft.client.renderer.entity.ItemFrameRenderer",
+  "net.minecraft.client.renderer.entity.PaintingRenderer",
+  "net.minecraft.client.renderer.entity.state.ItemFrameRenderState",
+  "net.minecraft.client.renderer.entity.state.PaintingRenderState",
+  "net.minecraft.client.renderer.extract.LevelExtractor",
+  "net.minecraft.client.renderer.feature.FeatureRendererMap",
+  "net.minecraft.client.renderer.feature.phase.SimpleFeatureRenderPhase",
+  "net.minecraft.client.renderer.feature.submit.TranslucentSubmit",
+  "net.minecraft.client.renderer.state.MapRenderState",
+  "net.minecraft.client.resources.model.SimpleModelWrapper",
+  "net.minecraft.client.resources.model.cuboid.CuboidModel.Deserializer",
+  "net.minecraft.client.resources.model.cuboid.CuboidModelElement",
+  "net.minecraft.client.resources.model.cuboid.UnbakedCuboidGeometry",
+  "net.minecraft.core.IdMapper",
+  "net.minecraft.server.packs.resources.ReloadableResourceManager",
+  "net.minecraft.world.level.EmptyBlockGetter",
+  "net.minecraft.world.level.block.AbstractCandleBlock",
+  "net.minecraft.world.level.block.BaseRailBlock",
+  "net.minecraft.world.level.block.BaseTorchBlock",
+  "net.minecraft.world.level.block.Block.ShapePairKey",
+  "and 78 more"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "moreculling-fabric-26.3-1.9.1.jar",
-  "published": "2026-11-01"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "moreculling-fabric-26.3-1.9.2.jar",
+  "published": "2026-11-08"
  },
  "reports": {
   "works": 0,
@@ -29,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -47,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 130
 }

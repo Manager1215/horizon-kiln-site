@@ -9,17 +9,17 @@
  "author": "Jong",
  "description": "Adds server-controlled traders, which read their trades from config files and can update on the fly.",
  "needs": [
-  "Mixin",
-  "net.minecraft.commands.arguments.IdentifierArgument",
-  "net.minecraft.server.permissions.Permissions",
+  "Mixin: 15 points inside the game's methods",
+  "net.minecraft.core.component.DataComponentPatch.Builder",
   "net.minecraft.world.entity.npc.villager.Villager",
   "net.minecraft.world.entity.npc.villager.VillagerData",
   "net.minecraft.world.entity.npc.villager.VillagerProfession",
   "net.minecraft.world.entity.npc.villager.VillagerType",
-  "net.minecraft.world.inventory.ContainerInput",
   "net.minecraft.world.inventory.MerchantContainer",
+  "net.minecraft.world.item.component.ResolvableProfile.Static",
   "net.minecraft.world.item.trading.ItemCost",
   "net.minecraft.world.item.trading.MerchantOffer",
+  "net.minecraft.world.level.block.entity.SignBlockEntity",
   "SharedSuggestionProvider.suggestResource()",
   "ItemInput.createItemStack()",
   "Registry.getOrThrow()",
@@ -28,10 +28,10 @@
   "BuiltInRegistries.VILLAGER_PROFESSION",
   "BuiltInRegistries.VILLAGER_TYPE",
   "MinecraftServer.createCommandSourceStack()",
-  "ServerPlayer.sendSystemMessage()",
   "ExtraCodecs.NON_EMPTY_STRING",
   "ExtraCodecs.RESOURCE_PATH_CODEC",
   "EntityTypes.VILLAGER",
+  "LivingEntity.<init>()",
   "Player.getYHeadRot()",
   "MenuType.GENERIC_9x1",
   "MenuType.GENERIC_9x2",
@@ -54,8 +54,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "servertraders-1.2.3+26.3.jar",
   "published": "2026-10-13"
  },
@@ -67,8 +67,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -83,5 +83,9 @@
   "fabricloader",
   "minecraft"
  ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
  "lacks": 39
 }

@@ -9,18 +9,27 @@
  "author": "CyberFlame",
  "description": "Allows the user to change viewmodels",
  "needs": [
-  "Mixin",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
-  "Screen.mouseClicked()",
-  "Screen.mouseScrolled()"
+  "net.minecraft.client.model.effects.SpearAnimations",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState",
+  "net.minecraft.client.renderer.state.level.PlayerRenderState",
+  "net.minecraft.world.entity.LivingEntity.SwingDescription",
+  "net.minecraft.world.item.CrossbowItem",
+  "net.minecraft.world.item.ItemUseAnimation",
+  "net.minecraft.world.item.ShieldItem",
+  "Axis.YN",
+  "Axis.ZP",
+  "DataComponents.MAP_ID",
+  "HumanoidArm.getOpposite()",
+  "ItemStack.getUseAnimation()",
+  "Items.CROSSBOW"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "viewmodel-26.3.jar",
   "published": "2026-09-22"
  },
@@ -32,8 +41,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -49,5 +58,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 4
+ "softOff": {
+  "class": "restart",
+  "why": "@overwrite into the game's classes"
+ },
+ "lacks": 14
 }

@@ -9,7 +9,7 @@
  "author": "BoboFraggins",
  "description": "Farm mobs with style!",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.vertex.QuadInstance",
   "com.mojang.math.Transformation",
@@ -31,9 +31,9 @@
   "net.fabricmc.fabric.api.transfer.v1.storage.base.FilteringStorage",
   "net.fabricmc.fabric.api.transfer.v1.storage.base.InsertionOnlyStorage",
   "net.minecraft.advancements.triggers.CriteriaTriggers",
+  "net.minecraft.advancements.triggers.InventoryChangeTrigger",
   "net.minecraft.advancements.triggers.ItemUsedOnLocationTrigger",
   "net.minecraft.advancements.triggers.LootTableTrigger",
-  "net.minecraft.client.CameraType",
   "net.minecraft.client.Screenshot",
   "net.minecraft.client.gui.render.GuiItemAtlas",
   "net.minecraft.client.gui.render.GuiItemAtlas.SlotView",
@@ -43,21 +43,21 @@
   "net.minecraft.client.model.geom.ModelPart.Visitor",
   "net.minecraft.client.model.object.skull.SkullModelBase",
   "net.minecraft.client.model.object.skull.SkullModelBase.State",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.client.particle.FlyTowardsPositionParticle",
   "net.minecraft.client.particle.FlyTowardsPositionParticle.EnchantProvider",
   "net.minecraft.client.particle.Particle",
   "net.minecraft.client.particle.ParticleProvider",
   "net.minecraft.client.particle.SingleQuadParticle",
   "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
+  "net.minecraft.client.renderer.blockentity.EnchantTableRenderer",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "mobfarmingsupplies-26.3.0.7-fabric.jar",
   "published": "2026-10-26"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 581
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; generates in the world"
+ },
+ "lacks": 553
 }

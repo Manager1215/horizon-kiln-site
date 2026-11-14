@@ -9,17 +9,20 @@
  "author": "Aell_",
  "description": "Litematica draws your schematic in Bobby's chunks — as far as you can see.",
  "needs": [
-  "Mixin",
+  "Mixin: 10 points inside the game's methods",
   "net.minecraft.client.multiplayer.ClientChunkCache",
-  "Minecraft.schedule()",
+  "net.minecraft.client.renderer.LevelRenderer",
+  "net.minecraft.client.renderer.fog.FogRenderer",
+  "net.minecraft.client.server.IntegratedServer",
+  "net.minecraft.world.level.lighting.LightEngine",
   "ClientLevel.getChunkSource()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "litematica_bobby_fix-1.1.7+26.3.jar",
   "published": "2026-10-05"
  },
@@ -37,5 +40,9 @@
   "litematica",
   "minecraft"
  ],
- "lacks": 3
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 6
 }

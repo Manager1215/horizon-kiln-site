@@ -9,7 +9,6 @@
  "author": "FireDragon1",
  "description": "Powerful emerald equipment with bonus Fortune and XP, ore highlighting, Zombie Villager curing, and rebalanced Trading Gems.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.BeforeGizmos",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
@@ -27,7 +26,6 @@
   "GameRenderer.mainCamera()",
   "RegistryAccess.lookupOrThrow()",
   "MinecraftServer.execute()",
-  "DamageSource.getEntity()",
   "ExperienceOrb.award()",
   "Item.Properties.enchantable()",
   "Item.Properties.spear()",
@@ -50,14 +48,15 @@
   "Blocks.DEEPSLATE_EMERALD_ORE",
   "Blocks.DEEPSLATE_GOLD_ORE",
   "Blocks.DEEPSLATE_IRON_ORE",
-  "and 24 more"
+  "Blocks.DEEPSLATE_LAPIS_ORE",
+  "and 21 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Emerald Enhancements-1.1.4.jar",
   "published": "2026-10-01"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 64
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 61
 }

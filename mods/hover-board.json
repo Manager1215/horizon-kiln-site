@@ -9,7 +9,6 @@
  "author": "OldManPlaysGames",
  "description": "Fly like Marty McFly with this premium Hoverboard mod!",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
@@ -20,6 +19,7 @@
   "net.minecraft.client.model.geom.builders.MeshDefinition",
   "net.minecraft.client.model.geom.builders.PartDefinition",
   "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
+  "net.minecraft.client.resources.sounds.AbstractTickableSoundInstance",
   "net.minecraft.core.particles.DustParticleOptions",
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
@@ -38,26 +38,25 @@
   "SynchedEntityData.set()",
   "ServerLevel.sendParticles()",
   "SoundEvents.BRUSH_GENERIC",
-  "DamageSource.getEntity()",
-  "DamageSource.is()",
+  "Entity.getVehicle()",
   "LivingEntity.<init>()",
   "LivingEntity.addAdditionalSaveData()",
   "LivingEntity.createLivingAttributes()",
   "LivingEntity.defineSynchedData()",
-  "LivingEntity.die()",
   "LivingEntity.positionRider()",
   "LivingEntity.readAdditionalSaveData()",
   "LivingEntity.setPose()",
-  "LivingEntity.tick()",
   "LivingEntity.travel()",
-  "and 12 more"
+  "Player.isSecondaryUseActive()",
+  "Player.startRiding()",
+  "and 10 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "hoverboard-1.0.2-26.3.jar",
   "published": "2026-09-29"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +84,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 52
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 50
 }

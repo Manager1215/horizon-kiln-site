@@ -10,7 +10,7 @@
  "description": "A mod all about lanterns and other light sources, focusing on small details.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 6 points inside the game's methods",
   "com.mojang.math.Quadrant",
   "net.fabricmc.fabric.api.blockgetter.v2.RenderDataBlockEntity",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin",
@@ -30,6 +30,9 @@
   "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
   "net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry",
   "net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags",
+  "net.minecraft.CrashReport",
+  "net.minecraft.CrashReportCategory",
+  "net.minecraft.SystemReport",
   "net.minecraft.client.data.models.ItemModelGenerators",
   "net.minecraft.client.data.models.model.ModelTemplate",
   "net.minecraft.client.data.models.model.ModelTemplates",
@@ -48,17 +51,14 @@
   "net.minecraft.core.particles.DustParticleOptions",
   "net.minecraft.data.PackOutput.PathProvider",
   "net.minecraft.data.PackOutput.Target",
-  "net.minecraft.gametest.framework.GameTestHelper",
-  "net.minecraft.references.BlockItemId",
-  "net.minecraft.server.packs.PackLocationInfo",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "auroraslanterns-2.2.0+26.3.jar",
   "published": "2026-09-16"
  },
@@ -82,5 +82,9 @@
   "minecraft",
   "yumi_mc_core"
  ],
- "lacks": 191
+ "softOff": {
+  "class": "restart",
+  "why": "@modify-args and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; generates in the world"
+ },
+ "lacks": 200
 }

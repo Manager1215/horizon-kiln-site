@@ -9,9 +9,18 @@
  "author": "BrekiTomasson",
  "description": "Adds new slime and honey block colors through dye.",
  "needs": [
-  "Mixin",
+  "Mixin: 7 points inside the game's methods",
+  "net.minecraft.core.particles.BlockParticleOption",
+  "net.minecraft.world.entity.ai.behavior.LongJumpToRandomPos",
+  "net.minecraft.world.entity.monster.breeze.Breeze",
+  "net.minecraft.world.entity.monster.breeze.LongJump",
   "net.minecraft.world.level.block.HoneyBlock",
   "net.minecraft.world.level.block.SlimeBlock",
+  "net.minecraft.world.level.block.piston.PistonMovingBlockEntity",
+  "net.minecraft.world.level.block.piston.PistonStructureResolver",
+  "net.minecraft.world.level.pathfinder.WalkNodeEvaluator",
+  "ParticleTypes.BLOCK",
+  "ServerLevel.sendParticles()",
   "DyeColor.getName()",
   "Blocks.HONEY_BLOCK",
   "Blocks.SLIME_BLOCK",
@@ -21,8 +30,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "coloredslime-1.13.0+mc26.3.jar",
   "published": "2026-09-16"
  },
@@ -34,8 +43,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -51,5 +60,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 6
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 15
 }

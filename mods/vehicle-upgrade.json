@@ -10,20 +10,20 @@
  "description": "Bring tons of quality-of-life improvements to your rides. Enjoy more reliable, and more capable mounts.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 5 points inside the game's methods",
   "net.minecraft.advancements.triggers.CriteriaTriggers",
   "net.minecraft.advancements.triggers.PlayerInteractTrigger",
   "net.minecraft.client.gui.components.ImageButton",
   "net.minecraft.client.gui.components.WidgetSprites",
   "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-  "net.minecraft.client.gui.components.debug.DebugScreenEntries",
   "net.minecraft.client.gui.components.debug.DebugScreenEntry",
   "net.minecraft.client.gui.screens.inventory.AbstractMountInventoryScreen",
   "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
   "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.client.player.FirstPersonHandsAndItems",
   "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
+  "net.minecraft.client.renderer.rendertype.RenderSetup",
+  "net.minecraft.client.renderer.rendertype.RenderSetup.TextureBinding",
   "net.minecraft.data.AtlasIds",
   "net.minecraft.network.chat.contents.objects.AtlasSprite",
   "net.minecraft.server.TickTask",
@@ -34,6 +34,7 @@
   "net.minecraft.world.entity.EntityAttachments",
   "net.minecraft.world.entity.EntityDimensions",
   "net.minecraft.world.entity.HasCustomInventoryScreen",
+  "net.minecraft.world.entity.PlayerRideableJumping",
   "net.minecraft.world.entity.ai.attributes.AttributeMap",
   "net.minecraft.world.entity.ai.attributes.RangedAttribute",
   "net.minecraft.world.entity.ai.goal.Goal",
@@ -50,15 +51,14 @@
   "net.minecraft.world.entity.vehicle.boat.AbstractBoat.Status",
   "net.minecraft.world.inventory.AbstractMountInventoryMenu",
   "net.minecraft.world.inventory.ArmorSlot",
-  "net.minecraft.world.phys.shapes.EntityCollisionContext",
-  "and 60 more"
+  "and 62 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "vehicleupgrade-v26.3.0-mc26.3.x+fabric.jar",
   "published": "2026-09-29"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "minecraft",
   "puzzleslib"
  ],
- "lacks": 142
+ "softOff": {
+  "class": "partial",
+  "why": "data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 161
 }

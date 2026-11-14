@@ -9,7 +9,6 @@
  "author": "tomalbrc",
  "description": "Fully Server-side tiny fighters / clay / terracotta soldiers. No client-mods, no resource pack needed!",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
@@ -21,7 +20,6 @@
   "net.minecraft.network.chat.RemoteChatSession.Data",
   "net.minecraft.network.protocol.game.ClientboundPlayerInfoUpdatePacket.Entry",
   "net.minecraft.network.protocol.game.ClientboundUpdateAttributesPacket.AttributeSnapshot",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.tags.DamageTypeTags",
   "net.minecraft.world.entity.SpawnPlacementTypes",
   "net.minecraft.world.entity.SpawnPlacements",
@@ -47,17 +45,18 @@
   "ServerLevel.getNearbyEntities()",
   "ServerLevel.sendParticles()",
   "ServerPlayer.connection",
+  "ServerGamePacketListenerImpl.send()",
   "SoundEvents.EMPTY",
   "SoundEvents.GRAVEL_BREAK",
-  "DamageSource.is()",
-  "and 38 more"
+  "DamageSources.genericKill()",
+  "and 35 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "microfighters-1.1.3+26.3.jar",
   "published": "2026-10-01"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -84,5 +83,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 78
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 75
 }

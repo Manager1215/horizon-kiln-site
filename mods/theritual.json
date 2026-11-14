@@ -1,0 +1,93 @@
+{
+ "id": "theritual",
+ "name": "The Ritual",
+ "version": "1.0.0-26.3.x",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/theritual",
+ "author": "TOP_G2026",
+ "description": "Ritual horror Fabric mod: build rune-circle altars, offer sacrifices, and summon the Moder and its watching, stalking, and roaring aspects.",
+ "needs": [
+  "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
+  "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
+  "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
+  "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
+  "net.minecraft.client.model.EntityModel",
+  "net.minecraft.client.particle.FlameParticle",
+  "net.minecraft.client.particle.FlameParticle.Provider",
+  "net.minecraft.client.renderer.entity.MobRenderer",
+  "net.minecraft.client.renderer.entity.layers.EyesLayer",
+  "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
+  "net.minecraft.network.syncher.EntityDataSerializers",
+  "net.minecraft.network.syncher.SynchedEntityData.Builder",
+  "net.minecraft.world.damagesource.DamageTypes",
+  "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
+  "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
+  "net.minecraft.world.entity.ai.goal.FloatGoal",
+  "net.minecraft.world.entity.ai.goal.GoalSelector",
+  "net.minecraft.world.entity.ai.goal.LookAtPlayerGoal",
+  "net.minecraft.world.entity.ai.goal.MeleeAttackGoal",
+  "net.minecraft.world.entity.ai.goal.RandomLookAroundGoal",
+  "net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal",
+  "net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal",
+  "net.minecraft.world.entity.monster.Monster",
+  "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
+  "net.minecraft.world.item.SpawnEggItem",
+  "net.minecraft.world.level.LightLayer",
+  "net.minecraft.world.level.material.PushReaction",
+  "JsonArray.forEach()",
+  "PoseStack.Pose.normal()",
+  "PoseStack.Pose.pose()",
+  "VertexConsumer.setLight()",
+  "VertexConsumer.setOverlay()",
+  "ModelPart.setRotation()",
+  "ModelPart.xScale",
+  "ModelPart.yScale",
+  "ModelPart.zScale",
+  "RenderTypes.eyes()",
+  "BlockPos.toShortString()",
+  "SynchedEntityData.defineId()",
+  "SynchedEntityData.get()",
+  "and 28 more"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "the-ritual-1.0.0-26.3.x.jar",
+  "published": "2026-10-28"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 68
+}

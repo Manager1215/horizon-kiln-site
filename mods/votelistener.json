@@ -9,36 +9,29 @@
  "author": "DrexHD",
  "description": "A vote listener for fabric using NuVotifier-Fabric",
  "needs": [
-  "Mixin",
   "net.fabricmc.api.DedicatedServerModInitializer",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.AfterSave",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.minecraft.TracingExecutor",
   "net.minecraft.core.UUIDUtil",
   "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.nbt.NbtIo",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.server.players.CachedUserNameToIdResolver",
   "net.minecraft.world.level.storage.LevelResource",
   "ServerLifecycleEvents.AFTER_SAVE",
   "ServerLifecycleEvents.SERVER_STARTING",
-  "CommandSourceStack.withEntity()",
-  "CommandSourceStack.withSuppressedOutput()",
-  "Commands.performPrefixedCommand()",
+  "NbtIo.readCompressed()",
   "MinecraftServer.createCommandSourceStack()",
-  "MinecraftServer.getCommands()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.getWorldPath()",
   "MinecraftServer.services()",
   "MinecraftServer.submit()",
-  "ServerPlayer.nameAndId()",
   "Util.nonCriticalIoPool()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "votelistener-1.1.2+26.3.jar",
   "published": "2026-09-28"
  },
@@ -58,5 +51,9 @@
   "java",
   "nuvotifier-fabric"
  ],
- "lacks": 22
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 16
 }

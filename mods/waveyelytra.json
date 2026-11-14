@@ -1,0 +1,84 @@
+{
+ "id": "waveyelytra",
+ "name": "WaveyElytra",
+ "version": "1.0.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/waveyelytra",
+ "author": "EnotikSergo",
+ "description": "Replaces the static elytra with simulated wings.",
+ "needs": [
+  "Mixin: 1 point inside the game's methods",
+  "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
+  "net.minecraft.client.renderer.entity.layers.WingsLayer",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.renderer.texture.DynamicTexture",
+  "net.minecraft.client.resources.model.EquipmentClientInfo",
+  "net.minecraft.client.resources.model.EquipmentClientInfo.Dyeable",
+  "net.minecraft.client.resources.model.EquipmentClientInfo.Layer",
+  "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
+  "net.minecraft.client.resources.sounds.AbstractTickableSoundInstance",
+  "net.minecraft.client.resources.sounds.ElytraOnPlayerSoundInstance",
+  "net.minecraft.world.item.component.DyedItemColor",
+  "NativeImage.getHeight()",
+  "NativeImage.getPixel()",
+  "NativeImage.getWidth()",
+  "NativeImage.isClosed()",
+  "NativeImage.read()",
+  "VertexConsumer.addVertex()",
+  "VertexConsumer.setLight()",
+  "VertexConsumer.setNormal()",
+  "VertexConsumer.setOverlay()",
+  "Int2ObjectMap.Entry.getValue()",
+  "ObjectIterator.hasNext()",
+  "ObjectIterator.next()",
+  "ObjectIterator.remove()",
+  "RenderTypes.armorCutoutNoCull()",
+  "RenderTypes.armorCutoutNoCullGlint()",
+  "EquipmentAssetManager.get()",
+  "LivingEntity.distanceToSqr()",
+  "LivingEntity.isCrouching()",
+  "LivingEntity.yBodyRot",
+  "ItemStack.hasFoil()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "waveyelytra-1.0.0.jar",
+  "published": "2026-11-01"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 31
+}

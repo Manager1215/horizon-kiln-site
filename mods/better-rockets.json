@@ -9,7 +9,6 @@
  "author": "maxiloo",
  "description": "Stores firework rockets to never run out of them in your elytra flight!",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.item.v1.ItemComponentTooltipProviderRegistry",
   "net.minecraft.world.entity.projectile.FireworkRocketEntity",
   "net.minecraft.world.inventory.ClickAction",
@@ -20,19 +19,18 @@
   "SoundEvents.BUNDLE_REMOVE_ONE",
   "ARGB.colorFromFloat()",
   "Entity.playSound()",
-  "Player.isFallFlying()",
   "Player.startUsingItem()",
   "Slot.allowModification()",
   "Item.inventoryTick()",
   "Items.FIREWORK_ROCKET",
   "Level.addFreshEntity()"
  ],
- "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "better-rockets-1.0.6+26.3.jar",
   "published": "2026-10-17"
  },
@@ -44,8 +42,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -61,5 +59,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 16
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 15
 }

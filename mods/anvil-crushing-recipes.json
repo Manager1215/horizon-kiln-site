@@ -9,30 +9,34 @@
  "author": "supersaiyansubtlety",
  "description": "Define what happens when an anvil lands on blocks or entities. Data driven.",
  "needs": [
-  "Mixin",
+  "Mixin: 5 points inside the game's methods",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.DoubleRuleBuilder",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
   "net.minecraft.core.HolderSet.Named",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
+  "net.minecraft.world.entity.EntitySelector",
+  "net.minecraft.world.entity.item.FallingBlockEntity",
   "net.minecraft.world.item.SpawnEggItem",
   "net.minecraft.world.item.component.BlockItemStateProperties",
   "net.minecraft.world.item.context.DirectionalPlaceContext",
+  "net.minecraft.world.level.block.AnvilBlock",
   "net.minecraft.world.level.block.BedBlock",
   "net.minecraft.world.level.block.FallingBlock",
   "net.minecraft.world.level.block.state.properties.BedPart",
+  "net.minecraft.world.level.entity.EntityAccess",
   "net.minecraft.world.level.gameevent.GameEvent.Context",
+  "net.minecraft.world.phys.shapes.BooleanOp",
   "ImmutableCollection.stream()",
   "ImmutableList.get()",
+  "ImmutableList.getFirst()",
   "ImmutableList.getLast()",
   "ImmutableList.size()",
   "ImmutableList.stream()",
   "ImmutableMap.size()",
   "ImmutableSet.size()",
   "ImmutableSet.stream()",
+  "BlockPos.betweenClosedStream()",
   "DefaultedRegistry.getOptional()",
   "NonNullList.isEmpty()",
   "Registry.get()",
@@ -43,21 +47,17 @@
   "StringTag.asString()",
   "ByteBufCodecs.collection()",
   "ByteBufCodecs.either()",
-  "CustomPacketPayload.codec()",
   "FileToIdConverter.json()",
   "Identifier.read()",
-  "ServerLevel.destroyBlock()",
   "ServerLevel.gameEvent()",
-  "ServerLevel.getGameRules()",
-  "ServerLevel.getPlayers()",
-  "and 21 more"
+  "and 37 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "anvil_crushing_recipes-2.8.0+MC26.3.x.jar",
   "published": "2026-09-29"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -84,5 +84,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 61
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 80
 }

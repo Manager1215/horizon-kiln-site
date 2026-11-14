@@ -1,0 +1,93 @@
+{
+ "id": "whostoppedthemusic",
+ "name": "Who Stopped The Music",
+ "version": "1.2.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/whostoppedthemusic",
+ "author": "OGMoo-cow",
+ "description": "Who Stopped The Music is a full soundtrack editor for Minecraft 26.3. Choose what music plays and when, using the game's soundtrack, music discs, or your own MP3 and OGG files.",
+ "needs": [
+  "Mixin: 4 points inside the game's methods",
+  "com.mojang.blaze3d.Blaze3D",
+  "com.mojang.blaze3d.audio.Channel",
+  "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
+  "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AllowKeyPress",
+  "net.fabricmc.fabric.api.client.screen.v1.Screens",
+  "net.minecraft.client.gui.components.BossHealthOverlay",
+  "net.minecraft.client.gui.components.toasts.NowPlayingToast",
+  "net.minecraft.client.gui.screens.AlertScreen",
+  "net.minecraft.client.gui.screens.WinScreen",
+  "net.minecraft.client.renderer.LevelEventHandler",
+  "net.minecraft.client.resources.sounds.Sound",
+  "net.minecraft.client.resources.sounds.Sound.Type",
+  "net.minecraft.client.sounds.AudioStream",
+  "net.minecraft.client.sounds.ChannelAccess",
+  "net.minecraft.client.sounds.ChannelAccess.ChannelHandle",
+  "net.minecraft.client.sounds.JOrbisAudioStream",
+  "net.minecraft.client.sounds.MusicManager",
+  "net.minecraft.client.sounds.MusicManager.MusicFrequency",
+  "net.minecraft.client.sounds.SoundBufferLibrary",
+  "net.minecraft.client.sounds.SoundManager.Preparations.1",
+  "net.minecraft.client.sounds.WeighedSoundEvents",
+  "net.minecraft.client.sounds.Weighted",
+  "net.minecraft.data.registries.VanillaRegistries",
+  "net.minecraft.sounds.Music",
+  "net.minecraft.sounds.Musics",
+  "net.minecraft.util.Keyframe",
+  "net.minecraft.util.KeyframeTrack",
+  "net.minecraft.util.valueproviders.ConstantFloat",
+  "net.minecraft.util.valueproviders.MultipliedFloats",
+  "net.minecraft.util.valueproviders.SampledFloat",
+  "net.minecraft.world.attribute.BackgroundMusic",
+  "net.minecraft.world.item.JukeboxSong",
+  "net.minecraft.world.level.dimension.BuiltinDimensionTypes",
+  "net.minecraft.world.level.levelgen.WorldDimensions",
+  "net.minecraft.world.level.levelgen.presets.WorldPresets",
+  "net.minecraft.world.timeline.AttributeTrack",
+  "net.minecraft.world.timeline.Timeline",
+  "Camera.blockPosition()",
+  "KeyMapping.matches()",
+  "Minecraft.gameDirectory",
+  "and 43 more"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "whostoppedthemusic-1.2.0.jar",
+  "published": "2026-11-07"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 83
+}

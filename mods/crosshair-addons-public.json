@@ -1,7 +1,7 @@
 {
  "id": "crosshair-addons-public",
  "name": "Crosshair Addons Public",
- "version": "2.2.0+26.3",
+ "version": "2.2.2+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,20 +9,22 @@
  "author": "Walksy",
  "description": "Provides helpful icons around the crosshair when certain conditions are met.",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.CameraType",
+  "net.minecraft.world.entity.projectile.FireworkRocketEntity",
+  "net.minecraft.world.item.component.Fireworks",
   "Minecraft.crosshairPickEntity",
-  "Options.getCameraType()",
-  "DefaultedRegistry.entrySet()"
+  "DefaultedRegistry.entrySet()",
+  "DataComponents.FIREWORKS",
+  "ClientboundGameEventPacket.PLAY_ARROW_HIT_SOUND",
+  "ClientboundGameEventPacket.getEvent()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "CrosshairAddons-2.2.0+26.3.jar",
-  "published": "2026-10-09"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "CrosshairAddons-2.2.2+26.3.jar",
+  "published": "2026-11-11"
  },
  "reports": {
   "works": 0,
@@ -32,8 +34,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -49,5 +51,9 @@
   "minecraft",
   "walksylib"
  ],
- "lacks": 4
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 7
 }

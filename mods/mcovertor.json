@@ -9,20 +9,32 @@
  "author": "_1ms",
  "description": "Seamless Tor integration into Minecraft, resulting in a free vpn with over 3000 possible IP addresses.",
  "needs": [
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
+  "io.netty.bootstrap.Bootstrap",
+  "io.netty.channel.Channel",
+  "io.netty.channel.ChannelHandler",
+  "io.netty.channel.ChannelPipeline",
+  "io.netty.handler.proxy.Socks5ProxyHandler",
+  "net.minecraft.client.gui.components.SpriteIconButton",
+  "net.minecraft.client.gui.components.SpriteIconButton.Builder",
+  "net.minecraft.client.gui.screens.ConnectScreen",
+  "net.minecraft.client.gui.screens.ConnectScreen.1",
   "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
+  "net.minecraft.client.multiplayer.ServerStatusPinger",
+  "net.minecraft.client.multiplayer.resolver.ServerAddress",
+  "net.minecraft.network.Connection.1",
+  "net.minecraft.network.protocol.handshake.ClientIntentionPacket",
   "org.apache.commons.io.FileUtils",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
-  "Minecraft.execute()",
+  "RemovalNotification.getKey()",
+  "RemovalNotification.getValue()",
   "ConfirmLinkScreen.confirmLink()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "McOverTor-1.9.2.jar",
   "published": "2026-10-01"
  },
@@ -34,8 +46,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -49,5 +61,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 6
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 18
 }

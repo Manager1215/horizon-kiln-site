@@ -10,9 +10,10 @@
  "description": "VoxelMap x SeedMapper is a heavily modified fork of VoxelMap that integrates SeedMapper directly into the client and extends VoxelMap with advanced chunk overlays, data sharing, and world-map tooling.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.buffers.Std140Builder",
+  "com.mojang.blaze3d.platform.SDLEventHandler",
   "com.mojang.blaze3d.platform.TextureUtil",
   "com.mojang.blaze3d.platform.Transparency",
   "com.mojang.blaze3d.platform.cursor.CursorTypes",
@@ -33,16 +34,15 @@
   "net.minecraft.ReportedException",
   "net.minecraft.SharedConstants",
   "net.minecraft.TracingExecutor",
-  "net.minecraft.client.CameraType",
   "net.minecraft.client.GameNarrator",
+  "net.minecraft.client.SectionUpdateTracker",
   "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
-  "net.minecraft.client.gui.components.Button.Plain",
-  "net.minecraft.client.gui.components.Tooltip",
-  "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
+  "net.minecraft.client.gui.screens.ManageServerScreen",
   "net.minecraft.client.gui.screens.OutOfMemoryScreen",
   "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
   "net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner",
   "net.minecraft.client.gui.screens.inventory.tooltip.TooltipRenderUtil",
+  "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
   "net.minecraft.client.model.EntityModel",
   "net.minecraft.client.model.HumanoidModel",
   "net.minecraft.client.model.animal.fish.CodModel",
@@ -57,8 +57,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "voxelmap-x-seedmapper_26.3_fabric_v0.15.jar",
   "published": "2026-10-20"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 772
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels"
+ },
+ "lacks": 726
 }

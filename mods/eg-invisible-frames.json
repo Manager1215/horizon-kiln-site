@@ -9,17 +9,42 @@
  "author": "enchanted-games",
  "description": "A simple, survival-friendly way to make Item Frames invisible! Fully server side",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
+  "com.mojang.math.Transformation",
+  "net.minecraft.util.Brightness",
+  "net.minecraft.world.entity.Display",
+  "net.minecraft.world.entity.Display.TextDisplay",
+  "net.minecraft.world.entity.decoration.BlockAttachedEntity",
+  "net.minecraft.world.entity.decoration.GlowItemFrame",
+  "net.minecraft.world.entity.decoration.HangingEntity",
   "net.minecraft.world.entity.decoration.ItemFrame",
   "BuiltInRegistries.TRIGGER_TYPES",
-  "LootItemCondition.CODEC"
+  "SynchedEntityData.get()",
+  "ServerLevel.getGameRules()",
+  "ServerPlayer.connection",
+  "ServerPlayer.distanceTo()",
+  "ServerPlayer.hasLineOfSight()",
+  "ServerGamePacketListenerImpl.send()",
+  "Entity.<init>()",
+  "EntityTypes.TEXT_DISPLAY",
+  "CustomData.copyTag()",
+  "GameRules.ENTITY_DROPS",
+  "GameRules.get()",
+  "LootItemCondition.CODEC",
+  "AABB.deflate()",
+  "AABB.getXsize()",
+  "AABB.getYsize()",
+  "AABB.getZsize()",
+  "AABB.minX",
+  "AABB.minY",
+  "AABB.minZ"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "eg_invisible_frames-2.3.1+26.3-fabric.jar",
   "published": "2026-09-25"
  },
@@ -31,8 +56,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -46,5 +71,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 3
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 28
 }

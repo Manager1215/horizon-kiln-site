@@ -10,18 +10,22 @@
  "description": "Fast nvidia only rendering engine for sodium",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 4 points inside the game's methods",
   "com.mojang.renderpearl.api.vertex.VertexFormat.Builder",
+  "com.mojang.renderpearl.backend.opengl.GlCommandEncoder",
   "com.mojang.renderpearl.backend.opengl.GlConst",
+  "com.mojang.renderpearl.backend.opengl.GlDevice",
   "com.mojang.renderpearl.backend.opengl.GlSampler",
   "com.mojang.renderpearl.backend.opengl.GlStateManager",
   "com.mojang.renderpearl.backend.opengl.GlTexture",
+  "com.mojang.renderpearl.frontend.FrontendCommandEncoder",
   "com.mojang.renderpearl.frontend.FrontendRenderPass",
   "com.mojang.renderpearl.util.TextureViewAndSampler",
   "net.fabricmc.loader.api.metadata.CustomValue",
   "net.minecraft.client.TextureFilteringMethod",
   "net.minecraft.client.renderer.LevelRenderer",
   "net.minecraft.client.renderer.ShaderDefines.Builder",
+  "net.minecraft.client.renderer.fog.FogRenderer",
   "net.minecraft.util.Util.OS",
   "org.lwjgl.opengl.ARBDirectStateAccess",
   "org.lwjgl.opengl.ARBSparseBuffer",
@@ -47,18 +51,14 @@
   "org.lwjgl.opengl.GLCapabilities",
   "org.lwjgl.opengl.NVMeshShader",
   "org.lwjgl.opengl.NVRepresentativeFragmentTest",
-  "org.lwjgl.opengl.NVShaderBufferLoad",
-  "org.lwjgl.opengl.NVUniformBufferUnifiedMemory",
-  "org.lwjgl.opengl.NVVertexBufferUnifiedMemory",
-  "org.lwjgl.opengl.NVXGPUMemoryInfo",
-  "and 27 more"
+  "and 31 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "nvidium-0.4.4-beta7-26.3.jar",
   "published": "2026-09-23"
  },
@@ -77,5 +77,9 @@
   "minecraft",
   "sodium"
  ],
- "lacks": 67
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 71
 }

@@ -9,11 +9,7 @@
  "author": "shiba.jr",
  "description": "ShibaGrace is a server-side Fabric mod granting new players a 45-min PvP protection grace period. It features smart chat warnings and visual indicators—like a scoreboard prefix and floating feather drone—to easily identify protected players.",
  "needs": [
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.class_10741",
   "net.minecraft.class_124",
   "net.minecraft.class_1268",
@@ -48,15 +44,16 @@
   "net.minecraft.class_8113",
   "net.minecraft.class_8113.class_8114",
   "net.minecraft.class_8113.class_8122",
-  "ServerTickEvents.END_SERVER_TICK",
-  "and 3 more"
+  "MinecraftServer.method_30002()",
+  "MinecraftServer.method_3760()",
+  "MinecraftServer.method_3845()"
  ],
  "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ShibaGrace-Universal-1.0.4.jar",
   "published": "2026-10-18"
  },
@@ -68,8 +65,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -83,5 +80,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 43
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 38
 }

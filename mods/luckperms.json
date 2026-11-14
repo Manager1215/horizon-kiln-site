@@ -9,7 +9,6 @@
  "author": "lucko",
  "description": "A permissions plugin/mod for Minecraft servers.",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.api.DedicatedServerModInitializer",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
@@ -21,9 +20,6 @@
   "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents.QueryStart",
   "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking",
   "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginSynchronizer",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.fabric.api.permission.v1.MutablePermissionContext",
   "net.fabricmc.fabric.api.permission.v1.PermissionContext",
   "net.fabricmc.fabric.api.permission.v1.PermissionContext.Key",
@@ -39,25 +35,28 @@
   "net.minecraft.server.level.ServerPlayerGameMode",
   "net.minecraft.server.network.ConfigurationTask",
   "net.minecraft.server.network.ConfigurationTask.Type",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.server.network.ServerLoginPacketListenerImpl",
-  "net.minecraft.server.permissions.LevelBasedPermissionSet",
-  "net.minecraft.server.permissions.Permission.Atom",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.server.players.ServerOpList",
   "net.minecraft.server.rcon.RconConsoleSource",
   "net.minecraft.world.level.dimension.BuiltinDimensionTypes",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "ImmutableList.stream()",
-  "and 37 more"
+  "ImmutableSet.stream()",
+  "JsonArray.forEach()",
+  "ServerLifecycleEvents.SERVER_STARTED",
+  "ServerLifecycleEvents.SERVER_STARTING",
+  "ServerLifecycleEvents.SERVER_STOPPING",
+  "ModContainer.getPath()",
+  "RegistryAccess.EMPTY",
+  "Registries.DIMENSION_TYPE",
+  "MinecraftServer.createCommandSourceStack()",
+  "and 17 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "LuckPerms-Fabric-5.5.85.jar",
   "published": "2026-09-19"
  },
@@ -82,5 +81,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 77
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels"
+ },
+ "lacks": 57
 }

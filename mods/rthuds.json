@@ -9,19 +9,19 @@
  "author": "RodinToprak",
  "description": "RTHuds is a modular and modern HUD system that lets players customize how on-screen information is organized and displayed. It focuses on clarity, flexibility, and performance, offering a clean interface suitable for all gameplay styles.",
  "needs": [
-  "Mixin",
+  "net.minecraft.client.gui.components.SpriteIconButton",
+  "net.minecraft.client.gui.components.SpriteIconButton.Builder",
+  "net.minecraft.client.gui.screens.options.OptionsScreen",
   "Camera.xRot()",
   "Camera.yRot()",
-  "GameRenderer.mainCamera()",
-  "MutableComponent.setStyle()",
-  "MutableComponent.withStyle()"
+  "GameRenderer.mainCamera()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "RTHuds-26.3-5.3.0.jar",
   "published": "2026-10-03"
  },
@@ -33,8 +33,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -50,5 +50,9 @@
   "minecraft",
   "yet_another_config_lib_v3"
  ],
- "lacks": 5
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 6
 }

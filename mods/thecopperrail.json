@@ -1,0 +1,59 @@
+{
+ "id": "thecopperrail",
+ "name": "The Copper Rail",
+ "version": "0.9.12",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/thecopperrail",
+ "author": "iluha168",
+ "description": "Copper rail is a directional rail. It would push any minecart over it, without the need of a block on one side to start the movement.",
+ "needs": [
+  "Mixin: 4 points inside the game's methods",
+  "net.minecraft.world.entity.vehicle.minecart.OldMinecartBehavior",
+  "net.minecraft.world.level.block.PoweredRailBlock",
+  "net.minecraft.world.level.block.state.properties.RailShape",
+  "Items.ACTIVATOR_RAIL",
+  "Blocks.POWERED_RAIL",
+  "BlockStateProperties.INVERTED",
+  "LootTable.Builder.modifyPools()"
+ ],
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "thecopperrail-0.9.12.jar",
+  "published": "2026-11-09"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 7
+}

@@ -1,0 +1,70 @@
+{
+ "id": "cursor-crosshair",
+ "name": "Cursor Crosshair",
+ "version": "1.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/cursor-crosshair",
+ "author": "JacobStar_",
+ "description": "Free your crosshair from the center of the screen and control it with your mouse—interact with blocks, entities, and hotbar slots without moving the camera.",
+ "needs": [
+  "Mixin: 3 points inside the game's methods",
+  "net.minecraft.world.entity.EntitySelector",
+  "net.minecraft.world.entity.projectile.ProjectileUtil",
+  "net.minecraft.world.phys.EntityHitResult",
+  "org.lwjgl.sdl.SDLMouse",
+  "InputConstants.grabMouse()",
+  "InputConstants.releaseMouse()",
+  "InputConstants.Type.getOrCreate()",
+  "Window.handle()",
+  "Window.isFocused()",
+  "Camera.forwardVector()",
+  "Camera.getFov()",
+  "Camera.leftVector()",
+  "Camera.upVector()",
+  "KeyMapping.click()",
+  "Minecraft.crosshairPickEntity",
+  "MouseHandler.setIgnoreFirstMove()",
+  "Gui.overlay()",
+  "GuiGraphicsExtractor.nextStratum()",
+  "ClientLevel.clip()",
+  "LocalPlayer.blockInteractionRange()",
+  "LocalPlayer.entityInteractionRange()",
+  "LocalPlayer.getViewVector()",
+  "GameRenderer.mainCamera()",
+  "RenderPipelines.CROSSHAIR",
+  "BlockPos.containing()",
+  "Direction.getApproximateNearest()",
+  "Entity.getBoundingBox()",
+  "AABB.expandTowards()",
+  "AABB.inflate()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "cursor-crosshair-1.3-mc26.3-fabric.jar",
+  "published": "2026-09-26"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "entrypoints": {},
+ "mixins": true,
+ "depends": [
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 29
+}

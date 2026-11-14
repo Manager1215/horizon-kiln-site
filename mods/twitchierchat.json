@@ -10,7 +10,7 @@
  "description": "Server side fabric mod to make minecraft chat more like twitch's. Adds emotes, name colors, replies and much more.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "io.netty.channel.Channel",
   "io.netty.channel.ChannelFuture",
@@ -31,34 +31,34 @@
   "net.fabricmc.api.DedicatedServerModInitializer",
   "net.fabricmc.fabric.api.entity.FakePlayer",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.minecraft.commands.arguments.GameProfileArgument",
-  "net.minecraft.commands.arguments.IdentifierArgument",
   "net.minecraft.commands.arguments.MessageArgument",
   "net.minecraft.commands.synchronization.SuggestionProviders",
   "net.minecraft.data.AtlasIds",
-  "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
-  "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-  "net.minecraft.network.chat.ComponentContents",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
   "net.minecraft.network.chat.OutgoingChatMessage",
   "net.minecraft.network.chat.OutgoingChatMessage.Player",
   "net.minecraft.network.chat.PlayerChatMessage",
   "net.minecraft.network.chat.contents.ObjectContents",
-  "net.minecraft.network.chat.contents.PlainTextContents",
   "net.minecraft.network.chat.contents.objects.AtlasSprite",
   "net.minecraft.network.chat.contents.objects.ObjectInfo",
   "net.minecraft.network.chat.contents.objects.PlayerSprite",
-  "and 46 more"
+  "net.minecraft.server.MinecraftServer.ServerResourcePackInfo",
+  "net.minecraft.server.dedicated.DedicatedPlayerList",
+  "net.minecraft.server.dedicated.DedicatedServer",
+  "net.minecraft.server.network.ConfigurationTask",
+  "net.minecraft.server.network.ConfigurationTask.Type",
+  "net.minecraft.server.network.Filterable",
+  "net.minecraft.server.network.FilteredText",
+  "net.minecraft.server.network.ServerConnectionListener.1",
+  "net.minecraft.server.network.config.ServerResourcePackConfigurationTask",
+  "net.minecraft.util.CommonColors",
+  "and 26 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "TwitchierChat-1.4+26.3.jar",
   "published": "2026-09-19"
  },
@@ -78,5 +78,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 86
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 66
 }

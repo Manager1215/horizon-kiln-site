@@ -9,17 +9,39 @@
  "author": "BVengo",
  "description": "Have complete control over the volume of every sound in the game, with both global and region-based audio controls.",
  "needs": [
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
+  "net.minecraft.client.OptionInstance.CaptionBasedToString",
+  "net.minecraft.client.OptionInstance.TooltipSupplier",
+  "net.minecraft.client.OptionInstance.UnitDouble",
+  "net.minecraft.client.OptionInstance.ValueUpdateListener",
+  "net.minecraft.client.gui.components.SubtitleOverlay",
+  "net.minecraft.client.gui.components.tabs.MenuTabBar",
+  "net.minecraft.client.gui.components.tabs.MenuTabBar.Builder",
+  "net.minecraft.client.gui.components.tabs.Tab",
+  "net.minecraft.client.gui.components.tabs.TabManager",
+  "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
+  "net.minecraft.client.gui.layouts.LinearLayout",
+  "net.minecraft.client.gui.screens.options.OptionsSubScreen",
+  "net.minecraft.client.gui.screens.options.SoundOptionsScreen",
   "net.minecraft.client.resources.sounds.TickableSoundInstance",
   "net.minecraft.world.level.storage.LevelResource",
   "net.minecraft.world.level.storage.WorldData",
   "Minecraft.getCurrentServer()",
   "Minecraft.getSingleplayerServer()",
+  "OptionInstance.<init>()",
+  "OptionInstance.createButton()",
+  "OptionInstance.noTooltip()",
+  "ScreenRectangle.bottom()",
+  "ScreenRectangle.left()",
+  "ScreenRectangle.top()",
   "ServerData.ip",
-  "SoundManager.getAvailableSounds()",
   "SoundManager.isActive()",
-  "SoundManager.stop()",
+  "SoundManager.refreshCategoryVolume()",
+  "CommonComponents.GUI_CANCEL",
+  "CommonComponents.GUI_DONE",
+  "CommonComponents.OPTION_OFF",
+  "Component.translationArg()",
   "MinecraftServer.getWorldData()",
   "MinecraftServer.getWorldPath()"
  ],
@@ -27,8 +49,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "soundcontroller-fabric-1.4.1-mc26.3.jar",
   "published": "2026-09-16"
  },
@@ -40,8 +62,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -57,5 +79,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 12
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method and @wrap-operation into the game's classes"
+ },
+ "lacks": 34
 }

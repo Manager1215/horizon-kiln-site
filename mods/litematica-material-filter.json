@@ -9,33 +9,22 @@
  "author": "EnotikSergo",
  "description": "Litematica addon: filtering materials in the Info HUD by search query",
  "needs": [
-  "Mixin",
   "com.mojang.blaze3d.platform.cursor.CursorTypes",
-  "net.minecraft.world.item.component.BundleContents",
   "ImmutableList.isEmpty()",
-  "KeyMapping.getTranslatedKeyMessage()",
-  "Minecraft.execute()",
-  "Minecraft.setScreenAndShow()",
   "Options.getEffectiveRenderDistance()",
-  "Font.plainSubstrByWidth()",
   "GuiGraphicsExtractor.nextStratum()",
   "GuiGraphicsExtractor.requestCursor()",
-  "EditBox.setBordered()",
-  "EditBox.setHint()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseReleased()",
   "BlockPos.MutableBlockPos.set()",
-  "DefaultedRegistry.wrapAsHolder()",
-  "DataComponents.BUNDLE_CONTENTS",
-  "ItemContainerContents.nonEmptyItemCopyStream()"
+  "Entity.getEyePosition()",
+  "Entity.getViewVector()",
+  "Level.clip()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "litematica-material-filter-1.0.5+26.3.jar",
   "published": "2026-11-04"
  },
@@ -47,8 +36,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -65,5 +54,9 @@
   "malilib",
   "minecraft"
  ],
- "lacks": 19
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 9
 }

@@ -9,31 +9,50 @@
  "author": "Stachelbeere1248",
  "description": "An all-in-one mod for Hypixel Zombies. Targets speedrunners as well as casual players.",
  "needs": [
-  "Mixin",
+  "Mixin: 7 points inside the game's methods",
+  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
+  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
   "net.minecraft.client.multiplayer.chat.ChatListener",
-  "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-  "org.apache.logging.log4j.LogBuilder",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
+  "net.minecraft.client.renderer.LevelRenderer",
+  "net.minecraft.client.renderer.ScreenEffectRenderer",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.RenderLayerParent",
+  "net.minecraft.client.renderer.entity.layers.CapeLayer",
+  "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
+  "net.minecraft.client.renderer.feature.FlameFeatureRenderer",
+  "net.minecraft.client.renderer.feature.FlameFeatureRenderer.Submit",
+  "net.minecraft.client.renderer.rendertype.LayeringTransform",
+  "net.minecraft.client.renderer.rendertype.RenderSetup",
+  "net.minecraft.client.renderer.rendertype.RenderSetup.OutlineProperty",
+  "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
+  "net.minecraft.world.entity.EntityDimensions",
+  "net.minecraft.world.entity.Pose",
+  "BlendFunction.TRANSLUCENT",
+  "RenderPipeline.builder()",
   "Camera.getFov()",
-  "Minecraft.execute()",
   "Minecraft.levelRenderer",
   "Gui.chatListener()",
   "LocalPlayer.getViewXRot()",
   "LocalPlayer.getViewYRot()",
   "GameRenderer.mainCamera()",
+  "RenderPipelines.ENTITY_SNIPPET",
+  "RenderPipelines.OIT_ENTITY",
+  "RenderPipelines.register()",
+  "RenderType.create()",
+  "RenderTypes.armorCutoutNoCull()",
+  "RenderTypes.entityTranslucentEmissive()",
   "LevelRenderState.lastEntityRenderStateCount",
   "Component.translationArg()",
-  "MutableComponent.setStyle()",
-  "MutableComponent.withStyle()",
-  "Style.withClickEvent()"
+  "Util.memoize()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "zombiesutils-3.1.2.jar",
   "published": "2026-10-17"
  },
@@ -45,8 +64,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -64,5 +83,9 @@
   "yet_another_config_lib_v3",
   "zombiesutils-core"
  ],
- "lacks": 17
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 36
 }

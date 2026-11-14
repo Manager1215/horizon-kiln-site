@@ -10,14 +10,10 @@
  "description": "A player to player trading system with a server-wide market.",
  "needs": [
   "an access widener",
-  "Mixin",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
-  "net.minecraft.client.gui.components.Tooltip",
+  "net.minecraft.client.gui.screens.inventory.ContainerScreen",
   "net.minecraft.client.renderer.blockentity.ChestRenderer",
   "net.minecraft.core.UUIDUtil",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.server.level.ServerPlayerGameMode",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.entity.ContainerUser",
   "net.minecraft.world.entity.ai.gossip.GossipContainer",
@@ -29,9 +25,8 @@
   "net.minecraft.world.inventory.DataSlot",
   "net.minecraft.world.inventory.MenuType.MenuSupplier",
   "net.minecraft.world.item.TooltipFlag.Default",
-  "net.minecraft.world.item.alchemy.Potion",
-  "net.minecraft.world.item.alchemy.PotionContents",
   "net.minecraft.world.item.trading.ItemCost",
+  "net.minecraft.world.item.trading.Merchant",
   "net.minecraft.world.item.trading.MerchantOffer",
   "net.minecraft.world.level.block.ChestBlock",
   "net.minecraft.world.level.block.entity.ChestBlockEntity",
@@ -39,26 +34,30 @@
   "net.minecraft.world.timeline.Timeline",
   "net.minecraft.world.timeline.Timelines",
   "Object2IntMap.Entry.getKey()",
-  "Minecraft.execute()",
-  "Minecraft.hitResult",
   "Options.advancedItemTooltips",
-  "Font.plainSubstrByWidth()",
   "Font.split()",
   "GuiGraphicsExtractor.fakeItem()",
   "GuiGraphicsExtractor.text()",
-  "Button.setTooltip()",
   "EditBox.canConsumeInput()",
-  "EditBox.setEditable()",
-  "EditBox.setHint()",
   "ToastManager.getNotificationDisplayTimeMultiplier()",
-  "and 47 more"
+  "AbstractContainerScreen.containerTick()",
+  "DefaultedRegistry.iterator()",
+  "Holder.Reference.areComponentsBound()",
+  "HolderLookup.Provider.lookup()",
+  "HolderLookup.RegistryLookup.get()",
+  "RegistryAccess.get()",
+  "DataComponents.STORED_ENCHANTMENTS",
+  "ByteBufCodecs.stringUtf8()",
+  "ResourceKey.codec()",
+  "MinecraftServer.getAllLevels()",
+  "and 43 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "[26.3] Open Trade [1.5.0].jar",
   "published": "2026-10-17"
  },
@@ -70,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -90,5 +89,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 103
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels"
+ },
+ "lacks": 84
 }

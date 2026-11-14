@@ -9,8 +9,9 @@
  "author": "FreezePhoenix",
  "description": "Improving Vanilla Experience and Performance",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.references.BlockItemId",
+  "net.minecraft.util.datafix.schemas.V1460",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.inventory.HopperMenu",
   "net.minecraft.world.inventory.MenuType.MenuSupplier",
@@ -25,13 +26,10 @@
   "net.minecraft.world.level.gameevent.vibrations.VibrationSystem.Ticker",
   "net.minecraft.world.level.gameevent.vibrations.VibrationSystem.User",
   "net.minecraft.world.phys.shapes.BooleanOp",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "StorageUtil.getRedstoneSignal()",
   "StorageUtil.tryInsertStacking()",
   "BlockPos.MutableBlockPos.setWithOffset()",
   "Component.translatableWithFallback()",
-  "FeatureFlagSet.of()",
   "MenuType.<init>()",
   "Level.getSignal()",
   "Block.column()",
@@ -41,12 +39,12 @@
   "Shapes.empty()",
   "Shapes.join()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "BetterMod-3.2.0.jar",
   "published": "2026-09-18"
  },
@@ -58,8 +56,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -76,5 +74,9 @@
   "freezelib",
   "minecraft"
  ],
- "lacks": 30
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-method into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 28
 }

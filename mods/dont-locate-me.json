@@ -14,21 +14,16 @@
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
   "net.fabricmc.fabric.api.permission.v1.PermissionNode",
-  "net.minecraft.server.permissions.PermissionCheck",
-  "net.minecraft.server.permissions.PermissionCheck.Require",
-  "net.minecraft.server.permissions.Permissions",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.server.players.ServerOpList",
   "net.minecraft.server.players.StoredUserEntry",
   "net.minecraft.server.players.UserWhiteList",
   "ServerPlayerEvents.JOIN",
   "CommandSourceStack.checkPermission()",
-  "CommandSourceStack.getServer()",
-  "Commands.hasPermission()",
   "MinecraftServer.getGameRules()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.overworld()",
   "ServerPlayer.getGameProfile()",
+  "PlayerList.getOps()",
+  "PlayerList.getWhiteList()",
   "Attributes.WAYPOINT_TRANSMIT_RANGE",
   "GameRules.LOCATOR_BAR",
   "GameRules.get()"
@@ -37,8 +32,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "dont-locate-me-26.3.jar",
   "published": "2026-09-17"
  },
@@ -50,8 +45,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -66,5 +61,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 23
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 18
 }

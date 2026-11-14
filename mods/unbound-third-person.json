@@ -9,41 +9,50 @@
  "author": "Xeonz",
  "description": "360 Free-Look Camera Mod for Fabric, Forge, and NeoForge",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.CameraType",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.client.player.ClientInput",
+  "net.minecraft.client.player.KeyboardInput",
   "net.minecraft.world.entity.animal.equine.AbstractHorse",
   "net.minecraft.world.entity.player.Input",
+  "net.minecraft.world.entity.projectile.ProjectileUtil",
   "net.minecraft.world.entity.vehicle.boat.Boat",
   "net.minecraft.world.item.BowItem",
   "net.minecraft.world.item.CrossbowItem",
   "net.minecraft.world.item.TridentItem",
-  "Options.getCameraType()",
-  "Options.keyAttack",
-  "Options.keyUse",
-  "Options.setCameraType()",
+  "net.minecraft.world.level.block.IronBarsBlock",
+  "net.minecraft.world.phys.EntityHitResult",
+  "Minecraft.crosshairPickEntity",
+  "LocalPlayer.blockInteractionRange()",
+  "LocalPlayer.entityInteractionRange()",
+  "LocalPlayer.getEyePosition()",
   "LocalPlayer.getUseItem()",
   "LocalPlayer.getVehicle()",
   "LocalPlayer.input",
-  "LocalPlayer.isFallFlying()",
   "LocalPlayer.isPassenger()",
   "LocalPlayer.isUsingItem()",
   "LocalPlayer.isVisuallyCrawling()",
-  "LocalPlayer.setSprinting()",
   "LocalPlayer.setXRot()",
   "LocalPlayer.setYRot()",
   "LocalPlayer.xRotO",
   "LocalPlayer.yRotO",
+  "BlockPos.containing()",
   "Mth.rotLerp()",
+  "Entity.getBoundingBox()",
+  "Entity.getEyePosition()",
+  "Entity.isPickable()",
+  "Entity.isSpectator()",
   "Entity.setYRot()",
-  "Entity.yRotO"
+  "Entity.yRotO",
+  "Level.clip()",
+  "AABB.expandTowards()",
+  "AABB.inflate()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "UnboundThirdPerson-mc26.3-v1.0.6-fabric.jar",
   "published": "2026-10-15"
  },
@@ -55,8 +64,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -71,5 +80,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 27
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 36
 }

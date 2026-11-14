@@ -1,7 +1,7 @@
 {
  "id": "glow-paste",
  "name": "Glow Paste",
- "version": "1.0.1-fabric-mc26.3",
+ "version": "1.0.2-fabric-mc26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,39 +10,57 @@
  "description": "Allows making any block emit light with Glow Paste!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 9 points inside the game's methods",
   "net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags",
+  "net.minecraft.client.renderer.LevelRenderer",
+  "net.minecraft.client.renderer.extract.LevelExtractor",
   "net.minecraft.nbt.NbtAccounter",
+  "net.minecraft.server.level.ServerPlayerGameMode",
+  "net.minecraft.server.network.PlayerChunkSender",
+  "net.minecraft.world.level.EmptyBlockGetter",
+  "net.minecraft.world.level.block.Block.UpdateFlags",
+  "net.minecraft.world.level.chunk.ImposterProtoChunk",
+  "net.minecraft.world.level.chunk.LevelChunk.PostLoadProcessor",
+  "net.minecraft.world.level.chunk.ProtoChunk",
+  "net.minecraft.world.level.chunk.storage.SerializableChunkData",
+  "net.minecraft.world.level.lighting.BlockLightEngine",
+  "net.minecraft.world.level.lighting.LightEngine",
+  "net.minecraft.world.level.lighting.LightEngine.QueueEntry",
   "ShortIterator.hasNext()",
   "ShortSet.clear()",
   "ShortSet.size()",
+  "Camera.blockPosition()",
+  "ClientLevel.getChunk()",
+  "ClientLevel.getLightEngine()",
+  "LevelRenderState.getData()",
+  "LevelRenderState.setData()",
+  "BlockPos.MutableBlockPos.set()",
+  "BlockPos.MutableBlockPos.set()",
+  "SectionPos.asLong()",
+  "SectionPos.getZeroNode()",
   "ListTag.add()",
   "ListTag.iterator()",
   "FriendlyByteBuf.readChunkPos()",
   "FriendlyByteBuf.readNbt()",
-  "FriendlyByteBuf.readVarInt()",
-  "FriendlyByteBuf.writeBoolean()",
-  "FriendlyByteBuf.writeByte()",
   "FriendlyByteBuf.writeChunkPos()",
-  "FriendlyByteBuf.writeVarInt()",
+  "Player.blockInteractionRange()",
+  "Player.getEyeY()",
   "Player.playSound()",
   "Player.preventsBlockDrops()",
   "Level.getChunk()",
   "Block.popResourceFromFace()",
-  "SoundType.getHitSound()",
-  "BlockState.getSoundType()",
+  "BlockState.getVisualShape()",
   "ChunkAccess.getMinY()",
-  "ChunkAccess.markUnsaved()",
-  "ChunkSource.getLightEngine()"
+  "and 7 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "glowpaste-1.0.1-fabric-mc26.3.jar",
-  "published": "2026-11-01"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "glowpaste-1.0.2-fabric-mc26.3.jar",
+  "published": "2026-11-06"
  },
  "reports": {
   "works": 0,
@@ -52,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -70,5 +88,9 @@
   "minecraft",
   "supermartijn642corelib"
  ],
- "lacks": 23
+ "softOff": {
+  "class": "partial",
+  "why": "data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 47
 }

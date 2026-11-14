@@ -9,27 +9,28 @@
  "author": "tech.anupam",
  "description": "G1axCrystalOptimizer optimizes end crystal placement and breaking with efficient client-side processing, reducing perceived delay and delivering a faster, smoother Crystal PvP experience.",
  "needs": [
-  "Mixin",
   "net.minecraft.SharedConstants",
-  "net.minecraft.network.chat.HoverEvent",
-  "PacketSender.sendPacket()",
+  "net.minecraft.network.protocol.game.ServerboundInteractPacket",
+  "net.minecraft.world.entity.boss.enderdragon.EndCrystal",
+  "net.minecraft.world.item.EndCrystalItem",
+  "net.minecraft.world.phys.EntityHitResult",
   "ChatFormatting.getByCode()",
-  "Minecraft.execute()",
   "Minecraft.getCurrentServer()",
   "Minecraft.isLocalServer()",
+  "ClientLevel.clip()",
+  "ClientLevel.getEntities()",
   "ServerData.ip",
-  "RegistryFriendlyByteBuf.readVarInt()",
-  "RegistryFriendlyByteBuf.writeBoolean()",
-  "RegistryFriendlyByteBuf.writeVarInt()",
-  "MutableComponent.withStyle()",
-  "Style.withHoverEvent()"
+  "LocalPlayer.getViewVector()",
+  "Entity.isAlive()",
+  "Entity.setRemoved()",
+  "Blocks.OBSIDIAN"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "g1axcrystaloptimizer-1.0.7.jar",
   "published": "2026-10-02"
  },
@@ -41,8 +42,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -56,5 +57,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 13
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels"
+ },
+ "lacks": 15
 }

@@ -9,13 +9,11 @@
  "author": "RaiseEvent200",
  "description": "Old Menu restores the compact Minecraft 26.1 title and pause-menu layouts in Minecraft Java Edition 26.2.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.screen.v1.Screens",
   "net.minecraft.SharedConstants",
   "net.minecraft.client.gui.components.FriendsButton",
   "net.minecraft.client.gui.components.SpriteIconButton",
   "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.components.WidgetSprites",
   "net.minecraft.client.gui.layouts.FrameLayout",
   "net.minecraft.client.gui.layouts.GridLayout",
@@ -27,35 +25,26 @@
   "net.minecraft.client.gui.screens.social.SocialInteractionsScreen",
   "net.minecraft.client.multiplayer.chat.report.ReportingContext",
   "net.minecraft.client.server.IntegratedServer",
-  "net.minecraft.network.chat.ComponentContents",
-  "net.minecraft.network.chat.contents.TranslatableContents",
   "net.minecraft.util.CommonLinks",
   "Minecraft.getReportingContext()",
   "Minecraft.getSingleplayerServer()",
   "Minecraft.isLocalServer()",
   "MouseHandler.grabMouse()",
-  "AbstractWidget.getMessage()",
-  "AbstractWidget.setPosition()",
-  "Button.setTooltip()",
-  "Button.Builder.tooltip()",
-  "Button.Builder.width()",
   "ConfirmLinkScreen.confirmLink()",
-  "Screen.children()",
   "ClientLevel.DEFAULT_QUIT_MESSAGE",
   "ClientPacketListener.getSeenPlayers()",
   "ClientPacketListener.showDialog()",
   "LocalPlayer.getStats()",
   "CommonComponents.disconnectButtonLabel()",
-  "Component.getContents()",
   "CommonDialogData.computeExternalTitle()",
   "DataVersion.isSideSeries()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "old-menu-1.1.0.jar",
   "published": "2026-10-05"
  },
@@ -73,5 +62,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 39
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 29
 }

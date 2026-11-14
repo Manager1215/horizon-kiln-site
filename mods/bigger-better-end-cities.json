@@ -9,16 +9,33 @@
  "author": "The-Architects727",
  "description": "Rewrites end city generation to be bigger and better",
  "needs": [
-  "Mixin",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger"
+  "Mixin: 1 point inside the game's methods",
+  "net.minecraft.world.level.levelgen.structure.Structure.GenerationContext",
+  "net.minecraft.world.level.levelgen.structure.structures.EndCityPieces",
+  "net.minecraft.world.level.levelgen.structure.structures.EndCityPieces.EndCityPiece",
+  "net.minecraft.world.level.levelgen.structure.structures.EndCityStructure",
+  "net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings",
+  "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate",
+  "BlockPos.rotate()",
+  "Rotation.getRotated()",
+  "BoundingBox.getCenter()",
+  "BoundingBox.maxX()",
+  "BoundingBox.maxY()",
+  "BoundingBox.maxZ()",
+  "BoundingBox.minX()",
+  "BoundingBox.minY()",
+  "BoundingBox.minZ()",
+  "StructurePiece.findCollisionPiece()",
+  "StructurePiece.getBoundingBox()",
+  "StructurePiece.getGenDepth()",
+  "StructurePiece.setGenDepth()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "bigger_end_cities-26.1-26.3-1.1.3.jar",
   "published": "2026-09-28"
  },
@@ -30,8 +47,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -46,5 +63,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 2
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 19
 }

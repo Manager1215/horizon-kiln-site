@@ -9,15 +9,15 @@
  "author": "Walksy",
  "description": "Handles eating client-side, ensuring servers don't slow down the eating process",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
+  "Mixin: 5 points inside the game's methods",
+  "net.minecraft.client.player.FirstPersonHandsAndItems",
   "net.minecraft.world.entity.EntityEvent",
   "net.minecraft.world.item.ItemCooldowns",
   "net.minecraft.world.item.ItemUseAnimation",
   "net.minecraft.world.item.component.Consumable",
   "net.minecraft.world.item.consume_effects.ConsumeEffect",
   "net.minecraft.world.item.consume_effects.PlaySoundConsumeEffect",
-  "Minecraft.gameMode",
+  "MultiPlayerGameMode.releaseUsingItem()",
   "LocalPlayer.getCooldowns()",
   "LocalPlayer.getEntityData()",
   "LocalPlayer.getRandom()",
@@ -25,7 +25,6 @@
   "LocalPlayer.getUseItemRemainingTicks()",
   "LocalPlayer.getUsedItemHand()",
   "LocalPlayer.isUsingItem()",
-  "LocalPlayer.setSprinting()",
   "LocalPlayer.stopUsingItem()",
   "DataComponents.CONSUMABLE",
   "ClientboundEntityEventPacket.getEntity()",
@@ -40,8 +39,8 @@
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ConsumableOptimizer-2.2.3+26.3.jar",
   "published": "2026-10-10"
  },
@@ -61,5 +60,9 @@
   "minecraft",
   "walksylib"
  ],
- "lacks": 25
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 24
 }

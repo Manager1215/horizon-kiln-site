@@ -1,7 +1,7 @@
 {
  "id": "music-disc-maker",
  "name": "Music Disc Maker",
- "version": "3.1.3+fabric-26.3",
+ "version": "3.1.4+fabric-26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,7 +9,9 @@
  "author": "KURONAMI",
  "description": "Craft playable music discs from YouTube, Spotify, SoundCloud, and other audio links.",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
+  "com.mojang.blaze3d.audio.Channel",
+  "com.mojang.blaze3d.audio.Library",
   "net.fabricmc.fabric.api.client.model.loading.v1.ExtraModelKey",
   "net.fabricmc.fabric.api.client.model.loading.v1.FabricModelManager",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin",
@@ -18,22 +20,22 @@
   "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ClientTooltipComponentCallback",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
+  "net.fabricmc.fabric.api.client.sound.v1.FabricSoundInstance",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.Unload",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.minecraft.client.InputType",
   "net.minecraft.client.StringSplitter",
   "net.minecraft.client.color.item.ItemTintSource",
   "net.minecraft.client.color.item.ItemTintSources",
-  "net.minecraft.client.gui.components.Tooltip",
+  "net.minecraft.client.gui.screens.inventory.tooltip.ClientTextTooltip",
   "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
+  "net.minecraft.client.model.HumanoidModel",
   "net.minecraft.client.model.geom.ModelLayers",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
+  "net.minecraft.client.renderer.LevelEventHandler",
+  "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
   "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperties",
   "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty",
   "net.minecraft.client.renderer.texture.DynamicTexture",
@@ -42,24 +44,22 @@
   "net.minecraft.client.resources.sounds.Sound.Type",
   "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.client.sounds.AudioStream",
+  "net.minecraft.client.sounds.ChannelAccess",
+  "net.minecraft.client.sounds.ChannelAccess.ChannelHandle",
   "net.minecraft.client.sounds.SoundBufferLibrary",
   "net.minecraft.client.sounds.WeighedSoundEvents",
   "net.minecraft.core.component.DataComponentPatch.SplitResult",
   "net.minecraft.core.dispenser.MinecartDispenseItemBehavior",
-  "net.minecraft.network.chat.contents.TranslatableContents",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
-  "net.minecraft.util.StringUtil",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "music_disc_maker-3.1.3+fabric-26.3.jar",
-  "published": "2026-11-04"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "music_disc_maker-3.1.4+fabric-26.3.jar",
+  "published": "2026-11-11"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 225
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 175
 }

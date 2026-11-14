@@ -9,7 +9,6 @@
  "author": "MixBadGun",
  "description": "The stools which can be placed, sit, and even thrown into the air as a bomb.",
  "needs": [
-  "Mixin",
   "com.mojang.math.Transformation",
   "net.fabricmc.fabric.api.client.model.loading.v1.UnbakedModelDeserializer",
   "net.fabricmc.fabric.api.client.renderer.v1.Renderer",
@@ -21,10 +20,11 @@
   "net.minecraft.client.renderer.entity.ThrownItemRenderer",
   "net.minecraft.client.renderer.entity.state.ThrownItemRenderState",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile",
   "net.minecraft.world.item.ItemCooldowns",
+  "net.minecraft.world.level.block.piston.PistonBaseBlock",
   "net.minecraft.world.level.block.piston.PistonMovingBlockEntity",
+  "net.minecraft.world.level.block.piston.PistonStructureResolver",
   "net.minecraft.world.phys.EntityHitResult",
   "PoseStack.mulPose()",
   "ModelState.transformation()",
@@ -33,11 +33,8 @@
   "ItemTransforms.NO_TRANSFORMS",
   "TextureSlots.getMaterial()",
   "TextureSlots.parseTextureMap()",
-  "Commands.LEVEL_GAMEMASTERS",
-  "Commands.hasPermission()",
-  "Direction.getApproximateNearest()",
   "ServerPlayer.connection",
-  "SoundEvents.ANVIL_PLACE",
+  "ServerGamePacketListenerImpl.send()",
   "SoundEvents.SNOWBALL_THROW",
   "Entity.<init>()",
   "Entity.getPassengerRidingPosition()",
@@ -50,14 +47,16 @@
   "Mob.startRiding()",
   "Player.getCooldowns()",
   "Player.hasCorrectToolForDrops()",
-  "and 24 more"
+  "Player.isSecondaryUseActive()",
+  "Player.startRiding()",
+  "and 21 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "mbgstool-fabric-26.3-33333.0.2+26.3.jar",
   "published": "2026-11-04"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 64
+ "softOff": {
+  "class": "partial",
+  "why": "data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 61
 }

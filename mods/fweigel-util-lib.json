@@ -9,17 +9,10 @@
  "author": "fweigel-dev",
  "description": "Shared client-side utility library for my Fabric mods. Provides common rendering, storage, UI, and sound utilities.",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
   "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.world.level.storage.LevelResource",
-  "ClientPlayNetworking.canSend()",
-  "Minecraft.execute()",
   "Minecraft.getCurrentServer()",
   "Minecraft.getSingleplayerServer()",
-  "Minecraft.setScreenAndShow()",
-  "AbstractWidget.setPosition()",
   "ServerData.ip",
   "SoundInstance.getOrResolve()",
   "SoundInstance.getSound()",
@@ -27,12 +20,12 @@
   "Entity.getBbHeight()",
   "Entity.isAlive()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fweigel-util-lib-1.7.0.jar",
   "published": "2026-10-11"
  },
@@ -50,5 +43,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 16
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 10
 }

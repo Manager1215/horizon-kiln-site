@@ -9,7 +9,7 @@
  "author": "yiyihehe",
  "description": "Craft faster, manage containers smarter, and build from Litematica schematics with less friction.",
  "needs": [
-  "Mixin",
+  "Mixin: 11 points inside the game's methods",
   "com.mojang.blaze3d.Blaze3D",
   "com.mojang.blaze3d.buffers.Std140Builder",
   "com.mojang.blaze3d.pipeline.TextureTarget",
@@ -27,37 +27,37 @@
   "net.fabricmc.fabric.api.client.renderer.v1.mesh.MutableQuadView",
   "net.fabricmc.fabric.api.client.renderer.v1.render.AltModelBlockRenderer",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.BeforeGizmos",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
   "net.fabricmc.loader.api.SemanticVersion",
   "net.fabricmc.loader.api.VersionParsingException",
   "net.minecraft.SharedConstants",
   "net.minecraft.TracingExecutor",
   "net.minecraft.client.ClientRecipeBook",
+  "net.minecraft.client.InputType",
   "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
+  "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
   "net.minecraft.client.gui.screens.inventory.AnvilScreen",
+  "net.minecraft.client.gui.screens.inventory.ContainerScreen",
   "net.minecraft.client.gui.screens.inventory.CraftingScreen",
   "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
   "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.ItemPickerMenu",
+  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.SlotWrapper",
   "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.gui.screens.inventory.MerchantScreen",
+  "net.minecraft.client.gui.screens.inventory.ShulkerBoxScreen",
   "net.minecraft.client.gui.screens.inventory.StonecutterScreen",
+  "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipPositioner",
   "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
   "net.minecraft.client.gui.screens.recipebook.RecipeCollection",
   "net.minecraft.client.multiplayer.ClientChunkCache",
   "net.minecraft.client.multiplayer.ClientLevel.ClientLevelData",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-  "net.minecraft.client.renderer.DynamicGpuData",
-  "net.minecraft.client.renderer.LevelRenderer",
-  "net.minecraft.client.renderer.StagedVertexBuffer.Draw",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "quickcraft-mc26.3-1.0.4.jar",
   "published": "2026-10-23"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +89,9 @@
   "malilib",
   "minecraft"
  ],
- "lacks": 462
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; runs threads of its own; has network channels"
+ },
+ "lacks": 540
 }

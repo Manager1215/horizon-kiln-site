@@ -9,26 +9,16 @@
  "author": "Bluebird",
  "description": "Obfuscates / hides death messages and kill messages that invisible players get. Both default to true but can be edited through gamerule commands.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.BooleanRuleBuilder",
   "net.minecraft.commands.synchronization.SuggestionProviders",
   "net.minecraft.network.chat.ComponentUtils",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowItem",
-  "net.minecraft.server.permissions.Permissions",
-  "net.minecraft.stats.ServerStatsCounter",
   "net.minecraft.world.scores.PlayerTeam",
   "DataComponents.CUSTOM_NAME",
-  "MutableComponent.withStyle()",
-  "Style.withHoverEvent()",
   "MinecraftServer.getGameRules()",
   "ServerLevel.getGameRules()",
   "ServerPlayer.deathTime",
   "ServerPlayer.getDisplayName()",
-  "ServerPlayer.getStats()",
-  "Stats.CUSTOM",
-  "Stats.TIME_SINCE_DEATH",
   "Entity.getDisplayName()",
   "Entity.getTeam()",
   "LivingEntity.getDisplayName()",
@@ -39,12 +29,12 @@
   "GameRules.get()",
   "GameRules.set()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "hideinvismsgs-26.2-1.4.jar",
   "published": "2026-08-30"
  },
@@ -57,5 +47,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
- "lacks": 28
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 19
 }

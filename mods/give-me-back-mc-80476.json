@@ -9,18 +9,17 @@
  "author": "asphyxiamywife",
  "description": "Client mod that restores the old macOS drop-stack shortcut behavior changed in snapshot 25w41a.",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.minecraft.util.Util.OS",
   "InputConstants.isKeyDown()",
-  "KeyEvent.hasControlDownWithQuirk()",
   "Util.getPlatform()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "give_me_back_mc_80476-1.0.1+26.3-snapshot-4.jar",
   "published": "2026-07-16"
  },
@@ -37,5 +36,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 4
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 3
 }

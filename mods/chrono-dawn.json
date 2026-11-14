@@ -1,7 +1,7 @@
 {
  "id": "chrono-dawn",
  "name": "Chrono Dawn",
- "version": "0.15.0",
+ "version": "0.16.0",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,14 +9,13 @@
  "author": "ksoichiro",
  "description": "Adds Chrono Dawn, a time-themed dimension with custom portals, boss battles, and time-manipulating artifacts. Supports Fabric & NeoForge.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
   "net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
@@ -45,6 +44,7 @@
   "net.minecraft.client.particle.SingleQuadParticle.Layer",
   "net.minecraft.client.particle.SpriteSet",
   "net.minecraft.client.renderer.BiomeColors",
+  "net.minecraft.client.renderer.SkyRenderer",
   "net.minecraft.client.renderer.blockentity.ChestRenderer",
   "net.minecraft.client.renderer.entity.ArrowRenderer",
   "net.minecraft.client.renderer.entity.MobRenderer",
@@ -56,10 +56,10 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "chronodawn-0.15.0+26.3-fabric.jar",
-  "published": "2026-10-26"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "chronodawn-0.16.0+26.3-fabric.jar",
+  "published": "2026-11-09"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 652
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; generates in the world"
+ },
+ "lacks": 656
 }

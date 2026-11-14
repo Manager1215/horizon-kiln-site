@@ -1,0 +1,66 @@
+{
+ "id": "woalk-datafixer",
+ "name": "Woalk Datafixer",
+ "version": "1.2.2",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/woalk-datafixer",
+ "author": "woalk",
+ "description": "Configurable DataFixer implementation to replace blocks, items and biomes according to a CSV mapping file",
+ "needs": [
+  "Mixin: 2 points inside the game's methods",
+  "net.minecraft.references.BlockItemId",
+  "net.minecraft.util.datafix.DataFixers",
+  "net.minecraft.util.datafix.LegacyComponentDataFixUtils",
+  "net.minecraft.util.datafix.fixes.References",
+  "net.minecraft.util.datafix.schemas.NamespacedSchema",
+  "net.minecraft.util.datafix.schemas.V1460",
+  "net.minecraft.util.datafix.schemas.V3439",
+  "net.minecraft.util.datafix.schemas.V99",
+  "net.minecraft.util.filefix.FileFixerUpper",
+  "net.minecraft.util.filefix.FileFixerUpper.Builder",
+  "TextColor.GRAY",
+  "Util.writeAndReadTypedOrThrow()"
+ ],
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "woalk_datafixer-1.2.2.jar",
+  "published": "2026-11-09"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "preLaunch": 1
+ },
+ "mixins": true,
+ "depends": [
+  "easy_data_fix",
+  "fabric-api",
+  "fabric-language-kotlin",
+  "fabricloader",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert)"
+ },
+ "lacks": 12
+}

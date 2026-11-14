@@ -9,20 +9,16 @@
  "author": "Alonediamond",
  "description": "Enhanced player controls, route flow automation, input recording & playback, and container caching assistance.",
  "needs": [
-  "Mixin",
   "net.minecraft.client.ClientRecipeBook",
   "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
   "net.minecraft.client.gui.screens.inventory.HorseInventoryScreen",
   "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.gui.screens.recipebook.RecipeCollection",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.client.player.ClientInput",
   "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.nbt.NbtIo",
   "net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.entity.player.Input",
-  "net.minecraft.world.inventory.ContainerInput",
   "net.minecraft.world.inventory.CraftingMenu",
   "net.minecraft.world.inventory.ShulkerBoxMenu",
   "net.minecraft.world.inventory.StonecutterMenu",
@@ -33,16 +29,11 @@
   "net.minecraft.world.level.block.ShulkerBoxBlock",
   "net.minecraft.world.level.block.state.properties.ChestType",
   "KeyMapping.setDown()",
-  "Minecraft.execute()",
-  "Minecraft.gameMode",
-  "Minecraft.hitResult",
-  "Options.keyAttack",
-  "Options.keyUse",
-  "Button.getMessage()",
-  "EditBox.setEditable()",
-  "Screen.charTyped()",
-  "Screen.mouseClicked()",
   "ClientPacketListener.send()",
+  "MultiPlayerGameMode.continueDestroyBlock()",
+  "MultiPlayerGameMode.handleInventoryButtonClick()",
+  "MultiPlayerGameMode.handlePlaceRecipe()",
+  "MultiPlayerGameMode.startDestroyBlock()",
   "LocalPlayer.closeContainer()",
   "LocalPlayer.getRecipeBook()",
   "LocalPlayer.input",
@@ -50,14 +41,22 @@
   "LocalPlayer.jumpFromGround()",
   "LocalPlayer.setPos()",
   "LocalPlayer.setXRot()",
-  "and 42 more"
+  "LocalPlayer.setYHeadRot()",
+  "LocalPlayer.setYRot()",
+  "LocalPlayer.yHeadRotO",
+  "LocalPlayer.yRotO",
+  "BlockPos.distSqr()",
+  "BlockPos.MutableBlockPos.set()",
+  "DefaultedRegistry.iterator()",
+  "NonNullList.iterator()",
+  "and 28 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "PlayerControlpp-v1.9-mc26.3.jar",
   "published": "2026-10-28"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 83
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 68
 }

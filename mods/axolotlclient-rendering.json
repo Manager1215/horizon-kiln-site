@@ -10,7 +10,7 @@
  "description": "AxolotlClient's GUI rendering library. Convenient and simple rendering of some shapes, static SVGs and truetype fonts.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "com.mojang.blaze3d.vertex.BufferBuilder",
   "com.mojang.blaze3d.vertex.DefaultVertexFormat",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
@@ -20,7 +20,12 @@
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.minecraft.client.StringSplitter",
   "net.minecraft.client.StringSplitter.WidthProvider",
+  "net.minecraft.client.gui.ActiveTextCollector",
+  "net.minecraft.client.gui.ActiveTextCollector.Parameters",
+  "net.minecraft.client.gui.GuiGraphicsExtractor.RenderingTextCollector",
   "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
+  "net.minecraft.client.renderer.texture.DynamicTexture",
+  "net.minecraft.client.renderer.texture.MissingTextureAtlasSprite",
   "net.minecraft.util.StringDecomposer",
   "org.lwjgl.CLongBuffer",
   "org.lwjgl.PointerBuffer",
@@ -46,19 +51,14 @@
   "RenderPipeline.builder()",
   "VertexFormat.builder()",
   "VertexFormat.getElement()",
-  "Int2ObjectMap.Entry.getValue()",
-  "IntList.size()",
-  "Object2ObjectMap.Entry.getKey()",
-  "Object2ObjectMap.Entry.getValue()",
-  "ObjectCollection.forEach()",
-  "and 19 more"
+  "and 26 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "AxolotlClient-rendering-0.0.12+26.3.jar",
   "published": "2026-09-20"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +85,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 59
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 66
 }

@@ -10,7 +10,7 @@
  "description": "Essential commands and features for Fabric servers",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 21 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.api.DedicatedServerModInitializer",
   "net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents",
@@ -20,7 +20,6 @@
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
@@ -29,38 +28,39 @@
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowChatMessage",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.fabric.api.util.TriState",
   "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
   "net.minecraft.SharedConstants",
-  "net.minecraft.commands.arguments.DimensionArgument",
-  "net.minecraft.commands.arguments.GameProfileArgument",
-  "net.minecraft.commands.arguments.IdentifierArgument",
   "net.minecraft.commands.arguments.MessageArgument",
   "net.minecraft.commands.arguments.ResourceArgument",
   "net.minecraft.commands.arguments.UuidArgument",
   "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
-  "net.minecraft.commands.arguments.coordinates.Vec3Argument",
   "net.minecraft.commands.synchronization.SuggestionProviders",
-  "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
+  "net.minecraft.core.component.DataComponentPatch.Builder",
   "net.minecraft.network.chat.OutgoingChatMessage",
   "net.minecraft.network.chat.PlayerChatMessage",
-  "net.minecraft.network.chat.contents.TranslatableContents",
+  "net.minecraft.resources.RegistryDataLoader",
+  "net.minecraft.server.ServerScoreboard",
+  "net.minecraft.server.bossevents.CustomBossEvent",
+  "net.minecraft.server.dedicated.DedicatedPlayerList",
+  "net.minecraft.server.level.ChunkHolder",
+  "net.minecraft.server.level.ChunkResult",
+  "net.minecraft.server.level.ServerPlayer.RespawnConfig",
+  "net.minecraft.server.network.FilteredText",
+  "net.minecraft.server.players.ServerOpList",
+  "net.minecraft.server.players.ServerOpListEntry",
+  "net.minecraft.server.players.SleepStatus",
+  "net.minecraft.server.players.UserBanList",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "solstice-1.9.7-alpha+26.3.jar",
-  "published": "2026-10-14"
+  "published": "2026-11-05"
  },
  "reports": {
   "works": 0,
@@ -78,5 +78,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 222
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
+ },
+ "lacks": 181
 }

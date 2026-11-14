@@ -1,0 +1,67 @@
+{
+ "id": "ct-overhaul-village",
+ "name": "ChoiceTheorem's Overhauled Village",
+ "version": "4.2.2a",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/ct-overhaul-village",
+ "author": "ChoiceTheorem",
+ "description": "Enhances and creates new villages and pillager outposts, that perfectly fit into your Minecraft world.",
+ "needs": [
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
+  "net.minecraft.world.level.levelgen.structure.BuiltinStructureSets",
+  "net.minecraft.world.level.levelgen.structure.StructureSet",
+  "net.minecraft.world.level.levelgen.structure.StructureSet.StructureSelectionEntry",
+  "net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessor",
+  "net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList",
+  "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate",
+  "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.StructureBlockInfo",
+  "ServerLifecycleEvents.SERVER_STARTING",
+  "HolderLookup.RegistryLookup.getOrThrow()",
+  "Registry.get()",
+  "Registry.getOrThrow()",
+  "RegistryAccess.lookupOrThrow()",
+  "BuiltInRegistries.STRUCTURE_PROCESSOR",
+  "Registries.PROCESSOR_LIST",
+  "Registries.STRUCTURE",
+  "Registries.STRUCTURE_SET",
+  "LevelReader.registryAccess()"
+ ],
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "[fabric]ctov-26-3-4.2.2a.jar",
+  "published": "2026-11-08"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": false,
+ "depends": [
+  "lithostitched",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 18
+}

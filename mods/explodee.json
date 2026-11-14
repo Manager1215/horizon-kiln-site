@@ -9,15 +9,15 @@
  "author": "Knownser",
  "description": "Makes Minecraft's explosion algorithm propagate spherically. Leading to more intense explosions.",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "ModContainer.findPath()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "explodee-1.1.0+26.1-26.3-fabric.jar",
   "published": "2026-10-11"
  },
@@ -34,5 +34,9 @@
   "java",
   "minecraft"
  ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
  "lacks": 1
 }

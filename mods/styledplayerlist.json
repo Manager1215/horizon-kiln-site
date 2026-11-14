@@ -9,39 +9,30 @@
  "author": "Patbox",
  "description": "This mod allows server owners to change player list look!",
  "needs": [
-  "Mixin",
+  "Mixin: 4 points inside the game's methods",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.util.TriState",
   "net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint",
   "net.fabricmc.loader.api.metadata.ContactInformation",
   "net.fabricmc.loader.api.metadata.Person",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
+  "net.minecraft.network.chat.numbers.FixedFormat",
+  "net.minecraft.network.protocol.game.ClientboundPlayerInfoUpdatePacket.Entry",
+  "net.minecraft.util.filefix.fixes.PlayerStorageFileFix",
   "ServerLifecycleEvents.SERVER_STARTED",
   "ModContainer.getPath()",
   "ModMetadata.getAuthors()",
   "ModMetadata.getContact()",
   "ModMetadata.getContributors()",
   "CommandSourceStack.checkPermission()",
-  "CommandSourceStack.getEntity()",
-  "CommandSourceStack.getServer()",
   "CommandSourceStack.registryAccess()",
-  "MutableComponent.setStyle()",
-  "Style.withClickEvent()",
-  "Style.withHoverEvent()",
+  "StringTag.TYPE",
   "Style.withShadowColor()",
-  "Style.withUnderlined()",
   "Identifier.toShortLanguageKey()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.getTickCount()",
   "MinecraftServer.registryAccess()",
   "ServerPlayer.connection",
-  "ServerPlayer.sendSystemMessage()",
+  "ServerGamePacketListenerImpl.send()",
+  "PlayerList.broadcastAll()",
   "Player.checkPermission()",
   "Player.permissions()",
   "ObjectiveCriteria.DUMMY"
@@ -50,8 +41,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "styledplayerlist-3.13.0+26.3.jar",
   "published": "2026-09-11"
  },
@@ -63,8 +54,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -77,5 +68,9 @@
  "depends": [
   "minecraft"
  ],
- "lacks": 35
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 26
 }

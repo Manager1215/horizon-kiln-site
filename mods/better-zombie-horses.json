@@ -9,14 +9,38 @@
  "author": "bo_bo",
  "description": "This mod allows Zombies to attack and infect Horses, turning them into Zombie Horses. These can later be cured just like Villagers. Beware: Zombies can also ride Zombie Horses!",
  "needs": [
-  "Mixin"
+  "net.minecraft.server.PlayerAdvancements",
+  "net.minecraft.server.ServerAdvancementManager",
+  "net.minecraft.world.entity.animal.equine.AbstractHorse",
+  "net.minecraft.world.entity.animal.equine.Horse",
+  "net.minecraft.world.entity.animal.equine.ZombieHorse",
+  "net.minecraft.world.entity.monster.zombie.Zombie",
+  "AdvancementProgress.getRemainingCriteria()",
+  "Registry.getOrThrow()",
+  "RegistryAccess.lookupOrThrow()",
+  "Registries.MOB_EFFECT",
+  "MinecraftServer.getAdvancements()",
+  "ServerLevel.getEntitiesOfClass()",
+  "ServerPlayer.getAdvancements()",
+  "SoundEvents.ZOMBIE_VILLAGER_CONVERTED",
+  "ProblemReporter.DISCARDING",
+  "Entity.distanceToSqr()",
+  "Entity.startRiding()",
+  "EntityTypes.HORSE",
+  "EntityTypes.ZOMBIE_HORSE",
+  "LivingEntity.isAlive()",
+  "LivingEntity.tickCount",
+  "Mob.setTarget()",
+  "ItemStack.consume()",
+  "Items.GOLDEN_APPLE",
+  "AABB.inflate()"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "better-zombie-horses-26.3-1.0.0.jar",
   "published": "2026-10-23"
  },
@@ -28,8 +52,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -44,5 +68,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 25
 }

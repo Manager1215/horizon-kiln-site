@@ -9,7 +9,7 @@
  "author": "DevBobcorn",
  "description": "Apply Windows 11 Fluent Design materials to Minecraft window.",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "com.mojang.blaze3d.vertex.BufferBuilder",
   "com.mojang.blaze3d.vertex.DefaultVertexFormat",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
@@ -19,9 +19,13 @@
   "com.mojang.renderpearl.backend.opengl.FrameBufferAttachment",
   "com.mojang.renderpearl.backend.opengl.FrameBufferCache",
   "com.mojang.renderpearl.backend.opengl.GlBackend",
+  "com.mojang.renderpearl.backend.opengl.GlCommandEncoder",
   "com.mojang.renderpearl.backend.opengl.GlStateManager",
+  "com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface",
   "com.mojang.renderpearl.frontend.FrontendCommandEncoder",
+  "com.mojang.renderpearl.frontend.FrontendGpuSurface",
   "net.minecraft.TracingExecutor",
+  "net.minecraft.client.renderer.Panorama",
   "net.minecraft.server.dedicated.Settings",
   "net.minecraft.server.dedicated.Settings.MutableValue",
   "net.minecraft.util.TimeSource",
@@ -46,18 +50,14 @@
   "RenderPipeline.builder()",
   "ARGB.alphaFloat()",
   "ARGB.blueFloat()",
-  "ARGB.color()",
-  "ARGB.greenFloat()",
-  "ARGB.redFloat()",
-  "Util.getPlatform()",
-  "and 1 more"
+  "and 5 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "acrylic-fabric-1.9.0+26.3.jar",
   "published": "2026-10-18"
  },
@@ -75,5 +75,9 @@
   "minecraft",
   "yet_another_config_lib_v3"
  ],
- "lacks": 41
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 45
 }

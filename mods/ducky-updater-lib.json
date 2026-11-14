@@ -9,27 +9,21 @@
  "author": "syorito-hatsuki",
  "description": "Simple library for checking mod updates from modrinth",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.loader.api.metadata.CustomValue",
   "net.fabricmc.loader.api.metadata.CustomValue.CvObject",
   "net.minecraft.SharedConstants",
   "net.minecraft.client.multiplayer.chat.ChatListener",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
+  "net.minecraft.server.Bootstrap",
   "ModMetadata.getCustomValue()",
-  "Minecraft.execute()",
-  "Gui.chatListener()",
-  "MutableComponent.withStyle()",
-  "Style.withClickEvent()",
-  "Style.withHoverEvent()"
+  "Gui.chatListener()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ducky-updater-lib-2026.6.1.jar",
   "published": "2026-06-20"
  },
@@ -46,5 +40,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 13
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 7
 }

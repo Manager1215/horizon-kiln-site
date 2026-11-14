@@ -10,8 +10,9 @@
  "description": "Fixes rabbit pathfinding efficiently",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 5 points inside the game's methods",
   "net.minecraft.client.animation.KeyframeAnimation",
+  "net.minecraft.client.model.animal.rabbit.RabbitModel",
   "net.minecraft.client.model.geom.PartPose",
   "net.minecraft.client.renderer.entity.state.RabbitRenderState",
   "net.minecraft.world.entity.ai.control.MoveControl",
@@ -32,8 +33,8 @@
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "rabbit-pathfinding-fix-1.5.0.jar",
   "published": "2026-09-15"
  },
@@ -46,5 +47,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
- "lacks": 16
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes"
+ },
+ "lacks": 17
 }

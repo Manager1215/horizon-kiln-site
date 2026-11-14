@@ -9,7 +9,6 @@
  "author": "MoonFather",
  "description": "This mod makes the food poisoning a serious deal. Eating any kind of raw food will cause poisoning with varying effects.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.minecraft.world.item.crafting.RecipeAccess",
@@ -17,19 +16,18 @@
   "ServerLifecycleEvents.SERVER_STARTED",
   "ClientLevel.recipeAccess()",
   "DataComponents.FOOD",
-  "MutableComponent.setStyle()",
   "Item.getId()",
   "Items.PUFFERFISH",
   "RecipePropertySet.CAMPFIRE_INPUT",
   "RecipePropertySet.test()",
   "Level.getDifficulty()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "cookyourfood--mc26.3--fabric--1.14.2.jar",
   "published": "2026-09-19"
  },
@@ -42,5 +40,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
- "lacks": 13
+ "softOff": {
+  "class": "partial",
+  "why": "data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 12
 }

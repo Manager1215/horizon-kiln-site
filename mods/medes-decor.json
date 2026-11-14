@@ -9,18 +9,21 @@
  "author": "medecoole",
  "description": "Most decoration mods have way to many things, so i made my own",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry",
   "net.minecraft.client.renderer.BiomeColors",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.item.FlintAndSteelItem",
   "net.minecraft.world.level.FoliageColor",
   "net.minecraft.world.level.block.ChainBlock",
+  "net.minecraft.world.level.block.DecoratedPotBlock",
+  "net.minecraft.world.level.block.FlowerBlock",
   "net.minecraft.world.level.block.IronBarsBlock",
   "net.minecraft.world.level.block.LanternBlock",
   "net.minecraft.world.level.block.Mirror",
   "net.minecraft.world.level.block.MultifaceBlock",
   "net.minecraft.world.level.block.PipeBlock",
+  "net.minecraft.world.level.block.TallFlowerBlock",
   "net.minecraft.world.level.block.WaterloggedTransparentBlock",
   "net.minecraft.world.level.block.state.properties.Half",
   "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
@@ -35,8 +38,6 @@
   "Util.toMap()",
   "DamageSources.campfire()",
   "Player.getUsedItemHand()",
-  "Player.swing()",
-  "SwingAnimation.DEFAULT",
   "Level.addFreshEntity()",
   "Level.playLocalSound()",
   "LevelAccessor.isClientSide()",
@@ -49,15 +50,14 @@
   "Blocks.BAMBOO_PLANKS",
   "Blocks.BIRCH_LEAVES",
   "Blocks.BIRCH_PLANKS",
-  "Blocks.BRICKS",
-  "and 35 more"
+  "and 38 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "medes_decor-1.2.5.jar",
   "published": "2026-10-19"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
  "lacks": 106
 }

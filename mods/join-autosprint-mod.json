@@ -9,9 +9,8 @@
  "author": "Slackow",
  "description": "Turns on togglesprint when you join a world/server or die, so you don't have to press or remember to press a key to turn it on.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
-  "net.minecraft.client.gui.components.Tooltip",
   "KeyMapping.setDown()",
   "Minecraft.gameDirectory",
   "Options.toggleSprint()",
@@ -21,8 +20,8 @@
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "JoinAutoSprintMod-1.0.7.jar",
   "published": "2026-05-06"
  },
@@ -38,5 +37,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 6
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 5
 }

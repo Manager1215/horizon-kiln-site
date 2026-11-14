@@ -13,15 +13,7 @@
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
-  "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.model.EntityModel",
   "net.minecraft.client.model.geom.PartPose",
   "net.minecraft.client.model.geom.builders.CubeDeformation",
@@ -34,8 +26,6 @@
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
   "net.minecraft.server.level.ServerPlayer.RespawnConfig",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
@@ -47,16 +37,26 @@
   "Camera.forwardVector()",
   "Camera.leftVector()",
   "Camera.upVector()",
-  "Minecraft.execute()",
-  "Minecraft.setScreenAndShow()",
-  "and 53 more"
+  "ModelPart.getChild()",
+  "LayerDefinition.create()",
+  "ClientLevel.getRespawnData()",
+  "GameRenderer.mainCamera()",
+  "EntityRendererProvider.Context.bakeLayer()",
+  "BlockPos.containing()",
+  "Registry.getOrThrow()",
+  "RegistryAccess.lookupOrThrow()",
+  "CommonComponents.GUI_CANCEL",
+  "CommonComponents.GUI_DONE",
+  "SynchedEntityData.defineId()",
+  "SynchedEntityData.get()",
+  "and 33 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "minersmarket-0.5.0+26.3-fabric.jar",
   "published": "2026-11-01"
  },
@@ -68,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 105
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
+ },
+ "lacks": 73
 }

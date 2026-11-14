@@ -10,9 +10,13 @@
  "description": "Illuminate your world with a flashlight!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 4 points inside the game's methods",
+  "net.minecraft.CrashReport",
+  "net.minecraft.CrashReportCategory",
+  "net.minecraft.SystemReport",
   "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperties",
   "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperty",
+  "net.minecraft.server.Bootstrap",
   "Axis.ZN",
   "Axis.ZP",
   "Mth.smoothstep()",
@@ -23,8 +27,8 @@
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "illuminated-1.3.1+26.3.jar",
   "published": "2026-10-17"
  },
@@ -48,5 +52,9 @@
   "minecraft",
   "yumi_mc_core"
  ],
- "lacks": 7
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 11
 }

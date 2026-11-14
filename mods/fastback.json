@@ -9,19 +9,18 @@
  "author": "pcal43",
  "description": "Fast, incremental world backups powered by Git.",
  "needs": [
-  "Mixin",
+  "Mixin: 5 points inside the game's methods",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.minecraft.client.gui.screens.GenericMessageScreen",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.network.protocol.game.ClientboundLevelChunkPacketData.BlockEntityInfo",
+  "net.minecraft.util.EncoderCache.2",
+  "net.minecraft.util.filefix.FileFixerUpper",
+  "net.minecraft.util.filefix.virtualfilesystem.CopyOnWriteFileSystem",
   "net.minecraft.world.level.storage.LevelStorageSource.LevelDirectory",
   "net.minecraft.world.level.storage.WorldData",
   "org.apache.commons.io.FileUtils",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "ServerLifecycleEvents.SERVER_STARTING",
   "Options.showAutosaveIndicator()",
-  "MutableComponent.setStyle()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.getServerVersion()",
   "MinecraftServer.getWorldData()",
   "MinecraftServer.isDedicatedServer()",
@@ -31,8 +30,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fastback-fabric-0.35.0+26.3.0.jar",
   "published": "2026-09-23"
  },
@@ -44,8 +43,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -62,5 +61,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 16
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 15
 }

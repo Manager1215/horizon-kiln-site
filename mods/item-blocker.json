@@ -10,25 +10,31 @@
  "description": "A client side mod that allows you to stop picking up items you don't want.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 12 points inside the game's methods",
   "com.mojang.blaze3d.platform.cursor.CursorType",
   "com.mojang.blaze3d.platform.cursor.CursorTypes",
   "net.fabricmc.api.DedicatedServerModInitializer",
   "net.minecraft.SharedConstants",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
-  "net.minecraft.client.gui.components.CycleButton.OnValueChange",
   "net.minecraft.client.gui.screens.inventory.AnvilScreen",
   "net.minecraft.client.gui.screens.inventory.ContainerScreen",
   "net.minecraft.client.gui.screens.inventory.CraftingScreen",
   "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
   "net.minecraft.client.gui.screens.inventory.HopperScreen",
+  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
   "net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner",
   "net.minecraft.client.gui.screens.worldselection.DataPackReloadCookie",
   "net.minecraft.client.gui.screens.worldselection.WorldCreationContext",
   "net.minecraft.client.gui.screens.worldselection.WorldCreationContextMapper",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
+  "net.minecraft.client.model.HumanoidModel",
+  "net.minecraft.client.model.HumanoidModel.ArmPose",
+  "net.minecraft.client.particle.NoRenderParticle",
+  "net.minecraft.client.renderer.entity.ArrowRenderer",
+  "net.minecraft.client.renderer.entity.ItemEntityRenderer",
+  "net.minecraft.client.renderer.entity.ThrownTridentRenderer",
+  "net.minecraft.client.renderer.entity.layers.ItemInHandLayer",
+  "net.minecraft.client.renderer.entity.player.AvatarRenderer",
+  "net.minecraft.client.renderer.entity.state.ArmedEntityRenderState",
   "net.minecraft.core.HolderSet.Named",
   "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
   "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
@@ -43,22 +49,16 @@
   "net.minecraft.server.packs.repository.RepositorySource",
   "net.minecraft.server.packs.repository.ServerPacksSource",
   "net.minecraft.server.packs.resources.CloseableResourceManager",
-  "net.minecraft.server.permissions.LevelBasedPermissionSet",
-  "net.minecraft.world.flag.FeatureFlags",
-  "net.minecraft.world.inventory.ContainerInput",
-  "net.minecraft.world.item.JukeboxPlayable",
-  "net.minecraft.world.item.JukeboxSong",
-  "net.minecraft.world.level.DataPackConfig",
-  "net.minecraft.world.level.WorldDataConfiguration",
-  "net.minecraft.world.level.levelgen.WorldGenSettings",
-  "and 45 more"
+  "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
+  "net.minecraft.world.entity.projectile.arrow.ThrownTrident",
+  "and 50 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "itemblocker-1.6.2+26.3.jar",
   "published": "2026-11-04"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 85
+ "softOff": {
+  "class": "restart",
+  "why": "@modify-args and @wrap-operation into the game's classes"
+ },
+ "lacks": 90
 }

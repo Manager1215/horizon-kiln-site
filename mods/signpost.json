@@ -9,25 +9,23 @@
  "author": "Gollorum",
  "description": "Adds sign posts for decoration and teleportation (optional).",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "com.mojang.blaze3d.vertex.SheetedDecalTextureGenerator",
   "net.fabricmc.fabric.api.command.v2.ArgumentTypeRegistry",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.event.registry.DynamicRegistries",
   "net.fabricmc.fabric.api.event.registry.DynamicRegistries.SyncOption",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
+  "net.minecraft.SharedConstants",
   "net.minecraft.client.gui.Font.GlyphVisitor",
   "net.minecraft.client.gui.Font.PreparedText",
   "net.minecraft.client.gui.components.ImageButton",
   "net.minecraft.client.gui.components.LockIconButton",
-  "net.minecraft.client.gui.components.ObjectSelectionList",
-  "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.components.WidgetSprites",
   "net.minecraft.client.gui.font.TextRenderable",
   "net.minecraft.client.gui.font.TextRenderable.Styled",
   "net.minecraft.client.renderer.BiomeColors",
+  "net.minecraft.client.renderer.special.SpecialModelRenderer.Unbaked",
+  "net.minecraft.client.renderer.special.SpecialModelRenderers",
   "net.minecraft.client.resources.model.ModelBakery",
   "net.minecraft.commands.synchronization.ArgumentTypeInfo",
   "net.minecraft.commands.synchronization.ArgumentTypeInfo.Template",
@@ -38,26 +36,28 @@
   "net.minecraft.data.worldgen.ProcessorLists",
   "net.minecraft.data.worldgen.placement.VegetationPlacements",
   "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.network.chat.ClickEvent.SuggestCommand",
   "net.minecraft.network.chat.ComponentSerialization",
   "net.minecraft.server.level.BlockDestructionProgress",
   "net.minecraft.server.level.ChunkMap",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.server.level.ServerPlayerGameMode",
   "net.minecraft.tags.StructureTags",
   "net.minecraft.util.StringUtil",
+  "net.minecraft.util.datafix.DataFixers",
+  "net.minecraft.util.datafix.fixes.LegacyBlockRenameFix",
   "net.minecraft.util.datafix.fixes.References",
+  "net.minecraft.util.datafix.schemas.NamespacedSchema",
+  "net.minecraft.util.filefix.FileFixerUpper",
+  "net.minecraft.util.filefix.FileFixerUpper.Builder",
   "net.minecraft.world.item.BrushItem",
   "net.minecraft.world.item.crafting.SingleItemRecipe.Factory",
-  "net.minecraft.world.level.StructureManager",
-  "and 71 more"
+  "and 72 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "signpost-fabric-26.3-2.04.1.jar",
   "published": "2026-10-04"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +89,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 267
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+ },
+ "lacks": 251
 }

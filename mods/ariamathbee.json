@@ -9,12 +9,10 @@
  "author": "mustafakaan",
  "description": "Bring the viral violinist bee to Minecraft and enjoy Aria Math on your journey!",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
   "net.minecraft.network.syncher.EntityDataAccessor",
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.entity.SpawnPlacementTypes",
   "net.minecraft.world.entity.SpawnPlacements",
   "net.minecraft.world.entity.SpawnPlacements.SpawnPredicate",
@@ -28,34 +26,28 @@
   "net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal",
   "net.minecraft.world.entity.ai.navigation.PathNavigation",
   "BiomeModifications.addSpawn()",
-  "CommandSourceStack.withSuppressedOutput()",
-  "Commands.performPrefixedCommand()",
-  "Registry.wrapAsHolder()",
   "SynchedEntityData.defineId()",
   "SynchedEntityData.get()",
   "SynchedEntityData.set()",
   "MinecraftServer.createCommandSourceStack()",
-  "MinecraftServer.getCommands()",
-  "MinecraftServer.getPlayerList()",
   "ServerLevel.sendParticles()",
+  "PlayerList.broadcastAll()",
   "RandomSource.nextLong()",
   "Attributes.FOLLOW_RANGE",
   "Animal.checkAnimalSpawnRules()",
   "Animal.createAnimalAttributes()",
   "Animal.defineSynchedData()",
-  "Animal.die()",
   "Animal.mobInteract()",
-  "Animal.tick()",
   "Items.GLASS_BOTTLE",
   "Items.HONEY_BOTTLE",
   "Level.getNearestPlayer()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ariamathbee-1.0.0+26.3.jar",
   "published": "2026-10-18"
  },
@@ -67,8 +59,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -84,5 +76,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 39
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 32
 }

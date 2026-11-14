@@ -9,7 +9,6 @@
  "author": "PotatoWolfie",
  "description": "A silly mod that adds silly geese to Minecraft that are slightly annoying.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
   "net.fabricmc.fabric.api.event.registry.DynamicRegistries",
@@ -39,6 +38,7 @@
   "net.minecraft.client.renderer.entity.layers.ItemInHandLayer",
   "net.minecraft.client.renderer.entity.state.ArmedEntityRenderState",
   "net.minecraft.client.renderer.texture.MissingTextureAtlasSprite",
+  "net.minecraft.client.resources.SplashManager",
   "net.minecraft.core.HolderSet.Named",
   "net.minecraft.core.UUIDUtil",
   "net.minecraft.core.particles.ItemParticleOption",
@@ -49,15 +49,14 @@
   "net.minecraft.server.ServerAdvancementManager",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.SimpleContainer",
-  "net.minecraft.world.entity.AnimationState",
   "and 80 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "silly-goose-1.1.0-26.3.jar",
   "published": "2026-09-28"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 176
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 175
 }

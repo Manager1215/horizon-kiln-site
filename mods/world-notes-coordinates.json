@@ -9,14 +9,11 @@
  "author": "Yuhzhua",
  "description": "Dimension-aware local coordinate bookmarks",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.multiplayer.ClientChunkCache",
   "net.minecraft.client.multiplayer.chat.ChatListener",
+  "net.minecraft.client.renderer.LevelRenderer",
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.client.server.IntegratedServer",
-  "net.minecraft.network.chat.contents.TranslatableContents",
-  "net.minecraft.server.permissions.Permissions",
   "net.minecraft.world.entity.NeutralMob",
   "net.minecraft.world.entity.monster.Enemy",
   "net.minecraft.world.level.storage.LevelResource",
@@ -30,7 +27,6 @@
   "Minecraft.getCurrentServer()",
   "Minecraft.getSingleplayerServer()",
   "Options.getEffectiveRenderDistance()",
-  "Font.plainSubstrByWidth()",
   "Font.split()",
   "Gui.chatListener()",
   "GuiGraphicsExtractor.blit()",
@@ -38,26 +34,29 @@
   "GuiGraphicsExtractor.nextStratum()",
   "GuiGraphicsExtractor.setTooltipForNextFrame()",
   "GuiGraphicsExtractor.text()",
-  "Button.setTooltip()",
-  "Button.Builder.createNarration()",
-  "Button.Builder.tooltip()",
-  "Checkbox.selected()",
-  "EditBox.setEditable()",
-  "EditBox.setHint()",
-  "EditBox.setTooltip()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseReleased()",
-  "Screen.mouseScrolled()",
   "ClientLevel.getChunkSource()",
-  "and 31 more"
+  "ClientLevel.getOverworldClockTime()",
+  "ClientPacketListener.getCommands()",
+  "ServerData.ip",
+  "LocalPlayer.getBlockX()",
+  "LocalPlayer.getBlockY()",
+  "LocalPlayer.getBlockZ()",
+  "LocalPlayer.getEyeY()",
+  "LocalPlayer.permissions()",
+  "BlockPos.MutableBlockPos.set()",
+  "Component.getSiblings()",
+  "ClientboundBlockUpdatePacket.getPos()",
+  "ClientboundSectionBlocksUpdatePacket.runUpdates()",
+  "Entity.getBlockX()",
+  "Entity.getBlockY()",
+  "and 15 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "world-notes-fabric-1.0.0+mc26.3.jar",
   "published": "2026-10-11"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +84,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 71
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 55
 }

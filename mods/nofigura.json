@@ -1,7 +1,7 @@
 {
  "id": "nofigura",
  "name": "NoFigura",
- "version": "0.1.6.10+26.3",
+ "version": "0.1.6.12+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,7 +10,7 @@
  "description": "Figura port with 1.21.x/26.x update",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 53 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.exceptions.AuthenticationUnavailableException",
   "com.mojang.authlib.exceptions.InsufficientPrivilegesException",
@@ -21,10 +21,15 @@
   "com.mojang.blaze3d.audio.Channel",
   "com.mojang.blaze3d.audio.Library",
   "com.mojang.blaze3d.audio.Library.Pool",
+  "com.mojang.blaze3d.audio.Listener",
+  "com.mojang.blaze3d.audio.ListenerTransform",
   "com.mojang.blaze3d.audio.SoundBuffer",
   "com.mojang.blaze3d.buffers.Std140Builder",
   "com.mojang.blaze3d.font.GlyphInfo",
+  "com.mojang.blaze3d.font.GlyphProvider",
+  "com.mojang.blaze3d.font.UnbakedGlyph",
   "com.mojang.blaze3d.platform.FramerateLimitTracker",
+  "com.mojang.blaze3d.resource.GraphicsResourceAllocator",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
   "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
@@ -33,9 +38,9 @@
   "net.fabricmc.loader.api.metadata.CustomValue",
   "net.fabricmc.loader.api.metadata.CustomValue.CvObject",
   "net.minecraft.SharedConstants",
-  "net.minecraft.client.CameraType",
   "net.minecraft.client.ClientBrandRetriever",
   "net.minecraft.client.CloudStatus",
+  "net.minecraft.client.GameNarrator",
   "net.minecraft.client.StringSplitter",
   "net.minecraft.client.StringSplitter.WidthLimitedCharSink",
   "net.minecraft.client.gui.Font.GlyphVisitor",
@@ -45,22 +50,17 @@
   "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
   "net.minecraft.client.gui.TextAlignment",
   "net.minecraft.client.gui.components.AbstractTextAreaWidget",
-  "net.minecraft.client.gui.components.Tooltip",
-  "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-  "net.minecraft.client.gui.components.debug.DebugScreenEntries",
-  "net.minecraft.client.gui.components.debug.DebugScreenEntry",
-  "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
-  "net.minecraft.client.gui.components.debug.DebugScreenEntryStatus",
+  "net.minecraft.client.gui.components.CommandSuggestions",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "nofigura-0.1.6.10+26.3-fabric-mc.jar",
-  "published": "2026-10-24"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "nofigura-0.1.6.12+26.3-fabric-mc.jar",
+  "published": "2026-11-08"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 596
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes; @modify-arg Kiln doesn't guard; registers blocks, items or entities (they stay, inert); runs threads of its own"
+ },
+ "lacks": 697
 }

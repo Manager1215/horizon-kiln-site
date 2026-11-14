@@ -1,7 +1,7 @@
 {
  "id": "lanterns-bow",
  "name": "Lanterns Belong on Walls",
- "version": "3.3.1+26.3-fabric",
+ "version": "3.5.0+26.3-fabric",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,38 +9,56 @@
  "author": "ThePoultryMan",
  "description": "Allows the placement of lanterns on walls.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry",
+  "net.minecraft.client.renderer.entity.DisplayRenderer",
+  "net.minecraft.world.level.block.Block.UpdateFlags",
+  "net.minecraft.world.level.block.LanternBlock",
+  "net.minecraft.world.level.block.LevelEvent.Value",
   "net.minecraft.world.level.block.WeatheringCopper",
   "net.minecraft.world.level.block.WeatheringCopper.WeatherState",
+  "net.minecraft.world.level.gameevent.GameEvent.Context",
+  "net.minecraft.world.level.redstone.CollectingNeighborUpdater",
   "net.minecraft.world.phys.shapes.BooleanOp",
-  "RenderTypes.cutoutMovingBlock()",
   "BlockPos.offset()",
   "Direction.getUnitVec3i()",
+  "Holder.is()",
   "Identifier.withPrefix()",
   "ResourceKey.codec()",
   "ExtraCodecs.JAVA",
   "Items.COPPER_LANTERN",
   "Items.LANTERN",
   "Items.SOUL_LANTERN",
-  "LevelAccessor.getBlockEntity()",
-  "Block.animateTick()",
-  "Block.canSupportCenter()",
-  "Block.destroy()",
-  "Block.getLootTable()",
-  "Blocks.LANTERN",
-  "BlockBehaviour.Properties.overrideLootTable()",
-  "Shapes.empty()",
-  "Shapes.join()"
+  "Level.<init>()",
+  "Level.clockManager()",
+  "Level.dimensionTypeRegistration()",
+  "Level.dragonParts()",
+  "Level.enabledFeatures()",
+  "Level.explode()",
+  "Level.gameEvent()",
+  "Level.gatherChunkSourceStats()",
+  "Level.getBiomeManager()",
+  "Level.getBlockTicks()",
+  "Level.getEntity()",
+  "Level.getFluidTicks()",
+  "Level.getMapData()",
+  "Level.getRespawnData()",
+  "Level.getScoreboard()",
+  "Level.getSeaLevel()",
+  "Level.getUncachedNoiseBiome()",
+  "Level.isDebug()",
+  "Level.levelEvent()",
+  "Level.playSeededSound()",
+  "Level.playSeededSound()",
+  "and 14 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "walllanterns-3.3.1.jar",
-  "published": "2026-10-31"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "walllanterns-3.5.0.jar",
+  "published": "2026-11-10"
  },
  "reports": {
   "works": 0,
@@ -50,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -68,5 +86,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 22
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 54
 }

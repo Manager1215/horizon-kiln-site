@@ -9,24 +9,32 @@
  "author": "ItsJustMiaouss",
  "description": "⚙️ A Fabric mod that tweaks the client side of Minecraft.",
  "needs": [
-  "Mixin",
+  "Mixin: 7 points inside the game's methods",
+  "net.minecraft.client.Screenshot",
+  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
+  "net.minecraft.client.renderer.LightmapRenderStateExtractor",
+  "net.minecraft.client.renderer.ScreenEffectRenderer",
+  "net.minecraft.client.renderer.debug.EntityHitboxDebugRenderer",
   "net.minecraft.client.renderer.extract.LevelExtractor",
-  "net.minecraft.network.chat.ClickEvent.OpenFile",
+  "net.minecraft.client.renderer.state.LightmapRenderState",
+  "net.minecraft.world.level.block.state.properties.Half",
   "org.lwjgl.sdl.SDLKeycode",
-  "Minecraft.execute()",
+  "Minecraft.isLocalServer()",
   "Minecraft.levelExtractor",
-  "Minecraft.setScreenAndShow()",
+  "OptionInstance.createBoolean()",
+  "Options.autoJump()",
   "Options.darkMojangStudiosBackground()",
-  "Options.save()",
-  "MutableComponent.withStyle()",
-  "Style.withClickEvent()"
+  "Options.smoothCamera",
+  "LocalPlayer.permissions()",
+  "HorizontalDirectionalBlock.FACING",
+  "BlockStateProperties.HALF"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ijm-tweaks-1.8.0+26.3.jar",
   "published": "2026-10-02"
  },
@@ -38,8 +46,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -56,5 +64,9 @@
   "minecraft",
   "yet_another_config_lib_v3"
  ],
- "lacks": 10
+ "softOff": {
+  "class": "restart",
+  "why": "@modify-args and @redirect into the game's classes"
+ },
+ "lacks": 18
 }

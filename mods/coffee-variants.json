@@ -1,0 +1,77 @@
+{
+ "id": "coffee-variants",
+ "name": "Coffee Variants",
+ "version": "1.2.0+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/coffee-variants",
+ "author": "JCS",
+ "description": "Coffee Variants is a mod that adds a variety of coffee to minecraft as well as a barista villager and a coffee structure.",
+ "needs": [
+  "net.fabricmc.fabric.api.object.builder.v1.world.poi.PoiHelper",
+  "net.minecraft.core.HolderSet.Named",
+  "net.minecraft.world.entity.npc.villager.VillagerProfession",
+  "net.minecraft.world.food.FoodProperties",
+  "net.minecraft.world.food.FoodProperties.Builder",
+  "net.minecraft.world.item.component.Consumable",
+  "net.minecraft.world.item.component.Consumable.Builder",
+  "net.minecraft.world.item.component.Consumables",
+  "net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect",
+  "net.minecraft.world.item.trading.TradeSet",
+  "HolderGetter.getOrThrow()",
+  "BuiltInRegistries.VILLAGER_PROFESSION",
+  "Registries.POINT_OF_INTEREST_TYPE",
+  "Registries.TRADE_SET",
+  "Registries.VILLAGER_TRADE",
+  "Identifier.withPrefix()",
+  "SoundEvents.GENERIC_DRINK",
+  "SoundEvents.VILLAGER_WORK_LIBRARIAN",
+  "MobEffect.addAttributeModifier()",
+  "MobEffect.applyEffectTick()",
+  "Player.drop()",
+  "Item.finishUsingItem()",
+  "Item.Properties.food()",
+  "Items.SPIDER_EYE"
+ ],
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "coffee-variants-1.2.0+26.3.jar",
+  "published": "2026-11-11"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1,
+  "fabric-datagen": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 24
+}

@@ -9,28 +9,31 @@
  "author": "Nordes",
  "description": "An update of the original Advanced Chat Core(With fixes). The core mod for AdvancedChat modules.",
  "needs": [
-  "Mixin",
+  "Mixin: 6 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.loader.api.metadata.CustomValue",
   "net.fabricmc.loader.api.metadata.CustomValue.CvType",
+  "net.minecraft.client.gui.components.ChatComponent.ChatGraphicsAccess",
+  "net.minecraft.client.gui.components.ChatComponent.ChatMethod",
   "net.minecraft.client.gui.components.ChatComponent.DisplayMode",
+  "net.minecraft.client.gui.components.ChatComponent.DrawingFocusedGraphicsAccess",
   "net.minecraft.client.gui.components.CommandSuggestions",
+  "net.minecraft.client.gui.components.CommandSuggestions.SuggestionsList",
   "net.minecraft.client.gui.components.ComponentRenderUtils",
   "net.minecraft.client.gui.components.EditBox.TextFormatter",
+  "net.minecraft.client.gui.components.TextCursorUtils",
+  "net.minecraft.client.gui.screens.ChatScreen.ChatConstructor",
+  "net.minecraft.client.gui.screens.InBedChatScreen",
   "net.minecraft.client.input.InputQuirks",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.network.chat.ComponentContents",
-  "net.minecraft.network.chat.contents.PlainTextContents",
+  "net.minecraft.client.multiplayer.ClientSuggestionProvider",
   "net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket",
   "net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket.Action",
   "net.minecraft.util.ArrayListDeque",
+  "net.minecraft.world.entity.PortalProcessor",
   "org.apache.commons.csv.CSVFormat",
   "org.apache.commons.csv.CSVParser",
   "org.apache.commons.csv.CSVRecord",
   "org.apache.commons.io.FileUtils",
-  "org.apache.logging.log4j.Level",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "ImmutableList.stream()",
   "InputConstants.getKey()",
   "InputConstants.isKeyDown()",
@@ -47,17 +50,14 @@
   "ChatComponent.addPlayerMessage()",
   "ChatComponent.addRecentChat()",
   "ChatComponent.extractRenderState()",
-  "ChatComponent.getLinesPerPage()",
-  "ChatComponent.getRecentChat()",
-  "ChatComponent.resetChatScroll()",
-  "and 27 more"
+  "and 17 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "AdvancedChatCore-26.3-1.9.1.jar",
   "published": "2026-10-19"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "minecraft",
   "smartcompletion"
  ],
- "lacks": 67
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 57
 }

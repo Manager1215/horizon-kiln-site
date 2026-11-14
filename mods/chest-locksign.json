@@ -9,29 +9,26 @@
  "author": "Yorickx",
  "description": "Sign Lock lets players protect chests, barrels, furnaces, and other containers by placing a sign on them. Simple, lightweight, and inspired by classic server protection plugins.",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.world.entity.ai.behavior.TransportItemsBetweenContainers",
+  "net.minecraft.world.entity.ai.behavior.TransportItemsBetweenContainers.TransportItemTarget",
   "net.minecraft.world.level.block.ChestBlock",
   "net.minecraft.world.level.block.ShulkerBoxBlock",
   "net.minecraft.world.level.block.SignBlock",
   "net.minecraft.world.level.block.StandingSignBlock",
   "net.minecraft.world.level.block.WallSignBlock",
+  "net.minecraft.world.level.block.entity.Hopper",
+  "net.minecraft.world.level.block.entity.HopperBlockEntity",
   "net.minecraft.world.level.block.entity.SignBlockEntity",
   "net.minecraft.world.level.block.entity.SignText",
   "net.minecraft.world.level.block.entity.SignText.Mutable",
+  "net.minecraft.world.level.block.piston.PistonBaseBlock",
+  "net.minecraft.world.level.block.piston.PistonStructureResolver",
   "net.minecraft.world.level.block.state.properties.ChestType",
-  "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
   "AttachmentRegistry.createPersistent()",
-  "ServerTickEvents.END_SERVER_TICK",
-  "MinecraftServer.getPlayerList()",
   "ServerChunkCache.blockChanged()",
-  "ServerPlayer.nameAndId()",
-  "ServerPlayer.sendSystemMessage()",
   "ServerPlayer.tickCount",
-  "Level.isEmptyBlock()",
   "Blocks.ACACIA_SIGN",
   "Blocks.ACACIA_WALL_SIGN",
   "Blocks.BAMBOO_SIGN",
@@ -50,14 +47,16 @@
   "Blocks.DARK_OAK_WALL_SIGN",
   "Blocks.DISPENSER",
   "Blocks.DROPPER",
-  "and 18 more"
+  "Blocks.FURNACE",
+  "Blocks.JUNGLE_SIGN",
+  "and 15 more"
  ],
- "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "chest-locksign-0.2.1.jar",
   "published": "2026-10-18"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +84,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 58
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 55
 }

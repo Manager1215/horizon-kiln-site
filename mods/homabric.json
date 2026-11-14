@@ -10,24 +10,11 @@
  "description": "🏠 Little yet powerful homes management mod for Fabric with GUI support",
  "needs": [
   "com.mojang.authlib.GameProfile",
-  "net.minecraft.commands.arguments.IdentifierArgument",
-  "net.minecraft.server.players.PlayerList",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
-  "CommandSourceStack.getEntity()",
-  "CommandSourceStack.getPosition()",
-  "CommandSourceStack.getServer()",
-  "CommandSourceStack.getTextName()",
-  "CommandSourceStack.sendSystemMessage()",
-  "EntityArgument.getPlayer()",
-  "EntityArgument.player()",
-  "MinecraftServer.getPlayerList()",
   "ServerLevel.sendParticles()",
   "ServerPlayer.getGameProfile()",
   "ServerPlayer.giveExperiencePoints()",
   "ServerPlayer.hasDisconnected()",
   "ServerPlayer.isDeadOrDying()",
-  "ServerPlayer.sendSystemMessage()",
   "ServerPlayer.teleportTo()",
   "MenuType.GENERIC_9x6",
   "ItemStack.getItemName()"
@@ -36,8 +23,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "homabric-4.0.1+26.3.x.jar",
   "published": "2026-09-21"
  },
@@ -49,8 +36,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -67,5 +54,9 @@
   "minecraft",
   "sgui"
  ],
- "lacks": 22
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; runs threads of its own; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 9
 }

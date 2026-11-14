@@ -9,15 +9,23 @@
  "author": "ApexHosting",
  "description": "Monetize your modpack with ease! Give your players a 1-click Apex Hosting setup while earning partner commissions.",
  "needs": [
-  "Mixin",
-  "Minecraft.gameDirectory"
+  "Mixin: 5 points inside the game's methods",
+  "com.mojang.blaze3d.Blaze3D",
+  "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
+  "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList",
+  "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList.Entry",
+  "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList.OnlineServerEntry",
+  "net.minecraft.client.renderer.texture.DynamicTexture",
+  "NativeImage.read()",
+  "Minecraft.gameDirectory",
+  "GuiGraphicsExtractor.blit()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "apexhosting-partner-link-fabric-26.3-1.1.0.jar",
   "published": "2026-10-21"
  },
@@ -29,8 +37,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -44,5 +52,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 1
+ "softOff": {
+  "class": "restart",
+  "why": "@modify-args and @redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 9
 }

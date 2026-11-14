@@ -10,7 +10,8 @@
  "description": "A tool to convert codecs to JSON schemas.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 5 points inside the game's methods",
+  "net.fabricmc.fabric.impl.client.model.loading.CustomUnbakedBlockStateModelRegistry",
   "net.fabricmc.fabric.impl.dimension.FailSoftMapCodec",
   "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
   "net.minecraft.SharedConstants",
@@ -36,6 +37,7 @@
   "net.minecraft.resources.RegistryDataLoader",
   "net.minecraft.resources.RegistryDataLoader.RegistryData",
   "net.minecraft.tags.TagFile",
+  "net.minecraft.util.EncoderCache",
   "net.minecraft.util.ExtraCodecs.StrictUnboundedMapCodec",
   "net.minecraft.world.entity.SulfurCubeArchetype",
   "net.minecraft.world.entity.animal.chicken.ChickenSoundVariant",
@@ -49,16 +51,14 @@
   "net.minecraft.world.entity.animal.pig.PigSoundVariant",
   "net.minecraft.world.entity.animal.pig.PigVariant",
   "net.minecraft.world.entity.animal.wolf.WolfSoundVariant",
-  "net.minecraft.world.entity.animal.wolf.WolfVariant",
-  "net.minecraft.world.entity.decoration.painting.PaintingVariant",
   "and 65 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "codec2schema-0.3.7+26.3-pre-1.jar",
   "published": "2026-09-02"
  },
@@ -78,5 +78,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 111
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 113
 }

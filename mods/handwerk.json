@@ -1,7 +1,7 @@
 {
  "id": "handwerk",
  "name": "Handwerk – AoE Tools, Vein Miner, Ore Variants & Building Blocks",
- "version": "0.16.2-26.3-rc-2+build.80",
+ "version": "0.16.5-26.3+build.1",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,15 +9,16 @@
  "author": "LufatZ",
  "description": "Vanilla-style tools that do the work for you: AoE hammer & shovel, vein miner, tree feller, harvester scythe. Plus tool upgrades, magnet enchantments, ores in their host rock & a building palette — slabs, stairs, trapdoors, lanterns, redstone chains.",
  "needs": [
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "net.minecraft.SharedConstants",
+  "net.minecraft.advancements.triggers.ItemUsedOnLocationTrigger",
   "net.minecraft.core.particles.DustParticleOptions",
   "net.minecraft.server.PlayerAdvancements",
   "net.minecraft.server.ServerAdvancementManager",
   "net.minecraft.server.packs.repository.Pack",
   "net.minecraft.server.packs.repository.PackCompatibility",
   "net.minecraft.server.packs.repository.PackRepository",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.tags.ItemTags",
   "net.minecraft.world.item.HoneycombItem",
   "net.minecraft.world.item.component.ItemLore",
   "net.minecraft.world.level.block.BubbleColumnBlock",
@@ -44,22 +45,21 @@
   "net.minecraft.world.level.block.state.properties.SlabType",
   "net.minecraft.world.level.block.state.properties.StairsShape",
   "net.minecraft.world.level.gameevent.GameEvent.Context",
-  "BiMap.get()",
-  "Minecraft.execute()",
-  "Minecraft.getResourcePackRepository()",
-  "Minecraft.reloadResourcePacks()",
-  "Options.incompatibleResourcePacks",
-  "Options.resourcePacks",
-  "and 54 more"
+  "net.minecraft.world.level.levelgen.feature.AbstractOreFeature",
+  "net.minecraft.world.level.levelgen.feature.BlockReplacement",
+  "net.minecraft.world.level.levelgen.feature.OreFeature",
+  "net.minecraft.world.level.levelgen.feature.ScatteredOreFeature",
+  "net.minecraft.world.level.levelgen.placement.FeaturePlacer",
+  "and 60 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "handwerk-0.16.2-26.3-rc-2+build.80.jar",
-  "published": "2026-09-13"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "handwerk-0.16.5-26.3+build.1.jar",
+  "published": "2026-11-12"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 234
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; generates in the world"
+ },
+ "lacks": 250
 }

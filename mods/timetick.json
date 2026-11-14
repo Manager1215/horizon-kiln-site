@@ -9,13 +9,10 @@
  "author": "Luzyvert",
  "description": "This mod saves and simulates the time passed on an unloaded chunk. Trees and crops will have grown when you come back to a chunk after a long time",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents.FullChunkStatusChange",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.minecraft.world.level.block.FarmlandBlock",
   "net.minecraft.world.level.block.StemBlock",
   "ServerChunkEvents.FULL_CHUNK_STATUS_CHANGE",
-  "ServerTickEvents.END_SERVER_TICK",
   "ServerLevel.getGameRules()",
   "LevelChunk.getFullStatus()",
   "LevelChunk.getMinY()",
@@ -28,12 +25,12 @@
   "ValueInput.getOptionalLongArray()",
   "ValueOutput.putLongArray()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "timetick-1.0.1-26.3.jar",
   "published": "2026-09-28"
  },
@@ -45,8 +42,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -62,5 +59,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 17
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 15
 }

@@ -1,0 +1,93 @@
+{
+ "id": "progressive-time-difficulty",
+ "name": "Progressive Time Difficulty",
+ "version": "1.1.7+fabric-26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/progressive-time-difficulty",
+ "author": "Tontoque28",
+ "description": "A server-side mod that increases hostile mob difficulty over time based on world age and player playtime.",
+ "needs": [
+  "Mixin: 1 point inside the game's methods",
+  "net.fabricmc.fabric.api.event.player.UseEntityCallback",
+  "net.minecraft.world.damagesource.DamageTypes",
+  "net.minecraft.world.entity.animal.fish.WaterAnimal",
+  "net.minecraft.world.entity.animal.golem.IronGolem",
+  "net.minecraft.world.entity.boss.enderdragon.EnderDragon",
+  "net.minecraft.world.entity.boss.wither.WitherBoss",
+  "net.minecraft.world.entity.monster.ElderGuardian",
+  "net.minecraft.world.entity.monster.Enemy",
+  "net.minecraft.world.entity.monster.warden.Warden",
+  "net.minecraft.world.entity.npc.villager.Villager",
+  "net.minecraft.world.entity.npc.wanderingtrader.WanderingTrader",
+  "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
+  "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrownExperienceBottle",
+  "Holder.is()",
+  "MinecraftServer.getAllLevels()",
+  "ServerLevel.getAllEntities()",
+  "ServerLevel.getDifficulty()",
+  "ServerLevel.getEntitiesOfClass()",
+  "ServerLevel.getNearestPlayer()",
+  "ServerLevel.getPlayers()",
+  "ServerLevel.sendParticles()",
+  "ServerPlayer.distanceToSqr()",
+  "ServerPlayer.getEyePosition()",
+  "ServerPlayer.getViewVector()",
+  "ServerPlayer.permissions()",
+  "SoundEvents.SOUL_ESCAPE",
+  "DamageSources.magic()",
+  "Entity.typeHolder()",
+  "EntityTypes.CREEPER",
+  "ExperienceOrb.award()",
+  "LivingEntity.damageCooldownTime",
+  "LivingEntity.damageSources()",
+  "LivingEntity.getBbHeight()",
+  "LivingEntity.getBbWidth()",
+  "LivingEntity.getCustomName()",
+  "LivingEntity.getExperienceReward()",
+  "LivingEntity.hasCustomName()",
+  "LivingEntity.isInvulnerableTo()",
+  "LivingEntity.setCustomName()",
+  "LivingEntity.setCustomNameVisible()",
+  "and 9 more"
+ ],
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "ProgressiveTimeDifficulty-1.1.7-Fabric-26.3.jar",
+  "published": "2026-11-09"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 49
+}

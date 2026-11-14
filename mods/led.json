@@ -9,9 +9,9 @@
  "author": "magistermaks",
  "description": "Redstone lamps, lamps and more lamps!",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry",
   "net.fabricmc.fabric.api.item.v1.BlockTransformerHelper",
+  "net.minecraft.client.resources.SplashManager",
   "net.minecraft.core.component.BlockTransformer.BlockTransformData.Builder",
   "net.minecraft.world.item.crafting.ShapelessRecipe",
   "net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate",
@@ -33,12 +33,12 @@
   "BlockSetType.STONE",
   "Shapes.joinUnoptimized()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "led-1.15.0.jar",
   "published": "2026-09-25"
  },
@@ -50,8 +50,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -67,5 +67,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 22
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 23
 }

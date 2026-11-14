@@ -1,15 +1,14 @@
 {
  "id": "lifsteal-market",
  "name": "Lifesteal Market",
- "version": "1.2.2",
+ "version": "1.2.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
  "url": "https://modrinth.com/mod/lifsteal-market",
  "author": "kaesitius",
- "description": "The live stock market for the Lifesteal Network: AH price charts, price alerts (in-game + Discord DMs), true net worth, a wealth leaderboard and hover prices. Fabric, 1.21.11 + 26.1 to 26.3.",
+ "description": "The live stock market for the Lifesteal Network (LSN) server: auction house (AH) price charts, price alerts in-game + Discord DMs, true net worth, a wealth leaderboard and hover prices. Fabric, 1.21.11 + 26.1 to 26.3.",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.exceptions.AuthenticationException",
   "com.mojang.authlib.exceptions.AuthenticationUnavailableException",
@@ -25,41 +24,41 @@
   "net.fabricmc.fabric.api.client.screen.v1.Screens",
   "net.minecraft.client.StringSplitter",
   "net.minecraft.client.gui.components.PlayerTabOverlay",
+  "net.minecraft.client.gui.screens.inventory.ContainerScreen",
+  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
   "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
+  "net.minecraft.client.gui.screens.inventory.ShulkerBoxScreen",
   "net.minecraft.client.renderer.texture.DynamicTexture",
-  "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
-  "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
+  "net.minecraft.client.resources.language.ClientLanguage",
   "net.minecraft.network.protocol.game.ServerboundContainerClosePacket",
-  "net.minecraft.world.inventory.ContainerInput",
   "net.minecraft.world.item.TooltipFlag.Default",
-  "net.minecraft.world.item.alchemy.PotionContents",
   "net.minecraft.world.item.component.ItemLore",
+  "net.minecraft.world.item.equipment.trim.ArmorTrim",
   "net.minecraft.world.scores.PlayerScoreEntry",
   "net.minecraft.world.scores.PlayerTeam",
   "NativeImage.getHeight()",
   "NativeImage.getWidth()",
   "NativeImage.read()",
+  "NativeImage.setPixel()",
   "ClientReceiveMessageEvents.ALLOW_GAME",
   "ClientReceiveMessageEvents.MODIFY_GAME",
   "ChatFormatting.getByCode()",
-  "KeyMapping.getTranslatedKeyMessage()",
-  "KeyMapping.isUnbound()",
-  "Minecraft.execute()",
-  "and 51 more"
+  "Minecraft.getCurrentServer()",
+  "Minecraft.services()",
+  "Font.getSplitter()",
+  "Font.split()",
+  "GuiGraphicsExtractor.blit()",
+  "GuiGraphicsExtractor.blit()",
+  "and 47 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "lifestealmarket-1.2.2_26.3.jar",
-  "published": "2026-11-01"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "lifestealmarket-1.2.3+26.3.jar",
+  "published": "2026-11-11"
  },
  "reports": {
   "works": 0,
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -84,5 +83,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 112
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own"
+ },
+ "lacks": 94
 }

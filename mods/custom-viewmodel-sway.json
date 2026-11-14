@@ -9,10 +9,10 @@
  "author": "mirzaa",
  "description": "Customize the sway and bobbing on your viewmodel",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.client.gui.components.MultiLineEditBox",
   "net.minecraft.client.gui.components.MultiLineEditBox.Builder",
-  "net.minecraft.client.gui.components.Tooltip",
+  "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState",
   "net.minecraft.client.server.IntegratedServer",
   "org.lwjgl.sdl.SDLDialog",
   "org.lwjgl.sdl.SDL_DialogFileCallback",
@@ -22,21 +22,14 @@
   "Window.handle()",
   "Axis.ZP",
   "KeyMapping.setAll()",
-  "Minecraft.execute()",
   "Minecraft.getSingleplayerServer()",
   "Font.split()",
   "Gui.isPausing()",
   "GuiGraphicsExtractor.text()",
-  "Button.setTooltip()",
-  "EditBox.moveCursorToStart()",
-  "EditBox.setHint()",
-  "EditBox.setTooltip()",
-  "Screen.mouseScrolled()",
   "LocalPlayer.getViewXRot()",
   "LocalPlayer.getViewYRot()",
   "LocalPlayer.isAlive()",
   "LocalPlayer.isCrouching()",
-  "LocalPlayer.isFallFlying()",
   "LocalPlayer.onClimbable()",
   "LocalPlayer.xo",
   "LocalPlayer.zo"
@@ -45,8 +38,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "custom-viewmodel-bobbing-n-sway-1.1.0+26.3.jar",
   "published": "2026-10-09"
  },
@@ -58,8 +51,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -76,5 +69,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 30
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 23
 }

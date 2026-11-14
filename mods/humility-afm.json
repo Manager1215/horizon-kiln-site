@@ -9,10 +9,7 @@
  "author": "Miki-Liki",
  "description": "Humility AFM is a small mod adding some simple vanilla style blocks with good resourcepack support.",
  "needs": [
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.client.renderer.block.BlockModelSet",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.item.FlintAndSteelItem",
   "net.minecraft.world.item.HoneycombItem",
@@ -21,16 +18,10 @@
   "net.minecraft.world.level.block.WallTorchBlock",
   "net.minecraft.world.level.block.state.properties.Half",
   "net.minecraft.world.level.block.state.properties.StairsShape",
-  "PacketSender.sendPacket()",
   "ResourceManagerHelper.registerBuiltinResourcePack()",
-  "Minecraft.execute()",
   "BlockEntityRenderer.extractRenderState()",
   "ItemStackRenderState.clear()",
   "ModelManager.getBlockModelSet()",
-  "FriendlyByteBuf.readByteArray()",
-  "FriendlyByteBuf.writeBoolean()",
-  "FriendlyByteBuf.writeByteArray()",
-  "FriendlyByteBuf.writeFloat()",
   "Identifier.tryBuild()",
   "ServerLevel.hasNeighborSignal()",
   "SoundEvents.AXE_WAX_OFF",
@@ -49,14 +40,23 @@
   "Items.DYED_CANDLE",
   "Level.hasNeighborSignal()",
   "Block.animateTick()",
-  "and 10 more"
+  "Block.defaultDestroyTime()",
+  "Block.getExplosionResistance()",
+  "Blocks.JACK_O_LANTERN",
+  "Blocks.TERRACOTTA",
+  "Blocks.TORCH",
+  "Blocks.register()",
+  "SoundType.COPPER",
+  "BlockStateProperties.HALF",
+  "BlockStateProperties.POWER",
+  "and 1 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "humility-afm-0.12.0-beta2+26.3.jar",
   "published": "2026-09-21"
  },
@@ -68,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +89,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 50
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 41
 }

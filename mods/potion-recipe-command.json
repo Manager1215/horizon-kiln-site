@@ -2,21 +2,19 @@
  "id": "potion-recipe-command",
  "name": "Potion Recipe Command",
  "version": "1.0.0",
- "status": "planned",
- "statusLabel": "Planned",
- "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "status": "works",
+ "statusLabel": "Works",
+ "statusMeaning": "Tried in the game with Kiln.",
  "url": "https://modrinth.com/mod/potion-recipe-command",
  "author": "ThirtyFangs",
  "description": "This mod adds the command /potion to list all potion recipes.",
- "needs": [
-  "Mixin"
- ],
- "roadmap": "Mixin (0.5)",
- "evidence": "Not run: Java did not start.",
+ "needs": [],
+ "roadmap": "",
+ "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "potion-recipe-command-1.0.0.jar",
   "published": "2026-09-20"
  },
@@ -28,8 +26,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -45,5 +43,18 @@
   "java",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 0,
+ "works": "A client command, /potion, that lists in chat general potion knowledge, every potion's brewing ingredients and how to make the special ingredients.",
+ "note": "From Modrinth, unchanged. Not yet: Its only mixins are the Fabric template's example ones, which do nothing; the mod works without it",
+ "checked": {
+  "kiln": "0.4.0",
+  "commit": "65f811ecccb786188bda6e89778f5faecccb264d",
+  "date": "2026-11-08",
+  "horizon": "Nightly 2026-11-04 · 3fb4c31",
+  "by": "kiln/proof.py on the Linux PC"
+ }
 }

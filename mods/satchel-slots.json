@@ -10,27 +10,50 @@
  "description": "Satchel Slots is a mod focused on \"physically\" extending the inventory (adding slots) by equipping different satchels to grant different perks/benefits.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.fabricmc.fabric.api.client.rendering.v1.ClientTooltipComponentCallback",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
+  "net.minecraft.client.gui.components.ImageButton",
+  "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
+  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
+  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "Minecraft.execute()",
+  "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
+  "net.minecraft.client.gui.screens.recipebook.RecipeBookTabButton",
+  "net.minecraft.client.renderer.entity.HumanoidMobRenderer",
+  "net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer",
+  "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
+  "net.minecraft.world.inventory.ResultContainer",
+  "net.minecraft.world.inventory.ResultSlot",
   "NonNullList.iterator()",
   "MinecraftServer.execute()",
+  "ServerLevel.enabledFeatures()",
+  "ServerLevel.getGameRules()",
+  "ServerPlayer.connection",
+  "ServerGamePacketListenerImpl.send()",
+  "LivingEntity.isEquippableInSlot()",
   "Player.drop()",
   "Player.hasInfiniteMaterials()",
   "StackedItemContents.accountSimpleStack()",
+  "AbstractContainerMenu.incrementStateId()",
+  "AbstractContainerMenu.setRemoteSlot()",
+  "CraftingContainer.asCraftInput()",
+  "InventoryMenu.EMPTY_ARMOR_SLOT_BOOTS",
+  "InventoryMenu.EMPTY_ARMOR_SLOT_CHESTPLATE",
+  "InventoryMenu.EMPTY_ARMOR_SLOT_HELMET",
+  "InventoryMenu.EMPTY_ARMOR_SLOT_LEGGINGS",
   "InventoryMenu.getCraftSlots()",
-  "ItemStack.limitSize()"
+  "ItemStack.isItemEnabled()",
+  "ItemStack.limitSize()",
+  "CraftingRecipe.defaultCraftingReminder()",
+  "GameRules.KEEP_INVENTORY",
+  "GameRules.get()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "satchel_slots-2.1.2+26.3.jar",
   "published": "2026-10-25"
  },
@@ -42,8 +65,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -61,5 +84,9 @@
   "minecraft",
   "trinkets_updated"
  ],
- "lacks": 13
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 36
 }

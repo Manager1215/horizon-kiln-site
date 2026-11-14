@@ -10,26 +10,22 @@
  "description": "Automatically sync files from servers to client or clients to clients upon joining with end to end encryption.",
  "needs": [
   "an access widener",
-  "Mixin",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.networking.v1.ServerConfigurationNetworking.ConfigurationPacketHandler",
   "net.fabricmc.fabric.api.networking.v1.ServerConfigurationNetworking.Context",
+  "net.fabricmc.fabric.impl.client.registry.sync.ClientRegistrySyncHandler",
+  "net.fabricmc.fabric.impl.registry.sync.RegistrySyncManager",
+  "net.fabricmc.fabric.impl.registry.sync.SyncCompletePayload",
   "net.minecraft.server.network.ConfigurationTask",
   "net.minecraft.server.network.ConfigurationTask.Type",
-  "net.minecraft.server.permissions.Permissions",
   "ClientConfigurationNetworking.send()",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "PayloadTypeRegistry.serverboundConfiguration()",
   "ServerConfigurationConnectionEvents.BEFORE_CONFIGURE",
   "ServerConfigurationNetworking.registerGlobalReceiver()",
   "ServerConfigurationNetworking.send()",
-  "Minecraft.execute()",
   "Minecraft.gameDirectory",
+  "Minecraft.isLocalServer()",
   "GuiGraphicsExtractor.blit()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseReleased()",
-  "Screen.mouseScrolled()",
   "ClientPacketListener.getConnection()",
   "RenderPipelines.GUI_TEXTURED",
   "Connection.disconnect()",
@@ -42,8 +38,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "easymodsync-1.26.6.1.jar",
   "published": "2026-06-23"
  },
@@ -55,8 +51,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -73,5 +69,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 26
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels"
+ },
+ "lacks": 23
 }

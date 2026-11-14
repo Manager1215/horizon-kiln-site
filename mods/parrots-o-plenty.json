@@ -1,7 +1,7 @@
 {
  "id": "parrots-o-plenty",
  "name": "Parrots O' Plenty - Parrot expansion",
- "version": "1.0.1",
+ "version": "1.0.2",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,24 +9,20 @@
  "author": "VoxelForgeStudios",
  "description": "Discover the weird, wonderful, and critically endangered parrots of the world! Parrots O’ Plenty introduces real-life species, and a whole new reason to explore the skies.",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
   "net.minecraft.client.model.animal.parrot.ParrotModel",
   "net.minecraft.client.model.animal.parrot.ParrotModel.Pose",
   "net.minecraft.client.model.geom.ModelLayers",
   "net.minecraft.client.renderer.entity.EntityRenderers",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
   "net.minecraft.client.renderer.entity.ParrotRenderer",
   "net.minecraft.client.renderer.entity.layers.RenderLayer",
+  "net.minecraft.client.renderer.entity.player.AvatarRenderer",
   "net.minecraft.client.renderer.entity.state.AvatarRenderState",
   "net.minecraft.client.renderer.entity.state.ParrotRenderState",
   "net.minecraft.core.UUIDUtil",
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.entity.SpawnGroupData",
   "net.minecraft.world.entity.SpawnPlacementTypes",
   "net.minecraft.world.entity.SpawnPlacements",
@@ -43,23 +39,26 @@
   "net.minecraft.world.item.SpawnEggItem",
   "BiomeModificationContext.MobSpawnSettingsContext.removeSpawnsOfEntityType()",
   "BiomeModifications.addSpawn()",
-  "ServerTickEvents.END_SERVER_TICK",
-  "ServerPlayNetworking.canSend()",
   "EntityModelSet.bakeLayer()",
   "SubmitNodeCollector.submitModel()",
+  "EntityRendererProvider.Context.getModelSet()",
   "Holder.is()",
+  "DataComponents.ENTITY_DATA",
   "Registries.BIOME",
   "SynchedEntityData.defineId()",
-  "and 17 more"
+  "SynchedEntityData.get()",
+  "SynchedEntityData.set()",
+  "ServerPlayer.getShoulderEntityLeft()",
+  "and 12 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "parrotsoplenty-1.0.1-for-fabric-26.3.jar",
-  "published": "2026-10-17"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "parrotsoplenty-1.0.2-for-fabric-26.3.jar",
+  "published": "2026-11-12"
  },
  "reports": {
   "works": 0,
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 57
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+ },
+ "lacks": 52
 }

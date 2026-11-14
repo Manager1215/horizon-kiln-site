@@ -10,7 +10,7 @@
  "description": "Temperature now matters, no more growing spruces in a tropical forest!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 4 points inside the game's methods",
   "com.mojang.math.Constants",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariantAttributes",
@@ -18,14 +18,15 @@
   "net.fabricmc.fabric.api.transfer.v1.storage.base.SidedStorageBlockEntity",
   "net.minecraft.advancements.triggers.InventoryChangeTrigger",
   "net.minecraft.advancements.triggers.InventoryChangeTrigger.TriggerInstance",
-  "net.minecraft.client.gui.components.Tooltip",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.core.HolderSet.Named",
   "net.minecraft.core.particles.ItemParticleOption",
   "net.minecraft.data.recipes.RecipeUnlockAdvancementBuilder",
   "net.minecraft.network.chat.ComponentSerialization",
   "net.minecraft.references.BlockItemId",
+  "net.minecraft.references.BlockItemIds",
   "net.minecraft.world.food.FoodProperties",
+  "net.minecraft.world.inventory.ResultSlot",
+  "net.minecraft.world.item.BoneMealItem",
   "net.minecraft.world.level.block.BushBlock",
   "net.minecraft.world.level.block.CarvedPumpkinBlock",
   "net.minecraft.world.level.block.Mirror",
@@ -43,22 +44,21 @@
   "FluidVariantRendering.getTooltip()",
   "ContainerItemContext.forPlayerInteraction()",
   "FluidConstants.fromBucketFraction()",
-  "Minecraft.gameMode",
-  "Minecraft.hitResult",
   "Button.extractTooltipForNextRenderPass()",
   "AbstractContainerScreen.extractLabels()",
+  "MultiPlayerGameMode.handleInventoryButtonClick()",
   "BlockEntityRenderer.extractRenderState()",
   "ItemStackRenderState.isEmpty()",
   "RenderTypes.translucentMovingBlock()",
   "HolderGetter.getOrThrow()",
-  "and 43 more"
+  "and 44 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "climatic_plants-2.0-beta.2+26.3.jar",
   "published": "2026-10-18"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 123
+ "softOff": {
+  "class": "restart",
+  "why": "@modify-args and @overwrite and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 111
 }

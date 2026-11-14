@@ -9,13 +9,12 @@
  "author": "2018_1_19",
  "description": "Discover two unique armor trims forged from the power of the Warden: Crown template and Warrior template.",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback",
   "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback.RegistrationHelper",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents",
   "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyCallback",
   "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyContext",
@@ -27,37 +26,38 @@
   "net.minecraft.client.model.geom.builders.MeshDefinition",
   "net.minecraft.client.model.geom.builders.PartDefinition",
   "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
+  "net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer",
   "net.minecraft.client.renderer.entity.layers.RenderLayer",
   "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
+  "net.minecraft.client.resources.model.EquipmentClientInfo",
+  "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
   "net.minecraft.server.PlayerAdvancements",
   "net.minecraft.server.ServerAdvancementManager",
   "net.minecraft.world.entity.decoration.ArmorStand",
+  "net.minecraft.world.inventory.AnvilMenu",
+  "net.minecraft.world.inventory.DataSlot",
+  "net.minecraft.world.inventory.SmithingMenu",
   "net.minecraft.world.item.SmithingTemplateItem",
   "net.minecraft.world.item.component.DyedItemColor",
+  "net.minecraft.world.item.crafting.SmithingTrimRecipe",
   "net.minecraft.world.item.equipment.trim.ArmorTrim",
   "net.minecraft.world.item.equipment.trim.TrimMaterial",
   "net.minecraft.world.item.equipment.trim.TrimMaterials",
   "net.minecraft.world.item.equipment.trim.TrimMaterials.Palette",
+  "net.minecraft.world.item.equipment.trim.TrimPattern",
   "net.minecraft.world.level.storage.loot.entries.EntryGroup",
   "net.minecraft.world.level.storage.loot.entries.EntryGroup.Builder",
   "net.minecraft.world.level.storage.loot.providers.number.ints.ConstantValue",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerTickEvents.END_SERVER_TICK",
-  "EntityModelSet.bakeLayer()",
-  "ModelPart.getChild()",
-  "ModelPart.translateAndRotate()",
-  "LayerDefinition.create()",
-  "SubmitNodeCollector.submitModelPart()",
-  "EntityRendererProvider.Context.getModelSet()",
-  "RenderTypes.armorCutoutNoCull()",
-  "and 17 more"
+  "and 29 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Warden's Relics.jar",
   "published": "2026-10-31"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 57
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 69
 }

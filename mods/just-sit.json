@@ -9,7 +9,6 @@
  "author": "Aquarius.playz",
  "description": "You can sit anywhere where you want.",
  "needs": [
-  "Mixin",
   "net.minecraft.client.model.HumanoidModel",
   "net.minecraft.client.renderer.entity.LivingEntityRenderer",
   "net.minecraft.client.renderer.entity.state.AvatarRenderState",
@@ -17,10 +16,7 @@
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
   "net.minecraft.world.entity.Pose",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "Window.handle()",
-  "Minecraft.execute()",
   "LocalPlayer.getPose()",
   "SynchedEntityData.defineId()",
   "SynchedEntityData.get()",
@@ -29,12 +25,12 @@
   "EntityTypes.PLAYER",
   "LivingEntity.<init>()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "justsit-1.0.1-fabric-26.3-0.161.0.jar",
   "published": "2026-09-22"
  },
@@ -47,5 +43,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
- "lacks": 18
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 15
 }

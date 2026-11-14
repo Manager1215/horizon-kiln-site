@@ -9,13 +9,21 @@
  "author": "CasualZ",
  "description": "Mob pathfinding runs on the server thread and causes tick spikes. PathWeaver moves it to spare CPU cores: mean tick roughly halved with 1024 mobs, worst-1% ticks down 55-61%. Server-side, clients need nothing. Read the warning before installing.",
  "needs": [
-  "Mixin",
+  "Mixin: 15 points inside the game's methods",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
+  "net.fabricmc.fabric.api.registry.LandPathTypeRegistry",
+  "net.fabricmc.fabric.api.registry.LandPathTypeRegistry.DynamicPathTypeProvider",
+  "net.fabricmc.fabric.api.registry.LandPathTypeRegistry.StaticPathTypeProvider",
   "net.fabricmc.loader.api.metadata.ModOrigin",
   "net.fabricmc.loader.api.metadata.ModOrigin.Kind",
+  "net.minecraft.world.entity.ai.Brain",
+  "net.minecraft.world.entity.ai.behavior.MoveToTargetSink",
+  "net.minecraft.world.entity.ai.behavior.PositionTracker",
+  "net.minecraft.world.entity.ai.memory.MemoryModuleType",
+  "net.minecraft.world.entity.ai.memory.WalkTarget",
   "net.minecraft.world.entity.ai.navigation.PathNavigation",
+  "net.minecraft.world.entity.ai.navigation.WallClimberNavigation",
   "net.minecraft.world.entity.monster.zombie.Zombie",
   "net.minecraft.world.level.PathNavigationRegion",
   "net.minecraft.world.level.pathfinder.AmphibiousNodeEvaluator",
@@ -24,30 +32,32 @@
   "net.minecraft.world.level.pathfinder.NodeEvaluator",
   "net.minecraft.world.level.pathfinder.Path",
   "net.minecraft.world.level.pathfinder.PathFinder",
+  "net.minecraft.world.level.pathfinder.PathType",
   "net.minecraft.world.level.pathfinder.PathTypeCache",
   "net.minecraft.world.level.pathfinder.PathfindingContext",
   "net.minecraft.world.level.pathfinder.SwimNodeEvaluator",
   "net.minecraft.world.level.pathfinder.WalkNodeEvaluator",
   "ServerLifecycleEvents.SERVER_STARTING",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerTickEvents.END_SERVER_TICK",
   "ModContainer.findPath()",
   "ModContainer.getContainingMod()",
   "ModContainer.getOrigin()",
   "ModContainer.getRootPaths()",
   "ModMetadata.getType()",
-  "Commands.LEVEL_GAMEMASTERS",
-  "Commands.hasPermission()",
+  "SectionPos.asLong()",
   "SectionPos.asLong()",
   "MinecraftServer.getTickCount()",
-  "Mob.getNavigation()"
+  "ServerLevel.getNearestPlayer()",
+  "ServerLevel.getPathTypeCache()",
+  "Mob.distanceToSqr()",
+  "and 10 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "pathweaver-0.9.0+26.3.jar",
   "published": "2026-10-13"
  },
@@ -59,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -76,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 31
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes"
+ },
+ "lacks": 50
 }

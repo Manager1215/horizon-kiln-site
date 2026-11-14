@@ -9,20 +9,18 @@
  "author": "xfl03",
  "description": "Custom Skin Loader mod for Minecraft.",
  "needs": [
-  "Mixin",
   "net.fabricmc.loader.impl.launch.FabricLauncher",
   "net.fabricmc.loader.impl.launch.FabricLauncherBase",
+  "net.minecraft.client.main.Main",
   "net.minecraft.launchwrapper.IClassTransformer",
-  "net.minecraft.launchwrapper.LaunchClassLoader",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger"
+  "net.minecraft.launchwrapper.LaunchClassLoader"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "CustomSkinLoader_Universal-15.1.jar",
   "published": "2026-10-11"
  },
@@ -35,5 +33,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
- "lacks": 6
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 5
 }

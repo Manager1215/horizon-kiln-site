@@ -9,10 +9,12 @@
  "author": "lilgallon",
  "description": "A lightweight mod that shows the stats of horses (health, jump height, speed, owner and slots for Llamas). Client-sided mod, you don't need it for your server!",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
+  "net.minecraft.client.gui.screens.inventory.AbstractMountInventoryScreen",
   "net.minecraft.client.gui.screens.inventory.HorseInventoryScreen",
+  "net.minecraft.world.entity.EntityAttachment",
+  "net.minecraft.world.entity.EntityAttachments",
   "net.minecraft.world.entity.animal.camel.Camel",
   "net.minecraft.world.entity.animal.equine.AbstractHorse",
   "net.minecraft.world.entity.animal.equine.Donkey",
@@ -24,28 +26,32 @@
   "net.minecraft.world.entity.animal.equine.ZombieHorse",
   "net.minecraft.world.entity.projectile.ProjectileUtil",
   "net.minecraft.world.phys.EntityHitResult",
-  "Minecraft.hitResult",
   "Minecraft.services()",
-  "Options.keyPickItem",
   "GuiGraphicsExtractor.nextStratum()",
   "GuiGraphicsExtractor.textWithBackdrop()",
+  "LocalPlayer.getVehicle()",
+  "EntityRenderState.distanceToCameraSq",
+  "EntityRenderState.isDiscrete",
+  "EntityRenderState.nameTag",
+  "EntityRenderState.scoreText",
   "Component.translatableWithFallback()",
+  "Entity.getAttachments()",
   "Entity.getBoundingBox()",
   "Entity.getVehicle()",
   "Entity.getViewVector()",
+  "Entity.getYRot()",
   "Entity.isPickable()",
   "EntityReference.getUUID()",
   "Attribute.sanitizeValue()",
   "AABB.expandTowards()",
-  "AABB.inflate()",
-  "HitResult.getType()"
+  "AABB.inflate()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "horsestatsmod-fabric-26.3-3.6.0.jar",
   "published": "2026-10-09"
  },
@@ -57,8 +63,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -75,5 +81,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 29
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 36
 }

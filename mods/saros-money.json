@@ -9,21 +9,14 @@
  "author": "Sarocesch",
  "description": "Adds physical coins (1€–2€), banknotes (5€–500€), ATMs, and bank accounts for a complete multiplayer economy — with /pay, /eco commands, sign shops, and a leaderboard.",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.client.gui.screens.inventory.AbstractSignEditScreen",
   "net.minecraft.server.level.ChunkMap",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.permissions.Permissions",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.SimpleMenuProvider",
   "net.minecraft.world.entity.ai.village.poi.PoiType",
@@ -38,26 +31,32 @@
   "net.minecraft.world.level.block.entity.SignBlockEntity",
   "net.minecraft.world.level.block.entity.SignText",
   "net.minecraft.world.level.storage.LevelResource",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "CommandSyntaxException.printStackTrace()",
   "ServerLifecycleEvents.SERVER_STARTED",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerTickEvents.END_SERVER_TICK",
-  "Minecraft.execute()",
   "AbstractContainerScreen.containerTick()",
   "AbstractContainerScreen.extractContents()",
-  "CommandSourceStack.getPlayerOrException()",
-  "CommandSourceStack.getServer()",
   "DefaultedRegistry.iterator()",
-  "and 44 more"
+  "NonNullList.iterator()",
+  "RegistryAccess.fromRegistryOfRegistries()",
+  "BuiltInRegistries.POINT_OF_INTEREST_TYPE",
+  "BuiltInRegistries.REGISTRY",
+  "BuiltInRegistries.VILLAGER_PROFESSION",
+  "Registries.POINT_OF_INTEREST_TYPE",
+  "Registries.TRADE_SET",
+  "Registries.VILLAGER_PROFESSION",
+  "MinecraftServer.execute()",
+  "MinecraftServer.getAllLevels()",
+  "MinecraftServer.getWorldPath()",
+  "MinecraftServer.overworld()",
+  "and 22 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Saros-Money-Mod-Fabric-26.3-4.4.8.jar",
   "published": "2026-10-02"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 84
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 62
 }

@@ -9,21 +9,42 @@
  "author": "medicalwhiskey",
  "description": "Adds toggles to reduce or simplify gameplay mechanics, making common interactions quicker and less repetitive.",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
+  "Mixin: 4 points inside the game's methods",
   "net.minecraft.client.gui.screens.AlertScreen",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "ClientPlayNetworking.canSend()",
-  "Minecraft.execute()",
-  "StreamCodec.composite()"
+  "net.minecraft.world.entity.ai.goal.RunAroundLikeCrazyGoal",
+  "net.minecraft.world.entity.animal.equine.AbstractHorse",
+  "net.minecraft.world.entity.animal.feline.Cat",
+  "net.minecraft.world.entity.animal.wolf.Wolf",
+  "net.minecraft.world.food.FoodProperties",
+  "net.minecraft.world.item.BoneMealItem",
+  "net.minecraft.world.level.block.BonemealableBlock.Type",
+  "net.minecraft.world.level.block.ComposterBlock",
+  "net.minecraft.world.level.block.StemBlock",
+  "net.minecraft.world.level.gameevent.GameEvent.Context",
+  "Registry.getOptional()",
+  "RegistryAccess.lookupOrThrow()",
+  "BlockTransformer.transformBlock()",
+  "DataComponents.COMPOSTABLE",
+  "DataComponents.FOOD",
+  "StreamCodec.composite()",
+  "Animal.getAge()",
+  "Animal.getLoveCause()",
+  "Animal.setAge()",
+  "FoodData.eat()",
+  "ItemStack.consume()",
+  "BlockTransformers.HOE",
+  "UseOnContext.<init>()",
+  "Level.gameEvent()",
+  "BonemealableBlock.getType()",
+  "HorizontalDirectionalBlock.FACING",
+  "GameEvent.BLOCK_CHANGE"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "instant-actions-2.0.6+26.3.jar",
   "published": "2026-11-03"
  },
@@ -35,8 +56,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -54,5 +75,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 7
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; has network channels"
+ },
+ "lacks": 28
 }

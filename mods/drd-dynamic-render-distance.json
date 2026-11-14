@@ -1,7 +1,7 @@
 {
  "id": "drd-dynamic-render-distance",
  "name": "[DRD] Dynamic Render Distance",
- "version": "1.0.2+26.3",
+ "version": "1.0.4+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,29 +9,45 @@
  "author": "Bahanos",
  "description": "Automatically adjusts render distance based on FPS. Flash-free, Bobby-compatible, configurable via Mod Menu",
  "needs": [
-  "Mixin",
+  "Mixin: 6 points inside the game's methods",
   "com.mojang.blaze3d.platform.FramerateLimitTracker",
   "com.mojang.blaze3d.platform.FramerateLimitTracker.FramerateThrottleReason",
   "com.mojang.blaze3d.platform.VideoMode",
+  "net.minecraft.client.OptionInstance.CaptionBasedToString",
+  "net.minecraft.client.OptionInstance.TooltipSupplier",
+  "net.minecraft.client.OptionInstance.ValueUpdateListener",
+  "net.minecraft.client.gui.components.OptionsList",
+  "net.minecraft.client.gui.screens.options.OptionsSubScreen",
+  "net.minecraft.client.gui.screens.options.VideoSettingsScreen",
+  "net.minecraft.client.renderer.LevelRenderer",
   "net.minecraft.client.renderer.SectionOcclusionGraph",
+  "net.minecraft.client.renderer.extract.LevelExtractor",
+  "net.minecraft.client.server.IntegratedServer",
   "Window.getActiveVideoMode()",
   "Window.isIconified()",
   "Minecraft.getFramerateLimitTracker()",
+  "Minecraft.getSingleplayerServer()",
   "Minecraft.isWindowActive()",
   "Minecraft.levelRenderer",
+  "OptionInstance.<init>()",
+  "OptionInstance.cachedConstantTooltip()",
+  "OptionInstance.createBoolean()",
+  "OptionInstance.IntRange.<init>()",
   "Options.enableVsync()",
   "Options.framerateLimit()",
+  "Options.genericValueLabel()",
   "Options.getEffectiveRenderDistance()",
-  "Gui.overlay()"
+  "Gui.overlay()",
+  "PlayerList.setSimulationDistance()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "drd-mc26.3-fabric-1.0.2.jar",
-  "published": "2026-10-30"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "drd-mc26.3-fabric-1.0.4.jar",
+  "published": "2026-11-11"
  },
  "reports": {
   "works": 0,
@@ -41,8 +57,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -59,5 +75,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 13
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method into the game's classes"
+ },
+ "lacks": 29
 }

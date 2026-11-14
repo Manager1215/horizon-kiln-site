@@ -9,21 +9,19 @@
  "author": "UninenVille",
  "description": "You will be prompted with a confirmation screen before resetting all keybindings.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.client.gui.screens.options.OptionsSubScreen",
   "net.minecraft.client.gui.screens.options.controls.KeyBindsList",
-  "KeyMapping.getDefaultKey()",
+  "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
   "KeyMapping.setKey()",
-  "Minecraft.setScreenAndShow()",
-  "Options.keyMappings",
   "Component.translatableWithFallback()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "reset-keys-confirmation-screen-1.4.0.jar",
   "published": "2026-06-24"
  },
@@ -39,5 +37,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 7
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 5
 }

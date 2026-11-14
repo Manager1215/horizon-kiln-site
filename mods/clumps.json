@@ -9,10 +9,8 @@
  "author": "jaredlll08",
  "description": "Clumps XP orbs together to reduce lag",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.minecraft.world.item.enchantment.EnchantedItemInUse",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "ServerLevel.getEntities()",
   "ServerPlayer.giveExperiencePoints()",
   "ServerPlayer.take()",
@@ -23,12 +21,12 @@
   "EntityTypeTest.forClass()",
   "AABB.ofSize()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Clumps-fabric-26.3-26.3.2.jar",
   "published": "2026-09-16"
  },
@@ -45,5 +43,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 12
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 10
 }

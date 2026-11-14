@@ -9,7 +9,7 @@
  "author": "Pepper_Bell",
  "description": "A Minecraft mod that allows for efficient connected textures",
  "needs": [
-  "Mixin",
+  "Mixin: 5 points inside the game's methods",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin.Context",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelModifier",
@@ -19,13 +19,18 @@
   "net.fabricmc.fabric.api.client.model.loading.v1.PreparableModelLoadingPlugin.DataLoader",
   "net.fabricmc.fabric.api.client.model.loading.v1.wrapper.WrapperBlockStateModel",
   "net.fabricmc.fabric.api.client.renderer.v1.Renderer",
+  "net.fabricmc.fabric.api.client.renderer.v1.mesh.Mesh",
+  "net.fabricmc.fabric.api.client.renderer.v1.mesh.MeshView",
   "net.fabricmc.fabric.api.client.renderer.v1.mesh.MutableMesh",
   "net.fabricmc.fabric.api.client.renderer.v1.mesh.MutableQuadView",
   "net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadAtlas",
   "net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadEmitter",
   "net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadTransform",
   "net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadView",
+  "net.fabricmc.fabric.api.client.renderer.v1.model.MeshQuadCollection",
+  "net.fabricmc.fabric.api.client.renderer.v1.model.ModelHelper",
   "net.fabricmc.fabric.api.client.renderer.v1.sprite.SpriteFinder",
+  "net.fabricmc.fabric.api.client.renderer.v1.sprite.SpriteFinderGetter",
   "net.fabricmc.fabric.api.client.rendering.v1.InvalidateRenderStateCallback",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
@@ -34,30 +39,25 @@
   "net.fabricmc.fabric.api.util.TriState",
   "net.minecraft.IdentifierException",
   "net.minecraft.client.model.geom.builders.UVPair",
+  "net.minecraft.client.renderer.item.CuboidItemModelWrapper",
+  "net.minecraft.client.renderer.item.CuboidItemModelWrapper.Unbaked",
   "net.minecraft.client.renderer.texture.MissingTextureAtlasSprite",
+  "net.minecraft.client.renderer.texture.atlas.SpriteResourceLoader",
+  "net.minecraft.client.renderer.texture.atlas.SpriteSource",
+  "net.minecraft.client.renderer.texture.atlas.SpriteSource.DiscardableLoader",
+  "net.minecraft.client.renderer.texture.atlas.SpriteSourceList",
+  "net.minecraft.client.renderer.texture.atlas.sources.SingleFile",
+  "net.minecraft.client.resources.model.geometry.BakedQuad.MaterialFlags",
   "net.minecraft.client.resources.model.sprite.AtlasManager.PendingStitchResults",
   "net.minecraft.data.AtlasIds",
-  "net.minecraft.server.packs.PackResources.ResourceOutput",
-  "net.minecraft.server.packs.resources.PreparableReloadListener.StateKey",
-  "org.apache.commons.io.FilenameUtils",
-  "IntList.isEmpty()",
-  "Object2ObjectMap.Entry.getKey()",
-  "Object2ObjectMap.Entry.getValue()",
-  "ObjectArrayList.toArray()",
-  "ObjectBidirectionalIterator.hasNext()",
-  "ObjectBidirectionalIterator.next()",
-  "ObjectIterator.hasNext()",
-  "ObjectIterator.next()",
-  "ObjectSet.toArray()",
-  "ReferenceCollection.forEach()",
-  "and 41 more"
+  "and 59 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "continuity-3.0.1+26.3.jar",
   "published": "2026-09-16"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +85,9 @@
   "fabric-api",
   "minecraft"
  ],
- "lacks": 81
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 99
 }

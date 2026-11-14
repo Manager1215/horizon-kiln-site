@@ -10,19 +10,42 @@
  "description": "Prevents the game from disabling all resourcepacks if a shader related error occurs. Also adds a hot-reload key (F3 + R)",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 8 points inside the game's methods",
+  "com.mojang.renderpearl.backend.api.BackendRenderPipeline",
+  "com.mojang.renderpearl.backend.api.BackendRenderPipeline.CreateInfo",
+  "com.mojang.renderpearl.backend.api.BackendRenderPipeline.CreateInfo.Shader",
+  "com.mojang.renderpearl.backend.opengl.GlProgram",
+  "com.mojang.renderpearl.backend.opengl.GlShaderModule",
+  "com.mojang.renderpearl.frontend.shaders.PipelineBuilder",
+  "com.mojang.renderpearl.util.ShaderCompileException",
+  "net.minecraft.client.gui.components.ComponentRenderUtils",
   "net.minecraft.client.renderer.ShaderManager",
   "net.minecraft.client.renderer.ShaderManager.Configs",
   "net.minecraft.server.packs.VanillaPackResources",
   "net.minecraft.server.packs.resources.MultiPackResourceManager",
-  "Minecraft.getVanillaPackResources()"
+  "net.minecraft.server.packs.resources.ReloadInstance",
+  "net.minecraft.server.packs.resources.SimpleReloadInstance",
+  "net.minecraft.util.CommonColors",
+  "RenderPipeline.getLocation()",
+  "ShaderType.getName()",
+  "KeyMapping.matches()",
+  "Minecraft.getShaderManager()",
+  "Minecraft.getVanillaPackResources()",
+  "Minecraft.isGameLoadFinished()",
+  "GuiGraphicsExtractor.<init>()",
+  "GuiGraphicsExtractor.text()",
+  "ChatComponent.addServerSystemMessage()",
+  "CommonComponents.SPACE",
+  "Component.translatableWithFallback()",
+  "Component.translatableWithFallback()",
+  "Util.backgroundExecutor()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "eg_stop_unloading_my_shaders-1.6.0+26.3-fabric.jar",
   "published": "2026-09-17"
  },
@@ -34,8 +57,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -50,5 +73,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 5
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 28
 }

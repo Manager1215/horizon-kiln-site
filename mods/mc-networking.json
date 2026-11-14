@@ -9,7 +9,6 @@
  "author": "AsgarraRu",
  "description": "Build, configure, and simulate realistic IP Networks, Devices and Protocols in-game.",
  "needs": [
-  "Mixin",
   "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
   "com.mojang.blaze3d.vertex.BufferBuilder",
   "com.mojang.blaze3d.vertex.ByteBufferBuilder",
@@ -24,7 +23,6 @@
   "net.minecraft.client.renderer.DynamicGpuData",
   "net.minecraft.client.renderer.MappableRingBuffer",
   "net.minecraft.core.particles.DustParticleOptions",
-  "net.minecraft.server.players.PlayerList",
   "org.lwjgl.system.MemoryUtil",
   "ProjectionType.vertexSorting()",
   "RenderSystem.getCompiledPipeline()",
@@ -42,22 +40,23 @@
   "RenderPipeline.getVertexFormatBinding()",
   "VertexFormat.getVertexSize()",
   "LevelRenderEvents.END_EXTRACTION",
-  "PlayerLookup.around()",
-  "Minecraft.execute()",
   "Options.languageCode",
   "Font.split()",
   "GuiGraphicsExtractor.text()",
-  "EditBox.setBordered()",
-  "EditBox.setCursorPosition()",
-  "EditBox.setTextColor()",
-  "and 16 more"
+  "ConfirmLinkScreen.confirmLink()",
+  "ClientLevel.getChunkSource()",
+  "LocalPlayer.chunkPosition()",
+  "RenderPipelines.DEBUG_FILLED_SNIPPET",
+  "RenderPipelines.register()",
+  "BlockPos.toShortString()",
+  "and 8 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "mc-networking-1.2.0.jar",
   "published": "2026-11-04"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 56
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 48
 }

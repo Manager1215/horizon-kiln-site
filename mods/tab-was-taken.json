@@ -22,9 +22,6 @@
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.EnumChatFormat",
   "net.minecraft.SharedConstants",
   "net.minecraft.network.NetworkManager",
@@ -33,12 +30,6 @@
   "net.minecraft.network.chat.ChatHexColor",
   "net.minecraft.network.chat.ChatMessage",
   "net.minecraft.network.chat.ChatModifier",
-  "net.minecraft.network.chat.ClickEvent.ChangePage",
-  "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-  "net.minecraft.network.chat.ClickEvent.OpenFile",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
-  "net.minecraft.network.chat.ClickEvent.SuggestCommand",
   "net.minecraft.network.chat.FontDescription",
   "net.minecraft.network.chat.FontDescription.Resource",
   "net.minecraft.network.chat.FontDescription.c",
@@ -47,17 +38,26 @@
   "net.minecraft.network.chat.RemoteChatSession",
   "net.minecraft.network.chat.RemoteChatSession.Data",
   "net.minecraft.network.chat.RemoteChatSession.a",
-  "net.minecraft.network.chat.contents.PlainTextContents",
   "net.minecraft.network.chat.contents.objects.AtlasSprite",
   "net.minecraft.network.chat.contents.objects.PlayerSprite",
-  "and 80 more"
+  "net.minecraft.network.chat.numbers.FixedFormat",
+  "net.minecraft.network.protocol.game.ClientboundPlayerInfoUpdatePacket.Entry",
+  "net.minecraft.network.protocol.game.ClientboundPlayerInfoUpdatePacket.a",
+  "net.minecraft.network.protocol.game.ClientboundPlayerInfoUpdatePacket.b",
+  "net.minecraft.network.protocol.game.ClientboundSetPlayerTeamPacket.Action",
+  "net.minecraft.network.protocol.game.PacketPlayOutPlayerInfo",
+  "net.minecraft.network.protocol.game.PacketPlayOutPlayerInfo.EnumPlayerInfoAction",
+  "net.minecraft.network.protocol.game.PacketPlayOutPlayerInfo.PlayerInfoData",
+  "net.minecraft.network.protocol.game.PacketPlayOutPlayerListHeaderFooter",
+  "net.minecraft.network.protocol.game.PacketPlayOutScoreboardDisplayObjective",
+  "and 75 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "TAB v6.2.1.jar",
   "published": "2026-10-18"
  },
@@ -76,5 +76,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 243
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 220
 }

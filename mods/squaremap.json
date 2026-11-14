@@ -10,28 +10,29 @@
  "description": "squaremap is a minimalistic & lightweight world map viewer for Minecraft servers, using the vanilla map rendering style",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 6 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.Unload",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
   "net.minecraft.SharedConstants",
   "net.minecraft.TracingExecutor",
-  "net.minecraft.commands.arguments.DimensionArgument",
+  "net.minecraft.commands.arguments.selector.EntitySelectorParser",
+  "net.minecraft.commands.synchronization.ArgumentTypeInfos",
+  "net.minecraft.commands.synchronization.ArgumentUtils",
   "net.minecraft.core.QuartPos",
   "net.minecraft.network.chat.ComponentSerialization",
   "net.minecraft.network.chat.ComponentUtils",
+  "net.minecraft.network.protocol.game.ClientboundCommandsPacket.ArgumentNodeStub",
   "net.minecraft.server.level.ChunkHolder",
   "net.minecraft.server.level.ChunkLevel",
+  "net.minecraft.server.level.ChunkMap",
   "net.minecraft.server.level.ChunkResult",
   "net.minecraft.server.level.ServerPlayerGameMode",
   "net.minecraft.server.level.Ticket",
-  "net.minecraft.server.permissions.LevelBasedPermissionSet",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.util.BitStorage",
   "net.minecraft.util.SimpleBitStorage",
@@ -46,19 +47,18 @@
   "net.minecraft.world.level.chunk.storage.SerializableChunkData.ChunkReadException",
   "net.minecraft.world.level.levelgen.BelowZeroRetrogen",
   "net.minecraft.world.level.storage.LevelResource",
-  "org.apache.logging.log4j.Level",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
-  "org.apache.logging.log4j.LoggingException",
-  "org.apache.logging.log4j.ThreadContext",
-  "and 64 more"
+  "RemovalNotification.getValue()",
+  "ImmutableList.get()",
+  "ImmutableList.isEmpty()",
+  "ImmutableList.size()",
+  "and 56 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "squaremap-fabric-mc26.3-1.4.3.jar",
   "published": "2026-10-16"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 154
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own; has network channels"
+ },
+ "lacks": 135
 }

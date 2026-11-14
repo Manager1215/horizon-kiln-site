@@ -1,0 +1,46 @@
+{
+ "id": "modern-port-of-tooltip-fix",
+ "name": "Modern port of ToolTip Fix",
+ "version": "1.0.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/modern-port-of-tooltip-fix",
+ "author": "Itamio",
+ "description": "Fixes tooltips from running off the screen; wraps long tooltip lines and flips overflowing tooltips to the other side of the cursor.",
+ "needs": [
+  "Mixin: 1 point inside the game's methods",
+  "net.minecraft.client.gui.screens.inventory.tooltip.ClientTextTooltip",
+  "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
+  "Font.split()",
+  "Component.getSiblings()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "evidence": "",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "tooltipfix263-1.0.0.jar",
+  "published": "2026-11-09"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "entrypoints": {},
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 4
+}

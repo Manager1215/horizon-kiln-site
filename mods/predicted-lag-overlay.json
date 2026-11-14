@@ -9,25 +9,31 @@
  "author": "tenite",
  "description": "A prediction logic, for then a player lags and gets frozen in place while they are already moving. The mod simulated the predicted movement as a ghost.",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
-  "net.minecraft.client.gui.components.CycleButton.OnValueChange",
+  "Mixin: 2 points inside the game's methods",
   "net.minecraft.client.gui.components.OptionsList",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
   "net.minecraft.client.gui.layouts.LinearLayout",
   "net.minecraft.client.gui.screens.options.OptionsSubScreen",
-  "Button.Builder.width()",
+  "net.minecraft.client.renderer.LevelRenderer",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
+  "net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer",
+  "net.minecraft.client.renderer.entity.layers.RenderLayer",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
   "ClientLevel.getEntityCollisions()",
+  "ClientPacketListener.getConnection()",
   "AbstractClientPlayer.getBoundingBox()",
   "AbstractClientPlayer.getPositionCodec()",
-  "AbstractClientPlayer.isFallFlying()",
   "AbstractClientPlayer.isInLava()",
   "AbstractClientPlayer.isPassenger()",
   "AbstractClientPlayer.onClimbable()",
+  "EntityRenderDispatcher.submit()",
+  "RenderTypes.entityTranslucent()",
+  "RenderTypes.entityTranslucentCull()",
+  "LevelRenderState.entityRenderStates",
   "CommonComponents.GUI_DONE",
   "CommonComponents.optionNameValue()",
+  "ClientboundMoveEntityPacket.getEntity()",
   "VecDeltaCodec.getBase()",
   "Entity.collideBoundingBox()",
   "Entity.getPositionCodec()",
@@ -40,8 +46,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "predicted-lag-overlay-0.1.1+26.3.jar",
   "published": "2026-10-15"
  },
@@ -53,8 +59,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -69,5 +75,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 25
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes"
+ },
+ "lacks": 31
 }

@@ -10,7 +10,6 @@
  "description": "Adds new types of snowballs that have unique effects",
  "needs": [
   "an access widener",
-  "Mixin",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
   "net.minecraft.client.animation.AnimationChannel",
@@ -29,6 +28,7 @@
   "net.minecraft.client.model.geom.builders.CubeListBuilder",
   "net.minecraft.client.model.geom.builders.MeshDefinition",
   "net.minecraft.client.model.geom.builders.PartDefinition",
+  "net.minecraft.client.player.ClientInput",
   "net.minecraft.client.renderer.entity.EntityRenderers",
   "net.minecraft.client.renderer.entity.ThrownItemRenderer",
   "net.minecraft.core.particles.ItemParticleOption",
@@ -40,6 +40,7 @@
   "net.minecraft.world.entity.PlayerRideableJumping",
   "net.minecraft.world.entity.PostSpawnProcessor",
   "net.minecraft.world.entity.monster.Blaze",
+  "net.minecraft.world.entity.player.Input",
   "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile",
   "net.minecraft.world.entity.vehicle.boat.Boat",
   "net.minecraft.world.food.FoodProperties",
@@ -49,16 +50,14 @@
   "net.minecraft.world.item.ProjectileItem",
   "net.minecraft.world.item.component.DyedItemColor",
   "net.minecraft.world.level.SimpleExplosionDamageCalculator",
-  "net.minecraft.world.phys.EntityHitResult",
-  "Options.operatorItemsTab()",
-  "and 59 more"
+  "and 65 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "iceball-fabric-1.5.1+mc26.3.jar",
   "published": "2026-09-16"
  },
@@ -70,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 114
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 119
 }

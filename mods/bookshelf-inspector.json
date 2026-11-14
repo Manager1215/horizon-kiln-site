@@ -9,23 +9,20 @@
  "author": "lukasabbe",
  "description": "Inspect any book in a chiseled bookshelf.",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.network.chat.ComponentUtils",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.tags.EnchantmentTags",
   "net.minecraft.world.TickRateManager",
   "net.minecraft.world.effect.MobEffectUtil",
-  "net.minecraft.world.item.alchemy.PotionContents",
   "net.minecraft.world.item.component.WrittenBookContent",
+  "net.minecraft.world.level.block.ChiseledBookShelfBlock",
+  "net.minecraft.world.level.block.ShelfBlock",
   "net.minecraft.world.level.block.entity.ChiseledBookShelfBlockEntity",
   "net.minecraft.world.level.block.entity.LecternBlockEntity",
   "net.minecraft.world.level.block.entity.ShelfBlockEntity",
   "ModContainer.findPath()",
   "ClientLevel.tickRateManager()",
   "Holder.is()",
-  "DataComponents.POTION_CONTENTS",
   "DataComponents.STORED_ENCHANTMENTS",
   "DataComponents.WRITTEN_BOOK_CONTENT",
   "ItemStack.getItemName()",
@@ -37,8 +34,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "bookshelfinspector-fabric-2.4+26.3.jar",
   "published": "2026-09-15"
  },
@@ -50,8 +47,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -66,5 +63,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 22
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 19
 }

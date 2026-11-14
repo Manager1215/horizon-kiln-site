@@ -9,20 +9,25 @@
  "author": "Sn0wix",
  "description": "A simple client side mod that takes off inventory closing packets, so you can use the crafting grid as an additional storage space.",
  "needs": [
-  "Mixin",
   "net.minecraft.client.OptionInstance.CaptionBasedToString",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
   "net.minecraft.client.OptionInstance.ValueUpdateListener",
+  "net.minecraft.client.multiplayer.chat.report.ReportingContext",
+  "net.minecraft.network.protocol.game.ServerboundContainerClosePacket",
+  "Minecraft.getReportingContext()",
   "OptionInstance.cachedConstantTooltip()",
   "OptionInstance.createBoolean()",
-  "OptionInstance.noTooltip()"
+  "OptionInstance.noTooltip()",
+  "ClientLevel.DEFAULT_QUIT_MESSAGE",
+  "ClientPacketListener.send()",
+  "InventoryMenu.getCraftSlots()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "KeepThatInventoryOpen-1.2.0+mc26.3.jar",
   "published": "2026-10-06"
  },
@@ -34,8 +39,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -50,5 +55,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 6
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 12
 }

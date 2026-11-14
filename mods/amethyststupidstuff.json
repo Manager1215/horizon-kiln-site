@@ -9,7 +9,6 @@
  "author": "AmethystOS04",
  "description": "adds chaotic stupid things to your game and also adds sulfur logs\nincludes 16 items and 1 null block\nnow supports 26.3!",
  "needs": [
-  "Mixin",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.entity.projectile.hurtingprojectile.LargeFireball",
   "net.minecraft.world.entity.projectile.hurtingprojectile.windcharge.WindCharge",
@@ -21,7 +20,6 @@
   "SoundEvents.WIND_CHARGE_BURST",
   "LightningBolt.setPos()",
   "Player.getEyeY()",
-  "Player.getLookAngle()",
   "Player.startUsingItem()",
   "Item.Properties.food()",
   "Item.Properties.spear()",
@@ -34,12 +32,12 @@
   "LootPool.Builder.when()",
   "Vec3.yRot()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "randomlogger-2.2.0-MiniUpd1-26.3.jar",
   "published": "2026-11-01"
  },
@@ -51,8 +49,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -68,5 +66,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 23
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 22
 }

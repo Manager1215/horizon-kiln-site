@@ -10,7 +10,7 @@
  "description": "Saddle: A Datapack Debugger for Live Editing",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
@@ -18,15 +18,21 @@
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.StartDataPackReload",
   "net.minecraft.commands.arguments.NbtTagArgument",
   "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
-  "net.minecraft.commands.arguments.coordinates.Coordinates",
   "net.minecraft.commands.arguments.selector.EntitySelectorParser",
   "net.minecraft.commands.execution.ExecutionContext",
   "net.minecraft.commands.execution.Frame",
+  "net.minecraft.commands.execution.UnboundEntryAction",
+  "net.minecraft.commands.functions.CommandFunction",
+  "net.minecraft.commands.functions.FunctionBuilder",
+  "net.minecraft.commands.functions.InstantiatedFunction",
+  "net.minecraft.commands.functions.MacroFunction",
+  "net.minecraft.commands.functions.MacroFunction.MacroEntry",
   "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.nbt.NbtIo",
+  "net.minecraft.network.chat.PlayerChatMessage",
   "net.minecraft.server.ServerFunctionManager",
   "net.minecraft.server.ServerScoreboard",
   "net.minecraft.server.commands.data.EntityDataAccessor",
+  "net.minecraft.server.commands.data.StorageDataAccessor",
   "net.minecraft.server.dialog.ActionButton",
   "net.minecraft.server.dialog.CommonButtonData",
   "net.minecraft.server.dialog.MultiActionDialog",
@@ -34,8 +40,6 @@
   "net.minecraft.server.dialog.body.PlainMessage",
   "net.minecraft.server.dialog.input.TextInput",
   "net.minecraft.server.packs.repository.PackRepository",
-  "net.minecraft.server.permissions.PermissionCheck",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.util.profiling.InactiveProfiler",
   "net.minecraft.world.level.DataPackConfig",
   "net.minecraft.world.level.WorldDataConfiguration",
@@ -44,21 +48,17 @@
   "net.minecraft.world.level.storage.WorldData",
   "net.minecraft.world.scores.PlayerScoreEntry",
   "net.minecraft.world.scores.ReadOnlyScoreInfo",
+  "net.minecraft.world.scores.Score",
   "net.minecraft.world.scores.ScoreAccess",
-  "net.minecraft.world.scores.ScoreHolder",
   "ServerLifecycleEvents.END_DATA_PACK_RELOAD",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerLifecycleEvents.SERVER_STARTING",
-  "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerLifecycleEvents.START_DATA_PACK_RELOAD",
-  "and 54 more"
+  "and 39 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "saddle-1.2.0.jar",
   "published": "2026-09-19"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 94
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 79
 }

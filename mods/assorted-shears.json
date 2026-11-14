@@ -9,15 +9,19 @@
  "author": "grim3212",
  "description": "Adds shears in every material and the Coral Cutter enchantment.",
  "needs": [
-  "Mixin",
+  "Mixin: 4 points inside the game's methods",
+  "net.minecraft.advancements.predicates.ItemPredicate",
   "net.minecraft.core.dispenser.ShearsDispenseItemBehavior",
   "net.minecraft.world.entity.Shearable",
   "net.minecraft.world.item.ShearsItem",
+  "net.minecraft.world.level.block.BeehiveBlock",
+  "net.minecraft.world.level.block.TripWireBlock",
   "Registry.getOrThrow()",
   "RegistryAccess.lookupOrThrow()",
   "InteractionHand.asEquipmentSlot()",
   "LivingEntity.gameEvent()",
   "Item.Properties.enchantable()",
+  "ItemInstance.is()",
   "EnchantmentHelper.getItemEnchantmentLevel()",
   "Block.getLootTable()",
   "GameEvent.SHEAR",
@@ -27,8 +31,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "assortedshears-fabric-26.3-2.0.0.jar",
   "published": "2026-10-24"
  },
@@ -40,8 +44,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -57,5 +61,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 12
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 16
 }

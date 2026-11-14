@@ -9,16 +9,33 @@
  "author": "cech12",
  "description": "Adds Wooden Shears to the game.",
  "needs": [
-  "Mixin",
+  "Mixin: 11 points inside the game's methods",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents.TagsLoaded",
+  "net.minecraft.advancements.predicates.ItemPredicate",
+  "net.minecraft.core.HolderSet.Direct",
   "net.minecraft.core.dispenser.ShearsDispenseItemBehavior",
-  "net.minecraft.world.item.ShearsItem"
+  "net.minecraft.world.entity.animal.cow.MushroomCow",
+  "net.minecraft.world.entity.animal.golem.CopperGolem",
+  "net.minecraft.world.entity.animal.golem.SnowGolem",
+  "net.minecraft.world.entity.animal.sheep.Sheep",
+  "net.minecraft.world.entity.decoration.LeashFenceKnotEntity",
+  "net.minecraft.world.entity.monster.cubemob.SulfurCube",
+  "net.minecraft.world.entity.monster.skeleton.Bogged",
+  "net.minecraft.world.item.ShearsItem",
+  "net.minecraft.world.item.crafting.RepairItemRecipe",
+  "net.minecraft.world.level.block.BeehiveBlock",
+  "net.minecraft.world.level.block.TripWireBlock",
+  "net.minecraft.world.level.storage.loot.predicates.MatchTool",
+  "DataComponents.DAMAGE",
+  "DataComponents.MAX_DAMAGE"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "woodenshears-fabric-26.3-4.2.1.0.jar",
   "published": "2026-10-01"
  },
@@ -30,8 +47,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -48,5 +65,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 2
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 19
 }

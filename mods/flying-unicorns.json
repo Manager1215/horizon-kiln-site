@@ -9,13 +9,14 @@
  "author": "in2bubble",
  "description": "Discover rare herds of winged unicorns, tame and ride them across land and sky, manage flight stamina, and summon your bonded mount with a unique horn in this balanced fantasy survival experience.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.client.sound.v1.FabricSoundInstance",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndLevelTick",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
   "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
+  "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState",
+  "net.minecraft.client.renderer.state.level.PlayerRenderState",
   "net.minecraft.client.resources.sounds.AbstractTickableSoundInstance",
   "net.minecraft.client.sounds.AudioStream",
   "net.minecraft.client.sounds.SoundBufferLibrary",
@@ -23,7 +24,6 @@
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
   "net.minecraft.server.network.Filterable",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.entity.SpawnPlacementTypes",
   "net.minecraft.world.entity.SpawnPlacements",
   "net.minecraft.world.entity.SpawnPlacements.SpawnPredicate",
@@ -38,26 +38,26 @@
   "net.minecraft.world.entity.animal.equine.Horse.HorseGroupData",
   "net.minecraft.world.entity.animal.equine.Variant",
   "net.minecraft.world.entity.monster.Monster",
+  "net.minecraft.world.entity.player.PlayerModelPart",
   "net.minecraft.world.item.ItemCooldowns",
   "net.minecraft.world.item.ItemUseAnimation",
   "net.minecraft.world.item.SpawnEggItem",
   "net.minecraft.world.item.component.CustomModelData",
   "net.minecraft.world.item.component.WrittenBookContent",
+  "net.minecraft.world.level.chunk.storage.EntityStorage",
   "net.minecraft.world.level.chunk.storage.SimpleRegionStorage",
+  "net.minecraft.world.level.entity.PersistentEntitySectionManager",
   "net.minecraft.world.level.storage.LevelResource",
+  "Axis.ZP",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerTickEvents.END_LEVEL_TICK",
-  "ServerTickEvents.END_SERVER_TICK",
-  "AbstractClientPlayer.getUsedItemHand()",
-  "AbstractClientPlayer.isUsingItem()",
-  "and 55 more"
+  "and 58 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "flying-unicorns-2.2.jar",
   "published": "2026-10-11"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 159
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
+ },
+ "lacks": 155
 }

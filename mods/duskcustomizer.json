@@ -10,23 +10,16 @@
  "description": "A Fabric mod that lets players customize held-item names and lore with colors, MiniMessage, configurable XP costs, messages, action bar feedback, and sounds.",
  "needs": [
   "net.minecraft.network.chat.ComponentSerialization",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.permissions.Permissions",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.item.component.ItemLore",
-  "CommandSourceStack.getEntity()",
-  "Registry.wrapAsHolder()",
   "DataComponents.CUSTOM_NAME",
   "DataComponents.LORE",
-  "MutableComponent.setStyle()",
-  "Style.withObfuscated()",
-  "Style.withStrikethrough()",
-  "Style.withUnderlined()",
   "ServerPlayer.closeContainer()",
   "ServerPlayer.connection",
   "ServerPlayer.getRandom()",
   "ServerPlayer.giveExperienceLevels()",
   "ServerPlayer.giveExperiencePoints()",
+  "ServerGamePacketListenerImpl.send()",
   "SoundEvents.VILLAGER_WORK_CARTOGRAPHER",
   "RandomSource.nextLong()",
   "MenuType.GENERIC_9x3"
@@ -35,8 +28,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "duskcustomizer-1.0.1.jar",
   "published": "2026-09-26"
  },
@@ -48,8 +41,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -64,5 +57,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 21
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 14
 }

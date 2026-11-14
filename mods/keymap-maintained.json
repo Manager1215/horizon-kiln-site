@@ -9,11 +9,12 @@
  "author": "Leclowndu93150",
  "description": "Visual key remapping mod for Minecraft",
  "needs": [
-  "Mixin",
+  "net.minecraft.client.gui.components.OptionsList",
+  "net.minecraft.client.gui.screens.options.MouseSettingsScreen",
+  "net.minecraft.client.gui.screens.options.OptionsSubScreen",
+  "net.minecraft.client.gui.screens.options.controls.ControlsScreen",
   "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
   "net.minecraft.util.StringUtil",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "BiMap.clear()",
   "BiMap.containsKey()",
   "BiMap.entrySet()",
@@ -21,24 +22,26 @@
   "BiMap.remove()",
   "InputConstants.Key.getDisplayName()",
   "InputConstants.Type.getOrCreate()",
-  "KeyMapping.getDefaultKey()",
+  "Window.handle()",
   "KeyMapping.resetMapping()",
   "KeyMapping.setKey()",
-  "Options.keyMappings",
-  "Font.plainSubstrByWidth()",
-  "KeyEvent.hasAltDown()",
-  "KeyEvent.hasShiftDown()",
-  "MutableComponent.withStyle()",
+  "Options.autoJump()",
+  "Options.operatorItemsTab()",
+  "Options.sprintWindow()",
+  "Options.toggleAttack()",
+  "Options.toggleCrouch()",
+  "Options.toggleSprint()",
+  "Options.toggleUse()",
   "FileToIdConverter.json()",
   "FileToIdConverter.listMatchingResources()",
   "Identifier.toLanguageKey()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "keymap-26.3-Fabric-0.11.3.jar",
   "published": "2026-10-04"
  },
@@ -50,8 +53,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -65,5 +68,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 22
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 26
 }

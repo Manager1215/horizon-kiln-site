@@ -1,16 +1,16 @@
 {
  "id": "lod-server-support",
  "name": "LOD Server Support",
- "version": "v0.20.0+fabric+mc26.3",
+ "version": "v0.22.0-beta.1+fabric+mc26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
  "url": "https://modrinth.com/mod/lod-server-support",
  "author": "bitvox",
- "description": "Voxy multiplayer support and Distant Horizons compatibility (unofficial). See fully rendered chunks and players thousands of blocks away in multiplayer.",
+ "description": "Unofficial multiplayer support for Voxy: servers send distant terrain and far-away players to clients. Also fills Xaero's World Map and JourneyMap, and works with Distant Horizons servers. The same mod as Voxy Server Side.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "io.netty.channel.Channel",
   "io.netty.channel.ChannelConfig",
@@ -19,9 +19,6 @@
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
   "net.fabricmc.fabric.api.networking.v1.context.PacketContextProvider",
   "net.minecraft.SharedConstants",
   "net.minecraft.client.model.EntityModel",
@@ -41,26 +38,29 @@
   "net.minecraft.core.IdMapper",
   "net.minecraft.core.RegistryAccess.ImmutableRegistryAccess",
   "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.nbt.NbtIo",
   "net.minecraft.nbt.TagType",
   "net.minecraft.nbt.TagTypes",
   "net.minecraft.network.VarInt",
-  "net.minecraft.network.chat.contents.TranslatableContents",
+  "net.minecraft.network.protocol.game.ServerboundMovePlayerPacket",
   "net.minecraft.network.protocol.ping.ServerboundPingRequestPacket",
+  "net.minecraft.server.MinecraftServer.MultiplayerScope",
   "net.minecraft.server.level.ChunkMap",
   "net.minecraft.server.level.ChunkTrackingView",
   "net.minecraft.server.network.PlayerChunkSender",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
+  "net.minecraft.util.BitStorage",
+  "net.minecraft.util.debugchart.LocalSampleLogger",
+  "net.minecraft.util.thread.PriorityConsecutiveExecutor",
+  "net.minecraft.world.entity.ElytraAnimationState",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "lod-server-support-fabric-0.20.0+26.3.jar",
-  "published": "2026-10-24"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "lod-server-support-fabric-0.22.0-beta.1+26.3.jar",
+  "published": "2026-11-13"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 305
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels"
+ },
+ "lacks": 289
 }

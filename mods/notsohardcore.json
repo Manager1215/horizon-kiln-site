@@ -10,33 +10,23 @@
  "description": "Semi-Hardcore mod - multiple lives & life regain over time",
  "needs": [
   "an access widener",
-  "Mixin",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
+  "Mixin: 4 points inside the game's methods",
   "net.minecraft.network.syncher.EntityDataSerializers",
+  "net.minecraft.network.syncher.SynchedEntityData.Builder",
   "net.minecraft.server.level.ServerPlayer.RespawnConfig",
   "net.minecraft.server.level.ServerPlayerGameMode",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.permissions.Permissions",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.util.CommonColors",
   "net.minecraft.world.food.Foods",
-  "Minecraft.setScreenAndShow()",
   "LocalPlayer.getEntityData()",
-  "CommandSourceStack.getServer()",
-  "EntityArgument.getPlayer()",
-  "EntityArgument.player()",
   "StreamCodec.composite()",
   "SynchedEntityData.defineId()",
   "SynchedEntityData.get()",
   "SynchedEntityData.set()",
   "MinecraftServer.getDefaultGameType()",
-  "MinecraftServer.getPlayerList()",
   "ServerLevel.getRespawnData()",
   "ServerPlayer.gameMode",
   "ServerPlayer.getEntityData()",
   "ServerPlayer.getRespawnConfig()",
-  "ServerPlayer.setGameMode()",
   "ServerPlayer.teleportTo()",
   "Player.getEntityData()",
   "Item.finishUsingItem()",
@@ -47,8 +37,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "notsohardcore-0.2.3_fabric26.3.jar",
   "published": "2026-09-23"
  },
@@ -60,8 +50,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -77,5 +67,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 31
+ "softOff": {
+  "class": "restart",
+  "why": "@modify-args and @redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels"
+ },
+ "lacks": 21
 }

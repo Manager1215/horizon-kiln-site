@@ -10,17 +10,11 @@
  "description": "kUI is the shared interface layer behind the KALPE mods.",
  "needs": [
   "InputConstants.isKeyDown()",
-  "Minecraft.setScreenAndShow()",
-  "Font.plainSubstrByWidth()",
   "GuiGraphicsExtractor.<init>()",
   "ScreenRectangle.bottom()",
   "ScreenRectangle.left()",
   "ScreenRectangle.right()",
   "ScreenRectangle.top()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseReleased()",
-  "Screen.mouseScrolled()",
   "GuiRenderState.addGlyphToCurrentLayer()",
   "GuiRenderState.addGuiElement()",
   "GuiRenderState.addItem()",
@@ -30,8 +24,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "kui-1.2.0+mc26.3.jar",
   "published": "2026-11-03"
  },
@@ -43,8 +37,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -59,5 +53,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 16
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 10
 }

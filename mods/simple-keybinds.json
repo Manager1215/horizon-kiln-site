@@ -10,37 +10,36 @@
  "description": "A Fabric/(Neo)Forge mod that adds simple(r) keybinds to Minecraft.",
  "needs": [
   "an access widener",
-  "Mixin",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.components.debug.DebugEntryCategory",
   "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-  "net.minecraft.client.gui.components.debug.DebugScreenEntries",
   "net.minecraft.client.gui.components.debug.DebugScreenEntry",
-  "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
   "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
+  "net.minecraft.client.multiplayer.ClientChunkCache",
   "net.minecraft.client.renderer.extract.LevelExtractor",
   "net.minecraft.client.renderer.fog.FogData",
+  "net.minecraft.client.renderer.fog.FogRenderer",
   "net.minecraft.world.level.material.FogType",
   "Window.calculateScale()",
-  "Minecraft.debugEntries",
   "Minecraft.isEnforceUnicode()",
   "Minecraft.isRunning()",
   "Minecraft.levelExtractor",
   "Options.advancedItemTooltips",
+  "Options.debugGuiScale()",
+  "Options.entityDistanceScaling()",
   "Options.gamma()",
   "Options.getSoundSourceOptionInstance()",
-  "Options.save()",
-  "Button.Builder.tooltip()",
   "ChatComponent.clearMessages()",
+  "ClientLevel.getChunkSource()",
   "ClientPacketListener.getConnection()",
-  "TextColor.WHITE"
+  "TextColor.WHITE",
+  "LevelLightEngine.getRawBrightness()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "simplekeybinds-1.4.9_fabric-mc26.3.jar",
   "published": "2026-10-25"
  },
@@ -52,8 +51,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -71,5 +70,9 @@
   "java",
   "minecraft"
  ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
  "lacks": 23
 }

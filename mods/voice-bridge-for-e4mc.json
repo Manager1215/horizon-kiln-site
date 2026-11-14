@@ -1,7 +1,7 @@
 {
  "id": "voice-bridge-for-e4mc",
  "name": "Voice Bridge for e4mc",
- "version": "1.1.0+26.3",
+ "version": "1.2.0+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,40 +9,22 @@
  "author": "phoenix.dustin2",
  "description": "Routes Simple Voice Chat through an e4mc-shared Minecraft connection without UDP port forwarding.",
  "needs": [
-  "Mixin",
+  "io.netty.channel.local.LocalAddress",
   "net.fabricmc.fabric.api.client.networking.v1.ClientConfigurationConnectionEvents",
   "net.fabricmc.fabric.api.client.networking.v1.ClientConfigurationConnectionEvents.Init",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "ClientPlayNetworking.canSend()",
-  "PacketSender.sendPacket()",
   "ServerConfigurationNetworking.send()",
-  "ServerPlayNetworking.canSend()",
-  "ServerPlayNetworking.canSend()",
-  "ServerPlayNetworking.canSend()",
-  "ServerPlayNetworking.getSender()",
-  "Commands.LEVEL_GAMEMASTERS",
-  "Commands.hasPermission()",
   "Connection.getRemoteAddress()",
   "Connection.isMemoryConnection()",
-  "FriendlyByteBuf.writeBoolean()",
-  "RegistryFriendlyByteBuf.readByteArray()",
-  "RegistryFriendlyByteBuf.readVarInt()",
-  "RegistryFriendlyByteBuf.writeByteArray()",
-  "RegistryFriendlyByteBuf.writeVarInt()",
-  "CustomPacketPayload.codec()",
   "ServerPlayer.connection"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "e4mc-voice-bridge-1.1.0+26.3.jar",
-  "published": "2026-10-06"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "e4mc-voice-bridge-1.2.0+26.3.jar",
+  "published": "2026-11-12"
  },
  "reports": {
   "works": 0,
@@ -52,8 +34,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -69,8 +51,11 @@
   "fabricloader",
   "java",
   "minecraft",
-  "voicechat",
-  "voicechat_api"
+  "voicechat"
  ],
- "lacks": 24
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels"
+ },
+ "lacks": 7
 }

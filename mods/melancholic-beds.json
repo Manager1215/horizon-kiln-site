@@ -9,15 +9,12 @@
  "author": "antigers",
  "description": "Removes insomnia, makes phantoms spawn in swamps as regular enemies, also changes how beds are crafted making it a little bit harder. All features are optional",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents",
   "net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents.AllowSleeping",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleEvents",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleEvents.ValueUpdate",
   "net.fabricmc.fabric.api.loot.v3.LootTableEvents.ModifyDrops",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType.Builder",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType.Builder.Mob",
@@ -30,7 +27,7 @@
   "net.minecraft.client.renderer.entity.PhantomRenderer",
   "net.minecraft.resources.RegistryOps.RegistryInfoLookup",
   "net.minecraft.server.packs.repository.PackRepository",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.util.random.WeightedList.Builder",
   "net.minecraft.world.entity.SpawnPlacementTypes",
   "net.minecraft.world.entity.SpawnPlacements",
   "net.minecraft.world.entity.SpawnPlacements.SpawnPredicate",
@@ -42,22 +39,24 @@
   "net.minecraft.world.entity.player.Player.BedSleepingProblem",
   "ServerLifecycleEvents.SERVER_STARTED",
   "LootTableEvents.MODIFY_DROPS",
-  "PacketSender.sendPacket()",
   "Minecraft.getSingleplayerServer()",
   "LocalPlayer.permissions()",
-  "MutableComponent.setStyle()",
   "MinecraftServer.getGameRules()",
   "MinecraftServer.getPackRepository()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.reloadResources()",
-  "and 16 more"
+  "ServerLevel.getDifficulty()",
+  "ServerPlayer.permissions()",
+  "WeightedList.unwrap()",
+  "EntityType.Builder.eyeHeight()",
+  "EntityType.Builder.notInPeaceful()",
+  "and 14 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "melancholic_beds-1.0-26.3.jar",
   "published": "2026-09-15"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +87,9 @@
   "minecraft",
   "yet_another_config_lib_v3"
  ],
- "lacks": 56
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 54
 }

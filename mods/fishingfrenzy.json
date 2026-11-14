@@ -9,7 +9,7 @@
  "author": "VgLevelUp",
  "description": "Introduces a dynamic fishing experience inspired by Stardew Valley and Terraria. This mod adds new fishing rods, baits, and a variety of new fish with unique spawning conditions and fishing loot requirements.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.advancements.triggers.CriteriaTriggers",
   "net.minecraft.advancements.triggers.FishingRodHookedTrigger",
   "net.minecraft.client.model.EntityModel",
@@ -18,6 +18,7 @@
   "net.minecraft.client.model.geom.builders.CubeListBuilder",
   "net.minecraft.client.model.geom.builders.MeshDefinition",
   "net.minecraft.client.model.geom.builders.PartDefinition",
+  "net.minecraft.client.renderer.entity.FishingHookRenderer",
   "net.minecraft.client.renderer.entity.MobRenderer",
   "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
   "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
@@ -48,16 +49,15 @@
   "net.minecraft.world.entity.ai.navigation.PathNavigation",
   "net.minecraft.world.entity.animal.fish.AbstractSchoolingFish",
   "net.minecraft.world.entity.animal.fish.WaterAnimal",
-  "net.minecraft.world.entity.projectile.FishingHook",
   "net.minecraft.world.food.FoodProperties",
-  "and 73 more"
+  "and 69 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fishingfrenzy-fabric-26.3-1.2.3.jar",
   "published": "2026-10-16"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +89,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 170
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; generates in the world"
+ },
+ "lacks": 164
 }

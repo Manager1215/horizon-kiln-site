@@ -9,15 +9,33 @@
  "author": "imthefixpot",
  "description": "Just A Library Mod For My Mods",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.resource.v1.ResourceLoader"
+  "Mixin: 2 points inside the game's methods",
+  "com.mojang.authlib.GameProfile",
+  "com.mojang.blaze3d.Blaze3D",
+  "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
+  "net.minecraft.client.OptionInstance.TooltipSupplier",
+  "net.minecraft.client.gui.components.PlayerFaceExtractor",
+  "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
+  "net.minecraft.client.gui.layouts.LinearLayout",
+  "net.minecraft.client.renderer.texture.DynamicTexture",
+  "net.minecraft.util.CommonColors",
+  "Minecraft.gameDirectory",
+  "Minecraft.getSkinManager()",
+  "Minecraft.services()",
+  "OptionInstance.noTooltip()",
+  "GuiGraphicsExtractor.blit()",
+  "CycleButton.Builder.withTooltip()",
+  "SkinManager.get()",
+  "CommonComponents.GUI_DONE",
+  "CommonComponents.OPTION_OFF",
+  "CommonComponents.OPTION_ON"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fixlib-2.2.0+26.3.jar",
   "published": "2026-09-16"
  },
@@ -29,8 +47,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -47,5 +65,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 1
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
+ },
+ "lacks": 19
 }

@@ -9,23 +9,30 @@
  "author": "Nettakrim",
  "description": "Display web images as vanilla-like paintings using signs, Scale images automatically for a pixelated look!",
  "needs": [
-  "Mixin",
+  "Mixin: 5 points inside the game's methods",
   "com.mojang.blaze3d.platform.ClipboardManager",
+  "net.minecraft.client.Screenshot",
   "net.minecraft.client.gui.components.MultiLineTextWidget",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.font.TextFieldHelper",
+  "net.minecraft.client.gui.screens.inventory.AbstractSignEditScreen",
+  "net.minecraft.client.gui.screens.inventory.SignEditScreen",
   "net.minecraft.client.model.object.banner.BannerFlagModel",
+  "net.minecraft.client.renderer.blockentity.AbstractSignRenderer",
+  "net.minecraft.client.renderer.blockentity.BannerRenderer",
+  "net.minecraft.client.renderer.blockentity.state.BannerRenderState",
   "net.minecraft.client.renderer.blockentity.state.SignRenderState",
+  "net.minecraft.client.renderer.chunk.SectionCompiler",
+  "net.minecraft.client.renderer.special.ShieldSpecialRenderer",
   "net.minecraft.client.renderer.texture.DynamicTexture",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.network.chat.ClickEvent.SuggestCommand",
   "net.minecraft.world.level.block.CeilingHangingSignBlock",
   "net.minecraft.world.level.block.SignBlock",
   "net.minecraft.world.level.block.StandingSignBlock",
   "net.minecraft.world.level.block.WallHangingSignBlock",
   "net.minecraft.world.level.block.WallSignBlock",
+  "net.minecraft.world.level.block.entity.BannerBlockEntity",
   "net.minecraft.world.level.block.entity.SignBlockEntity",
   "net.minecraft.world.level.block.entity.SignText",
+  "net.minecraft.world.level.block.entity.SignText.Mutable",
   "org.lwjgl.system.MemoryUtil",
   "NativeImage.format()",
   "NativeImage.getHeight()",
@@ -38,26 +45,19 @@
   "VertexConsumer.setNormal()",
   "VertexConsumer.setOverlay()",
   "Axis.ZP",
-  "Minecraft.execute()",
   "Minecraft.executeBlocking()",
   "Minecraft.gameDirectory",
   "Minecraft.isLocalServer()",
-  "Minecraft.schedule()",
-  "Minecraft.setScreenAndShow()",
-  "AbstractSliderButton.keyPressed()",
-  "Button.setTooltip()",
   "ModelPart.getChild()",
   "ModelPart.translateAndRotate()",
-  "BlockStateModelSet.getParticleMaterial()",
-  "RenderTypes.entityTranslucent()",
-  "and 9 more"
+  "and 11 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "signed_paintings-1.2.17-mc26.3.jar",
   "published": "2026-10-10"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 49
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 51
 }

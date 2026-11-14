@@ -9,23 +9,25 @@
  "author": "Glam_Ardor",
  "description": "Resource-pack-driven block sound overrides: break, fall, hit, place, step and ambient (idle) sounds per blockstate, with volume, pitch, chance and condition settings in blockmap.json.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "BlockPos.MutableBlockPos.set()",
+  "ClientboundSoundPacket.getPitch()",
+  "ClientboundSoundPacket.getSeed()",
+  "ClientboundSoundPacket.getSound()",
+  "ClientboundSoundPacket.getSource()",
+  "ClientboundSoundPacket.getVolume()",
+  "ClientboundSoundPacket.getX()",
+  "ClientboundSoundPacket.getY()",
+  "ClientboundSoundPacket.getZ()",
   "RandomSource.nextIntBetweenInclusive()",
-  "Level.getOverworldClockTime()",
-  "SoundType.getBreakSound()",
-  "SoundType.getFallSound()",
-  "SoundType.getHitSound()",
-  "SoundType.getPlaceSound()",
-  "SoundType.getStepSound()"
+  "Level.getOverworldClockTime()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "customblocksounds-1.0.1+26.jar",
   "published": "2026-10-16"
  },
@@ -37,8 +39,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -53,5 +55,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 9
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 12
 }

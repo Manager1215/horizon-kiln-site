@@ -10,19 +10,14 @@
  "description": "Accidentally stripped your log? Use bark to unstrip it!",
  "needs": [
   "an access widener",
-  "Mixin",
   "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents",
   "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents.TagsLoaded",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SyncDataPackContents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.client.renderer.special.SpecialModelRenderer.Unbaked",
   "net.minecraft.client.renderer.special.SpecialModelRenderers",
   "net.minecraft.core.component.DataComponentPatch.Builder",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate",
   "net.minecraft.world.level.levelgen.blockpredicates.MatchingBlockTagPredicate",
   "net.minecraft.world.level.levelgen.blockpredicates.MatchingBlocksPredicate",
@@ -43,22 +38,24 @@
   "ServerLifecycleEvents.SERVER_STARTED",
   "ServerLifecycleEvents.SERVER_STARTING",
   "ServerLifecycleEvents.SYNC_DATA_PACK_CONTENTS",
-  "PacketSender.disconnect()",
-  "Minecraft.execute()",
   "DefaultedRegistry.getTagOrEmpty()",
   "Registry.get()",
   "RegistryAccess.lookupOrThrow()",
   "DataComponentPatch.CODEC",
   "DataComponentPatch.builder()",
   "Registries.BLOCK_TRANSFORMER",
-  "and 7 more"
+  "MinecraftServer.registryAccess()",
+  "Item.CODEC",
+  "ItemStack.<init>()",
+  "Level.addFreshEntity()",
+  "Block.builtInRegistryHolder()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "unstriplog-26.3-fabric-26.3.0.2.jar",
   "published": "2026-10-29"
  },
@@ -70,8 +67,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 47
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 39
 }

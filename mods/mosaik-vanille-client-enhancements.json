@@ -9,7 +9,6 @@
  "author": "Hacky1432",
  "description": "Vanilla Client Enhancements - Made for Infinitum (Window-borderless fix, window-theme fix, xaero mini-map and world map reset from main menu)",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents",
   "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.Command",
@@ -24,16 +23,12 @@
   "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseClick",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseRelease",
   "net.fabricmc.fabric.api.client.screen.v1.Screens",
-  "net.minecraft.client.CameraType",
   "net.minecraft.client.gui.components.FriendsButton",
   "net.minecraft.client.gui.components.PlayerFaceExtractor",
   "net.minecraft.client.gui.components.ScrollableLayout",
   "net.minecraft.client.gui.components.ScrollableLayout.ReserveStrategy",
   "net.minecraft.client.gui.components.SpriteIconButton",
   "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-  "net.minecraft.client.gui.components.StringWidget",
-  "net.minecraft.client.gui.components.Tooltip",
-  "net.minecraft.client.gui.components.events.AbstractContainerEventHandler",
   "net.minecraft.client.gui.layouts.LinearLayout",
   "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
   "net.minecraft.client.renderer.blockentity.BeaconRenderer",
@@ -45,19 +40,23 @@
   "InputConstants.Key.getDisplayName()",
   "InputConstants.Type.getOrCreate()",
   "Window.handle()",
-  "ClientPlayNetworking.canSend()",
   "LevelExtractionEvents.END_EXTRACTION",
   "LevelRenderEvents.COLLECT_SUBMITS",
   "Camera.forwardVector()",
   "Camera.leftVector()",
-  "and 51 more"
+  "Camera.upVector()",
+  "KeyMapping.matches()",
+  "KeyMapping.matchesMouse()",
+  "KeyMapping.resetMapping()",
+  "KeyMapping.setKey()",
+  "and 47 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "mvce-26.3-1.2.7.0.jar",
   "published": "2026-09-28"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 156
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels"
+ },
+ "lacks": 110
 }

@@ -1,7 +1,7 @@
 {
  "id": "simple-changes",
  "name": "Simple Changes",
- "version": "0.1.9",
+ "version": "0.1.9a",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,7 +9,7 @@
  "author": "BayhaSoft_MC",
  "description": "A small mod that makes small quality of life changes and additions.",
  "needs": [
-  "Mixin",
+  "Mixin: 4 points inside the game's methods",
   "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents",
   "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyCallback",
   "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyConsumer",
@@ -17,7 +17,13 @@
   "net.minecraft.core.HolderSet.Named",
   "net.minecraft.core.component.DataComponentInitializers",
   "net.minecraft.core.component.DataComponentInitializers.SingleComponentInitializer",
+  "net.minecraft.world.entity.vehicle.minecart.OldMinecartBehavior",
+  "net.minecraft.world.item.BoatItem",
   "net.minecraft.world.item.CrossbowItem",
+  "net.minecraft.world.item.EggItem",
+  "net.minecraft.world.item.HangingSignItem",
+  "net.minecraft.world.item.MinecartItem",
+  "net.minecraft.world.item.PotionItem",
   "net.minecraft.world.item.component.ChargedProjectiles",
   "net.minecraft.world.item.component.DamageResistant",
   "net.minecraft.world.level.block.PoweredRailBlock",
@@ -29,6 +35,7 @@
   "DataComponents.MAX_STACK_SIZE",
   "Item.Properties.delayedComponent()",
   "Item.Properties.enchantable()",
+  "Item.Properties.useCooldown()",
   "Items.ACACIA_SIGN",
   "Items.ARMOR_STAND",
   "Items.BAMBOO_SIGN",
@@ -43,23 +50,16 @@
   "Items.DIAMOND_HORSE_ARMOR",
   "Items.DIAMOND_NAUTILUS_ARMOR",
   "Items.DRAGON_EGG",
-  "Items.DYED_SHULKER_BOX",
-  "Items.ENCHANTING_TABLE",
-  "Items.ENDER_PEARL",
-  "Items.GOLDEN_HORSE_ARMOR",
-  "Items.GOLDEN_NAUTILUS_ARMOR",
-  "Items.HARNESS",
-  "Items.HONEY_BOTTLE",
-  "and 33 more"
+  "and 39 more"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "simplechanges-0.1.9.jar",
-  "published": "2026-10-22"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "simplechanges-0.1.9a.jar",
+  "published": "2026-11-08"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 98
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 105
 }

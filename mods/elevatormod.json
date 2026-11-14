@@ -10,7 +10,6 @@
  "description": "Simple port of the elevator from OpenBlocks to 1.8+",
  "needs": [
   "an access widener",
-  "Mixin",
   "net.fabricmc.fabric.api.blockgetter.v2.RenderDataBlockEntity",
   "net.fabricmc.fabric.api.client.model.loading.v1.ExtraModelKey",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin",
@@ -25,13 +24,10 @@
   "net.minecraft.world.entity.player.Input",
   "net.minecraft.world.inventory.ContainerLevelAccess",
   "net.minecraft.world.level.block.state.BlockBehaviour.StateArgumentPredicate",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "Minecraft.getBlockColors()",
   "BlockColors.getTintSource()",
   "BlockTintSource.colorAsTerrainParticle()",
   "BlockTintSource.colorInWorld()",
-  "Checkbox.selected",
   "AbstractContainerScreen.containerTick()",
   "LocalPlayer.input",
   "LocalPlayer.isAlive()",
@@ -50,15 +46,18 @@
   "Player.isAlive()",
   "Player.isCrouching()",
   "Player.isDeadOrDying()",
-  "Player.isRemoved()",
-  "and 36 more"
+  "DyeColor.getName()",
+  "BlockPlaceContext.<init>()",
+  "BlockAndLightGetter.getBlockEntityRenderData()",
+  "BlockGetter.getBlockEntity()",
+  "and 34 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "elevatorid-fabric-26.3-1.16.6.jar",
   "published": "2026-10-10"
  },
@@ -70,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 81
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 77
 }

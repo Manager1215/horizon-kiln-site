@@ -9,29 +9,26 @@
  "author": "Leclowndu93150",
  "description": "Ever tried to make a mod that needs proper death handling or inventory tracking? Yeah, NeoForge events suck for that.",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.core.UUIDUtil",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
-  "net.minecraft.stats.ServerStatsCounter",
+  "net.minecraft.network.protocol.game.ServerboundPlayerAbilitiesPacket",
+  "net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket",
   "net.minecraft.world.level.storage.LevelResource",
   "MinecraftServer.getDataStorage()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.getWorldPath()",
   "MinecraftServer.services()",
   "ServerPlayer.getGameProfile()",
-  "ServerPlayer.getStats()"
+  "ItemEntity.getItem()",
+  "CustomData.copyTag()",
+  "CustomData.update()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "baguettelib-26.3-Fabric-2.0.8.jar",
   "published": "2026-10-11"
  },
@@ -43,8 +40,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -60,5 +57,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 15
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 12
 }

@@ -1,7 +1,7 @@
 {
  "id": "enchanting-infuser",
  "name": "Enchanting Infuser",
- "version": "26.3.0",
+ "version": "26.3.1",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,11 +10,9 @@
  "description": "An all-new enchanting table for choosing your enchantments at fair prices without the randomness.",
  "needs": [
   "an access widener",
-  "Mixin",
   "net.minecraft.advancements.triggers.CriteriaTriggers",
   "net.minecraft.advancements.triggers.EnchantedItemTrigger",
   "net.minecraft.client.gui.components.ImageButton",
-  "net.minecraft.client.gui.components.StringWidget",
   "net.minecraft.client.gui.components.StringWidget.TextOverflow",
   "net.minecraft.client.gui.components.WidgetSprites",
   "net.minecraft.client.gui.components.WidgetTooltipHolder",
@@ -23,7 +21,6 @@
   "net.minecraft.client.model.geom.ModelLayers",
   "net.minecraft.client.model.object.book.BookModel",
   "net.minecraft.client.model.object.book.BookModel.State",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.client.renderer.SpriteMapper",
   "net.minecraft.client.renderer.blockentity.EnchantTableRenderer",
   "net.minecraft.client.renderer.blockentity.state.EnchantTableRenderState",
@@ -45,22 +42,24 @@
   "Axis.ZP",
   "Object2IntMap.Entry.getKey()",
   "KeyMapping.matches()",
-  "Minecraft.gameMode",
-  "Options.keyChat",
   "Font.split()",
   "GuiGraphicsExtractor.fakeItem()",
-  "AbstractWidget.setMessage()",
   "EditBox.isVisible()",
-  "and 49 more"
+  "EditBox.setInvertHighlightedTextColor()",
+  "AbstractContainerScreen.SLOT_HIGHLIGHT_BACK_SPRITE",
+  "AbstractContainerScreen.SLOT_HIGHLIGHT_FRONT_SPRITE",
+  "MultiPlayerGameMode.handleInventoryButtonClick()",
+  "Sheets.BLOCK_ENTITIES_MAPPER",
+  "and 47 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "enchantinginfuser-v26.3.0-mc26.3.x+fabric.jar",
-  "published": "2026-09-23"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "enchantinginfuser-v26.3.1-mc26.3.x+fabric.jar",
+  "published": "2026-11-12"
  },
  "reports": {
   "works": 0,
@@ -70,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +87,9 @@
   "minecraft",
   "puzzleslib"
  ],
- "lacks": 102
+ "softOff": {
+  "class": "partial",
+  "why": "data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 93
 }

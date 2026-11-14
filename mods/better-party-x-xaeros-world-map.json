@@ -1,7 +1,7 @@
 {
  "id": "better-party-x-xaeros-world-map",
  "name": "Better Party X Xaero's World Map",
- "version": "1.0.2",
+ "version": "1.0.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,39 +9,20 @@
  "author": "MrStilu2k6",
  "description": "Display Better Party members on Xaero's World Map as player heads or colored dots, with party-admin visibility controls and personal client settings.",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.minecraft.server.players.PlayerList",
-  "ServerTickEvents.END_SERVER_TICK",
-  "Minecraft.execute()",
-  "Font.plainSubstrByWidth()",
+  "net.minecraft.client.resources.DefaultPlayerSkin",
   "Font.split()",
   "GuiGraphicsExtractor.text()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseMoved()",
-  "Screen.mouseReleased()",
-  "Screen.mouseScrolled()",
-  "RegistryFriendlyByteBuf.readUUID()",
-  "RegistryFriendlyByteBuf.readUtf()",
-  "RegistryFriendlyByteBuf.readVarInt()",
-  "RegistryFriendlyByteBuf.writeDouble()",
-  "RegistryFriendlyByteBuf.writeInt()",
-  "RegistryFriendlyByteBuf.writeUUID()",
-  "RegistryFriendlyByteBuf.writeUtf()",
-  "RegistryFriendlyByteBuf.writeVarInt()",
-  "CustomPacketPayload.codec()",
-  "MinecraftServer.getPlayerList()",
+  "PlayerInfo.getSkin()",
   "MinecraftServer.getTickCount()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "better-party-x-xaeros-world-map-fabric-26.3-1.0.2.jar",
-  "published": "2026-09-17"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "better-party-x-xaeros-world-map-fabric-26.3-1.0.3.jar",
+  "published": "2026-11-12"
  },
  "reports": {
   "works": 0,
@@ -51,15 +32,16 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
  },
  "entrypoints": {
   "main": 1,
-  "client": 1
+  "client": 1,
+  "preLaunch": 1
  },
  "mixins": true,
  "depends": [
@@ -67,8 +49,11 @@
   "fabric-api",
   "fabricloader",
   "java",
-  "minecraft",
-  "xaeroworldmap"
+  "minecraft"
  ],
- "lacks": 23
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 5
 }

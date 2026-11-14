@@ -1,7 +1,7 @@
 {
  "id": "played",
  "name": "Played",
- "version": "mc26.3-26.10.0-fabric",
+ "version": "mc26.3-26.11.0-fabric",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,39 +9,48 @@
  "author": "Tenkayro",
  "description": "Played is a lightweight Fabric mod that tracks local playtime for singleplayer worlds and multiplayer servers, with a total playtime display and optional Mod Menu config.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
+  "com.mojang.blaze3d.Blaze3D",
   "net.fabricmc.fabric.api.client.screen.v1.Screens",
-  "net.minecraft.client.gui.components.Tooltip",
+  "net.minecraft.client.gui.components.PlayerTabOverlay",
+  "net.minecraft.client.gui.components.SelectableEntry",
+  "net.minecraft.client.gui.screens.ManageServerScreen",
+  "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
+  "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList",
+  "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList.Entry",
+  "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList.OnlineServerEntry",
+  "net.minecraft.client.gui.screens.worldselection.EditWorldScreen",
+  "net.minecraft.client.gui.screens.worldselection.WorldSelectionList",
+  "net.minecraft.client.gui.screens.worldselection.WorldSelectionList.Entry",
+  "net.minecraft.client.gui.screens.worldselection.WorldSelectionList.WorldListEntry",
+  "net.minecraft.client.multiplayer.ServerList",
   "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.network.chat.ComponentSerialization",
   "net.minecraft.world.level.storage.LevelResource",
-  "Minecraft.execute()",
+  "net.minecraft.world.level.storage.LevelSummary",
+  "net.minecraft.world.level.storage.WorldData",
+  "Window.handle()",
   "Minecraft.getCurrentServer()",
+  "Minecraft.getLevelSource()",
   "Minecraft.getSingleplayerServer()",
   "Minecraft.isWindowActive()",
-  "Minecraft.schedule()",
-  "Options.keyAttack",
-  "Options.keyUse",
-  "Font.plainSubstrByWidth()",
   "GuiGraphicsExtractor.setTooltipForNextFrame()",
-  "GuiGraphicsExtractor.setTooltipForNextFrame()",
-  "Button.setTooltip()",
-  "EditBox.setHint()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseReleased()",
   "ServerData.ip",
   "ServerData.name",
-  "RegistryAccess.EMPTY"
+  "RegistryAccess.EMPTY",
+  "SoundEvents.UI_TOAST_CHALLENGE_COMPLETE",
+  "Util.getMillis()",
+  "LevelStorageSource.getLevelPath()",
+  "LevelStorageSource.LevelStorageAccess.getLevelPath()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "played-26.10.0.jar",
-  "published": "2026-11-04"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "played-26.11.0.jar",
+  "published": "2026-11-13"
  },
  "reports": {
   "works": 0,
@@ -51,8 +60,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -70,5 +79,9 @@
   "minecraft",
   "yet_another_config_lib_v3"
  ],
- "lacks": 23
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 32
 }

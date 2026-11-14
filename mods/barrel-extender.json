@@ -9,14 +9,14 @@
  "author": "antarip",
  "description": "Expands vanilla barrels from 27 slots to 54 slots.",
  "needs": [
-  "Mixin"
+  "net.minecraft.world.level.block.entity.BarrelBlockEntity"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Machines (0.4)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "barrelextender-26.3-1.0.0+mc26.3.jar",
   "published": "2026-10-05"
  },
@@ -28,8 +28,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -42,5 +42,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 1
 }

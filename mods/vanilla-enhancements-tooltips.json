@@ -9,25 +9,19 @@
  "author": "Troopas",
  "description": "This project takes the Vanilla Enhancements mod's tooltips, originally only for version 1.8.9 on forge, and puts it in the latest version for fabric.",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.minecraft.network.chat.FontDescription",
   "net.minecraft.network.chat.FontDescription.Resource",
-  "net.minecraft.world.item.alchemy.PotionContents",
   "net.minecraft.world.item.component.ItemLore",
   "net.minecraft.world.item.enchantment.LevelBasedValue",
   "net.minecraft.world.item.enchantment.effects.AddValue",
   "Object2IntMap.Entry.getKey()",
-  "Minecraft.setScreenAndShow()",
   "GuiGraphicsExtractor.nextStratum()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseReleased()",
+  "GuiGraphicsExtractor.textWithBackdrop()",
   "LocalPlayer.tickCount",
   "NonNullList.iterator()",
   "DataComponents.LORE",
-  "DataComponents.POTION_CONTENTS",
   "CompoundTag.forEach()",
-  "MutableComponent.withStyle()",
   "Style.withFont()",
   "AttributeModifier.is()",
   "Inventory.getTimesChanged()",
@@ -51,8 +45,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "vanilla-enhancements-tooltips-1.8.jar",
   "published": "2026-10-14"
  },
@@ -64,8 +58,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -81,5 +75,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 36
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes"
+ },
+ "lacks": 30
 }

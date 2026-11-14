@@ -1,7 +1,7 @@
 {
  "id": "villager-trade-reset",
  "name": "Villager Trade Reset",
- "version": "1.1.2",
+ "version": "1.1.4",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,18 +9,33 @@
  "author": "Xaunther",
  "description": "A mod that allows to reset villager trades of any experience level, at a cost.",
  "needs": [
-  "Mixin",
+  "net.minecraft.world.entity.npc.villager.AbstractVillager",
+  "net.minecraft.world.entity.npc.villager.Villager",
+  "net.minecraft.world.entity.npc.villager.VillagerData",
+  "net.minecraft.world.entity.npc.villager.VillagerDataHolder",
+  "net.minecraft.world.entity.npc.villager.VillagerProfession",
+  "net.minecraft.world.inventory.MerchantContainer",
+  "net.minecraft.world.inventory.MerchantMenu",
+  "net.minecraft.world.inventory.MerchantResultSlot",
   "net.minecraft.world.item.component.ItemLore",
-  "DataComponents.LORE"
+  "net.minecraft.world.item.trading.ItemCost",
+  "net.minecraft.world.item.trading.MerchantOffer",
+  "DataComponents.LORE",
+  "MenuType.MERCHANT",
+  "MerchantOffers.add()",
+  "MerchantOffers.addFirst()",
+  "MerchantOffers.clear()",
+  "MerchantOffers.iterator()",
+  "MerchantOffers.remove()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "villagertradereset-fabric-26.3-1.1.2.jar",
-  "published": "2026-09-22"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "villagertradereset-fabric-26.3-1.1.4.jar",
+  "published": "2026-11-11"
  },
  "reports": {
   "works": 0,
@@ -30,8 +45,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -46,5 +61,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 2
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert)"
+ },
+ "lacks": 18
 }

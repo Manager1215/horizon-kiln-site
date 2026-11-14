@@ -9,11 +9,12 @@
  "author": "Yori3o",
  "description": "Adds Terraria-inspired explosives as weapon and useful tool.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.minecraft.client.renderer.entity.ThrownItemRenderer",
   "net.minecraft.world.entity.projectile.Projectile.ProjectileFactory",
   "net.minecraft.world.entity.projectile.ProjectileUtil",
+  "net.minecraft.world.entity.projectile.ThrowableProjectile",
   "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile",
   "net.minecraft.world.item.ItemCooldowns",
   "net.minecraft.world.item.ProjectileItem",
@@ -31,7 +32,6 @@
   "Explosion.getDefaultDamageSource()",
   "Level.clip()",
   "Level.explode()",
-  "Level.getWorldBorder()",
   "DispenserBlock.registerProjectileBehavior()",
   "BlockState.getCollisionShape()",
   "WorldBorder.getCollisionShape()",
@@ -51,8 +51,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "yo_bombs-fabric-1.1.0+26.3.jar",
   "published": "2026-10-25"
  },
@@ -64,8 +64,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -83,5 +83,9 @@
   "minecraft",
   "yet_another_config_lib_v3"
  ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
  "lacks": 36
 }

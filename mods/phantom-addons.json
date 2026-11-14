@@ -1,7 +1,7 @@
 {
  "id": "phantom-addons",
  "name": "Phantom Addons",
- "version": "1.7.4",
+ "version": "1.7.5",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,7 +9,7 @@
  "author": "PhantomOrigin",
  "description": "A Hypixel SkyBlock QOL mod for Kuudra.",
  "needs": [
-  "Mixin",
+  "Mixin: 5 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.minecraft.SessionService",
   "com.mojang.authlib.properties.Property",
@@ -28,38 +28,38 @@
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
+  "net.fabricmc.fabric.impl.command.client.ClientCommandInternals",
   "net.minecraft.SharedConstants",
-  "net.minecraft.client.CameraType",
+  "net.minecraft.client.gui.components.BossHealthOverlay",
+  "net.minecraft.client.gui.components.ChatComponent.ChatGraphicsAccess",
+  "net.minecraft.client.gui.components.ChatComponent.DisplayMode",
+  "net.minecraft.client.gui.components.ChatComponent.DrawingFocusedGraphicsAccess",
+  "net.minecraft.client.gui.components.CommandSuggestions",
+  "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
+  "net.minecraft.client.gui.screens.inventory.ContainerScreen",
   "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
+  "net.minecraft.client.particle.ParticleEngine",
+  "net.minecraft.client.player.FirstPersonHandsAndItems",
   "net.minecraft.client.player.RemotePlayer",
   "net.minecraft.client.renderer.LevelRenderer",
   "net.minecraft.client.renderer.block.FluidRenderer",
   "net.minecraft.client.renderer.block.FluidRenderer.Output",
+  "net.minecraft.client.renderer.entity.FishingHookRenderer",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.player.AvatarRenderer",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
   "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
-  "net.minecraft.client.resources.DefaultPlayerSkin",
-  "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.nbt.NbtIo",
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
-  "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowItem",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
-  "net.minecraft.util.datafix.DataFixers",
-  "net.minecraft.util.datafix.fixes.References",
-  "net.minecraft.world.entity.Display",
-  "net.minecraft.world.entity.Display.ItemDisplay",
-  "net.minecraft.world.entity.decoration.ArmorStand",
-  "and 79 more"
+  "net.minecraft.client.renderer.feature.CustomFeatureRenderer",
+  "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "26.3.x-PhantomAddons-1.7.4.jar",
-  "published": "2026-10-31"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "26.3.x-PhantomAddons-1.7.5.jar",
+  "published": "2026-11-06"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +85,9 @@
   "minecraft",
   "sodium"
  ],
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own"
+ },
  "lacks": 241
 }

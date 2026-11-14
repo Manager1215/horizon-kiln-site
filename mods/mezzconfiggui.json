@@ -1,7 +1,7 @@
 {
  "id": "mezzconfiggui",
  "name": "MezzConfigGUI",
- "version": "mc26.3-0.6.3",
+ "version": "mc26.3-0.6.6",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -12,15 +12,20 @@
   "an access widener",
   "com.mojang.blaze3d.platform.TextInputManager",
   "com.mojang.blaze3d.platform.cursor.CursorTypes",
+  "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
+  "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AllowCharType",
+  "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AllowKeyPress",
+  "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AllowKeyRelease",
+  "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
+  "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseClick",
+  "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseDrag",
+  "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseRelease",
+  "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseScroll",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.loader.api.EntrypointException",
   "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
   "net.minecraft.SharedConstants",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
   "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipPositioner",
   "net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner",
@@ -30,36 +35,31 @@
   "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
   "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling.NineSlice",
   "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling.Tile",
-  "net.minecraft.network.chat.contents.TranslatableContents",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.server.packs.resources.PreparableReloadListener.StateKey",
-  "net.minecraft.server.permissions.LevelBasedPermissionSet",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.util.StringUtil",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "InputConstants.getKey()",
   "InputConstants.Key.getDisplayName()",
   "InputConstants.Type.getOrCreate()",
   "NativeImage.getHeight()",
   "NativeImage.getWidth()",
   "NativeImage.read()",
-  "ClientPlayNetworking.canSend()",
   "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerTickEvents.END_SERVER_TICK",
-  "ServerPlayNetworking.canSend()",
   "FabricLoader.getEntrypointContainers()",
   "ModContainer.findPath()",
-  "and 48 more"
+  "ModMetadata.getIconPath()",
+  "KeyMapping.matches()",
+  "KeyMapping.matchesMouse()",
+  "KeyMapping.resetMapping()",
+  "and 47 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "mezz_config_gui-26.3-fabric-mc26.3-0.6.3.jar",
-  "published": "2026-11-01"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "mezz_config_gui-26.3-fabric-mc26.3-0.6.6.jar",
+  "published": "2026-11-12"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -90,5 +90,9 @@
   "mezz_config",
   "minecraft"
  ],
- "lacks": 112
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 90
 }

@@ -9,7 +9,6 @@
  "author": "downloadableduck",
  "description": "Adds the Magic Toy Stick to your game, a destructive weapon based off of the Magic Toy Stick from Hypixel.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
@@ -23,18 +22,16 @@
   "ServerLevel.sendParticles()",
   "SoundEvents.FIREWORK_ROCKET_LAUNCH",
   "LivingEntity.<init>()",
-  "LivingEntity.tick()",
   "TamableAnimal.createAnimalAttributes()",
-  "Player.getLookAngle()",
   "Player.getOnPos()",
   "Player.isJumping()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "magic-toy-stick-1.1.2-26.3.jar",
   "published": "2026-09-17"
  },
@@ -46,8 +43,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -63,5 +60,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 18
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 16
 }

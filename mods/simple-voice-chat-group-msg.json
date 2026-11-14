@@ -12,7 +12,6 @@
   "net.fabricmc.api.DedicatedServerModInitializer",
   "net.minecraft.commands.arguments.MessageArgument",
   "net.minecraft.network.chat.OutgoingChatMessage",
-  "CommandSourceStack.isPlayer()",
   "ChatType.TEAM_MSG_COMMAND_INCOMING",
   "ChatType.TEAM_MSG_COMMAND_OUTGOING",
   "ChatType.bind()",
@@ -24,8 +23,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "VoiceChatGroupMsg-1.1+26.3.jar",
   "published": "2026-09-15"
  },
@@ -44,5 +43,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 10
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 9
 }

@@ -9,7 +9,6 @@
  "author": "uuComma",
  "description": "Adds hammers that let you mine large areas in no time!",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionEvents.EndExtraction",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
@@ -18,12 +17,12 @@
   "net.minecraft.client.renderer.state.level.BlockBreakingRenderState",
   "net.minecraft.core.HolderSet.Named",
   "net.minecraft.world.item.enchantment.Enchantment.Builder",
+  "net.minecraft.world.item.enchantment.EnchantmentInstance",
   "net.minecraft.world.level.storage.loot.functions.SetEnchantmentsFunction",
   "net.minecraft.world.level.storage.loot.functions.SetEnchantmentsFunction.Builder",
   "LevelExtractionEvents.END_EXTRACTION",
   "LevelRenderContext.levelRenderer()",
   "FabricCreativeModeTabOutput.insertAfter()",
-  "Minecraft.hitResult",
   "Options.highContrastBlockOutline()",
   "GameRenderer.useImprovedTransparency()",
   "RenderTypes.linesDepthBias()",
@@ -52,12 +51,12 @@
   "ToolMaterial.GOLD",
   "and 13 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "NeoHammers-4.1.0-beta+mc26.3-b1-fabric.jar",
   "published": "2026-10-22"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "forgeconfigapiport",
   "minecraft"
  ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
  "lacks": 53
 }

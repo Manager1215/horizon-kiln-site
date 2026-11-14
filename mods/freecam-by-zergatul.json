@@ -9,27 +9,16 @@
  "author": "Zergatul",
  "description": "FreeCam mod with support for wide range of versions and modloaders",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.CameraType",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
-  "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-  "net.minecraft.client.gui.components.StringWidget",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
   "net.minecraft.client.gui.components.debug.DebugScreenEntry",
   "net.minecraft.client.player.ClientInput",
   "net.minecraft.world.entity.player.Input",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "KeyMapping.setDown()",
   "Minecraft.gameDirectory",
   "OptionInstance.createBoolean()",
-  "Options.getCameraType()",
-  "Options.keyTogglePerspective",
-  "Options.setCameraType()",
   "ChatComponent.addRecentChat()",
+  "CycleButton.Builder.withTooltip()",
   "LocalPlayer.input",
   "GameRenderer.checkEntityPostEffect()",
   "CommonComponents.GUI_DONE",
@@ -37,16 +26,14 @@
   "Entity.getEyePosition()",
   "Entity.getViewXRot()",
   "Entity.getViewYRot()",
-  "BlockState.tags()",
-  "HitResult.getType()",
-  "Vec2.normalized()"
+  "BlockState.tags()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "zergatul.freecam-2.3.6-mc-26.3.jar",
   "published": "2026-09-22"
  },
@@ -59,5 +46,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
- "lacks": 30
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 18
 }

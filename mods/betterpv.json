@@ -9,7 +9,7 @@
  "author": "vyirv",
  "description": "A skyblock profile viewer, but better!",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.exceptions.AuthenticationException",
   "com.mojang.authlib.exceptions.InvalidCredentialsException",
@@ -29,35 +29,35 @@
   "net.minecraft.CrashReportCategory",
   "net.minecraft.client.entity.ClientMannequin",
   "net.minecraft.client.gui.components.MultiLineTextWidget",
-  "net.minecraft.client.gui.components.StringWidget",
+  "net.minecraft.client.gui.components.PlayerTabOverlay",
   "net.minecraft.client.gui.layouts.FrameLayout",
   "net.minecraft.client.gui.layouts.LayoutSettings",
   "net.minecraft.client.gui.layouts.LinearLayout",
   "net.minecraft.client.gui.screens.ConnectScreen",
   "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
+  "net.minecraft.client.multiplayer.ClientHandshakePacketListenerImpl",
   "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
   "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.client.resources.DefaultPlayerSkin",
   "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.nbt.NbtIo",
-  "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-  "net.minecraft.network.chat.ClickEvent.OpenFile",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
-  "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
   "net.minecraft.world.item.component.DyedItemColor",
-  "and 62 more"
+  "net.minecraft.world.item.component.ItemLore",
+  "net.minecraft.world.item.component.ResolvableProfile",
+  "net.minecraft.world.scores.PlayerTeam",
+  "InputConstants.isKeyDown()",
+  "NativeImage.copyRect()",
+  "NativeImage.fillRect()",
+  "NativeImage.getHeight()",
+  "and 56 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "BetterPV-1.2.1+26.3.jar",
   "published": "2026-11-03"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 236
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 194
 }

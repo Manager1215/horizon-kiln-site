@@ -10,16 +10,55 @@
  "description": "Clean and Customizable. Alternative to Just Enough Items/JEI.",
  "needs": [
   "an access widener",
-  "Mixin",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger"
+  "Mixin: 1 point inside the game's methods",
+  "com.mojang.authlib.GameProfile",
+  "com.mojang.blaze3d.Blaze3D",
+  "net.minecraft.CrashReport",
+  "net.minecraft.CrashReportCategory",
+  "net.minecraft.IdentifierException",
+  "net.minecraft.ReportType",
+  "net.minecraft.ReportedException",
+  "net.minecraft.client.StringSplitter",
+  "net.minecraft.client.StringSplitter.WidthLimitedCharSink",
+  "net.minecraft.client.StringSplitter.WidthProvider",
+  "net.minecraft.client.gui.ComponentPath",
+  "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
+  "net.minecraft.client.gui.components.ImageButton",
+  "net.minecraft.client.gui.components.WidgetSprites",
+  "net.minecraft.client.gui.components.toasts.RecipeToast",
+  "net.minecraft.client.gui.screens.Screen.NarratableSearchResult",
+  "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
+  "net.minecraft.client.gui.screens.inventory.CraftingScreen",
+  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
+  "net.minecraft.client.gui.screens.inventory.EffectsInInventory",
+  "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
+  "net.minecraft.client.gui.screens.recipebook.GhostSlots",
+  "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
+  "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen",
+  "net.minecraft.client.multiplayer.ClientSuggestionProvider",
+  "net.minecraft.client.renderer.texture.DynamicTexture",
+  "net.minecraft.client.resources.language.LanguageInfo",
+  "net.minecraft.client.server.IntegratedServer",
+  "net.minecraft.core.HolderSet.Direct",
+  "net.minecraft.core.HolderSet.Named",
+  "net.minecraft.core.Registry.PendingTags",
+  "net.minecraft.core.WritableRegistry",
+  "net.minecraft.core.component.PatchedDataComponentMap",
+  "net.minecraft.network.PacketEncoder",
+  "net.minecraft.resources.RegistryDataLoader",
+  "net.minecraft.resources.RegistryDataLoader.RegistryData",
+  "net.minecraft.server.Bootstrap",
+  "net.minecraft.server.packs.resources.MultiPackResourceManager",
+  "net.minecraft.tags.TagEntry",
+  "net.minecraft.tags.TagEntry.Lookup",
+  "and 76 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "RoughlyEnoughItems-26.3.824.jar",
   "published": "2026-10-07"
  },
@@ -31,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -51,5 +90,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 2
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 203
 }

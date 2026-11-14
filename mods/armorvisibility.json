@@ -1,7 +1,7 @@
 {
  "id": "armorvisibility",
  "name": "ArmorVisibility",
- "version": "2.8.0",
+ "version": "0.40.1",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,20 +9,46 @@
  "author": "nexi499",
  "description": "A mod that allows you to toggle the visibility of your armor.",
  "needs": [
-  "Mixin",
+  "Mixin: 6 points inside the game's methods",
   "net.fabricmc.fabric.api.client.screen.v1.Screens",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-  "AbstractWidget.getMessage()"
+  "net.minecraft.client.model.object.projectile.TridentModel",
+  "net.minecraft.client.renderer.blockentity.BannerRenderer",
+  "net.minecraft.client.renderer.entity.layers.CapeLayer",
+  "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
+  "net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer",
+  "net.minecraft.client.renderer.entity.layers.ItemInHandLayer",
+  "net.minecraft.client.renderer.entity.layers.WingsLayer",
+  "net.minecraft.client.renderer.entity.state.ArmedEntityRenderState",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
+  "net.minecraft.client.renderer.special.ShieldSpecialRenderer",
+  "net.minecraft.client.renderer.special.TridentSpecialRenderer",
+  "net.minecraft.client.resources.model.EquipmentClientInfo",
+  "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
+  "IntList.size()",
+  "Model.renderType()",
+  "Model.renderType()",
+  "LocalPlayer.getDisplayName()",
+  "RenderTypes.armorCutoutNoCull()",
+  "RenderTypes.armorCutoutNoCullGlint()",
+  "RenderTypes.entityTranslucentCull()",
+  "RenderTypes.itemTranslucent()",
+  "RenderTypes.itemTranslucentGlint()",
+  "RenderTypes.itemTranslucentGlintSpecial()",
+  "TextureAtlasSprite.atlasLocation()",
+  "BakedQuad.MaterialInfo.isTinted()",
+  "SpriteId.renderType()",
+  "ItemStack.hasFoil()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "armorvisibility-2.8.0.jar",
-  "published": "2026-10-30"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "armorvisibility-0.40.1.jar",
+  "published": "2026-11-08"
  },
  "reports": {
   "works": 0,
@@ -32,8 +58,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -49,5 +75,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 4
+ "softOff": {
+  "class": "restart",
+  "why": "@modify-args and @overwrite and @redirect into the game's classes"
+ },
+ "lacks": 30
 }

@@ -9,20 +9,15 @@
  "author": "deanxbox",
  "description": "This project re-calculates the lighting of every chunk in your world! Useful if you've optimised your world and your LODs are broken.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
+  "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.nbt.NbtIo",
+  "net.minecraft.server.level.ChunkGenerationTask",
+  "net.minecraft.server.level.ChunkMap",
   "net.minecraft.server.level.ChunkTrackingView",
   "net.minecraft.server.level.ThreadedLevelLightEngine",
   "net.minecraft.server.network.PlayerChunkSender",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.permissions.Permissions",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.level.LightLayer",
   "net.minecraft.world.level.chunk.ImposterProtoChunk",
   "net.minecraft.world.level.chunk.LevelChunk.UnsavedListener",
@@ -30,15 +25,13 @@
   "net.minecraft.world.level.storage.LevelResource",
   "ServerLifecycleEvents.SERVER_STARTED",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerTickEvents.END_SERVER_TICK",
-  "CommandSourceStack.getPosition()",
-  "CommandSourceStack.getServer()",
+  "Minecraft.getSingleplayerServer()",
   "SectionPos.of()",
   "SectionPos.sectionToBlockCoord()",
+  "NbtIo.read()",
   "MinecraftServer.execute()",
   "MinecraftServer.getAllLevels()",
   "MinecraftServer.getAverageTickTimeNanos()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.getWorldPath()",
   "ServerBossEvent.removeAllPlayers()",
   "ServerBossEvent.setName()",
@@ -50,14 +43,20 @@
   "ServerLevel.getMaxY()",
   "ServerLevel.getMinY()",
   "ServerLevel.getSectionYFromSectionIndex()",
-  "and 8 more"
+  "ServerPlayer.connection",
+  "ServerPlayer.getChunkTrackingView()",
+  "TicketType.FORCED",
+  "ServerGamePacketListenerImpl.chunkSender",
+  "LevelChunk.getSectionsCount()",
+  "LevelChunk.markUnsaved()",
+  "and 3 more"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "lighten-up-chunks-1.3.0.jar",
   "published": "2026-10-15"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 48
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 43
 }

@@ -1,0 +1,78 @@
+{
+ "id": "nobroken",
+ "name": "NoBroken (No Broken)",
+ "version": "1.0.2+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/nobroken",
+ "author": "Bahanos",
+ "description": "NoBroken prevents your tools and armor from breaking permanently. When an item reaches 1 durability, it becomes unusable but remains intact for future repairs. Keep your gear alive longer!",
+ "needs": [
+  "Mixin: 1 point inside the game's methods",
+  "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
+  "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
+  "net.fabricmc.fabric.api.event.player.UseEntityCallback",
+  "net.minecraft.advancements.triggers.CriteriaTriggers",
+  "net.minecraft.advancements.triggers.DefaultBlockInteractionTrigger",
+  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
+  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
+  "net.minecraft.network.protocol.game.ServerboundUseItemOnPacket",
+  "net.minecraft.server.level.ServerPlayerGameMode",
+  "net.minecraft.world.entity.animal.wolf.Wolf",
+  "net.minecraft.world.phys.EntityHitResult",
+  "ClientLevel.enabledFeatures()",
+  "LocalPlayer.isSecondaryUseActive()",
+  "Holder.Reference.is()",
+  "Component.translatableWithFallback()",
+  "ServerPlayer.connection",
+  "ServerPlayer.getRandom()",
+  "ServerPlayer.isSecondaryUseActive()",
+  "ServerGamePacketListenerImpl.send()",
+  "LivingEntity.getUseItem()",
+  "LivingEntity.isUsingItem()",
+  "LivingEntity.stopUsingItem()",
+  "AttributeInstance.hasModifier()",
+  "AttributeInstance.removeModifier()",
+  "ItemStack.forEachModifier()",
+  "Level.enabledFeatures()",
+  "Block.isEnabled()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "nobroken-mc26.3-fabric-1.0.2.jar",
+  "published": "2026-11-12"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 27
+}

@@ -9,35 +9,23 @@
  "author": "terex-mint",
  "description": "Glowing Trims adds permanent glow to armor trims.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "com.mojang.blaze3d.Blaze3D",
   "net.minecraft.client.OptionInstance.CaptionBasedToString",
   "net.minecraft.client.OptionInstance.LazyEnum",
   "net.minecraft.client.OptionInstance.SliderableValueSet",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
   "net.minecraft.client.OptionInstance.UnitDouble",
-  "net.minecraft.client.OptionInstance.ValueSet",
   "net.minecraft.client.OptionInstance.ValueUpdateListener",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
-  "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-  "net.minecraft.client.gui.components.ObjectSelectionList",
-  "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
   "net.minecraft.client.gui.components.OptionsList",
-  "net.minecraft.client.gui.components.StringWidget",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.layouts.FrameLayout",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
   "net.minecraft.client.gui.layouts.LayoutSettings",
   "net.minecraft.client.gui.layouts.LinearLayout",
   "net.minecraft.client.gui.screens.options.OptionsSubScreen",
+  "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
   "OptionInstance.<init>()",
   "OptionInstance.<init>()",
-  "Button.setTooltip()",
-  "Button.Builder.width()",
-  "EditBox.setEditable()",
-  "EditBox.setHint()",
-  "KeyEvent.isSelection()",
   "CommonComponents.GUI_CANCEL",
   "CommonComponents.GUI_DONE"
  ],
@@ -45,8 +33,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "glowing_trims-1.1.26.3.x.jar",
   "published": "2026-10-31"
  },
@@ -58,8 +46,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -76,5 +64,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 30
+ "softOff": {
+  "class": "restart",
+  "why": "@modify-args into the game's classes; runs threads of its own"
+ },
+ "lacks": 18
 }

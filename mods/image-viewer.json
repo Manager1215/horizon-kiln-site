@@ -9,15 +9,8 @@
  "author": "shihyeon",
  "description": "A cross-platform (Fabric/NeoForge/Paper) mod and plugin that allows server operators to display full-resolution images to players through a native in-game viewer",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.permissions.Permissions",
-  "net.minecraft.server.players.PlayerList",
   "org.lwjgl.stb.STBImage",
   "org.lwjgl.system.MemoryStack",
   "org.lwjgl.system.MemoryUtil",
@@ -29,21 +22,20 @@
   "ServerLifecycleEvents.SERVER_STARTED",
   "ServerLifecycleEvents.SERVER_STOPPING",
   "ServerPlayNetworking.createClientboundPacket()",
-  "Minecraft.execute()",
   "Minecraft.gameDirectory",
   "GuiGraphicsExtractor.blit()",
-  "CommandSourceStack.getServer()",
   "ByteBufCodecs.byteArray()",
   "ByteBufCodecs.stringUtf8()",
-  "MinecraftServer.getPlayerList()",
-  "ServerPlayer.connection"
+  "ServerPlayer.connection",
+  "ServerGamePacketListenerImpl.send()",
+  "ServerGamePacketListenerImpl.send()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "imageviewer-fabric-0.2.1+mc26.3.jar",
   "published": "2026-09-17"
  },
@@ -55,8 +47,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -71,5 +63,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 27
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels"
+ },
+ "lacks": 20
 }

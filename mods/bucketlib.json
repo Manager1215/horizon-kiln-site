@@ -10,7 +10,6 @@
  "description": "Library mod for custom buckets",
  "needs": [
   "an access widener",
-  "Mixin",
   "net.fabricmc.fabric.api.transfer.v1.fluid.base.SingleFluidStorage",
   "net.fabricmc.fabric.impl.transfer.VariantCodecs",
   "net.minecraft.advancements.triggers.ConsumeItemTrigger",
@@ -24,41 +23,41 @@
   "net.minecraft.client.renderer.texture.MissingTextureAtlasSprite",
   "net.minecraft.data.registries.VanillaRegistries",
   "net.minecraft.tags.EntityTypeTags",
+  "net.minecraft.tags.ItemTags",
   "net.minecraft.util.ByIdMap",
   "net.minecraft.util.ByIdMap.OutOfBoundsStrategy",
   "net.minecraft.util.context.ContextMap.Builder",
   "net.minecraft.world.entity.Bucketable",
+  "net.minecraft.world.entity.animal.axolotl.Axolotl",
+  "net.minecraft.world.entity.animal.nautilus.AbstractNautilus",
+  "net.minecraft.world.entity.animal.nautilus.NautilusAi",
   "net.minecraft.world.entity.monster.cubemob.SulfurCube",
+  "net.minecraft.world.inventory.AbstractFurnaceMenu",
+  "net.minecraft.world.inventory.FurnaceFuelSlot",
   "net.minecraft.world.item.DispensibleContainerItem",
   "net.minecraft.world.item.ItemUseAnimation",
   "net.minecraft.world.item.MobBucketItem",
   "net.minecraft.world.item.SolidBucketItem",
   "net.minecraft.world.item.component.Consumable",
   "net.minecraft.world.item.component.Consumables",
+  "net.minecraft.world.item.crafting.DyeRecipe",
+  "net.minecraft.world.item.crafting.RepairItemRecipe",
   "net.minecraft.world.item.crafting.ShapelessRecipe",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
+  "net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity",
   "ResolvedModel.getTopTransforms()",
   "Material.CODEC",
   "DefaultedRegistry.getTagOrEmpty()",
   "Holder.Reference.is()",
   "HolderLookup.Provider.create()",
   "HolderLookup.Provider.listRegistries()",
-  "DataComponents.BREAK_SOUND",
-  "DataComponents.BUCKET_ENTITY_DATA",
-  "RegistryFriendlyByteBuf.readUtf()",
-  "RegistryFriendlyByteBuf.writeUtf()",
-  "ByteBufCodecs.idMapper()",
-  "Identifier.withPath()",
-  "Stats.ITEM_BROKEN",
-  "and 47 more"
+  "and 54 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "bucketlib-fabric-26.3-5.3.0.1.jar",
   "published": "2026-10-01"
  },
@@ -70,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -91,5 +90,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 96
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 105
 }

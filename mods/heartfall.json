@@ -9,7 +9,6 @@
  "author": "ax",
  "description": "Hostile mobs have a chance to drop floating heart shards that heal you",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.minecraft.network.syncher.EntityDataSerializers",
@@ -21,10 +20,7 @@
   "SynchedEntityData.get()",
   "SynchedEntityData.set()",
   "ServerLevel.noCollision()",
-  "DamageSource.getEntity()",
-  "DamageSource.isCreativePlayer()",
   "Entity.<init>()",
-  "Entity.tick()",
   "LivingEntity.getRandom()",
   "Player.getBbHeight()",
   "Level.getNearestPlayer()",
@@ -32,12 +28,12 @@
   "AABB.deflate()",
   "AABB.move()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "heartfall-0.4.2-fabric+26.3-SNAPSHOT.jar",
   "published": "2026-10-03"
  },
@@ -49,8 +45,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -68,5 +64,9 @@
   "minecraft",
   "yet_another_config_lib_v3"
  ],
- "lacks": 21
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert)"
+ },
+ "lacks": 18
 }

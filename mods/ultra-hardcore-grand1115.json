@@ -1,7 +1,7 @@
 {
  "id": "ultra-hardcore-grand1115",
  "name": "Ultra Hardcore",
- "version": "v5.0.1",
+ "version": "v6.0.1",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,21 +9,56 @@
  "author": "grand1115",
  "description": "A progression-based advancement datapack featuring custom ranks, advancement rewards, and challenging progression paths.",
  "needs": [
-  "Mixin",
-  "Minecraft.execute()",
-  "CommandSourceStack.getPlayerOrException()",
-  "CommandSourceStack.getServer()",
-  "CommandSourceStack.sendSystemMessage()",
-  "CustomPacketPayload.codec()"
+  "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
+  "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
+  "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
+  "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
+  "net.fabricmc.fabric.api.event.player.UseEntityCallback",
+  "net.minecraft.server.PlayerAdvancements",
+  "net.minecraft.world.entity.boss.enderdragon.EnderDragon",
+  "net.minecraft.world.entity.boss.wither.WitherBoss",
+  "net.minecraft.world.entity.monster.Creeper",
+  "net.minecraft.world.entity.monster.illager.Pillager",
+  "net.minecraft.world.entity.monster.skeleton.Skeleton",
+  "net.minecraft.world.entity.monster.spider.Spider",
+  "net.minecraft.world.entity.monster.warden.Warden",
+  "net.minecraft.world.entity.monster.zombie.Zombie",
+  "net.minecraft.world.entity.raid.Raid",
+  "net.minecraft.world.level.StructureManager",
+  "net.minecraft.world.level.levelgen.structure.BuiltinStructures",
+  "RegistryAccess.lookupOrThrow()",
+  "DataComponents.CUSTOM_NAME",
+  "Registries.STRUCTURE",
+  "ServerLevel.getRaidAt()",
+  "ServerLevel.isVillage()",
+  "ServerLevel.structureManager()",
+  "ServerPlayer.addItem()",
+  "Player.addItem()",
+  "Items.AMETHYST_SHARD",
+  "Items.BEACON",
+  "Items.BLAZE_ROD",
+  "Items.CAKE",
+  "Items.CREAKING_HEART",
+  "Items.ENCHANTED_BOOK",
+  "Items.ENCHANTED_GOLDEN_APPLE",
+  "Items.ENDER_PEARL",
+  "Items.FIREWORK_ROCKET",
+  "Items.GOLDEN_APPLE",
+  "Items.HEAVY_CORE",
+  "Items.LAPIS_LAZULI",
+  "Items.NAME_TAG",
+  "Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE",
+  "Items.SHULKER_SHELL",
+  "and 25 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "ultra-hardcore-advancement-pack-1.0.0.jar",
-  "published": "2026-11-01"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "UHAP v6.0.1 - 100 Download Celebration Update.jar",
+  "published": "2026-11-13"
  },
  "reports": {
   "works": 0,
@@ -33,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -50,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 5
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+ },
+ "lacks": 65
 }

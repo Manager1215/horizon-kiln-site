@@ -9,35 +9,20 @@
  "author": "halfstorm",
  "description": "A simple tool to backup and switch between config profiles!",
  "needs": [
-  "Mixin",
   "com.mojang.blaze3d.platform.cursor.CursorType",
   "com.mojang.blaze3d.platform.cursor.CursorTypes",
-  "net.minecraft.client.gui.components.ObjectSelectionList",
-  "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
-  "net.minecraft.client.gui.components.Tooltip",
-  "org.apache.logging.log4j.Level",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "org.apache.logging.log4j.core.config.Configurator",
   "GuiGraphicsExtractor.requestCursor()",
   "GuiGraphicsExtractor.text()",
   "GuiGraphicsExtractor.textHighlight()",
-  "Button.setPosition()",
-  "Button.Builder.tooltip()",
-  "EditBox.setHint()",
-  "CharacterEvent.codepointAsString()",
-  "CharacterEvent.isAllowedChatCharacter()",
-  "KeyEvent.isCopy()",
-  "KeyEvent.isCut()",
-  "KeyEvent.isPaste()",
   "FormattedCharSequence.forward()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ecs-fabric-26.3-2.0.0.jar",
   "published": "2026-10-02"
  },
@@ -49,8 +34,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -67,5 +52,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 21
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 7
 }

@@ -10,29 +10,18 @@
  "description": "See item enchantments, potion effects, shulker box contents and much more directly above your hotbar.",
  "needs": [
   "an access widener",
-  "Mixin",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-  "net.minecraft.network.chat.contents.PlainTextContents",
   "net.minecraft.util.profiling.Profiler",
   "net.minecraft.util.profiling.ProfilerFiller",
   "net.minecraft.world.item.AdventureModePredicate",
   "net.minecraft.world.item.TooltipFlag.Default",
   "net.minecraft.world.item.equipment.trim.ArmorTrim",
-  "org.apache.logging.log4j.LogManager",
-  "Minecraft.gameMode",
   "Options.textBackgroundOpacity()",
   "Hud.overlayMessageTime",
+  "MultiPlayerGameMode.canHurtPlayer()",
   "DataComponents.CAN_BREAK",
   "DataComponents.CAN_PLACE_ON",
   "DataComponents.TRIM",
-  "Component.getContents()",
   "Component.getSiblings()",
-  "MutableComponent.setStyle()",
-  "MutableComponent.withStyle()",
-  "Style.applyTo()",
-  "Style.withObfuscated()",
-  "Style.withStrikethrough()",
-  "Style.withUnderlined()",
   "Attribute.getStyle()",
   "AttributeModifier.is()",
   "DyeColor.getTextColor()",
@@ -46,8 +35,6 @@
   "TooltipFlag.ADVANCED",
   "TooltipFlag.NORMAL",
   "ItemAttributeModifiers.Display.attributeModifiers()",
-  "ItemContainerContents.nonEmptyItemCopyStream()",
-  "ItemContainerContents.nonEmptyItems()",
   "TooltipDisplay.DEFAULT",
   "TooltipDisplay.shows()",
   "Level.enabledFeatures()"
@@ -56,8 +43,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "helditemtooltips-v26.3.0-mc26.3.x+fabric.jar",
   "published": "2026-09-24"
  },
@@ -69,8 +56,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +74,9 @@
   "minecraft",
   "puzzleslib"
  ],
- "lacks": 40
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 28
 }

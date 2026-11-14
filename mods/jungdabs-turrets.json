@@ -9,14 +9,12 @@
  "author": "Jungdab",
  "description": "Adds various turrets that can be customized with a simple targeting system and upgrade chips.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
+  "net.minecraft.client.renderer.LevelRenderer",
   "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
   "net.minecraft.core.UUIDUtil",
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.entity.HasCustomInventoryScreen",
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
@@ -26,14 +24,17 @@
   "net.minecraft.world.entity.ai.goal.GoalSelector",
   "net.minecraft.world.entity.ai.sensing.Sensing",
   "net.minecraft.world.entity.monster.Monster",
+  "net.minecraft.world.inventory.AnvilMenu",
   "net.minecraft.world.inventory.ContainerData",
+  "net.minecraft.world.inventory.DataSlot",
+  "net.minecraft.world.inventory.ItemCombinerMenu",
+  "net.minecraft.world.inventory.ResultContainer",
   "net.minecraft.world.inventory.SimpleContainerData",
   "net.minecraft.world.item.component.ItemLore",
   "PoseStack.Pose.pose()",
   "VertexConsumer.addVertex()",
   "Minecraft.getEntityRenderDispatcher()",
   "GuiGraphicsExtractor.entity()",
-  "AbstractWidget.onClick()",
   "AbstractContainerScreen.extractLabels()",
   "EntityRenderDispatcher.getRenderer()",
   "EntityRenderer.createRenderState()",
@@ -44,20 +45,18 @@
   "Registry.getOrThrow()",
   "RegistryAccess.lookupOrThrow()",
   "DataComponents.LORE",
-  "FriendlyByteBuf.writeInt()",
+  "DataComponents.STORED_ENCHANTMENTS",
   "SynchedEntityData.defineId()",
   "SynchedEntityData.get()",
   "SynchedEntityData.set()",
-  "MinecraftServer.getPlayerList()",
-  "ServerLevel.getEntitiesOfClass()",
   "and 38 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "jdturrets-fabric-26.3-1.0.3.jar",
   "published": "2026-10-13"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +86,9 @@
   "java",
   "minecraft"
  ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
  "lacks": 78
 }

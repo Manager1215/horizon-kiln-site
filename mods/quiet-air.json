@@ -9,9 +9,6 @@
  "author": "lukemcd",
  "description": "Hides the \"standing on air - force-sending blocks below\" console spam on Fabric servers.",
  "needs": [
-  "org.apache.logging.log4j.Level",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Marker",
   "org.apache.logging.log4j.core.Filter",
   "org.apache.logging.log4j.core.Filter.Result",
   "org.apache.logging.log4j.core.LogEvent",
@@ -19,15 +16,14 @@
   "org.apache.logging.log4j.core.LoggerContext",
   "org.apache.logging.log4j.core.config.Configuration",
   "org.apache.logging.log4j.core.filter.AbstractFilter",
-  "org.apache.logging.log4j.core.filter.CompositeFilter",
-  "org.apache.logging.log4j.message.Message"
+  "org.apache.logging.log4j.core.filter.CompositeFilter"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "quiet-air-1.0.0.jar",
   "published": "2026-09-21"
  },
@@ -39,8 +35,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -54,5 +50,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 12
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 8
 }

@@ -9,7 +9,6 @@
  "author": "OldManPlaysGames",
  "description": "\"The ultimate vine-harvesting utility. Quick, server-sided, and works with all vine types!\"\nVer. 1.0.1 when sneaking normal Minecraft behavior and only the one sheared will drop",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
   "BlockPos.mutable()",
@@ -17,21 +16,18 @@
   "ServerLevel.getMinY()",
   "ServerPlayer.onEquippedItemBroken()",
   "ItemStack.hurtAndBreak()",
-  "Block.dropResources()",
   "Blocks.CAVE_VINES",
   "Blocks.CAVE_VINES_PLANT",
-  "Blocks.TWISTING_VINES",
   "Blocks.TWISTING_VINES_PLANT",
   "Blocks.VINE",
-  "Blocks.WEEPING_VINES",
   "Blocks.WEEPING_VINES_PLANT"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "vinescutter-1.0.1-26.3.jar",
   "published": "2026-09-19"
  },
@@ -43,8 +39,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -59,5 +55,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 15
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 12
 }

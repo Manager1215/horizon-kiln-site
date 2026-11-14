@@ -10,10 +10,10 @@
  "description": "Adds potion and food effect descriptions directly to tooltips. Know effects without the wiki.",
  "needs": [
   "an access widener",
-  "Mixin",
-  "net.minecraft.network.chat.contents.TranslatableContents",
+  "net.minecraft.client.gui.font.FontManager.CachedFontProvider",
+  "net.minecraft.client.gui.screens.inventory.BeaconScreen",
+  "net.minecraft.client.gui.screens.inventory.BeaconScreen.BeaconPowerButton",
   "net.minecraft.world.TickRateManager",
-  "net.minecraft.world.item.alchemy.PotionContents",
   "net.minecraft.world.item.component.Consumable",
   "net.minecraft.world.item.component.DeathProtection",
   "net.minecraft.world.item.component.OminousBottleAmplifier",
@@ -21,21 +21,21 @@
   "net.minecraft.world.item.component.SuspiciousStewEffects.Entry",
   "net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect",
   "net.minecraft.world.item.consume_effects.ConsumeEffect",
+  "net.minecraft.world.level.block.entity.BeaconBlockEntity",
   "ClientLevel.tickRateManager()",
   "DataComponents.CONSUMABLE",
   "DataComponents.DEATH_PROTECTION",
   "DataComponents.OMINOUS_BOTTLE_AMPLIFIER",
-  "DataComponents.POTION_CONTENTS",
   "DataComponents.SUSPICIOUS_STEW_EFFECTS",
   "Registries.MOB_EFFECT",
-  "Component.getContents()"
+  "PotionContents.addPotionTooltip()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "effectinsights-v26.3.1-mc26.3.x+fabric.jar",
   "published": "2026-09-26"
  },
@@ -47,8 +47,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -66,5 +66,9 @@
   "puzzleslib",
   "tooltipinsights"
  ],
- "lacks": 18
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 19
 }

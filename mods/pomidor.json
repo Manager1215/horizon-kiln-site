@@ -9,15 +9,22 @@
  "author": "logitechno",
  "description": "Hiding nicknames, displaying side light, mob statistics, coordinate conversion, everything in this mod.",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
+  "net.minecraft.client.gui.components.PlayerTabOverlay",
+  "net.minecraft.client.renderer.entity.MobRenderer",
+  "net.minecraft.client.renderer.entity.player.AvatarRenderer",
   "net.minecraft.client.renderer.extract.LevelExtractor",
   "net.minecraft.world.entity.animal.equine.AbstractHorse",
   "net.minecraft.world.entity.animal.pig.Pig",
+  "net.minecraft.world.level.block.LightBlock",
+  "RenderSystem.isOnRenderThread()",
   "Minecraft.levelExtractor",
   "ClientLevel.getOverworldClockTime()",
   "Identifier.toLanguageKey()",
   "Identifier.toLanguageKey()",
+  "Mob.distanceTo()",
+  "Mob.hasCustomName()",
   "Player.xOld",
   "Player.yOld",
   "Player.zOld",
@@ -27,8 +34,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "pomidor-1.0.0-26.3.jar",
   "published": "2026-10-12"
  },
@@ -40,8 +47,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -58,5 +65,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 12
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 19
 }

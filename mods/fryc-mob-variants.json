@@ -9,7 +9,6 @@
  "author": "Xires87",
  "description": "Adds stronger variants for hostile mobs",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.StartDataPackReload",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
@@ -52,12 +51,12 @@
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
   "and 80 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "frycmobvariants-7.6.1+26.3.jar",
   "published": "2026-10-18"
  },
@@ -70,5 +69,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
- "lacks": 217
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 206
 }

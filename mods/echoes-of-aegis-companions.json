@@ -9,7 +9,6 @@
  "author": "Echo220",
  "description": "Server-side friendly little companions that can be tamed, equipped, leveled, recalled, healed, commanded, and revived.",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "com.mojang.math.Transformation",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
@@ -19,25 +18,21 @@
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.damagesource.DamageTypes",
   "net.minecraft.world.entity.Display",
   "net.minecraft.world.entity.Display.BlockDisplay",
   "net.minecraft.world.entity.NeutralMob",
   "net.minecraft.world.entity.ai.control.LookControl",
+  "net.minecraft.world.entity.ai.goal.AvoidEntityGoal",
   "net.minecraft.world.entity.ai.navigation.PathNavigation",
+  "net.minecraft.world.entity.ai.sensing.VillagerHostilesSensor",
+  "net.minecraft.world.entity.ai.targeting.TargetingConditions",
   "net.minecraft.world.entity.monster.Monster",
   "net.minecraft.world.entity.monster.zombie.Zombie",
   "net.minecraft.world.entity.vehicle.boat.AbstractBoat",
   "net.minecraft.world.food.FoodProperties",
-  "net.minecraft.world.inventory.ContainerInput",
   "net.minecraft.world.item.component.ItemLore",
   "net.minecraft.world.item.component.ResolvableProfile",
   "net.minecraft.world.level.block.BedBlock",
@@ -46,18 +41,22 @@
   "ImmutableList.get()",
   "ServerLifecycleEvents.SERVER_STARTED",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerTickEvents.END_SERVER_TICK",
-  "CommandSourceStack.getEntity()",
-  "CommandSourceStack.getPlayerOrException()",
-  "CommandSourceStack.getServer()",
-  "and 53 more"
+  "DataComponents.CUSTOM_NAME",
+  "DataComponents.ENCHANTMENT_GLINT_OVERRIDE",
+  "DataComponents.FOOD",
+  "DataComponents.LORE",
+  "DataComponents.PROFILE",
+  "TagParser.parseFully()",
+  "MinecraftServer.getAllLevels()",
+  "MinecraftServer.getWorldPath()",
+  "and 49 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "echoescompanions-1.0.35.jar",
   "published": "2026-09-16"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +84,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 177
+ "softOff": {
+  "class": "partial",
+  "why": "data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 155
 }

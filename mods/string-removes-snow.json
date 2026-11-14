@@ -9,14 +9,21 @@
  "author": "zskv",
  "description": "With this mod, you can now place string at Y 319 above where you want snow to not spawn.",
  "needs": [
-  "Mixin"
+  "net.minecraft.world.entity.SpawnPlacements",
+  "BlockPos.MutableBlockPos.setY()",
+  "ServerLevel.getHeight()",
+  "ServerLevel.getMinY()",
+  "LevelReader.dimensionType()",
+  "LevelReader.getHeight()",
+  "LevelReader.getMinY()",
+  "Blocks.TRIPWIRE"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "EchoCraftSnowChange-1.0-SNAPSHOT.jar",
   "published": "2026-09-22"
  },
@@ -28,8 +35,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -44,5 +51,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 8
 }

@@ -9,10 +9,6 @@
  "author": "Serilum",
  "description": "📚 Automatically refills the player's hand when using the final item if a replacement exists.",
  "needs": [
-  "net.minecraft.server.players.PlayerList",
-  "CommandSourceStack.getPlayerOrException()",
-  "DataComponents.POTION_CONTENTS",
-  "MinecraftServer.getPlayerList()",
   "Player.addTag()",
   "Player.entityTags()",
   "Player.getUsedItemHand()",
@@ -25,8 +21,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "stackrefill-26.3.0-6.2.jar",
   "published": "2026-10-21"
  },
@@ -38,8 +34,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -56,5 +52,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 11
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 7
 }

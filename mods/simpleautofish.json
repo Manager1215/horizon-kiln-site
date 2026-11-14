@@ -2,27 +2,19 @@
  "id": "simpleautofish",
  "name": "Simple AutoFish",
  "version": "1.1.0+mc26.3",
- "status": "planned",
- "statusLabel": "Planned",
- "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "status": "not-checked",
+ "statusLabel": "Not checked",
+ "statusMeaning": "In the catalogue, not checked yet.",
  "url": "https://modrinth.com/mod/simpleautofish",
  "author": "MVPFishstock",
  "description": "A Mod that automatically reels in fish and recasts your fishing rod when a fish bites. Perfect for AFK fishing!",
- "needs": [
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-  "net.minecraft.world.entity.projectile.FishingHook",
-  "net.minecraft.world.item.FishingRodItem",
-  "Minecraft.gameMode",
-  "LocalPlayer.fishing",
-  "LocalPlayer.swing()",
-  "ItemStack.getInteractAnimation()"
- ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
- "evidence": "Not run: Java did not start.",
+ "needs": [],
+ "roadmap": "",
+ "evidence": "Everything its code calls is covered by Kiln development build 2026-11-14 (fa70eeb) (19 classes, 26 members). Not run yet.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "simpleautofish-1.1.0+mc26.3.jar",
   "published": "2026-10-20"
  },
@@ -34,8 +26,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -50,5 +42,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 7
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 0
 }

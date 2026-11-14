@@ -11,25 +11,16 @@
  "needs": [
   "an access widener",
   "net.minecraft.commands.arguments.ResourceArgument",
-  "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
   "net.minecraft.network.chat.ComponentUtils",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
-  "Registry.wrapAsHolder()",
   "Registries.MOB_EFFECT",
-  "MutableComponent.withStyle()",
-  "Style.withClickEvent()",
-  "Style.withHoverEvent()",
   "Style.withInsertion()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "potionring-fabric-26.3-26.3-2.0.jar",
   "published": "2026-09-23"
  },
@@ -41,8 +32,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -59,5 +50,9 @@
   "minecraft",
   "trinkets"
  ],
- "lacks": 13
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 4
 }

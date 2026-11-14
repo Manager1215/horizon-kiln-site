@@ -9,23 +9,45 @@
  "author": "PrIyme",
  "description": "Re-implements MCPatcher's CIT (custom item textures from optifine resource packs)",
  "needs": [
-  "Mixin",
+  "Mixin: 7 points inside the game's methods",
   "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
   "net.minecraft.IdentifierException",
+  "net.minecraft.client.gui.screens.AlertScreen",
+  "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
+  "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer.LayerTextureKey",
+  "net.minecraft.client.renderer.entity.layers.WingsLayer",
+  "net.minecraft.client.renderer.texture.atlas.SpriteSource",
+  "net.minecraft.client.renderer.texture.atlas.SpriteSource.Output",
+  "net.minecraft.client.renderer.texture.atlas.SpriteSourceList",
+  "net.minecraft.client.resources.model.ClientItemInfoLoader",
+  "net.minecraft.server.packs.AbstractPackMetadataResources",
+  "net.minecraft.server.packs.PackResources.ResourceOutput",
+  "net.minecraft.server.packs.metadata.pack.PackMetadataSection",
+  "net.minecraft.server.packs.repository.PackCompatibility",
+  "net.minecraft.server.packs.resources.ReloadInstance",
+  "net.minecraft.server.packs.resources.ReloadableResourceManager",
+  "net.minecraft.util.InclusiveRange",
+  "net.minecraft.util.profiling.Profiler",
   "net.minecraft.util.profiling.ProfilerFiller",
   "org.apache.commons.io.IOUtils",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "FabricLoader.getEntrypointContainers()",
+  "Minecraft.reloadResourcePacks()",
+  "FileToIdConverter.fileToId()",
+  "FileToIdConverter.listMatchingResources()",
+  "Identifier.withPath()",
+  "Identifier.withPrefix()",
   "PackResources.getNamespaces()",
-  "PackResources.getResource()"
+  "PackResources.getResource()",
+  "PackResources.listResources()",
+  "PackFormat.of()",
+  "PreparableReloadListener.SharedState.resourceManager()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "citresewn-continuation-1.2.2-fork.14+26.3.jar",
   "published": "2026-10-24"
  },
@@ -37,8 +59,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -54,5 +76,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 9
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 31
 }

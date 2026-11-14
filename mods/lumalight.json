@@ -9,7 +9,7 @@
  "author": "fdderng",
  "description": "Colorful client-side lighting, outlines, bloom, and a biome-aware cartoon atmosphere without shader packs.",
  "needs": [
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "com.mojang.blaze3d.buffers.Std140Builder",
   "com.mojang.blaze3d.pipeline.TextureTarget",
   "com.mojang.blaze3d.vertex.DefaultVertexFormat",
@@ -20,12 +20,17 @@
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.renderer.BindGroupLayouts",
+  "net.minecraft.client.renderer.CloudRenderer",
   "net.minecraft.client.renderer.LevelRenderer",
   "net.minecraft.client.renderer.MappableRingBuffer",
+  "net.minecraft.client.renderer.entity.ItemEntityRenderer",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
   "net.minecraft.client.renderer.entity.state.ItemEntityRenderState",
+  "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
   "net.minecraft.client.renderer.fog.FogData",
+  "net.minecraft.client.renderer.oit.OitRenderPassProvider",
+  "net.minecraft.client.renderer.oit.OitRenderPassProvider.Parameters",
   "net.minecraft.client.renderer.rendertype.RenderSetup",
   "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
   "net.minecraft.client.renderer.state.level.SkyRenderState",
@@ -45,19 +50,14 @@
   "VertexConsumer.setColor()",
   "CommandEncoder.createRenderPass()",
   "BindGroupLayout.builder()",
-  "BlendFunction.TRANSLUCENT",
-  "ColorTargetState.DEFAULT",
-  "RenderPipeline.builder()",
-  "LevelExtractionEvents.END_EXTRACTION",
-  "LevelRenderEvents.COLLECT_SUBMITS",
-  "and 44 more"
+  "and 49 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "lumalight-100.0.0.jar",
   "published": "2026-10-05"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 130
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 122
 }

@@ -1,7 +1,7 @@
 {
  "id": "voxelmap-updated",
  "name": "VoxelMap-Updated",
- "version": "26.3-1.16.13",
+ "version": "26.3-1.16.14",
  "status": "no-plans",
  "statusLabel": "No plans yet",
  "statusMeaning": "Calls something that is not on Kiln's roadmap yet. Parts of it may already run.",
@@ -10,7 +10,7 @@
  "description": "Minimap and Worldmap. Have an overview of your surroundings, or view the entire world. Create waypoints.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.buffers.Std140Builder",
   "com.mojang.blaze3d.platform.TextureUtil",
@@ -33,14 +33,14 @@
   "net.minecraft.ReportedException",
   "net.minecraft.SharedConstants",
   "net.minecraft.TracingExecutor",
-  "net.minecraft.client.CameraType",
   "net.minecraft.client.GameNarrator",
   "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
-  "net.minecraft.client.gui.components.Button.Plain",
-  "net.minecraft.client.gui.components.Tooltip",
-  "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
+  "net.minecraft.client.gui.components.toasts.TutorialToast",
+  "net.minecraft.client.gui.components.toasts.TutorialToast.Icons",
+  "net.minecraft.client.gui.screens.ManageServerScreen",
   "net.minecraft.client.gui.screens.OutOfMemoryScreen",
   "net.minecraft.client.gui.screens.inventory.tooltip.TooltipRenderUtil",
+  "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
   "net.minecraft.client.model.EntityModel",
   "net.minecraft.client.model.HumanoidModel",
   "net.minecraft.client.model.animal.fish.CodModel",
@@ -57,10 +57,10 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "voxelmap-fabric-26.3-1.16.13.jar",
-  "published": "2026-09-24"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "voxelmap-fabric-26.3-1.16.14.jar",
+  "published": "2026-11-08"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 458
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels"
+ },
+ "lacks": 401
 }

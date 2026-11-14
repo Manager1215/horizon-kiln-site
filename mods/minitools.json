@@ -9,7 +9,6 @@
  "author": "Keeganator",
  "description": "Adds mini tools and a couple other small additions to the game",
  "needs": [
-  "Mixin",
   "net.minecraft.advancements.predicates.ItemPredicate",
   "net.minecraft.client.renderer.entity.ThrownItemRenderer",
   "net.minecraft.core.particles.ItemParticleOption",
@@ -40,7 +39,6 @@
   "ItemStack.hurtAndBreak()",
   "Items.ENDER_PEARL",
   "Level.broadcastEntityEvent()",
-  "Level.destroyBlock()",
   "Biomes.BEACH",
   "Biomes.CHERRY_GROVE",
   "Biomes.LUSH_CAVES",
@@ -50,14 +48,15 @@
   "Biomes.WINDSWEPT_FOREST",
   "Biomes.WINDSWEPT_GRAVELLY_HILLS",
   "Biomes.WINDSWEPT_HILLS",
-  "and 11 more"
+  "SoundType.LANTERN",
+  "and 10 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "minitools-1.1.5-26.3.jar",
   "published": "2026-09-19"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 51
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 50
 }

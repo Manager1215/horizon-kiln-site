@@ -9,14 +9,12 @@
  "author": "qpcrummer",
  "description": "A cross-platform render distance manipulation mod",
  "needs": [
-  "Mixin",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
-  "Commands.LEVEL_ADMINS",
-  "Commands.hasPermission()",
+  "Mixin: 3 points inside the game's methods",
+  "net.minecraft.server.level.ChunkMap",
   "MinecraftServer.getGameRules()",
-  "MinecraftServer.getPlayerList()",
   "ServerPlayer.connection",
+  "ServerGamePacketListenerImpl.send()",
+  "PlayerList.getViewDistance()",
   "GameRuleCategory.PLAYER",
   "GameRules.get()"
  ],
@@ -24,8 +22,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Optometrist-1.0.0.jar",
   "published": "2026-05-29"
  },
@@ -41,5 +39,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 9
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 7
 }

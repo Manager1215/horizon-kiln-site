@@ -1,0 +1,93 @@
+{
+ "id": "valhalla-echoes",
+ "name": "Valhalla Echoes",
+ "version": "v0.5.0-beta",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/valhalla-echoes",
+ "author": "mataflex29",
+ "description": "Adds Norse Mythology inspired items, mobs, tools and overpowered weapons to the game.",
+ "needs": [
+  "net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer",
+  "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
+  "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
+  "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
+  "net.minecraft.client.model.HumanoidModel",
+  "net.minecraft.client.model.geom.ModelLayers",
+  "net.minecraft.client.model.geom.PartPose",
+  "net.minecraft.client.model.geom.builders.CubeDeformation",
+  "net.minecraft.client.model.geom.builders.CubeListBuilder",
+  "net.minecraft.client.model.geom.builders.MeshDefinition",
+  "net.minecraft.client.model.geom.builders.PartDefinition",
+  "net.minecraft.client.renderer.entity.PiglinRenderer",
+  "net.minecraft.client.renderer.entity.WitherSkeletonRenderer",
+  "net.minecraft.client.renderer.entity.state.PiglinRenderState",
+  "net.minecraft.client.renderer.entity.state.SkeletonRenderState",
+  "net.minecraft.util.profiling.Profiler",
+  "net.minecraft.util.profiling.ProfilerFiller",
+  "net.minecraft.world.entity.SpawnPlacementTypes",
+  "net.minecraft.world.entity.SpawnPlacements",
+  "net.minecraft.world.entity.SpawnPlacements.SpawnPredicate",
+  "net.minecraft.world.entity.ai.ActivityData",
+  "net.minecraft.world.entity.ai.Brain",
+  "net.minecraft.world.entity.ai.Brain.ActivitySupplier",
+  "net.minecraft.world.entity.ai.Brain.Packed",
+  "net.minecraft.world.entity.ai.Brain.Provider",
+  "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
+  "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
+  "net.minecraft.world.entity.ai.behavior.DoNothing",
+  "net.minecraft.world.entity.ai.behavior.InteractWithDoor",
+  "net.minecraft.world.entity.ai.behavior.LookAtTargetSink",
+  "net.minecraft.world.entity.ai.behavior.MeleeAttack",
+  "net.minecraft.world.entity.ai.behavior.MoveToTargetSink",
+  "net.minecraft.world.entity.ai.behavior.RandomStroll",
+  "net.minecraft.world.entity.ai.behavior.RunOne",
+  "net.minecraft.world.entity.ai.behavior.SetEntityLookTarget",
+  "net.minecraft.world.entity.ai.behavior.SetWalkTargetFromAttackTargetIfTargetOutOfReach",
+  "net.minecraft.world.entity.ai.behavior.StartAttacking",
+  "net.minecraft.world.entity.ai.behavior.StartAttacking.TargetFinder",
+  "net.minecraft.world.entity.ai.behavior.StopAttackingIfTargetInvalid",
+  "net.minecraft.world.entity.ai.goal.GoalSelector",
+  "and 50 more"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "valhalla-echoes-v0.5.0-beta.jar",
+  "published": "2026-11-12"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 91
+}

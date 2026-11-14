@@ -9,7 +9,6 @@
  "author": "ofek",
  "description": "Adds multiple crafting station on a stick such as crafting table on a stick",
  "needs": [
-  "Mixin",
   "net.minecraft.world.SimpleMenuProvider",
   "net.minecraft.world.inventory.AnvilMenu",
   "net.minecraft.world.inventory.CartographyTableMenu",
@@ -19,38 +18,34 @@
   "net.minecraft.world.inventory.LoomMenu",
   "net.minecraft.world.inventory.SmithingMenu",
   "net.minecraft.world.inventory.StonecutterMenu",
+  "VertexConsumer.addVertexWith2DPose()",
   "GuiGraphicsExtractor.fakeItem()",
   "GuiGraphicsExtractor.setTooltipForNextFrame()",
   "Hud.extractDeferredSubtitles()",
-  "Screen.keyReleased()",
-  "Screen.mouseMoved()",
-  "Screen.mouseReleased()",
+  "TextureSetup.noTexture()",
   "RenderPipelines.GUI",
+  "GuiRenderState.addGuiElement()",
   "DataComponents.TOOLTIP_STYLE",
   "Player.getRandom()",
   "Player.hasContainerOpen()",
-  "Player.isRemoved()",
   "AbstractContainerMenu.isValidSlotIndex()",
   "AbstractContainerMenu.setItem()",
   "Item.canFitInsideContainerItems()",
   "ItemStack.getTooltipImage()",
   "ItemStack.transmuteCopy()",
   "ItemStack.transmuteCopy()",
-  "Blocks.ANVIL",
   "Blocks.CARTOGRAPHY_TABLE",
-  "Blocks.CHIPPED_ANVIL",
-  "Blocks.DAMAGED_ANVIL",
   "Blocks.GRINDSTONE",
   "Blocks.LOOM",
   "Blocks.SMITHING_TABLE",
   "Blocks.STONECUTTER"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "crafting_on_a_stick-fabric-26.3-1.0.jar",
   "published": "2026-10-01"
  },
@@ -62,8 +57,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -80,5 +75,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 34
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 30
 }

@@ -10,21 +10,12 @@
  "description": "Customisable sidebars for your Minecraft server!",
  "needs": [
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.fabric.api.util.TriState",
   "net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint",
   "net.fabricmc.loader.api.metadata.ContactInformation",
   "net.fabricmc.loader.api.metadata.Person",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
   "net.minecraft.network.chat.numbers.BlankFormat",
   "net.minecraft.network.chat.numbers.FixedFormat",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "JsonArray.forEach()",
   "ServerLifecycleEvents.SERVER_STARTING",
   "ModContainer.getPath()",
@@ -32,14 +23,8 @@
   "ModMetadata.getContact()",
   "ModMetadata.getContributors()",
   "CommandSourceStack.checkPermission()",
-  "CommandSourceStack.getEntity()",
-  "CommandSourceStack.getPlayerOrException()",
   "CommandSourceStack.registryAccess()",
-  "MutableComponent.setStyle()",
-  "Style.withClickEvent()",
-  "Style.withHoverEvent()",
   "Style.withShadowColor()",
-  "Style.withUnderlined()",
   "Identifier.toShortLanguageKey()",
   "MinecraftServer.registryAccess()",
   "ServerPlayer.connection",
@@ -50,8 +35,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "styled-sidebars-1.13.0+26.3.jar",
   "published": "2026-09-12"
  },
@@ -63,8 +48,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -77,5 +62,9 @@
  "depends": [
   "minecraft"
  ],
- "lacks": 36
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 21
 }

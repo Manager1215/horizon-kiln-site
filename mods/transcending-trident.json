@@ -9,20 +9,14 @@
  "author": "Serilum",
  "description": "🔱 Improves the trident. Hold a water bucket, or any item you choose, to use riptide anywhere.",
  "needs": [
-  "Mixin",
-  "net.minecraft.world.item.alchemy.PotionContents",
-  "net.minecraft.world.item.alchemy.Potions",
+  "Mixin: 1 point inside the game's methods",
+  "net.minecraft.world.item.TridentItem",
   "RegistryAccess.lookupOrThrow()",
-  "DataComponents.POTION_CONTENTS",
   "MinecraftServer.isSingleplayerOwner()",
-  "ServerPlayer.nameAndId()",
   "ServerPlayer.syncVelocity",
   "Player.getBoundingBox()",
-  "Player.getLookAngle()",
-  "Player.isFallFlying()",
   "AbstractContainerMenu.sendAllDataToRemote()",
   "Items.GLASS_BOTTLE",
-  "Items.POTION",
   "Items.TRIDENT",
   "EnchantmentHelper.getTridentSpinAttackStrength()",
   "Level.isRainingAt()",
@@ -32,8 +26,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "transcendingtrident-26.3.0-6.0.jar",
   "published": "2026-11-01"
  },
@@ -45,8 +39,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -63,5 +57,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 17
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 11
 }

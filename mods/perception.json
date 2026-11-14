@@ -10,27 +10,29 @@
  "description": "Enriching the world with immersive visual effects",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
+  "net.minecraft.client.particle.Particle",
+  "net.minecraft.client.particle.ParticleEngine",
   "net.minecraft.world.entity.projectile.FireworkRocketEntity",
   "net.minecraft.world.entity.projectile.arrow.Arrow",
   "net.minecraft.world.entity.projectile.throwableitemprojectile.AbstractThrownPotion",
-  "net.minecraft.world.item.alchemy.PotionContents",
   "net.minecraft.world.item.component.FireworkExplosion",
-  "DataComponents.POTION_CONTENTS",
+  "Camera.rotation()",
   "Entity.getKnownMovement()",
   "Entity.getPosition()",
   "Entity.isAlive()",
   "Entity.tickCount",
   "ExperienceOrb.getIcon()",
+  "Player.fallDistance",
   "Player.getEyePosition()",
   "Level.getNearestPlayer()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Perception-FABRIC-0.1.6.1+26.3.jar",
   "published": "2026-10-18"
  },
@@ -42,8 +44,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -60,5 +62,9 @@
   "minecraft",
   "shatterlib"
  ],
- "lacks": 13
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 15
 }

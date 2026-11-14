@@ -10,13 +10,15 @@
  "description": "BetterF3 is a mod that replaces Minecraft's original debug HUD with a highly customizable, more human-readable HUD.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.SharedConstants",
   "net.minecraft.client.ClientBrandRetriever",
   "net.minecraft.client.CloudStatus",
   "net.minecraft.client.GraphicsPreset",
   "net.minecraft.client.RotatingSectionStorage",
+  "net.minecraft.client.gui.components.BossHealthOverlay",
   "net.minecraft.client.gui.components.debug.DebugEntryHeightmap",
+  "net.minecraft.client.gui.components.debug.DebugEntryNoop",
   "net.minecraft.client.gui.components.debug.DebugEntrySystemSpecs",
   "net.minecraft.client.multiplayer.ClientChunkCache",
   "net.minecraft.client.multiplayer.ClientChunkCache.Storage",
@@ -35,8 +37,6 @@
   "net.minecraft.world.level.NaturalSpawner.SpawnState",
   "net.minecraft.world.level.levelgen.WorldgenRandom",
   "net.minecraft.world.level.lighting.LayerLightEventListener",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "LongSet.size()",
   "Minecraft.crosshairPickEntity",
   "Minecraft.getGpuUtilization()",
@@ -44,21 +44,21 @@
   "Minecraft.levelExtractor",
   "Minecraft.levelRenderer",
   "Minecraft.particleEngine",
+  "Minecraft.showOnlyReducedInfo()",
   "Minecraft.smartCull",
   "Options.biomeBlendRadius()",
   "Options.cloudStatus()",
   "Options.enableVsync()",
   "Options.framerateLimit()",
   "Options.graphicsPreset()",
-  "DebugScreenOverlay.renderFpsCharts",
   "and 46 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "BetterF3-20.0.0-Fabric-26.3.jar",
   "published": "2026-10-04"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 86
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 89
 }

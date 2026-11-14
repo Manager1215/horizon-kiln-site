@@ -9,16 +9,29 @@
  "author": "DanceDown",
  "description": "A Minecraft mod for displaying Twitch, 7tv, BetterTTV and FrankerFaceZ emotes in chat.",
  "needs": [
-  "Mixin",
   "com.mojang.blaze3d.font.GlyphInfo",
+  "net.minecraft.client.OptionInstance.CaptionBasedToString",
+  "net.minecraft.client.OptionInstance.TooltipSupplier",
+  "net.minecraft.client.OptionInstance.ValueUpdateListener",
+  "net.minecraft.client.gui.components.ComponentRenderUtils",
+  "net.minecraft.client.gui.components.SpriteIconButton",
+  "net.minecraft.client.gui.components.SpriteIconButton.Builder",
+  "net.minecraft.client.gui.components.SpriteIconButton.CenteredIcon",
+  "net.minecraft.client.gui.components.WidgetSprites",
   "net.minecraft.client.gui.font.GlyphRenderTypes",
   "net.minecraft.client.gui.font.TextRenderable",
   "net.minecraft.client.gui.font.TextRenderable.Styled",
   "net.minecraft.client.gui.font.glyphs.BakedGlyph",
+  "net.minecraft.client.gui.layouts.GridLayout",
+  "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
+  "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
+  "net.minecraft.client.gui.layouts.LayoutSettings",
+  "net.minecraft.client.gui.layouts.LinearLayout",
+  "net.minecraft.client.gui.layouts.SpacerElement",
+  "net.minecraft.client.multiplayer.ClientSuggestionProvider",
   "net.minecraft.client.renderer.texture.DynamicTexture",
+  "net.minecraft.data.AtlasIds",
   "org.apache.commons.io.IOUtils",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "NativeImage.copyFrom()",
   "NativeImage.getHeight()",
   "NativeImage.getPixelsABGR()",
@@ -26,17 +39,24 @@
   "NativeImage.read()",
   "VertexConsumer.addVertex()",
   "VertexConsumer.setLight()",
-  "Minecraft.execute()",
-  "Minecraft.isSameThread()",
+  "OptionInstance.<init>()",
+  "OptionInstance.createButton()",
+  "OptionInstance.noTooltip()",
+  "Font.split()",
+  "GuiGraphicsExtractor.centeredText()",
   "ChatComponent.rescaleChat()",
-  "Util.getMillis()"
+  "CommonComponents.GUI_CANCEL",
+  "Style.getInsertion()",
+  "Style.withInsertion()",
+  "FormattedCharSequence.forward()",
+  "and 1 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "twitchemotes-1.0.3-mc26.3.jar",
   "published": "2026-09-23"
  },
@@ -48,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -64,5 +84,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 20
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 41
 }

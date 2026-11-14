@@ -9,7 +9,7 @@
  "author": "Nerjal_Nosk",
  "description": "Enforces Minecraft network privacy like it should have always been",
  "needs": [
-  "Mixin",
+  "Mixin: 6 points inside the game's methods",
   "io.netty.channel.Channel",
   "io.netty.channel.ChannelFuture",
   "io.netty.channel.ChannelHandlerContext",
@@ -19,17 +19,17 @@
   "net.minecraft.network.protocol.status.ServerStatus",
   "net.minecraft.network.protocol.status.ServerStatus.Players",
   "net.minecraft.network.protocol.status.ServerStatus.Version",
+  "net.minecraft.server.Main",
   "net.minecraft.server.ServerInfo",
   "net.minecraft.server.dedicated.DedicatedServer",
+  "net.minecraft.server.network.LegacyQueryHandler",
   "net.minecraft.server.network.ServerConnectionListener",
+  "net.minecraft.server.network.ServerConnectionListener.1",
+  "net.minecraft.server.network.ServerHandshakePacketListenerImpl",
   "net.minecraft.server.network.ServerStatusPacketListenerImpl",
   "net.minecraft.server.players.IpBanList",
   "net.minecraft.server.players.IpBanListEntry",
-  "net.minecraft.server.players.PlayerList",
   "ModContainer.findPath()",
-  "CommandSourceStack.getServer()",
-  "Commands.LEVEL_GAMEMASTERS",
-  "Commands.hasPermission()",
   "Connection.disconnect()",
   "Connection.getLoggableAddress()",
   "Connection.getRemoteAddress()",
@@ -39,8 +39,8 @@
   "MinecraftServer.createCommandSourceStack()",
   "MinecraftServer.getGameRules()",
   "MinecraftServer.getMotd()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.logIPs()",
+  "PlayerList.getIpBans()",
   "GameRuleCategory.register()",
   "GameRules.get()"
  ],
@@ -48,8 +48,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "status_hider-26.1-1.5.5.jar",
   "published": "2026-07-18"
  },
@@ -66,5 +66,9 @@
   "minecraft",
   "unruled_api"
  ],
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; runs threads of its own"
+ },
  "lacks": 33
 }

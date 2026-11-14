@@ -9,18 +9,27 @@
  "author": "arvitus",
  "description": "A Minecraft mod that prevents changing the spawner type in survival mode.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
   "net.fabricmc.loader.api.metadata.Person",
+  "net.minecraft.world.item.SpawnEggItem",
+  "net.minecraft.world.level.BaseSpawner",
+  "net.minecraft.world.level.Spawner",
+  "net.minecraft.world.level.block.entity.SpawnerBlockEntity",
+  "net.minecraft.world.level.block.entity.TrialSpawnerBlockEntity",
+  "net.minecraft.world.level.block.entity.trialspawner.TrialSpawner",
+  "net.minecraft.world.level.block.entity.trialspawner.TrialSpawnerStateData",
+  "net.minecraft.world.level.block.state.pattern.BlockInWorld",
   "ServerLifecycleEvents.END_DATA_PACK_RELOAD",
-  "ModMetadata.getAuthors()"
+  "ModMetadata.getAuthors()",
+  "ItemStack.canPlaceOnBlockInAdventureMode()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "NoSpawnerChange-1.2.0-26.3.jar",
   "published": "2026-09-27"
  },
@@ -32,8 +41,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -47,5 +56,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 4
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 13
 }

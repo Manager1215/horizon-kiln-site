@@ -1,7 +1,7 @@
 {
  "id": "immersive-overlays",
  "name": "Immersive Overlays",
- "version": "1.8.6+26.3-fabric",
+ "version": "1.8.7+26.3-fabric",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,19 +9,19 @@
  "author": "Cassian",
  "description": "Overlays useful info like coordinates and the time onto your HUD - as long as you have the right item in your inventory (or bundle!)",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.tag.client.v1.ClientTags",
   "net.fabricmc.fabric.api.tag.convention.v2.ConventionalBiomeTags",
+  "net.minecraft.client.gui.contextualbar.LocatorBar",
+  "net.minecraft.references.BlockItemId",
+  "net.minecraft.tags.BlockItemTagId",
   "net.minecraft.world.item.component.LodestoneTracker",
   "net.minecraft.world.level.MoonPhase",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "LocalPlayer.getLastDeathLocation()",
   "LocalPlayer.getRootVehicle()",
   "DataComponents.LODESTONE_TRACKER",
   "Component.translatableWithFallback()",
-  "MutableComponent.withStyle()",
-  "ResourceKey.mru$identifier()",
+  "ResourceKey.asphodel$identifier()",
   "EnvironmentAttributeSystem.getValue()",
   "EnvironmentAttributes.MOON_PHASE",
   "Level.getBiome()",
@@ -38,10 +38,10 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "immersiveoverlays-1.8.6+26.3-fabric.jar",
-  "published": "2026-10-20"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "immersiveoverlays-1.8.7+26.3-fabric.jar",
+  "published": "2026-11-12"
  },
  "reports": {
   "works": 0,
@@ -51,8 +51,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -63,10 +63,14 @@
  },
  "mixins": true,
  "depends": [
+  "asphodel_api",
   "fabric-api",
   "fabricloader",
-  "minecraft",
-  "mru"
+  "minecraft"
  ],
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
+ },
  "lacks": 23
 }

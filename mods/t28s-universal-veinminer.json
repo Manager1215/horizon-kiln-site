@@ -1,0 +1,68 @@
+{
+ "id": "t28s-universal-veinminer",
+ "name": "T28's Universal Veinminer",
+ "version": "1.0.2+fabric-26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/t28s-universal-veinminer",
+ "author": "Tontoque28",
+ "description": "A simple, lightweight, and highly configurable universal Veinminer mod for Minecraft Forge 1.20.1!",
+ "needs": [
+  "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
+  "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
+  "SharedSuggestionProvider.suggestResource()",
+  "Registry.getOrThrow()",
+  "RegistryAccess.lookupOrThrow()",
+  "Player.causeFoodExhaustion()",
+  "Player.isCrouching()",
+  "ItemStack.isCorrectToolForDrops()",
+  "Items.NETHERITE_SCRAP",
+  "EnchantmentHelper.getItemEnchantmentLevel()",
+  "Enchantments.FORTUNE",
+  "Block.getDrops()",
+  "Blocks.ANCIENT_DEBRIS",
+  "BlockState.requiresCorrectToolForDrops()",
+  "BlockState.spawnAfterBreak()",
+  "GameEvent.BLOCK_DESTROY"
+ ],
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "UniversalVeinminer-1.0.2-Fabric-26.3.jar",
+  "published": "2026-11-09"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": false,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 16
+}

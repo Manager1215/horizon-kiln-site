@@ -9,30 +9,21 @@
  "author": "trevlar",
  "description": "Inventory Plus brings restocking, sorting, slot locking, and tool switching into one client-side mod.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AfterKeyPress",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
   "net.minecraft.client.gui.screens.inventory.ContainerScreen",
   "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
   "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.ItemPickerMenu",
   "net.minecraft.client.gui.screens.inventory.DispenserScreen",
   "net.minecraft.client.gui.screens.inventory.HopperScreen",
   "net.minecraft.client.gui.screens.inventory.ShulkerBoxScreen",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.client.server.IntegratedServer",
-  "net.minecraft.network.chat.contents.TranslatableContents",
   "net.minecraft.network.protocol.game.ServerboundSelectBundleItemPacket",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.CompoundContainer",
   "net.minecraft.world.effect.MobEffectUtil",
-  "net.minecraft.world.entity.EquipmentSlot.Type",
   "net.minecraft.world.entity.monster.Monster",
   "net.minecraft.world.food.FoodProperties",
-  "net.minecraft.world.inventory.ChestMenu",
-  "net.minecraft.world.inventory.ContainerInput",
   "net.minecraft.world.inventory.DispenserMenu",
   "net.minecraft.world.inventory.HopperMenu",
   "net.minecraft.world.inventory.PlayerEnderChestContainer",
@@ -40,7 +31,6 @@
   "net.minecraft.world.inventory.ShulkerBoxMenu",
   "net.minecraft.world.item.BundleItem",
   "net.minecraft.world.item.ProjectileWeaponItem",
-  "net.minecraft.world.item.alchemy.PotionContents",
   "net.minecraft.world.item.component.Consumable",
   "net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect",
   "net.minecraft.world.item.consume_effects.ConsumeEffect",
@@ -50,14 +40,23 @@
   "net.minecraft.world.item.equipment.trim.TrimPattern",
   "net.minecraft.world.level.block.ChestBlock",
   "net.minecraft.world.level.block.EnderChestBlock",
-  "and 60 more"
+  "net.minecraft.world.level.block.ShulkerBoxBlock",
+  "net.minecraft.world.level.block.state.properties.ChestType",
+  "net.minecraft.world.level.storage.WorldData",
+  "net.minecraft.world.phys.EntityHitResult",
+  "InputConstants.isKeyDown()",
+  "KeyMapping.matches()",
+  "Minecraft.getCurrentServer()",
+  "Minecraft.getSingleplayerServer()",
+  "GuiGraphicsExtractor.blit()",
+  "and 44 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "inventory-plus-3.3.2+26.3.jar",
   "published": "2026-11-02"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +88,9 @@
   "minecraft",
   "slotkit"
  ],
- "lacks": 100
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 84
 }

@@ -11,13 +11,10 @@
  "needs": [
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.AfterTranslucentTerrain",
   "net.minecraft.util.CommonColors",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "PoseStack.Pose.pose()",
   "VertexConsumer.addVertex()",
   "VertexConsumer.setColor()",
   "LevelRenderEvents.AFTER_TRANSLUCENT_TERRAIN",
-  "Minecraft.hitResult",
   "GameRenderer.mainCamera()",
   "RenderTypes.debugQuads()",
   "BlockState.getShape()",
@@ -34,8 +31,8 @@
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "blockhighlightfx-1.0.5+26.3.jar",
   "published": "2026-10-13"
  },
@@ -48,5 +45,9 @@
  "entrypoints": {},
  "mixins": false,
  "depends": [],
- "lacks": 20
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 17
 }

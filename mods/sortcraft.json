@@ -9,15 +9,10 @@
  "author": "Nayruden",
  "description": "SortCraft is a multi-chest item sorter without the redstone. Label chests with signs like [ores], right-click your input chest, and items instantly sort!",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.minecraft.server.permissions.Permissions",
   "net.minecraft.world.entity.Display",
   "net.minecraft.world.entity.Display.BlockDisplay",
-  "net.minecraft.world.item.alchemy.PotionContents",
-  "net.minecraft.world.item.component.BundleContents",
   "net.minecraft.world.level.block.ChestBlock",
   "net.minecraft.world.level.block.WallSignBlock",
   "net.minecraft.world.level.block.entity.SignBlockEntity",
@@ -26,23 +21,17 @@
   "net.minecraft.world.level.block.state.properties.ChestType",
   "net.minecraft.world.scores.PlayerTeam",
   "net.minecraft.world.scores.TeamColor",
-  "org.apache.logging.log4j.Level",
   "org.apache.logging.log4j.core.config.Configurator",
   "ServerLifecycleEvents.SERVER_STARTING",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerTickEvents.END_SERVER_TICK",
-  "CommandSourceStack.getServer()",
   "SharedSuggestionProvider.suggestResource()",
   "BlockPos.distSqr()",
   "BlockPos.toShortString()",
-  "DefaultedRegistry.wrapAsHolder()",
   "Holder.is()",
   "Holder.tags()",
   "HolderLookup.RegistryLookup.get()",
   "RegistryAccess.lookupOrThrow()",
-  "DataComponents.BUNDLE_CONTENTS",
   "DataComponents.CUSTOM_NAME",
-  "DataComponents.POTION_CONTENTS",
   "DataComponents.STORED_ENCHANTMENTS",
   "MinecraftServer.registryAccess()",
   "ServerLevel.getEntity()",
@@ -50,14 +39,19 @@
   "ServerPlayer.createCommandSourceStack()",
   "Entity.discard()",
   "EntityTypes.BLOCK_DISPLAY",
-  "and 6 more"
+  "Enchantment.getMaxLevel()",
+  "Blocks.STAINED_GLASS",
+  "BlockStateProperties.CHEST_TYPE",
+  "Scoreboard.addPlayerTeam()",
+  "Scoreboard.addPlayerToTeam()",
+  "Scoreboard.getPlayerTeam()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "sortcraft-fabric-1.3.3+26.3.jar",
   "published": "2026-09-26"
  },
@@ -69,8 +63,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +79,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 46
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 36
 }

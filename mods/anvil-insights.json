@@ -9,9 +9,8 @@
  "author": "Skyyyy1767",
  "description": "See exactly what your anvil is doing with detailed cost, enchantment, repair, and prior-work breakdowns.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.screens.inventory.AnvilScreen",
   "net.minecraft.util.CommonColors",
   "net.minecraft.util.StringUtil",
@@ -21,9 +20,6 @@
   "GuiGraphicsExtractor.setTooltipForNextFrame()",
   "GuiGraphicsExtractor.text()",
   "GuiGraphicsExtractor.textRendererForWidget()",
-  "AbstractWidget.wrapDefaultNarrationMessage()",
-  "Button.setPosition()",
-  "Button.setTooltip()",
   "LocalPlayer.hasInfiniteMaterials()",
   "DataComponents.CUSTOM_NAME",
   "DataComponents.REPAIR_COST",
@@ -47,8 +43,8 @@
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "anvil-insight-fabric-1.1+mc26.3.jar",
   "published": "2026-09-29"
  },
@@ -66,5 +62,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 32
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 28
 }

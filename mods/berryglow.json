@@ -9,25 +9,23 @@
  "author": "OrkaMC",
  "description": "BerryGlow makes Glow Berries give players a short Glowing effect when eaten",
  "needs": [
-  "Mixin",
-  "net.minecraft.world.item.alchemy.Potion",
-  "net.minecraft.world.item.alchemy.PotionContents",
+  "net.minecraft.world.item.crafting.BrewingInput",
+  "net.minecraft.world.item.crafting.BrewingRecipe",
+  "net.minecraft.world.item.crafting.ImbueRecipe",
   "FabricCreativeModeTabOutput.getSearchTabStacks()",
-  "DataComponents.POTION_CONTENTS",
-  "BuiltInRegistries.POTION",
+  "ParticleTypes.ENTITY_EFFECT",
   "Items.ARROW",
-  "Items.LINGERING_POTION",
   "Items.SPECTRAL_ARROW",
   "Items.TIPPED_ARROW",
   "CraftingInput.getItem()",
   "CraftingInput.ingredientCount()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
- "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "berryglow-1.1.1.jar",
   "published": "2026-09-27"
  },
@@ -39,8 +37,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -57,5 +55,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 11
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 10
 }

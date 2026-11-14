@@ -10,12 +10,14 @@
  "description": "Reborn Core is a library used for many of the Tech Reborn team's mods",
  "needs": [
   "an access widener",
-  "Mixin",
-  "Minecraft.execute()",
+  "Mixin: 2 points inside the game's methods",
+  "net.minecraft.world.inventory.ResultSlot",
   "NonNullList.iterator()",
   "NonNullList.stream()",
   "ServerLevel.getAttached()",
   "ServerLevel.getAttachedOrCreate()",
+  "Entity.<init>()",
+  "LivingEntity.<init>()",
   "Ingredient.getCustomIngredient()",
   "Level.addFreshEntity()",
   "Level.hasChunksAt()",
@@ -25,12 +27,12 @@
   "FlowingFluid.createFluidStateDefinition()",
   "FluidState.getValue()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "RebornCore-6.2.1.jar",
   "published": "2026-10-23"
  },
@@ -42,8 +44,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -59,5 +61,9 @@
   "minecraft",
   "team_reborn_energy"
  ],
- "lacks": 13
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+ },
+ "lacks": 15
 }

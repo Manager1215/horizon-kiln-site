@@ -9,15 +9,29 @@
  "author": "yeahimliam",
  "description": "Makes the locator bar separate from the XP bar and High up like popular RPG's!",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
+  "net.minecraft.client.gui.contextualbar.ContextualBar",
+  "net.minecraft.client.gui.contextualbar.ContextualBarRenderer",
+  "net.minecraft.client.gui.contextualbar.ExperienceBar",
+  "net.minecraft.client.gui.contextualbar.ExperienceBarRenderer",
+  "net.minecraft.client.gui.contextualbar.JumpableVehicleBar",
+  "net.minecraft.client.gui.contextualbar.JumpableVehicleBarRenderer",
+  "net.minecraft.client.gui.contextualbar.LocatorBar",
+  "net.minecraft.client.gui.contextualbar.LocatorBarRenderer",
+  "net.minecraft.client.waypoints.ClientWaypointManager",
+  "net.minecraft.world.entity.PlayerRideableJumping",
+  "GuiGraphicsExtractor.nextStratum()",
+  "ClientPacketListener.getWaypointManager()",
+  "MultiPlayerGameMode.hasExperience()",
+  "LocalPlayer.jumpableVehicle()",
   "CommonComponents.optionStatus()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "rpg-locator-bar-fabric-mc26.1-26.3-1.1.0.jar",
   "published": "2026-10-11"
  },
@@ -29,8 +43,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -46,5 +60,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 1
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 15
 }

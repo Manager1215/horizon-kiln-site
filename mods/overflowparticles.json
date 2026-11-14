@@ -9,10 +9,15 @@
  "author": "Wyvest",
  "description": "Advanced particles mod. By Polyfrost, best with OneClient.",
  "needs": [
-  "Mixin",
+  "Mixin: 7 points inside the game's methods",
+  "net.minecraft.client.particle.BreakingItemParticle",
+  "net.minecraft.client.particle.HugeExplosionParticle",
+  "net.minecraft.client.particle.Particle",
   "net.minecraft.client.particle.ParticleEngine",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
+  "net.minecraft.client.particle.SingleQuadParticle",
+  "net.minecraft.client.particle.TerrainParticle",
+  "net.minecraft.client.particle.TrackingEmitter",
+  "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
   "Minecraft.particleEngine",
   "ParticleTypes.BLOCK",
   "ParticleTypes.BLOCK_CRUMBLE",
@@ -29,16 +34,19 @@
   "ParticleTypes.SHRIEK",
   "ParticleTypes.VIBRATION",
   "ClientboundEntityEventPacket.getEntity()",
+  "Entity.<init>()",
   "Player.fallDistance",
   "Player.getVehicle()",
-  "Player.onClimbable()"
+  "Player.onClimbable()",
+  "Level.addParticle()",
+  "AABB.move()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "overflowparticles-1.2.5+26.3.jar",
   "published": "2026-10-30"
  },
@@ -50,8 +58,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -66,5 +74,9 @@
   "minecraft",
   "oneconfigv1"
  ],
- "lacks": 22
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 30
 }

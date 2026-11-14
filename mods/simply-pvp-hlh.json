@@ -9,8 +9,9 @@
  "author": "Hyperlinkhyper",
  "description": "This mod adds weapons and utilities for pvp",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.client.renderer.entity.EntityRenderers",
+  "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState",
   "net.minecraft.core.particles.DustParticleOptions",
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
@@ -35,6 +36,7 @@
   "ServerLevel.sendParticles()",
   "SoundEvents.BEACON_AMBIENT",
   "SoundEvents.WARDEN_SONIC_BOOM",
+  "DamageSources.magic()",
   "DamageSources.thrown()",
   "Entity.getBbHeight()",
   "Entity.isAlive()",
@@ -44,20 +46,18 @@
   "EntityTypes.CREEPER",
   "EntityTypes.SKELETON",
   "EntityTypes.ZOMBIE",
+  "LivingEntity.getBbHeight()",
+  "LivingEntity.getBbWidth()",
   "LivingEntity.getRandom()",
   "LivingEntity.getTicksRequiredToFreeze()",
-  "LivingEntity.isAlive()",
-  "LivingEntity.setDeltaMovement()",
-  "LivingEntity.setTicksFrozen()",
-  "LivingEntity.syncVelocity",
-  "and 25 more"
+  "and 30 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "B - Simply Weapons 1.0.14.jar",
   "published": "2026-09-17"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 65
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 70
 }

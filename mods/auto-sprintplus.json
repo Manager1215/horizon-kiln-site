@@ -2,24 +2,19 @@
  "id": "auto-sprintplus",
  "name": "Auto Sprint+",
  "version": "1.4-26.3",
- "status": "planned",
- "statusLabel": "Planned",
- "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "status": "works",
+ "statusLabel": "Works",
+ "statusMeaning": "Tried in the game with Kiln.",
  "url": "https://modrinth.com/mod/auto-sprintplus",
  "author": "febreze.gamerz",
  "description": "A Minecraft mod that adds auto sprint, no need to press or hold ctrl any more.",
- "needs": [
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseReleased()",
-  "Screen.mouseScrolled()"
- ],
- "roadmap": "Minecraft's libraries and client API (0.2)",
- "evidence": "Not run: Java did not start.",
+ "needs": [],
+ "roadmap": "",
+ "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Auto-SprintPlus-1.4-26.3.jar",
   "published": "2026-10-22"
  },
@@ -31,8 +26,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -47,5 +42,18 @@
   "java",
   "minecraft"
  ],
- "lacks": 4
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 0,
+ "works": "Sprints for you while you walk forward, and always draws a box at the top left (gui 10,10, 190x26) saying 'Sprint: Toggled'; the box hides with the GUI (F1), as its code checks Hud.isHidden.",
+ "note": "From Modrinth, unchanged. Not yet: its settings screen and HUD editor (key Y) don't open; its toggle key has no default; the check uses F1 hiding its always-on box, so it assumes F1 hides the GUI in Horizon; the mod works without it",
+ "checked": {
+  "kiln": "0.4.0",
+  "commit": "65f811ecccb786188bda6e89778f5faecccb264d",
+  "date": "2026-11-08",
+  "horizon": "Nightly 2026-11-04 · 3fb4c31",
+  "by": "kiln/proof.py on the Linux PC"
+ }
 }

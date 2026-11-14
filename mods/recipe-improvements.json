@@ -9,13 +9,26 @@
  "author": "NineOfGaming",
  "description": "Fixes empty recipe syncs via client side fallback and adds recipe-book QoL, tooltip improvements, quick-craft shortcuts, and more.",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.minecraft.client.ClientRecipeBook",
+  "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
+  "net.minecraft.client.gui.screens.recipebook.GhostSlots",
+  "net.minecraft.client.gui.screens.recipebook.OverlayRecipeComponent",
+  "net.minecraft.client.gui.screens.recipebook.OverlayRecipeComponent.OverlayRecipeButton",
+  "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
+  "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent.TabInfo",
+  "net.minecraft.client.gui.screens.recipebook.RecipeBookPage",
+  "net.minecraft.client.gui.screens.recipebook.RecipeBookTabButton",
+  "net.minecraft.client.gui.screens.recipebook.RecipeButton",
+  "net.minecraft.client.gui.screens.recipebook.RecipeCollection",
   "net.minecraft.client.gui.screens.recipebook.RecipeUpdateListener",
+  "net.minecraft.client.gui.screens.recipebook.SearchRecipeBookCategory",
   "net.minecraft.client.multiplayer.ClientRecipeContainer",
   "net.minecraft.client.multiplayer.KnownPacksManager",
   "net.minecraft.client.multiplayer.SessionSearchTrees",
   "net.minecraft.core.RegistrationInfo",
+  "net.minecraft.recipebook.PlaceRecipeHelper",
+  "net.minecraft.recipebook.PlaceRecipeHelper.Output",
   "net.minecraft.resources.RegistryDataLoader",
   "net.minecraft.resources.RegistryDataLoader.RegistryData",
   "net.minecraft.server.packs.PackLocationInfo",
@@ -25,6 +38,8 @@
   "net.minecraft.server.packs.repository.PackRepository",
   "net.minecraft.server.packs.resources.CloseableResourceManager",
   "net.minecraft.server.packs.resources.MultiPackResourceManager",
+  "net.minecraft.world.inventory.AbstractFurnaceMenu",
+  "net.minecraft.world.item.crafting.RecipeBookCategories",
   "net.minecraft.world.item.crafting.display.FurnaceRecipeDisplay",
   "net.minecraft.world.item.crafting.display.ShapedCraftingRecipeDisplay",
   "net.minecraft.world.item.crafting.display.ShapelessCraftingRecipeDisplay",
@@ -35,29 +50,14 @@
   "net.minecraft.world.item.crafting.display.SlotDisplayContext",
   "net.minecraft.world.item.crafting.display.SmithingRecipeDisplay",
   "net.minecraft.world.item.crafting.display.StonecutterRecipeDisplay",
-  "Minecraft.getCurrentServer()",
-  "Minecraft.getResourcePackRepository()",
-  "Minecraft.getVanillaPackResources()",
-  "Minecraft.isLocalServer()",
-  "Screen.getTooltipFromItem()",
-  "ClientPacketListener.enabledFeatures()",
-  "ClientPacketListener.getLevel()",
-  "ClientPacketListener.registryAccess()",
-  "ClientPacketListener.searchTrees()",
-  "ServerData.ip",
-  "ServerData.isLan()",
-  "ServerData.isRealm()",
-  "LocalPlayer.getRecipeBook()",
-  "DefaultedRegistry.iterator()",
-  "Holder.tags()",
-  "and 23 more"
+  "and 45 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "recipe-improvements-1.1.0+26.3.jar",
   "published": "2026-09-15"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "minecraft",
   "yet_another_config_lib_v3"
  ],
- "lacks": 63
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 85
 }

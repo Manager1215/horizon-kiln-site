@@ -9,11 +9,19 @@
  "author": "rasmus123d",
  "description": "Rare tropical fish glow, real fish models in bucket tooltips, and a collection screen to catch them all. Optional Xaero map filters.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.rendering.v1.ClientTooltipComponentCallback",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
   "net.minecraft.client.gui.components.toasts.AdvancementToast",
+  "net.minecraft.client.gui.screens.advancements.AdvancementTab",
+  "net.minecraft.client.gui.screens.advancements.AdvancementsScreen",
   "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
+  "net.minecraft.client.model.animal.fish.TropicalFishLargeModel",
+  "net.minecraft.client.model.animal.fish.TropicalFishSmallModel",
+  "net.minecraft.client.model.geom.PartPose",
+  "net.minecraft.client.model.geom.builders.CubeDeformation",
+  "net.minecraft.client.model.geom.builders.CubeListBuilder",
+  "net.minecraft.client.model.geom.builders.MeshDefinition",
+  "net.minecraft.client.model.geom.builders.PartDefinition",
   "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
   "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.world.entity.animal.fish.TropicalFish",
@@ -27,32 +35,28 @@
   "Minecraft.getCurrentServer()",
   "Minecraft.getEntityRenderDispatcher()",
   "Minecraft.getSingleplayerServer()",
-  "Minecraft.setScreenAndShow()",
+  "GuiGraphicsExtractor.fakeItem()",
   "GuiGraphicsExtractor.text()",
   "ToastManager.getNotificationDisplayTimeMultiplier()",
+  "LayerDefinition.create()",
   "ServerData.ip",
   "EntityRenderDispatcher.getRenderer()",
   "EntityRenderer.createRenderState()",
   "EntityRenderState.shadowPieces",
+  "NonNullList.iterator()",
   "DataComponents.BUCKET_ENTITY_DATA",
   "DataComponents.TROPICAL_FISH_BASE_COLOR",
   "DataComponents.TROPICAL_FISH_PATTERN",
   "DataComponents.TROPICAL_FISH_PATTERN_COLOR",
   "Component.getVisualOrderText()",
-  "SoundEvents.UI_TOAST_CHALLENGE_COMPLETE",
-  "DyeColor.byId()",
-  "DyeColor.getId()",
-  "DyeColor.getName()",
-  "DyeColor.getTextureDiffuseColor()",
-  "Items.TROPICAL_FISH_BUCKET",
-  "CustomData.copyTag()"
+  "and 7 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "rarefishfinder-2.11.1+26.3.jar",
   "published": "2026-10-19"
  },
@@ -64,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -83,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 36
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 47
 }

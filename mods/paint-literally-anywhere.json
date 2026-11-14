@@ -9,7 +9,7 @@
  "author": "Ninjaking312",
  "description": "The world is (literally) your canvas!",
  "needs": [
-  "Mixin",
+  "Mixin: 8 points inside the game's methods",
   "com.mojang.blaze3d.platform.cursor.CursorTypes",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
@@ -29,6 +29,8 @@
   "net.fabricmc.fabric.api.event.player.ItemEvents.UseCallback",
   "net.fabricmc.fabric.api.event.player.ItemEvents.UseOnCallback",
   "net.fabricmc.fabric.api.item.v1.ItemComponentTooltipProviderRegistry",
+  "net.fabricmc.fabric.impl.client.indigo.renderer.mesh.EncodingFormat",
+  "net.fabricmc.fabric.impl.client.indigo.renderer.mesh.MutableQuadViewImpl",
   "net.minecraft.SharedConstants",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
   "net.minecraft.client.color.item.ItemTintSource",
@@ -38,26 +40,24 @@
   "net.minecraft.client.data.models.model.ModelLocationUtils",
   "net.minecraft.client.data.models.model.ModelTemplate",
   "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
   "net.minecraft.client.gui.components.SpriteIconButton",
   "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-  "net.minecraft.client.gui.components.StringWidget",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.layouts.FrameLayout",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
   "net.minecraft.client.gui.layouts.LayoutSettings",
   "net.minecraft.client.gui.layouts.LinearLayout",
   "net.minecraft.client.renderer.item.EmptyModel",
   "net.minecraft.client.renderer.item.EmptyModel.Unbaked",
+  "net.minecraft.client.renderer.item.RangeSelectItemModel",
+  "net.minecraft.client.renderer.item.RangeSelectItemModel.Entry",
   "and 76 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "paint_literally_anywhere-1.1.0-26.3.jar",
   "published": "2026-10-15"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 135
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 140
 }

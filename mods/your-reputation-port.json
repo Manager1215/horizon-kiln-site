@@ -9,8 +9,8 @@
  "author": "FR13NDS_Krypton",
  "description": "Ported the ‘Your Reputation’ mod to Fabric version 26.1.2. Added a villager reputation display.",
  "needs": [
-  "Mixin",
   "net.minecraft.world.entity.NeutralMob",
+  "net.minecraft.world.entity.ai.goal.target.DefendVillageTargetGoal",
   "net.minecraft.world.entity.animal.golem.IronGolem",
   "net.minecraft.world.entity.npc.villager.Villager",
   "ServerLevel.getNearbyEntities()",
@@ -19,12 +19,12 @@
   "LivingEntity.isSpectator()",
   "AABB.inflate()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "your-reputation-0.1.0+jade.26.3.jar",
   "published": "2026-10-02"
  },
@@ -44,5 +44,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 8
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 9
 }

@@ -9,16 +9,15 @@
  "author": "LevsidorovI",
  "description": "Fixed MC-194284, MC-200131, MC-218145, MC-274182, MC-274183, MC-274184. Bugs caused some sounds to vanish after reloading resource packs or pressing F3 + T.",
  "needs": [
-  "Mixin",
   "net.minecraft.client.sounds.ChannelAccess",
   "net.minecraft.client.sounds.ChannelAccess.ChannelHandle"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "reloadloopingsoundfix-fabric-1.1+26.1-26.3.jar",
   "published": "2026-10-18"
  },
@@ -31,5 +30,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
  "lacks": 2
 }

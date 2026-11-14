@@ -1,7 +1,7 @@
 {
  "id": "my-nethers-delight-refabricated",
  "name": "My Nether's Delight Refabricated",
- "version": "3.0.0-1.10.4-beta.1+26.3",
+ "version": "3.0.0-1.10.4-beta.3+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,7 +10,7 @@
  "description": "Modern Fabric port of the new Nether addon for Farmer's Delight.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
   "net.fabricmc.fabric.api.event.registry.DynamicRegistries",
@@ -37,6 +37,8 @@
   "net.minecraft.client.renderer.entity.ThrownItemRenderer",
   "net.minecraft.core.dispenser.ProjectileDispenseBehavior",
   "net.minecraft.core.particles.ItemParticleOption",
+  "net.minecraft.network.syncher.EntityDataSerializers",
+  "net.minecraft.network.syncher.SynchedEntityData.Builder",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.damagesource.DamageTypes",
   "net.minecraft.world.effect.MobEffectUtil",
@@ -49,18 +51,16 @@
   "net.minecraft.world.entity.ai.goal.WrappedGoal",
   "net.minecraft.world.entity.ai.navigation.PathNavigation",
   "net.minecraft.world.entity.animal.equine.AbstractHorse",
-  "net.minecraft.world.entity.animal.frog.Frog",
-  "net.minecraft.world.entity.animal.sheep.Sheep",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "mynethersdelight-3.0.0-1.10.4-beta.1-fabric+26.3.jar",
-  "published": "2026-10-25"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "mynethersdelight-3.0.0-1.10.4-beta.3-fabric+26.3.jar",
+  "published": "2026-11-11"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -90,5 +90,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 402
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 395
 }

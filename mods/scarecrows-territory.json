@@ -10,9 +10,7 @@
  "description": "Scarecrows' Territory keeps spawners activated!",
  "needs": [
   "an access widener",
-  "Mixin",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.Unload",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndLevelTick",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
   "net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags",
@@ -21,13 +19,13 @@
   "net.minecraft.util.profiling.ProfilerFiller",
   "net.minecraft.world.entity.SpawnGroupData",
   "net.minecraft.world.entity.SpawnPlacements",
+  "net.minecraft.world.level.BaseSpawner",
   "net.minecraft.world.level.NaturalSpawner",
   "net.minecraft.world.level.NaturalSpawner.AfterSpawnCallback",
   "net.minecraft.world.level.NaturalSpawner.SpawnPredicate",
   "net.minecraft.world.level.NaturalSpawner.SpawnState",
   "net.minecraft.world.level.StructureManager",
   "ServerLevelEvents.UNLOAD",
-  "ServerTickEvents.END_LEVEL_TICK",
   "BlockPos.MutableBlockPos.set()",
   "DataComponents.DYE",
   "MinecraftServer.schedule()",
@@ -43,22 +41,23 @@
   "ServerLevel.structureManager()",
   "EntityType.canSummon()",
   "EntityType.getSpawnAABB()",
+  "EntityType.isAllowedInPeaceful()",
   "Mob.checkSpawnObstruction()",
   "Mob.checkSpawnRules()",
+  "Mob.discard()",
   "Mob.finalizeSpawn()",
   "Mob.getMaxSpawnClusterSize()",
   "Mob.isMaxGroupSizeReached()",
-  "Mob.snapTo()",
-  "MobCategory.getMaxInstancesPerChunk()",
-  "MobCategory.isFriendly()",
-  "and 17 more"
+  "Mob.isPersistenceRequired()",
+  "Mob.removeWhenFarAway()",
+  "and 22 more"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "scarecrowsterritory-1.1.12-fabric-mc26.3.jar",
   "published": "2026-09-18"
  },
@@ -70,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +88,9 @@
   "supermartijn642configlib",
   "supermartijn642corelib"
  ],
- "lacks": 57
+ "softOff": {
+  "class": "partial",
+  "why": "data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 62
 }

@@ -9,28 +9,19 @@
  "author": "Flavio6561",
  "description": "Display tiers from the Official Italian Tierlist",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
-  "net.minecraft.client.gui.components.StringWidget",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.network.chat.FontDescription",
   "net.minecraft.network.chat.FontDescription.Resource",
   "net.minecraft.util.CommonColors",
   "org.apache.commons.io.FileUtils",
   "NativeImage.read()",
-  "Minecraft.execute()",
   "Minecraft.getGameProfile()",
   "Minecraft.isGameLoadFinished()",
-  "Minecraft.setScreenAndShow()",
-  "Button.setPosition()",
-  "Button.setTooltip()",
-  "Button.Builder.tooltip()",
   "PlayerInfo.getProfile()",
   "SharedSuggestionProvider.matchesSubStr()",
-  "MutableComponent.setStyle()",
   "Style.withFont()",
   "PreparableReloadListener.SharedState.resourceManager()",
   "GsonHelper.fromJson()",
@@ -43,21 +34,23 @@
   "Items.ENDER_PEARL",
   "Items.GLOWSTONE",
   "Items.GOLDEN_APPLE",
-  "Items.IRON_LEGGINGS",
   "Items.NETHERITE_AXE",
   "Items.NETHERITE_BOOTS",
   "Items.NETHERITE_CHESTPLATE",
-  "Items.NETHERITE_HELMET",
   "Items.NETHERITE_LEGGINGS",
   "Items.NETHERITE_PICKAXE",
-  "and 7 more"
+  "Items.NETHERITE_SWORD",
+  "Items.RESPAWN_ANCHOR",
+  "Items.TOTEM_OF_UNDYING",
+  "Level.close()",
+  "Level.players()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "itatiers-0.3.3+26.3.jar",
   "published": "2026-10-03"
  },
@@ -69,8 +62,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +79,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 47
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 35
 }

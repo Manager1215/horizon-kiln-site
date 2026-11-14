@@ -10,55 +10,44 @@
  "description": "Bedrock Edition-like easy and accurate block placement and breaking plus reach-around placement for fast bridging.",
  "needs": [
   "an access widener",
-  "Mixin",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.client.player.ClientInput",
   "net.minecraft.network.protocol.game.ServerboundPlayerInputPacket",
   "net.minecraft.world.entity.player.Input",
-  "Minecraft.gameMode",
-  "Minecraft.hitResult",
   "Minecraft.pick()",
   "Minecraft.rightClickDelay",
-  "Options.keyAttack",
-  "Options.keyUse",
-  "ClientLevel.isEmptyBlock()",
   "ClientPacketListener.send()",
+  "MultiPlayerGameMode.destroyDelay",
   "LocalPlayer.blockInteractionRange()",
   "LocalPlayer.getOnPos()",
   "LocalPlayer.getViewXRot()",
   "LocalPlayer.hasInfiniteMaterials()",
   "LocalPlayer.input",
   "LocalPlayer.itemUsed()",
-  "LocalPlayer.swing()",
   "BlockPos.distManhattan()",
   "BlockPos.subtract()",
-  "Direction.getNearest()",
   "Direction.getUnitVec3i()",
   "CommonComponents.OPTION_OFF",
   "CommonComponents.OPTION_ON",
   "Entity.getEyePosition()",
   "Entity.getViewVector()",
-  "ItemStack.getInteractAnimation()",
   "BlockGetter.clipWithInteractionOverride()",
   "BlockGetter.traverseBlocks()",
   "ClipContext.getBlockShape()",
   "ClipContext.getFluidShape()",
   "ClipContext.getFrom()",
   "ClipContext.getTo()",
-  "Level.isEmptyBlock()",
   "Blocks.SCAFFOLDING",
   "BlockState.getCollisionShape()",
-  "HitResult.getType()",
   "VoxelShape.clip()",
   "VoxelShape.max()",
-  "and 1 more"
+  "VoxelShape.min()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "proplacer-v26.3.0-mc26.3.x+fabric.jar",
   "published": "2026-09-23"
  },
@@ -70,8 +59,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +77,9 @@
   "minecraft",
   "puzzleslib"
  ],
- "lacks": 41
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 31
 }

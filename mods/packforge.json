@@ -1,7 +1,7 @@
 {
  "id": "packforge",
  "name": "PackForge - Optimized Resource Pack Loading Time",
- "version": "1.4.1",
+ "version": "1.4.2",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,39 +10,57 @@
  "description": "Faster resourcepack reloads and atlas overflow recovery for large resource packs.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 18 points inside the game's methods",
   "com.mojang.blaze3d.font.GlyphInfo",
   "com.mojang.blaze3d.font.GlyphProvider",
   "com.mojang.blaze3d.font.GlyphProvider.Conditional",
   "com.mojang.blaze3d.font.SpaceProvider",
+  "com.mojang.blaze3d.font.SpaceProvider.Definition",
   "com.mojang.blaze3d.font.TrueTypeGlyphProvider",
   "com.mojang.blaze3d.font.UnbakedGlyph",
+  "com.mojang.blaze3d.platform.TextureUtil",
+  "net.minecraft.ReportedException",
+  "net.minecraft.client.gui.components.SpriteIconButton",
+  "net.minecraft.client.gui.components.SpriteIconButton.Builder",
   "net.minecraft.client.gui.font.AllMissingGlyphProvider",
   "net.minecraft.client.gui.font.CodepointMap",
   "net.minecraft.client.gui.font.CodepointMap.Output",
+  "net.minecraft.client.gui.font.FontManager",
+  "net.minecraft.client.gui.font.FontManager.Preparation",
   "net.minecraft.client.gui.font.FontOption",
   "net.minecraft.client.gui.font.FontOption.Filter",
+  "net.minecraft.client.gui.font.FontSet",
   "net.minecraft.client.gui.font.glyphs.SpecialGlyphs",
   "net.minecraft.client.gui.font.providers.BitmapProvider",
   "net.minecraft.client.gui.font.providers.UnihexProvider",
-  "NativeImage.getHeight()",
-  "NativeImage.getPixels()",
-  "NativeImage.getWidth()",
-  "NativeImage.setPixel()",
-  "Int2ObjectMap.Entry.getValue()",
-  "Int2ObjectMap.Entry.setValue()",
-  "IntList.size()",
-  "IntSet.size()",
-  "ExtraCodecs.CODEPOINT"
+  "net.minecraft.client.gui.screens.LoadingOverlay",
+  "net.minecraft.client.gui.screens.packs.PackSelectionScreen",
+  "net.minecraft.client.main.Main",
+  "net.minecraft.client.renderer.ShaderManager",
+  "net.minecraft.client.renderer.texture.StitcherException",
+  "net.minecraft.client.renderer.texture.atlas.SpriteResourceLoader",
+  "net.minecraft.client.renderer.texture.atlas.SpriteSource",
+  "net.minecraft.client.renderer.texture.atlas.SpriteSource.Loader",
+  "net.minecraft.client.resources.model.cuboid.FaceBakery",
+  "net.minecraft.server.packs.FilePackResources",
+  "net.minecraft.server.packs.FilePackResources.SharedZipFileAccess",
+  "net.minecraft.server.packs.PathPackResources",
+  "net.minecraft.server.packs.resources.ReloadInstance",
+  "net.minecraft.server.packs.resources.ReloadableResourceManager",
+  "net.minecraft.server.packs.resources.SimpleReloadInstance",
+  "net.minecraft.util.profiling.ProfilerFiller",
+  "org.lwjgl.system.MemoryUtil",
+  "NativeImage.format()",
+  "and 19 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "packforge-fabric-1.4.1-mc26.1-26.3.jar",
-  "published": "2026-10-01"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "packforge-fabric-1.4.2-mc26.1-26.3.jar",
+  "published": "2026-11-13"
  },
  "reports": {
   "works": 0,
@@ -52,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -69,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 23
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 59
 }

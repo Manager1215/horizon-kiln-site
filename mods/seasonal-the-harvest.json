@@ -10,7 +10,7 @@
  "description": "This mod adds halloween themed content with new mobs, structures and a final boss. After killing the boss you are able to get a scarecrow to work for your farm :)",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 5 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "io.netty.channel.ChannelHandler",
   "io.netty.channel.embedded.EmbeddedChannel",
@@ -23,12 +23,10 @@
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
   "net.fabricmc.fabric.api.entity.event.v1.effect.ServerMobEffectEvents",
   "net.fabricmc.fabric.api.entity.event.v1.effect.ServerMobEffectEvents.AllowAdd",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
   "net.minecraft.advancements.triggers.CriteriaTriggers",
   "net.minecraft.advancements.triggers.SummonedEntityTrigger",
+  "net.minecraft.client.gui.Hud.HeartType",
   "net.minecraft.client.model.EntityModel",
   "net.minecraft.client.model.HumanoidModel",
   "net.minecraft.client.model.animal.equine.AbstractEquineModel",
@@ -41,7 +39,7 @@
   "net.minecraft.client.model.geom.builders.MeshDefinition",
   "net.minecraft.client.model.geom.builders.PartDefinition",
   "net.minecraft.client.model.monster.zombie.ZombieVillagerModel",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
+  "net.minecraft.client.model.player.PlayerModel",
   "net.minecraft.client.particle.EmissiveRisingParticle",
   "net.minecraft.client.particle.EmissiveRisingParticle.Provider",
   "net.minecraft.client.renderer.BiomeColors",
@@ -51,14 +49,16 @@
   "net.minecraft.client.renderer.entity.EntityRenderers",
   "net.minecraft.client.renderer.entity.EvokerRenderer",
   "net.minecraft.client.renderer.entity.HumanoidMobRenderer",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.MobRenderer",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "seasonal-fabric-1.5.1+26.3.jar",
   "published": "2026-10-31"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 615
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 599
 }

@@ -2,21 +2,46 @@
  "id": "old-gui",
  "name": "old-gui",
  "version": "0.0.2",
- "status": "planned",
- "statusLabel": "Planned",
- "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "status": "no-plans",
+ "statusLabel": "No plans yet",
+ "statusMeaning": "Calls something that is not on Kiln's roadmap yet. Parts of it may already run.",
  "url": "https://modrinth.com/mod/old-gui",
  "author": "FourTerms2",
  "description": "this adds the old Gui look to it",
  "needs": [
-  "Mixin"
+  "com.mojang.realmsclient.gui.screens.RealmsNotificationsScreen",
+  "net.minecraft.SharedConstants",
+  "net.minecraft.client.gui.layouts.FrameLayout",
+  "net.minecraft.client.gui.layouts.GridLayout",
+  "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
+  "net.minecraft.client.gui.layouts.LayoutSettings",
+  "net.minecraft.client.gui.screens.CreditsAndAttributionScreen",
+  "net.minecraft.client.gui.screens.WorldOptionsScreen",
+  "net.minecraft.client.gui.screens.achievement.StatsScreen",
+  "net.minecraft.client.gui.screens.advancements.AdvancementsScreen",
+  "net.minecraft.client.gui.screens.options.OptionsScreen",
+  "net.minecraft.client.multiplayer.chat.report.ReportingContext",
+  "net.minecraft.client.resources.SplashManager",
+  "net.minecraft.util.CommonLinks",
+  "Minecraft.getReportingContext()",
+  "Minecraft.isDemo()",
+  "Minecraft.isLocalServer()",
+  "MouseHandler.grabMouse()",
+  "Gui.splashManager()",
+  "ConfirmLinkScreen.confirmLink()",
+  "ClientLevel.DEFAULT_QUIT_MESSAGE",
+  "ClientPacketListener.getSeenPlayers()",
+  "ClientPacketListener.showDialog()",
+  "LocalPlayer.getStats()",
+  "CommonComponents.disconnectButtonLabel()",
+  "CommonDialogData.computeExternalTitle()"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "old-gui-1.1.0.jar",
   "published": "2026-09-17"
  },
@@ -28,8 +53,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -45,5 +70,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 26
 }

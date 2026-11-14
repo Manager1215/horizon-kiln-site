@@ -9,7 +9,6 @@
  "author": "SpacEagle17",
  "description": "Euphoria Patches is an add-on for Complementary Shaders, extending it with more optional features and settings.",
  "needs": [
-  "Mixin",
   "net.minecraft.class_1041",
   "net.minecraft.class_1132",
   "net.minecraft.class_124",
@@ -33,19 +32,17 @@
   "net.minecraft.class_5321",
   "net.minecraft.class_638",
   "net.minecraft.class_8028",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "org.lwjgl.BufferUtils",
   "org.lwjgl.glfw.GLFW",
   "org.lwjgl.stb.STBImage",
   "org.lwjgl.stb.STBImageWrite"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "EuphoriaPatcher-1.10.5-r5.9.3-fabric.jar",
   "published": "2026-09-15"
  },
@@ -58,5 +55,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
- "lacks": 29
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 27
 }

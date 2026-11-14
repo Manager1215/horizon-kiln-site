@@ -9,7 +9,6 @@
  "author": "Developer-Mike",
  "description": "A simple autototem mod. If your totem pops in your offhand, it automatically gets replaced.",
  "needs": [
-  "Mixin",
   "net.minecraft.network.HashedPatchMap",
   "net.minecraft.network.HashedPatchMap.HashGenerator",
   "net.minecraft.network.HashedStack",
@@ -17,19 +16,18 @@
   "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
   "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
   "net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket",
-  "net.minecraft.world.inventory.ContainerInput",
   "ClientPacketListener.getConnection()",
   "Connection.send()",
   "Inventory.getFreeSlot()",
   "AbstractContainerMenu.getStateId()",
   "Items.TOTEM_OF_UNDYING"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "autototem-1.1.0.jar",
   "published": "2026-09-02"
  },
@@ -45,5 +43,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 13
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 12
 }

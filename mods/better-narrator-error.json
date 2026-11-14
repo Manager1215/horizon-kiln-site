@@ -9,15 +9,17 @@
  "author": "Awakened-Redstone",
  "description": "Stop the Narrator from printing huge errors without disabling it.",
  "needs": [
-  "Mixin",
-  "com.mojang.text2speech.Narrator"
+  "Mixin: 3 points inside the game's methods",
+  "com.mojang.text2speech.Narrator",
+  "com.mojang.text2speech.NarratorLinux.FliteLibrary",
+  "com.mojang.text2speech.NarratorLinux.FliteLibrary.CmuUsKal16"
  ],
  "roadmap": "Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "betternarratorerror-1.1.0-dev.jar",
   "published": "2026-10-18"
  },
@@ -34,5 +36,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 1
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 3
 }

@@ -10,16 +10,9 @@
  "description": "A simple and opinionated Minecraft radial menu mod that works flawlessly out of the box.",
  "needs": [
   "an access widener",
-  "Mixin",
   "com.mojang.blaze3d.platform.cursor.CursorTypes",
   "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
   "net.minecraft.client.Screenshot",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-  "net.minecraft.client.gui.components.ObjectSelectionList",
-  "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
-  "net.minecraft.client.gui.components.StringWidget",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.layouts.FrameLayout",
   "net.minecraft.client.gui.layouts.LinearLayout",
   "net.minecraft.client.gui.screens.options.AccessibilityOptionsScreen",
@@ -46,19 +39,25 @@
   "Window.handle()",
   "KeyMappingHelper.getBoundKeyOf()",
   "FabricLoader.getEntrypointContainers()",
-  "KeyMapping.getTranslatedKeyMessage()",
   "KeyMapping.matches()",
   "KeyMapping.setDown()",
   "KeyMapping.Category.label()",
   "KeyboardHandler.handleDebugKeys()",
-  "and 43 more"
+  "Options.menuBackgroundBlurriness()",
+  "Options.operatorItemsTab()",
+  "GuiGraphicsExtractor.blit()",
+  "GuiGraphicsExtractor.blitSprite()",
+  "GuiGraphicsExtractor.fakeItem()",
+  "GuiGraphicsExtractor.nextStratum()",
+  "GuiGraphicsExtractor.requestCursor()",
+  "and 14 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "radial-3.2.2+26.3.jar",
   "published": "2026-10-05"
  },
@@ -70,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 83
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 54
 }

@@ -10,15 +10,12 @@
  "description": "This mod allows you to regenerate chunks to how they where like when they where first generated.",
  "needs": [
   "an access widener",
-  "Mixin",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.minecraft.server.level.ChunkHolder",
   "net.minecraft.server.level.ChunkMap",
   "net.minecraft.server.level.ChunkResult",
   "net.minecraft.server.level.GeneratingChunkMap",
   "net.minecraft.server.level.GenerationChunkHolder",
   "net.minecraft.server.level.WorldGenRegion",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.util.StaticCache2D",
   "net.minecraft.util.StaticCache2D.Initializer",
   "net.minecraft.world.level.StructureManager",
@@ -29,8 +26,6 @@
   "net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator",
   "net.minecraft.world.level.levelgen.RandomState",
   "net.minecraft.world.level.levelgen.blending.Blender",
-  "ServerTickEvents.END_SERVER_TICK",
-  "CommandSourceStack.getPosition()",
   "BlockPos.containing()",
   "BlockPos.MutableBlockPos.set()",
   "ServerChunkCache.chunkMap",
@@ -41,7 +36,7 @@
   "ServerLevel.structureManager()",
   "ServerPlayer.connection",
   "ServerPlayer.isAlive()",
-  "PermissionLevel.byId()",
+  "ServerGamePacketListenerImpl.send()",
   "ChunkAccess.collectBiomesInPalette()",
   "ChunkGenerator.applyBiomeDecoration()",
   "ChunkGenerator.buildTerrain()",
@@ -51,14 +46,18 @@
   "ChunkStatus.FEATURES",
   "ChunkStatus.FINAL_HEIGHTMAPS",
   "ChunkStatus.STRUCTURE_STARTS",
-  "and 5 more"
+  "ChunkStatus.TERRAIN",
+  "ChunkStatus.getStatusList()",
+  "ChunkStatus.isBefore()",
+  "ChunkStatus.isOrBefore()",
+  "and 1 more"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Regenerate-chunks-26.3-0.4.7.jar",
   "published": "2026-10-26"
  },
@@ -70,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +84,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 45
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 41
 }

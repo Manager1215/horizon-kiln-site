@@ -9,26 +9,22 @@
  "author": "uright008",
  "description": "Optimize Minecraft's PalettedContainer",
  "needs": [
-  "Mixin",
   "net.minecraft.core.IdMap",
   "net.minecraft.network.VarInt",
   "net.minecraft.util.SimpleBitStorage",
   "Int2IntMap.FastEntrySet.forEach()",
   "FriendlyByteBuf.readFixedSizeLongArray()",
-  "FriendlyByteBuf.readVarInt()",
-  "FriendlyByteBuf.writeByte()",
   "FriendlyByteBuf.writeFixedSizeLongArray()",
-  "FriendlyByteBuf.writeVarInt()",
   "Strategy.entryCount()",
   "Strategy.getIndex()",
   "Strategy.globalMap()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "notenoughpalette-0.3.0.jar",
   "published": "2026-10-05"
  },
@@ -45,5 +41,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 12
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 9
 }

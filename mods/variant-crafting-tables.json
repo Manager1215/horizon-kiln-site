@@ -1,0 +1,62 @@
+{
+ "id": "variant-crafting-tables",
+ "name": "Variant Crafting Tables",
+ "version": "8.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/variant-crafting-tables",
+ "author": "xanthian",
+ "description": "Crafting Tables made from all wood types",
+ "needs": [
+  "net.minecraft.world.inventory.ContainerLevelAccess",
+  "net.minecraft.world.inventory.CraftingMenu",
+  "net.minecraft.world.level.block.CraftingTableBlock",
+  "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
+  "net.minecraft.world.level.storage.loot.providers.number.ints.ResolvableInt.Constant",
+  "BlockBehaviour.Properties.instrument()",
+  "MapColor.CRIMSON_STEM",
+  "MapColor.WARPED_STEM",
+  "ContextFloatProviders.COOKING_DEFAULT_SPEED_MULTIPLIER",
+  "ResolvableFloat.fromKey()"
+ ],
+ "roadmap": "Code next to data (0.3), Machines (0.4)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "variantcraftingtables-8.0.jar",
+  "published": "2026-11-08"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "fabric-datagen": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 10
+}

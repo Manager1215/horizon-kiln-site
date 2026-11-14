@@ -10,7 +10,7 @@
  "description": "Ensures important resource packs stay always active and helps clean up the pack selection screen.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AfterKeyPress",
   "net.fabricmc.fabric.api.client.screen.v1.Screens",
@@ -37,7 +37,6 @@
   "ObjectCollection.forEach()",
   "Minecraft.getResourcePackRepository()",
   "GuiGraphicsExtractor.tooltip()",
-  "KeyEvent.hasControlDownWithQuirk()",
   "RegistryAccess.EMPTY",
   "Component.getVisualOrderText()",
   "Identifier.toLanguageKey()",
@@ -52,8 +51,8 @@
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "resourcepackoverrides-v26.3.0-mc26.3.x+fabric.jar",
   "published": "2026-09-22"
  },
@@ -65,8 +64,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -81,5 +80,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 36
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 35
 }

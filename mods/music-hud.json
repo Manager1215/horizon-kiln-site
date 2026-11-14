@@ -9,7 +9,7 @@
  "author": "Etern",
  "description": "Enjoy music in all situations powered by Netease Cloud Music (NCM) | 基于网易云的全场景音乐模组",
  "needs": [
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "com.mojang.blaze3d.Blaze3D",
   "com.mojang.blaze3d.vertex.DefaultVertexFormat",
   "com.mojang.renderpearl.api.pipeline.BindGroupLayout.Builder",
@@ -22,20 +22,21 @@
   "net.minecraft.client.gui.Font.PreparedText",
   "net.minecraft.client.gui.font.TextRenderable",
   "net.minecraft.client.gui.font.TextRenderable.Styled",
+  "net.minecraft.client.gui.screens.LevelLoadingScreen",
+  "net.minecraft.client.gui.screens.multiplayer.ServerReconfigScreen",
   "net.minecraft.client.renderer.DynamicGpuDataStorage",
   "net.minecraft.client.renderer.DynamicGpuDataStorage.DynamicGpuData",
   "net.minecraft.client.renderer.DynamicGpuDataStorageMapped",
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.client.server.IntegratedServer",
   "org.apache.commons.codec.binary.Hex",
-  "org.apache.logging.log4j.Level",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "org.apache.logging.log4j.core.config.Configurator",
   "org.lwjgl.openal.AL",
   "org.lwjgl.openal.AL10",
   "org.lwjgl.openal.AL11",
+  "org.lwjgl.openal.ALC10",
   "org.lwjgl.openal.ALCapabilities",
+  "org.lwjgl.openal.EXTEfx",
   "org.lwjgl.openal.EXTFloat32",
   "org.lwjgl.openal.EXTMCFormats",
   "org.lwjgl.openal.SOFTDirectChannels",
@@ -49,15 +50,14 @@
   "org.lwjgl.system.MemoryUtil",
   "org.lwjgl.system.NativeResource",
   "org.lwjgl.system.Pointer",
-  "ForwardingSet.removeIf()",
-  "and 49 more"
+  "and 38 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "music_hud-fabric-1.3.1+26.3.jar",
   "published": "2026-10-17"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +89,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 89
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; runs threads of its own; has network channels"
+ },
+ "lacks": 78
 }

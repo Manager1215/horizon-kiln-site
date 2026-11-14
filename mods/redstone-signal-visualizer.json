@@ -9,14 +9,16 @@
  "author": "MPGod42",
  "description": "A mod that lets you visualize redstone signals with neat numbers.",
  "needs": [
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
+  "net.minecraft.client.renderer.LevelRenderer",
   "net.minecraft.world.level.block.ComparatorBlock",
+  "net.minecraft.world.level.block.state.properties.ComparatorMode",
   "org.lwjgl.sdl.SDLScancode",
   "Camera.forwardVector()",
   "Camera.rotation()",
+  "KeyMapping.resetMapping()",
   "Minecraft.getEntityRenderDispatcher()",
   "ClientLevel.getDirectSignal()",
-  "ClientLevel.hasChunk()",
   "GameRenderer.mainCamera()",
   "EntityRenderDispatcher.camera",
   "BlockPos.distSqr()",
@@ -24,8 +26,10 @@
   "Component.getVisualOrderText()",
   "ByteBufCodecs.collection()",
   "ByteBufCodecs.idMapper()",
+  "MinecraftServer.execute()",
+  "MinecraftServer.getAllLevels()",
+  "ServerLevel.getSignal()",
   "Level.getSectionIndex()",
-  "Level.hasChunk()",
   "BlockState.getSignal()",
   "BlockState.isRedstoneConductor()",
   "LevelChunk.getSections()",
@@ -35,8 +39,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Redstone-Signal-Visualizer-2.1.0-26.3.jar",
   "published": "2026-09-27"
  },
@@ -48,8 +52,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -63,5 +67,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 20
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 24
 }

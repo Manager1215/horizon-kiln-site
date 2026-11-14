@@ -9,20 +9,20 @@
  "author": "Devtyy",
  "description": "WAYLITE is an lightweight,waypoints mod designed to show clean, simple world-space waypoint markers.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowChat",
   "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionEvents.EndExtraction",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
   "net.minecraft.client.gui.Font.PreparedText",
   "net.minecraft.client.gui.font.TextRenderable",
+  "net.minecraft.client.renderer.LevelRenderer",
   "net.minecraft.client.renderer.feature.TextFeatureRenderer",
   "net.minecraft.client.renderer.feature.TextFeatureRenderer.Content",
   "net.minecraft.client.renderer.feature.TextFeatureRenderer.Content.Text",
   "net.minecraft.client.renderer.feature.TextFeatureRenderer.Submit",
   "net.minecraft.client.renderer.feature.phase.SimpleFeatureRenderPhase",
   "net.minecraft.client.server.IntegratedServer",
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
   "net.minecraft.network.chat.FontDescription",
   "net.minecraft.network.chat.FontDescription.Resource",
   "net.minecraft.world.level.storage.LevelResource",
@@ -37,27 +37,27 @@
   "LevelRenderEvents.COLLECT_SUBMITS",
   "Minecraft.getCurrentServer()",
   "Minecraft.getSingleplayerServer()",
-  "Font.plainSubstrByWidth()",
   "Font.prepareBackground()",
   "Font.prepareText()",
-  "EditBox.setBordered()",
-  "EditBox.setHint()",
   "ScreenRectangle.bottom()",
   "ScreenRectangle.left()",
   "ScreenRectangle.right()",
   "ScreenRectangle.top()",
-  "Screen.isMouseOver()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseMoved()",
-  "and 26 more"
+  "ServerData.ip",
+  "LocalPlayer.getPosition()",
+  "LocalPlayer.getViewVector()",
+  "LocalPlayer.isDeadOrDying()",
+  "GameRenderer.featureRenderDispatcher()",
+  "SubmitNodeCollection.alwaysOnTopGizmos",
+  "SubmitNodeStorage.getSubmitsPerOrder()",
+  "and 13 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "waylite-fabric-26.3-1.0.2.jar",
   "published": "2026-10-03"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 66
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 53
 }

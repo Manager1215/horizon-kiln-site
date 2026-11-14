@@ -9,10 +9,12 @@
  "author": "Tog_Yk",
  "description": "This mod adds playing cards to the game",
  "needs": [
-  "Mixin",
   "net.minecraft.advancements.triggers.CriteriaTriggers",
   "net.minecraft.advancements.triggers.ItemUsedOnLocationTrigger",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
+  "net.minecraft.client.model.player.PlayerModel",
+  "net.minecraft.client.renderer.entity.state.ArmedEntityRenderState",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.server.level.ServerPlayerGameMode",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.inventory.ContainerData",
   "net.minecraft.world.inventory.MenuType.MenuSupplier",
@@ -23,12 +25,11 @@
   "net.minecraft.world.level.gameevent.GameEvent.Context",
   "Axis.YN",
   "Axis.ZP",
-  "Minecraft.gameMode",
-  "Minecraft.hitResult",
   "Minecraft.resizeGui()",
   "TextureSlot.create()",
-  "AbstractContainerScreen.resize()",
+  "MultiPlayerGameMode.handleInventoryButtonClick()",
   "BlockEntityRenderer.extractRenderState()",
+  "ItemModelResolver.updateForLiving()",
   "ItemModelResolver.updateForNonLiving()",
   "RenderTypes.translucentMovingBlock()",
   "BlockPos.multiply()",
@@ -46,18 +47,16 @@
   "SoundEvents.BUNDLE_REMOVE_ONE",
   "Container.startOpen()",
   "Container.stopOpen()",
+  "LivingEntity.getViewVector()",
   "Player.addItem()",
-  "Player.drop()",
-  "Player.getOnPos()",
-  "Player.isCrouching()",
-  "and 31 more"
+  "and 34 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "tog_yks-cards-26.3-4.1.jar",
   "published": "2026-09-17"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 120
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 121
 }

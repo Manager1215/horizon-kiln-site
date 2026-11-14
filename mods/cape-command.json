@@ -10,31 +10,41 @@
  "description": "Adds a /cape command to Minecraft, which allows you to use any cape you want. Features Geyser compatibility.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
+  "com.mojang.authlib.properties.Property",
+  "com.mojang.authlib.properties.PropertyMap",
+  "com.mojang.authlib.services.MinecraftServicesDiscoveryService",
+  "io.netty.channel.ChannelFutureListener",
+  "net.minecraft.network.chat.RemoteChatSession",
+  "net.minecraft.network.chat.RemoteChatSession.Data",
+  "net.minecraft.network.protocol.game.ClientboundPlayerInfoUpdatePacket.Entry",
   "net.minecraft.server.level.ChunkMap",
   "net.minecraft.server.level.ChunkMap.TrackedEntity",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
-  "CommandSourceStack.getPlayerOrException()",
-  "CommandSourceStack.getServer()",
-  "CommandSourceStack.isPlayer()",
+  "ClientboundPlayerInfoUpdatePacket.actions()",
   "ClientboundPlayerInfoUpdatePacket.createPlayerInitializing()",
-  "MinecraftServer.getPlayerList()",
+  "ClientboundPlayerInfoUpdatePacket.entries()",
   "ServerChunkCache.chunkMap",
   "ServerLevel.getDifficulty()",
   "ServerLevel.getLevelData()",
   "ServerPlayer.connection",
   "ServerPlayer.createCommonSpawnInfo()",
   "ServerPlayer.getGameProfile()",
-  "ServerPlayer.stopUsingItem()"
+  "ServerPlayer.stopUsingItem()",
+  "ServerGamePacketListenerImpl.resetPosition()",
+  "ServerGamePacketListenerImpl.send()",
+  "ServerGamePacketListenerImpl.teleport()",
+  "PlayerList.sendActivePlayerEffects()",
+  "PlayerList.sendAllPlayerInfo()",
+  "PlayerList.sendLevelInfo()",
+  "PlayerList.sendPlayerPermissionLevel()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "capecommand-fabric-0.3.2-26.3.jar",
   "published": "2026-10-01"
  },
@@ -46,8 +56,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -62,5 +72,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 17
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; has network channels"
+ },
+ "lacks": 27
 }

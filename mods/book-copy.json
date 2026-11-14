@@ -9,10 +9,7 @@
  "author": "eclipseisoffline",
  "description": "This mod adds a simple client-side /bookcopy command, which allows you to save written books and import them later in another book.",
  "needs": [
-  "Mixin",
   "net.minecraft.client.GameNarrator",
-  "net.minecraft.nbt.NbtIo",
-  "net.minecraft.network.chat.ClickEvent.SuggestCommand",
   "net.minecraft.network.protocol.game.ServerboundEditBookPacket",
   "net.minecraft.server.network.Filterable",
   "net.minecraft.world.item.component.BookContent",
@@ -21,18 +18,15 @@
   "ClientPacketListener.send()",
   "DataComponents.WRITABLE_BOOK_CONTENT",
   "DataComponents.WRITTEN_BOOK_CONTENT",
-  "MutableComponent.withStyle()",
-  "Style.withClickEvent()",
-  "Style.withUnderlined()",
   "Items.WRITABLE_BOOK",
   "Items.WRITTEN_BOOK"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "bookcopy-fabric-0.2.0-26.3.jar",
   "published": "2026-10-01"
  },
@@ -44,8 +38,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -59,5 +53,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 16
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 11
 }

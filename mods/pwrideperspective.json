@@ -9,9 +9,10 @@
  "author": "PortalWorld_Team",
  "description": "A mod that enhances riding mechanics with a free camera, allowing you to look around and fight smoothly while on horses or other mobs.",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.CameraType",
+  "Mixin: 3 points inside the game's methods",
   "net.minecraft.client.player.ClientInput",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.entity.player.Input",
   "net.minecraft.world.entity.vehicle.boat.AbstractBoat",
@@ -24,10 +25,6 @@
   "net.minecraft.world.item.WindChargeItem",
   "InputConstants.isKeyDown()",
   "Window.handle()",
-  "Options.getCameraType()",
-  "Options.keyAttack",
-  "Options.keyUse",
-  "Options.setCameraType()",
   "LocalPlayer.getEyePosition()",
   "LocalPlayer.getUseItem()",
   "LocalPlayer.getVehicle()",
@@ -36,7 +33,6 @@
   "LocalPlayer.input",
   "LocalPlayer.isInWaterOrRain()",
   "LocalPlayer.isUsingItem()",
-  "LocalPlayer.setSprinting()",
   "LocalPlayer.setXRot()",
   "LocalPlayer.setYBodyRot()",
   "LocalPlayer.setYHeadRot()",
@@ -49,15 +45,17 @@
   "Entity.setYRot()",
   "LivingEntity.setYBodyRot()",
   "LivingEntity.setYHeadRot()",
+  "Player.getVehicle()",
   "EnchantmentHelper.getTridentSpinAttackStrength()",
-  "and 1 more"
+  "Level.clip()",
+  "Vec3.directionFromRotation()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "PWrideperspective-1.0.29+26.3.jar",
   "published": "2026-10-27"
  },
@@ -69,8 +67,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 41
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 39
 }

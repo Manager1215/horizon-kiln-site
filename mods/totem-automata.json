@@ -9,13 +9,11 @@
  "author": "Yunitrish",
  "description": "Turn copper golems into configurable sorting and gathering helpers, with manual filters, tools, furnace routing, and optional AI classification.",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.BeforeGizmos",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
@@ -25,7 +23,6 @@
   "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.core.UUIDUtil",
   "net.minecraft.server.level.ServerPlayerGameMode",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.entity.ai.Brain",
   "net.minecraft.world.entity.ai.behavior.TransportItemsBetweenContainers",
@@ -39,25 +36,27 @@
   "net.minecraft.world.level.block.entity.FurnaceBlockEntity",
   "net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity",
   "net.minecraft.world.level.block.entity.SmokerBlockEntity",
-  "ClientPlayNetworking.canSend()",
   "LevelRenderEvents.BEFORE_GIZMOS",
-  "ServerTickEvents.END_SERVER_TICK",
-  "Minecraft.execute()",
-  "Font.plainSubstrByWidth()",
+  "KeyMapping.matches()",
   "GuiGraphicsExtractor.blitSprite()",
-  "EditBox.setHint()",
-  "AbstractContainerScreen.charTyped()",
-  "AbstractContainerScreen.mouseDragged()",
-  "AbstractContainerScreen.mouseScrolled()",
   "AbstractContainerScreen.preeditUpdated()",
-  "and 49 more"
+  "ClientLevel.getEntity()",
+  "Holder.tags()",
+  "Holder.Reference.tags()",
+  "NonNullList.iterator()",
+  "Registry.getOptional()",
+  "BuiltInRegistries.TRIGGER_TYPES",
+  "ListTag.add()",
+  "ListTag.compoundStream()",
+  "ListTag.stream()",
+  "and 47 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "totem-automata-0.1.28.jar",
   "published": "2026-09-20"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +87,9 @@
   "minecraft",
   "totem-core"
  ],
- "lacks": 126
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 104
 }

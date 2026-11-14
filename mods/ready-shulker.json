@@ -9,23 +9,29 @@
  "author": "Ion-1",
  "description": "Readily access your shulkers from your inventory via right-click",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.world.CompoundContainer",
   "net.minecraft.world.SimpleMenuProvider",
+  "net.minecraft.world.inventory.ClickAction",
   "net.minecraft.world.inventory.ShulkerBoxMenu",
   "net.minecraft.world.inventory.ShulkerBoxSlot",
-  "ServerTickEvents.END_SERVER_TICK",
+  "net.minecraft.world.level.block.ShulkerBoxBlock",
+  "net.minecraft.world.level.block.entity.ChestBlockEntity.1",
   "NonNullList.iterator()",
   "ServerPlayer.doCloseContainer()",
-  "Container.stopOpen()"
+  "SoundEvents.BUNDLE_INSERT",
+  "SoundEvents.BUNDLE_INSERT_FAIL",
+  "SoundEvents.SHULKER_BOX_OPEN",
+  "Container.stopOpen()",
+  "Slot.allowModification()",
+  "Item.canFitInsideContainerItems()"
  ],
  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ready-shulker-0.2.0+26.3.jar",
   "published": "2026-10-10"
  },
@@ -37,8 +43,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -53,5 +59,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 9
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 15
 }

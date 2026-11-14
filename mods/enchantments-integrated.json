@@ -9,14 +9,12 @@
  "author": "maksi",
  "description": "An overhaul of Minecraft's Enchanting system that encourages exploration over grinding",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.world.SimpleContainer",
+  "net.minecraft.world.inventory.AnvilMenu",
+  "net.minecraft.world.inventory.DataSlot",
   "net.minecraft.world.level.block.EnchantingTableBlock",
   "net.minecraft.world.level.block.entity.ChiseledBookShelfBlockEntity",
   "Object2IntMap.Entry.getKey()",
-  "Minecraft.execute()",
-  "Button.Builder.tooltip()",
   "AbstractContainerScreen.containerTick()",
   "BlockPos.offset()",
   "NonNullList.getFirst()",
@@ -25,20 +23,16 @@
   "Registry.get()",
   "RegistryAccess.lookupOrThrow()",
   "DataComponents.STORED_ENCHANTMENTS",
-  "RegistryFriendlyByteBuf.readUtf()",
-  "RegistryFriendlyByteBuf.readVarInt()",
-  "RegistryFriendlyByteBuf.writeUtf()",
-  "RegistryFriendlyByteBuf.writeVarInt()",
   "MinecraftServer.execute()",
   "MinecraftServer.overworld()",
   "BlockTags.ENCHANTMENT_POWER_TRANSMITTER",
   "Container.startOpen()",
   "Container.stopOpen()",
+  "Player.giveExperienceLevels()",
   "ItemStack.isEnchantable()",
   "Items.BRUSH",
   "Items.ENCHANTED_BOOK",
   "Items.FLINT_AND_STEEL",
-  "Items.SHIELD",
   "Items.WARPED_FUNGUS_ON_A_STICK",
   "Enchantment.areCompatible()",
   "Enchantment.getMaxLevel()",
@@ -48,12 +42,12 @@
   "Blocks.CHISELED_BOOKSHELF",
   "Blocks.ENCHANTING_TABLE"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "enchantments-integrated-1.0.3.jar",
   "published": "2026-10-07"
  },
@@ -65,8 +59,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -82,5 +76,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 37
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 32
 }

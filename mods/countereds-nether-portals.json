@@ -1,0 +1,92 @@
+{
+ "id": "countereds-nether-portals",
+ "name": "Countered's Nether Portals",
+ "version": "1.1.1",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/countereds-nether-portals",
+ "author": "Countered",
+ "description": "A mod that aims to improve the Nether Portal visuals",
+ "needs": [
+  "com.mojang.blaze3d.vertex.DefaultVertexFormat",
+  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
+  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
+  "net.minecraft.client.gui.screens.LevelLoadingScreen",
+  "net.minecraft.client.gui.screens.LevelLoadingScreen.Reason",
+  "net.minecraft.client.multiplayer.ClientChunkCache",
+  "net.minecraft.client.particle.PortalParticle",
+  "net.minecraft.client.particle.SingleQuadParticle",
+  "net.minecraft.client.renderer.BindGroupLayouts",
+  "net.minecraft.client.renderer.LevelRenderer",
+  "net.minecraft.client.renderer.oit.OitPipelineSet",
+  "net.minecraft.client.renderer.oit.OitPipelineSet.Builder",
+  "net.minecraft.client.renderer.rendertype.RenderSetup",
+  "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
+  "net.minecraft.world.level.block.NetherPortalBlock",
+  "SamplerCache.getSampler()",
+  "VertexConsumer.setColor()",
+  "VertexConsumer.setLight()",
+  "VertexConsumer.setOverlay()",
+  "BlendFunction.ADDITIVE",
+  "BlendFunction.TRANSLUCENT",
+  "DepthStencilState.DEFAULT",
+  "RenderPipeline.builder()",
+  "RenderPipeline.getLocation()",
+  "GameRenderer.mainCamera()",
+  "RenderPipelines.PIPELINES_BY_LOCATION",
+  "BlockStateModelSet.getParticleMaterial()",
+  "Frustum.isVisible()",
+  "RenderType.create()",
+  "RenderTypes.entityTranslucentEmissive()",
+  "CameraRenderState.cullFrustum",
+  "SectionPos.sectionToBlockCoord()",
+  "ARGB.colorFromFloat()",
+  "Blocks.NETHER_PORTAL",
+  "LevelChunk.getSectionYFromSectionIndex()",
+  "LevelChunk.getSections()",
+  "LevelChunkSection.getBlockState()",
+  "LevelChunkSection.hasOnlyAir()",
+  "LevelChunkSection.maybeHas()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "Countered's Nether Portals 1.1.1-26.3-fabric.jar",
+  "published": "2026-10-20"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "architectury",
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "midnightlib",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 39
+}

@@ -1,7 +1,7 @@
 {
  "id": "jei",
  "name": "Just Enough Items (JEI)",
- "version": "31.17.0.108",
+ "version": "31.17.0.113",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,11 +10,12 @@
  "description": "View Items and Recipes",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 5 points inside the game's methods",
   "com.mojang.blaze3d.platform.MacosUtil",
   "com.mojang.blaze3d.platform.cursor.CursorTypes",
   "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowChat",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
+  "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AllowCharType",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AllowKeyPress",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AllowKeyRelease",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
@@ -30,6 +31,7 @@
   "net.minecraft.CrashReport",
   "net.minecraft.CrashReportCategory",
   "net.minecraft.ReportedException",
+  "net.minecraft.client.Options.FieldAccess",
   "net.minecraft.client.StringSplitter",
   "net.minecraft.client.gui.ActiveTextCollector",
   "net.minecraft.client.gui.ActiveTextCollector.ClickableStyleFinder",
@@ -49,18 +51,16 @@
   "net.minecraft.client.gui.screens.inventory.BrewingStandScreen",
   "net.minecraft.client.gui.screens.inventory.CrafterScreen",
   "net.minecraft.client.gui.screens.inventory.CraftingScreen",
-  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.ItemPickerMenu",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "jei-26.3-fabric-31.17.0.108.jar",
-  "published": "2026-10-31"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "jei-26.3-fabric-31.17.0.113.jar",
+  "published": "2026-11-12"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +89,9 @@
   "java",
   "mezz_config"
  ],
- "lacks": 430
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+ },
+ "lacks": 365
 }

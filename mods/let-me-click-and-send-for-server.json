@@ -9,14 +9,15 @@
  "author": "fallen-breath",
  "description": "A simple Minecraft server-side mod, that replaces all non-command `run_command` content with a custom command, \nto bypass client-side restrictions since 1.19.1-rc1",
  "needs": [
-  "Mixin"
+  "Component.getSiblings()",
+  "ServerPlayer.getDisplayName()"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "LetMeClickAndSendForServer-v1.0.5-mc26.3.jar",
   "published": "2026-10-20"
  },
@@ -28,8 +29,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -42,5 +43,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 2
 }

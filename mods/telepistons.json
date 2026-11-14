@@ -9,18 +9,25 @@
  "author": "Tec",
  "description": "Telescopic and Squishy animations for pistons",
  "needs": [
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
+  "net.minecraft.client.renderer.blockentity.PistonHeadRenderer",
+  "net.minecraft.client.renderer.blockentity.state.PistonHeadRenderState",
+  "net.minecraft.world.level.block.piston.PistonBaseBlock",
+  "net.minecraft.world.level.block.piston.PistonHeadBlock",
+  "net.minecraft.world.level.block.piston.PistonMovingBlockEntity",
   "GsonHelper.parse()",
-  "Blocks.END_ROD"
+  "Level.getBiome()",
+  "Blocks.END_ROD",
+  "Blocks.PISTON_HEAD"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Telepistons-1.1.4-26.3.jar",
   "published": "2026-09-16"
  },
@@ -32,8 +39,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -47,5 +54,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 4
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert)"
+ },
+ "lacks": 11
 }

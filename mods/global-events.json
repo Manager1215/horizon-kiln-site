@@ -9,17 +9,10 @@
  "author": "MD22",
  "description": "Random world-changing events keep minecraft fresh. Meteor strikes, Blood Moons, wandering caravans with exclusive loot, and Golden Hours with doubled ore drops — something always happens.",
  "needs": [
-  "Mixin",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.entity.npc.wanderingtrader.WanderingTrader",
   "net.minecraft.world.item.trading.ItemCost",
   "net.minecraft.world.item.trading.MerchantOffer",
-  "CommandSourceStack.getPosition()",
-  "CommandSourceStack.getServer()",
-  "Commands.LEVEL_GAMEMASTERS",
-  "Commands.hasPermission()",
   "BlockPos.containing()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.getTickCount()",
   "MinecraftServer.overworld()",
   "ServerLevel.getCurrentDifficultyAt()",
@@ -46,12 +39,12 @@
   "Blocks.IRON_ORE",
   "Blocks.MAGMA_BLOCK"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "global-events-2.0.0+mc26.3.jar",
   "published": "2026-10-10"
  },
@@ -67,5 +60,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 35
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 29
 }

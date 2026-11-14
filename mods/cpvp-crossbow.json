@@ -9,14 +9,24 @@
  "author": "JelloHT3",
  "description": "If your only tipped arrow type is already loaded in the crossbow, the loaded-arrow indicator is hidden — it only shows when the loaded arrow is different from what you'd refill with.",
  "needs": [
-  "Mixin"
+  "net.minecraft.world.item.component.ChargedProjectiles",
+  "Minecraft.screen",
+  "GuiGraphicsExtractor.blitSprite()",
+  "RenderPipelines.GUI_TEXTURED",
+  "DataComponents.CHARGED_PROJECTILES",
+  "Player.getProjectile()",
+  "Items.ARROW",
+  "Items.CROSSBOW",
+  "Items.FIREWORK_ROCKET",
+  "Items.SPECTRAL_ARROW",
+  "Items.TIPPED_ARROW"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "cpvp-crossbow-26.1-1.2.3.jar",
   "published": "2026-10-03"
  },
@@ -28,8 +38,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -44,5 +54,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 11
 }

@@ -9,20 +9,24 @@
  "author": "jason13official",
  "description": "A non-invasive library mod for Fabric, Forge, and NeoForge.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.minecraft.Optionull",
   "net.minecraft.core.UUIDUtil",
   "net.minecraft.core.registries.codec.RegistryFixedCodec",
-  "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
   "net.minecraft.network.chat.ComponentSerialization",
-  "net.minecraft.server.permissions.Permissions",
+  "net.minecraft.world.inventory.AnvilMenu",
+  "net.minecraft.world.inventory.DataSlot",
+  "net.minecraft.world.inventory.ItemCombinerMenu",
+  "net.minecraft.world.inventory.ItemCombinerMenuSlotDefinition",
+  "net.minecraft.world.inventory.ItemCombinerMenuSlotDefinition.Builder",
+  "net.minecraft.world.inventory.ResultContainer",
+  "net.minecraft.world.level.block.AnvilBlock",
   "net.minecraft.world.level.block.Mirror",
   "org.apache.commons.io.FilenameUtils",
   "ServerLifecycleEvents.SERVER_STARTED",
-  "CommandSourceStack.getEntity()",
   "Holder.tags()",
+  "DataComponents.REPAIR_COST",
   "BuiltInRegistries.ACTIVITY",
   "BuiltInRegistries.ATTRIBUTE",
   "BuiltInRegistries.BIOME_SOURCE",
@@ -45,19 +49,14 @@
   "BuiltInRegistries.INT_PROVIDER_TYPE",
   "BuiltInRegistries.LOOT_CONDITION_TYPE",
   "BuiltInRegistries.LOOT_FUNCTION_TYPE",
-  "BuiltInRegistries.LOOT_NBT_PROVIDER_TYPE",
-  "BuiltInRegistries.LOOT_POOL_ENTRY_TYPE",
-  "BuiltInRegistries.LOOT_SCORE_PROVIDER_TYPE",
-  "BuiltInRegistries.MATERIAL_CONDITION_TYPE",
-  "BuiltInRegistries.MATERIAL_RULE_TYPE",
-  "and 29 more"
+  "and 30 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "monolib-fabric-26.3-4.1.2.jar",
   "published": "2026-10-26"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 69
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own"
+ },
+ "lacks": 70
 }

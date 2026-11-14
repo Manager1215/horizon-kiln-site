@@ -9,17 +9,9 @@
  "author": "duzzl",
  "description": "TradeWatch finds matching enchanted-book villager trades, highlights them, and plays a notification sound. Set desired enchantments, levels, and maximum prices without automating any trading actions.",
  "needs": [
-  "Mixin",
   "net.minecraft.client.gui.screens.inventory.MerchantScreen",
-  "net.minecraft.commands.arguments.IdentifierArgument",
   "net.minecraft.world.inventory.MerchantMenu",
   "net.minecraft.world.item.trading.MerchantOffer",
-  "Minecraft.setScreenAndShow()",
-  "EditBox.setHint()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseScrolled()",
-  "Screen.rebuildWidgets()",
   "RegistryAccess.lookupOrThrow()",
   "DataComponents.STORED_ENCHANTMENTS",
   "ItemStack.hashItemAndComponents()",
@@ -29,12 +21,12 @@
   "MerchantOffers.isEmpty()",
   "MerchantOffers.iterator()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "tradewatch-26.3.jar",
   "published": "2026-09-16"
  },
@@ -46,8 +38,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -63,5 +55,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 18
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 11
 }

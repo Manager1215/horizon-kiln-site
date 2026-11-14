@@ -10,15 +10,17 @@
  "description": "Holds Lapis in Enchanting Tables per player. Version agnotic & dependancy free!",
  "needs": [
   "an access widener",
-  "Mixin",
-  "FabricLoader.getRawGameVersion()"
+  "net.minecraft.world.inventory.EnchantmentMenu",
+  "FabricLoader.getRawGameVersion()",
+  "Player.<init>()",
+  "ValueInput.TypedInputList.iterator()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "26.1.0-fabric-1.0.19+26.1-fabric.jar",
   "published": "2026-05-09"
  },
@@ -30,8 +32,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -42,5 +44,9 @@
  },
  "mixins": true,
  "depends": [],
- "lacks": 1
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 4
 }

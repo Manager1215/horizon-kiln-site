@@ -10,10 +10,12 @@
  "description": "Instantly closes the loading terrain screen on world changing and drastically reduces the resource pack loading screen duration",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "com.mojang.blaze3d.vertex.DefaultVertexFormat",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
+  "net.minecraft.client.gui.screens.LevelLoadingScreen",
+  "net.minecraft.client.gui.screens.LoadingOverlay",
   "net.minecraft.client.gui.screens.multiplayer.ServerReconfigScreen",
   "net.minecraft.client.input.InputQuirks",
   "net.minecraft.client.renderer.BindGroupLayouts",
@@ -21,7 +23,6 @@
   "RenderTarget.width",
   "RenderPipeline.builder()",
   "KeyMapping.setAll()",
-  "Minecraft.isSameThread()",
   "Minecraft.isWindowActive()",
   "Gui.setOverlay()",
   "GuiGraphicsExtractor.blit()",
@@ -37,8 +38,8 @@
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "forcecloseloadingscreen-2.3.7.jar",
   "published": "2026-09-19"
  },
@@ -55,5 +56,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 21
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 22
 }

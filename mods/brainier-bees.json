@@ -10,12 +10,17 @@
  "description": "Rewrites, improves, and fixes Bee behavior in the modern Brain AI system!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.tags.PoiTypeTags",
+  "net.minecraft.util.profiling.Profiler",
+  "net.minecraft.util.profiling.ProfilerFiller",
   "net.minecraft.world.entity.NeutralMob",
   "net.minecraft.world.entity.ai.ActivityData",
   "net.minecraft.world.entity.ai.Brain",
+  "net.minecraft.world.entity.ai.Brain.ActivitySupplier",
+  "net.minecraft.world.entity.ai.Brain.Packed",
+  "net.minecraft.world.entity.ai.Brain.Provider",
   "net.minecraft.world.entity.ai.behavior.AnimalMakeLove",
   "net.minecraft.world.entity.ai.behavior.BabyFollowAdult",
   "net.minecraft.world.entity.ai.behavior.Behavior",
@@ -32,6 +37,7 @@
   "net.minecraft.world.entity.ai.control.MoveControl",
   "net.minecraft.world.entity.ai.memory.MemoryModuleType",
   "net.minecraft.world.entity.ai.memory.MemoryStatus",
+  "net.minecraft.world.entity.ai.navigation.FlyingPathNavigation",
   "net.minecraft.world.entity.ai.navigation.PathNavigation",
   "net.minecraft.world.entity.ai.sensing.Sensor",
   "net.minecraft.world.entity.ai.sensing.SensorType",
@@ -45,20 +51,14 @@
   "net.minecraft.world.level.block.StemBlock",
   "net.minecraft.world.level.block.entity.BeehiveBlockEntity",
   "net.minecraft.world.level.pathfinder.Path",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
-  "BlockPos.distManhattan()",
-  "BlockPos.distSqr()",
-  "BlockPos.MutableBlockPos.move()",
-  "BlockPos.MutableBlockPos.set()",
-  "and 18 more"
+  "and 28 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "brainierbees-1.10.3.jar",
   "published": "2026-09-28"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +85,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 58
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
+ },
+ "lacks": 68
 }

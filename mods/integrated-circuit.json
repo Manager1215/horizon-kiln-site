@@ -10,15 +10,22 @@
  "description": "Adds integrated circuits to compact your redstone circuits into one block",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry",
   "net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder",
   "net.fabricmc.fabric.api.event.registry.RegistryAttribute",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.core.IdMapper",
   "net.minecraft.network.chat.ComponentSerialization",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.util.CommonColors",
+  "net.minecraft.util.LenientJsonParser",
+  "net.minecraft.util.datafix.DataFixers",
+  "net.minecraft.util.datafix.fixes.AddNewChoices",
+  "net.minecraft.util.datafix.fixes.BlockEntityRenameFix",
+  "net.minecraft.util.datafix.fixes.NamedEntityFix",
+  "net.minecraft.util.datafix.fixes.References",
+  "net.minecraft.util.datafix.schemas.NamespacedSchema",
+  "net.minecraft.util.filefix.FileFixerUpper",
+  "net.minecraft.util.filefix.FileFixerUpper.Builder",
   "net.minecraft.world.level.block.RedstoneWireBlock",
   "net.minecraft.world.level.block.state.StateDefinition.Factory",
   "net.minecraft.world.level.block.state.properties.ComparatorMode",
@@ -36,29 +43,22 @@
   "InputConstants.getKey()",
   "InputConstants.Type.getOrCreate()",
   "KeyMapping.matches()",
-  "Minecraft.setScreenAndShow()",
-  "Options.keyAttack",
-  "Options.keyInventory",
-  "Options.keyPickItem",
-  "Options.keyUse",
   "GuiGraphicsExtractor.blit()",
-  "EditBox.capturesInput()",
-  "EditBox.setBordered()",
-  "EditBox.setEditable()",
-  "EditBox.setHint()",
-  "Screen.addRenderableWidget()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "KeyEvent.isConfirmation()",
   "BlockEntityRenderer.extractRenderState()",
-  "and 41 more"
+  "DefaultedMappedRegistry.<init>()",
+  "DefaultedRegistry.createIntrusiveHolder()",
+  "DefaultedRegistry.iterator()",
+  "Direction.getRotation()",
+  "Vec3i.multiply()",
+  "DataComponents.CUSTOM_NAME",
+  "and 48 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "integrated-circuit-26.3-1.6.11.jar",
   "published": "2026-10-18"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 106
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 97
 }

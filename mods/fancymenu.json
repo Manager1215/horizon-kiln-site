@@ -1,7 +1,7 @@
 {
  "id": "fancymenu",
  "name": "FancyMenu",
- "version": "3.9.14-26.3-fabric",
+ "version": "3.10.0-26.3-fabric",
  "status": "no-plans",
  "statusLabel": "No plans yet",
  "statusMeaning": "Calls something that is not on Kiln's roadmap yet. Parts of it may already run.",
@@ -10,7 +10,7 @@
  "description": "Customize Minecraft's menus with ease!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 78 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.SignatureState",
   "com.mojang.authlib.minecraft.MinecraftProfileTexture",
@@ -22,7 +22,9 @@
   "com.mojang.blaze3d.buffers.Std140Builder",
   "com.mojang.blaze3d.pipeline.PipelineCache",
   "com.mojang.blaze3d.pipeline.TextureTarget",
+  "com.mojang.blaze3d.platform.SDLEventHandler",
   "com.mojang.blaze3d.platform.TextureUtil",
+  "com.mojang.blaze3d.platform.cursor.CursorType",
   "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
   "com.mojang.blaze3d.vertex.BufferBuilder",
   "com.mojang.blaze3d.vertex.ByteBufferBuilder",
@@ -49,18 +51,16 @@
   "com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen",
   "com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen",
   "com.mojang.realmsclient.gui.screens.configuration.RealmsInviteScreen",
-  "com.mojang.realmsclient.gui.screens.configuration.RealmsSlotOptionsScreen",
-  "com.mojang.renderpearl.api.pipeline.BindGroupLayout.Builder",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "fancymenu_fabric_3.9.14_MC_26.3.jar",
-  "published": "2026-09-28"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "fancymenu_fabric_3.10.0_MC_26.3.jar",
+  "published": "2026-11-10"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "melody",
   "minecraft"
  ],
- "lacks": 700
+ "softOff": {
+  "class": "restart",
+  "why": "@modify-args and @wrap-operation into the game's classes; runs threads of its own; has network channels"
+ },
+ "lacks": 743
 }

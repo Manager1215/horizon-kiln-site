@@ -9,22 +9,19 @@
  "author": "cech12",
  "description": "Client side post effects that simulate color blindness",
  "needs": [
-  "Mixin",
   "com.mojang.blaze3d.resource.GraphicsResourceAllocator",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.minecraft.client.renderer.LevelTargetBundle",
   "net.minecraft.client.renderer.PostChain",
   "net.minecraft.client.renderer.ShaderManager",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "Minecraft.getShaderManager()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "colorblindnessclient-fabric-26.3-2.2.0.0.jar",
   "published": "2026-09-22"
  },
@@ -36,8 +33,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -52,5 +49,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 8
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 6
 }

@@ -9,14 +9,20 @@
  "author": "OffsetMonkey538",
  "description": "Allows datapacks and mods to modify loot tables instead of replacing them.\nLoot modification is applied at data loading, so there's no performance impact during gameplay.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
+  "net.minecraft.core.HolderSet.Direct",
+  "net.minecraft.resources.RegistryDataLoader",
+  "net.minecraft.resources.RegistryDataLoader.RegistryData",
+  "net.minecraft.resources.RegistryLoadTask",
+  "net.minecraft.resources.RegistryLoadTask.PendingRegistration",
+  "net.minecraft.resources.ResourceManagerRegistryLoadTask",
   "net.minecraft.world.level.storage.loot.entries.LootPoolEntries",
+  "net.minecraft.world.level.storage.loot.predicates.AllOfCondition",
   "org.apache.commons.io.file.Counters",
   "org.apache.commons.io.file.Counters.PathCounters",
   "org.apache.commons.io.file.PathUtils",
-  "CommandSourceStack.getServer()",
-  "DefaultedRegistry.wrapAsHolder()",
-  "RegistryOps.create()",
+  "HolderSet.direct()",
+  "Identifier.withPath()",
   "MinecraftServer.registryAccess()",
   "Item.CODEC",
   "LootPool.CODEC",
@@ -27,8 +33,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "loot-table-modifier-fabric-26.3-2.5.0+fabric+26.3.jar",
   "published": "2026-10-20"
  },
@@ -40,8 +46,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -57,5 +63,9 @@
   "minecraft",
   "monkeylib538"
  ],
- "lacks": 12
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
+ },
+ "lacks": 18
 }

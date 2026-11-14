@@ -10,16 +10,24 @@
  "description": "A mod to allow you to expand how you assign keyboard bindings.",
  "needs": [
   "an access widener",
-  "Mixin",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger"
+  "Mixin: 1 point inside the game's methods",
+  "InputConstants.getKey()",
+  "InputConstants.Key.getDisplayName()",
+  "KeyMapping.matches()",
+  "KeyMapping.matchesMouse()",
+  "KeyMapping.resetMapping()",
+  "KeyMapping.setDown()",
+  "KeyMapping.setKey()",
+  "Minecraft.gameDirectory",
+  "Minecraft.pauseGame()",
+  "Util.getMillis()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "too-many-shortcuts-0.0.21.jar",
   "published": "2026-09-20"
  },
@@ -31,8 +39,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -50,5 +58,9 @@
   "tms_gui",
   "tms_shortcuts"
  ],
- "lacks": 2
+ "softOff": {
+  "class": "restart",
+  "why": "@overwrite into the game's classes"
+ },
+ "lacks": 10
 }

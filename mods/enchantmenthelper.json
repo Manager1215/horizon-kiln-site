@@ -9,25 +9,50 @@
  "author": "koldgeneration",
  "description": "EnchantmentHelper adds powerful anvil side panels that display all applicable enchantments and automatically calculate the optimal book-merge order — so you never waste XP on a bad sequence again.",
  "needs": [
-  "Mixin",
+  "net.minecraft.SharedConstants",
+  "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
   "net.minecraft.client.gui.screens.inventory.AnvilScreen",
+  "net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner",
+  "net.minecraft.tags.EnchantmentTags",
   "net.minecraft.world.inventory.AnvilMenu",
   "JsonSyntaxException.getMessage()",
   "Object2IntMap.Entry.getKey()",
+  "Font.split()",
+  "GuiGraphicsExtractor.setTooltipForNextFrame()",
+  "GuiGraphicsExtractor.text()",
+  "Holder.is()",
+  "NonNullList.iterator()",
+  "Registry.listElements()",
+  "RegistryAccess.lookupOrThrow()",
   "DataComponents.CUSTOM_NAME",
   "DataComponents.REPAIR_COST",
+  "DataComponents.STORED_ENCHANTMENTS",
+  "SoundEvents.NOTE_BLOCK_BASS",
+  "SoundEvents.VILLAGER_NO",
+  "FormattedCharSequence.EMPTY",
+  "Player.hasInfiniteMaterials()",
+  "ItemStack.isValidRepairItem()",
   "Items.ENCHANTED_BOOK",
+  "Enchantment.areCompatible()",
+  "Enchantment.canEnchant()",
   "Enchantment.getAnvilCost()",
+  "Enchantment.getFullname()",
+  "Enchantment.getMaxLevel()",
   "EnchantmentHelper.canStoreEnchantments()",
   "EnchantmentHelper.getEnchantmentsForCrafting()",
-  "ItemEnchantments.entrySet()"
+  "ItemEnchantments.entrySet()",
+  "ItemEnchantments.isEmpty()",
+  "ItemEnchantments.size()",
+  "ItemEnchantments.Mutable.getLevel()",
+  "ItemEnchantments.Mutable.keySet()",
+  "ItemEnchantments.Mutable.set()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "enchantmenthelper-1.0.6+26.3.jar",
   "published": "2026-09-30"
  },
@@ -39,8 +64,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -55,5 +80,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 11
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 37
 }

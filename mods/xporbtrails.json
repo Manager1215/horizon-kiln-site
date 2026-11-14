@@ -9,18 +9,11 @@
  "author": "GoldenEggOVO",
  "description": "A mod that adds smooth, customizable trails and pickup effects to experience orbs.",
  "needs": [
-  "Mixin",
   "com.mojang.blaze3d.vertex.DefaultVertexFormat",
   "com.mojang.blaze3d.vertex.VertexSorting",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionEvents.EndExtraction",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
-  "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.renderer.BindGroupLayouts",
   "net.minecraft.client.renderer.DynamicGpuData",
   "net.minecraft.client.renderer.StagedVertexBuffer.Draw",
@@ -35,28 +28,22 @@
   "LevelExtractionEvents.END_EXTRACTION",
   "Font.split()",
   "GuiGraphicsExtractor.text()",
-  "AbstractWidget.setTooltip()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseReleased()",
-  "Screen.resize()",
   "GameRenderer.mainCamera()",
   "StagedVertexBuffer.appendDraw()",
   "StagedVertexBuffer.endFrame()",
   "StagedVertexBuffer.getExecuteInfo()",
   "StagedVertexBuffer.getVertexBuilder()",
   "StagedVertexBuffer.upload()",
-  "MutableComponent.withStyle()",
+  "ClientboundTakeItemEntityPacket.getItemId()",
   "ExperienceOrb.getPosition()",
-  "ExperienceOrb.isAlive()",
-  "ExperienceOrb.isRemoved()"
+  "ExperienceOrb.isAlive()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "xp-orb-trails-fabric-1.4.0+26.3.jar",
   "published": "2026-10-20"
  },
@@ -68,8 +55,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +72,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 40
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 28
 }

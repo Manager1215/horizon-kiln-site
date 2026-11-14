@@ -9,14 +9,26 @@
  "author": "WhalterMC",
  "description": "Android compatibility patches for Flashback",
  "needs": [
-  "Mixin"
+  "Mixin: 1 point inside the game's methods",
+  "com.mojang.blaze3d.Blaze3D",
+  "com.mojang.blaze3d.platform.NativeLibrariesBootstrap",
+  "org.lwjgl.PointerBuffer",
+  "org.lwjgl.system.Checks",
+  "org.lwjgl.system.Library",
+  "org.lwjgl.system.MemoryStack",
+  "org.lwjgl.system.MemoryUtil",
+  "org.lwjgl.system.Platform",
+  "org.lwjgl.util.nfd.NFDFilterItem",
+  "org.lwjgl.util.nfd.NFDFilterItem.Buffer",
+  "org.lwjgl.util.nfd.NativeFileDialog",
+  "Minecraft.gameDirectory"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fba-26.3-1.1.2.jar",
   "published": "2026-10-12"
  },
@@ -28,8 +40,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -46,5 +58,9 @@
   "flashback",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 12
 }

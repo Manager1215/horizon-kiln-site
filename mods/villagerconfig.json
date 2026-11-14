@@ -10,8 +10,10 @@
  "description": "Advanced Villager configuration with data driven trades",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 6 points inside the game's methods",
+  "net.minecraft.client.gui.screens.inventory.MerchantScreen",
   "net.minecraft.commands.arguments.ResourceArgument",
+  "net.minecraft.core.HolderSet.Direct",
   "net.minecraft.core.component.DataComponentExactPredicate",
   "net.minecraft.core.component.DataComponentExactPredicate.Builder",
   "net.minecraft.core.component.DataComponentPatch.SplitResult",
@@ -20,7 +22,10 @@
   "net.minecraft.data.DataProvider.Factory",
   "net.minecraft.data.PackOutput.PathProvider",
   "net.minecraft.data.PackOutput.Target",
+  "net.minecraft.util.context.ContextKeySet.Builder",
   "net.minecraft.world.SimpleMenuProvider",
+  "net.minecraft.world.entity.monster.Monster",
+  "net.minecraft.world.entity.monster.zombie.Zombie",
   "net.minecraft.world.entity.npc.villager.AbstractVillager",
   "net.minecraft.world.entity.npc.villager.Villager",
   "net.minecraft.world.entity.npc.villager.VillagerData",
@@ -28,7 +33,9 @@
   "net.minecraft.world.entity.npc.villager.VillagerType",
   "net.minecraft.world.entity.npc.wanderingtrader.WanderingTrader",
   "net.minecraft.world.inventory.MerchantMenu",
+  "net.minecraft.world.item.component.DyedItemColor",
   "net.minecraft.world.item.trading.ItemCost",
+  "net.minecraft.world.item.trading.Merchant",
   "net.minecraft.world.item.trading.MerchantOffer",
   "net.minecraft.world.item.trading.TradeCost",
   "net.minecraft.world.item.trading.TradeSet",
@@ -36,29 +43,22 @@
   "net.minecraft.world.item.trading.VillagerTrade",
   "net.minecraft.world.level.storage.loot.entries.LootPoolEntries",
   "net.minecraft.world.level.storage.loot.entries.LootPoolEntry",
+  "net.minecraft.world.level.storage.loot.functions.LootItemFunctions",
   "net.minecraft.world.level.storage.loot.functions.SetComponentsFunction",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "CommandBuildContext.getOrThrow()",
-  "CommandSourceStack.getPlayerOrException()",
-  "CommandSourceStack.getServer()",
-  "Commands.LEVEL_GAMEMASTERS",
-  "Commands.hasPermission()",
   "DefaultedRegistry.entrySet()",
   "HolderLookup.Provider.getOrThrow()",
-  "DataComponentPatch.split()",
-  "DataComponents.ADDITIONAL_TRADE_COST",
-  "DataComponents.STORED_ENCHANTMENTS",
-  "BuiltInRegistries.VILLAGER_PROFESSION",
-  "Registries.VILLAGER_PROFESSION",
-  "and 32 more"
+  "HolderSet.direct()",
+  "Registry.listElements()",
+  "RegistryAccess.lookupOrThrow()",
+  "and 46 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "villagerconfig-fabric-4.6.0+26.3.jar",
   "published": "2026-09-23"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +89,9 @@
   "fabricloader",
   "java"
  ],
- "lacks": 72
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels"
+ },
+ "lacks": 86
 }

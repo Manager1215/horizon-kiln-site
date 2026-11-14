@@ -9,14 +9,34 @@
  "author": "HuTAR",
  "description": "Gaider10's mod named \"Player Health Indicators\", but with support to see hearts of invisible players (ONLY WITH ARMOR!)",
  "needs": [
-  "Mixin"
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.RenderLayerParent",
+  "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
+  "net.minecraft.data.AtlasIds",
+  "PoseStack.mulPose()",
+  "PoseStack.Pose.pose()",
+  "VertexConsumer.addVertex()",
+  "VertexConsumer.setLight()",
+  "VertexConsumer.setOverlay()",
+  "Camera.rotation()",
+  "AbstractClientPlayer.getAbsorptionAmount()",
+  "AbstractClientPlayer.getBbHeight()",
+  "AbstractClientPlayer.isLocalPlayer()",
+  "EntityRenderDispatcher.camera",
+  "EntityRenderDispatcher.distanceToSqr()",
+  "TextureAtlasSprite.getU0()",
+  "TextureAtlasSprite.getU1()",
+  "TextureAtlasSprite.getV0()",
+  "TextureAtlasSprite.getV1()",
+  "Level.getScoreboard()",
+  "Scoreboard.getDisplayObjective()"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "PlayerHealthIndicators-1.1.3-26.3.jar",
   "published": "2026-09-20"
  },
@@ -28,8 +48,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -44,5 +64,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 21
 }

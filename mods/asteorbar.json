@@ -9,8 +9,14 @@
  "author": "afoxxvi",
  "description": "A simple mod to display player's status in HUD and mob's health using slim bars.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.networking.v1.FriendlyByteBufs",
+  "net.minecraft.client.gui.contextualbar.ContextualBar",
+  "net.minecraft.client.gui.contextualbar.ExperienceBar",
+  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
+  "net.minecraft.world.entity.decoration.ArmorStand",
   "net.minecraft.world.food.FoodProperties",
   "PoseStack.last()",
   "PoseStack.Pose.pose()",
@@ -19,20 +25,24 @@
   "VertexConsumer.setNormal()",
   "VertexConsumer.setOverlay()",
   "ServerPlayNetworking.createClientboundPacket()",
-  "Minecraft.execute()",
+  "Camera.rotation()",
+  "Minecraft.getEntityRenderDispatcher()",
   "GuiGraphicsExtractor.blit()",
   "Hud.getGuiTicks()",
+  "EntityRenderDispatcher.camera",
+  "EntityRenderer.getRenderOffset()",
   "RenderTypes.entityTranslucent()",
   "RenderTypes.solidMovingBlock()",
-  "FriendlyByteBuf.<init>()",
-  "FriendlyByteBuf.writeByte()",
-  "FriendlyByteBuf.writeBytes()",
-  "FriendlyByteBuf.writeFloat()",
-  "FriendlyByteBuf.writeInt()",
-  "CustomPacketPayload.codec()",
+  "FormattedCharSequence.forward()",
   "EntityTypes.ENDER_DRAGON",
   "EntityTypes.WITHER",
+  "LivingEntity.distanceTo()",
+  "LivingEntity.getAbsorptionAmount()",
+  "LivingEntity.hasLineOfSight()",
+  "LivingEntity.isInvisibleTo()",
+  "LivingEntity.isSpectator()",
   "LivingEntity.setAbsorptionAmount()",
+  "Player.<init>()",
   "Player.getAbsorptionAmount()",
   "Player.getAirSupply()",
   "Player.getInvulnerableTime()",
@@ -41,12 +51,12 @@
   "Player.isFullyFrozen()",
   "FoodData.setSaturation()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "asteorbar-fabric-26.3-1.5.3.jar",
   "published": "2026-10-05"
  },
@@ -58,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -75,5 +85,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 30
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; has network channels"
+ },
+ "lacks": 40
 }

@@ -1,7 +1,7 @@
 {
  "id": "takeitout",
  "name": "Take It Out — Minecraft Mod (Shulker Picking + Easy Place)",
- "version": "1.1.29-26.3",
+ "version": "1.2.0-26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,55 +9,46 @@
  "author": "rofumer",
  "description": "Minecraft mod that lets you pick blocks from shulker boxes using mouse wheel, Easy Place, or right-click — perfect for Litematica schematics and printers.",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.BeforeGizmos",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.client.server.IntegratedServer",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.tags.ItemTags",
+  "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.level.block.BarrelBlock",
   "net.minecraft.world.level.block.ChestBlock",
   "net.minecraft.world.level.block.EnderChestBlock",
+  "net.minecraft.world.level.block.MushroomBlock",
+  "net.minecraft.world.level.block.RedstoneWireBlock",
   "net.minecraft.world.level.block.ShulkerBoxBlock",
   "net.minecraft.world.level.storage.WorldData",
   "LevelRenderEvents.BEFORE_GIZMOS",
-  "PacketSender.sendPacket()",
-  "Minecraft.execute()",
   "Minecraft.getCurrentServer()",
   "Minecraft.getSingleplayerServer()",
-  "Minecraft.hitResult",
-  "Font.plainSubstrByWidth()",
-  "EditBox.setHint()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseReleased()",
   "ServerData.ip",
   "ServerData.name",
+  "AbstractClientPlayer.<init>()",
   "LocalPlayer.getGameProfile()",
   "CameraRenderState.initialized",
   "BlockPos.asLong()",
   "NonNullList.iterator()",
   "ByteBufCodecs.collection()",
+  "ClientboundContainerSetSlotPacket.getContainerId()",
+  "ClientboundContainerSetSlotPacket.getItem()",
   "MinecraftServer.execute()",
-  "MinecraftServer.getPlayerList()",
-  "ServerLevel.hasChunkAt()",
   "ServerPlayer.getGameProfile()",
   "Inventory.getFreeSlot()",
   "ItemStack.getDisplayName()",
+  "Items.FIREWORK_ROCKET",
   "BlockState.canBeReplaced()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "takeitout-1.1.29-26.3.jar",
-  "published": "2026-10-16"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "takeitout-1.2.0-26.3.jar",
+  "published": "2026-11-05"
  },
  "reports": {
   "works": 0,
@@ -67,8 +58,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +76,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 39
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 31
 }

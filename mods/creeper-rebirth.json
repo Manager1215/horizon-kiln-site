@@ -9,18 +9,17 @@
  "author": "Simon73",
  "description": "Creeper Rebirth adds new creepers with special abilities for different biomes",
  "needs": [
-  "Mixin",
+  "Mixin: 10 points inside the game's methods",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndLevelTick",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
   "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
+  "net.minecraft.client.model.HumanoidModel",
+  "net.minecraft.client.model.player.PlayerModel",
   "net.minecraft.client.particle.ParticleProvider",
   "net.minecraft.client.particle.SingleQuadParticle",
   "net.minecraft.client.particle.SingleQuadParticle.Layer",
@@ -28,13 +27,16 @@
   "net.minecraft.client.renderer.entity.BatRenderer",
   "net.minecraft.client.renderer.entity.RabbitRenderer",
   "net.minecraft.client.renderer.entity.ThrownItemRenderer",
+  "net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer",
   "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
+  "net.minecraft.client.renderer.item.SpecialModelWrapper",
+  "net.minecraft.client.renderer.special.SpecialModelRenderers",
   "net.minecraft.core.particles.BlockParticleOption",
   "net.minecraft.data.AtlasIds",
+  "net.minecraft.network.HashedStack.ActualItem",
   "net.minecraft.network.syncher.EntityDataAccessor",
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.tags.DamageTypeTags",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.damagesource.DamageTypes",
@@ -48,16 +50,14 @@
   "net.minecraft.world.entity.ai.control.LookControl",
   "net.minecraft.world.entity.ai.goal.AvoidEntityGoal",
   "net.minecraft.world.entity.ai.goal.FloatGoal",
-  "net.minecraft.world.entity.ai.goal.Goal",
-  "net.minecraft.world.entity.ai.goal.Goal.Flag",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "(Fabric26.3)creeperrebirth-1.0.0.jar",
   "published": "2026-11-03"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 203
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
+ },
+ "lacks": 197
 }

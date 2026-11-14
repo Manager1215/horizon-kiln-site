@@ -9,41 +9,33 @@
  "author": "ItsJustMeChris",
  "description": "Shared-progress tree felling for Fabric - chop one log, finish in size-scaled swings, vanilla balanced and SMP-safe, works with tagged modded woods.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
+  "net.minecraft.client.particle.ParticleEngine",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedStateProvider",
   "net.minecraft.world.level.material.PushReaction",
-  "Minecraft.execute()",
   "BlockModelRenderState.clear()",
   "BlockEntityRenderer.extractRenderState()",
   "BlockPos.offset()",
   "DefaultedRegistry.iterator()",
   "RegistryAccess.lookupOrThrow()",
   "Registries.BLOCK_TRANSFORMER",
-  "FriendlyByteBuf.readBlockPos()",
-  "FriendlyByteBuf.readVarInt()",
-  "FriendlyByteBuf.writeBlockPos()",
-  "FriendlyByteBuf.writeVarInt()",
-  "CustomPacketPayload.codec()",
   "RandomSource.createThreadLocalInstance()",
-  "Block.dropResources()",
   "Block.stateById()",
   "Blocks.OAK_LOG",
-  "SoundType.getHitSound()",
   "BlockBehaviour.Properties.pushReaction()",
-  "BlockState.getSeed()",
-  "BlockState.getSoundType()"
+  "BlockState.getSeed()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "chopt-1.0.10+mc26.3.jar",
   "published": "2026-09-17"
  },
@@ -55,8 +47,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -73,5 +65,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 27
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 19
 }

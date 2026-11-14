@@ -1,7 +1,7 @@
 {
  "id": "artemis-laboratory-blocks",
  "name": "Artemis' Laboratory Blocks",
- "version": "0.8.5-fabric-mc26.3",
+ "version": "1.0-fabric-mc26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -20,6 +20,7 @@
   "net.minecraft.world.level.block.state.BlockBehaviour.StateArgumentPredicate",
   "net.minecraft.world.level.block.state.BlockBehaviour.StatePredicate",
   "net.minecraft.world.level.material.PushReaction",
+  "Registries.JUKEBOX_SONG",
   "ServerLevel.hasNeighborSignal()",
   "SoundEvents.AXE_WAX_OFF",
   "SoundEvents.IRON_DOOR_CLOSE",
@@ -33,6 +34,7 @@
   "SoundEvents.STONE_BUTTON_CLICK_ON",
   "ItemEntity.setDeltaMovement()",
   "Item.Properties.enchantable()",
+  "Item.Properties.jukeboxPlayable()",
   "Item.Properties.repairable()",
   "Level.addFreshEntity()",
   "Level.hasNeighborSignal()",
@@ -48,18 +50,16 @@
   "Blocks.PALE_OAK_PLANKS",
   "Blocks.POPLAR_PLANKS",
   "Blocks.SPRUCE_PLANKS",
-  "Blocks.WARPED_PLANKS",
-  "SoundType.BAMBOO_WOOD",
-  "and 8 more"
+  "and 9 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "laboratoryblocks-0.8.5-fabric-mc26.3.jar",
-  "published": "2026-10-27"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "laboratoryblocks-1.0-fabric-mc26.3.jar",
+  "published": "2026-11-08"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -80,7 +80,7 @@
   "client": 1,
   "fabric-datagen": 1
  },
- "mixins": false,
+ "mixins": true,
  "depends": [
   "fabric-api",
   "fabricloader",
@@ -88,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 48
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 49
 }

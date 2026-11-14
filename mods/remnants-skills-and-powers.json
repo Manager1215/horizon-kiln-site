@@ -7,9 +7,8 @@
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
  "url": "https://modrinth.com/mod/remnants-skills-and-powers",
  "author": "NAIZO",
- "description": "A Path of Exile-style skill tree: 522 nodes in six schools of magic, 30 castable abilities and 12 keystones. Plan paths, share build codes, respec anytime. Links up with Remnants | RPG Player Skills.",
+ "description": "A sprawling constellation skill tree with 522 nodes in six schools of magic, 30 castable abilities and 12 keystones you can respec anytime.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
@@ -18,10 +17,6 @@
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType.Builder",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType.Builder.Mob",
@@ -34,12 +29,6 @@
   "net.minecraft.client.renderer.entity.state.IronGolemRenderState",
   "net.minecraft.core.particles.BlockParticleOption",
   "net.minecraft.core.particles.DustParticleOptions",
-  "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.permissions.Permissions",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.tags.DamageTypeTags",
   "net.minecraft.tags.EntityTypeTags",
   "net.minecraft.world.damagesource.DamageTypes",
@@ -50,14 +39,24 @@
   "net.minecraft.world.entity.SpawnPlacements.SpawnPredicate",
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
-  "and 80 more"
+  "net.minecraft.world.entity.ai.goal.FloatGoal",
+  "net.minecraft.world.entity.ai.goal.GoalSelector",
+  "net.minecraft.world.entity.ai.goal.LookAtPlayerGoal",
+  "net.minecraft.world.entity.ai.goal.MeleeAttackGoal",
+  "net.minecraft.world.entity.ai.goal.RandomLookAroundGoal",
+  "net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal",
+  "net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal",
+  "net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal",
+  "net.minecraft.world.entity.animal.golem.IronGolem",
+  "net.minecraft.world.entity.decoration.ArmorStand",
+  "and 74 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "remnants-skills-and-powers-fabric-26.3-2.0.2.jar",
   "published": "2026-11-03"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 172
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+ },
+ "lacks": 136
 }

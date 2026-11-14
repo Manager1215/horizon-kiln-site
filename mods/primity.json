@@ -1,7 +1,7 @@
 {
  "id": "primity",
  "name": "Primity",
- "version": "0.2.2+26.3-fabric",
+ "version": "0.3.0-beta.1+26.3-fabric",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,12 +9,12 @@
  "author": "VinnyStalck",
  "description": "Increases difficulty by slowing down the early stage progression and by adding flint tools and cast iron. No tree punching. Block hardness increase.",
  "needs": [
-  "Mixin",
   "net.minecraft.core.HolderSet.Named",
   "net.minecraft.core.component.DataComponentInitializers",
   "net.minecraft.core.component.DataComponentInitializers.SingleComponentInitializer",
   "net.minecraft.tags.DamageTypeTags",
   "net.minecraft.tags.ItemTags",
+  "net.minecraft.world.item.FlintAndSteelItem",
   "net.minecraft.world.item.ShieldItem",
   "net.minecraft.world.item.component.BlocksAttacks",
   "net.minecraft.world.item.component.BlocksAttacks.DamageReduction",
@@ -30,24 +30,25 @@
   "Item.Properties.repairable()",
   "Item.Properties.spear()",
   "Items.FLINT",
+  "Items.FLINT_AND_STEEL",
   "Items.NETHERITE_SCRAP",
   "Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE",
-  "Items.SHIELD",
   "Items.STONE_AXE",
   "Items.STONE_HOE",
   "Items.STONE_SPEAR",
   "Items.STONE_SWORD",
   "ToolMaterial.STONE",
+  "Block.defaultDestroyTime()",
   "Blocks.IRON_BLOCK"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "primity-0.2.2+26.3-fabric.jar",
-  "published": "2026-09-20"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "primity-0.3.0-beta.1+26.3-fabric.jar",
+  "published": "2026-11-12"
  },
  "reports": {
   "works": 0,
@@ -57,8 +58,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -76,5 +77,9 @@
   "minecraft",
   "yet_another_config_lib_v3"
  ],
- "lacks": 29
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 31
 }

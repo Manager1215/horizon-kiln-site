@@ -9,16 +9,24 @@
  "author": "mesosopic",
  "description": "A tiny, configurable mod intended for use in modpacks. Allows for configuration of the anvil, primarily XP costs.",
  "needs": [
-  "Mixin",
+  "Mixin: 5 points inside the game's methods",
+  "net.minecraft.client.gui.screens.inventory.AnvilScreen",
+  "net.minecraft.world.inventory.AnvilMenu",
+  "net.minecraft.world.inventory.DataSlot",
+  "net.minecraft.world.inventory.ItemCombinerMenu",
+  "net.minecraft.world.inventory.ResultContainer",
+  "DataComponents.REPAIR_COST",
   "GsonHelper.parse()",
-  "GsonHelper.toStableString()"
+  "GsonHelper.toStableString()",
+  "Player.hasInfiniteMaterials()",
+  "Enchantment.getAnvilCost()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "qubit-anvil-1.1.0.jar",
   "published": "2026-09-16"
  },
@@ -30,8 +38,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -46,5 +54,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 2
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method into the game's classes"
+ },
+ "lacks": 10
 }

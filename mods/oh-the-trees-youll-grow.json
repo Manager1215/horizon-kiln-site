@@ -1,7 +1,7 @@
 {
  "id": "oh-the-trees-youll-grow",
  "name": "Oh The Trees You'll Grow",
- "version": "12.0.3-fabric",
+ "version": "12.0.4-fabric",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,11 +10,23 @@
  "description": "Tree library used by popular mods such as Oh The Biomes You'll Go.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
+  "net.minecraft.nbt.NbtAccounter",
+  "net.minecraft.nbt.StreamTagVisitor",
+  "net.minecraft.nbt.StreamTagVisitor.EntryResult",
+  "net.minecraft.nbt.visitors.FieldSelector",
+  "net.minecraft.nbt.visitors.SkipFields",
   "net.minecraft.server.level.WorldGenRegion",
   "net.minecraft.util.random.WeightedList.Builder",
   "net.minecraft.util.valueproviders.IntProviders",
+  "net.minecraft.world.entity.ai.village.poi.PoiManager",
   "net.minecraft.world.level.block.VineBlock",
+  "net.minecraft.world.level.chunk.ImposterProtoChunk",
+  "net.minecraft.world.level.chunk.LevelChunk.PostLoadProcessor",
+  "net.minecraft.world.level.chunk.ProtoChunk",
+  "net.minecraft.world.level.chunk.storage.RegionFileStorage",
+  "net.minecraft.world.level.chunk.storage.RegionStorageInfo",
+  "net.minecraft.world.level.chunk.storage.SerializableChunkData",
   "net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate",
   "net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider",
   "net.minecraft.world.level.levelgen.feature.treedecorators.AlterGroundDecorator",
@@ -33,34 +45,22 @@
   "Direction.CODEC",
   "Direction.Plane.shuffledCopy()",
   "BuiltInRegistries.FEATURE_TYPE",
+  "ListTag.TYPE",
+  "ListTag.add()",
+  "ListTag.iterator()",
+  "NbtIo.parse()",
   "ServerLevel.getStructureTemplateManager()",
-  "BlockTags.DIRT",
   "BlockTags.HUGE_BROWN_MUSHROOM_CAN_PLACE_ON",
-  "BlockTags.SUBSTRATE_OVERWORLD",
-  "ExtraCodecs.nonEmptyList()",
-  "StringRepresentable.EnumCodec.listOf()",
-  "Util.getRandom()",
-  "Util.make()",
-  "Util.shuffledCopy()",
-  "Util.shuffledCopy()",
-  "WeightedList.builder()",
-  "WorldGenLevel.getChunk()",
-  "WorldGenLevel.getMaxY()",
-  "WorldGenLevel.isStateAtPosition()",
-  "WorldGenLevel.removeBlock()",
-  "WorldGenLevel.setBlock()",
-  "Blocks.ACACIA_LEAVES",
-  "Blocks.ACACIA_LOG",
-  "and 30 more"
+  "and 46 more"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "ohthetreesyoullgrow-fabric-26.3-12.0.3.jar",
-  "published": "2026-10-10"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "ohthetreesyoullgrow-fabric-26.3-12.0.4.jar",
+  "published": "2026-11-06"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 70
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 86
 }

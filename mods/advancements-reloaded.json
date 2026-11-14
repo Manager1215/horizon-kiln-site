@@ -10,17 +10,55 @@
  "description": "Enhance your Minecraft advancements experience with a revamped UI that utilizes more of your screen space, especially at higher GUI scales.\n\nThis mod is a continuation of the original AdvancementInfo mod by gbl marked as end-of-life since Jun 2024.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
+  "net.minecraft.IdentifierException",
+  "net.minecraft.advancements.AdvancementNode",
+  "net.minecraft.advancements.AdvancementTree",
+  "net.minecraft.advancements.CriterionProgress",
+  "net.minecraft.advancements.TreeNodePosition",
+  "net.minecraft.client.StringSplitter",
+  "net.minecraft.client.gui.components.SpriteIconButton",
+  "net.minecraft.client.gui.components.SpriteIconButton.Builder",
+  "net.minecraft.client.gui.screens.advancements.AdvancementsScreen",
+  "net.minecraft.client.multiplayer.ClientAdvancements.Listener",
   "net.minecraft.client.renderer.texture.MissingTextureAtlasSprite",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger"
+  "net.minecraft.network.chat.ComponentUtils",
+  "net.minecraft.network.protocol.game.ServerboundSeenAdvancementsPacket",
+  "net.minecraft.util.CommonColors",
+  "AdvancementHolder.value()",
+  "AdvancementProgress.getCompletedCriteria()",
+  "AdvancementProgress.getCriterion()",
+  "AdvancementProgress.getPercent()",
+  "AdvancementProgress.getProgressText()",
+  "AdvancementProgress.getRemainingCriteria()",
+  "AdvancementRequirements.size()",
+  "AdvancementType.getChatColor()",
+  "KeyMapping.matches()",
+  "MouseHandler.grabMouse()",
+  "Font.getSplitter()",
+  "Font.split()",
+  "Font.substrByWidth()",
+  "GuiGraphicsExtractor.blitSprite()",
+  "GuiGraphicsExtractor.blitSprite()",
+  "GuiGraphicsExtractor.fakeItem()",
+  "GuiGraphicsExtractor.nextStratum()",
+  "GuiGraphicsExtractor.text()",
+  "GuiGraphicsExtractor.text()",
+  "Screen.INWORLD_FOOTER_SEPARATOR",
+  "Screen.INWORLD_HEADER_SEPARATOR",
+  "ClientAdvancements.setListener()",
+  "ClientAdvancements.setSelectedTab()",
+  "ClientAdvancements.tree()",
+  "ClientPacketListener.send()",
+  "Language.getVisualOrder()",
+  "and 4 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "advancements_reloaded-0.15.1-fabric-26.3.jar",
   "published": "2026-10-19"
  },
@@ -32,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -48,5 +86,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 3
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 44
 }

@@ -9,7 +9,6 @@
  "author": "inqwizitor57",
  "description": "Inventory sorting in 2 seconds",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AfterKeyPress",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
@@ -17,17 +16,14 @@
   "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseDrag",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseRelease",
   "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-  "KeyMapping.matches()",
-  "Minecraft.gameMode",
-  "Screen.getFocused()"
+  "KeyMapping.matches()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "organizer-2.0.0.jar",
   "published": "2026-10-15"
  },
@@ -39,8 +35,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -56,5 +52,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 11
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 8
 }

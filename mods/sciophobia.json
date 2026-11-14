@@ -1,7 +1,7 @@
 {
  "id": "sciophobia",
  "name": "Sciophobia",
- "version": "2.0.1",
+ "version": "2.0.2",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,16 +10,18 @@
  "description": "Customize Minecraft's text shadow rendering globally",
  "needs": [
   "an access widener",
-  "Mixin"
+  "Mixin: 1 point inside the game's methods",
+  "net.minecraft.client.gui.font.glyphs.BakedSheetGlyph",
+  "net.minecraft.client.gui.font.glyphs.BakedSheetGlyph.GlyphInstance"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "sciophobia-2.0.1+26.3-fabric.jar",
-  "published": "2026-09-23"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "sciophobia-2.0.2+26.3-fabric.jar",
+  "published": "2026-11-07"
  },
  "reports": {
   "works": 0,
@@ -29,15 +31,15 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
  },
  "entrypoints": {
-  "sodium:config_api_user": 1,
-  "main": 1
+  "main": 1,
+  "sodium:config_api_user": 1
  },
  "mixins": true,
  "depends": [
@@ -45,5 +47,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 2
 }

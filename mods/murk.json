@@ -9,33 +9,26 @@
  "author": "tiigerbones",
  "description": "A horror-themed Minecraft mod that punishes players for lingering in complete darkness.",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.fabric.api.resource.v1.reloader.SimpleReloadListener",
   "net.minecraft.client.resources.sounds.AbstractTickableSoundInstance",
-  "net.minecraft.server.players.PlayerList",
-  "ServerTickEvents.END_SERVER_TICK",
   "RegistryAccess.lookupOrThrow()",
   "Registries.BIOME",
-  "MutableComponent.withStyle()",
-  "MinecraftServer.getPlayerList()",
   "ServerLevel.clip()",
   "ServerLevel.getBiome()",
   "ServerLevel.getEntitiesOfClass()",
   "ServerLevel.getMaxLocalRawBrightness()",
-  "ServerPlayer.sendSystemMessage()",
   "PreparableReloadListener.SharedState.resourceManager()",
   "MobEffect.addAttributeModifiers()",
   "ItemEntity.getItem()",
   "Player.isAlive()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "themurk-1.0.2+26.3.jar",
   "published": "2026-09-20"
  },
@@ -47,8 +40,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -66,5 +59,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 19
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 13
 }

@@ -9,10 +9,7 @@
  "author": "FabiHBBBT",
  "description": "Fabric Mod to view texturepack assets ingame",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.gui.components.ObjectSelectionList",
-  "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
-  "net.minecraft.client.gui.components.StringWidget",
+  "com.mojang.blaze3d.audio.Channel",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
   "net.minecraft.client.gui.layouts.LayoutSettings",
   "net.minecraft.client.gui.layouts.LinearLayout",
@@ -29,33 +26,23 @@
   "NativeImage.getHeight()",
   "NativeImage.getWidth()",
   "NativeImage.read()",
-  "Minecraft.execute()",
-  "Font.plainSubstrByWidth()",
   "GuiGraphicsExtractor.blit()",
-  "AbstractSliderButton.onRelease()",
-  "Button.setPosition()",
-  "EditBox.setHint()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseReleased()",
-  "Screen.mouseScrolled()",
   "AnimationFrame.timeOr()",
   "AnimationMetadataSection.TYPE",
   "AnimationMetadataSection.calculateFrameSize()",
   "SoundManager.isActive()",
-  "SoundManager.stop()",
   "CommonComponents.GUI_BACK",
   "FileToIdConverter.fileToId()",
   "Identifier.tryBuild()",
   "Resource.metadata()",
   "Util.ioPool()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "assetbrowser-1.0.0+26.3.jar",
   "published": "2026-09-15"
  },
@@ -73,5 +60,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 39
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 27
 }

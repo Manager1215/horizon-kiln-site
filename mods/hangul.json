@@ -9,10 +9,17 @@
  "author": "cityofseoul",
  "description": "Native Korean (한국어) IME for smooth 한글 채팅 (Hangul/Hangeul chat), commands, books, signs, items, and recipes. 26+",
  "needs": [
-  "Mixin",
+  "Mixin: 6 points inside the game's methods",
   "com.mojang.blaze3d.platform.TextInputManager",
+  "net.minecraft.client.gui.components.CommandSuggestions",
+  "net.minecraft.client.gui.components.IMEPreeditOverlay",
+  "net.minecraft.client.gui.components.MultiLineEditBox",
   "net.minecraft.client.gui.components.MultilineTextField",
+  "net.minecraft.client.gui.font.FontManager",
   "net.minecraft.client.gui.font.TextFieldHelper",
+  "net.minecraft.client.gui.screens.inventory.AbstractSignEditScreen",
+  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
+  "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
   "net.minecraft.client.input.PreeditEvent",
   "net.minecraft.client.searchtree.SearchTree",
   "Window.handle()",
@@ -20,27 +27,18 @@
   "Minecraft.isWindowActive()",
   "Minecraft.textInputManager()",
   "Font.plainSubstrByWidth()",
-  "Font.plainSubstrByWidth()",
   "EditBox.canConsumeInput()",
-  "EditBox.getCursorPosition()",
   "EditBox.getHighlighted()",
-  "EditBox.getInnerWidth()",
-  "EditBox.insertText()",
-  "EditBox.isBordered()",
   "EditBox.isVisible()",
   "EditBox.moveCursorTo()",
-  "EditBox.preeditUpdated()",
-  "Screen.getFocused()",
-  "KeyEvent.hasAltDown()",
-  "KeyEvent.hasControlDownWithQuirk()",
-  "KeyEvent.hasShiftDown()"
+  "EditBox.preeditUpdated()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "hangul-1.3.0-beta.11-fabric.jar",
   "published": "2026-10-23"
  },
@@ -57,5 +55,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 24
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-method into the game's classes"
+ },
+ "lacks": 22
 }

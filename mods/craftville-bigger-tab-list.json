@@ -9,14 +9,15 @@
  "author": "qbos",
  "description": "Craftville - Bigger / Wider Tab List increases the maximum number of visible players in the tab list from 80 to 180. It is a fully client-side Fabric mod for Minecraft 26.2 or newer and does not require Fabric API.",
  "needs": [
-  "Mixin"
+  "Mixin: 1 point inside the game's methods",
+  "net.minecraft.client.gui.components.PlayerTabOverlay"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "craftville-bigger-tab-list-fabric-1.2.0.jar",
   "published": "2026-10-30"
  },
@@ -33,5 +34,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 1
 }

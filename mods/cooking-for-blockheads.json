@@ -9,8 +9,6 @@
  "author": "BlayTheNinth",
  "description": "Adds a multiblock kitchen that shows recipes you can make with what ingredients you have available.",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
   "net.minecraft.client.gui.screens.recipebook.CraftingRecipeBookComponent",
   "net.minecraft.client.model.AdultAndBabyModelPair",
@@ -20,10 +18,10 @@
   "net.minecraft.client.model.animal.chicken.ColdChickenModel",
   "net.minecraft.client.model.animal.cow.CowModel",
   "net.minecraft.client.model.geom.ModelLayers",
+  "net.minecraft.client.renderer.LevelEventHandler",
   "net.minecraft.client.renderer.entity.state.ChickenRenderState",
   "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
   "net.minecraft.network.chat.ComponentSerialization",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.entity.animal.chicken.Chicken",
@@ -37,27 +35,28 @@
   "net.minecraft.world.food.FoodProperties",
   "net.minecraft.world.food.FoodProperties.Builder",
   "net.minecraft.world.inventory.ContainerData",
-  "net.minecraft.world.inventory.ContainerInput",
   "net.minecraft.world.inventory.ContainerLevelAccess",
   "net.minecraft.world.inventory.RecipeBookType",
   "net.minecraft.world.inventory.ResultContainer",
   "net.minecraft.world.item.TooltipFlag.Default",
-  "net.minecraft.world.item.alchemy.PotionContents",
-  "net.minecraft.world.item.alchemy.Potions",
   "net.minecraft.world.item.crafting.RecipeManager.ServerDisplayInfo",
   "net.minecraft.world.item.crafting.ShapelessRecipe",
   "net.minecraft.world.item.crafting.display.FurnaceRecipeDisplay",
   "net.minecraft.world.item.crafting.display.ShapedCraftingRecipeDisplay",
   "net.minecraft.world.item.crafting.display.ShapelessCraftingRecipeDisplay",
   "net.minecraft.world.item.crafting.display.SlotDisplayContext",
-  "and 68 more"
+  "net.minecraft.world.item.equipment.Equippable.Builder",
+  "net.minecraft.world.level.MoonPhase",
+  "net.minecraft.world.level.block.Mirror",
+  "net.minecraft.world.level.block.state.properties.Half",
+  "and 62 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "cookingforblockheads-fabric-26.3-26.3.0.2.jar",
   "published": "2026-10-02"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 157
+ "softOff": {
+  "class": "partial",
+  "why": "data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 143
 }

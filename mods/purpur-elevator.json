@@ -9,17 +9,32 @@
  "author": "Gjorgdy",
  "description": "Purpur block + Redstone power = Teleporting elevator",
  "needs": [
-  "Mixin",
-  "org.apache.logging.log4j.Level",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger"
+  "net.minecraft.network.protocol.game.ServerboundPlayerInputPacket",
+  "net.minecraft.world.entity.player.Input",
+  "net.minecraft.world.entity.vehicle.boat.AbstractBoat",
+  "net.minecraft.world.level.block.state.properties.SlabType",
+  "ServerLevel.playSound()",
+  "ServerPlayer.isCrouching()",
+  "Entity.getVehicle()",
+  "Entity.isPassenger()",
+  "Level.broadcastEntityEvent()",
+  "Level.getBestNeighborSignal()",
+  "Level.getEntities()",
+  "Level.getSignal()",
+  "Blocks.END_ROD",
+  "Blocks.PURPUR_BLOCK",
+  "Blocks.PURPUR_PILLAR",
+  "Blocks.PURPUR_SLAB",
+  "Blocks.PURPUR_STAIRS",
+  "SlabBlock.TYPE",
+  "BlockState.isSuffocating()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Purpur Elevator-1.1.0+26.3.jar",
   "published": "2026-10-03"
  },
@@ -31,8 +46,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -45,5 +60,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 3
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 19
 }

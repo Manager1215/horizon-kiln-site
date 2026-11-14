@@ -10,16 +10,48 @@
  "description": "Automatically sort your inventory with just a button!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-  "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType"
+  "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
+  "net.minecraft.client.gui.components.WidgetSprites",
+  "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
+  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
+  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.ItemPickerMenu",
+  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
+  "net.minecraft.server.packs.repository.PackRepository",
+  "net.minecraft.world.inventory.BlastFurnaceMenu",
+  "net.minecraft.world.inventory.BrewingStandMenu",
+  "net.minecraft.world.inventory.CrafterMenu",
+  "net.minecraft.world.inventory.CraftingMenu",
+  "net.minecraft.world.inventory.EnchantmentMenu",
+  "net.minecraft.world.inventory.FurnaceMenu",
+  "net.minecraft.world.inventory.GrindstoneMenu",
+  "net.minecraft.world.inventory.ShulkerBoxMenu",
+  "net.minecraft.world.inventory.SmokerMenu",
+  "net.minecraft.world.item.TooltipFlag.Default",
+  "KeyMapping.matches()",
+  "KeyMapping.matchesMouse()",
+  "Minecraft.getResourcePackRepository()",
+  "Options.advancedItemTooltips",
+  "Options.operatorItemsTab()",
+  "ClientLevel.enabledFeatures()",
+  "LocalPlayer.canUseGameMasterBlocks()",
+  "NonNullList.stream()",
+  "AbstractContainerMenu.clicked()",
+  "AbstractCraftingMenu.getInputGridSlots()",
+  "AbstractCraftingMenu.getResultSlot()",
+  "CreativeModeTabs.buildAllTabContents()",
+  "Item.TooltipContext.of()",
+  "ItemStack.getDisplayName()",
+  "ItemStack.getItemName()",
+  "ItemStack.getTooltipLines()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "nemos-inventory-sorting-Fabric-26.3-1.22.3.jar",
   "published": "2026-10-16"
  },
@@ -31,8 +63,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -48,5 +80,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 2
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 34
 }

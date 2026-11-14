@@ -9,16 +9,24 @@
  "author": "IceYeti",
  "description": "Server-side mod that makes players burn in sunlight like some mobs do.",
  "needs": [
-  "Mixin",
   "net.minecraft.commands.execution.CustomCommandExecutor",
-  "net.minecraft.commands.execution.CustomCommandExecutor.CommandAdapter"
+  "net.minecraft.commands.execution.CustomCommandExecutor.CommandAdapter",
+  "Player.getEyeY()",
+  "Player.isInPowderSnow",
+  "Player.isInWaterOrRain()",
+  "Player.isSleeping()",
+  "Player.wasInPowderSnow",
+  "Level.getBiome()",
+  "Level.getOverworldClockTime()",
+  "Level.getSeaLevel()",
+  "Biome.getPrecipitationAt()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "players-burn-in-sunlight-1.0.4-fabric-26.1.1.jar",
   "published": "2026-04-01"
  },
@@ -30,8 +38,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -46,5 +54,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 2
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 11
 }

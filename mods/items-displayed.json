@@ -9,11 +9,8 @@
  "author": "FREEDINNER",
  "description": "A mod for builders and adventurers who would like to have their items placed in the world, not lying around in chests!",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
   "net.minecraft.client.model.ArmedModel",
   "net.minecraft.client.model.EntityModel",
@@ -28,7 +25,6 @@
   "net.minecraft.core.particles.BlockParticleOption",
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.tags.DamageTypeTags",
   "net.minecraft.world.entity.EntityDimensions",
   "net.minecraft.world.entity.EntityEvent",
@@ -39,25 +35,28 @@
   "net.minecraft.world.entity.vehicle.minecart.Minecart",
   "net.minecraft.world.level.material.PushReaction",
   "net.minecraft.world.level.storage.loot.providers.number.ints.ResolvableInt.Constant",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "BiMap.forEach()",
   "BiMap.getOrDefault()",
   "BiMap.size()",
-  "Minecraft.execute()",
   "LayerDefinition.create()",
   "EntityRendererProvider.Context.bakeLayer()",
   "EntityRendererProvider.Context.getItemModelResolver()",
   "DataComponents.DYE",
   "ParticleTypes.BLOCK",
-  "and 51 more"
+  "SynchedEntityData.defineId()",
+  "SynchedEntityData.get()",
+  "SynchedEntityData.set()",
+  "ServerLevel.addFreshEntityWithPassengers()",
+  "ServerLevel.sendParticles()",
+  "SoundEvents.ARMOR_STAND_BREAK",
+  "and 46 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ItemsDisplayed - v1.3-26.3.jar",
   "published": "2026-09-26"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 187
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 167
 }

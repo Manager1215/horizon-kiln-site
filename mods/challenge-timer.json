@@ -13,20 +13,12 @@
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.nbt.NbtIo",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.level.storage.LevelResource",
   "ServerLifecycleEvents.SERVER_STARTED",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerTickEvents.END_SERVER_TICK",
-  "CommandSourceStack.getServer()",
-  "Commands.LEVEL_GAMEMASTERS",
-  "Commands.hasPermission()",
+  "NbtIo.readCompressed()",
   "MinecraftServer.getGameRules()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.getTickCount()",
   "MinecraftServer.getWorldPath()",
   "MinecraftServer.halt()",
@@ -35,7 +27,7 @@
   "ServerPlayer.clientInformation()",
   "ServerPlayer.connection",
   "ServerPlayer.gameMode()",
-  "ServerPlayer.setGameMode()",
+  "ServerGamePacketListenerImpl.send()",
   "GameRules.IMMEDIATE_RESPAWN",
   "GameRules.set()"
  ],
@@ -43,8 +35,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ChallengeTimer-1.0.2-Fabric-26.3.jar",
   "published": "2026-09-24"
  },
@@ -57,5 +49,9 @@
  "entrypoints": {},
  "mixins": false,
  "depends": [],
- "lacks": 29
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 21
 }

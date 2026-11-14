@@ -9,8 +9,9 @@
  "author": "Baisylia",
  "description": "A magic overhaul focusing on a new enchanting system.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+  "net.minecraft.client.gui.screens.inventory.SmithingScreen",
   "net.minecraft.world.item.crafting.SmithingRecipe",
   "net.minecraft.world.item.crafting.SmithingRecipeInput",
   "net.minecraft.world.phys.shapes.Shapes.DoubleLineConsumer",
@@ -49,15 +50,14 @@
   "RecipeType.SMITHING",
   "Enchantment.areCompatible()",
   "Enchantment.getMaxLevel()",
-  "Enchantment.getSupportedItems()",
-  "and 10 more"
+  "and 11 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "modestmagic-fabric-26.3-1.4.2.jar",
   "published": "2026-10-23"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 50
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 51
 }

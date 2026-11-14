@@ -10,15 +10,55 @@
  "description": "Improves and customizes the player's default animations.",
  "needs": [
   "an access widener",
-  "Mixin",
-  "FabricLoader.getRawGameVersion()"
+  "Mixin: 2 points inside the game's methods",
+  "net.minecraft.client.entity.ClientMannequin",
+  "net.minecraft.client.model.HumanoidModel",
+  "net.minecraft.client.model.HumanoidModel.ArmPose",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.RenderLayerParent",
+  "net.minecraft.client.renderer.entity.layers.ItemInHandLayer",
+  "net.minecraft.client.renderer.entity.layers.RenderLayer",
+  "net.minecraft.client.renderer.entity.player.AvatarRenderer",
+  "net.minecraft.client.renderer.entity.state.ArmedEntityRenderState",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
+  "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
+  "net.minecraft.client.renderer.state.MapRenderState",
+  "net.minecraft.world.damagesource.DamageTypes",
+  "net.minecraft.world.entity.EntityEquipment",
+  "net.minecraft.world.entity.LivingEntity.SwingDescription",
+  "net.minecraft.world.entity.animal.equine.Donkey",
+  "net.minecraft.world.entity.animal.equine.Horse",
+  "net.minecraft.world.entity.animal.equine.Mule",
+  "net.minecraft.world.entity.animal.equine.SkeletonHorse",
+  "net.minecraft.world.entity.animal.equine.ZombieHorse",
+  "net.minecraft.world.entity.decoration.Mannequin",
+  "net.minecraft.world.entity.vehicle.boat.Boat",
+  "net.minecraft.world.entity.vehicle.minecart.Minecart",
+  "net.minecraft.world.item.BowItem",
+  "net.minecraft.world.item.BrushItem",
+  "net.minecraft.world.item.CrossbowItem",
+  "net.minecraft.world.item.InstrumentItem",
+  "net.minecraft.world.item.MapItem",
+  "net.minecraft.world.item.PotionItem",
+  "net.minecraft.world.item.ShieldItem",
+  "net.minecraft.world.item.TridentItem",
+  "net.minecraft.world.level.block.AirBlock",
+  "net.minecraft.world.level.block.IronBarsBlock",
+  "net.minecraft.world.level.block.LadderBlock",
+  "net.minecraft.world.level.block.PowderSnowBlock",
+  "net.minecraft.world.level.block.ScaffoldingBlock",
+  "net.minecraft.world.level.block.TwistingVinesBlock",
+  "net.minecraft.world.level.block.TwistingVinesPlantBlock",
+  "net.minecraft.world.level.block.VineBlock",
+  "and 45 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "cpa-5.9.10-fabric+26.3.jar",
   "published": "2026-10-03"
  },
@@ -30,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -51,5 +91,9 @@
   "minecraft",
   "player_animation_library"
  ],
- "lacks": 1
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 85
 }

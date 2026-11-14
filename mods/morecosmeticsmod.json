@@ -9,7 +9,6 @@
  "author": "CosmeticsMod",
  "description": "MoreCosmetics adds cosmetics to Minecraft, such as hats, wings, shields and cloaks. Everything free and fully customizable!",
  "needs": [
-  "Mixin",
   "io.netty.bootstrap.Bootstrap",
   "io.netty.channel.Channel",
   "io.netty.channel.ChannelFuture",
@@ -24,22 +23,40 @@
   "io.netty.channel.epoll.EpollSocketChannel",
   "io.netty.channel.nio.NioEventLoopGroup",
   "io.netty.channel.socket.nio.NioSocketChannel",
+  "net.minecraft.client.Screenshot",
+  "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
+  "net.minecraft.client.gui.components.OptionsList",
+  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
+  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
+  "net.minecraft.client.gui.screens.options.OptionsSubScreen",
+  "net.minecraft.client.gui.screens.options.SkinCustomizationScreen",
+  "net.minecraft.client.model.geom.PartPose",
+  "net.minecraft.client.model.geom.builders.CubeDeformation",
+  "net.minecraft.client.model.geom.builders.CubeListBuilder",
+  "net.minecraft.client.model.geom.builders.MeshDefinition",
+  "net.minecraft.client.model.geom.builders.PartDefinition",
+  "net.minecraft.client.model.player.PlayerCapeModel",
+  "net.minecraft.client.model.player.PlayerModel",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.layers.RenderLayer",
+  "net.minecraft.client.renderer.entity.player.AvatarRenderer",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
+  "net.minecraft.server.packs.resources.ReloadableResourceManager",
+  "net.minecraft.world.entity.Pose",
+  "net.minecraft.world.entity.player.PlayerSkin.Patch",
   "org.apache.commons.io.FileUtils",
   "org.apache.commons.io.IOUtils",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "org.apache.logging.log4j.core.LoggerContext",
   "org.apache.logging.log4j.core.config.Configuration",
-  "org.apache.logging.log4j.core.lookup.Interpolator",
-  "org.apache.logging.log4j.core.lookup.StrSubstitutor",
-  "org.lwjgl.opengl.GL11"
+  "and 59 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "MoreCosmetics-Fabric-26.3.jar",
   "published": "2026-09-24"
  },
@@ -51,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -67,5 +84,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 23
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 99
 }

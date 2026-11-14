@@ -9,25 +9,19 @@
  "author": "ItzNoobster",
  "description": "Turns sea pickles into spinning-mob spawners and iron chestplates into elytra, with a right-click spawner menu. Most popular DonutSMP Scamming/faking mod.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
-  "net.minecraft.client.gui.components.CycleButton.OnValueChange",
   "net.minecraft.client.multiplayer.ClientChunkCache",
   "net.minecraft.client.renderer.blockentity.SpawnerRenderer",
+  "net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer",
   "net.minecraft.world.item.component.ItemLore",
   "net.minecraft.world.level.LightLayer",
+  "net.minecraft.world.level.block.SeaPickleBlock",
   "LevelRenderEvents.COLLECT_SUBMITS",
   "KeyMapping.matches()",
   "Minecraft.getEntityRenderDispatcher()",
-  "Minecraft.setScreenAndShow()",
-  "Options.keyInventory",
   "GuiGraphicsExtractor.setTooltipForNextFrame()",
-  "EditBox.setHint()",
-  "Screen.mouseClicked()",
   "ClientLevel.getBrightness()",
   "ClientLevel.getChunkSource()",
   "ClientLevel.getSectionYFromSectionIndex()",
@@ -39,10 +33,6 @@
   "DataComponents.CUSTOM_NAME",
   "DataComponents.ITEM_NAME",
   "DataComponents.LORE",
-  "MutableComponent.withStyle()",
-  "Style.withObfuscated()",
-  "Style.withStrikethrough()",
-  "Style.withUnderlined()",
   "Entity.getBbHeight()",
   "Entity.getBbWidth()",
   "Entity.setId()",
@@ -50,14 +40,19 @@
   "Items.BONE",
   "Items.IRON_CHESTPLATE",
   "Items.SEA_PICKLE",
-  "and 6 more"
+  "Items.SPAWNER",
+  "Blocks.SEA_PICKLE",
+  "LevelChunk.getSections()",
+  "LevelChunkSection.getBlockState()",
+  "LevelChunkSection.hasOnlyAir()",
+  "LevelChunkSection.maybeHas()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "pickles-to-skellys-4.0.0mc26.3.jar",
   "published": "2026-11-04"
  },
@@ -69,8 +64,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +80,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 46
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 37
 }

@@ -9,21 +9,18 @@
  "author": "kryparnold",
  "description": "Makes item frames more useful by shrinking hitboxes and making them invisible.",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
-  "ClientPlayNetworking.canSend()",
-  "MinecraftServer.execute()"
+  "Mixin: 2 points inside the game's methods",
+  "net.minecraft.world.entity.decoration.ItemFrame",
+  "MinecraftServer.execute()",
+  "AABB.ofSize()",
+  "Vec3.relative()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "itemframesplus-fabric-1.2.1+26.2.jar",
   "published": "2026-10-07"
  },
@@ -35,8 +32,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -55,5 +52,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 7
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 4
 }

@@ -9,13 +9,33 @@
  "author": "rofumer",
  "description": "Just Enough Book (JEB) – Minecraft Recipe Book Mod",
  "needs": [
-  "Mixin",
+  "Mixin: 8 points inside the game's methods",
   "net.minecraft.SharedConstants",
   "net.minecraft.client.ClientRecipeBook",
+  "net.minecraft.client.OptionInstance.TooltipSupplier",
+  "net.minecraft.client.gui.components.CycleButton.DisplayState",
+  "net.minecraft.client.gui.components.CycleButton.SpriteSupplier",
+  "net.minecraft.client.gui.components.WidgetSprites",
+  "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
+  "net.minecraft.client.gui.screens.recipebook.CraftingRecipeBookComponent",
+  "net.minecraft.client.gui.screens.recipebook.GhostSlots",
+  "net.minecraft.client.gui.screens.recipebook.OverlayRecipeComponent",
+  "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
+  "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent.TabInfo",
+  "net.minecraft.client.gui.screens.recipebook.RecipeBookPage",
+  "net.minecraft.client.gui.screens.recipebook.RecipeBookTabButton",
+  "net.minecraft.client.gui.screens.recipebook.RecipeButton",
   "net.minecraft.client.gui.screens.recipebook.RecipeCollection",
+  "net.minecraft.client.gui.screens.recipebook.RecipeCollection.CraftableStatus",
   "net.minecraft.client.gui.screens.recipebook.RecipeUpdateListener",
+  "net.minecraft.client.gui.screens.recipebook.SearchRecipeBookCategory",
   "net.minecraft.client.multiplayer.SessionSearchTrees",
+  "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.core.HolderSet.Named",
+  "net.minecraft.network.protocol.game.ServerboundRecipeBookSeenRecipePacket",
+  "net.minecraft.stats.RecipeBook",
+  "net.minecraft.stats.ServerRecipeBook",
+  "net.minecraft.stats.ServerRecipeBook.DisplayResolver",
   "net.minecraft.world.item.TooltipFlag.Default",
   "net.minecraft.world.item.crafting.RecipeBookCategories",
   "net.minecraft.world.item.crafting.display.FurnaceRecipeDisplay",
@@ -29,27 +49,15 @@
   "net.minecraft.world.item.crafting.display.SlotDisplayContext",
   "net.minecraft.world.item.crafting.display.SmithingRecipeDisplay",
   "net.minecraft.world.item.crafting.display.StonecutterRecipeDisplay",
-  "ChatFormatting.stripFormatting()",
-  "Minecraft.gameDirectory",
-  "ClientPacketListener.searchTrees()",
-  "LocalPlayer.getRecipeBook()",
-  "DefaultedRegistry.get()",
-  "HolderSet.emptyNamed()",
-  "RegistryAccess.lookupOrThrow()",
-  "BuiltInRegistries.RECIPE_BOOK_CATEGORY",
-  "Registries.TRIM_PATTERN",
-  "AbstractCraftingMenu.getGridHeight()",
-  "AbstractCraftingMenu.getGridWidth()",
-  "Item.TooltipContext.of()",
-  "ItemStack.getTooltipLines()",
-  "SlotDisplay.resolveForStacks()"
+  "net.minecraft.world.level.storage.WorldData",
+  "and 41 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "JEB-1.1.2-26.3.jar",
   "published": "2026-10-10"
  },
@@ -61,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -77,5 +85,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 33
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 81
 }

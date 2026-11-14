@@ -9,18 +9,18 @@
  "author": "YeahAkis_",
  "description": "Renders chests as normal blocks instead of block entities, so big storage rooms stop eating your FPS",
  "needs": [
-  "Mixin",
+  "net.minecraft.client.renderer.block.BlockModelSet",
   "net.minecraft.world.level.block.CopperChestBlock",
   "Blocks.CHEST",
   "Blocks.ENDER_CHEST",
   "Blocks.TRAPPED_CHEST"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fastchestrevived-fabric-2.0.jar",
   "published": "2026-10-20"
  },
@@ -37,5 +37,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 4
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 5
 }

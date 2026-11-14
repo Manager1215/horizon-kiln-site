@@ -1,7 +1,7 @@
 {
  "id": "kinetic-minecart",
  "name": "Kinetic Minecart",
- "version": "2.6.0-alpha.1+26.3",
+ "version": "2.6.1+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,18 +9,32 @@
  "author": "KSSJW",
  "description": "This mod increases damage to moving minecarts; the faster they move, the higher the damage, with virtually no damage limit!",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "ServerTickEvents.END_SERVER_TICK"
+  "net.minecraft.world.entity.animal.equine.AbstractHorse",
+  "net.minecraft.world.entity.vehicle.minecart.Minecart",
+  "ServerPlayer.connection",
+  "ServerGamePacketListenerImpl.send()",
+  "DamageSources.flyIntoWall()",
+  "Entity.getBoundingBox()",
+  "Entity.getVehicle()",
+  "Entity.hasCustomName()",
+  "Entity.isAlive()",
+  "Entity.isPassenger()",
+  "Entity.kill()",
+  "TamableAnimal.getOwner()",
+  "TamableAnimal.isTame()",
+  "AbstractMinecart.getBoundingBox()",
+  "Level.getEntities()",
+  "AABB.inflate()",
+  "AABB.intersects()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "kinetic-minecart-2.6.0-alpha.1+26.3.jar",
-  "published": "2026-09-17"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "kinetic-minecart-2.6.1+26.3.jar",
+  "published": "2026-11-14"
  },
  "reports": {
   "works": 0,
@@ -30,8 +44,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -43,10 +57,13 @@
  },
  "mixins": true,
  "depends": [
-  "fabric-api",
   "fabricloader",
   "java",
   "minecraft"
  ],
- "lacks": 2
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 17
 }

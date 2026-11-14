@@ -11,18 +11,16 @@
  "needs": [
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
   "net.minecraft.server.network.Filterable",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.world.item.component.WrittenBookContent",
   "net.minecraft.world.level.block.ChestBlock",
   "net.minecraft.world.level.block.state.properties.ChestType",
   "DataComponents.WRITTEN_BOOK_CONTENT",
   "Component.plainCopy()",
-  "MutableComponent.setStyle()",
-  "MutableComponent.withStyle()",
   "ServerPlayer.connection",
   "ServerPlayer.createCommandSourceStack()",
   "ServerPlayer.getOnPos()",
   "ServerPlayer.openItemGui()",
+  "ServerGamePacketListenerImpl.send()",
   "Items.WRITTEN_BOOK",
   "CustomData.copyTag()",
   "Blocks.CHEST",
@@ -32,8 +30,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "universalledger-1.2.1.jar",
   "published": "2026-10-03"
  },
@@ -45,8 +43,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -60,5 +58,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 18
+ "softOff": {
+  "class": "partial",
+  "why": "data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 16
 }

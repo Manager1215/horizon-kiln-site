@@ -10,7 +10,8 @@
  "description": "Move cushions around by attaching leashes to them!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 4 points inside the game's methods",
+  "net.minecraft.client.renderer.entity.CushionRenderer",
   "net.minecraft.client.renderer.entity.state.CushionRenderState",
   "net.minecraft.util.BlockUtil",
   "net.minecraft.util.BlockUtil.FoundRectangle",
@@ -24,7 +25,6 @@
   "Entity.move()",
   "Entity.refreshDimensions()",
   "Entity.setPos()",
-  "Entity.tick()",
   "Leashable.mayBeLeashed()",
   "LivingEntity.resetForwardDirectionOfRelativePortalPosition()",
   "Block.getFriction()"
@@ -33,8 +33,8 @@
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "LeashableCushions-Fabric-0.2.1.jar",
   "published": "2026-09-15"
  },
@@ -52,5 +52,9 @@
   "java",
   "minecraft"
  ],
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method and @wrap-operation into the game's classes"
+ },
  "lacks": 17
 }

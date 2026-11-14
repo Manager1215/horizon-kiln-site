@@ -1,7 +1,7 @@
 {
  "id": "embers-and-icicles",
  "name": "Embers and Icicles",
- "version": "1.0.8+26.3-fabric",
+ "version": "1.0.9+26.3-fabric",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,7 +9,7 @@
  "author": "Cassian",
  "description": "An expansion on Fire and Ice, featuring status effects for Burning and Freezing and backports from 26.4.",
  "needs": [
-  "Mixin",
+  "Mixin: 8 points inside the game's methods",
   "net.fabricmc.fabric.api.advancement.v1.AdvancementEvents",
   "net.fabricmc.fabric.api.advancement.v1.AdvancementEvents.Modify",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
@@ -27,6 +27,7 @@
   "net.minecraft.advancements.predicates.MobEffectsPredicate.Builder",
   "net.minecraft.advancements.triggers.EffectsChangedTrigger",
   "net.minecraft.advancements.triggers.EffectsChangedTrigger.TriggerInstance",
+  "net.minecraft.client.gui.Hud.HeartType",
   "net.minecraft.client.model.geom.ModelLayers",
   "net.minecraft.client.model.geom.builders.CubeDeformation",
   "net.minecraft.client.model.monster.zombie.BabyZombieModel",
@@ -45,21 +46,20 @@
   "net.minecraft.core.particles.BlockParticleOption",
   "net.minecraft.core.particles.ItemParticleOption",
   "net.minecraft.core.registries.codec.RegistryCodecs",
+  "net.minecraft.data.advancements.packs.VanillaAdventureAdvancements",
   "net.minecraft.references.BlockItemId",
-  "net.minecraft.tags.EntityTypeTags",
-  "net.minecraft.util.valueproviders.ClampedNormalFloat",
-  "net.minecraft.util.valueproviders.FloatProvider",
-  "net.minecraft.util.valueproviders.FloatProviders",
+  "net.minecraft.tags.BlockItemTagId",
+  "net.minecraft.tags.DamageTypeTags",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "embers_and_icicles-1.0.8+26.3-fabric.jar",
-  "published": "2026-11-04"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "embers_and_icicles-1.0.9+26.3-fabric.jar",
+  "published": "2026-11-06"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +85,9 @@
   "fabric-api",
   "fabricloader"
  ],
- "lacks": 201
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 243
 }

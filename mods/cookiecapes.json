@@ -9,7 +9,7 @@
  "author": "Alexa3004",
  "description": "CookieCapes lets you upload your own custom capes. Anyone with the mod can see your cape in-game.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.minecraft.SessionService",
   "net.minecraft.CrashReport",
@@ -19,11 +19,11 @@
   "net.minecraft.client.gui.components.MultiLineEditBox.Builder",
   "net.minecraft.client.gui.components.MultiLineTextWidget",
   "net.minecraft.client.gui.components.ScrollableLayout",
-  "net.minecraft.client.gui.components.StringWidget",
   "net.minecraft.client.gui.components.StringWidget.TextOverflow",
-  "net.minecraft.client.gui.components.Tooltip",
+  "net.minecraft.client.gui.layouts.AbstractLayout.AbstractChildWrapper",
   "net.minecraft.client.gui.layouts.FrameLayout",
   "net.minecraft.client.gui.layouts.GridLayout",
+  "net.minecraft.client.gui.layouts.GridLayout.ChildContainer",
   "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
   "net.minecraft.client.gui.layouts.LayoutSettings",
@@ -34,9 +34,10 @@
   "net.minecraft.client.model.geom.ModelPart.Polygon",
   "net.minecraft.client.model.geom.ModelPart.Vertex",
   "net.minecraft.client.multiplayer.chat.ChatListener",
+  "net.minecraft.client.renderer.entity.layers.CapeLayer",
+  "net.minecraft.client.renderer.entity.player.AvatarRenderer",
   "net.minecraft.client.renderer.entity.state.AvatarRenderState",
   "net.minecraft.client.renderer.texture.DynamicTexture",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
   "org.apache.commons.io.IOUtils",
   "org.lwjgl.PointerBuffer",
   "org.lwjgl.system.Checks",
@@ -49,15 +50,14 @@
   "NativeImage.getWidth()",
   "NativeImage.read()",
   "NativeImage.read()",
-  "NativeImage.setPixel()",
-  "and 32 more"
+  "and 22 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "cookiecapes-fabric-26.3-6.0.0.jar",
   "published": "2026-11-04"
  },
@@ -77,5 +77,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 72
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 62
 }

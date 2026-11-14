@@ -9,7 +9,6 @@
  "author": "sea-sky-coder",
  "description": "Allow you to freely adjust the generation quantity of various ores (including ores in other mods).",
  "needs": [
-  "Mixin",
   "net.minecraft.client.gui.ActiveTextCollector",
   "net.minecraft.client.gui.TextAlignment",
   "net.minecraft.util.valueproviders.ConstantInt",
@@ -18,25 +17,17 @@
   "net.minecraft.world.level.levelgen.feature.ScatteredOreFeature",
   "net.minecraft.world.level.levelgen.placement.CountPlacement",
   "net.minecraft.world.level.levelgen.placement.RarityFilter",
-  "ClientPlayNetworking.canSend()",
-  "ServerPlayNetworking.canSend()",
-  "Minecraft.execute()",
   "GuiGraphicsExtractor.textRenderer()",
-  "EditBox.setHint()",
-  "Screen.mouseScrolled()",
-  "CommandSourceStack.getTextName()",
-  "Commands.LEVEL_GAMEMASTERS",
-  "Commands.hasPermission()",
   "CommonComponents.GUI_CANCEL",
   "CommonComponents.GUI_DONE",
   "MinecraftServer.execute()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "rich-ore-vein-fabric-1.0.1+26.3.jar",
   "published": "2026-09-28"
  },
@@ -48,8 +39,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -65,5 +56,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 20
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 12
 }

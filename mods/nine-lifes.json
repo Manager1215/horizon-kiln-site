@@ -1,7 +1,7 @@
 {
  "id": "nine-lifes",
  "name": "Nine lifes",
- "version": "7.1+26.3",
+ "version": "8.1+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,7 +9,7 @@
  "author": "bleudev",
  "description": "Nine lifes - is a mod which gives you only 9 lifes for entire your survival. Cool challenge for those who are tired of the vanilla hardcore",
  "needs": [
-  "Mixin",
+  "Mixin: 5 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.buffers.Std140Builder",
   "com.mojang.blaze3d.buffers.Std140SizeCalculator",
@@ -27,12 +27,13 @@
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents.AllowLoad",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.BooleanRuleBuilder",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.IntegerRuleBuilder",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
   "net.fabricmc.loader.api.metadata.Person",
+  "net.minecraft.client.gui.components.PlayerTabOverlay",
+  "net.minecraft.client.gui.screens.inventory.EffectsInInventory",
   "net.minecraft.client.model.EntityModel",
   "net.minecraft.client.model.geom.ModelLayers",
   "net.minecraft.client.model.object.armorstand.ArmorStandArmorModel",
@@ -41,6 +42,7 @@
   "net.minecraft.client.renderer.MappableRingBuffer",
   "net.minecraft.client.renderer.PostChain",
   "net.minecraft.client.renderer.PostChain.TargetBundle",
+  "net.minecraft.client.renderer.PostPass",
   "net.minecraft.client.renderer.ShaderManager",
   "net.minecraft.client.renderer.entity.ArmorModelSet",
   "net.minecraft.client.renderer.entity.ArmorStandRenderer",
@@ -48,18 +50,16 @@
   "net.minecraft.client.renderer.entity.HumanoidMobRenderer",
   "net.minecraft.client.renderer.entity.LivingEntityRenderer",
   "net.minecraft.client.renderer.entity.RenderLayerParent",
-  "net.minecraft.client.renderer.entity.layers.CustomHeadLayer",
-  "net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer",
   "and 80 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "nine_lifes-7.1+26.3.jar",
-  "published": "2026-10-13"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "nine_lifes-8.1+26.3.jar",
+  "published": "2026-11-06"
  },
  "reports": {
   "works": 0,
@@ -69,17 +69,17 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
  },
  "entrypoints": {
-  "fabric-datagen": 1,
+  "main": 1,
   "client": 1,
-  "modmenu": 1,
-  "main": 1
+  "fabric-datagen": 1,
+  "modmenu": 1
  },
  "mixins": true,
  "depends": [
@@ -89,5 +89,9 @@
   "minecraft",
   "yet_another_config_lib_v3"
  ],
- "lacks": 225
+ "softOff": {
+  "class": "restart",
+  "why": "@modify-args and @redirect and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 221
 }

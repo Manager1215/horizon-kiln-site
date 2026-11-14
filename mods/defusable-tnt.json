@@ -9,19 +9,49 @@
  "author": "AutisticPlush",
  "description": "Defusable TNT via means of Water Bottles, and their splash and lingering counterparts",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
   "net.minecraft.advancements.triggers.PlayerTrigger",
+  "net.minecraft.world.entity.ai.ActivityData",
+  "net.minecraft.world.entity.ai.behavior.Behavior",
+  "net.minecraft.world.entity.ai.navigation.PathNavigation",
+  "net.minecraft.world.entity.animal.allay.Allay",
+  "net.minecraft.world.entity.animal.allay.AllayAi",
+  "net.minecraft.world.entity.monster.cubemob.AbstractCubeMob",
+  "net.minecraft.world.entity.monster.cubemob.SulfurCube",
+  "net.minecraft.world.entity.projectile.throwableitemprojectile.AbstractThrownPotion",
+  "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile",
+  "net.minecraft.world.entity.vehicle.minecart.MinecartTNT",
+  "ImmutableList.getFirst()",
+  "ImmutableList.stream()",
   "ServerPlayerEvents.JOIN",
+  "Holder.is()",
   "BuiltInRegistries.TRIGGER_TYPES",
-  "Registries.POTION"
+  "Registries.POTION",
+  "SynchedEntityData.set()",
+  "ServerLevel.getGameRules()",
+  "Entity.<init>()",
+  "Entity.isAlive()",
+  "Entity.kill()",
+  "EntityTypes.SULFUR_CUBE",
+  "EntityTypes.TNT",
+  "EntityTypes.TNT_MINECART",
+  "Inventory.getSlot()",
+  "ItemStack.count()",
+  "Items.GLASS_BOTTLE",
+  "Items.TNT",
+  "Items.TNT_MINECART",
+  "Level.getEntitiesOfClass()",
+  "GameRules.ENTITY_DROPS",
+  "GameRules.get()",
+  "AABB.inflate()",
+  "AABB.inflate()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "tnt_defuse-1.2.2+fabric+26.3.jar",
   "published": "2026-09-15"
  },
@@ -33,8 +63,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -50,5 +80,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 5
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 36
 }

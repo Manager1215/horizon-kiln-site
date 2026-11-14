@@ -10,7 +10,7 @@
  "description": "Rechiseled allows you to chisel blocks into various decorative blocks with connected textures!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "com.mojang.blaze3d.platform.cursor.CursorType",
   "net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadEmitter",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionEvents.EndExtraction",
@@ -23,13 +23,13 @@
   "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
   "net.minecraft.advancements.predicates.StatePropertiesPredicate",
   "net.minecraft.advancements.predicates.StatePropertiesPredicate.Builder",
+  "net.minecraft.server.ReloadableServerResources",
   "net.minecraft.server.packs.PackResources.ResourceOutput",
   "net.minecraft.server.packs.VanillaPackResources",
   "net.minecraft.server.packs.repository.Pack",
   "net.minecraft.server.packs.repository.PackRepository",
   "net.minecraft.server.packs.repository.ServerPacksSource",
   "net.minecraft.server.packs.resources.MultiPackResourceManager",
-  "net.minecraft.world.inventory.ContainerInput",
   "net.minecraft.world.level.EmptyBlockGetter",
   "net.minecraft.world.level.block.state.BlockBehaviour.StateArgumentPredicate",
   "net.minecraft.world.level.block.state.BlockBehaviour.StatePredicate",
@@ -47,18 +47,18 @@
   "FabricPackOutput.getOutputFolder()",
   "FabricLoader.getEntrypointContainers()",
   "Minecraft.getBlockColors()",
-  "Minecraft.hitResult",
   "Minecraft.resourcePackRepository",
   "Options.advancedItemTooltips",
   "BlockColors.getTintSources()",
+  "BlockTintSource.colorInWorld()",
   "and 49 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "rechiseled-1.2.6a-fabric-mc26.3.jar",
   "published": "2026-10-06"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -92,5 +92,9 @@
   "supermartijn642configlib",
   "supermartijn642corelib"
  ],
- "lacks": 340
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 326
 }

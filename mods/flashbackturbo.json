@@ -9,15 +9,19 @@
  "author": "Zeffut",
  "description": "Field-proven faster Flashback exports, without quality loss — up to ~11x, ~8.5s for a 1080p60 clip on NVIDIA.",
  "needs": [
-  "Mixin",
-  "org.lwjgl.opengl.GL11"
+  "org.lwjgl.opengl.GL11",
+  "NativeImage.format()",
+  "NativeImage.getHeight()",
+  "NativeImage.getPixelsABGR()",
+  "NativeImage.getWidth()",
+  "NativeImage.Format.hasAlpha()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "flashbackturbo-0.6.2+26.3.jar",
   "published": "2026-10-03"
  },
@@ -29,8 +33,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -46,5 +50,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 1
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 6
 }

@@ -9,26 +9,55 @@
  "author": "ZsoltMolnarrr",
  "description": "🏹 Create fully functional bows and crossbows, with ease",
  "needs": [
-  "Mixin",
+  "Mixin: 21 points inside the game's methods",
+  "net.minecraft.client.player.FirstPersonHandsAndItems",
+  "net.minecraft.client.renderer.entity.AbstractSkeletonRenderer",
+  "net.minecraft.client.renderer.entity.player.AvatarRenderer",
   "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperties",
   "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty",
   "net.minecraft.client.renderer.item.properties.numeric.UseDuration",
+  "net.minecraft.core.component.DataComponentInitializers",
+  "net.minecraft.core.component.DataComponentInitializers.Initializer",
+  "net.minecraft.tags.ItemTags",
+  "net.minecraft.world.entity.ai.attributes.AttributeMap",
+  "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
+  "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
   "net.minecraft.world.entity.ai.attributes.RangedAttribute",
+  "net.minecraft.world.entity.ai.behavior.CrossbowAttack",
+  "net.minecraft.world.entity.ai.goal.RangedBowAttackGoal",
+  "net.minecraft.world.entity.ai.goal.RangedCrossbowAttackGoal",
+  "net.minecraft.world.entity.monster.illager.Pillager",
+  "net.minecraft.world.entity.monster.piglin.Piglin",
+  "net.minecraft.world.entity.monster.skeleton.AbstractSkeleton",
+  "net.minecraft.world.entity.projectile.ProjectileUtil",
+  "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
   "net.minecraft.world.item.BowItem",
   "net.minecraft.world.item.CrossbowItem",
-  "net.minecraft.world.item.alchemy.Potion",
+  "net.minecraft.world.item.ItemUseAnimation",
+  "net.minecraft.world.item.ProjectileWeaponItem",
+  "net.minecraft.world.item.component.ItemAttributeModifiers.Display.Default",
+  "AbstractClientPlayer.getUseItem()",
   "BuiltInRegistries.ATTRIBUTE",
-  "BuiltInRegistries.POTION",
+  "CommonComponents.space()",
   "MobEffect.addAttributeModifier()",
+  "Entity.<init>()",
   "ItemOwner.asLivingEntity()",
-  "LivingEntity.getUseItem()"
+  "LivingEntity.getUseItem()",
+  "LivingEntity.isUsingItem()",
+  "Mob.getAttributes()",
+  "AttributeModifier.is()",
+  "Item.components()",
+  "ItemStack.getUseAnimation()",
+  "ItemStack.getUseDuration()",
+  "Items.BOW",
+  "and 3 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ranged_weapon_api-fabric-4.0.0+26.3.jar",
   "published": "2026-09-28"
  },
@@ -40,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -58,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 12
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 43
 }

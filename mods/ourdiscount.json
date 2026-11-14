@@ -9,42 +9,31 @@
  "author": "LukysGaming",
  "description": "This mod allows a villager's discount to be shared with all players on the server.",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
-  "net.fabricmc.api.DedicatedServerModInitializer",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
   "net.fabricmc.fabric.api.networking.v1.ServerConfigurationConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.server.network.ServerLoginPacketListenerImpl",
   "net.minecraft.world.entity.ai.gossip.GossipContainer",
   "net.minecraft.world.entity.ai.gossip.GossipType",
   "net.minecraft.world.entity.npc.villager.Villager",
+  "ServerLifecycleEvents.SERVER_STARTING",
   "ServerConfigurationConnectionEvents.DISCONNECT",
-  "CommandSourceStack.getServer()",
-  "EntityArgument.getPlayer()",
-  "EntityArgument.player()",
   "Connection.isConnected()",
-  "MutableComponent.withStyle()",
-  "Style.withClickEvent()",
-  "Style.withHoverEvent()",
+  "Connection.isMemoryConnection()",
   "MinecraftServer.getAllLevels()",
-  "MinecraftServer.getPlayerList()",
+  "MinecraftServer.getSingleplayerProfile()",
+  "MinecraftServer.isDedicatedServer()",
   "ServerLevel.getAllEntities()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ourdiscount-26.3.jar",
-  "published": "2026-09-28"
+  "published": "2026-11-07"
  },
  "reports": {
   "works": 0,
@@ -52,8 +41,16 @@
   "broken": 0,
   "latest": []
  },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
  "entrypoints": {
-  "server": 1
+  "main": 1
  },
  "mixins": true,
  "depends": [
@@ -63,5 +60,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 26
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 16
 }

@@ -9,13 +9,13 @@
  "author": "Monte_Carlo_Simulations",
  "description": "Craft or Dump items using nearby inventories. Vanilla Friendly Server Plugin, No Client Install Required.",
  "needs": [
-  "Mixin",
+  "net.minecraft.recipebook.ServerPlaceRecipe",
   "net.minecraft.world.entity.animal.equine.AbstractChestedHorse",
+  "net.minecraft.world.entity.animal.equine.AbstractHorse",
+  "net.minecraft.world.inventory.ContainerLevelAccess",
+  "net.minecraft.world.inventory.CraftingMenu",
   "net.minecraft.world.level.block.ChestBlock",
   "net.minecraft.world.level.block.state.properties.ChestType",
-  "CommandSourceStack.getPlayerOrException()",
-  "Commands.LEVEL_GAMEMASTERS",
-  "Commands.hasPermission()",
   "DataComponents.CUSTOM_NAME",
   "ServerChunkCache.getChunkNow()",
   "ServerLevel.getEntitiesOfClass()",
@@ -24,6 +24,7 @@
   "Entity.isAlive()",
   "Inventory.isHotbarSlot()",
   "StackedItemContents.accountSimpleStack()",
+  "ItemStack.<init>()",
   "Blocks.ENDER_CHEST",
   "BlockStateProperties.CHEST_TYPE",
   "LevelChunk.getBlockEntities()",
@@ -35,12 +36,12 @@
   "BoundingBox.minZ()",
   "AABB.inflate()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "nearby_inventory-fabric-1.0.1.jar",
   "published": "2026-10-21"
  },
@@ -52,8 +53,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -69,5 +70,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 24
+ "softOff": {
+  "class": "partial",
+  "why": "data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 26
 }

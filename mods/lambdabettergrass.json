@@ -10,7 +10,7 @@
  "description": "A Minecraft mod which adds better grass and snow to the game.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 12 points inside the game's methods",
   "com.mojang.blaze3d.Blaze3D",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin.Context",
@@ -28,16 +28,20 @@
   "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
   "net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys",
   "net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys.Client",
+  "net.minecraft.CrashReport",
+  "net.minecraft.CrashReportCategory",
+  "net.minecraft.SystemReport",
   "net.minecraft.client.OptionInstance.CaptionBasedToString",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
-  "net.minecraft.client.OptionInstance.ValueSet",
   "net.minecraft.client.OptionInstance.ValueUpdateListener",
   "net.minecraft.client.gui.screens.options.OptionsSubScreen",
+  "net.minecraft.client.gui.screens.options.VideoSettingsScreen",
   "net.minecraft.client.renderer.BiomeColors",
   "net.minecraft.client.renderer.block.dispatch.BlockStateModel.UnbakedRoot",
   "net.minecraft.client.renderer.extract.LevelExtractor",
   "net.minecraft.data.PackOutput.PathProvider",
   "net.minecraft.data.PackOutput.Target",
+  "net.minecraft.server.Bootstrap",
   "net.minecraft.server.packs.resources.PreparableReloadListener.StateKey",
   "net.minecraft.world.level.block.BaseCoralPlantTypeBlock",
   "net.minecraft.world.level.block.BaseTorchBlock",
@@ -47,18 +51,14 @@
   "net.minecraft.world.level.block.CandleCakeBlock",
   "net.minecraft.world.level.block.CarpetBlock",
   "net.minecraft.world.level.block.ChainBlock",
-  "net.minecraft.world.level.block.ChestBlock",
-  "net.minecraft.world.level.block.CopperChestBlock",
-  "net.minecraft.world.level.block.CopperGolemStatueBlock",
-  "net.minecraft.world.level.block.FlowerBedBlock",
-  "and 53 more"
+  "and 56 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "lambdabettergrass-2.9.0+26.3.jar",
   "published": "2026-09-16"
  },
@@ -85,5 +85,9 @@
   "spruceui",
   "yumi_mc_core"
  ],
- "lacks": 93
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 96
 }

@@ -9,7 +9,7 @@
  "author": "alejandrocoria",
  "description": "This mod is an addon for JourneyMap that allows you to divide the map into regions and assign them names and colors.",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.GameProfileRepository",
   "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowChat",
@@ -17,14 +17,10 @@
   "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.BeforeMouseRelease",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.SharedConstants",
   "net.minecraft.client.InputType",
   "net.minecraft.client.gui.ComponentPath",
   "net.minecraft.client.gui.components.MultiLineTextWidget",
-  "net.minecraft.client.gui.components.StringWidget",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.layouts.FrameLayout",
   "net.minecraft.client.gui.layouts.GridLayout",
   "net.minecraft.client.gui.layouts.Layout",
@@ -37,7 +33,6 @@
   "net.minecraft.client.gui.navigation.FocusNavigationEvent.InitialFocus",
   "net.minecraft.client.gui.navigation.FocusNavigationEvent.TabNavigation",
   "net.minecraft.client.gui.navigation.ScreenAxis",
-  "net.minecraft.client.gui.navigation.ScreenDirection",
   "net.minecraft.client.model.geom.ModelLayers",
   "net.minecraft.client.model.geom.ModelPart.Polygon",
   "net.minecraft.client.model.geom.ModelPart.Vertex",
@@ -45,19 +40,24 @@
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.data.AtlasIds",
   "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.nbt.NbtIo",
   "net.minecraft.nbt.TagType",
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
-  "and 74 more"
+  "net.minecraft.network.chat.PlayerChatMessage",
+  "net.minecraft.util.StringUtil",
+  "net.minecraft.world.item.BannerItem",
+  "net.minecraft.world.level.block.entity.BannerPattern",
+  "net.minecraft.world.level.block.entity.BannerPatternLayers",
+  "net.minecraft.world.level.block.entity.BannerPatternLayers.Builder",
+  "net.minecraft.world.level.block.entity.BannerPatternLayers.Layer",
+  "net.minecraft.world.level.block.entity.BannerPatterns",
+  "net.minecraft.world.level.storage.LevelResource",
+  "and 60 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "MapFrontiers-26.3-fabric-3.0.0-beta.13.jar",
   "published": "2026-09-24"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +89,9 @@
   "journeymap",
   "minecraft"
  ],
- "lacks": 168
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 103
 }

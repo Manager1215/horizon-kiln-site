@@ -9,39 +9,33 @@
  "author": "JeremySeq",
  "description": "Adds a directional damage indicator.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-  "net.minecraft.client.CameraType",
   "net.minecraft.world.phys.EntityHitResult",
   "NativeImage.read()",
   "LevelRenderEvents.COLLECT_SUBMITS",
   "Camera.rotation()",
-  "Minecraft.hitResult",
-  "Options.getCameraType()",
   "GuiGraphicsExtractor.blit()",
   "LocalPlayer.getForward()",
   "GameRenderer.mainCamera()",
-  "DamageSource.getEntity()",
-  "DamageSource.getSourcePosition()",
   "LivingEntity.getBbHeight()",
   "LivingEntity.getEyeY()",
   "LivingEntity.getLastDamageSource()",
   "LivingEntity.isAlive()",
+  "Player.fallDistance",
+  "Player.getAttackStrengthScale()",
   "Player.getLastDamageSource()",
+  "Player.isPassenger()",
+  "Player.onClimbable()",
   "Level.clip()",
-  "Level.getEntities()",
-  "Vec2.add()",
-  "Vec2.negated()",
-  "Vec2.x",
-  "Vec2.y"
+  "Level.getEntities()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "jdamageindicators-fabric-26.3-2.3.0.jar",
   "published": "2026-10-12"
  },
@@ -53,8 +47,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -70,5 +64,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 25
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 20
 }

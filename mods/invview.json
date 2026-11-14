@@ -9,16 +9,15 @@
  "author": "Potatoboy9999",
  "description": "Allows you to open and manipulate the inventories and ender chests of online and offline players. Server Side",
  "needs": [
-  "Mixin",
+  "Mixin: 15 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.minecraft.commands.arguments.GameProfileArgument",
-  "net.minecraft.nbt.NbtIo",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.core.component.DataComponentPatch.Builder",
   "net.minecraft.world.inventory.PlayerEnderChestContainer",
+  "net.minecraft.world.item.component.ResolvableProfile.Static",
+  "net.minecraft.world.level.block.entity.SignBlockEntity",
   "net.minecraft.world.level.storage.LevelResource",
   "ServerLifecycleEvents.SERVER_STARTING",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.getWorldPath()",
   "MinecraftServer.overworld()",
   "MinecraftServer.registryAccess()",
@@ -28,7 +27,7 @@
   "ServerPlayer.problemPath()",
   "ServerPlayer.registryAccess()",
   "ServerPlayer.saveWithoutId()",
-  "Util.safeReplaceFile()",
+  "PlayerList.loadPlayerData()",
   "Entity.load()",
   "MenuType.GENERIC_9x1",
   "MenuType.GENERIC_9x2",
@@ -42,8 +41,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "InvView-1.4.22-26.3+.jar",
   "published": "2026-09-26"
  },
@@ -55,8 +54,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -71,5 +70,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 27
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 26
 }

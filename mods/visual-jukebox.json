@@ -9,14 +9,17 @@
  "author": "tomalbrc",
  "description": "Shows the disc of jukeboxes, with a rotation animation and static option with insert/eject animation. Server-side for fabric",
  "needs": [
-  "Mixin"
+  "net.minecraft.world.item.JukeboxSongPlayer",
+  "net.minecraft.world.level.block.JukeboxBlock",
+  "net.minecraft.world.level.block.entity.JukeboxBlockEntity",
+  "Level.getChunkAt()"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "visualjukebox-1.2.0+26.3.jar",
   "published": "2026-10-01"
  },
@@ -28,8 +31,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -45,5 +48,9 @@
   "polymer-core",
   "polymer-virtual-entity"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 4
 }

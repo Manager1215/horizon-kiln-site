@@ -10,18 +10,18 @@
  "description": "A difficult, survival-based mod that adds body temperature and thirst!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.minecraft.advancements.triggers.ConsumeItemTrigger",
   "net.minecraft.advancements.triggers.CriteriaTriggers",
   "net.minecraft.client.gui.Hud.HeartType",
   "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.client.particle.ParticleProvider",
   "net.minecraft.client.particle.SingleQuadParticle",
   "net.minecraft.client.particle.SingleQuadParticle.Layer",
   "net.minecraft.client.particle.SpriteSet",
   "net.minecraft.client.renderer.BiomeColors",
+  "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperties",
   "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty",
   "net.minecraft.core.HolderSet.Named",
   "net.minecraft.tags.ItemTags",
@@ -38,9 +38,6 @@
   "net.minecraft.world.inventory.MenuType.MenuSupplier",
   "net.minecraft.world.inventory.SimpleContainerData",
   "net.minecraft.world.item.ItemUseAnimation",
-  "net.minecraft.world.item.alchemy.Potion",
-  "net.minecraft.world.item.alchemy.PotionContents",
-  "net.minecraft.world.item.alchemy.Potions",
   "net.minecraft.world.item.component.Consumables",
   "net.minecraft.world.item.component.DyedItemColor",
   "net.minecraft.world.item.crafting.RecipeAccess",
@@ -51,14 +48,17 @@
   "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
   "net.minecraft.world.level.gameevent.GameEvent.Context",
   "net.minecraft.world.level.levelgen.structure.pools.SinglePoolElement",
-  "and 63 more"
+  "net.minecraft.world.phys.shapes.BooleanOp",
+  "ImmutableList.stream()",
+  "InputConstants.isKeyDown()",
+  "and 58 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ToughAsNails-fabric-26.3-21.11.0.11.jar",
   "published": "2026-10-17"
  },
@@ -79,5 +79,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 188
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own; generates in the world"
+ },
+ "lacks": 167
 }

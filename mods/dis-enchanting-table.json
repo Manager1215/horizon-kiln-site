@@ -9,10 +9,8 @@
  "author": "Lupin",
  "description": "Recover enchantments from enchanted weapons or books!",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.resource.v1.DataResourceLoader",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.flag.FeatureFlags",
   "net.minecraft.world.inventory.ContainerData",
@@ -29,7 +27,6 @@
   "DataComponents.ENCHANTMENT_GLINT_OVERRIDE",
   "DataComponents.REPAIR_COST",
   "DataComponents.STORED_ENCHANTMENTS",
-  "MinecraftServer.getPlayerList()",
   "ServerLevel.sendParticles()",
   "FormattedCharSequence.forward()",
   "Player.giveExperienceLevels()",
@@ -48,12 +45,12 @@
   "HorizontalDirectionalBlock.destroy()",
   "MapColor.COLOR_BLUE"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "disenchanting_table-fabric-26.3-6.0.2.jar",
   "published": "2026-10-26"
  },
@@ -65,8 +62,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -83,5 +80,9 @@
   "minecraft",
   "monolib"
  ],
- "lacks": 37
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 35
 }

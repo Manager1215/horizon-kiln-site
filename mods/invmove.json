@@ -10,7 +10,7 @@
  "description": "Adds the ability to walk around while in inventories",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
   "net.minecraft.client.ToggleKeyMapping",
   "net.minecraft.client.gui.screens.GenericMessageScreen",
@@ -43,6 +43,7 @@
   "net.minecraft.client.gui.screens.inventory.JigsawBlockEditScreen",
   "net.minecraft.client.gui.screens.inventory.LoomScreen",
   "net.minecraft.client.gui.screens.inventory.MerchantScreen",
+  "net.minecraft.client.gui.screens.inventory.MerchantScreen.TradeOfferButton",
   "net.minecraft.client.gui.screens.inventory.MinecartCommandBlockEditScreen",
   "net.minecraft.client.gui.screens.inventory.ShulkerBoxScreen",
   "net.minecraft.client.gui.screens.inventory.SmithingScreen",
@@ -50,15 +51,14 @@
   "net.minecraft.client.gui.screens.inventory.StonecutterScreen",
   "net.minecraft.client.gui.screens.inventory.StructureBlockEditScreen",
   "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
-  "net.minecraft.client.player.ClientInput",
-  "and 23 more"
+  "and 20 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "InvMove-0.9.6+26.3-Fabric.jar",
   "published": "2026-09-16"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 63
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 60
 }

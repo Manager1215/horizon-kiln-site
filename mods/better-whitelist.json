@@ -9,7 +9,6 @@
  "author": "JFronny",
  "description": "A configurable whitelist system for Minecraft",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking",
   "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking.LoginQueryRequestHandler",
   "net.fabricmc.fabric.api.networking.v1.FriendlyByteBufs",
@@ -19,7 +18,6 @@
   "net.fabricmc.loader.api.metadata.ModEnvironment",
   "net.fabricmc.loader.api.metadata.Person",
   "net.minecraft.client.multiplayer.ClientHandshakePacketListenerImpl",
-  "net.minecraft.network.chat.ComponentContents",
   "net.minecraft.server.packs.repository.Pack",
   "net.minecraft.server.packs.repository.PackRepository",
   "ModMetadata.getAuthors()",
@@ -28,16 +26,14 @@
   "ModMetadata.getDependencies()",
   "ModMetadata.getEnvironment()",
   "ModMetadata.getLicense()",
-  "Minecraft.getResourcePackRepository()",
-  "FriendlyByteBuf.writeUtf()",
-  "Component.getContents()"
+  "Minecraft.getResourcePackRepository()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "better-whitelist-26.3.0.jar",
   "published": "2026-09-15"
  },
@@ -49,8 +45,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -67,5 +63,9 @@
   "libjf-base",
   "minecraft"
  ],
- "lacks": 21
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 18
 }

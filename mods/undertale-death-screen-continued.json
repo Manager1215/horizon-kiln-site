@@ -9,32 +9,32 @@
  "author": "Denmoth",
  "description": "Undertale Death Screen Continued is a direct fork of the original mod by Raik176. Since the original hasn't been updated or ported in a long time, this project keeps it alive by providing active support, bug fixes, and ports to modern Minecraft versions.",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.client.renderer.texture.MissingTextureAtlasSprite",
+  "net.minecraft.client.resources.sounds.AbstractTickableSoundInstance",
+  "net.minecraft.client.sounds.MusicManager",
   "net.minecraft.data.AtlasIds",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "NativeImage.format()",
   "NativeImage.getHeight()",
   "NativeImage.getPixel()",
   "NativeImage.getWidth()",
   "NativeImage.read()",
   "NativeImage.setPixel()",
-  "Minecraft.execute()",
-  "FriendlyByteBuf.readUtf()",
-  "FriendlyByteBuf.writeUtf()",
-  "CustomPacketPayload.codec()",
-  "Identifier.tryBuild()"
+  "Minecraft.getMusicManager()",
+  "GuiGraphicsExtractor.blitSprite()",
+  "LocalPlayer.isDeadOrDying()",
+  "Identifier.tryBuild()",
+  "Mth.smoothstep()",
+  "Util.getMillis()",
+  "Player.isFreezing()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "[26.3] undertale_death_screen-v3.0.1-fabric.jar",
   "published": "2026-10-03"
  },
@@ -46,8 +46,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -63,5 +63,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 18
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels"
+ },
+ "lacks": 19
 }

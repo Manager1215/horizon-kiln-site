@@ -9,18 +9,55 @@
  "author": "PixelIndieDev",
  "description": "Optimizes Minecraft mob AI by scaling calculations based on distance to players, improving performance with as minimal gameplay impact as possible",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
+  "net.minecraft.world.entity.EntityTypeIds",
+  "net.minecraft.world.entity.ai.Brain",
+  "net.minecraft.world.entity.ai.behavior.TransportItemsBetweenContainers",
+  "net.minecraft.world.entity.ai.behavior.TransportItemsBetweenContainers.TransportItemTarget",
+  "net.minecraft.world.entity.ai.control.LookControl",
+  "net.minecraft.world.entity.ai.goal.AvoidEntityGoal",
+  "net.minecraft.world.entity.ai.goal.FloatGoal",
+  "net.minecraft.world.entity.ai.goal.FollowMobGoal",
+  "net.minecraft.world.entity.ai.goal.LookAtPlayerGoal",
+  "net.minecraft.world.entity.ai.goal.MeleeAttackGoal",
+  "net.minecraft.world.entity.ai.goal.MoveThroughVillageGoal",
+  "net.minecraft.world.entity.ai.goal.MoveToBlockGoal",
+  "net.minecraft.world.entity.ai.goal.OcelotAttackGoal",
+  "net.minecraft.world.entity.ai.goal.RandomLookAroundGoal",
+  "net.minecraft.world.entity.ai.goal.RandomStrollGoal",
+  "net.minecraft.world.entity.ai.goal.RangedAttackGoal",
+  "net.minecraft.world.entity.ai.goal.RangedBowAttackGoal",
+  "net.minecraft.world.entity.ai.goal.RangedCrossbowAttackGoal",
+  "net.minecraft.world.entity.ai.goal.RemoveBlockGoal",
+  "net.minecraft.world.entity.ai.goal.TemptGoal",
+  "net.minecraft.world.entity.ai.goal.target.ResetUniversalAngerTargetGoal",
+  "net.minecraft.world.entity.ai.memory.MemoryModuleType",
+  "net.minecraft.world.entity.ai.navigation.PathNavigation",
+  "net.minecraft.world.entity.ai.village.ReputationEventType",
+  "net.minecraft.world.entity.monster.Ghast.GhastShootFireballGoal",
+  "net.minecraft.world.entity.monster.Monster",
+  "net.minecraft.world.entity.npc.villager.AbstractVillager",
+  "net.minecraft.world.entity.npc.villager.Villager",
+  "net.minecraft.world.entity.npc.villager.VillagerData",
+  "net.minecraft.world.entity.npc.villager.VillagerProfession",
+  "net.minecraft.world.level.EmptyBlockGetter",
+  "net.minecraft.world.level.block.ChestBlock",
+  "net.minecraft.world.level.block.entity.ChestBlockEntity",
+  "BlockPos.distSqr()",
+  "BlockPos.MutableBlockPos.move()",
+  "BlockPos.MutableBlockPos.move()",
+  "BlockPos.MutableBlockPos.set()",
+  "BlockPos.MutableBlockPos.setWithOffset()",
   "MinecraftServer.getTickCount()",
   "MinecraftServer.getTickTimesNanos()",
-  "LivingEntity.distanceToSqr()",
-  "Level.getNearestPlayer()"
+  "and 53 more"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "lazy-ai-1.7.2.jar",
   "published": "2026-11-01"
  },
@@ -32,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -49,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 4
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 111
 }

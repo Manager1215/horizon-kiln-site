@@ -1,0 +1,68 @@
+{
+ "id": "block-duplicator-tree",
+ "name": "Block Duplicator Tree",
+ "version": "2.2.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/block-duplicator-tree",
+ "author": "blueDev",
+ "description": "DUPLICATE YOUR BLOCKS AND GET OP QUICKLY. Inspired by the Orespawn tree.",
+ "needs": [
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
+  "net.minecraft.world.level.block.BushBlock",
+  "net.minecraft.world.level.material.PushReaction",
+  "ServerLifecycleEvents.SERVER_STARTING",
+  "SoundEvents.GRASS_PLACE",
+  "BlockItem.placeBlock()",
+  "Blocks.DIAMOND_BLOCK",
+  "Blocks.EMERALD_BLOCK",
+  "Blocks.OAK_LEAVES",
+  "Blocks.OAK_LOG",
+  "Blocks.OAK_SAPLING",
+  "LeavesBlock.DISTANCE",
+  "LeavesBlock.PERSISTENT",
+  "BlockBehaviour.Properties.pushReaction()",
+  "BlockState.canBeReplaced()",
+  "MapColor.DIAMOND",
+  "MapColor.EMERALD"
+ ],
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "duplicator_tree_release_26.3_fabric.jar",
+  "published": "2026-11-13"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": false,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 17
+}

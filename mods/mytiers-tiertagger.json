@@ -9,46 +9,39 @@
  "author": "shwedxhardy",
  "description": "Displaying tiers using the MyTiers API.",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.Blaze3D",
   "net.minecraft.client.gui.components.PlayerFaceExtractor",
-  "net.minecraft.client.gui.components.Tooltip",
+  "net.minecraft.client.gui.components.PlayerTabOverlay",
   "net.minecraft.client.gui.screens.inventory.InventoryScreen",
+  "net.minecraft.client.renderer.entity.player.AvatarRenderer",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
   "net.minecraft.client.resources.DefaultPlayerSkin",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
   "net.minecraft.network.chat.FontDescription",
   "net.minecraft.network.chat.FontDescription.Resource",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
+  "net.minecraft.server.packs.PackLocationInfo",
+  "net.minecraft.server.packs.PackResources.ResourceOutput",
+  "net.minecraft.server.packs.repository.PackSource",
+  "net.minecraft.server.packs.resources.ReloadableResourceManager",
+  "net.minecraft.world.entity.Display",
+  "net.minecraft.world.entity.Display.TextDisplay",
+  "net.minecraft.world.entity.Display.TextDisplay.CachedInfo",
   "ModContainer.findPath()",
   "Minecraft.getSkinManager()",
   "Minecraft.reloadResourcePacks()",
-  "Minecraft.schedule()",
   "Minecraft.services()",
   "Gui.overlay()",
-  "Button.Builder.tooltip()",
-  "EditBox.setTextColor()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseReleased()",
-  "Screen.mouseScrolled()",
   "PlayerInfo.getProfile()",
   "PlayerInfo.getSkin()",
   "SkinManager.get()",
-  "MutableComponent.withStyle()",
-  "Style.withClickEvent()",
-  "Style.withFont()",
-  "Style.withHoverEvent()",
-  "Style.withUnderlined()"
+  "Style.withFont()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "tiertagger-2.4.9+mc26.3.jar",
   "published": "2026-10-11"
  },
@@ -60,8 +53,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -77,5 +70,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 32
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 26
 }

@@ -9,28 +9,20 @@
  "author": "LucHeart",
  "description": "OpenShock Minecraft Integration",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.Chat",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.minecraft.client.particle.Particle",
   "net.minecraft.client.particle.ParticleProvider",
   "net.minecraft.client.particle.SingleQuadParticle",
   "net.minecraft.client.particle.SingleQuadParticle.Layer",
   "net.minecraft.client.particle.SpriteSet",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.tags.DamageTypeTags",
   "net.minecraft.world.damagesource.DamageTypes",
   "net.minecraft.world.item.equipment.Equippable.Builder",
   "ClientReceiveMessageEvents.CHAT",
-  "ClientPlayNetworking.canSend()",
-  "ServerTickEvents.END_SERVER_TICK",
-  "ServerPlayNetworking.canSend()",
   "Camera.leftVector()",
   "Camera.upVector()",
-  "Minecraft.execute()",
   "Options.screenEffectScale()",
   "LocalPlayer.getLastDamageSource()",
   "LocalPlayer.isDeadOrDying()",
@@ -39,25 +31,20 @@
   "DataComponents.ENCHANTMENT_GLINT_OVERRIDE",
   "DataComponents.ITEM_NAME",
   "Registries.PARTICLE_TYPE",
-  "RegistryFriendlyByteBuf.readUtf()",
-  "RegistryFriendlyByteBuf.readVarInt()",
-  "RegistryFriendlyByteBuf.writeBoolean()",
-  "RegistryFriendlyByteBuf.writeUtf()",
-  "RegistryFriendlyByteBuf.writeVarInt()",
-  "MinecraftServer.getPlayerList()",
   "ServerLevel.sendParticles()",
   "ServerPlayer.connection",
   "ServerPlayer.getBbWidth()",
   "ServerPlayer.getRandom()",
   "ServerPlayer.yBodyRot",
-  "and 7 more"
+  "ServerGamePacketListenerImpl.send()",
+  "Equippable.builder()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "shockcraft-fabric-2.0.0+mc26.3.jar",
   "published": "2026-10-18"
  },
@@ -69,8 +56,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +76,9 @@
   "minecraft",
   "yet_another_config_lib_v3"
  ],
- "lacks": 47
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 29
 }

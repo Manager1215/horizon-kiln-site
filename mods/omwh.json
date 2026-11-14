@@ -7,26 +7,19 @@
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
  "url": "https://modrinth.com/mod/omwh",
  "author": "OGMoo-cow",
- "description": "Server-side /home and /spawn using Minecraft's own destinations, with mounted-group travel, safety checks, cooldowns, and dimension controls.",
+ "description": "Use /home to return to your bed or respawn anchor, or /spawn for world spawn. Bring your ride and its passengers along; no client mod needed.",
  "needs": [
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDamage",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.server.level.ServerPlayer.RespawnConfig",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.world.entity.EntityDimensions",
   "net.minecraft.world.entity.Pose",
   "net.minecraft.world.level.block.AbstractBedBlock",
   "net.minecraft.world.level.block.Portal",
   "net.minecraft.world.level.block.RespawnAnchorBlock",
   "net.minecraft.world.phys.shapes.BooleanOp",
-  "ServerTickEvents.END_SERVER_TICK",
-  "CommandSourceStack.getEntity()",
   "BlockPos.containing()",
   "BlockPos.MutableBlockPos.set()",
   "Direction.isFacingAngle()",
@@ -39,7 +32,6 @@
   "ServerLevel.getMaxY()",
   "ServerLevel.getMinY()",
   "ServerLevel.getRespawnData()",
-  "ServerLevel.getWorldBorder()",
   "ServerLevel.sendParticles()",
   "ServerPlayer.findRespawnPositionAndUseSpawnBlock()",
   "ServerPlayer.getDimensions()",
@@ -48,15 +40,23 @@
   "ServerPlayer.getRootVehicle()",
   "ServerPlayer.hasDisconnected()",
   "ServerPlayer.isAlive()",
-  "DamageSource.getEntity()",
-  "and 35 more"
+  "Entity.getBbHeight()",
+  "Entity.getBbWidth()",
+  "Entity.getBoundingBox()",
+  "Entity.getDimensions()",
+  "Entity.getPassengers()",
+  "Entity.getVehicle()",
+  "Blocks.END_PORTAL",
+  "Blocks.FIRE",
+  "Blocks.MAGMA_BLOCK",
+  "and 25 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "omwh-1.2.1.jar",
   "published": "2026-09-19"
  },
@@ -68,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -84,5 +84,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 75
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 65
 }

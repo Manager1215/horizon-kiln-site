@@ -9,7 +9,6 @@
  "author": "tpwalke2",
  "description": "A Fabric plugin for BlueMap that creates markers from signs",
  "needs": [
-  "Mixin",
   "net.fabricmc.api.DedicatedServerModInitializer",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents.Load",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
@@ -24,12 +23,12 @@
   "MinecraftServer.getWorldPath()",
   "LevelChunk.getBlockEntity()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "bluemapsignmarkers-26.3-1.0.1.89.jar",
   "published": "2026-10-08"
  },
@@ -50,5 +49,9 @@
   "java",
   "minecraft"
  ],
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
  "lacks": 13
 }

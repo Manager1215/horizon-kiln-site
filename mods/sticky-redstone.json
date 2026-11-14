@@ -1,7 +1,7 @@
 {
  "id": "sticky-redstone",
  "name": "Sticky Redstone",
- "version": "1.0.2-fabric-mc26.3",
+ "version": "1.0.3-fabric-mc26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,7 +10,7 @@
  "description": "Adds redstone that can go on the side of blocks!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 15 points inside the game's methods",
   "net.fabricmc.fabric.api.client.model.loading.v1.wrapper.WrapperBlockStateModel",
   "net.fabricmc.fabric.api.client.renderer.v1.mesh.MutableQuadView",
   "net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadEmitter",
@@ -18,8 +18,12 @@
   "net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags",
   "net.minecraft.advancements.triggers.CriteriaTriggers",
   "net.minecraft.advancements.triggers.ItemUsedOnLocationTrigger",
+  "net.minecraft.client.renderer.extract.LevelExtractor",
   "net.minecraft.client.resources.model.geometry.BakedQuad.MaterialFlags",
   "net.minecraft.core.particles.DustParticleOptions",
+  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
+  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
+  "net.minecraft.server.level.ServerPlayerGameMode",
   "net.minecraft.util.context.ContextKeySet.Builder",
   "net.minecraft.world.entity.decoration.ItemFrame",
   "net.minecraft.world.level.block.Block.UpdateFlags",
@@ -33,6 +37,10 @@
   "net.minecraft.world.level.block.state.properties.RedstoneSide",
   "net.minecraft.world.level.gameevent.GameEvent.Context",
   "net.minecraft.world.level.material.PushReaction",
+  "net.minecraft.world.level.redstone.CollectingNeighborUpdater",
+  "net.minecraft.world.level.redstone.CollectingNeighborUpdater.MultiNeighborUpdate",
+  "net.minecraft.world.level.redstone.NeighborUpdater",
+  "net.minecraft.world.level.redstone.RedstoneWireEvaluator",
   "net.minecraft.world.ticks.LevelTickAccess",
   "BlockStateModel.createGeometryKey()",
   "BlockStateModel.emitQuads()",
@@ -43,24 +51,16 @@
   "BlockPos.MutableBlockPos.move()",
   "BlockPos.MutableBlockPos.setWithOffset()",
   "Direction.getApproximateNearest()",
-  "Direction.getClockWise()",
-  "Direction.getCounterClockWise()",
-  "Direction.Axis.getNegative()",
-  "Direction.Axis.getPositive()",
-  "BuiltInRegistries.CONTEXT_INT_PROVIDER_TYPE",
-  "BuiltInRegistries.CONTEXT_KEY_SET",
-  "SoundEvents.COMPARATOR_CLICK",
-  "ContextKeySet.allowed()",
-  "and 33 more"
+  "and 45 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "stickyredstone-1.0.2-fabric-mc26.3.jar",
-  "published": "2026-11-05"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "stickyredstone-1.0.3-fabric-mc26.3.jar",
+  "published": "2026-11-07"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "minecraft",
   "supermartijn642corelib"
  ],
- "lacks": 73
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 85
 }

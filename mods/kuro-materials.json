@@ -10,14 +10,15 @@
  "description": "Unique materials with useful features",
  "needs": [
   "an access widener",
-  "Mixin",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.world.entity.LivingEntity.SwingDescription",
   "net.minecraft.world.item.ItemCooldowns",
   "net.minecraft.world.item.ItemUseAnimation",
   "net.minecraft.world.item.SmithingTemplateItem",
+  "net.minecraft.world.item.equipment.trim.ArmorTrim",
+  "ModelManager.getItemModel()",
   "DataComponents.ENCHANTMENT_GLINT_OVERRIDE",
+  "DataComponents.TRIM",
   "Registries.TRIM_MATERIAL",
-  "MinecraftServer.getPlayerList()",
   "ServerLevel.playSound()",
   "ServerPlayer.teleportTo()",
   "ServerPlayer.teleportTo()",
@@ -28,8 +29,11 @@
   "Relative.ALL",
   "Player.drop()",
   "Player.getCooldowns()",
+  "Player.getCurrentSwing()",
+  "Player.getUseItem()",
   "Player.hasInfiniteMaterials()",
   "Player.isSecondaryUseActive()",
+  "Player.isSwinging()",
   "Player.startUsingItem()",
   "Item.finishUsingItem()",
   "Item.interactLivingEntity()",
@@ -43,12 +47,12 @@
   "MapColor.COLOR_BLACK",
   "MapColor.COLOR_GRAY"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "kuromaterials-26.3-1.0.5-fabric.jar",
   "published": "2026-09-18"
  },
@@ -60,8 +64,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -76,5 +80,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 31
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 36
 }

@@ -1,0 +1,93 @@
+{
+ "id": "villager-apprentice",
+ "name": "Villager Apprentice",
+ "version": "1.0.0+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/villager-apprentice",
+ "author": "EthRocky",
+ "description": "Villagers don't teach you. You teach them. Replaces the slot machine rolling of villager trades with a more adventerous system.",
+ "needs": [
+  "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
+  "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.MobConversion",
+  "net.fabricmc.fabric.api.event.player.UseEntityCallback",
+  "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents",
+  "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents.StartTracking",
+  "net.minecraft.core.UUIDUtil",
+  "net.minecraft.core.particles.ItemParticleOption",
+  "net.minecraft.network.chat.FontDescription",
+  "net.minecraft.network.chat.FontDescription.Resource",
+  "net.minecraft.server.PlayerAdvancements",
+  "net.minecraft.server.ServerAdvancementManager",
+  "net.minecraft.tags.EnchantmentTags",
+  "net.minecraft.world.entity.ai.gossip.GossipContainer",
+  "net.minecraft.world.entity.ai.gossip.GossipType",
+  "net.minecraft.world.entity.monster.zombie.ZombieVillager",
+  "net.minecraft.world.entity.npc.villager.AbstractVillager",
+  "net.minecraft.world.entity.npc.villager.Villager",
+  "net.minecraft.world.entity.npc.villager.VillagerData",
+  "net.minecraft.world.item.trading.ItemCost",
+  "net.minecraft.world.item.trading.MerchantOffer",
+  "net.minecraft.world.phys.EntityHitResult",
+  "Object2IntMap.Entry.getKey()",
+  "AttachmentRegistry.createPersistent()",
+  "Holder.is()",
+  "Registry.get()",
+  "RegistryAccess.lookupOrThrow()",
+  "DataComponents.STORED_ENCHANTMENTS",
+  "ParticleTypes.ITEM",
+  "Style.withFont()",
+  "ByteBufCodecs.fromCodecWithRegistries()",
+  "MinecraftServer.getAdvancements()",
+  "ServerLevel.sendParticles()",
+  "ServerPlayer.getAdvancements()",
+  "SoundEvents.VILLAGER_NO",
+  "SoundEvents.VILLAGER_YES",
+  "LivingEntity.getAttached()",
+  "LivingEntity.setAttached()",
+  "Inventory.clearOrCountMatchingItems()",
+  "Player.giveExperienceLevels()",
+  "InventoryMenu.getCraftSlots()",
+  "and 17 more"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "apprentice-fabric-1.0.0+26.3.jar",
+  "published": "2026-11-11"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 57
+}

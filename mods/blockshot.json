@@ -9,7 +9,6 @@
  "author": "ThePaul_T",
  "description": "Easily share gameplay screenshots and short recordings safely",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.Blaze3D",
   "net.minecraft.SharedConstants",
@@ -17,39 +16,31 @@
   "net.minecraft.client.Screenshot",
   "net.minecraft.client.multiplayer.chat.GuiMessage.Line",
   "net.minecraft.client.renderer.texture.DynamicTexture",
-  "net.minecraft.network.chat.ClickEvent.OpenFile",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
+  "net.minecraft.client.resources.model.sprite.AtlasManager.AtlasConfig",
+  "net.minecraft.client.resources.model.sprite.AtlasManager.AtlasEntry",
   "org.apache.commons.io.IOUtils",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "NativeImage.getHeight()",
   "NativeImage.getPixel()",
   "NativeImage.getWidth()",
   "NativeImage.read()",
-  "KeyMapping.getTranslatedKeyMessage()",
   "KeyMapping.matches()",
-  "Minecraft.execute()",
   "Minecraft.gameDirectory",
   "Minecraft.getGameProfile()",
-  "Options.keyScreenshot",
   "Hud.getGuiTicks()",
   "ChatComponent.addPlayerMessage()",
   "ChatComponent.addServerSystemMessage()",
   "ChatComponent.scrollChat()",
   "GuiMessage.splitLines()",
   "TextureAtlas.location()",
-  "MutableComponent.withStyle()",
-  "Style.getClickEvent()",
-  "Style.withClickEvent()",
   "Util.getFilenameFormattedDateTime()",
   "Util.ioPool()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "blockshot-fabric-26.3-1.5.1.jar",
   "published": "2026-09-16"
  },
@@ -61,8 +52,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -80,5 +71,9 @@
   "minecraft",
   "polylib"
  ],
- "lacks": 33
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 25
 }

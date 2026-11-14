@@ -9,34 +9,36 @@
  "author": "Jack",
  "description": "A mod that aims on adding more ways to configure Minecraft. The mod adds config options for more fine grained control over the game.",
  "needs": [
-  "Mixin",
+  "Mixin: 10 points inside the game's methods",
   "net.fabricmc.api.DedicatedServerModInitializer",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-  "net.minecraft.commands.arguments.GameProfileArgument",
-  "net.minecraft.commands.arguments.GameProfileArgument.Result",
+  "net.minecraft.network.protocol.status.ServerStatus",
+  "net.minecraft.server.dedicated.DedicatedPlayerList",
   "net.minecraft.server.dedicated.DedicatedServer",
   "net.minecraft.server.dedicated.DedicatedServerProperties",
   "net.minecraft.server.dedicated.Settings",
   "net.minecraft.server.dedicated.Settings.MutableValue",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.damagesource.DamageTypes",
   "net.minecraft.world.entity.boss.enderdragon.EndCrystal",
   "net.minecraft.world.entity.vehicle.minecart.MinecartTNT",
+  "net.minecraft.world.item.EnderEyeItem",
+  "net.minecraft.world.item.FireworkRocketItem",
+  "net.minecraft.world.level.block.EndPortalBlock",
+  "net.minecraft.world.level.block.entity.TheEndGatewayBlockEntity",
+  "net.minecraft.world.waypoints.WaypointTransmitter",
   "ServerLifecycleEvents.END_DATA_PACK_RELOAD",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.services()",
   "ServerPlayer.getTeam()",
-  "DamageSource.getDirectEntity()",
-  "DamageSource.getEntity()",
-  "DamageSource.is()",
+  "PlayerList.setSimulationDistance()",
+  "PlayerList.setViewDistance()",
   "LivingEntity.getTeam()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Configured-mc26.3-v1.9.8.jar",
   "published": "2026-10-04"
  },
@@ -56,5 +58,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 20
+ "softOff": {
+  "class": "restart",
+  "why": "@modify-arg Kiln doesn't guard"
+ },
+ "lacks": 22
 }

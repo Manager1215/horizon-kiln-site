@@ -1,7 +1,7 @@
 {
  "id": "cntrafficsymbols-0-0",
  "name": "CNTrafficSymbols 0.0",
- "version": "0.0.2+mc26.3",
+ "version": "0.0.3-a1+mc26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,38 +9,57 @@
  "author": "IAmREGE",
  "description": "Contents of version “0.0” phase of CNTrafficSymbols",
  "needs": [
+  "Mixin: 3 points inside the game's methods",
   "net.minecraft.network.chat.ComponentSerialization",
+  "net.minecraft.world.entity.ai.attributes.AttributeMap",
   "net.minecraft.world.level.block.Mirror",
+  "net.minecraft.world.timeline.Timeline",
+  "net.minecraft.world.timeline.Timelines",
   "BlockEntityRenderer.extractRenderState()",
+  "BlockPos.distToCenterSqr()",
+  "HolderSet.iterator()",
   "MappedRegistry.addAlias()",
+  "RegistryAccess.get()",
   "DataComponents.CUSTOM_NAME",
+  "CommonComponents.GUI_CANCEL",
+  "CommonComponents.GUI_DONE",
   "Component.getVisualOrderText()",
   "Component.translatableWithFallback()",
+  "ServerPlayer.getAttributes()",
   "ItemStack.getCustomName()",
-  "Level.getDefaultClockTime()",
-  "BaseEntityBlock.getCloneItemStack()",
+  "Level.clockManager()",
   "BaseEntityBlock.updateShape()",
   "Block.getDestroyProgress()",
   "Block.updateShape()",
+  "HorizontalDirectionalBlock.updateShape()",
   "BlockEntity.applyImplicitComponents()",
   "BlockEntity.collectImplicitComponents()",
   "BlockEntity.removeComponentsFromTag()",
+  "BlockBehaviour.Properties.forceSolidOn()",
   "BlockBehaviour.Properties.mapColor()",
   "BlockStateProperties.BOTTOM",
+  "DimensionType.timelines()",
+  "MapColor.CLAY",
+  "MapColor.COLOR_BLACK",
+  "MapColor.COLOR_BLUE",
+  "MapColor.COLOR_BROWN",
   "MapColor.COLOR_CYAN",
+  "MapColor.COLOR_GRAY",
   "MapColor.COLOR_GREEN",
-  "MapColor.COLOR_ORANGE",
-  "MapColor.COLOR_PURPLE",
-  "Shapes.empty()"
+  "MapColor.COLOR_LIGHT_BLUE",
+  "MapColor.COLOR_LIGHT_GRAY",
+  "MapColor.COLOR_LIGHT_GREEN",
+  "MapColor.COLOR_MAGENTA",
+  "and 25 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "cntrafficsymbols_0.0-0.0.2+mc26.3.jar",
-  "published": "2026-10-01"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "cntrafficsymbols_0.0-0.0.3-a1+mc26.3.jar",
+  "published": "2026-11-07"
  },
  "reports": {
   "works": 0,
@@ -50,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -61,7 +80,7 @@
   "client": 1,
   "modmenu": 1
  },
- "mixins": false,
+ "mixins": true,
  "depends": [
   "cntrafficsymbols_core",
   "fabric-api",
@@ -69,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 23
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 89
 }

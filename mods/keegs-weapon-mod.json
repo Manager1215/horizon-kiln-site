@@ -9,7 +9,7 @@
  "author": "Keeganator",
  "description": "Adds vanilla style weapons and enchantments!",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
@@ -19,7 +19,7 @@
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.BooleanRuleBuilder",
   "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
-  "net.minecraft.client.CameraType",
+  "net.minecraft.client.model.player.PlayerModel",
   "net.minecraft.client.particle.HugeExplosionParticle",
   "net.minecraft.client.particle.ParticleProvider",
   "net.minecraft.client.particle.SingleQuadParticle",
@@ -27,37 +27,37 @@
   "net.minecraft.client.particle.SingleQuadParticle.Layer",
   "net.minecraft.client.particle.SpriteSet",
   "net.minecraft.client.renderer.entity.ThrownItemRenderer",
+  "net.minecraft.client.renderer.entity.player.AvatarRenderer",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
   "net.minecraft.client.renderer.entity.state.ThrownItemRenderState",
-  "net.minecraft.commands.arguments.IdentifierArgument",
   "net.minecraft.core.HolderSet.Direct",
+  "net.minecraft.core.HolderSet.Named",
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
+  "net.minecraft.server.PlayerAdvancements",
+  "net.minecraft.tags.EntityTypeTags",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.SimpleMenuProvider",
+  "net.minecraft.world.damagesource.CombatRules",
   "net.minecraft.world.entity.animal.cow.MushroomCow",
   "net.minecraft.world.entity.monster.Phantom",
+  "net.minecraft.world.entity.monster.zombie.Zombie",
+  "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
   "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile",
   "net.minecraft.world.flag.FeatureFlags",
+  "net.minecraft.world.inventory.AnvilMenu",
   "net.minecraft.world.inventory.ContainerLevelAccess",
+  "net.minecraft.world.inventory.ItemCombinerMenu",
   "net.minecraft.world.inventory.MenuType.MenuSupplier",
-  "net.minecraft.world.item.ItemCooldowns",
-  "net.minecraft.world.item.ShearsItem",
-  "net.minecraft.world.item.component.ItemLore",
-  "net.minecraft.world.item.crafting.RecipeAccess",
-  "net.minecraft.world.item.enchantment.Enchantment.Builder",
-  "net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect",
-  "net.minecraft.world.level.block.RedstoneLampBlock",
-  "net.minecraft.world.level.block.RedstoneTorchBlock",
-  "net.minecraft.world.level.storage.loot.entries.NestedLootTable",
-  "and 60 more"
+  "net.minecraft.world.inventory.ResultContainer",
+  "and 74 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "keegsweapons-0.7.3-26.3.jar",
   "published": "2026-10-18"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 170
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+ },
+ "lacks": 190
 }

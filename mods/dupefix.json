@@ -9,14 +9,37 @@
  "author": "TreeOfSelf",
  "description": "A simple drop-in mod to prevent all forms of duping. TNT-Duping, Gravity block duping, and much more will not work with this mod enabled.",
  "needs": [
-  "Mixin"
+  "Mixin: 8 points inside the game's methods",
+  "net.minecraft.network.protocol.game.ServerboundEditBookPacket",
+  "net.minecraft.world.SimpleContainer",
+  "net.minecraft.world.entity.animal.bee.Bee",
+  "net.minecraft.world.entity.item.FallingBlockEntity",
+  "net.minecraft.world.inventory.AbstractMountInventoryMenu",
+  "net.minecraft.world.level.block.BaseRailBlock",
+  "net.minecraft.world.level.block.LecternBlock",
+  "net.minecraft.world.level.block.ShulkerBoxBlock",
+  "net.minecraft.world.level.block.TripWireBlock",
+  "net.minecraft.world.level.block.entity.BeehiveBlockEntity",
+  "net.minecraft.world.level.block.entity.HopperBlockEntity",
+  "net.minecraft.world.level.block.entity.LecternBlockEntity",
+  "net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity",
+  "net.minecraft.world.level.block.piston.PistonBaseBlock",
+  "ServerPlayer.getTicksUsingItem()",
+  "ServerPlayer.getUseItemRemainingTicks()",
+  "LivingEntity.isAlive()",
+  "Inventory.isHotbarSlot()",
+  "Player.isAlive()",
+  "AbstractContainerMenu.sendAllDataToRemote()",
+  "Items.WRITABLE_BOOK",
+  "Blocks.LECTERN",
+  "LootContextParams.BLOCK_ENTITY"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "panda-anti-dupe-1.1.4+26.3.jar",
   "published": "2026-10-19"
  },
@@ -28,8 +51,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -44,5 +67,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 23
 }

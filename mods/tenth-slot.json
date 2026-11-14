@@ -1,0 +1,67 @@
+{
+ "id": "tenth-slot",
+ "name": "Tenth Slot",
+ "version": "2.2.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/tenth-slot",
+ "author": "armaninyow",
+ "description": "This mod adds a tenth hotbar slot as a dedicated bare-hand toggle.",
+ "needs": [
+  "net.minecraft.client.gui.screens.options.controls.KeyBindsList",
+  "net.minecraft.client.gui.screens.options.controls.KeyBindsList.Entry",
+  "net.minecraft.client.gui.screens.options.controls.KeyBindsList.KeyEntry",
+  "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
+  "net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket",
+  "Options.mouseWheelSensitivity()",
+  "GuiGraphicsExtractor.blit()",
+  "GuiGraphicsExtractor.item()",
+  "ClientPacketListener.send()",
+  "ServerPlayer.getUsedItemHand()",
+  "ServerPlayer.resetLastActionTime()",
+  "ServerPlayer.stopUsingItem()",
+  "HumanoidArm.getOpposite()",
+  "ItemStack.getPopTime()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "tenthslot-26.3-2.2.0.jar",
+  "published": "2026-11-12"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 14
+}

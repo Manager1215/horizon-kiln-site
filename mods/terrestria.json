@@ -10,7 +10,8 @@
  "description": "Terrestria is a detailed and vibrant biomes mod for Minecraft running on the Fabric mod loader.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 22 points inside the game's methods",
+  "net.fabricmc.fabric.api.biome.v1.TheEndBiomes",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleRenderEvents",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleRenderEvents.AllowTerrainParticleTint",
   "net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry",
@@ -22,6 +23,7 @@
   "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyConsumer",
   "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyContext",
   "net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags",
+  "net.fabricmc.fabric.impl.biome.TheEndBiomeData.Overrides",
   "net.minecraft.client.renderer.BiomeColors",
   "net.minecraft.core.QuartPos",
   "net.minecraft.data.worldgen.BiomeDefaultFeatures",
@@ -35,30 +37,28 @@
   "net.minecraft.data.worldgen.placement.TreePlacements",
   "net.minecraft.data.worldgen.placement.VegetationPlacements",
   "net.minecraft.references.BlockItemId",
+  "net.minecraft.server.WorldStem",
   "net.minecraft.server.level.ChunkMap",
   "net.minecraft.tags.BlockItemTagId",
+  "net.minecraft.util.datafix.DataFixers",
+  "net.minecraft.util.datafix.fixes.ChunkHeightAndBiomeFix",
   "net.minecraft.util.random.WeightedList.Builder",
   "net.minecraft.util.valueproviders.ConstantInt",
   "net.minecraft.util.valueproviders.IntProviders",
   "net.minecraft.world.attribute.BackgroundMusic",
   "net.minecraft.world.attribute.EnvironmentAttributeMap.Builder",
   "net.minecraft.world.attribute.modifier.FloatModifier",
-  "net.minecraft.world.entity.npc.villager.VillagerType",
-  "net.minecraft.world.item.HangingSignItem",
-  "net.minecraft.world.item.component.Compostable",
-  "net.minecraft.world.level.EmptyBlockGetter",
-  "net.minecraft.world.level.FoliageColor",
-  "net.minecraft.world.level.GrassColor",
-  "net.minecraft.world.level.StructureManager",
-  "net.minecraft.world.level.biome.Biome.BiomeBuilder",
+  "net.minecraft.world.entity.ai.goal.EatBlockGoal",
+  "net.minecraft.world.entity.animal.fish.WaterAnimal",
+  "net.minecraft.world.entity.animal.rabbit.Rabbit.RaidGardenGoal",
   "and 80 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "terrestria-8.2.0-alpha.1.jar",
   "published": "2026-10-27"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -92,5 +92,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 333
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 351
 }

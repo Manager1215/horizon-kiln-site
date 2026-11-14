@@ -9,8 +9,6 @@
  "author": "watkins.steve",
  "description": "A modern, highly customizable HUD overlay mod for Minecraft",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.components.debug.DebugEntrySystemSpecs",
   "net.minecraft.client.particle.ParticleEngine",
   "net.minecraft.client.renderer.extract.LevelExtractor",
@@ -21,21 +19,14 @@
   "net.minecraft.network.chat.FontDescription.Resource",
   "net.minecraft.world.phys.EntityHitResult",
   "RenderSystem.tryGetDevice()",
-  "Minecraft.hitResult",
   "Minecraft.levelExtractor",
   "Minecraft.particleEngine",
   "Options.simulationDistance()",
   "GuiGraphicsExtractor.blit()",
-  "Button.Builder.tooltip()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseReleased()",
   "LocalPlayer.getAirSupply()",
   "LocalPlayer.getMaxAirSupply()",
   "LocalPlayer.isCrouching()",
   "SoundManager.getSoundCacheDebugStats()",
-  "MutableComponent.setStyle()",
-  "MutableComponent.withStyle()",
   "Style.withFont()",
   "BlockTags.MINEABLE_WITH_AXE",
   "BlockTags.MINEABLE_WITH_HOE",
@@ -44,15 +35,14 @@
   "Items.IRON_HOE",
   "Items.IRON_PICKAXE",
   "Items.IRON_SHOVEL",
-  "Items.IRON_SWORD",
-  "HitResult.getType()"
+  "Items.IRON_SWORD"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "powerhud-1.14.1.jar",
   "published": "2026-10-02"
  },
@@ -64,8 +54,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -80,5 +70,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 36
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 27
 }

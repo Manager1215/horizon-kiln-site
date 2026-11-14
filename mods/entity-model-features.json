@@ -9,10 +9,8 @@
  "author": "Traben",
  "description": "EMF is an, OptiFine format, Custom Entity Model replacement mod available for Fabric and Forge.",
  "needs": [
-  "Mixin",
   "com.mojang.blaze3d.vertex.BufferBuilder",
   "net.minecraft.IdentifierException",
-  "net.minecraft.client.CameraType",
   "net.minecraft.client.DeltaTracker.Timer",
   "net.minecraft.client.model.AdultAndBabyModelPair",
   "net.minecraft.client.model.EntityModel",
@@ -50,14 +48,15 @@
   "net.minecraft.client.renderer.entity.state.ItemFrameRenderState",
   "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
   "net.minecraft.client.renderer.entity.state.SulfurCubeRenderState",
+  "net.minecraft.client.renderer.feature.ModelFeatureRenderer.Submit",
   "and 80 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "entity_model_features-3.3.12-26.3-fabric.jar",
   "published": "2026-10-15"
  },
@@ -70,5 +69,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
- "lacks": 203
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method into the game's classes"
+ },
+ "lacks": 193
 }

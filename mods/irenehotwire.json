@@ -1,25 +1,22 @@
 {
  "id": "irenehotwire",
  "name": "Hotwire",
- "version": "0.7.1-beta.380",
- "status": "planned",
- "statusLabel": "Planned",
- "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "version": "0.9.2-beta+mc26.1-26.3",
+ "status": "not-checked",
+ "statusLabel": "Not checked",
+ "statusMeaning": "In the catalogue, not checked yet.",
  "url": "https://modrinth.com/mod/irenehotwire",
  "author": "DearIrene",
  "description": "Allows hotswapping mods live. Adding/updating mods, turning existing ones off/on. Browsing modrinth ingame.",
- "needs": [
-  "Mixin",
-  "net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint"
- ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
- "evidence": "Not run: Java did not start.",
+ "needs": [],
+ "roadmap": "",
+ "evidence": "Its code calls nothing in Minecraft or the Fabric API that Kiln would have to provide. Not run yet.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "hotwire-0.7.1-beta.380+mc26.1-26.3.jar",
-  "published": "2026-11-05"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "hotwire-0.9.2-beta+mc26.1-26.3.jar",
+  "published": "2026-11-11"
  },
  "reports": {
   "works": 0,
@@ -29,8 +26,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -38,7 +35,7 @@
  "entrypoints": {
   "preLaunch": 1,
   "client": 1,
-  "modmenu": 3
+  "modmenu": 1
  },
  "mixins": true,
  "depends": [
@@ -47,5 +44,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 1
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 0
 }

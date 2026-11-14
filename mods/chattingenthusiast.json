@@ -10,38 +10,38 @@
  "description": "A variety of configurable improvements and new features to Minecraft's chat, such as copying and searching through messages.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 7 points inside the game's methods",
+  "net.minecraft.client.gui.components.ChatComponent.AlphaCalculator",
+  "net.minecraft.client.gui.components.ChatComponent.ChatGraphicsAccess",
+  "net.minecraft.client.gui.components.ChatComponent.DisplayMode",
+  "net.minecraft.client.gui.components.ChatComponent.DrawingBackgroundGraphicsAccess",
+  "net.minecraft.client.gui.components.ChatComponent.DrawingFocusedGraphicsAccess",
+  "net.minecraft.client.gui.components.ChatComponent.LineConsumer",
+  "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
   "net.minecraft.client.multiplayer.chat.GuiMessage.Line",
   "InputConstants.isKeyDown()",
   "Minecraft.gameDirectory",
   "Minecraft.getCurrentServer()",
+  "Options.chatHeightFocused()",
+  "Options.chatLineSpacing()",
   "Options.chatScale()",
   "Options.textBackgroundOpacity()",
   "Hud.getGuiTicks()",
-  "AbstractWidget.charTyped()",
-  "AbstractWidget.keyPressed()",
-  "AbstractWidget.mouseDragged()",
-  "AbstractWidget.onClick()",
   "ChatComponent.clearMessages()",
   "ChatComponent.getLinesPerPage()",
   "ChatComponent.isChatFocused()",
   "ChatComponent.resetChatScroll()",
   "ChatComponent.scrollChat()",
-  "EditBox.setCanLoseFocus()",
   "ServerData.ip",
-  "MutableComponent.withStyle()",
-  "Style.withObfuscated()",
-  "Style.withStrikethrough()",
-  "Style.withUnderlined()",
   "ARGB.color()",
   "ARGB.colorFromFloat()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "chattingenthusiast-1.4.8.jar",
   "published": "2026-09-15"
  },
@@ -53,8 +53,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -69,5 +69,9 @@
   "java",
   "minecraft"
  ],
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
  "lacks": 24
 }

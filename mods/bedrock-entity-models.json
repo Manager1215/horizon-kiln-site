@@ -10,7 +10,7 @@
  "description": "Allows Bedrock Edition entity models to be used natively in Java Edition.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
   "net.minecraft.client.OptionInstance.ValueUpdateListener",
   "net.minecraft.client.model.BabyModelTransform",
@@ -25,7 +25,11 @@
   "net.minecraft.client.model.geom.builders.MaterialDefinition",
   "net.minecraft.client.model.geom.builders.MeshDefinition",
   "net.minecraft.client.model.geom.builders.PartDefinition",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
   "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
+  "net.minecraft.client.renderer.feature.ModelFeatureRenderer.Submit",
+  "net.minecraft.client.renderer.rendertype.RenderSetup",
+  "net.minecraft.client.renderer.rendertype.RenderSetup.TextureBinding",
   "net.minecraft.server.packs.PackMetadataResources",
   "net.minecraft.server.packs.repository.Pack",
   "net.minecraft.server.packs.repository.PackRepository",
@@ -34,6 +38,7 @@
   "Minecraft.getResourcePackRepository()",
   "OptionInstance.createBoolean()",
   "OptionInstance.noTooltip()",
+  "Model.root()",
   "EntityModelSet.bakeLayer()",
   "EntityModelSet.roots",
   "ModelPart.children",
@@ -46,19 +51,14 @@
   "ModelPart.xScale",
   "ModelPart.y",
   "ModelPart.yScale",
-  "ModelPart.z",
-  "ModelPart.zScale",
-  "ModelPart.Cube.maxX",
-  "ModelPart.Cube.maxY",
-  "ModelPart.Cube.maxZ",
-  "and 12 more"
+  "and 22 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "BedrockEntityModels-26.3-1.1.2-fabric.jar",
   "published": "2026-09-17"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 52
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 62
 }

@@ -9,7 +9,7 @@
  "author": "nnhomoli",
  "description": "Mod that provides survival friendly invisible alternatives to items.",
  "needs": [
-  "Mixin",
+  "Mixin: 5 points inside the game's methods",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
@@ -37,9 +37,12 @@
   "net.minecraft.client.renderer.entity.state.ArmedEntityRenderState",
   "net.minecraft.client.renderer.entity.state.ItemFrameRenderState",
   "net.minecraft.world.entity.AnimationState",
+  "net.minecraft.world.entity.ConversionParams",
+  "net.minecraft.world.entity.ConversionParams.AfterConversion",
   "net.minecraft.world.entity.EntityDimensions",
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
+  "net.minecraft.world.entity.ai.control.MoveControl",
   "net.minecraft.world.entity.ai.goal.FleeSunGoal",
   "net.minecraft.world.entity.ai.goal.GoalSelector",
   "net.minecraft.world.entity.ai.goal.LookAtPlayerGoal",
@@ -47,17 +50,14 @@
   "net.minecraft.world.entity.ai.goal.MoveThroughVillageGoal",
   "net.minecraft.world.entity.ai.goal.RandomLookAroundGoal",
   "net.minecraft.world.entity.ai.goal.RestrictSunGoal",
-  "net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal",
-  "net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal",
-  "net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal",
-  "and 58 more"
+  "and 79 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ghostbulb-1.1.2.jar",
   "published": "2026-11-02"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -91,5 +91,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 98
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 120
 }

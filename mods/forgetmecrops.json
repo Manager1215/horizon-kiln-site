@@ -11,7 +11,6 @@
  "needs": [
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.minecraft.core.particles.DustParticleOptions",
   "net.minecraft.core.particles.ItemParticleOption",
   "net.minecraft.tags.ItemTags",
@@ -21,7 +20,6 @@
   "net.minecraft.world.level.block.entity.ChestBlockEntity",
   "ServerLifecycleEvents.SERVER_STARTED",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerTickEvents.END_SERVER_TICK",
   "Registry.getOrThrow()",
   "RegistryAccess.lookupOrThrow()",
   "ParticleTypes.ITEM",
@@ -31,14 +29,9 @@
   "ServerLevel.sendParticles()",
   "SoundEvents.GRAVEL_HIT",
   "SoundEvents.HOE_TILL",
-  "Items.BEETROOT_SEEDS",
-  "Items.CARROT",
   "Items.IRON_HOE",
   "Items.MELON_SEEDS",
-  "Items.NETHER_WART",
-  "Items.POTATO",
   "Items.PUMPKIN_SEEDS",
-  "Items.WHEAT_SEEDS",
   "Items.WOODEN_HOE",
   "EnchantmentHelper.getItemEnchantmentLevel()",
   "Enchantments.FORTUNE",
@@ -46,17 +39,16 @@
   "Level.getChunk()",
   "Level.getEntitiesOfClass()",
   "Level.getEntitiesOfClass()",
-  "Blocks.ATTACHED_MELON_STEM",
-  "Blocks.ATTACHED_PUMPKIN_STEM",
-  "Blocks.BEETROOTS",
-  "and 14 more"
+  "Blocks.SOUL_SAND",
+  "Blocks.SWEET_BERRY_BUSH",
+  "LevelChunk.getBlockEntities()"
  ],
  "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Forget-Me-Crops_0.26.0+26.3-fabric-0.26.0.jar",
   "published": "2026-09-25"
  },
@@ -68,8 +60,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +78,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 54
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 33
 }

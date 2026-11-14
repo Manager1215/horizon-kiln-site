@@ -9,25 +9,21 @@
  "author": "Meowmiao",
  "description": "🛡️ Server-side AntiXray & ore obfuscation for Fabric/NeoForge. 💎 Hides unexposed ores from X-ray clients. 🚀 No client install. Minecraft 26.1–26.3.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.loader.api.metadata.ModOrigin",
   "net.fabricmc.loader.api.metadata.ModOrigin.Kind",
   "net.minecraft.SharedConstants",
   "net.minecraft.core.IdMapper",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.Action",
+  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
+  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
   "net.minecraft.server.dedicated.DedicatedPlayerList",
   "net.minecraft.server.dedicated.DedicatedServer",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.server.level.ServerPlayerGameMode",
+  "net.minecraft.server.network.PlayerChunkSender",
   "net.minecraft.util.BitStorage",
   "net.minecraft.util.SimpleBitStorage",
   "net.minecraft.world.level.EmptyBlockGetter",
@@ -39,9 +35,7 @@
   "ShortIterator.remove()",
   "ServerLifecycleEvents.SERVER_STARTED",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerTickEvents.END_SERVER_TICK",
   "ModContainer.getOrigin()",
-  "CommandSourceStack.getServer()",
   "BlockPos.MutableBlockPos.set()",
   "SectionPos.asLong()",
   "SectionPos.asLong()",
@@ -50,14 +44,20 @@
   "SectionPos.relativeToBlockX()",
   "SectionPos.relativeToBlockY()",
   "SectionPos.relativeToBlockZ()",
-  "and 42 more"
+  "SectionPos.sectionRelativePos()",
+  "SectionPos.x()",
+  "SectionPos.y()",
+  "SectionPos.z()",
+  "MinecraftServer.execute()",
+  "ServerChunkCache.blockChanged()",
+  "and 25 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "meowantixray-fabric-1.7.0.jar",
   "published": "2026-09-24"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 82
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 65
 }

@@ -9,17 +9,41 @@
  "author": "noramibu",
  "description": "Dynamically render Armor Trim patterns! Updated fork of Bawnorton's mod.",
  "needs": [
-  "Mixin",
+  "Mixin: 6 points inside the game's methods",
+  "net.minecraft.client.renderer.texture.atlas.SpriteSource",
+  "net.minecraft.client.renderer.texture.atlas.SpriteSource.Output",
+  "net.minecraft.client.renderer.texture.atlas.SpriteSourceList",
+  "net.minecraft.client.renderer.texture.atlas.SpriteSources",
+  "net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations",
+  "net.minecraft.client.resources.model.ClientItemInfoLoader",
+  "net.minecraft.client.resources.model.cuboid.ItemModelGenerator",
+  "net.minecraft.server.packs.VanillaPackResources",
+  "net.minecraft.server.packs.resources.MultiPackResourceManager",
+  "net.minecraft.world.item.SmithingTemplateItem",
+  "net.minecraft.world.item.component.DyedItemColor",
   "net.minecraft.world.item.equipment.trim.ArmorTrim",
   "net.minecraft.world.item.equipment.trim.TrimPattern",
-  "DataComponents.TRIM"
+  "org.apache.commons.io.IOUtils",
+  "JsonArray.forEach()",
+  "NativeImage.getHeight()",
+  "NativeImage.getPixel()",
+  "NativeImage.getWidth()",
+  "Minecraft.getVanillaPackResources()",
+  "ItemStackRenderState.pickParticleMaterial()",
+  "DefaultedRegistry.iterator()",
+  "Holder.areComponentsBound()",
+  "DataComponents.TRIM",
+  "Identifier.withPath()",
+  "Identifier.withPath()",
+  "Identifier.withPrefix()",
+  "Item.components()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "dynamic-trims-26.3-fabric-build-2.jar",
   "published": "2026-10-03"
  },
@@ -31,8 +55,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -47,5 +71,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 3
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 27
 }

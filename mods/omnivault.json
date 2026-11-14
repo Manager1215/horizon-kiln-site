@@ -1,15 +1,14 @@
 {
  "id": "omnivault",
  "name": "OmniVault",
- "version": "2.0.2+fabric-26.3",
+ "version": "2.0.4+fabric-26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
  "url": "https://modrinth.com/mod/omnivault",
  "author": "NAIZO",
- "description": "All-in-one storage: a chest network on day one, then a channel-free network with cell drives, terminals, buses and autocrafting, up to quantum bridges. Plus six-tier vaults, drawers, linked vaults and upgradable backpacks.",
+ "description": "All-in-one storage that grows from a chest network on day one to channel-free cell drives, autocrafting and quantum bridges, plus vaults, drawers and backpacks.",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.vertex.QuadInstance",
   "net.fabricmc.fabric.api.client.model.loading.v1.ExtraModelKey",
@@ -19,15 +18,12 @@
   "net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback",
   "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback.RegistrationHelper",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
   "net.minecraft.SharedConstants",
   "net.minecraft.client.color.item.ItemTintSource",
   "net.minecraft.client.color.item.ItemTintSources",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.model.geom.builders.UVPair",
   "net.minecraft.client.model.player.PlayerModel",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.client.renderer.entity.RenderLayerParent",
   "net.minecraft.client.renderer.entity.layers.RenderLayer",
   "net.minecraft.client.renderer.entity.player.AvatarRenderer",
@@ -35,31 +31,34 @@
   "net.minecraft.client.resources.model.SimpleModelWrapper",
   "net.minecraft.core.UUIDUtil",
   "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.nbt.NbtIo",
   "net.minecraft.network.chat.ComponentSerialization",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.util.datafix.fixes.References",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.SimpleMenuProvider",
   "net.minecraft.world.entity.monster.piglin.PiglinAi",
   "net.minecraft.world.food.FoodProperties",
   "net.minecraft.world.inventory.ContainerData",
-  "net.minecraft.world.inventory.ContainerInput",
   "net.minecraft.world.inventory.DataSlot",
   "net.minecraft.world.inventory.ResultContainer",
   "net.minecraft.world.inventory.ResultSlot",
   "net.minecraft.world.inventory.SimpleContainerData",
-  "and 80 more"
+  "net.minecraft.world.item.component.Consumable",
+  "net.minecraft.world.item.component.DyedItemColor",
+  "net.minecraft.world.item.component.SuspiciousStewEffects",
+  "net.minecraft.world.item.component.SuspiciousStewEffects.Entry",
+  "net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect",
+  "net.minecraft.world.item.consume_effects.ConsumeEffect",
+  "net.minecraft.world.item.crafting.display.ShapedCraftingRecipeDisplay",
+  "and 74 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "omnivault-26.3-fabric-2.0.2.jar",
-  "published": "2026-11-03"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "omnivault-26.3-fabric-2.0.4.jar",
+  "published": "2026-11-10"
  },
  "reports": {
   "works": 0,
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 303
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 258
 }

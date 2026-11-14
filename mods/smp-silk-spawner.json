@@ -9,27 +9,31 @@
  "author": "derexXD",
  "description": "Silk Touch spawners implemented in a vanilla/smp friendly way! Fully configurable with different things that could happen with breaking spawners!  Available as plugin / mod",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.item.component.ItemLore",
+  "net.minecraft.world.level.block.SpawnerBlock",
   "net.minecraft.world.level.block.entity.BlockEntityTypes",
   "net.minecraft.world.level.block.entity.SpawnerBlockEntity",
   "DataComponents.LORE",
+  "ServerLevel.sendParticles()",
+  "SoundEvents.SOUL_SAND_HIT",
+  "SoundEvents.SOUL_SAND_PLACE",
   "DamageSources.magic()",
   "Player.damageSources()",
   "Player.hurt()",
+  "Items.SPAWNER",
   "TypedEntityData.getUnsafe()",
   "EnchantmentHelper.getEnchantmentsForCrafting()",
   "Blocks.SPAWNER"
  ],
- "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "SMPSilkSpawner-2.0.4.0-26.3-fabric.jar",
   "published": "2026-11-04"
  },
@@ -41,8 +45,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -57,5 +61,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 13
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 18
 }

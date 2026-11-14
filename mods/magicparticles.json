@@ -9,31 +9,26 @@
  "author": "DrexHD",
  "description": "A server side cosmetics mod, that allows administrator to create custom particles using simple json files",
  "needs": [
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "net.minecraft.core.particles.DustParticleOptions",
   "net.minecraft.network.chat.ComponentUtils",
   "net.minecraft.network.protocol.BundlerInfo",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.network.protocol.game.ClientboundLevelChunkPacketData.BlockEntityInfo",
+  "net.minecraft.util.EncoderCache.2",
+  "net.minecraft.util.filefix.fixes.PlayerStorageFileFix",
   "net.minecraft.world.entity.Display",
   "net.minecraft.world.entity.Display.BillboardConstraints",
   "org.apache.commons.io.filefilter.SuffixFileFilter",
   "ModContainer.findPath()",
-  "CommandSourceStack.getPlayerOrException()",
-  "CommandSourceStack.getPosition()",
-  "CommandSourceStack.getRotation()",
   "EntityAnchorArgument.Anchor.apply()",
   "EntityAnchorArgument.Anchor.getByName()",
   "ParticleTypes.CODEC",
   "StringTag.TYPE",
-  "MinecraftServer.getPlayerList()",
   "ServerPlayer.connection",
   "ServerPlayer.createCommandSourceStack()",
+  "ServerGamePacketListenerImpl.send()",
   "RandomSource.nextIntBetweenInclusive()",
   "Vec2.CODEC",
-  "Vec2.ZERO",
-  "Vec2.x",
-  "Vec2.y",
   "Vec3.CODEC",
   "Vec3.toVector3f()"
  ],
@@ -41,8 +36,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "magic-particles-1.3.2+26.3.jar",
   "published": "2026-09-19"
  },
@@ -54,8 +49,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -67,5 +62,9 @@
  "depends": [
   "java"
  ],
- "lacks": 26
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; runs threads of its own; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 21
 }

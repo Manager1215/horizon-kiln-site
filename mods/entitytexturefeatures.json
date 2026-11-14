@@ -9,17 +9,13 @@
  "author": "Traben",
  "description": "Emissive, Random & Custom texture support for entities in resourcepacks just like Optifine but for Fabric",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.Blaze3D",
   "com.mojang.blaze3d.vertex.BufferBuilder",
   "net.minecraft.IdentifierException",
   "net.minecraft.advancements.predicates.NbtPredicate",
   "net.minecraft.client.StringSplitter",
-  "net.minecraft.client.gui.components.Button.Plain",
   "net.minecraft.client.gui.components.ImageButton",
-  "net.minecraft.client.gui.components.StringWidget",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.components.WidgetSprites",
   "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.model.EntityModel",
@@ -44,20 +40,23 @@
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.client.resources.SkinManager.TextureCache",
   "net.minecraft.core.ClientAsset.DownloadedTexture",
-  "net.minecraft.network.chat.ComponentContents",
-  "net.minecraft.network.chat.contents.PlainTextContents",
-  "net.minecraft.network.chat.contents.PlainTextContents.LiteralContents",
   "net.minecraft.server.packs.VanillaPackResources",
   "net.minecraft.server.packs.repository.PackRepository",
   "net.minecraft.server.packs.resources.ResourceMetadata",
+  "net.minecraft.tags.ItemTags",
+  "net.minecraft.util.FileUtil",
+  "net.minecraft.world.entity.NeutralMob",
+  "net.minecraft.world.entity.Pose",
+  "net.minecraft.world.entity.animal.cow.MushroomCow",
+  "net.minecraft.world.entity.animal.cow.MushroomCow.Variant",
   "and 80 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "entity_texture_features-7.2.7-26.3-fabric.jar",
   "published": "2026-11-03"
  },
@@ -70,5 +69,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
- "lacks": 242
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 207
 }

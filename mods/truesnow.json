@@ -9,7 +9,6 @@
  "author": "IlyRac",
  "description": "An immersive vanilla-plus mod that finally makes cold biomes make sense.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin.Context",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelModifier",
@@ -20,7 +19,18 @@
   "net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadEmitter",
   "net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry",
   "net.minecraft.client.renderer.BiomeColors",
+  "net.minecraft.client.renderer.CloudRenderer",
+  "net.minecraft.client.renderer.SkyRenderer",
+  "net.minecraft.client.renderer.fog.FogData",
+  "net.minecraft.client.renderer.fog.environment.AtmosphericFogEnvironment",
+  "net.minecraft.client.renderer.state.level.SkyRenderState",
+  "net.minecraft.client.resources.sounds.AbstractTickableSoundInstance",
   "ResourceManagerHelper.registerBuiltinResourcePack()",
+  "Camera.blockPosition()",
+  "LocalPlayer.getRandom()",
+  "SoundEvents.AMBIENT_SOUL_SAND_VALLEY_LOOP",
+  "SoundEvents.ELYTRA_FLYING",
+  "Level.getBiome()",
   "Blocks.BROWN_MUSHROOM",
   "Blocks.BUSH",
   "Blocks.DANDELION",
@@ -31,16 +41,15 @@
   "Blocks.POPPY",
   "Blocks.RED_MUSHROOM",
   "Blocks.SHORT_GRASS",
-  "Blocks.SUGAR_CANE",
   "Blocks.SWEET_BERRY_BUSH",
   "Blocks.TALL_GRASS"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "truesnow-1.1.jar",
   "published": "2026-09-19"
  },
@@ -52,8 +61,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -69,5 +78,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 24
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 34
 }

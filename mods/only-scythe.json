@@ -10,27 +10,20 @@
  "description": "Adds Scythe to harvesting crops",
  "needs": [
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
-  "BlockTags.CROPS",
   "Player.isCrouching()",
   "ItemStack.hurtAndBreak()",
   "ToolMaterial.COPPER",
   "ToolMaterial.GOLD",
   "ToolMaterial.STONE",
   "ToolMaterial.WOOD",
-  "Block.dropResources()",
-  "Blocks.BAMBOO",
-  "Blocks.COCOA",
-  "Blocks.KELP_PLANT",
-  "Blocks.NETHER_WART",
-  "Blocks.SUGAR_CANE",
   "BlockState.getCloneItemStack()"
  ],
  "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "onlyscythe-fabric-26.3-26.3-0.2.jar",
   "published": "2026-10-09"
  },
@@ -42,8 +35,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -59,5 +52,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 15
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 8
 }

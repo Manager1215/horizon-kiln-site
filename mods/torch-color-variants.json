@@ -1,0 +1,72 @@
+{
+ "id": "torch-color-variants",
+ "name": "Colorful Torches",
+ "version": "1.0.0+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/torch-color-variants",
+ "author": "JCS",
+ "description": "Torch Color Variants is a mod that adds a variety of torch colors.",
+ "needs": [
+  "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
+  "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
+  "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
+  "net.minecraft.client.particle.ParticleProvider",
+  "net.minecraft.client.particle.RisingParticle",
+  "net.minecraft.client.particle.SingleQuadParticle",
+  "net.minecraft.client.particle.SingleQuadParticle.Layer",
+  "net.minecraft.client.particle.SpriteSet",
+  "net.minecraft.world.level.block.TorchBlock",
+  "net.minecraft.world.level.block.WallTorchBlock",
+  "net.minecraft.world.level.material.PushReaction",
+  "LightCoordsUtil.addSmoothBlockEmission()",
+  "Block.getLootTable()",
+  "Blocks.SOUL_TORCH",
+  "Blocks.TORCH",
+  "BlockBehaviour.Properties.overrideDescription()",
+  "BlockBehaviour.Properties.overrideLootTable()",
+  "BlockBehaviour.Properties.pushReaction()",
+  "AABB.move()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "custom-torches-1.0.0+26.3.jar",
+  "published": "2026-11-13"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "fabric-datagen": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 19
+}

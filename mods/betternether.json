@@ -10,7 +10,7 @@
  "description": "More Biomes, More Mobs, More Tools for the fiery Dimension",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 5 points inside the game's methods",
   "com.mojang.math.Quadrant",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
@@ -46,19 +46,19 @@
   "net.minecraft.client.model.geom.builders.MeshDefinition",
   "net.minecraft.client.model.geom.builders.PartDefinition",
   "net.minecraft.client.model.monster.skeleton.SkeletonModel",
+  "net.minecraft.client.model.object.armorstand.ArmorStandArmorModel",
   "net.minecraft.client.particle.DripParticle",
   "net.minecraft.client.particle.DripParticle.DripHangParticle",
   "net.minecraft.client.particle.DripParticle.DripLandParticle",
   "net.minecraft.client.particle.DripParticle.FallAndLandParticle",
-  "net.minecraft.client.particle.ParticleProvider",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "better-nether-26.302.1.jar",
   "published": "2026-11-01"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -95,5 +95,9 @@
   "wover",
   "wunderlib"
  ],
- "lacks": 613
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 631
 }

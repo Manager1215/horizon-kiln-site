@@ -9,9 +9,8 @@
  "author": "Monkeyopolis",
  "description": "Madoku Craft: Items adds a rarity and leveling system to certain items. It increases the stacking limit by default.",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.minecraft.core.HolderSet.Direct",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.SimpleMenuProvider",
@@ -24,20 +23,20 @@
   "net.minecraft.world.item.component.ItemLore",
   "net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect",
   "net.minecraft.world.item.consume_effects.ConsumeEffect",
-  "Minecraft.setScreenAndShow()",
+  "GuiGraphicsExtractor.fill()",
   "AbstractContainerScreen.containerTick()",
+  "RenderPipelines.GUI",
   "DefaultedRegistry.getTagOrEmpty()",
   "HolderSet.direct()",
-  "Registry.wrapAsHolder()",
   "DataComponents.ATTACK_RANGE",
   "DataComponents.CONSUMABLE",
   "DataComponents.FOOD",
   "DataComponents.LORE",
   "DataComponents.MAX_DAMAGE",
-  "MinecraftServer.getPlayerList()",
   "BlockTags.INCORRECT_FOR_NETHERITE_TOOL",
   "BlockTags.INCORRECT_FOR_STONE_TOOL",
   "BlockTags.INCORRECT_FOR_WOODEN_TOOL",
+  "LivingEntity.getRandom()",
   "MenuType.<init>()",
   "Item.BASE_ATTACK_DAMAGE_ID",
   "Item.BASE_ATTACK_SPEED_ID",
@@ -50,14 +49,15 @@
   "Items.BOWL",
   "Items.LEATHER",
   "Items.NETHERITE_SCRAP",
-  "and 4 more"
+  "Items.OAK_LOG",
+  "and 3 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "madoku-craft-items-26.3-1.2.6-V1.jar",
   "published": "2026-10-31"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "madoku-craft-core",
   "minecraft"
  ],
- "lacks": 44
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels"
+ },
+ "lacks": 43
 }

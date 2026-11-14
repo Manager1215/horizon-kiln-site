@@ -1,7 +1,7 @@
 {
  "id": "disable-fog",
  "name": "Disable Fog",
- "version": "2.2.1",
+ "version": "2.3.0-beta.1",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,29 +9,33 @@
  "author": "Sergo467",
  "description": "Allows you to selectively disable different types of fog.",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
   "net.minecraft.client.gui.ActiveTextCollector",
-  "net.minecraft.client.gui.components.AbstractStringWidget",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
-  "net.minecraft.client.gui.components.CycleButton.OnValueChange",
   "net.minecraft.client.gui.components.OptionsList",
   "net.minecraft.client.gui.components.OptionsList.AbstractEntry",
-  "net.minecraft.client.gui.components.StringWidget",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
   "net.minecraft.client.gui.layouts.LinearLayout",
   "net.minecraft.client.gui.screens.options.OptionsSubScreen",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
-  "AbstractWidget.getMessage()",
-  "AbstractWidget.playButtonClickSound()",
-  "AbstractWidget.setHeight()",
-  "AbstractWidget.setPosition()",
-  "Button.Builder.width()",
+  "net.minecraft.client.renderer.LevelRenderer",
+  "net.minecraft.client.renderer.SkyRenderer",
+  "net.minecraft.client.renderer.fog.FogData",
+  "net.minecraft.client.renderer.fog.FogRenderer",
+  "net.minecraft.client.renderer.fog.environment.AtmosphericFogEnvironment",
+  "net.minecraft.client.renderer.fog.environment.BlindnessFogEnvironment",
+  "net.minecraft.client.renderer.fog.environment.DarknessFogEnvironment",
+  "net.minecraft.client.renderer.fog.environment.FogEnvironment",
+  "net.minecraft.client.renderer.fog.environment.LavaFogEnvironment",
+  "net.minecraft.client.renderer.fog.environment.PowderedSnowFogEnvironment",
+  "net.minecraft.client.renderer.fog.environment.WaterFogEnvironment",
+  "net.minecraft.client.renderer.state.level.CameraEntityRenderState",
+  "net.minecraft.world.level.material.FogType",
+  "Camera.getFluidInCamera()",
+  "CycleButton.Builder.withTooltip()",
   "NarrationElementOutput.add()",
   "ClientPacketListener.levels()",
+  "GameRenderer.mainCamera()",
+  "CameraRenderState.entityRenderState",
   "CommonComponents.GUI_DONE",
   "Component.getVisualOrderText()"
  ],
@@ -39,10 +43,10 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "disablefog-fabric-26.3-2.2.1.jar",
-  "published": "2026-09-18"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "disablefog-fabric-26.3-2.3.0-beta.1.jar",
+  "published": "2026-11-08"
  },
  "reports": {
   "works": 0,
@@ -52,8 +56,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -68,5 +72,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 24
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 28
 }

@@ -9,17 +9,14 @@
  "author": "Bluebird",
  "description": "Removes the annoying fishing rod bobber/hook in first person allowing you to see clearer",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.CameraType",
-  "net.minecraft.world.entity.projectile.FishingHook",
-  "Options.getCameraType()"
+  "net.minecraft.client.renderer.entity.FishingHookRenderer"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "nofishinghook-1.0+26.3-fabric.jar",
   "published": "2026-09-15"
  },
@@ -37,5 +34,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 3
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 1
 }

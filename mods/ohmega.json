@@ -9,7 +9,6 @@
  "author": "Swackyy",
  "description": "A modernised and lightweight data-driven accessory API for Minecraft",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
   "net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider",
   "net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider.TranslationBuilder",
@@ -26,16 +25,13 @@
   "net.minecraft.client.gui.screens.options.controls.KeyBindsList.Entry",
   "net.minecraft.client.gui.screens.options.controls.KeyBindsList.KeyEntry",
   "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.data.PackOutput.Target",
   "net.minecraft.network.VarInt",
-  "net.minecraft.network.chat.contents.PlainTextContents",
   "net.minecraft.network.protocol.game.ServerboundContainerClosePacket",
   "net.minecraft.util.profiling.ProfilerFiller",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.SimpleMenuProvider",
   "net.minecraft.world.entity.Attackable",
-  "net.minecraft.world.entity.EquipmentSlot.Type",
   "net.minecraft.world.entity.PortalProcessor",
   "net.minecraft.world.inventory.ArmorSlot",
   "net.minecraft.world.inventory.CraftingMenu",
@@ -45,19 +41,22 @@
   "net.minecraft.world.item.AirItem",
   "net.minecraft.world.item.enchantment.EnchantedItemInUse",
   "net.minecraft.world.waypoints.WaypointTransmitter",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "ImmutableList.get()",
   "ImmutableList.isEmpty()",
   "ImmutableList.size()",
-  "and 57 more"
+  "ImmutableSet.isEmpty()",
+  "ImmutableSet.size()",
+  "Window.handle()",
+  "AttachmentRegistry.create()",
+  "KeyMapping.matches()",
+  "and 52 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ohmega-1.5.22-fabric-mc26.3.jar",
   "published": "2026-10-09"
  },
@@ -70,5 +69,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
- "lacks": 117
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 98
 }

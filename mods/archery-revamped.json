@@ -9,12 +9,9 @@
  "author": "Lomin",
  "description": "A Vanilla-Friendly Archery Overhaul!",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.AfterTranslucentFeatures",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.client.model.geom.ModelLayers",
   "net.minecraft.client.model.object.projectile.ArrowModel",
   "net.minecraft.client.renderer.entity.ArrowRenderer",
@@ -28,36 +25,39 @@
   "net.minecraft.network.syncher.EntityDataAccessor",
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.SimpleContainer",
+  "net.minecraft.world.SimpleMenuProvider",
   "net.minecraft.world.entity.projectile.ProjectileUtil",
   "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
   "net.minecraft.world.entity.projectile.arrow.AbstractArrow.Pickup",
   "net.minecraft.world.flag.FeatureFlags",
+  "net.minecraft.world.inventory.AnvilMenu",
   "net.minecraft.world.inventory.ClickAction",
   "net.minecraft.world.inventory.ContainerData",
-  "net.minecraft.world.inventory.ContainerInput",
   "net.minecraft.world.inventory.ContainerLevelAccess",
+  "net.minecraft.world.inventory.CraftingMenu",
   "net.minecraft.world.inventory.MenuType.MenuSupplier",
+  "net.minecraft.world.inventory.ResultContainer",
   "net.minecraft.world.inventory.SimpleContainerData",
   "net.minecraft.world.item.ArrowItem",
   "net.minecraft.world.item.BowItem",
   "net.minecraft.world.item.CrossbowItem",
   "net.minecraft.world.item.ItemCooldowns",
-  "net.minecraft.world.item.alchemy.PotionContents",
+  "net.minecraft.world.item.ProjectileWeaponItem",
   "net.minecraft.world.level.block.MultifaceBlock",
   "net.minecraft.world.level.block.SculkShriekerBlock",
   "net.minecraft.world.level.storage.loot.functions.EnchantRandomlyFunction",
   "net.minecraft.world.level.storage.loot.functions.EnchantRandomlyFunction.Builder",
-  "and 62 more"
+  "net.minecraft.world.level.storage.loot.providers.number.ints.ConstantValue",
+  "net.minecraft.world.phys.EntityHitResult",
+  "and 60 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "archery-revamped-26.3-1.6.6.jar",
   "published": "2026-10-18"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 170
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 155
 }

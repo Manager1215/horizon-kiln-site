@@ -9,20 +9,12 @@
  "author": "ChillPavz",
  "description": "Adds 11 handheld ore detectors you can craft early in the game. Right-click any block to scan the stone behind it for coal, copper, iron, redstone, lapis, gold, diamond, emerald, quartz, amethyst, or netherite",
  "needs": [
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.core.UUIDUtil",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.world.item.ItemCooldowns",
   "net.minecraft.world.item.component.UseCooldown",
   "FabricCreativeModeTabOutput.accept()",
   "DataComponents.USE_COOLDOWN",
-  "MutableComponent.withStyle()",
-  "Style.withClickEvent()",
-  "Style.withUnderlined()",
   "MinecraftServer.overworld()",
-  "ServerPlayer.sendSystemMessage()",
   "Player.getCooldowns()",
   "Item.Properties.repairable()",
   "Item.Properties.repairable()",
@@ -49,14 +41,16 @@
   "Blocks.IRON_ORE",
   "Blocks.LAPIS_ORE",
   "Blocks.NETHER_GOLD_ORE",
-  "and 3 more"
+  "Blocks.NETHER_QUARTZ_ORE",
+  "Blocks.REDSTONE_ORE",
+  "GameEvent.INSTRUMENT_PLAY"
  ],
  "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "oredetector-fabric-26.x-2.0.0.jar",
   "published": "2026-09-22"
  },
@@ -68,8 +62,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +80,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 43
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 35
 }

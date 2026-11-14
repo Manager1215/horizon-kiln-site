@@ -10,10 +10,15 @@
  "description": "Lets you dye all items exactly like leather armor!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 6 points inside the game's methods",
   "net.minecraft.client.color.item.Dye",
   "net.minecraft.client.renderer.entity.ThrownTridentRenderer",
+  "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
   "net.minecraft.client.renderer.entity.state.ThrownTridentRenderState",
+  "net.minecraft.client.renderer.item.CuboidItemModelWrapper",
+  "net.minecraft.client.renderer.special.NoDataSpecialModelRenderer",
+  "net.minecraft.client.renderer.special.ShieldSpecialRenderer",
+  "net.minecraft.client.renderer.special.TridentSpecialRenderer",
   "net.minecraft.client.resources.model.EquipmentClientInfo",
   "net.minecraft.client.resources.model.EquipmentClientInfo.Layer",
   "net.minecraft.network.syncher.EntityDataSerializers",
@@ -21,12 +26,12 @@
   "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
   "net.minecraft.world.entity.projectile.arrow.ThrownTrident",
   "net.minecraft.world.item.component.DyedItemColor",
+  "net.minecraft.world.item.crafting.RecipeSerializers",
   "net.minecraft.world.item.crafting.TransmuteRecipe",
   "net.minecraft.world.item.crafting.display.ShapelessCraftingRecipeDisplay",
   "net.minecraft.world.item.crafting.display.SlotDisplay.DyedSlotDemo",
   "net.minecraft.world.item.crafting.display.SlotDisplay.ItemSlotDisplay",
   "net.minecraft.world.item.crafting.display.SlotDisplay.OnlyWithComponent",
-  "org.apache.logging.log4j.LogManager",
   "Model.renderType()",
   "CauldronInteractions.dyedItemIteration()",
   "DataComponents.DYE",
@@ -47,8 +52,8 @@
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "DyeAllTheThings-1.11.0-26.3.jar",
   "published": "2026-09-16"
  },
@@ -65,5 +70,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 31
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 36
 }

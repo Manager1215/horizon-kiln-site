@@ -1,7 +1,7 @@
 {
  "id": "marvelores",
  "name": "MarvelOres",
- "version": "1.0.2-26.3",
+ "version": "1.0.3-26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,12 +9,14 @@
  "author": "At0m_W",
  "description": "Adds 4 Marvel ores (Titanium, Vibranium, Adamantium, Uru) and iconic weapons like Mjolnir, Stormbreaker, Captain America's Shield, and Black Panther armor!",
  "needs": [
-  "Mixin",
+  "net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer",
+  "net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer.Factory",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
   "net.minecraft.client.model.EntityModel",
+  "net.minecraft.client.model.HumanoidModel",
   "net.minecraft.client.model.geom.PartPose",
   "net.minecraft.client.model.geom.builders.CubeDeformation",
   "net.minecraft.client.model.geom.builders.CubeListBuilder",
@@ -28,6 +30,7 @@
   "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
   "net.minecraft.world.entity.projectile.arrow.Arrow",
   "net.minecraft.world.inventory.ContainerData",
+  "net.minecraft.world.inventory.FurnaceMenu",
   "net.minecraft.world.inventory.SimpleContainerData",
   "net.minecraft.world.item.ArrowItem",
   "net.minecraft.world.item.BowItem",
@@ -36,30 +39,26 @@
   "net.minecraft.world.item.component.BlocksAttacks",
   "net.minecraft.world.item.component.BlocksAttacks.DamageReduction",
   "net.minecraft.world.item.component.BlocksAttacks.ItemDamageFunction",
+  "net.minecraft.world.item.crafting.AbstractCookingRecipe.Factory",
   "net.minecraft.world.item.crafting.RecipeBookCategories",
+  "net.minecraft.world.item.crafting.RecipeManager.CachedCheck",
   "net.minecraft.world.item.equipment.ArmorMaterials",
   "net.minecraft.world.item.equipment.Equippable.Builder",
+  "net.minecraft.world.level.block.AbstractFurnaceBlock",
   "net.minecraft.world.level.block.UntintedParticleLeavesBlock",
+  "net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity",
   "net.minecraft.world.level.block.state.BlockBehaviour.StateArgumentPredicate",
   "net.minecraft.world.level.block.state.BlockBehaviour.StatePredicate",
-  "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
-  "net.minecraft.world.level.levelgen.feature.BlockReplacement",
-  "net.minecraft.world.level.levelgen.feature.OreFeature",
-  "net.minecraft.world.level.levelgen.feature.TreeFeature",
-  "net.minecraft.world.level.levelgen.feature.TreeFeature.Builder",
-  "net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize",
-  "net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer",
-  "net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer",
-  "and 50 more"
+  "and 64 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "marvelores-1.0.2-26.3.jar",
-  "published": "2026-10-27"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "marvelores-1.0.3-26.3.jar",
+  "published": "2026-11-13"
  },
  "reports": {
   "works": 0,
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 90
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 104
 }

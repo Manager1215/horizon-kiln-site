@@ -10,10 +10,6 @@
  "description": "Client-side, allows you to create palettes with percentages that automatically selects randomly when you place",
  "needs": [
   "net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket",
-  "Minecraft.hitResult",
-  "Options.keyUse",
-  "Font.plainSubstrByWidth()",
-  "Screen.mouseClicked()",
   "ClientPacketListener.getConnection()",
   "Connection.send()",
   "Inventory.getSelectionSize()"
@@ -22,8 +18,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "palette-placer-1.0.2+26.3.jar",
   "published": "2026-09-22"
  },
@@ -35,8 +31,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -51,5 +47,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 8
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 4
 }

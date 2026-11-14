@@ -1,0 +1,71 @@
+{
+ "id": "polydium",
+ "name": "Polydium (Vulkan 1.21.11 - 26.1.2 / VulkanMod+)",
+ "version": "v1.4.8",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/polydium",
+ "author": "Wyvest",
+ "description": "Well-rounded client-side optimization mod. Extremely compatible Vulkan backend for 1.21.11-26.1.2. By Polyfrost, best with OneClient.",
+ "needs": [
+  "com.mojang.renderpearl.api.device.BackendCreationException",
+  "com.mojang.renderpearl.backend.opengl.GlRenderPipeline",
+  "com.mojang.renderpearl.backend.opengl.VertexArray",
+  "com.mojang.renderpearl.backend.vulkan.VulkanBackend",
+  "com.mojang.renderpearl.frontend.FrontendRenderPipeline",
+  "net.fabricmc.loader.api.LanguageAdapter",
+  "net.minecraft.client.PreferredGraphicsApi",
+  "net.minecraft.client.gui.components.ImageWidget",
+  "net.minecraft.client.gui.layouts.LinearLayout",
+  "net.minecraft.client.gui.screens.AlertScreen",
+  "ModMetadata.getProvides()",
+  "Options.preferredGraphicsBackend()",
+  "CommonComponents.GUI_OK",
+  "CommonComponents.joinLines()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "polydium-1.4.8+26.3.jar",
+  "published": "2026-11-14"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "preLaunch": 1,
+  "client": 1,
+  "mixinsquared": 1,
+  "mixinsquared-adjuster": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabric-language-kotlin",
+  "fabricloader",
+  "gpu_booster",
+  "java",
+  "minecraft",
+  "oneconfigv1"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 14
+}

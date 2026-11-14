@@ -9,13 +9,10 @@
  "author": "Melworks",
  "description": "A lightweight villager brain overhaul that makes villagers feel more alive and responsive.",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndLevelTick",
   "net.minecraft.core.particles.DustParticleOptions",
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
   "net.minecraft.server.network.Filterable",
-  "net.minecraft.server.permissions.Permissions",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.entity.ai.Brain",
@@ -31,8 +28,6 @@
   "net.minecraft.world.entity.projectile.ProjectileUtil",
   "net.minecraft.world.entity.projectile.arrow.Arrow",
   "net.minecraft.world.item.MapItem",
-  "net.minecraft.world.item.alchemy.PotionContents",
-  "net.minecraft.world.item.alchemy.Potions",
   "net.minecraft.world.item.component.DyedItemColor",
   "net.minecraft.world.item.component.ItemLore",
   "net.minecraft.world.item.component.WrittenBookContent",
@@ -41,6 +36,7 @@
   "net.minecraft.world.level.block.entity.BrewingStandBlockEntity",
   "net.minecraft.world.level.block.entity.LecternBlockEntity",
   "net.minecraft.world.level.block.entity.SmokerBlockEntity",
+  "net.minecraft.world.level.material.MapColor.Brightness",
   "net.minecraft.world.phys.EntityHitResult",
   "net.minecraft.world.scores.PlayerTeam",
   "net.minecraft.world.scores.TeamColor",
@@ -49,15 +45,18 @@
   "VertexConsumer.setNormal()",
   "VertexConsumer.setOverlay()",
   "Object2IntMap.Entry.getKey()",
-  "ServerTickEvents.END_LEVEL_TICK",
-  "and 54 more"
+  "EntityRenderer.shouldRender()",
+  "RenderTypes.entityCutoutCull()",
+  "CameraRenderState.orientation",
+  "BlockPos.distSqr()",
+  "and 51 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "real-working-villagers-26.3.jar",
   "published": "2026-10-23"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 222
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert)"
+ },
+ "lacks": 224
 }

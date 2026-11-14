@@ -9,24 +9,23 @@
  "author": "Milasand",
  "description": "After a certain period of inactivity, the camera will automatically showcase the player, nearby mobs, and the surrounding scenery.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "com.mojang.blaze3d.platform.FramerateLimitTracker",
-  "net.minecraft.client.CameraType",
   "net.minecraft.client.Screenshot",
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.world.entity.ambient.Bat",
   "net.minecraft.world.entity.monster.Enemy",
   "NativeImage.getHeight()",
   "NativeImage.getWidth()",
+  "Window.handle()",
+  "Camera.getCameraEntityPartialTicks()",
   "Camera.xRot()",
   "Camera.yRot()",
   "Minecraft.getFramerateLimitTracker()",
   "Minecraft.isLocalServer()",
   "Minecraft.isWindowActive()",
   "Options.framerateLimit()",
-  "Options.getCameraType()",
   "Options.pauseOnLostFocus",
-  "Options.setCameraType()",
   "GuiGraphicsExtractor.blit()",
   "GuiGraphicsExtractor.blit()",
   "Hud.toggle()",
@@ -36,7 +35,6 @@
   "Mob.distanceToSqr()",
   "Mob.getBbHeight()",
   "Mob.isAlive()",
-  "Mob.isRemoved()",
   "Mob.xo",
   "Mob.yo",
   "Mob.zo",
@@ -44,15 +42,14 @@
   "Player.getViewYRot()",
   "Level.clip()",
   "Level.getEntitiesOfClass()",
-  "AABB.inflate()",
-  "HitResult.getType()"
+  "AABB.inflate()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ambient_camera-fabric-26.3-1.1.0.jar",
   "published": "2026-10-26"
  },
@@ -64,8 +61,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -81,5 +78,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 36
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 33
 }

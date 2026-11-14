@@ -9,11 +9,9 @@
  "author": "YourDailyModder",
  "description": "With this Mod your Hotbar items will be visible on your Character, with a unique location for a Shield and Banner.",
  "needs": [
-  "Mixin",
   "com.mojang.blaze3d.platform.TextInputManager",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
-  "net.minecraft.client.gui.components.events.AbstractContainerEventHandler",
   "net.minecraft.client.model.EntityModel",
   "net.minecraft.client.model.HumanoidModel",
   "net.minecraft.client.model.geom.PartPose",
@@ -39,25 +37,26 @@
   "net.minecraft.world.item.ShieldItem",
   "net.minecraft.world.item.SpectralArrowItem",
   "net.minecraft.world.item.TridentItem",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "InputConstants.isKeyDown()",
   "Window.handle()",
   "Axis.ZP",
-  "ClientPlayNetworking.canSend()",
-  "ServerPlayNetworking.canSend()",
   "ChatFormatting.stripFormatting()",
   "KeyMapping.matches()",
-  "Minecraft.execute()",
   "Minecraft.getEntityRenderDispatcher()",
-  "and 41 more"
+  "Minecraft.textInputManager()",
+  "GuiGraphicsExtractor.entity()",
+  "LayoutElement.getRectangle()",
+  "NarrationElementOutput.add()",
+  "ModelPart.getChild()",
+  "ModelPart.translateAndRotate()",
+  "and 27 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "weaponmaster_ydm-4.4.4-fabric.jar",
   "published": "2026-09-17"
  },
@@ -70,5 +69,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
- "lacks": 81
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 67
 }

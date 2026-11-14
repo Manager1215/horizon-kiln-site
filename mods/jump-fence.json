@@ -9,18 +9,11 @@
  "author": "AquaLawng",
  "description": "Allows players to smoothly jump over fences",
  "needs": [
-  "Mixin",
   "net.fabricmc.api.DedicatedServerModInitializer",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
-  "ServerTickEvents.END_SERVER_TICK",
   "BlockPos.MutableBlockPos.set()",
-  "MinecraftServer.getPlayerList()",
   "ServerPlayer.connection",
   "ServerPlayer.getBoundingBox()",
+  "ServerGamePacketListenerImpl.send()",
   "BlockTags.FENCES",
   "BlockTags.FENCE_GATES",
   "BlockTags.WALLS",
@@ -32,12 +25,12 @@
   "AABB.minY",
   "AABB.minZ"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "jumpfences-1.0.1.jar",
   "published": "2026-09-23"
  },
@@ -57,5 +50,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 21
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 15
 }

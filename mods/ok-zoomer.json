@@ -9,36 +9,32 @@
  "author": "Ennui",
  "description": "Ok Zoomer is a zoom mod that is powerful, lean, and pretty customizable. The zoom is yours!",
  "needs": [
-  "Mixin",
+  "Mixin: 9 points inside the game's methods",
   "net.fabricmc.fabric.api.tag.client.v1.ClientTags",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
-  "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-  "net.minecraft.client.gui.components.StringWidget",
-  "net.minecraft.client.gui.components.Tooltip",
+  "net.minecraft.client.gui.components.SubtitleOverlay",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
   "net.minecraft.client.gui.layouts.LinearLayout",
+  "net.minecraft.client.renderer.extract.LevelExtractor",
+  "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.util.CommonColors",
   "net.minecraft.util.Ease",
   "net.minecraft.util.SmoothDouble",
+  "org.lwjgl.sdl.SDLMouse",
+  "RenderPipeline.getColorTargetStates()",
+  "Camera.getFov()",
   "GuiGraphicsExtractor.blit()",
   "GuiGraphicsExtractor.fill()",
-  "AbstractWidget.setPosition()",
-  "Button.Builder.tooltip()",
-  "Button.Builder.width()",
-  "EditBox.setTextColor()",
-  "EditBox.setTooltip()",
-  "Screen.getFont()",
+  "CycleButton.Builder.withTooltip()",
   "LocalPlayer.isScoping()",
   "RenderPipelines.GUI",
   "RenderPipelines.VIGNETTE",
+  "CameraRenderState.cameraEntityPartialTicks",
   "CommonComponents.GUI_DONE",
   "CommonComponents.joinLines()",
   "CommonComponents.optionNameValue()",
   "Identifier.withPath()",
+  "ARGB.color()",
   "ARGB.colorFromFloat()",
   "Inventory.contains()"
  ],
@@ -46,8 +42,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ok_zoomer-19.0.0-beta.3.jar",
   "published": "2026-10-26"
  },
@@ -59,8 +55,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -77,5 +73,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 31
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method into the game's classes; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 27
 }

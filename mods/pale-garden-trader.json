@@ -13,7 +13,6 @@
   "net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer.Factory",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.object.builder.v1.world.poi.PoiHelper",
   "net.minecraft.client.model.HumanoidModel",
   "net.minecraft.client.model.geom.PartNames",
@@ -22,10 +21,8 @@
   "net.minecraft.client.model.geom.builders.CubeListBuilder",
   "net.minecraft.client.model.geom.builders.MeshDefinition",
   "net.minecraft.client.model.geom.builders.PartDefinition",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.entity.npc.villager.VillagerProfession",
   "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
-  "ServerTickEvents.END_SERVER_TICK",
   "LayerDefinition.create()",
   "EntityRendererProvider.Context.bakeLayer()",
   "RenderTypes.armorCutoutNoCull()",
@@ -34,7 +31,6 @@
   "Registries.POINT_OF_INTEREST_TYPE",
   "Registries.TRADE_SET",
   "Registries.VILLAGER_PROFESSION",
-  "MinecraftServer.getPlayerList()",
   "SoundEvents.ARMOR_EQUIP_GENERIC",
   "SoundEvents.VILLAGER_TRADE",
   "ItemStack.hasFoil()",
@@ -45,8 +41,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "leons_pale_garden_trader-1.0.0 Fabric 26.3.jar",
   "published": "2026-10-23"
  },
@@ -58,8 +54,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -75,5 +71,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 31
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 27
 }

@@ -10,24 +10,16 @@
  "description": "A server-sided fabric networking optimization mod that uses packet batching and other optimizations. Fully compatible with Krypton.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 4 points inside the game's methods",
   "io.netty.channel.Channel",
   "io.netty.channel.Channel.Unsafe",
   "io.netty.channel.ChannelFutureListener",
   "io.netty.channel.ChannelOutboundBuffer",
   "io.netty.channel.EventLoop",
-  "net.minecraft.network.chat.contents.TranslatableContents",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
+  "net.minecraft.network.protocol.game.ClientboundLevelChunkPacketData.BlockEntityInfo",
+  "net.minecraft.util.EncoderCache.2",
   "MappedRegistry.<init>()",
   "SectionPos.chunk()",
-  "MutableComponent.create()",
-  "MutableComponent.setStyle()",
-  "Style.applyTo()",
-  "Style.withObfuscated()",
-  "Style.withStrikethrough()",
-  "Style.withUnderlined()",
   "Packet.isTerminal()",
   "ClientboundBlockEntityDataPacket.getPos()",
   "ClientboundBlockUpdatePacket.getPos()",
@@ -43,8 +35,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "pulsenet-1.1.0+26.2.jar",
   "published": "2026-09-16"
  },
@@ -56,8 +48,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -72,5 +64,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 27
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 19
 }

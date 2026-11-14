@@ -9,21 +9,18 @@
  "author": "Monkeyopolis",
  "description": "Madoku Craft: Farming adjusts crops to grow based on time instead of randomly. It modifies the yield for crops and allows farmland and other blocks to be fertilized.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.client.multiplayer.ClientChunkCache",
+  "net.minecraft.client.renderer.LevelRenderer",
   "net.minecraft.network.chat.FontDescription",
   "net.minecraft.network.chat.FontDescription.Resource",
   "net.minecraft.server.level.ChunkMap",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.item.component.ItemLore",
-  "ServerPlayNetworking.canSend()",
+  "net.minecraft.world.level.block.ComposterBlock",
+  "net.minecraft.world.level.block.FarmlandBlock",
+  "net.minecraft.world.level.block.StemBlock",
   "ClientLevel.clip()",
   "ClientLevel.getChunkSource()",
   "Frustum.isVisible()",
@@ -37,27 +34,27 @@
   "DataComponents.LORE",
   "ListTag.add()",
   "ListTag.iterator()",
-  "MutableComponent.withStyle()",
   "Style.withFont()",
   "MinecraftServer.getAllLevels()",
-  "MinecraftServer.getPlayerList()",
   "ServerChunkCache.chunkMap",
   "ServerLevel.isRainingAt()",
   "ServerLevel.sendParticles()",
   "ServerPlayer.getBlockX()",
   "ServerPlayer.getBlockY()",
   "ServerPlayer.getBlockZ()",
-  "BlockTags.DIRT",
-  "BlockTags.SAND",
+  "SoundEvents.BONE_MEAL_USE",
   "BlockTags.SUPPORTS_STEM_FRUIT",
-  "and 6 more"
+  "LightCoordsUtil.lightCoordsWithEmission()",
+  "Item.components()",
+  "HorizontalDirectionalBlock.FACING",
+  "CollisionContext.empty()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "madoku-craft-farming-26.3-1.1.4-V1.jar",
   "published": "2026-10-31"
  },
@@ -69,8 +66,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +84,9 @@
   "madoku-craft-core",
   "minecraft"
  ],
- "lacks": 46
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 39
 }

@@ -9,7 +9,6 @@
  "author": "Novaliyn",
  "description": "All about the shifting, multiple new materials and blocks, as well as armor sets",
  "needs": [
-  "Mixin",
   "net.minecraft.references.BlockItemId",
   "net.minecraft.world.entity.animal.cow.Cow",
   "net.minecraft.world.food.FoodProperties",
@@ -34,7 +33,6 @@
   "SoundEvents.COW_MILK",
   "SoundEvents.PLAYER_DEATH",
   "DamageSources.fellOutOfWorld()",
-  "Inventory.findSlotMatchingItem()",
   "Player.addItem()",
   "Player.damageSources()",
   "Player.getBlockX()",
@@ -45,16 +43,15 @@
   "Item.Properties.food()",
   "ArmorType.getDurability()",
   "Level.addFreshEntity()",
-  "Level.destroyBlock()",
   "Level.explode()",
   "BlockBehaviour.Properties.forceSolidOn()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "shiftism-0.2.1.jar",
   "published": "2026-10-02"
  },
@@ -66,8 +63,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -84,5 +81,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 38
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 36
 }

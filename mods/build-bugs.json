@@ -9,23 +9,19 @@
  "author": "derNiklaas",
  "description": "A simple utility mod to speed up (build-) bug reports on MCC Island.",
  "needs": [
-  "Mixin",
   "net.minecraft.client.gui.font.TextFieldHelper",
-  "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "Minecraft.execute()",
+  "net.minecraft.commands.arguments.selector.EntitySelectorParser",
   "Minecraft.getCurrentServer()",
   "ServerData.ip",
   "ServerData.type()",
-  "Component.getSiblings()",
-  "Style.getClickEvent()"
+  "Component.getSiblings()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "build-bugs-2.3.0.jar",
   "published": "2026-10-01"
  },
@@ -47,5 +43,9 @@
   "minecraft",
   "noxesium"
  ],
- "lacks": 9
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method into the game's classes"
+ },
+ "lacks": 6
 }

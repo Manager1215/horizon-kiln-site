@@ -9,7 +9,7 @@
  "author": "ZeroXXII",
  "description": "A clean and modern armor bar that improves Minecraft's vanilla HUD.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "com.mojang.blaze3d.vertex.DefaultVertexFormat",
   "com.mojang.renderpearl.api.pipeline.BindGroupLayout.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
@@ -29,7 +29,6 @@
   "BindGroupLayout.builder()",
   "BlendFunction.GLINT",
   "RenderPipeline.builder()",
-  "Minecraft.setScreenAndShow()",
   "Options.glintSpeed()",
   "Options.glintStrength()",
   "GuiGraphicsExtractor.blit()",
@@ -40,8 +39,6 @@
   "DataComponents.GLIDER",
   "DataComponents.TRIM",
   "Util.getMillis()",
-  "DamageSource.is()",
-  "DamageSource.is()",
   "Player.getLastDamageSource()",
   "Player.hurtTime",
   "ItemStack.getEnchantments()",
@@ -52,8 +49,8 @@
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "FreshArmorBar-2.2-26.3.jar",
   "published": "2026-09-23"
  },
@@ -72,5 +69,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 37
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 34
 }

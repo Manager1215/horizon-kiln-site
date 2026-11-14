@@ -9,14 +9,15 @@
  "author": "TLOTD",
  "description": "A small road decor mod, that adds asphalt (with and without markings), guardrails, delineators and a whole bunch of European and a few American style street signs.",
  "needs": [
-  "Mixin",
+  "net.minecraft.client.renderer.texture.DynamicTexture",
+  "net.minecraft.core.ClientAsset.DownloadedTexture",
   "net.minecraft.network.chat.FontDescription",
   "net.minecraft.network.chat.FontDescription.Resource",
   "net.minecraft.world.level.block.GlazedTerracottaBlock",
   "net.minecraft.world.level.block.RedstoneTorchBlock",
   "net.minecraft.world.level.block.state.properties.Half",
   "net.minecraft.world.level.block.state.properties.SlabType",
-  "MutableComponent.withStyle()",
+  "NativeImage.read()",
   "Style.withFont()",
   "ServerLevel.hasNeighborSignal()",
   "Player.isCrouching()",
@@ -34,12 +35,12 @@
   "MapColor.QUARTZ",
   "MapColor.TERRACOTTA_GREEN"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "roads-n-vehicles-0.1.2+26.3.X.jar",
   "published": "2026-10-11"
  },
@@ -51,8 +52,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -70,5 +71,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 23
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 25
 }

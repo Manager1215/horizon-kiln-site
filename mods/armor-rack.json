@@ -9,9 +9,10 @@
  "author": "ThePotatoArchivist",
  "description": "An upgraded armor stand that stores armor like a shulker box",
  "needs": [
-  "Mixin",
+  "Mixin: 5 points inside the game's methods",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
+  "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
   "net.fabricmc.fabric.api.item.v1.ItemComponentTooltipProviderRegistry",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
@@ -20,6 +21,7 @@
   "net.minecraft.client.renderer.entity.state.ArmorStandRenderState",
   "net.minecraft.client.renderer.special.SpecialModelRenderer.Unbaked",
   "net.minecraft.client.renderer.special.SpecialModelRenderers",
+  "net.minecraft.world.entity.EntityEquipment",
   "net.minecraft.world.entity.decoration.ArmorStand",
   "net.minecraft.world.entity.decoration.ArmorStand.ArmorStandPose",
   "net.minecraft.world.item.ArmorStandItem",
@@ -33,11 +35,15 @@
   "SoundEvents.ARMOR_EQUIP_GENERIC",
   "Unit.CODEC",
   "Unit.STREAM_CODEC",
+  "Entity.setAttached()",
   "EntityTypes.ARMOR_STAND",
   "EquipmentSlot.STREAM_CODEC",
-  "EquipmentSlot.isArmor()",
+  "LivingEntity.<init>()",
+  "Inventory.hasAnyMatching()",
+  "Player.addItem()",
   "Player.handleExtraItemsCreatedOnUse()",
   "Player.isSecondaryUseActive()",
+  "ItemStack.isStackable()",
   "ItemStack.transmuteCopy()",
   "ItemStack.transmuteCopy()",
   "Items.ARMOR_STAND",
@@ -49,8 +55,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "armorrack-2.0.1+mc26.3.jar",
   "published": "2026-09-15"
  },
@@ -62,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -80,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 34
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 40
 }

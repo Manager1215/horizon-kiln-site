@@ -9,14 +9,16 @@
  "author": "Lazuline",
  "description": "XXL Packets is a fork of XL Packets which raises the packet size limit from 2MB to the Java Integer limit (2.147483647 GB).",
  "needs": [
-  "Mixin"
+  "Mixin: 4 points inside the game's methods",
+  "net.minecraft.network.CompressionDecoder",
+  "net.minecraft.network.PacketEncoder"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "xlpackets-1.0.6.jar",
   "published": "2026-04-30"
  },
@@ -34,5 +36,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 2
 }

@@ -9,17 +9,14 @@
  "author": "Velizar",
  "description": "Log tellraw's output to the server console or game output",
  "needs": [
-  "Mixin",
-  "net.minecraft.commands.arguments.ComponentArgument",
-  "Commands.LEVEL_GAMEMASTERS",
-  "Commands.hasPermission()"
+  "net.minecraft.commands.arguments.ComponentArgument"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "logtellrawcommand-1.0.8+26.1.1.jar",
   "published": "2026-04-06"
  },
@@ -36,5 +33,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 3
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 1
 }

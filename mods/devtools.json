@@ -9,11 +9,15 @@
  "author": "Beef",
  "description": "A utility mod, that enables you to select different parts of your world and see information about them and debug them.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.BeforeTranslucentTerrain",
+  "net.minecraft.client.gui.screens.options.OptionsScreen",
+  "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
+  "net.minecraft.client.player.ClientInput",
+  "net.minecraft.client.player.KeyboardInput",
   "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.world.attribute.AmbientSounds",
   "net.minecraft.world.entity.EntityDimensions",
+  "net.minecraft.world.entity.player.Input",
   "net.minecraft.world.entity.projectile.ProjectileUtil",
   "net.minecraft.world.item.SpawnEggItem",
   "net.minecraft.world.level.BaseCommandBlock",
@@ -45,19 +49,14 @@
   "net.minecraft.world.level.block.entity.ConduitBlockEntity",
   "net.minecraft.world.level.block.entity.CrafterBlockEntity",
   "net.minecraft.world.level.block.entity.DecoratedPotBlockEntity",
-  "net.minecraft.world.level.block.entity.DropperBlockEntity",
-  "net.minecraft.world.level.block.entity.EnchantingTableBlockEntity",
-  "net.minecraft.world.level.block.entity.HopperBlockEntity",
-  "net.minecraft.world.level.block.entity.JigsawBlockEntity",
-  "net.minecraft.world.level.block.entity.JukeboxBlockEntity",
-  "and 77 more"
+  "and 80 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "devtools-1.1.jar",
   "published": "2026-11-04"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 234
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 226
 }

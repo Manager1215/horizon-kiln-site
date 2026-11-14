@@ -24,11 +24,9 @@
   "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
   "net.minecraft.client.gui.components.MultiLineTextWidget",
   "net.minecraft.client.gui.components.MultilineTextField",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.components.Whence",
   "net.minecraft.client.gui.screens.inventory.ContainerScreen",
   "net.minecraft.client.multiplayer.ClientSuggestionProvider",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.client.player.inventory.Hotbar",
   "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.core.HolderSet.Direct",
@@ -40,23 +38,25 @@
   "net.minecraft.core.component.DataComponentPatch.SplitResult",
   "net.minecraft.core.registries.codec.RegistryCodecs",
   "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.nbt.NbtIo",
   "net.minecraft.nbt.SnbtPrinterTagVisitor",
-  "net.minecraft.network.chat.ClickEvent.ChangePage",
-  "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
   "net.minecraft.network.chat.ClickEvent.Custom",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
-  "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-  "net.minecraft.network.chat.ComponentContents",
+  "net.minecraft.network.chat.ComponentSerialization",
+  "net.minecraft.network.chat.FontDescription",
+  "net.minecraft.network.chat.FontDescription.Resource",
+  "net.minecraft.network.chat.HoverEvent.EntityTooltipInfo",
+  "net.minecraft.network.chat.HoverEvent.ShowEntity",
+  "net.minecraft.network.chat.contents.ObjectContents",
+  "net.minecraft.network.chat.contents.objects.AtlasSprite",
+  "net.minecraft.network.chat.contents.objects.ObjectInfo",
+  "net.minecraft.network.chat.contents.objects.PlayerSprite",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Item Editor-26.3-b25.jar",
   "published": "2026-09-26"
  },
@@ -68,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "minecraft",
   "owo"
  ],
- "lacks": 534
+ "softOff": {
+  "class": "restart",
+  "why": "@modify-args and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+ },
+ "lacks": 468
 }

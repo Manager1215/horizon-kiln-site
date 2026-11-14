@@ -9,16 +9,14 @@
  "author": "DimasKama",
  "description": "Partial fix for MC-577. Inventories can be closed with the bound mouse button",
  "needs": [
-  "Mixin",
-  "KeyMapping.matchesMouse()",
-  "Options.keyInventory"
+  "KeyMapping.matchesMouse()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "icwmf-0.0.2.jar",
   "published": "2026-03-25"
  },
@@ -33,5 +31,9 @@
  "depends": [
   "minecraft"
  ],
- "lacks": 2
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 1
 }

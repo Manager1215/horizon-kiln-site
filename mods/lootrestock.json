@@ -9,10 +9,8 @@
  "author": "PtolemaicQueen",
  "description": "A lightweight Fabric mod that automatically restocks loot chests after a configurable amount of time has passed.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
@@ -27,12 +25,10 @@
   "net.minecraft.world.phys.EntityHitResult",
   "ServerLifecycleEvents.SERVER_STARTED",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerTickEvents.END_SERVER_TICK",
   "BlockPos.toShortString()",
   "MinecraftServer.getAllLevels()",
   "MinecraftServer.getWorldPath()",
   "ServerLevel.getEntitiesOfClass()",
-  "ServerLevel.hasChunk()",
   "RandomSource.nextLong()",
   "Containers.dropContents()",
   "Player.canUseGameMasterBlocks()",
@@ -41,12 +37,12 @@
   "RandomizableContainerBlockEntity.unpackLootTable()",
   "AABB.inflate()"
  ],
- "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "LootRestock-1.0.3-26.3.jar",
   "published": "2026-10-17"
  },
@@ -59,5 +55,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
- "lacks": 30
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 27
 }

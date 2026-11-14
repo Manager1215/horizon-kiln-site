@@ -9,23 +9,22 @@
  "author": "Yori3o",
  "description": "Adds vanilla-like and physically realistic grappling hooks.",
  "needs": [
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.client.Camera.NearPlane",
-  "net.minecraft.client.CameraType",
   "net.minecraft.client.model.player.PlayerModel",
+  "net.minecraft.client.player.FirstPersonHandsAndItems",
   "net.minecraft.client.renderer.entity.EntityRenderers",
   "net.minecraft.client.renderer.entity.player.AvatarRenderer",
   "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperties",
+  "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperty",
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
   "net.minecraft.server.PlayerAdvancements",
   "net.minecraft.server.ServerAdvancementManager",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.world.damagesource.DamageTypes",
   "net.minecraft.world.entity.Entity.MovementEmission",
   "net.minecraft.world.entity.Pose",
@@ -34,8 +33,6 @@
   "net.minecraft.world.level.block.RedStoneOreBlock",
   "net.minecraft.world.level.storage.loot.entries.NestedLootTable",
   "net.minecraft.world.phys.EntityHitResult",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "PoseStack.last()",
   "PoseStack.rotate()",
   "PoseStack.Pose.pose()",
@@ -48,16 +45,19 @@
   "ServerLifecycleEvents.SERVER_STARTED",
   "Camera.getNearPlane()",
   "Camera.rotation()",
-  "KeyMapping.same()",
   "KeyMapping.setDown()",
-  "and 46 more"
+  "Minecraft.getEntityRenderDispatcher()",
+  "LocalPlayer.isAlive()",
+  "LocalPlayer.isSleeping()",
+  "EntityRenderDispatcher.camera",
+  "and 43 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "yo_hooks-fabric-5.4.0+26.3.jar",
   "published": "2026-10-28"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "minecraft",
   "yet_another_config_lib_v3"
  ],
- "lacks": 104
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 85
 }

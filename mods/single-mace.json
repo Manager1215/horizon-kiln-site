@@ -9,37 +9,32 @@
  "author": "Carter-Cook",
  "description": "One Mace per minecraft server. Mace will tell everyone when dropped out of inventory that it is available again, and once one mace is created you can never make another mace again.",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.permissions.Permissions",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.world.entity.decoration.ItemFrame",
+  "net.minecraft.world.inventory.AnvilMenu",
+  "net.minecraft.world.inventory.EnchantmentMenu",
   "net.minecraft.world.inventory.PlayerEnderChestContainer",
-  "ServerTickEvents.END_SERVER_TICK",
-  "CommandSourceStack.getServer()",
-  "EntityArgument.getPlayer()",
-  "EntityArgument.player()",
+  "net.minecraft.world.inventory.ResultSlot",
+  "net.minecraft.world.inventory.ShulkerBoxSlot",
+  "net.minecraft.world.level.block.entity.HopperBlockEntity",
   "NonNullList.stream()",
-  "Registry.wrapAsHolder()",
   "MinecraftServer.getAllLevels()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.overworld()",
   "ServerLevel.getAllEntities()",
   "ServerPlayer.connection",
   "ServerPlayer.getEnderChestInventory()",
+  "ServerGamePacketListenerImpl.send()",
   "SoundEvents.LIGHTNING_BOLT_THUNDER",
   "SoundEvents.UI_TOAST_CHALLENGE_COMPLETE",
   "ItemEntity.getItem()",
-  "ItemEntity.isRemoved()",
   "Inventory.contains()",
   "Items.MACE"
  ],
- "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "single-mace-1.0.0.jar",
   "published": "2026-09-29"
  },
@@ -51,8 +46,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -67,5 +62,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 23
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 19
 }

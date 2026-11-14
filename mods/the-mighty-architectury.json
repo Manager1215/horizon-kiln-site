@@ -1,7 +1,7 @@
 {
  "id": "the-mighty-architectury",
  "name": "The Mighty Architectury",
- "version": "3.2.1+mc26.3-fabric",
+ "version": "3.2.2+mc26.3-fabric",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,7 +9,6 @@
  "author": "TimStewartJ",
  "description": "Design elaborate buildings within a minute. A maintained port of simibubi's The Mighty Architect for Fabric, NeoForge and Forge — Minecraft 1.19.4 to 26.3.",
  "needs": [
-  "Mixin",
   "com.mojang.blaze3d.Blaze3D",
   "com.mojang.blaze3d.platform.TextInputManager",
   "com.mojang.blaze3d.resource.GraphicsResourceAllocator",
@@ -20,15 +19,12 @@
   "com.mojang.blaze3d.vertex.MeshData.DrawState",
   "com.mojang.renderpearl.api.vertex.VertexFormatElement",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.client.renderer.LevelTargetBundle",
   "net.minecraft.client.renderer.PostChain",
   "net.minecraft.client.renderer.ShaderManager",
   "net.minecraft.client.renderer.block.ModelBlockRenderer",
   "net.minecraft.commands.arguments.blocks.BlockStateParser",
   "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.nbt.NbtIo",
-  "net.minecraft.server.permissions.Permissions",
   "net.minecraft.util.Continuation",
   "net.minecraft.world.level.CardinalLighting.Type",
   "net.minecraft.world.level.LightLayer",
@@ -42,24 +38,27 @@
   "net.minecraft.world.level.entity.LevelEntityGetter",
   "net.minecraft.world.level.gameevent.GameEvent.Context",
   "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate",
+  "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.StructureBlockInfo",
   "net.minecraft.world.level.storage.WritableLevelData",
   "net.minecraft.world.ticks.BlackholeTickAccess",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "InputConstants.isKeyDown()",
   "PoseStack.last()",
   "PoseStack.Pose.normal()",
   "PoseStack.Pose.pose()",
-  "and 56 more"
+  "VertexConsumer.addVertex()",
+  "VertexConsumer.addVertex()",
+  "VertexConsumer.putBakedQuad()",
+  "VertexConsumer.setColor()",
+  "and 52 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "mightyarchitect-3.2.1+mc26.3-fabric.jar",
-  "published": "2026-11-02"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "mightyarchitect-3.2.2+mc26.3-fabric.jar",
+  "published": "2026-11-12"
  },
  "reports": {
   "works": 0,
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 203
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 181
 }

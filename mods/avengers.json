@@ -9,19 +9,15 @@
  "author": "SG327",
  "description": "Avengers Mod is a custom Minecraft Fabric mod focused first on Iron Man, with a full progression system built around exploration, crafting, armor upgrading, energy-powered flight, and combat abilities. Future expands to all other heros",
  "needs": [
-  "Mixin",
+  "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
+  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.world.entity.boss.enderdragon.EnderDragon",
   "BiomeModifications.addFeature()",
-  "Screen.mouseClicked()",
-  "LocalPlayer.getLookAngle()",
-  "LocalPlayer.isFallFlying()",
   "LocalPlayer.tickCount",
   "DataComponents.GLIDER",
   "ServerLevel.getEntities()",
   "ServerLevel.sendParticles()",
   "ServerPlayer.damageSources()",
-  "ServerPlayer.getLookAngle()",
-  "ServerPlayer.isFallFlying()",
   "ServerPlayer.stopFallFlying()",
   "SoundEvents.BLAZE_SHOOT",
   "SoundEvents.GENERIC_EXPLODE",
@@ -30,7 +26,6 @@
   "Entity.isAlive()",
   "Entity.isPickable()",
   "Player.fallDistance",
-  "Player.isFallFlying()",
   "Player.tickCount",
   "Item.inventoryTick()",
   "ArmorType.getDurability()",
@@ -42,12 +37,12 @@
   "AABB.getCenter()",
   "AABB.inflate()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "avengersmod-1.0.0.jar",
   "published": "2026-10-20"
  },
@@ -59,8 +54,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -76,5 +71,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 31
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+ },
+ "lacks": 27
 }

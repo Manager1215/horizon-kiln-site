@@ -9,14 +9,26 @@
  "author": "pajic",
  "description": "Displays the durability of items on the item itself, updated for 1.21 and above",
  "needs": [
-  "Mixin"
+  "Mixin: 2 points inside the game's methods",
+  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
+  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.ItemPickerMenu",
+  "net.minecraft.tags.ItemTags",
+  "net.minecraft.world.item.BowItem",
+  "net.minecraft.world.item.CrossbowItem",
+  "Registry.getOrThrow()",
+  "RegistryAccess.lookupOrThrow()",
+  "Container.forEach()",
+  "ItemStackTemplate.is()",
+  "Items.ARROW",
+  "EnchantmentHelper.getItemEnchantmentLevel()",
+  "Enchantments.INFINITY"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "tillitbreaks-fabric-1.1.5+26.3.jar",
   "published": "2026-09-20"
  },
@@ -28,8 +40,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -45,5 +57,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 12
 }

@@ -9,7 +9,6 @@
  "author": "fnn",
  "description": "A survival-friendly implementation of the ability to view block history via a new item — the magnifying glass.",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
@@ -19,14 +18,8 @@
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
+  "net.minecraft.client.renderer.LevelRenderer",
   "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
-  "net.minecraft.gizmos.GizmoStyle",
-  "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.world.inventory.AnvilMenu",
   "net.minecraft.world.item.TooltipFlag.Default",
   "net.minecraft.world.item.component.ResolvableProfile",
@@ -38,26 +31,32 @@
   "net.minecraft.world.level.block.PowderSnowBlock",
   "net.minecraft.world.level.block.RepeaterBlock",
   "net.minecraft.world.level.block.state.properties.ChestType",
-  "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
   "net.minecraft.world.level.storage.LevelResource",
   "ServerLifecycleEvents.SERVER_STARTING",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "Minecraft.execute()",
   "Options.getMenuBackgroundBlurriness()",
-  "Options.keyUse",
-  "Font.plainSubstrByWidth()",
   "Font.split()",
   "GuiGraphicsExtractor.blurBeforeThisStratum()",
   "GuiGraphicsExtractor.text()",
-  "LocalPlayer.swing()",
-  "and 29 more"
+  "NonNullList.iterator()",
+  "DataComponents.PROFILE",
+  "Gizmos.rect()",
+  "Component.getVisualOrderText()",
+  "MinecraftServer.execute()",
+  "MinecraftServer.getWorldPath()",
+  "ServerPlayer.getGameProfile()",
+  "ServerPlayer.hasInfiniteMaterials()",
+  "LivingEntity.getBlockX()",
+  "LivingEntity.getBlockY()",
+  "LivingEntity.getBlockZ()",
+  "and 7 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "inspector-0.13-fabric-26.3.jar",
   "published": "2026-10-02"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +86,9 @@
   "minecraft",
   "yet_another_config_lib_v3"
  ],
- "lacks": 69
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 47
 }

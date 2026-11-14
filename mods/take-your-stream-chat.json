@@ -1,7 +1,7 @@
 {
  "id": "take-your-stream-chat",
  "name": "Take Your Stream Chat",
- "version": "2.1.1",
+ "version": "2.2.0",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,13 +9,16 @@
  "author": "ijustseen",
  "description": "Live chat from Twitch, YouTube, Kick & TikTok — right inside your Minecraft world.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.client.server.IntegratedServer",
   "NativeImage.getHeight()",
   "NativeImage.getWidth()",
   "NativeImage.read()",
+  "NativeImage.setPixel()",
+  "PoseStack.last()",
+  "PoseStack.mulPose()",
+  "PoseStack.Pose.pose()",
   "VertexConsumer.addVertex()",
   "VertexConsumer.setColor()",
   "VertexConsumer.setLight()",
@@ -24,42 +27,38 @@
   "Axis.ZP",
   "LevelRenderEvents.COLLECT_SUBMITS",
   "ChatFormatting.getByCode()",
-  "Minecraft.execute()",
   "Minecraft.getCurrentServer()",
   "Minecraft.getSingleplayerServer()",
-  "Minecraft.setScreenAndShow()",
   "Font.split()",
   "GuiGraphicsExtractor.blit()",
   "GuiGraphicsExtractor.nextStratum()",
   "GuiGraphicsExtractor.setTooltipForNextFrame()",
   "GuiGraphicsExtractor.text()",
-  "AbstractSliderButton.onDrag()",
-  "Button.getMessage()",
-  "Button.setPosition()",
-  "Button.setSize()",
-  "EditBox.setEditable()",
-  "EditBox.setPosition()",
-  "Screen.children()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseReleased()",
-  "Screen.mouseScrolled()",
+  "ClientLevel.clip()",
   "ClientLevel.noCollision()",
   "ServerData.ip",
   "LocalPlayer.getEyeHeight()",
   "LocalPlayer.getPose()",
   "LocalPlayer.getRandom()",
+  "LocalPlayer.getUsedItemHand()",
   "LocalPlayer.getViewVector()",
-  "and 7 more"
+  "GameRenderer.mainCamera()",
+  "RenderTypes.entityTranslucent()",
+  "RenderTypes.text()",
+  "SoundEvents.PLAYER_ATTACK_CRIT",
+  "Entity.setXRot()",
+  "Entity.setYHeadRot()",
+  "Entity.setYRot()",
+  "and 2 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "tysc-2.1.1+26.3.jar",
-  "published": "2026-10-07"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "tysc-2.2.0+26.3.jar",
+  "published": "2026-11-10"
  },
  "reports": {
   "works": 0,
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 47
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 42
 }

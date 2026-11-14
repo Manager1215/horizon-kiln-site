@@ -9,14 +9,17 @@
  "author": "PinkGoosik",
  "description": "Ripoff of the Better End mod's sky renderer in a standalone mod for a client-side only usage.",
  "needs": [
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
   "com.mojang.blaze3d.vertex.BufferBuilder",
   "com.mojang.blaze3d.vertex.ByteBufferBuilder",
   "com.mojang.blaze3d.vertex.DefaultVertexFormat",
   "com.mojang.blaze3d.vertex.MeshData",
   "net.minecraft.client.renderer.DynamicGpuData",
+  "net.minecraft.client.renderer.SkyRenderer",
+  "net.minecraft.client.renderer.extract.LevelExtractor",
   "net.minecraft.client.renderer.fog.FogData",
+  "net.minecraft.client.renderer.fog.FogRenderer",
   "net.minecraft.client.renderer.state.level.CameraEntityRenderState",
   "net.minecraft.world.level.dimension.DimensionType.Skybox",
   "net.minecraft.world.level.levelgen.LegacyRandomSource",
@@ -34,15 +37,14 @@
   "AbstractTexture.getSampler()",
   "AbstractTexture.getTextureView()",
   "RandomSource.createThreadLocalInstance()",
-  "Level.getDefaultClockTime()",
   "DimensionType.skybox()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "better_end_sky-0.3.1+26.3.jar",
   "published": "2026-09-20"
  },
@@ -59,5 +61,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 26
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 28
 }

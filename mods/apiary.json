@@ -9,39 +9,33 @@
  "author": "dark979spider",
  "description": "A lightweight mod that makes honeycombs magnetically fly to your inventory when harvesting with shears, eliminating dropped items.",
  "needs": [
-  "Mixin",
   "net.minecraft.core.particles.DustParticleOptions",
   "net.minecraft.world.level.block.BeehiveBlock",
   "net.minecraft.world.level.block.CampfireBlock",
   "net.minecraft.world.level.block.entity.BeehiveBlockEntity",
   "net.minecraft.world.level.block.entity.BeehiveBlockEntity.BeeReleaseStatus",
-  "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
   "BlockPos.MutableBlockPos.set()",
   "ServerLevel.getEntities()",
   "ServerLevel.getMoonBrightness()",
   "ServerLevel.isDarkOutside()",
   "ServerLevel.precipitationAt()",
   "ServerLevel.sendParticles()",
-  "ServerPlayer.sendSystemMessage()",
   "SoundEvents.BEEHIVE_SHEAR",
   "SoundEvents.BEE_LOOP",
   "BlockTags.FLOWERS",
   "Mob.setTarget()",
   "Player.drop()",
   "Player.giveExperiencePoints()",
-  "Player.swing()",
   "Items.HONEY_BOTTLE",
-  "SwingAnimation.DEFAULT",
-  "BlockStateProperties.DOUBLE_BLOCK_HALF",
   "GameEvent.SHEAR",
   "AABB.inflate()"
  ],
- "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "apiary-4.9-mc26.3.jar",
   "published": "2026-11-04"
  },
@@ -53,8 +47,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -69,5 +63,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 25
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 20
 }

@@ -10,29 +10,45 @@
  "description": "View your friends skins directly from the friends menu.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
+  "com.mojang.authlib.services.response.PresenceStatus",
   "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
+  "net.minecraft.client.gui.components.LoadingDotsWidget",
   "net.minecraft.client.gui.components.MultiLineTextWidget",
+  "net.minecraft.client.gui.components.ScrollableLayout",
+  "net.minecraft.client.gui.components.ScrollableLayout.ReserveStrategy",
   "net.minecraft.client.gui.components.SpriteIconButton",
   "net.minecraft.client.gui.components.SpriteIconButton.Builder",
   "net.minecraft.client.gui.components.WidgetSprites",
+  "net.minecraft.client.gui.components.tabs.TabNavigationBar",
+  "net.minecraft.client.gui.components.tabs.TabNavigationBar.Builder",
+  "net.minecraft.client.gui.layouts.FrameLayout",
+  "net.minecraft.client.gui.layouts.LayoutSettings",
+  "net.minecraft.client.gui.layouts.LinearLayout",
+  "net.minecraft.client.gui.layouts.LinearLayout.Orientation",
+  "net.minecraft.client.gui.screens.friends.AbstractFriendsEntryContainerWidget",
+  "net.minecraft.client.gui.screens.friends.AbstractFriendsTab",
+  "net.minecraft.client.gui.screens.friends.FriendEntry",
+  "net.minecraft.client.gui.screens.friends.FriendsOverlayScreen",
+  "net.minecraft.client.gui.screens.friends.FriendsOverlayTabButton",
   "net.minecraft.client.gui.screens.social.PlayerSocialManager",
   "net.minecraft.client.gui.screens.social.PlayerSocialManager.PlayerData",
+  "net.minecraft.client.gui.screens.social.PresenceHandler",
   "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
   "net.minecraft.client.renderer.entity.state.AvatarRenderState",
   "net.minecraft.client.renderer.state.gui.pip.GuiEntityRenderState",
   "net.minecraft.world.item.component.ResolvableProfile",
+  "Minecraft.getPlayerSocialManager()",
   "Minecraft.playerSkinRenderCache()",
   "GuiGraphicsExtractor.scissorStack",
-  "Button.setPosition()",
   "PlayerSkinRenderCache.getOrDefault()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "FriendPlus-1.1.1+26.3.jar",
   "published": "2026-09-15"
  },
@@ -44,8 +60,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -59,5 +75,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 15
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 31
 }

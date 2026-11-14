@@ -9,21 +9,16 @@
  "author": "Scr0ols",
  "description": "Potion Belt addresses inventory management by introducing a specialized item container designed solely for potions.",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
+  "Mixin: 2 points inside the game's methods",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.SimpleMenuProvider",
   "net.minecraft.world.item.ItemCooldowns",
   "net.minecraft.world.item.component.Consumable",
   "net.minecraft.world.item.component.Consumables",
-  "ServerTickEvents.END_SERVER_TICK",
-  "LocalPlayer.getMainArm()",
   "LocalPlayer.getUseItem()",
   "LocalPlayer.isUsingItem()",
   "DataComponents.CONSUMABLE",
+  "ServerPlayer.getUseItem()",
   "SoundEvents.BUNDLE_INSERT_FAIL",
   "Player.getCooldowns()",
   "Player.getUseItem()",
@@ -31,15 +26,14 @@
   "Player.isUsingItem()",
   "Player.startUsingItem()",
   "Player.stopUsingItem()",
-  "Items.GLASS_BOTTLE",
-  "Items.POTION"
+  "Items.GLASS_BOTTLE"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fabric-potions-belt-1.1.0+26.3.jar",
   "published": "2026-10-14"
  },
@@ -51,8 +45,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -68,5 +62,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 23
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 17
 }

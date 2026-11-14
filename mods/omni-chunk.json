@@ -9,34 +9,40 @@
  "author": "saodminecraft1",
  "description": "Changes to one chunk affect ALL chunks.",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.Unload",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.world.level.BaseSpawner",
+  "net.minecraft.world.level.block.BedBlock",
+  "net.minecraft.world.level.block.entity.trialspawner.TrialSpawner",
+  "net.minecraft.world.level.block.state.properties.BedPart",
   "ServerLevelEvents.UNLOAD",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerTickEvents.END_SERVER_TICK",
-  "Commands.LEVEL_GAMEMASTERS",
-  "Commands.hasPermission()",
   "RegistryAccess.lookupOrThrow()",
   "ListTag.add()",
   "ListTag.getList()",
   "MinecraftServer.getAllLevels()",
-  "MinecraftServer.getPlayerList()",
   "ServerChunkCache.blockChanged()",
   "ServerLevel.getHeight()",
+  "ServerLevel.isOutsideBuildHeight()",
+  "ServerLevel.tryAddFreshEntityWithPassengers()",
   "ServerPlayer.chunkPosition()",
-  "ProblemReporter.DISCARDING"
+  "PlayerList.getSimulationDistance()",
+  "ProblemReporter.DISCARDING",
+  "EntityType.spawn()",
+  "Player.blockInteractionRange()",
+  "Player.calculateViewVector()",
+  "Level.clip()",
+  "BlockEntity.saveWithFullMetadata()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "omnichunk-1.2.3-26.1-26.3.jar",
   "published": "2026-10-01"
  },
@@ -48,8 +54,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -63,5 +69,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 20
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 26
 }

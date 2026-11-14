@@ -9,26 +9,24 @@
  "author": "Thedustbuster",
  "description": "A small mod that increases Minecraft's FPS limit limit to 1000",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "com.mojang.blaze3d.platform.FramerateLimitTracker",
   "net.minecraft.client.OptionInstance.CaptionBasedToString",
-  "net.minecraft.client.OptionInstance.IntRange",
   "net.minecraft.client.OptionInstance.SliderableValueSet",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
-  "net.minecraft.client.OptionInstance.ValueSet",
   "net.minecraft.client.OptionInstance.ValueUpdateListener",
   "Minecraft.getFramerateLimitTracker()",
   "OptionInstance.<init>()",
   "OptionInstance.noTooltip()",
-  "Options.genericValueLabel()",
-  "MutableComponent.withStyle()"
+  "OptionInstance.IntRange.xmap()",
+  "Options.genericValueLabel()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "not-enough-fps-26.3-1.1.2.jar",
   "published": "2026-10-17"
  },
@@ -47,5 +45,9 @@
   "minecraft",
   "sodium"
  ],
- "lacks": 12
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 10
 }

@@ -9,17 +9,21 @@
  "author": "chappiepie",
  "description": "Decorative block for beautiful storage of one item",
  "needs": [
-  "Mixin",
   "net.minecraft.advancements.triggers.CriteriaTriggers",
   "net.minecraft.advancements.triggers.ItemUsedOnLocationTrigger",
   "net.minecraft.advancements.triggers.UsingItemTrigger",
   "net.minecraft.advancements.triggers.UsingItemTrigger.TriggerInstance",
+  "net.minecraft.client.renderer.special.SpecialModelRenderer.Unbaked",
+  "net.minecraft.client.renderer.special.SpecialModelRenderers",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.item.DyeItem",
   "net.minecraft.world.item.HoneycombItem",
   "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
   "net.minecraft.world.phys.shapes.BooleanOp",
+  "Minecraft.getBlockEntityRenderDispatcher()",
+  "BlockEntityRenderDispatcher.getRenderer()",
   "BlockEntityRenderer.extractRenderState()",
+  "BlockEntityRenderState.lightCoords",
   "DataComponents.BASE_COLOR",
   "DataComponents.DYE",
   "BuiltInRegistries.TRIGGER_TYPES",
@@ -35,9 +39,9 @@
   "ItemStack.hurtAndBreak()",
   "Items.LOOM",
   "TypedEntityData.copyTagWithoutId()",
-  "Level.destroyBlock()",
   "Level.getEntitiesOfClass()",
   "Level.levelEvent()",
+  "LevelReader.registryAccess()",
   "BaseEntityBlock.getCloneItemStack()",
   "BaseEntityBlock.getDrops()",
   "BaseEntityBlock.updateShape()",
@@ -45,16 +49,14 @@
   "BlockBehaviour.Properties.instrument()",
   "MapColor.STONE",
   "LootContextParams.BLOCK_ENTITY",
-  "LootItemCondition.CODEC",
-  "AABB.inflate()",
-  "Shapes.join()"
+  "and 3 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "display_case-fabric-26.3-1.4.3.jar",
   "published": "2026-09-20"
  },
@@ -66,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -83,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 38
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 43
 }

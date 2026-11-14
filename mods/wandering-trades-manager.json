@@ -9,19 +9,14 @@
  "author": "CoolAid",
  "description": "Adds a config screen to manage your VT Wandering Trades datapack in-game",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
   "com.mojang.blaze3d.Blaze3D",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.minecraft.SharedConstants",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
   "net.minecraft.client.gui.components.MultiLineTextWidget",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.server.packs.OverlayMetadataSection",
   "net.minecraft.world.entity.npc.wanderingtrader.WanderingTrader",
@@ -31,33 +26,24 @@
   "SamplerCache.getClampToEdge()",
   "ServerLifecycleEvents.SERVER_STARTING",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerTickEvents.END_SERVER_TICK",
   "Minecraft.gameDirectory",
   "Minecraft.getSingleplayerServer()",
   "Minecraft.getSkinManager()",
-  "Minecraft.setScreenAndShow()",
-  "Font.plainSubstrByWidth()",
   "Font.split()",
   "GuiGraphicsExtractor.blit()",
   "GuiGraphicsExtractor.text()",
-  "AbstractWidget.setHeight()",
-  "Button.setHeight()",
-  "Button.setTooltip()",
-  "EditBox.moveCursorToStart()",
-  "EditBox.setHint()",
-  "Screen.mouseClicked()",
   "AbstractTexture.getTextureView()",
   "SkinManager.get()",
   "DataComponents.CUSTOM_NAME",
   "DataComponents.PROFILE",
-  "and 3 more"
+  "MinecraftServer.getWorldPath()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "wandering-trades-manager-fabric-2.1.0+26.3.jar",
   "published": "2026-11-04"
  },
@@ -70,5 +56,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
- "lacks": 43
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 28
 }

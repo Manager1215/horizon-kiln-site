@@ -9,26 +9,21 @@
  "author": "0x0f07",
  "description": "Chop entire trees by breaking one log - fully configurable with auto replant and tool safety.",
  "needs": [
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.tags.ItemTags",
-  "ServerTickEvents.END_SERVER_TICK",
-  "Button.Builder.tooltip()",
   "BlockPos.MutableBlockPos.set()",
   "BlockPos.MutableBlockPos.set()",
   "Player.isCrouching()",
-  "Level.destroyBlock()",
   "Level.getMinY()",
   "BlockStateProperties.DISTANCE"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "treechopmod-1.2.1+mc26.3.x.jar",
   "published": "2026-09-18"
  },
@@ -40,8 +35,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -58,5 +53,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 13
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 8
 }

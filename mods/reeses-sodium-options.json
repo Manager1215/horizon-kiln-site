@@ -1,7 +1,7 @@
 {
  "id": "reeses-sodium-options",
  "name": "Reese's Sodium Options",
- "version": "mc26.3-2.2.6-beta.1+fabric",
+ "version": "mc26.3-2.2.6-beta.4+fabric",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,7 +9,6 @@
  "author": "FlashyReese",
  "description": "Alternative Options Menu for Sodium",
  "needs": [
-  "Mixin",
   "com.mojang.blaze3d.Blaze3D",
   "com.mojang.blaze3d.platform.TextInputManager",
   "com.mojang.blaze3d.platform.cursor.CursorType",
@@ -19,16 +18,13 @@
   "net.minecraft.client.gui.navigation.FocusNavigationEvent",
   "net.minecraft.client.gui.navigation.FocusNavigationEvent.ArrowNavigation",
   "net.minecraft.client.gui.navigation.FocusNavigationEvent.TabNavigation",
-  "net.minecraft.client.gui.navigation.ScreenDirection",
   "net.minecraft.client.gui.screens.options.VideoSettingsScreen",
   "net.minecraft.util.StringUtil",
   "org.lwjgl.sdl.SDLKeycode",
   "org.lwjgl.sdl.SDLMouse",
-  "Minecraft.execute()",
   "Minecraft.getLastInputType()",
   "Minecraft.onTextInputFocusChange()",
   "Minecraft.textInputManager()",
-  "Font.plainSubstrByWidth()",
   "Font.plainSubstrByWidth()",
   "Font.split()",
   "GuiGraphicsExtractor.blit()",
@@ -40,26 +36,29 @@
   "GuiGraphicsExtractor.text()",
   "ContainerEventHandler.nextFocusPath()",
   "GuiEventListener.getCurrentFocusPath()",
-  "GuiEventListener.keyPressed()",
   "GuiEventListener.nextFocusPath()",
   "NarratableEntry.getNarratables()",
   "NarrationElementOutput.add()",
+  "ScreenDirection.getOpposite()",
   "ScreenRectangle.empty()",
-  "Screen.mouseClicked()",
-  "Screen.mouseReleased()",
-  "CharacterEvent.codepointAsString()",
-  "CharacterEvent.isAllowedChatCharacter()",
-  "KeyEvent.hasControlDownWithQuirk()",
-  "and 23 more"
+  "RenderPipelines.GUI",
+  "RenderPipelines.GUI_TEXT_HIGHLIGHT",
+  "AbstractTexture.getTexture()",
+  "Language.getVisualOrder()",
+  "CommonComponents.SPACE",
+  "CommonComponents.optionNameValue()",
+  "CommonComponents.optionStatus()",
+  "FormattedText.composite()",
+  "and 4 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "reeses-sodium-options-fabric-2.2.6-beta.1+mc26.3.jar",
-  "published": "2026-10-16"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "reeses-sodium-options-fabric-2.2.6-beta.4+mc26.3.jar",
+  "published": "2026-11-12"
  },
  "reports": {
   "works": 0,
@@ -76,5 +75,9 @@
   "minecraft",
   "sodium"
  ],
- "lacks": 63
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 44
 }

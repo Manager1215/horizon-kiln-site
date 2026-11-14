@@ -9,11 +9,8 @@
  "author": "raylix2",
  "description": "Survival Ban & Pardon hammers, staff moderation, custom crafts and optional weapon effects. Configurable messages, safeguards and optional resource packs.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.server.players.UserBanList",
   "net.minecraft.server.players.UserBanListEntry",
   "net.minecraft.world.level.storage.LevelResource",
@@ -21,23 +18,20 @@
   "ServerLifecycleEvents.SERVER_STOPPING",
   "DataComponents.CUSTOM_NAME",
   "MinecraftServer.execute()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.getWorldPath()",
   "ServerPlayer.connection",
   "ServerPlayer.createCommandSourceStack()",
-  "ServerPlayer.nameAndId()",
-  "PermissionLevel.byId()",
-  "DamageSource.getDirectEntity()",
-  "DamageSource.getEntity()",
+  "ServerGamePacketListenerImpl.disconnect()",
+  "PlayerList.getBans()",
   "Items.MACE",
   "CustomData.copyTag()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "BanHammer-1.2.0-alpha.1-26.3-fabric.jar",
   "published": "2026-10-15"
  },
@@ -49,8 +43,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -65,5 +59,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 21
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 16
 }

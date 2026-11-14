@@ -9,30 +9,24 @@
  "author": "dennis.thegamer96",
  "description": "Automatically tracks and analyzes all your fishing activity, recording casts, catches, bite times and treasure rates in real-time with a detailed session history, statistics and HUD overlay.",
  "needs": [
-  "Mixin",
   "net.minecraft.client.server.IntegratedServer",
-  "net.minecraft.world.entity.projectile.FishingHook",
   "net.minecraft.world.level.storage.LevelResource",
   "Object2IntMap.Entry.getKey()",
-  "KeyMapping.getTranslatedKeyMessage()",
   "Minecraft.getCurrentServer()",
   "Minecraft.getSingleplayerServer()",
   "ServerData.ip",
-  "LocalPlayer.fishing",
   "BlockPos.containing()",
   "BlockPos.MutableBlockPos.set()",
   "Registry.getOrThrow()",
   "RegistryAccess.lookupOrThrow()",
   "DataComponents.CUSTOM_NAME",
   "DataComponents.STORED_ENCHANTMENTS",
-  "MutableComponent.withStyle()",
   "ItemEntity.getItem()",
   "ItemEntity.tickCount",
   "ItemStack.getItemName()",
   "Items.BOW",
   "Items.COD",
   "Items.ENCHANTED_BOOK",
-  "Items.FISHING_ROD",
   "Items.LEATHER_BOOTS",
   "Items.LILY_PAD",
   "Items.NAME_TAG",
@@ -50,14 +44,16 @@
   "Level.getBiome()",
   "Level.getEntitiesOfClass()",
   "Level.getEntity()",
-  "and 3 more"
+  "Blocks.LILY_PAD",
+  "BlockState.getCollisionShape()",
+  "VoxelShape.isEmpty()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fishingstats-fabric-1.2.2+mc26.3.jar",
   "published": "2026-09-27"
  },
@@ -69,8 +65,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +84,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 43
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 38
 }

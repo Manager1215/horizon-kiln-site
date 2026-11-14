@@ -9,34 +9,17 @@
  "author": "June",
  "description": "Library for Khazoda's mods containing lots of useful code",
  "needs": [
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
   "net.minecraft.client.gui.components.SpriteIconButton",
   "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-  "net.minecraft.client.gui.components.Tooltip",
   "org.lwjgl.sdl.SDLMouse",
   "InputConstants.isKeyDown()",
   "InputConstants.Key.getDisplayName()",
   "InputConstants.Type.getOrCreate()",
-  "PacketSender.sendPacket()",
-  "ServerPlayNetworking.canSend()",
-  "KeyMapping.getTranslatedKeyMessage()",
-  "KeyMapping.isUnbound()",
-  "KeyMapping.saveString()",
-  "AbstractWidget.setTooltip()",
-  "Button.setTooltip()",
-  "EditBox.setEditable()",
-  "EditBox.setTextColor()",
   "Registry.get()",
   "BuiltInRegistries.REGISTRY",
   "CommonComponents.GUI_CANCEL",
   "CommonComponents.GUI_DONE",
   "Component.translatableWithFallback()",
-  "CustomPacketPayload.codec()",
   "Identifier.toLanguageKey()",
   "Item.Properties.horseArmor()",
   "Item.Properties.nautilusArmor()",
@@ -47,8 +30,8 @@
  "evidence": "",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "khazodacore-fabric-1.0.4+26.3.jar",
   "published": "2026-10-04"
  },
@@ -68,5 +51,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 33
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels"
+ },
+ "lacks": 16
 }

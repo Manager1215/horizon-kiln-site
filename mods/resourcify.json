@@ -10,7 +10,7 @@
  "description": "In-game resource pack, data pack and shader browser and updater.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "com.mojang.blaze3d.Blaze3D",
   "com.mojang.blaze3d.platform.TextInputManager",
   "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
@@ -38,27 +38,27 @@
   "net.minecraft.client.gui.Font.GlyphVisitor",
   "net.minecraft.client.gui.Font.PreparedText",
   "net.minecraft.client.gui.components.FocusableTextWidget",
+  "net.minecraft.client.gui.components.tabs.Tab",
+  "net.minecraft.client.gui.components.tabs.TabManager",
   "net.minecraft.client.gui.font.TextRenderable",
   "net.minecraft.client.gui.font.TextRenderable.Styled",
+  "net.minecraft.client.gui.layouts.Layout",
+  "net.minecraft.client.gui.layouts.LinearLayout",
   "net.minecraft.client.gui.screens.DisconnectedScreen",
   "net.minecraft.client.gui.screens.GenericMessageScreen",
-  "net.minecraft.client.gui.screens.worldselection.SelectWorldScreen",
-  "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
-  "net.minecraft.client.input.InputQuirks",
-  "net.minecraft.client.renderer.BindGroupLayouts",
-  "net.minecraft.client.renderer.DynamicGpuData",
-  "net.minecraft.client.renderer.DynamicGpuData.Transform",
-  "net.minecraft.client.renderer.fog.FogRenderer",
-  "net.minecraft.client.renderer.fog.FogRenderer.FogMode",
-  "net.minecraft.network.chat.ComponentContents",
-  "and 77 more"
+  "net.minecraft.client.gui.screens.packs.PackSelectionModel",
+  "net.minecraft.client.gui.screens.packs.PackSelectionModel.Entry",
+  "net.minecraft.client.gui.screens.packs.PackSelectionModel.EntryBase",
+  "net.minecraft.client.gui.screens.packs.PackSelectionScreen",
+  "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen",
+  "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Resourcify (26.3-fabric)-1.8.7.jar",
   "published": "2026-09-28"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 136
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 127
 }

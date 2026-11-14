@@ -1,7 +1,7 @@
 {
  "id": "omni-wheel",
  "name": "Omni Wheel",
- "version": "2.0.0-fabric-mc26.3",
+ "version": "2.1.0-fabric-mc26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,7 +9,6 @@
  "author": "seniorendi",
  "description": "Client-side radial quick-action menu with configurable wheels, profiles, shortcuts, and multiplayer-safe command and keybind access.",
  "needs": [
-  "Mixin",
   "com.mojang.blaze3d.platform.TextInputManager",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
@@ -17,7 +16,6 @@
   "net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys",
   "net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys.Client",
   "net.fabricmc.fabric.api.resource.v1.reloader.SimpleReloadListener",
-  "net.minecraft.client.CameraType",
   "net.minecraft.client.Screenshot",
   "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
   "net.minecraft.client.gui.components.CommandSuggestions",
@@ -26,15 +24,11 @@
   "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.gui.screens.social.SocialInteractionsScreen",
   "net.minecraft.client.model.geom.builders.UVPair",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.client.renderer.texture.MissingTextureAtlasSprite",
   "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.client.tutorial.Tutorial",
   "net.minecraft.data.AtlasIds",
-  "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
   "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
   "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
   "net.minecraft.world.level.storage.LevelResource",
@@ -50,16 +44,21 @@
   "org.lwjgl.system.MemoryUtil",
   "InputConstants.getKey()",
   "InputConstants.isKeyDown()",
-  "and 58 more"
+  "InputConstants.releaseMouse()",
+  "NativeImage.getHeight()",
+  "NativeImage.getPixel()",
+  "NativeImage.getWidth()",
+  "NativeImage.read()",
+  "and 53 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "omniwheel-2.0.0-fabric-mc26.3.jar",
-  "published": "2026-10-27"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "omniwheel-2.1.0-fabric-mc26.3.jar",
+  "published": "2026-11-07"
  },
  "reports": {
   "works": 0,
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 146
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 110
 }

@@ -9,20 +9,9 @@
  "author": "ngk22",
  "description": "A high-performance Fabric mod that collaboratively streams chunk data from the server to fill the Bobby render distance cache.",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
   "net.minecraft.server.level.ChunkMap",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.world.level.chunk.storage.SerializableChunkData",
-  "ClientPlayNetworking.canSend()",
-  "ServerTickEvents.END_SERVER_TICK",
-  "ServerPlayNetworking.canSend()",
-  "Minecraft.execute()",
   "ClientLevel.getChunkSource()",
-  "Commands.LEVEL_GAMEMASTERS",
-  "Commands.hasPermission()",
   "ListTag.compoundStream()",
   "ByteBufCodecs.OPTIONAL_COMPOUND_TAG",
   "MinecraftServer.execute()",
@@ -31,12 +20,12 @@
   "ServerPlayer.chunkPosition()",
   "ServerPlayer.hasDisconnected()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "bobbyshare-1.4.0+mc26.3.jar",
   "published": "2026-11-03"
  },
@@ -48,8 +37,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -64,5 +53,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 20
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels"
+ },
+ "lacks": 10
 }

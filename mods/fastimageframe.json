@@ -1,7 +1,7 @@
 {
  "id": "fastimageframe",
  "name": "Fast ImageFrame",
- "version": "1.7.3+26.3",
+ "version": "1.8.0+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,7 +10,7 @@
  "description": "Improve your FPS on item frames, map item frames. Made originaly to optimize ImageFrameClient mod. Fixes the incompatibility issue between IFC mod and ImmediatelyFast.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 6 points inside the game's methods",
   "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
   "com.mojang.blaze3d.systems.ScissorState",
   "com.mojang.blaze3d.vertex.BufferBuilder",
@@ -20,13 +20,20 @@
   "com.mojang.blaze3d.vertex.MeshData.DrawState",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
+  "net.minecraft.client.gui.screens.options.OptionsScreen",
   "net.minecraft.client.renderer.DynamicGpuData",
   "net.minecraft.client.renderer.DynamicGpuData.Transform",
+  "net.minecraft.client.renderer.LevelRenderer",
   "net.minecraft.client.renderer.SectionOcclusionGraph",
   "net.minecraft.client.renderer.SectionOcclusionGraph.Node",
+  "net.minecraft.client.renderer.ShaderManager",
+  "net.minecraft.client.renderer.ShaderManager.Configs",
   "net.minecraft.client.renderer.ViewArea",
   "net.minecraft.client.renderer.chunk.SectionRenderDispatcher",
   "net.minecraft.client.renderer.chunk.SectionRenderDispatcher.RenderSection",
+  "net.minecraft.client.renderer.entity.ItemFrameRenderer",
+  "net.minecraft.client.renderer.entity.state.ItemFrameRenderState",
+  "net.minecraft.client.renderer.extract.LevelExtractor",
   "net.minecraft.client.renderer.oit.OitPipelineSet",
   "net.minecraft.client.renderer.rendertype.LayeringTransform",
   "net.minecraft.client.renderer.rendertype.PreparedRenderType",
@@ -36,31 +43,24 @@
   "net.minecraft.client.renderer.state.MapRenderState",
   "net.minecraft.client.renderer.state.MapRenderState.MapDecorationRenderState",
   "net.minecraft.client.renderer.texture.DynamicTexture",
+  "net.minecraft.client.resources.MapTextureManager.MapInstance",
   "net.minecraft.client.server.IntegratedServer",
+  "net.minecraft.data.AtlasIds",
   "net.minecraft.world.entity.decoration.GlowItemFrame",
   "net.minecraft.world.entity.decoration.ItemFrame",
   "net.minecraft.world.level.storage.LevelResource",
   "org.lwjgl.system.MemoryStack",
   "org.lwjgl.system.MemoryUtil",
-  "NativeImage.getHeight()",
-  "NativeImage.getPixels()",
-  "NativeImage.getWidth()",
-  "NativeImage.read()",
-  "NativeImage.setPixel()",
-  "RenderSystem.getCompiledPipeline()",
-  "RenderSystem.getCompiledPipelineNullable()",
-  "RenderSystem.getDynamicUniforms()",
-  "RenderSystem.getModelViewMatrixCopy()",
-  "and 51 more"
+  "and 60 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "FastImageFrames-26.3-fabric-1.7.3.jar",
-  "published": "2026-11-04"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "FastImageFrames-26.3-fabric-1.8.0.jar",
+  "published": "2026-11-07"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 113
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; runs threads of its own; has network channels"
+ },
+ "lacks": 133
 }

@@ -9,29 +9,28 @@
  "author": "rabiesland",
  "description": "Changes the title screen to the pre-25th Half-Life title screen",
  "needs": [
-  "Mixin",
+  "net.minecraft.client.gui.screens.LoadingOverlay",
   "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
   "net.minecraft.client.gui.screens.options.OptionsScreen",
   "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen",
   "net.minecraft.client.gui.screens.worldselection.SelectWorldScreen",
+  "net.minecraft.client.renderer.Panorama",
   "net.minecraft.client.renderer.texture.ReloadableTexture",
   "net.minecraft.client.renderer.texture.TextureContents",
   "NativeImage.read()",
   "Minecraft.allowsMultiplayer()",
-  "Minecraft.close()",
   "Minecraft.isDemo()",
-  "Minecraft.setScreenAndShow()",
   "Gui.setOverlay()",
   "Screen.extractPanorama()",
   "TextureManager.registerAndLoad()",
   "Util.getEpochMillis()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "HalfLifeMenu3-mc26.3-3.3.0.jar",
   "published": "2026-09-16"
  },
@@ -46,5 +45,9 @@
  "depends": [
   "minecraft"
  ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
  "lacks": 15
 }

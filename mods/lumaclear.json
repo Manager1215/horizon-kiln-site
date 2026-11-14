@@ -1,0 +1,93 @@
+{
+ "id": "lumaclear",
+ "name": "LumaClear",
+ "version": "1.0.1",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/lumaclear",
+ "author": "Jonyboylovespie",
+ "description": "LumaClear is a lightweight client-side Fabric mod that combines fullbright lighting, customizable fog removal, and targeted rendering optimizations for a clearer Minecraft experience",
+ "needs": [
+  "Mixin: 6 points inside the game's methods",
+  "net.fabricmc.fabric.impl.client.indigo.renderer.aocalc.AoCalculator",
+  "net.fabricmc.fabric.impl.client.indigo.renderer.aocalc.FlatLighter",
+  "net.minecraft.client.gui.components.BossHealthOverlay",
+  "net.minecraft.client.multiplayer.ClientChunkCache",
+  "net.minecraft.client.renderer.LevelRenderer",
+  "net.minecraft.client.renderer.LightmapRenderStateExtractor",
+  "net.minecraft.client.renderer.ShaderManager.Configs",
+  "net.minecraft.client.renderer.block.BlockModelLighter",
+  "net.minecraft.client.renderer.block.BlockModelLighter.Cache",
+  "net.minecraft.client.renderer.block.FluidRenderer",
+  "net.minecraft.client.renderer.fog.FogData",
+  "net.minecraft.client.renderer.fog.FogRenderer",
+  "net.minecraft.client.renderer.fog.environment.AtmosphericFogEnvironment",
+  "net.minecraft.client.renderer.fog.environment.BlindnessFogEnvironment",
+  "net.minecraft.client.renderer.fog.environment.DarknessFogEnvironment",
+  "net.minecraft.client.renderer.fog.environment.FogEnvironment",
+  "net.minecraft.client.renderer.fog.environment.LavaFogEnvironment",
+  "net.minecraft.client.renderer.fog.environment.PowderedSnowFogEnvironment",
+  "net.minecraft.client.renderer.fog.environment.WaterFogEnvironment",
+  "net.minecraft.client.renderer.oit.OitPipelineSet",
+  "net.minecraft.client.renderer.state.LightmapRenderState",
+  "net.minecraft.client.renderer.state.level.CameraEntityRenderState",
+  "net.minecraft.client.renderer.state.level.SkyRenderState",
+  "net.minecraft.util.LightCoordsUtil.BrightnessGetter",
+  "net.minecraft.world.attribute.EnvironmentAttributeProbe",
+  "net.minecraft.world.level.dimension.DimensionType.Skybox",
+  "net.minecraft.world.level.material.FogType",
+  "Camera.attributeProbe()",
+  "Minecraft.getBlockColors()",
+  "Minecraft.levelRenderer",
+  "Options.cloudRange()",
+  "Hud.getBossOverlay()",
+  "GameRenderer.mainCamera()",
+  "CameraRenderState.entityRenderState",
+  "CameraRenderState.fogType",
+  "LevelRenderState.skyRenderState",
+  "ARGB.colorFromVector3f()",
+  "ARGB.vector4fFromARGB32()",
+  "EnvironmentAttributes.CLOUD_FOG_END_DISTANCE",
+  "EnvironmentAttributes.SKY_FOG_END_DISTANCE"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "lumaclear-1.0.1+mc26.3.jar",
+  "published": "2026-11-13"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 40
+}

@@ -9,37 +9,22 @@
  "author": "Inferis",
  "description": "This is a (mostly server side) vein miner mod.",
  "needs": [
-  "Mixin",
   "com.mojang.blaze3d.vertex.DefaultVertexFormat",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
   "net.minecraft.client.renderer.BindGroupLayouts",
   "net.minecraft.client.renderer.rendertype.RenderSetup",
   "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
-  "net.minecraft.network.chat.contents.PlainTextContents",
-  "net.minecraft.network.chat.contents.PlainTextContents.LiteralContents",
   "net.minecraft.server.level.ServerPlayerGameMode",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.phys.shapes.BooleanOp",
   "BlendFunction.TRANSLUCENT",
   "RenderPipeline.builder()",
-  "ServerTickEvents.END_SERVER_TICK",
   "GameRenderer.mainCamera()",
   "RenderType.create()",
   "Holder.getRegisteredName()",
-  "RegistryFriendlyByteBuf.readBlockPos()",
-  "RegistryFriendlyByteBuf.readVarInt()",
-  "RegistryFriendlyByteBuf.writeBlockPos()",
-  "RegistryFriendlyByteBuf.writeVarInt()",
-  "MutableComponent.create()",
   "MinecraftServer.execute()",
-  "MinecraftServer.getPlayerList()",
   "ServerPlayer.blockInteractionRange()",
   "ServerPlayer.gameMode",
   "ServerPlayer.getBlockY()",
@@ -47,17 +32,16 @@
   "Entity.setPosRaw()",
   "ItemStack.getEnchantments()",
   "ItemStack.isCorrectToolForDrops()",
-  "HitResult.getType()",
   "Shapes.create()",
   "Shapes.empty()",
-  "and 1 more"
+  "Shapes.join()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "manic-miner-1.2.0-26.3.jar",
   "published": "2026-09-16"
  },
@@ -69,8 +53,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +71,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 41
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 26
 }

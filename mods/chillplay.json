@@ -9,23 +9,15 @@
  "author": "Emirisr",
  "description": "A progression mod that brings back the gameplay experience we used to enjoy to the fullest, just like in the old days.",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.core.UUIDUtil",
   "net.minecraft.server.PlayerAdvancements",
   "net.minecraft.server.ServerAdvancementManager",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
-  "net.minecraft.stats.ServerStatsCounter",
   "net.minecraft.tags.ItemTags",
+  "net.minecraft.world.entity.animal.feline.Cat",
   "net.minecraft.world.entity.animal.pig.Pig",
+  "net.minecraft.world.entity.animal.wolf.Wolf",
   "net.minecraft.world.level.StructureManager",
-  "ServerTickEvents.END_SERVER_TICK",
   "AdvancementHolder.value()",
-  "Minecraft.execute()",
-  "Minecraft.setScreenAndShow()",
   "Font.split()",
   "GuiGraphicsExtractor.text()",
   "DefaultedRegistry.iterator()",
@@ -39,7 +31,6 @@
   "ByteBufCodecs.collection()",
   "MinecraftServer.execute()",
   "MinecraftServer.getAdvancements()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.overworld()",
   "ServerLevel.getBiome()",
   "ServerLevel.getEntities()",
@@ -49,15 +40,22 @@
   "ServerPlayer.getAdvancements()",
   "ServerPlayer.getBoundingBox()",
   "ServerPlayer.getRootVehicle()",
-  "ServerPlayer.getStats()",
-  "and 26 more"
+  "ServerPlayer.getVehicle()",
+  "ServerPlayer.tickCount",
+  "ServerGamePacketListenerImpl.send()",
+  "StatFormatter.DEFAULT",
+  "StatType.get()",
+  "ItemEntity.setPickUpDelay()",
+  "Blocks.AMETHYST_BLOCK",
+  "StructureStart.isValid()",
+  "AABB.inflate()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Chill Play 1.0 - 26.3.jar",
   "published": "2026-09-16"
  },
@@ -69,8 +67,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +84,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 66
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels"
+ },
+ "lacks": 40
 }

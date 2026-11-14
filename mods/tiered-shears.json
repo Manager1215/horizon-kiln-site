@@ -1,0 +1,93 @@
+{
+ "id": "tiered-shears",
+ "name": "Tiered Shears",
+ "version": "1.0.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/tiered-shears",
+ "author": "fehykitop",
+ "description": "A clean expansion for shears in Minecraft, adding Copper, Gold, Amethyst, Diamond, and Netherite variants",
+ "needs": [
+  "Mixin: 10 points inside the game's methods",
+  "net.minecraft.advancements.criterion.ItemPredicate",
+  "net.minecraft.advancements.predicates.ItemPredicate",
+  "net.minecraft.core.HolderSet.Direct",
+  "net.minecraft.core.HolderSet.Named",
+  "net.minecraft.core.dispenser.OptionalDispenseItemBehavior",
+  "net.minecraft.world.entity.EntitySelector",
+  "net.minecraft.world.entity.Shearable",
+  "net.minecraft.world.entity.animal.cow.MushroomCow",
+  "net.minecraft.world.entity.animal.golem.SnowGolem",
+  "net.minecraft.world.entity.animal.sheep.Sheep",
+  "net.minecraft.world.entity.monster.skeleton.Bogged",
+  "net.minecraft.world.item.ShearsItem",
+  "net.minecraft.world.level.block.BeehiveBlock",
+  "net.minecraft.world.level.block.CarvedPumpkinBlock",
+  "net.minecraft.world.level.block.TripWireBlock",
+  "net.minecraft.world.level.block.entity.BeehiveBlockEntity",
+  "net.minecraft.world.level.block.entity.BeehiveBlockEntity.BeeReleaseStatus",
+  "HolderGetter.get()",
+  "HolderGetter.getOrThrow()",
+  "HolderSet.direct()",
+  "BuiltInRegistries.acquireBootstrapRegistrationLookup()",
+  "ServerLevel.getEntitiesOfClass()",
+  "SoundEvents.BEEHIVE_SHEAR",
+  "SoundEvents.PUMPKIN_CARVE",
+  "BlockTags.BEEHIVES",
+  "BlockTags.WOOL",
+  "Item.Properties.enchantable()",
+  "Item.Properties.repairable()",
+  "ItemInstance.is()",
+  "ItemStack.hurtAndBreak()",
+  "Items.AMETHYST_SHARD",
+  "Items.PUMPKIN_SEEDS",
+  "Tool.Rule.minesAndDrops()",
+  "Tool.Rule.overrideSpeed()",
+  "Block.builtInRegistryHolder()",
+  "Blocks.CARVED_PUMPKIN",
+  "Blocks.COBWEB",
+  "Blocks.GLOW_LICHEN",
+  "Blocks.VINE",
+  "BlockState.is()",
+  "and 1 more"
+ ],
+ "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "Tiered-Shears-Fabric-Quilt-26.1-26.3-1.0.0.jar",
+  "published": "2026-11-13"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 41
+}

@@ -1,0 +1,57 @@
+{
+ "id": "mouse-lock",
+ "name": "Mouse Lock",
+ "version": "1.0.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/mouse-lock",
+ "author": "Daylight",
+ "description": "Toggle mouse locking to assist you with repetitive tasks where you need to go in a straight line, such as farming, planting crops when already aligned to an angle",
+ "needs": [
+  "InputConstants.isKeyDown()",
+  "KeyMappingHelper.getBoundKeyOf()",
+  "MultiPlayerGameMode.canHurtPlayer()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "mouselock-fabric-1.0.0-26.3.jar",
+  "published": "2026-11-07"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "forgeconfigapiport",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 3
+}

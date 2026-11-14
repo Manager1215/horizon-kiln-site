@@ -9,7 +9,7 @@
  "author": "shadowhunter22",
  "description": "Have a HUD indicator of entities that hit you and when you take damage!",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "net.minecraft.client.model.EntityModel",
   "net.minecraft.client.model.geom.ModelLayers",
@@ -22,6 +22,7 @@
   "net.minecraft.client.player.RemotePlayer",
   "net.minecraft.client.renderer.entity.BreezeRenderer",
   "net.minecraft.client.renderer.entity.CreakingRenderer",
+  "net.minecraft.client.renderer.entity.EnderDragonRenderer",
   "net.minecraft.client.renderer.entity.GhastRenderer",
   "net.minecraft.client.renderer.entity.LivingEntityRenderer",
   "net.minecraft.client.renderer.entity.PhantomRenderer",
@@ -30,6 +31,9 @@
   "net.minecraft.client.renderer.entity.layers.RenderLayer",
   "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
   "net.minecraft.client.resources.DefaultPlayerSkin",
+  "net.minecraft.world.damagesource.DamageTypes",
+  "net.minecraft.world.entity.AreaEffectCloud",
+  "net.minecraft.world.entity.boss.enderdragon.EndCrystal",
   "Camera.yRot()",
   "Minecraft.getEntityModels()",
   "Minecraft.getEntityRenderDispatcher()",
@@ -46,18 +50,14 @@
   "ModelPart.Cube.maxX",
   "ModelPart.Cube.maxY",
   "ModelPart.Cube.maxZ",
-  "ModelPart.Cube.minX",
-  "ModelPart.Cube.minY",
-  "ModelPart.Cube.minZ",
-  "ClientLevel.getEntity()",
-  "and 15 more"
+  "and 21 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "wdthm-5.0.0-beta+26.3.jar",
   "published": "2026-09-15"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 55
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 61
 }

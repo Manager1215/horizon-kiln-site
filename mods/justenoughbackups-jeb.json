@@ -12,9 +12,7 @@
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.minecraft.SharedConstants",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.level.storage.LevelResource",
   "net.minecraft.world.level.storage.WorldData",
   "org.apache.commons.compress.archivers.zip.DefaultBackingStoreSupplier",
@@ -25,38 +23,28 @@
   "org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream",
   "org.apache.commons.compress.archivers.zip.ZipFile",
   "org.apache.commons.compress.archivers.zip.ZipMethod",
-  "ClientPlayNetworking.canSend()",
   "ServerLifecycleEvents.SERVER_STARTED",
   "ServerLifecycleEvents.SERVER_STARTING",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerTickEvents.END_SERVER_TICK",
-  "ServerPlayNetworking.canSend()",
   "Minecraft.canInterruptScreen()",
-  "Minecraft.execute()",
-  "Minecraft.setScreenAndShow()",
-  "EditBox.getCursorPosition()",
-  "EditBox.setCanLoseFocus()",
-  "EditBox.setHint()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseReleased()",
-  "Screen.mouseScrolled()",
-  "CharacterEvent.codepointAsString()",
-  "CharacterEvent.isAllowedChatCharacter()",
-  "CommandSourceStack.getEntity()",
-  "CommandSourceStack.getServer()",
-  "RegistryFriendlyByteBuf.readEnum()",
-  "RegistryFriendlyByteBuf.readUtf()",
-  "RegistryFriendlyByteBuf.writeBoolean()",
-  "RegistryFriendlyByteBuf.writeEnum()",
-  "and 17 more"
+  "MinecraftServer.execute()",
+  "MinecraftServer.getAllLevels()",
+  "MinecraftServer.getWorldData()",
+  "MinecraftServer.getWorldPath()",
+  "MinecraftServer.halt()",
+  "MinecraftServer.isAutoSave()",
+  "MinecraftServer.isSameThread()",
+  "MinecraftServer.saveEverything()",
+  "MinecraftServer.setAutoSave()",
+  "ServerLevel.noSave",
+  "ServerPlayer.createCommandSourceStack()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "justenoughbackups-1.2.0.10+26.3.jar",
   "published": "2026-11-01"
  },
@@ -68,8 +56,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +74,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 57
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels"
+ },
+ "lacks": 29
 }

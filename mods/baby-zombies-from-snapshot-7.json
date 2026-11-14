@@ -9,21 +9,23 @@
  "author": "wirebtw",
  "description": "Baby Zombies from Snapshot 7 restores the Baby Zombie, Baby Husk, and Baby Drowned models and textures from Minecraft 26.1 Snapshot 7.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.client.model.HumanoidModel",
+  "net.minecraft.client.model.geom.LayerDefinitions",
   "net.minecraft.client.model.geom.PartPose",
   "net.minecraft.client.model.geom.builders.CubeDeformation",
   "net.minecraft.client.model.geom.builders.CubeListBuilder",
   "net.minecraft.client.model.geom.builders.MeshDefinition",
   "net.minecraft.client.model.geom.builders.PartDefinition",
+  "net.minecraft.client.model.monster.zombie.BabyZombieModel",
   "LayerDefinition.create()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Baby Zombies from snapshot-7.jar",
   "published": "2026-09-17"
  },
@@ -40,5 +42,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 7
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 9
 }

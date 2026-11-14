@@ -9,12 +9,16 @@
  "author": "CIOCOLATA47",
  "description": "A mod that displays player health, armor, and equipment information.",
  "needs": [
-  "Mixin",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.renderer.rendertype.RenderSetup",
   "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
+  "net.minecraft.world.scores.ReadOnlyScoreInfo",
+  "PoseStack.last()",
+  "PoseStack.Pose.pose()",
+  "VertexConsumer.addVertex()",
+  "VertexConsumer.setLight()",
+  "VertexConsumer.setOverlay()",
   "RenderPipeline.builder()",
   "RenderPipeline.getBindGroupLayouts()",
   "RenderPipeline.getColorTargetStates()",
@@ -24,20 +28,35 @@
   "RenderPipeline.getVertexFormatBindings()",
   "RenderPipeline.isCull()",
   "RenderPipeline.pushConstantSize()",
-  "Minecraft.setScreenAndShow()",
-  "Button.getMessage()",
-  "Button.Builder.tooltip()",
-  "Screen.mouseScrolled()",
+  "Camera.rotation()",
+  "Camera.xRot()",
+  "Camera.yRot()",
+  "Font.split()",
+  "ClientLevel.getScoreboard()",
+  "GameRenderer.mainCamera()",
   "RenderPipelines.DEBUG_FILLED_BOX",
   "RenderPipelines.ENTITY_CUTOUT",
-  "RenderType.create()"
+  "ItemModelResolver.updateForLiving()",
+  "ItemStackRenderState.pickParticleMaterial()",
+  "RenderType.create()",
+  "RenderTypes.debugFilledBox()",
+  "TextureAtlasSprite.atlasLocation()",
+  "TextureAtlasSprite.getU0()",
+  "TextureAtlasSprite.getU1()",
+  "TextureAtlasSprite.getV0()",
+  "TextureAtlasSprite.getV1()",
+  "Entity.distanceToSqr()",
+  "Player.distanceToSqr()",
+  "Player.getAbsorptionAmount()",
+  "Player.getBbHeight()",
+  "and 2 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "PlayerIndicatorPlus-1.0.6-26.3.jar",
   "published": "2026-09-20"
  },
@@ -49,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -63,5 +82,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 21
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 42
 }

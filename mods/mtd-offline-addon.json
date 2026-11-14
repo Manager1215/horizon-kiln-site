@@ -9,21 +9,22 @@
  "author": "HiWord9",
  "description": "MyTotemDoll addon which adds offline-mode player skins support",
  "needs": [
-  "Mixin",
+  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.minecraft.MinecraftProfileTexture",
   "com.mojang.authlib.minecraft.MinecraftProfileTextures",
   "com.mojang.authlib.minecraft.SessionService",
+  "net.minecraft.network.protocol.game.ClientboundPlayerInfoUpdatePacket.Entry",
   "Minecraft.services()",
   "PlayerInfo.getProfile()",
   "PlayerInfo.getSkin()",
   "Services.sessionService()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "MTDOfflineAddon-26.3-1.0.2.jar",
   "published": "2026-10-23"
  },
@@ -35,8 +36,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -52,5 +53,9 @@
   "minecraft",
   "my_totem_doll"
  ],
- "lacks": 7
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 9
 }

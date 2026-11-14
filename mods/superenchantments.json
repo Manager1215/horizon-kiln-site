@@ -9,19 +9,55 @@
  "author": "KaseToatz1337",
  "description": "Custom enchant levels, combine illegal enchants & much more. All server-side.",
  "needs": [
-  "Mixin",
+  "Mixin: 12 points inside the game's methods",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+  "net.minecraft.server.commands.EnchantCommand",
+  "net.minecraft.world.entity.npc.villager.AbstractVillager",
+  "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
+  "net.minecraft.world.entity.projectile.arrow.ThrownTrident",
+  "net.minecraft.world.inventory.AnvilMenu",
+  "net.minecraft.world.inventory.ContainerSynchronizer",
+  "net.minecraft.world.inventory.DataSlot",
+  "net.minecraft.world.item.BowItem",
+  "net.minecraft.world.item.CrossbowItem",
+  "net.minecraft.world.item.TridentItem",
+  "net.minecraft.world.item.enchantment.effects.ChangeItemDamage",
+  "net.minecraft.world.item.trading.ItemCost",
+  "net.minecraft.world.item.trading.MerchantOffer",
+  "net.minecraft.world.level.storage.loot.predicates.WeatherCheck",
   "ServerLifecycleEvents.SERVER_STARTED",
+  "DataComponents.INTANGIBLE_PROJECTILE",
+  "DataComponents.REPAIR_COST",
+  "DataComponents.STORED_ENCHANTMENTS",
+  "SynchedEntityData.get()",
   "MinecraftServer.overworld()",
+  "Inventory.add()",
+  "Items.ARROW",
+  "Items.CROSSBOW",
+  "Items.ENCHANTED_BOOK",
+  "Items.FIREWORK_ROCKET",
+  "CustomData.copyTag()",
+  "CustomData.update()",
+  "Enchantment.getMaxLevel()",
   "EnchantmentHelper.getItemEnchantmentLevel()",
-  "Enchantments.CHANNELING"
+  "Enchantments.BANE_OF_ARTHROPODS",
+  "Enchantments.BLAST_PROTECTION",
+  "Enchantments.BREACH",
+  "Enchantments.CHANNELING",
+  "Enchantments.DENSITY",
+  "Enchantments.FIRE_PROTECTION",
+  "Enchantments.FROST_WALKER",
+  "Enchantments.INFINITY",
+  "Enchantments.MENDING",
+  "Enchantments.MULTISHOT",
+  "and 10 more"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "SuperEnchants-1.15.jar",
   "published": "2026-09-17"
  },
@@ -33,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -50,5 +86,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 5
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 50
 }

@@ -11,7 +11,6 @@
  "needs": [
   "net.minecraft.world.effect.MobEffectUtil",
   "net.minecraft.world.item.ItemUseAnimation",
-  "net.minecraft.world.item.alchemy.PotionContents",
   "net.minecraft.world.item.component.Consumable",
   "net.minecraft.world.item.component.DeathProtection",
   "net.minecraft.world.item.component.SuspiciousStewEffects",
@@ -27,14 +26,15 @@
   "DataComponents.SUSPICIOUS_STEW_EFFECTS",
   "MobEffect.createModifiers()",
   "MobEffectCategory.getTooltipFormatting()",
-  "ItemStack.getUseAnimation()"
+  "ItemStack.getUseAnimation()",
+  "PotionContents.addPotionTooltip()"
  ],
  "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "FoodEffectTooltips-2.1.2+26.3.jar",
   "published": "2026-10-22"
  },
@@ -46,8 +46,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -63,5 +63,9 @@
   "fabricloader",
   "minecraft"
  ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
  "lacks": 19
 }

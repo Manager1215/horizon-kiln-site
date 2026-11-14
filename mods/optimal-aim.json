@@ -9,8 +9,6 @@
  "author": "sootysplash",
  "description": "Optimal aim renders a cube on other entities to aid in aiming and best utilizing your reach. Aimed towards pvp.",
  "needs": [
-  "Mixin",
-  "net.minecraft.gizmos.GizmoStyle",
   "net.minecraft.world.entity.boss.enderdragon.EnderDragon",
   "net.minecraft.world.entity.boss.enderdragon.EnderDragonPart",
   "LocalPlayer.getEyePosition()",
@@ -28,12 +26,12 @@
   "AABB.minZ",
   "AABB.move()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "optimalAim-1.1.7.jar",
   "published": "2026-09-17"
  },
@@ -53,5 +51,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 17
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 16
 }

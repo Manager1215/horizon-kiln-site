@@ -9,8 +9,9 @@
  "author": "dennis.thegamer96",
  "description": "BreedTimer shows countdown timers above animals and villagers so you know when they can breed again.",
  "needs": [
-  "Mixin",
+  "Mixin: 4 points inside the game's methods",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
+  "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
   "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.entity.AnimationState",
@@ -49,15 +50,14 @@
   "net.minecraft.world.entity.monster.hoglin.HoglinAi",
   "net.minecraft.world.entity.npc.villager.AbstractVillager",
   "net.minecraft.world.entity.npc.villager.Villager",
-  "net.minecraft.world.level.LevelSettings",
-  "and 70 more"
+  "and 69 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "breedtimer-fabric-1.6.2+mc26.3.jar",
   "published": "2026-09-27"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 114
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 113
 }

@@ -9,27 +9,19 @@
  "author": "4drian3d",
  "description": "Allows you to cancel or modify messages or commands from Velocity without synchronization problems",
  "needs": [
-  "Mixin",
   "net.fabricmc.api.DedicatedServerModInitializer",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
   "net.minecraft.network.chat.LastSeenMessages.Update",
   "net.minecraft.network.chat.PlayerChatMessage",
   "net.minecraft.network.protocol.game.ServerboundChatCommandPacket",
   "net.minecraft.network.protocol.game.ServerboundChatCommandSignedPacket",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "FriendlyByteBuf.<init>()",
-  "FriendlyByteBuf.writeUUID()",
-  "FriendlyByteBuf.writeUtf()",
-  "CustomPacketPayload.codec()",
   "MinecraftServer.execute()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "SignedVelocity-Fabric-1.5.0.jar",
   "published": "2026-09-03"
  },
@@ -49,5 +41,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 13
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 6
 }

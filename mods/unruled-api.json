@@ -10,19 +10,16 @@
  "description": "Expands on the vanilla gamerules, adding new gamerules types for other mods to use and enabling players to set per-dimension overrides for gamerules",
  "needs": [
   "an access widener",
-  "Mixin",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
-  "net.minecraft.client.gui.components.CycleButton.OnValueChange",
+  "Mixin: 14 points inside the game's methods",
   "net.minecraft.client.gui.screens.worldselection.AbstractGameRulesScreen",
   "net.minecraft.client.gui.screens.worldselection.AbstractGameRulesScreen.EntryFactory",
   "net.minecraft.client.gui.screens.worldselection.AbstractGameRulesScreen.RuleEntry",
+  "net.minecraft.client.gui.screens.worldselection.AbstractGameRulesScreen.RuleList.1",
   "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen",
   "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen.MoreTab",
   "net.minecraft.client.gui.screens.worldselection.WorldCreationContext",
   "net.minecraft.client.gui.screens.worldselection.WorldCreationGameRulesScreen",
   "net.minecraft.client.gui.screens.worldselection.WorldCreationUiState",
-  "net.minecraft.commands.arguments.DimensionArgument",
   "net.minecraft.commands.arguments.ResourceArgument",
   "net.minecraft.commands.arguments.selector.EntitySelectorParser",
   "net.minecraft.commands.synchronization.ArgumentTypeInfo",
@@ -31,17 +28,13 @@
   "net.minecraft.core.LayeredRegistryAccess",
   "net.minecraft.network.protocol.game.ClientboundCommandsPacket.ArgumentNodeStub",
   "net.minecraft.server.WorldStem",
+  "net.minecraft.server.commands.GameRuleCommand",
+  "net.minecraft.server.commands.GameRuleCommand.1",
   "net.minecraft.util.datafix.fixes.References",
   "Font.split()",
   "GuiGraphicsExtractor.text()",
-  "EditBox.setTextColor()",
   "CommandBuildContext.listRegistryKeys()",
   "CommandBuildContext.simple()",
-  "CommandSourceStack.getServer()",
-  "Commands.LEVEL_GAMEMASTERS",
-  "Commands.hasPermission()",
-  "EntityArgument.entities()",
-  "EntitySelector.getMaxResults()",
   "Holder.Reference.getRegisteredName()",
   "HolderLookup.get()",
   "HolderLookup.get()",
@@ -51,14 +44,21 @@
   "HolderLookup.RegistryLookup.get()",
   "HolderLookup.RegistryLookup.getOrThrow()",
   "Registry.entrySet()",
-  "and 38 more"
+  "Registry.getId()",
+  "RegistryAccess.lookupOrThrow()",
+  "BuiltInRegistries.GAME_RULE",
+  "BuiltInRegistries.REGISTRY",
+  "Registries.STRUCTURE_TYPE",
+  "Component.translatableWithFallback()",
+  "MinecraftServer.getGameRules()",
+  "and 30 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "unruled_api-unruled-api+26.2-2.3.3.jar",
   "published": "2026-06-20"
  },
@@ -74,5 +74,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 78
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
+ },
+ "lacks": 70
 }

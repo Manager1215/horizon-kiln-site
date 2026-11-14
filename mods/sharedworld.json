@@ -9,12 +9,10 @@
  "author": "Bolido",
  "description": "A free Minecraft server alternative with no queues and no waiting for your friend who has the world.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "net.minecraft.SharedConstants",
   "net.minecraft.client.gui.components.LoadingDotsWidget",
-  "net.minecraft.client.gui.components.ObjectSelectionList",
-  "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
   "net.minecraft.client.gui.components.tabs.MenuTabBar",
   "net.minecraft.client.gui.components.tabs.MenuTabBar.Builder",
   "net.minecraft.client.gui.components.tabs.Tab",
@@ -25,6 +23,7 @@
   "net.minecraft.client.gui.layouts.LayoutSettings",
   "net.minecraft.client.gui.layouts.LinearLayout",
   "net.minecraft.client.gui.screens.ConnectScreen",
+  "net.minecraft.client.gui.screens.DisconnectedScreen",
   "net.minecraft.client.gui.screens.FaviconTexture",
   "net.minecraft.client.gui.screens.GenericMessageScreen",
   "net.minecraft.client.gui.screens.LevelLoadingScreen",
@@ -38,26 +37,27 @@
   "net.minecraft.client.multiplayer.resolver.ServerAddress",
   "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.nbt.NbtIo",
-  "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
   "net.minecraft.network.protocol.login.ServerboundHelloPacket",
+  "net.minecraft.network.protocol.login.ServerboundKeyPacket",
   "net.minecraft.server.MinecraftServer.MultiplayerScope",
+  "net.minecraft.server.commands.BanPlayerCommands",
+  "net.minecraft.server.commands.WhitelistCommand",
   "net.minecraft.server.level.ChunkMap",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.permissions.Permissions",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.server.players.UserBanList",
+  "net.minecraft.util.Crypt",
+  "net.minecraft.util.CryptException",
   "net.minecraft.util.HttpUtil",
   "net.minecraft.util.thread.AbstractConsecutiveExecutor",
   "net.minecraft.world.entity.player.ProfileKeyPair",
-  "and 76 more"
+  "net.minecraft.world.entity.player.ProfilePublicKey",
+  "and 67 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "sharedworld-0.5.4+mc26.3.jar",
   "published": "2026-10-24"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 124
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 107
 }

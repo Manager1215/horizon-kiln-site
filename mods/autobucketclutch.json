@@ -9,21 +9,14 @@
  "author": "CaptainDude",
  "description": "Automatically uses a water bucket to clutch when falling!",
  "needs": [
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.network.protocol.game.ServerboundInteractPacket",
   "net.minecraft.world.entity.vehicle.boat.Boat",
-  "net.minecraft.world.inventory.ContainerInput",
   "net.minecraft.world.phys.EntityHitResult",
-  "Minecraft.gameMode",
-  "Minecraft.schedule()",
   "GuiGraphicsExtractor.text()",
-  "EditBox.setEditable()",
-  "EditBox.setTextColor()",
   "ClientPacketListener.send()",
   "LocalPlayer.distanceToSqr()",
   "LocalPlayer.setXRot()",
   "LocalPlayer.setYRot()",
-  "LocalPlayer.swing()",
   "Component.getVisualOrderText()",
   "Player.isPassenger()",
   "Player.onClimbable()",
@@ -49,14 +42,15 @@
   "Items.PALE_OAK_CHEST_BOAT",
   "Items.SLIME_BLOCK",
   "Items.SPRUCE_BOAT",
-  "and 4 more"
+  "Items.SPRUCE_CHEST_BOAT",
+  "Level.clip()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "autobucketclutch-26.3-fabric-v1.1.0.jar",
   "published": "2026-09-28"
  },
@@ -68,8 +62,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +80,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 44
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 35
 }

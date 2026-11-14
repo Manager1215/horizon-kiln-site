@@ -10,16 +10,32 @@
  "description": "Optimize datapack / resourcepack zip file loading times",
  "needs": [
   "an access widener",
-  "Mixin",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger"
+  "Mixin: 4 points inside the game's methods",
+  "com.mojang.blaze3d.font.GlyphInfo",
+  "com.mojang.blaze3d.font.GlyphProvider",
+  "com.mojang.blaze3d.font.GlyphProvider.Conditional",
+  "com.mojang.blaze3d.font.UnbakedGlyph",
+  "net.minecraft.client.gui.font.FontManager",
+  "net.minecraft.client.gui.font.FontOption",
+  "net.minecraft.client.gui.font.FontOption.Filter",
+  "net.minecraft.client.gui.font.FontSet",
+  "net.minecraft.client.gui.font.glyphs.SpecialGlyphs",
+  "net.minecraft.client.gui.screens.LoadingOverlay",
+  "net.minecraft.server.packs.FilePackResources",
+  "net.minecraft.server.packs.FilePackResources.FileResourcesSupplier",
+  "net.minecraft.server.packs.FilePackResources.SharedZipFileAccess",
+  "net.minecraft.server.packs.repository.Pack",
+  "net.minecraft.server.packs.repository.Pack.Metadata",
+  "Gui.setOverlay()",
+  "Identifier.isValidNamespace()",
+  "PackType.getDirectory()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "quick-pack-fabric-1.5.1+26.3.jar",
   "published": "2026-09-29"
  },
@@ -31,8 +47,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -45,5 +61,9 @@
   "fabricloader",
   "java"
  ],
- "lacks": 2
+ "softOff": {
+  "class": "restart",
+  "why": "@overwrite and @wrap-method and @wrap-operation into the game's classes"
+ },
+ "lacks": 18
 }

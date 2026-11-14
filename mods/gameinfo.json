@@ -1,7 +1,7 @@
 {
  "id": "gameinfo",
  "name": "GameInfo Unofficial Port",
- "version": "26.3-3.1.4-Fabric",
+ "version": "26.3-3.1.5-Fabric",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,56 +9,55 @@
  "author": "CodaR5",
  "description": "Gameinfo has been ported to a higher version(⚠️IMPORTANT NOTICE:This is an unofficial port of the original mod gameinfo created by ifcifc. I am not the original creator. )",
  "needs": [
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
-  "net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint",
   "net.minecraft.SharedConstants",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.client.server.IntegratedServer",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.util.CommonColors",
   "net.minecraft.world.inventory.AbstractFurnaceMenu",
   "net.minecraft.world.level.block.AbstractFurnaceBlock",
   "net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity",
   "net.minecraft.world.phys.EntityHitResult",
-  "ServerTickEvents.END_SERVER_TICK",
-  "Minecraft.execute()",
-  "Minecraft.gameMode",
+  "KeyMapping.matches()",
   "Minecraft.getCurrentServer()",
   "Minecraft.getSingleplayerServer()",
-  "Minecraft.hitResult",
-  "EditBox.setEditable()",
-  "EditBox.setHint()",
-  "Screen.mouseScrolled()",
+  "MultiPlayerGameMode.getDestroyStage()",
   "ServerData.ip",
-  "RegistryFriendlyByteBuf.readBlockPos()",
-  "RegistryFriendlyByteBuf.writeBlockPos()",
-  "RegistryFriendlyByteBuf.writeBoolean()",
-  "MinecraftServer.getPlayerList()",
   "ServerLevel.getSeed()",
   "ServerPlayer.tickCount",
   "ItemStack.getEnchantments()",
   "ItemStack.isCorrectToolForDrops()",
+  "Items.CLOCK",
+  "Items.COMPASS",
   "Items.EGG",
+  "Items.FLINT_AND_STEEL",
+  "Items.GRASS_BLOCK",
+  "Items.IRON_PICKAXE",
   "Items.IRON_SWORD",
-  "Items.PLAYER_HEAD",
+  "Items.LEVER",
+  "Items.MAP",
+  "Items.NAME_TAG",
+  "Items.SLIME_BALL",
   "Items.WHEAT",
   "Level.getBiome()",
   "Level.getOverworldClockTime()",
   "Blocks.BARRIER",
   "Blocks.BLAST_FURNACE",
   "Blocks.FURNACE",
-  "and 6 more"
+  "Blocks.SMOKER",
+  "BlockState.requiresCorrectToolForDrops()",
+  "ChunkSource.getForceLoadedChunks()",
+  "ChunkSource.getLoadedChunksCount()",
+  "ChunkSource.updateChunkForced()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "GameInfo-26.3-Fabric-3.1.4.jar",
-  "published": "2026-10-25"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "GameInfo-26.3-Fabric-3.1.5.jar",
+  "published": "2026-11-13"
  },
  "reports": {
   "works": 0,
@@ -68,8 +67,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -77,8 +76,7 @@
  "entrypoints": {
   "client": 1,
   "main": 1,
-  "modmenu": 1,
-  "preLaunch": 1
+  "modmenu": 1
  },
  "mixins": false,
  "depends": [
@@ -86,5 +84,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 46
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 40
 }

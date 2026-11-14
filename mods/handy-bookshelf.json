@@ -9,7 +9,6 @@
  "author": "dfox288",
  "description": "Enchanted books in chiseled bookshelves shimmer with enchantment glint, and aiming at a slot shows the enchantment name. Find Mending in a 30-shelf library at a glance.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
   "net.minecraft.world.level.block.ChiseledBookShelfBlock",
   "net.minecraft.world.level.block.entity.BlockEntityTypes",
@@ -19,7 +18,6 @@
   "VertexConsumer.setNormal()",
   "VertexConsumer.setOverlay()",
   "Object2IntMap.Entry.getKey()",
-  "Minecraft.hitResult",
   "Options.getBackgroundOpacity()",
   "RenderTypes.itemCutoutGlintSpecial()",
   "CameraRenderState.orientation",
@@ -31,15 +29,14 @@
   "Enchantment.getFullname()",
   "ItemEnchantments.entrySet()",
   "ItemEnchantments.isEmpty()",
-  "ItemEnchantments.size()",
-  "HitResult.getType()"
+  "ItemEnchantments.size()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "handybookshelf-2.4.0.jar",
   "published": "2026-09-16"
  },
@@ -51,8 +48,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -69,5 +66,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 23
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 21
 }

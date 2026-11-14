@@ -10,24 +10,23 @@
  "description": "Simulates zero latency by predicting server actions",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "io.netty.channel.ChannelFutureListener",
+  "net.minecraft.client.multiplayer.PingDebugMonitor",
   "net.minecraft.network.PacketProcessor",
   "net.minecraft.network.PacketProcessor.ListenerAndPacket",
   "net.minecraft.network.protocol.game.ServerboundUseItemOnPacket",
   "net.minecraft.world.TickRateManager",
   "net.minecraft.world.entity.ai.attributes.AttributeMap",
   "net.minecraft.world.entity.boss.enderdragon.EndCrystal",
+  "net.minecraft.world.item.EndCrystalItem",
   "net.minecraft.world.item.ItemCooldowns",
   "net.minecraft.world.item.MinecartItem",
   "net.minecraft.world.level.block.BaseRailBlock",
   "net.minecraft.world.level.block.state.properties.RailShape",
-  "org.apache.logging.log4j.LogManager",
   "Minecraft.isLocalServer()",
-  "Minecraft.isSameThread()",
   "ClientLevel.addEntity()",
   "ClientLevel.getEntities()",
-  "ClientLevel.isEmptyBlock()",
   "ClientLevel.removeEntity()",
   "ClientLevel.tickRateManager()",
   "ClientPacketListener.getConnection()",
@@ -51,14 +50,15 @@
   "Entity.getVehicle()",
   "Entity.getYHeadRot()",
   "Entity.isPassenger()",
-  "and 24 more"
+  "Entity.removalReason",
+  "and 22 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "eslium-4.9.0-alpha+26.3.jar",
   "published": "2026-10-19"
  },
@@ -75,5 +75,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 64
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 62
 }

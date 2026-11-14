@@ -10,16 +10,13 @@
  "description": "You want to know what your horses are truly capable of? Check out their statistics!",
  "needs": [
   "an access widener",
-  "Mixin",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
-  "net.minecraft.client.CameraType",
   "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
   "net.minecraft.client.model.HumanoidModel",
   "net.minecraft.client.model.geom.LayerDefinitions",
   "net.minecraft.client.model.geom.builders.CubeDeformation",
   "net.minecraft.client.model.player.PlayerModel",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.client.renderer.BindGroupLayouts",
   "net.minecraft.client.renderer.entity.ArmorModelSet",
   "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
@@ -43,22 +40,24 @@
   "net.minecraft.world.entity.animal.equine.AbstractHorse",
   "net.minecraft.world.entity.animal.equine.Llama",
   "net.minecraft.world.item.equipment.Equippable.Builder",
-  "org.apache.logging.log4j.LogManager",
   "BlendFunction.TRANSLUCENT",
   "RenderPipeline.builder()",
   "Minecraft.crosshairPickEntity",
-  "Minecraft.gameMode",
-  "Options.getCameraType()",
-  "Hud.getMobEffectSprite()",
   "LayerDefinition.apply()",
-  "and 17 more"
+  "LayerDefinition.create()",
+  "RenderPipelines.ENTITY_SNIPPET",
+  "RenderPipelines.GLINT_SNIPPET",
+  "RenderPipelines.OIT_ENTITY_SNIPPET",
+  "EntityRendererProvider.Context.bakeLayer()",
+  "EntityRendererProvider.Context.getEquipmentRenderer()",
+  "and 11 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "horseexpert-v26.3.1-mc26.3.x+fabric.jar",
   "published": "2026-10-07"
  },
@@ -70,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +87,9 @@
   "minecraft",
   "puzzleslib"
  ],
- "lacks": 57
+ "softOff": {
+  "class": "partial",
+  "why": "data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 51
 }

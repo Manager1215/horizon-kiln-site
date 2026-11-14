@@ -9,7 +9,7 @@
  "author": "shadowhunter22",
  "description": "Change how the vanilla campfire works by requiring you to put more work in creating and maintaining a campfire",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
@@ -18,23 +18,45 @@
   "net.minecraft.client.model.geom.builders.CubeListBuilder",
   "net.minecraft.client.model.geom.builders.MeshDefinition",
   "net.minecraft.client.model.geom.builders.PartDefinition",
+  "net.minecraft.client.renderer.blockentity.CampfireRenderer",
+  "net.minecraft.client.renderer.blockentity.state.CampfireRenderState",
   "net.minecraft.server.packs.PackLocationInfo",
   "net.minecraft.util.StrictJsonParser",
+  "net.minecraft.world.item.FlintAndSteelItem",
+  "net.minecraft.world.item.crafting.RecipeManager.CachedCheck",
+  "net.minecraft.world.level.block.CampfireBlock",
+  "net.minecraft.world.level.block.entity.CampfireBlockEntity",
+  "net.minecraft.world.level.chunk.storage.SerializableChunkData",
+  "net.minecraft.world.level.gameevent.GameEvent.Context",
   "ServerPlayerEvents.JOIN",
+  "Model.root()",
   "LayerDefinition.create()",
-  "FriendlyByteBuf.writeInt()",
-  "CustomPacketPayload.codec()",
+  "SubmitNodeCollector.submitModelPart()",
+  "BlockEntityRendererProvider.Context.bakeLayer()",
+  "ListTag.compoundStream()",
   "FileToIdConverter.fileToId()",
   "FileToIdConverter.listMatchingResourceStacks()",
   "FileToIdConverter.registry()",
-  "PackResources.location()"
+  "PackResources.location()",
+  "SoundEvents.FLINTANDSTEEL_USE",
+  "InteractionHand.asEquipmentSlot()",
+  "Player.addItem()",
+  "Player.getRandom()",
+  "Level.gameEvent()",
+  "Level.isRainingAt()",
+  "Level.levelEvent()",
+  "Blocks.CAMPFIRE",
+  "Blocks.SOUL_CAMPFIRE",
+  "BlockState.is()",
+  "DimensionType.infiniburn()",
+  "GameEvent.BLOCK_CHANGE"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "11.0.0-beta+26.3-fabric.jar",
   "published": "2026-09-24"
  },
@@ -46,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -63,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 18
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 40
 }

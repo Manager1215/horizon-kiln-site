@@ -9,13 +9,13 @@
  "author": "vlad2305m",
  "description": "Each player has their own mob cap (of 70 by default)",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
+  "net.minecraft.server.level.DistanceManager",
   "net.minecraft.util.profiling.ProfilerFiller",
   "net.minecraft.world.level.NaturalSpawner",
   "net.minecraft.world.level.NaturalSpawner.SpawnState",
   "ServerLevel.getAllEntities()",
   "ServerPlayer.getLastSectionPos()",
-  "ServerPlayer.sendSystemMessage()",
   "Mob.isPersistenceRequired()",
   "Mob.requiresCustomPersistence()",
   "MobCategory.getMaxInstancesPerChunk()",
@@ -25,8 +25,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fabric-per-player-spawns-3.2.2.jar",
   "published": "2026-09-29"
  },
@@ -42,5 +42,9 @@
   "fabricloader",
   "minecraft"
  ],
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
  "lacks": 10
 }

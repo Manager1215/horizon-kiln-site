@@ -10,10 +10,10 @@
  "description": "A parkour savestate and replay tool",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
   "net.minecraft.client.player.ClientInput",
-  "net.minecraft.nbt.NbtIo",
+  "net.minecraft.client.player.KeyboardInput",
   "net.minecraft.world.entity.player.Input",
   "ServerPlayerEvents.JOIN",
   "Minecraft.gameDirectory",
@@ -22,14 +22,10 @@
   "LocalPlayer.getRotationVector()",
   "LocalPlayer.getXRot()",
   "LocalPlayer.getYRot()",
-  "LocalPlayer.horizontalCollision",
   "LocalPlayer.input",
-  "LocalPlayer.isFallFlying()",
   "LocalPlayer.jumpTriggerTime",
-  "LocalPlayer.minorHorizontalCollision",
   "LocalPlayer.setOldPosAndRot()",
   "LocalPlayer.setPos()",
-  "LocalPlayer.setSprinting()",
   "LocalPlayer.setXRot()",
   "LocalPlayer.setYRot()",
   "LocalPlayer.sprintTriggerTime",
@@ -38,14 +34,10 @@
   "LocalPlayer.verticalCollision",
   "LocalPlayer.verticalCollisionBelow",
   "Tag.asCompound()",
-  "RegistryFriendlyByteBuf.writeBoolean()",
   "ServerPlayer.setKnownMovement()",
   "ServerPlayer.setOldPosAndRot()",
   "ServerPlayer.setPos()",
   "Vec2.CODEC",
-  "Vec2.ZERO",
-  "Vec2.x",
-  "Vec2.y",
   "Vec3.CODEC",
   "Vec3.STREAM_CODEC"
  ],
@@ -53,8 +45,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "kinestat-1.0.1.jar",
   "published": "2026-11-04"
  },
@@ -66,8 +58,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -83,5 +75,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 37
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 29
 }

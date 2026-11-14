@@ -9,7 +9,6 @@
  "author": "VoreZ",
  "description": "This is an unofficial continuation of OfflineSkins originally created by zlainsama (LainMI), ported and maintained by VoreZ",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.minecraft.MinecraftProfileTexture",
   "com.mojang.authlib.minecraft.MinecraftProfileTextures",
@@ -37,9 +36,7 @@
   "NativeImage.read()",
   "NativeImage.read()",
   "NativeImage.setPixel()",
-  "Minecraft.execute()",
   "Minecraft.getProxy()",
-  "Minecraft.isSameThread()",
   "Minecraft.services()",
   "GuiGraphicsExtractor.blit()",
   "LocalPlayer.getGameProfile()",
@@ -50,12 +47,12 @@
   "Player.getGameProfile()",
   "PlayerSkin.insecure()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "offlineskins-reloaded-26.3-Fabric-1.2.2.jar",
   "published": "2026-10-31"
  },
@@ -68,5 +65,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
- "lacks": 39
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 37
 }

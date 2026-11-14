@@ -12,24 +12,13 @@
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDamage",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.level.storage.WorldData",
-  "ServerTickEvents.END_SERVER_TICK",
-  "CommandSourceStack.getServer()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.getWorldData()",
   "ServerPlayer.giveExperienceLevels()",
   "ServerPlayer.giveExperiencePoints()",
   "ServerPlayer.permissions()",
-  "ServerPlayer.sendSystemMessage()",
   "ServerPlayer.teleportTo()",
-  "DamageSource.getDirectEntity()",
-  "DamageSource.getEntity()",
+  "PlayerList.getPlayer()",
   "DamageSources.generic()",
   "Entity.damageSources()",
   "Entity.is()",
@@ -40,8 +29,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "cyansethome-2.1.0-beta.2+26.3.x.jar",
   "published": "2026-09-23"
  },
@@ -53,8 +42,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -74,5 +63,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 26
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 15
 }

@@ -1,7 +1,7 @@
 {
  "id": "reliable-name-tags",
  "name": "Reliable Name Tags",
- "version": "2.1.0+26.1.2-fabric",
+ "version": "2.1.1+26.1.2-fabric",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,30 +9,45 @@
  "author": "Cassian",
  "description": "Lets you right click Name Tags in the air to change their name - a port of Convenient Name Tags to modern versions.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition",
   "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditionType",
   "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions",
   "net.minecraft.resources.RegistryOps.RegistryInfoLookup",
+  "net.minecraft.world.entity.animal.cow.MushroomCow",
+  "net.minecraft.world.entity.animal.equine.AbstractChestedHorse",
+  "net.minecraft.world.entity.animal.equine.Horse",
+  "net.minecraft.world.entity.animal.golem.SnowGolem",
+  "net.minecraft.world.entity.animal.sheep.Sheep",
+  "net.minecraft.world.entity.decoration.ArmorStand",
+  "net.minecraft.world.entity.npc.villager.Villager",
+  "net.minecraft.world.entity.npc.wanderingtrader.WanderingTrader",
   "net.minecraft.world.item.NameTagItem",
-  "org.apache.logging.log4j.LogManager",
+  "net.minecraft.world.item.ShearsItem",
+  "ScreenRectangle.left()",
   "DataComponents.CUSTOM_NAME",
   "MinecraftServer.execute()",
   "ServerPlayer.setExperienceLevels()",
   "ExtraCodecs.NON_EMPTY_STRING",
+  "Entity.<init>()",
+  "LivingEntity.getCustomName()",
+  "LivingEntity.hasCustomName()",
+  "LivingEntity.isAlive()",
   "Player.hasInfiniteMaterials()",
+  "ItemStack.hurtAndBreak()",
+  "Items.NAME_TAG",
   "CraftingBookCategory.CODEC",
   "CraftingBookCategory.STREAM_CODEC",
-  "CraftingInput.ingredientCount()"
+  "CraftingInput.ingredientCount()",
+  "Level.addFreshEntity()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "reliablenametags-2.1.0+26.1.2-fabric.jar",
-  "published": "2026-10-20"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "reliablenametags-2.1.1+26.1.2-fabric.jar",
+  "published": "2026-11-12"
  },
  "reports": {
   "works": 0,
@@ -42,8 +57,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -53,10 +68,14 @@
  },
  "mixins": true,
  "depends": [
+  "asphodel_api",
   "fabric-api",
   "fabricloader",
-  "minecraft",
-  "mru"
+  "minecraft"
  ],
- "lacks": 14
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 30
 }

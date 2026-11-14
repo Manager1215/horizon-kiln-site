@@ -1,0 +1,92 @@
+{
+ "id": "combat-persistence",
+ "name": "Combat Persistence",
+ "version": "1.10.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/combat-persistence",
+ "author": "PottersGame",
+ "description": "Stops combat logging on Fabric servers. Quit mid-fight and a copy of you stays behind with your gear. Kill it and take the loot. Server-side only, players don't need to install anything.",
+ "needs": [
+  "com.mojang.authlib.GameProfile",
+  "com.mojang.authlib.properties.Property",
+  "com.mojang.authlib.properties.PropertyMap",
+  "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
+  "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
+  "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
+  "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
+  "net.fabricmc.fabric.api.event.player.UseEntityCallback",
+  "net.minecraft.core.UUIDUtil",
+  "net.minecraft.nbt.NbtAccounter",
+  "net.minecraft.network.protocol.PacketUtils",
+  "net.minecraft.network.protocol.game.ServerboundChatCommandPacket",
+  "net.minecraft.network.protocol.game.ServerboundChatCommandSignedPacket",
+  "net.minecraft.world.entity.ai.attributes.AttributeMap",
+  "net.minecraft.world.entity.decoration.Mannequin",
+  "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrownEnderpearl",
+  "net.minecraft.world.inventory.BeaconMenu",
+  "net.minecraft.world.inventory.CartographyTableMenu",
+  "net.minecraft.world.inventory.EnchantmentMenu",
+  "net.minecraft.world.inventory.GrindstoneMenu",
+  "net.minecraft.world.inventory.ItemCombinerMenu",
+  "net.minecraft.world.inventory.LoomMenu",
+  "net.minecraft.world.inventory.MerchantMenu",
+  "net.minecraft.world.inventory.ResultContainer",
+  "net.minecraft.world.inventory.StonecutterMenu",
+  "net.minecraft.world.item.component.ResolvableProfile",
+  "net.minecraft.world.level.block.EnderChestBlock",
+  "net.minecraft.world.level.storage.LevelResource",
+  "ServerLifecycleEvents.SERVER_STOPPING",
+  "DataComponents.PROFILE",
+  "NbtIo.readCompressed()",
+  "NbtIo.writeCompressed()",
+  "Connection.disconnect()",
+  "ClientboundPlayerInfoUpdatePacket.createPlayerInitializing()",
+  "SynchedEntityData.getNonDefaultValues()",
+  "MinecraftServer.execute()",
+  "MinecraftServer.getAllLevels()",
+  "MinecraftServer.getTickCount()",
+  "MinecraftServer.getWorldPath()",
+  "and 39 more"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "combatpersistence-1.10.0.jar",
+  "published": "2026-11-06"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 79
+}

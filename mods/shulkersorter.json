@@ -9,32 +9,19 @@
  "author": "dennis.thegamer96",
  "description": "Sort, merge and label your shulker boxes with a single keypress.",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.level.block.ShulkerBoxBlock",
   "InputConstants.isKeyDown()",
-  "Minecraft.execute()",
-  "Minecraft.gameMode",
   "Minecraft.getSingleplayerServer()",
   "DataComponents.CUSTOM_NAME",
   "DataComponents.FOOD",
-  "FriendlyByteBuf.readUtf()",
-  "FriendlyByteBuf.readVarInt()",
-  "FriendlyByteBuf.writeBoolean()",
-  "FriendlyByteBuf.writeByte()",
-  "FriendlyByteBuf.writeUtf()",
-  "FriendlyByteBuf.writeVarInt()",
-  "CustomPacketPayload.codec()",
-  "MinecraftServer.execute()",
-  "MinecraftServer.getPlayerList()"
+  "MinecraftServer.execute()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "shulkersorter-fabric-1.2.1+mc26.3.jar",
   "published": "2026-09-27"
  },
@@ -46,8 +33,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -65,5 +52,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 18
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 6
 }

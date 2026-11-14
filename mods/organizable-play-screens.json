@@ -10,26 +10,24 @@
  "description": "Organize your worlds and servers with folders in the play screens.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 13 points inside the game's methods",
   "net.minecraft.SharedConstants",
   "net.minecraft.client.OptionInstance.CaptionBasedToString",
   "net.minecraft.client.OptionInstance.Enum",
   "net.minecraft.client.OptionInstance.IntRangeBase",
   "net.minecraft.client.OptionInstance.SliderableValueSet",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
-  "net.minecraft.client.OptionInstance.ValueSet",
   "net.minecraft.client.OptionInstance.ValueUpdateListener",
-  "net.minecraft.client.gui.components.ObjectSelectionList",
-  "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
   "net.minecraft.client.gui.components.SelectableEntry",
   "net.minecraft.client.gui.components.SpriteIconButton",
   "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-  "net.minecraft.client.gui.components.StringWidget",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.components.WidgetSprites",
+  "net.minecraft.client.gui.layouts.CommonLayouts",
   "net.minecraft.client.gui.layouts.GridLayout",
   "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
+  "net.minecraft.client.gui.layouts.LayoutSettings",
+  "net.minecraft.client.gui.layouts.LinearLayout",
   "net.minecraft.client.gui.screens.FaviconTexture",
   "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
   "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList",
@@ -46,19 +44,21 @@
   "net.minecraft.client.multiplayer.ServerData.State",
   "net.minecraft.client.multiplayer.ServerStatusPinger",
   "net.minecraft.client.renderer.texture.DynamicTexture",
-  "net.minecraft.nbt.NbtIo",
   "net.minecraft.server.network.EventLoopGroupHolder",
   "net.minecraft.world.level.storage.LevelSummary",
-  "NativeImage.copyFrom()",
-  "NativeImage.format()",
-  "and 42 more"
+  "net.minecraft.world.level.storage.LevelVersion",
+  "org.lwjgl.sdl.SDLDialog",
+  "org.lwjgl.sdl.SDLError",
+  "org.lwjgl.sdl.SDL_DialogFileFilter",
+  "org.lwjgl.sdl.SDL_DialogFileFilter.Buffer",
+  "and 37 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "organizable-play-screens-1.3.3+26.3.jar",
   "published": "2026-10-18"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 82
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 77
 }

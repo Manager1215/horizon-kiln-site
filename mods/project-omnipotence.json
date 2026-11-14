@@ -10,17 +10,55 @@
  "description": "A server-side mod that allows you to achieve a complete state of harmony with the surrounding world.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 6 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
+  "net.minecraft.advancements.triggers.CriteriaTriggers",
+  "net.minecraft.advancements.triggers.CuredZombieVillagerTrigger",
+  "net.minecraft.advancements.triggers.KilledTrigger",
+  "net.minecraft.advancements.triggers.PlayerTrigger",
+  "net.minecraft.core.UUIDUtil",
+  "net.minecraft.server.commands.KillCommand",
+  "net.minecraft.server.level.ServerPlayerGameMode",
+  "net.minecraft.tags.DamageTypeTags",
+  "net.minecraft.tags.EnchantmentTags",
+  "net.minecraft.tags.ItemTags",
+  "net.minecraft.world.entity.Bucketable",
+  "net.minecraft.world.entity.ConversionParams",
+  "net.minecraft.world.entity.ConversionParams.AfterConversion",
+  "net.minecraft.world.entity.ConversionType",
+  "net.minecraft.world.entity.NeutralMob",
+  "net.minecraft.world.entity.ai.Brain",
+  "net.minecraft.world.entity.ai.attributes.AttributeMap",
+  "net.minecraft.world.entity.ai.goal.AvoidEntityGoal",
+  "net.minecraft.world.entity.ai.goal.GoalSelector",
+  "net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal",
+  "net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal",
+  "net.minecraft.world.entity.ai.gossip.GossipContainer",
+  "net.minecraft.world.entity.ai.village.ReputationEventType",
+  "net.minecraft.world.entity.animal.goat.Goat",
+  "net.minecraft.world.entity.monster.piglin.Piglin",
+  "net.minecraft.world.entity.monster.zombie.ZombieVillager",
+  "net.minecraft.world.entity.monster.zombie.ZombifiedPiglin",
+  "net.minecraft.world.entity.npc.villager.Villager",
+  "net.minecraft.world.entity.player.Player.BedSleepingProblem",
+  "net.minecraft.world.entity.projectile.ProjectileDeflection",
+  "net.minecraft.world.entity.schedule.Activity",
+  "net.minecraft.world.item.MobBucketItem",
+  "net.minecraft.world.item.component.Consumable",
+  "net.minecraft.world.item.trading.MerchantOffer",
+  "net.minecraft.world.level.block.entity.BeaconBlockEntity",
+  "net.minecraft.world.level.block.entity.trialspawner.TrialSpawner",
+  "net.minecraft.world.level.dimension.end.EnderDragonFight",
+  "net.minecraft.world.level.storage.loot.functions.ApplyBonusCount",
   "org.apache.commons.io.FileUtils",
-  "ByteBufCodecs.GAME_PROFILE"
+  "and 60 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "project-omnipotence-1.5.4-26.3.jar",
   "published": "2026-09-15"
  },
@@ -32,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -49,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 3
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+ },
+ "lacks": 176
 }

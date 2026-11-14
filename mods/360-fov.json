@@ -9,14 +9,55 @@
  "author": "xpncvr",
  "description": "Mod blending various projections to get an uncapped FOV (based on Flex FOV)",
  "needs": [
-  "Mixin"
+  "Mixin: 19 points inside the game's methods",
+  "com.mojang.blaze3d.buffers.Std140Builder",
+  "com.mojang.blaze3d.buffers.Std140SizeCalculator",
+  "com.mojang.blaze3d.pipeline.TextureTarget",
+  "com.mojang.renderpearl.api.pipeline.BindGroupLayout.Builder",
+  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
+  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
+  "net.minecraft.client.OptionInstance.CaptionBasedToString",
+  "net.minecraft.client.OptionInstance.Enum",
+  "net.minecraft.client.OptionInstance.TooltipSupplier",
+  "net.minecraft.client.OptionInstance.ValueUpdateListener",
+  "net.minecraft.client.gui.components.MultiLineTextWidget",
+  "net.minecraft.client.gui.components.OptionsList",
+  "net.minecraft.client.gui.components.SpriteIconButton",
+  "net.minecraft.client.gui.components.SpriteIconButton.Builder",
+  "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
+  "net.minecraft.client.gui.layouts.LinearLayout",
+  "net.minecraft.client.gui.screens.options.OptionsScreen",
+  "net.minecraft.client.gui.screens.options.OptionsSubScreen",
+  "net.minecraft.client.gui.screens.options.VideoSettingsScreen",
+  "net.minecraft.client.particle.Particle",
+  "net.minecraft.client.particle.SingleQuadParticle",
+  "net.minecraft.client.particle.SingleQuadParticle.FacingCameraMode",
+  "net.minecraft.client.renderer.LevelRenderer",
+  "net.minecraft.client.renderer.MappableRingBuffer",
+  "net.minecraft.client.renderer.PostPass",
+  "net.minecraft.client.renderer.ScreenEffectRenderer",
+  "net.minecraft.client.renderer.SkyRenderer",
+  "net.minecraft.client.renderer.blockentity.ConduitRenderer",
+  "net.minecraft.client.renderer.entity.DragonFireballRenderer",
+  "net.minecraft.client.renderer.entity.ExperienceOrbRenderer",
+  "net.minecraft.client.renderer.entity.FireworkEntityRenderer",
+  "net.minecraft.client.renderer.entity.FishingHookRenderer",
+  "net.minecraft.client.renderer.entity.ThrownItemRenderer",
+  "net.minecraft.client.renderer.extract.LevelExtractor",
+  "net.minecraft.client.renderer.fog.environment.AtmosphericFogEnvironment",
+  "net.minecraft.client.renderer.state.level.PlayerRenderState",
+  "net.minecraft.client.renderer.state.level.PlayerRenderState.BlockOverlay",
+  "net.minecraft.util.profiling.Profiler",
+  "net.minecraft.util.profiling.ProfilerFiller",
+  "net.minecraft.world.level.material.FogType",
+  "and 53 more"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fov360-1.2.4.jar",
   "published": "2026-10-19"
  },
@@ -28,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -42,5 +83,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes"
+ },
+ "lacks": 93
 }

@@ -10,26 +10,37 @@
  "description": "Reviving Minecart Spawner with bug fixes and small improvements!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
+  "net.minecraft.client.model.geom.ModelLayers",
+  "net.minecraft.client.renderer.blockentity.SpawnerRenderer",
+  "net.minecraft.client.renderer.entity.EntityRenderers",
   "net.minecraft.world.entity.EntitySpawnRequest",
   "net.minecraft.world.entity.vehicle.minecart.MinecartSpawner",
+  "net.minecraft.world.item.SpawnEggItem",
   "net.minecraft.world.level.BaseSpawner",
   "net.minecraft.world.level.SpawnData",
-  "ClientPlayNetworking.canSend()",
-  "ServerPlayNetworking.canSend()",
-  "Minecraft.execute()",
-  "FriendlyByteBuf.writeInt()",
-  "CustomPacketPayload.codec()",
+  "AbstractMinecartRenderer.extractRenderState()",
+  "AbstractMinecartRenderer.submit()",
+  "EntityRenderDispatcher.extractEntity()",
+  "EntityRendererProvider.Context.getEntityRenderDispatcher()",
   "MinecraftServer.execute()",
   "ServerLevel.getEntity()",
-  "EntityType.loadEntityRecursive()"
+  "Entity.getBbHeight()",
+  "Entity.getBbWidth()",
+  "Entity.setId()",
+  "EntityType.loadEntityRecursive()",
+  "ExperienceOrb.award()",
+  "AbstractMinecart.destroy()",
+  "AbstractMinecart.interact()",
+  "AbstractMinecart.recreateFromPacket()",
+  "GameEvent.ENTITY_INTERACT"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "minecartspawnerrevived-mc26.3-v26.3.0-fabric.jar",
   "published": "2026-09-25"
  },
@@ -41,8 +52,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -57,5 +68,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 12
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; has network channels"
+ },
+ "lacks": 23
 }

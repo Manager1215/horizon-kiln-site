@@ -9,13 +9,12 @@
  "author": "Teron",
  "description": "A client-side core that serves as the shared foundation for all Easeon modules.",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.gui.components.Button.Plain",
   "net.minecraft.client.resources.ClientPackSource",
   "net.minecraft.server.packs.PackLocationInfo",
   "net.minecraft.server.packs.PackSelectionConfig",
   "net.minecraft.server.packs.PathPackResources",
   "net.minecraft.server.packs.PathPackResources.PathResourcesSupplier",
+  "net.minecraft.server.packs.repository.BuiltInPackSource",
   "net.minecraft.server.packs.repository.Pack",
   "net.minecraft.server.packs.repository.Pack.Metadata",
   "net.minecraft.server.packs.repository.Pack.Position",
@@ -24,27 +23,18 @@
   "net.minecraft.server.packs.repository.PackSource",
   "net.minecraft.server.packs.repository.RepositorySource",
   "net.minecraft.world.flag.FeatureFlags",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "InputConstants.Key.getDisplayName()",
   "InputConstants.Type.getOrCreate()",
   "ModContainer.getRootPath()",
   "ModContainer.getRootPaths()",
-  "Minecraft.execute()",
-  "Minecraft.setScreenAndShow()",
-  "GuiGraphicsExtractor.<init>()",
-  "Button.DEFAULT_NARRATION",
-  "Screen.addRenderableWidget()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseReleased()"
+  "GuiGraphicsExtractor.<init>()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "easeon.cs.core.teron.fabric-26.3.2.0+mc26.3.jar",
   "published": "2026-10-06"
  },
@@ -61,5 +51,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 28
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 19
 }

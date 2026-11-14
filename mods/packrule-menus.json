@@ -9,16 +9,13 @@
  "author": "Estecka",
  "description": "Makes the Datapack and Gamerule menus accessible from existing singleplayer worlds. Allows toggling experimental features.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
-  "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.layouts.GridLayout",
   "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
   "net.minecraft.client.gui.layouts.LinearLayout",
+  "net.minecraft.client.gui.screens.WorldOptionsScreen",
   "net.minecraft.client.gui.screens.multiplayer.WarningScreen",
   "net.minecraft.client.gui.screens.packs.PackSelectionScreen",
   "net.minecraft.client.server.IntegratedServer",
@@ -30,11 +27,8 @@
   "net.minecraft.world.level.storage.WorldData",
   "Minecraft.disconnectWithSavingScreen()",
   "Minecraft.getSingleplayerServer()",
-  "Minecraft.setScreenAndShow()",
-  "Button.Builder.tooltip()",
-  "Button.Builder.width()",
   "ChatComponent.addServerSystemMessage()",
-  "Checkbox.selected()",
+  "CycleButton.Builder.withTooltip()",
   "ClientLevel.DEFAULT_QUIT_MESSAGE",
   "ClientLevel.disconnect()",
   "CommonComponents.GUI_CANCEL",
@@ -46,8 +40,8 @@
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "packrule-menus-3.0.0+26.3.jar",
   "published": "2026-09-17"
  },
@@ -66,5 +60,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 31
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 25
 }

@@ -9,16 +9,29 @@
  "author": "JXSnack",
  "description": "TT20 helps reduce lag by optimizing how ticks work when the server's TPS is low.",
  "needs": [
-  "Mixin",
-  "CommandSourceStack.sendSystemMessage()",
-  "Identifier.tryBuild()"
+  "Mixin: 8 points inside the game's methods",
+  "net.minecraft.server.dedicated.ServerWatchdog",
+  "net.minecraft.world.entity.PortalProcessor",
+  "net.minecraft.world.item.BowItem",
+  "net.minecraft.world.item.CrossbowItem",
+  "net.minecraft.world.level.chunk.LevelChunk.BoundTickingBlockEntity",
+  "net.minecraft.world.level.material.LavaFluid",
+  "net.minecraft.world.level.material.WaterFluid",
+  "net.minecraft.world.level.storage.ServerLevelData",
+  "RegistryAccess.lookupOrThrow()",
+  "Identifier.tryBuild()",
+  "ServerLevel.getLevelData()",
+  "AgeableMob.getAge()",
+  "AgeableMob.setAge()",
+  "Player.isSleeping()",
+  "GameRules.RANDOM_TICK_SPEED"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "tt20-0.8.5+mc26.3-fabric.jar",
   "published": "2026-09-16"
  },
@@ -30,8 +43,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -44,5 +57,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 2
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 15
 }

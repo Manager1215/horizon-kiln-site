@@ -10,18 +10,55 @@
  "description": "A silly little experiment that removes the stack size limit and no, I don't mean just a really big number",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 8 points inside the game's methods",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+  "net.fabricmc.fabric.api.item.v1.FabricItemStack",
+  "net.minecraft.CrashReport",
+  "net.minecraft.CrashReportCategory",
+  "net.minecraft.ReportedException",
+  "net.minecraft.advancements.triggers.CriteriaTriggers",
+  "net.minecraft.advancements.triggers.FilledBucketTrigger",
+  "net.minecraft.server.commands.GiveCommand",
+  "net.minecraft.world.entity.Bucketable",
+  "net.minecraft.world.entity.animal.axolotl.Axolotl",
+  "net.minecraft.world.inventory.AnvilMenu",
+  "net.minecraft.world.inventory.BrewingStandMenu",
+  "net.minecraft.world.inventory.ClickAction",
+  "net.minecraft.world.item.BundleItem",
+  "net.minecraft.world.item.JukeboxPlayable",
+  "net.minecraft.world.item.SolidBucketItem",
+  "net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity",
+  "net.minecraft.world.level.block.entity.JukeboxBlockEntity",
   "ServerLifecycleEvents.SERVER_STARTED",
+  "ItemInput.createItemStack()",
+  "DataComponentPatch.CODEC",
   "DataComponents.MAX_STACK_SIZE",
-  "Item.components()"
+  "DefaultDispenseItemBehavior.spawnItem()",
+  "ServerPlayer.drop()",
+  "ServerPlayer.getDisplayName()",
+  "ServerPlayer.getRandom()",
+  "ExtraCodecs.intRange()",
+  "ExtraCodecs.optionalAlwaysPresentFieldOf()",
+  "ExtraCodecs.optionalEmptyMap()",
+  "LivingEntity.discard()",
+  "LivingEntity.isAlive()",
+  "LivingEntity.playSound()",
+  "ItemEntity.makeFakeItem()",
+  "ItemEntity.setNoPickUpDelay()",
+  "ItemEntity.setTarget()",
+  "Inventory.add()",
+  "Inventory.getFreeSlot()",
+  "Inventory.getSlotWithRemainingSpace()",
+  "Player.<init>()",
+  "Player.addItem()",
+  "and 35 more"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "StacksAreGone-0.0.3-1.26.3.jar",
   "published": "2026-09-21"
  },
@@ -33,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -49,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 4
+ "softOff": {
+  "class": "restart",
+  "why": "@overwrite and @redirect into the game's classes; registers blocks, items or entities (they stay, inert)"
+ },
+ "lacks": 75
 }

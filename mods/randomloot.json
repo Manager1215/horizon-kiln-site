@@ -1,7 +1,7 @@
 {
  "id": "randomloot",
  "name": "Random Loot",
- "version": "1.5.33+mc26.3-fabric",
+ "version": "1.6.0+mc26.3-fabric",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,14 +10,14 @@
  "description": "Introducing Looting like you've never seen it before!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDamage",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.item.v1.EnchantmentEvents",
   "net.fabricmc.fabric.api.item.v1.EnchantmentEvents.AllowEnchanting",
+  "net.fabricmc.fabric.api.loot.v3.LootTableEvents.ModifyDrops",
   "net.fabricmc.fabric.api.util.TriState",
   "net.minecraft.advancements.predicates.MinMaxBounds.Ints",
   "net.minecraft.advancements.triggers.CriteriaTriggers",
@@ -26,13 +26,13 @@
   "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty",
   "net.minecraft.network.chat.FontDescription",
   "net.minecraft.network.chat.FontDescription.Resource",
-  "net.minecraft.server.players.PlayerList",
-  "net.minecraft.stats.ServerStatsCounter",
+  "net.minecraft.server.level.ServerPlayerGameMode",
   "net.minecraft.tags.DamageTypeTags",
-  "net.minecraft.world.entity.EquipmentSlot.Type",
   "net.minecraft.world.entity.monster.Monster",
   "net.minecraft.world.entity.monster.Shulker",
   "net.minecraft.world.entity.projectile.hurtingprojectile.LargeFireball",
+  "net.minecraft.world.inventory.AnvilMenu",
+  "net.minecraft.world.inventory.RecipeCraftingHolder",
   "net.minecraft.world.inventory.SmithingMenu",
   "net.minecraft.world.item.HoneycombItem",
   "net.minecraft.world.item.crafting.SmithingRecipe",
@@ -49,18 +49,18 @@
   "BiMap.get()",
   "InputConstants.isKeyDown()",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerTickEvents.END_SERVER_TICK",
-  "CommandSourceStack.getPlayerOrException()",
+  "LootTableEvents.MODIFY_DROPS",
+  "BlockPos.containing()",
   "and 55 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "randomloot-fabric-26.3-1.5.33.jar",
-  "published": "2026-10-24"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "randomloot-fabric-26.3-1.6.0.jar",
+  "published": "2026-11-11"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 174
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+ },
+ "lacks": 162
 }

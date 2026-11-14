@@ -21,12 +21,8 @@
   "net.minecraft.client.data.models.model.ModelTemplates",
   "net.minecraft.client.gui.screens.inventory.StonecutterScreen",
   "net.minecraft.data.recipes.ShapelessRecipeBuilder",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
   "net.minecraft.network.chat.FontDescription",
   "net.minecraft.network.chat.FontDescription.Resource",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
   "net.minecraft.world.SimpleMenuProvider",
   "net.minecraft.world.flag.FeatureFlags",
   "net.minecraft.world.inventory.ContainerLevelAccess",
@@ -44,19 +40,23 @@
   "ShapedRecipeBuilder.save()",
   "BlockItemTagAppender.addAll()",
   "BlockItemTagAppender.addTag()",
-  "MutableComponent.setStyle()",
-  "MutableComponent.withStyle()",
-  "Style.withClickEvent()",
   "Style.withFont()",
-  "Style.withHoverEvent()",
-  "and 48 more"
+  "BlockTags.IMPERMEABLE",
+  "TagKey.getTranslationKey()",
+  "MenuType.<init>()",
+  "DyeColor.getName()",
+  "Items.AMETHYST_SHARD",
+  "Items.DYE",
+  "Items.FEATHER",
+  "Items.FLINT",
+  "and 40 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "betterglass-1.1.1+mc26.3.jar",
   "published": "2026-09-15"
  },
@@ -69,5 +69,9 @@
  "entrypoints": {},
  "mixins": false,
  "depends": [],
- "lacks": 88
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 80
 }

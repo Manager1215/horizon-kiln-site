@@ -9,20 +9,32 @@
  "author": "raderth",
  "description": "Get the most out of your hardware. Scalable optimises and puts the most important things first",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.minecraft.server.level.ChunkHolder",
+  "net.minecraft.server.level.ChunkLevel",
   "net.minecraft.server.level.ChunkMap",
+  "net.minecraft.server.level.ChunkResult",
   "net.minecraft.server.level.DistanceManager",
+  "net.minecraft.server.level.GenerationChunkHolder",
   "net.minecraft.server.level.Ticket",
+  "net.minecraft.world.level.LocalMobCapCalculator",
+  "net.minecraft.world.level.NaturalSpawner",
+  "net.minecraft.world.level.NaturalSpawner.ChunkGetter",
+  "net.minecraft.world.level.NaturalSpawner.SpawnState",
   "net.minecraft.world.level.TicketStorage",
   "net.minecraft.world.level.block.piston.PistonMovingBlockEntity",
   "ServerLifecycleEvents.SERVER_STARTING",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "CommandSourceStack.getServer()",
   "MinecraftServer.getCurrentSmoothedTickTime()",
   "MinecraftServer.getServerDirectory()",
+  "ServerChunkCache.chunkMap",
+  "ServerChunkCache.getChunkNow()",
+  "ServerLevel.canSpawnEntitiesInChunk()",
+  "ServerLevel.getGameRules()",
+  "ServerLevel.isDebug()",
+  "ServerLevel.tickChunk()",
   "ServerPlayer.chunkPosition()",
   "TicketType.DRAGON",
   "TicketType.ENDER_PEARL",
@@ -30,15 +42,22 @@
   "TicketType.PORTAL",
   "TicketType.UNKNOWN",
   "Entity.chunkPosition()",
-  "Entity.isRemoved()",
-  "LevelChunk.getBlockEntities()"
+  "Leashable.isLeashed()",
+  "LivingEntity.isPassenger()",
+  "LivingEntity.isVehicle()",
+  "LivingEntity.tickCount",
+  "LevelChunk.getBlockEntities()",
+  "LevelChunk.incrementInhabitedTime()",
+  "GameRules.RANDOM_TICK_SPEED",
+  "GameRules.SPAWN_MOBS",
+  "and 1 more"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Scalable.jar",
   "published": "2026-11-02"
  },
@@ -50,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -66,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 22
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 41
 }

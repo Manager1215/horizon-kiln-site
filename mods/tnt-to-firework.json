@@ -9,28 +9,25 @@
  "author": "OldManPlaysGames",
  "description": "Tired of TNT grief on your server? This mod intercepts every ignited TNT in the Overworld and swaps it out for a randomly generated firework — complete with random colors, shapes, trails and twinkle effects. Fully server-side, no client install required!",
  "needs": [
-  "Mixin",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.entity.projectile.FireworkRocketEntity",
+  "net.minecraft.world.entity.vehicle.minecart.MinecartTNT",
   "net.minecraft.world.item.component.FireworkExplosion",
   "net.minecraft.world.item.component.FireworkExplosion.Shape",
   "net.minecraft.world.item.component.Fireworks",
   "net.minecraft.world.level.storage.WorldData",
   "DataComponents.FIREWORKS",
   "MinecraftServer.execute()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.getWorldData()",
   "ServerPlayer.canUseGameMasterBlocks()",
   "Entity.discard()",
-  "PrimedTnt.isRemoved()",
   "Items.FIREWORK_ROCKET"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "tnt-to-rocket-1.0.1-26.3.jar",
   "published": "2026-09-19"
  },
@@ -42,8 +39,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -57,5 +54,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 14
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 12
 }

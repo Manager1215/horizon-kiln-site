@@ -10,12 +10,13 @@
  "description": "Devonian is a minecraft mod focused on enhancing your gameplay experience while playing Hypixel Skyblock. Adding various QOL features for a better experience while gaming.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 76 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.exceptions.AuthenticationException",
   "com.mojang.authlib.minecraft.SessionService",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
+  "com.mojang.authlib.services.MinecraftServicesKeyInfo",
   "com.mojang.blaze3d.Blaze3D",
   "com.mojang.blaze3d.buffers.Std140Builder",
   "com.mojang.blaze3d.buffers.Std140SizeCalculator",
@@ -23,8 +24,12 @@
   "com.mojang.blaze3d.systems.ScissorState",
   "com.mojang.blaze3d.vertex.DefaultVertexFormat",
   "com.mojang.blaze3d.vertex.VertexSorting",
+  "com.mojang.renderpearl.api.pipeline.BindGroupLayout.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
+  "com.mojang.renderpearl.backend.opengl.GlDevice",
+  "com.mojang.renderpearl.frontend.shaders.GlslCompiler",
+  "io.netty.channel.ChannelHandlerContext",
   "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
   "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.ModifyGame",
   "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents",
@@ -42,23 +47,18 @@
   "net.fabricmc.fabric.impl.command.client.ClientCommandInternals",
   "net.fabricmc.loader.api.SemanticVersion",
   "net.minecraft.SharedConstants",
-  "net.minecraft.client.CameraType",
-  "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
-  "net.minecraft.client.gui.Hud.HeartType",
-  "net.minecraft.client.gui.components.ChatComponent.ChatMethod",
-  "net.minecraft.client.gui.components.LerpingBossEvent",
-  "net.minecraft.client.gui.screens.LevelLoadingScreen",
-  "net.minecraft.client.gui.screens.Overlay",
-  "net.minecraft.client.gui.screens.inventory.ContainerScreen",
-  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
+  "net.minecraft.client.Screenshot",
+  "net.minecraft.client.gui.Font.PreparedText",
+  "net.minecraft.client.gui.Font.PreparedTextBuilder",
+  "net.minecraft.client.gui.GlyphSource",
   "and 80 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "devonian-1.36.9.jar",
   "published": "2026-10-31"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 807
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 828
 }

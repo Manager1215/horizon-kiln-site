@@ -10,7 +10,6 @@
  "description": "Library mod for EvilCraft, Integrated Dynamics and others.",
  "needs": [
   "an access widener",
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.Blaze3D",
   "com.mojang.blaze3d.vertex.DefaultVertexFormat",
@@ -23,6 +22,7 @@
   "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditionType",
   "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions",
   "net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariantAttributes",
+  "net.fabricmc.fabric.impl.gametest.FabricGameTestModInitializer",
   "net.fabricmc.fabric.impl.menu.Networking",
   "net.fabricmc.loader.impl.FabricLoaderImpl",
   "net.minecraft.CrashReport",
@@ -42,6 +42,7 @@
   "net.minecraft.client.particle.SpriteSet",
   "net.minecraft.client.renderer.BindGroupLayouts",
   "net.minecraft.client.renderer.entity.EntityRenderers",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
   "net.minecraft.commands.synchronization.ArgumentTypeInfo",
   "net.minecraft.commands.synchronization.ArgumentTypeInfo.Template",
   "net.minecraft.commands.synchronization.ArgumentTypeInfos",
@@ -49,16 +50,14 @@
   "net.minecraft.commands.synchronization.SingletonArgumentInfo.Template",
   "net.minecraft.core.Holder.Kind",
   "net.minecraft.core.HolderSet.Named",
-  "net.minecraft.core.particles.BlockParticleOption",
-  "net.minecraft.gametest.framework.GameTestAssertException",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "cyclopscore-26.3-fabric-1.30.0-1212.jar",
   "published": "2026-10-31"
  },
@@ -70,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +84,9 @@
   "fabricloader",
   "java"
  ],
- "lacks": 251
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
+ },
+ "lacks": 222
 }

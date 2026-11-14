@@ -1,7 +1,7 @@
 {
  "id": "cntrafficsymbols-core",
  "name": "CNTrafficSymbols Core",
- "version": "0.0.2-rc2+mc26.3",
+ "version": "0.0.3-a1+mc26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,23 +9,40 @@
  "author": "IAmREGE",
  "description": "Core module of CNTrafficSymbols",
  "needs": [
-  "Mixin",
   "net.minecraft.world.level.block.Mirror",
   "net.minecraft.world.level.block.state.properties.RotationSegment",
+  "MutableComponent.withoutShadow()",
+  "Style.withShadowColor()",
+  "TextColor.AQUA",
+  "TextColor.BLACK",
+  "TextColor.BLUE",
+  "TextColor.DARK_AQUA",
+  "TextColor.DARK_BLUE",
+  "TextColor.DARK_GRAY",
+  "TextColor.DARK_GREEN",
+  "TextColor.DARK_PURPLE",
+  "TextColor.DARK_RED",
+  "TextColor.GOLD",
+  "TextColor.GRAY",
+  "TextColor.GREEN",
+  "TextColor.LIGHT_PURPLE",
+  "TextColor.RED",
+  "TextColor.WHITE",
+  "TextColor.YELLOW",
   "Block.getDestroyProgress()",
   "Block.stateById()",
   "Block.updateShape()",
   "BlockState.mirror()",
   "Shapes.empty()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "cntrafficsymbols_core-0.0.2-rc2+mc26.3.jar",
-  "published": "2026-09-27"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "cntrafficsymbols_core-0.0.3-a1+mc26.3.jar",
+  "published": "2026-11-07"
  },
  "reports": {
   "works": 0,
@@ -40,5 +57,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 7
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 25
 }

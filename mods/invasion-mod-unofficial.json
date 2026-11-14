@@ -10,7 +10,7 @@
  "description": "Mob Invasions in waves and a Nexus.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 9 points inside the game's methods",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
@@ -29,18 +29,13 @@
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndLevelTick",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
   "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
   "net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags",
   "net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags",
   "net.minecraft.SharedConstants",
   "net.minecraft.advancements.predicates.MinMaxBounds.Ints",
-  "net.minecraft.client.CameraType",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
   "net.minecraft.client.animation.AnimationChannel",
   "net.minecraft.client.animation.AnimationChannel.Interpolation",
@@ -51,14 +46,19 @@
   "net.minecraft.client.animation.AnimationDefinition.Builder",
   "net.minecraft.client.animation.Keyframe",
   "net.minecraft.client.animation.KeyframeAnimation",
+  "net.minecraft.client.animation.KeyframeAnimations",
+  "net.minecraft.client.gui.components.CycleButton.DisplayState",
+  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
+  "net.minecraft.client.model.AnimationUtils",
+  "net.minecraft.client.model.ArmedModel",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "invasion-4.6.0-26.3fabric.jar",
   "published": "2026-10-20"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +89,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 1267
+ "softOff": {
+  "class": "restart",
+  "why": "@overwrite and @redirect into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 1211
 }

@@ -10,17 +10,47 @@
  "description": "Client-sided mod for automated, convenient resource pack hosting for LAN worlds",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
+  "net.fabricmc.fabric.impl.resource.pack.ModResourcePackCreator",
+  "net.minecraft.SharedConstants",
   "net.minecraft.client.GameNarrator",
+  "net.minecraft.client.gui.components.SpriteIconButton",
+  "net.minecraft.client.gui.components.SpriteIconButton.Builder",
+  "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
+  "net.minecraft.client.gui.layouts.LayoutSettings",
+  "net.minecraft.client.gui.layouts.LinearLayout",
+  "net.minecraft.client.gui.screens.AlertScreen",
+  "net.minecraft.client.gui.screens.WorldOptionsScreen",
+  "net.minecraft.client.gui.screens.packs.PackSelectionScreen",
+  "net.minecraft.client.gui.screens.packs.TransferableSelectionList",
+  "net.minecraft.client.server.IntegratedServer",
+  "net.minecraft.network.chat.ComponentUtils",
+  "net.minecraft.server.MinecraftServer.MultiplayerScope",
+  "net.minecraft.server.MinecraftServer.ServerResourcePackInfo",
+  "net.minecraft.server.notifications.NotificationManager",
+  "net.minecraft.server.packs.repository.Pack",
+  "net.minecraft.server.packs.repository.PackRepository",
+  "net.minecraft.server.packs.repository.PackSource",
+  "net.minecraft.server.packs.repository.RepositorySource",
+  "net.minecraft.server.packs.resources.MultiPackResourceManager",
+  "net.minecraft.world.level.storage.LevelResource",
+  "org.apache.commons.io.FileUtils",
   "Minecraft.getNarrator()",
-  "Minecraft.updateTitle()"
+  "Minecraft.getResourcePackDirectory()",
+  "Minecraft.getResourcePackRepository()",
+  "Minecraft.getSingleplayerServer()",
+  "Minecraft.updateTitle()",
+  "CommonComponents.GUI_DONE",
+  "CommonComponents.OPTION_OFF",
+  "CommonComponents.OPTION_ON",
+  "MinecraftServer.<init>()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "pakko-1.4.1+mc26.3.jar",
   "published": "2026-09-27"
  },
@@ -32,8 +62,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -46,5 +76,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 3
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 33
 }

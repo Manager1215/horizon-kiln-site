@@ -9,23 +9,17 @@
  "author": "PoeticRainbow",
  "description": "Beloved by indecisive people, now you can swap out broken blocks for your block of choice!",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.client.player.ClientPlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.client.player.ClientPlayerBlockBreakEvents.After",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-  "Minecraft.gameMode",
-  "Minecraft.hitResult",
   "ClientLevel.playPlayerSound()",
-  "LocalPlayer.swing()",
-  "SwingAnimation.DEFAULT",
   "Vec3.relative()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "simpleswap-1.0+26.3.jar",
   "published": "2026-09-15"
  },
@@ -38,5 +32,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
- "lacks": 9
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 4
 }

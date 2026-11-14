@@ -9,19 +9,19 @@
  "author": "teddyxlandlee",
  "description": "Fixes the wrong display of mob effect amplifier",
  "needs": [
-  "Mixin",
   "net.fabricmc.loader.api.MappingResolver",
   "net.fabricmc.loader.api.SemanticVersion",
   "net.fabricmc.loader.api.VersionParsingException",
   "net.fabricmc.loader.api.metadata.version.VersionPredicate",
+  "net.minecraft.client.gui.screens.inventory.EffectsInInventory",
   "FabricLoader.getMappingResolver()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "MobEffectDisplayFix-0.4.0+mc.215.jar",
   "published": "2026-08-11"
  },
@@ -37,5 +37,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 5
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 6
 }

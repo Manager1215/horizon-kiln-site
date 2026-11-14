@@ -9,7 +9,7 @@
  "author": "Monkeyopolis",
  "description": "Madoku Craft is an interconnected overhaul mod that modifies vanilla Minecraft. This mod adds seasons, an ecosystem, pets, a main menu, and a leveling system. It also modifies items, attributes, recipes, loot, enchanting and mobs.",
  "needs": [
-  "Mixin",
+  "Mixin: 42 points inside the game's methods",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
   "net.fabricmc.fabric.api.client.rendering.v1.hud.HudStatusBarHeightRegistry",
@@ -22,14 +22,12 @@
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
+  "net.minecraft.client.gui.screens.inventory.EnchantmentScreen",
+  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.gui.screens.inventory.MerchantScreen",
   "net.minecraft.client.model.EntityModel",
   "net.minecraft.client.model.ambient.BatModel",
@@ -50,14 +48,16 @@
   "net.minecraft.client.model.monster.silverfish.SilverfishModel",
   "net.minecraft.client.model.monster.skeleton.SkeletonModel",
   "net.minecraft.client.model.monster.spider.SpiderModel",
+  "net.minecraft.client.model.monster.zombie.ZombieModel",
+  "net.minecraft.client.multiplayer.ClientChunkCache",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "madoku-craft-26.3-1.3.8-V1.jar",
   "published": "2026-10-31"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 592
+ "softOff": {
+  "class": "restart",
+  "why": "@modify-args and @redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 655
 }

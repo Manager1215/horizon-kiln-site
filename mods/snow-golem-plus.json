@@ -9,7 +9,6 @@
  "author": "A_Turkish_Guy",
  "description": "added 48 snow golems with their own snowballs and powers",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
   "net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry",
@@ -17,8 +16,11 @@
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
   "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
+  "net.minecraft.advancements.triggers.CriteriaTriggers",
+  "net.minecraft.advancements.triggers.SummonedEntityTrigger",
   "net.minecraft.client.Screenshot",
   "net.minecraft.client.color.item.ItemTintSource",
+  "net.minecraft.client.color.item.ItemTintSources",
   "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
   "net.minecraft.client.model.EntityModel",
   "net.minecraft.client.model.geom.PartPose",
@@ -41,23 +43,20 @@
   "net.minecraft.tags.DamageTypeTags",
   "net.minecraft.tags.EntityTypeTags",
   "net.minecraft.tags.ItemTags",
+  "net.minecraft.util.SpawnUtil",
+  "net.minecraft.util.SpawnUtil.Strategy",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.SimpleMenuProvider",
   "net.minecraft.world.damagesource.DamageTypes",
   "net.minecraft.world.entity.NeutralMob",
-  "net.minecraft.world.entity.ai.Brain",
-  "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
-  "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
-  "net.minecraft.world.entity.ai.goal.Goal",
-  "net.minecraft.world.entity.ai.goal.Goal.Flag",
   "and 80 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "snowgolemplus-fabric-26.3-1.0.0.jar",
   "published": "2026-11-02"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +87,9 @@
   "java",
   "minecraft"
  ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
  "lacks": 270
 }

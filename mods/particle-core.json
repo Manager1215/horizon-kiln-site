@@ -9,18 +9,53 @@
  "author": "fzzyhmstrs",
  "description": "Particle optimizations: Culling, rendering optimizations, configurable particle-type-specific spawn reduction, and potion particle disabling. Compatible with Sodium, improves performance over Sodium alone.",
  "needs": [
-  "Mixin",
+  "Mixin: 11 points inside the game's methods",
+  "net.minecraft.ReportedException",
+  "net.minecraft.client.particle.FireworkParticles",
+  "net.minecraft.client.particle.FireworkParticles.Starter",
   "net.minecraft.client.particle.Particle",
+  "net.minecraft.client.particle.ParticleEngine",
+  "net.minecraft.client.particle.ParticleGroup",
+  "net.minecraft.client.particle.ParticleRenderType",
+  "net.minecraft.client.particle.QuadParticleGroup",
+  "net.minecraft.client.player.RemotePlayer",
+  "net.minecraft.core.Cursor3D",
+  "net.minecraft.util.LightCoordsUtil.BrightnessGetter",
+  "net.minecraft.util.profiling.Profiler",
+  "net.minecraft.util.profiling.ProfilerFiller",
+  "net.minecraft.world.phys.shapes.BooleanOp",
+  "Minecraft.particleEngine",
   "Options.getEffectiveRenderDistance()",
   "Frustum.isVisible()",
-  "RandomSource.createThreadLocalInstance()"
+  "BlockPos.MutableBlockPos.set()",
+  "Holder.is()",
+  "Registries.PARTICLE_TYPE",
+  "LightCoordsUtil.getLightCoords()",
+  "RandomSource.createThreadLocalInstance()",
+  "BlockState.getCollisionShape()",
+  "BlockState.getCollisionShape()",
+  "AABB.expandTowards()",
+  "AABB.intersects()",
+  "AABB.maxX",
+  "AABB.maxY",
+  "AABB.maxZ",
+  "AABB.minX",
+  "AABB.minY",
+  "AABB.minZ",
+  "AABB.move()",
+  "AABB.move()",
+  "CollisionContext.empty()",
+  "Shapes.collide()",
+  "Shapes.create()",
+  "Shapes.joinIsNotEmpty()",
+  "VoxelShape.isEmpty()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "particle_core-0.3.3+fix1+26.2.jar",
   "published": "2026-10-10"
  },
@@ -32,8 +67,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -48,5 +83,9 @@
   "fzzy_config",
   "minecraft"
  ],
- "lacks": 4
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 39
 }

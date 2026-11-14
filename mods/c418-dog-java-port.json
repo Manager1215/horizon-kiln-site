@@ -10,32 +10,40 @@
  "description": "Ports the Dog disc to (Neo)Forge/Fabric 1.12.2 - 1.21.11 - 26.3",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.entity.FakePlayer",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.minecraft.server.TickTask",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
-  "ServerTickEvents.END_SERVER_TICK",
-  "CommandSourceStack.getEntity()",
-  "CommandSourceStack.getPosition()",
-  "Commands.LEVEL_OWNERS",
-  "Commands.hasPermission()",
+  "net.minecraft.world.item.BoneMealItem",
+  "net.minecraft.world.item.crafting.RepairItemRecipe",
   "Registries.JUKEBOX_SONG",
   "MinecraftServer.getTickCount()",
+  "ServerLevel.getGameRules()",
+  "ServerPlayer.takeXpDelay",
+  "LivingEntity.getExperienceReward()",
+  "LivingEntity.getLastHurtByPlayer()",
+  "LivingEntity.getUseItem()",
+  "LivingEntity.getUseItemRemainingTicks()",
+  "LivingEntity.isUsingItem()",
+  "LivingEntity.shouldDropExperience()",
+  "LivingEntity.wasExperienceConsumed()",
+  "ItemEntity.getItem()",
   "Player.addItem()",
   "Item.Properties.jukeboxPlayable()",
   "Items.registerItem()",
+  "BlockPlaceContext.<init>()",
+  "CraftingInput.ingredientCount()",
   "LevelAccessor.destroyBlock()",
   "LevelAccessor.setBlock()",
-  "Blocks.JUKEBOX"
+  "Blocks.JUKEBOX",
+  "GameRules.MOB_DROPS",
+  "GameRules.get()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Dog-Disc 26.3 (Fabric).jar",
   "published": "2026-10-14"
  },
@@ -47,8 +55,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -64,5 +72,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 18
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 26
 }

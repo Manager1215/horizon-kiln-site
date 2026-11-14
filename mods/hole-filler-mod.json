@@ -11,13 +11,11 @@
  "needs": [
   "an access widener",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.renderer.entity.ThrownItemRenderer",
   "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperties",
   "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty",
   "net.minecraft.client.renderer.special.SpecialModelRenderer.Unbaked",
   "net.minecraft.core.UUIDUtil",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.entity.projectile.Projectile.ProjectileFactory",
   "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile",
@@ -31,17 +29,11 @@
   "net.minecraft.world.level.block.AirBlock",
   "net.minecraft.world.level.block.state.BlockBehaviour.StatePredicate",
   "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "InputConstants.isKeyDown()",
   "LevelRenderEvents.COLLECT_SUBMITS",
-  "Button.setTooltip()",
   "EditBox.canConsumeInput()",
-  "EditBox.setTooltip()",
-  "GuiEventListener.mouseDragged()",
   "AbstractContainerScreen.extractContents()",
   "AbstractContainerScreen.extractLabels()",
-  "AbstractContainerScreen.mouseDragged()",
   "ClientLevel.cardinalLighting()",
   "ClientLevel.getLightEngine()",
   "LocalPlayer.closeContainer()",
@@ -50,14 +42,22 @@
   "MovingBlockRenderState.blockPos",
   "MovingBlockRenderState.blockState",
   "MovingBlockRenderState.cardinalLighting",
-  "and 43 more"
+  "MovingBlockRenderState.lightEngine",
+  "MovingBlockRenderState.randomSeedPos",
+  "BlockEntityRenderer.extractRenderState()",
+  "BlockEntityRenderer.getViewDistance()",
+  "RenderTypes.solidMovingBlock()",
+  "RenderTypes.translucentMovingBlock()",
+  "BlockPos.asLong()",
+  "BlockPos.offset()",
+  "and 39 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "hole_filler_mod_1.3.4-fabric-mc_26.3.jar",
   "published": "2026-10-03"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 132
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 112
 }

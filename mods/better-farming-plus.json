@@ -7,9 +7,9 @@
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
  "url": "https://modrinth.com/mod/better-farming-plus",
  "author": "NAIZO",
- "description": "Better Farming is a lightweight and easy-to-use mod that enhances farming in Minecraft by introducing crop automation and quality-of-life features for growers of all experience levels",
+ "description": "Right-click harvest that replants, hoes that sweep up to 7x7, a Sprinkler, a Farming Crate that harvests and stores your field, and no more trampling.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
   "net.minecraft.server.packs.repository.PackRepository",
@@ -28,13 +28,11 @@
   "BuiltInRegistries.REGISTRY",
   "Registries.MENU",
   "ServerLevel.sendParticles()",
-  "ServerPlayer.swing()",
   "Container.startOpen()",
   "Container.stopOpen()",
   "Containers.updateNeighboursAfterDestroy()",
   "AbstractContainerMenu.getRedstoneSignalFromBlockEntity()",
   "MenuType.<init>()",
-  "SwingAnimation.DEFAULT",
   "Block.getDrops()",
   "SoundType.COPPER",
   "GameEvent.BLOCK_CHANGE",
@@ -44,8 +42,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "better_farming_plus-fabric-26.3-1.0.0.jar",
   "published": "2026-10-25"
  },
@@ -57,8 +55,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -74,5 +72,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 29
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 27
 }

@@ -1,34 +1,31 @@
 {
  "id": "remnants-rpg-mobs",
  "name": "Remnants | RPG Mobs",
- "version": "3.1.2",
+ "version": "3.2.0",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
  "url": "https://modrinth.com/mod/remnants-rpg-mobs",
  "author": "NAIZO",
- "description": "Every mob has the potential to grow stronger, smarter, and more dangerous as they gain levels. With dynamic scaling of health, damage, and special abilities, each encounter becomes a unique challenge that will test your survival skills",
+ "description": "Monsters grow stronger the farther, deeper and longer you play, with levels, five ranks, sixteen traits and rare named Remnants with boss bars.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.entity.FakePlayer",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.commands.arguments.ResourceArgument",
   "net.minecraft.core.particles.DustParticleOptions",
+  "net.minecraft.network.chat.FontDescription",
+  "net.minecraft.network.chat.FontDescription.Resource",
   "net.minecraft.server.PlayerAdvancements",
   "net.minecraft.server.ServerAdvancementManager",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
-  "net.minecraft.stats.ServerStatsCounter",
   "net.minecraft.tags.DamageTypeTags",
   "net.minecraft.world.damagesource.DamageTypes",
+  "net.minecraft.world.entity.EntityAttachment",
+  "net.minecraft.world.entity.EntityAttachments",
   "net.minecraft.world.entity.EntityDimensions",
   "net.minecraft.world.entity.SpawnPlacements",
   "net.minecraft.world.entity.ai.navigation.PathNavigation",
@@ -41,25 +38,28 @@
   "net.minecraft.world.level.storage.LevelResource",
   "ServerLifecycleEvents.SERVER_STARTED",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerTickEvents.END_SERVER_TICK",
-  "ServerPlayNetworking.canSend()",
-  "CommandSourceStack.getEntityOrException()",
-  "CommandSourceStack.getPlayerOrException()",
-  "CommandSourceStack.getPosition()",
-  "CommandSourceStack.getRotation()",
-  "CommandSourceStack.getServer()",
-  "CommandSourceStack.withSuppressedOutput()",
-  "Commands.LEVEL_GAMEMASTERS",
-  "and 49 more"
+  "Minecraft.crosshairPickEntity",
+  "Font.split()",
+  "GuiGraphicsExtractor.centeredText()",
+  "GuiGraphicsExtractor.setTooltipForNextFrame()",
+  "GuiGraphicsExtractor.text()",
+  "ClientLevel.clip()",
+  "ClientLevel.getEntities()",
+  "LocalPlayer.getUseItem()",
+  "LocalPlayer.getViewVector()",
+  "LocalPlayer.isUsingItem()",
+  "EntityRenderState.distanceToCameraSq",
+  "EntityRenderState.nameTag",
+  "and 46 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "remnant_mobs-fabric-26.3-3.1.2.jar",
-  "published": "2026-11-03"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "remnant_mobs-fabric-26.3-3.2.0.jar",
+  "published": "2026-11-11"
  },
  "reports": {
   "works": 0,
@@ -69,15 +69,16 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
  },
  "entrypoints": {
   "main": 1,
-  "client": 1
+  "client": 1,
+  "modmenu": 1
  },
  "mixins": true,
  "depends": [
@@ -86,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 193
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+ },
+ "lacks": 178
 }

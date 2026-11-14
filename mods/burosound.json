@@ -9,7 +9,6 @@
  "author": "p4pingvin4ik",
  "description": "Lets map‑makers and resource‑pack creators place custom music and ambience directly in the world",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.BeforeGizmos",
   "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
   "net.minecraft.client.resources.sounds.TickableSoundInstance",
@@ -17,15 +16,14 @@
   "Camera.rotation()",
   "GameRenderer.mainCamera()",
   "SoundManager.isActive()",
-  "SoundManager.stop()",
   "Shapes.create()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "BuroSound-1.1.0-mc26.3.jar",
   "published": "2026-10-29"
  },
@@ -37,8 +35,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -53,5 +51,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 9
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 8
 }

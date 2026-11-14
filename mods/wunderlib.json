@@ -10,26 +10,17 @@
  "description": "A Support lib to simplify Configs with an automated UI, Grid-Based UI-Layouts, Simplified Network management and other usefull utilities.",
  "needs": [
   "com.mojang.blaze3d.pipeline.TextureTarget",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Init",
   "net.minecraft.TracingExecutor",
   "net.minecraft.client.Screenshot",
   "net.minecraft.client.renderer.item.TrackingItemStackRenderState",
-  "org.apache.logging.log4j.Level",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "RenderTarget.destroyBuffers()",
   "RenderTarget.width",
   "NativeImage.writeToFile()",
-  "ClientPlayNetworking.registerReceiver()",
   "ServerPlayNetworking.registerReceiver()",
-  "Minecraft.execute()",
   "Minecraft.gameDirectory",
   "GuiGraphicsExtractor.fakeItem()",
   "GameRenderer.featureRenderDispatcher()",
   "SubmitNodeStorage.submitText()",
-  "CustomPacketPayload.codec()",
-  "CustomPacketPayload.createType()",
   "MinecraftServer.execute()",
   "Util.ioPool()"
  ],
@@ -37,8 +28,8 @@
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "wunderlib-26.301.4.jar",
   "published": "2026-11-01"
  },
@@ -50,8 +41,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -66,5 +57,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 23
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels"
+ },
+ "lacks": 14
 }

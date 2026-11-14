@@ -10,7 +10,7 @@
  "description": "Craft blocks of pure color from the void itself",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 4 points inside the game's methods",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
   "net.minecraft.client.renderer.block.BuiltInBlockModels",
@@ -22,6 +22,7 @@
   "net.minecraft.client.renderer.block.model.SpecialBlockModelWrapper.Unbaked",
   "net.minecraft.client.renderer.blockentity.AbstractEndPortalRenderer",
   "net.minecraft.client.renderer.blockentity.state.EndPortalRenderState",
+  "net.minecraft.client.renderer.extract.LevelExtractor",
   "net.minecraft.client.renderer.special.EndCubeSpecialRenderer",
   "net.minecraft.client.renderer.special.EndCubeSpecialRenderer.Type",
   "net.minecraft.client.renderer.special.EndCubeSpecialRenderer.Unbaked",
@@ -31,34 +32,33 @@
   "net.minecraft.client.renderer.special.SpecialModelRenderers",
   "net.minecraft.references.BlockItemId",
   "net.minecraft.tags.BlockItemTagId",
+  "net.minecraft.world.item.BottleItem",
   "net.minecraft.world.item.ItemUseAnimation",
   "net.minecraft.world.item.component.Consumable",
   "net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect",
   "net.minecraft.world.item.consume_effects.ConsumeEffect",
   "net.minecraft.world.item.consume_effects.ConsumeEffect.Type",
+  "net.minecraft.world.level.block.EndGatewayBlock",
+  "net.minecraft.world.level.block.EndPortalBlock",
   "net.minecraft.world.level.block.entity.TheEndPortalBlockEntity",
+  "AbstractClientPlayer.<init>()",
   "MovingBlockRenderState.blockState",
   "MovingBlockRenderState.cardinalLighting",
   "RenderTypes.endPortal()",
   "DefaultedRegistry.addAlias()",
-  "Registry.wrapAsHolder()",
   "DataComponents.CONSUMABLE",
   "BuiltInRegistries.CONSUME_EFFECT_TYPE",
   "Registries.SULFUR_CUBE_ARCHETYPE",
   "SoundEvents.EMPTY",
-  "LivingEntity.setAirSupply()",
-  "ItemEntity.getItem()",
-  "ItemEntity.setItem()",
-  "Player.causeFoodExhaustion()",
-  "Item.Properties.usingConvertsTo()",
-  "and 11 more"
+  "Entity.<init>()",
+  "and 21 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "dyedvoid-1.1.3+mc26.3.jar",
   "published": "2026-09-15"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 51
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 61
 }

@@ -9,14 +9,14 @@
  "author": "DevJG",
  "description": "Count redstone ticks, game ticks and real-life seconds with ease",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.minecraft.world.level.block.ComparatorBlock",
   "net.minecraft.world.level.block.ObserverBlock",
   "net.minecraft.world.level.block.RedstoneTorchBlock",
   "net.minecraft.world.level.block.RedstoneWireBlock",
   "net.minecraft.world.level.block.RepeaterBlock",
   "net.minecraft.world.level.block.piston.PistonBaseBlock",
-  "Minecraft.execute()",
+  "net.minecraft.world.level.redstone.DefaultRedstoneWireEvaluator",
   "Minecraft.getCurrentServer()",
   "BlockPos.toShortString()"
  ],
@@ -24,8 +24,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "devjg-smart-counter-26.3-2.2.0.jar",
   "published": "2026-09-15"
  },
@@ -37,8 +37,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -53,5 +53,9 @@
   "java",
   "minecraft"
  ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
  "lacks": 9
 }

@@ -1,0 +1,60 @@
+{
+ "id": "duration-4-rockets",
+ "name": "Duration 4 Rockets",
+ "version": "1.0.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/duration-4-rockets",
+ "author": "DaJoisright",
+ "description": "Adds duration 4 fireworks to minecraft!",
+ "needs": [
+  "Mixin: 3 points inside the game's methods",
+  "net.minecraft.world.entity.projectile.FireworkRocketEntity",
+  "net.minecraft.world.item.component.Fireworks",
+  "net.minecraft.world.item.crafting.FireworkRocketRecipe",
+  "FabricCreativeModeTabOutput.insertAfter()",
+  "DataComponents.FIREWORKS",
+  "LivingEntity.setDeltaMovement()",
+  "Items.FIREWORK_ROCKET"
+ ],
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "duration4rockets-1.0.0.jar",
+  "published": "2026-10-28"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 7
+}

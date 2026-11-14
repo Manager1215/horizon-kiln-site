@@ -10,14 +10,39 @@
  "description": "Tell Me What I Need : Display the litematica material list in the crafting table screen.",
  "needs": [
   "an access widener",
-  "Mixin"
+  "net.minecraft.client.ClientRecipeBook",
+  "net.minecraft.client.gui.components.ImageButton",
+  "net.minecraft.client.gui.components.WidgetSprites",
+  "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
+  "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
+  "net.minecraft.client.gui.screens.recipebook.RecipeUpdateListener",
+  "net.minecraft.world.inventory.AbstractFurnaceMenu",
+  "net.minecraft.world.inventory.CraftingMenu",
+  "net.minecraft.world.item.crafting.RecipeAccess",
+  "net.minecraft.world.item.crafting.display.SlotDisplayContext",
+  "ImmutableList.isEmpty()",
+  "GuiGraphicsExtractor.fakeItem()",
+  "Screen.getTooltipFromItem()",
+  "ClientLevel.recipeAccess()",
+  "LocalPlayer.getRecipeBook()",
+  "Items.BED",
+  "Items.DYE",
+  "Items.LAPIS_LAZULI",
+  "Items.LEATHER",
+  "Items.PAPER",
+  "Items.RAW_GOLD",
+  "Items.WOOL",
+  "Ingredient.display()",
+  "SlotDisplay.resolveForFirstStack()",
+  "SlotDisplay.resolveForStacks()",
+  "ColorCollection.asList()"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "tellmewhatineed-1.1.0+26.3.jar",
   "published": "2026-11-03"
  },
@@ -29,8 +54,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -45,5 +70,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method into the game's classes"
+ },
+ "lacks": 26
 }

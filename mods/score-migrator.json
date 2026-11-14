@@ -9,21 +9,19 @@
  "author": "Velizar",
  "description": "Automatically migrates a player's scoreboard objective scores when their name changes",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.server.ServerScoreboard",
   "net.minecraft.world.scores.Score",
   "net.minecraft.world.scores.ScoreAccess",
-  "net.minecraft.world.scores.ScoreHolder",
   "MinecraftServer.getScoreboard()",
-  "MinecraftServer.services()",
-  "ServerPlayer.nameAndId()"
+  "MinecraftServer.services()"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "score-migrator-1.0.5+26.1.1.jar",
   "published": "2026-04-06"
  },
@@ -40,5 +38,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 7
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 5
 }

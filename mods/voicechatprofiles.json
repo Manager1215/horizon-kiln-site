@@ -1,7 +1,7 @@
 {
  "id": "voicechatprofiles",
  "name": "VoiceChatProfiles",
- "version": "1.0.3+26.3-fabric",
+ "version": "1.0.4+26.3-fabric",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,23 +9,17 @@
  "author": "MrDrak",
  "description": "Save, load, and edit SimpleVoiceChat settings profiles.",
  "needs": [
-  "Mixin",
   "Minecraft.gameDirectory",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseReleased()",
-  "Screen.mouseScrolled()",
-  "KeyEvent.isConfirmation()",
   "DefaultedRegistry.iterator()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "voicechatprofiles-fabric-26.3-1.0.3.jar",
-  "published": "2026-11-03"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "voicechatprofiles-fabric-26.3-1.0.4.jar",
+  "published": "2026-11-12"
  },
  "reports": {
   "works": 0,
@@ -35,8 +29,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -53,5 +47,9 @@
   "minecraft",
   "voicechat"
  ],
- "lacks": 7
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 2
 }

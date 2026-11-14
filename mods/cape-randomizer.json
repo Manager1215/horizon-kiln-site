@@ -10,11 +10,9 @@
  "description": "Mod that equips a random cape every time you disconnect from a server.",
  "needs": [
   "an access widener",
-  "Mixin",
   "com.mojang.authlib.minecraft.SessionService",
   "net.minecraft.client.gui.components.FittingMultiLineTextWidget",
   "net.minecraft.client.gui.components.ScrollableLayout",
-  "net.minecraft.client.gui.components.StringWidget",
   "net.minecraft.client.gui.layouts.GridLayout",
   "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
@@ -22,15 +20,10 @@
   "net.minecraft.client.renderer.texture.ReloadableTexture",
   "net.minecraft.client.renderer.texture.TextureContents",
   "NativeImage.read()",
-  "Minecraft.execute()",
   "Minecraft.isOfflineDeveloperMode()",
   "Minecraft.profileFuture",
   "Minecraft.services()",
   "GuiGraphicsExtractor.blit()",
-  "Button.getBottom()",
-  "Button.getRight()",
-  "Button.setPosition()",
-  "Button.Builder.width()",
   "Screen.FOOTER_SEPARATOR",
   "Screen.HEADER_SEPARATOR",
   "TextureManager.registerAndLoad()",
@@ -42,8 +35,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "CapeRandomizer-5.3+26.3.jar",
   "published": "2026-09-15"
  },
@@ -55,8 +48,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -72,5 +65,9 @@
   "fabric-api",
   "minecraft"
  ],
- "lacks": 26
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 20
 }

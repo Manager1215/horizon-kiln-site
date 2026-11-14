@@ -9,7 +9,7 @@
  "author": "thexaero",
  "description": "Adds a full screen world map which shows you what you have explored in the world. Works great together with Xaero's Minimap.",
  "needs": [
-  "Mixin",
+  "Mixin: 11 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.Blaze3D",
   "com.mojang.blaze3d.pipeline.TextureTarget",
@@ -22,6 +22,7 @@
   "com.mojang.realmsclient.gui.screens.RealmsLongRunningMcoTaskScreen",
   "com.mojang.realmsclient.util.task.GetServerDetailsTask",
   "com.mojang.realmsclient.util.task.LongRunningTask",
+  "com.mojang.renderpearl.backend.opengl.GlBuffer",
   "net.fabricmc.api.DedicatedServerModInitializer",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.loader.api.metadata.ModOrigin",
@@ -29,14 +30,14 @@
   "net.minecraft.IdentifierException",
   "net.minecraft.client.ClientClockManager",
   "net.minecraft.client.ClientClockManager.ClientClockInstance",
-  "net.minecraft.client.gui.components.Button.Plain",
   "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
   "net.minecraft.client.multiplayer.ClientChunkCache",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
+  "net.minecraft.client.multiplayer.chat.ChatListener",
   "net.minecraft.client.renderer.rendertype.PreparedRenderType",
   "net.minecraft.client.renderer.rendertype.PreparedRenderType.Texture",
   "net.minecraft.client.renderer.rendertype.RenderSetup",
   "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
+  "net.minecraft.client.renderer.rendertype.RenderSetup.TextureBinding",
   "net.minecraft.client.renderer.texture.MissingTextureAtlasSprite",
   "net.minecraft.client.resources.DefaultPlayerSkin",
   "net.minecraft.client.server.IntegratedServer",
@@ -44,20 +45,19 @@
   "net.minecraft.core.UUIDUtil",
   "net.minecraft.data.AtlasIds",
   "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.nbt.NbtIo",
+  "net.minecraft.server.dedicated.DedicatedServer",
   "net.minecraft.server.level.ChunkMap",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.server.packs.repository.Pack",
   "net.minecraft.server.packs.repository.PackRepository",
-  "net.minecraft.server.permissions.PermissionCheck",
+  "net.minecraft.util.BitStorage",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "xaeroworldmap-fabric-26.3-1.47.2.jar",
   "published": "2026-10-25"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "minecraft",
   "xaerolib"
  ],
- "lacks": 226
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+ },
+ "lacks": 209
 }

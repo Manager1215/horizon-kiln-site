@@ -9,20 +9,12 @@
  "author": "mozartsghost1212",
  "description": "A server-side only Fabric mod for Minecraft that allows you to configure the length of day and night.",
  "needs": [
-  "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
   "net.minecraft.world.clock.ServerClockManager",
   "net.minecraft.world.clock.ServerClockManager.ServerClockInstance",
   "net.minecraft.world.clock.WorldClocks",
-  "Commands.LEVEL_OWNERS",
-  "Commands.hasPermission()",
   "Registry.getOrThrow()",
   "RegistryAccess.Frozen.lookupOrThrow()",
   "Registries.WORLD_CLOCK",
-  "MutableComponent.withStyle()",
-  "Style.withClickEvent()",
-  "Style.withHoverEvent()",
   "MinecraftServer.clockManager()",
   "MinecraftServer.registryAccess()"
  ],
@@ -30,8 +22,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "mg-custom-day-night-mod-2.2.0.jar",
   "published": "2026-09-28"
  },
@@ -43,8 +35,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -59,5 +51,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 16
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 8
 }

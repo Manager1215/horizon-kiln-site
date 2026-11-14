@@ -9,7 +9,6 @@
  "author": "MoonFather",
  "description": "Adds alternatives to leather, ink etc.  without killing animals. Makes chicken drop feathers. Vegan and children-friendly mod.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SyncDataPackContents",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
@@ -20,18 +19,28 @@
   "net.minecraft.core.HolderSet.Named",
   "net.minecraft.core.Registry.PendingTags",
   "net.minecraft.resources.RegistryOps.RegistryInfoLookup",
+  "net.minecraft.server.ReloadableServerResources",
   "net.minecraft.server.packs.repository.PackRepository",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.SimpleContainer",
+  "net.minecraft.world.entity.ai.goal.GoalSelector",
+  "net.minecraft.world.entity.ai.goal.TemptGoal",
   "net.minecraft.world.entity.animal.armadillo.Armadillo",
+  "net.minecraft.world.entity.animal.feline.Cat",
+  "net.minecraft.world.entity.animal.feline.CatSoundVariant",
+  "net.minecraft.world.entity.animal.feline.CatSoundVariant.CatSoundSet",
+  "net.minecraft.world.entity.animal.feline.Ocelot",
   "net.minecraft.world.inventory.AbstractFurnaceMenu",
   "net.minecraft.world.inventory.ContainerData",
   "net.minecraft.world.inventory.ContainerLevelAccess",
   "net.minecraft.world.inventory.DataSlot",
   "net.minecraft.world.inventory.FurnaceResultSlot",
   "net.minecraft.world.inventory.MenuType.MenuSupplier",
+  "net.minecraft.world.item.component.DyedItemColor",
+  "net.minecraft.world.item.component.ItemLore",
   "net.minecraft.world.item.crafting.AbstractCookingRecipe.Factory",
   "net.minecraft.world.item.crafting.RecipeBookCategories",
+  "net.minecraft.world.item.crafting.RepairItemRecipe",
   "net.minecraft.world.item.crafting.ShapelessRecipe",
   "net.minecraft.world.level.DataPackConfig",
   "net.minecraft.world.level.WorldDataConfiguration",
@@ -40,24 +49,14 @@
   "net.minecraft.world.level.block.state.properties.Half",
   "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
   "net.minecraft.world.level.gameevent.GameEvent.Context",
-  "net.minecraft.world.level.material.PushReaction",
-  "net.minecraft.world.level.storage.WorldData",
-  "PoseStack.mulPose()",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerLifecycleEvents.SYNC_DATA_PACK_CONTENTS",
-  "GuiGraphicsExtractor.blitSprite()",
-  "BlockEntityRenderer.extractRenderState()",
-  "BlockPos.distToCenterSqr()",
-  "DefaultedRegistry.getTagOrEmpty()",
-  "Direction.fromYRot()",
-  "and 52 more"
+  "and 62 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "i-dont-want-to-kill-them--mc26.3--fabric--1.2.4.jar",
   "published": "2026-10-07"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -92,5 +91,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 117
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 132
 }

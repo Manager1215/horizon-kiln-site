@@ -1,7 +1,7 @@
 {
  "id": "noammaddons",
  "name": "NoammAddons | Hypixel Skyblock",
- "version": "1.3.4",
+ "version": "1.3.5",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,7 +10,6 @@
  "description": "Fabric mod for Hypixel Skyblock, mostly designed to reduce the number of mods i use.",
  "needs": [
   "an access widener",
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
@@ -20,7 +19,6 @@
   "com.mojang.blaze3d.platform.cursor.CursorTypes",
   "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
   "net.minecraft.client.gui.components.PlayerTabOverlay",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.client.multiplayer.ProfileKeyPairManager",
   "net.minecraft.client.renderer.extract.LevelExtractor",
   "net.minecraft.client.renderer.item.TrackingItemStackRenderState",
@@ -30,12 +28,7 @@
   "net.minecraft.core.component.DataComponentPatch.Builder",
   "net.minecraft.data.registries.VanillaRegistries",
   "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.nbt.NbtIo",
   "net.minecraft.nbt.PrimitiveTag",
-  "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
   "net.minecraft.network.protocol.game.ClientboundPlayerInfoUpdatePacket.Entry",
   "net.minecraft.network.protocol.game.ClientboundSetPlayerTeamPacket.Parameters",
   "net.minecraft.network.protocol.game.ServerboundChatCommandPacket",
@@ -51,16 +44,22 @@
   "net.minecraft.world.entity.player.ProfileKeyPair",
   "net.minecraft.world.entity.player.ProfilePublicKey",
   "net.minecraft.world.entity.player.ProfilePublicKey.Data",
-  "and 76 more"
+  "net.minecraft.world.entity.projectile.ProjectileUtil",
+  "net.minecraft.world.item.component.DyedItemColor",
+  "net.minecraft.world.item.component.FireworkExplosion",
+  "net.minecraft.world.item.component.FireworkExplosion.Shape",
+  "net.minecraft.world.item.component.ItemLore",
+  "net.minecraft.world.item.component.ResolvableProfile",
+  "and 69 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "NoammAddons-1.3.4-26.3-legit.jar",
-  "published": "2026-11-03"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "NoammAddons-1.3.5-26.3-legit.jar",
+  "published": "2026-11-12"
  },
  "reports": {
   "works": 0,
@@ -70,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 619
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 579
 }

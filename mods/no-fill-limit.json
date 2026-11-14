@@ -9,14 +9,27 @@
  "author": "fmg1925",
  "description": "Removes fill limits and out of world checks",
  "needs": [
-  "Mixin"
+  "Mixin: 1 point inside the game's methods",
+  "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
+  "net.minecraft.server.commands.FillCommand",
+  "ServerLevel.getMaxY()",
+  "ServerLevel.getMinY()",
+  "BoundingBox.getXSpan()",
+  "BoundingBox.getYSpan()",
+  "BoundingBox.getZSpan()",
+  "BoundingBox.maxX()",
+  "BoundingBox.maxY()",
+  "BoundingBox.maxZ()",
+  "BoundingBox.minX()",
+  "BoundingBox.minY()",
+  "BoundingBox.minZ()"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "no-fill-limit-1.0.0.jar",
   "published": "2026-02-21"
  },
@@ -28,8 +41,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -43,5 +56,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 13
 }

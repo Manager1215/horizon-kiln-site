@@ -1,0 +1,93 @@
+{
+ "id": "economymc",
+ "name": "EconomyMc",
+ "version": "3.1",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/economymc",
+ "author": "Karl_der_III",
+ "description": "A complete Minecraft economy with real money circulation, treasury, interactive plots, taxes, banking & advanced management.",
+ "needs": [
+  "com.mojang.authlib.GameProfile",
+  "com.mojang.authlib.properties.Property",
+  "com.mojang.authlib.properties.PropertyMap",
+  "com.mojang.math.Transformation",
+  "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
+  "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.Chat",
+  "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
+  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+  "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
+  "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowChatMessage",
+  "net.minecraft.client.gui.components.ChatComponent.ChatMethod",
+  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
+  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.ItemPickerMenu",
+  "net.minecraft.client.model.HumanoidModel",
+  "net.minecraft.client.model.player.PlayerModel",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState",
+  "net.minecraft.client.renderer.state.level.PlayerRenderState",
+  "net.minecraft.client.resources.language.ClientLanguage",
+  "net.minecraft.core.UUIDUtil",
+  "net.minecraft.nbt.NbtAccounter",
+  "net.minecraft.network.chat.PlayerChatMessage",
+  "net.minecraft.network.protocol.game.ServerboundPickItemFromBlockPacket",
+  "net.minecraft.network.protocol.game.ServerboundSetCreativeModeSlotPacket",
+  "net.minecraft.server.level.ServerPlayerGameMode",
+  "net.minecraft.tags.ItemTags",
+  "net.minecraft.world.SimpleContainer",
+  "net.minecraft.world.SimpleMenuProvider",
+  "net.minecraft.world.entity.Display",
+  "net.minecraft.world.entity.Display.ItemDisplay",
+  "net.minecraft.world.inventory.DispenserMenu",
+  "net.minecraft.world.inventory.HopperMenu",
+  "net.minecraft.world.inventory.ShulkerBoxMenu",
+  "net.minecraft.world.inventory.ShulkerBoxSlot",
+  "net.minecraft.world.item.component.ItemLore",
+  "net.minecraft.world.item.component.ResolvableProfile",
+  "net.minecraft.world.level.block.DecoratedPotBlock",
+  "net.minecraft.world.level.block.entity.DecoratedPotBlockEntity",
+  "net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity",
+  "net.minecraft.world.level.storage.LevelResource",
+  "and 60 more"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "EconomyMC-3.1-Fabric-26.3.jar",
+  "published": "2026-11-08"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 163
+}

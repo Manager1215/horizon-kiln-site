@@ -9,24 +9,24 @@
  "author": "JeanGomez",
  "description": "Unofficial port of FastChest with an in-game config screen: chests render as static block models for better FPS, with per-type toggles.",
  "needs": [
-  "Mixin",
   "net.minecraft.client.renderer.extract.LevelExtractor",
   "net.minecraft.world.level.block.AbstractChestBlock",
+  "net.minecraft.world.level.block.ChestBlock",
   "net.minecraft.world.level.block.CopperChestBlock",
+  "net.minecraft.world.level.block.EnderChestBlock",
   "net.minecraft.world.level.block.TrappedChestBlock",
   "net.minecraft.world.level.block.entity.ChestBlockEntity",
   "net.minecraft.world.level.block.entity.EnderChestBlockEntity",
   "net.minecraft.world.level.block.entity.TrappedChestBlockEntity",
   "Minecraft.levelExtractor",
-  "Minecraft.setScreenAndShow()",
   "CommonComponents.GUI_DONE"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fast-chest-1.10+26.3.jar",
   "published": "2026-09-17"
  },
@@ -45,5 +45,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 10
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 11
 }

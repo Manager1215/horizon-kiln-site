@@ -9,7 +9,7 @@
  "author": "ThePaul_T",
  "description": "Stops known hostile connections before they reach Minecraft, saving your server's resources for actual players.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "io.netty.channel.Channel",
   "io.netty.channel.ChannelConfig",
   "io.netty.channel.ChannelHandler",
@@ -22,8 +22,7 @@
   "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents.QueryStart",
   "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking",
   "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginSynchronizer",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
+  "net.minecraft.server.network.ServerConnectionListener",
   "org.apache.logging.log4j.core.Appender",
   "org.apache.logging.log4j.core.Filter",
   "org.apache.logging.log4j.core.Filter.Result",
@@ -46,8 +45,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "packetward-fabric-26.3-1.0.0.jar",
   "published": "2026-09-16"
  },
@@ -68,5 +67,9 @@
   "minecraft",
   "polylib"
  ],
- "lacks": 31
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 30
 }

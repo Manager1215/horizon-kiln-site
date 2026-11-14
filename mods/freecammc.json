@@ -9,9 +9,7 @@
  "author": "jasonzli",
  "description": "A free camera for Minecraft activated with a single button!",
  "needs": [
-  "Mixin",
   "net.minecraft.client.multiplayer.ClientChunkCache",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.client.multiplayer.prediction.BlockStatePredictionHandler",
   "net.minecraft.client.player.ItemActivation",
   "net.minecraft.client.player.KeyboardInput",
@@ -33,13 +31,12 @@
   "net.minecraft.network.protocol.game.ServerboundUseItemOnPacket",
   "net.minecraft.network.protocol.game.ServerboundUseItemPacket",
   "net.minecraft.world.entity.player.Input",
-  "Minecraft.gameMode",
   "Minecraft.packetProcessor()",
-  "Options.keyMappings",
-  "Options.load()",
   "ClientLevel.addEntity()",
   "ClientLevel.getChunkSource()",
   "ClientPacketListener.getConnection()",
+  "MultiPlayerGameMode.setLocalMode()",
+  "MultiPlayerGameMode.stopDestroyBlock()",
   "LocalPlayer.<init>()",
   "LocalPlayer.aiStep()",
   "LocalPlayer.getGameProfile()",
@@ -50,14 +47,16 @@
   "LocalPlayer.remove()",
   "LocalPlayer.setDeltaMovement()",
   "LocalPlayer.setPos()",
-  "and 22 more"
+  "LocalPlayer.setXRot()",
+  "LocalPlayer.setYRot()",
+  "and 19 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fabric-0.19.5-26.3_freecam_by_jasonzli-26.3.0.jar",
   "published": "2026-09-16"
  },
@@ -74,5 +73,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 62
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 59
 }

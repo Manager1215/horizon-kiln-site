@@ -9,14 +9,13 @@
  "author": "Seele1018",
  "description": "A mod integrated with Honkai Impact 3rd",
  "needs": [
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Leave",
   "net.fabricmc.fabric.api.entity.event.v1.effect.ServerMobEffectEvents",
   "net.fabricmc.fabric.api.entity.event.v1.effect.ServerMobEffectEvents.AllowAdd",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
   "net.fabricmc.fabric.api.tag.convention.v2.ConventionalEntityTypeTags",
   "net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags",
@@ -24,8 +23,7 @@
   "net.minecraft.client.renderer.entity.ThrownItemRenderer",
   "net.minecraft.core.particles.BlockParticleOption",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.tags.DamageTypeTags",
   "net.minecraft.tags.EntityTypeTags",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.entity.NeutralMob",
@@ -34,10 +32,13 @@
   "net.minecraft.world.entity.decoration.ArmorStand",
   "net.minecraft.world.entity.monster.Enemy",
   "net.minecraft.world.entity.monster.piglin.AbstractPiglin",
+  "net.minecraft.world.entity.monster.skeleton.WitherSkeleton",
   "net.minecraft.world.entity.projectile.ItemSupplier",
   "net.minecraft.world.entity.projectile.ProjectileUtil",
   "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
   "net.minecraft.world.entity.projectile.arrow.AbstractArrow.Pickup",
+  "net.minecraft.world.inventory.AnvilMenu",
+  "net.minecraft.world.inventory.DataSlot",
   "net.minecraft.world.item.ItemCooldowns",
   "net.minecraft.world.item.ItemUseAnimation",
   "net.minecraft.world.item.MaceItem",
@@ -48,16 +49,15 @@
   "net.minecraft.world.phys.EntityHitResult",
   "ServerPlayerEvents.JOIN",
   "ServerPlayerEvents.LEAVE",
-  "ServerTickEvents.END_SERVER_TICK",
-  "Options.keyUse",
-  "and 56 more"
+  "LocalPlayer.tickCount",
+  "and 57 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "seelescraft-1.4.0-fabric-26.3.jar",
   "published": "2026-11-03"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 175
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 182
 }

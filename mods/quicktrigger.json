@@ -10,24 +10,14 @@
  "description": "Adds Spawn and Home teleport buttons directly to your inventory, made for the VanillaTweaks Homes & Spawn datapacks",
  "needs": [
   "net.fabricmc.fabric.api.client.screen.v1.Screens",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.server.IntegratedServer",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.world.level.storage.WorldData",
   "net.minecraft.world.scores.ReadOnlyScoreInfo",
-  "net.minecraft.world.scores.ScoreHolder",
-  "ServerPlayNetworking.canSend()",
   "Minecraft.getSingleplayerServer()",
-  "Minecraft.setScreenAndShow()",
   "GuiGraphicsExtractor.setTooltipForNextFrame()",
   "ClientPacketListener.getServerData()",
   "ServerData.ip",
-  "FriendlyByteBuf.readUtf()",
-  "FriendlyByteBuf.readVarInt()",
-  "FriendlyByteBuf.writeUtf()",
-  "FriendlyByteBuf.writeVarInt()",
   "MinecraftServer.getScoreboard()",
   "Items.BED",
   "Items.COMPASS",
@@ -38,8 +28,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "quicktrigger-fabric-1.3.0-26.3.jar",
   "published": "2026-09-25"
  },
@@ -51,8 +41,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -69,5 +59,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 24
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 14
 }

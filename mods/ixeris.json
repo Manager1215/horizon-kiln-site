@@ -9,15 +9,55 @@
  "author": "decce6",
  "description": "Buffered raw input and threaded event polling",
  "needs": [
-  "Mixin",
-  "RenderSystem.isOnRenderThread()"
+  "Mixin: 4 points inside the game's methods",
+  "com.mojang.blaze3d.platform.ClientShutdownWatchdog",
+  "net.minecraft.CrashReport",
+  "net.minecraft.client.main.GameConfig",
+  "net.minecraft.client.main.GameConfig.FolderData",
+  "net.minecraft.client.main.GameConfig.GameData",
+  "net.minecraft.client.main.Main",
+  "net.minecraft.client.main.SilentInitException",
+  "net.minecraft.util.NativeModuleLister",
+  "net.minecraft.util.profiling.Profiler",
+  "net.minecraft.util.profiling.ProfilerFiller",
+  "org.lwjgl.BufferUtils",
+  "org.lwjgl.PointerBuffer",
+  "org.lwjgl.Version",
+  "org.lwjgl.glfw.GLFW",
+  "org.lwjgl.glfw.GLFWCharCallback",
+  "org.lwjgl.glfw.GLFWCharCallbackI",
+  "org.lwjgl.glfw.GLFWCharModsCallback",
+  "org.lwjgl.glfw.GLFWCharModsCallbackI",
+  "org.lwjgl.glfw.GLFWCursorEnterCallback",
+  "org.lwjgl.glfw.GLFWCursorEnterCallbackI",
+  "org.lwjgl.glfw.GLFWCursorPosCallback",
+  "org.lwjgl.glfw.GLFWCursorPosCallbackI",
+  "org.lwjgl.glfw.GLFWDropCallback",
+  "org.lwjgl.glfw.GLFWDropCallbackI",
+  "org.lwjgl.glfw.GLFWErrorCallback",
+  "org.lwjgl.glfw.GLFWErrorCallbackI",
+  "org.lwjgl.glfw.GLFWFramebufferSizeCallback",
+  "org.lwjgl.glfw.GLFWFramebufferSizeCallbackI",
+  "org.lwjgl.glfw.GLFWIMEStatusCallback",
+  "org.lwjgl.glfw.GLFWIMEStatusCallbackI",
+  "org.lwjgl.glfw.GLFWImage",
+  "org.lwjgl.glfw.GLFWKeyCallback",
+  "org.lwjgl.glfw.GLFWKeyCallbackI",
+  "org.lwjgl.glfw.GLFWMonitorCallback",
+  "org.lwjgl.glfw.GLFWMonitorCallbackI",
+  "org.lwjgl.glfw.GLFWMouseButtonCallback",
+  "org.lwjgl.glfw.GLFWMouseButtonCallbackI",
+  "org.lwjgl.glfw.GLFWNativeWin32",
+  "org.lwjgl.glfw.GLFWPreeditCallback",
+  "org.lwjgl.glfw.GLFWPreeditCallbackI",
+  "and 33 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Ixeris-4.6.11+26.3-fabric.jar",
   "published": "2026-10-31"
  },
@@ -29,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -43,5 +83,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 1
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method into the game's classes; runs threads of its own"
+ },
+ "lacks": 101
 }

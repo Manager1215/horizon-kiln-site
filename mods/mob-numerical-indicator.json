@@ -1,0 +1,93 @@
+{
+ "id": "mob-numerical-indicator",
+ "name": "Mob Numerical Indicator",
+ "version": "2.2.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/mob-numerical-indicator",
+ "author": "armaninyow",
+ "description": "This mod displays real-time health, armor, and oxygen indicators on mobs.",
+ "needs": [
+  "net.minecraft.client.gui.font.GlyphRenderTypes",
+  "net.minecraft.client.multiplayer.ClientLevel.ClientLevelData",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.data.AtlasIds",
+  "net.minecraft.world.entity.EntityAttachment",
+  "net.minecraft.world.entity.EntityAttachments",
+  "net.minecraft.world.entity.animal.equine.Horse",
+  "net.minecraft.world.entity.animal.nautilus.AbstractNautilus",
+  "net.minecraft.world.entity.animal.wolf.Wolf",
+  "net.minecraft.world.entity.decoration.ArmorStand",
+  "net.minecraft.world.entity.monster.piglin.AbstractPiglin",
+  "net.minecraft.world.entity.monster.skeleton.AbstractSkeleton",
+  "net.minecraft.world.entity.monster.zombie.Drowned",
+  "net.minecraft.world.entity.monster.zombie.Zombie",
+  "net.minecraft.world.entity.monster.zombie.ZombifiedPiglin",
+  "net.minecraft.world.level.LightLayer",
+  "PoseStack.Pose.pose()",
+  "VertexConsumer.addVertex()",
+  "Minecraft.getEntityRenderDispatcher()",
+  "ClientLevel.clip()",
+  "ClientLevel.getLevelData()",
+  "LocalPlayer.distanceTo()",
+  "LocalPlayer.getVehicle()",
+  "EntityRenderDispatcher.camera",
+  "CameraRenderState.orientation",
+  "TextureAtlasSprite.atlasLocation()",
+  "TextureAtlasSprite.getU0()",
+  "TextureAtlasSprite.getU1()",
+  "TextureAtlasSprite.getV0()",
+  "TextureAtlasSprite.getV1()",
+  "BlockPos.containing()",
+  "ClientboundUpdateMobEffectPacket.effectShowsIcon()",
+  "ClientboundUpdateMobEffectPacket.getEffect()",
+  "ClientboundUpdateMobEffectPacket.getEffectAmplifier()",
+  "ClientboundUpdateMobEffectPacket.getEffectDurationTicks()",
+  "ClientboundUpdateMobEffectPacket.getEntityId()",
+  "ClientboundUpdateMobEffectPacket.isEffectAmbient()",
+  "ClientboundUpdateMobEffectPacket.isEffectVisible()",
+  "ServerChunkCache.sendToTrackingPlayers()",
+  "FormattedCharSequence.forward()",
+  "and 13 more"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "mobnumericalindicator-26.3-2.2.0.jar",
+  "published": "2026-11-13"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 53
+}

@@ -9,7 +9,6 @@
  "author": "Rizzardas",
  "description": "A Mod Where You Can Load Crafter Presets!",
  "needs": [
-  "Mixin",
   "com.mojang.blaze3d.Blaze3D",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
@@ -21,17 +20,17 @@
   "net.fabricmc.fabric.api.event.client.player.ClientPlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.client.player.ClientPlayerBlockBreakEvents.After",
   "net.fabricmc.loader.api.VersionParsingException",
-  "net.minecraft.client.gui.components.Button.Plain",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
-  "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-  "net.minecraft.client.gui.components.Tooltip",
+  "net.minecraft.client.gui.components.ImageButton",
+  "net.minecraft.client.gui.components.WidgetSprites",
   "net.minecraft.client.gui.screens.inventory.CrafterScreen",
   "net.minecraft.client.multiplayer.ClientChunkCache",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.client.multiplayer.resolver.ServerAddress",
+  "net.minecraft.client.renderer.LevelRenderer",
   "net.minecraft.client.server.IntegratedServer",
-  "net.minecraft.world.inventory.ContainerInput",
+  "net.minecraft.network.protocol.game.ServerboundContainerClickPacket",
+  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
+  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
+  "net.minecraft.network.protocol.game.ServerboundSetCreativeModeSlotPacket",
   "net.minecraft.world.inventory.CrafterMenu",
   "net.minecraft.world.level.block.ChestBlock",
   "net.minecraft.world.level.block.HopperBlock",
@@ -44,20 +43,20 @@
   "VertexConsumer.addVertex()",
   "LevelRenderEvents.COLLECT_SUBMITS",
   "Version.parse()",
-  "KeyMapping.getTranslatedKeyMessage()",
   "KeyMapping.matches()",
   "KeyMapping.matchesMouse()",
-  "Minecraft.execute()",
-  "Minecraft.gameMode",
   "Minecraft.getCurrentServer()",
+  "Minecraft.getSingleplayerServer()",
+  "GuiGraphicsExtractor.blitSprite()",
+  "GuiGraphicsExtractor.fakeItem()",
   "and 51 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "crafter-presets-4.5.0+26.3.jar",
   "published": "2026-10-29"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 113
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 93
 }

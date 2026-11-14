@@ -11,9 +11,6 @@
  "needs": [
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.client.StringSplitter",
   "net.minecraft.client.gui.components.EditBox.TextFormatter",
   "net.minecraft.client.gui.components.MultiLineEditBox",
@@ -21,10 +18,6 @@
   "net.minecraft.client.gui.components.PlayerFaceExtractor",
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.client.resources.DefaultPlayerSkin",
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.permissions.Permissions",
-  "net.minecraft.server.players.PlayerList",
   "org.lwjgl.PointerBuffer",
   "org.lwjgl.system.MemoryStack",
   "org.lwjgl.util.tinyfd.TinyFileDialogs",
@@ -32,31 +25,32 @@
   "NativeImage.getWidth()",
   "NativeImage.read()",
   "ServerLifecycleEvents.SERVER_STARTED",
-  "Minecraft.execute()",
   "Minecraft.getSkinManager()",
   "Font.bidirectionalShaping()",
   "Font.getSplitter()",
-  "Font.plainSubstrByWidth()",
   "GuiGraphicsExtractor.blit()",
   "GuiGraphicsExtractor.text()",
   "EditBox.addFormatter()",
-  "EditBox.setHint()",
   "PlayerInfo.getSkin()",
   "SkinManager.get()",
-  "CommandSourceStack.getPlayerOrException()",
-  "CommandSourceStack.getServer()",
-  "EntityArgument.getPlayer()",
-  "EntityArgument.player()",
   "ListTag.add()",
   "ListTag.compoundStream()",
-  "and 27 more"
+  "ListTag.forEach()",
+  "Tag.asIntArray()",
+  "Tag.asLong()",
+  "Tag.asString()",
+  "MinecraftServer.overworld()",
+  "ServerPlayer.getGameProfile()",
+  "ServerPlayer.permissions()",
+  "FormattedCharSequence.EMPTY",
+  "FormattedCharSequence.forward()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "serverpress-Fabric-26.3.jar",
   "published": "2026-10-13"
  },
@@ -68,8 +62,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +79,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 67
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 35
 }

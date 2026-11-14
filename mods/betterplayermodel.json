@@ -9,7 +9,7 @@
  "author": "Zhoporez",
  "description": "Play as any character with custom 3D player models and animations, fully synced in multiplayer.",
  "needs": [
-  "Mixin",
+  "Mixin: 17 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.vertex.DefaultVertexFormat",
   "com.mojang.renderpearl.api.pipeline.BindGroupLayout.Builder",
@@ -26,17 +26,16 @@
   "io.netty.channel.Channel",
   "io.netty.channel.Channel.Unsafe",
   "io.netty.channel.ChannelOutboundBuffer",
+  "net.fabricmc.fabric.api.client.sound.v1.FabricSoundInstance",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Leave",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents",
   "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents.StartTracking",
   "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
-  "net.minecraft.client.CameraType",
-  "net.minecraft.client.gui.components.Tooltip",
+  "net.minecraft.client.Camera.NearPlane",
   "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.model.animal.parrot.ParrotModel",
   "net.minecraft.client.model.animal.parrot.ParrotModel.Pose",
@@ -44,20 +43,21 @@
   "net.minecraft.client.model.geom.ModelLayers",
   "net.minecraft.client.model.object.equipment.ElytraModel",
   "net.minecraft.client.model.player.PlayerModel",
+  "net.minecraft.client.multiplayer.ClientLevel.ClientLevelData",
   "net.minecraft.client.particle.Particle",
   "net.minecraft.client.particle.ParticleEngine",
   "net.minecraft.client.player.ClientInput",
   "net.minecraft.client.renderer.BindGroupLayouts",
+  "net.minecraft.client.renderer.LevelRenderer",
   "net.minecraft.client.renderer.entity.LivingEntityRenderer",
-  "net.minecraft.client.renderer.entity.ParrotRenderer",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "better-player-model-26.3-1.1.5.jar",
   "published": "2026-10-19"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 451
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 407
 }

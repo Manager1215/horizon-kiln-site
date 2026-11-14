@@ -9,12 +9,8 @@
  "author": "guenter00",
  "description": "Adds a border which always has the size of your current level count.",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.minecraft.server.level.ServerPlayer.RespawnConfig",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
-  "CommandSourceStack.getEntity()",
-  "MinecraftServer.getPlayerList()",
   "MinecraftServer.overworld()",
   "ServerLevel.getHeight()",
   "ServerLevel.getLevelData()",
@@ -25,10 +21,10 @@
   "ServerPlayer.setPosRaw()",
   "ServerPlayer.setRespawnPosition()",
   "ServerPlayer.teleportTo()",
+  "ServerGamePacketListenerImpl.send()",
   "DamageSources.inWall()",
   "BlockState.getCollisionShape()",
   "WorldBorder.getDistanceToBorder()",
-  "WorldBorder.getSize()",
   "WorldBorder.setCenter()",
   "WorldBorder.setSize()",
   "WorldBorder.tick()",
@@ -40,8 +36,8 @@
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "levelborder-fabric-0.2-mc26.2.jar",
   "published": "2026-06-16"
  },
@@ -58,5 +54,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 25
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 21
 }

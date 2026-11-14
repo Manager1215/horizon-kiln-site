@@ -1,7 +1,7 @@
 {
  "id": "peek",
  "name": "Peek",
- "version": "fabric-1.6.0+26.3",
+ "version": "fabric-1.6.1+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,8 +10,21 @@
  "description": "A Fabric mod that provides additional information about items and blocks",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 15 points inside the game's methods",
   "net.minecraft.SharedConstants",
+  "net.minecraft.client.gui.screens.inventory.AnvilScreen",
+  "net.minecraft.client.gui.screens.inventory.ContainerScreen",
+  "net.minecraft.client.gui.screens.inventory.ShulkerBoxScreen",
+  "net.minecraft.client.gui.screens.inventory.tooltip.ClientBundleTooltip",
+  "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
+  "net.minecraft.client.renderer.blockentity.DecoratedPotRenderer",
+  "net.minecraft.client.renderer.blockentity.ShulkerBoxRenderer",
+  "net.minecraft.client.renderer.blockentity.state.DecoratedPotRenderState",
+  "net.minecraft.client.renderer.blockentity.state.ShulkerBoxRenderState",
+  "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperties",
+  "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperty",
+  "net.minecraft.client.renderer.special.ShulkerBoxSpecialRenderer",
+  "net.minecraft.core.component.DataComponentPatch.Builder",
   "net.minecraft.server.packs.AbstractPackMetadataResources",
   "net.minecraft.server.packs.PackLocationInfo",
   "net.minecraft.server.packs.PackResources.ResourceOutput",
@@ -20,28 +33,34 @@
   "net.minecraft.server.packs.repository.Pack.Metadata",
   "net.minecraft.server.packs.repository.Pack.Position",
   "net.minecraft.server.packs.repository.Pack.ResourcesSupplier",
+  "net.minecraft.server.packs.repository.PackRepository",
   "net.minecraft.server.packs.repository.PackSource",
-  "net.minecraft.world.phys.EntityHitResult",
-  "Minecraft.getEntityRenderDispatcher()",
-  "Minecraft.getResourcePackRepository()",
-  "Minecraft.hitResult",
-  "GuiGraphicsExtractor.entity()",
-  "EntityRenderDispatcher.getRenderer()",
-  "EntityRenderer.createRenderState()",
-  "EntityRenderState.shadowPieces",
-  "PackType.getDirectory()",
-  "LivingEntity.getBbHeight()",
-  "LivingEntity.getBbWidth()",
-  "BlockState.getCloneItemStack()"
+  "net.minecraft.util.valueproviders.FloatProvider",
+  "net.minecraft.world.SimpleContainer",
+  "net.minecraft.world.entity.SulfurCubeArchetype",
+  "net.minecraft.world.entity.SulfurCubeArchetype.AttributeEntry",
+  "net.minecraft.world.entity.SulfurCubeArchetype.ContactDamage",
+  "net.minecraft.world.entity.SulfurCubeArchetype.ExplosionData",
+  "net.minecraft.world.entity.SulfurCubeArchetype.KnockbackModifiers",
+  "net.minecraft.world.inventory.ShulkerBoxMenu",
+  "net.minecraft.world.item.component.LodestoneTracker",
+  "net.minecraft.world.item.component.MapDecorations",
+  "net.minecraft.world.item.component.MapDecorations.Entry",
+  "net.minecraft.world.item.component.SulfurCubeContent",
+  "net.minecraft.world.item.component.SuspiciousStewEffects",
+  "net.minecraft.world.item.component.TooltipProvider.Getter",
+  "net.minecraft.world.level.block.BarrelBlock",
+  "net.minecraft.world.level.block.ChestBlock",
+  "and 47 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "peek-fabric-1.6.0+26.3.jar",
-  "published": "2026-09-15"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "peek-fabric-1.6.1+26.3.jar",
+  "published": "2026-11-10"
  },
  "reports": {
   "works": 0,
@@ -51,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -60,12 +79,17 @@
  "entrypoints": {
   "main": 1,
   "client": 1,
-  "modmenu": 1
+  "modmenu": 1,
+  "bbe:renderer_registration_api": 1
  },
  "mixins": true,
  "depends": [
   "fabricloader",
   "minecraft"
  ],
- "lacks": 22
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own; has network channels"
+ },
+ "lacks": 87
 }

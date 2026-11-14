@@ -10,8 +10,12 @@
  "description": "A mod that adds billiard-related blocks and items.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.item.v1.BlockTransformerHelper",
+  "net.minecraft.client.ScrollWheelHandler",
+  "net.minecraft.client.gui.ItemSlotMouseAction",
+  "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
+  "net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner",
   "net.minecraft.core.component.BlockTransformer.BlockTransformData.Builder",
   "net.minecraft.network.chat.ComponentSerialization",
   "net.minecraft.references.BlockItemId",
@@ -24,12 +28,14 @@
   "net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate",
   "net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedStateProvider",
   "net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedStateProvider.Builder",
+  "Font.split()",
+  "GuiGraphicsExtractor.tooltip()",
   "BlockTransformer.BlockTransformData.builder()",
   "DataComponents.BUCKET_ENTITY_DATA",
   "DataComponents.CUSTOM_NAME",
   "DataComponents.SULFUR_CUBE_CONTENT",
-  "FriendlyByteBuf.readVarInt()",
-  "FriendlyByteBuf.writeVarInt()",
+  "DataComponents.TOOLTIP_STYLE",
+  "Component.getVisualOrderText()",
   "ByteBufCodecs.fromCodec()",
   "ServerLevel.getBestNeighborSignal()",
   "SoundEvents.AXE_SCRAPE",
@@ -38,27 +44,21 @@
   "SoundEvents.BUNDLE_INSERT",
   "SoundEvents.BUNDLE_INSERT_FAIL",
   "ARGB.colorFromFloat()",
+  "Mth.positiveCeilDiv()",
   "Entity.discard()",
   "Entity.playSound()",
   "EntitySpawnReason.RESIN_BILLIARDS_RACK_ITEM_USE",
   "EntityType.spawn()",
   "EntityTypes.SULFUR_CUBE",
   "ItemEntity.getItem()",
-  "ItemEntity.getOnPos()",
-  "Player.hasInfiniteMaterials()",
-  "Slot.allowModification()",
-  "BlockItem.registerBlocks()",
-  "Item.BY_BLOCK",
-  "ItemStack.getCustomName()",
-  "Items.SULFUR_CUBE_BUCKET",
-  "and 14 more"
+  "and 22 more"
  ],
- "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "resinbilliards-0.2.1+26.3-fabric.jar",
   "published": "2026-09-17"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 54
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 62
 }

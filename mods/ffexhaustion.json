@@ -9,15 +9,8 @@
  "author": "Fyxe",
  "description": "A stamina mod makes actions less effective the more exhaused you get. Better Combat and Glider compatible.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndLevelTick",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "AttachmentRegistry.builder()",
-  "ServerTickEvents.END_LEVEL_TICK",
   "DataComponents.BLOCKS_ATTACKS",
   "ServerPlayer.getAttackStrengthScale()",
   "ServerPlayer.getUseItem()",
@@ -27,15 +20,14 @@
   "ServerPlayer.tickCount",
   "Entity.fallDistance",
   "LivingEntity.fallDistance",
-  "AttributeInstance.addTransientModifier()",
-  "HitResult.getType()"
+  "AttributeInstance.addTransientModifier()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ffexhaustion-0.10.1+26.3-fabric.jar",
   "published": "2026-10-15"
  },
@@ -47,8 +39,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -64,5 +56,9 @@
   "ffutilities",
   "minecraft"
  ],
- "lacks": 19
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 12
 }

@@ -9,7 +9,6 @@
  "author": "Sanno",
  "description": "A Fabric Mod, used to detect and block players who use unauthorized client mods. [Both the server and the client must install this Mod.]",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking",
   "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking.LoginQueryRequestHandler",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
@@ -20,36 +19,22 @@
   "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking",
   "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginQueryResponseHandler",
   "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginSynchronizer",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.server.network.ServerLoginPacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
   "ServerLifecycleEvents.SERVER_STARTED",
   "ServerPlayNetworking.getReceived()",
   "ServerPlayNetworking.getSendable()",
-  "Minecraft.execute()",
   "CommandSourceStack.checkPermission()",
-  "CommandSourceStack.sendSystemMessage()",
-  "FriendlyByteBuf.readUtf()",
-  "FriendlyByteBuf.readUtf()",
-  "FriendlyByteBuf.readVarInt()",
-  "FriendlyByteBuf.writeLong()",
-  "FriendlyByteBuf.writeUtf()",
-  "FriendlyByteBuf.writeUtf()",
-  "FriendlyByteBuf.writeVarInt()",
   "MinecraftServer.execute()",
-  "MinecraftServer.getPlayerList()",
   "ServerPlayer.connection",
-  "ServerPlayer.hasDisconnected()"
+  "ServerPlayer.hasDisconnected()",
+  "ServerGamePacketListenerImpl.disconnect()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "SerendiModGuarder-1.5.3.jar",
   "published": "2026-10-04"
  },
@@ -61,8 +46,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -77,5 +62,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 33
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels"
+ },
+ "lacks": 19
 }

@@ -9,7 +9,6 @@
  "author": "HVB007",
  "description": "Resolves Minecraft keybind conflicts: when two actions share a key, choose the one you meant.",
  "needs": [
-  "Mixin",
   "net.minecraft.client.GameNarrator",
   "net.minecraft.client.NarratorStatus",
   "net.minecraft.client.gui.screens.options.OptionsSubScreen",
@@ -17,27 +16,22 @@
   "InputConstants.Key.getDisplayName()",
   "InputConstants.Type.getOrCreate()",
   "VertexConsumer.addVertexWith2DPose()",
-  "KeyMapping.same()",
   "KeyMapping.Category.label()",
   "Minecraft.getNarrator()",
   "Minecraft.isWindowActive()",
-  "Options.keyAttack",
-  "Options.keyMappings",
   "Options.narrator()",
   "NarrationElementOutput.add()",
   "NarrationElementOutput.add()",
   "TextureSetup.noTexture()",
-  "Screen.keyReleased()",
-  "Screen.resize()",
   "RenderPipelines.GUI",
   "GuiRenderState.addGuiElement()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "keybindsgalore-1.9.1+26.3.jar",
   "published": "2026-10-23"
  },
@@ -50,5 +44,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
- "lacks": 21
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 16
 }

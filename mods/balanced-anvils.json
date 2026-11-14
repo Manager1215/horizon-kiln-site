@@ -9,13 +9,14 @@
  "author": "EsotericEnderman",
  "description": "Makes anvil experience costs make more sense.",
  "needs": [
-  "Mixin",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
+  "Mixin: 2 points inside the game's methods",
+  "net.minecraft.world.inventory.AnvilMenu",
   "net.minecraft.world.inventory.DataSlot",
   "net.minecraft.world.inventory.ItemCombinerMenu",
   "net.minecraft.world.inventory.ResultContainer",
   "DataComponents.REPAIR_COST",
   "ServerPlayer.connection",
+  "ServerGamePacketListenerImpl.send()",
   "ItemStack.count()",
   "ItemStack.isValidRepairItem()",
   "Items.BRUSH",
@@ -37,7 +38,6 @@
   "Items.DIAMOND_SPEAR",
   "Items.FEATHER",
   "Items.GOLDEN_AXE",
-  "Items.GOLDEN_BOOTS",
   "Items.GOLDEN_CHESTPLATE",
   "Items.GOLDEN_HOE",
   "Items.GOLDEN_LEGGINGS",
@@ -49,15 +49,15 @@
   "Items.IRON_CHESTPLATE",
   "Items.IRON_HELMET",
   "Items.IRON_HOE",
-  "Items.IRON_LEGGINGS",
+  "Items.IRON_PICKAXE",
   "and 24 more"
  ],
  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "anvils-1.2.1.jar",
   "published": "2026-10-03"
  },
@@ -74,5 +74,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 73
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 70
 }

@@ -1,7 +1,7 @@
 {
  "id": "just-mob-heads",
  "name": "Just Mob Heads",
- "version": "26.3.0-9.6-fabric+forge+neo",
+ "version": "26.3.0-9.7-fabric+forge+neo",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,7 +10,6 @@
  "description": "🗿 Adds a configurable chance for mobs to drop their head, using vanilla resources only.",
  "needs": [
   "com.mojang.authlib.GameProfile",
-  "net.minecraft.server.permissions.Permissions",
   "net.minecraft.world.entity.animal.axolotl.Axolotl",
   "net.minecraft.world.entity.animal.axolotl.Axolotl.Variant",
   "net.minecraft.world.entity.animal.chicken.Chicken",
@@ -42,23 +41,24 @@
   "net.minecraft.world.item.component.ResolvableProfile",
   "net.minecraft.world.level.block.WeatheringCopper",
   "net.minecraft.world.level.block.WeatheringCopper.WeatherState",
-  "CommandSourceStack.getPlayerOrException()",
   "SharedSuggestionProvider.suggest()",
   "Registry.getOrThrow()",
   "RegistryAccess.lookupOrThrow()",
   "DataComponents.CUSTOM_NAME",
   "DataComponents.NOTE_BLOCK_SOUND",
   "DataComponents.PROFILE",
-  "and 14 more"
+  "DataComponents.WOLF_VARIANT",
+  "TamableAnimal.isBaby()",
+  "and 9 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "justmobheads-26.3.0-9.6.jar",
-  "published": "2026-10-14"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "justmobheads-26.3.0-9.7.jar",
+  "published": "2026-11-08"
  },
  "reports": {
   "works": 0,
@@ -68,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 54
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 49
 }

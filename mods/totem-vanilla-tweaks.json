@@ -9,11 +9,11 @@
  "author": "Yunitrish",
  "description": "Sort inventory, fill bookshelves, recover furnace XP through hoppers, and observe supported player interfaces with read-only administrator tools.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.entity.monster.skeleton.AbstractSkeleton",
+  "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
+  "net.minecraft.world.entity.projectile.arrow.AbstractArrow.Pickup",
   "net.minecraft.world.food.FoodProperties",
   "net.minecraft.world.food.FoodProperties.Builder",
   "net.minecraft.world.inventory.AnvilMenu",
@@ -21,7 +21,6 @@
   "net.minecraft.world.inventory.BlastFurnaceMenu",
   "net.minecraft.world.inventory.BrewingStandMenu",
   "net.minecraft.world.inventory.CartographyTableMenu",
-  "net.minecraft.world.inventory.ChestMenu",
   "net.minecraft.world.inventory.CrafterMenu",
   "net.minecraft.world.inventory.CraftingMenu",
   "net.minecraft.world.inventory.DispenserMenu",
@@ -36,28 +35,29 @@
   "net.minecraft.world.inventory.SmithingMenu",
   "net.minecraft.world.inventory.SmokerMenu",
   "net.minecraft.world.inventory.StonecutterMenu",
+  "net.minecraft.world.level.block.ChiseledBookShelfBlock",
+  "net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity",
+  "net.minecraft.world.level.block.entity.ChiseledBookShelfBlockEntity",
+  "net.minecraft.world.level.block.entity.Hopper",
+  "net.minecraft.world.level.block.entity.HopperBlockEntity",
+  "net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings",
+  "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate",
+  "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.StructureBlockInfo",
   "AttachmentRegistry.createPersistent()",
-  "ServerTickEvents.END_SERVER_TICK",
+  "KeyMapping.matches()",
+  "KeyMapping.matchesMouse()",
+  "HolderLookup.listElements()",
   "NonNullList.iterator()",
-  "FriendlyByteBuf.readEnum()",
-  "FriendlyByteBuf.writeEnum()",
   "MinecraftServer.execute()",
-  "MinecraftServer.getPlayerList()",
   "ServerLevel.getCurrentDifficultyAt()",
-  "ServerPlayer.drop()",
-  "DifficultyInstance.getDifficulty()",
-  "DifficultyInstance.getSpecialMultiplier()",
-  "BlockItem.registerBlocks()",
-  "Item.BY_BLOCK",
-  "Item.Properties.food()",
-  "and 3 more"
+  "and 16 more"
  ],
- "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "totem-vanilla-tweaks-0.1.32.jar",
   "published": "2026-10-17"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "minecraft",
   "totem-core"
  ],
- "lacks": 43
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 56
 }

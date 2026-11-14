@@ -1,7 +1,7 @@
 {
  "id": "fence-posts",
  "name": "Fence Posts",
- "version": "3.0.2",
+ "version": "3.1.1",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -11,7 +11,6 @@
  "needs": [
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents.AllowLoad",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndLevelTick",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
@@ -22,10 +21,8 @@
   "AttachmentRegistry.createPersistent()",
   "ServerEntityEvents.ALLOW_LOAD",
   "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerTickEvents.END_LEVEL_TICK",
   "MinecraftServer.getAllLevels()",
   "ServerLevel.gameEvent()",
-  "ServerPlayer.sendSystemMessage()",
   "BlockTags.FENCES",
   "Entity.entityTags()",
   "EntityTypes.COPPER_GOLEM",
@@ -41,6 +38,7 @@
   "Block.updateShape()",
   "SoundType.BAMBOO_WOOD",
   "SoundType.CHERRY_WOOD",
+  "SoundType.CINNABAR",
   "SoundType.DEEPSLATE_BRICKS",
   "SoundType.DEEPSLATE_TILES",
   "SoundType.MUD_BRICKS",
@@ -48,6 +46,8 @@
   "SoundType.NETHER_WOOD",
   "SoundType.POLISHED_DEEPSLATE",
   "SoundType.POLISHED_TUFF",
+  "SoundType.RESIN_BRICKS",
+  "SoundType.SULFUR",
   "SoundType.TUFF",
   "and 22 more"
  ],
@@ -55,10 +55,10 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "fence-posts-3.0.2.jar",
-  "published": "2026-10-28"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "fence-posts-3.1.1.jar",
+  "published": "2026-11-13"
  },
  "reports": {
   "works": 0,
@@ -68,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +85,9 @@
   "minecraft",
   "pandorical"
  ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
  "lacks": 62
 }

@@ -9,17 +9,14 @@
  "author": "sebseb7",
  "description": "afk trading",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.AfterSolidFeatures",
   "net.fabricmc.fabric.api.client.screen.v1.Screens",
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-  "net.minecraft.client.gui.components.StringWidget",
   "net.minecraft.client.gui.screens.inventory.ContainerScreen",
   "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.gui.screens.inventory.MerchantScreen",
   "net.minecraft.client.gui.screens.inventory.ShulkerBoxScreen",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
   "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
   "net.minecraft.network.protocol.game.ServerboundSelectTradePacket",
@@ -28,7 +25,6 @@
   "net.minecraft.world.entity.npc.villager.VillagerData",
   "net.minecraft.world.entity.npc.villager.VillagerProfession",
   "net.minecraft.world.entity.npc.wanderingtrader.WanderingTrader",
-  "net.minecraft.world.inventory.ContainerInput",
   "net.minecraft.world.inventory.MerchantMenu",
   "net.minecraft.world.item.trading.ItemCost",
   "net.minecraft.world.item.trading.MerchantOffer",
@@ -36,28 +32,31 @@
   "net.minecraft.world.level.block.ChestBlock",
   "net.minecraft.world.level.block.ShulkerBoxBlock",
   "net.minecraft.world.phys.EntityHitResult",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "ImmutableList.get()",
   "ImmutableList.size()",
   "Object2IntMap.Entry.getKey()",
   "LevelRenderEvents.AFTER_SOLID_FEATURES",
   "ChatFormatting.stripFormatting()",
-  "Minecraft.execute()",
-  "Minecraft.gameMode",
-  "Minecraft.hitResult",
-  "Button.setPosition()",
-  "Checkbox.selected()",
   "ClientLevel.clip()",
   "ClientLevel.getEntitiesOfClass()",
-  "and 48 more"
+  "ClientLevel.getEntitiesOfClass()",
+  "ClientLevel.getOverworldClockTime()",
+  "ClientPacketListener.send()",
+  "MultiPlayerGameMode.interact()",
+  "LocalPlayer.closeContainer()",
+  "LocalPlayer.distanceToSqr()",
+  "LocalPlayer.getBoundingBox()",
+  "LocalPlayer.setXRot()",
+  "LocalPlayer.setYRot()",
+  "LocalPlayer.yHeadRot",
+  "and 38 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "autotrade-fabric-26.3-0.0.18.jar",
   "published": "2026-09-21"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +84,9 @@
   "malilib",
   "minecraft"
  ],
- "lacks": 91
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 78
 }

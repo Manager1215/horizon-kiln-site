@@ -9,23 +9,23 @@
  "author": "Bactrosaurus",
  "description": "Fullbright, low fire, low shield, item scaling, no fog, no pumpkin blur and more all in one mod!",
  "needs": [
-  "Mixin",
+  "Mixin: 8 points inside the game's methods",
   "net.minecraft.client.OptionInstance.CaptionBasedToString",
-  "net.minecraft.client.OptionInstance.IntRange",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
-  "net.minecraft.client.OptionInstance.ValueSet",
   "net.minecraft.client.OptionInstance.ValueUpdateListener",
   "net.minecraft.client.gui.components.OptionsList",
-  "net.minecraft.client.gui.components.StringWidget",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
   "net.minecraft.client.gui.layouts.LayoutSettings",
   "net.minecraft.client.gui.layouts.LinearLayout",
   "net.minecraft.client.gui.screens.CreditsAndAttributionScreen",
+  "net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen",
   "net.minecraft.client.gui.screens.options.OptionsSubScreen",
+  "net.minecraft.client.player.FirstPersonHandsAndItems",
   "net.minecraft.client.renderer.LightmapRenderStateExtractor",
+  "net.minecraft.client.renderer.ScreenEffectRenderer",
   "net.minecraft.client.renderer.entity.state.AvatarRenderState",
   "net.minecraft.client.renderer.fog.FogData",
+  "net.minecraft.client.renderer.fog.FogRenderer",
   "net.minecraft.client.renderer.fog.environment.FogEnvironment",
   "net.minecraft.client.renderer.state.LightmapRenderState",
   "net.minecraft.world.level.material.FogType",
@@ -34,24 +34,18 @@
   "OptionInstance.createBoolean()",
   "Options.cloudRange()",
   "Options.genericValueLabel()",
-  "Button.Builder.tooltip()",
-  "Button.Builder.width()",
   "EditBox.SEARCH_HINT_STYLE",
-  "EditBox.setHint()",
   "LocalPlayer.getItemSwapScale()",
   "DefaultedRegistry.iterator()",
-  "MutableComponent.setStyle()",
-  "EquipmentSlot.isArmor()",
   "Items.CARVED_PUMPKIN",
-  "Items.FILLED_MAP",
-  "Items.SHIELD"
+  "Items.FILLED_MAP"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "bactromod-4.2.jar",
   "published": "2026-09-20"
  },
@@ -71,5 +65,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 35
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 29
 }

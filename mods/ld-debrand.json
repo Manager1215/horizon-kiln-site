@@ -1,7 +1,7 @@
 {
  "id": "ld-debrand",
  "name": "Debrand",
- "version": "1.0.0+26.2s4..26.4s6",
+ "version": "1.0.0+26.2s4..26.4s7",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,19 +9,20 @@
  "author": "LoganDark",
  "description": "Convinces Minecraft it is unmodded",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.minecraft.SharedConstants",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger"
+  "net.minecraft.client.ClientBrandRetriever",
+  "net.minecraft.client.main.Main",
+  "net.minecraft.util.ModCheck"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "debrand-1.0.0+26.2-snapshot-4..26.4-snapshot-6.jar",
-  "published": "2026-10-28"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "debrand-1.0.0+26.2-snapshot-4..26.4-snapshot-7.jar",
+  "published": "2026-11-08"
  },
  "reports": {
   "works": 0,
@@ -34,5 +35,9 @@
  "depends": [
   "minecraft"
  ],
- "lacks": 3
+ "softOff": {
+  "class": "restart",
+  "why": "@modify-args and @redirect into the game's classes"
+ },
+ "lacks": 4
 }

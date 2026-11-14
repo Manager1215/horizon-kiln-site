@@ -9,13 +9,10 @@
  "author": "Cattail",
  "description": "A simple client-side mod that allows you to easily capture and create custom main menu panoramas directly from the game.",
  "needs": [
-  "Mixin",
   "com.mojang.blaze3d.Blaze3D",
   "net.minecraft.SharedConstants",
-  "net.minecraft.client.CameraType",
   "net.minecraft.client.CloudStatus",
   "net.minecraft.client.Screenshot",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
   "net.minecraft.client.particle.ParticleEngine",
   "net.minecraft.client.renderer.texture.DynamicTexture",
@@ -35,8 +32,6 @@
   "Window.setWidth()",
   "Camera.disablePanoramicMode()",
   "Camera.enablePanoramicMode()",
-  "KeyMapping.getTranslatedKeyMessage()",
-  "Minecraft.execute()",
   "Minecraft.getCurrentServer()",
   "Minecraft.getResourcePackDirectory()",
   "Minecraft.getResourcePackRepository()",
@@ -45,19 +40,23 @@
   "Minecraft.reloadResourcePacks()",
   "Options.bobView()",
   "Options.cloudStatus()",
-  "Options.getCameraType()",
   "Options.incompatibleResourcePacks",
   "Options.resourcePacks",
-  "Options.save()",
-  "Options.setCameraType()",
-  "and 22 more"
+  "Options.updateResourcePacks()",
+  "ServerData.name",
+  "LocalPlayer.setXRot()",
+  "LocalPlayer.setYRot()",
+  "LocalPlayer.xRotO",
+  "LocalPlayer.yRotO",
+  "GameRenderer.extract()",
+  "and 12 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "panoramacreator-2.0.0+26.3.jar",
   "published": "2026-10-23"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 62
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 52
 }

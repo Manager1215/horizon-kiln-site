@@ -1,0 +1,92 @@
+{
+ "id": "villiger-tarde-finder",
+ "name": "Villager Trade Finder",
+ "version": "1.1.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/villiger-tarde-finder",
+ "author": "NickHUB-create",
+ "description": "A simple mod that lets you find trades using a GUI",
+ "needs": [
+  "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
+  "net.minecraft.client.OptionInstance.TooltipSupplier",
+  "net.minecraft.client.gui.screens.inventory.MerchantScreen",
+  "net.minecraft.network.protocol.game.ServerboundPunchPacket",
+  "net.minecraft.tags.EnchantmentTags",
+  "net.minecraft.tags.ItemTags",
+  "net.minecraft.world.entity.npc.villager.Villager",
+  "net.minecraft.world.entity.npc.villager.VillagerData",
+  "net.minecraft.world.entity.npc.villager.VillagerProfession",
+  "net.minecraft.world.inventory.MerchantMenu",
+  "net.minecraft.world.item.trading.MerchantOffer",
+  "net.minecraft.world.level.block.LecternBlock",
+  "net.minecraft.world.phys.EntityHitResult",
+  "ClientReceiveMessageEvents.ALLOW_GAME",
+  "Font.split()",
+  "GuiGraphicsExtractor.text()",
+  "CycleButton.Builder.withTooltip()",
+  "EditBox.SEARCH_HINT_STYLE",
+  "ClientLevel.getEntitiesOfClass()",
+  "ClientPacketListener.getCommands()",
+  "ClientPacketListener.send()",
+  "MultiPlayerGameMode.continueDestroyBlock()",
+  "MultiPlayerGameMode.interact()",
+  "MultiPlayerGameMode.startDestroyBlock()",
+  "MultiPlayerGameMode.stopDestroyBlock()",
+  "LocalPlayer.closeContainer()",
+  "LocalPlayer.distanceToSqr()",
+  "LocalPlayer.isWithinBlockInteractionRange()",
+  "LocalPlayer.isWithinEntityInteractionRange()",
+  "LocalPlayer.setXRot()",
+  "LocalPlayer.setYHeadRot()",
+  "LocalPlayer.setYRot()",
+  "BlockPos.toShortString()",
+  "Holder.is()",
+  "Holder.Reference.is()",
+  "Registry.get()",
+  "Registry.listElements()",
+  "RegistryAccess.Frozen.lookupOrThrow()",
+  "DataComponents.STORED_ENCHANTMENTS",
+  "InteractionResult.SwingSource.PREDICTED",
+  "and 15 more"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "villager-trade-finder-1.1.0.jar",
+  "published": "2026-10-02"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 55
+}

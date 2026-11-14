@@ -10,7 +10,6 @@
  "description": "Adds compressed sponges and new lava, snow, and fire sponge variants — each with 5 compression tiers, passive biome-based drying, and a Freezer machine.",
  "needs": [
   "an access widener",
-  "Mixin",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
   "net.minecraft.client.model.EntityModel",
   "net.minecraft.client.model.HeadedModel",
@@ -29,6 +28,8 @@
   "net.minecraft.client.renderer.entity.state.VillagerRenderState",
   "net.minecraft.core.HolderSet.Named",
   "net.minecraft.world.SimpleContainer",
+  "net.minecraft.world.entity.SpawnPlacementType",
+  "net.minecraft.world.entity.SpawnPlacements",
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
   "net.minecraft.world.entity.ai.goal.AvoidEntityGoal",
@@ -44,21 +45,19 @@
   "net.minecraft.world.entity.ai.goal.TradeWithPlayerGoal",
   "net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal",
   "net.minecraft.world.entity.ai.navigation.PathNavigation",
+  "net.minecraft.world.entity.ai.village.poi.PoiManager",
+  "net.minecraft.world.entity.ai.village.poi.PoiManager.Occupancy",
+  "net.minecraft.world.entity.ai.village.poi.PoiTypes",
   "net.minecraft.world.entity.monster.Vex",
   "net.minecraft.world.entity.monster.Zoglin",
-  "net.minecraft.world.entity.monster.illager.Evoker",
-  "net.minecraft.world.entity.monster.illager.Illusioner",
-  "net.minecraft.world.entity.monster.illager.Pillager",
-  "net.minecraft.world.entity.monster.illager.Vindicator",
-  "net.minecraft.world.entity.monster.zombie.Zombie",
-  "and 71 more"
+  "and 77 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "moresponge-fabric-26.3-26.3.0.1.jar",
   "published": "2026-10-06"
  },
@@ -70,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 111
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; generates in the world"
+ },
+ "lacks": 127
 }

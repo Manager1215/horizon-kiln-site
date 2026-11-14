@@ -2,30 +2,19 @@
  "id": "plasmo-voice-voice-changer",
  "name": "Plasmo Voice Voice Changer",
  "version": "1.8.0",
- "status": "planned",
- "statusLabel": "Planned",
- "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "status": "not-checked",
+ "statusLabel": "Not checked",
+ "statusMeaning": "In the catalogue, not checked yet.",
  "url": "https://modrinth.com/mod/plasmo-voice-voice-changer",
  "author": "sawiq_",
  "description": "Client-side mod for Plasmo Voice that adds a full live voice changer with presets, custom tuning, saved profiles, self listen, and a native settings UI.",
- "needs": [
-  "Mixin",
-  "net.minecraft.client.gui.components.Tooltip",
-  "ClientPlayNetworking.canSend()",
-  "Minecraft.execute()",
-  "Minecraft.setScreenAndShow()",
-  "AbstractWidget.setTooltip()",
-  "Button.setTooltip()",
-  "Button.Builder.tooltip()",
-  "EditBox.setHint()",
-  "EditBox.setTooltip()"
- ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
- "evidence": "Not run: Java did not start.",
+ "needs": [],
+ "roadmap": "",
+ "evidence": "Everything its code calls is covered by Kiln development build 2026-11-14 (fa70eeb) (45 classes, 104 members). Not run yet.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "pv-voice-changer-1.8.0-fabric-26.3.jar",
   "published": "2026-10-28"
  },
@@ -37,8 +26,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -54,5 +43,9 @@
   "minecraft",
   "plasmovoice"
  ],
- "lacks": 9
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels"
+ },
+ "lacks": 0
 }

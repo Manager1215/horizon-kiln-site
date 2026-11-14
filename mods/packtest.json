@@ -10,7 +10,7 @@
  "description": "Fabric mod for testing data packs, with data packs!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 19 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "net.minecraft.advancements.predicates.MinMaxBounds.Ints",
   "net.minecraft.advancements.triggers.AnyBlockInteractionTrigger",
@@ -18,9 +18,6 @@
   "net.minecraft.advancements.triggers.PlayerInteractTrigger",
   "net.minecraft.commands.FunctionInstantiationException",
   "net.minecraft.commands.arguments.ComponentArgument",
-  "net.minecraft.commands.arguments.DimensionArgument",
-  "net.minecraft.commands.arguments.IdentifierArgument",
-  "net.minecraft.commands.arguments.ObjectiveArgument",
   "net.minecraft.commands.arguments.RangeArgument",
   "net.minecraft.commands.arguments.RangeArgument.Floats",
   "net.minecraft.commands.arguments.RangeArgument.Ints",
@@ -28,14 +25,11 @@
   "net.minecraft.commands.arguments.ResourceOrIdArgument.LootPredicateArgument",
   "net.minecraft.commands.arguments.ResourceOrTagArgument",
   "net.minecraft.commands.arguments.ResourceOrTagArgument.Result",
-  "net.minecraft.commands.arguments.ScoreHolderArgument",
   "net.minecraft.commands.arguments.SlotSourceArgument",
   "net.minecraft.commands.arguments.SlotSourceArgument.Result",
   "net.minecraft.commands.arguments.TimeArgument",
   "net.minecraft.commands.arguments.blocks.BlockPredicateArgument",
   "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
-  "net.minecraft.commands.arguments.coordinates.Coordinates",
-  "net.minecraft.commands.arguments.coordinates.Vec3Argument",
   "net.minecraft.commands.arguments.item.FunctionArgument",
   "net.minecraft.commands.arguments.item.ItemPredicateArgument",
   "net.minecraft.commands.arguments.item.ItemPredicateArgument.Result",
@@ -51,14 +45,20 @@
   "net.minecraft.commands.execution.tasks.BuildContexts.Continuation",
   "net.minecraft.commands.execution.tasks.CallFunction",
   "net.minecraft.commands.execution.tasks.FallthroughTask",
+  "net.minecraft.commands.execution.tasks.IsolatedCall",
+  "net.minecraft.commands.functions.CommandFunction",
+  "net.minecraft.commands.functions.InstantiatedFunction",
+  "net.minecraft.commands.synchronization.ArgumentUtils",
+  "net.minecraft.core.HolderSet.Named",
+  "net.minecraft.core.MappedRegistry.TagSet",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "packtest-2.8.0.jar",
   "published": "2026-10-17"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 131
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; runs threads of its own; generates in the world"
+ },
+ "lacks": 166
 }

@@ -9,20 +9,20 @@
  "author": "creoii",
  "description": "Prevent Boats from getting stuck on Lily Pads",
  "needs": [
-  "Mixin",
   "net.minecraft.tags.EntityTypeTags",
   "net.minecraft.world.entity.vehicle.boat.AbstractBoat",
+  "net.minecraft.world.level.block.LilyPadBlock",
   "net.minecraft.world.phys.shapes.EntityCollisionContext",
   "Entity.is()",
   "VegetationBlock.getCollisionShape()",
   "Shapes.empty()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "boat-through-lilies-fabric-1.0.2+26.3.jar",
   "published": "2026-11-05"
  },
@@ -39,5 +39,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 6
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 7
 }

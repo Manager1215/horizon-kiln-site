@@ -9,21 +9,41 @@
  "author": "H3LiiiX",
  "description": "A configurable enhanced Ender Dragon Fight staying true to vanilla",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndLevelTick",
-  "net.minecraft.server.permissions.Permissions",
-  "net.minecraft.server.players.PlayerList",
+  "Mixin: 3 points inside the game's methods",
+  "net.minecraft.world.damagesource.DamageTypes",
+  "net.minecraft.world.entity.boss.enderdragon.EndCrystal",
   "net.minecraft.world.entity.boss.enderdragon.EnderDragon",
+  "net.minecraft.world.entity.boss.enderdragon.phases.DragonPhaseInstance",
+  "net.minecraft.world.entity.boss.enderdragon.phases.EnderDragonPhase",
+  "net.minecraft.world.entity.boss.enderdragon.phases.EnderDragonPhaseManager",
+  "net.minecraft.world.entity.monster.Shulker",
   "net.minecraft.world.level.dimension.end.EnderDragonFight",
-  "ServerTickEvents.END_LEVEL_TICK",
-  "MinecraftServer.getPlayerList()"
+  "net.minecraft.world.level.levelgen.feature.EndSpikeFeature",
+  "net.minecraft.world.level.levelgen.feature.EndSpikeFeature.EndSpike",
+  "BlockPos.MutableBlockPos.set()",
+  "ServerLevel.getEntitiesOfClass()",
+  "ServerLevel.getGameRules()",
+  "ServerLevel.getHeightmapPos()",
+  "ServerPlayer.giveExperiencePoints()",
+  "EntityTypes.END_CRYSTAL",
+  "EntityTypes.SHULKER",
+  "ExperienceOrb.award()",
+  "Level.getEntitiesOfClass()",
+  "ServerLevelAccessor.addFreshEntity()",
+  "ServerLevelAccessor.getEntitiesOfClass()",
+  "ServerLevelAccessor.setBlock()",
+  "Blocks.FIRE",
+  "Blocks.OBSIDIAN",
+  "GameRules.MOB_DROPS",
+  "GameRules.get()",
+  "AABB.inflate()"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "BetterVanillaDragonFight-v1.0.1+26.3.0.jar",
   "published": "2026-10-29"
  },
@@ -35,8 +55,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -52,5 +72,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 7
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 27
 }

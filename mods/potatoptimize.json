@@ -9,15 +9,20 @@
  "author": "qpcrummer",
  "description": "Let tater optimize your game!",
  "needs": [
-  "Mixin",
+  "Mixin: 5 points inside the game's methods",
   "net.fabricmc.loader.api.VersionParsingException",
+  "net.minecraft.util.SpecialDates",
+  "net.minecraft.world.entity.ai.navigation.PathNavigation",
   "net.minecraft.world.entity.monster.Enemy",
+  "net.minecraft.world.entity.monster.cubemob.Slime",
+  "net.minecraft.world.level.block.CeilingHangingSignBlock",
+  "net.minecraft.world.level.block.SignBlock",
+  "net.minecraft.world.level.block.WallHangingSignBlock",
   "net.minecraft.world.level.block.entity.SignBlockEntity",
   "net.minecraft.world.level.chunk.LevelChunk.PostLoadProcessor",
   "net.minecraft.world.level.chunk.ProtoChunk",
   "net.minecraft.world.level.levelgen.WorldgenRandom",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
+  "net.minecraft.world.level.portal.PortalShape",
   "FabricLoader.getGameInstance()",
   "ModContainer.getRootPaths()",
   "Version.parse()",
@@ -31,8 +36,8 @@
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Potatoptimize-2.2.2.jar",
   "published": "2026-09-07"
  },
@@ -48,5 +53,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 16
+ "softOff": {
+  "class": "restart",
+  "why": "@overwrite and @redirect and @wrap-method into the game's classes"
+ },
+ "lacks": 21
 }

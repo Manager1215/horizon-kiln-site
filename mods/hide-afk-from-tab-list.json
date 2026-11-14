@@ -1,7 +1,7 @@
 {
  "id": "hide-afk-from-tab-list",
  "name": "Hide AFK from Tab List",
- "version": "v1.2.0",
+ "version": "v1.2.1",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,18 +9,18 @@
  "author": "paraf0x",
  "description": "Client-side Fabric mod that filters AFK players from the tab list. Toggle with a keybind to declutter your player list on busy servers.",
  "needs": [
-  "Mixin",
-  "KeyMapping.getTranslatedKeyMessage()",
-  "Minecraft.execute()"
+  "com.mojang.authlib.GameProfile",
+  "net.minecraft.client.gui.components.PlayerTabOverlay",
+  "PlayerInfo.getProfile()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "release-asset.jar",
-  "published": "2026-09-17"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "afk-filter-1.2.1.jar",
+  "published": "2026-11-10"
  },
  "reports": {
   "works": 0,
@@ -30,8 +30,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -46,5 +46,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 2
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 3
 }

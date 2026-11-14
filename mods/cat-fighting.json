@@ -9,16 +9,46 @@
  "author": "XiaoCraft",
  "description": "Cat fighting adds cat quarrels and fighting added into Minecraft. Watch them argue and fight!",
  "needs": [
-  "Mixin",
+  "net.minecraft.client.model.animal.feline.AbstractFelineModel",
+  "net.minecraft.client.model.animal.feline.AdultFelineModel",
+  "net.minecraft.client.model.animal.feline.BabyFelineModel",
+  "net.minecraft.client.model.geom.PartPose",
+  "net.minecraft.client.model.geom.builders.CubeDeformation",
+  "net.minecraft.client.model.geom.builders.CubeListBuilder",
+  "net.minecraft.client.model.geom.builders.MeshDefinition",
+  "net.minecraft.client.model.geom.builders.PartDefinition",
+  "net.minecraft.client.renderer.entity.CatRenderer",
+  "net.minecraft.client.renderer.entity.state.CatRenderState",
+  "net.minecraft.client.renderer.entity.state.FelineRenderState",
+  "net.minecraft.tags.ItemTags",
+  "net.minecraft.world.entity.ai.control.LookControl",
+  "net.minecraft.world.entity.ai.goal.Goal",
+  "net.minecraft.world.entity.ai.goal.Goal.Flag",
+  "net.minecraft.world.entity.ai.goal.GoalSelector",
+  "net.minecraft.world.entity.ai.navigation.PathNavigation",
   "net.minecraft.world.entity.animal.feline.Cat",
-  "Level.getEntity()"
+  "Model.root()",
+  "ModelPart.getChild()",
+  "ModelPart.x",
+  "ModelPart.xScale",
+  "ModelPart.y",
+  "ModelPart.yScale",
+  "ModelPart.z",
+  "ModelPart.zScale",
+  "ServerChunkCache.sendToTrackingPlayersAndSelf()",
+  "ServerLevel.sendParticles()",
+  "SoundEvents.ANVIL_LAND",
+  "DamageSource.getWeaponItem()",
+  "Level.getEntitiesOfClass()",
+  "Level.getEntity()",
+  "AABB.inflate()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "catfighting-fabric-26.3-1.2.2.jar",
   "published": "2026-10-10"
  },
@@ -30,8 +60,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -48,5 +78,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 2
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels"
+ },
+ "lacks": 33
 }

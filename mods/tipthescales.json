@@ -10,25 +10,23 @@
  "description": "Allows for more options when adjusting the GUIScale option as well as making it a slider.",
  "needs": [
   "an access widener",
-  "Mixin",
   "net.minecraft.client.OptionInstance.CaptionBasedToString",
   "net.minecraft.client.OptionInstance.ClampingLazyMaxIntRange",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
-  "net.minecraft.client.OptionInstance.ValueSet",
   "net.minecraft.client.OptionInstance.ValueUpdateListener",
   "net.minecraft.client.gui.screens.options.OptionsSubScreen",
+  "net.minecraft.client.gui.screens.options.VideoSettingsScreen",
   "Minecraft.resizeGui()",
   "OptionInstance.<init>()",
   "OptionInstance.noTooltip()",
-  "OptionInstance.values()",
   "Options.genericValueLabel()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "TipTheScales-fabric-26.3-26.3.1.jar",
   "published": "2026-09-18"
  },
@@ -45,5 +43,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 11
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 10
 }

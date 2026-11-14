@@ -10,30 +10,42 @@
  "description": "Overhauls horses with various adjustments and training mechanics",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 7 points inside the game's methods",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry.ModifyConsumer",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry.ModifyContext",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry.ModifyDefaultAttribute",
   "net.minecraft.advancements.triggers.PlayerTrigger",
+  "net.minecraft.client.gui.screens.inventory.AbstractMountInventoryScreen",
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
+  "net.minecraft.world.entity.ai.goal.RandomStandGoal",
   "net.minecraft.world.entity.animal.camel.Camel",
+  "net.minecraft.world.entity.animal.equine.AbstractChestedHorse",
   "net.minecraft.world.entity.animal.equine.AbstractHorse",
+  "net.minecraft.world.entity.animal.equine.Horse",
   "net.minecraft.world.entity.animal.equine.Llama",
+  "net.minecraft.world.entity.animal.equine.SkeletonHorse",
+  "net.minecraft.world.entity.animal.equine.ZombieHorse",
+  "net.minecraft.world.item.component.Consumable",
+  "net.minecraft.world.item.consume_effects.ConsumeEffect",
+  "net.minecraft.world.level.block.PowderSnowBlock",
+  "DataComponents.CONSUMABLE",
   "EntityTypes.CAMEL",
   "EntityTypes.SKELETON_HORSE",
   "EntityTypes.ZOMBIE_HORSE",
   "AttributeInstance.addPermanentModifier()",
   "AttributeInstance.removeModifier()",
-  "Player.getControlledVehicle()"
+  "Player.getControlledVehicle()",
+  "Blocks.SOUL_SAND",
+  "Blocks.SOUL_SOIL"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "superb-steeds-fabric-26.3-r1.jar",
   "published": "2026-09-16"
  },
@@ -45,8 +57,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -64,5 +76,9 @@
   "minecraft",
   "strawberrylib"
  ],
- "lacks": 16
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 28
 }

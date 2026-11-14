@@ -1,7 +1,7 @@
 {
  "id": "macu-lib",
  "name": "macu lib",
- "version": "3.0.7+26.2",
+ "version": "3.0.8+26.2",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,10 +10,12 @@
  "description": "Library for my mods and adding supporter perks",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 4 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.exceptions.AuthenticationException",
   "com.mojang.authlib.minecraft.MinecraftSessionService",
+  "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
+  "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDamage",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
@@ -24,20 +26,22 @@
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndLevelTick",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
+  "net.minecraft.CrashReport",
+  "net.minecraft.CrashReportCategory",
+  "net.minecraft.SystemReport",
+  "net.minecraft.client.gui.screens.options.SkinCustomizationScreen",
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.core.UUIDUtil",
   "net.minecraft.network.chat.PlayerChatMessage",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.server.Bootstrap",
   "NativeImage.read()",
   "ObjectSortedSet.contains()",
   "ObjectSortedSet.stream()",
+  "AttachmentRegistry.builder()",
   "FabricCreativeModeTabOutput.accept()",
   "FabricCreativeModeTabOutput.insertAfter()",
   "FabricCreativeModeTabOutput.insertAfter()",
@@ -47,20 +51,16 @@
   "ServerPlayerEvents.JOIN",
   "ServerPlayerEvents.LEAVE",
   "ServerLevelEvents.UNLOAD",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerLifecycleEvents.SERVER_STARTING",
-  "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerTickEvents.END_LEVEL_TICK",
   "and 11 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "macu_lib-3.0.7+26.2.jar",
-  "published": "2026-10-16"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "macu_lib-3.0.8+26.2.jar",
+  "published": "2026-11-07"
  },
  "reports": {
   "works": 0,
@@ -79,5 +79,9 @@
   "minecraft",
   "yumi_mc_core"
  ],
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+ },
  "lacks": 51
 }

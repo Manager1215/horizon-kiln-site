@@ -1,0 +1,71 @@
+{
+ "id": "buried-wrecks",
+ "name": "Buried Wrecks",
+ "version": "15.0.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/buried-wrecks",
+ "author": "Mrbysco",
+ "description": "A mod that adds buried shipwrecks to the underground",
+ "needs": [
+  "net.minecraft.world.level.block.Mirror",
+  "net.minecraft.world.level.levelgen.structure.Structure.GenerationContext",
+  "net.minecraft.world.level.levelgen.structure.Structure.GenerationStub",
+  "net.minecraft.world.level.levelgen.structure.StructureType",
+  "net.minecraft.world.level.levelgen.structure.TemplateStructurePiece",
+  "net.minecraft.world.level.levelgen.structure.pieces.StructurePieceType.StructureTemplateType",
+  "net.minecraft.world.level.levelgen.structure.pieces.StructurePiecesBuilder",
+  "net.minecraft.world.level.levelgen.structure.templatesystem.BlockIgnoreProcessor",
+  "net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings",
+  "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate",
+  "Registries.BIOME",
+  "Registries.STRUCTURE",
+  "Registries.STRUCTURE_PIECE",
+  "Registries.STRUCTURE_TYPE",
+  "Util.getRandom()",
+  "RandomizableContainer.setBlockEntityLootTable()",
+  "WorldGenLevel.getHeight()",
+  "Rotation.getRandom()"
+ ],
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "BuriedWrecks-fabric-26.3-15.0.0.jar",
+  "published": "2026-11-13"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "modmenu": 1
+ },
+ "mixins": false,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "forgeconfigapiport",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 18
+}

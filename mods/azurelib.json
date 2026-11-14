@@ -1,7 +1,7 @@
 {
  "id": "azurelib",
  "name": "AzureLib",
- "version": "4.1.6",
+ "version": "4.1.8",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,18 +10,19 @@
  "description": "Java Minecraft mod using Bedrock models to create custom models and animations for items, blocks, entities",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 5 points inside the game's methods",
   "com.mojang.blaze3d.Blaze3D",
   "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback",
   "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback.RegistrationHelper",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.minecraft.CrashReport",
   "net.minecraft.ReportedException",
-  "net.minecraft.client.CameraType",
   "net.minecraft.client.model.HumanoidModel",
   "net.minecraft.client.model.geom.ModelLayers",
   "net.minecraft.client.model.player.PlayerModel",
   "net.minecraft.client.renderer.entity.ArmorModelSet",
+  "net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer",
+  "net.minecraft.client.renderer.entity.layers.RenderLayer",
   "net.minecraft.client.renderer.entity.player.AvatarRenderer",
   "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
   "net.minecraft.client.renderer.rendertype.RenderSetup",
@@ -41,26 +42,25 @@
   "net.minecraft.client.resources.palette.PalettedTextureManager.Handle",
   "net.minecraft.core.UUIDUtil",
   "net.minecraft.server.packs.resources.ResourceMetadata",
-  "net.minecraft.world.entity.EquipmentSlot.Type",
+  "net.minecraft.world.entity.Pose",
   "net.minecraft.world.entity.WalkAnimationState",
+  "net.minecraft.world.entity.projectile.ProjectileUtil",
   "net.minecraft.world.item.component.CustomModelData",
   "net.minecraft.world.item.component.DyedItemColor",
   "net.minecraft.world.item.equipment.trim.ArmorTrim",
   "net.minecraft.world.item.equipment.trim.TrimMaterial",
   "net.minecraft.world.item.equipment.trim.TrimPattern",
-  "net.minecraft.world.level.MoonPhase",
-  "org.apache.commons.io.IOUtils",
-  "org.apache.logging.log4j.LogManager",
-  "and 62 more"
+  "net.minecraft.world.level.LightLayer",
+  "and 66 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "azurelib-fabric-26.3-4.1.6.jar",
-  "published": "2026-11-05"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "azurelib-fabric-26.3-4.1.8.jar",
+  "published": "2026-11-09"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 211
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+ },
+ "lacks": 264
 }

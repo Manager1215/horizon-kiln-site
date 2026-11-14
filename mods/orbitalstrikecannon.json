@@ -1,0 +1,67 @@
+{
+ "id": "orbitalstrikecannon",
+ "name": "OrbitalStrikeCannon",
+ "version": "1.8.0-26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/orbitalstrikecannon",
+ "author": "DirectSky943",
+ "description": "This mod adds the Orbital Strike Cannon from Wembu's videos.",
+ "needs": [
+  "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
+  "net.minecraft.core.particles.ItemParticleOption",
+  "net.minecraft.world.entity.projectile.hurtingprojectile.WitherSkull",
+  "DataComponents.CUSTOM_NAME",
+  "ParticleTypes.ITEM",
+  "MinecraftServer.execute()",
+  "ServerLevel.getHeight()",
+  "ServerLevel.sendParticles()",
+  "ServerPlayer.fishing",
+  "EntityTypes.WITHER_SKULL",
+  "PrimedTnt.isAlive()",
+  "PrimedTnt.setDeltaMovement()",
+  "PrimedTnt.setFuse()",
+  "FishingHook.discard()",
+  "FishingHook.isAlive()"
+ ],
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "OrbitalStrikeMod-26.3-1.8.0.jar",
+  "published": "2026-11-13"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "fabric-datagen": 1,
+  "client": 1,
+  "main": 2
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 15
+}

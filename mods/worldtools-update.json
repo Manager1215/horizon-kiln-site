@@ -10,11 +10,11 @@
  "description": "Download a server's world as a detailed singleplayer world. An updated fork of WorldTools.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 4 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "net.minecraft.SharedConstants",
+  "net.minecraft.client.gui.components.BossHealthOverlay",
   "net.minecraft.client.gui.components.LerpingBossEvent",
-  "net.minecraft.client.gui.components.StringWidget",
   "net.minecraft.client.gui.layouts.FrameLayout",
   "net.minecraft.client.gui.layouts.GridLayout",
   "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
@@ -27,13 +27,11 @@
   "net.minecraft.client.gui.screens.inventory.HopperScreen",
   "net.minecraft.client.gui.screens.inventory.LecternScreen",
   "net.minecraft.client.gui.screens.inventory.ShulkerBoxScreen",
+  "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
   "net.minecraft.client.multiplayer.ClientChunkCache",
   "net.minecraft.client.multiplayer.ClientChunkCache.Storage",
   "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.core.IdMap",
-  "net.minecraft.gizmos.GizmoStyle",
-  "net.minecraft.nbt.NbtIo",
-  "net.minecraft.network.chat.ClickEvent.OpenFile",
   "net.minecraft.network.chat.RemoteChatSession",
   "net.minecraft.network.chat.RemoteChatSession.Data",
   "net.minecraft.network.protocol.game.ServerboundClientCommandPacket",
@@ -47,18 +45,20 @@
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.entity.vehicle.ContainerEntity",
   "net.minecraft.world.entity.vehicle.minecart.MinecartHopper",
-  "net.minecraft.world.inventory.ChestMenu",
   "net.minecraft.world.inventory.LecternMenu",
   "net.minecraft.world.inventory.PlayerEnderChestContainer",
   "net.minecraft.world.level.LightLayer",
+  "net.minecraft.world.level.block.ChestBlock",
+  "net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity",
+  "net.minecraft.world.level.block.entity.BarrelBlockEntity",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "WorldTools-fabric-1.3+26.3.jar",
   "published": "2026-10-05"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +89,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 183
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes"
+ },
+ "lacks": 169
 }

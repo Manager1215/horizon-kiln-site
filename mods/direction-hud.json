@@ -1,7 +1,7 @@
 {
  "id": "direction-hud",
  "name": "Direction HUD",
- "version": "5.0.1",
+ "version": "5.0.2",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,18 +9,17 @@
  "author": "SniperXJohn",
  "description": "The Direction HUD mod displays the player's current facing direction (North, South, East, West, etc.) on the top left corner of the screen.",
  "needs": [
-  "Mixin",
   "ClientLevel.getOverworldClockTime()",
   "LocalPlayer.isDeadOrDying()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "direction-hud-5.0.1.jar",
-  "published": "2026-10-09"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "direction-hud-5.0.2.jar",
+  "published": "2026-11-10"
  },
  "reports": {
   "works": 0,
@@ -30,8 +29,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -47,5 +46,9 @@
   "java",
   "minecraft"
  ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
  "lacks": 2
 }

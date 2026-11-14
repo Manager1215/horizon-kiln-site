@@ -9,7 +9,7 @@
  "author": "ActuallyEnbeon",
  "description": "Yet another mod that gives Enchanted Books unique textures based on the enchantments they have.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.DetectedVersion",
   "net.minecraft.core.component.DataComponentPatch.Builder",
   "net.minecraft.data.registries.VanillaRegistries",
@@ -22,14 +22,15 @@
   "Identifier.bySeparator()",
   "ItemStack.<init>()",
   "Items.ENCHANTED_BOOK",
+  "ItemEnchantments.isEmpty()",
   "ItemEnchantments.Mutable.set()"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "enbeons_custom_books-1.0.5+26.3.jar",
   "published": "2026-09-15"
  },
@@ -41,8 +42,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -58,5 +59,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 13
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes"
+ },
+ "lacks": 14
 }

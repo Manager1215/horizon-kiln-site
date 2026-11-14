@@ -9,7 +9,6 @@
  "author": "phantomwing",
  "description": "Squids drop calamari! A vanilla+ mod that fully integrates calamari into systems like fishing, chest loot, villager trades & more.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.loot.v3.LootTableEvents.Loaded",
   "net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition",
   "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditionType",
@@ -26,16 +25,20 @@
   "EntityTypes.GUARDIAN",
   "EntityTypes.SQUID",
   "Item.Properties.food()",
+  "Items.COD",
+  "Items.COOKED_CHICKEN",
+  "Items.COOKED_COD",
   "Items.COOKED_RABBIT",
+  "LootContext.getRandom()",
   "LootPool.Builder.apply()",
   "LootPool.Builder.when()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "calamari-fabric-26.3-1.0.1.jar",
   "published": "2026-10-02"
  },
@@ -47,8 +50,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -64,5 +67,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 19
+ "softOff": {
+  "class": "partial",
+  "why": "data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 23
 }

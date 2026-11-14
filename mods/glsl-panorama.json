@@ -9,7 +9,7 @@
  "author": "magistermaks",
  "description": "This mod allows resource packs to add GLSL shaders for the title screen panorama",
  "needs": [
-  "Mixin",
+  "Mixin: 5 points inside the game's methods",
   "com.mojang.blaze3d.buffers.Std140Builder",
   "com.mojang.blaze3d.buffers.Std140SizeCalculator",
   "com.mojang.blaze3d.pipeline.TextureTarget",
@@ -20,21 +20,22 @@
   "com.mojang.renderpearl.api.pipeline.BindGroupLayout.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
+  "com.mojang.renderpearl.frontend.shaders.GlslCompiler",
   "com.mojang.renderpearl.util.ShaderCompileException",
   "net.minecraft.client.OptionInstance.CaptionBasedToString",
-  "net.minecraft.client.OptionInstance.IntRange",
   "net.minecraft.client.OptionInstance.SliderableValueSet",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
-  "net.minecraft.client.OptionInstance.ValueSet",
   "net.minecraft.client.OptionInstance.ValueUpdateListener",
   "net.minecraft.client.gui.components.OptionsList",
-  "net.minecraft.client.gui.components.StringWidget",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
   "net.minecraft.client.gui.layouts.LayoutSettings",
   "net.minecraft.client.gui.layouts.LinearLayout",
   "net.minecraft.client.gui.layouts.LinearLayout.Orientation",
   "net.minecraft.client.gui.screens.options.OptionsSubScreen",
+  "net.minecraft.client.renderer.CubeMap",
   "net.minecraft.client.renderer.MappableRingBuffer",
+  "net.minecraft.client.renderer.Panorama",
+  "net.minecraft.client.renderer.ShaderManager",
   "net.minecraft.client.renderer.texture.TextureContents",
   "org.apache.commons.io.IOUtils",
   "RenderTarget.blitAndBlendToTexture()",
@@ -49,15 +50,14 @@
   "BindGroupLayout.builder()",
   "ColorTargetState.DEFAULT",
   "RenderPipeline.builder()",
-  "VertexFormat.getVertexSize()",
-  "and 9 more"
+  "and 10 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "glsl-0.3.8.jar",
   "published": "2026-09-18"
  },
@@ -76,5 +76,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 49
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method and @wrap-operation into the game's classes"
+ },
+ "lacks": 50
 }

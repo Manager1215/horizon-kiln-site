@@ -11,14 +11,6 @@
  "needs": [
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-  "net.minecraft.client.gui.components.ObjectSelectionList",
-  "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
-  "net.minecraft.client.gui.components.StringWidget",
   "net.minecraft.client.gui.layouts.GridLayout",
   "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
@@ -29,8 +21,6 @@
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
   "net.minecraft.server.PlayerAdvancements",
   "net.minecraft.server.ServerAdvancementManager",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.tags.EntityTypeTags",
   "net.minecraft.world.entity.Pose",
   "net.minecraft.world.entity.boss.enderdragon.EnderDragonPart",
@@ -46,17 +36,27 @@
   "VertexConsumer.setOverlay()",
   "ServerLifecycleEvents.SERVER_STARTED",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "Button.setPosition()",
-  "Button.Builder.width()",
-  "EditBox.setHint()",
-  "and 50 more"
+  "ClientLevel.clip()",
+  "ClientLevel.getEntitiesOfClass()",
+  "RenderTypes.entityTranslucent()",
+  "CameraRenderState.orientation",
+  "Direction.fromYRot()",
+  "ListTag.add()",
+  "CommonComponents.GUI_BACK",
+  "ByteBufCodecs.collection()",
+  "ByteBufCodecs.stringUtf8()",
+  "SynchedEntityData.defineId()",
+  "SynchedEntityData.get()",
+  "SynchedEntityData.set()",
+  "ResourceKey.streamCodec()",
+  "and 40 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ts_spacetime_traverse-fabric-mc26.3-1.2.2.jar",
   "published": "2026-10-26"
  },
@@ -68,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "minecraft",
   "tokorotenslime"
  ],
- "lacks": 122
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 98
 }

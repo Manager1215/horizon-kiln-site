@@ -1,7 +1,7 @@
 {
  "id": "monkeylib538",
  "name": "MonkeyLib538",
- "version": "5.3.1+fabric+26.2",
+ "version": "5.4.0+fabric+26.2",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,15 +9,12 @@
  "author": "OffsetMonkey538",
  "description": "A library mod for OffsetMonkey538's mods",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Leave",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SyncDataPackContents",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndLevelTick",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.minecraft.server.dedicated.DedicatedServer",
   "FabricCreativeModeTabOutput.acceptAll()",
   "FabricCreativeModeTabOutput.insertAfter()",
@@ -27,18 +24,16 @@
   "ServerLifecycleEvents.SERVER_STARTED",
   "ServerLifecycleEvents.SERVER_STARTING",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerLifecycleEvents.SYNC_DATA_PACK_CONTENTS",
-  "ServerTickEvents.END_LEVEL_TICK",
-  "ServerTickEvents.END_SERVER_TICK"
+  "ServerLifecycleEvents.SYNC_DATA_PACK_CONTENTS"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "monkeylib538-fabric-26.2-5.3.1+fabric+26.2.jar",
-  "published": "2026-09-27"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "monkeylib538-fabric-26.2-5.4.0+fabric+26.2.jar",
+  "published": "2026-11-05"
  },
  "reports": {
   "works": 0,
@@ -48,8 +43,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -66,5 +61,9 @@
   "minecraft",
   "placeholder-api"
  ],
- "lacks": 20
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+ },
+ "lacks": 16
 }

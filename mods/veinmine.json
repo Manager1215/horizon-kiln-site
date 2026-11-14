@@ -9,7 +9,6 @@
  "author": "diaoyugan",
  "description": "Veinmine is a simple, lightweight, multi- loader, and fast-updating Minecraft mod that allows players to efficiently mine connected blocks of the same type.",
  "needs": [
-  "Mixin",
   "com.mojang.blaze3d.platform.cursor.CursorTypes",
   "com.mojang.blaze3d.vertex.DefaultVertexFormat",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
@@ -17,20 +16,13 @@
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Init",
-  "net.minecraft.client.gui.components.Button.Plain",
   "net.minecraft.client.gui.components.MultiLineEditBox",
   "net.minecraft.client.gui.components.MultiLineEditBox.Builder",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
   "net.minecraft.client.renderer.rendertype.LayeringTransform",
   "net.minecraft.client.renderer.rendertype.RenderSetup",
   "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
   "net.minecraft.server.level.ServerPlayerGameMode",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.permissions.Permissions",
   "org.lwjgl.sdl.SDLKeyboard",
   "org.lwjgl.sdl.SDLMouse",
   "JsonSyntaxException.getMessage()",
@@ -46,18 +38,25 @@
   "LevelRenderEvents.COLLECT_SUBMITS",
   "ServerPlayNetworking.registerReceiver()",
   "KeyMapping.resetMapping()",
-  "KeyMapping.saveString()",
   "KeyMapping.setKey()",
   "Minecraft.isMultiplayerServer()",
-  "Minecraft.setScreenAndShow()",
-  "and 43 more"
+  "Font.split()",
+  "GuiGraphicsExtractor.blurBeforeThisStratum()",
+  "GuiGraphicsExtractor.centeredText()",
+  "GuiGraphicsExtractor.requestCursor()",
+  "GuiGraphicsExtractor.text()",
+  "AbstractWidget.preeditUpdated()",
+  "EditBox.preeditUpdated()",
+  "Screen.preeditUpdated()",
+  "GameRenderer.mainCamera()",
+  "and 16 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Veinmine-26.3-1.4.2.1-universal.jar",
   "published": "2026-10-19"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 104
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 56
 }

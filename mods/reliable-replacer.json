@@ -9,18 +9,23 @@
  "author": "evanbones",
  "description": "A lightweight utility for replacing one block with another, both during worldgen and afterward.",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
   "net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys",
   "net.minecraft.server.level.ChunkHolder",
+  "net.minecraft.server.level.ChunkMap",
   "net.minecraft.server.level.WorldGenRegion",
   "net.minecraft.world.level.StructureManager",
   "net.minecraft.world.level.chunk.status.ChunkDependencies",
   "net.minecraft.world.level.chunk.status.ChunkStep",
+  "net.minecraft.world.level.chunk.storage.ChunkSerializer",
+  "net.minecraft.world.level.chunk.storage.SerializableChunkData",
   "net.minecraft.world.level.levelgen.feature.TreeFeature",
+  "net.minecraft.world.level.levelgen.placement.FeaturePlacer",
   "net.minecraft.world.level.levelgen.structure.structures.DesertPyramidPiece",
   "net.minecraft.world.level.levelgen.structure.structures.JungleTemplePiece",
+  "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate",
   "ServerLifecycleEvents.SERVER_STARTING",
   "BlockPos.distSqr()",
   "BlockPos.MutableBlockPos.set()",
@@ -33,31 +38,26 @@
   "BuiltInRegistries.FEATURE_TYPE",
   "Registries.FEATURE_TYPE",
   "Registries.STRUCTURE",
+  "ListTag.getList()",
   "NbtUtils.compareNbt()",
   "MinecraftServer.getAllLevels()",
   "ServerChunkCache.chunkMap",
   "ServerLevel.structureManager()",
   "ChunkPos.getChessboardDistance()",
+  "Level.getLevelData()",
   "Level.getRespawnData()",
   "LevelAccessor.getBiome()",
   "LevelAccessor.getChunk()",
+  "LevelAccessor.getLevelData()",
   "LevelAccessor.hasChunk()",
-  "LevelAccessor.registryAccess()",
-  "LevelAccessor.setBlock()",
-  "ChunkAccess.getAllStarts()",
-  "ChunkAccess.getBlockEntityNbtForSaving()",
-  "ChunkAccess.getSectionYFromSectionIndex()",
-  "ChunkAccess.getSections()",
-  "ChunkAccess.markUnsaved()",
-  "ChunkAccess.removeBlockEntity()",
-  "and 23 more"
+  "and 34 more"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "reliable_replacer-1.8.2+26.3-fabric.jar",
   "published": "2026-10-17"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 63
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 74
 }

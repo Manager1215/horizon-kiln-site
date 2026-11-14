@@ -9,7 +9,7 @@
  "author": "j10a1n15",
  "description": "Hypixel reward claiming in-game.",
  "needs": [
-  "Mixin",
+  "Mixin: 7 points inside the game's methods",
   "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
   "net.minecraft.client.gui.components.WidgetSprites",
   "net.minecraft.client.gui.layouts.FrameLayout",
@@ -17,26 +17,24 @@
   "net.minecraft.client.gui.layouts.LayoutSettings",
   "net.minecraft.client.gui.layouts.LinearLayout",
   "net.minecraft.client.gui.layouts.LinearLayout.Orientation",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
+  "net.minecraft.client.gui.screens.inventory.BookViewScreen",
+  "net.minecraft.client.renderer.LevelRenderer",
+  "net.minecraft.client.renderer.ScreenEffectRenderer",
+  "net.minecraft.client.renderer.extract.LevelExtractor",
+  "net.minecraft.client.renderer.fog.FogRenderer",
+  "net.minecraft.server.dedicated.DedicatedServer",
   "ClientReceiveMessageEvents.ALLOW_GAME",
   "ChatFormatting.stripFormatting()",
-  "Minecraft.schedule()",
   "GuiGraphicsExtractor.blit()",
-  "AbstractWidget.isHoveredOrFocused()",
-  "Screen.addRenderableWidget()",
   "CommonComponents.NEW_LINE",
-  "MutableComponent.withStyle()",
-  "Style.getClickEvent()",
-  "Style.withClickEvent()",
-  "Style.withUnderlined()",
   "GsonHelper.parse()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "rewardclaim-2.6.0.jar",
   "published": "2026-09-22"
  },
@@ -48,8 +46,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -64,5 +62,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 20
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+ },
+ "lacks": 18
 }

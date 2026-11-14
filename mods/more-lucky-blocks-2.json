@@ -9,12 +9,8 @@
  "author": "KING6579",
  "description": "This project adds Lucky Blocks + new items, armor and LOTS OF more Stuff! (NO QUILT)",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDamage",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.world.food.FoodProperties",
   "net.minecraft.world.item.BoneMealItem",
   "net.minecraft.world.item.component.Consumable",
@@ -22,17 +18,13 @@
   "net.minecraft.world.item.component.Consumables",
   "net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect",
   "KeyMapping.matches()",
-  "Minecraft.setScreenAndShow()",
-  "Options.keyInventory",
   "DataComponents.ENCHANTMENT_GLINT_OVERRIDE",
-  "ServerLevel.destroyBlock()",
   "ServerPlayer.addTag()",
   "ServerPlayer.drop()",
   "ServerPlayer.teleportTo()",
   "SoundEvents.ARMOR_EQUIP_NETHERITE",
   "SoundEvents.BOOK_PAGE_TURN",
   "BlockTags.INCORRECT_FOR_NETHERITE_TOOL",
-  "DamageSource.getEntity()",
   "EntityType.spawn()",
   "EntityTypes.BLAZE",
   "EntityTypes.CAVE_SPIDER",
@@ -50,14 +42,21 @@
   "EntityTypes.SKELETON",
   "EntityTypes.VEX",
   "EntityTypes.WARDEN",
-  "and 31 more"
+  "EntityTypes.WITHER",
+  "EntityTypes.WITHER_SKELETON",
+  "EntityTypes.ZOMBIE",
+  "LightningBolt.setPos()",
+  "LightningBolt.setPos()",
+  "LightningBolt.setVisualOnly()",
+  "ItemEntity.setDefaultPickUpDelay()",
+  "and 28 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "more-lucky-blocks-2-too-much-lucky-blocks-1.6.0-26.3.jar",
   "published": "2026-10-14"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 93
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 82
 }

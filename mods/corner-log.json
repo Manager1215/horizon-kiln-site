@@ -9,9 +9,9 @@
  "author": "DvaArtioma",
  "description": "FIxes mega trees to not have bark inside them",
  "needs": [
-  "Mixin",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.level.block.GrowingPlantHeadBlock",
+  "net.minecraft.world.level.block.NetherFungusBlock",
   "net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate",
   "net.minecraft.world.level.levelgen.feature.HugeFungusFeature",
   "net.minecraft.world.level.levelgen.feature.TreeFeature",
@@ -24,18 +24,20 @@
   "BlockPos.MutableBlockPos.move()",
   "BlockPos.MutableBlockPos.setWithOffset()",
   "Direction.Plane.getRandomDirection()",
+  "Registry.get()",
+  "RegistryAccess.lookupOrThrow()",
   "BuiltInRegistries.FEATURE_TYPE",
   "BuiltInRegistries.TRUNK_PLACER_TYPE",
+  "WeightedList.getRandom()",
   "WeightedList.of()",
-  "LevelAccessor.isEmptyBlock()",
   "LevelAccessor.setBlock()",
   "WorldGenLevel.destroyBlock()",
   "WorldGenLevel.isStateAtPosition()",
   "WorldGenLevel.setBlock()",
+  "Blocks.CRIMSON_FUNGUS",
   "Blocks.CRIMSON_STEM",
   "Blocks.NETHER_WART_BLOCK",
   "Blocks.OAK_WOOD",
-  "Blocks.WEEPING_VINES",
   "Blocks.WEEPING_VINES_PLANT",
   "TreeGrower.ACACIA",
   "TreeGrower.AZALEA",
@@ -47,14 +49,14 @@
   "BlockBehaviour.BlockStateBase.canBeReplaced()",
   "ChunkGenerator.getGenDepth()",
   "ContextFloatProviders.COOKING_DEFAULT_SPEED_MULTIPLIER",
-  "ResolvableFloat.fromKey()"
+  "and 1 more"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "CornerLog-1.0.jar",
   "published": "2026-09-23"
  },
@@ -66,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -83,5 +85,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 38
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 41
 }

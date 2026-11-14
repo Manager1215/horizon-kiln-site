@@ -9,12 +9,11 @@
  "author": "grim3212",
  "description": "Adds the Neptune, Phoenix and power staffs that freeze mobs, thaw them and move blocks.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
   "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback",
   "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback.RegistrationHelper",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndLevelTick",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
   "net.minecraft.client.renderer.entity.ThrownItemRenderer",
   "net.minecraft.client.renderer.entity.layers.RenderLayer",
   "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
@@ -30,7 +29,6 @@
   "net.minecraft.world.level.storage.loot.entries.NestedLootTable",
   "net.minecraft.world.phys.EntityHitResult",
   "AttachmentRegistry.create()",
-  "ServerTickEvents.END_LEVEL_TICK",
   "BlockPos.betweenClosedStream()",
   "BlockPos.containing()",
   "BlockPos.distSqr()",
@@ -50,14 +48,15 @@
   "Entity.getAttachedOrElse()",
   "Entity.getTicksFrozen()",
   "Entity.getTicksRequiredToFreeze()",
-  "and 30 more"
+  "Entity.hasAttached()",
+  "and 29 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "assortedstaffs-fabric-26.3-2.0.0.jar",
   "published": "2026-10-24"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 70
+ "softOff": {
+  "class": "partial",
+  "why": "data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 69
 }

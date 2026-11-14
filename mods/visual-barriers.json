@@ -9,17 +9,17 @@
  "author": "Bluebird",
  "description": "See barriers with the press of a key. There is no registry mismatch meaning you can use it in singleplayer without others needing the mod. Like visible barriers but only barriers",
  "needs": [
-  "Mixin",
   "net.minecraft.client.renderer.extract.LevelExtractor",
+  "net.minecraft.world.level.block.BarrierBlock",
   "Minecraft.levelExtractor",
   "Minecraft.levelRenderer"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "VisualBarriers-1.1-26.3.jar",
   "published": "2026-09-15"
  },
@@ -31,8 +31,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -45,5 +45,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 3
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 4
 }

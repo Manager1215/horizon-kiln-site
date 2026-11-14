@@ -9,37 +9,29 @@
  "author": "Pikajuna",
  "description": "Suomi Tier Tagger on mod joka näyttää pelaajien tier tasot suomalaisesta Minecraft PvP Tierlistasta.\n\nSuomi Tier Tagger is a mod that displays players’ tier levels from the Finnish Minecraft PvP tier list.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.loader.api.metadata.ModOrigin",
   "net.minecraft.client.Screenshot",
   "net.minecraft.client.gui.components.PlayerSkinWidget",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.network.chat.FontDescription",
   "net.minecraft.network.chat.FontDescription.Resource",
   "net.minecraft.world.item.component.ResolvableProfile",
+  "net.minecraft.world.scores.PlayerTeam",
   "NativeImage.setPixel()",
   "ModContainer.getOrigin()",
-  "Minecraft.execute()",
   "Minecraft.getEntityModels()",
   "Minecraft.playerSkinRenderCache()",
-  "Font.plainSubstrByWidth()",
   "Font.split()",
   "GuiGraphicsExtractor.blit()",
   "GuiGraphicsExtractor.text()",
-  "Button.getMessage()",
-  "Button.setAlpha()",
-  "Button.Builder.tooltip()",
-  "EditBox.setBordered()",
   "EditBox.setCentered()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "Screen.mouseReleased()",
-  "Screen.mouseScrolled()",
   "PlayerInfo.getProfile()",
+  "PlayerInfo.getTeam()",
   "PlayerSkinRenderCache.createLookup()",
-  "MutableComponent.setStyle()",
+  "Component.getSiblings()",
   "Style.withFont()",
   "Player.getGameProfile()"
  ],
@@ -47,8 +39,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "suomitiertagger-6.8.0+mc26.3.jar",
   "published": "2026-10-04"
  },
@@ -60,8 +52,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -75,5 +67,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 32
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 24
 }

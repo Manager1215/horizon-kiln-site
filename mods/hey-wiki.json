@@ -10,7 +10,7 @@
  "description": "Press H to open the Minecraft Wiki page of the block/item/entity you're aiming at.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "com.mojang.blaze3d.Blaze3D",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.minecraft.SharedConstants",
@@ -19,21 +19,28 @@
   "net.minecraft.client.gui.components.FocusableTextWidget.BackgroundFill",
   "net.minecraft.client.gui.components.FocusableTextWidget.Builder",
   "net.minecraft.client.gui.components.ImageWidget",
-  "net.minecraft.client.gui.components.ObjectSelectionList",
-  "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
-  "net.minecraft.client.gui.components.StringWidget",
   "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
   "net.minecraft.client.gui.components.debug.DebugScreenEntry",
   "net.minecraft.client.gui.layouts.FrameLayout",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
   "net.minecraft.client.gui.layouts.LayoutSettings",
   "net.minecraft.client.gui.layouts.LinearLayout",
+  "net.minecraft.client.gui.screens.inventory.EffectsInInventory",
+  "net.minecraft.client.gui.screens.inventory.MerchantScreen",
+  "net.minecraft.client.gui.screens.inventory.MerchantScreen.TradeOfferButton",
+  "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
+  "net.minecraft.client.gui.screens.recipebook.RecipeBookPage",
+  "net.minecraft.client.gui.screens.recipebook.RecipeButton",
+  "net.minecraft.client.gui.screens.recipebook.RecipeCollection",
+  "net.minecraft.client.multiplayer.chat.ChatListener",
   "net.minecraft.client.renderer.texture.DynamicTexture",
+  "net.minecraft.client.resources.SplashManager",
   "net.minecraft.client.resources.language.ClientLanguage",
   "net.minecraft.client.server.IntegratedServer",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.entity.decoration.ItemFrame",
+  "net.minecraft.world.inventory.MerchantMenu",
+  "net.minecraft.world.item.crafting.display.SlotDisplayContext",
+  "net.minecraft.world.item.trading.MerchantOffer",
   "net.minecraft.world.level.block.AirBlock",
   "net.minecraft.world.phys.EntityHitResult",
   "org.apache.commons.codec.binary.Hex",
@@ -43,22 +50,15 @@
   "BiMap.size()",
   "JsonArray.spliterator()",
   "NativeImage.read()",
-  "KeyMapping.getTranslatedKeyMessage()",
-  "KeyMapping.isUnbound()",
   "KeyMapping.matches()",
-  "Minecraft.delayTextureReload()",
-  "Minecraft.execute()",
-  "Minecraft.getSingleplayerServer()",
-  "Options.languageCode",
-  "GuiGraphicsExtractor.blit()",
-  "and 37 more"
+  "and 32 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "heywiki-1.9.1+26.3-fabric.jar",
   "published": "2026-09-24"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 77
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 72
 }

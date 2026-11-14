@@ -1,7 +1,7 @@
 {
  "id": "variants-cit",
  "name": "Variants-CIT",
- "version": "5.7.1+26.3",
+ "version": "5.8.1+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,10 +10,19 @@
  "description": "Alternative CIT format for large collections of variants with repeating patterns.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 14 points inside the game's methods",
   "net.minecraft.SharedConstants",
+  "net.minecraft.client.renderer.entity.layers.CapeLayer",
+  "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
+  "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer.TrimTextureKey",
+  "net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer",
+  "net.minecraft.client.renderer.entity.layers.LlamaDecorLayer",
+  "net.minecraft.client.renderer.entity.layers.SimpleEquipmentLayer",
+  "net.minecraft.client.renderer.entity.layers.WingsLayer",
+  "net.minecraft.client.renderer.entity.layers.WolfArmorLayer",
   "net.minecraft.client.resources.language.ClientLanguage",
-  "net.minecraft.commands.arguments.IdentifierArgument",
+  "net.minecraft.client.resources.metadata.texture.PaletteMetadataSection",
+  "net.minecraft.client.resources.palette.PalettedTextureManager.Handle",
   "net.minecraft.network.chat.ComponentSerialization",
   "net.minecraft.server.packs.PackLocationInfo",
   "net.minecraft.server.packs.PackResources.ResourceOutput",
@@ -26,13 +35,15 @@
   "net.minecraft.server.packs.repository.PackCompatibility",
   "net.minecraft.server.packs.repository.PackRepository",
   "net.minecraft.server.packs.repository.PackSource",
+  "net.minecraft.server.packs.repository.RepositorySource",
+  "net.minecraft.server.packs.resources.MultiPackResourceManager",
+  "net.minecraft.server.packs.resources.ReloadableResourceManager",
   "net.minecraft.server.packs.resources.ResourceMetadata",
   "net.minecraft.util.ExtraCodecs.StrictUnboundedMapCodec",
   "net.minecraft.util.InclusiveRange",
   "net.minecraft.world.entity.animal.axolotl.Axolotl",
   "net.minecraft.world.entity.animal.axolotl.Axolotl.Variant",
   "net.minecraft.world.item.JukeboxPlayable",
-  "net.minecraft.world.item.alchemy.PotionContents",
   "net.minecraft.world.item.component.DyedItemColor",
   "net.minecraft.world.item.component.InstrumentComponent",
   "net.minecraft.world.item.component.ItemLore",
@@ -40,27 +51,16 @@
   "net.minecraft.world.level.entity.LevelEntityGetter",
   "Char2ObjectMap.putAll()",
   "Char2ObjectMap.Entry.getValue()",
-  "Object2IntMap.Entry.getKey()",
-  "ModContainer.findPath()",
-  "Minecraft.getResourcePackRepository()",
-  "Minecraft.reloadResourcePacks()",
-  "SharedSuggestionProvider.suggestResource()",
-  "SharedSuggestionProvider.suggestResource()",
-  "DataComponents.AXOLOTL_VARIANT",
-  "DataComponents.BUCKET_ENTITY_DATA",
-  "DataComponents.CUSTOM_NAME",
-  "DataComponents.DAMAGE",
-  "DataComponents.DYED_COLOR",
-  "and 26 more"
+  "and 37 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "variants-cit-5.7.1+26.3.jar",
-  "published": "2026-10-13"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "variants-cit-5.8.1+26.3.jar",
+  "published": "2026-11-06"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 66
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 77
 }

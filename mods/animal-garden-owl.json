@@ -9,7 +9,6 @@
  "author": "Aquarius.playz",
  "description": "Adds owls into the game, that can dance and take a rest on your shoulder.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
@@ -35,7 +34,6 @@
   "net.minecraft.client.renderer.entity.state.AvatarRenderState",
   "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
   "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
-  "net.minecraft.network.chat.contents.PlainTextContents",
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
   "net.minecraft.tags.ItemTags",
@@ -50,14 +48,15 @@
   "net.minecraft.world.entity.SpawnPlacements.SpawnPredicate",
   "net.minecraft.world.entity.TamableAnimal.TamableAnimalPanicGoal",
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
-  "and 80 more"
+  "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
+  "and 77 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "animalgarden-owl-1.2.8-fabric-26.3-0.161.0.jar",
   "published": "2026-09-21"
  },
@@ -70,5 +69,9 @@
  "entrypoints": {},
  "mixins": true,
  "depends": [],
- "lacks": 133
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels; generates in the world"
+ },
+ "lacks": 127
 }

@@ -1,7 +1,7 @@
 {
  "id": "create-fly",
  "name": "Create Fly",
- "version": "26.3-6.0.9-1",
+ "version": "26.3-6.0.9-2",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,7 +10,7 @@
  "description": "Higher version Create mod porting to Fabric",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 140 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.Blaze3D",
   "com.mojang.blaze3d.font.GlyphInfo",
@@ -40,27 +40,27 @@
   "net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariantAttributes",
   "net.fabricmc.fabric.impl.transfer.DebugMessages",
   "net.fabricmc.fabric.impl.transfer.item.ItemVariantImpl",
+  "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
   "net.fabricmc.loader.api.metadata.CustomValue",
   "net.fabricmc.loader.api.metadata.CustomValue.CvObject",
   "net.fabricmc.loader.api.metadata.CustomValue.CvType",
   "net.fabricmc.loader.impl.util.version.StringVersion",
+  "net.minecraft.CrashReport",
   "net.minecraft.CrashReportCategory",
   "net.minecraft.CrashReportCategory.Entry",
   "net.minecraft.IdentifierException",
+  "net.minecraft.ReportedException",
   "net.minecraft.SharedConstants",
-  "net.minecraft.SystemReport",
-  "net.minecraft.advancements.triggers.CriteriaTriggers",
-  "net.minecraft.advancements.triggers.ItemUsedOnLocationTrigger",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "create-fly-26.3-6.0.9-1.jar",
-  "published": "2026-11-05"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "create-fly-26.3-6.0.9-2.jar",
+  "published": "2026-11-07"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -81,6 +81,7 @@
   "client": 1,
   "create_plugin": 1,
   "jei_mod_plugin": 1,
+  "rrv": 1,
   "rrv_client": 1,
   "rei_client": 1,
   "rei_common": 1
@@ -91,5 +92,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 2453
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; generates in the world"
+ },
+ "lacks": 2524
 }

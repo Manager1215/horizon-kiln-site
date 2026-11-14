@@ -11,13 +11,8 @@
  "needs": [
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.util.TriState",
-  "net.minecraft.server.permissions.LevelBasedPermissionSet",
-  "SharedSuggestionProvider.permissions()",
   "MinecraftServer.getProfilePermissions()",
   "ServerPlayer.createCommandSourceStack()",
-  "PermissionLevel.byId()",
-  "PermissionLevel.id()",
-  "PermissionLevel.isEqualOrHigherThan()",
   "NameAndId.<init>()",
   "Entity.createCommandSourceStackForNameResolution()"
  ],
@@ -25,8 +20,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fabric-permissions-api-0.7.0.jar",
   "published": "2026-05-27"
  },
@@ -43,5 +38,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 11
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 6
 }

@@ -9,7 +9,6 @@
  "author": "OffsetMonkey538",
  "description": "Allows for auto-updating resource and data packs at runtime from a git repository.",
  "needs": [
-  "Mixin",
   "io.netty.handler.codec.http.DefaultFullHttpResponse",
   "io.netty.handler.codec.http.FullHttpRequest",
   "io.netty.handler.codec.http.HttpMethod",
@@ -18,9 +17,10 @@
   "net.fabricmc.api.DedicatedServerModInitializer",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.minecraft.server.MinecraftServer.ServerResourcePackInfo",
+  "net.minecraft.server.dedicated.DedicatedServer",
   "net.minecraft.server.dedicated.DedicatedServerProperties",
   "net.minecraft.server.dedicated.DedicatedServerSettings",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
+  "net.minecraft.server.dedicated.Settings",
   "net.minecraft.server.packs.repository.PackRepository",
   "net.minecraft.world.level.storage.LevelResource",
   "org.apache.commons.io.FileUtils",
@@ -29,21 +29,19 @@
   "org.apache.commons.io.file.PathUtils",
   "org.apache.commons.io.filefilter.HiddenFileFilter",
   "ServerLifecycleEvents.SERVER_STARTING",
-  "CommandSourceStack.getPlayerOrException()",
-  "CommandSourceStack.getServer()",
-  "CommandSourceStack.isPlayer()",
   "MinecraftServer.getPackRepository()",
   "MinecraftServer.getServerResourcePack()",
   "MinecraftServer.getWorldPath()",
   "MinecraftServer.reloadResources()",
-  "ServerPlayer.connection"
+  "ServerPlayer.connection",
+  "ServerGamePacketListenerImpl.send()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "git-pack-manager-fabric-26.1-5.3.3+fabric+26.1.jar",
   "published": "2026-09-27"
  },
@@ -65,5 +63,9 @@
   "minecraft",
   "monkeylib538"
  ],
- "lacks": 27
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 26
 }

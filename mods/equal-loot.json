@@ -10,28 +10,28 @@
  "description": "Adds a configurable per player mob loot system",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "net.fabricmc.fabric.api.resource.v1.DataResourceLoader",
   "net.minecraft.core.UUIDUtil",
   "net.minecraft.core.registries.codec.RegistryCodecs",
-  "net.minecraft.server.players.PlayerList",
-  "org.apache.logging.log4j.LogManager",
-  "DefaultedRegistry.wrapAsHolder()",
+  "net.minecraft.world.entity.boss.wither.WitherBoss",
   "FileToIdConverter.registry()",
-  "MinecraftServer.getPlayerList()",
   "SimpleJsonResourceReloadListener.<init>()",
-  "DamageSource.getEntity()",
+  "Entity.<init>()",
   "LivingEntity.damageSources()",
   "LivingEntity.getKillCredit()",
   "LivingEntity.tickCount",
-  "ValueInput.TypedInputList.forEach()"
+  "ItemEntity.getItem()",
+  "Player.getLuck()",
+  "ValueInput.TypedInputList.forEach()",
+  "LootParams.Builder.withLuck()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "equal_loot-26.3-1.1.0-fabric.jar",
   "published": "2026-09-18"
  },
@@ -43,8 +43,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -57,5 +57,9 @@
   "fabric-api",
   "minecraft"
  ],
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
+ },
  "lacks": 14
 }

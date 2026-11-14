@@ -10,15 +10,13 @@
  "description": "Edit and create resource packs without leaving Minecraft",
  "needs": [
   "an access widener",
-  "Mixin",
   "com.mojang.blaze3d.Blaze3D",
   "com.mojang.blaze3d.buffers.Std140Builder",
   "com.mojang.math.Quadrant",
+  "com.mojang.renderpearl.frontend.shaders.GlslCompiler",
   "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
   "net.minecraft.client.gui.components.EditBox.TextFormatter",
   "net.minecraft.client.gui.components.MultiLineTextWidget",
-  "net.minecraft.client.gui.components.StringWidget",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.model.geom.ModelPart.Polygon",
   "net.minecraft.client.model.geom.ModelPart.Vertex",
   "net.minecraft.client.model.geom.ModelPart.Visitor",
@@ -33,32 +31,33 @@
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.client.renderer.texture.MissingTextureAtlasSprite",
   "net.minecraft.client.renderer.texture.SpriteContents.AnimationState",
+  "net.minecraft.client.resources.ClientPackSource",
   "net.minecraft.client.resources.model.cuboid.CuboidFace",
   "net.minecraft.client.resources.model.cuboid.CuboidFace.UVs",
   "net.minecraft.client.resources.model.cuboid.FaceBakery",
   "net.minecraft.network.chat.ComponentUtils",
+  "net.minecraft.server.packs.PackLocationInfo",
+  "net.minecraft.server.packs.PackSelectionConfig",
+  "net.minecraft.server.packs.PathPackResources",
+  "net.minecraft.server.packs.PathPackResources.PathResourcesSupplier",
+  "net.minecraft.server.packs.repository.Pack",
+  "net.minecraft.server.packs.repository.Pack.Position",
+  "net.minecraft.server.packs.repository.Pack.ResourcesSupplier",
   "net.minecraft.server.packs.repository.PackRepository",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.server.packs.repository.PackSource",
+  "net.minecraft.server.packs.repository.RepositorySource",
   "net.minecraft.world.entity.decoration.ArmorStand",
   "net.minecraft.world.entity.vehicle.boat.Boat",
   "net.minecraft.world.entity.vehicle.boat.ChestBoat",
   "net.minecraft.world.entity.vehicle.minecart.Minecart",
-  "net.minecraft.world.item.ArmorStandItem",
-  "net.minecraft.world.item.BoatItem",
-  "net.minecraft.world.item.MinecartItem",
-  "net.minecraft.world.item.SpawnEggItem",
-  "net.minecraft.world.level.block.AirBlock",
-  "net.minecraft.world.level.block.AmethystClusterBlock",
-  "net.minecraft.world.level.block.AnvilBlock",
-  "net.minecraft.world.level.block.BannerBlock",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "livetextureeditor-fabric-3.1.jar",
   "published": "2026-10-30"
  },
@@ -70,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 217
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels"
+ },
+ "lacks": 198
 }

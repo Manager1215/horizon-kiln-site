@@ -9,28 +9,36 @@
  "author": "Motschen",
  "description": "Adds resourcepack features and a GUI to configure OptiFine alternatives more conveniently.",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
   "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
+  "net.minecraft.client.gui.screens.LoadingOverlay",
+  "net.minecraft.client.gui.screens.Overlay",
+  "net.minecraft.client.gui.screens.options.OptionsScreen",
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.client.renderer.texture.ReloadableTexture",
   "net.minecraft.client.renderer.texture.TextureContents",
+  "net.minecraft.client.resources.model.cuboid.CuboidModelElement",
+  "net.minecraft.client.resources.model.cuboid.CuboidModelElement.Deserializer",
   "net.minecraft.server.packs.VanillaPackResources",
   "net.minecraft.util.Util.OS",
   "NativeImage.read()",
   "RenderPipeline.builder()",
   "Minecraft.getVanillaPackResources()",
+  "GuiGraphicsExtractor.blit()",
+  "GuiGraphicsExtractor.blit()",
   "TextureManager.registerAndLoad()",
   "PackResources.getResource()",
+  "Util.getMillis()",
   "Util.getPlatform()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "puzzle-fabric-2.3.1+26.3.jar",
   "published": "2026-09-29"
  },
@@ -42,8 +50,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -56,5 +64,9 @@
   "fabric-api",
   "minecraft"
  ],
- "lacks": 14
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 22
 }

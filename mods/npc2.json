@@ -9,9 +9,6 @@
  "author": "oofman124",
  "description": "more intelligent fabric npcs without being extremely bloated.",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType.Builder",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType.Builder.Mob",
@@ -23,12 +20,6 @@
   "net.minecraft.client.renderer.entity.HumanoidMobRenderer",
   "net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer",
   "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
-  "net.minecraft.gizmos.Gizmos.TemporaryCollection",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.tags.ItemTags",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.entity.ContainerUser",
@@ -50,14 +41,22 @@
   "net.minecraft.world.entity.monster.Creeper",
   "net.minecraft.world.entity.monster.Monster",
   "net.minecraft.world.entity.npc.villager.Villager",
-  "and 73 more"
+  "net.minecraft.world.food.FoodProperties",
+  "net.minecraft.world.item.BowItem",
+  "net.minecraft.world.item.CrossbowItem",
+  "net.minecraft.world.item.SpawnEggItem",
+  "net.minecraft.world.level.block.BedBlock",
+  "net.minecraft.world.level.block.ChestBlock",
+  "net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity",
+  "net.minecraft.world.level.block.entity.ChestBlockEntity",
+  "and 65 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "npc2-0.3.1-alpha+26.3.jar",
   "published": "2026-09-19"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 231
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels"
+ },
+ "lacks": 186
 }

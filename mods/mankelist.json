@@ -11,52 +11,22 @@
  "needs": [
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
-  "net.minecraft.client.gui.components.CycleButton.OnValueChange",
   "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
   "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.nbt.NbtIo",
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.permissions.PermissionCheck",
-  "net.minecraft.server.players.PlayerList",
-  "net.minecraft.world.item.component.BundleContents",
   "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerTickEvents.END_SERVER_TICK",
-  "ServerPlayNetworking.canSend()",
-  "Minecraft.execute()",
-  "Minecraft.setScreenAndShow()",
-  "EditBox.insertText()",
-  "EditBox.setHint()",
-  "Screen.mouseClicked()",
-  "CommandSourceStack.getServer()",
-  "CommandSourceStack.getTextName()",
-  "Commands.LEVEL_GAMEMASTERS",
-  "Commands.hasPermission()",
-  "DataComponents.BUNDLE_CONTENTS",
-  "FriendlyByteBuf.readUtf()",
-  "FriendlyByteBuf.readVarInt()",
-  "FriendlyByteBuf.writeBoolean()",
-  "FriendlyByteBuf.writeUtf()",
-  "FriendlyByteBuf.writeVarInt()",
-  "MutableComponent.withStyle()",
-  "Style.withClickEvent()",
-  "Style.withHoverEvent()",
-  "CustomPacketPayload.codec()",
-  "and 8 more"
+  "NbtIo.readCompressed()",
+  "MinecraftServer.getAllLevels()",
+  "MinecraftServer.isDedicatedServer()",
+  "ServerPlayer.getGameProfile()",
+  "Items.BARRIER",
+  "LevelChunk.getBlockEntities()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "mankelist-1.0.1+26.3.jar",
   "published": "2026-10-04"
  },
@@ -68,8 +38,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +56,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 48
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels"
+ },
+ "lacks": 11
 }

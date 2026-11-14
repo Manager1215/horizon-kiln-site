@@ -9,16 +9,17 @@
  "author": "creoii",
  "description": "Rain passes through Leaves and other perforated blocks",
  "needs": [
-  "Mixin",
+  "Mixin: 4 points inside the game's methods",
+  "net.minecraft.client.renderer.WeatherEffectRenderer",
   "net.minecraft.world.level.levelgen.Heightmap.Usage",
   "Heightmap.Types.isOpaque()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "rain-through-leaves-fabric-1.0.3+26.3.jar",
   "published": "2026-11-05"
  },
@@ -35,5 +36,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 2
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 3
 }

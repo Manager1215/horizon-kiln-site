@@ -9,25 +9,18 @@
  "author": "YureHiran",
  "description": "Added a quick configuration UI for Malilib mods, so you don’t have to worry about running out of hotkeys anymore",
  "needs": [
-  "Mixin",
   "com.mojang.blaze3d.platform.TextInputManager",
   "com.mojang.blaze3d.platform.cursor.CursorTypes",
   "com.mojang.blaze3d.vertex.BufferBuilder",
   "com.mojang.blaze3d.vertex.MeshData",
+  "net.minecraft.client.renderer.LevelRenderer",
   "net.minecraft.client.renderer.state.level.BlockBreakingRenderState",
-  "org.apache.logging.log4j.Logger",
   "ImmutableList.size()",
   "KeyMapping.matches()",
-  "KeyMapping.saveString()",
   "KeyMapping.setDown()",
   "Minecraft.gameDirectory",
-  "Minecraft.gameMode",
-  "Minecraft.setScreenAndShow()",
   "Minecraft.textInputManager()",
-  "Options.keyInventory",
   "GuiGraphicsExtractor.requestCursor()",
-  "Screen.charTyped()",
-  "ClientPacketListener.sendChat()",
   "GameRenderer.mainCamera()",
   "LevelRenderState.blockBreakingRenderStates",
   "ARGB.srgbLerp()",
@@ -45,12 +38,12 @@
   "VoxelShape.bounds()",
   "VoxelShape.isEmpty()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fast-masa-config-26.3-5.4.0.jar",
   "published": "2026-10-31"
  },
@@ -62,8 +55,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -80,5 +73,9 @@
   "malilib",
   "minecraft"
  ],
- "lacks": 34
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 28
 }

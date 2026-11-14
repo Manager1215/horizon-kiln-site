@@ -1,0 +1,67 @@
+{
+ "id": "cloth-cloaks",
+ "name": "Cloth Cloaks",
+ "version": "2.1",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/cloth-cloaks",
+ "author": "pheological",
+ "description": "A mod that adds realistic physics to capes, very similar to Lunar Client's Cloth Capes feature. As tr7zw once said, the cape shouldn't be a static slab.",
+ "needs": [
+  "net.fabricmc.fabric.api.client.screen.v1.Screens",
+  "net.minecraft.client.model.HumanoidModel",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.layers.CapeLayer",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.resources.model.EquipmentClientInfo",
+  "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
+  "VertexConsumer.addVertex()",
+  "VertexConsumer.setLight()",
+  "VertexConsumer.setNormal()",
+  "VertexConsumer.setOverlay()",
+  "ModelPart.translateAndRotate()",
+  "AbstractClientPlayer.isCrouching()",
+  "AbstractClientPlayer.yBodyRot"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "clothcapes-2.1+26.3.jar",
+  "published": "2026-11-14"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": true,
+ "depends": [
+  "cloth-config",
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 14
+}

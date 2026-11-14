@@ -9,16 +9,16 @@
  "author": "DutchMTC",
  "description": "A client side GUI Mod to edit Items, Entities, Potions, Fireworks + More!",
  "needs": [
-  "Mixin",
+  "Mixin: 5 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
+  "com.mojang.blaze3d.buffers.Std140Builder",
+  "com.mojang.blaze3d.platform.TextInputManager",
   "com.mojang.math.Transformation",
   "net.fabricmc.fabric.api.command.v2.ArgumentTypeRegistry",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
   "net.minecraft.advancements.predicates.BlockPredicate",
   "net.minecraft.advancements.predicates.DataComponentMatchers",
   "net.minecraft.client.StringSplitter",
@@ -27,8 +27,10 @@
   "net.minecraft.client.gui.components.CommandSuggestions",
   "net.minecraft.client.gui.components.CommandSuggestions.SuggestionsList",
   "net.minecraft.client.gui.components.EditBox.TextFormatter",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.font.TextFieldHelper",
+  "net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen",
+  "net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen.GameModeIcon",
+  "net.minecraft.client.gui.screens.inventory.AbstractSignEditScreen",
   "net.minecraft.client.gui.screens.inventory.BookEditScreen",
   "net.minecraft.client.gui.screens.inventory.BookSignScreen",
   "net.minecraft.client.gui.screens.inventory.BookViewScreen",
@@ -37,13 +39,11 @@
   "net.minecraft.client.model.geom.ModelLayers",
   "net.minecraft.client.model.object.banner.BannerFlagModel",
   "net.minecraft.client.multiplayer.ClientSuggestionProvider",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
   "net.minecraft.client.multiplayer.chat.ChatListener",
   "net.minecraft.client.renderer.blockentity.AbstractSignRenderer",
   "net.minecraft.client.renderer.entity.state.DisplayEntityRenderState",
   "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
   "net.minecraft.client.renderer.texture.DynamicTexture",
-  "net.minecraft.commands.arguments.GameProfileArgument",
   "net.minecraft.commands.arguments.ResourceArgument",
   "net.minecraft.commands.synchronization.SingletonArgumentInfo",
   "net.minecraft.commands.synchronization.SuggestionProviders",
@@ -56,8 +56,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "EditEverything-26.3.0.jar",
   "published": "2026-10-13"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 482
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+ },
+ "lacks": 418
 }

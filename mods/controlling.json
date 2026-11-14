@@ -10,12 +10,9 @@
  "description": "Adds a search bar to the Key-Bindings menu",
  "needs": [
   "an access widener",
-  "Mixin",
   "net.minecraft.client.gui.components.FocusableTextWidget",
   "net.minecraft.client.gui.components.FocusableTextWidget.BackgroundFill",
   "net.minecraft.client.gui.components.FocusableTextWidget.Builder",
-  "net.minecraft.client.gui.components.StringWidget",
-  "net.minecraft.client.gui.components.Tooltip",
   "net.minecraft.client.gui.layouts.GridLayout",
   "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
@@ -23,32 +20,19 @@
   "net.minecraft.client.gui.layouts.LinearLayout",
   "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
   "net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner",
+  "net.minecraft.client.gui.screens.options.OptionsSubScreen",
   "net.minecraft.client.gui.screens.options.controls.KeyBindsList",
   "net.minecraft.client.gui.screens.options.controls.KeyBindsList.Entry",
   "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
-  "net.minecraft.network.chat.contents.TranslatableContents",
   "net.minecraft.util.CommonColors",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
   "org.lwjgl.sdl.SDLScancode",
   "InputConstants.getKey()",
   "InputConstants.Key.getDisplayName()",
-  "KeyMapping.getDefaultKey()",
-  "KeyMapping.getTranslatedKeyMessage()",
-  "KeyMapping.isDefault()",
-  "KeyMapping.isUnbound()",
-  "KeyMapping.same()",
   "KeyMapping.setKey()",
   "KeyMapping.Category.label()",
-  "Options.keyMappings",
   "GuiGraphicsExtractor.tooltip()",
-  "Button.getMessage()",
-  "Button.setPosition()",
-  "Button.setTooltip()",
-  "Button.Builder.createNarration()",
   "CommonComponents.GUI_DONE",
   "CommonComponents.NEW_LINE",
-  "Component.getContents()",
   "Component.getVisualOrderText()",
   "Util.getMillis()"
  ],
@@ -56,8 +40,8 @@
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Controlling-fabric-26.3-26.3.4.jar",
   "published": "2026-10-09"
  },
@@ -76,5 +60,9 @@
   "minecraft",
   "searchables"
  ],
- "lacks": 40
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 25
 }

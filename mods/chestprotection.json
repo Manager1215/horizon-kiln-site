@@ -9,7 +9,7 @@
  "author": "FBanna",
  "description": "Locks chests or creates a trading chest!",
  "needs": [
-  "Mixin",
+  "Mixin: 15 points inside the game's methods",
   "com.mojang.authlib.GameProfileRepository",
   "com.mojang.authlib.HttpDiscoveryService",
   "com.mojang.authlib.exceptions.MinecraftClientException",
@@ -25,14 +25,15 @@
   "net.minecraft.core.UUIDUtil",
   "net.minecraft.core.component.DataComponentPatch.Builder",
   "net.minecraft.server.network.Filterable",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.item.WrittenBookItem",
+  "net.minecraft.world.item.component.ResolvableProfile.Static",
   "net.minecraft.world.item.component.WrittenBookContent",
   "net.minecraft.world.level.block.ChestBlock",
   "net.minecraft.world.level.block.DoubleBlockCombiner",
   "net.minecraft.world.level.block.DoubleBlockCombiner.BlockType",
   "net.minecraft.world.level.block.LightBlock",
+  "net.minecraft.world.level.block.entity.SignBlockEntity",
   "GlobalPos.isCloseEnough()",
   "NonNullList.iterator()",
   "NonNullList.toArray()",
@@ -49,15 +50,14 @@
   "DataComponents.MAX_DAMAGE",
   "DataComponents.MAX_STACK_SIZE",
   "DataComponents.RARITY",
-  "DataComponents.REPAIRABLE",
-  "and 36 more"
+  "and 33 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "chestprotection-2.0.7.jar",
   "published": "2026-09-28"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 76
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 73
 }

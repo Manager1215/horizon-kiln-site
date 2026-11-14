@@ -9,18 +9,17 @@
  "author": "deborn",
  "description": "Renaming now always cost 1 level, regardless of the item's enchantments! Fixes MC-122763.",
  "needs": [
-  "Mixin",
   "net.minecraft.util.StringUtil",
   "net.minecraft.world.inventory.AnvilMenu",
   "net.minecraft.world.inventory.DataSlot",
   "DataComponents.CUSTOM_NAME"
  ],
- "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "one-level-renaming-1.0.0.jar",
   "published": "2026-08-20"
  },
@@ -37,5 +36,9 @@
   "java",
   "minecraft"
  ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
  "lacks": 4
 }

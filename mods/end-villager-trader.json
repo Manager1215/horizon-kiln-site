@@ -9,16 +9,12 @@
  "author": "Leonxkingx",
  "description": "Adds a new villager trader in the End, offering End-related items, including a new Shulker Armor",
  "needs": [
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.object.builder.v1.world.poi.PoiHelper",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.entity.npc.villager.VillagerProfession",
-  "ServerTickEvents.END_SERVER_TICK",
   "BuiltInRegistries.VILLAGER_PROFESSION",
   "Registries.POINT_OF_INTEREST_TYPE",
   "Registries.TRADE_SET",
   "Registries.VILLAGER_PROFESSION",
-  "MinecraftServer.getPlayerList()",
   "SoundEvents.SHULKER_BOX_OPEN",
   "Items.ENDER_EYE",
   "SoundType.BONE_BLOCK"
@@ -27,8 +23,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "end_villager_trader-1.0.0 Fabric 26.3.jar",
   "published": "2026-10-21"
  },
@@ -40,8 +36,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -56,5 +52,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 13
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 9
 }

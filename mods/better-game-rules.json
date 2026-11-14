@@ -1,0 +1,88 @@
+{
+ "id": "better-game-rules",
+ "name": "Better Game Rules",
+ "version": "1.0.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/better-game-rules",
+ "author": "KoroWin",
+ "description": "Improves the Game Rules menu: type filters, rule pinning, presets and a reworked layout.",
+ "needs": [
+  "net.minecraft.client.gui.components.LoadingDotsWidget",
+  "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
+  "net.minecraft.client.gui.layouts.LayoutSettings",
+  "net.minecraft.client.gui.layouts.LinearLayout",
+  "net.minecraft.client.gui.screens.options.InWorldGameRulesScreen",
+  "net.minecraft.client.gui.screens.worldselection.AbstractGameRulesScreen",
+  "net.minecraft.client.gui.screens.worldselection.WorldCreationGameRulesScreen",
+  "net.minecraft.network.chat.ComponentUtils",
+  "net.minecraft.network.protocol.game.ServerboundClientCommandPacket",
+  "net.minecraft.network.protocol.game.ServerboundClientCommandPacket.Action",
+  "net.minecraft.network.protocol.game.ServerboundSetGameRulePacket",
+  "net.minecraft.network.protocol.game.ServerboundSetGameRulePacket.Entry",
+  "Font.split()",
+  "GuiGraphicsExtractor.setTooltipForNextFrame()",
+  "EditBox.SEARCH_HINT_STYLE",
+  "ClientPacketListener.send()",
+  "BuiltInRegistries.GAME_RULE",
+  "CommonComponents.GUI_BACK",
+  "CommonComponents.GUI_CANCEL",
+  "CommonComponents.GUI_DONE",
+  "Component.getVisualOrderText()",
+  "GameRule.category()",
+  "GameRule.defaultValue()",
+  "GameRule.deserialize()",
+  "GameRule.gameRuleType()",
+  "GameRule.getDescriptionId()",
+  "GameRule.id()",
+  "GameRule.serialize()",
+  "GameRuleCategory.getDescriptionId()",
+  "GameRuleCategory.label()",
+  "GameRuleMap.get()",
+  "GameRuleMap.keySet()",
+  "GameRuleMap.of()",
+  "GameRuleMap.set()",
+  "GameRules.availableRules()",
+  "GameRules.get()",
+  "GameRules.set()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "bettergamerules-1.0.0+26.3-fabric.jar",
+  "published": "2026-10-08"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 37
+}

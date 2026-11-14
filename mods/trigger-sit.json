@@ -9,16 +9,10 @@
  "author": "LostGPU",
  "description": "Sit anywhere in Minecraft with a simple command or keybind! Or simply sit by right clicking on stairs and slabs.",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.entity.decoration.ArmorStand",
   "net.minecraft.world.level.block.state.properties.Half",
   "net.minecraft.world.level.block.state.properties.SlabType",
-  "ServerTickEvents.END_SERVER_TICK",
-  "MinecraftServer.getPlayerList()",
   "ServerPlayer.isPassenger()",
-  "ServerPlayer.sendSystemMessage()",
   "ServerPlayer.startRiding()",
   "ServerPlayer.stopRiding()",
   "ServerPlayer.teleportTo()",
@@ -29,12 +23,12 @@
   "VoxelShape.isEmpty()",
   "VoxelShape.max()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "TriggerSit-1.0.24.jar",
   "published": "2026-09-15"
  },
@@ -46,8 +40,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -63,5 +57,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 18
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 13
 }

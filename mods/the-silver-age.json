@@ -10,7 +10,7 @@
  "description": "A vanilla+ expansion that introduces (oxidizable) silver, designed and polished to feel like an official game drop. Includes compatibility with Create & Farmer's Delight!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.StartDataPackReload",
@@ -22,6 +22,8 @@
   "net.minecraft.client.color.item.ItemTintSource",
   "net.minecraft.client.color.item.ItemTintSources",
   "net.minecraft.client.gui.screens.LevelLoadingScreen",
+  "net.minecraft.client.gui.screens.packs.PackSelectionModel",
+  "net.minecraft.client.gui.screens.packs.PackSelectionModel.Entry",
   "net.minecraft.client.particle.FlameParticle",
   "net.minecraft.client.particle.FlameParticle.Provider",
   "net.minecraft.client.renderer.entity.ArrowRenderer",
@@ -30,35 +32,33 @@
   "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty",
   "net.minecraft.core.dispenser.OptionalDispenseItemBehavior",
   "net.minecraft.resources.RegistryOps.RegistryInfoLookup",
+  "net.minecraft.server.level.WorldGenRegion",
   "net.minecraft.server.packs.repository.PackRepository",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.util.valueproviders.ConstantInt",
   "net.minecraft.world.damagesource.DamageTypes",
   "net.minecraft.world.entity.EntitySelector",
-  "net.minecraft.world.entity.EquipmentSlot.Type",
+  "net.minecraft.world.entity.ai.goal.Goal",
+  "net.minecraft.world.entity.ai.goal.Goal.Flag",
+  "net.minecraft.world.entity.ai.goal.GoalSelector",
+  "net.minecraft.world.entity.ai.goal.WrappedGoal",
+  "net.minecraft.world.entity.ai.navigation.PathNavigation",
+  "net.minecraft.world.entity.ai.util.DefaultRandomPos",
+  "net.minecraft.world.entity.ai.util.RandomPos",
   "net.minecraft.world.entity.ai.village.poi.PoiTypes",
   "net.minecraft.world.entity.monster.Enemy",
+  "net.minecraft.world.entity.monster.zombie.Zombie",
   "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
   "net.minecraft.world.entity.projectile.arrow.AbstractArrow.Pickup",
   "net.minecraft.world.item.ArrowItem",
   "net.minecraft.world.item.equipment.trim.TrimMaterial",
-  "net.minecraft.world.item.equipment.trim.TrimMaterials",
-  "net.minecraft.world.level.block.ChainBlock",
-  "net.minecraft.world.level.block.CopperBulbBlock",
-  "net.minecraft.world.level.block.IronBarsBlock",
-  "net.minecraft.world.level.block.LanternBlock",
-  "net.minecraft.world.level.block.LightningRodBlock",
-  "net.minecraft.world.level.block.TorchBlock",
-  "net.minecraft.world.level.block.WallTorchBlock",
-  "net.minecraft.world.level.block.WaterloggedTransparentBlock",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "thesilverage-fabric-26.3-1.4.0.jar",
   "published": "2026-11-04"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -90,5 +90,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 195
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; generates in the world"
+ },
+ "lacks": 218
 }

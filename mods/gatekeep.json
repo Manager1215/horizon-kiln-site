@@ -9,15 +9,16 @@
  "author": "sanctuary",
  "description": "Remove all chat signing related indicators",
  "needs": [
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
+  "net.minecraft.client.gui.components.ChatComponent.1",
   "net.minecraft.client.gui.components.ChatComponent.ChatGraphicsAccess"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "gatekeep-fabric-26.1-1.4.3.jar",
   "published": "2026-03-24"
  },
@@ -33,5 +34,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 1
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 2
 }

@@ -9,17 +9,17 @@
  "author": "AceOverDeuce",
  "description": "Something now waits far from spawn. Your compass knows where.\nWhat you do when you find it is your own affair.",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
+  "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
+  "net.minecraft.server.dedicated.DedicatedServer",
   "net.minecraft.server.level.ServerPlayerGameMode",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.tags.StructureTags",
   "net.minecraft.world.item.component.LodestoneTracker",
   "net.minecraft.world.level.StructureManager",
   "net.minecraft.world.level.block.VaultBlock",
-  "Commands.getDispatcher()",
-  "Commands.performPrefixedCommand()",
+  "BlockPos.containing()",
   "BlockPos.mutable()",
+  "BlockPos.toShortString()",
   "BlockPos.MutableBlockPos.move()",
   "BlockPos.MutableBlockPos.set()",
   "DefaultedRegistry.iterator()",
@@ -28,36 +28,35 @@
   "DataComponents.LODESTONE_TRACKER",
   "MinecraftServer.createCommandSourceStack()",
   "MinecraftServer.getAllLevels()",
-  "MinecraftServer.getCommands()",
   "MinecraftServer.getTickCount()",
   "MinecraftServer.halt()",
   "MinecraftServer.overworld()",
   "ClientInformation.createDefault()",
+  "ServerLevel.findNearestMapStructure()",
   "ServerLevel.getChunk()",
   "ServerLevel.getHeight()",
   "ServerLevel.getLevelData()",
   "ServerLevel.getMinY()",
   "ServerLevel.getOverworldClockTime()",
+  "ServerLevel.getSeed()",
   "ServerLevel.structureManager()",
   "ServerPlayer.<init>()",
   "ServerPlayer.addItem()",
   "ServerPlayer.addTag()",
   "ServerPlayer.gameMode",
-  "ServerPlayer.sendSystemMessage()",
+  "ServerPlayer.getSleepingPos()",
   "ServerPlayer.startSleeping()",
   "ServerPlayer.stopSleepInBed()",
   "ServerPlayer.teleportTo()",
   "CommonListenerCookie.createInitial()",
-  "PermissionLevel.byId()",
-  "SoundEvents.WARDEN_SONIC_BOOM",
-  "and 27 more"
+  "and 28 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "clearness-fabric-26.3-3.0.0.jar",
   "published": "2026-10-25"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -83,5 +82,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 148
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 161
 }

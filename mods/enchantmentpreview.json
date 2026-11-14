@@ -9,7 +9,8 @@
  "author": "SuperrSohrab",
  "description": "See what enchants you get before wasting your levels on random enchants",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
+  "net.minecraft.client.gui.screens.inventory.EnchantmentScreen",
   "net.minecraft.core.HolderSet.Named",
   "net.minecraft.core.IdMap",
   "net.minecraft.tags.EnchantmentTags",
@@ -20,6 +21,7 @@
   "Registry.asHolderIdMap()",
   "Registry.get()",
   "RegistryAccess.lookupOrThrow()",
+  "Enchantment.getFullname()",
   "EnchantmentHelper.getEnchantmentCost()",
   "EnchantmentHelper.selectEnchantment()",
   "Blocks.ENCHANTING_TABLE"
@@ -28,8 +30,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "enchantment-preview-1.0.0+mc26.3.jar",
   "published": "2026-10-24"
  },
@@ -41,8 +43,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -58,5 +60,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 13
+ "softOff": {
+  "class": "restart",
+  "why": "@modify-arg Kiln doesn't guard"
+ },
+ "lacks": 15
 }

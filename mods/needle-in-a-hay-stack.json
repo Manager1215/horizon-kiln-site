@@ -9,18 +9,24 @@
  "author": "Sir_Cow",
  "description": "Find the needle in a hay stack!",
  "needs": [
-  "Mixin",
-  "CommandSourceStack.isPlayer()",
+  "net.minecraft.server.PlayerAdvancements",
+  "net.minecraft.server.ServerAdvancementManager",
+  "net.minecraft.world.item.component.ItemLore",
+  "DataComponents.CUSTOM_NAME",
+  "DataComponents.LORE",
+  "MinecraftServer.getAdvancements()",
+  "ServerPlayer.gameMode()",
   "ServerPlayer.get()",
+  "ServerPlayer.getAdvancements()",
   "ServerPlayer.setComponent()",
   "CustomData.copyTag()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "needleinahaystack-fabric-26.3-1.0.0.jar",
   "published": "2026-09-23"
  },
@@ -32,8 +38,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -48,5 +54,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 4
+ "softOff": {
+  "class": "partial",
+  "why": "data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 11
 }

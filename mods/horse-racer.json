@@ -9,25 +9,20 @@
  "author": "bioji",
  "description": "Adds individual growth stats (Speed, Stamina, Power, Guts) and skills to horses, with breeding, stamina-based boosting, and a full racing system.\n馬に個体値(スピード・スタミナ・パワー・根性)とスキルを追加し、繁殖・ブースト・レースシステムを実装するMod。",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
   "net.minecraft.client.gui.screens.inventory.HorseInventoryScreen",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.entity.animal.equine.Horse",
   "net.minecraft.world.level.block.LeverBlock",
   "net.minecraft.world.phys.EntityHitResult",
   "AttachmentRegistry.create()",
-  "ServerTickEvents.END_SERVER_TICK",
-  "Minecraft.hitResult",
   "ClientLevel.getEntitiesOfClass()",
   "LocalPlayer.getBoundingBox()",
   "LocalPlayer.getVehicle()",
+  "EntityRenderState.nameTag",
   "BlockPos.toShortString()",
   "MinecraftServer.execute()",
-  "MinecraftServer.getPlayerList()",
   "ServerBossEvent.setColor()",
   "ServerLevel.getEntitiesOfClass()",
   "ServerPlayer.distanceTo()",
@@ -36,18 +31,20 @@
   "BlockTags.FENCES",
   "RandomSource.nextLong()",
   "AttributeInstance.addOrUpdateTransientModifier()",
+  "AttributeInstance.addPermanentModifier()",
   "AttributeInstance.getModifier()",
   "AttributeInstance.removeModifier()",
+  "Attributes.NAME_TAG_DISTANCE",
   "Blocks.GOLD_BLOCK",
   "AABB.inflate()",
   "AABB.intersects()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "horse_mod-1.1.3.jar",
   "published": "2026-10-08"
  },
@@ -59,8 +56,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -76,5 +73,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 31
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 29
 }

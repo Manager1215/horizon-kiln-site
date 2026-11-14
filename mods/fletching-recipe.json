@@ -10,7 +10,7 @@
  "description": "Craft more arrows with same amount of ingredient with Fletching Recipe. \nCraft Explosive arrows with Fletching Table and blow your enemy up!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.client.rendering.v1.ExtractItemDecorationsCallback",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
@@ -18,30 +18,27 @@
   "net.minecraft.IdentifierException",
   "net.minecraft.client.gui.screens.inventory.CyclingSlotBackground",
   "net.minecraft.core.RegistrationInfo",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.SimpleMenuProvider",
+  "net.minecraft.world.entity.projectile.ProjectileDeflection",
   "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
   "net.minecraft.world.inventory.ContainerLevelAccess",
   "net.minecraft.world.inventory.ResultContainer",
   "net.minecraft.world.inventory.ResultSlot",
   "net.minecraft.world.item.ArrowItem",
   "net.minecraft.world.item.LingeringPotionItem",
-  "net.minecraft.world.item.alchemy.PotionContents",
   "net.minecraft.world.phys.EntityHitResult",
   "ServerLifecycleEvents.SERVER_STARTED",
   "ServerLifecycleEvents.SERVER_STOPPING",
   "ServerLifecycleEvents.SYNC_DATA_PACK_CONTENTS",
-  "PacketSender.disconnect()",
-  "Minecraft.execute()",
   "GuiGraphicsExtractor.fakeItem()",
   "AbstractContainerScreen.containerTick()",
   "MappedRegistry.<init>()",
   "MappedRegistry.freeze()",
   "MappedRegistry.register()",
-  "DataComponents.POTION_CONTENTS",
   "ServerLevel.enabledFeatures()",
   "ServerPlayer.connection",
+  "ServerGamePacketListenerImpl.send()",
   "Entity.asLivingEntity()",
   "Player.drop()",
   "Player.isWithinBlockInteractionRange()",
@@ -51,14 +48,15 @@
   "Items.ARROW",
   "Items.TIPPED_ARROW",
   "RecipeMap.EMPTY",
-  "and 2 more"
+  "RecipeMap.create()",
+  "Blocks.FLETCHING_TABLE"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "fletchingrecipe-fabric-26.3-26.3.0.2.jar",
   "published": "2026-10-31"
  },
@@ -70,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 42
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 39
 }

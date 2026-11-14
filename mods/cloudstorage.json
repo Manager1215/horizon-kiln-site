@@ -9,29 +9,22 @@
  "author": "thflyer",
  "description": "Build servers. Store millions. Access from anywhere.",
  "needs": [
-  "Mixin",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.fabric.api.object.builder.v1.world.poi.PoiHelper",
   "net.minecraft.core.UUIDUtil",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
+  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
+  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
   "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.entity.npc.villager.VillagerProfession",
   "net.minecraft.world.inventory.ContainerData",
-  "net.minecraft.world.inventory.ContainerInput",
   "net.minecraft.world.inventory.SimpleContainerData",
   "net.minecraft.world.item.BundleItem",
-  "net.minecraft.world.item.component.BundleContents",
   "net.minecraft.world.level.block.Mirror",
   "net.minecraft.world.level.block.ShulkerBoxBlock",
   "net.minecraft.world.level.levelgen.feature.BlockReplacement",
@@ -44,20 +37,26 @@
   "net.minecraft.world.level.storage.loot.providers.number.ints.UniformGenerator",
   "BiomeModifications.addFeature()",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerTickEvents.END_SERVER_TICK",
-  "EditBox.setHint()",
   "Screen.getTooltipFromItem()",
-  "AbstractContainerScreen.charTyped()",
   "AbstractContainerScreen.containerTick()",
   "AbstractContainerScreen.extractContents()",
-  "and 52 more"
+  "AbstractContainerScreen.slotClicked()",
+  "BlockPos.atY()",
+  "NonNullList.iterator()",
+  "NonNullList.stream()",
+  "NonNullList.subList()",
+  "DataComponentPatch.CODEC",
+  "DataComponents.CONTAINER_LOOT",
+  "BuiltInRegistries.FEATURE_TYPE",
+  "BuiltInRegistries.PLACEMENT_MODIFIER_TYPE",
+  "and 45 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "cloudstorage-1.0.4.jar",
   "published": "2026-09-19"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +86,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 99
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+ },
+ "lacks": 85
 }

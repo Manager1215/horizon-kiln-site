@@ -9,12 +9,9 @@
  "author": "Sunekaer",
  "description": "Adds useful commands and improves the vanilla structure blocks - ToolKit",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.command.v2.ArgumentTypeRegistry",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-  "net.minecraft.commands.arguments.DimensionArgument",
   "net.minecraft.commands.arguments.ResourceArgument",
   "net.minecraft.commands.arguments.StringRepresentableArgument",
   "net.minecraft.commands.arguments.blocks.BlockPredicateArgument",
@@ -22,24 +19,13 @@
   "net.minecraft.commands.synchronization.SingletonArgumentInfo",
   "net.minecraft.commands.synchronization.SuggestionProviders",
   "net.minecraft.nbt.SnbtPrinterTagVisitor",
-  "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
-  "net.minecraft.server.permissions.Permissions",
   "net.minecraft.world.clock.ServerClockManager",
   "net.minecraft.world.clock.WorldClocks",
   "net.minecraft.world.entity.monster.Monster",
   "net.minecraft.world.level.block.state.pattern.BlockInWorld",
   "ServerPlayerEvents.JOIN",
   "ServerLifecycleEvents.SERVER_STOPPING",
-  "ServerTickEvents.END_SERVER_TICK",
-  "CommandSourceStack.getPlayerOrException()",
-  "CommandSourceStack.getServer()",
   "CommandSourceStack.registryAccess()",
-  "EntityArgument.entities()",
-  "EntityArgument.getEntities()",
-  "EntityArgument.getPlayer()",
-  "EntityArgument.player()",
   "BlockPos.betweenClosedStream()",
   "Holder.getRegisteredName()",
   "Holder.tags()",
@@ -50,14 +36,27 @@
   "DataComponents.CUSTOM_NAME",
   "TypedDataComponent.createUnchecked()",
   "TypedDataComponent.encodeValue()",
-  "and 40 more"
+  "ListTag.add()",
+  "MinecraftServer.clockManager()",
+  "MinecraftServer.execute()",
+  "MinecraftServer.overworld()",
+  "MinecraftServer.registryAccess()",
+  "MinecraftServer.setWeatherParameters()",
+  "ServerLevel.getAllEntities()",
+  "ServerLevel.getChunk()",
+  "ServerLevel.getGameRules()",
+  "ServerLevel.getHeightmapPos()",
+  "ServerLevel.getMaxY()",
+  "ServerLevel.getMinY()",
+  "ServerLevel.getPlayers()",
+  "and 34 more"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ToolKit-fabric-26.3.0.1.jar",
   "published": "2026-09-19"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -84,5 +83,9 @@
   "fabric-api",
   "minecraft"
  ],
- "lacks": 96
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 76
 }

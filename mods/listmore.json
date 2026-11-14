@@ -9,7 +9,7 @@
  "author": "fenad2",
  "description": "It provides some minor quality-of-life features",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "com.mojang.blaze3d.vertex.BufferBuilder",
   "com.mojang.blaze3d.vertex.MeshData",
   "net.minecraft.client.multiplayer.ClientChunkCache",
@@ -23,14 +23,14 @@
   "net.minecraft.world.level.block.entity.FurnaceBlockEntity",
   "net.minecraft.world.phys.EntityHitResult",
   "Minecraft.getSingleplayerServer()",
-  "Minecraft.hitResult",
   "ClientLevel.getChunkSource()",
   "ClientLevel.getEntitiesOfClass()",
   "ClientLevel.isInWorldBounds()",
   "ClientLevel.recipeAccess()",
+  "ClientPacketListener.send()",
+  "MultiPlayerGameMode.stopDestroyBlock()",
   "LocalPlayer.distanceToSqr()",
   "LocalPlayer.getBoundingBox()",
-  "LocalPlayer.getLookAngle()",
   "LocalPlayer.getTicksUsingItem()",
   "LocalPlayer.getUseItem()",
   "LocalPlayer.isUsingItem()",
@@ -47,15 +47,14 @@
   "Level.getEntities()",
   "LevelChunk.getBlockEntities()",
   "AABB.clip()",
-  "AABB.inflate()",
-  "HitResult.getType()"
+  "AABB.inflate()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ListMore-Fabric-1.0.8-mc26.3.jar",
   "published": "2026-10-16"
  },
@@ -67,8 +66,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +84,9 @@
   "malilib",
   "minecraft"
  ],
- "lacks": 39
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 38
 }

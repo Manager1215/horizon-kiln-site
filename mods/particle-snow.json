@@ -9,25 +9,28 @@
  "author": "Talek",
  "description": "A gentle snowfall mod that makes Minecraft winters feel warm, quiet, and comforting. Snow drifts softly around you, creating a peaceful, cozy atmosphere!",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
   "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
-  "net.minecraft.client.CameraType",
+  "net.minecraft.client.particle.ParticleGroup",
   "net.minecraft.client.particle.ParticleProvider",
   "net.minecraft.client.particle.SingleQuadParticle",
   "net.minecraft.client.particle.SingleQuadParticle.Layer",
   "net.minecraft.client.particle.SpriteSet",
+  "net.minecraft.client.renderer.WeatherEffectRenderer",
+  "net.minecraft.client.renderer.entity.LightningBoltRenderer",
+  "net.minecraft.client.renderer.fog.FogData",
+  "net.minecraft.client.renderer.fog.FogRenderer",
   "net.minecraft.client.resources.sounds.AbstractTickableSoundInstance",
-  "Options.getCameraType()",
   "ClientLevel.getHeight()",
   "ClientLevel.hasChunkAt()",
-  "LocalPlayer.getLookAngle()",
   "LocalPlayer.isAlive()",
   "LocalPlayer.xo",
   "LocalPlayer.yo",
   "LocalPlayer.zo",
-  "SoundManager.stop()",
+  "SoundEvents.WEATHER_RAIN",
+  "SoundEvents.WEATHER_RAIN_ABOVE",
   "Level.getBiome()",
   "Level.getSeaLevel()",
   "Biome.getPrecipitationAt()"
@@ -36,8 +39,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Particle-Snow-1.4.4-26.3.jar",
   "published": "2026-11-02"
  },
@@ -49,8 +52,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -68,5 +71,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 21
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert)"
+ },
+ "lacks": 24
 }

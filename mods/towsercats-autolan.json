@@ -1,0 +1,55 @@
+{
+ "id": "towsercats-autolan",
+ "name": "TowserCat's AutoLan",
+ "version": "1.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/towsercats-autolan",
+ "author": "ezraseibert",
+ "description": "This mod immediately opens a world to Lan as you open the world to port 25565.  Thats it.  You can then set gamemode and such using vanilla commands or turn off lan after it automatically opens to lan.",
+ "needs": [
+  "net.minecraft.client.server.IntegratedServer",
+  "net.minecraft.server.MinecraftServer.MultiplayerScope",
+  "Minecraft.getSingleplayerServer()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "towsersautolan-1.0.0.jar",
+  "published": "2026-10-04"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 3
+}

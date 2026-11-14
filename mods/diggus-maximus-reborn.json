@@ -9,25 +9,16 @@
  "author": "qyl27",
  "description": "A continuous of Diggus Maximus.",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
   "net.minecraft.server.level.ServerPlayerGameMode",
   "net.minecraft.world.entity.EntitySelector",
-  "ClientPlayNetworking.canSend()",
-  "ServerPlayNetworking.canSend()",
   "BlockPos.offset()",
   "DefaultedRegistry.get()",
   "Holder.is()",
   "Vec3i.ZERO",
   "Vec3i.relative()",
-  "FriendlyByteBuf.readBlockPos()",
-  "FriendlyByteBuf.readEnum()",
-  "FriendlyByteBuf.readIdentifier()",
-  "FriendlyByteBuf.writeBlockPos()",
-  "FriendlyByteBuf.writeBoolean()",
-  "FriendlyByteBuf.writeEnum()",
-  "FriendlyByteBuf.writeIdentifier()",
   "MinecraftServer.execute()",
   "ServerPlayer.gameMode",
   "ServerPlayer.getNearestViewDirection()",
@@ -37,12 +28,12 @@
   "Block.builtInRegistryHolder()",
   "Block.defaultDestroyTime()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "diggus-maximus-fabric-1.8.1+mc26.3.jar",
   "published": "2026-09-20"
  },
@@ -54,8 +45,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -72,5 +63,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 26
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; has network channels"
+ },
+ "lacks": 17
 }

@@ -10,17 +10,55 @@
  "description": "A mod which profiles commands and functions",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 9 points inside the game's methods",
   "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
+  "net.minecraft.commands.FunctionInstantiationException",
+  "net.minecraft.commands.arguments.item.FunctionArgument",
+  "net.minecraft.commands.execution.CommandQueueEntry",
+  "net.minecraft.commands.execution.ExecutionContext",
+  "net.minecraft.commands.execution.Frame",
+  "net.minecraft.commands.execution.Frame.FrameControl",
+  "net.minecraft.commands.execution.UnboundEntryAction",
+  "net.minecraft.commands.execution.tasks.BuildContexts",
+  "net.minecraft.commands.execution.tasks.BuildContexts.TopLevel",
+  "net.minecraft.commands.execution.tasks.BuildContexts.Unbound",
+  "net.minecraft.commands.execution.tasks.CallFunction",
+  "net.minecraft.commands.execution.tasks.ExecuteCommand",
+  "net.minecraft.commands.functions.CommandFunction",
+  "net.minecraft.commands.functions.FunctionBuilder",
+  "net.minecraft.commands.functions.InstantiatedFunction",
+  "net.minecraft.commands.functions.MacroFunction",
+  "net.minecraft.commands.functions.MacroFunction.Entry",
+  "net.minecraft.commands.functions.MacroFunction.MacroEntry",
+  "net.minecraft.commands.functions.MacroFunction.PlainTextEntry",
+  "net.minecraft.commands.functions.PlainTextFunction",
+  "net.minecraft.commands.functions.StringTemplate",
+  "net.minecraft.server.ServerFunctionLibrary",
+  "net.minecraft.server.ServerFunctionManager",
+  "net.minecraft.server.ServerScoreboard",
+  "net.minecraft.server.commands.FunctionCommand",
+  "net.minecraft.world.entity.vehicle.minecart.MinecartCommandBlock",
+  "net.minecraft.world.entity.vehicle.minecart.MinecartCommandBlock.MinecartCommandBase",
+  "net.minecraft.world.level.BaseCommandBlock",
+  "net.minecraft.world.scores.ReadOnlyScoreInfo",
+  "IntArrayList.getLast()",
+  "IntArrayList.removeLast()",
   "Object2LongMap.Entry.getKey()",
-  "FabricLoader.getEntrypointContainers()"
+  "FabricLoader.getEntrypointContainers()",
+  "CommandResultCallback.EMPTY",
+  "CommandSourceStack.callback()",
+  "Commands.executeCommandInContext()",
+  "Commands.finishParsing()",
+  "Holder.getRegisteredName()",
+  "MinecraftServer.cmdprof$addDirtyObjectiveScoreHolder()",
+  "and 5 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "command-profiler-1.4.1+26.3-pre-2-fabric.jar",
   "published": "2026-09-06"
  },
@@ -32,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -47,5 +85,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 3
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 45
 }

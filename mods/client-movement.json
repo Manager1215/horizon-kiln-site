@@ -9,7 +9,7 @@
  "author": "zortler",
  "description": "A minecraft mod that makes sprinting and poses fully client-sided, with no server intervention. Fixes many bugs and issues for player with high ping, especially in parkour.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.minecraft.network.protocol.game.ClientboundUpdateAttributesPacket.AttributeSnapshot",
   "net.minecraft.network.syncher.EntityDataAccessor",
   "net.minecraft.network.syncher.SynchedEntityData.DataItem",
@@ -21,8 +21,8 @@
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "clientmovement-1.1-fabric.jar",
   "published": "2026-10-01"
  },
@@ -39,5 +39,9 @@
   "java",
   "minecraft"
  ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
  "lacks": 6
 }

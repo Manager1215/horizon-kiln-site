@@ -9,7 +9,6 @@
  "author": "phasmoware",
  "description": "Revive downed players: instead of dying, players drop to half a heart and crawl. Inspired by Call of Duty Zombies. Fully server-side and compatible with vanilla and Geyser Bedrock clients.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterEntityChange",
@@ -21,10 +20,6 @@
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.entity.decoration.ArmorStand",
   "net.minecraft.world.entity.monster.Shulker",
   "net.minecraft.world.scores.PlayerTeam",
@@ -36,12 +31,6 @@
   "ServerPlayerEvents.LEAVE",
   "ServerLifecycleEvents.SERVER_STOPPING",
   "Component.tryCollapseToString()",
-  "MutableComponent.withStyle()",
-  "Style.withClickEvent()",
-  "Style.withHoverEvent()",
-  "Style.withUnderlined()",
-  "MinecraftServer.getPlayerCount()",
-  "MinecraftServer.getPlayerList()",
   "ServerLevel.getScoreboard()",
   "ServerPlayer.addTag()",
   "ServerPlayer.blockInteractionRange()",
@@ -50,14 +39,24 @@
   "ServerPlayer.getAttached()",
   "ServerPlayer.getAttachedOrCreate()",
   "ServerPlayer.getBoundingBox()",
-  "and 31 more"
+  "ServerPlayer.getEyePosition()",
+  "ServerPlayer.getTeam()",
+  "ServerPlayer.getVehicle()",
+  "ServerPlayer.getViewVector()",
+  "ServerPlayer.isInLava()",
+  "ServerPlayer.removeAllEffects()",
+  "ServerPlayer.removeTag()",
+  "ServerPlayer.setAttached()",
+  "ServerPlayer.setGlowingTag()",
+  "ServerPlayer.setPermanentlyInvulnerable()",
+  "and 19 more"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "down-but-not-out-0.5.2+26.3.jar",
   "published": "2026-09-19"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +84,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 71
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 59
 }

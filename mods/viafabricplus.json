@@ -10,7 +10,7 @@
  "description": "Minecraft Fabric mod which allows you to join EVERY Minecraft server version (Classic, Alpha, Beta, Release, April Fools, Bedrock)",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 225 points inside the game's methods",
   "com.mojang.authlib.DiscoveryService",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.GameProfileRepository",
@@ -21,6 +21,7 @@
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
   "com.mojang.authlib.services.MinecraftServicesDiscoveryService",
+  "com.mojang.authlib.services.MinecraftServicesUserApiService",
   "com.mojang.authlib.services.ProfileNotFoundException",
   "com.mojang.authlib.services.ProfileResult",
   "com.mojang.authlib.services.response.KeyPairResponse",
@@ -28,8 +29,10 @@
   "com.mojang.authlib.services.response.NameAndId",
   "com.mojang.authlib.services.response.discovery.Service",
   "com.mojang.blaze3d.Blaze3D",
+  "com.mojang.blaze3d.audio.SoundBuffer",
   "com.mojang.blaze3d.font.GlyphBitmap",
   "com.mojang.blaze3d.font.GlyphInfo",
+  "com.mojang.blaze3d.platform.SDLEventHandler",
   "com.mojang.realmsclient.RealmsMainScreen",
   "com.mojang.realmsclient.RealmsMainScreen.CrossButton",
   "io.netty.channel.Channel",
@@ -44,21 +47,18 @@
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
   "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
+  "net.fabricmc.fabric.impl.client.registry.sync.ClientRegistrySyncHandler",
+  "net.fabricmc.fabric.impl.registry.sync.RegistrySyncManager",
   "net.fabricmc.loader.api.metadata.ContactInformation",
   "net.fabricmc.loader.api.metadata.CustomValue",
-  "net.fabricmc.loader.api.metadata.Person",
-  "net.minecraft.SharedConstants",
-  "net.minecraft.advancements.predicates.MinMaxBounds.Ints",
-  "net.minecraft.client.gui.Font.PreparedTextBuilder",
-  "net.minecraft.client.gui.components.CommandSuggestions",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ViaFabricPlus-5.1.3.jar",
   "published": "2026-11-01"
  },
@@ -83,5 +83,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 704
+ "softOff": {
+  "class": "restart",
+  "why": "@modify-args and @overwrite and @redirect and @wrap-operation into the game's classes; @modify-constant Kiln doesn't guard; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+ },
+ "lacks": 726
 }

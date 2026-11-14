@@ -10,26 +10,33 @@
  "description": "Petlings gives you a pet to interact and play with in Minecraft.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 10 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.client.networking.v1.ServerboundPlayChannelEvents",
   "net.fabricmc.fabric.api.client.networking.v1.ServerboundPlayChannelEvents.Register",
   "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback",
   "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback.RegistrationHelper",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
-  "net.minecraft.client.CameraType",
   "net.minecraft.client.Screenshot",
   "net.minecraft.client.gui.components.PlayerFaceExtractor",
+  "net.minecraft.client.gui.components.toasts.AdvancementToast",
   "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.model.EntityModel",
+  "net.minecraft.client.model.HumanoidModel",
+  "net.minecraft.client.model.player.PlayerModel",
   "net.minecraft.client.multiplayer.ServerList",
   "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.WolfRenderer",
+  "net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer",
   "net.minecraft.client.renderer.entity.layers.RenderLayer",
   "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
   "net.minecraft.client.renderer.entity.state.SlimeRenderState",
+  "net.minecraft.client.renderer.item.SpecialModelWrapper",
+  "net.minecraft.client.renderer.special.SpecialModelRenderers",
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.core.particles.BlockParticleOption",
+  "net.minecraft.network.HashedStack.ActualItem",
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
   "net.minecraft.world.entity.ai.control.LookControl",
@@ -42,23 +49,16 @@
   "net.minecraft.world.entity.monster.Enemy",
   "net.minecraft.world.entity.monster.Monster",
   "net.minecraft.world.entity.monster.cubemob.Slime",
+  "net.minecraft.world.inventory.RemoteSlot.Synchronized",
   "net.minecraft.world.level.storage.WorldData",
-  "NativeImage.read()",
-  "NativeImage.writeToFile()",
-  "PoseStack.Pose.pose()",
-  "VertexConsumer.addVertex()",
-  "VertexConsumer.setColor()",
-  "VertexConsumer.setLight()",
-  "VertexConsumer.setOverlay()",
-  "Axis.ZP",
-  "and 52 more"
+  "and 60 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "petlings-0.8.3-26.3-fabric.jar",
   "published": "2026-10-04"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 200
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+ },
+ "lacks": 195
 }

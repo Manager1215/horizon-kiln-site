@@ -10,10 +10,10 @@
  "description": "Copy chat messages as text or a nice transparent image with one click.",
  "needs": [
   "an access widener",
-  "Mixin",
   "com.mojang.blaze3d.pipeline.TextureTarget",
   "com.mojang.blaze3d.platform.MacosUtil",
   "net.minecraft.client.gui.render.GuiRenderer.Draw",
+  "net.minecraft.client.main.Main",
   "net.minecraft.client.multiplayer.chat.GuiMessage.Line",
   "net.minecraft.client.renderer.DynamicGpuData",
   "org.apache.commons.io.FileUtils",
@@ -48,8 +48,8 @@
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ChatShot (26.3-fabric)-1.0.11.jar",
   "published": "2026-10-24"
  },
@@ -68,5 +68,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 32
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 33
 }

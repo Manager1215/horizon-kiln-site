@@ -9,18 +9,20 @@
  "author": "J0KER2J0KER",
  "description": "Allows you to download worlds from servers.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
   "net.minecraft.advancements.CriterionProgress",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
+  "net.minecraft.client.gui.components.SpriteIconButton",
+  "net.minecraft.client.gui.components.SpriteIconButton.Builder",
   "net.minecraft.client.gui.screens.inventory.AbstractFurnaceScreen",
   "net.minecraft.client.gui.screens.inventory.HorseInventoryScreen",
   "net.minecraft.client.gui.screens.inventory.MerchantScreen",
+  "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
   "net.minecraft.client.multiplayer.ClientChunkCache",
   "net.minecraft.client.multiplayer.ServerData.ServerPackStatus",
+  "net.minecraft.client.resources.server.ServerPackManager",
   "net.minecraft.client.server.IntegratedServer",
-  "net.minecraft.nbt.NbtIo",
+  "net.minecraft.server.packs.DownloadQueue",
+  "net.minecraft.server.packs.DownloadQueue.BatchResult",
   "net.minecraft.world.entity.decoration.ItemFrame",
   "net.minecraft.world.entity.npc.villager.AbstractVillager",
   "net.minecraft.world.entity.npc.villager.Villager",
@@ -34,30 +36,27 @@
   "net.minecraft.world.level.block.state.properties.ChestType",
   "net.minecraft.world.level.chunk.storage.RegionFile",
   "net.minecraft.world.level.chunk.storage.RegionStorageInfo",
+  "net.minecraft.world.level.storage.LevelResource",
   "net.minecraft.world.level.storage.PlayerDataStorage",
   "net.minecraft.world.level.storage.WorldData",
   "Object2IntMap.Entry.getKey()",
   "AdvancementProgress.getCompletedCriteria()",
   "AdvancementProgress.getCriterion()",
-  "Minecraft.execute()",
   "Minecraft.getCurrentServer()",
   "Minecraft.getLevelSource()",
   "Minecraft.getSingleplayerServer()",
   "Minecraft.isLocalServer()",
-  "Minecraft.setScreenAndShow()",
   "GuiGraphicsExtractor.nextStratum()",
-  "AbstractScrollArea.defaultSettings()",
-  "AbstractScrollArea.mouseDragged()",
-  "AbstractScrollArea.mouseScrolled()",
-  "AbstractScrollArea.setScrollAmount()",
-  "and 46 more"
+  "ClientLevel.getChunkSource()",
+  "ServerData.getIconBytes()",
+  "and 50 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "simple-world-downloader-fabric-1.5.6+26.3.jar",
   "published": "2026-10-04"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 100
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 92
 }

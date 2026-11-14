@@ -1,7 +1,7 @@
 {
  "id": "dreamdisplays",
  "name": "Dream Displays",
- "version": "1.10.8",
+ "version": "1.10.9",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,7 +10,7 @@
  "description": "Create in-game screens to stream your favorite videos in Minecraft.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.platform.cursor.CursorType",
   "com.mojang.blaze3d.platform.cursor.CursorTypes",
@@ -26,9 +26,6 @@
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.client.InputType",
   "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
   "net.minecraft.client.gui.components.WidgetSprites",
@@ -42,25 +39,28 @@
   "net.minecraft.data.BlockFamilies",
   "net.minecraft.data.BlockFamily",
   "net.minecraft.data.BlockFamily.Variant",
-  "net.minecraft.network.chat.ClickEvent.OpenUrl",
-  "net.minecraft.network.chat.ComponentContents",
-  "net.minecraft.network.chat.HoverEvent",
-  "net.minecraft.network.chat.HoverEvent.ShowItem",
-  "net.minecraft.network.chat.HoverEvent.ShowText",
   "net.minecraft.network.chat.contents.ObjectContents",
   "net.minecraft.network.chat.contents.objects.AtlasSprite",
   "net.minecraft.network.chat.contents.objects.ObjectInfo",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
+  "net.minecraft.world.level.block.piston.PistonStructureResolver",
+  "net.minecraft.world.level.storage.LevelResource",
+  "org.apache.commons.io.Charsets",
+  "org.apache.commons.io.FileUtils",
+  "org.apache.commons.io.IOUtils",
+  "org.apache.commons.io.build.AbstractStreamBuilder",
+  "org.apache.commons.io.file.attribute.FileTimes",
+  "org.apache.commons.io.function.IOConsumer",
+  "org.apache.commons.io.function.IOIterator",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "dreamdisplays-fabric-26.3-1.10.8.jar",
-  "published": "2026-10-31"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "dreamdisplays-fabric-26.3-1.10.9.jar",
+  "published": "2026-11-08"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 190
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels"
+ },
+ "lacks": 155
 }

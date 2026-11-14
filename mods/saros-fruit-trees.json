@@ -10,7 +10,6 @@
  "description": "Adds Apple, Orange, Pear, and Gold Apple trees with unique growth stages, harvestable fruit, and juice/jam processing.",
  "needs": [
   "com.mojang.authlib.GameProfile",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.minecraft.server.PlayerAdvancements",
   "net.minecraft.server.ServerAdvancementManager",
   "net.minecraft.server.level.ServerPlayerGameMode",
@@ -26,37 +25,38 @@
   "net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings",
   "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate",
   "net.minecraft.world.level.material.PushReaction",
-  "org.apache.logging.log4j.LogManager",
   "BiomeModifications.addFeature()",
-  "ServerTickEvents.END_SERVER_TICK",
   "AdvancementProgress.getRemainingCriteria()",
   "AbstractContainerScreen.containerTick()",
   "AbstractContainerScreen.extractContents()",
-  "CommandSource.NULL",
-  "CommandSourceStack.withSuppressedOutput()",
-  "Commands.performPrefixedCommand()",
   "BuiltInRegistries.FEATURE_TYPE",
-  "RegistryFriendlyByteBuf.readBlockPos()",
-  "RegistryFriendlyByteBuf.writeBlockPos()",
-  "RegistryFriendlyByteBuf.writeInt()",
   "MinecraftServer.execute()",
   "MinecraftServer.getAdvancements()",
-  "MinecraftServer.getCommands()",
   "ServerLevel.getStructureTemplateManager()",
   "ServerLevel.sendParticles()",
   "ServerPlayer.closeContainer()",
   "ServerPlayer.gameMode",
   "ServerPlayer.getAdvancements()",
-  "PermissionSet.ALL_PERMISSIONS",
   "SoundEvents.BONE_MEAL_USE",
-  "and 38 more"
+  "SoundEvents.COMPOSTER_FILL",
+  "SoundEvents.VILLAGER_YES",
+  "ItemEntity.setPickUpDelay()",
+  "ItemEntity.setUnlimitedLifetime()",
+  "Player.getGameProfile()",
+  "MenuType.<init>()",
+  "Item.Properties.food()",
+  "Item.Properties.useItemDescriptionPrefix()",
+  "LevelAccessor.destroyBlock()",
+  "LevelAccessor.setBlock()",
+  "WorldGenLevel.getHeight()",
+  "and 24 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Saros-Fruit-Trees-Fabric-26.3-3.2.6.jar",
   "published": "2026-10-18"
  },
@@ -68,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +85,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 79
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+ },
+ "lacks": 64
 }

@@ -9,9 +9,11 @@
  "author": "xcheezie",
  "description": "Gives you the ability to give yourself ghost block and other cool features CLIENT-SIDE",
  "needs": [
-  "Mixin",
+  "Mixin: 2 points inside the game's methods",
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
-  "net.minecraft.client.multiplayer.MultiPlayerGameMode",
+  "net.minecraft.client.player.ClientInput",
+  "net.minecraft.client.player.KeyboardInput",
+  "net.minecraft.client.renderer.LevelRenderer",
   "net.minecraft.client.renderer.entity.state.AvatarRenderState",
   "net.minecraft.network.protocol.game.ServerboundAttackPacket",
   "net.minecraft.network.protocol.game.ServerboundChangeGameModePacket",
@@ -33,31 +35,29 @@
   "net.minecraft.network.protocol.game.ServerboundUseItemPacket",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
   "net.minecraft.server.network.FilteredText",
+  "net.minecraft.world.entity.player.Input",
   "net.minecraft.world.level.block.SignBlock",
   "net.minecraft.world.level.block.entity.SignBlockEntity",
   "KeyMapping.setDown()",
-  "Minecraft.gameMode",
   "Minecraft.getEntityRenderDispatcher()",
-  "Minecraft.hitResult",
   "Minecraft.setCameraEntity()",
-  "Options.keyPickItem",
-  "Options.keyUse",
   "ClientLevel.levelEvent()",
   "ClientLevel.removeEntity()",
+  "MultiPlayerGameMode.getPreviousPlayerMode()",
+  "MultiPlayerGameMode.setLocalMode()",
+  "MultiPlayerGameMode.setLocalMode()",
   "LocalPlayer.deathTime",
   "LocalPlayer.getBoundingBox()",
   "LocalPlayer.getEyeY()",
-  "LocalPlayer.isAlive()",
-  "LocalPlayer.openTextEdit()",
-  "EntityRenderDispatcher.extractEntity()",
-  "and 19 more"
+  "LocalPlayer.input",
+  "and 23 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "GhostBlock-2.3+26.3.jar",
   "published": "2026-09-20"
  },
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -85,5 +85,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 59
+ "softOff": {
+  "class": "restart",
+  "why": "@modify-args and @redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 63
 }

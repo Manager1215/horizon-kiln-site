@@ -10,7 +10,7 @@
  "description": "A Minecraft mod that enhances community and server features, such as global chat, chunk pre-generation, auto server join from protocol uri (via FTBApp), friends lists, private chats and many more features linked to the MineTogether platform.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.minecraft.SessionService",
   "com.mojang.authlib.services.ProfileResult",
@@ -30,35 +30,35 @@
   "io.netty.handler.timeout.ReadTimeoutHandler",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
+  "net.minecraft.DefaultUncaughtExceptionHandler",
   "net.minecraft.SharedConstants",
+  "net.minecraft.client.GameNarrator",
   "net.minecraft.client.gui.ActiveTextCollector",
   "net.minecraft.client.gui.ActiveTextCollector.ClickableStyleFinder",
   "net.minecraft.client.gui.ActiveTextCollector.Parameters",
   "net.minecraft.client.gui.components.ChatComponent.DisplayMode",
+  "net.minecraft.client.gui.components.CommandSuggestions",
+  "net.minecraft.client.gui.components.CommandSuggestions.SuggestionsList",
   "net.minecraft.client.gui.components.ComponentRenderUtils",
   "net.minecraft.client.gui.components.SpriteIconButton",
   "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-  "net.minecraft.client.gui.components.Tooltip",
+  "net.minecraft.client.gui.screens.ConnectScreen",
+  "net.minecraft.client.gui.screens.DisconnectedScreen",
+  "net.minecraft.client.gui.screens.FaviconTexture",
+  "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
+  "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList",
+  "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList.NetworkServerEntry",
+  "net.minecraft.client.model.geom.ModelLayers",
   "net.minecraft.client.model.geom.PartPose",
   "net.minecraft.client.model.geom.builders.CubeListBuilder",
-  "net.minecraft.client.model.geom.builders.MeshDefinition",
-  "net.minecraft.client.model.geom.builders.PartDefinition",
-  "net.minecraft.client.multiplayer.ClientHandshakePacketListenerImpl",
-  "net.minecraft.client.multiplayer.ProfileKeyPairManager",
-  "net.minecraft.client.multiplayer.TransferState",
-  "net.minecraft.client.multiplayer.chat.ChatAbilities",
-  "net.minecraft.client.multiplayer.chat.ChatRestriction",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "minetogethercommunity-fabric-26.3-6.4.2.jar",
   "published": "2026-10-14"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "minecraft",
   "polylib"
  ],
- "lacks": 229
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own; has network channels"
+ },
+ "lacks": 244
 }

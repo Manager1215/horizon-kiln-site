@@ -2,21 +2,19 @@
  "id": "toggle-subtitles",
  "name": "Toggle Subtitles",
  "version": "1.5+26.3-fabric",
- "status": "planned",
- "statusLabel": "Planned",
- "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "status": "works",
+ "statusLabel": "Works",
+ "statusMeaning": "Tried in the game with Kiln.",
  "url": "https://modrinth.com/mod/toggle-subtitles",
  "author": "Crendgrim",
  "description": "Adds a keybind to toggle subtitles",
- "needs": [
-  "Options.showSubtitles()"
- ],
- "roadmap": "Minecraft's libraries and client API (0.2)",
- "evidence": "Not run: Java did not start.",
+ "needs": [],
+ "roadmap": "",
+ "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "togglesubtitles-1.5+26.3-fabric.jar",
   "published": "2026-09-16"
  },
@@ -28,8 +26,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -44,5 +42,18 @@
   "java",
   "minecraft"
  ],
- "lacks": 1
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 0,
+ "works": "I toggles closed captions: Horizon's subtitles option follows (off → on → off), and the mod says \"Toggled closed captions ON\" or OFF.",
+ "note": "Not yet: its line shows in the chat, not above the hotbar, and without its ON/OFF colour, as Kiln sends a mod's overlay message to the chat and doesn't show a component's colour yet; the toggle works fully without it.",
+ "checked": {
+  "kiln": "main",
+  "commit": "49d483e0812fda4621357ec043c1d0213a97276a",
+  "date": "2026-11-09",
+  "horizon": "Nightly 2026-11-04 · 3fb4c31",
+  "by": "kiln/proof.py on the Linux PC"
+ }
 }

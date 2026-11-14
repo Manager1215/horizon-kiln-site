@@ -1,7 +1,7 @@
 {
  "id": "carry-on",
  "name": "Carry On",
- "version": "2.12.1",
+ "version": "2.12.2",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,7 +9,7 @@
  "author": "Tschipp",
  "description": "Carry On allows you to pick up Tile Entities and Mobs and carry them around!",
  "needs": [
-  "Mixin",
+  "Mixin: 4 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
@@ -18,14 +18,17 @@
   "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents",
   "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents.TagsLoaded",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SyncDataPackContents",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
+  "net.minecraft.client.model.HumanoidModel",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.layers.RenderLayer",
+  "net.minecraft.client.renderer.entity.player.AvatarRenderer",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
   "net.minecraft.commands.arguments.blocks.BlockStateParser",
   "net.minecraft.commands.arguments.blocks.BlockStateParser.BlockResult",
   "net.minecraft.commands.arguments.item.ItemParser",
@@ -33,33 +36,30 @@
   "net.minecraft.server.PlayerAdvancements",
   "net.minecraft.server.ServerAdvancementManager",
   "net.minecraft.server.level.ServerPlayerGameMode",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.players.PlayerList",
   "net.minecraft.world.entity.AreaEffectCloud",
+  "net.minecraft.world.entity.Entity.MoveFunction",
   "net.minecraft.world.entity.EntityDimensions",
   "net.minecraft.world.entity.EntitySpawnRequest",
+  "net.minecraft.world.entity.Pose",
   "net.minecraft.world.entity.animal.equine.Horse",
+  "net.minecraft.world.level.block.ChestBlock",
   "org.apache.commons.io.FileUtils",
   "JsonSyntaxException.getMessage()",
+  "PoseStack.last()",
+  "PoseStack.mulPose()",
+  "PoseStack.Pose.pose()",
   "CommandSyntaxException.printStackTrace()",
-  "AttachmentRegistry.create()",
-  "ServerLifecycleEvents.SYNC_DATA_PACK_CONTENTS",
-  "ServerTickEvents.END_SERVER_TICK",
-  "KeyMapping.isUnbound()",
-  "Minecraft.execute()",
-  "CommandSourceStack.getEntityOrException()",
-  "CommandSourceStack.getPlayerOrException()",
-  "Commands.performPrefixedCommand()",
-  "and 50 more"
+  "Axis.ZN",
+  "and 54 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "carryon-fabric-26.3-2.12.1.jar",
-  "published": "2026-11-03"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "carryon-fabric-26.3-2.12.2.jar",
+  "published": "2026-11-09"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +87,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 128
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 164
 }

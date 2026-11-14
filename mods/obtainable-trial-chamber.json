@@ -9,15 +9,23 @@
  "author": "BadutZY",
  "description": "Make blocks in the Trial Chamber like Vault and Trial Spawner Obtainable",
  "needs": [
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
   "net.minecraft.tags.ItemTags",
+  "net.minecraft.world.level.block.entity.vault.VaultBlockEntity",
+  "net.minecraft.world.level.block.entity.vault.VaultBlockEntity.Server",
+  "net.minecraft.world.level.block.entity.vault.VaultServerData",
+  "net.minecraft.world.level.block.entity.vault.VaultSharedData",
+  "Object2LongMap.Entry.getKey()",
+  "ObjectSet.removeIf()",
   "ServerLifecycleEvents.SERVER_STARTING",
+  "SoundEvents.VAULT_INSERT_ITEM_FAIL",
   "ItemEntity.setPickUpDelay()",
+  "Player.getDestroySpeed()",
   "Items.GOLDEN_PICKAXE",
   "Items.IRON_PICKAXE",
   "Items.NETHERITE_PICKAXE",
@@ -29,12 +37,12 @@
   "Blocks.TRIAL_SPAWNER",
   "Blocks.VAULT"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "obtainable-trial-chamber-1.6.0.jar",
   "published": "2026-10-18"
  },
@@ -46,8 +54,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -64,5 +72,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 18
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 26
 }

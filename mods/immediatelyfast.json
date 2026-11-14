@@ -10,23 +10,30 @@
  "description": "Speed up immediate mode rendering in Minecraft",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 17 points inside the game's methods",
   "com.mojang.blaze3d.pipeline.TextureTarget",
   "com.mojang.blaze3d.platform.TextureUtil",
+  "com.mojang.blaze3d.systems.ScissorState",
   "com.mojang.renderpearl.backend.opengl.DirectStateAccess",
+  "com.mojang.renderpearl.backend.opengl.GlCommandEncoder",
   "com.mojang.renderpearl.backend.opengl.GlConst",
+  "com.mojang.renderpearl.backend.opengl.GlDebug",
   "com.mojang.renderpearl.backend.opengl.GlStateManager",
+  "com.mojang.renderpearl.backend.opengl.GlSurface",
   "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
   "net.minecraft.client.gui.components.debug.DebugScreenEntry",
-  "net.minecraft.client.gui.components.debug.DebugScreenEntryStatus",
   "net.minecraft.client.gui.components.debug.DebugScreenProfile",
   "net.minecraft.client.gui.font.FontManager",
+  "net.minecraft.client.gui.font.FontTexture",
   "net.minecraft.client.gui.render.DynamicAtlasAllocator",
   "net.minecraft.client.gui.render.DynamicAtlasAllocator.Slot",
   "net.minecraft.client.gui.render.GuiItemAtlas",
   "net.minecraft.client.gui.render.GuiItemAtlas.SlotView",
+  "net.minecraft.client.renderer.blockentity.AbstractSignRenderer",
   "net.minecraft.client.renderer.blockentity.state.SignRenderState",
+  "net.minecraft.client.renderer.feature.RenderTypeFeatureRenderer.Group",
   "net.minecraft.client.renderer.feature.TextFeatureRenderer",
+  "net.minecraft.client.renderer.feature.TextFeatureRenderer.GlyphRenderer",
   "net.minecraft.client.renderer.fog.FogRenderer",
   "net.minecraft.client.renderer.fog.FogRenderer.FogMode",
   "net.minecraft.client.renderer.item.TrackingItemStackRenderState",
@@ -36,6 +43,7 @@
   "net.minecraft.client.renderer.state.MapRenderState",
   "net.minecraft.client.renderer.state.gui.GuiItemRenderState",
   "net.minecraft.client.renderer.texture.DynamicTexture",
+  "net.minecraft.client.resources.MapTextureManager.MapInstance",
   "net.minecraft.server.packs.PackLocationInfo",
   "net.minecraft.server.packs.VanillaPackResources",
   "net.minecraft.server.packs.resources.ReloadableResourceManager",
@@ -43,22 +51,14 @@
   "org.lwjgl.system.MathUtil",
   "RemovalNotification.getValue()",
   "RenderSystem.assertOnRenderThread()",
-  "RenderSystem.getShaderFog()",
-  "RenderSystem.setShaderFog()",
-  "SamplerCache.getSampler()",
-  "VertexConsumer.addVertex()",
-  "VertexConsumer.setLight()",
-  "DeviceLimits.maxTextureSizeForFormat()",
-  "ShaderType.idConverter()",
-  "ObjectSet.add()",
-  "and 19 more"
+  "and 26 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "ImmediatelyFast-Fabric-1.17.1+26.3.jar",
   "published": "2026-09-17"
  },
@@ -75,5 +75,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 59
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes"
+ },
+ "lacks": 66
 }

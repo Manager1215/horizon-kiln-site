@@ -9,30 +9,19 @@
  "author": "Hurky",
  "description": "Adds custom join, leave, and first-time join messages to your server. Fully configurable and can be turned off.",
  "needs": [
-  "Mixin",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.server.permissions.LevelBasedPermissionSet",
-  "net.minecraft.server.players.PlayerList",
+  "Mixin: 2 points inside the game's methods",
   "ChatFormatting.getByCode()",
-  "CommandSourceStack.getServer()",
-  "MutableComponent.withStyle()",
   "Style.applyLegacyFormat()",
   "MinecraftServer.getMaxPlayers()",
-  "MinecraftServer.getPlayerCount()",
-  "MinecraftServer.getPlayerList()",
   "ServerPlayer.distanceToSqr()",
-  "ServerPlayer.getDisplayName()",
-  "PermissionLevel.isEqualOrHigherThan()"
+  "ServerPlayer.getDisplayName()"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Better Join Messages 1.3.0  fabric 26.x.jar",
   "published": "2026-10-25"
  },
@@ -44,8 +33,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -60,5 +49,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 16
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 5
 }

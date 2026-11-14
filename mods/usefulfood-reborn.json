@@ -9,7 +9,6 @@
  "author": "skniro",
  "description": "Adds more new food in minecraft. This is a newer version rewrite of UsefulFood.",
  "needs": [
-  "Mixin",
   "net.minecraft.advancements.triggers.ConsumeItemTrigger",
   "net.minecraft.advancements.triggers.CriteriaTriggers",
   "net.minecraft.tags.ItemTags",
@@ -33,7 +32,6 @@
   "DataComponents.FOOD",
   "SoundEvents.CAKE_ADD_CANDLE",
   "SoundEvents.GLASS_PLACE",
-  "Stats.EAT_CAKE_SLICE",
   "BlockTags.CANDLE_CAKES",
   "LivingEntity.removeAllEffects()",
   "Player.canEat()",
@@ -50,14 +48,15 @@
   "Items.GLASS_BOTTLE",
   "LevelAccessor.removeBlock()",
   "LevelAccessor.setBlock()",
-  "and 12 more"
+  "Blocks.CAKE",
+  "and 11 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "UsefulFoodReborn-1.5.4-26.3-Fabric.jar",
   "published": "2026-09-18"
  },
@@ -69,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +85,9 @@
   "fabricloader",
   "minecraft"
  ],
- "lacks": 52
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 51
 }

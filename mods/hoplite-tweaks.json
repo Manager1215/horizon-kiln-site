@@ -1,7 +1,7 @@
 {
  "id": "hoplite-tweaks",
  "name": "Hoplite Tweaks",
- "version": "1.3.4-fabric+26.3",
+ "version": "1.3.5-fabric+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,7 +10,7 @@
  "description": "An all-in-one hoplite that adds all the QOL & Utility mods you need for Hoplite. Includes Team View, Cooldown viewing, and much more.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 3 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.Chat",
   "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents",
@@ -18,24 +18,26 @@
   "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.AllowCommand",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
   "net.fabricmc.fabric.impl.networking.PayloadTypeRegistryImpl",
-  "net.minecraft.client.OptionInstance.IntRange",
-  "net.minecraft.client.OptionInstance.ValueSet",
+  "net.minecraft.client.gui.components.PlayerTabOverlay",
+  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
+  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.SlotWrapper",
   "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
   "net.minecraft.client.multiplayer.ClientChunkCache",
   "net.minecraft.client.multiplayer.chat.ChatListener",
   "net.minecraft.client.renderer.feature.FeatureRendererMap",
   "net.minecraft.client.renderer.feature.submit.TranslucentSubmit",
+  "net.minecraft.client.renderer.fog.FogData",
+  "net.minecraft.client.renderer.fog.environment.LavaFogEnvironment",
   "net.minecraft.core.UUIDUtil",
-  "net.minecraft.network.chat.ClickEvent.RunCommand",
   "net.minecraft.network.chat.ComponentSerialization",
   "net.minecraft.network.chat.FontDescription",
   "net.minecraft.network.chat.FontDescription.Resource",
+  "net.minecraft.network.protocol.common.custom.CustomPacketPayload.1",
   "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
   "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
   "net.minecraft.world.scores.PlayerScoreEntry",
   "net.minecraft.world.scores.PlayerTeam",
   "net.minecraft.world.scores.ReadOnlyScoreInfo",
-  "net.minecraft.world.scores.ScoreHolder",
   "net.minecraft.world.scores.TeamColor",
   "PoseStack.last()",
   "PoseStack.Pose.copy()",
@@ -45,22 +47,20 @@
   "ClientReceiveMessageEvents.CHAT",
   "LevelRenderEvents.COLLECT_SUBMITS",
   "KeyMapping.matches()",
-  "Minecraft.execute()",
   "Minecraft.getCurrentServer()",
-  "OptionInstance.values()",
   "Options.bobView()",
   "Options.getBackgroundOpacity()",
   "Options.getEffectiveRenderDistance()",
-  "and 46 more"
+  "and 36 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "hoplite_tweaks-1.3.4-fabric+26.3.jar",
-  "published": "2026-11-03"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "hoplite_tweaks-1.3.5-fabric+26.3.jar",
+  "published": "2026-11-10"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "minecraft",
   "yet_another_config_lib_v3"
  ],
- "lacks": 87
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; has network channels"
+ },
+ "lacks": 76
 }

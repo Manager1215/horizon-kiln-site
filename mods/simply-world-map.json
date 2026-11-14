@@ -9,16 +9,11 @@
  "author": "Hyperlinkhyper",
  "description": "A new worldmap mod that adds a worldmap to the game thats client side",
  "needs": [
-  "Mixin",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
-  "net.minecraft.client.gui.components.CycleButton.OnValueChange",
   "net.minecraft.client.multiplayer.ClientChunkCache",
   "net.minecraft.client.renderer.BiomeColors",
   "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.nbt.NbtIo",
   "net.minecraft.world.level.storage.LevelResource",
   "net.minecraft.world.level.storage.WorldData",
   "NativeImage.getHeight()",
@@ -29,19 +24,12 @@
   "Camera.getFov()",
   "Camera.leftVector()",
   "Camera.upVector()",
-  "Minecraft.execute()",
   "Minecraft.getBlockColors()",
   "Minecraft.getCurrentServer()",
   "Minecraft.getSingleplayerServer()",
-  "Options.save()",
   "BlockColors.getTintSource()",
   "BlockTintSource.colorInWorld()",
   "GuiGraphicsExtractor.blit()",
-  "Screen.charTyped()",
-  "Screen.mouseClicked()",
-  "Screen.mouseDragged()",
-  "CharacterEvent.codepointAsString()",
-  "CharacterEvent.isAllowedChatCharacter()",
   "ClientLevel.cardinalLighting()",
   "ClientLevel.getChunkSource()",
   "ClientLevel.getHeight()",
@@ -50,14 +38,20 @@
   "ServerData.ip",
   "LocalPlayer.tickCount",
   "GameRenderer.mainCamera()",
-  "and 6 more"
+  "BakedQuad.MaterialInfo.isTinted()",
+  "HolderGetter.get()",
+  "Registries.BIOME",
+  "NbtIo.read()",
+  "BlockState.getMapColor()",
+  "MapColor.WATER",
+  "MapColor.col"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "B - Simply Worldmap 1.0.4.jar",
   "published": "2026-09-17"
  },
@@ -69,8 +63,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -87,5 +81,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 46
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 36
 }

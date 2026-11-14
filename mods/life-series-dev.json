@@ -10,12 +10,11 @@
  "description": "Development versions of the Life Series mod.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 28 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
   "net.minecraft.Optionull",
-  "net.minecraft.client.CameraType",
   "net.minecraft.client.animation.AnimationChannel",
   "net.minecraft.client.animation.AnimationChannel.Interpolation",
   "net.minecraft.client.animation.AnimationChannel.Interpolations",
@@ -26,9 +25,11 @@
   "net.minecraft.client.animation.Keyframe",
   "net.minecraft.client.animation.KeyframeAnimation",
   "net.minecraft.client.animation.KeyframeAnimations",
+  "net.minecraft.client.gui.components.PlayerTabOverlay",
   "net.minecraft.client.gui.screens.InBedChatScreen",
   "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner",
+  "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
   "net.minecraft.client.model.EntityModel",
   "net.minecraft.client.model.HumanoidModel",
   "net.minecraft.client.model.HumanoidModel.ArmPose",
@@ -43,22 +44,21 @@
   "net.minecraft.client.particle.ParticleProvider",
   "net.minecraft.client.particle.ParticleRenderType",
   "net.minecraft.client.player.ClientInput",
+  "net.minecraft.client.renderer.CloudRenderer",
+  "net.minecraft.client.renderer.LevelRenderer",
+  "net.minecraft.client.renderer.SkyRenderer",
+  "net.minecraft.client.renderer.WeatherEffectRenderer",
   "net.minecraft.client.renderer.entity.AgeableMobRenderer",
   "net.minecraft.client.renderer.entity.SnowGolemRenderer",
-  "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
-  "net.minecraft.client.renderer.entity.state.SnowGolemRenderState",
-  "net.minecraft.client.renderer.fog.FogData",
-  "net.minecraft.client.renderer.state.level.ParticlesRenderState",
-  "net.minecraft.client.renderer.state.level.SkyRenderState",
-  "net.minecraft.client.renderer.texture.DynamicTexture",
+  "net.minecraft.client.renderer.entity.layers.ItemInHandLayer",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "lifeseries-1.5.10-pre1+26.3-fabric.jar",
   "published": "2026-10-22"
  },
@@ -78,5 +78,9 @@
   "matlib",
   "minecraft"
  ],
- "lacks": 837
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
+ },
+ "lacks": 816
 }

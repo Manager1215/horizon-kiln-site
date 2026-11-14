@@ -1,0 +1,57 @@
+{
+ "id": "badpackets",
+ "name": "bad packets",
+ "version": "fabric-0.12.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/badpackets",
+ "author": "deirn",
+ "description": "Bad Packets allows packet messaging between different modding platforms.",
+ "needs": [
+  "Mixin: 7 points inside the game's methods",
+  "com.mojang.authlib.GameProfile",
+  "net.minecraft.network.protocol.common.custom.CustomPacketPayload.1",
+  "net.minecraft.server.network.ConfigurationTask",
+  "net.minecraft.server.network.ConfigurationTask.Type",
+  "ClientPacketListener.getConnection()",
+  "Connection.disconnect()",
+  "Connection.isConnected()",
+  "Connection.send()",
+  "Connection.send()",
+  "ClientboundCustomPayloadPacket.CONFIG_STREAM_CODEC",
+  "ClientboundCustomPayloadPacket.GAMEPLAY_STREAM_CODEC",
+  "ClientboundPingPacket.getId()",
+  "ServerboundCustomPayloadPacket.STREAM_CODEC",
+  "ServerboundPongPacket.getId()",
+  "MinecraftServer.registryAccess()",
+  "ServerPlayer.connection",
+  "ServerConfigurationPacketListenerImpl.getOwner()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "",
+ "library": true,
+ "scanned": {
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "badpackets-fabric-0.12.3.jar",
+  "published": "2026-11-08"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "entrypoints": {},
+ "mixins": true,
+ "depends": [
+  "fabricloader",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 17
+}

@@ -10,7 +10,7 @@
  "description": "Shows information about what you are looking at. (Hwyla/Waila fork for Minecraft 1.16+)",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 7 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.Blaze3D",
   "com.mojang.blaze3d.font.GlyphInfo",
@@ -40,25 +40,25 @@
   "net.minecraft.client.gui.ActiveTextCollector.Parameters",
   "net.minecraft.client.gui.ComponentPath",
   "net.minecraft.client.gui.ComponentPath.Path",
+  "net.minecraft.client.gui.Font.PreparedTextBuilder",
   "net.minecraft.client.gui.Font.Provider",
   "net.minecraft.client.gui.GlyphSource",
   "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
   "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
   "net.minecraft.client.gui.Hud.HeartType",
   "net.minecraft.client.gui.TextAlignment",
-  "net.minecraft.client.gui.components.AbstractStringWidget",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-  "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-  "net.minecraft.client.gui.components.CycleButton",
-  "net.minecraft.client.gui.components.CycleButton.Builder",
+  "net.minecraft.client.gui.components.BossHealthOverlay",
+  "net.minecraft.client.gui.components.CycleButton.DisplayState",
+  "net.minecraft.client.gui.components.CycleButton.SpriteSupplier",
+  "net.minecraft.client.gui.components.MultiLineLabel",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "Jade-mc26.3-Fabric-26.3.5.jar",
   "published": "2026-10-02"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "fabric-api",
   "minecraft"
  ],
- "lacks": 650
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own; has network channels"
+ },
+ "lacks": 574
 }

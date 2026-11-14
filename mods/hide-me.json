@@ -9,32 +9,24 @@
  "author": "Kalpe",
  "description": "Allows you to randomise anything in your render distance that could lead to your coordinates being found.",
  "needs": [
-  "Mixin",
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.loader.api.VersionParsingException",
-  "net.minecraft.client.gui.components.Tooltip",
+  "net.minecraft.client.particle.ParticleEngine",
+  "net.minecraft.client.renderer.CloudRenderer",
+  "net.minecraft.client.renderer.chunk.RenderSectionRegion",
   "InputConstants.getKey()",
   "InputConstants.Type.getOrCreate()",
   "Version.parse()",
-  "KeyMapping.getTranslatedKeyMessage()",
-  "KeyMapping.isUnbound()",
   "KeyMapping.resetMapping()",
-  "KeyMapping.saveString()",
   "KeyMapping.setKey()",
   "Minecraft.getCurrentServer()",
   "Minecraft.levelRenderer",
-  "Minecraft.setScreenAndShow()",
-  "Options.keyMappings",
-  "Options.save()",
-  "Font.plainSubstrByWidth()",
-  "Button.Builder.tooltip()",
-  "Screen.mouseClicked()",
   "ClientLevel.setSectionRangeDirty()",
   "ServerData.ip",
   "LocalPlayer.chunkPosition()",
   "BlockPos.MutableBlockPos.set()",
   "Level.getHeight()",
   "Level.getMinY()",
-  "Blocks.BAMBOO",
   "Blocks.BASALT",
   "Blocks.DEEPSLATE",
   "Blocks.NETHERRACK",
@@ -45,8 +37,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "hideme-0.3.0+mc26.3.jar",
   "published": "2026-11-03"
  },
@@ -58,8 +50,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -74,5 +66,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 30
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 22
 }

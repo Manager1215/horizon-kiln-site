@@ -9,14 +9,34 @@
  "author": "JayDaMan53",
  "description": "A plugin that stops certain hidden block entities from being sent to players to prevent the pie chart from working.",
  "needs": [
-  "Mixin"
+  "net.minecraft.network.protocol.game.ClientboundLevelChunkPacketData.BlockEntityInfo",
+  "LongIterator.hasNext()",
+  "LongIterator.remove()",
+  "BlockPos.getX()",
+  "BlockPos.getZ()",
+  "BlockPos.MutableBlockPos.set()",
+  "SectionPos.relativeToBlockPos()",
+  "SectionPos.sectionRelative()",
+  "SectionPos.x()",
+  "SectionPos.y()",
+  "SectionPos.z()",
+  "ClientboundBlockEntityDataPacket.getPos()",
+  "ClientboundBlockEntityDataPacket.getType()",
+  "ClientboundBlockUpdatePacket.getPos()",
+  "ServerChunkCache.getChunkNow()",
+  "ServerLevel.getLightEngine()",
+  "ServerLevel.getSectionIndexFromSectionY()",
+  "ServerPlayer.connection",
+  "ServerCommonPacketListenerImpl.send()",
+  "ServerGamePacketListenerImpl.send()",
+  "LevelChunk.getSection()"
  ],
- "roadmap": "Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "anti-pie-fabric-1.2.0+mc26.3.jar",
   "published": "2026-09-16"
  },
@@ -28,8 +48,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -43,5 +63,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 0
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 21
 }

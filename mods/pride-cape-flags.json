@@ -9,15 +9,31 @@
  "author": "App24",
  "description": "This mod adds different pride flags that can be used as capes and elytra.",
  "needs": [
-  "Mixin",
-  "Identifier.withPath()"
+  "Mixin: 2 points inside the game's methods",
+  "net.minecraft.client.gui.components.LogoRenderer",
+  "net.minecraft.client.gui.components.SplashRenderer",
+  "net.minecraft.client.gui.components.SpriteIconButton",
+  "net.minecraft.client.gui.components.SpriteIconButton.Builder",
+  "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
+  "net.minecraft.client.gui.layouts.LinearLayout",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.resources.SplashManager",
+  "GuiGraphicsExtractor.blit()",
+  "GuiGraphicsExtractor.blitSprite()",
+  "GuiGraphicsExtractor.entity()",
+  "LocalPlayer.getSkin()",
+  "CommonComponents.GUI_BACK",
+  "CommonComponents.GUI_OK",
+  "TextColor.RED",
+  "Identifier.withPath()",
+  "Player.<init>()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "pridecapeflags-1.2.3-26.3.jar",
   "published": "2026-10-13"
  },
@@ -29,8 +45,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -48,5 +64,9 @@
   "minecraft",
   "yet_another_config_lib_v3"
  ],
- "lacks": 1
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; has network channels"
+ },
+ "lacks": 17
 }

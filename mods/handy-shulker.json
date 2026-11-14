@@ -9,42 +9,46 @@
  "author": "dfox288",
  "description": "Shulker boxes should work like bundles. Click to insert items, hover to preview contents, and scroll to extract — all without placing the box down.",
  "needs": [
-  "Mixin",
   "net.fabricmc.fabric.api.client.rendering.v1.ClientTooltipComponentCallback",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
   "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseScroll",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.minecraft.client.ScrollWheelHandler",
   "net.minecraft.client.gui.ItemSlotMouseAction",
   "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
   "net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner",
   "net.minecraft.network.protocol.game.ServerboundSelectBundleItemPacket",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
-  "net.minecraft.world.inventory.ContainerInput",
+  "net.minecraft.world.entity.ContainerUser",
+  "net.minecraft.world.inventory.ClickAction",
   "net.minecraft.world.inventory.PlayerEnderChestContainer",
   "net.minecraft.world.item.TooltipFlag.Default",
   "net.minecraft.world.level.block.EnderChestBlock",
   "net.minecraft.world.level.block.ShulkerBoxBlock",
   "InputConstants.isKeyDown()",
+  "Options.discreteMouseScroll()",
+  "Options.mouseWheelSensitivity()",
   "GuiGraphicsExtractor.tooltip()",
   "ClientPacketListener.send()",
   "DataComponents.TOOLTIP_STYLE",
   "Component.getVisualOrderText()",
+  "SoundEvents.SHULKER_CLOSE",
+  "SoundEvents.SHULKER_HURT_CLOSED",
+  "SoundEvents.SHULKER_OPEN",
   "ARGB.colorFromFloat()",
   "Player.getEnderChestInventory()",
+  "Slot.allowModification()",
+  "Slot.safeInsert()",
   "DyeColor.getTextureDiffuseColor()",
   "Item.TooltipContext.of()",
   "ItemStack.getStyledHoverName()",
   "ItemStack.getTooltipLines()",
   "TooltipFlag.NORMAL"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "handyshulker-2.4.0.jar",
   "published": "2026-09-16"
  },
@@ -56,8 +60,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -74,5 +78,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 28
+ "softOff": {
+  "class": "partial",
+  "why": "has network channels"
+ },
+ "lacks": 33
 }

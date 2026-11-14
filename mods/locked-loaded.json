@@ -10,7 +10,7 @@
  "description": "A variety of fun crossbow enchantments!",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 38 points inside the game's methods",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
@@ -29,36 +29,36 @@
   "net.minecraft.advancements.predicates.entity.EntityPredicate",
   "net.minecraft.advancements.predicates.entity.EntityPredicate.Builder",
   "net.minecraft.advancements.predicates.entity.MovementPredicate",
+  "net.minecraft.client.model.HumanoidModel",
+  "net.minecraft.client.model.HumanoidModel.ArmPose",
+  "net.minecraft.client.player.FirstPersonHandsAndItems",
+  "net.minecraft.client.renderer.entity.HumanoidMobRenderer",
+  "net.minecraft.client.renderer.entity.layers.ItemInHandLayer",
+  "net.minecraft.client.renderer.entity.state.ArmedEntityRenderState",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
+  "net.minecraft.client.renderer.item.properties.select.Charge",
+  "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState",
+  "net.minecraft.client.renderer.state.level.PlayerRenderState",
   "net.minecraft.resources.RegistryOps.RegistryInfoLookup",
-  "net.minecraft.server.network.ServerGamePacketListenerImpl",
   "net.minecraft.util.context.ContextKeySet.Builder",
   "net.minecraft.util.valueproviders.ConstantInt",
   "net.minecraft.util.valueproviders.IntProviders",
-  "net.minecraft.world.entity.projectile.FireworkRocketEntity",
-  "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
-  "net.minecraft.world.item.component.ChargedProjectiles",
-  "net.minecraft.world.item.component.FireworkExplosion",
-  "net.minecraft.world.item.component.FireworkExplosion.Shape",
-  "net.minecraft.world.item.component.Fireworks",
-  "net.minecraft.world.item.component.UseEffects",
-  "net.minecraft.world.item.enchantment.Enchantment.Builder",
-  "net.minecraft.world.item.enchantment.EnchantmentHelper.EnchantmentVisitor",
-  "net.minecraft.world.item.enchantment.LevelBasedValue",
-  "net.minecraft.world.item.enchantment.LevelBasedValue.Constant",
-  "net.minecraft.world.item.enchantment.effects.AllOf",
-  "net.minecraft.world.item.enchantment.effects.AllOf.ValueEffects",
-  "net.minecraft.world.level.storage.loot.entries.EmptyLootItem",
-  "net.minecraft.world.level.storage.loot.entries.NestedLootTable",
-  "net.minecraft.world.level.storage.loot.functions.FilteredFunction",
-  "net.minecraft.world.level.storage.loot.functions.FilteredFunction.Builder",
-  "and 58 more"
+  "net.minecraft.world.entity.ai.goal.RangedCrossbowAttackGoal",
+  "net.minecraft.world.entity.ai.goal.RangedCrossbowAttackGoal.CrossbowState",
+  "net.minecraft.world.entity.boss.enderdragon.phases.AbstractDragonSittingPhase",
+  "net.minecraft.world.entity.boss.wither.WitherBoss",
+  "net.minecraft.world.entity.monster.Enderman",
+  "net.minecraft.world.entity.monster.Monster",
+  "net.minecraft.world.entity.monster.Shulker",
+  "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "lockedloaded-1.1.1+mc26.3.jar",
   "published": "2026-09-15"
  },
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +89,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 98
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 167
 }

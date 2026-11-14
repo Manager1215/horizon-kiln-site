@@ -9,15 +9,42 @@
  "author": "RexBeto",
  "description": "Overhauled enchanting compatibility, overeat, hotkey totem and much more.",
  "needs": [
-  "Mixin",
-  "DamageSources.generic()"
+  "Mixin: 6 points inside the game's methods",
+  "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen",
+  "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
+  "net.minecraft.server.level.ServerPlayerGameMode",
+  "net.minecraft.tags.ItemTags",
+  "net.minecraft.world.entity.animal.goat.Goat",
+  "net.minecraft.world.entity.animal.pig.Pig",
+  "net.minecraft.world.entity.animal.sheep.Sheep",
+  "net.minecraft.world.food.FoodProperties",
+  "net.minecraft.world.food.Foods",
+  "net.minecraft.world.item.EnderpearlItem",
+  "net.minecraft.world.item.ItemCooldowns",
+  "net.minecraft.world.item.TridentItem",
+  "DataComponents.FOOD",
+  "ServerLevel.addFreshEntityWithPassengers()",
+  "SoundEvents.HOE_TILL",
+  "DamageSources.generic()",
+  "AgeableMob.setBaby()",
+  "AgeableMob.snapTo()",
+  "Animal.getBreedOffspring()",
+  "Player.getUsedItemHand()",
+  "Player.isInWaterOrRain()",
+  "FoodData.setFoodLevel()",
+  "FoodData.setSaturation()",
+  "Item.Properties.food()",
+  "Items.CHORUS_FRUIT",
+  "Items.PUFFERFISH_BUCKET",
+  "Items.WIND_CHARGE",
+  "Block.getDrops()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "rbsurvivaltweaks-5.0.1.1.jar",
   "published": "2026-10-08"
  },
@@ -29,8 +56,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -46,5 +73,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 1
+ "softOff": {
+  "class": "restart",
+  "why": "@overwrite and @redirect into the game's classes; has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 28
 }

@@ -10,14 +10,14 @@
  "description": "Bigger advancements screen plus a checklist of exactly which requirements you still need (biomes, foods, mobs...). Perfect for completionists. Fabric 26.3.",
  "needs": [
   "an access widener",
-  "Mixin",
+  "Mixin: 11 points inside the game's methods",
   "net.minecraft.advancements.AdvancementNode",
   "net.minecraft.advancements.AdvancementTree",
+  "net.minecraft.client.gui.screens.advancements.AdvancementTab",
+  "net.minecraft.client.gui.screens.advancements.AdvancementTabType",
   "net.minecraft.client.gui.screens.advancements.AdvancementWidget",
   "net.minecraft.client.gui.screens.advancements.AdvancementsScreen",
-  "org.apache.logging.log4j.Level",
-  "org.apache.logging.log4j.LogManager",
-  "org.apache.logging.log4j.Logger",
+  "net.minecraft.util.CommonColors",
   "org.apache.logging.log4j.core.config.Configurator",
   "AdvancementProgress.getCompletedCriteria()",
   "AdvancementProgress.getRemainingCriteria()",
@@ -27,8 +27,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "file": "advancementinfo-26.3-fabric-1.4.0.jar",
   "published": "2026-10-08"
  },
@@ -40,8 +40,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -58,5 +58,9 @@
   "java",
   "minecraft"
  ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
  "lacks": 11
 }

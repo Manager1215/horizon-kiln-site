@@ -1,7 +1,7 @@
 {
  "id": "core-companion",
- "name": "Core Companion",
- "version": "2.4.5",
+ "name": "Core Companion - AI Player",
+ "version": "2.4.6",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,7 +9,7 @@
  "author": "capital_coin",
  "description": "An owner-bound AI companion that chats, remembers, builds a relationship, and runs survival tasks with Baritone path finding — local or cloud AI, optional voice and vision.",
  "needs": [
-  "Mixin",
+  "Mixin: 12 points inside the game's methods",
   "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
   "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
@@ -25,7 +25,6 @@
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.BeforeSave",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
@@ -34,32 +33,33 @@
   "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents",
   "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents.StartTracking",
   "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents.StopTracking",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
-  "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
-  "net.minecraft.client.CameraType",
   "net.minecraft.client.Screenshot",
+  "net.minecraft.client.gui.components.CommandSuggestions",
   "net.minecraft.client.gui.screens.inventory.BookViewScreen",
   "net.minecraft.client.gui.screens.inventory.BookViewScreen.BookAccess",
+  "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipPositioner",
+  "net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner",
   "net.minecraft.client.model.HumanoidModel",
+  "net.minecraft.client.model.geom.ModelPart.Visitor",
   "net.minecraft.client.model.geom.PartPose",
   "net.minecraft.client.model.geom.builders.CubeListBuilder",
   "net.minecraft.client.model.geom.builders.MeshDefinition",
   "net.minecraft.client.model.geom.builders.PartDefinition",
+  "net.minecraft.client.model.object.equipment.ShieldModel",
   "net.minecraft.client.model.player.PlayerModel",
-  "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
-  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.multiplayer.ClientChunkCache",
+  "net.minecraft.client.multiplayer.ClientChunkCache.Storage",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
-  "file": "core-companion-2.4.5-dev.26.3.jar",
-  "published": "2026-11-04"
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "file": "core-companion-2.4.33.jar",
+  "published": "2026-11-13"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-05",
-  "kiln": "development build 2026-11-05 (afb67d1)",
+  "date": "2026-11-14",
+  "kiln": "development build 2026-11-14 (fa70eeb)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -88,5 +88,9 @@
   "java",
   "minecraft"
  ],
- "lacks": 570
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 595
 }
