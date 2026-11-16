@@ -26,7 +26,6 @@
     "net.minecraft.world.attribute.BackgroundMusic",
     "Object2BooleanMap.Entry.getKey()",
     "Object2BooleanMap.FastEntrySet.stream()",
-    "KeyMapping.matches()",
     "Minecraft.getMusicManager()",
     "Minecraft.getSituationalMusic()",
     "Options.getSoundSourceVolume()",
@@ -51,14 +50,15 @@
     "SoundEvents.MUSIC_BIOME_LUSH_CAVES",
     "SoundEvents.MUSIC_BIOME_MEADOW",
     "SoundEvents.MUSIC_BIOME_NETHER_WASTES",
-    "and 8 more"
+    "SoundEvents.MUSIC_BIOME_OLD_GROWTH_TAIGA",
+    "and 7 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "simple_music_control-fabric-1.5.6+26.3.jar",
     "published": "2026-10-26"
   },
@@ -88,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 48,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method into the game's classes"
+  },
+  "lacks": 47,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

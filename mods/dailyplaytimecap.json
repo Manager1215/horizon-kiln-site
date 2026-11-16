@@ -9,14 +9,6 @@
   "author": "Kurtisdede",
   "description": "A server-side Minecraft mod that lets moderators set daily playtime limits for players. (Fabric)",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "net.minecraft.commands.arguments.GameProfileArgument",
-    "net.minecraft.server.permissions.Permissions",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "ServerPlayer.connection",
-    "ServerPlayer.sendSystemMessage()",
     "ServerGamePacketListenerImpl.disconnect()",
     "Player.nameAndId()"
   ],
@@ -25,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "DailyPlaytimeCap_1.1.2_26.3.jar",
     "published": "2026-09-19"
   },
@@ -52,7 +44,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

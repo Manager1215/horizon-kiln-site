@@ -9,21 +9,16 @@
   "author": "isxander",
   "description": "Adds a way of adding information to the user's title screen.",
   "needs": [
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.network.chat.ComponentSerialization",
     "net.minecraft.network.chat.ComponentUtils",
     "JsonArray.forEach()",
-    "FabricLoader.getEntrypointContainers()",
-    "Style.getClickEvent()",
-    "Style.withUnderlined()"
+    "StringWidget.visitLines()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "main-menu-credits-1.4.0+26.2-universal.jar",
     "published": "2026-06-17"
   },
@@ -49,7 +44,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

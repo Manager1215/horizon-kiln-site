@@ -2,33 +2,19 @@
   "id": "easyreplant",
   "name": "EasyReplant",
   "version": "26.3",
-  "status": "planned",
-  "statusLabel": "Planned",
-  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "status": "not-checked",
+  "statusLabel": "Not checked",
+  "statusMeaning": "In the catalogue, not checked yet.",
   "url": "https://modrinth.com/mod/easyreplant",
   "author": "gifti3003",
   "description": "Right-click to instantly harvest and replant crops using seeds from your inventory.",
-  "needs": [
-    "Inventory.contains()",
-    "Inventory.findSlotMatchingItem()",
-    "Items.BEETROOT_SEEDS",
-    "Items.CARROT",
-    "Items.POTATO",
-    "Items.WHEAT_SEEDS",
-    "Level.destroyBlock()",
-    "Blocks.BEETROOTS",
-    "Blocks.CARROTS",
-    "Blocks.POTATOES",
-    "Blocks.WHEAT",
-    "CropBlock.getStateForAge()",
-    "CropBlock.isMaxAge()"
-  ],
-  "roadmap": "Code next to data (0.3)",
-  "evidence": "Not run: Java did not start.",
+  "needs": [],
+  "roadmap": "",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (21 classes, 27 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "easyreplant-26.3.jar",
     "published": "2026-09-16"
   },
@@ -56,7 +42,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "name": "EasyReplant",
     "version": "26.3",

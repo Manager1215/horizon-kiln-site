@@ -9,9 +9,7 @@
   "author": "nathancord",
   "description": "Shows a player their own nametag in F5.",
   "needs": [
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
-    "Options.getCameraType()",
     "LivingEntity.isInvisibleTo()",
     "LivingEntity.isVehicle()"
   ],
@@ -20,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "thirdpersonnametags-mc26.3-1.8.0.jar",
     "published": "2026-09-15"
   },
@@ -48,7 +46,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

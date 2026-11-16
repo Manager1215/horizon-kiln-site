@@ -22,7 +22,6 @@
     "net.minecraft.Optionull",
     "net.minecraft.client.ClientClockManager",
     "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.multiplayer.ClientLevel.ClientLevelData",
     "net.minecraft.client.renderer.DynamicGpuData",
     "net.minecraft.client.renderer.DynamicGpuData.ChunkSectionInfo",
@@ -33,7 +32,6 @@
     "net.minecraft.client.renderer.chunk.ChunkSectionsToRender",
     "net.minecraft.client.renderer.chunk.ChunkSectionsToRender.DrawSeparate",
     "net.minecraft.world.attribute.EnvironmentAttributeSystem.Builder",
-    "net.minecraft.world.flag.FeatureFlags",
     "net.minecraft.world.level.chunk.ChunkAccess.PackedTicks",
     "net.minecraft.world.level.dimension.BuiltinDimensionTypes",
     "net.minecraft.world.level.gameevent.GameEvent.Context",
@@ -49,14 +47,16 @@
     "RenderSystem.getGlobalSettingsUniform()",
     "RenderSystem.getModelViewMatrixCopy()",
     "RenderSystem.getSequentialBuffer()",
-    "and 50 more"
+    "RenderSystem.setGlobalSettingsUniform()",
+    "SamplerCache.getClampToEdge()",
+    "and 35 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "schematicpreview-0.0.17+26.3.jar",
     "published": "2026-09-23"
   },
@@ -86,7 +86,11 @@
     "malilib",
     "minecraft"
   ],
-  "lacks": 90,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 75,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

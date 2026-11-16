@@ -9,29 +9,18 @@
   "author": "imkrqte",
   "description": "This mod adds the ability to create markers in the world with customizable icons, name colors, and display settings.",
   "needs": [
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
     "net.minecraft.world.level.storage.WorldData",
     "Camera.isInitialized()",
     "Camera.rotation()",
-    "Minecraft.execute()",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
-    "Screen.mouseClicked()",
-    "Screen.mouseScrolled()",
-    "ServerData.ip",
-    "ServerData.name",
-    "BlockPos.distSqr()",
-    "MutableComponent.setStyle()",
-    "Style.withClickEvent()",
-    "Items.COMPASS"
+    "IntegratedServer.getWorldData()",
+    "BlockPos.distSqr()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "PrettyMarker 26.x.jar",
     "published": "2026-10-13"
   },
@@ -59,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

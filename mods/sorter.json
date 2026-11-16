@@ -9,20 +9,14 @@
   "author": "l.treegardener",
   "description": "This Mod adds a Sorter, that can be connected to Chests and automatically sorts Items into these chests",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.minecraft.core.particles.DustParticleOptions",
     "net.minecraft.core.particles.ItemParticleOption",
-    "net.minecraft.world.SimpleContainer",
-    "net.minecraft.world.inventory.ChestMenu",
     "net.minecraft.world.level.block.Mirror",
     "net.minecraft.world.level.block.entity.HopperBlockEntity",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "AbstractContainerScreen.mouseScrolled()",
     "BlockEntityRenderer.extractRenderState()",
     "BlockPos.toShortString()",
     "ParticleTypes.ITEM",
     "ByteBufCodecs.registry()",
-    "MinecraftServer.execute()",
     "ServerLevel.sendParticles()",
     "SoundEvents.AMETHYST_BLOCK_RESONATE",
     "BaseEntityBlock.updateShape()",
@@ -33,7 +27,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sortiermod-1.0.0+26.3.jar",
     "published": "2026-10-30"
   },
@@ -62,7 +56,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

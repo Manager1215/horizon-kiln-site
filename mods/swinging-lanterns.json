@@ -21,12 +21,10 @@
     "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.BeforeGizmos",
     "net.fabricmc.fabric.impl.client.indigo.renderer.render.AltModelBlockRendererImpl",
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
     "net.minecraft.client.model.geom.ModelLayers",
     "net.minecraft.client.model.object.bell.BellModel",
     "net.minecraft.client.model.object.bell.BellModel.State",
     "net.minecraft.client.multiplayer.ClientChunkCache",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.particle.ParticleEngine",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.block.BlockModelSet",
@@ -50,14 +48,16 @@
     "net.minecraft.world.level.block.entity.HangingSignBlockEntity",
     "net.minecraft.world.level.block.entity.SignText",
     "net.minecraft.world.level.block.state.properties.BellAttachType",
-    "and 62 more"
+    "net.minecraft.world.level.chunk.LevelChunk.EntityCreationType",
+    "net.minecraft.world.phys.shapes.EntityCollisionContext",
+    "and 60 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "swinginglanterns-fabric-26.3-2.1.0.jar",
     "published": "2026-11-03"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 219,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels"
+  },
+  "lacks": 193,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

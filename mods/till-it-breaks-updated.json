@@ -10,25 +10,19 @@
   "description": "Displays the durability of items on the item itself, updated for 1.21 and above",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.ItemPickerMenu",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.item.BowItem",
     "net.minecraft.world.item.CrossbowItem",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "Container.forEach()",
     "ItemStackTemplate.is()",
-    "Items.ARROW",
     "EnchantmentHelper.getItemEnchantmentLevel()",
     "Enchantments.INFINITY"
   ],
-  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tillitbreaks-fabric-1.1.5+26.3.jar",
     "published": "2026-09-20"
   },
@@ -57,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

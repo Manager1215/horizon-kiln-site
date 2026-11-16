@@ -10,15 +10,14 @@
   "description": "this mod modifies mouse architecture which gives the ability to place fast",
   "needs": [
     "org.lwjgl.glfw.GLFW",
-    "InputConstants.Type.KEYSYM",
-    "Minecraft.setScreenAndShow()"
+    "InputConstants.Type.KEYSYM"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "FastBlocks-26.3.jar",
     "published": "2026-10-17"
   },
@@ -46,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

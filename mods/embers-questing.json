@@ -10,7 +10,6 @@
   "description": "Powerful data driven questing mod using LDLib2 for maximum customizability",
   "needs": [
     "Mixin: 28 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.blaze3d.Blaze3D",
     "com.mojang.blaze3d.buffers.Std140Builder",
     "com.mojang.blaze3d.pipeline.TextureTarget",
@@ -27,11 +26,8 @@
     "com.mojang.blaze3d.vertex.VertexSorting.DistanceFunction",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
     "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking",
     "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking.LoginQueryRequestHandler",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AllowKeyPress",
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
     "net.fabricmc.fabric.api.entity.FakePlayer",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
@@ -39,9 +35,6 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDamage",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
@@ -50,6 +43,13 @@
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
     "net.fabricmc.fabric.api.event.registry.RegistryEntryAddedCallback",
     "net.fabricmc.fabric.api.networking.v1.LoginPacketSender",
+    "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents",
+    "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents.QueryStart",
+    "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking",
+    "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginQueryResponseHandler",
+    "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginSynchronizer",
+    "net.fabricmc.fabric.api.transfer.v1.storage.base.InsertionOnlyStorage",
+    "net.minecraft.advancements.AdvancementNode",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "embersquesting-fabric-26.3-1.9.0.jar",
     "published": "2026-11-15"
   },
@@ -93,5 +93,9 @@
     "ldlib2",
     "minecraft"
   ],
-  "lacks": 1360
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
+  },
+  "lacks": 885
 }

@@ -9,15 +9,12 @@
   "author": "fudgedy1",
   "description": "An in-game catalogue of community schematics for Litematica: browse, filter by category, and download straight into your schematics folder.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.minecraft.SessionService",
     "com.mojang.blaze3d.Blaze3D",
     "com.mojang.blaze3d.buffers.Std140Builder",
     "com.mojang.blaze3d.buffers.Std140SizeCalculator",
     "com.mojang.blaze3d.font.GlyphInfo",
     "com.mojang.blaze3d.pipeline.TextureTarget",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
     "com.mojang.blaze3d.vertex.BufferBuilder",
     "com.mojang.blaze3d.vertex.ByteBufferBuilder",
@@ -34,8 +31,6 @@
     "net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint",
     "net.fabricmc.loader.api.metadata.ModOrigin",
     "net.fabricmc.loader.api.metadata.version.VersionPredicate",
-    "net.minecraft.client.CameraType",
-    "net.minecraft.client.StringSplitter",
     "net.minecraft.client.StringSplitter.WidthProvider",
     "net.minecraft.client.gui.GlyphSource",
     "net.minecraft.client.gui.components.MultiLineEditBox",
@@ -49,6 +44,11 @@
     "net.minecraft.client.gui.font.glyphs.BakedGlyph",
     "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
     "net.minecraft.client.main.Main",
+    "net.minecraft.client.model.geom.builders.UVPair",
+    "net.minecraft.client.multiplayer.ClientLevel.ClientLevelData",
+    "net.minecraft.client.renderer.BindGroupLayouts",
+    "net.minecraft.client.renderer.DynamicGpuData",
+    "net.minecraft.client.renderer.MappableRingBuffer",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -56,7 +56,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "schematicindex-0.8.5+26.3.jar",
     "published": "2026-11-14"
   },
@@ -87,7 +87,11 @@
     "malilib",
     "minecraft"
   ],
-  "lacks": 355,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 239,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

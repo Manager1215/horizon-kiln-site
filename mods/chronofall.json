@@ -25,7 +25,6 @@
     "net.minecraft.client.model.geom.builders.MeshDefinition",
     "net.minecraft.client.model.geom.builders.PartDefinition",
     "net.minecraft.client.model.player.PlayerModel",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.particle.ParticleProvider",
     "net.minecraft.client.particle.SingleQuadParticle",
     "net.minecraft.client.particle.SingleQuadParticle.Layer",
@@ -44,20 +43,21 @@
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.server.level.ServerPlayerGameMode",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.InterpolationHandler",
     "net.minecraft.world.entity.LinearInterpolationHandler",
     "net.minecraft.world.entity.PlayerRideableJumping",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
-    "and 80 more"
+    "net.minecraft.world.entity.ai.goal.FloatGoal",
+    "net.minecraft.world.entity.ai.goal.GoalSelector",
+    "and 79 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "chronofall-fabric-26.3-2.1.0.jar",
     "published": "2026-11-03"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 235,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 199,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

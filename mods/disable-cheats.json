@@ -10,17 +10,14 @@
   "description": "Restores the old \"no cheats after world creation\" rule by locking the pause-menu \"Allow Cheats\" toggle introduced in 26.2.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.gui.components.CycleButton",
     "net.minecraft.client.gui.components.LockIconButton",
     "net.minecraft.client.gui.components.PopupScreen",
     "net.minecraft.client.gui.components.PopupScreen.Builder",
     "net.minecraft.client.gui.layouts.EqualSpacingLayout",
     "net.minecraft.client.gui.layouts.EqualSpacingLayout.Orientation",
     "net.minecraft.client.gui.screens.WorldOptionsScreen",
-    "net.minecraft.client.server.IntegratedServer",
-    "Minecraft.getSingleplayerServer()",
-    "CommonComponents.GUI_NO",
-    "CommonComponents.GUI_YES",
+    "IntegratedServer.getDataStorage()",
+    "IntegratedServer.isHardcore()",
     "SavedDataStorage.scheduleSave()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -28,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "disable-cheats-2.0.0.jar",
     "published": "2026-09-19"
   },
@@ -57,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

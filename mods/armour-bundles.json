@@ -13,22 +13,16 @@
     "net.fabricmc.fabric.api.client.rendering.v1.ClientTooltipComponentCallback",
     "net.minecraft.client.ScrollWheelHandler",
     "net.minecraft.client.gui.ItemSlotMouseAction",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
-    "net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner",
     "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperties",
     "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperty",
     "net.minecraft.util.datafix.DataFixers",
     "net.minecraft.util.datafix.fixes.ItemStackComponentizationFix",
     "net.minecraft.util.datafix.fixes.ItemStackComponentizationFix.ItemStackData",
     "net.minecraft.world.inventory.ClickAction",
-    "net.minecraft.world.inventory.ContainerInput",
     "Font.wordWrapHeight()",
-    "GuiGraphicsExtractor.tooltip()",
     "ItemModelResolver.appendItemLayers()",
     "NonNullList.iterator()",
     "DataComponents.DAMAGE",
-    "DataComponents.TOOLTIP_STYLE",
-    "Component.getVisualOrderText()",
     "SoundEvents.BUNDLE_INSERT",
     "SoundEvents.BUNDLE_INSERT_FAIL",
     "SoundEvents.BUNDLE_REMOVE_ONE",
@@ -36,12 +30,7 @@
     "EquipmentSlot.CODEC",
     "EquipmentSlot.STREAM_CODEC",
     "LivingEntity.isEquippableInSlot()",
-    "Player.drop()",
-    "Slot.allowModification()",
-    "Slot.safeInsert()",
-    "Item.getTooltipImage()",
     "ItemStack.getStyledHoverName()",
-    "ItemStack.isStackable()",
     "ItemStack.matchesIgnoringComponents()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -49,7 +38,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "armourbundles-1.10.0+26.3.jar",
     "published": "2026-09-18"
   },
@@ -81,7 +70,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 33,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

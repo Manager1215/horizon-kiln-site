@@ -43,7 +43,6 @@
     "GameRenderer.mainCamera()",
     "BlockPos.containing()",
     "BlockPos.MutableBlockPos.set()",
-    "Holder.is()",
     "Registries.BIOME",
     "ByteBufCodecs.VECTOR3F",
     "Identifier.toShortString()",
@@ -51,14 +50,15 @@
     "ARGB.as8BitChannel()",
     "ARGB.blueFloat()",
     "ARGB.greenFloat()",
-    "and 12 more"
+    "ARGB.redFloat()",
+    "and 11 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "immersive-storms-1.8.0+26.3.jar",
     "published": "2026-09-26"
   },
@@ -89,7 +89,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 52,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 51,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

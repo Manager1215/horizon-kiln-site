@@ -9,7 +9,6 @@
   "author": "PeteMC",
   "description": "Everlasting Winter creates continuous snowfall for a configurable list of biomes.",
   "needs": [
-    "net.minecraft.world.level.block.DoublePlantBlock",
     "net.minecraft.world.level.block.KelpBlock",
     "net.minecraft.world.level.block.KelpPlantBlock",
     "net.minecraft.world.level.block.MushroomBlock",
@@ -19,11 +18,8 @@
     "net.minecraft.world.level.block.TallFlowerBlock",
     "net.minecraft.world.level.block.TallSeagrassBlock",
     "net.minecraft.world.level.block.TorchBlock",
-    "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
     "net.minecraft.world.level.block.state.properties.SlabType",
     "BiomeModificationContext.EffectsContext.setFoliageColorOverride()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "MinecraftServer.setWeatherParameters()",
     "ServerLevel.RAIN_DELAY",
     "BlockTags.SMALL_FLOWERS",
@@ -34,11 +30,6 @@
     "Level.getMinY()",
     "Level.getSeaLevel()",
     "Biome.coldEnoughToSnow()",
-    "Block.dropResources()",
-    "Blocks.DIRT_PATH",
-    "Blocks.POWDER_SNOW",
-    "Blocks.SNOW",
-    "Blocks.SNOW_BLOCK",
     "SlabBlock.TYPE",
     "BlockState.canBeReplaced()"
   ],
@@ -47,7 +38,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "EverlastingWinter-1.1.1-Fabric-mc26.1.2.jar",
     "published": "2026-11-07"
   },
@@ -77,7 +68,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 32,
+  "softOff": {
+    "class": "partial",
+    "why": "generates in the world"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

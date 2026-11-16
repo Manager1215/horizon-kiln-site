@@ -9,7 +9,6 @@
   "author": "Mrbysco",
   "description": "Adds underground villages to your world",
   "needs": [
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.data.worldgen.Pools",
     "net.minecraft.data.worldgen.ProcessorLists",
     "net.minecraft.data.worldgen.features.PileFeatures",
@@ -29,8 +28,6 @@
     "net.minecraft.world.level.levelgen.structure.templatesystem.RandomBlockMatchTest",
     "net.minecraft.world.level.levelgen.structure.templatesystem.RuleProcessor",
     "net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList",
-    "HolderGetter.getOrThrow()",
-    "Registry.getOrThrow()",
     "BuiltInRegistries.REGISTRY",
     "Registries.BIOME",
     "Registries.HEIGHT_PROVIDER_TYPE",
@@ -38,7 +35,6 @@
     "Registries.STRUCTURE",
     "Registries.STRUCTURE_SET",
     "Registries.TEMPLATE_POOL",
-    "Blocks.CALCITE",
     "StructurePoolElement.empty()",
     "StructurePoolElement.feature()",
     "StructurePoolElement.legacy()",
@@ -49,7 +45,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "UndergroundVillages-fabric-26.3-13.0.1.jar",
     "published": "2026-09-30"
   },
@@ -62,7 +58,11 @@
   "entrypoints": {},
   "mixins": false,
   "depends": [],
-  "lacks": 34,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 30,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

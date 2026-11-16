@@ -12,18 +12,14 @@
     "Mixin: 4 points inside the game's methods",
     "net.minecraft.commands.arguments.TimeArgument",
     "net.minecraft.server.commands.PerfCommand",
-    "net.minecraft.util.profiling.metrics.profiling.ActiveMetricsRecorder",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
-    "Commands.CommandSelection.includeDedicated",
-    "Component.translatableWithFallback()"
+    "net.minecraft.util.profiling.metrics.profiling.ActiveMetricsRecorder"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "perf-duration-1.0.0.jar",
     "published": "2026-07-13"
   },
@@ -50,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

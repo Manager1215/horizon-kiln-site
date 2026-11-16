@@ -36,27 +36,27 @@
     "net.minecraft.world.level.block.WallSignBlock",
     "net.minecraft.world.level.block.entity.BlockEntityTypes",
     "BlockSetTypeBuilder.register()",
-    "Identifier.withPrefix()",
     "EntityType.Builder.eyeHeight()",
     "EntityType.Builder.noLootTable()",
     "BlockItem.registerBlocks()",
     "Item.BY_BLOCK",
     "Item.Properties.requiredFeatures()",
     "Item.Properties.signText()",
-    "Items.CHERRY_CHEST_BOAT",
-    "Items.PALE_OAK_BUTTON",
-    "Items.PALE_OAK_HANGING_SIGN",
-    "Items.PALE_OAK_LOG",
-    "Items.PALE_OAK_SHELF",
     "Block.defaultMapColor()",
-    "and 24 more"
+    "Block.requiredFeatures()",
+    "Blocks.buttonProperties()",
+    "Blocks.logProperties()",
+    "SoundType.CHERRY_WOOD",
+    "BlockEntityType.addValidBlock()",
+    "BlockBehaviour.Properties.overrideLootTable()",
+    "and 4 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "azaleawood-9.0.1.jar",
     "published": "2026-11-03"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 64,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 44,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

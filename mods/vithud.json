@@ -9,10 +9,8 @@
   "author": "CryonLabs",
   "description": "VitHud is a clean and lightweight HUD mod that shows useful information while you play, without filling your screen with too much stuff.  It focuses on giving you what you actually need, in a simple and easy-to-read way.",
   "needs": [
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.world.level.LightLayer",
     "net.minecraft.world.level.levelgen.WorldgenRandom",
-    "Minecraft.getSingleplayerServer()",
     "ClientLevel.getBrightness()",
     "LocalPlayer.getAbsorptionAmount()",
     "LocalPlayer.getAirSupply()",
@@ -20,22 +18,8 @@
     "LocalPlayer.getMaxAirSupply()",
     "LocalPlayer.getTicksFrozen()",
     "LocalPlayer.getTicksRequiredToFreeze()",
+    "IntegratedServer.overworld()",
     "ServerLevel.getSeed()",
-    "Items.CLOCK",
-    "Items.COMPASS",
-    "Items.COOKED_BEEF",
-    "Items.FEATHER",
-    "Items.GOLDEN_APPLE",
-    "Items.GRASS_BLOCK",
-    "Items.IRON_SWORD",
-    "Items.LEATHER_CHESTPLATE",
-    "Items.LILY_PAD",
-    "Items.MAP",
-    "Items.OAK_SAPLING",
-    "Items.PAPER",
-    "Items.SLIME_BALL",
-    "Items.SNOWBALL",
-    "Items.TORCH",
     "Biomes.MANGROVE_SWAMP"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -43,7 +27,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "vitalhud-1.0.0+mc26.3.jar",
     "published": "2026-10-06"
   },
@@ -71,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

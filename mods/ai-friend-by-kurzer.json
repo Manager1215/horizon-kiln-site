@@ -21,15 +21,8 @@
     "net.minecraft.world.entity.ai.goal.LookAtPlayerGoal",
     "net.minecraft.world.entity.ai.goal.RandomLookAroundGoal",
     "net.minecraft.world.entity.ai.goal.RandomStrollGoal",
-    "net.minecraft.world.item.SpawnEggItem",
     "EntityRendererProvider.Context.bakeLayer()",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
-    "MinecraftServer.execute()",
     "PathfinderMob.createMobAttributes()",
-    "Attributes.FOLLOW_RANGE",
     "Item.Properties.spawnEgg()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -37,7 +30,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "AI Friend 1.0.0-26.3.jar",
     "published": "2026-09-24"
   },
@@ -66,7 +59,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

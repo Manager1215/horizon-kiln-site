@@ -12,13 +12,9 @@
     "an access widener",
     "Mixin: 39 points inside the game's methods",
     "net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder",
-    "net.minecraft.SharedConstants",
     "net.minecraft.advancements.predicates.StatePropertiesPredicate",
     "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.client.sounds.MusicManager",
-    "net.minecraft.core.HolderSet.Direct",
     "net.minecraft.core.IdMap",
     "net.minecraft.core.QuartPos",
     "net.minecraft.core.RegistrationInfo",
@@ -51,6 +47,10 @@
     "net.minecraft.world.attribute.SpatialAttributeInterpolator",
     "net.minecraft.world.attribute.modifier.MobSpawnSettingsModifier",
     "net.minecraft.world.entity.npc.villager.VillagerType",
+    "net.minecraft.world.level.NoiseColumn",
+    "net.minecraft.world.level.StructureManager",
+    "net.minecraft.world.level.biome.Biome.ClimateSettings",
+    "net.minecraft.world.level.biome.BiomeSpecialEffects.Builder",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "lithostitched-2.0.6-fabric-26.3.jar",
     "published": "2026-10-13"
   },
@@ -85,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 416,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 394,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

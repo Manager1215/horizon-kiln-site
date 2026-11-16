@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "com.mojang.blaze3d.Blaze3D",
-    "com.mojang.blaze3d.platform.TextInputManager",
     "com.mojang.blaze3d.vertex.DefaultVertexFormat",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
@@ -50,14 +49,15 @@
     "io.netty.handler.timeout.WriteTimeoutHandler",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
     "net.minecraft.client.ComponentCollector",
-    "and 71 more"
+    "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
+    "and 42 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bteterrarenderer-1.5.1-fabric26.3.jar",
     "published": "2026-10-04"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 111,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 82,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

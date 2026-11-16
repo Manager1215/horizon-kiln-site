@@ -10,28 +10,16 @@
   "description": "💾 Store your XP in any Item you want!",
   "needs": [
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.minecraft.commands.arguments.IdentifierArgument",
-    "net.minecraft.server.permissions.Permissions",
     "ServerPlayerEvents.JOIN",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "CommandSourceStack.getServer()",
-    "Commands.CommandSelection.includeIntegrated",
-    "ServerPlayer.connection",
-    "ServerPlayer.giveExperiencePoints()",
     "ServerPlayer.isCrouching()",
-    "ServerGamePacketListenerImpl.send()",
-    "ItemStack.getCustomName()",
-    "CustomData.copyTag()"
+    "ItemStack.getCustomName()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "smiles-xp-storage-1.8.jar",
     "published": "2026-10-25"
   },
@@ -60,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

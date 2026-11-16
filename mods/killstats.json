@@ -9,18 +9,8 @@
   "author": "dennis.thegamer96",
   "description": "Tracks your entity kills during gameplay sessions and displays live statistics via a configurable in-game HUD overlay.",
   "needs": [
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.AbstractThrownPotion",
-    "KeyMapping.getTranslatedKeyMessage()",
-    "Minecraft.execute()",
-    "Holder.is()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
-    "MutableComponent.withStyle()",
-    "DamageSource.getDirectEntity()",
-    "DamageSource.getEntity()",
     "EntityTypes.BLAZE",
     "EntityTypes.CAVE_SPIDER",
     "EntityTypes.CHICKEN",
@@ -49,14 +39,24 @@
     "EntityTypes.SHEEP",
     "EntityTypes.SHULKER",
     "EntityTypes.SILVERFISH",
-    "and 24 more"
+    "EntityTypes.SKELETON",
+    "EntityTypes.SLIME",
+    "EntityTypes.SPIDER",
+    "EntityTypes.SQUID",
+    "EntityTypes.STRAY",
+    "EntityTypes.VEX",
+    "EntityTypes.VINDICATOR",
+    "EntityTypes.WITCH",
+    "EntityTypes.WITHER",
+    "EntityTypes.WITHER_SKELETON",
+    "and 13 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "killstats-fabric-1.1.1+mc26.3.jar",
     "published": "2026-09-27"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 70,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 53,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

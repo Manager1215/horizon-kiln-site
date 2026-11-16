@@ -10,18 +10,14 @@
   "description": "This mod allows you to light extinguished campfires (both kind) with flint and steel or fire charges.",
   "needs": [
     "SoundEvents.FLINTANDSTEEL_USE",
-    "Player.getEquipmentSlotForItem()",
-    "Items.FIRE_CHARGE",
-    "Items.FLINT_AND_STEEL",
-    "Blocks.CAMPFIRE",
-    "Blocks.SOUL_CAMPFIRE"
+    "Player.getEquipmentSlotForItem()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "lightable-campfires-1.1.0.jar",
     "published": "2026-09-20"
   },
@@ -50,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

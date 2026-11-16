@@ -11,15 +11,9 @@
   "needs": [
     "Mixin: 1 point inside the game's methods",
     "com.mojang.blaze3d.vertex.QuadInstance",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
     "net.minecraft.client.multiplayer.ClientChunkCache",
     "net.minecraft.client.renderer.LevelRenderer",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.commands.arguments.blocks.BlockStateParser",
-    "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.level.StructureManager",
     "PoseStack.Pose.copy()",
     "PoseStack.Pose.set()",
@@ -29,12 +23,7 @@
     "VertexConsumer.setNormal()",
     "LongIterator.hasNext()",
     "Object2IntMap.Entry.getKey()",
-    "KeyMapping.matches()",
-    "KeyMapping.matchesMouse()",
-    "Minecraft.getSingleplayerServer()",
     "Options.getEffectiveRenderDistance()",
-    "Screen.keyReleased()",
-    "Screen.mouseReleased()",
     "ClientLevel.getChunkSource()",
     "LocalPlayer.getBlockX()",
     "LocalPlayer.getBlockY()",
@@ -50,14 +39,25 @@
     "BlockPos.getZ()",
     "BlockPos.offset()",
     "BlockPos.offset()",
-    "and 25 more"
+    "BlockPos.offset()",
+    "BlockPos.MutableBlockPos.set()",
+    "BlockPos.MutableBlockPos.set()",
+    "Registries.STRUCTURE",
+    "ServerChunkCache.getChunkNow()",
+    "ServerLevel.structureManager()",
+    "BlockState.getSeed()",
+    "LevelChunk.getAllReferences()",
+    "BoundingBox.maxX()",
+    "BoundingBox.maxY()",
+    "BoundingBox.maxZ()",
+    "and 6 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "architects_toolbox-fabric-2.0+mc26.3-fabric.jar",
     "published": "2026-11-16"
   },
@@ -85,5 +85,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 65
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 46
 }

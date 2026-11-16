@@ -2,24 +2,19 @@
   "id": "autogg-fabric",
   "name": "AutoGG-Fabric",
   "version": "1.0.2",
-  "status": "planned",
-  "statusLabel": "Planned",
-  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "status": "not-checked",
+  "statusLabel": "Not checked",
+  "statusMeaning": "In the catalogue, not checked yet.",
   "url": "https://modrinth.com/mod/autogg-fabric",
   "author": "EinsLucaaa",
   "description": "Automatic \"GG\" messages after rounds — Fabric mod for Minecraft",
-  "needs": [
-    "Minecraft.execute()",
-    "Minecraft.getCurrentServer()",
-    "ClientPacketListener.sendChat()",
-    "ServerData.ip"
-  ],
-  "roadmap": "Minecraft's libraries and client API (0.2)",
-  "evidence": "Not run: Java did not start.",
+  "needs": [],
+  "roadmap": "",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (13 classes, 19 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "auto-gg-1.0.2.jar",
     "published": "2026-10-12"
   },
@@ -51,7 +46,11 @@
     "minecraft",
     "modmenu"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 0,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

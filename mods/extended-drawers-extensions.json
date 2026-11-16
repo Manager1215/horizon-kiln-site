@@ -24,13 +24,10 @@
     "BlockEntityRenderer.extractRenderState()",
     "RenderTypes.entityTranslucent()",
     "BlockPos.toShortString()",
-    "DataComponents.LORE",
     "ExtraCodecs.VECTOR3F",
     "Item.isFoil()",
     "BlockEntityType.addValidBlock()",
     "MapColor.SAND",
-    "TagValueOutput.createWithoutContext()",
-    "TagValueOutput.store()",
     "Vec3.toVector3f()",
     "Shapes.rotate()"
   ],
@@ -39,7 +36,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ExtendedDrawersExtensions-5.2.0+mc.26.3.jar",
     "published": "2026-10-11"
   },
@@ -66,7 +63,11 @@
   "depends": [
     "extended_drawers"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 21,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

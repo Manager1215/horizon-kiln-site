@@ -9,8 +9,6 @@
   "author": "dexflex_yt",
   "description": "Simple mod adding a /restart command to your server",
   "needs": [
-    "net.minecraft.server.permissions.Permissions",
-    "CommandSourceStack.getServer()",
     "MinecraftServer.halt()",
     "MinecraftServer.saveEverything()"
   ],
@@ -19,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "basicallyrestart-1.5-26.jar",
     "published": "2026-10-07"
   },
@@ -47,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

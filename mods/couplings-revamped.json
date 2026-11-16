@@ -10,15 +10,10 @@
   "description": "A mod for Minecraft that allows coupled usage of doors, fence gates, and trapdoors",
   "needs": [
     "Mixin: 6 points inside the game's methods",
-    "net.minecraft.world.level.block.state.properties.DoorHingeSide",
     "net.minecraft.world.level.block.state.properties.Half",
     "Player.isCrouching()",
     "Level.getBestNeighborSignal()",
     "Level.hasNeighborSignal()",
-    "DoorBlock.FACING",
-    "DoorBlock.HALF",
-    "DoorBlock.HINGE",
-    "DoorBlock.OPEN",
     "FenceGateBlock.OPEN",
     "HorizontalDirectionalBlock.FACING",
     "TrapDoorBlock.HALF",
@@ -32,7 +27,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "couplings-fabric-26.3-1.0.0.jar",
     "published": "2026-10-19"
   },
@@ -60,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

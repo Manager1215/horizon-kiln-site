@@ -32,10 +32,8 @@
     "SubmitNodeCollector.submitModel()",
     "EntityRendererProvider.Context.bakeLayer()",
     "ClientboundAddEntityPacket.getMovement()",
-    "MinecraftServer.execute()",
     "MinecraftServer.getTickCount()",
     "ServerPlayer.getEyeY()",
-    "ServerPlayer.sendSystemMessage()",
     "SoundEvents.GLOW_ITEM_FRAME_BREAK",
     "SoundEvents.ITEM_FRAME_BREAK",
     "SoundEvents.ITEM_FRAME_REMOVE_ITEM",
@@ -47,16 +45,15 @@
     "LivingEntity.isSpectator()",
     "Projectile.onHitBlock()",
     "Projectile.recreateFromPacket()",
-    "Items.GLOW_ITEM_FRAME",
-    "Items.ITEM_FRAME",
-    "and 3 more"
+    "Level.addFreshEntity()",
+    "Level.getBlockStates()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "spitting-image-5-26.3-fabric.jar",
     "published": "2026-09-18"
   },
@@ -85,7 +82,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 43,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 38,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

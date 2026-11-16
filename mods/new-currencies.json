@@ -9,33 +9,23 @@
   "author": "MattyTomas",
   "description": "Coins and banknotes for Minecraft: 1€ and 2€ coins, 5€ to 500€ notes, with shapeless recipes to combine and split denominations. Lightweight, no config.",
   "needs": [
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.SimpleMenuProvider",
-    "net.minecraft.world.inventory.ChestMenu",
-    "net.minecraft.world.inventory.ContainerInput",
     "net.minecraft.world.inventory.ContainerLevelAccess",
-    "net.minecraft.world.item.component.ItemLore",
-    "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
     "net.minecraft.world.level.material.PushReaction",
-    "DataComponents.CUSTOM_NAME",
-    "DataComponents.LORE",
-    "MutableComponent.withStyle()",
     "Player.hasCorrectToolForDrops()",
     "Player.preventsBlockDrops()",
-    "MenuType.GENERIC_9x3",
     "Level.isOutsideBuildHeight()",
     "Level.levelEvent()",
     "Block.updateShape()",
     "HorizontalDirectionalBlock.FACING",
-    "BlockBehaviour.Properties.pushReaction()",
-    "BlockStateProperties.DOUBLE_BLOCK_HALF"
+    "BlockBehaviour.Properties.pushReaction()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "newcurrencies-1.1.0+26.3.jar",
     "published": "2026-10-05"
   },
@@ -63,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

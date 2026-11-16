@@ -22,12 +22,9 @@
     "net.minecraft.world.level.storage.loot.providers.number.ints.ConstantValue",
     "net.minecraft.world.level.storage.loot.providers.number.ints.UniformGenerator",
     "LocalPlayer.getVehicle()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "SynchedEntityData.defineId()",
     "SynchedEntityData.get()",
     "SynchedEntityData.set()",
-    "MinecraftServer.execute()",
     "MinecraftServer.getAllLevels()",
     "MinecraftServer.isHardcore()",
     "ServerLevel.getDifficulty()",
@@ -53,7 +50,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "chikem-mod-1.5.0.jar",
     "published": "2026-11-08"
   },
@@ -82,7 +79,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 38,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 35,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

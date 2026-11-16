@@ -10,11 +10,8 @@
   "description": "A mod to infinitely fly with an elytra without fireworks.",
   "needs": [
     "LocalPlayer.getBoundingBox()",
-    "LocalPlayer.isFallFlying()",
     "LocalPlayer.setXRot()",
-    "Player.isFallFlying()",
     "Player.setXRot()",
-    "Items.FIREWORK_ROCKET",
     "Level.noCollision()",
     "AABB.move()"
   ],
@@ -23,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "elytra-infinite-1.5.3.jar",
     "published": "2026-09-18"
   },
@@ -53,7 +50,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

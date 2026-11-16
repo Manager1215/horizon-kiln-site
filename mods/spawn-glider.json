@@ -9,18 +9,10 @@
   "author": "uOrb",
   "description": "Adds a Glider that is like a Elytra with boost that is given to the player in the set location. Spawn Elytra",
   "needs": [
-    "net.minecraft.commands.arguments.coordinates.Vec3Argument",
     "net.minecraft.world.entity.player.Input",
-    "net.minecraft.world.item.component.Fireworks",
-    "CommandSourceStack.getServer()",
-    "DataComponents.FIREWORKS",
     "ServerPlayer.getLastClientInput()",
-    "ServerPlayer.isFallFlying()",
     "ServerPlayer.setInvulnerable()",
     "ServerPlayer.startFallFlying()",
-    "PermissionLevel.byId()",
-    "Items.FIREWORK_ROCKET",
-    "CustomData.copyTag()",
     "CustomData.update()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -28,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "spawn-glider-1.0.0.jar",
     "published": "2026-10-31"
   },
@@ -56,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -12,7 +12,6 @@
     "Mixin: 7 points inside the game's methods",
     "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents",
     "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents.TagsLoaded",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.fabricmc.loader.api.VersionParsingException",
     "net.fabricmc.loader.api.metadata.version.VersionPredicate",
@@ -23,10 +22,8 @@
     "net.minecraft.world.ticks.LevelTicks",
     "net.minecraft.world.ticks.SavedTick",
     "net.minecraft.world.ticks.ScheduledTick",
-    "DefaultedRegistry.get()",
+    "ResourceLoader.registerBuiltinPack()",
     "DefaultedRegistry.getId()",
-    "MutableComponent.setStyle()",
-    "Identifier.withPrefix()",
     "RandomSource.nextIntBetweenInclusive()",
     "Level.<init>()"
   ],
@@ -35,7 +32,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "leaves_us_in_peace-1.14.0+MC26.3.x.jar",
     "published": "2026-09-18"
   },
@@ -63,7 +60,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

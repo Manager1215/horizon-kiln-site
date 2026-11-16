@@ -9,7 +9,6 @@
   "author": "Alfakynz",
   "description": "A little mod that improves the inventory slot management.",
   "needs": [
-    "net.minecraft.world.inventory.ContainerInput",
     "net.minecraft.world.inventory.ResultSlot"
   ],
   "roadmap": "Machines (0.4)",
@@ -17,7 +16,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "better-slots-1.0.2.jar",
     "published": "2026-05-30"
   },
@@ -44,7 +43,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 2,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

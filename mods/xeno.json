@@ -13,8 +13,6 @@
     "Mixin: 11 points inside the game's methods",
     "com.mojang.blaze3d.platform.Monitor",
     "com.mojang.blaze3d.platform.VideoMode",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "com.mojang.blaze3d.vertex.BufferBuilder",
     "com.mojang.blaze3d.vertex.ByteBufferBuilder",
     "com.mojang.blaze3d.vertex.ByteBufferBuilder.Result",
@@ -50,7 +48,9 @@
     "net.fabricmc.fabric.api.client.rendering.v1.BlockTintsFactory",
     "net.fabricmc.fabric.api.client.rendering.v1.FeatureRendererRegistry",
     "net.fabricmc.fabric.api.util.TriState",
-    "net.minecraft.CrashReport",
+    "net.minecraft.TracingExecutor",
+    "net.minecraft.client.AttackIndicatorStatus",
+    "net.minecraft.client.CloudStatus",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Xeno-0.2.3+mc26.3(release-fabric).jar",
     "published": "2026-11-14"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 244,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 221,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

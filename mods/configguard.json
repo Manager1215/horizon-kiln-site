@@ -9,26 +9,9 @@
   "author": "FNT_1",
   "description": "Automatic snapshots of your config folder with a line-by-line diff and one-click restore. Undo any config change, on the client or on a server.",
   "needs": [
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
     "net.minecraft.client.gui.layouts.LayoutSettings",
     "net.minecraft.client.gui.layouts.LinearLayout",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "Font.plainSubstrByWidth()",
-    "Font.substrByWidth()",
-    "Button.Builder.width()",
-    "Commands.LEVEL_OWNERS",
-    "Commands.hasPermission()",
-    "CommonComponents.GUI_BACK",
-    "CommonComponents.GUI_DONE",
-    "Component.translatableWithFallback()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
     "MinecraftServer.isDedicatedServer()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -36,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "configguard-fabric-26.3-1.0.0.jar",
     "published": "2026-10-16"
   },
@@ -67,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

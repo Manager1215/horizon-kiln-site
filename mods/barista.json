@@ -11,36 +11,28 @@
   "needs": [
     "an access widener",
     "com.mojang.blaze3d.platform.IconSet",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.gui.screens.LevelLoadingScreen",
     "org.apache.commons.compress.utils.IOUtils",
-    "org.apache.logging.log4j.Level",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Window.setTitle()",
+    "SharedConstants.getCurrentVersion()",
     "Minecraft.crosshairPickEntity",
-    "Minecraft.execute()",
-    "Minecraft.hitResult",
     "ClientLevel.getChunk()",
     "LevelLoadTracker.serverProgress()",
     "BlockPos.toShortString()",
-    "RegistryAccess.lookupOrThrow()",
     "Registries.BIOME",
-    "Entity.getDisplayName()",
     "BlockStateProperties.DELAY",
     "BlockStateProperties.ENABLED",
     "BlockStateProperties.LEVEL_COMPOSTER",
     "BlockStateProperties.LEVEL_HONEY",
     "BlockStateProperties.MOISTURE",
-    "BlockStateProperties.POWER",
-    "HitResult.getType()"
+    "BlockStateProperties.POWER"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Barista-26.3-1.4.0-Fabric.jar",
     "published": "2026-10-25"
   },
@@ -66,7 +58,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

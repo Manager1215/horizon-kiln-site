@@ -10,14 +10,10 @@
   "description": "Adds bamboo-like trees for decoration and farming",
   "needs": [
     "net.minecraft.world.level.storage.loot.entries.NestedLootTable",
-    "HolderLookup.RegistryLookup.getOrThrow()",
-    "ServerLevel.destroyBlock()",
     "ServerLevel.getRawBrightness()",
     "BlockTags.SUBSTRATE_OVERWORLD",
     "LevelReader.isOutsideBuildHeight()",
     "Block.column()",
-    "Blocks.BAMBOO",
-    "Blocks.GRAVEL",
     "BlockState.getOffset()",
     "BlockStateProperties.STAGE",
     "VoxelShape.move()"
@@ -27,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "thin-trees-1.1.0+26.3.jar",
     "published": "2026-09-17"
   },
@@ -55,5 +51,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 8
 }

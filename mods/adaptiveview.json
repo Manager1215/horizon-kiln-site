@@ -9,18 +9,10 @@
   "author": "TreSet",
   "description": "Mod for dynamically adjusting the servers view distance based on performance.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.minecraft.server.permissions.Permissions",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "Commands.CommandSelection.includeDedicated",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
     "MinecraftServer.getPlayerNames()",
     "ServerPlayer.hasDisconnected()",
-    "ServerPlayer.nameAndId()",
     "PlayerList.getSimulationDistance()",
     "PlayerList.getViewDistance()",
-    "PlayerList.isOp()",
     "PlayerList.setSimulationDistance()",
     "PlayerList.setViewDistance()"
   ],
@@ -29,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "adaptiveview-2.4.4+26.2.jar",
     "published": "2026-06-17"
   },
@@ -58,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

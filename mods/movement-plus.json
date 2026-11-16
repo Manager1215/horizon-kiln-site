@@ -20,7 +20,6 @@
     "net.minecraft.world.entity.ai.attributes.RangedAttribute",
     "net.minecraft.world.entity.player.Input",
     "LocalPlayer.input",
-    "Registry.wrapAsHolder()",
     "BuiltInRegistries.ATTRIBUTE",
     "ServerLevel.sendParticles()",
     "EntityTypes.PLAYER",
@@ -29,7 +28,6 @@
     "AttributeInstance.removeModifier()",
     "Player.isAlive()",
     "Player.isCrouching()",
-    "Player.isFallFlying()",
     "Player.isSleeping()",
     "Player.isVisuallyCrawling()",
     "Player.isVisuallySwimming()",
@@ -40,7 +38,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "movement_plus-fabric-2.3.0.jar",
     "published": "2026-10-21"
   },
@@ -71,7 +69,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

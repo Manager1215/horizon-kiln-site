@@ -9,22 +9,15 @@
   "author": "AutisticPlush",
   "description": "Custom filters to how you or your friends chat!",
   "needs": [
-    "com.mojang.authlib.GameProfile",
-    "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowChat",
     "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents",
     "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.AllowChat",
     "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.AllowCommand",
     "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.ModifyChat",
     "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.ModifyCommand",
     "net.fabricmc.fabric.api.command.v2.ArgumentTypeRegistry",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.commands.synchronization.ArgumentTypeInfo",
     "net.minecraft.commands.synchronization.SingletonArgumentInfo",
-    "net.minecraft.world.level.storage.LevelResource",
-    "ClientReceiveMessageEvents.ALLOW_CHAT",
-    "LocalPlayer.getRandom()",
     "TextColor.GRAY",
-    "MinecraftServer.getWorldPath()",
     "MinecraftServer.isSingleplayer()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -32,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "chat_gags-1.2-rc-1.jar",
     "published": "2026-11-15"
   },
@@ -63,7 +56,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

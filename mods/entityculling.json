@@ -11,24 +11,19 @@
   "needs": [
     "net.minecraft.client.gui.components.debug.DebugEntryCategory",
     "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
     "net.minecraft.client.gui.components.debug.DebugScreenEntry",
-    "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "net.minecraft.client.renderer.extract.LevelExtractor",
     "net.minecraft.world.entity.Display",
     "net.minecraft.world.entity.EntityAttachment",
     "net.minecraft.world.entity.EntityAttachments",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.InterpolationHandler",
     "net.minecraft.world.entity.decoration.ArmorStand",
     "net.minecraft.world.entity.monster.Shulker",
     "net.minecraft.world.entity.monster.warden.AngerLevel",
     "net.minecraft.world.entity.monster.warden.Warden",
     "net.minecraft.world.level.block.entity.BannerBlockEntity",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Minecraft.getBlockEntityRenderDispatcher()",
     "Minecraft.getEntityRenderDispatcher()",
     "Minecraft.isRunning()",
@@ -49,14 +44,19 @@
     "EntityRenderState.isInvisible",
     "EntityRenderState.nameTag",
     "EntityRenderState.nameTagAttachment",
-    "and 40 more"
+    "EntityRenderState.x",
+    "EntityRenderState.y",
+    "EntityRenderState.z",
+    "BlockPos.MutableBlockPos.set()",
+    "SoundEvents.WARDEN_HEARTBEAT",
+    "and 35 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "entityculling-fabric-1.12.1-mc26.3.jar",
     "published": "2026-11-13"
   },
@@ -83,7 +83,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 89,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 77,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -14,22 +14,14 @@
     "net.fabricmc.loader.api.metadata.version.VersionPredicate",
     "net.minecraft.world.level.block.CampfireBlock",
     "net.minecraft.world.level.block.entity.CampfireBlockEntity",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "ImmutableSet.stream()",
-    "Minecraft.setScreenAndShow()",
-    "MutableComponent.setStyle()",
-    "Blocks.ACTIVATOR_RAIL",
-    "Blocks.DETECTOR_RAIL",
-    "Blocks.POWERED_RAIL",
-    "Blocks.RAIL"
+    "ImmutableSet.stream()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "smoke_suppression-1.5.1+MC26.2-26.3.x.jar",
     "published": "2026-09-18"
   },
@@ -57,7 +49,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

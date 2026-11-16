@@ -9,31 +9,11 @@
   "author": "_gid",
   "description": "Highlights every occurrence of a block pattern near you.",
   "needs": [
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.gizmos.GizmoStyle",
     "Minecraft.canInterruptScreen()",
-    "Minecraft.schedule()",
-    "Minecraft.setScreenAndShow()",
-    "Font.plainSubstrByWidth()",
-    "AbstractScrollArea.defaultSettings()",
-    "AbstractScrollArea.mouseDragged()",
-    "AbstractScrollArea.mouseScrolled()",
-    "AbstractScrollArea.onRelease()",
-    "AbstractWidget.charTyped()",
-    "AbstractWidget.keyPressed()",
-    "AbstractWidget.mouseDragged()",
-    "AbstractWidget.onRelease()",
-    "Button.Builder.tooltip()",
-    "EditBox.setHint()",
     "ClientLevel.getChunk()",
     "BlockPos.distSqr()",
     "BlockPos.MutableBlockPos.set()",
-    "DefaultedRegistry.getTagOrEmpty()",
-    "SectionPos.sectionToBlockCoord()",
     "Gizmos.cuboid()",
-    "Identifier.tryBuild()",
     "ChunkAccess.getSection()",
     "ChunkAccess.getSectionIndexFromSectionY()",
     "ChunkAccess.getSections()",
@@ -46,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "blockgrep-fabric-26.0.1.jar",
     "published": "2026-09-20"
   },
@@ -75,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 31,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

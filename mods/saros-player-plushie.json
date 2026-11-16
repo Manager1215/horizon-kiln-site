@@ -9,15 +9,7 @@
   "author": "Sarocesch",
   "description": "Create and customize miniature player plushies with unique poses, skins, and held item.",
   "needs": [
-    "net.minecraft.client.renderer.texture.DynamicTexture",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.level.LightLayer",
-    "net.minecraft.world.level.storage.LevelResource",
-    "NativeImage.getHeight()",
-    "NativeImage.getPixel()",
-    "NativeImage.getWidth()",
-    "NativeImage.read()",
     "PoseStack.last()",
     "PoseStack.Pose.pose()",
     "PoseStack.Pose.rotate()",
@@ -26,19 +18,12 @@
     "VertexConsumer.setNormal()",
     "VertexConsumer.setOverlay()",
     "Axis.ZP",
-    "Minecraft.execute()",
-    "Minecraft.gameDirectory",
-    "Minecraft.getSingleplayerServer()",
-    "Button.DEFAULT_NARRATION",
     "AbstractContainerScreen.containerTick()",
     "AbstractContainerScreen.extractContents()",
-    "ClientPacketListener.getConnection()",
     "BlockEntityRenderer.extractRenderState()",
     "ItemStackRenderState.isEmpty()",
     "RenderTypes.entityTranslucent()",
     "Connection.getRemoteAddress()",
-    "Component.getVisualOrderText()",
-    "MinecraftServer.execute()",
     "LightCoordsUtil.pack()",
     "Level.getBrightness()",
     "HorizontalDirectionalBlock.FACING",
@@ -49,7 +34,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Saros-Player-Plushie-Fabric-26.3-1.2.jar",
     "published": "2026-09-19"
   },
@@ -78,7 +63,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 34,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 19,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,10 +11,7 @@
   "needs": [
     "an access widener",
     "Mixin: 3 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.impl.resource.FabricResourceReloader",
-    "net.minecraft.SharedConstants",
     "net.minecraft.commands.synchronization.ArgumentTypeInfos",
     "net.minecraft.network.chat.OutgoingChatMessage",
     "net.minecraft.network.chat.OutgoingChatMessage.Disguised",
@@ -44,21 +41,24 @@
     "net.minecraft.world.level.levelgen.structure.structures.JigsawStructure.MaxDistance",
     "net.minecraft.world.level.levelgen.structure.templatesystem.LiquidSettings",
     "net.minecraft.world.phys.shapes.BooleanOp",
-    "org.apache.logging.log4j.Level",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "ServerLifecycleEvents.SERVER_STARTED",
+    "SharedConstants.getCurrentVersion()",
     "CommandSourceStack.sendChatMessage()",
     "BlockPos.distSqr()",
     "BlockPos.offset()",
-    "and 56 more"
+    "BlockPos.subtract()",
+    "BlockPos.MutableBlockPos.setX()",
+    "BlockPos.MutableBlockPos.setY()",
+    "BlockPos.MutableBlockPos.setZ()",
+    "Registry.getOptional()",
+    "Registry.getValueOrThrow()",
+    "and 50 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "filloaxlib-0.42.4-26.3-fabric.jar",
     "published": "2026-11-13"
   },
@@ -87,7 +87,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 117,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 107,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,13 +11,10 @@
   "needs": [
     "an access widener",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "Minecraft.isRunning()",
+    "OptionInstance.value",
     "Options.gamma()",
     "ClientLevel.dimensionTypeRegistration()",
-    "Holder.getRegisteredName()",
-    "Component.getContents()",
-    "MutableComponent.withStyle()",
     "MutableComponent.withoutShadow()",
     "Style.withoutShadow()"
   ],
@@ -26,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "lumina-0.1.5.jar",
     "published": "2026-09-16"
   },
@@ -55,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

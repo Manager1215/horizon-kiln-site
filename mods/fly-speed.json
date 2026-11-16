@@ -9,20 +9,14 @@
   "author": "DutchMTC",
   "description": "Boost creative & survival flight speed up to 20x with Hold/Toggle control.",
   "needs": [
-    "org.lwjgl.sdl.SDLMouse",
-    "InputConstants.isKeyDown()",
-    "KeyMappingHelper.getBoundKeyOf()",
-    "KeyMapping.isUnbound()",
-    "Minecraft.getSingleplayerServer()",
-    "Minecraft.isWindowActive()",
-    "LocalPlayer.setSprinting()"
+    "org.lwjgl.sdl.SDLMouse"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "flyspeed-26.3.1.jar",
     "published": "2026-09-30"
   },
@@ -51,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

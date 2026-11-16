@@ -11,35 +11,18 @@
   "needs": [
     "Mixin: 2 points inside the game's methods",
     "com.mojang.blaze3d.Blaze3D",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "org.lwjgl.PointerBuffer",
     "org.lwjgl.stb.STBImage",
     "org.lwjgl.system.MemoryStack",
     "org.lwjgl.system.MemoryUtil",
-    "NativeImage.getHeight()",
-    "NativeImage.getPixel()",
-    "NativeImage.getWidth()",
-    "NativeImage.read()",
-    "NativeImage.setPixel()",
-    "Font.substrByWidth()",
-    "GuiGraphicsExtractor.blit()",
-    "AbstractContainerScreen.INVENTORY_LOCATION",
-    "Util.backgroundExecutor()",
-    "Util.getMillis()"
+    "Util.backgroundExecutor()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "inventorywallpaper-1.0.0.jar",
     "published": "2026-11-09"
   },
@@ -68,5 +51,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 6
 }

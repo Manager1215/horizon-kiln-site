@@ -10,19 +10,10 @@
   "description": "The Future of FullBright",
   "needs": [
     "net.minecraft.client.OptionInstance.UnitDouble",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.renderer.Lightmap",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.world.level.LightLayer",
     "net.minecraft.world.level.lighting.LightEngine",
-    "Minecraft.execute()",
     "Options.gamma()",
-    "Button.Builder.tooltip()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
     "Level.getBrightness()",
     "Level.isDarkOutside()",
     "ChunkSource.getLightEngine()",
@@ -33,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "devjg-fullbright-26.3-3.1.0.jar",
     "published": "2026-09-16"
   },
@@ -62,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

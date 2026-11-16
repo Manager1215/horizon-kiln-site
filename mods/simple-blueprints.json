@@ -19,18 +19,15 @@
     "com.mojang.blaze3d.vertex.QuadInstance",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.multiplayer.chat.ChatAbilities",
     "net.minecraft.client.renderer.DynamicGpuData",
     "net.minecraft.client.renderer.MappableRingBuffer",
     "net.minecraft.commands.SharedSuggestionProvider.TextCoordinates",
     "net.minecraft.nbt.NbtAccounter",
-    "net.minecraft.nbt.NbtIo",
     "net.minecraft.world.TickRateManager",
     "net.minecraft.world.level.block.BedBlock",
     "net.minecraft.world.level.block.Mirror",
     "net.minecraft.world.level.block.state.properties.BedPart",
-    "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
     "net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings",
     "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate",
     "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.Palette",
@@ -49,14 +46,17 @@
     "RenderSystem.getDynamicUniforms()",
     "RenderSystem.getModelViewMatrixCopy()",
     "RenderSystem.getScissorStateForRenderTypeDraws()",
-    "and 54 more"
+    "RenderSystem.getSequentialBuffer()",
+    "SamplerCache.getClampToEdge()",
+    "PoseStack.last()",
+    "and 47 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "simple_blueprints-26.3-1.2.2.jar",
     "published": "2026-09-23"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 110,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 87,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

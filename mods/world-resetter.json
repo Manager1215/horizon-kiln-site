@@ -16,7 +16,6 @@
     "net.minecraft.server.ServerAdvancementManager",
     "net.minecraft.server.level.ServerPlayer.RespawnConfig",
     "net.minecraft.stats.ServerRecipeBook",
-    "net.minecraft.stats.ServerStatsCounter",
     "net.minecraft.world.clock.ServerClockManager",
     "net.minecraft.world.entity.boss.enderdragon.EnderDragon",
     "net.minecraft.world.entity.raid.Raid",
@@ -26,12 +25,10 @@
     "net.minecraft.world.level.levelgen.WorldGenSettings",
     "net.minecraft.world.level.levelgen.WorldOptions",
     "net.minecraft.world.level.saveddata.WeatherData",
-    "net.minecraft.world.level.storage.LevelResource",
     "net.minecraft.world.level.storage.ServerLevelData",
     "net.minecraft.world.level.storage.WorldData",
     "AdvancementProgress.getCompletedCriteria()",
     "AdvancementProgress.hasProgress()",
-    "CommandSourceStack.getServer()",
     "MinecraftServer.clockManager()",
     "MinecraftServer.createLevels()",
     "MinecraftServer.forceGameTimeSynchronization()",
@@ -41,7 +38,6 @@
     "MinecraftServer.getLevelLoadListener()",
     "MinecraftServer.getWorldData()",
     "MinecraftServer.getWorldGenSettings()",
-    "MinecraftServer.getWorldPath()",
     "MinecraftServer.overworld()",
     "MinecraftServer.setInitialSpawn()",
     "MinecraftServer.weatherData",
@@ -50,14 +46,18 @@
     "ServerLevel.getDragonFight()",
     "ServerLevel.getDragons()",
     "ServerLevel.getRaids()",
-    "and 19 more"
+    "ServerLevel.serverLevelData",
+    "ServerPlayer.adjustSpawnLocation()",
+    "ServerPlayer.getAdvancements()",
+    "ServerPlayer.getEnderChestInventory()",
+    "and 14 more"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "worldresetter-1.0.0.jar",
     "published": "2026-08-22"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 59,
+  "softOff": {
+    "class": "partial",
+    "why": "generates in the world"
+  },
+  "lacks": 54,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

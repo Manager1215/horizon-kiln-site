@@ -23,21 +23,14 @@
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "com.mojang.renderpearl.backend.opengl.GlSurface",
     "net.minecraft.client.OptionInstance.ClampingLazyMaxIntRange",
-    "net.minecraft.client.OptionInstance.IntRange",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.TextureFilteringMethod",
     "net.minecraft.client.gui.components.BossHealthOverlay",
-    "net.minecraft.client.gui.components.CycleButton",
     "net.minecraft.client.gui.components.debug.DebugEntryCategory",
     "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
     "net.minecraft.client.gui.components.debug.DebugScreenEntry",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryStatus",
     "net.minecraft.client.gui.components.debug.DebugScreenProfile",
     "net.minecraft.client.gui.components.toasts.AdvancementToast",
     "net.minecraft.client.gui.components.toasts.RecipeToast",
-    "net.minecraft.client.gui.components.toasts.ToastManager.ToastInstance",
     "net.minecraft.client.gui.components.toasts.TutorialToast",
     "net.minecraft.client.gui.screens.debug.DebugOptionsScreen",
     "net.minecraft.client.gui.screens.debug.DebugOptionsScreen.AbstractOptionEntry",
@@ -51,14 +44,21 @@
     "net.minecraft.client.renderer.LevelTargetBundle",
     "net.minecraft.client.renderer.PostChain",
     "net.minecraft.client.renderer.PostChain.TargetBundle",
-    "and 69 more"
+    "net.minecraft.client.renderer.PostPass",
+    "net.minecraft.client.renderer.ShaderManager",
+    "net.minecraft.client.renderer.ShaderManager.Configs",
+    "net.minecraft.client.renderer.SkyRenderer",
+    "net.minecraft.client.renderer.WeatherEffectRenderer",
+    "net.minecraft.client.renderer.blockentity.BeaconRenderer",
+    "net.minecraft.client.renderer.blockentity.EnchantTableRenderer",
+    "and 66 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sodium-extra-fabric-0.9.6-beta.4+mc26.3.jar",
     "published": "2026-11-12"
   },
@@ -86,7 +86,11 @@
     "minecraft",
     "sodium"
   ],
-  "lacks": 118,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @wrap-method and @wrap-operation into the game's classes"
+  },
+  "lacks": 107,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

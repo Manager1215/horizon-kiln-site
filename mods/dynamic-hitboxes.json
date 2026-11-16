@@ -11,7 +11,6 @@
   "needs": [
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionEvents.EndExtraction",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-    "net.minecraft.world.entity.Pose",
     "VertexConsumer.addVertex()",
     "VertexConsumer.setColor()",
     "VertexConsumer.setNormal()",
@@ -32,7 +31,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dynamic-hitboxes-1.0.2-26.3.jar",
     "published": "2026-10-23"
   },
@@ -60,7 +59,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

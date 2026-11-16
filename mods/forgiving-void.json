@@ -11,7 +11,6 @@
   "needs": [
     "net.minecraft.world.entity.projectile.arrow.ThrownTrident",
     "SynchedEntityData.get()",
-    "ServerPlayer.connection",
     "Entity.ejectPassengers()",
     "Entity.getPassengers()",
     "Entity.getVehicle()",
@@ -21,18 +20,15 @@
     "Entity.stopRiding()",
     "Entity.teleportTo()",
     "Entity.yo",
-    "LivingEntity.getDisplayName()",
-    "LivingEntity.isFallFlying()",
     "Level.getHeight()",
-    "Level.getMinY()",
-    "Blocks.COBWEB"
+    "Level.getMinY()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "forgivingvoid-fabric-26.3-26.3.0.2.jar",
     "published": "2026-09-25"
   },
@@ -62,7 +58,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

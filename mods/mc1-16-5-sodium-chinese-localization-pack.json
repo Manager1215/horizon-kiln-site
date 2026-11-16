@@ -10,7 +10,6 @@
   "description": "A project can translate you sodium mod into Chinese",
   "needs": [
     "net.minecraft.util.Util.OS",
-    "FormattedText.composite()",
     "Util.getPlatform()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -18,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sclp-fabric-5.6.8-snapshot+mc26.1-local.jar",
     "published": "2026-10-17"
   },
@@ -45,7 +44,11 @@
     "minecraft",
     "sodium"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

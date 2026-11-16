@@ -9,13 +9,9 @@
   "author": "okipiak",
   "description": "Every rod gets its own bobber, so each one can act as a remote redstone trigger.",
   "needs": [
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.renderer.entity.FishingHookRenderer",
     "net.minecraft.client.renderer.entity.state.FishingHookRenderState",
     "net.minecraft.client.renderer.item.properties.conditional.FishingRodCast",
-    "net.minecraft.world.entity.projectile.FishingHook",
-    "net.minecraft.world.item.FishingRodItem",
-    "Options.getCameraType()",
     "MinecraftServer.getAllLevels()",
     "ServerLevel.getEntity()",
     "SoundEvents.FISHING_BOBBER_RETRIEVE",
@@ -24,18 +20,19 @@
     "EntityReference.getUUID()",
     "HumanoidArm.getOpposite()",
     "Player.getEyePosition()",
-    "Player.getMainArm()",
-    "Player.getScale()",
     "Player.getViewVector()",
     "Player.isAlive()",
     "Player.isCrouching()",
     "Player.yBodyRot",
     "Player.yBodyRotO",
+    "FishingHook.<init>()",
+    "FishingHook.discard()",
+    "FishingHook.getPosition()",
+    "FishingHook.retrieve()",
     "Projectile.addAdditionalSaveData()",
     "Projectile.readAdditionalSaveData()",
     "Projectile.spawnProjectile()",
     "ItemStack.causeUseVibration()",
-    "CustomData.copyTag()",
     "CustomData.update()",
     "EnchantmentHelper.getFishingLuckBonus()",
     "EnchantmentHelper.getFishingTimeReduction()",
@@ -47,7 +44,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "unique_fishing_rods-1.7-26.3.jar",
     "published": "2026-11-10"
   },
@@ -76,7 +73,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 32,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite into the game's classes"
+  },
+  "lacks": 29,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -13,7 +13,6 @@
     "net.fabricmc.fabric.api.item.v1.BlockTransformerHelper",
     "net.minecraft.client.resources.SplashManager",
     "net.minecraft.core.component.BlockTransformer.BlockTransformData.Builder",
-    "net.minecraft.world.item.crafting.ShapelessRecipe",
     "net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate",
     "net.minecraft.world.level.levelgen.feature.stateproviders.CopyPropertiesProvider",
     "net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedStateProvider",
@@ -23,12 +22,7 @@
     "SoundEvents.AXE_SCRAPE",
     "SoundEvents.HONEYCOMB_WAX_ON",
     "Mth.randomBetween()",
-    "DyeColor.getFireworkColor()",
-    "DyeColor.getName()",
     "ItemStack.consume()",
-    "Items.IRON_BARS",
-    "Items.LEVER",
-    "ShapedRecipePattern.of()",
     "Level.hasNeighborSignal()",
     "BlockSetType.STONE",
     "Shapes.joinUnoptimized()"
@@ -38,7 +32,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "led-1.15.0.jar",
     "published": "2026-09-25"
   },
@@ -67,7 +61,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

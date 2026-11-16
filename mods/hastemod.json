@@ -9,10 +9,10 @@
   "author": "yukovitsch",
   "description": "A client-side mod that abuses the instamine feature to very quickly mine set types of blocks.",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket",
-    "Minecraft.gameMode",
     "ClientPacketListener.send()",
+    "MultiPlayerGameMode.startDestroyBlock()",
+    "MultiPlayerGameMode.stopDestroyBlock()",
     "LocalPlayer.isWithinBlockInteractionRange()",
     "BlockPos.distSqr()"
   ],
@@ -21,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "HasteMod-fabric-0.4.0-26.3.jar",
     "published": "2026-10-07"
   },
@@ -50,6 +50,10 @@
     "java",
     "minecraft"
   ],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 6,
   "development": {
     "status": "planned",

@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 2 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.blaze3d.vertex.DefaultVertexFormat",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
@@ -21,14 +20,10 @@
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
     "net.fabricmc.fabric.api.command.v2.ArgumentTypeRegistry",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityDataRegistry",
     "net.minecraft.client.gui.components.WidgetSprites",
     "net.minecraft.client.gui.render.pip.GuiEntityRenderer",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.model.EntityModel",
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.model.QuadrupedModel",
@@ -51,14 +46,19 @@
     "net.minecraft.client.model.geom.builders.MeshDefinition",
     "net.minecraft.client.model.geom.builders.PartDefinition",
     "net.minecraft.client.model.monster.creeper.CreeperModel",
+    "net.minecraft.client.model.monster.ghast.GhastModel",
+    "net.minecraft.client.model.monster.illager.IllagerModel",
+    "net.minecraft.client.model.monster.slime.SlimeModel",
+    "net.minecraft.client.model.monster.spider.SpiderModel",
+    "net.minecraft.client.model.monster.vex.VexModel",
     "and 80 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "easy_npc-fabric-26.3-7.19.0.jar",
     "published": "2026-11-15"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 1064,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 924,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

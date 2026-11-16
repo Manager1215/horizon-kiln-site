@@ -9,9 +9,6 @@
   "author": "VoxelBill",
   "description": "A simple mod that makes mobs only pickup items that are intentionally dropped by players.",
   "needs": [
-    "net.minecraft.core.HolderSet.Named",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "ItemEntity.getItem()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -19,7 +16,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "intentional_pickup-fabric-1.0.0+mc26.2.jar",
     "published": "2026-08-16"
   },
@@ -36,7 +33,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,10 +11,6 @@
   "needs": [
     "Mixin: 3 points inside the game's methods",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.layouts.GridLayout",
     "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
     "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
@@ -26,7 +22,6 @@
     "net.minecraft.client.gui.screens.worldselection.WorldSelectionList",
     "net.minecraft.client.gui.screens.worldselection.WorldSelectionList.Entry",
     "net.minecraft.client.gui.screens.worldselection.WorldSelectionList.WorldListEntry",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.world.level.storage.LevelSummary",
     "org.apache.commons.compress.archivers.zip.ParallelScatterZipCreator",
     "org.apache.commons.compress.archivers.zip.Zip64Mode",
@@ -35,25 +30,16 @@
     "org.apache.commons.compress.parallel.InputStreamSupplier",
     "org.apache.commons.io.FileUtils",
     "Minecraft.createWorldOpenFlows()",
-    "Minecraft.getSingleplayerServer()",
-    "Minecraft.setScreenAndShow()",
     "OptionInstance.createBoolean()",
-    "Button.Builder.width()",
     "EditBox.SEARCH_HINT_STYLE",
-    "EditBox.setHint()",
-    "KeyEvent.isSelection()",
-    "CommonComponents.GUI_CANCEL",
-    "CommonComponents.GUI_DONE",
-    "MutableComponent.setStyle()",
-    "Util.getMillis()",
-    "LevelStorageSource.LevelStorageAccess.getLevelId()"
+    "IntegratedServer.saveEverything()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SaveMod-1.5.0-fabric-mc26.3.jar",
     "published": "2026-10-04"
   },
@@ -84,7 +70,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 37,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

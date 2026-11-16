@@ -30,8 +30,6 @@
     "net.minecraft.client.renderer.item.CuboidItemModelWrapper",
     "net.minecraft.client.renderer.item.CuboidItemModelWrapper.Unbaked",
     "net.minecraft.client.renderer.item.SpecialModelWrapper",
-    "net.minecraft.server.permissions.Permissions",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.level.block.IronBarsBlock",
     "net.minecraft.world.level.block.state.properties.SlabType",
     "net.minecraft.world.level.gameevent.GameEvent.Context",
@@ -42,21 +40,23 @@
     "VertexConsumer.setNormal()",
     "VertexConsumer.setOverlay()",
     "FluidRenderingRegistry.setBlockTransparency()",
-    "Minecraft.execute()",
     "Minecraft.getBlockColors()",
     "Minecraft.levelRenderer",
     "GameRenderer.mainCamera()",
     "Sheets.cutoutBlockItemGlintSheet()",
     "Sheets.translucentBlockItemGlintSheet()",
     "Sheets.translucentBlockItemSheet()",
-    "and 47 more"
+    "BlockStateModelSet.getParticleMaterial()",
+    "BlockStateModel.emitQuads()",
+    "MinecraftServer.isSingleplayerOwner()",
+    "and 34 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ultimate-glass-0.2.3+mc26.3.jar",
     "published": "2026-11-05"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 87,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 74,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -30,7 +30,6 @@
     "net.minecraft.client.model.object.skull.SkullModel",
     "net.minecraft.client.model.object.skull.SkullModelBase",
     "net.minecraft.client.model.object.skull.SkullModelBase.State",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.BindGroupLayouts",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.block.ModelBlockRenderer",
@@ -41,7 +40,6 @@
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
     "net.minecraft.client.resources.DefaultPlayerSkin",
     "net.minecraft.client.resources.model.BlockStateDefinitions",
-    "net.minecraft.data.AtlasIds",
     "net.minecraft.tags.PaintingVariantTags",
     "net.minecraft.world.entity.decoration.Cushion",
     "net.minecraft.world.entity.decoration.painting.Painting",
@@ -50,6 +48,8 @@
     "net.minecraft.world.item.ArmorStandItem",
     "net.minecraft.world.item.BoatItem",
     "net.minecraft.world.item.CushionItem",
+    "net.minecraft.world.item.EndCrystalItem",
+    "net.minecraft.world.item.ItemUseAnimation",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "buildbetter-0.10.0+26.3-fabric.jar",
     "published": "2026-10-08"
   },
@@ -88,7 +88,11 @@
     "minecraft",
     "rosetta"
   ],
-  "lacks": 236,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels; generates in the world"
+  },
+  "lacks": 183,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

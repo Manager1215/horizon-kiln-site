@@ -9,8 +9,6 @@
   "author": "Jackbusters",
   "description": "Forces Infinity enchantment to work with all arrows in 1.16 - 1.21. All your favorite mod loaders.",
   "needs": [
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "EnchantmentHelper.getItemEnchantmentLevel()",
     "Enchantments.INFINITY"
   ],
@@ -19,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "allarrowsinfinityfix-1.10-fabric-mc26.3.jar",
     "published": "2026-10-24"
   },
@@ -36,7 +34,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

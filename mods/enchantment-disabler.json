@@ -13,10 +13,6 @@
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.EnchantedItemTrigger",
     "net.minecraft.client.gui.screens.inventory.EnchantmentScreen",
-    "net.minecraft.core.HolderSet.Direct",
-    "net.minecraft.core.HolderSet.Named",
-    "net.minecraft.tags.EnchantmentTags",
-    "net.minecraft.world.inventory.AnvilMenu",
     "net.minecraft.world.inventory.ContainerLevelAccess",
     "net.minecraft.world.inventory.EnchantmentMenu",
     "net.minecraft.world.inventory.ItemCombinerMenu",
@@ -32,31 +28,18 @@
     "net.minecraft.world.level.storage.loot.functions.SequenceFunction",
     "net.minecraft.world.level.storage.loot.functions.SetEnchantmentsFunction",
     "Object2IntMap.Entry.getKey()",
-    "Holder.is()",
-    "HolderSet.direct()",
-    "Registry.get()",
-    "RegistryAccess.lookupOrThrow()",
-    "DataComponents.STORED_ENCHANTMENTS",
-    "Stats.ENCHANT_ITEM",
     "ItemStack.getEnchantments()",
     "ItemStackTemplate.is()",
-    "Items.ENCHANTED_BOOK",
-    "Enchantment.getMaxLevel()",
     "EnchantmentHelper.getAvailableEnchantmentResults()",
     "EnchantmentHelper.getEnchantmentCost()",
-    "EnchantmentHelper.hasAnyEnchantments()",
-    "ItemEnchantments.entrySet()",
-    "ItemEnchantments.isEmpty()",
-    "ItemEnchantments.Mutable.getLevel()",
-    "ItemEnchantments.Mutable.keySet()",
-    "ItemEnchantments.Mutable.set()"
+    "EnchantmentHelper.hasAnyEnchantments()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "enchantmentdisabler-fabric-3.4.10+26.3.jar",
     "published": "2026-11-03"
   },
@@ -88,7 +71,11 @@
     "minecraft",
     "mixson"
   ],
-  "lacks": 40,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; @modify-arg Kiln doesn't guard"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

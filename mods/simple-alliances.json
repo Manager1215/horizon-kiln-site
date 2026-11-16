@@ -9,29 +9,15 @@
   "author": "dianacraft",
   "description": "A simple alliance mod that adds a /teammsg alternative among other stuff!",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
     "net.minecraft.server.ServerTickRateManager",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "CommandSourceStack.getServer()",
-    "CommandSourceStack.sendSystemMessage()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withUnderlined()",
-    "MinecraftServer.tickRateManager()",
-    "ServerPlayer.getDisplayName()",
-    "ServerPlayer.nameAndId()",
-    "ServerPlayer.sendSystemMessage()",
-    "PlayerList.isOp()"
+    "MinecraftServer.tickRateManager()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "alliances-1.1.0.jar",
     "published": "2026-10-27"
   },
@@ -59,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

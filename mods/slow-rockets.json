@@ -19,15 +19,14 @@
     "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginQueryResponseHandler",
     "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginSynchronizer",
     "net.minecraft.server.network.ServerLoginPacketListenerImpl",
-    "net.minecraft.world.entity.projectile.FireworkRocketEntity",
-    "LivingEntity.isFallFlying()"
+    "net.minecraft.world.entity.projectile.FireworkRocketEntity"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "slowrockets-1.0.4+26.3.jar",
     "published": "2026-10-03"
   },
@@ -56,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

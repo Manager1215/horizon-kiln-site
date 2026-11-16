@@ -10,16 +10,14 @@
   "description": "A simple mod that adds controls to the pause menu to control media that is playing on your computer. Also adds a now playing label to the pause menu to see what is playing all within Minecraft.",
   "needs": [
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
-    "net.minecraft.client.gui.components.StringWidget",
-    "Options.getSoundSourceOptionInstance()",
-    "Screen.getFont()"
+    "Options.getSoundSourceOptionInstance()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "media-controls-in-minecraft-1.2.0-26.3.jar",
     "published": "2026-09-19"
   },
@@ -50,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

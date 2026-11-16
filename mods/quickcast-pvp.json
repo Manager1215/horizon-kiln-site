@@ -9,36 +9,19 @@
   "author": "s17mj_09",
   "description": "Bind keys to use hotbar pearls, wind charges or crystals, with vanilla interactions and optional slot restoration.",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "KeyMappingHelper.getBoundKeyOf()",
-    "Minecraft.execute()",
-    "Minecraft.gameMode",
-    "Minecraft.hitResult",
     "Minecraft.isLocalServer()",
-    "Minecraft.setScreenAndShow()",
-    "Options.keyMappings",
-    "Hud.setTimes()",
-    "Hud.setTitle()",
-    "Screen.getFocused()",
     "ClientLevel.getEntities()",
-    "ClientLevel.isEmptyBlock()",
     "LocalPlayer.isAlive()",
     "LocalPlayer.isUsingItem()",
     "LocalPlayer.itemUsed()",
-    "LocalPlayer.swing()",
-    "InteractionResult.SwingSource.PREDICTED",
-    "ItemStack.getInteractAnimation()",
-    "Items.ENDER_PEARL",
-    "Items.WIND_CHARGE",
-    "Blocks.OBSIDIAN",
-    "HitResult.getType()"
+    "InteractionResult.SwingSource.PREDICTED"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "quickcastpvp-1.0.3.jar",
     "published": "2026-10-24"
   },
@@ -68,7 +51,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

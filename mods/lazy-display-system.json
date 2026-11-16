@@ -11,12 +11,9 @@
   "needs": [
     "com.mojang.blaze3d.vertex.QuadInstance",
     "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
-    "net.minecraft.client.gui.components.EditBox.TextFormatter",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.block.ModelBlockRenderer",
     "net.minecraft.network.chat.FontDescription",
     "net.minecraft.network.chat.FontDescription.Resource",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.decoration.ArmorStand",
     "net.minecraft.world.level.block.state.BlockBehaviour.StateArgumentPredicate",
     "net.minecraft.world.level.block.state.BlockBehaviour.StatePredicate",
@@ -24,20 +21,11 @@
     "PoseStack.Pose.translate()",
     "VertexConsumer.putBakedQuad()",
     "Axis.ZP",
-    "Minecraft.gameMode",
     "Minecraft.getBlockColors()",
     "Minecraft.getEntityRenderDispatcher()",
     "Options.ambientOcclusion()",
-    "GuiGraphicsExtractor.blit()",
-    "EditBox.addFormatter()",
-    "EditBox.setBordered()",
-    "EditBox.setCursorPosition()",
-    "EditBox.setHighlightPos()",
-    "EditBox.setTextColor()",
-    "AbstractContainerScreen.charTyped()",
-    "AbstractContainerScreen.mouseDragged()",
-    "AbstractContainerScreen.mouseScrolled()",
     "ClientPacketListener.send()",
+    "MultiPlayerGameMode.handleInventoryButtonClick()",
     "LocalPlayer.getEyeY()",
     "BlockAndTintGetter.EMPTY",
     "BlockStateModelSet.missingModel()",
@@ -48,15 +36,27 @@
     "RenderTypes.translucentMovingBlock()",
     "PictureInPictureRenderState.getBounds()",
     "NonNullList.iterator()",
-    "DataComponents.ENCHANTMENT_GLINT_OVERRIDE",
-    "and 31 more"
+    "Style.withFont()",
+    "ServerLevel.noCollision()",
+    "ServerPlayer.isWithinBlockInteractionRange()",
+    "ARGB.colorFromFloat()",
+    "Container.startOpen()",
+    "Container.stopOpen()",
+    "Entity.getBoundingBox()",
+    "Entity.teleportTo()",
+    "Player.getEquipmentSlotForItem()",
+    "InventoryMenu.EMPTY_ARMOR_SLOT_BOOTS",
+    "InventoryMenu.EMPTY_ARMOR_SLOT_CHESTPLATE",
+    "InventoryMenu.EMPTY_ARMOR_SLOT_HELMET",
+    "InventoryMenu.EMPTY_ARMOR_SLOT_LEGGINGS",
+    "and 27 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "lazy_display_stand-fabric-26.3-2.0.2.jar",
     "published": "2026-11-14"
   },
@@ -85,5 +85,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 83
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 67
 }

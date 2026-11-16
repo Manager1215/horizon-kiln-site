@@ -10,7 +10,6 @@
   "description": "Mythic Upgrades adds new mythic crystals & gems to the game! Explore new cave biomes, upgrade your netherite gear or brew new potions!",
   "needs": [
     "an access widener",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.QuartPos",
     "net.minecraft.core.RegistrationInfo",
     "net.minecraft.core.WritableRegistry",
@@ -22,8 +21,6 @@
     "net.minecraft.world.food.FoodProperties",
     "net.minecraft.world.food.FoodProperties.Builder",
     "net.minecraft.world.item.SmithingTemplateItem",
-    "net.minecraft.world.item.alchemy.Potion",
-    "net.minecraft.world.item.alchemy.PotionContents",
     "net.minecraft.world.item.component.Consumable",
     "net.minecraft.world.item.component.Consumable.Builder",
     "net.minecraft.world.item.component.Consumables",
@@ -50,14 +47,17 @@
     "net.minecraft.world.level.levelgen.placement.RarityFilter",
     "net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest",
     "net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest",
-    "and 61 more"
+    "net.minecraft.world.scores.Team",
+    "BiomeModifications.addFeature()",
+    "BuiltInRegistries.FEATURE_TYPE",
+    "and 58 more"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mythicupgrades-fabric-26.3-5.1.1.jar",
     "published": "2026-09-28"
   },
@@ -88,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 142,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 109,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

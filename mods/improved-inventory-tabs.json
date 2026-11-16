@@ -11,14 +11,9 @@
   "needs": [
     "net.fabricmc.fabric.api.client.networking.v1.ClientLoginConnectionEvents",
     "net.fabricmc.fabric.api.client.networking.v1.ClientLoginConnectionEvents.Init",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.network.protocol.game.ServerboundContainerClosePacket",
     "net.minecraft.world.entity.decoration.ItemFrame",
     "net.minecraft.world.entity.npc.InventoryCarrier",
-    "net.minecraft.world.inventory.ContainerInput",
     "net.minecraft.world.item.component.ResolvableProfile",
     "net.minecraft.world.level.block.AbstractBannerBlock",
     "net.minecraft.world.level.block.AbstractChestBlock",
@@ -49,14 +44,19 @@
     "net.minecraft.world.level.block.StonecutterBlock",
     "net.minecraft.world.level.block.StructureBlock",
     "net.minecraft.world.level.block.entity.LecternBlockEntity",
-    "and 41 more"
+    "net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity",
+    "net.minecraft.world.level.block.piston.MovingPistonBlock",
+    "net.minecraft.world.level.block.state.properties.ChestType",
+    "net.minecraft.world.phys.EntityHitResult",
+    "InputConstants.releaseMouse()",
+    "and 20 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "improved-inventory-tabs-fabric-26.3-1.5.0.jar",
     "published": "2026-11-12"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 81,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 60,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

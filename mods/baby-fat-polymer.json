@@ -43,7 +43,6 @@
     "BlockPos.MutableBlockPos.setWithOffset()",
     "DataComponents.BUCKET_ENTITY_DATA",
     "DataComponents.ENTITY_DATA",
-    "DataComponents.ITEM_MODEL",
     "ServerLevel.getNearbyEntities()",
     "ServerLevel.sendParticles()",
     "SoundEvents.BUCKET_EMPTY_FISH",
@@ -51,14 +50,15 @@
     "SoundEvents.COD_FLOP",
     "SoundEvents.COD_HURT",
     "SoundEvents.FISH_SWIM",
-    "and 30 more"
+    "BiomeTags.IS_RIVER",
+    "and 26 more"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "babyfat-polymerized-1.0.14+26.3.jar",
     "published": "2026-10-01"
   },
@@ -89,7 +89,11 @@
     "polymer-resource-pack",
     "polymer-virtual-entity"
   ],
-  "lacks": 70,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; generates in the world"
+  },
+  "lacks": 66,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

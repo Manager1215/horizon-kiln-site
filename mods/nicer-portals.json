@@ -10,13 +10,8 @@
   "description": "Various small improvements to portals.",
   "needs": [
     "Mixin: 8 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.client.renderer.LevelEventHandler",
-    "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
-    "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling.NineSlice",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.server.packs.PackLocationInfo",
     "net.minecraft.server.packs.repository.Pack",
     "net.minecraft.server.packs.repository.ServerPacksSource",
@@ -25,22 +20,11 @@
     "net.minecraft.world.level.block.NetherPortalBlock",
     "net.minecraft.world.level.portal.PortalShape",
     "net.minecraft.world.level.storage.LevelStorageSource.LevelDirectory",
-    "org.apache.logging.log4j.Level",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "InputConstants.isKeyDown()",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "Minecraft.execute()",
-    "Minecraft.getSingleplayerServer()",
+    "ResourceLoader.registerBuiltinPack()",
     "Minecraft.isLocalServer()",
-    "CommonComponents.GUI_NO",
-    "CommonComponents.GUI_YES",
-    "CommonComponents.OPTION_OFF",
-    "CommonComponents.OPTION_ON",
-    "MinecraftServer.execute()",
     "BlockGetter.isOutsideBuildHeight()",
     "LevelAccessor.setBlock()",
-    "Blocks.NETHER_PORTAL",
+    "LevelReader.isClientSide()",
     "LevelStorageSource.LevelStorageAccess.getLevelDirectory()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -48,7 +32,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nicerportals-fabric-2.0.4+26.3.jar",
     "published": "2026-09-17"
   },
@@ -76,7 +60,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 32,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

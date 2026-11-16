@@ -11,41 +11,22 @@
   "needs": [
     "an access widener",
     "Mixin: 3 points inside the game's methods",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.client.gui.ActiveTextCollector",
-    "net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner",
-    "net.minecraft.network.chat.ClickEvent.ChangePage",
-    "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
     "net.minecraft.network.chat.ClickEvent.Custom",
-    "net.minecraft.network.chat.ClickEvent.OpenFile",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
     "net.minecraft.network.chat.ClickEvent.ShowDialog",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.Action",
     "net.minecraft.network.chat.HoverEvent.EntityTooltipInfo",
     "net.minecraft.network.chat.HoverEvent.ShowEntity",
-    "net.minecraft.network.chat.HoverEvent.ShowItem",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.util.profiling.Profiler",
     "net.minecraft.util.profiling.ProfilerFiller",
     "GuiGraphicsExtractor.textRenderer()",
-    "GuiGraphicsExtractor.tooltip()",
-    "GuiRenderState.up()",
-    "MutableComponent.setStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "PreparableReloadListener.SharedState.resourceManager()",
-    "Util.getNanos()",
-    "Items.MOSS_BLOCK"
+    "GuiRenderState.up()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "MossyLib-1.6.0+26.3+fabric.jar",
     "published": "2026-09-21"
   },
@@ -75,7 +56,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,29 +11,18 @@
   "needs": [
     "an access widener",
     "Mixin: 4 points inside the game's methods",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.client.resources.MapTextureManager.MapInstance",
     "net.minecraft.commands.arguments.selector.EntitySelectorParser",
     "net.minecraft.commands.synchronization.ArgumentTypeInfos",
     "net.minecraft.commands.synchronization.ArgumentUtils",
     "net.minecraft.network.protocol.game.ClientboundCommandsPacket.ArgumentNodeStub",
-    "org.apache.logging.log4j.Level",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "org.apache.logging.log4j.LoggingException",
-    "org.apache.logging.log4j.ThreadContext",
     "org.apache.logging.log4j.core.Filter",
     "org.apache.logging.log4j.core.Filter.Result",
     "org.apache.logging.log4j.core.LifeCycle",
     "org.apache.logging.log4j.core.LifeCycle.State",
     "org.apache.logging.log4j.core.LogEvent",
     "org.apache.logging.log4j.core.Logger",
-    "org.apache.logging.log4j.message.Message",
-    "org.apache.logging.log4j.message.MessageFormatMessageFactory",
-    "org.apache.logging.log4j.message.StringFormattedMessage",
-    "org.apache.logging.log4j.spi.AbstractLogger",
     "JsonArray.forEach()",
-    "NativeImage.setPixel()",
     "RenderSystem.isOnRenderThread()",
     "ObjectCollection.forEach()",
     "Minecraft.getMapTextureManager()",
@@ -47,7 +36,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Pl3xMap-26.3-557.jar",
     "published": "2026-10-14"
   },
@@ -78,7 +67,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 30,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 19,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -12,26 +12,17 @@
     "net.minecraft.server.PlayerAdvancements",
     "net.minecraft.world.item.component.SeededContainerLoot",
     "AdvancementHolder.value()",
-    "Minecraft.execute()",
     "LocalPlayer.getRandomX()",
     "LocalPlayer.getRandomY()",
     "LocalPlayer.getRandomZ()",
-    "CommandSourceStack.getPlayerOrException()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
-    "DataComponents.CONTAINER_LOOT",
-    "DataComponents.CUSTOM_NAME",
-    "ServerPlayer.drop()",
-    "ServerPlayer.getRandom()",
-    "ServerPlayer.sendSystemMessage()",
-    "Items.CHEST"
+    "DataComponents.CONTAINER_LOOT"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "advancedrop-1.0.0.jar",
     "published": "2026-10-17"
   },
@@ -62,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

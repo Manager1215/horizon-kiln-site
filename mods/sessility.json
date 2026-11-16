@@ -9,24 +9,12 @@
   "author": "bytzo",
   "description": "AFK utilities for servers: Recolor AFK players in tab list, exclude AFK players from the sleeping requirement, broadcast messages when players go AFK, and more.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.api.DedicatedServerModInitializer",
-    "net.minecraft.network.chat.ComponentContents",
-    "net.minecraft.network.chat.ComponentSerialization",
-    "net.minecraft.network.chat.contents.PlainTextContents",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.network.protocol.game.ClientboundPlayerInfoUpdatePacket.Entry",
     "net.minecraft.server.dedicated.Settings",
     "net.minecraft.util.StrictJsonParser",
     "net.minecraft.world.scores.PlayerTeam",
-    "Component.getContents()",
-    "MutableComponent.create()",
-    "MutableComponent.getSiblings()",
-    "MutableComponent.withStyle()",
-    "TextColor.parseColor()",
     "PlayerList.broadcastAll()",
-    "PlayerList.broadcastSystemMessage()",
-    "Util.getMillis()",
     "Player.<init>()",
     "Player.getVehicle()",
     "Player.isPassenger()"
@@ -36,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sessility-fabric-mod-0.7.12.jar",
     "published": "2026-09-24"
   },
@@ -56,7 +44,11 @@
     "minecraft",
     "mixinextras"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

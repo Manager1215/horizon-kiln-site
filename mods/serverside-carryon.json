@@ -11,22 +11,17 @@
   "needs": [
     "an access widener",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.entity.LivingEntity.SwingDescription",
     "net.minecraft.world.entity.LivingEntity.SwingState",
     "net.minecraft.world.entity.WalkAnimationState",
     "net.minecraft.world.entity.decoration.ArmorStand",
-    "CommandSourceStack.getServer()",
     "ServerLevel.getEntity()",
-    "ServerPlayer.getBbHeight()",
     "ServerPlayer.isAlive()",
     "ServerPlayer.isNoGravity()",
     "ServerPlayer.noPhysics",
-    "ServerPlayer.sendSystemMessage()",
     "ServerPlayer.setNoGravity()",
     "Entity.getBoundingBox()",
     "Entity.getVehicle()",
-    "Entity.isRemoved()",
     "Entity.noPhysics",
     "Entity.setDeltaMovement()",
     "Entity.setNoGravity()",
@@ -50,14 +45,19 @@
     "LivingEntity.yHeadRotO",
     "LivingEntity.yya",
     "LivingEntity.zza",
-    "and 11 more"
+    "Mob.isNoAi()",
+    "Mob.isNoGravity()",
+    "Mob.noPhysics",
+    "Mob.setNoAi()",
+    "Mob.setNoGravity()",
+    "and 6 more"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "serverside-carryon-26.3.jar",
     "published": "2026-10-23"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 51,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 46,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

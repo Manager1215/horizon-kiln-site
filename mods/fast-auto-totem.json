@@ -9,18 +9,14 @@
   "author": "adamjaroui23",
   "description": "Automatically re-equips a Totem of Undying after it pops, using a realistic human-like delay (400–650ms). Lightweight, client-side, and designed to feel natural instead of instant.",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.world.inventory.ContainerInput",
-    "Minecraft.gameMode",
-    "LocalPlayer.isDeadOrDying()",
-    "Items.TOTEM_OF_UNDYING"
+    "LocalPlayer.isDeadOrDying()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "AutoTotem-2.0.1+26.3+mc26.3(1).jar",
     "published": "2026-10-22"
   },
@@ -48,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

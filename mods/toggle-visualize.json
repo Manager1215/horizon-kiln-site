@@ -9,28 +9,16 @@
   "author": "BlueSheep2804",
   "description": "Visualize sprint and sneak toggling.",
   "needs": [
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "net.minecraft.client.gui.components.ImageWidget",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
     "net.minecraft.client.gui.layouts.FrameLayout",
     "net.minecraft.client.gui.layouts.LayoutSettings",
     "net.minecraft.client.gui.layouts.LinearLayout",
-    "Minecraft.debugEntries",
-    "Options.keyAttack",
-    "Options.keyUse",
     "Options.toggleAttack()",
     "Options.toggleCrouch()",
     "Options.toggleSprint()",
     "Options.toggleUse()",
-    "GuiGraphicsExtractor.requestCursor()",
     "GuiGraphicsExtractor.setTooltipForNextFrame()",
     "AbstractWidget.getRectangle()",
-    "ScreenRectangle.left()",
-    "ScreenRectangle.top()",
-    "Screen.mouseClicked()",
-    "Screen.mouseScrolled()",
-    "LocalPlayer.isFallFlying()",
     "LocalPlayer.isVisuallyCrawling()",
     "LocalPlayer.isVisuallySwimming()"
   ],
@@ -39,7 +27,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "togglevisualize-2.2.2+26.3-fabric.jar",
     "published": "2026-09-17"
   },
@@ -70,7 +58,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

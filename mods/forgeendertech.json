@@ -15,14 +15,10 @@
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
     "net.fabricmc.fabric.api.client.renderer.v1.mesh.MutableQuadView",
     "net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadEmitter",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AfterKeyPress",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AllowKeyPress",
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
     "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents",
     "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents.TagsLoaded",
     "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.Unload",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.fabricmc.loader.impl.FabricLoaderImpl",
@@ -30,7 +26,6 @@
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.ItemDurabilityTrigger",
     "net.minecraft.client.color.item.ItemTintSources",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.model.geom.builders.UVPair",
     "net.minecraft.client.particle.ParticleResources",
     "net.minecraft.client.particle.ParticleResources.SpriteParticleRegistration",
@@ -51,14 +46,19 @@
     "net.minecraft.commands.arguments.RangeArgument.Floats",
     "net.minecraft.commands.arguments.RangeArgument.Ints",
     "net.minecraft.commands.arguments.TeamColorArgument",
-    "and 80 more"
+    "net.minecraft.core.component.PatchedDataComponentMap",
+    "net.minecraft.server.level.ChunkMap",
+    "net.minecraft.world.entity.EntitySelector",
+    "net.minecraft.world.entity.decoration.ItemFrame",
+    "net.minecraft.world.entity.monster.Enemy",
+    "and 73 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "forgeendertech-26.3.0.1-fabric-build.0125.jar",
     "published": "2026-10-10"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 229,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 182,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

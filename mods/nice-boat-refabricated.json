@@ -11,16 +11,14 @@
   "needs": [
     "Mixin: 2 points inside the game's methods",
     "net.minecraft.world.entity.vehicle.boat.AbstractBoat",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Entity.<init>()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "NiceBoat26.3-1.1.5.jar",
     "published": "2026-09-26"
   },
@@ -50,7 +48,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

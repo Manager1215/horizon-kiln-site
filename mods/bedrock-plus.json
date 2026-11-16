@@ -11,11 +11,9 @@
   "needs": [
     "net.minecraft.world.item.SmithingTemplateItem",
     "BiomeModifications.addFeature()",
-    "CommonComponents.space()",
     "SoundEvents.ARMOR_EQUIP_NETHERITE",
     "BlockTags.INCORRECT_FOR_NETHERITE_TOOL",
     "Item.Properties.spear()",
-    "Blocks.ANCIENT_DEBRIS",
     "SoundType.NETHERITE_BLOCK",
     "MapColor.COLOR_BLACK"
   ],
@@ -24,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bedrockplus-fabric-26.3-2.1.0.jar",
     "published": "2026-10-04"
   },
@@ -53,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

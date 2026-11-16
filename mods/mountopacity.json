@@ -10,7 +10,6 @@
   "description": "Allows setting custom opacity (transparency) for entities that you are riding, making it easier to see what's in front or below you!",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
     "net.minecraft.world.entity.animal.camel.Camel",
@@ -20,7 +19,6 @@
     "net.minecraft.world.entity.animal.nautilus.Nautilus",
     "net.minecraft.world.entity.animal.pig.Pig",
     "net.minecraft.world.entity.monster.Strider",
-    "Options.getCameraType()",
     "LocalPlayer.getViewXRot()",
     "LocalPlayer.isPassenger()",
     "RenderTypes.entityTranslucent()",
@@ -32,7 +30,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mountopacity-1.2.5+26.3-fabric.jar",
     "published": "2026-10-13"
   },
@@ -62,7 +60,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,14 +10,10 @@
   "description": "The mod adds blocks and some items to build ukraine's mazanka",
   "needs": [
     "net.minecraft.world.item.DoubleHighBlockItem",
-    "net.minecraft.world.level.block.DoublePlantBlock",
     "net.minecraft.world.level.block.IronBarsBlock",
     "net.minecraft.world.level.block.state.BlockBehaviour.OffsetType",
-    "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
     "net.minecraft.world.level.material.PushReaction",
     "BiomeModifications.addFeature()",
-    "BlockTags.DIRT",
-    "BlockTags.SAND",
     "ItemEntity.setPickUpDelay()",
     "Item.Properties.useItemDescriptionPrefix()",
     "FenceBlock.connectsTo()",
@@ -33,7 +29,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mazanka-1.0.2-[26.3]-fabric.jar",
     "published": "2026-10-24"
   },
@@ -61,7 +57,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

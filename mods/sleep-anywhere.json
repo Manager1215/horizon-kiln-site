@@ -10,7 +10,6 @@
   "description": "Sleep anywhere without a bed!",
   "needs": [
     "net.minecraft.server.level.ServerPlayer.RespawnConfig",
-    "net.minecraft.world.entity.Pose",
     "net.minecraft.world.level.block.AbstractBedBlock",
     "ServerLevel.isBrightOutside()",
     "ServerLevel.updateSleepingPlayerList()",
@@ -31,7 +30,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sleepanywhere-1.1-26.3.jar",
     "published": "2026-09-19"
   },
@@ -60,7 +59,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

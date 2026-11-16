@@ -12,7 +12,6 @@
     "an access widener",
     "Mixin: 6 points inside the game's methods",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.network.protocol.game.ClientboundLevelChunkPacketData.BlockEntityInfo",
     "net.minecraft.server.level.ChunkMap",
     "net.minecraft.util.EncoderCache.2",
@@ -27,12 +26,7 @@
     "net.minecraft.world.level.saveddata.WeatherData",
     "net.minecraft.world.timeline.Timeline",
     "net.minecraft.world.timeline.Timelines",
-    "Commands.LEVEL_MODERATORS",
-    "Commands.hasPermission()",
     "RegistryAccess.get()",
-    "SectionPos.sectionToBlockCoord()",
-    "CommonComponents.space()",
-    "MinecraftServer.execute()",
     "MinecraftServer.isPublished()",
     "MinecraftServer.isSingleplayer()",
     "MinecraftServer.submit()",
@@ -47,18 +41,24 @@
     "ServerLevel.getBiome()",
     "ServerLevel.getBlockRandomPos()",
     "ServerLevel.getCurrentDifficultyAt()",
-    "ServerLevel.getDefaultClockTime()",
     "ServerLevel.getGameRules()",
     "ServerLevel.getHeightmapPos()",
     "ServerLevel.getSeaLevel()",
-    "and 36 more"
+    "ServerLevel.getWeatherData()",
+    "ServerLevel.isPositionEntityTicking()",
+    "ServerLevel.resetWeatherCycle()",
+    "ServerLevel.shouldTickBlocksAt()",
+    "ServerLevel.tickNonPassenger()",
+    "ServerLevel.tickTime()",
+    "ServerLevel.updateSkyBrightness()",
+    "and 30 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sleepwarp-2.13.0+26.3-rc-3.jar",
     "published": "2026-09-14"
   },
@@ -85,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 82,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 70,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

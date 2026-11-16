@@ -10,16 +10,11 @@
   "description": "Improves the visual appearance of chunk borders",
   "needs": [
     "net.minecraft.client.renderer.debug.ChunkBorderRenderer",
-    "net.minecraft.gizmos.GizmoStyle",
-    "Minecraft.execute()",
-    "Minecraft.schedule()",
-    "Minecraft.setScreenAndShow()",
     "ClientLevel.getHeight()",
     "GameRenderer.mainCamera()",
     "SectionPos.minBlockX()",
     "SectionPos.minBlockZ()",
     "SectionPos.of()",
-    "Gizmos.line()",
     "Gizmos.rect()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -27,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "betterchunkborders-1.0.2.jar",
     "published": "2026-09-15"
   },
@@ -58,7 +53,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

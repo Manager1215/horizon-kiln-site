@@ -9,30 +9,21 @@
   "author": "Scanysses",
   "description": "Little mod that helps using 1e-7 stepping mechanics!",
   "needs": [
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "KeyMapping.getDefaultKey()",
     "KeyMapping.set()",
-    "Minecraft.execute()",
-    "Minecraft.schedule()",
     "Options.toggleCrouch()",
     "LocalPlayer.absSnapTo()",
     "LocalPlayer.setYRot()",
     "LocalPlayer.turn()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "EnchantmentHelper.getItemEnchantmentLevel()",
     "Enchantments.SOUL_SPEED",
-    "Enchantments.SWIFT_SNEAK",
-    "Blocks.SOUL_SAND",
-    "Blocks.SOUL_SOIL"
+    "Enchantments.SWIFT_SNEAK"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "auto_1e-7_stepping-1.1.0+26.3-fabric.jar",
     "published": "2026-10-08"
   },
@@ -63,7 +54,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -15,16 +15,14 @@
     "net.minecraft.client.resources.SplashManager",
     "net.minecraft.commands.synchronization.ArgumentTypeInfos",
     "net.minecraft.commands.synchronization.ArgumentUtils",
-    "net.minecraft.network.chat.ComponentSerialization",
-    "net.minecraft.network.protocol.game.ClientboundCommandsPacket.ArgumentNodeStub",
-    "GuiGraphicsExtractor.setTooltipForNextFrame()"
+    "net.minecraft.network.protocol.game.ClientboundCommandsPacket.ArgumentNodeStub"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SplashChanger-1.5.0.jar",
     "published": "2026-09-17"
   },
@@ -52,7 +50,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,13 +10,11 @@
   "description": "Lets map‑makers and resource‑pack creators place custom music and ambience directly in the world",
   "needs": [
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.BeforeGizmos",
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
     "net.minecraft.client.resources.sounds.TickableSoundInstance",
     "LevelRenderEvents.BEFORE_GIZMOS",
     "Camera.rotation()",
     "GameRenderer.mainCamera()",
     "SoundManager.isActive()",
-    "SoundManager.stop()",
     "Shapes.create()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -24,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "BuroSound-1.1.0-mc26.3.jar",
     "published": "2026-10-29"
   },
@@ -52,7 +50,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

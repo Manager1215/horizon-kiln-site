@@ -11,22 +11,18 @@
   "needs": [
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.tags.ItemTags",
-    "Button.Builder.tooltip()",
     "BlockPos.MutableBlockPos.set()",
     "BlockPos.MutableBlockPos.set()",
     "Player.isCrouching()",
-    "Level.destroyBlock()",
     "Level.getMinY()",
     "BlockStateProperties.DISTANCE"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "treechopmod-1.2.1+mc26.3.x.jar",
     "published": "2026-09-18"
   },
@@ -56,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

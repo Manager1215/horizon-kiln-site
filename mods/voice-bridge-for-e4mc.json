@@ -13,18 +13,14 @@
     "net.fabricmc.fabric.api.client.networking.v1.ClientConfigurationConnectionEvents",
     "net.fabricmc.fabric.api.client.networking.v1.ClientConfigurationConnectionEvents.Init",
     "ServerConfigurationNetworking.send()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
-    "Connection.getRemoteAddress()",
-    "Connection.isMemoryConnection()",
-    "ServerPlayer.connection"
+    "Connection.getRemoteAddress()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "e4mc-voice-bridge-1.2.0+26.3.jar",
     "published": "2026-11-12"
   },
@@ -55,7 +51,11 @@
     "minecraft",
     "voicechat"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,9 +9,7 @@
   "author": "Monte_Carlo_Simulations",
   "description": "Fully configurable beacon pyramids, add new pyramid types and adjust strength.  Place carpets on beacons to hide beam.",
   "needs": [
-    "net.minecraft.commands.arguments.IdentifierArgument",
     "net.minecraft.server.packs.repository.PackRepository",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.tags.TagEntry",
     "net.minecraft.tags.TagLoader",
     "net.minecraft.tags.TagLoader.EntryWithSource",
@@ -19,9 +17,6 @@
     "net.minecraft.world.level.block.entity.BeaconBeamOwner",
     "net.minecraft.world.level.block.entity.BeaconBeamOwner.Section",
     "net.minecraft.world.level.block.entity.BeaconBlockEntity",
-    "CommandSourceStack.getServer()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "SharedSuggestionProvider.suggestResource()",
     "ResourceKey.codec()",
     "MinecraftServer.getAllLevels()",
@@ -36,7 +31,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "betterbeacons-fabric-1.1.2.jar",
     "published": "2026-10-20"
   },
@@ -64,7 +59,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

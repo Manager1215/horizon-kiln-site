@@ -9,10 +9,7 @@
   "author": "auth",
   "description": "Freecam mod for Fabric that detaches your camera so you can fly around and line up shots without moving your actual character. Toggle with F4, hold Alt and scroll to adjust fly speed.",
   "needs": [
-    "net.minecraft.client.CameraType",
     "Minecraft.smartCull",
-    "Options.getCameraType()",
-    "Options.setCameraType()",
     "LocalPlayer.getEyePosition()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
@@ -20,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "BetterFreecam-26.3.jar",
     "published": "2026-09-24"
   },
@@ -48,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

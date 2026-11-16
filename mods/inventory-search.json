@@ -9,19 +9,14 @@
   "author": "Kroniichiwa",
   "description": "Allows the player to search and highlight specified item name inside containers and inventory.",
   "needs": [
-    "net.minecraft.client.gui.screens.inventory.ContainerScreen",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-    "net.minecraft.client.gui.screens.inventory.ShulkerBoxScreen",
-    "KeyMapping.matches()",
-    "Options.keyInventory",
-    "EditBox.setHint()"
+    "net.minecraft.client.gui.screens.inventory.ShulkerBoxScreen"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4)",
+  "roadmap": "Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "inventory-search-26.3.0.jar",
     "published": "2026-09-16"
   },
@@ -51,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

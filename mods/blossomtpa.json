@@ -9,20 +9,15 @@
   "author": "CodedSakura",
   "description": "Blossom-series /tpa command and utilities",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "org.apache.logging.log4j.core.Logger",
-    "CommandSourceStack.getPlayerOrException()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
-    "ServerPlayer.getGameProfile()",
-    "ServerPlayer.sendSystemMessage()"
+    "ServerPlayer.getGameProfile()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "blossom-tpa-2.2.15+26.3.jar",
     "published": "2026-09-16"
   },
@@ -49,7 +44,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

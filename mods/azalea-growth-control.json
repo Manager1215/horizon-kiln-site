@@ -10,7 +10,6 @@
   "description": "Limits azalea generation to appropriate biomes. Because even trees need boundaries.",
   "needs": [
     "an access widener",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.data.worldgen.features.CaveFeatures",
     "net.minecraft.data.worldgen.features.TreeFeatures",
     "net.minecraft.data.worldgen.placement.PlacementUtils",
@@ -18,12 +17,9 @@
     "net.minecraft.world.level.levelgen.blockpredicates.MatchingBiomesPredicate",
     "net.minecraft.world.level.levelgen.feature.RootSystemFeature",
     "Direction.getUnitVec3i()",
-    "HolderGetter.getOrThrow()",
     "Registries.BIOME",
     "BlockTags.AZALEA_GROWS_ON",
     "BlockTags.AZALEA_ROOT_REPLACEABLE",
-    "Blocks.HANGING_ROOTS",
-    "Blocks.ROOTED_DIRT",
     "BlockStateProvider.holderOf()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
@@ -31,7 +27,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "azaleagrowthcontrol-v26.3.0-mc26.3.x+fabric.jar",
     "published": "2026-09-28"
   },
@@ -61,7 +57,11 @@
     "minecraft",
     "puzzleslib"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "partial",
+    "why": "generates in the world"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -31,7 +31,6 @@
     "net.minecraft.core.component.BlockTransformer.BlockTransformData.Builder",
     "net.minecraft.core.registries.codec.RegistryCodecs",
     "net.minecraft.resources.RegistryDataLoader",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.util.datafix.fixes.References",
     "net.minecraft.util.valueproviders.ConstantInt",
     "net.minecraft.util.valueproviders.IntProviders",
@@ -51,6 +50,7 @@
     "net.minecraft.world.entity.item.FallingBlockEntity",
     "net.minecraft.world.entity.vehicle.boat.Boat",
     "net.minecraft.world.entity.vehicle.boat.ChestBoat",
+    "net.minecraft.world.entity.vehicle.boat.ChestRaft",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "verdantfields-fabric-26.3-1.1.0.jar",
     "published": "2026-11-03"
   },
@@ -86,7 +86,11 @@
     "fabricloader",
     "java"
   ],
-  "lacks": 236,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 215,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

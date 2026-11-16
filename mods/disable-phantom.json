@@ -9,13 +9,7 @@
   "author": "shapira0000",
   "description": "Toggle Phantom spawning easily with a simple command.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.minecraft.server.permissions.Permissions",
-    "net.minecraft.world.level.storage.LevelResource",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "CommandSourceStack.getServer()",
     "MinecraftServer.getGameRules()",
-    "MinecraftServer.getWorldPath()",
     "GameRules.SPAWN_PHANTOMS",
     "GameRules.set()"
   ],
@@ -24,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "disable_phantoms-1.0.0.jar",
     "published": "2026-09-19"
   },
@@ -52,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

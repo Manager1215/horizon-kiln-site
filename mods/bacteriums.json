@@ -13,22 +13,17 @@
     "net.minecraft.world.entity.projectile.Projectile.ProjectileFactory",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrownSplashPotion",
     "net.minecraft.world.item.SplashPotionItem",
-    "Holder.getRegisteredName()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "SoundEvents.SPLASH_POTION_THROW",
     "ContextMap.getOrDefault()",
     "InteractionHand.asEquipmentSlot()",
     "Projectile.spawnProjectileFromRotation()",
     "ItemStack.consume()",
     "EnchantmentHelper.getItemEnchantmentLevel()",
-    "Enchantments.FORTUNE",
     "Level.getMaxY()",
     "Level.getMinY()",
     "Level.hasNeighborSignal()",
     "Level.setBlockEntity()",
     "Block.getDrops()",
-    "Blocks.BRICKS",
     "BlockEntity.loadStatic()",
     "BlockEntity.saveWithFullMetadata()",
     "Property.valueCodec()",
@@ -46,7 +41,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bacterium-fabric-26.3-26.3.0.0.jar",
     "published": "2026-10-11"
   },
@@ -75,7 +70,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 30,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 25,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

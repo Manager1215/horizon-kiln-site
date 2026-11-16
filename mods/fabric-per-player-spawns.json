@@ -16,18 +16,16 @@
     "net.minecraft.world.level.NaturalSpawner.SpawnState",
     "ServerLevel.getAllEntities()",
     "ServerPlayer.getLastSectionPos()",
-    "ServerPlayer.sendSystemMessage()",
     "Mob.isPersistenceRequired()",
     "Mob.requiresCustomPersistence()",
-    "MobCategory.getMaxInstancesPerChunk()",
-    "Items.GLISTERING_MELON_SLICE"
+    "MobCategory.getMaxInstancesPerChunk()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fabric-per-player-spawns-3.2.2.jar",
     "published": "2026-09-29"
   },
@@ -43,7 +41,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

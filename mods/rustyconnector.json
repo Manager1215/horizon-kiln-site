@@ -10,8 +10,6 @@
   "description": "Register new servers without restarting Velocity!",
   "needs": [
     "net.fabricmc.api.DedicatedServerModInitializer",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.minecraft.class_2168",
     "net.minecraft.class_2561",
     "net.minecraft.class_2960",
@@ -19,8 +17,6 @@
     "net.minecraft.class_3222",
     "net.minecraft.class_3324",
     "net.minecraft.class_5321",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "MinecraftServer.method_29435()",
     "MinecraftServer.method_3760()",
     "MinecraftServer.method_3788()",
@@ -32,7 +28,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "rustyconnector-fabric-0.9.3.jar",
     "published": "2026-10-11"
   },
@@ -50,7 +46,11 @@
     "fabric",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

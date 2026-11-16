@@ -18,17 +18,10 @@
     "net.fabricmc.fabric.api.client.model.loading.v1.SimpleUnbakedExtraModel",
     "net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadEmitter",
     "net.fabricmc.fabric.api.client.renderer.v1.model.FabricBlockStateModel",
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.OptionInstance.CaptionBasedToString",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
-    "net.minecraft.client.gui.components.AbstractStringWidget",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
     "net.minecraft.client.gui.components.OptionsList",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.layouts.GridLayout",
     "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
     "net.minecraft.client.gui.screens.inventory.SignEditScreen",
@@ -51,14 +44,21 @@
     "net.minecraft.client.renderer.texture.atlas.SpriteSources",
     "net.minecraft.client.renderer.texture.atlas.sources.DirectoryLister",
     "net.minecraft.client.renderer.texture.atlas.sources.SingleFile",
-    "and 80 more"
+    "net.minecraft.client.resources.model.SimpleModelWrapper",
+    "net.minecraft.client.resources.model.cuboid.MissingCuboidModel",
+    "net.minecraft.server.packs.PackLocationInfo",
+    "net.minecraft.server.packs.PackResources.ResourceOutput",
+    "net.minecraft.server.packs.VanillaPackResources",
+    "net.minecraft.server.packs.metadata.pack.PackMetadataSection",
+    "net.minecraft.server.packs.repository.PackSource",
+    "and 56 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "enhancedblockentities-0.13.3+26.3-fabric.jar",
     "published": "2026-10-22"
   },
@@ -79,7 +79,11 @@
     "matlib",
     "minecraft"
   ],
-  "lacks": 175,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 96,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

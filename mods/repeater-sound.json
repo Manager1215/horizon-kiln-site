@@ -10,26 +10,19 @@
   "description": "A simple client side mod that add click sound to some redstone components",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.world.level.block.ComparatorBlock",
     "net.minecraft.world.level.block.DaylightDetectorBlock",
     "net.minecraft.world.level.block.RedstoneWireBlock",
     "net.minecraft.world.level.block.RepeaterBlock",
     "net.minecraft.world.level.block.state.properties.ComparatorMode",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "BlockPos.toShortString()",
-    "Blocks.COMPARATOR",
-    "Blocks.DAYLIGHT_DETECTOR",
-    "Blocks.REDSTONE_WIRE",
-    "Blocks.REPEATER"
+    "BlockPos.toShortString()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "RepeaterSound-1.6.1_26.3.jar",
     "published": "2026-10-05"
   },
@@ -57,7 +50,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args into the game's classes"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -14,8 +14,6 @@
     "net.minecraft.world.level.block.DriedGhastBlock",
     "Direction.fromYRot()",
     "SoundEvents.DRIED_GHAST_PLACE",
-    "Items.DRIED_GHAST",
-    "Blocks.DRIED_GHAST",
     "BlockState.canBeReplaced()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -23,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dry-ghast-1.0-fabric+26.1.jar",
     "published": "2026-09-30"
   },
@@ -36,7 +34,11 @@
   "entrypoints": {},
   "mixins": true,
   "depends": [],
-  "lacks": 8,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

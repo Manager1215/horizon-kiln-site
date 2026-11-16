@@ -10,14 +10,9 @@
   "description": "Allows to trade potions with Cleric",
   "needs": [
     "net.minecraft.core.registries.codec.RegistryCodecs",
-    "net.minecraft.world.item.alchemy.Potion",
-    "net.minecraft.world.item.alchemy.PotionContents",
     "net.minecraft.world.level.storage.loot.functions.LootItemFunctions",
     "Registry.getRandom()",
-    "RegistryAccess.lookupOrThrow()",
     "DataComponents.ADDITIONAL_TRADE_COST",
-    "DataComponents.POTION_CONTENTS",
-    "Registries.POTION",
     "ItemStack.update()",
     "LootContext.getRandom()",
     "LootContext.hasParameter()",
@@ -28,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tradablepotions-fabric-26.3-1.1.1.jar",
     "published": "2026-09-21"
   },
@@ -56,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

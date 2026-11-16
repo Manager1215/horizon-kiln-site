@@ -9,20 +9,17 @@
   "author": "nuriui",
   "description": "Prevents elytra from being activated underwater",
   "needs": [
-    "LocalPlayer.isFallFlying()",
     "LocalPlayer.setSwimming()",
     "LocalPlayer.stopFallFlying()",
-    "ServerPlayer.isFallFlying()",
     "ServerPlayer.setSwimming()",
-    "ServerPlayer.stopFallFlying()",
-    "Items.FIREWORK_ROCKET"
+    "ServerPlayer.stopFallFlying()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ElytraSwimFix-26.1.1.jar",
     "published": "2026-03-31"
   },
@@ -49,7 +46,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

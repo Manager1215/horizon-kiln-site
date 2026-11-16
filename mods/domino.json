@@ -15,8 +15,6 @@
     "net.minecraft.world.level.block.Mirror",
     "Window.getAppropriateLineWidth()",
     "LevelRenderEvents.COLLECT_SUBMITS",
-    "Minecraft.gameMode",
-    "Minecraft.hitResult",
     "LocalPlayer.blockInteractionRange()",
     "LocalPlayer.getEyePosition()",
     "LocalPlayer.getViewVector()",
@@ -41,7 +39,6 @@
     "AABB.minX",
     "AABB.minY",
     "AABB.minZ",
-    "HitResult.getType()",
     "Shapes.empty()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -49,7 +46,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dominomod-fabric-26.3-1.1.1.jar",
     "published": "2026-10-23"
   },
@@ -78,7 +75,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 33,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 30,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

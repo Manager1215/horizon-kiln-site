@@ -31,7 +31,6 @@
     "net.minecraft.client.gui.screens.inventory.SignEditScreen",
     "net.minecraft.client.model.geom.builders.UVPair",
     "net.minecraft.client.multiplayer.ClientChunkCache",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.multiplayer.prediction.BlockStatePredictionHandler",
     "net.minecraft.client.particle.Particle",
     "net.minecraft.client.particle.ParticleEngine",
@@ -51,6 +50,7 @@
     "net.minecraft.network.protocol.game.ServerboundPickItemFromBlockPacket",
     "net.minecraft.network.protocol.game.ServerboundSignUpdatePacket",
     "net.minecraft.network.protocol.game.ServerboundUseItemOnPacket",
+    "net.minecraft.server.level.ChunkMap",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "offgrid-fabric-1.0.6+26.3.jar",
     "published": "2026-11-09"
   },
@@ -89,7 +89,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 287,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 262,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

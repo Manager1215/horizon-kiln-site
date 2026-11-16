@@ -10,7 +10,6 @@
   "description": "The mod shows the distance between you and the player who hit you. Designed to understand the enemy's attack range in PVP. It only works on the client, so it depends on your ping and ping of your your opponent's ping.",
   "needs": [
     "LocalPlayer.getLastDamageSource()",
-    "DamageSource.getEntity()",
     "Entity.getBoundingBox()",
     "Player.getBoundingBox()",
     "AABB.maxX",
@@ -25,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hit-distance-1.0.1-26.3.jar",
     "published": "2026-10-18"
   },
@@ -55,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

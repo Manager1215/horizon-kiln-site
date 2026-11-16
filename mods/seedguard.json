@@ -16,15 +16,10 @@
     "net.minecraft.world.level.levelgen.WorldgenRandom",
     "net.minecraft.world.level.levelgen.structure.StructureSet",
     "net.minecraft.world.level.levelgen.structure.placement.AbstractSpreadingStructurePlacement",
-    "net.minecraft.world.level.storage.LevelResource",
     "Object2LongMap.putAll()",
     "Reference2IntMap.putAll()",
     "Reference2LongMap.putAll()",
-    "Registry.listElements()",
-    "RegistryAccess.Frozen.lookupOrThrow()",
     "Registries.STRUCTURE_SET",
-    "RegistryOps.create()",
-    "MinecraftServer.getWorldPath()",
     "MinecraftServer.registryAccess()",
     "Feature.CODEC"
   ],
@@ -33,7 +28,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "seedguard+26.3-1.0.1.jar",
     "published": "2026-09-20"
   },
@@ -48,7 +43,11 @@
   "depends": [
     "fabricloader"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @redirect and @wrap-operation into the game's classes"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

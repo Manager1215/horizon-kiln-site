@@ -13,15 +13,14 @@
     "net.minecraft.world.level.portal.PortalShape",
     "BlockPos.MutableBlockPos.move()",
     "BlockPos.MutableBlockPos.move()",
-    "BlockPos.MutableBlockPos.set()",
-    "Blocks.CRYING_OBSIDIAN"
+    "BlockPos.MutableBlockPos.set()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nether-portal-rework-1.0.0+26.3.jar",
     "published": "2026-10-12"
   },
@@ -51,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

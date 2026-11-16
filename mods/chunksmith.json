@@ -10,13 +10,6 @@
   "description": "Pre-generates chunks fast, and safely: an adaptive throttle paces generation against server tick-health so it can run with players online. Builds Distant Horizons / voxy LOD data as it goes and serves it to clients. Fabric, Forge, NeoForge and Paper/Folia.",
   "needs": [
     "Mixin: 5 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.commands.arguments.DimensionArgument",
     "net.minecraft.commands.arguments.blocks.BlockStateParser",
     "net.minecraft.commands.arguments.blocks.BlockStateParser.BlockResult",
     "net.minecraft.nbt.visitors.CollectFields",
@@ -31,7 +24,6 @@
     "net.minecraft.server.level.DistanceManager",
     "net.minecraft.server.level.Ticket",
     "net.minecraft.server.level.WorldGenRegion",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.util.profiling.InactiveProfiler",
     "net.minecraft.util.thread.PriorityConsecutiveExecutor",
     "net.minecraft.world.TickRateManager",
@@ -50,14 +42,22 @@
     "net.minecraft.world.level.entity.ChunkEntities",
     "net.minecraft.world.level.entity.EntityPersistentStorage",
     "net.minecraft.world.level.entity.PersistentEntitySectionManager",
-    "and 62 more"
+    "net.minecraft.world.level.lighting.LayerLightEventListener",
+    "Long2ObjectMap.Entry.getValue()",
+    "LongSet.size()",
+    "Commands.sendCommands()",
+    "BlockPos.MutableBlockPos.move()",
+    "RegistryAccess.Frozen.get()",
+    "SectionPos.of()",
+    "SectionPos.origin()",
+    "and 53 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "chunksmith-4.9.0+26.3.jar",
     "published": "2026-11-13"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 139,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 101,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

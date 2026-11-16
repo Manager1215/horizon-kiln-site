@@ -10,10 +10,8 @@
   "description": "The status mod used on the Hermitcraft server.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking",
     "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking.LoginQueryRequestHandler",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.networking.v1.LoginPacketSender",
     "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents",
     "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents.QueryStart",
@@ -26,24 +24,13 @@
     "net.minecraft.client.gui.components.PlayerFaceExtractor",
     "net.minecraft.client.gui.components.PlayerTabOverlay",
     "net.minecraft.network.chat.ComponentUtils",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.server.network.ServerLoginPacketListenerImpl",
     "net.minecraft.world.entity.player.Player.BedSleepingProblem",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "ServerLifecycleEvents.SERVER_STARTING",
     "ModMetadata.getCustomValue()",
-    "Minecraft.gameDirectory",
     "GuiGraphicsExtractor.textRendererForWidget()",
     "PlayerInfo.getProfile()",
     "LocalPlayer.getGameProfile()",
-    "MutableComponent.withStyle()",
-    "Style.withHoverEvent()",
     "MinecraftServer.getServerDirectory()",
-    "ServerPlayer.connection",
-    "ServerPlayer.getDisplayName()",
-    "ServerGamePacketListenerImpl.send()",
     "LivingEntity.<init>()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -51,7 +38,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "status-fabric-1.1.0+26.3.jar",
     "published": "2026-09-15"
   },
@@ -78,7 +65,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 35,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

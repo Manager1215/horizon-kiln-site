@@ -12,7 +12,6 @@
     "MinecraftServer.getAllLevels()",
     "ServerLevel.getEntitiesOfClass()",
     "ServerPlayer.getBoundingBox()",
-    "ServerPlayer.giveExperiencePoints()",
     "ExperienceOrb.discard()",
     "ExperienceOrb.getValue()",
     "AABB.inflate()"
@@ -22,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "instant-xp-1.1.0.jar",
     "published": "2026-09-20"
   },
@@ -51,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

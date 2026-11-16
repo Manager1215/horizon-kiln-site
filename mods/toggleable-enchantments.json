@@ -10,39 +10,16 @@
   "description": "Allows enchantments to be toggled",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
-    "net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner",
-    "net.minecraft.world.entity.EquipmentSlot.Type",
     "Object2IntMap.Entry.getKey()",
-    "GuiGraphicsExtractor.blitSprite()",
-    "GuiGraphicsExtractor.tooltip()",
-    "Screen.mouseClicked()",
-    "Screen.mouseScrolled()",
-    "Holder.getRegisteredName()",
-    "Holder.is()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
-    "Component.getVisualOrderText()",
-    "Component.plainCopy()",
-    "EquipmentSlot.getIndex()",
-    "EquipmentSlot.getType()",
-    "ItemStack.getDisplayName()",
     "ItemStack.getEnchantments()",
-    "Enchantment.getFullname()",
-    "ItemEnchantments.CODEC",
-    "ItemEnchantments.STREAM_CODEC",
-    "ItemEnchantments.entrySet()",
-    "ItemEnchantments.isEmpty()",
-    "ItemEnchantments.Mutable.getLevel()",
-    "ItemEnchantments.Mutable.removeIf()",
-    "ItemEnchantments.Mutable.set()"
+    "ItemEnchantments.STREAM_CODEC"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "toggleable_enchantments-fabric-26.3-1.0.5.jar",
     "published": "2026-09-16"
   },
@@ -71,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 26,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

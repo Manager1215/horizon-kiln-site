@@ -9,27 +9,15 @@
   "author": "DaJoisright",
   "description": "Stasis 1 time use rods that tp you to any cord any dimension!",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.minecraft.commands.arguments.coordinates.Vec3Argument",
-    "net.minecraft.server.permissions.PermissionCheck",
-    "net.minecraft.world.item.component.ItemLore",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "CommandSourceStack.getPlayerOrException()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "DataComponents.CUSTOM_NAME",
-    "DataComponents.LORE",
-    "MutableComponent.withStyle()",
     "MinecraftServer.isDedicatedServer()",
-    "ServerPlayer.teleportTo()",
-    "Items.FISHING_ROD",
-    "CustomData.copyTag()"
+    "ServerPlayer.teleportTo()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "RodStasis-Fabric-26.3 (2).jar",
     "published": "2026-09-27"
   },
@@ -57,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

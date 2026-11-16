@@ -15,7 +15,6 @@
     "net.minecraft.commands.arguments.blocks.BlockStateParser.BlockResult",
     "net.minecraft.data.worldgen.Pools",
     "net.minecraft.server.level.ServerPlayer.RespawnConfig",
-    "net.minecraft.world.entity.EntitySpawnRequest",
     "net.minecraft.world.entity.decoration.ItemFrame",
     "net.minecraft.world.entity.decoration.painting.Painting",
     "net.minecraft.world.level.block.JigsawBlock",
@@ -27,8 +26,6 @@
     "net.minecraft.world.level.levelgen.WorldOptions",
     "BlockPos.distSqr()",
     "BlockPos.toShortString()",
-    "RegistryAccess.lookupOrThrow()",
-    "MinecraftServer.execute()",
     "MinecraftServer.getWorldGenSettings()",
     "ServerLevel.addFreshEntityWithPassengers()",
     "ServerLevel.getChunkAt()",
@@ -38,25 +35,28 @@
     "ServerLevel.holderLookup()",
     "ServerLevel.setRespawnData()",
     "ServerPlayer.getRespawnConfig()",
-    "ServerPlayer.isRemoved()",
     "ServerPlayer.teleportTo()",
     "BlockTags.SUBSTRATE_OVERWORLD",
     "Entity.entityTags()",
     "Entity.getIndirectPassengers()",
     "Entity.setPos()",
     "EntityType.create()",
-    "Blocks.STRUCTURE_VOID",
     "BlockState.canBeReplaced()",
     "BlockState.getCollisionShape()",
     "BlockState.isCollisionShapeFullBlock()",
-    "and 6 more"
+    "BlockState.updateNeighbourShapes()",
+    "LevelChunk.getBlockEntities()",
+    "LevelData.RespawnData.dimension()",
+    "LevelData.RespawnData.of()",
+    "LevelData.RespawnData.pos()",
+    "and 1 more"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "starterstructure-26.3.0-6.0.jar",
     "published": "2026-11-10"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 46,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 41,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

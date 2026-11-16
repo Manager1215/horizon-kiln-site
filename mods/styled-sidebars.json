@@ -9,36 +9,22 @@
   "author": "Patbox",
   "description": "Customisable sidebars for your Minecraft server!",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.util.TriState",
     "net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint",
     "net.fabricmc.loader.api.metadata.ContactInformation",
     "net.fabricmc.loader.api.metadata.Person",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.network.chat.numbers.BlankFormat",
     "net.minecraft.network.chat.numbers.FixedFormat",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "JsonArray.forEach()",
-    "ServerLifecycleEvents.SERVER_STARTING",
     "ModContainer.getPath()",
     "ModMetadata.getAuthors()",
     "ModMetadata.getContact()",
     "ModMetadata.getContributors()",
     "CommandSourceStack.checkPermission()",
-    "CommandSourceStack.getEntity()",
-    "CommandSourceStack.getPlayerOrException()",
     "CommandSourceStack.registryAccess()",
-    "MutableComponent.setStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
     "Style.withShadowColor()",
-    "Style.withUnderlined()",
     "Identifier.toShortLanguageKey()",
     "MinecraftServer.registryAccess()",
-    "ServerPlayer.connection",
     "Player.checkPermission()",
     "Player.permissions()"
   ],
@@ -47,7 +33,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "styled-sidebars-1.13.0+26.3.jar",
     "published": "2026-09-12"
   },
@@ -73,7 +59,11 @@
   "depends": [
     "minecraft"
   ],
-  "lacks": 32,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,16 +9,14 @@
   "author": "MarioS271",
   "description": "A minecraft mod which enables you to copy player and block coordinates with the press of a button.",
   "needs": [
-    "FabricLoader.getRawGameVersion()",
-    "Minecraft.hitResult",
-    "HitResult.getType()"
+    "FabricLoader.getRawGameVersion()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "coords_copy-2.0.0-fabric+26.3.jar",
     "published": "2026-10-11"
   },
@@ -48,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

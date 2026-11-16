@@ -9,24 +9,15 @@
   "author": "cel20",
   "description": "Stop water accidents destroying your redstone builds.",
   "needs": [
-    "net.minecraft.server.permissions.Permissions",
-    "CommandSourceStack.getTextName()",
     "BlockTags.BUTTONS",
-    "BlockTags.WASHED_AWAY_BY_FLUIDS",
-    "Blocks.COMPARATOR",
-    "Blocks.LEVER",
-    "Blocks.REDSTONE_TORCH",
-    "Blocks.REDSTONE_WIRE",
-    "Blocks.REPEATER",
-    "Blocks.TRIPWIRE",
-    "Blocks.TRIPWIRE_HOOK"
+    "BlockTags.WASHED_AWAY_BY_FLUIDS"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "RedstoneProtect-1.0.1-F.jar",
     "published": "2026-09-23"
   },
@@ -55,7 +46,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite into the game's classes"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

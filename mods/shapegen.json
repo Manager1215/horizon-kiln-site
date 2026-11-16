@@ -10,9 +10,7 @@
   "description": "Additional shapes for any block, including modded ones",
   "needs": [
     "Mixin: 6 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.client.gui.screens.inventory.StonecutterScreen",
     "net.minecraft.client.renderer.item.TrackingItemStackRenderState",
@@ -49,15 +47,17 @@
     "net.minecraft.world.level.pathfinder.PathComputationType",
     "BiMap.containsValue()",
     "BiMap.get()",
-    "FabricCreativeModeTabOutput.insertAfter()",
-    "and 50 more"
+    "ResourceLoader.registerBuiltinPack()",
+    "Screen.getTooltipFromItem()",
+    "GuiRenderState.addItem()",
+    "and 36 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "shapegen-fabric-1.0.0+26.3.jar",
     "published": "2026-11-14"
   },
@@ -88,7 +88,11 @@
     "minecraft",
     "mixson"
   ],
-  "lacks": 90,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 76,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,7 +11,6 @@
   "needs": [
     "net.minecraft.advancements.triggers.ConsumeItemTrigger",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.food.FoodProperties",
     "net.minecraft.world.food.FoodProperties.Builder",
     "net.minecraft.world.item.component.Consumable",
@@ -32,31 +31,32 @@
     "DataComponents.FOOD",
     "SoundEvents.CAKE_ADD_CANDLE",
     "SoundEvents.GLASS_PLACE",
-    "Stats.EAT_CAKE_SLICE",
     "BlockTags.CANDLE_CAKES",
     "LivingEntity.removeAllEffects()",
     "Player.canEat()",
-    "Player.drop()",
     "Player.hasInfiniteMaterials()",
     "FoodData.eat()",
-    "Item.components()",
     "Item.finishUsingItem()",
     "Item.Properties.food()",
     "Item.Properties.food()",
-    "Items.BOWL",
-    "Items.FIRE_CHARGE",
-    "Items.FLINT_AND_STEEL",
-    "Items.GLASS_BOTTLE",
     "LevelAccessor.removeBlock()",
     "LevelAccessor.setBlock()",
-    "and 12 more"
+    "Blocks.DYED_CANDLE",
+    "BlockBehaviour.Properties.ofLegacyCopy()",
+    "BlockState.is()",
+    "BlockState.isSolid()",
+    "BlockStateProperties.BITES",
+    "GameEvent.BLOCK_CHANGE",
+    "GameEvent.BLOCK_DESTROY",
+    "GameEvent.EAT",
+    "and 2 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "UsefulFoodReborn-1.5.4-26.3-Fabric.jar",
     "published": "2026-09-18"
   },
@@ -85,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 52,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 42,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

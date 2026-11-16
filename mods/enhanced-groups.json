@@ -9,18 +9,7 @@
   "author": "henkelmax",
   "description": "A server side Fabric mod providing useful features to Simple Voice Chat groups.",
   "needs": [
-    "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
     "net.minecraft.network.chat.ComponentUtils",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.server.permissions.Permissions",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.isPlayer()",
-    "CommandSourceStack.sendSystemMessage()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
     "ServerLevel.getEntitiesOfClass()",
     "ServerPlayer.checkPermission()",
     "ServerPlayer.checkPermission()"
@@ -30,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "enhancedgroups-fabric-1.8.0+26.3.jar",
     "published": "2026-09-15"
   },
@@ -58,7 +47,11 @@
     "minecraft",
     "voicechat_api"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

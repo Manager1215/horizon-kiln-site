@@ -27,14 +27,10 @@
     "net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint",
     "net.minecraft.advancements.triggers.ConsumeItemTrigger",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.GameNarrator",
-    "net.minecraft.client.ResourceLoadStateTracker",
-    "net.minecraft.client.ResourceLoadStateTracker.ReloadReason",
     "net.minecraft.client.gui.components.ImageButton",
     "net.minecraft.client.gui.components.SpriteIconButton",
     "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.WidgetSprites",
     "net.minecraft.client.gui.screens.inventory.EffectsInInventory",
     "net.minecraft.client.model.player.PlayerModel",
@@ -47,10 +43,14 @@
     "net.minecraft.client.renderer.entity.player.AvatarRenderer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
-    "net.minecraft.core.HolderSet.Direct",
-    "net.minecraft.core.HolderSet.Named",
-    "net.minecraft.gizmos.GizmoStyle",
-    "net.minecraft.network.chat.ComponentSerialization",
+    "net.minecraft.network.syncher.EntityDataAccessor",
+    "net.minecraft.network.syncher.EntityDataSerializers",
+    "net.minecraft.network.syncher.SynchedEntityData.Builder",
+    "net.minecraft.server.PlayerAdvancements",
+    "net.minecraft.server.ServerAdvancementManager",
+    "net.minecraft.server.level.ChunkMap",
+    "net.minecraft.server.network.config.PrepareSpawnTask.Ready",
+    "net.minecraft.tags.DamageTypeTags",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "useless-reptile-0.14.3-26.3.jar",
     "published": "2026-10-23"
   },
@@ -92,7 +92,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 489,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 407,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

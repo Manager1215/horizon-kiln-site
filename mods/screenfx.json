@@ -10,9 +10,6 @@
   "description": "Customise your overlays and screen effects, resource pack compatible",
   "needs": [
     "Mixin: 12 points inside the game's methods",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.tabs.GridLayoutTab",
     "net.minecraft.client.gui.components.tabs.MenuTabBar",
     "net.minecraft.client.gui.components.tabs.MenuTabBar.Builder",
@@ -29,35 +26,21 @@
     "net.minecraft.client.renderer.state.level.PlayerRenderState.ItemActivationRenderState",
     "Axis.ZP",
     "Options.getMenuBackgroundBlurriness()",
-    "Font.split()",
-    "GuiGraphicsExtractor.blit()",
     "GuiGraphicsExtractor.blurBeforeThisStratum()",
-    "GuiGraphicsExtractor.text()",
-    "AbstractWidget.setMessage()",
-    "AbstractWidget.setTooltip()",
-    "Button.getMessage()",
-    "Button.setTooltip()",
-    "Button.Builder.tooltip()",
-    "EditBox.setTextColor()",
-    "EditBox.setTooltip()",
     "Screen.FOOTER_SEPARATOR",
     "Screen.INWORLD_FOOTER_SEPARATOR",
-    "Registry.wrapAsHolder()",
-    "CommonComponents.GUI_CANCEL",
-    "CommonComponents.GUI_DONE",
-    "MutableComponent.setStyle()",
     "SoundEvents.ARMOR_EQUIP_GENERIC",
     "SoundEvents.SHEARS_SNIP",
     "ARGB.color()",
     "ARGB.colorFromFloat()",
-    "and 2 more"
+    "Item.BY_BLOCK"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "screenfx-1.5.1+26.3.jar",
     "published": "2026-10-05"
   },
@@ -84,7 +67,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 42,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @redirect and @wrap-operation into the game's classes"
+  },
+  "lacks": 24,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

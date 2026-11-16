@@ -10,11 +10,7 @@
   "description": "A client-side mod that renders inventory & container screens as a 3D plane.",
   "needs": [
     "com.mojang.blaze3d.pipeline.TextureTarget",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.gui.screens.GenericMessageScreen",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-    "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
     "net.minecraft.client.model.player.PlayerModel",
     "net.minecraft.client.renderer.DynamicGpuData",
     "net.minecraft.client.renderer.GlobalSettingsUniform",
@@ -49,14 +45,18 @@
     "GpuBuffer.slice()",
     "RenderPipeline.getPrimitiveTopology()",
     "RenderPipeline.getVertexFormatBinding()",
-    "and 39 more"
+    "Camera.getFov()",
+    "Camera.xRot()",
+    "Camera.yRot()",
+    "Minecraft.crosshairPickEntity",
+    "and 35 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "spatial-gui-1.11.1+26.3-fabric.jar",
     "published": "2026-11-11"
   },
@@ -69,7 +69,11 @@
   "entrypoints": {},
   "mixins": true,
   "depends": [],
-  "lacks": 133,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes"
+  },
+  "lacks": 102,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

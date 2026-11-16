@@ -10,7 +10,6 @@
   "description": "this adds the old Gui look to it",
   "needs": [
     "com.mojang.realmsclient.gui.screens.RealmsNotificationsScreen",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.gui.layouts.FrameLayout",
     "net.minecraft.client.gui.layouts.GridLayout",
     "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
@@ -23,12 +22,12 @@
     "net.minecraft.client.multiplayer.chat.report.ReportingContext",
     "net.minecraft.client.resources.SplashManager",
     "net.minecraft.util.CommonLinks",
+    "SharedConstants.getCurrentVersion()",
     "Minecraft.getReportingContext()",
     "Minecraft.isDemo()",
     "Minecraft.isLocalServer()",
     "MouseHandler.grabMouse()",
     "Gui.splashManager()",
-    "Button.Builder.width()",
     "ConfirmLinkScreen.confirmLink()",
     "ClientLevel.DEFAULT_QUIT_MESSAGE",
     "ClientPacketListener.getSeenPlayers()",
@@ -42,7 +41,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "old-gui-1.1.0.jar",
     "published": "2026-09-17"
   },
@@ -71,7 +70,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 26,
   "development": {
     "status": "no-plans",
     "statusLabel": "No plans yet",

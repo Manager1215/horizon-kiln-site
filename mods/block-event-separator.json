@@ -11,21 +11,12 @@
   "needs": [
     "Mixin: 3 points inside the game's methods",
     "net.minecraft.client.DeltaTracker.Timer",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.server.ServerTickRateManager",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.TickRateManager",
     "net.minecraft.world.level.BlockEventData",
     "net.minecraft.world.level.block.entity.TickingBlockEntity",
     "net.minecraft.world.level.block.piston.PistonMovingBlockEntity",
-    "CommandSourceStack.getServer()",
-    "MutableComponent.withStyle()",
-    "Style.withHoverEvent()",
-    "ServerPlayer.connection",
-    "ServerGamePacketListenerImpl.send()",
+    "MultiPlayerGameMode.tick()",
     "PlayerList.broadcast()",
     "PlayerList.sendPlayerPermissionLevel()",
     "Level.<init>()"
@@ -35,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "block-event-separator-mc26.3-1.3.0.jar",
     "published": "2026-10-19"
   },
@@ -52,7 +43,11 @@
   "depends": [
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

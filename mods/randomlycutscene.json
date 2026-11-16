@@ -9,12 +9,8 @@
   "author": "Lakrica",
   "description": "Plays a random cinematic cutscene every time you join a world or server. 11 built-in shots, your own cutscenes via JSON, music support, and a Mod Menu config.",
   "needs": [
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.player.RemotePlayer",
-    "Minecraft.getSingleplayerServer()",
     "Minecraft.setCameraEntity()",
-    "Options.getCameraType()",
-    "Options.setCameraType()",
     "ClientLevel.addEntity()",
     "ClientLevel.clip()",
     "ClientLevel.removeEntity()",
@@ -24,7 +20,6 @@
     "LocalPlayer.isDeadOrDying()",
     "LocalPlayer.yBodyRot",
     "LocalPlayer.yHeadRot",
-    "SoundManager.stop()",
     "BlockPos.containing()",
     "SynchedEntityData.assignValues()",
     "SynchedEntityData.getNonDefaultValues()",
@@ -36,7 +31,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "randomcutscene-1.1.0+mc26.3.jar",
     "published": "2026-10-30"
   },
@@ -65,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

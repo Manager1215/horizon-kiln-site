@@ -10,12 +10,6 @@
   "description": "🍽 Makes lots of ingredients edible, after which the player receives a short status effect.",
   "needs": [
     "Player.swingAndResetAttackStrength()",
-    "Items.BLAZE_POWDER",
-    "Items.GHAST_TEAR",
-    "Items.MAGMA_CREAM",
-    "Items.RABBIT_FOOT",
-    "Items.SUGAR",
-    "SwingAnimation.DEFAULT",
     "Level.getEntities()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -23,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "edibles-26.3.0-4.6.jar",
     "published": "2026-10-02"
   },
@@ -53,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

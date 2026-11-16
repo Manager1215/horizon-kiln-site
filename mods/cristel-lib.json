@@ -11,9 +11,7 @@
   "needs": [
     "net.fabricmc.fabric.impl.resource.ResourceLoaderImpl",
     "net.minecraft.IdentifierException",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.gui.screens.packs.PackSelectionModel",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
     "net.minecraft.server.Bootstrap",
     "net.minecraft.server.packs.OverlayedPackResources",
     "net.minecraft.server.packs.PackLocationInfo",
@@ -26,13 +24,9 @@
     "net.minecraft.server.packs.repository.PackSource",
     "net.minecraft.server.packs.resources.ResourceMetadata",
     "org.apache.commons.io.FileUtils",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "ImmutableCollection.stream()",
     "ImmutableSet.stream()",
-    "Minecraft.setScreenAndShow()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
+    "SharedConstants.getCurrentVersion()",
     "PackResources.getNamespaces()",
     "PackResources.knownPackInfo()",
     "GsonHelper.convertToJsonObject()",
@@ -46,7 +40,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "cristellib-fabric-26.3-3.1.13.jar",
     "published": "2026-09-19"
   },
@@ -76,7 +70,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 31,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 25,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

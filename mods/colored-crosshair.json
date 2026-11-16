@@ -10,30 +10,18 @@
   "description": "A highly customizable crosshair mod, great for PvP.",
   "needs": [
     "com.mojang.blaze3d.Blaze3D",
-    "net.minecraft.client.CameraType",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.world.level.storage.WorldData",
     "net.minecraft.world.phys.EntityHitResult",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
-    "Minecraft.hitResult",
-    "Minecraft.setScreenAndShow()",
-    "Options.getCameraType()",
-    "GuiGraphicsExtractor.blitSprite()",
-    "EditBox.setEditable()",
-    "Screen.mouseScrolled()",
-    "ServerData.ip",
     "LocalPlayer.getAttackStrengthScale()",
-    "LocalPlayer.isFallFlying()",
     "LocalPlayer.isInWaterOrRain()",
-    "HitResult.getType()"
+    "IntegratedServer.getWorldData()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "colered-crosshair-1.1.2-26.3.jar",
     "published": "2026-10-23"
   },
@@ -62,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -23,13 +23,9 @@
     "net.minecraft.client.particle.SingleQuadParticle",
     "net.minecraft.client.particle.TerrainParticle",
     "net.minecraft.client.resources.model.ModelBakery",
-    "net.minecraft.core.component.DataComponentPatch.Builder",
     "net.minecraft.core.particles.TrailParticleOption",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.util.ExtraCodecs.TagOrElementLocation",
     "net.minecraft.util.TriState",
-    "net.minecraft.world.inventory.CrafterMenu",
-    "net.minecraft.world.inventory.CraftingMenu",
     "net.minecraft.world.item.ShearsItem",
     "net.minecraft.world.item.component.DyedItemColor",
     "net.minecraft.world.item.component.SuspiciousStewEffects",
@@ -50,14 +46,18 @@
     "BlockTintSource.colorInWorld()",
     "BlockTintSources.dryFoliage()",
     "BlockTintSources.grass()",
-    "and 54 more"
+    "BlockEntityRenderer.extractRenderState()",
+    "ItemModelResolver.appendItemLayers()",
+    "ItemStackRenderState.clear()",
+    "ItemStackRenderState.pickParticleMaterial()",
+    "and 41 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tiny_flowers-fabric-26.3-2.1.0+26.3.jar",
     "published": "2026-10-16"
   },
@@ -85,7 +85,11 @@
     "fabric-api",
     "java"
   ],
-  "lacks": 104,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 81,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

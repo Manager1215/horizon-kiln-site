@@ -31,7 +31,6 @@
     "net.minecraft.client.model.geom.builders.PartDefinition",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.AnimationState",
     "net.minecraft.world.entity.ai.goal.target.TargetGoal",
     "net.minecraft.world.entity.npc.villager.VillagerProfession",
@@ -39,7 +38,6 @@
     "ModelPart.getChild()",
     "LayerDefinition.create()",
     "EntityRendererProvider.Context.bakeLayer()",
-    "Holder.getRegisteredName()",
     "BuiltInRegistries.POINT_OF_INTEREST_TYPE",
     "BuiltInRegistries.VILLAGER_PROFESSION",
     "Registries.TRADE_SET",
@@ -54,7 +52,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "rogues-fabric-3.1.4.1+26.3.jar",
     "published": "2026-10-09"
   },
@@ -88,7 +86,11 @@
     "spell_engine",
     "structure_pool_api"
   ],
-  "lacks": 38,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 36,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

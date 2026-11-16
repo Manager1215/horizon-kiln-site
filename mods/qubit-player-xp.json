@@ -9,7 +9,6 @@
   "author": "mesosopic",
   "description": "A tiny, configurable mod intended for use in modpacks. Allows for configuration of the XP leveling and XP drop on death formulas.",
   "needs": [
-    "net.minecraft.core.HolderSet.Direct",
     "net.minecraft.util.context.ContextKeySet.Builder",
     "net.minecraft.world.level.storage.loot.IntRangePredicate",
     "net.minecraft.world.level.storage.loot.predicates.IntValueCheck",
@@ -20,7 +19,6 @@
     "net.minecraft.world.level.storage.loot.providers.number.ints.NumberDispatcher",
     "net.minecraft.world.level.storage.loot.providers.number.ints.Product",
     "net.minecraft.world.level.storage.loot.providers.number.ints.Sum",
-    "HolderSet.direct()",
     "BuiltInRegistries.CONTEXT_INT_PROVIDER_TYPE",
     "BuiltInRegistries.CONTEXT_KEY_SET",
     "Registries.CONTEXT_KEY_SET",
@@ -33,7 +31,6 @@
     "GameRules.get()",
     "LootContext.getOptional()",
     "LootParams.Builder.withLuck()",
-    "LootContextParams.THIS_ENTITY",
     "ContextIntProvider.getIntUnsafe()",
     "ContextIntProviders.CODEC"
   ],
@@ -42,7 +39,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "qubit-player-xp-2.0.0.jar",
     "published": "2026-09-17"
   },
@@ -70,7 +67,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 24,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

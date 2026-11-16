@@ -9,18 +9,15 @@
   "author": "jkr",
   "description": "Customise the output of F3+C",
   "needs": [
-    "KeyMapping.matches()",
-    "Minecraft.hitResult",
     "Options.keyDebugCopyLocation",
-    "LocalPlayer.isReducedDebugInfo()",
-    "HitResult.getType()"
+    "LocalPlayer.isReducedDebugInfo()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "where-am-i-1.0-26.3.jar",
     "published": "2026-09-26"
   },
@@ -49,7 +46,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

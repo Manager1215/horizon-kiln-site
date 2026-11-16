@@ -9,7 +9,6 @@
   "author": "Serilum",
   "description": "🐷 Gives all piglins a default or custom name to liven up the world.",
   "needs": [
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.entity.monster.piglin.AbstractPiglin",
     "ServerLevel.getAllEntities()",
     "Entity.addTag()",
@@ -23,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "piglinnames-26.3.0-1.6.jar",
     "published": "2026-11-08"
   },
@@ -53,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

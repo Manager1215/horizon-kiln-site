@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 25 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
@@ -29,18 +28,11 @@
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyCallback",
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyContext",
     "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-    "net.minecraft.CrashReport",
-    "net.minecraft.ReportedException",
     "net.minecraft.advancements.triggers.PlayerTrigger",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.gui.Hud.ContextualInfo",
     "net.minecraft.client.gui.components.BossHealthOverlay",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
     "net.minecraft.client.gui.components.PlayerTabOverlay",
     "net.minecraft.client.gui.components.SubtitleOverlay",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.model.HumanoidModel.ArmPose",
     "net.minecraft.client.model.Model.Simple",
@@ -51,6 +43,14 @@
     "net.minecraft.client.model.geom.builders.PartDefinition",
     "net.minecraft.client.particle.ParticleProvider",
     "net.minecraft.client.particle.ParticleRenderType",
+    "net.minecraft.client.particle.SingleQuadParticle",
+    "net.minecraft.client.particle.SingleQuadParticle.Layer",
+    "net.minecraft.client.particle.SpriteSet",
+    "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+    "net.minecraft.client.renderer.entity.layers.RenderLayer",
+    "net.minecraft.client.renderer.entity.layers.SpinAttackEffectLayer",
+    "net.minecraft.client.renderer.entity.player.AvatarRenderer",
+    "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "acornlib-1.1.1+26.3.jar",
     "published": "2026-11-15"
   },
@@ -87,7 +87,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 192,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 146,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

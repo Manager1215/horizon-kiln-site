@@ -13,16 +13,14 @@
     "net.fabricmc.loader.impl.launch.FabricLauncherBase",
     "net.minecraft.client.main.Main",
     "net.minecraft.launchwrapper.IClassTransformer",
-    "net.minecraft.launchwrapper.LaunchClassLoader",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger"
+    "net.minecraft.launchwrapper.LaunchClassLoader"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "CustomSkinLoader_Universal-15.1.jar",
     "published": "2026-10-11"
   },
@@ -35,7 +33,11 @@
   "entrypoints": {},
   "mixins": true,
   "depends": [],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

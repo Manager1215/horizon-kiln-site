@@ -11,33 +11,24 @@
   "needs": [
     "Mixin: 1 point inside the game's methods",
     "net.minecraft.client.PrioritizeChunkUpdates",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.waypoints.ClientWaypointManager",
     "ResourceManagerHelper.registerBuiltinResourcePack()",
-    "Minecraft.gameMode",
     "Options.broadcastOptions()",
     "Options.prioritizeChunkUpdates()",
     "Options.reducedDebugInfo()",
     "ClientLevel.getOverworldClockTime()",
+    "MultiPlayerGameMode.canHurtPlayer()",
     "LocalPlayer.getBlockX()",
     "LocalPlayer.getBlockY()",
     "LocalPlayer.getBlockZ()",
-    "MutableComponent.withStyle()",
-    "Style.withObfuscated()",
-    "Style.withStrikethrough()",
-    "Style.withUnderlined()",
-    "Inventory.hasAnyOf()",
-    "Items.CLOCK",
-    "Items.COMPASS",
-    "Vec2.x",
-    "Vec2.y"
+    "Inventory.hasAnyOf()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "itemshud-4.7.1.jar",
     "published": "2026-09-18"
   },
@@ -67,7 +58,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

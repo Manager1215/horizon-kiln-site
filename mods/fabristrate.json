@@ -33,7 +33,6 @@
     "net.minecraft.client.data.models.model.TexturedModel.Provider",
     "net.minecraft.references.BlockItemId",
     "net.minecraft.world.level.material.PushReaction",
-    "FluidRenderingRegistry.register()",
     "FabricDataGenerator.getModId()",
     "AdvancementHolder.value()",
     "BlockModelGenerators.blockStateOutput",
@@ -51,14 +50,15 @@
     "Vec3i.CODEC",
     "BlockLootSubProvider.dropSelf()",
     "RecipeOutput.getRecipeIdentifier()",
-    "and 7 more"
+    "BlockBehaviour.Properties.liquid()",
+    "and 4 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fabristrate-0.1.6+26.3.jar",
     "published": "2026-09-17"
   },
@@ -88,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 47,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 44,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

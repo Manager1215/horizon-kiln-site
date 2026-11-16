@@ -10,19 +10,8 @@
   "description": "Adds Scythe to harvesting crops",
   "needs": [
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
-    "BlockTags.CROPS",
     "Player.isCrouching()",
     "ItemStack.hurtAndBreak()",
-    "ToolMaterial.COPPER",
-    "ToolMaterial.GOLD",
-    "ToolMaterial.STONE",
-    "ToolMaterial.WOOD",
-    "Block.dropResources()",
-    "Blocks.BAMBOO",
-    "Blocks.COCOA",
-    "Blocks.KELP_PLANT",
-    "Blocks.NETHER_WART",
-    "Blocks.SUGAR_CANE",
     "BlockState.getCloneItemStack()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -30,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "onlyscythe-fabric-26.3-26.3-0.2.jar",
     "published": "2026-10-09"
   },
@@ -59,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

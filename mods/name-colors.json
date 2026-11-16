@@ -11,20 +11,15 @@
   "needs": [
     "net.minecraft.server.waypoints.ServerWaypointManager",
     "net.minecraft.world.waypoints.Waypoint.Icon",
-    "CommandSourceStack.sendSystemMessage()",
-    "MutableComponent.setStyle()",
     "ServerLevel.getWaypointManager()",
-    "ServerPlayer.connection",
-    "ServerPlayer.getDisplayName()",
-    "ServerPlayer.waypointIcon()",
-    "ServerGamePacketListenerImpl.send()"
+    "ServerPlayer.waypointIcon()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "namecolors-2.2.1-fabric-26.3.jar",
     "published": "2026-09-21"
   },
@@ -50,7 +45,11 @@
     "fabric-api",
     "fabricloader"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

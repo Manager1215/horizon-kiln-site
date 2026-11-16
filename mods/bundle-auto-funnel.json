@@ -10,23 +10,21 @@
   "description": "Automatically sorts items you pick up into your bundles.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.inventory.ContainerInput",
-    "net.minecraft.world.item.component.BundleContents",
     "net.minecraft.world.item.component.BundleContents.Mutable",
-    "DataComponents.BUNDLE_CONTENTS",
     "SoundEvents.BUNDLE_INSERT",
     "ItemEntity.discard()",
     "ItemEntity.getItem()",
     "ItemEntity.setItem()",
-    "AbstractContainerMenu.isValidSlotIndex()"
+    "AbstractContainerMenu.isValidSlotIndex()",
+    "BundleContents.asMutable()",
+    "BundleContents.canItemBeInBundle()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bundleautofunnel-fabric-26.3-1.0.0.jar",
     "published": "2026-09-26"
   },
@@ -54,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

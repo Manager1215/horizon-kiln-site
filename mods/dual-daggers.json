@@ -22,38 +22,25 @@
     "Axis.ZP",
     "ClientPacketListener.send()",
     "AbstractClientPlayer.getCurrentSwing()",
-    "AbstractClientPlayer.getMainArm()",
     "AbstractClientPlayer.isSwinging()",
-    "LocalPlayer.swing()",
     "ItemModelResolver.updateForLiving()",
     "ItemStackRenderState.clear()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "DataComponents.ATTACK_ANIMATION",
     "SoundEvents.PLAYER_ATTACK_SWEEP",
     "Avatar.getMainArm()",
     "Inventory.getSelectionSize()",
-    "Player.addDeltaMovement()",
-    "Player.applyPostImpulseGraceTime()",
     "Player.causeFoodExhaustion()",
-    "Player.isFallFlying()",
     "Player.needsSync",
     "Player.registryAccess()",
-    "Player.syncVelocity",
     "ItemStack.getAttackAnimation()",
-    "Items.TRIDENT",
-    "ToolMaterial.GOLD",
-    "ToolMaterial.STONE",
-    "ToolMaterial.WOOD",
-    "EnchantmentHelper.getItemEnchantmentLevel()",
-    "HitResult.getType()"
+    "EnchantmentHelper.getItemEnchantmentLevel()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dagger-1.2.2.jar",
     "published": "2026-10-26"
   },
@@ -82,7 +69,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 37,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 24,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

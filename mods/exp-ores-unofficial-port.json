@@ -10,9 +10,6 @@
   "description": "Exp Ores adds new experience ores that drop a lot of experience orbs.",
   "needs": [
     "BiomeModifications.addFeature()",
-    "Blocks.DEEPSLATE_DIAMOND_ORE",
-    "Blocks.DIAMOND_ORE",
-    "Blocks.NETHER_QUARTZ_ORE",
     "MapColor.CRIMSON_NYLIUM",
     "MapColor.DEEPSLATE",
     "MapColor.SAND"
@@ -22,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "expores-0.1.2+fabric26.3.jar",
     "published": "2026-10-26"
   },
@@ -51,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

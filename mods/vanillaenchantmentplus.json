@@ -9,21 +9,15 @@
   "author": "masyumarogames",
   "description": "This update expands the maximum level of vanilla enchantments and adds the indestructible enchantment. It removes most of the enchantment restrictions, allowing for stronger enchantments.",
   "needs": [
-    "net.minecraft.world.inventory.AnvilMenu",
     "net.minecraft.world.inventory.DataSlot",
-    "DataComponents.REPAIR_COST",
-    "ItemStack.getEnchantments()",
-    "Items.ENCHANTED_BOOK",
-    "Enchantment.getMaxLevel()",
-    "EnchantmentHelper.getEnchantmentsForCrafting()",
-    "ItemEnchantments.Mutable.set()"
+    "ItemStack.getEnchantments()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Vanilla Enchantment Plus-26.3-Fabric-1.00.jar",
     "published": "2026-09-16"
   },
@@ -52,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

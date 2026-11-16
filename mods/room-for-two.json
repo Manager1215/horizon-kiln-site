@@ -10,11 +10,8 @@
   "description": "Lets you share a bed with a villager or another player.",
   "needs": [
     "Mixin: 4 points inside the game's methods",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
-    "net.minecraft.server.permissions.Permissions",
-    "net.minecraft.world.entity.Pose",
     "net.minecraft.world.entity.ai.Brain",
     "net.minecraft.world.entity.ai.behavior.SleepInBed",
     "net.minecraft.world.entity.ai.behavior.ValidateNearbyPoi",
@@ -25,10 +22,7 @@
     "net.minecraft.world.entity.npc.villager.Villager",
     "net.minecraft.world.level.block.AbstractBedBlock",
     "net.minecraft.world.level.block.state.properties.BedPart",
-    "Minecraft.execute()",
-    "Options.getCameraType()",
     "EntityRenderState.nameTag",
-    "CommandSourceStack.getPlayerOrException()",
     "BuiltInRegistries.TRIGGER_TYPES",
     "ServerLevel.getEntitiesOfClass()",
     "ServerLevel.getEntity()",
@@ -51,7 +45,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "roomfortwo-fabric-26.3-0.3.1.jar",
     "published": "2026-11-07"
   },
@@ -80,7 +74,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 35,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 29,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

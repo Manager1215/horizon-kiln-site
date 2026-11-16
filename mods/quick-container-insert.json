@@ -11,7 +11,6 @@
   "needs": [
     "Mixin: 1 point inside the game's methods",
     "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.player.FirstPersonHandsAndItems",
     "net.minecraft.client.renderer.blockentity.ChestRenderer",
     "net.minecraft.client.renderer.blockentity.ShulkerBoxRenderer",
@@ -20,7 +19,6 @@
     "net.minecraft.client.renderer.entity.AbstractBoatRenderer",
     "net.minecraft.network.protocol.game.ServerboundInteractPacket",
     "net.minecraft.network.protocol.game.ServerboundUseItemOnPacket",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.vehicle.ContainerEntity",
     "net.minecraft.world.item.LingeringPotionItem",
     "net.minecraft.world.item.PotionItem",
@@ -40,24 +38,26 @@
     "net.minecraft.world.level.block.entity.EnderChestBlockEntity",
     "net.minecraft.world.level.block.state.properties.ChestType",
     "net.minecraft.world.phys.EntityHitResult",
-    "InputConstants.isKeyDown()",
     "PoseStack.rotateAround()",
     "Axis.ZP",
-    "Minecraft.execute()",
-    "Minecraft.hitResult",
-    "Options.keyUse",
-    "LocalPlayer.swing()",
     "MovingBlockRenderState.biome",
     "MovingBlockRenderState.blockPos",
     "MovingBlockRenderState.blockState",
-    "and 17 more"
+    "MovingBlockRenderState.cardinalLighting",
+    "MovingBlockRenderState.lightEngine",
+    "MovingBlockRenderState.randomSeedPos",
+    "BlockEntityRenderState.blockPos",
+    "BlockPos.distSqr()",
+    "ServerLevel.getEntity()",
+    "ServerPlayer.distanceToSqr()",
+    "and 4 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "quickcontainerinsert-26.3-2.2.0.jar",
     "published": "2026-11-13"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 57,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; has network channels"
+  },
+  "lacks": 44,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

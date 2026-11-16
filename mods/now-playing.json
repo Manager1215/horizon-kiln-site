@@ -11,40 +11,28 @@
   "needs": [
     "an access widener",
     "Mixin: 3 points inside the game's methods",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.client.GameNarrator",
     "net.minecraft.client.gui.components.MultiLineTextWidget",
-    "net.minecraft.client.gui.components.toasts.ToastManager.ToastInstance",
     "net.minecraft.client.renderer.LevelEventHandler",
     "net.minecraft.client.resources.sounds.Sound",
     "net.minecraft.client.sounds.MusicManager",
     "net.minecraft.client.sounds.SoundEventListener",
     "net.minecraft.sounds.Music",
     "net.minecraft.world.item.JukeboxSong",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "org.apache.logging.log4j.message.AbstractMessageFactory",
-    "org.apache.logging.log4j.message.FormattedMessage",
-    "org.apache.logging.log4j.message.SimpleMessage",
     "Minecraft.getNarrator()",
     "Minecraft.getSituationalMusic()",
-    "Minecraft.schedule()",
     "Options.getSoundSourceVolume()",
-    "Font.split()",
-    "GuiGraphicsExtractor.blitSprite()",
-    "GuiGraphicsExtractor.text()",
     "Hud.getFont()",
     "ConfirmLinkScreen.confirmLink()",
     "SoundInstance.getSound()",
-    "SoundManager.addListener()",
-    "CommonComponents.GUI_OK"
+    "SoundManager.addListener()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nowplaying-fabric-2.104.1+26.3.jar",
     "published": "2026-10-14"
   },
@@ -73,7 +61,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

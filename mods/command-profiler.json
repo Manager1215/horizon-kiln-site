@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 9 points inside the game's methods",
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
     "net.minecraft.commands.FunctionInstantiationException",
     "net.minecraft.commands.arguments.item.FunctionArgument",
     "net.minecraft.commands.execution.CommandQueueEntry",
@@ -33,7 +32,6 @@
     "net.minecraft.commands.functions.MacroFunction.PlainTextEntry",
     "net.minecraft.commands.functions.PlainTextFunction",
     "net.minecraft.commands.functions.StringTemplate",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
     "net.minecraft.server.ServerFunctionLibrary",
     "net.minecraft.server.ServerFunctionManager",
     "net.minecraft.server.ServerScoreboard",
@@ -42,23 +40,25 @@
     "net.minecraft.world.entity.vehicle.minecart.MinecartCommandBlock.MinecartCommandBase",
     "net.minecraft.world.level.BaseCommandBlock",
     "net.minecraft.world.scores.ReadOnlyScoreInfo",
-    "net.minecraft.world.scores.ScoreHolder",
     "IntArrayList.getLast()",
     "IntArrayList.removeLast()",
     "Object2LongMap.Entry.getKey()",
-    "FabricLoader.getEntrypointContainers()",
     "CommandResultCallback.EMPTY",
-    "CommandSourceStack.getPosition()",
-    "CommandSourceStack.getServer()",
-    "Commands.LEVEL_ADMINS",
-    "and 13 more"
+    "CommandSourceStack.callback()",
+    "Commands.executeCommandInContext()",
+    "Commands.finishParsing()",
+    "MinecraftServer.cmdprof$addDirtyObjectiveScoreHolder()",
+    "MinecraftServer.createCommandSourceStack()",
+    "MinecraftServer.getFunctions()",
+    "ServerLevel.dimensionTypeRegistration()",
+    "and 2 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "command-profiler-1.4.1+26.3-pre-2-fabric.jar",
     "published": "2026-09-06"
   },
@@ -85,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 53,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own"
+  },
+  "lacks": 42,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

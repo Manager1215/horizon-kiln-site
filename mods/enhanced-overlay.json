@@ -10,7 +10,6 @@
   "description": "Settings for Hitboxes, Scoreboard, Chat, Subtitles, Tablist, Debug Screen, Nametags, and Text Displays and an option for a fake Enchantment Glint",
   "needs": [
     "Mixin: 8 points inside the game's methods",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.gui.components.ChatComponent.ChatGraphicsAccess",
     "net.minecraft.client.gui.components.ChatComponent.DisplayMode",
     "net.minecraft.client.gui.components.PlayerTabOverlay",
@@ -18,11 +17,9 @@
     "net.minecraft.client.renderer.debug.EntityHitboxDebugRenderer",
     "net.minecraft.client.renderer.entity.DisplayRenderer",
     "net.minecraft.client.renderer.entity.DisplayRenderer.TextDisplayRenderer",
-    "net.minecraft.gizmos.GizmoStyle",
     "net.minecraft.world.entity.boss.enderdragon.EndCrystal",
     "net.minecraft.world.entity.boss.enderdragon.EnderDragon",
     "net.minecraft.world.entity.boss.enderdragon.EnderDragonPart",
-    "net.minecraft.world.entity.projectile.FishingHook",
     "net.minecraft.world.entity.projectile.arrow.Arrow",
     "net.minecraft.world.entity.projectile.arrow.SpectralArrow",
     "net.minecraft.world.entity.projectile.arrow.ThrownTrident",
@@ -30,25 +27,13 @@
     "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrownEnderpearl",
     "net.minecraft.world.entity.vehicle.boat.Boat",
     "net.minecraft.world.entity.vehicle.boat.ChestBoat",
-    "Options.getCameraType()",
     "OptionsRenderState.getBackgroundOpacity()",
     "Gizmos.cuboid()",
-    "MutableComponent.withStyle()",
     "Entity.getBoundingBox()",
     "Entity.getPosition()",
     "Player.isCrouching()",
-    "Player.isFallFlying()",
     "Player.isVisuallyCrawling()",
     "Player.isVisuallySwimming()",
-    "Items.DIAMOND_SPEAR",
-    "Items.NETHERITE_AXE",
-    "Items.NETHERITE_BOOTS",
-    "Items.NETHERITE_CHESTPLATE",
-    "Items.NETHERITE_HELMET",
-    "Items.NETHERITE_LEGGINGS",
-    "Items.NETHERITE_PICKAXE",
-    "Items.NETHERITE_SPEAR",
-    "Items.NETHERITE_SWORD",
     "AABB.move()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -56,7 +41,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "enhanced-overlay-3.2.1-fabric-26.3.jar",
     "published": "2026-10-28"
   },
@@ -86,7 +71,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 40,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 25,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

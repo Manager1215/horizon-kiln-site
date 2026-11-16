@@ -36,7 +36,6 @@
     "net.minecraft.util.random.WeightedList.Builder",
     "net.minecraft.util.valueproviders.ConstantInt",
     "net.minecraft.util.valueproviders.IntProviders",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.SimpleMenuProvider",
     "net.minecraft.world.entity.vehicle.boat.Boat",
     "net.minecraft.world.entity.vehicle.boat.ChestBoat",
@@ -47,8 +46,9 @@
     "net.minecraft.world.inventory.ResultContainer",
     "net.minecraft.world.item.BoatItem",
     "net.minecraft.world.item.HangingSignItem",
-    "net.minecraft.world.item.crafting.RecipeAccess",
     "net.minecraft.world.level.block.AmethystBlock",
+    "net.minecraft.world.level.block.BedBlock",
+    "net.minecraft.world.level.block.BellBlock",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
@@ -56,7 +56,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "blockus-2.18.4+26.3.jar",
     "published": "2026-11-11"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 428,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 270,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

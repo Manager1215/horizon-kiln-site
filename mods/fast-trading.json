@@ -10,34 +10,20 @@
   "description": "Adds a button to the villager trading GUI to repeat the current trade until it's no longer available again. (Fork of SpeedTrading)",
   "needs": [
     "an access widener",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.inventory.MerchantScreen",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
     "net.minecraft.network.chat.ComponentUtils",
-    "net.minecraft.world.inventory.ContainerInput",
     "net.minecraft.world.inventory.MerchantMenu",
     "net.minecraft.world.item.trading.ItemCost",
     "net.minecraft.world.item.trading.MerchantOffer",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Window.handle()",
-    "KeyMapping.isUnbound()",
-    "KeyMapping.matches()",
-    "KeyMapping.matchesMouse()",
-    "KeyMapping.saveString()",
     "KeyMapping.setDown()",
-    "EditBox.canConsumeInput()",
-    "Screen.getChildAt()",
-    "Screen.getFocused()",
+    "Tooltip.cachedTooltip",
+    "Tooltip.splitWithLanguage",
     "AbstractContainerScreen.containerTick()",
     "NonNullList.iterator()",
-    "MutableComponent.withStyle()",
-    "MutableComponent.withStyle()",
-    "Style.applyFormats()",
     "Inventory.getFreeSlot()",
     "Inventory.getSlotWithRemainingSpace()",
-    "ItemStack.getRarity()",
-    "ItemStack.isStackable()",
     "MerchantOffers.get()",
     "MerchantOffers.size()"
   ],
@@ -46,7 +32,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "FastTrading-0.2.5+26.3.jar",
     "published": "2026-09-26"
   },
@@ -74,7 +60,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 30,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

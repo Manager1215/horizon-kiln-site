@@ -10,31 +10,22 @@
   "description": "Adds simple decorations inspired by Minecraft's missing textures.",
   "needs": [
     "net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.network.protocol.game.ServerboundUseItemOnPacket",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "net.minecraft.world.item.alchemy.Potions",
-    "FabricCreativeModeTabOutput.acceptAll()",
+    "ResourceLoader.registerBuiltinPack()",
     "BlockTintSources.grassBlock()",
-    "DataComponents.POTION_CONTENTS",
     "ResourceKey.codec()",
     "ResourceKey.streamCodec()",
     "ServerLevel.getMaxY()",
     "ServerLevel.getMinY()",
     "ServerLevel.sendParticles()",
     "ServerPlayer.isCrouching()",
-    "ServerPlayer.swing()",
     "SoundEvents.BOTTLE_EMPTY",
     "SoundEvents.CRAFTER_CRAFT",
     "SoundEvents.GENERIC_SPLASH",
     "ItemEntity.setDeltaMovement()",
     "ItemEntity.setPickUpDelay()",
     "ItemStack.consume()",
-    "Items.GLASS_BOTTLE",
-    "SwingAnimation.DEFAULT",
-    "Block.builtInRegistryHolder()",
-    "Blocks.AMETHYST_BLOCK",
     "MapColor.COLOR_RED"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -42,7 +33,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "deco-not-found-1.0.1.jar",
     "published": "2026-09-10"
   },
@@ -74,7 +65,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

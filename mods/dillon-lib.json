@@ -15,13 +15,10 @@
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
     "net.minecraft.advancements.predicates.ItemPredicate",
     "net.minecraft.client.OptionInstance.SliderableValueSet",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
     "net.minecraft.client.gui.components.SpriteIconButton",
     "net.minecraft.client.gui.components.SpriteIconButton.CenteredIcon",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.WidgetSprites",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
     "net.minecraft.client.gui.layouts.LinearLayout",
     "net.minecraft.client.gui.screens.GenericMessageScreen",
     "net.minecraft.client.gui.screens.debug.DebugOptionsScreen",
@@ -35,7 +32,6 @@
     "net.minecraft.core.dispenser.BoatDispenseItemBehavior",
     "net.minecraft.core.dispenser.FlintAndSteelDispenseItemBehavior",
     "net.minecraft.core.dispenser.ShearsDispenseItemBehavior",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.tags.BlockItemTagId",
     "net.minecraft.util.CommonColors",
     "net.minecraft.world.entity.animal.cow.MushroomCow",
@@ -50,14 +46,18 @@
     "net.minecraft.world.item.ShearsItem",
     "net.minecraft.world.item.component.ChargedProjectiles",
     "net.minecraft.world.level.block.BeehiveBlock",
-    "and 37 more"
+    "net.minecraft.world.level.block.CandleCakeBlock",
+    "net.minecraft.world.level.block.TntBlock",
+    "net.minecraft.world.level.block.TripWireBlock",
+    "net.minecraft.world.level.storage.loot.predicates.MatchTool",
+    "and 19 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dillonlib-1.2.5_fabric-mc26.3.jar",
     "published": "2026-10-25"
   },
@@ -88,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 77,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 59,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

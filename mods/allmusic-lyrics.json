@@ -10,19 +10,11 @@
   "description": "Addon mod for AllMusic Client3 by color_yr.Automatically fetches synced lyrics from NetEase Cloud Music / LRCLIB and displays them on screen when songs play.",
   "needs": [
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.Chat",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
     "net.minecraft.client.gui.components.MultiLineTextWidget",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "org.lwjgl.glfw.GLFW",
     "Window.handle()",
     "ClientReceiveMessageEvents.CHAT",
-    "Font.plainSubstrByWidth()",
     "GuiGraphicsExtractor.blit()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
     "RenderPipelines.GUI_TEXTURED"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
@@ -30,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "AllMusic_Lyrics-1.5.0-fabric-26.2.jar",
     "published": "2026-10-03"
   },
@@ -60,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

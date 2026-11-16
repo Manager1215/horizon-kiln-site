@@ -10,18 +10,14 @@
   "description": "Run a command to open that mods config screen",
   "needs": [
     "net.fabricmc.loader.api.metadata.ContactInformation",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "ModMetadata.getContact()",
-    "Minecraft.execute()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()"
+    "ModMetadata.getContact()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "emc-fabric-1.0.1-26.2.jar",
     "published": "2026-09-17"
   },
@@ -51,7 +47,11 @@
     "minecraft",
     "modmenu"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

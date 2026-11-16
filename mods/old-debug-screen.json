@@ -9,8 +9,6 @@
   "author": "mobilelize",
   "description": "This mod restores the old debug screen (Old F3 Menu) that was changed in version 1.21.9. (Revert F3 Menu)",
   "needs": [
-    "net.minecraft.SharedConstants",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
     "net.minecraft.client.gui.components.debugchart.BandwidthDebugChart",
     "net.minecraft.client.gui.components.debugchart.FpsDebugChart",
     "net.minecraft.client.gui.components.debugchart.PingDebugChart",
@@ -20,20 +18,17 @@
     "net.minecraft.client.particle.ParticleEngine",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.world.level.LightLayer",
+    "SharedConstants.getCurrentVersion()",
     "Minecraft.crosshairPickEntity",
-    "Minecraft.debugEntries",
-    "Minecraft.getSingleplayerServer()",
     "Minecraft.isGameLoadFinished()",
     "Minecraft.isLocalServer()",
     "Minecraft.levelRenderer",
     "Minecraft.particleEngine",
     "Minecraft.showOnlyReducedInfo()",
-    "GuiGraphicsExtractor.nextStratum()",
     "ClientLevel.gatherChunkSourceStats()",
     "ClientLevel.getBrightness()",
     "ClientLevel.getEntityCount()",
     "ClientLevel.getLevelData()",
-    "ClientPacketListener.serverBrand()",
     "SoundManager.getChannelDebugString()",
     "DifficultyInstance.getEffectiveDifficulty()",
     "DifficultyInstance.getSpecialMultiplier()",
@@ -42,17 +37,15 @@
     "ChunkPos.getRegionLocalZ()",
     "ChunkPos.getRegionX()",
     "ChunkPos.getRegionZ()",
-    "Block.builtInRegistryHolder()",
     "Property.Value.valueName()",
-    "LevelChunk.getInhabitedTime()",
-    "HitResult.getType()"
+    "LevelChunk.getInhabitedTime()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Old Debug Screen-1.0.2+26.3.jar",
     "published": "2026-09-20"
   },
@@ -79,7 +72,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 37,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 30,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

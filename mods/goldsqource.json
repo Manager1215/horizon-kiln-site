@@ -19,22 +19,17 @@
     "ParticleTypes.BLOCK",
     "BuiltInRegistries.CUSTOM_STAT",
     "StatType.get()",
-    "Stats.CUSTOM",
     "Entity.collideBoundingBox()",
     "LivingEntity.<init>()",
     "Player.awardStat()",
     "Player.calculateEntityAnimation()",
-    "Player.getBbWidth()",
     "Player.getBoundingBox()",
     "Player.getInBlockState()",
     "Player.getKnownSpeed()",
     "Player.getLastClimbablePos()",
-    "Player.getRandom()",
     "Player.getSpeed()",
     "Player.getVehicle()",
-    "Player.horizontalCollision",
     "Player.isCrouching()",
-    "Player.isFallFlying()",
     "Player.isInLava()",
     "Player.isNoGravity()",
     "Player.isUsingItem()",
@@ -47,16 +42,16 @@
     "Level.getEntityCollisions()",
     "Level.getMinY()",
     "Block.getFriction()",
-    "Blocks.LADDER",
-    "Blocks.POWDER_SNOW",
-    "and 3 more"
+    "BlockState.getRenderShape()",
+    "AABB.expandTowards()",
+    "AABB.minY"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "goldsqource-2.1.1+26.3.jar",
     "published": "2026-09-17"
   },
@@ -88,7 +83,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 43,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 36,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

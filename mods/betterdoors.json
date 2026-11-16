@@ -11,10 +11,6 @@
   "needs": [
     "Mixin: 1 point inside the game's methods",
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
-    "net.minecraft.world.level.block.state.properties.DoorHingeSide",
-    "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "SoundEvents.FENCE_GATE_CLOSE",
     "SoundEvents.FENCE_GATE_OPEN",
     "SoundEvents.IRON_DOOR_CLOSE",
@@ -28,10 +24,6 @@
     "BlockTags.FENCE_GATES",
     "BlockTags.WOODEN_DOORS",
     "BlockTags.WOODEN_TRAPDOORS",
-    "DoorBlock.FACING",
-    "DoorBlock.HALF",
-    "DoorBlock.HINGE",
-    "DoorBlock.OPEN",
     "FenceGateBlock.FACING",
     "FenceGateBlock.OPEN",
     "TrapDoorBlock.OPEN",
@@ -44,7 +36,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "betterdoors-fabric-1.0.7.jar",
     "published": "2026-09-15"
   },
@@ -73,7 +65,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

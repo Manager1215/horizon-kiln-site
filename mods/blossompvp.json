@@ -9,17 +9,14 @@
   "author": "CodedSakura",
   "description": "Blossom-series /pvp command",
   "needs": [
-    "org.apache.logging.log4j.core.Logger",
-    "CommandSourceStack.getPlayerOrException()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()"
+    "org.apache.logging.log4j.core.Logger"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "blossom-pvp-2.0.14+26.3.jar",
     "published": "2026-09-16"
   },
@@ -46,7 +43,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

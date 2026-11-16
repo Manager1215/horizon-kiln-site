@@ -11,13 +11,11 @@
   "needs": [
     "an access widener",
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.model.player.PlayerModel",
     "net.minecraft.client.renderer.entity.player.AvatarRenderer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState",
     "net.minecraft.client.renderer.state.level.PlayerRenderState",
-    "net.minecraft.commands.arguments.IdentifierArgument",
     "net.minecraft.world.entity.player.PlayerModelPart",
     "PoseStack.last()",
     "PoseStack.Pose.normal()",
@@ -29,14 +27,12 @@
     "Camera.isDetached()",
     "Camera.rotation()",
     "Minecraft.getEntityRenderDispatcher()",
-    "Options.getCameraType()",
     "ModelPart.resetPose()",
     "ModelPart.setRotation()",
     "ModelPart.visible",
     "ModelPart.xScale",
     "ModelPart.yScale",
     "ModelPart.zScale",
-    "LocalPlayer.getMainArm()",
     "LocalPlayer.getSkin()",
     "LocalPlayer.isModelPartShown()",
     "SubmitNodeCollector.submitModelPart()",
@@ -50,7 +46,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fp_pal-1.1.1-fabric+26.3.jar",
     "published": "2026-10-26"
   },
@@ -81,7 +77,11 @@
     "minecraft",
     "player_animation_library"
   ],
-  "lacks": 33,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 29,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

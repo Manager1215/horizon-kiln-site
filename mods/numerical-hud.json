@@ -15,19 +15,14 @@
     "net.minecraft.client.gui.contextualbar.ExperienceBar",
     "net.minecraft.client.gui.contextualbar.JumpableVehicleBar",
     "net.minecraft.client.multiplayer.ClientLevel.ClientLevelData",
-    "net.minecraft.util.StringUtil",
     "net.minecraft.world.TickRateManager",
     "net.minecraft.world.entity.PlayerRideableJumping",
-    "GuiGraphicsExtractor.blit()",
-    "GuiGraphicsExtractor.blitSprite()",
-    "GuiGraphicsExtractor.blitSprite()",
     "Hud.getBossOverlay()",
-    "Hud.getGuiTicks()",
-    "Hud.getMobEffectSprite()",
     "ClientLevel.getLevelData()",
     "ClientLevel.tickRateManager()",
     "LocalPlayer.getJumpRidingScale()",
     "LocalPlayer.jumpableVehicle()",
+    "StringUtil.formatTickDuration()",
     "Player.getAbsorptionAmount()",
     "Player.getAirSupply()",
     "Player.getInvulnerableTime()",
@@ -40,7 +35,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "numericalhud-26.3-4.2.0.jar",
     "published": "2026-11-11"
   },
@@ -69,7 +64,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

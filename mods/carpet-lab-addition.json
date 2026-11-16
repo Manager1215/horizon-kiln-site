@@ -10,7 +10,6 @@
   "description": "Carpet features created for the LAB SMP",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.minecraft.network.chat.PlayerChatMessage",
     "net.minecraft.network.protocol.game.ServerboundSignUpdatePacket",
     "net.minecraft.world.entity.decoration.BlockAttachedEntity",
     "net.minecraft.world.entity.decoration.HangingEntity",
@@ -23,8 +22,7 @@
     "org.apache.commons.io.IOUtils",
     "BlockPos.distToCenterSqr()",
     "ListTag.add()",
-    "ServerPlayer.createCommandSourceStack()",
-    "DyeColor.getTextColor()",
+    "PlayerChatMessage.decoratedContent()",
     "Level.players()",
     "AABB.intersects()",
     "VoxelShape.isEmpty()"
@@ -34,7 +32,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "carpet-lab-addition-1.5.0+26.3.jar",
     "published": "2026-10-12"
   },
@@ -61,7 +59,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -14,26 +14,20 @@
     "net.minecraft.client.particle.SingleQuadParticle",
     "net.minecraft.client.particle.SingleQuadParticle.Layer",
     "net.minecraft.client.particle.SpriteSet",
-    "net.minecraft.data.AtlasIds",
     "Minecraft.particleEngine",
     "ClientLevel.getLevelData()",
     "LocalPlayer.getBlockY()",
     "LocalPlayer.getEyeY()",
     "BlockPos.asLong()",
     "BlockPos.MutableBlockPos.set()",
-    "Biomes.LUSH_CAVES",
-    "Blocks.CAMPFIRE",
-    "Blocks.MAGMA_BLOCK",
-    "Blocks.SOUL_CAMPFIRE",
-    "Blocks.TORCH",
-    "Blocks.WALL_TORCH"
+    "Biomes.LUSH_CAVES"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "cave_dust_rethinking-3.4.0+26.3-fabric-neoforge.jar",
     "published": "2026-09-25"
   },
@@ -63,7 +57,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

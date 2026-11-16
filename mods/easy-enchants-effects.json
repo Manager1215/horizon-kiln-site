@@ -9,36 +9,17 @@
   "author": "Mr_Lan123",
   "description": "Easy Enchants/Effects - This powerful and convenient mod adds a custom menu for enchanting items and applying effects to the game. Forget about limited enchantment options - now you can apply any enchantment and effect at any level!",
   "needs": [
-    "net.minecraft.client.server.IntegratedServer",
-    "Minecraft.getSingleplayerServer()",
-    "Minecraft.setScreenAndShow()",
-    "Font.plainSubstrByWidth()",
-    "Font.split()",
     "GuiGraphicsExtractor.setTooltipForNextFrame()",
-    "GuiGraphicsExtractor.text()",
-    "AbstractButton.onPress()",
-    "EditBox.setHint()",
-    "Screen.mouseClicked()",
-    "Screen.mouseScrolled()",
-    "Registry.entrySet()",
-    "Registry.wrapAsHolder()",
     "Registries.MOB_EFFECT",
-    "CommonComponents.GUI_DONE",
-    "MinecraftServer.execute()",
     "MinecraftServer.registryAccess()",
-    "ItemStack.getDisplayName()",
-    "ItemStack.getEnchantments()",
-    "Enchantment.canEnchant()",
-    "Enchantment.getFullname()",
-    "ItemEnchantments.isEmpty()",
-    "ItemEnchantments.Mutable.set()"
+    "ItemStack.getEnchantments()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "enchantmenu-2.0.0+26.1-26.3.jar",
     "published": "2026-11-08"
   },
@@ -67,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

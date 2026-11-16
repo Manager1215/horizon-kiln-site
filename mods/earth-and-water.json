@@ -14,7 +14,6 @@
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
     "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
     "net.minecraft.client.animation.AnimationChannel",
@@ -49,7 +48,8 @@
     "net.minecraft.client.renderer.special.SpecialModelRenderer.Unbaked",
     "net.minecraft.client.renderer.special.SpecialModelRenderers",
     "net.minecraft.client.resources.SplashManager",
-    "net.minecraft.core.HolderSet.Direct",
+    "net.minecraft.core.component.DataComponentInitializers",
+    "net.minecraft.core.component.DataComponentInitializers.SingleComponentInitializer",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "earth-and-water-1.0.6-26.3-hotfix-2.jar",
     "published": "2026-10-20"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 409,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 334,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

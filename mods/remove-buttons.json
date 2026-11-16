@@ -10,23 +10,18 @@
   "description": "Remove \"Friends\" and other buttons from title & pause screens",
   "needs": [
     "net.minecraft.client.gui.components.FriendsButton",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.gui.layouts.FrameLayout",
     "net.minecraft.client.gui.layouts.GridLayout",
     "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
     "net.minecraft.client.gui.layouts.LayoutSettings",
-    "net.minecraft.client.gui.layouts.LinearLayout",
-    "net.minecraft.network.chat.contents.TranslatableContents",
-    "AbstractWidget.getMessage()",
-    "AbstractWidget.setPosition()",
-    "Component.getContents()"
+    "net.minecraft.client.gui.layouts.LinearLayout"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "removebuttons-1.0.1.jar",
     "published": "2026-06-19"
   },
@@ -56,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

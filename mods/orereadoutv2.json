@@ -9,29 +9,15 @@
   "author": "veii",
   "description": "Have staff and console receive notifications whenever any player breaks a certain block (e.g. ores).",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "org.apache.logging.log4j.Level",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "org.apache.logging.log4j.core.config.Configurator",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "CommandSourceStack.isPlayer()",
-    "CommandSourceStack.sendSystemMessage()",
-    "MutableComponent.setStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "MinecraftServer.getTickCount()",
-    "Player.getPlainTextName()"
+    "MinecraftServer.getTickCount()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ore-readout-2.2.2-26.3.jar",
     "published": "2026-09-28"
   },
@@ -59,7 +45,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

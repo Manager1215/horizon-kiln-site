@@ -9,14 +9,7 @@
   "author": "Sarocesch",
   "description": "Fakename adds Commands to change the display name",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.client.gui.screens.social.SocialInteractionsPlayerList",
-    "net.minecraft.server.permissions.Permissions",
-    "ChatFormatting.stripFormatting()",
-    "Minecraft.execute()",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "CommandSourceStack.sendSystemMessage()",
     "ServerPlayer.getGameProfile()",
     "Player.getGameProfile()"
   ],
@@ -25,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Saros-FakeName-Fabric-26.3-1.9.jar",
     "published": "2026-09-19"
   },
@@ -54,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

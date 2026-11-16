@@ -11,8 +11,6 @@
   "needs": [
     "net.minecraft.client.searchtree.SuffixArray",
     "org.apache.commons.io.IOUtils",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Options.languageCode"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
@@ -20,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "jecharacters-26.1.2-fabric-4.6.9.jar",
     "published": "2026-10-13"
   },
@@ -50,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

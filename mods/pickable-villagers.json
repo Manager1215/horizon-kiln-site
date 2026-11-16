@@ -13,9 +13,6 @@
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditionType",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions",
-    "net.minecraft.client.gui.components.Button.Plain",
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.gui.screens.inventory.MerchantScreen",
     "net.minecraft.client.renderer.entity.IronGolemRenderer",
     "net.minecraft.client.renderer.entity.VillagerRenderer",
@@ -26,7 +23,6 @@
     "net.minecraft.client.renderer.special.SpecialModelRenderer.Unbaked",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.resources.RegistryOps.RegistryInfoLookup",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.ai.village.ReputationEventType",
     "net.minecraft.world.entity.ai.village.poi.PoiTypes",
     "net.minecraft.world.entity.animal.golem.IronGolem",
@@ -36,9 +32,6 @@
     "net.minecraft.world.entity.npc.villager.VillagerProfession",
     "net.minecraft.world.inventory.DataSlot",
     "net.minecraft.world.inventory.MerchantMenu",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "net.minecraft.world.item.alchemy.Potions",
-    "net.minecraft.world.item.component.ItemLore",
     "net.minecraft.world.item.trading.ItemCost",
     "net.minecraft.world.item.trading.Merchant",
     "net.minecraft.world.item.trading.MerchantOffer",
@@ -49,15 +42,22 @@
     "ResourceManagerHelper.registerBuiltinResourcePack()",
     "Minecraft.crosshairPickEntity",
     "Minecraft.getEntityRenderDispatcher()",
-    "GuiGraphicsExtractor.blitSprite()",
-    "and 53 more"
+    "BlockModelRenderState.clear()",
+    "BlockEntityRenderer.extractRenderState()",
+    "EntityRenderDispatcher.getRenderer()",
+    "ItemStackRenderState.isEmpty()",
+    "DataComponents.VILLAGER_FOOD",
+    "BuiltInRegistries.VILLAGER_PROFESSION",
+    "Registries.MENU",
+    "ServerLevel.broadcastEntityEvent()",
+    "and 24 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "PickableVillagers-fabric-26.3.jar",
     "published": "2026-11-14"
   },
@@ -90,5 +90,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 93
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 64
 }

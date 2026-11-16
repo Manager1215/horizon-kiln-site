@@ -9,20 +9,13 @@
   "author": "loooosh98",
   "description": "Adds a color picker option to Xaero's Minimap waypoints, letting them go beyond the preset colors.",
   "needs": [
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "net.minecraft.world.level.storage.LevelStorageSource.LevelDirectory",
     "org.apache.commons.io.file.Counters",
     "org.apache.commons.io.file.Counters.PathCounters",
     "org.apache.commons.io.file.PathUtils",
     "org.lwjgl.sdl.SDLMouse",
-    "GuiGraphicsExtractor.requestCursor()",
+    "CursorType.createStandardCursor()",
     "EditBox.DEFAULT_HINT_STYLE",
-    "EditBox.setHint()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "MutableComponent.withStyle()",
     "LevelStorageSource.LevelStorageAccess.getLevelDirectory()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -30,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "xaero-custom-waypoint-colors-1.0.7-26.3.jar",
     "published": "2026-10-08"
   },
@@ -59,7 +52,11 @@
     "minecraft",
     "xaerominimap"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

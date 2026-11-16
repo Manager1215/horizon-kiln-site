@@ -9,7 +9,6 @@
   "author": "kontraschub",
   "description": "AntiFreecam evolved is a Fabric mod for Minecraft servers that forces Freecam clients to keep block collisions enabled when the server requires it.\nThe mod is derived from Kesuaheli's AntiFreecam and ports the functionality to the current technical baseli",
   "needs": [
-    "ModContainer.findPath()",
     "Options.getEffectiveRenderDistance()",
     "LocalPlayer.chunkPosition()",
     "Entity.setPos()"
@@ -19,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "antifreecam-evolved-1.2.2+mc26.3.jar",
     "published": "2026-10-21"
   },
@@ -49,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

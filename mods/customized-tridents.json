@@ -9,17 +9,12 @@
   "author": "Thanatoros",
   "description": "Customize tridents by changing power of riptide flight, choosing where/when you can use riptide, changing duration of trident charging, or changing how much durability a trident loses per riptide use.",
   "needs": [
-    "net.minecraft.SharedConstants",
     "net.minecraft.world.entity.projectile.Projectile.ProjectileFactory",
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow.Pickup",
     "net.minecraft.world.entity.projectile.arrow.ThrownTrident",
     "net.minecraft.world.item.TridentItem",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "Commands.LEVEL_ADMINS",
-    "Commands.LEVEL_ALL",
-    "Commands.hasPermission()",
+    "SharedConstants.getCurrentVersion()",
     "SoundEvents.TRIDENT_THROW",
     "Inventory.removeItem()",
     "Player.getBoundingBox()",
@@ -29,7 +24,6 @@
     "Player.move()",
     "Player.startAutoSpinAttack()",
     "Player.startUsingItem()",
-    "Player.syncVelocity",
     "Projectile.spawnProjectileFromRotation()",
     "ItemStack.hurtWithoutBreaking()",
     "ItemStack.nextDamageWillBreak()",
@@ -39,12 +33,12 @@
     "Level.isRainingAt()",
     "AABB.maxY"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "customizedtridents-FABRIC-1.2.1-26.3.jar",
     "published": "2026-09-16"
   },
@@ -73,7 +67,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 29,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

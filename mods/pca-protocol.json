@@ -10,7 +10,6 @@
   "description": "A fork of plusls-carpet-addition, provides PCA protocol support to the server only",
   "needs": [
     "Mixin: 5 points inside the game's methods",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.animal.equine.AbstractHorse",
     "net.minecraft.world.entity.npc.villager.AbstractVillager",
     "net.minecraft.world.entity.vehicle.minecart.AbstractMinecartContainer",
@@ -28,12 +27,8 @@
     "net.minecraft.world.level.block.state.properties.ChestType",
     "ServerLevel.getChunkAt()",
     "ServerLevel.getEntity()",
-    "ServerPlayer.connection",
-    "ServerGamePacketListenerImpl.send()",
     "Entity.problemPath()",
     "Entity.registryAccess()",
-    "Entity.saveWithoutId()",
-    "Blocks.BARREL",
     "LevelChunk.getBlockEntity()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -41,7 +36,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "pca-protocol-v0.3.15-mc26.3.jar",
     "published": "2026-09-19"
   },
@@ -58,7 +53,11 @@
     "fanetlib",
     "minecraft"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

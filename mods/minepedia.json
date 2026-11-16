@@ -10,30 +10,16 @@
   "description": "Bring the Bedrock edition Encyclopedia to Minecraft: Java Edition",
   "needs": [
     "net.minecraft.client.gui.components.MultiLineTextWidget",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
     "net.minecraft.client.gui.components.SpriteIconButton",
     "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.gui.layouts.GridLayout",
     "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
     "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
     "net.minecraft.client.gui.layouts.LayoutSettings",
     "net.minecraft.client.gui.layouts.LinearLayout",
-    "KeyMapping.getTranslatedKeyMessage()",
-    "Minecraft.setScreenAndShow()",
-    "Options.keyAttack",
-    "Options.keyHotbarSlots",
-    "Options.keyInventory",
-    "Options.keyUse",
     "Options.languageCode",
-    "AbstractScrollArea.defaultSettings()",
-    "AbstractScrollArea.mouseScrolled()",
-    "Button.getMessage()",
-    "Button.getRight()",
     "NarrationElementOutput.add()",
     "Screen.MENU_BACKGROUND",
-    "MutableComponent.setStyle()",
     "ARGB.colorFromFloat()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -41,7 +27,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Minepedia-1.7.jar",
     "published": "2026-09-30"
   },
@@ -71,7 +57,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 26,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

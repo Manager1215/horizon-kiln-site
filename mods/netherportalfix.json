@@ -13,21 +13,17 @@
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.world.level.block.NetherPortalBlock",
     "net.minecraft.world.level.portal.PortalForcer",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "BlockPos.distSqr()",
     "ListTag.add()",
     "ListTag.iterator()",
-    "ServerLevel.getPortalForcer()",
-    "ServerLevel.getWorldBorder()",
-    "Blocks.NETHER_PORTAL"
+    "ServerLevel.getPortalForcer()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "netherportalfix-fabric-26.3-26.3.0.1.jar",
     "published": "2026-09-16"
   },
@@ -56,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

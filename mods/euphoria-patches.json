@@ -32,8 +32,6 @@
     "net.minecraft.class_5321",
     "net.minecraft.class_638",
     "net.minecraft.class_8028",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "org.lwjgl.BufferUtils",
     "org.lwjgl.glfw.GLFW",
     "org.lwjgl.stb.STBImage",
@@ -44,7 +42,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "EuphoriaPatcher-1.10.5-r5.9.3-fabric.jar",
     "published": "2026-09-15"
   },
@@ -57,7 +55,11 @@
   "entrypoints": {},
   "mixins": true,
   "depends": [],
-  "lacks": 29,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 27,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

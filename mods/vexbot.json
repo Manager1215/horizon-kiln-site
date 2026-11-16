@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 20 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.GameProfileRepository",
     "com.mojang.authlib.ProfileLookupCallback",
     "com.mojang.authlib.properties.Property",
@@ -30,9 +29,6 @@
     "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking.LoginQueryRequestHandler",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
@@ -42,15 +38,19 @@
     "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking",
     "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginQueryResponseHandler",
     "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginSynchronizer",
-    "net.minecraft.SharedConstants",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.EntityHurtPlayerTrigger",
     "net.minecraft.advancements.triggers.PlayerHurtEntityTrigger",
     "net.minecraft.client.gui.components.SplashRenderer",
     "net.minecraft.client.resources.SplashManager",
-    "net.minecraft.commands.arguments.IdentifierArgument",
     "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
-    "net.minecraft.commands.arguments.coordinates.Vec3Argument",
+    "net.minecraft.commands.arguments.selector.EntitySelectorParser",
+    "net.minecraft.commands.synchronization.ArgumentTypeInfo",
+    "net.minecraft.commands.synchronization.ArgumentTypeInfo.Template",
+    "net.minecraft.commands.synchronization.ArgumentTypeInfos",
+    "net.minecraft.core.IdMap",
+    "net.minecraft.core.UUIDUtil",
+    "net.minecraft.core.particles.ItemParticleOption",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "vexbot-3.2.0+mc26.3.jar",
     "published": "2026-11-14"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 806,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 503,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

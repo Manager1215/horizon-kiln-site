@@ -30,16 +30,14 @@
     "net.minecraft.unmapped.C_5553933",
     "net.minecraft.unmapped.C_bdwnwhiu",
     "net.minecraft.world.World",
-    "net.minecraft.world.server.ServerWorld",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger"
+    "net.minecraft.world.server.ServerWorld"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Ksyxis-1.4.6.jar",
     "published": "2026-10-08"
   },
@@ -62,7 +60,11 @@
   },
   "mixins": true,
   "depends": [],
-  "lacks": 23,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 21,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

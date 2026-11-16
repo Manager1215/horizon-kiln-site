@@ -10,7 +10,6 @@
   "description": "Added some GUI animation effects.",
   "needs": [
     "Mixin: 26 points inside the game's methods",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.client.ScrollWheelHandler",
     "net.minecraft.client.gui.components.BossHealthOverlay",
     "net.minecraft.client.gui.components.ChatComponent.ChatGraphicsAccess",
@@ -18,19 +17,13 @@
     "net.minecraft.client.gui.components.ImageButton",
     "net.minecraft.client.gui.components.LerpingBossEvent",
     "net.minecraft.client.gui.components.WidgetSprites",
-    "net.minecraft.client.gui.components.events.AbstractContainerEventHandler",
     "net.minecraft.client.gui.render.GuiItemAtlas",
     "net.minecraft.client.gui.render.GuiItemAtlas.SlotView",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.multiplayer.chat.GuiMessage.Line",
     "net.minecraft.client.renderer.state.gui.GuiItemRenderState",
     "net.minecraft.network.protocol.game.ClientboundBossEventPacket.Handler",
-    "net.minecraft.world.inventory.ContainerInput",
     "InputConstants.grabMouse()",
     "KeyMapping.setAll()",
-    "Minecraft.isWindowActive()",
-    "Button.setPosition()",
     "LocalPlayer.getUsedItemHand()",
     "LocalPlayer.isUsingItem()",
     "DataComponents.FOOD",
@@ -45,7 +38,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "guitween-3.4.2-26.3+fabric.jar",
     "published": "2026-10-16"
   },
@@ -75,7 +68,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 29,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @redirect and @wrap-operation into the game's classes"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

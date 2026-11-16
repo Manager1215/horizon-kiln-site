@@ -18,7 +18,6 @@
     "net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.ItemUsedOnLocationTrigger",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.extract.LevelExtractor",
     "net.minecraft.client.resources.model.geometry.BakedQuad.MaterialFlags",
     "net.minecraft.core.particles.DustParticleOptions",
@@ -43,7 +42,6 @@
     "net.minecraft.world.level.redstone.NeighborUpdater",
     "net.minecraft.world.level.redstone.RedstoneWireEvaluator",
     "net.minecraft.world.ticks.LevelTickAccess",
-    "Minecraft.hitResult",
     "BlockStateModel.createGeometryKey()",
     "BlockStateModel.emitQuads()",
     "BlockStateModel.hasMaterialFlag()",
@@ -51,14 +49,16 @@
     "BlockStateModel.particleMaterial()",
     "BlockPos.MutableBlockPos.move()",
     "BlockPos.MutableBlockPos.move()",
-    "and 49 more"
+    "BlockPos.MutableBlockPos.setWithOffset()",
+    "Direction.getApproximateNearest()",
+    "and 39 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "stickyredstone-1.0.3-fabric-mc26.3.jar",
     "published": "2026-11-07"
   },
@@ -88,7 +88,11 @@
     "minecraft",
     "supermartijn642corelib"
   ],
-  "lacks": 89,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 79,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

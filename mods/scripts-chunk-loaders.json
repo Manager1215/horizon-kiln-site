@@ -9,14 +9,11 @@
   "author": "scriptcoded",
   "description": "Make minecarts act as chunk loaders using redstone.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.minecraft.server.level.ChunkMap",
     "net.minecraft.server.level.Ticket",
     "net.minecraft.world.entity.EntitySelector",
     "net.minecraft.world.entity.vehicle.minecart.MinecartChest",
     "net.minecraft.world.level.block.entity.BlockEntityTypes",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "DataComponents.CUSTOM_NAME",
     "BuiltInRegistries.TICKET_TYPE",
     "ServerChunkCache.addTicket()",
     "ServerLevel.getEntitiesOfClass()",
@@ -26,9 +23,6 @@
     "Entity.chunkPosition()",
     "Entity.remove()",
     "EntityTypes.CHEST_MINECART",
-    "Items.AMETHYST_SHARD",
-    "Items.GLOWSTONE",
-    "Items.SHROOMLIGHT",
     "DispenserBlockEntity.getItem()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
@@ -36,7 +30,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "scripts-chunk-loaders-mc26.3-0.12.0.jar",
     "published": "2026-09-15"
   },
@@ -64,7 +58,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

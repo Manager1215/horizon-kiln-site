@@ -10,17 +10,14 @@
   "description": "Corpanion - The Companion Mod for the German Corpium Minecraft Server.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "KeyMapping.resetMapping()",
-    "StringTag.asString()",
-    "Util.getEpochMillis()",
-    "CustomData.copyTag()"
+    "StringTag.asString()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "corpanion-1.20.0.jar",
     "published": "2026-10-15"
   },
@@ -47,7 +44,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

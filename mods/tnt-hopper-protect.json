@@ -10,15 +10,14 @@
   "description": "Protects hopper minecarts from TNT explosions while still allowing TNT to destroy regular blocks normally.",
   "needs": [
     "net.minecraft.tags.DamageTypeTags",
-    "net.minecraft.world.entity.vehicle.minecart.MinecartHopper",
-    "DamageSource.is()"
+    "net.minecraft.world.entity.vehicle.minecart.MinecartHopper"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "TNT-Hopper-Protect-Fabric-4.0+mc26.3.jar",
     "published": "2026-10-03"
   },
@@ -45,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

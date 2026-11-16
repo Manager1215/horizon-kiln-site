@@ -10,11 +10,11 @@
   "description": "This Fabric client mod rewrites options.txt so the renderer preference is set to OpenGL.",
   "needs": [],
   "roadmap": "",
-  "evidence": "Everything its code calls is covered by Kiln 0.4.1 (4 classes, 5 members). Not run yet.",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (4 classes, 5 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "preferopengl-1.0.0.jar",
     "published": "2026-04-25"
   },
@@ -42,6 +42,10 @@
     "fabricloader",
     "minecraft"
   ],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 0,
   "development": {
     "status": "not-checked",

@@ -11,15 +11,11 @@
   "needs": [
     "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
     "net.minecraft.world.entity.player.Input",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "BlockPos.toShortString()",
-    "ServerPlayer.connection",
     "ServerPlayer.gameMode()",
     "ServerPlayer.getLastClientInput()",
     "ServerPlayer.setPermanentlyInvulnerable()",
     "ServerPlayer.startFallFlying()",
-    "ServerGamePacketListenerImpl.send()",
     "FoodData.setFoodLevel()",
     "FoodData.setSaturation()",
     "Level.getRespawnData()",
@@ -30,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "spawnelytra-1.3.0.jar",
     "published": "2026-11-02"
   },
@@ -57,7 +53,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

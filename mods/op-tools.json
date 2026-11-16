@@ -11,7 +11,6 @@
   "needs": [
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.ai.navigation.PathNavigation",
     "net.minecraft.world.food.FoodConstants",
     "net.minecraft.world.food.FoodProperties",
@@ -21,12 +20,8 @@
     "net.minecraft.world.item.enchantment.EnchantedItemInUse",
     "net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect",
     "net.minecraft.world.item.equipment.ArmorMaterials",
-    "net.minecraft.world.level.storage.loot.providers.number.ints.ResolvableInt.Constant",
-    "AttachmentRegistry.createPersistent()",
     "BiomeModifications.addFeature()",
-    "RegistryAccess.lookupOrThrow()",
     "BuiltInRegistries.ENCHANTMENT_ENTITY_EFFECT_TYPE",
-    "ServerLevel.destroyBlock()",
     "ServerLevel.sendParticles()",
     "ServerPlayer.blockActionRestricted()",
     "ServerPlayer.gameMode()",
@@ -34,14 +29,9 @@
     "Containers.updateNeighboursAfterDestroy()",
     "Entity.entityTags()",
     "Entity.fireImmune()",
-    "Entity.getAttached()",
-    "Entity.hasAttached()",
-    "Entity.isRemoved()",
     "Entity.move()",
-    "Entity.removeAttached()",
     "Entity.removeTag()",
     "Entity.resetFallDistance()",
-    "Entity.setAttached()",
     "Entity.setDeltaMovement()",
     "Entity.setNoGravity()",
     "LightningBolt.setPos()",
@@ -49,14 +39,21 @@
     "Mob.getNavigation()",
     "AbstractContainerMenu.getRedstoneSignalFromBlockEntity()",
     "Item.Properties.food()",
-    "and 29 more"
+    "ItemStack.hurtAndBreak()",
+    "EnchantmentHelper.getEnchantmentLevel()",
+    "EnchantmentHelper.getItemEnchantmentLevel()",
+    "Enchantments.FIRE_PROTECTION",
+    "HorizontalDirectionalBlock.FACING",
+    "SoundType.NETHERITE_BLOCK",
+    "ContextFloatProviders.COOKING_DEFAULT_SPEED_MULTIPLIER",
+    "ResolvableFloat.fromKey()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "op-tools-1.8.4+26.3.jar",
     "published": "2026-10-28"
   },
@@ -86,7 +83,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 69,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 38,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

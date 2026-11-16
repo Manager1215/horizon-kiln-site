@@ -10,32 +10,14 @@
   "description": "Adds a search bar to containers",
   "needs": [
     "Mixin: 6 points inside the game's methods",
-    "net.minecraft.client.gui.screens.inventory.CraftingScreen",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-    "net.minecraft.world.item.TooltipFlag.Default",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "net.minecraft.world.item.component.BundleContents",
-    "KeyMapping.matches()",
-    "EditBox.getInnerWidth()",
-    "EditBox.isVisible()",
-    "EditBox.setTextColor()",
-    "AbstractContainerScreen.setFocused()",
-    "DataComponents.BUNDLE_CONTENTS",
-    "DataComponents.POTION_CONTENTS",
-    "Inventory.EQUIPMENT_SLOT_MAPPING",
-    "Item.TooltipContext.of()",
-    "ItemStack.getTooltipLines()",
-    "Items.ENCHANTED_BOOK",
-    "ItemContainerContents.nonEmptyItems()",
-    "EnchantmentHelper.getEnchantmentsForCrafting()"
+    "Inventory.EQUIPMENT_SLOT_MAPPING"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "chestsearchbar-fabric-26.3-1.7.0.jar",
     "published": "2026-10-16"
   },
@@ -63,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

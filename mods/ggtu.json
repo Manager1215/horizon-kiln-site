@@ -23,7 +23,6 @@
     "com.mojang.renderpearl.frontend.FrontendGpuSurface",
     "net.minecraft.client.FramerateLimiter",
     "net.minecraft.client.gui.components.OptionsList",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.gui.components.debug.DebugEntryFps",
     "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
@@ -50,14 +49,15 @@
     "org.lwjgl.opengl.GL32C",
     "org.lwjgl.opengl.GL33",
     "org.lwjgl.opengl.GL33C",
-    "and 60 more"
+    "org.lwjgl.opengl.GL45C",
+    "and 40 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "NeoGGTU-1.2.2+mc26.3.jar",
     "published": "2026-11-06"
   },
@@ -88,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 100,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own"
+  },
+  "lacks": 80,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

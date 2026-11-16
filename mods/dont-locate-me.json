@@ -9,36 +9,29 @@
   "author": "duzzl",
   "description": "This mod adds the option for individual players to turn off being shown on the Locator Bar. That can be useful for PvP events or similar.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
     "net.fabricmc.fabric.api.permission.v1.PermissionNode",
-    "net.minecraft.server.permissions.PermissionCheck",
-    "net.minecraft.server.permissions.PermissionCheck.Require",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.server.players.ServerOpList",
     "net.minecraft.server.players.StoredUserEntry",
     "net.minecraft.server.players.UserWhiteList",
     "ServerPlayerEvents.JOIN",
     "CommandSourceStack.checkPermission()",
-    "CommandSourceStack.getServer()",
-    "Commands.hasPermission()",
     "MinecraftServer.getGameRules()",
     "MinecraftServer.overworld()",
     "ServerPlayer.getGameProfile()",
     "PlayerList.getOps()",
     "PlayerList.getWhiteList()",
-    "Attributes.WAYPOINT_TRANSMIT_RANGE",
     "GameRules.LOCATOR_BAR",
     "GameRules.get()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dont-locate-me-26.3.jar",
     "published": "2026-09-17"
   },
@@ -66,7 +59,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

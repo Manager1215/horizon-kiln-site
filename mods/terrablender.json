@@ -14,8 +14,6 @@
     "net.fabricmc.fabric.api.event.registry.DynamicRegistries",
     "net.fabricmc.fabric.api.event.registry.DynamicRegistries.SyncOption",
     "net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder",
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
     "net.minecraft.core.QuartPos",
     "net.minecraft.core.registries.BuiltInRegistries.RegistryBootstrap",
@@ -51,14 +49,16 @@
     "net.minecraft.world.level.levelgen.material.rule.MaterialRule",
     "net.minecraft.world.level.levelgen.material.rule.MaterialRule.HolderHolder",
     "net.minecraft.world.level.levelgen.material.rule.RuleEvaluator",
-    "and 37 more"
+    "net.minecraft.world.level.levelgen.material.rule.SequenceRule",
+    "net.minecraft.world.level.storage.PrimaryLevelData",
+    "and 27 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "TerraBlender-fabric-26.3-26.3.0.0.9.jar",
     "published": "2026-10-02"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 77,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; generates in the world"
+  },
+  "lacks": 67,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

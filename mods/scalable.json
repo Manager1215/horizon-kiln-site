@@ -10,8 +10,6 @@
   "description": "Get the most out of your hardware. Scalable optimises and puts the most important things first",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.minecraft.server.level.ChunkHolder",
     "net.minecraft.server.level.ChunkLevel",
     "net.minecraft.server.level.ChunkMap",
@@ -25,9 +23,6 @@
     "net.minecraft.world.level.NaturalSpawner.SpawnState",
     "net.minecraft.world.level.TicketStorage",
     "net.minecraft.world.level.block.piston.PistonMovingBlockEntity",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "CommandSourceStack.getServer()",
     "MinecraftServer.getCurrentSmoothedTickTime()",
     "MinecraftServer.getServerDirectory()",
     "ServerChunkCache.chunkMap",
@@ -43,21 +38,22 @@
     "TicketType.PORTAL",
     "TicketType.UNKNOWN",
     "Entity.chunkPosition()",
-    "Entity.isRemoved()",
     "Leashable.isLeashed()",
     "LivingEntity.isPassenger()",
     "LivingEntity.isVehicle()",
     "LivingEntity.tickCount",
     "LevelChunk.getBlockEntities()",
     "LevelChunk.incrementInhabitedTime()",
-    "and 3 more"
+    "GameRules.RANDOM_TICK_SPEED",
+    "GameRules.SPAWN_MOBS",
+    "GameRules.get()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Scalable.jar",
     "published": "2026-11-02"
   },
@@ -85,7 +81,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 43,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 37,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

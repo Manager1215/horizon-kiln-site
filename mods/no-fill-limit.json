@@ -11,13 +11,7 @@
   "needs": [
     "Mixin: 1 point inside the game's methods",
     "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.server.commands.FillCommand",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
     "ServerLevel.getMaxY()",
     "ServerLevel.getMinY()",
     "BoundingBox.getXSpan()",
@@ -35,7 +29,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "no-fill-limit-1.0.0.jar",
     "published": "2026-02-21"
   },
@@ -62,7 +56,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

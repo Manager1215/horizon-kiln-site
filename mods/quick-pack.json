@@ -26,10 +26,7 @@
     "net.minecraft.server.packs.FilePackResources.SharedZipFileAccess",
     "net.minecraft.server.packs.repository.Pack",
     "net.minecraft.server.packs.repository.Pack.Metadata",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Gui.setOverlay()",
-    "Identifier.isValidNamespace()",
     "PackType.getDirectory()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -37,7 +34,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "quick-pack-fabric-1.5.1+26.3.jar",
     "published": "2026-09-29"
   },
@@ -63,7 +60,11 @@
     "fabricloader",
     "java"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @wrap-method and @wrap-operation into the game's classes"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

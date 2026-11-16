@@ -16,18 +16,14 @@
     "net.minecraft.world.level.lighting.BlockLightEngine",
     "net.minecraft.world.level.lighting.LightEngine",
     "FabricLoader.getRawGameVersion()",
-    "Minecraft.execute()",
-    "Minecraft.getSingleplayerServer()",
-    "Minecraft.isSameThread()",
-    "Minecraft.levelExtractor",
-    "MinecraftServer.isSameThread()"
+    "Minecraft.levelExtractor"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "optimized_fullbright-2.0.1+26.2-fabric.jar",
     "published": "2026-10-30"
   },
@@ -58,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

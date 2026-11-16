@@ -10,27 +10,7 @@
   "description": "Allows you to expose your Minecraft server using automatic Cloudflare Tunnel setup.",
   "needs": [
     "an access widener",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.server.permissions.PermissionCheck",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "CommandSourceStack.getEntity()",
-    "CommandSourceStack.source",
-    "Commands.LEVEL_OWNERS",
-    "Commands.getDispatcher()",
     "Commands.sendCommands()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "MinecraftServer.execute()",
-    "MinecraftServer.getCommands()",
     "MinecraftServer.getLocalIp()",
     "MinecraftServer.getPort()"
   ],
@@ -39,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "serverflared-1.1.0-stable.1+26.3-fabric.jar",
     "published": "2026-10-30"
   },
@@ -67,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

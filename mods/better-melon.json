@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
     "net.fabricmc.fabric.api.entity.FakePlayer",
@@ -38,27 +37,28 @@
     "net.minecraft.server.ServerAdvancementManager",
     "net.minecraft.server.TickTask",
     "net.minecraft.world.damagesource.DamageTypes",
-    "net.minecraft.world.entity.EquipmentSlot.Type",
     "net.minecraft.world.entity.monster.piglin.PiglinAi",
     "net.minecraft.world.food.FoodProperties",
     "net.minecraft.world.food.FoodProperties.Builder",
-    "net.minecraft.world.inventory.ChestMenu",
     "net.minecraft.world.item.BoneMealItem",
     "net.minecraft.world.item.ItemUseAnimation",
-    "net.minecraft.world.item.alchemy.Potion",
     "net.minecraft.world.item.component.Consumable",
     "net.minecraft.world.item.component.Consumable.Builder",
     "net.minecraft.world.item.component.Consumables",
-    "net.minecraft.world.item.crafting.RepairItemRecipe",
     "net.minecraft.world.level.block.Mirror",
-    "and 66 more"
+    "net.minecraft.world.level.block.state.BlockBehaviour.PostProcess",
+    "net.minecraft.world.level.block.state.BlockBehaviour.StatePredicate",
+    "net.minecraft.world.level.material.PushReaction",
+    "net.minecraft.world.phys.shapes.BooleanOp",
+    "BiomeModifications.addFeature()",
+    "and 59 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "qa_better_melon-26.10.4-beta-fabric-26.3.jar",
     "published": "2026-10-17"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 175,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 135,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

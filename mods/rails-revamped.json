@@ -12,15 +12,12 @@
     "an access widener",
     "Mixin: 18 points inside the game's methods",
     "com.mojang.math.OctahedralGroup",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
     "net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.BooleanRuleBuilder",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.DoubleRuleBuilder",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.client.model.object.cart.MinecartModel",
     "net.minecraft.client.renderer.entity.EntityRenderers",
@@ -29,7 +26,6 @@
     "net.minecraft.client.resources.sounds.RidingMinecartSoundInstance",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.vehicle.minecart.AbstractMinecartContainer",
     "net.minecraft.world.entity.vehicle.minecart.Minecart",
     "net.minecraft.world.entity.vehicle.minecart.OldMinecartBehavior",
@@ -48,17 +44,21 @@
     "net.minecraft.world.level.block.WeatheringCopper.WeatherState",
     "net.minecraft.world.level.block.state.properties.RailShape",
     "net.minecraft.world.level.redstone.Redstone",
-    "AttachmentRegistry.create()",
     "FabricCreativeModeTabOutput.insertBefore()",
+    "ResourceLoader.registerBuiltinPack()",
     "AbstractMinecartRenderer.extractRenderState()",
-    "and 55 more"
+    "BlockPos.toShortString()",
+    "Direction.get()",
+    "Direction.getFacingAxis()",
+    "DataComponents.USE_REMAINDER",
+    "and 45 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "rails-revamped-0.3.0+mc26.3.jar",
     "published": "2026-09-26"
   },
@@ -86,7 +86,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 95,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 85,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

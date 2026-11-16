@@ -27,16 +27,14 @@
     "io.netty.handler.ssl.SslContext",
     "io.netty.handler.ssl.SslHandler",
     "io.netty.handler.timeout.ReadTimeoutException",
-    "io.netty.handler.timeout.WriteTimeoutHandler",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger"
+    "io.netty.handler.timeout.WriteTimeoutHandler"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mongodb-driver-5.13.0+2026-09-26-all.jar",
     "published": "2026-10-16"
   },
@@ -49,7 +47,11 @@
   "entrypoints": {},
   "mixins": false,
   "depends": [],
-  "lacks": 21,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 19,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

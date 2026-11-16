@@ -10,14 +10,9 @@
   "description": "A mod that hides or changes the crosshair dependent on context",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.gui.components.tabs.TabManager",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.AreaEffectCloud",
     "net.minecraft.world.entity.Bucketable",
-    "net.minecraft.world.entity.EquipmentSlot.Type",
     "net.minecraft.world.entity.NeutralMob",
     "net.minecraft.world.entity.Shearable",
     "net.minecraft.world.entity.animal.allay.Allay",
@@ -50,14 +45,19 @@
     "net.minecraft.world.entity.vehicle.minecart.Minecart",
     "net.minecraft.world.entity.vehicle.minecart.MinecartFurnace",
     "net.minecraft.world.food.FoodProperties",
-    "and 80 more"
+    "net.minecraft.world.item.ArmorStandItem",
+    "net.minecraft.world.item.BoatItem",
+    "net.minecraft.world.item.BoneMealItem",
+    "net.minecraft.world.item.BottleItem",
+    "net.minecraft.world.item.BowItem",
+    "and 63 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dynamiccrosshair-9.15+26.3-fabric.jar",
     "published": "2026-09-16"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 208,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 160,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

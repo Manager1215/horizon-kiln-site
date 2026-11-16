@@ -10,27 +10,18 @@
   "description": "OceTags is OceNet's tiertagger, with built-in MCTiers and PvPTiers Support. See player's tiers directly in-game, including in nametags, the tab list, and chat.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.client.gui.components.PlayerTabOverlay",
     "net.minecraft.client.renderer.entity.DisplayRenderer",
     "net.minecraft.client.renderer.entity.DisplayRenderer.TextDisplayRenderer",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
     "LinkedTreeMap.getOrDefault()",
-    "Minecraft.execute()",
-    "Minecraft.getCurrentServer()",
-    "PlayerInfo.getProfile()",
-    "ServerData.ip",
-    "MutableComponent.withStyle()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withUnderlined()"
+    "PlayerInfo.getProfile()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "OceTags-5.0.0+mc26.3.jar",
     "published": "2026-11-12"
   },
@@ -60,7 +51,11 @@
     "minecraft",
     "ukulib"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,7 +9,6 @@
   "author": "geek",
   "description": "Locolourtor is a client-side mod that lets you customise the colour of your marker on Minecraft's locator bar. Your chosen colour syncs in real-time to any other players with Locolourtor installed, no need for any server-side mods.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.client.gui.contextualbar.LocatorBar",
     "net.minecraft.client.multiplayer.ProfileKeyPairManager",
     "net.minecraft.world.entity.player.ProfileKeyPair",
@@ -23,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "locolourtor-26.2-fabric-1.0.2.jar",
     "published": "2026-09-01"
   },
@@ -51,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

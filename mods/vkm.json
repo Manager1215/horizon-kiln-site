@@ -10,29 +10,20 @@
   "description": "A Simple MaLiLib-based tool to compare all MaliLib keybinds with Vanilla keybinds",
   "needs": [
     "an access widener",
-    "net.minecraft.SharedConstants",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "InputConstants.getKey()",
     "InputConstants.Key.NAME_MAP",
-    "InputConstants.Key.getDisplayName()",
     "InputConstants.Type.defaultPrefix",
     "InputConstants.Type.map",
+    "SharedConstants.getCurrentVersion()",
     "KeyMapping.MAP",
-    "KeyMapping.getDefaultKey()",
-    "KeyMapping.key",
-    "KeyMapping.resetMapping()",
     "KeyMapping.setDown()",
-    "KeyMapping.setKey()",
-    "KeyMapping.Category.SORT_ORDER",
-    "KeyMapping.Category.label()"
+    "KeyMapping.Category.SORT_ORDER"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "vkm-v1.0.11-mc26.3.jar",
     "published": "2026-09-24"
   },
@@ -60,7 +51,11 @@
     "malilib",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

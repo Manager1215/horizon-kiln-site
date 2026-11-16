@@ -11,8 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 30 points inside the game's methods",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
     "net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry",
@@ -21,7 +19,6 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
@@ -37,11 +34,9 @@
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyContext",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
     "net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry",
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.ItemDurabilityTrigger",
     "net.minecraft.advancements.triggers.ItemUsedOnLocationTrigger",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
     "net.minecraft.client.animation.AnimationChannel",
@@ -51,6 +46,11 @@
     "net.minecraft.client.animation.AnimationChannel.Targets",
     "net.minecraft.client.animation.AnimationDefinition",
     "net.minecraft.client.animation.AnimationDefinition.Builder",
+    "net.minecraft.client.animation.Keyframe",
+    "net.minecraft.client.animation.KeyframeAnimation",
+    "net.minecraft.client.animation.KeyframeAnimations",
+    "net.minecraft.client.gui.components.SpriteIconButton",
+    "net.minecraft.client.gui.components.SpriteIconButton.Builder",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "contentified-10.0.4.jar",
     "published": "2026-10-23"
   },
@@ -89,7 +89,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 1655,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 1203,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

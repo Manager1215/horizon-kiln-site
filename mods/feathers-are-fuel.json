@@ -12,7 +12,6 @@
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents",
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyCallback",
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyContext",
-    "Items.FEATHER",
     "CookingFuel.<init>()",
     "ContextFloatProviders.COOKING_DEFAULT_SPEED_MULTIPLIER",
     "ContextIntProviders.COOKING_TIME_BAMBOO"
@@ -22,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "feather-fuel-1.3.0.jar",
     "published": "2026-10-11"
   },
@@ -49,7 +48,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

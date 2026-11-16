@@ -10,8 +10,6 @@
   "description": "A lightweight utility for replacing one block with another, both during worldgen and afterward.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
     "net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys",
     "net.minecraft.server.level.ChunkHolder",
     "net.minecraft.server.level.ChunkMap",
@@ -26,15 +24,8 @@
     "net.minecraft.world.level.levelgen.structure.structures.DesertPyramidPiece",
     "net.minecraft.world.level.levelgen.structure.structures.JungleTemplePiece",
     "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate",
-    "ServerLifecycleEvents.SERVER_STARTING",
     "BlockPos.distSqr()",
     "BlockPos.MutableBlockPos.set()",
-    "DefaultedRegistry.entrySet()",
-    "DefaultedRegistry.getTagOrEmpty()",
-    "Holder.is()",
-    "Registry.get()",
-    "RegistryAccess.lookupOrThrow()",
-    "SectionPos.sectionToBlockCoord()",
     "BuiltInRegistries.FEATURE_TYPE",
     "Registries.FEATURE_TYPE",
     "Registries.STRUCTURE",
@@ -50,14 +41,23 @@
     "LevelAccessor.getChunk()",
     "LevelAccessor.getLevelData()",
     "LevelAccessor.hasChunk()",
-    "and 34 more"
+    "LevelAccessor.registryAccess()",
+    "LevelAccessor.setBlock()",
+    "LevelHeightAccessor.isOutsideBuildHeight()",
+    "ChunkAccess.getAllStarts()",
+    "ChunkAccess.getBlockEntityNbtForSaving()",
+    "ChunkAccess.getHeightAccessorForGeneration()",
+    "ChunkAccess.getSectionYFromSectionIndex()",
+    "ChunkAccess.getSections()",
+    "ChunkAccess.isUpgrading()",
+    "and 25 more"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "reliable_replacer-1.8.2+26.3-fabric.jar",
     "published": "2026-10-17"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 74,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 65,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

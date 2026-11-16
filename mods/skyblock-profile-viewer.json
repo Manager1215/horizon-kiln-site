@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 63 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.minecraft.SessionService",
     "com.mojang.authlib.properties.PropertyMap",
     "com.mojang.authlib.properties.PropertyMap.Serializer",
@@ -19,8 +18,6 @@
     "com.mojang.authlib.services.MinecraftServicesSessionService",
     "com.mojang.blaze3d.buffers.Std140Builder",
     "com.mojang.blaze3d.buffers.Std140SizeCalculator",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "com.mojang.blaze3d.vertex.DefaultVertexFormat",
     "com.mojang.renderpearl.api.pipeline.BindGroupLayout.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
@@ -31,7 +28,6 @@
     "net.minecraft.client.gui.Font.PreparedTextBuilder",
     "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
     "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.WidgetSprites",
     "net.minecraft.client.gui.font.GlyphRenderTypes",
     "net.minecraft.client.gui.font.glyphs.BakedSheetGlyph.EffectInstance",
@@ -42,8 +38,6 @@
     "net.minecraft.client.gui.layouts.LayoutSettings",
     "net.minecraft.client.gui.layouts.LinearLayout",
     "net.minecraft.client.gui.layouts.SpacerElement",
-    "net.minecraft.client.gui.screens.inventory.ContainerScreen",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
     "net.minecraft.client.model.animal.feline.AbstractFelineModel",
     "net.minecraft.client.model.animal.feline.AdultCatModel",
     "net.minecraft.client.model.animal.feline.BabyCatModel",
@@ -51,14 +45,20 @@
     "net.minecraft.client.multiplayer.chat.ChatListener",
     "net.minecraft.client.particle.ParticleEngine",
     "net.minecraft.client.renderer.LevelRenderer",
-    "and 80 more"
+    "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
+    "net.minecraft.client.renderer.ScreenEffectRenderer",
+    "net.minecraft.client.renderer.entity.HumanoidMobRenderer",
+    "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+    "net.minecraft.client.renderer.entity.layers.RenderLayer",
+    "net.minecraft.client.renderer.entity.player.AvatarRenderer",
+    "and 52 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SkyBlockPv-1.10.0-26.3.jar",
     "published": "2026-11-07"
   },
@@ -94,7 +94,11 @@
     "resourcefullib",
     "skyblock-api"
   ],
-  "lacks": 179,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 92,
   "development": {
     "status": "no-plans",
     "statusLabel": "No plans yet",

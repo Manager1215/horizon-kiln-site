@@ -11,21 +11,14 @@
   "needs": [
     "net.minecraft.core.particles.BlockParticleOption",
     "net.minecraft.core.particles.ItemParticleOption",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
     "net.minecraft.world.level.material.PushReaction",
-    "Minecraft.execute()",
     "BlockEntityRenderer.extractRenderState()",
-    "CommandSourceStack.getEntity()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "ParticleTypes.BLOCK",
     "ParticleTypes.BLOCK_CRUMBLE",
     "ParticleTypes.BLOCK_MARKER",
     "ParticleTypes.DUST_PILLAR",
     "ParticleTypes.FALLING_DUST",
     "ParticleTypes.ITEM",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
     "Level.getBestNeighborSignal()",
     "BaseEntityBlock.getShape()",
     "BlockBehaviour.Properties.pushReaction()",
@@ -37,7 +30,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ParticleGenerator-FABRIC-26.3-1.2.1.jar",
     "published": "2026-10-03"
   },
@@ -66,7 +59,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

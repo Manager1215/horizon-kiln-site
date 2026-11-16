@@ -28,7 +28,6 @@
     "net.minecraft.world.entity.Entity.MoveFunction",
     "net.minecraft.world.entity.EntityAttachment",
     "net.minecraft.world.entity.EntityAttachments",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.boss.enderdragon.EndCrystal",
     "net.minecraft.world.entity.decoration.ArmorStand",
     "net.minecraft.world.entity.vehicle.boat.AbstractBoat",
@@ -36,7 +35,6 @@
     "net.minecraft.world.level.levelgen.structure.BuiltinStructures",
     "net.minecraft.world.phys.EntityHitResult",
     "net.minecraft.world.phys.shapes.EntityCollisionContext",
-    "Minecraft.hitResult",
     "ModelPart.getChild()",
     "ModelPart.resetPose()",
     "LayerDefinition.create()",
@@ -44,19 +42,21 @@
     "LocalPlayer.xxa",
     "LocalPlayer.zza",
     "EntityRendererProvider.Context.bakeLayer()",
-    "SoundManager.stop()",
     "BlockPos.containing()",
-    "DataComponents.CUSTOM_NAME",
-    "DataComponents.DYE",
     "ParticleTypes.ITEM",
-    "and 47 more"
+    "BuiltInRegistries.LOOT_CONDITION_TYPE",
+    "Registries.STRUCTURE",
+    "SynchedEntityData.defineId()",
+    "SynchedEntityData.get()",
+    "SynchedEntityData.set()",
+    "and 46 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "terracart-3.0.jar",
     "published": "2026-10-25"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 132,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 109,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

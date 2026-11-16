@@ -9,20 +9,8 @@
   "author": "OrkaMC",
   "description": "BerryGlow makes Glow Berries give players a short Glowing effect when eaten",
   "needs": [
-    "net.minecraft.world.item.alchemy.Potion",
-    "net.minecraft.world.item.alchemy.PotionContents",
     "net.minecraft.world.item.crafting.BrewingInput",
-    "net.minecraft.world.item.crafting.BrewingRecipe",
-    "net.minecraft.world.item.crafting.ImbueRecipe",
-    "FabricCreativeModeTabOutput.getSearchTabStacks()",
-    "DataComponents.POTION_CONTENTS",
     "ParticleTypes.ENTITY_EFFECT",
-    "BuiltInRegistries.POTION",
-    "Items.ARROW",
-    "Items.LINGERING_POTION",
-    "Items.SPECTRAL_ARROW",
-    "Items.TIPPED_ARROW",
-    "CraftingInput.getItem()",
     "CraftingInput.ingredientCount()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -30,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "berryglow-1.1.1.jar",
     "published": "2026-09-27"
   },
@@ -60,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

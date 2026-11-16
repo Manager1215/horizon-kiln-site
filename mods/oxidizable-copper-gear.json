@@ -10,15 +10,11 @@
   "description": "Adds oxidation and waxing mechanics to copper tools and armor",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer",
     "net.minecraft.client.renderer.entity.layers.SimpleEquipmentLayer",
-    "net.minecraft.tags.ItemTags",
-    "FabricCreativeModeTabOutput.insertAfter()",
-    "DefaultedRegistry.getTagOrEmpty()",
+    "ResourceLoader.registerBuiltinPack()",
     "Entity.<init>()",
-    "ItemStack.<init>()",
     "CraftingInput.ingredientCount()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -26,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "oxidizable_copper_gear-fabric-1.3.0+26.1.2.jar",
     "published": "2026-10-20"
   },
@@ -55,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

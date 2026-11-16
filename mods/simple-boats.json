@@ -24,15 +24,12 @@
     "net.minecraft.client.resources.sounds.AbstractTickableSoundInstance",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.entity.Entity.MoveFunction",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.EntitySelector",
     "net.minecraft.world.entity.vehicle.boat.AbstractBoat",
     "net.minecraft.world.entity.vehicle.boat.AbstractBoat.Status",
     "net.minecraft.world.entity.vehicle.boat.Boat",
     "Axis.ZP",
-    "Minecraft.execute()",
     "ModelPart.getChild()",
     "ModelPart.visible",
     "LayerDefinition.create()",
@@ -43,21 +40,24 @@
     "SynchedEntityData.defineId()",
     "SynchedEntityData.get()",
     "SynchedEntityData.set()",
-    "MinecraftServer.execute()",
-    "ServerPlayer.getPlainTextName()",
     "ServerPlayer.getVehicle()",
-    "ServerPlayer.permissions()",
     "Mth.rotLerpRad()",
     "Entity.getBoundingBox()",
     "Entity.getPickRadius()",
-    "and 25 more"
+    "EntityType.createDefaultStackConfig()",
+    "Player.getBoundingBox()",
+    "Player.getViewVector()",
+    "BlockItem.registerBlocks()",
+    "Item.BY_BLOCK",
+    "ItemStack.consume()",
+    "and 9 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "simpleboats-0.3.0-beta-26.3.x.jar",
     "published": "2026-10-13"
   },
@@ -88,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 65,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 49,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

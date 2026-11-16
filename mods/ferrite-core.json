@@ -23,8 +23,6 @@
     "net.minecraft.world.phys.shapes.CubeVoxelShape",
     "net.minecraft.world.phys.shapes.SliceShape",
     "net.minecraft.world.phys.shapes.SubShape",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Reference2ObjectMap.isEmpty()",
     "FabricLoader.getMappingResolver()",
     "ModMetadata.getCustomValues()",
@@ -38,7 +36,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ferritecore-9.0.0-fabric.jar",
     "published": "2026-03-24"
   },
@@ -54,7 +52,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect and @wrap-operation into the game's classes"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

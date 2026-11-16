@@ -9,7 +9,6 @@
   "author": "downloadableduck",
   "description": "explode on die!!!!",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
@@ -45,7 +44,6 @@
     "LivingEntity.onSyncedDataUpdated()",
     "Player.deathTime",
     "Player.getGameProfile()",
-    "Player.getPlainTextName()",
     "Player.getYHeadRot()",
     "Player.isDeadOrDying()",
     "Player.yBodyRot"
@@ -55,7 +53,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "explode-on-die-fabric-1.0.0-26.3.jar",
     "published": "2026-09-17"
   },
@@ -84,7 +82,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 40,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 38,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

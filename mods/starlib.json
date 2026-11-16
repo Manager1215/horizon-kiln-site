@@ -9,7 +9,6 @@
   "author": "Starcatcher",
   "description": "Another Library mod for starcatchers mods",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.event.registry.DynamicRegistries",
     "net.minecraft.client.renderer.entity.layers.CapeLayer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
@@ -18,24 +17,19 @@
     "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
     "net.minecraft.core.registries.codec.RegistryFileCodec",
     "net.minecraft.util.profiling.ProfilerFiller",
-    "Minecraft.gameDirectory",
     "RenderTypes.entityTranslucent()",
     "SkinTextureDownloader.downloadAndRegisterSkin()",
     "BlockPos.east()",
     "BlockPos.north()",
     "BlockPos.south()",
     "BlockPos.west()",
-    "RegistryAccess.Frozen.lookupOrThrow()",
-    "MutableComponent.withStyle()",
     "ByteBufCodecs.fromCodecWithRegistries()",
     "MinecraftServer.registryAccess()",
     "ServerLevel.sendParticles()",
-    "SoundEvents.BAMBOO_FALL",
     "TagKey.hashedCodec()",
     "ExtraCodecs.POSITIVE_FLOAT",
     "LivingEntity.getBoundingBox()",
     "Level.RESOURCE_KEY_CODEC",
-    "Level.isEmptyBlock()",
     "LiquidBlock.POSSIBLE_FLOW_DIRECTIONS",
     "BlockState.getCollisionShape()",
     "BlockState.getShape()",
@@ -53,7 +47,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "starlib-fabric-1.0.7.jar",
     "published": "2026-11-08"
   },
@@ -81,7 +75,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 38,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 32,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

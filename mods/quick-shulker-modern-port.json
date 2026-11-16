@@ -9,19 +9,16 @@
   "author": "Itamio",
   "description": "Press K while holding a shulker box (or ender chest/crafting table/stonecutter) to open it in place.",
   "needs": [
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.SimpleMenuProvider",
-    "net.minecraft.world.inventory.ChestMenu",
     "net.minecraft.world.inventory.ContainerLevelAccess",
-    "net.minecraft.world.inventory.CraftingMenu",
     "net.minecraft.world.inventory.ShulkerBoxMenu",
     "net.minecraft.world.inventory.StonecutterMenu",
     "net.minecraft.world.level.block.CraftingTableBlock",
     "net.minecraft.world.level.block.EnderChestBlock",
     "net.minecraft.world.level.block.ShulkerBoxBlock",
     "net.minecraft.world.level.block.StonecutterBlock",
-    "MinecraftServer.execute()",
     "Player.getEnderChestInventory()",
+    "CraftingMenu.<init>()",
     "ItemStack.getCustomName()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
@@ -29,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "quickshulker263-1.0.0.jar",
     "published": "2026-11-09"
   },
@@ -58,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
@@ -20,7 +19,6 @@
     "net.minecraft.server.TickTask",
     "net.minecraft.util.BlockUtil",
     "net.minecraft.util.BlockUtil.FoundRectangle",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.ai.village.poi.PoiManager",
     "net.minecraft.world.entity.ai.village.poi.PoiManager.Occupancy",
     "net.minecraft.world.entity.ai.village.poi.PoiRecord",
@@ -31,17 +29,11 @@
     "net.minecraft.world.food.FoodProperties",
     "net.minecraft.world.food.FoodProperties.Builder",
     "net.minecraft.world.item.BoneMealItem",
-    "net.minecraft.world.item.crafting.RepairItemRecipe",
     "net.minecraft.world.level.block.NetherPortalBlock",
     "net.minecraft.world.level.block.Portal",
     "net.minecraft.world.level.block.Portal.Transition",
     "net.minecraft.world.level.material.PushReaction",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "AttachmentRegistry.create()",
     "ServerPlayerEvents.JOIN",
-    "Minecraft.execute()",
-    "LocalPlayer.getAttachedOrCreate()",
     "LocalPlayer.registryAccess()",
     "BlockPos.distSqr()",
     "BlockPos.get()",
@@ -51,14 +43,22 @@
     "BlockPos.MutableBlockPos.move()",
     "BlockPos.MutableBlockPos.set()",
     "BlockPos.MutableBlockPos.setWithOffset()",
-    "and 47 more"
+    "BlockPos.MutableBlockPos.setY()",
+    "Direction.get()",
+    "BuiltInRegistries.POINT_OF_INTEREST_TYPE",
+    "MinecraftServer.getTickCount()",
+    "ServerLevel.findFreePosition()",
+    "ServerLevel.getGameRules()",
+    "ServerLevel.getHeight()",
+    "ServerLevel.getLogicalHeight()",
+    "and 42 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fish_stuff-1.0alpha-fabric-26.3.jar",
     "published": "2026-10-25"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 117,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels; generates in the world"
+  },
+  "lacks": 95,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,13 +10,9 @@
   "description": "This is a library mod for the Moogs Structure series",
   "needs": [
     "Mixin: 4 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "net.minecraft.SharedConstants",
     "net.minecraft.commands.arguments.ResourceOrTagKeyArgument",
     "net.minecraft.commands.arguments.ResourceOrTagKeyArgument.Result",
     "net.minecraft.core.FrontAndTop",
-    "net.minecraft.core.HolderSet.Direct",
     "net.minecraft.core.QuartPos",
     "net.minecraft.core.registries.codec.RegistryCodecs",
     "net.minecraft.data.worldgen.Pools",
@@ -25,14 +21,12 @@
     "net.minecraft.server.level.WorldGenRegion",
     "net.minecraft.server.packs.resources.FallbackResourceManager",
     "net.minecraft.server.packs.resources.FallbackResourceManager.PackEntry",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.tags.TagEntry",
     "net.minecraft.tags.TagLoader",
     "net.minecraft.tags.TagLoader.ElementLookup",
     "net.minecraft.tags.TagLoader.EntryWithSource",
     "net.minecraft.util.valueproviders.ConstantInt",
     "net.minecraft.util.valueproviders.IntProviders",
-    "net.minecraft.world.entity.EntitySpawnRequest",
     "net.minecraft.world.level.NoiseColumn",
     "net.minecraft.world.level.StructureManager",
     "net.minecraft.world.level.biome.CheckerboardColumnBiomeSource",
@@ -50,6 +44,12 @@
     "net.minecraft.world.level.levelgen.RandomState",
     "net.minecraft.world.level.levelgen.WorldgenRandom",
     "net.minecraft.world.level.levelgen.feature.DeltaFeature",
+    "net.minecraft.world.level.levelgen.feature.SteppedColumnClusterFeature",
+    "net.minecraft.world.level.levelgen.heightproviders.HeightProvider",
+    "net.minecraft.world.level.levelgen.placement.RepeatingPlacement",
+    "net.minecraft.world.level.levelgen.structure.PoolElementStructurePiece",
+    "net.minecraft.world.level.levelgen.structure.Structure.GenerationContext",
+    "net.minecraft.world.level.levelgen.structure.Structure.GenerationStub",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "MoogsStructureLib-fabric-26.3-3.4.2.jar",
     "published": "2026-10-03"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 235,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-method into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; generates in the world"
+  },
+  "lacks": 207,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

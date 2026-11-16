@@ -23,13 +23,10 @@
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "net.minecraft.client.renderer.special.SpecialModelRenderer.Unbaked",
     "net.minecraft.client.renderer.special.SpecialModelRenderers",
-    "net.minecraft.commands.arguments.IdentifierArgument",
     "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
     "net.minecraft.network.syncher.EntityDataAccessor",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
-    "net.minecraft.server.permissions.Permissions",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.WalkAnimationState",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
@@ -45,19 +42,22 @@
     "net.minecraft.world.entity.animal.fish.WaterAnimal",
     "net.minecraft.world.level.block.Mirror",
     "net.minecraft.world.level.gameevent.GameEvent.Context",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "JsonParseException.getMessage()",
     "PoseStack.last()",
     "PoseStack.rotate()",
-    "and 57 more"
+    "PoseStack.Pose.normal()",
+    "PoseStack.Pose.pose()",
+    "VertexConsumer.addVertex()",
+    "VertexConsumer.setLight()",
+    "VertexConsumer.setNormal()",
+    "and 52 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "easy_model_entities-fabric-26.3-2.6.0.jar",
     "published": "2026-10-16"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 141,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 120,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

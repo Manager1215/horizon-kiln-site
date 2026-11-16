@@ -10,19 +10,6 @@
   "description": "The ultimate mod for building with slabs, stairs and walls",
   "needs": [
     "net.minecraft.references.BlockItemId",
-    "Items.COBBLESTONE_WALL",
-    "Blocks.CALCITE",
-    "Blocks.CRACKED_DEEPSLATE_BRICKS",
-    "Blocks.CRACKED_DEEPSLATE_TILES",
-    "Blocks.CRACKED_NETHER_BRICKS",
-    "Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS",
-    "Blocks.CRACKED_STONE_BRICKS",
-    "Blocks.CUT_RED_SANDSTONE",
-    "Blocks.CUT_SANDSTONE",
-    "Blocks.DRIPSTONE_BLOCK",
-    "Blocks.QUARTZ_BRICKS",
-    "Blocks.SMOOTH_BASALT",
-    "Blocks.SMOOTH_STONE",
     "SoundType.BASALT",
     "SoundType.CALCITE",
     "SoundType.DEEPSLATE_BRICKS",
@@ -47,7 +34,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "NewSlabsStairs&Walls-fabric-26.3-2.0.22.jar",
     "published": "2026-09-15"
   },
@@ -75,7 +62,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 32,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 19,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

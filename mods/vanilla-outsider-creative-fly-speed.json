@@ -9,12 +9,7 @@
   "author": "dasikigaijin",
   "description": "A way to configure fly speed in creative and spectator",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.minecraft.server.level.ServerPlayerGameMode",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "CommandSourceStack.getServer()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "MinecraftServer.getGameRules()",
     "ServerLevel.getGameRules()",
     "ServerPlayer.gameMode",
@@ -26,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "creative-fly-speed-1.1.0+26.3.jar",
     "published": "2026-11-13"
   },
@@ -56,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

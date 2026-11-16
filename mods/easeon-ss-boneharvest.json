@@ -2,28 +2,19 @@
   "id": "easeon-ss-boneharvest",
   "name": "EaseonSS - BoneHarvest",
   "version": "26.3.0.0+mc26.3",
-  "status": "planned",
-  "statusLabel": "Planned",
-  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "status": "not-checked",
+  "statusLabel": "Not checked",
+  "statusMeaning": "In the catalogue, not checked yet.",
   "url": "https://modrinth.com/mod/easeon-ss-boneharvest",
   "author": "Teron",
   "description": "BoneHarvest lets you instantly harvest plants using bone items. Simply right-click supported plants with bone meal, bone, or bone blocks.",
-  "needs": [
-    "Items.BONE",
-    "Items.BONE_BLOCK",
-    "Items.BONE_MEAL",
-    "Items.BUSH",
-    "Items.FIREFLY_BUSH",
-    "Items.GLOW_LICHEN",
-    "Items.SUGAR_CANE",
-    "Items.VINE"
-  ],
-  "roadmap": "Code next to data (0.3)",
-  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+  "needs": [],
+  "roadmap": "",
+  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers. Everything its code calls is covered by Kiln 0.4.5 (8 classes, 14 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "easeon.ss.boneharvest.teron.fabric-26.3.0.0+mc26.3.jar",
     "published": "2026-10-06"
   },
@@ -51,7 +42,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

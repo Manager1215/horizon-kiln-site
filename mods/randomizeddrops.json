@@ -10,7 +10,6 @@
   "description": "Destroy any block, (almost) any way and someday, mobs too, and get a random drop!",
   "needs": [
     "net.fabricmc.fabric.api.loot.v3.LootTableEvents.ModifyDrops",
-    "net.minecraft.server.permissions.Permissions",
     "LootTableEvents.MODIFY_DROPS",
     "LootContext.getOptional()",
     "LootContext.hasParameter()"
@@ -20,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "randomdrops-1.1.6.jar",
     "published": "2026-10-09"
   },
@@ -48,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

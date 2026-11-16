@@ -10,24 +10,14 @@
   "description": "Create easy configs with class based annotation processing.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.SharedConstants",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-    "net.minecraft.client.gui.components.Tooltip",
-    "Font.plainSubstrByWidth()",
-    "AbstractWidget.setTooltip()",
-    "EditBox.setTextColor()",
-    "MutableComponent.withStyle()"
+    "SharedConstants.getCurrentVersion()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "easyconfig-fabric-26.3-1.263.0.9.jar",
     "published": "2026-09-29"
   },
@@ -57,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

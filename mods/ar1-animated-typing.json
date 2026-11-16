@@ -10,18 +10,14 @@
   "description": "A simple mod adding customizable animations when typing in text fields",
   "needs": [
     "net.minecraft.client.gui.components.WidgetSprites",
-    "Font.plainSubstrByWidth()",
-    "GuiGraphicsExtractor.text()",
-    "GuiGraphicsExtractor.textHighlight()",
-    "AbstractWidget.isActive()",
-    "Util.getMillis()"
+    "GuiGraphicsExtractor.textHighlight()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ar1-animated-typing-1.0.1.jar",
     "published": "2026-09-19"
   },
@@ -52,7 +48,11 @@
     "minecraft",
     "modmenu"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

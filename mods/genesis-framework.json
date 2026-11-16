@@ -20,7 +20,6 @@
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleEvents",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleEvents.ValueUpdate",
     "net.fabricmc.fabric.api.resource.v1.DataResourceLoader",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys",
     "net.fabricmc.fabric.api.resource.v1.reloader.SimpleReloadListener",
     "net.minecraft.advancements.AdvancementNode",
@@ -49,16 +48,17 @@
     "net.minecraft.client.gui.components.toasts.TutorialToast.Icons",
     "net.minecraft.client.gui.screens.advancements.AdvancementTab",
     "net.minecraft.client.gui.screens.advancements.AdvancementsScreen",
-    "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
     "net.minecraft.client.gui.screens.recipebook.RecipeButton",
-    "and 80 more"
+    "net.minecraft.client.gui.screens.recipebook.RecipeButton.ResolvedEntry",
+    "net.minecraft.client.gui.screens.recipebook.RecipeCollection",
+    "and 69 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "genesisframework-1.4.0.jar",
     "published": "2026-10-08"
   },
@@ -90,7 +90,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 145,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 109,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

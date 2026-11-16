@@ -15,7 +15,6 @@
     "net.minecraft.client.model.geom.builders.PartDefinition",
     "PoseStack.last()",
     "PoseStack.Pose.set()",
-    "FabricCreativeModeTabOutput.accept()",
     "ModelPart.getChild()",
     "ModelPart.y",
     "BlockEntityRenderer.extractRenderState()",
@@ -25,8 +24,6 @@
     "LivingEntity.getKnownMovement()",
     "LivingEntity.isCrouching()",
     "LivingEntity.isSpectator()",
-    "Projectile.getBbHeight()",
-    "Projectile.getBbWidth()",
     "Projectile.xo",
     "Projectile.yo",
     "Projectile.zo",
@@ -38,8 +35,6 @@
     "Level.hasNeighborSignal()",
     "Level.isBrightOutside()",
     "Block.defaultMapColor()",
-    "Blocks.BAMBOO",
-    "Blocks.IRON_BLOCK",
     "SoundType.BAMBOO",
     "SoundType.COPPER",
     "BlockState.getCollisionShape()",
@@ -49,14 +44,14 @@
     "AABB.inflate()",
     "AABB.inflate()",
     "VoxelShape.isEmpty()",
-    "and 1 more"
+    "VoxelShape.max()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "windchimes-fabric-1.2.0+26.3.jar",
     "published": "2026-09-16"
   },
@@ -90,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 41,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 36,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

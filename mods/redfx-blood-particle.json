@@ -17,16 +17,13 @@
     "net.fabricmc.fabric.api.client.model.loading.v1.wrapper.WrapperBlockStateModel",
     "net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadEmitter",
     "net.minecraft.client.Screenshot",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.particle.Particle",
     "net.minecraft.client.particle.ParticleEngine",
     "net.minecraft.client.particle.SingleQuadParticle",
     "net.minecraft.client.particle.TerrainParticle",
     "net.minecraft.client.renderer.SpriteMapper",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.core.particles.BlockParticleOption",
     "net.minecraft.tags.EntityTypeTags",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.boss.enderdragon.EnderDragon",
     "net.minecraft.world.entity.monster.Blaze",
     "net.minecraft.world.entity.monster.Creeper",
@@ -49,14 +46,17 @@
     "net.minecraft.world.level.block.VineBlock",
     "net.minecraft.world.level.block.state.properties.Half",
     "net.minecraft.world.level.block.state.properties.SlabType",
-    "and 60 more"
+    "Long2ObjectMap.isEmpty()",
+    "Long2ObjectMap.Entry.getValue()",
+    "Minecraft.particleEngine",
+    "and 40 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "redfx-3.3.0-mc26.3.x-fabric.jar",
     "published": "2026-11-13"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 107,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 80,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

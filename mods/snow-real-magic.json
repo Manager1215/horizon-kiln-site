@@ -11,10 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 12 points inside the game's methods",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget.OnAttachedSet",
     "net.fabricmc.fabric.api.block.v1.FabricBlock",
     "net.fabricmc.fabric.api.blockgetter.v2.FabricBlockGetter",
     "net.fabricmc.fabric.api.blockgetter.v2.RenderDataBlockEntity",
@@ -51,6 +47,10 @@
     "net.minecraft.client.resources.model.geometry.BakedQuad.MaterialFlags",
     "net.minecraft.core.QuartPos",
     "net.minecraft.server.TickTask",
+    "net.minecraft.server.commands.DebugMobSpawningCommand",
+    "net.minecraft.server.commands.GameRuleCommand",
+    "net.minecraft.server.level.WorldGenRegion",
+    "net.minecraft.server.packs.resources.ResourceMetadata",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SnowRealMagic-mc26.3-Fabric-26.3.0.jar",
     "published": "2026-11-10"
   },
@@ -87,7 +87,11 @@
     "fabric-api",
     "kiwi"
   ],
-  "lacks": 265,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 232,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,10 +11,7 @@
   "needs": [
     "an access widener",
     "Mixin: 40 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.blaze3d.pipeline.TextureTarget",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "net.fabricmc.frozenblock.datafixer.api.FabricDataFixerBuilder",
     "net.fabricmc.frozenblock.datafixer.api.FabricDataFixes",
     "net.minecraft.TracingExecutor",
@@ -26,7 +23,6 @@
     "net.minecraft.advancements.predicates.SingleComponentItemPredicate",
     "net.minecraft.advancements.predicates.entity.EntityPredicate",
     "net.minecraft.advancements.predicates.entity.EntityPredicate.Builder",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.RotatingSectionStorage",
     "net.minecraft.client.RotatingSectionStorage.Value",
     "net.minecraft.client.Screenshot",
@@ -38,10 +34,7 @@
     "net.minecraft.client.gui.screens.inventory.BookEditScreen",
     "net.minecraft.client.gui.screens.inventory.BookViewScreen",
     "net.minecraft.client.gui.screens.inventory.BookViewScreen.BookAccess",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.ItemPickerMenu",
     "net.minecraft.client.gui.screens.inventory.CyclingSlotBackground",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
     "net.minecraft.client.model.EntityModel",
     "net.minecraft.client.model.HeadedModel",
     "net.minecraft.client.model.HumanoidModel",
@@ -50,7 +43,14 @@
     "net.minecraft.client.model.geom.builders.CubeListBuilder",
     "net.minecraft.client.model.geom.builders.MeshDefinition",
     "net.minecraft.client.model.geom.builders.PartDefinition",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
+    "net.minecraft.client.player.FirstPersonHandsAndItems",
+    "net.minecraft.client.player.inventory.Hotbar",
+    "net.minecraft.client.renderer.LevelTargetBundle",
+    "net.minecraft.client.renderer.PostChain",
+    "net.minecraft.client.renderer.PostChainConfig",
+    "net.minecraft.client.renderer.PostChainConfig.InternalTarget",
+    "net.minecraft.client.renderer.PostChainConfig.Pass",
+    "net.minecraft.client.renderer.PostChainConfig.TargetInput",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "FreezeFrame-1.2.1-mc26.3-fabric.jar",
     "published": "2026-10-10"
   },
@@ -89,7 +89,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 325,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 239,
   "development": {
     "status": "no-plans",
     "statusLabel": "No plans yet",

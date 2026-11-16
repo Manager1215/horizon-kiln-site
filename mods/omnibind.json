@@ -10,42 +10,28 @@
   "description": "Bind any video, sound, chat, control or accessibility setting to a key",
   "needs": [
     "an access widener",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.OptionInstance.CycleableValueSet",
     "net.minecraft.client.OptionInstance.CycleableValueSet.ValueSetter",
     "net.minecraft.client.OptionInstance.IntRangeBase",
     "net.minecraft.client.OptionInstance.SliderableValueSet",
-    "net.minecraft.client.OptionInstance.ValueSet",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.ValueListSupplier",
-    "net.minecraft.network.chat.ComponentContents",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.world.entity.player.PlayerModelPart",
-    "InputConstants.Key.getDisplayName()",
-    "InputConstants.Type.getOrCreate()",
     "Minecraft.resizeGui()",
-    "OptionInstance.values()",
-    "Options.advancedItemTooltips",
-    "Options.getCameraType()",
     "Options.getSoundSourceOptionInstance()",
     "Options.hideServerAddress",
     "Options.isModelPartEnabled()",
     "Options.pauseOnLostFocus",
-    "Options.setCameraType()",
     "Options.setModelPart()",
     "Options.smoothCamera",
     "Hud.toggle()",
     "CommonComponents.optionNameValue()",
-    "CommonComponents.optionStatus()",
-    "Component.getContents()",
-    "Component.translatableWithFallback()"
+    "CommonComponents.optionStatus()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "omnibind-fabric-2.0.0+mc26.3.jar",
     "published": "2026-10-23"
   },
@@ -75,7 +61,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 29,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

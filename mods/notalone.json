@@ -13,7 +13,6 @@
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
     "net.fabricmc.fabric.impl.client.rendering.EntityRendererRegistryImpl",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.model.EntityModel",
     "net.minecraft.client.model.geom.PartPose",
     "net.minecraft.client.model.geom.builders.CubeDeformation",
@@ -37,8 +36,6 @@
     "net.minecraft.world.entity.animal.cow.Cow",
     "net.minecraft.world.entity.animal.pig.Pig",
     "net.minecraft.world.entity.animal.sheep.Sheep",
-    "Minecraft.execute()",
-    "Options.getCameraType()",
     "ModelPart.getAllParts()",
     "ModelPart.getChild()",
     "ModelPart.resetPose()",
@@ -47,16 +44,19 @@
     "EntityRendererProvider.Context.bakeLayer()",
     "RenderTypes.entityCutoutZOffset()",
     "BlockPos.containing()",
-    "Holder.is()",
     "MinecraftServer.overworld()",
-    "and 48 more"
+    "ServerLevel.getBiome()",
+    "ServerLevel.getEntities()",
+    "ServerLevel.getEntitiesOfClass()",
+    "ServerLevel.getEntity()",
+    "and 31 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "notalone-fabric-26.3-1.2.0.jar",
     "published": "2026-09-21"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 115,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 71,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

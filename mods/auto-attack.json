@@ -11,21 +11,16 @@
   "needs": [
     "an access widener",
     "net.fabricmc.loader.api.metadata.ModOrigin",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.network.protocol.game.ServerboundPunchPacket",
     "net.minecraft.world.entity.monster.Monster",
     "net.minecraft.world.item.ShieldItem",
     "net.minecraft.world.phys.EntityHitResult",
     "ModContainer.getOrigin()",
-    "Minecraft.gameMode",
-    "Minecraft.hitResult",
-    "EditBox.setSuggestion()",
-    "EditBox.suggestion",
     "ClientPacketListener.send()",
+    "MultiPlayerGameMode.attack()",
     "LocalPlayer.getAttackStrengthScale()",
     "LocalPlayer.setYHeadRot()",
     "LocalPlayer.setYRot()",
-    "LocalPlayer.swing()",
     "EntityTypes.ARMOR_STAND",
     "EntityTypes.GLOW_ITEM_FRAME",
     "EntityTypes.ITEM_FRAME",
@@ -44,7 +39,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "auto_attack-fabric-3.1.1.jar",
     "published": "2026-10-08"
   },
@@ -73,7 +68,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

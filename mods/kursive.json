@@ -19,13 +19,9 @@
     "net.minecraft.client.gui.ActiveTextCollector",
     "net.minecraft.client.gui.ActiveTextCollector.Parameters",
     "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
     "net.minecraft.client.gui.components.SpriteIconButton",
     "net.minecraft.client.gui.components.SpriteIconButton.Builder",
     "net.minecraft.client.gui.components.SpriteIconButton.CenteredIcon",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.WidgetSprites",
     "net.minecraft.client.gui.layouts.FrameLayout",
     "net.minecraft.client.gui.layouts.GridLayout",
@@ -35,12 +31,9 @@
     "net.minecraft.client.gui.screens.options.controls.KeyBindsList",
     "net.minecraft.client.gui.screens.options.controls.KeyBindsList.KeyEntry",
     "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.extract.LevelExtractor",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.commands.synchronization.ArgumentTypeInfos",
-    "net.minecraft.network.chat.ComponentSerialization",
     "net.minecraft.network.protocol.game.ClientboundCommandsPacket.ArgumentNodeStub",
     "net.minecraft.network.protocol.game.ServerboundTeleportToEntityPacket",
     "net.minecraft.resources.RegistryLoadTask",
@@ -50,14 +43,21 @@
     "net.minecraft.server.WorldLoader",
     "net.minecraft.server.commands.SaveAllCommand",
     "net.minecraft.server.commands.TeamMsgCommand",
-    "and 40 more"
+    "net.minecraft.server.dedicated.DedicatedServer",
+    "net.minecraft.server.dedicated.ServerWatchdog",
+    "net.minecraft.server.jsonrpc.internalapi.MinecraftServerStateServiceImpl",
+    "net.minecraft.server.level.ChunkMap",
+    "net.minecraft.server.level.ChunkMap.TrackedEntity",
+    "net.minecraft.server.level.ServerLevel.EntityCallbacks",
+    "net.minecraft.server.level.ServerPlayerGameMode",
+    "and 27 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Kursive-0.4.0-alpha.3+26.3.jar",
     "published": "2026-09-18"
   },
@@ -86,7 +86,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 85,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 67,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

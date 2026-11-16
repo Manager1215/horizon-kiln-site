@@ -9,7 +9,6 @@
   "author": "DvaArtioma",
   "description": "FIxes mega trees to not have bark inside them",
   "needs": [
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.level.block.GrowingPlantHeadBlock",
     "net.minecraft.world.level.block.NetherFungusBlock",
     "net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate",
@@ -19,28 +18,18 @@
     "net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer.FoliageAttachment",
     "net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacer",
     "net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType",
-    "net.minecraft.world.level.storage.loot.providers.number.ints.ResolvableInt.Constant",
     "BlockPos.mutable()",
     "BlockPos.MutableBlockPos.move()",
     "BlockPos.MutableBlockPos.setWithOffset()",
     "Direction.Plane.getRandomDirection()",
-    "Registry.get()",
-    "RegistryAccess.lookupOrThrow()",
     "BuiltInRegistries.FEATURE_TYPE",
     "BuiltInRegistries.TRUNK_PLACER_TYPE",
     "WeightedList.getRandom()",
     "WeightedList.of()",
-    "LevelAccessor.isEmptyBlock()",
     "LevelAccessor.setBlock()",
     "WorldGenLevel.destroyBlock()",
     "WorldGenLevel.isStateAtPosition()",
     "WorldGenLevel.setBlock()",
-    "Blocks.CRIMSON_FUNGUS",
-    "Blocks.CRIMSON_STEM",
-    "Blocks.NETHER_WART_BLOCK",
-    "Blocks.OAK_WOOD",
-    "Blocks.WEEPING_VINES",
-    "Blocks.WEEPING_VINES_PLANT",
     "TreeGrower.ACACIA",
     "TreeGrower.AZALEA",
     "TreeGrower.BIRCH",
@@ -49,14 +38,16 @@
     "TreeGrower.OAK",
     "TreeGrower.POPLAR",
     "BlockBehaviour.BlockStateBase.canBeReplaced()",
-    "and 3 more"
+    "ChunkGenerator.getGenDepth()",
+    "ContextFloatProviders.COOKING_DEFAULT_SPEED_MULTIPLIER",
+    "ResolvableFloat.fromKey()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "CornerLog-1.0.jar",
     "published": "2026-09-23"
   },
@@ -85,7 +76,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 43,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 32,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

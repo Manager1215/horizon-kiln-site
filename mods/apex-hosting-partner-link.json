@@ -11,24 +11,17 @@
   "needs": [
     "Mixin: 5 points inside the game's methods",
     "com.mojang.blaze3d.Blaze3D",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
     "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
     "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList",
     "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList.Entry",
-    "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList.OnlineServerEntry",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
-    "NativeImage.read()",
-    "Minecraft.execute()",
-    "Minecraft.gameDirectory",
-    "Minecraft.setScreenAndShow()",
-    "GuiGraphicsExtractor.blit()"
+    "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList.OnlineServerEntry"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "apexhosting-partner-link-fabric-26.3-1.1.0.jar",
     "published": "2026-10-21"
   },
@@ -55,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @redirect into the game's classes; runs threads of its own"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -26,7 +26,6 @@
     "net.minecraft.world.level.block.piston.PistonBaseBlock",
     "net.minecraft.world.level.block.piston.PistonHeadBlock",
     "net.minecraft.world.level.block.state.properties.BedPart",
-    "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
     "net.minecraft.world.level.block.state.properties.SlabType",
     "BlockPos.getX()",
     "BlockPos.getY()",
@@ -40,24 +39,22 @@
     "BlockTags.IMPERMEABLE",
     "BlockTags.WALLS",
     "Containers.dropContents()",
-    "Level.destroyBlock()",
     "Level.getHeight()",
     "Level.getMaxY()",
     "Level.getMinY()",
-    "Blocks.GLASS_PANE",
     "BlockEntity.loadStatic()",
     "BlockEntity.saveWithFullMetadata()",
     "BlockState.getCollisionShape()",
     "BlockStateProperties.BED_PART",
-    "BlockStateProperties.DOUBLE_BLOCK_HALF",
-    "and 2 more"
+    "BlockStateProperties.SLAB_TYPE",
+    "VoxelShape.isEmpty()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tnt-logic-realistic-explosion-physics-fabric-26.3-2.0.2.jar",
     "published": "2026-11-11"
   },
@@ -84,7 +81,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 42,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 38,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

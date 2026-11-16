@@ -29,7 +29,6 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
     "net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents.FullChunkStatusChange",
     "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.Unload",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
@@ -41,16 +40,17 @@
     "net.minecraft.advancements.triggers.InventoryChangeTrigger",
     "net.minecraft.advancements.triggers.InventoryChangeTrigger.TriggerInstance",
     "net.minecraft.client.GraphicsPreset",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.model.HumanoidModel",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.particle.Particle",
     "net.minecraft.client.particle.ParticleGroup",
     "net.minecraft.client.particle.ParticleProvider",
     "net.minecraft.client.particle.ParticleRenderType",
     "net.minecraft.client.particle.SingleQuadParticle",
     "net.minecraft.client.particle.SingleQuadParticle.Layer",
+    "net.minecraft.client.particle.SpriteSet",
+    "net.minecraft.client.renderer.BindGroupLayouts",
+    "net.minecraft.client.renderer.block.dispatch.BlockStateModel.UnbakedRoot",
+    "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "PowerGrid-0.6.2.4+fly-mc26.3.jar",
     "published": "2026-11-09"
   },
@@ -92,7 +92,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 485,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 369,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

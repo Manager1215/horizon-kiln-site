@@ -11,13 +11,7 @@
   "needs": [
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.minecraft.server.level.ServerPlayerGameMode",
-    "net.minecraft.world.level.storage.LevelResource",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "MinecraftServer.getWorldPath()",
     "ServerLevel.getHeight()",
     "ServerLevel.getMinY()",
     "ServerLevel.getRespawnData()",
@@ -30,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dimensional-inventories-extension-warp-1.0.2+26.3.jar",
     "published": "2026-09-24"
   },
@@ -60,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

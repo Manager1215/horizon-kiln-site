@@ -14,13 +14,9 @@
     "net.minecraft.world.item.DyeItem",
     "net.minecraft.world.level.block.state.properties.AttachFace",
     "BlockPos.offset()",
-    "DataComponents.DYE",
     "ServerLevel.getBestNeighborSignal()",
     "ServerLevel.hasNeighborSignal()",
     "SoundEvents.METAL_BREAK",
-    "DyeColor.byId()",
-    "DyeColor.getId()",
-    "DyeColor.getTextureDiffuseColor()",
     "ItemStack.consume()",
     "Items.DYE",
     "Level.getBestNeighborSignal()",
@@ -35,7 +31,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "laserbridges-26.3-fabric-6.3.jar",
     "published": "2026-10-31"
   },
@@ -64,7 +60,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

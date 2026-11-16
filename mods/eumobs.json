@@ -11,8 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
@@ -51,6 +49,8 @@
     "net.minecraft.client.model.monster.skeleton.SkeletonModel",
     "net.minecraft.client.model.monster.zombie.BabyZombieModel",
     "net.minecraft.client.model.monster.zombie.ZombieModel",
+    "net.minecraft.client.model.npc.VillagerModel",
+    "net.minecraft.client.model.object.book.BookModel",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "eum-1.0-alpha.10b-fabric+26.3.jar",
     "published": "2026-10-17"
   },
@@ -89,7 +89,11 @@
     "minecraft",
     "mixson"
   ],
-  "lacks": 410,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 351,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

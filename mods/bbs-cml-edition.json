@@ -11,15 +11,11 @@
   "needs": [
     "an access widener",
     "Mixin: 29 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.blaze3d.audio.Library",
     "com.mojang.blaze3d.audio.Listener",
     "com.mojang.blaze3d.audio.ListenerTransform",
     "com.mojang.blaze3d.buffers.Std140Builder",
     "com.mojang.blaze3d.pipeline.MainTarget",
-    "com.mojang.blaze3d.platform.TextInputManager",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
     "com.mojang.blaze3d.systems.ScissorState",
     "com.mojang.blaze3d.vertex.BufferBuilder",
@@ -51,6 +47,10 @@
     "com.mojang.renderpearl.backend.opengl.Uniform.Ubo",
     "com.mojang.renderpearl.backend.opengl.Uniform.Utb",
     "com.mojang.renderpearl.backend.opengl.VertexArray",
+    "com.mojang.renderpearl.frontend.FrontendGpuDevice",
+    "com.mojang.renderpearl.frontend.FrontendRenderPass",
+    "com.mojang.renderpearl.frontend.FrontendRenderPipeline",
+    "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.AfterSolidFeatures",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bbs-cml-3.0-beta-9-26.3.jar",
     "published": "2026-11-16"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 887,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @redirect and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 781,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

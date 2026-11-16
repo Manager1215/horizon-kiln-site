@@ -9,9 +9,6 @@
   "author": "Freef",
   "description": "Adds the entire CPDV translation of the Bible as an item.",
   "needs": [
-    "net.minecraft.client.StringSplitter",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
     "net.minecraft.world.entity.ConversionParams",
     "net.minecraft.world.entity.ConversionParams.AfterConversion",
     "net.minecraft.world.entity.animal.allay.Allay",
@@ -31,13 +28,7 @@
     "net.minecraft.world.entity.monster.zombie.ZombieVillager",
     "net.minecraft.world.entity.npc.villager.Villager",
     "net.minecraft.world.level.saveddata.WeatherData",
-    "KeyMapping.isUnbound()",
-    "KeyMapping.matches()",
-    "Options.keyMappings",
-    "Font.getSplitter()",
     "NarrationElementOutput.add()",
-    "MouseButtonEvent.hasAltDown()",
-    "MouseButtonEvent.hasShiftDown()",
     "ClientLevel.playPlayerSound()",
     "MinecraftServer.getWeatherData()",
     "SoundEvents.BOOK_PAGE_TURN",
@@ -49,14 +40,21 @@
     "EntityTypes.PIG",
     "EntityTypes.VILLAGER",
     "LightningBolt.setPos()",
-    "and 9 more"
+    "LivingEntity.damageSources()",
+    "LivingEntity.fireImmune()",
+    "LivingEntity.hurt()",
+    "LivingEntity.playSound()",
+    "LivingEntity.setRemainingFireTicks()",
+    "Level.addFreshEntity()",
+    "Level.setRainLevel()",
+    "Level.setThunderLevel()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "freefbible-FABRIC-26.3-1.0.0.jar",
     "published": "2026-11-14"
   },
@@ -85,5 +83,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 49
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 39
 }

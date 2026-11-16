@@ -9,25 +9,16 @@
   "author": "SoftlySophie",
   "description": "Bridge Minecraft and Matrix chats together!",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.loader.impl.FabricLoaderImpl",
     "net.minecraft.network.chat.OutgoingChatMessage",
     "net.minecraft.server.PlayerAdvancements",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.server.players.UserWhiteList",
     "net.minecraft.server.players.UserWhiteListEntry",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "Advancement.name()",
     "AdvancementHolder.value()",
-    "CommandSourceStack.sendSystemMessage()",
     "ChatType.CHAT",
     "MinecraftServer.getPlayerNames()",
     "ServerPlayer.getAdvancements()",
-    "ServerPlayer.getDisplayName()",
-    "ServerPlayer.nameAndId()",
-    "PlayerList.broadcastSystemMessage()",
     "PlayerList.getWhiteList()",
     "DamageSource.getLocalizedDeathMessage()"
   ],
@@ -36,7 +27,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "matrix-bridge-26.3-1.5-BETA1.jar",
     "published": "2026-09-20"
   },
@@ -63,7 +54,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

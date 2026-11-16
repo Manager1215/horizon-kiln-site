@@ -10,18 +10,15 @@
   "description": "Obedience is liberating",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.minecraft.server.network.ServerLoginPacketListenerImpl",
-    "ServerLifecycleEvents.SERVER_STARTING",
     "Connection.getRemoteAddress()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "LibertyBans_Release-1.2.0-M1.jar",
     "published": "2026-09-22"
   },
@@ -50,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

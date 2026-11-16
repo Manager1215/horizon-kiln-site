@@ -9,11 +9,11 @@
   "author": "Globox1997",
   "description": "Not another rottenflesh to leather mod anymore",
   "needs": [
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.world.item.crafting.RecipeBookCategories",
     "net.minecraft.world.item.crafting.RecipeManager.CachedCheck",
     "net.minecraft.world.level.block.Mirror",
+    "ResourceLoader.registerBuiltinPack()",
     "BlockEntityRenderer.extractRenderState()",
     "ItemStackRenderState.isEmpty()",
     "BlockPos.mutable()",
@@ -28,35 +28,15 @@
     "Biome.getBaseTemperature()",
     "Biome.hasPrecipitation()",
     "Block.updateShape()",
-    "Blocks.ACACIA_PLANKS",
-    "Blocks.ACACIA_SLAB",
-    "Blocks.BAMBOO_PLANKS",
-    "Blocks.BAMBOO_SLAB",
-    "Blocks.BIRCH_PLANKS",
-    "Blocks.BIRCH_SLAB",
-    "Blocks.CHERRY_PLANKS",
-    "Blocks.CHERRY_SLAB",
-    "Blocks.CRIMSON_PLANKS",
-    "Blocks.CRIMSON_SLAB",
-    "Blocks.DARK_OAK_PLANKS",
-    "Blocks.DARK_OAK_SLAB",
-    "Blocks.JUNGLE_PLANKS",
-    "Blocks.JUNGLE_SLAB",
-    "Blocks.MANGROVE_PLANKS",
-    "Blocks.MANGROVE_SLAB",
-    "Blocks.OAK_SLAB",
-    "Blocks.SPRUCE_PLANKS",
-    "Blocks.SPRUCE_SLAB",
-    "Blocks.WARPED_PLANKS",
-    "Blocks.WARPED_SLAB",
-    "and 2 more"
+    "HorizontalDirectionalBlock.FACING",
+    "BlockState.isSignalSource()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fleshz-fabric-1.8.0+26.3.jar",
     "published": "2026-11-14"
   },
@@ -87,5 +67,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 42
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 21
 }

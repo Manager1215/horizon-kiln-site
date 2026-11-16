@@ -9,22 +9,11 @@
   "author": "HolJake",
   "description": "Automatic password entry when logging in to a Minecraft server that has its own authorization system.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.Chat",
     "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents",
     "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.Command",
     "ClientReceiveMessageEvents.CHAT",
-    "Minecraft.execute()",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.setScreenAndShow()",
-    "Font.plainSubstrByWidth()",
-    "Button.getMessage()",
-    "Button.setAlpha()",
-    "Button.setHeight()",
-    "EditBox.setHint()",
-    "Screen.mouseScrolled()",
     "ClientPacketListener.getLocalGameProfile()",
-    "ServerData.ip",
     "LocalPlayer.getGameProfile()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
@@ -32,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "autologin-mc26.3.x-1.2.0.jar",
     "published": "2026-09-27"
   },
@@ -62,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -13,7 +13,6 @@
     "net.fabricmc.fabric.api.client.networking.v1.ClientLoginConnectionEvents.Disconnect",
     "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking",
     "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking.LoginQueryRequestHandler",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.networking.v1.LoginPacketSender",
     "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents",
     "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents.QueryStart",
@@ -27,26 +26,19 @@
     "net.minecraft.client.multiplayer.resolver.ServerAddress",
     "net.minecraft.network.protocol.status.ServerStatus",
     "net.minecraft.server.network.ServerLoginPacketListenerImpl",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "Minecraft.execute()",
-    "Minecraft.setScreenAndShow()",
     "GuiGraphicsExtractor.blit()",
-    "Screen.mouseScrolled()",
     "ServerData.motd",
-    "Component.getSiblings()",
-    "MutableComponent.withStyle()",
     "Style.getInsertion()",
     "Style.withInsertion()",
     "MinecraftServer.getServerDirectory()",
-    "MinecraftServer.getServerVersion()",
-    "Util.getMillis()"
+    "MinecraftServer.getServerVersion()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "conduit-1.1.0.jar",
     "published": "2026-11-06"
   },
@@ -75,7 +67,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 31,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

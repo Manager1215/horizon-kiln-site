@@ -26,7 +26,6 @@
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
     "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
     "net.fabricmc.fabric.impl.biome.TheEndBiomeData.Overrides",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.animation.AnimationChannel",
     "net.minecraft.client.animation.AnimationChannel.Interpolation",
     "net.minecraft.client.animation.AnimationChannel.Interpolations",
@@ -50,6 +49,7 @@
     "net.minecraft.client.particle.SingleQuadParticle",
     "net.minecraft.client.particle.SingleQuadParticle.Layer",
     "net.minecraft.client.particle.SpriteSet",
+    "net.minecraft.client.renderer.blockentity.BeaconRenderer",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "theendupdate-1.2.2.jar",
     "published": "2026-09-19"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 666,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 394,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

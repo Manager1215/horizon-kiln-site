@@ -9,30 +9,19 @@
   "author": "Tenty",
   "description": "Use a torch on a cobweb to burn it away!",
   "needs": [
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "BuiltInRegistries.CUSTOM_STAT",
     "ServerLevel.sendParticles()",
     "SoundEvents.FLINTANDSTEEL_USE",
     "StatFormatter.DEFAULT",
     "StatType.get()",
-    "Stats.CUSTOM",
-    "InteractionHand.asEquipmentSlot()",
-    "Items.COPPER_TORCH",
-    "Items.FLINT_AND_STEEL",
-    "Items.GUNPOWDER",
-    "Items.REDSTONE_TORCH",
-    "Items.SOUL_TORCH",
-    "Items.STRING",
-    "Items.TORCH",
-    "Blocks.COBWEB"
+    "InteractionHand.asEquipmentSlot()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "cobweb_torcher-1.1.0+mc26.3.jar",
     "published": "2026-09-19"
   },
@@ -63,7 +52,11 @@
     "modmenu",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

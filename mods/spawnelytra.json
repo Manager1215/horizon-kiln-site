@@ -11,23 +11,14 @@
   "needs": [
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.minecraft.network.protocol.game.ServerboundPlayerAbilitiesPacket",
     "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
     "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
     "net.minecraft.world.damagesource.DamageTypes",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "CommandSourceStack.sendSystemMessage()",
-    "MinecraftServer.execute()",
     "MinecraftServer.overworld()",
     "ServerPlayer.gameMode()",
-    "ServerPlayer.isFallFlying()",
-    "ServerPlayer.permissions()",
     "ServerPlayer.startFallFlying()",
     "ServerPlayer.stopFallFlying()",
-    "ServerPlayer.syncVelocity",
-    "PermissionLevel.byId()",
-    "DamageSource.is()",
     "Level.getRespawnData()",
     "Level.players()",
     "LevelData.RespawnData.pos()"
@@ -37,7 +28,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SpawnElytra-Fabric-1.2.2.jar",
     "published": "2026-09-29"
   },
@@ -64,7 +55,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

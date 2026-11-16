@@ -9,16 +9,15 @@
   "author": "FelixDev",
   "description": "Skip the wait when fishing",
   "needs": [
-    "net.minecraft.world.entity.projectile.FishingHook",
     "InteractionHand.asEquipmentSlot()",
-    "Items.FISHING_ROD"
+    "FishingHook.retrieve()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "instantfish-1.0.0.jar",
     "published": "2026-10-07"
   },
@@ -35,7 +34,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

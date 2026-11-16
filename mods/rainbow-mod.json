@@ -37,28 +37,28 @@
     "net.minecraft.client.resources.sounds.Sound",
     "net.minecraft.commands.arguments.ResourceKeyArgument",
     "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
-    "net.minecraft.commands.arguments.coordinates.Coordinates",
-    "net.minecraft.commands.arguments.coordinates.LocalCoordinates",
-    "net.minecraft.commands.arguments.coordinates.WorldCoordinate",
-    "net.minecraft.commands.arguments.coordinates.WorldCoordinates",
     "net.minecraft.commands.synchronization.SingletonArgumentInfo",
-    "net.minecraft.core.component.DataComponentPatch.Builder",
     "net.minecraft.core.component.DataComponentPatch.SplitResult",
-    "net.minecraft.network.chat.ClickEvent.OpenFile",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-    "net.minecraft.util.StringUtil",
     "net.minecraft.world.item.component.ResolvableProfile",
     "net.minecraft.world.waypoints.WaypointStyleAssets",
     "org.apache.commons.io.IOUtils",
     "NativeImage.copyFrom()",
-    "and 35 more"
+    "RenderSystem.assertOnRenderThread()",
+    "FabricClientCommandSource.getRotation()",
+    "Minecraft.getEntityRenderDispatcher()",
+    "Gui.splashManager()",
+    "Hud.getWaypointStyles()",
+    "ClientPacketListener.getSuggestionsProvider()",
+    "LocalPlayer.getRecipeBook()",
+    "GameRenderer.featureRenderDispatcher()",
+    "and 15 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Rainbow.jar",
     "published": "2026-10-15"
   },
@@ -85,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 75,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 55,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

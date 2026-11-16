@@ -16,14 +16,9 @@
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
     "net.minecraft.client.AttackIndicatorStatus",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
     "net.minecraft.client.gui.components.OptionsList",
     "net.minecraft.client.gui.components.OptionsList.Entry",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
     "net.minecraft.client.gui.screens.options.OptionsSubScreen",
     "net.minecraft.client.model.HumanoidModel",
@@ -41,7 +36,6 @@
     "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState",
     "net.minecraft.client.renderer.state.level.PlayerRenderState",
     "net.minecraft.network.protocol.game.ServerboundUseItemPacket",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.effect.MobEffectUtil",
     "net.minecraft.world.entity.LivingEntity.SwingDescription",
     "net.minecraft.world.entity.NeutralMob",
@@ -51,14 +45,20 @@
     "net.minecraft.world.entity.decoration.ArmorStand",
     "net.minecraft.world.entity.monster.Monster",
     "net.minecraft.world.entity.player.Input",
-    "and 67 more"
+    "net.minecraft.world.entity.projectile.FireworkRocketEntity",
+    "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
+    "net.minecraft.world.entity.projectile.arrow.AbstractArrow.Pickup",
+    "net.minecraft.world.item.CrossbowItem",
+    "net.minecraft.world.item.ItemUseAnimation",
+    "net.minecraft.world.item.component.AttackRange",
+    "and 61 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "AcroWield-2.2.0-MC26.3.jar",
     "published": "2026-11-02"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 183,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; has network channels"
+  },
+  "lacks": 142,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,35 +10,22 @@
   "description": "Replace your mouse cursor in Minecraft with anything you want.\nA diamond sword, a rainbow arrow, a heart… or your own image!",
   "needs": [
     "com.mojang.blaze3d.Blaze3D",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "org.lwjgl.sdl.SDLMouse",
     "org.lwjgl.sdl.SDLPixels",
     "org.lwjgl.sdl.SDLSurface",
     "org.lwjgl.sdl.SDL_Surface",
     "org.lwjgl.stb.STBImage",
     "org.lwjgl.system.MemoryStack",
-    "org.lwjgl.system.MemoryUtil",
-    "NativeImage.setPixel()",
-    "GuiGraphicsExtractor.blit()",
-    "Button.Builder.tooltip()",
-    "Screen.mouseClicked()",
-    "Screen.mouseScrolled()",
-    "CommonComponents.GUI_DONE"
+    "org.lwjgl.system.MemoryUtil"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "customcursor-1.0.0+26.3-fabric.jar",
     "published": "2026-09-25"
   },
@@ -66,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

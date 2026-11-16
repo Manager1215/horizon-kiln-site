@@ -15,8 +15,6 @@
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionEvents.EndExtraction",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
@@ -46,10 +44,12 @@
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
     "net.minecraft.client.renderer.state.level.SkyRenderState",
     "net.minecraft.core.UUIDUtil",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
     "net.minecraft.network.syncher.EntityDataAccessor",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
+    "net.minecraft.server.TickTask",
+    "net.minecraft.server.level.WorldGenRegion",
+    "net.minecraft.tags.DamageTypeTags",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "arienteworld-fabric-26.3-5.0.1-fabric.jar",
     "published": "2026-11-14"
   },
@@ -92,7 +92,11 @@
     "minecraft",
     "team_reborn_energy"
   ],
-  "lacks": 314,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 276,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

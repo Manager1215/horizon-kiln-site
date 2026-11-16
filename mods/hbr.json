@@ -9,21 +9,13 @@
   "author": "TauCubed",
   "description": "Refills your hotbar when you run out of items",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.world.food.FoodProperties",
-    "net.minecraft.world.inventory.ContainerInput",
     "Object2IntMap.Entry.getKey()",
     "ObjectSet.stream()",
-    "Minecraft.gameMode",
-    "Minecraft.schedule()",
-    "Holder.tags()",
     "HolderSet.iterator()",
     "NonNullList.iterator()",
     "NonNullList.stream()",
-    "Registry.wrapAsHolder()",
-    "RegistryAccess.lookupOrThrow()",
     "DataComponents.FOOD",
-    "EquipmentSlot.isArmor()",
     "Inventory.EQUIPMENT_SLOT_MAPPING",
     "Player.hasContainerOpen()",
     "Player.hasInfiniteMaterials()",
@@ -31,9 +23,6 @@
     "Player.typeHolder()",
     "InventoryMenu.findSlot()",
     "ItemStack.count()",
-    "Enchantment.getMaxLevel()",
-    "ItemEnchantments.entrySet()",
-    "ItemEnchantments.size()",
     "Equippable.canBeEquippedBy()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
@@ -41,7 +30,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "HotbarRefill-fabric-1.0.0.jar",
     "published": "2026-09-28"
   },
@@ -71,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 26,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

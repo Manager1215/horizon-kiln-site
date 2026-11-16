@@ -9,13 +9,9 @@
   "author": "imreppofficial",
   "description": "A lightweight client-side mod that changes your crosshair color to green when aiming at a player and red when they block with a shield.",
   "needs": [
-    "net.minecraft.client.CameraType",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
     "net.minecraft.world.phys.EntityHitResult",
     "Minecraft.crosshairPickEntity",
-    "Minecraft.gameMode",
-    "Options.getCameraType()",
     "LocalPlayer.getAttackStrengthScale()",
     "LocalPlayer.getUseItem()",
     "LocalPlayer.hurtDuration",
@@ -27,16 +23,14 @@
     "LivingEntity.isAlive()",
     "LivingEntity.isBlocking()",
     "Inventory.getSelectionSize()",
-    "Player.isAlive()",
-    "Items.MACE",
-    "Items.SHIELD"
+    "Player.isAlive()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "advancedplayercrosshair-1.4.jar",
     "published": "2026-11-07"
   },
@@ -64,7 +58,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

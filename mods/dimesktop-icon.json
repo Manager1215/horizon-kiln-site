@@ -10,9 +10,9 @@
   "description": "Sets your Minecraft Desktop Icon to the dimension you are in.",
   "needs": [
     "com.mojang.blaze3d.platform.IconSet",
-    "net.minecraft.SharedConstants",
     "net.minecraft.server.packs.VanillaPackResources",
     "Window.setIcon()",
+    "SharedConstants.getCurrentVersion()",
     "Minecraft.getVanillaPackResources()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -20,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dimesktop-icon-1.0.1.jar",
     "published": "2026-09-18"
   },
@@ -48,6 +48,10 @@
     "java",
     "minecraft"
   ],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 5,
   "development": {
     "status": "planned",

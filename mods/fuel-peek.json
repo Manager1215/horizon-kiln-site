@@ -9,20 +9,19 @@
   "author": "kln",
   "description": "Look at a furnace, blast furnace or smoker to see remaining fuel and cook progress. U toggles.",
   "needs": [
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.world.inventory.AbstractFurnaceMenu",
     "net.minecraft.world.inventory.ContainerData",
     "net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity",
-    "Minecraft.getSingleplayerServer()",
-    "Minecraft.hitResult",
-    "HitResult.getType()"
+    "IntegratedServer.getAllLevels()",
+    "AbstractFurnaceMenu.getBurnProgress()",
+    "AbstractFurnaceMenu.getLitProgress()",
+    "AbstractFurnaceMenu.isLit()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fuel-peek-1.0.0.jar",
     "published": "2026-11-06"
   },
@@ -51,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

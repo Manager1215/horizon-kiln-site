@@ -15,12 +15,7 @@
     "net.minecraft.server.commands.RideCommand",
     "net.minecraft.world.entity.projectile.ProjectileUtil",
     "net.minecraft.world.phys.EntityHitResult",
-    "Minecraft.hitResult",
-    "ServerPlayer.connection",
-    "ServerGamePacketListenerImpl.send()",
     "Entity.dismountTo()",
-    "Entity.getBbHeight()",
-    "Entity.getBbWidth()",
     "Entity.getFirstPassenger()",
     "Entity.getVehicle()",
     "Entity.isCrouching()",
@@ -34,15 +29,14 @@
     "Player.isPassenger()",
     "Player.isVehicle()",
     "Player.startRiding()",
-    "Player.stopRiding()",
-    "HitResult.getType()"
+    "Player.stopRiding()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "PlayerLadder-fabric-0.8.1+26.3.jar",
     "published": "2026-10-06"
   },
@@ -73,7 +67,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 26,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; has network channels"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

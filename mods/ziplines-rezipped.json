@@ -21,13 +21,10 @@
     "net.minecraft.world.item.ItemUseAnimation",
     "Axis.YN",
     "Axis.ZP",
-    "Minecraft.execute()",
     "Options.damageTiltStrength()",
     "ModelPart.y",
     "ModelPart.z",
     "HumanoidArm.getOpposite()",
-    "LivingEntity.addDeltaMovement()",
-    "Player.addDeltaMovement()",
     "Player.fallDistance",
     "Player.getBoundingBox()",
     "Player.getCooldowns()",
@@ -50,7 +47,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "zipline-1.5.3+26.3-fabric.jar",
     "published": "2026-09-26"
   },
@@ -80,7 +77,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 34,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 31,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

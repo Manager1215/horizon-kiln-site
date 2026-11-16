@@ -9,22 +9,17 @@
   "author": "dennis.thegamer96",
   "description": "A Minecraft mod that automatically stores items in shulker boxes within your inventory when the main inventory becomes full.",
   "needs": [
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AfterKeyPress",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-    "net.minecraft.world.inventory.ContainerInput",
     "net.minecraft.world.level.block.ShulkerBoxBlock",
-    "KeyMapping.matches()",
     "NonNullList.iterator()",
     "ServerLevel.sendParticles()",
     "SoundEvents.SHULKER_BOX_CLOSE"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "auto_shulker_inventory-fabric-1.5.1+mc26.3.jar",
     "published": "2026-09-27"
   },
@@ -54,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

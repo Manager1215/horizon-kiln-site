@@ -10,14 +10,8 @@
   "description": "Create and manage worlds in-game, through commands. An improved Multiverse alternative for Fabric.",
   "needs": [
     "Mixin: 35 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.minecraft.SharedConstants",
     "net.minecraft.commands.arguments.CompoundTagArgument",
-    "net.minecraft.commands.arguments.IdentifierArgument",
-    "net.minecraft.core.component.DataComponentPatch.Builder",
     "net.minecraft.nbt.NbtAccounter",
-    "net.minecraft.nbt.NbtIo",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
     "net.minecraft.server.commands.ExecuteCommand",
     "net.minecraft.server.commands.TimeCommand",
     "net.minecraft.server.level.ChunkMap",
@@ -46,18 +40,24 @@
     "org.apache.commons.compress.archivers.tar.TarArchiveInputStream",
     "org.apache.commons.compress.compressors.gzip.GzipCompressorInputStream",
     "org.apache.commons.io.FilenameUtils",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getPosition()",
-    "CommandSourceStack.getRotation()",
-    "and 56 more"
+    "SharedConstants.getCurrentVersion()",
+    "SharedSuggestionProvider.suggestResource()",
+    "SharedSuggestionProvider.suggestResource()",
+    "ItemInput.createItemStack()",
+    "Registries.BIOME",
+    "Registries.DIMENSION_TYPE",
+    "Registries.FLAT_LEVEL_GENERATOR_PRESET",
+    "CompoundTag.entrySet()",
+    "NbtIo.readCompressed()",
+    "NbtIo.writeCompressed()",
+    "and 25 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "worldmanager-1.5.1+26.3.jar",
     "published": "2026-09-24"
   },
@@ -84,7 +84,11 @@
     "fabricloader",
     "java"
   ],
-  "lacks": 102,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
+  },
+  "lacks": 65,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

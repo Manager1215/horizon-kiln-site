@@ -23,12 +23,10 @@
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
     "net.minecraft.world.entity.monster.Creeper",
     "net.minecraft.world.entity.monster.Monster",
-    "net.minecraft.world.item.SpawnEggItem",
     "BiomeModificationContext.MobSpawnSettingsContext.removeSpawnsOfEntityType()",
     "BiomeModifications.addSpawn()",
     "BiomeSelectors.spawnsOneOf()",
     "RenderTypes.armorCutoutNoCull()",
-    "Holder.is()",
     "Registries.BIOME",
     "BiomeTags.IS_BEACH",
     "BiomeTags.IS_END",
@@ -48,7 +46,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "CamoCreepers-fabric-26.3-13.0.0.jar",
     "published": "2026-11-14"
   },
@@ -80,5 +78,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 33
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 31
 }

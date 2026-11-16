@@ -12,16 +12,14 @@
     "com.mojang.renderpearl.backend.opengl.GlStateManager",
     "com.mojang.renderpearl.frontend.FrontendGpuDevice",
     "net.minecraft.client.gui.components.debug.DebugEntrySystemSpecs",
-    "net.minecraft.util.debugchart.LocalSampleLogger",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger"
+    "net.minecraft.util.debugchart.LocalSampleLogger"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SpecSpoof-1.5.2.jar",
     "published": "2026-09-19"
   },
@@ -49,7 +47,11 @@
     "minecraft",
     "rose_bush"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

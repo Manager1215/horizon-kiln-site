@@ -10,7 +10,6 @@
   "description": "Adds new recipes to items that don't currently have one.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition",
@@ -19,28 +18,17 @@
     "net.minecraft.resources.RegistryOps.RegistryInfoLookup",
     "net.minecraft.server.packs.repository.PackRepository",
     "net.minecraft.world.level.block.SpawnerBlock",
-    "net.minecraft.world.level.storage.LevelResource",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "CommandSourceStack.getServer()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
-    "MinecraftServer.execute()",
     "MinecraftServer.getPackRepository()",
-    "MinecraftServer.getWorldPath()",
     "MinecraftServer.reloadResources()",
     "EnchantmentHelper.getItemEnchantmentLevel()",
-    "Level.addFreshEntity()",
-    "Blocks.BUDDING_AMETHYST",
-    "Blocks.SPAWNER"
+    "Level.addFreshEntity()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "recipesofthelost-5.2-fabric-26.3.jar",
     "published": "2026-10-21"
   },
@@ -68,7 +56,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

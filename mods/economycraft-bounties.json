@@ -9,54 +9,31 @@
   "author": "ReaZip",
   "description": "Bounties and PvP money-loss add-on for EconomyCraft.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.properties.PropertyMap",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "net.minecraft.commands.arguments.GameProfileArgument",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.SimpleMenuProvider",
-    "net.minecraft.world.inventory.AnvilMenu",
-    "net.minecraft.world.inventory.ContainerInput",
     "net.minecraft.world.inventory.ContainerLevelAccess",
     "net.minecraft.world.inventory.ResultContainer",
-    "net.minecraft.world.item.component.ItemLore",
     "net.minecraft.world.item.component.ResolvableProfile",
-    "net.minecraft.world.level.storage.LevelResource",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
     "DefaultedRegistry.iterator()",
     "Registry.iterator()",
-    "Registry.wrapAsHolder()",
-    "DataComponents.CUSTOM_NAME",
-    "DataComponents.LORE",
     "DataComponents.PROFILE",
-    "MutableComponent.withStyle()",
     "MinecraftServer.getFile()",
     "MinecraftServer.getTickCount()",
-    "MinecraftServer.getWorldPath()",
     "MinecraftServer.isDedicatedServer()",
-    "MinecraftServer.isSameThread()",
     "ServerPlayer.closeContainer()",
-    "ServerPlayer.connection",
-    "ServerPlayer.createCommandSourceStack()",
     "ServerPlayer.getGameProfile()",
-    "ServerPlayer.getRandom()",
-    "ServerGamePacketListenerImpl.send()",
-    "PlayerList.broadcastSystemMessage()",
     "SoundEvents.VILLAGER_NO",
-    "and 10 more"
+    "AbstractContainerMenu.clicked()",
+    "AnvilMenu.<init>()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "economycraft-bounties-fabric-1.0.0_26.3.jar",
     "published": "2026-09-17"
   },
@@ -84,5 +61,9 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 50
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 18
 }

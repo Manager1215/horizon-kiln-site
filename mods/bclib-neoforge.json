@@ -12,9 +12,6 @@
     "an access widener",
     "Mixin: 14 points inside the game's methods",
     "com.mojang.math.Quadrant",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
     "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
@@ -37,7 +34,6 @@
     "net.minecraft.client.data.models.model.ModelTemplate",
     "net.minecraft.client.data.models.model.ModelTemplates",
     "net.minecraft.client.gui.screens.GenericWaitingScreen",
-    "net.minecraft.client.gui.screens.inventory.AnvilScreen",
     "net.minecraft.client.gui.screens.inventory.ItemCombinerScreen",
     "net.minecraft.client.model.EntityModel",
     "net.minecraft.client.model.Model.Simple",
@@ -45,12 +41,16 @@
     "net.minecraft.client.model.object.boat.AbstractBoatModel",
     "net.minecraft.client.model.object.boat.BoatModel",
     "net.minecraft.client.model.object.boat.RaftModel",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.particle.ParticleEngine",
     "net.minecraft.client.renderer.SpriteMapper",
     "net.minecraft.client.renderer.block.dispatch.BlockStateModel.UnbakedRoot",
     "net.minecraft.client.renderer.block.dispatch.SingleVariant",
     "net.minecraft.client.renderer.block.dispatch.SingleVariant.Unbaked",
+    "net.minecraft.client.renderer.block.dispatch.Variant",
+    "net.minecraft.client.renderer.block.dispatch.VariantMutator",
+    "net.minecraft.client.renderer.block.dispatch.VariantMutator.VariantProperty",
+    "net.minecraft.client.renderer.block.dispatch.WeightedVariants",
+    "net.minecraft.client.renderer.block.dispatch.WeightedVariants.Unbaked",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bclib-26.3.3-fabric.jar",
     "published": "2026-10-24"
   },
@@ -92,7 +92,11 @@
     "wover",
     "wunderlib"
   ],
-  "lacks": 458,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 375,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

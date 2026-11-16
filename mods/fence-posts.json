@@ -10,7 +10,6 @@
   "description": "Standalone fence and wall posts with half-height slab variants",
   "needs": [
     "net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents.AllowLoad",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
@@ -18,12 +17,9 @@
     "net.minecraft.world.entity.decoration.LeashFenceKnotEntity",
     "net.minecraft.world.level.block.state.properties.SlabType",
     "net.minecraft.world.level.gameevent.GameEvent.Context",
-    "AttachmentRegistry.createPersistent()",
     "ServerEntityEvents.ALLOW_LOAD",
-    "ServerLifecycleEvents.SERVER_STARTED",
     "MinecraftServer.getAllLevels()",
     "ServerLevel.gameEvent()",
-    "ServerPlayer.sendSystemMessage()",
     "BlockTags.FENCES",
     "Entity.entityTags()",
     "EntityTypes.COPPER_GOLEM",
@@ -34,7 +30,6 @@
     "Leashable.LeashData.leashHolder",
     "Player.isSecondaryUseActive()",
     "ItemStack.consume()",
-    "Items.LEAD",
     "Block.updateFromNeighbourShapes()",
     "Block.updateShape()",
     "SoundType.BAMBOO_WOOD",
@@ -49,14 +44,19 @@
     "SoundType.POLISHED_TUFF",
     "SoundType.RESIN_BRICKS",
     "SoundType.SULFUR",
-    "and 25 more"
+    "SoundType.TUFF",
+    "SoundType.TUFF_BRICKS",
+    "BlockStateProperties.SLAB_TYPE",
+    "GameEvent.BLOCK_ATTACH",
+    "MapColor.COLOR_BLACK",
+    "and 18 more"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fence-posts-3.1.1.jar",
     "published": "2026-11-13"
   },
@@ -85,7 +85,11 @@
     "minecraft",
     "pandorical"
   ],
-  "lacks": 65,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 58,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

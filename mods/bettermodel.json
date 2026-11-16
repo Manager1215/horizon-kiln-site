@@ -10,7 +10,6 @@
   "description": "⚡ Custom 3D entity model on servers!",
   "needs": [
     "Mixin: 7 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.properties.Property",
     "com.mojang.authlib.properties.PropertyMap",
     "com.mojang.math.Transformation",
@@ -21,8 +20,6 @@
     "io.netty.channel.ChannelPipeline",
     "io.netty.channel.ChannelPromise",
     "io.netty.channel.EventLoop",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterEntityChange",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
@@ -32,8 +29,6 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Leave",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
     "net.fabricmc.fabric.mixin.networking.accessor.ChunkMapAccessor",
     "net.fabricmc.fabric.mixin.networking.accessor.EntityTrackerAccessor",
@@ -50,6 +45,11 @@
     "net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket",
     "net.minecraft.network.syncher.EntityDataAccessor",
     "net.minecraft.network.syncher.EntityDataSerializers",
+    "net.minecraft.network.syncher.SynchedEntityData.DataItem",
+    "net.minecraft.server.level.ServerLevel.EntityCallbacks",
+    "net.minecraft.server.network.ServerPlayerConnection",
+    "net.minecraft.util.Brightness",
+    "net.minecraft.util.InclusiveRange",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bettermodel-3.7.0-SNAPSHOT-544+26.3-fabric.jar",
     "published": "2026-11-13"
   },
@@ -95,7 +95,11 @@
     "minecraft",
     "polymer-resource-pack"
   ],
-  "lacks": 196,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 177,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

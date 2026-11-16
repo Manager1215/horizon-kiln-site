@@ -10,7 +10,6 @@
   "description": "Recovery Compasses no longer drop when you die!",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "MutableComponent.setStyle()",
     "Inventory.replaceWith()",
     "Player.<init>()"
   ],
@@ -19,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dont_drop_your_compass-1.0+26.1.2-fabric.jar",
     "published": "2026-11-07"
   },
@@ -46,7 +45,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

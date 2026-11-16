@@ -10,7 +10,6 @@
   "description": "Added many practical redstone components, very suitable for players who love redstone.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.math.Transformation",
     "net.fabricmc.fabric.api.entity.FakePlayer",
     "net.minecraft.client.model.object.chest.ChestModel",
@@ -22,12 +21,8 @@
     "net.minecraft.client.renderer.special.NoDataSpecialModelRenderer.Unbaked",
     "net.minecraft.client.renderer.special.SpecialModelRenderer.Unbaked",
     "net.minecraft.client.renderer.special.SpecialModelRenderers",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.EntitySelector",
-    "net.minecraft.world.flag.FeatureFlags",
-    "net.minecraft.world.inventory.ChestMenu",
     "net.minecraft.world.inventory.DataSlot",
-    "net.minecraft.world.inventory.MenuType.MenuSupplier",
     "net.minecraft.world.level.block.ChestBlock",
     "net.minecraft.world.level.block.DoubleBlockCombiner",
     "net.minecraft.world.level.block.DoubleBlockCombiner.Combiner",
@@ -50,14 +45,19 @@
     "PoseStack.mulPose()",
     "LongSet.clear()",
     "LongSet.isEmpty()",
-    "and 57 more"
+    "EntityModelSet.bakeLayer()",
+    "ModelPart.getExtentsForGui()",
+    "Sheets.CHEST_MAPPER",
+    "SubmitNodeCollector.submitModel()",
+    "BlockEntityRendererProvider.Context.bakeLayer()",
+    "and 52 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "redstone-expansion-1.0.3-26.3.jar",
     "published": "2026-10-15"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 113,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 93,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

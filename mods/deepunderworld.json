@@ -18,7 +18,6 @@
     "net.minecraft.references.BlockItemId",
     "net.minecraft.util.BlockUtil",
     "net.minecraft.util.BlockUtil.FoundRectangle",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.ai.village.poi.PoiManager",
     "net.minecraft.world.entity.ai.village.poi.PoiManager.Occupancy",
     "net.minecraft.world.entity.ai.village.poi.PoiRecord",
@@ -50,14 +49,15 @@
     "BlockPos.distSqr()",
     "BlockPos.mutable()",
     "BlockPos.spiralAround()",
-    "and 55 more"
+    "BlockPos.MutableBlockPos.move()",
+    "and 54 more"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "deepunderworld-1.7-mc26.3-fabric.jar",
     "published": "2026-10-20"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 121,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 113,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

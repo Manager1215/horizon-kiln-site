@@ -17,9 +17,7 @@
     "net.minecraft.client.renderer.entity.layers.ItemInHandLayer",
     "net.minecraft.client.renderer.entity.player.AvatarRenderer",
     "net.minecraft.core.particles.BlockParticleOption",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.tags.DamageTypeTags",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.ai.navigation.PathNavigation",
     "net.minecraft.world.entity.animal.feline.Cat",
     "net.minecraft.world.entity.animal.feline.Ocelot",
@@ -36,8 +34,6 @@
     "net.minecraft.world.entity.monster.zombie.Zombie",
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
     "net.minecraft.world.entity.projectile.arrow.ThrownTrident",
-    "net.minecraft.world.inventory.AnvilMenu",
-    "net.minecraft.world.inventory.CraftingMenu",
     "net.minecraft.world.inventory.DataSlot",
     "net.minecraft.world.inventory.ResultContainer",
     "net.minecraft.world.item.BowItem",
@@ -47,17 +43,21 @@
     "net.minecraft.world.item.component.ChargedProjectiles",
     "net.minecraft.world.level.block.PowderSnowBlock",
     "Object2IntMap.Entry.getKey()",
-    "FabricCreativeModeTabOutput.accept()",
     "BlockPos.offset()",
-    "HolderLookup.RegistryLookup.get()",
-    "and 56 more"
+    "NonNullList.iterator()",
+    "DataComponents.CHARGED_PROJECTILES",
+    "ParticleTypes.BLOCK",
+    "Registries.MOB_EFFECT",
+    "MinecraftServer.registryAccess()",
+    "ServerLevel.broadcastEntityEvent()",
+    "and 40 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "practical_enchantments-1.8.3.263-fabric-26.3.jar",
     "published": "2026-11-15"
   },
@@ -88,7 +88,11 @@
     "merlinlib",
     "minecraft"
   ],
-  "lacks": 130,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 80,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

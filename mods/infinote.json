@@ -10,24 +10,12 @@
   "description": "Server-side configurable Noteblock expansion mod",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.commands.arguments.IdentifierArgument",
-    "net.minecraft.commands.arguments.blocks.BlockInput",
-    "net.minecraft.commands.arguments.blocks.BlockStateArgument",
     "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
-    "net.minecraft.commands.arguments.coordinates.Coordinates",
     "net.minecraft.commands.synchronization.SuggestionProviders",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.server.ServerTickRateManager",
     "net.minecraft.world.level.block.NoteBlock",
     "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
-    "CommandSourceStack.getServer()",
     "BlockPos.MutableBlockPos.set()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
     "MinecraftServer.tickRateManager()",
     "ServerLevel.sendParticles()",
     "Level.blockEvent()",
@@ -38,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "infinote-v1.6.0-mc26.3.jar",
     "published": "2026-09-20"
   },
@@ -66,7 +54,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

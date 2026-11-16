@@ -10,21 +10,14 @@
   "description": "A collection of camera related client side gameplay enhancements (freecam, freelook)",
   "needs": [
     "Mixin: 26 points inside the game's methods",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.GameNarrator",
     "net.minecraft.client.OptionInstance.CaptionBasedToString",
     "net.minecraft.client.OptionInstance.ClampingLazyMaxIntRange",
-    "net.minecraft.client.OptionInstance.IntRange",
     "net.minecraft.client.OptionInstance.SliderableValueSet",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
     "net.minecraft.client.gui.components.ChatComponent.ChatMethod",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
     "net.minecraft.client.gui.components.ResettableOptionWidget",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.debug.DebugEntryBiome",
     "net.minecraft.client.gui.components.debug.DebugEntryHeightmap",
     "net.minecraft.client.gui.components.debug.DebugEntryLight",
@@ -50,14 +43,21 @@
     "net.minecraft.client.renderer.state.level.PlayerRenderState.WaterOverlay",
     "net.minecraft.world.entity.player.Input",
     "net.minecraft.world.level.material.FogType",
-    "and 61 more"
+    "org.lwjgl.sdl.SDLScancode",
+    "Camera.blockPosition()",
+    "Camera.forwardVector()",
+    "Camera.getCullFrustum()",
+    "Camera.getFluidInCamera()",
+    "Camera.xRot()",
+    "Camera.yRot()",
+    "and 45 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "CameraEnhancements-0.2.18.jar",
     "published": "2026-09-18"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 117,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 85,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

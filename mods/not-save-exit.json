@@ -9,21 +9,14 @@
   "author": "Unkoburiburi",
   "description": "you can quit the game without save",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.world.level.storage.LevelResource",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "Button.getMessage()",
-    "Checkbox.selected()",
-    "MinecraftServer.getWorldPath()",
     "MinecraftServer.isDedicatedServer()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "NoSaveExit-26.jar",
     "published": "2026-09-15"
   },
@@ -51,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

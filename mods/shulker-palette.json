@@ -17,11 +17,9 @@
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
     "net.minecraft.client.gui.components.tabs.TabNavigationBar",
     "net.minecraft.client.gui.screens.inventory.ShulkerBoxScreen",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.rendertype.RenderSetup",
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
     "net.minecraft.client.renderer.special.ShulkerBoxSpecialRenderer",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.commands.arguments.item.ItemParser",
     "net.minecraft.data.BlockFamilies",
     "net.minecraft.data.BlockFamily",
@@ -29,7 +27,6 @@
     "net.minecraft.server.level.ServerPlayerGameMode",
     "net.minecraft.util.ByIdMap",
     "net.minecraft.util.ByIdMap.OutOfBoundsStrategy",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.inventory.DataSlot",
     "net.minecraft.world.inventory.ShulkerBoxMenu",
     "net.minecraft.world.inventory.ShulkerBoxSlot",
@@ -38,8 +35,6 @@
     "net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity",
     "net.minecraft.world.level.block.entity.SignBlockEntity",
     "net.minecraft.world.level.block.entity.SignText",
-    "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
-    "net.minecraft.world.level.storage.LevelResource",
     "net.minecraft.world.level.storage.loot.functions.CopyComponentsFunction",
     "net.minecraft.world.level.storage.loot.functions.CopyComponentsFunction.Builder",
     "PoseStack.last()",
@@ -48,16 +43,21 @@
     "VertexConsumer.putBakedQuad()",
     "RenderPipeline.builder()",
     "LevelRenderEvents.COLLECT_SUBMITS",
-    "KeyMapping.getTranslatedKeyMessage()",
-    "KeyMapping.matches()",
-    "and 46 more"
+    "MultiPlayerGameMode.handleInventoryButtonClick()",
+    "RenderPipelines.DEBUG_FILLED_SNIPPET",
+    "ItemStackRenderState.getData()",
+    "ItemStackRenderState.setAnimated()",
+    "ItemStackRenderState.setData()",
+    "ItemStackRenderState.LayerRenderState.setLocalTransform()",
+    "ItemStackRenderState.LayerRenderState.setupSpecialModel()",
+    "and 24 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "shulker-palette-2.2.1+26.3.jar",
     "published": "2026-10-28"
   },
@@ -89,7 +89,11 @@
     "minecraft",
     "slotkit"
   ],
-  "lacks": 86,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 64,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

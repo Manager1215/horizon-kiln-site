@@ -34,8 +34,6 @@
     "net.minecraft.world.level.storage.loot.functions.ApplyExplosionDecay",
     "net.minecraft.world.level.storage.loot.predicates.MatchBlock",
     "ResourceManagerHelper.registerBuiltinResourcePack()",
-    "Minecraft.execute()",
-    "Minecraft.setScreenAndShow()",
     "BlockModelGenerators.blockStateOutput",
     "BlockModelGenerators.createAxisAlignedPillarBlock()",
     "BlockModelGenerators.createButton()",
@@ -49,6 +47,8 @@
     "BlockModelGenerators.createWall()",
     "BlockModelGenerators.family()",
     "BlockModelGenerators.itemModelOutput",
+    "BlockModelGenerators.modelOutput",
+    "BlockModelGenerators.plainVariant()",
     "and 44 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -56,7 +56,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "cinchsmissingblocks-[Fabric-26.3]-5.0.1.jar",
     "published": "2026-11-08"
   },
@@ -69,7 +69,11 @@
   "entrypoints": {},
   "mixins": true,
   "depends": [],
-  "lacks": 210,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 128,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

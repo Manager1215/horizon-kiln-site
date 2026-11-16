@@ -9,20 +9,15 @@
   "author": "Deftu",
   "description": "Adds (sticky) notes to the game!",
   "needs": [
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.world.level.storage.WorldData",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
-    "ServerData.ip"
+    "IntegratedServer.getWorldData()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "noteable-3.0.0+26.3.jar",
     "published": "2026-11-08"
   },
@@ -50,7 +45,11 @@
     "minecraft",
     "oneconfigv1"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

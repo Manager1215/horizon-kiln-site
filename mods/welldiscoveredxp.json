@@ -41,15 +41,15 @@
     "net.minecraft.world.level.material.PushReaction",
     "net.minecraft.world.level.storage.loot.entries.NestedLootTable",
     "BiomeModifications.addFeature()",
-    "FluidRenderingRegistry.register()",
     "FluidVariantRendering.register()",
-    "GuiGraphicsExtractor.blit()",
-    "LocalPlayer.isRemoved()",
     "SoundManager.isActive()",
     "BlockPos.containing()",
     "BlockPos.mutable()",
     "BlockPos.MutableBlockPos.move()",
-    "HolderLookup.RegistryLookup.getOrThrow()",
+    "Vec3i.distManhattan()",
+    "DataComponents.CONSUMABLE",
+    "BuiltInRegistries.CONSUME_EFFECT_TYPE",
+    "BuiltInRegistries.FEATURE_TYPE",
     "and 50 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "welldiscoveredxp-1.0.0-26.3.jar",
     "published": "2026-11-03"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 124,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 109,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

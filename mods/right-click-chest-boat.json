@@ -9,7 +9,6 @@
   "author": "Killar",
   "description": "A Really simple mod which enable the player to Shift Right Click on a boat with a chest on the hand to make a Chest Boat.",
   "needs": [
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.world.entity.PostSpawnProcessor",
     "net.minecraft.world.entity.vehicle.boat.AbstractBoat",
     "net.minecraft.world.entity.vehicle.boat.AbstractChestBoat",
@@ -17,7 +16,6 @@
     "EntityType.createDefaultStackConfig()",
     "EntityType.getBaseClass()",
     "VehicleEntity.interact()",
-    "Items.CHEST",
     "Level.addFreshEntity()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -25,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "right_click_chest_boat-fabric-26.3-1.0.7.jar",
     "published": "2026-09-25"
   },
@@ -53,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

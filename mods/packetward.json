@@ -23,8 +23,6 @@
     "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking",
     "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginSynchronizer",
     "net.minecraft.server.network.ServerConnectionListener",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "org.apache.logging.log4j.core.Appender",
     "org.apache.logging.log4j.core.Filter",
     "org.apache.logging.log4j.core.Filter.Result",
@@ -48,7 +46,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "packetward-fabric-26.3-1.0.0.jar",
     "published": "2026-09-16"
   },
@@ -69,7 +67,11 @@
     "minecraft",
     "polylib"
   ],
-  "lacks": 32,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 30,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

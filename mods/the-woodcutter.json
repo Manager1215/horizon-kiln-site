@@ -10,22 +10,12 @@
   "description": "Adds a Woodcutter block to craft stairs, slabs, fences, doors and other wooden items easily, just like a stonecutter!",
   "needs": [
     "net.minecraft.client.gui.screens.inventory.StonecutterScreen",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.SimpleMenuProvider",
-    "net.minecraft.world.flag.FeatureFlags",
     "net.minecraft.world.inventory.ContainerLevelAccess",
-    "net.minecraft.world.inventory.MenuType.MenuSupplier",
     "net.minecraft.world.inventory.StonecutterMenu",
     "net.minecraft.world.item.crafting.RecipeBookCategories",
     "net.minecraft.world.item.crafting.SingleItemRecipe.Factory",
-    "net.minecraft.world.item.crafting.display.SlotDisplay.ItemSlotDisplay",
-    "net.minecraft.world.item.crafting.display.StonecutterRecipeDisplay",
     "Registries.MENU",
-    "MenuType.<init>()",
-    "Items.BAMBOO_BLOCK",
-    "Items.BAMBOO_MOSAIC",
-    "Items.STRIPPED_BAMBOO_BLOCK",
-    "Ingredient.display()",
     "HorizontalDirectionalBlock.FACING",
     "BlockState.getMenuProvider()"
   ],
@@ -34,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "the_woodcutter-1.5+mc26.3+.jar",
     "published": "2026-11-07"
   },
@@ -66,7 +56,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

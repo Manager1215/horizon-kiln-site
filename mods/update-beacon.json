@@ -9,37 +9,20 @@
   "author": "FinnDog_123",
   "description": "Automatically checks for and updates your servers mods - highly configurable",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.loader.api.metadata.ModOrigin",
     "net.fabricmc.loader.api.metadata.ModOrigin.Kind",
-    "net.minecraft.SharedConstants",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.server.permissions.Permissions",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "ModContainer.getOrigin()",
-    "CommandSourceStack.getServer()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withUnderlined()",
-    "MinecraftServer.execute()",
+    "SharedConstants.getCurrentVersion()",
     "MinecraftServer.halt()",
     "ServerPlayer.getGameProfile()",
-    "ServerPlayer.permissions()",
-    "PermissionLevel.byId()",
-    "NameAndId.<init>()",
-    "PlayerList.broadcastSystemMessage()",
-    "PlayerList.isOp()"
+    "NameAndId.<init>()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "UpdateBeacon-fabric-26.3-1.2.0.jar",
     "published": "2026-09-18"
   },
@@ -67,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -15,15 +15,9 @@
     "net.minecraft.world.item.BowItem",
     "net.minecraft.world.item.CrossbowItem",
     "net.minecraft.world.phys.EntityHitResult",
-    "Minecraft.hitResult",
     "GuiGraphicsExtractor.fill()",
-    "Screen.charTyped()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
     "LocalPlayer.entityInteractionRange()",
     "LocalPlayer.getAttackStrengthScale()",
-    "LocalPlayer.isFallFlying()",
     "RenderPipelines.CROSSHAIR",
     "RenderPipelines.GUI_INVERT",
     "Entity.getBoundingBox()",
@@ -32,19 +26,15 @@
     "Player.getUseItem()",
     "Player.isAlive()",
     "Player.isUsingItem()",
-    "Items.BOW",
-    "Items.CROSSBOW",
-    "Items.TRIDENT",
     "AABB.expandTowards()",
-    "AABB.inflate()",
-    "HitResult.getType()"
+    "AABB.inflate()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "simple-crosshair-editor-4.2.1-mc26.3.jar",
     "published": "2026-10-24"
   },
@@ -74,7 +64,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

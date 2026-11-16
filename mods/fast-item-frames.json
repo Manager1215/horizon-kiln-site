@@ -11,13 +11,11 @@
   "needs": [
     "an access widener",
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.entity.ItemFrameRenderer",
     "net.minecraft.client.renderer.entity.state.ItemFrameRenderState",
     "net.minecraft.server.TickTask",
     "net.minecraft.world.entity.EntityAttachment",
     "net.minecraft.world.entity.EntityAttachments",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.EntityTypeIds",
     "net.minecraft.world.entity.decoration.GlowItemFrame",
     "net.minecraft.world.entity.decoration.HangingEntity",
@@ -33,11 +31,10 @@
     "net.minecraft.world.level.material.PushReaction",
     "net.minecraft.world.phys.shapes.EntityCollisionContext",
     "IntList.clear()",
-    "Minecraft.gameMode",
     "Minecraft.getEntityRenderDispatcher()",
     "Minecraft.getMapRenderer()",
-    "Minecraft.hitResult",
     "BlockTintSource.colorInWorld()",
+    "MultiPlayerGameMode.destroyDelay",
     "MapRenderer.extractRenderState()",
     "BlockModelRenderState.tintLayers()",
     "BlockEntityRenderer.extractRenderState()",
@@ -46,19 +43,22 @@
     "EntityRenderDispatcher.renderers",
     "EntityRenderer.createRenderState()",
     "ItemStackRenderState.isEmpty()",
-    "DataComponents.CUSTOM_NAME",
     "DataComponents.DYED_COLOR",
     "DataComponents.MAP_ID",
     "SynchedEntityData.set()",
     "MinecraftServer.getTickCount()",
-    "and 41 more"
+    "MinecraftServer.schedule()",
+    "ServerLevel.isUnobstructed()",
+    "ServerLevel.levelEvent()",
+    "SoundEvents.GLOW_ITEM_FRAME_ADD_ITEM",
+    "and 39 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fastitemframes-v26.3.0-mc26.3.x+fabric.jar",
     "published": "2026-09-21"
   },
@@ -88,7 +88,11 @@
     "minecraft",
     "puzzleslib"
   ],
-  "lacks": 94,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 83,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,9 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
     "net.fabricmc.fabric.api.entity.FakePlayer",
@@ -51,6 +48,9 @@
     "net.minecraft.client.model.HumanoidModel.ArmPose",
     "net.minecraft.client.model.geom.ModelLayers",
     "net.minecraft.client.model.geom.PartPose",
+    "net.minecraft.client.model.geom.builders.CubeDeformation",
+    "net.minecraft.client.model.geom.builders.CubeListBuilder",
+    "net.minecraft.client.model.geom.builders.MeshDefinition",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "world_of_silence-1.6.0-fabric-26.3.jar",
     "published": "2026-11-11"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 478,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 381,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

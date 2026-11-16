@@ -9,11 +9,7 @@
   "author": "mobiusmeansbusiness",
   "description": "A performance mod that massively boosts fps when dealing with a large amount of entities in the same place",
   "needs": [
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
     "net.minecraft.client.gui.components.OptionsList",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
     "net.minecraft.client.gui.layouts.LayoutSettings",
     "net.minecraft.client.gui.layouts.LinearLayout",
@@ -21,8 +17,6 @@
     "net.minecraft.client.gui.screens.options.VideoSettingsScreen",
     "Minecraft.crosshairPickEntity",
     "Options.getBackgroundOpacity()",
-    "EditBox.moveCursorToEnd()",
-    "EditBox.setHint()",
     "ClientLevel.getEntitiesOfClass()",
     "LocalPlayer.getBoundingBox()",
     "EntityRenderState.boundingBoxHeight",
@@ -32,9 +26,7 @@
     "EntityRenderState.nameTagAttachment",
     "CameraRenderState.orientation",
     "DefaultedRegistry.iterator()",
-    "MutableComponent.withStyle()",
     "ARGB.color()",
-    "Entity.isRemoved()",
     "EntityTypes.PLAYER",
     "AABB.inflate()"
   ],
@@ -43,7 +35,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Entity Render Stacking 1.2 - 26.3.jar",
     "published": "2026-09-15"
   },
@@ -72,7 +64,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

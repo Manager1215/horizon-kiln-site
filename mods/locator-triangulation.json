@@ -9,22 +9,12 @@
   "author": "EgorKhabarov",
   "description": "A client-side Fabric mod that allows determining players' coordinates using data from the locator and triangulation",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.client.waypoints.ClientWaypointManager",
-    "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.world.waypoints.Waypoint.Icon",
-    "InputConstants.isKeyDown()",
     "ClientPacketListener.getWaypointManager()",
     "PlayerInfo.getProfile()",
     "AbstractClientPlayer.getGameProfile()",
     "GameRenderer.mainCamera()",
-    "MutableComponent.setStyle()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "Style.withUnderlined()",
     "ARGB.setBrightness()",
     "TrackedWaypoint.distanceSquared()",
     "TrackedWaypoint.icon()",
@@ -36,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "LocatorTriangulation-1.5.0+mc26.3-fabric.jar",
     "published": "2026-09-15"
   },
@@ -64,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

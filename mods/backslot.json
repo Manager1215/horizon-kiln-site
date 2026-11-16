@@ -10,18 +10,12 @@
   "description": "Keep your weapon always ready",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.ItemPickerMenu",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.gui.screens.recipebook.RecipeUpdateListener",
     "net.minecraft.client.model.player.PlayerModel",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.layers.RenderLayer",
     "net.minecraft.client.renderer.entity.player.AvatarRenderer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.item.FishingRodItem",
     "net.minecraft.world.item.FlintAndSteelItem",
     "net.minecraft.world.item.FoodOnAStickItem",
     "net.minecraft.world.item.ProjectileWeaponItem",
@@ -30,34 +24,33 @@
     "net.minecraft.world.item.TridentItem",
     "net.minecraft.world.level.block.LanternBlock",
     "Axis.ZP",
-    "KeyMapping.same()",
-    "Minecraft.execute()",
     "GuiGraphicsExtractor.item()",
     "ModelPart.translateAndRotate()",
     "BlockModelRenderState.clear()",
     "ItemModelResolver.updateForLiving()",
     "ItemStackRenderState.clear()",
     "ItemStackRenderState.isEmpty()",
-    "MinecraftServer.execute()",
     "ServerLevel.getGameRules()",
     "ServerLevel.playSeededSound()",
-    "ServerPlayer.drop()",
-    "ServerPlayer.getRandom()",
     "ServerPlayer.isAlive()",
     "SoundEvents.ARMOR_EQUIP_GENERIC",
-    "RandomSource.nextLong()",
     "HumanoidArm.getOpposite()",
     "Inventory.getFreeSlot()",
     "Player.<init>()",
-    "Player.getMainArm()",
-    "and 7 more"
+    "AbstractContainerMenu.findSlot()",
+    "AbstractContainerMenu.setRemoteSlot()",
+    "ItemStack.getPopTime()",
+    "EnchantmentEffectComponents.PREVENT_ARMOR_CHANGE",
+    "GameRules.KEEP_INVENTORY",
+    "GameRules.get()",
+    "ValueInput.TypedInputList.iterator()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "backslot-fabric-1.4.0+26.3.jar",
     "published": "2026-11-14"
   },
@@ -88,5 +81,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 47
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 34
 }

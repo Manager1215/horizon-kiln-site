@@ -10,22 +10,16 @@
   "description": "removes every* useless button\nminecraft has",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.gui.layouts.LinearLayout",
     "net.minecraft.client.gui.screens.inventory.BeaconScreen",
-    "net.minecraft.client.gui.screens.options.OptionsScreen",
-    "Minecraft.setScreenAndShow()",
-    "CommonComponents.GUI_DONE"
+    "net.minecraft.client.gui.screens.options.OptionsScreen"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4), Mixin (0.5)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "uselessButtonsBeGone(ubbg)-v0.0.12_mc26.3.jar",
     "published": "2026-09-22"
   },
@@ -43,7 +37,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

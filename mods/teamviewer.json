@@ -9,7 +9,6 @@
   "author": "kazut0",
   "description": "Hoplite compatible TeamViewer!",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
@@ -20,8 +19,6 @@
     "RenderPipeline.builder()",
     "LevelRenderEvents.COLLECT_SUBMITS",
     "Camera.rotation()",
-    "Minecraft.execute()",
-    "Minecraft.setScreenAndShow()",
     "Options.getBackgroundOpacity()",
     "LocalPlayer.getGameProfile()",
     "LocalPlayer.getViewVector()",
@@ -29,7 +26,6 @@
     "RenderPipelines.DEBUG_FILLED_SNIPPET",
     "RenderPipelines.register()",
     "RenderType.create()",
-    "Player.getDisplayName()",
     "Player.xOld",
     "Player.yOld",
     "Player.zOld"
@@ -39,7 +35,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Teamviewer-2.0-release+26.3.jar",
     "published": "2026-10-03"
   },
@@ -69,7 +65,11 @@
     "modmenu",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

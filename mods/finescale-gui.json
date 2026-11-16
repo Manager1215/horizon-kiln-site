@@ -11,28 +11,17 @@
   "needs": [
     "Mixin: 1 point inside the game's methods",
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
     "net.minecraft.client.gui.screens.options.VideoSettingsScreen",
-    "InputConstants.isKeyDown()",
     "Minecraft.resizeGui()",
-    "Gui.overlay()",
-    "AbstractSliderButton.onRelease()",
-    "Button.Builder.tooltip()",
-    "EditBox.setHint()",
-    "EditBox.setTextColor()",
-    "EditBox.setTooltip()",
-    "ScreenRectangle.bottom()",
-    "ScreenRectangle.left()",
-    "ScreenRectangle.right()",
-    "ScreenRectangle.top()"
+    "Gui.overlay()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "finescale-fabric-26.3-2.0.0.jar",
     "published": "2026-11-06"
   },
@@ -61,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

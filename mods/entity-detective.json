@@ -9,10 +9,6 @@
   "author": "netcrafts",
   "description": "A server-side Fabric entity profiler that gives players commands to find, count, profile and locate entities across all dimensions",
   "needs": [
-    "net.minecraft.commands.arguments.IdentifierArgument",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.server.level.ChunkHolder",
     "net.minecraft.server.level.ChunkMap",
     "net.minecraft.server.level.DistanceManager",
@@ -22,13 +18,6 @@
     "net.minecraft.world.level.TicketStorage",
     "net.minecraft.world.level.chunk.LevelChunk.BoundTickingBlockEntity",
     "Long2ObjectMap.Entry.getValue()",
-    "CommandSourceStack.getEntity()",
-    "CommandSourceStack.getPosition()",
-    "CommandSourceStack.getServer()",
-    "CommandSourceStack.getTextName()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
     "MinecraftServer.getAllLevels()",
     "MinecraftServer.getTickCount()",
     "MinecraftServer.isSingleplayer()",
@@ -38,7 +27,6 @@
     "ServerLevel.getEntities()",
     "ServerLevel.getNearestPlayer()",
     "ServerLevel.shouldTickBlocksAt()",
-    "ServerPlayer.nameAndId()",
     "TicketType.ENDER_PEARL",
     "TicketType.PORTAL",
     "Entity.getCustomName()",
@@ -49,14 +37,16 @@
     "Mob.requiresCustomPersistence()",
     "MobCategory.getMaxInstancesPerChunk()",
     "ItemEntity.getItem()",
-    "and 3 more"
+    "LevelChunk.getBlockEntitiesPos()",
+    "LevelChunk.getBlockEntity()",
+    "EntityTypeTest.forClass()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "entity-detective-26.3+v2.8.2.jar",
     "published": "2026-11-03"
   },
@@ -85,7 +75,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 43,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 31,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

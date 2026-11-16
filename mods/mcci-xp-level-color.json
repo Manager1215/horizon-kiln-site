@@ -9,16 +9,14 @@
   "author": "TerexG",
   "description": "A Fabric mod which changes the color of the XP level text when on the MCC Island server.",
   "needs": [
-    "net.minecraft.client.gui.contextualbar.ContextualBar",
-    "Minecraft.getCurrentServer()",
-    "ServerData.ip"
+    "net.minecraft.client.gui.contextualbar.ContextualBar"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mcci-xp-level-color-1.0.1.jar",
     "published": "2026-11-05"
   },
@@ -48,7 +46,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite into the game's classes"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

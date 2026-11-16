@@ -12,18 +12,13 @@
     "Mixin: 1 point inside the game's methods",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityCombatEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityCombatEvents.AfterKilledOtherEntity",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.world.level.NaturalSpawner",
     "net.minecraft.world.level.StructureManager",
     "BlockPos.distToCenterSqr()",
     "BlockPos.distToCenterSqr()",
-    "Registry.get()",
-    "RegistryAccess.lookupOrThrow()",
     "Vec3i.toShortString()",
     "BuiltInRegistries.GAME_RULE",
     "Registries.STRUCTURE",
-    "Component.translatableWithFallback()",
-    "Component.translatableWithFallback()",
     "ServerLevel.findNearestMapStructure()",
     "ServerLevel.getGameRules()",
     "ServerLevel.getPlayers()",
@@ -31,7 +26,6 @@
     "WeightedList.unwrap()",
     "Entity.is()",
     "EntityType.CODEC",
-    "FeatureFlagSet.of()",
     "GameRuleCategory.SPAWNING",
     "GameRuleTypeVisitor.visitInteger()",
     "GameRules.get()",
@@ -42,7 +36,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "depillage-fabric-1.0.2+26.1.2.jar",
     "published": "2026-09-24"
   },
@@ -70,7 +64,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 26,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

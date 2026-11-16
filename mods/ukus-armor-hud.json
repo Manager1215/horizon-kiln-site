@@ -16,15 +16,8 @@
     "net.minecraft.util.profiling.Profiler",
     "net.minecraft.util.profiling.ProfilerFiller",
     "Options.attackIndicator()",
-    "GuiGraphicsExtractor.blitSprite()",
-    "Rect2i.getHeight()",
-    "Rect2i.getX()",
-    "Rect2i.getY()",
-    "Rect2i.setHeight()",
-    "Rect2i.setY()",
     "ARGB.black()",
     "Player.getAttackStrengthScale()",
-    "Player.getMainArm()",
     "Player.makeSound()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -32,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ukus-armor-hud-fabric-0.14.0+mc26.3.jar",
     "published": "2026-10-03"
   },
@@ -61,7 +54,11 @@
     "minecraft",
     "ukulib"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

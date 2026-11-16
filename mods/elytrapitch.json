@@ -10,12 +10,9 @@
   "description": "A customizable elytra HUD to maintain optimal pitch, monitor flight stats, and track durability.",
   "needs": [
     "Camera.isDetached()",
-    "LocalPlayer.isFallFlying()",
     "LocalPlayer.setXRot()",
     "GameRenderer.mainCamera()",
-    "MutableComponent.setStyle()",
     "Player.getMotionDirection()",
-    "Player.isFallFlying()",
     "Player.setXRot()",
     "Level.getSeaLevel()"
   ],
@@ -24,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "elytrapitch-1.4.6.jar",
     "published": "2026-09-17"
   },
@@ -54,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

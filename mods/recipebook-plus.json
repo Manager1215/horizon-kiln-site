@@ -10,18 +10,12 @@
   "description": "Adds instant crafting, ungrouped recipe variants, and mouse-wheel page scrolling to the Recipe Book.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseScroll",
-    "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
     "net.minecraft.client.gui.screens.recipebook.OverlayRecipeComponent",
-    "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
     "net.minecraft.client.gui.screens.recipebook.RecipeBookPage",
     "net.minecraft.client.gui.screens.recipebook.RecipeButton",
     "net.minecraft.client.gui.screens.recipebook.RecipeCollection",
     "net.minecraft.network.HashedStack",
     "net.minecraft.network.protocol.game.ServerboundContainerClickPacket",
-    "net.minecraft.world.inventory.ContainerInput",
-    "MouseButtonEvent.hasShiftDown()",
     "ClientPacketListener.send()",
     "RecipeBookMenu.getStateId()"
   ],
@@ -30,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "recipe-book-plus-1.2.0.jar",
     "published": "2026-09-15"
   },
@@ -60,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

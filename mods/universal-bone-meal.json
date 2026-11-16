@@ -41,24 +41,23 @@
     "ResourceKey.codec()",
     "ServerLevel.getMaxY()",
     "ServerLevel.getMinY()",
-    "ServerLevel.isEmptyBlock()",
     "ParticleUtils.spawnParticleInBlock()",
     "ParticleUtils.spawnParticles()",
-    "StringRepresentable.EnumCodec.fieldOf()",
-    "StringRepresentable.EnumCodec.optionalFieldOf()",
     "Util.getRandom()",
     "ItemStack.hurtAndBreak()",
     "Block.dropFromBlockInteractLootTable()",
     "BlockState.isCollisionShapeFullBlock()",
     "BlockState.propagatesSkylightDown()",
-    "and 3 more"
+    "BlockState.updateNeighbourShapes()",
+    "PlacedFeature.place()",
+    "LootTable.KEY_CODEC"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "universalbonemeal-v26.3.1-mc26.3.x+fabric.jar",
     "published": "2026-09-25"
   },
@@ -89,7 +88,11 @@
     "multiloaderdataextensions",
     "puzzleslib"
   ],
-  "lacks": 43,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels; generates in the world"
+  },
+  "lacks": 40,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

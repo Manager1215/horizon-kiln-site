@@ -9,30 +9,15 @@
   "author": "Tenty",
   "description": "A new set custom of potions and arrows designed around Flames and Burning",
   "needs": [
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
     "net.fabricmc.fabric.api.registry.FlammableBlockRegistry.Entry",
     "net.minecraft.world.entity.AreaEffectCloud",
     "net.minecraft.world.entity.projectile.arrow.Arrow",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.AbstractThrownPotion",
-    "net.minecraft.world.item.alchemy.Potion",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "AttachmentRegistry.create()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
-    "DataComponents.POTION_CONTENTS",
-    "BuiltInRegistries.POTION",
     "BuiltInRegistries.TRIGGER_TYPES",
     "DamageSources.inFire()",
     "LivingEntity.damageSources()",
-    "LivingEntity.getAttachedOrCreate()",
     "LivingEntity.isInWaterOrRain()",
-    "LivingEntity.setAttached()",
-    "Items.LINGERING_POTION",
-    "Items.SPLASH_POTION",
-    "Items.TIPPED_ARROW",
     "Level.getEntitiesOfClass()",
-    "Blocks.FIRE",
     "BlockState.getCollisionShape()",
     "LootItemCondition.CODEC",
     "VoxelShape.isEmpty()"
@@ -42,7 +27,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "flame_potions-1.1.0+mc26.3.jar",
     "published": "2026-09-28"
   },
@@ -74,7 +59,11 @@
     "modmenu",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

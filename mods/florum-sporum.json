@@ -14,7 +14,6 @@
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.DoubleRuleBuilder",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.IntegerRuleBuilder",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.particle.Particle",
     "net.minecraft.client.particle.SuspendedParticle",
     "net.minecraft.client.particle.SuspendedParticle.SporeBlossomAirProvider",
@@ -26,7 +25,6 @@
     "ServerLevel.hasNeighborSignal()",
     "Mth.nextDouble()",
     "Mth.randomBetween()",
-    "Items.SPORE_BLOSSOM",
     "Level.addAlwaysVisibleParticle()",
     "Level.clip()",
     "BlockBehaviour.Properties.mapColor()",
@@ -51,7 +49,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "florum-sporum-4.0.1+26.3.jar",
     "published": "2026-10-06"
   },
@@ -80,7 +78,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 35,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 33,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

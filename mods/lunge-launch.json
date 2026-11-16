@@ -11,23 +11,11 @@
   "needs": [
     "net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket",
     "net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket.Action",
-    "Options.keyAttack",
     "ClientPacketListener.send()",
     "LocalPlayer.isCrouching()",
-    "LocalPlayer.isFallFlying()",
     "LocalPlayer.registryAccess()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "Entity.<init>()",
     "LivingEntity.getFallFlyingTicks()",
-    "LivingEntity.isFallFlying()",
-    "Items.COPPER_SPEAR",
-    "Items.DIAMOND_SPEAR",
-    "Items.GOLDEN_SPEAR",
-    "Items.IRON_SPEAR",
-    "Items.NETHERITE_SPEAR",
-    "Items.STONE_SPEAR",
-    "Items.WOODEN_SPEAR",
     "EnchantmentHelper.getItemEnchantmentLevel()",
     "Enchantments.LUNGE"
   ],
@@ -36,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "lunge-launch-2.2.0.jar",
     "published": "2026-09-15"
   },
@@ -65,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

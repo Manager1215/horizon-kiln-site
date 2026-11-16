@@ -11,31 +11,19 @@
   "needs": [
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
-    "net.minecraft.network.chat.ComponentSerialization",
-    "net.minecraft.network.chat.PlayerChatMessage",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.network.protocol.game.ServerboundChatCommandPacket",
     "net.minecraft.network.protocol.game.ServerboundChatCommandSignedPacket",
     "net.minecraft.server.PlayerAdvancements",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "AdvancementHolder.value()",
-    "CommandSourceStack.getEntity()",
-    "CommandSourceStack.sendSystemMessage()",
     "ChatType.CHAT",
-    "Component.getContents()",
+    "PlayerChatMessage.decoratedContent()",
+    "PlayerChatMessage.signedContent()",
     "MinecraftServer.getServerVersion()",
-    "ServerPlayer.connection",
     "ServerPlayer.getIpAddress()",
     "ServerPlayer.getSpeed()",
     "ServerPlayer.hasDisconnected()",
-    "ServerPlayer.permissions()",
-    "ServerPlayer.sendSystemMessage()",
-    "ServerGamePacketListenerImpl.send()",
     "PlayerList.getPlayer()",
     "DamageSource.getLocalizedDeathMessage()"
   ],
@@ -44,7 +32,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "QueQiao-fabric+26.3-0.5.3.jar",
     "published": "2026-10-14"
   },
@@ -72,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 29,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

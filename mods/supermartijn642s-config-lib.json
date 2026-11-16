@@ -12,8 +12,6 @@
     "an access widener",
     "net.fabricmc.fabric.api.client.networking.v1.ClientConfigurationConnectionEvents",
     "net.fabricmc.fabric.api.client.networking.v1.ClientConfigurationConnectionEvents.Init",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "ServerLifecycleEvents.SERVER_STARTING",
     "ServerConfigurationNetworking.send()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -21,7 +19,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "supermartijn642configlib-1.1.8a-fabric-mc26.3.jar",
     "published": "2026-09-29"
   },
@@ -50,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

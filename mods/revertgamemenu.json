@@ -11,7 +11,6 @@
   "needs": [
     "net.minecraft.client.gui.components.CommonButtons",
     "net.minecraft.client.gui.components.FriendsButton",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.gui.screens.achievement.StatsScreen",
     "net.minecraft.client.gui.screens.advancements.AdvancementsScreen",
     "net.minecraft.client.gui.screens.friends.FriendsOverlayScreen",
@@ -21,11 +20,7 @@
     "net.minecraft.util.CommonLinks",
     "Minecraft.isLocalServer()",
     "MouseHandler.grabMouse()",
-    "Button.getMessage()",
     "ConfirmLinkScreen.confirmLink()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
     "ClientLevel.DEFAULT_QUIT_MESSAGE",
     "LocalPlayer.getStats()",
     "CommonComponents.disconnectButtonLabel()"
@@ -35,7 +30,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "RevertGameMenu-1.8+26.3.jar",
     "published": "2026-11-04"
   },
@@ -66,7 +61,11 @@
     "modmenu",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

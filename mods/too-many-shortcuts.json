@@ -11,25 +11,15 @@
   "needs": [
     "an access widener",
     "Mixin: 1 point inside the game's methods",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "InputConstants.getKey()",
-    "InputConstants.Key.getDisplayName()",
-    "KeyMapping.matches()",
-    "KeyMapping.matchesMouse()",
-    "KeyMapping.resetMapping()",
     "KeyMapping.setDown()",
-    "KeyMapping.setKey()",
-    "Minecraft.gameDirectory",
-    "Minecraft.pauseGame()",
-    "Util.getMillis()"
+    "Minecraft.pauseGame()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "too-many-shortcuts-0.0.21.jar",
     "published": "2026-09-20"
   },
@@ -60,7 +50,11 @@
     "tms_gui",
     "tms_shortcuts"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite into the game's classes"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

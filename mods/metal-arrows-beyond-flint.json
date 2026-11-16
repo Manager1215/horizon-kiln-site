@@ -21,14 +21,10 @@
     "net.minecraft.world.entity.monster.skeleton.Skeleton",
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
     "net.minecraft.world.item.ArrowItem",
-    "net.minecraft.world.item.alchemy.Potion",
-    "net.minecraft.world.item.alchemy.PotionContents",
     "Registry.asHolderIdMap()",
-    "DataComponents.POTION_CONTENTS",
     "DataComponents.POTION_DURATION_SCALE",
     "ParticleTypes.EFFECT",
     "ParticleTypes.ENTITY_EFFECT",
-    "BuiltInRegistries.POTION",
     "SynchedEntityData.defineId()",
     "SynchedEntityData.get()",
     "SynchedEntityData.set()",
@@ -36,9 +32,6 @@
     "Unit.CODEC",
     "Unit.STREAM_CODEC",
     "LivingEntity.addEffect()",
-    "Items.ARROW",
-    "Items.LINGERING_POTION",
-    "CraftingInput.getItem()",
     "CraftingInput.ingredientCount()",
     "Level.broadcastEntityEvent()",
     "Level.getDifficulty()"
@@ -48,7 +41,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mabf-4.0.1+26.3.jar",
     "published": "2026-09-20"
   },
@@ -78,7 +71,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 33,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 26,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

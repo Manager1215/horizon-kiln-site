@@ -13,14 +13,11 @@
     "com.mojang.blaze3d.audio.Channel",
     "net.minecraft.client.gui.components.LogoRenderer",
     "net.minecraft.client.gui.screens.inventory.SignEditScreen",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.sounds.MusicManager",
     "net.minecraft.client.sounds.SoundBufferLibrary",
     "net.minecraft.network.protocol.game.ServerboundSignUpdatePacket",
     "net.minecraft.world.level.block.entity.SignBlockEntity",
     "net.minecraft.world.level.block.entity.SignText",
-    "Minecraft.gameMode",
-    "Minecraft.hitResult",
     "Toast.occcupiedSlotCount()",
     "Toast.onFinishedRendering()",
     "Toast.xPos()",
@@ -31,15 +28,14 @@
     "TextColor.RED",
     "TextColor.YELLOW",
     "SoundEvents.BELL_BLOCK",
-    "ARGB.srgbLerp()",
-    "HitResult.getType()"
+    "ARGB.srgbLerp()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "signpresetsv2-1.0.0+26.3.jar",
     "published": "2026-10-23"
   },
@@ -68,7 +64,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 19,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

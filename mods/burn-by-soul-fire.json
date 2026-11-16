@@ -13,7 +13,6 @@
     "net.minecraft.client.renderer.SpriteMapper",
     "net.minecraft.client.renderer.feature.FlameFeatureRenderer",
     "net.minecraft.client.renderer.feature.FlameFeatureRenderer.Submit",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.level.block.BaseFireBlock",
     "PoseStack.Pose.pose()",
     "PoseStack.Pose.rotate()",
@@ -27,14 +26,9 @@
     "EntityRenderState.boundingBoxHeight",
     "EntityRenderState.boundingBoxWidth",
     "RenderTypes.fireScreenEffect()",
-    "TextureAtlasSprite.atlasLocation()",
-    "TextureAtlasSprite.getU0()",
-    "TextureAtlasSprite.getU1()",
-    "TextureAtlasSprite.getV0()",
-    "TextureAtlasSprite.getV1()",
     "LightCoordsUtil.withBlock()",
-    "Entity.getDimensions()",
     "Entity.getPose()",
+    "EntityDimensions.makeBoundingBox()",
     "Level.getBlockStates()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -42,7 +36,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "burnbysoulfire-1.2.1-fabric-26.2-0.152.2.jar",
     "published": "2026-06-18"
   },
@@ -68,7 +62,11 @@
     "aquarius_libs",
     "fabric-api"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 21,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

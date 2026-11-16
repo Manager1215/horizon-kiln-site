@@ -11,18 +11,11 @@
   "needs": [
     "net.fabricmc.api.DedicatedServerModInitializer",
     "net.minecraft.world.scores.PlayerTeam",
-    "CommandSourceStack.getServer()",
-    "CommandSourceStack.getTextName()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
-    "MutableComponent.withStyle()",
     "ServerboundPongPacket.getId()",
     "MinecraftServer.getTickCount()",
-    "ServerPlayer.connection",
     "ServerPlayer.getTeam()",
     "ServerGamePacketListenerImpl.getRemoteAddress()",
     "ServerGamePacketListenerImpl.latency()",
-    "ServerGamePacketListenerImpl.send()",
     "PlayerList.broadcastAll()",
     "PlayerList.getOpNames()"
   ],
@@ -31,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "player-ping-26.x-1.2.0.jar",
     "published": "2026-11-06"
   },
@@ -51,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

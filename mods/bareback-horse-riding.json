@@ -9,7 +9,6 @@
   "author": "Serilum",
   "description": "🐎 Allows riding horses without a saddle with tweaked game mechanics.",
   "needs": [
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.animal.equine.AbstractHorse",
     "net.minecraft.world.entity.animal.equine.Horse",
     "ServerPlayer.getVehicle()",
@@ -17,15 +16,14 @@
     "ServerPlayer.tickCount",
     "DamageSources.generic()",
     "Player.getVehicle()",
-    "ItemStack.isValidRepairItem()",
-    "Items.LEATHER"
+    "ItemStack.isValidRepairItem()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "barebackhorseriding-26.3.0-2.5.jar",
     "published": "2026-10-02"
   },
@@ -55,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

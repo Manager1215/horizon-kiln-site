@@ -10,11 +10,11 @@
   "description": "AntiInv is a lightweight client-side Fabric mod for Minecraft that disables player invisibility on the client.\n\nThe mod forces invisible players to be rendered normally, regardless of how invisibility is applied (potion effects, entity metadata, or",
   "needs": [],
   "roadmap": "",
-  "evidence": "Everything its code calls is covered by Kiln 0.4.1 (3 classes, 0 members). Not run yet.",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (3 classes, 0 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "anti-inv-1.0.0.jar",
     "published": "2026-10-17"
   },
@@ -42,6 +42,10 @@
     "java",
     "minecraft"
   ],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 0,
   "development": {
     "status": "not-checked",

@@ -10,8 +10,6 @@
   "description": "Easily toggle full brightness in Minecraft, instantly switching between normal and maximum brightness whenever you need.",
   "needs": [
     "net.minecraft.client.OptionInstance.UnitDouble",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Options.gamma()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
@@ -19,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fullbrightnesstoggle-fabric-2.1.0+mc26.3.jar",
     "published": "2026-09-19"
   },
@@ -47,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

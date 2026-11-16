@@ -10,7 +10,6 @@
   "description": "A client-side mod that saves and restores your settings across modpacks.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "Minecraft.gameDirectory",
     "Options.<init>()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
@@ -18,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "persistent_options-fabric-2.1.0+26.3.jar",
     "published": "2026-10-20"
   },
@@ -46,7 +45,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 2,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

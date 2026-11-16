@@ -10,11 +10,8 @@
   "description": "Deletes non-interacted chunks on every server start. Much smaller world files, no chunk trails, and fresh terrain for new versions.",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
     "net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags",
@@ -22,7 +19,6 @@
     "net.minecraft.core.CompositeDirection.Direction8",
     "net.minecraft.core.QuartPos",
     "net.minecraft.nbt.NbtAccounter",
-    "net.minecraft.nbt.NbtIo",
     "net.minecraft.server.level.WorldGenRegion",
     "net.minecraft.util.BlockUtil",
     "net.minecraft.util.BlockUtil.FoundRectangle",
@@ -50,14 +46,18 @@
     "net.minecraft.world.level.levelgen.densityfunction.DensityVolume",
     "net.minecraft.world.level.levelgen.densityfunction.SamplerContext",
     "net.minecraft.world.level.levelgen.densityfunction.SamplerContext.Builder",
-    "and 50 more"
+    "net.minecraft.world.level.levelgen.densityfunction.generator.SimpleDensityFunction",
+    "net.minecraft.world.level.levelgen.densityfunction.op.LerpFunction",
+    "net.minecraft.world.level.levelgen.densityfunction.op.SliceFunction",
+    "net.minecraft.world.level.levelgen.feature.OreFeature",
+    "and 43 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "PandaPrune-2.2.1+26.3.jar",
     "published": "2026-11-08"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 90,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 83,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

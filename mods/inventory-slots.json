@@ -9,36 +9,16 @@
   "author": "BitByLogic",
   "description": "A Fabric Minecraft mod for viewing container slot index's at the click of a button! Useful for development/configuration!",
   "needs": [
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AllowKeyPress",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AllowKeyRelease",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseClick",
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
-    "InputConstants.getKey()",
-    "KeyMapping.isUnbound()",
-    "KeyMapping.matches()",
-    "KeyMapping.matchesMouse()",
-    "Minecraft.setScreenAndShow()",
-    "GuiGraphicsExtractor.nextStratum()",
-    "Button.setTooltip()",
-    "EditBox.canConsumeInput()",
-    "Screen.children()",
-    "Screen.getFocused()",
-    "Screen.getFont()",
     "NonNullList.indexOf()",
-    "Component.translatableWithFallback()",
     "Inventory.isHotbarSlot()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "inventoryslots-2.2.0+26.3.jar",
     "published": "2026-11-11"
   },
@@ -66,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

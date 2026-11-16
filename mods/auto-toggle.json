@@ -10,7 +10,6 @@
   "description": "Adds toggle-based automation for repetitive keybinds.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.player.ClientInput",
     "net.minecraft.client.player.KeyboardInput",
     "net.minecraft.client.renderer.fog.FogData",
@@ -23,34 +22,22 @@
     "Object2IntMap.Entry.getKey()",
     "KeyMapping.click()",
     "KeyMapping.setDown()",
-    "Minecraft.gameMode",
-    "Minecraft.hitResult",
     "Options.gamma()",
-    "Options.keyAttack",
-    "Options.keyUse",
-    "GuiGraphicsExtractor.nextStratum()",
     "LocalPlayer.getAttackStrengthScale()",
     "LocalPlayer.getTicksUsingItem()",
     "LocalPlayer.getUseItem()",
-    "LocalPlayer.isFallFlying()",
     "LocalPlayer.isUsingItem()",
-    "Attributes.MINING_EFFICIENCY",
     "ItemStack.forEachModifier()",
     "ItemStack.getEnchantments()",
     "ItemStack.isCorrectToolForDrops()",
-    "Items.FIREWORK_ROCKET",
-    "Enchantments.FORTUNE",
-    "ItemEnchantments.entrySet()",
-    "BlockState.is()",
-    "HitResult.getType()",
-    "Vec2.normalized()"
+    "BlockState.is()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "autotoggle-fabric-1.2.3.1+mc26.3.jar",
     "published": "2026-10-03"
   },
@@ -78,7 +65,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 34,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 21,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

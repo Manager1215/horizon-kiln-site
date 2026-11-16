@@ -10,32 +10,20 @@
   "description": "Adds unobtainable enchanted books as rare chest loot and mob drops",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.StartDataPackReload",
-    "net.minecraft.world.inventory.AnvilMenu",
     "net.minecraft.world.level.block.entity.BrushableBlockEntity",
     "net.minecraft.world.level.storage.loot.entries.EmptyLootItem",
     "net.minecraft.world.level.storage.loot.functions.SetEnchantmentsFunction",
     "net.minecraft.world.level.storage.loot.functions.SetEnchantmentsFunction.Builder",
-    "ServerLifecycleEvents.END_DATA_PACK_RELOAD",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.START_DATA_PACK_RELOAD",
-    "ModContainer.findPath()",
-    "HolderLookup.RegistryLookup.get()",
-    "Registry.get()",
-    "RegistryAccess.Frozen.lookupOrThrow()",
     "MinecraftServer.registryAccess()",
     "ReloadableServerRegistries.Holder.lookup()",
-    "Items.ENCHANTED_BOOK",
     "LootContextParamSets.ARCHAEOLOGY"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "treasure_enchants-1.0.0+26.3.jar",
     "published": "2026-10-27"
   },
@@ -63,5 +51,9 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 19
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 7
 }

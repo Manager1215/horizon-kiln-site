@@ -20,8 +20,6 @@
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.PostChain",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "RenderTarget.width",
     "RenderSystem.assertOnRenderThread()",
     "RenderSystem.getCompiledPipeline()",
@@ -41,7 +39,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "polyblur-2.2.10+26.3.jar",
     "published": "2026-11-13"
   },
@@ -69,7 +67,11 @@
     "minecraft",
     "oneconfigv1"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

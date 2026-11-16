@@ -12,9 +12,7 @@
     "Mixin: 3 points inside the game's methods",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.inventory.CartographyTableScreen",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.blockentity.LecternRenderer",
     "net.minecraft.client.renderer.blockentity.state.LecternRenderState",
     "net.minecraft.client.renderer.state.MapRenderState",
@@ -31,8 +29,6 @@
     "net.minecraft.world.inventory.ContainerLevelAccess",
     "net.minecraft.world.inventory.ResultContainer",
     "net.minecraft.world.item.MapItem",
-    "net.minecraft.world.item.crafting.display.ShapelessCraftingRecipeDisplay",
-    "net.minecraft.world.item.crafting.display.SlotDisplay.ItemSlotDisplay",
     "net.minecraft.world.level.LightLayer",
     "net.minecraft.world.level.block.BedBlock",
     "net.minecraft.world.level.block.CampfireBlock",
@@ -44,20 +40,24 @@
     "net.minecraft.world.level.saveddata.maps.MapDecorationTypes",
     "net.minecraft.world.level.saveddata.maps.MapItemSavedData.HoldingPlayer",
     "net.minecraft.world.level.storage.WorldData",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "InputConstants.isKeyDown()",
-    "NativeImage.read()",
     "VertexConsumer.addVertex()",
     "VertexConsumer.setLight()",
-    "and 56 more"
+    "Axis.ZP",
+    "Minecraft.getMapRenderer()",
+    "Minecraft.getMapTextureManager()",
+    "GuiGraphicsExtractor.map()",
+    "GuiGraphicsExtractor.setTooltipForNextFrame()",
+    "ClientLevel.getBrightness()",
+    "ClientLevel.getMapData()",
+    "ClientLevel.getOverworldClockTime()",
+    "and 50 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ultimate_map_atlases-26.3.jar",
     "published": "2026-10-26"
   },
@@ -85,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 181,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 132,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

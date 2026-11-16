@@ -9,15 +9,12 @@
   "author": "CraftKernel",
   "description": "Totems of Undying become tiny 3D figures wearing a player's skin and cape.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.client.model.geom.ModelLayers",
     "net.minecraft.client.model.player.PlayerCapeModel",
     "net.minecraft.client.model.player.PlayerModel",
     "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "net.minecraft.core.UUIDUtil",
-    "net.minecraft.server.permissions.Permissions",
-    "net.minecraft.world.inventory.AnvilMenu",
     "net.minecraft.world.item.component.ResolvableProfile",
     "Minecraft.getEntityModels()",
     "Minecraft.playerSkinRenderCache()",
@@ -25,22 +22,17 @@
     "PlayerSkinRenderCache.getOrDefault()",
     "ItemStackRenderState.setAnimated()",
     "ItemStackRenderState.LayerRenderState.setupSpecialModel()",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "MinecraftServer.execute()",
     "MinecraftServer.getTickCount()",
     "MinecraftServer.services()",
     "ServerPlayer.getGameProfile()",
-    "Items.TOTEM_OF_UNDYING",
-    "CustomData.copyTag()",
     "CustomData.update()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "publicskintotems-fabric-mc26.3-1.4.0.jar",
     "published": "2026-10-18"
   },
@@ -68,7 +60,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,7 +10,6 @@
   "description": "Shows the contents of shulker boxes directly in their tooltips.",
   "needs": [
     "com.mojang.renderpearl.backend.opengl.GlTexture",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
     "net.minecraft.world.level.block.ShulkerBoxBlock",
     "org.lwjgl.opengl.GL",
     "org.lwjgl.opengl.GL33C",
@@ -20,35 +19,18 @@
     "org.lwjgl.system.MemoryUtil",
     "org.lwjgl.system.Struct",
     "RenderTarget.width",
-    "KeyMappingHelper.getBoundKeyOf()",
-    "ModContainer.findPath()",
-    "KeyMapping.resetMapping()",
-    "KeyMapping.setKey()",
-    "Minecraft.execute()",
     "Minecraft.onTextInputFocusChange()",
-    "GuiGraphicsExtractor.blitSprite()",
     "GuiGraphicsExtractor.blurBeforeThisStratum()",
     "Hud.extractDeferredSubtitles()",
-    "Screen.charTyped()",
     "Screen.isInputCaptured()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()",
-    "KeyEvent.hasAltDown()",
-    "KeyEvent.hasControlDownWithQuirk()",
-    "KeyEvent.hasShiftDown()",
-    "KeyEvent.shortcutKey()",
-    "NonNullList.iterator()",
-    "MutableComponent.withStyle()",
-    "DyeColor.getTextureDiffuseColor()"
+    "NonNullList.iterator()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "TD-ShulkerTooltip-26.3-1.1.0.jar",
     "published": "2026-11-12"
   },
@@ -77,7 +59,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 33,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,26 +10,20 @@
   "description": "This mod lets you inspect your bee hives and nests without breaking them open.",
   "needs": [
     "an access widener",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.world.entity.animal.bee.Bee",
     "net.minecraft.world.level.block.BeehiveBlock",
     "net.minecraft.world.level.block.entity.BeehiveBlockEntity",
     "net.minecraft.world.level.block.entity.BeehiveBlockEntity.Occupant",
-    "KeyMapping.matches()",
-    "Minecraft.execute()",
-    "Options.keyInventory",
-    "MutableComponent.withStyle()",
     "ServerPlayer.distanceToSqr()",
     "EntityTypes.BEE",
-    "TypedEntityData.copyTagWithoutId()",
-    "Blocks.BEEHIVE"
+    "TypedEntityData.copyTagWithoutId()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "beegui-26.2_26.3-4.2.0.jar",
     "published": "2026-11-11"
   },
@@ -58,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

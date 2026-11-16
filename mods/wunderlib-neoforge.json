@@ -11,9 +11,7 @@
   "needs": [
     "ServerPlayNetworking.registerReceiver()",
     "ServerPlayNetworking.unregisterReceiver()",
-    "Minecraft.execute()",
     "Minecraft.executeBlocking()",
-    "MinecraftServer.execute()",
     "MinecraftServer.executeBlocking()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -21,7 +19,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "wunderlib-26.3.1-fabric.jar",
     "published": "2026-10-14"
   },
@@ -49,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

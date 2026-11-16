@@ -10,13 +10,8 @@
   "description": "A Model Context Protocol (MCP) server that runs inside Minecraft Java Edition as a Fabric mod. It exposes the server-side Minecraft API and the Fabric API as MCP tools so Claude, Cursor, etc. can read and manipulate a live world programmatically.",
   "needs": [
     "an access widener",
-    "com.mojang.authlib.GameProfile",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
     "net.fabricmc.fabric.api.block.v1.FluidFlowEvents",
     "net.fabricmc.fabric.api.block.v1.FluidFlowEvents.Allow",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
@@ -27,15 +22,11 @@
     "net.fabricmc.loader.api.SemanticVersion",
     "net.fabricmc.loader.api.VersionParsingException",
     "net.fabricmc.loader.api.metadata.version.VersionPredicate",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.Screenshot",
     "net.minecraft.commands.functions.CommandFunction",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.data.BlockFamilies",
     "net.minecraft.data.BlockFamily",
     "net.minecraft.data.BlockFamily.Variant",
-    "net.minecraft.nbt.NbtIo",
-    "net.minecraft.network.chat.PlayerChatMessage",
     "net.minecraft.resources.RegistryOps.RegistryInfoLookup",
     "net.minecraft.server.PlayerAdvancements",
     "net.minecraft.server.ServerAdvancementManager",
@@ -50,14 +41,23 @@
     "net.minecraft.world.entity.ai.village.poi.PoiManager",
     "net.minecraft.world.entity.ai.village.poi.PoiManager.Occupancy",
     "net.minecraft.world.entity.ai.village.poi.PoiRecord",
-    "and 80 more"
+    "net.minecraft.world.entity.npc.InventoryCarrier",
+    "net.minecraft.world.inventory.CartographyTableMenu",
+    "net.minecraft.world.inventory.ContainerLevelAccess",
+    "net.minecraft.world.inventory.EnchantmentMenu",
+    "net.minecraft.world.inventory.LoomMenu",
+    "net.minecraft.world.inventory.StonecutterMenu",
+    "net.minecraft.world.item.component.BrewingFuel",
+    "net.minecraft.world.level.biome.Biome.ClimateSettings",
+    "net.minecraft.world.level.block.ComposterBlock",
+    "and 77 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "minecraft-fabric-mcp-1.2.0+26.3.jar",
     "published": "2026-10-27"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 245,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 186,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

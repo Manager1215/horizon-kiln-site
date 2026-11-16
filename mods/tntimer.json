@@ -9,18 +9,10 @@
   "author": "Gabrieli2806",
   "description": "Countdown timer on top of screen to know exactly when that TNT is going to explode without need to see the TNT client-side.\n\nRenders a timer over primed TNT",
   "needs": [
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.world.entity.monster.cubemob.SulfurCube",
-    "Minecraft.setScreenAndShow()",
-    "AbstractWidget.setTooltip()",
     "LevelRenderState.worldPartialTicks",
-    "MutableComponent.withStyle()",
     "Entity.distanceToSqr()",
-    "Entity.getBbHeight()",
     "Entity.getPosition()",
     "PrimedTnt.getFuse()"
   ],
@@ -29,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tntimer-fabric-3.0.2.jar",
     "published": "2026-10-09"
   },
@@ -58,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

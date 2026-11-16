@@ -15,7 +15,6 @@
     "net.minecraft.client.gui.ActiveTextCollector",
     "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
     "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.LevelLoadingScreen",
     "net.minecraft.client.gui.screens.options.controls.KeyBindsList",
     "net.minecraft.client.gui.screens.options.controls.KeyBindsList.KeyEntry",
@@ -33,10 +32,7 @@
     "net.minecraft.world.level.TicketStorage",
     "net.minecraft.world.level.chunk.ProtoChunk",
     "net.minecraft.world.level.chunk.status.ChunkStep",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "BiMap.get()",
-    "InputConstants.getKey()",
     "VertexConsumer.addVertexWith2DPose()",
     "Int2ObjectMap.isEmpty()",
     "Int2ObjectMap.Entry.getValue()",
@@ -51,14 +47,18 @@
     "ObjectCollection.stream()",
     "ServerLevelEvents.UNLOAD",
     "GuiGraphicsExtractor.scissorStack",
-    "and 43 more"
+    "GuiGraphicsExtractor.textRenderer()",
+    "GuiGraphicsExtractor.textRendererForWidget()",
+    "TextureSetup.noTexture()",
+    "ClientPacketListener.levels()",
+    "and 33 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ChunkDebug-2.9.1+26.3.jar",
     "published": "2026-11-02"
   },
@@ -85,7 +85,11 @@
     "fabric-api",
     "fabricloader"
   ],
-  "lacks": 83,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 73,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,18 +11,16 @@
   "needs": [
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
-    "net.minecraft.tags.ItemTags",
     "org.lwjgl.sdl.SDLScancode",
     "ServerPlayer.onEquippedItemBroken()",
-    "ItemStack.hurtAndBreak()",
-    "Level.destroyBlock()"
+    "ItemStack.hurtAndBreak()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "OneHitTreeChopper-Quilt-3.0.2.jar",
     "published": "2026-10-25"
   },
@@ -51,7 +49,11 @@
     "minecraft",
     "quilt_loader"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

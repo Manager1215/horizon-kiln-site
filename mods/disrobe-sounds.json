@@ -11,22 +11,20 @@
   "needs": [
     "an access widener",
     "net.minecraft.world.inventory.AbstractMountInventoryMenu",
-    "Minecraft.isSameThread()",
     "LocalPlayer.isAlive()",
     "ClientboundSetEquipmentPacket.getEntity()",
     "ClientboundSetEquipmentPacket.getSlots()",
     "SoundEvents.HORSE_SADDLE",
     "Entity.getSoundSource()",
     "LivingEntity.isAlive()",
-    "LivingEntity.isSilent()",
-    "Items.SADDLE"
+    "LivingEntity.isSilent()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "disrobe-sounds-1.0.2+26.3+fabric.jar",
     "published": "2026-11-05"
   },
@@ -55,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

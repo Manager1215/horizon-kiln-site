@@ -10,28 +10,14 @@
   "description": "Very customizable Loot Bags for the best Loot Goblins, Server-side compatible",
   "needs": [
     "net.minecraft.world.item.component.CustomModelData",
-    "net.minecraft.world.item.component.ItemLore",
     "net.minecraft.world.level.storage.loot.functions.SetComponentsFunction",
-    "Registry.get()",
-    "RegistryAccess.lookupOrThrow()",
     "DataComponents.CUSTOM_MODEL_DATA",
-    "DataComponents.CUSTOM_NAME",
     "DataComponents.DAMAGE",
-    "DataComponents.ENCHANTMENT_GLINT_OVERRIDE",
-    "DataComponents.ITEM_MODEL",
-    "DataComponents.LORE",
     "DataComponents.MAX_STACK_SIZE",
     "DataComponents.RARITY",
-    "DataComponents.REPAIR_COST",
     "BuiltInRegistries.ATTRIBUTE",
     "ListTag.iterator()",
-    "MutableComponent.setStyle()",
-    "Style.withObfuscated()",
-    "Style.withStrikethrough()",
-    "Style.withUnderlined()",
-    "TextColor.parseColor()",
     "SoundEvents.FIREWORK_ROCKET_TWINKLE",
-    "Player.drop()",
     "LootPool.Builder.apply()",
     "LootPool.Builder.apply()",
     "LootPool.Builder.when()",
@@ -42,7 +28,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "AdventureLoot-2.1.2-1.26.3.jar",
     "published": "2026-09-22"
   },
@@ -70,7 +56,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

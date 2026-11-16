@@ -11,15 +11,14 @@
   "needs": [
     "an access widener",
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.world.level.pathfinder.WalkNodeEvaluator",
-    "org.apache.logging.log4j.LogManager"
+    "net.minecraft.world.level.pathfinder.WalkNodeEvaluator"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "diagonalfences-v26.3.0-mc26.3.x+fabric.jar",
     "published": "2026-09-23"
   },
@@ -50,7 +49,11 @@
     "minecraft",
     "puzzleslib"
   ],
-  "lacks": 2,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

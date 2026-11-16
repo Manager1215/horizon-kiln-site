@@ -10,8 +10,6 @@
   "description": "A utility mod for MCDiamondFire aiming to make me specifically more efficient.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "com.mojang.blaze3d.vertex.BufferBuilder",
     "com.mojang.blaze3d.vertex.ByteBufferBuilder",
     "com.mojang.blaze3d.vertex.MeshData",
@@ -21,16 +19,12 @@
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "net.fabricmc.loader.api.metadata.ModOrigin",
     "net.fabricmc.loader.api.metadata.version.VersionPredicate",
-    "net.minecraft.client.gui.TextAlignment",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.gui.components.StringWidget.TextOverflow",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.WidgetTooltipHolder",
     "net.minecraft.client.model.geom.builders.CubeDeformation",
     "net.minecraft.client.model.geom.builders.MeshDefinition",
     "net.minecraft.client.model.geom.builders.PartDefinition",
     "net.minecraft.client.model.player.PlayerModel",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.player.ClientInput",
     "net.minecraft.client.renderer.DynamicGpuData",
     "net.minecraft.client.renderer.MappableRingBuffer",
@@ -48,16 +42,22 @@
     "net.minecraft.network.protocol.game.ServerboundMovePlayerPacket.Rot",
     "net.minecraft.network.protocol.game.ServerboundPlayerInputPacket",
     "net.minecraft.network.protocol.game.ServerboundSetCreativeModeSlotPacket",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.player.Input",
-    "and 69 more"
+    "net.minecraft.world.item.component.ResolvableProfile",
+    "net.minecraft.world.level.block.entity.ChestBlockEntity",
+    "net.minecraft.world.level.block.entity.SignBlockEntity",
+    "net.minecraft.world.phys.shapes.BooleanOp",
+    "org.apache.commons.io.FileUtils",
+    "org.lwjgl.system.MemoryUtil",
+    "JsonArray.forEach()",
+    "and 59 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "MilloMod2-1.7.4.jar",
     "published": "2026-10-30"
   },
@@ -85,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 168,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 106,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

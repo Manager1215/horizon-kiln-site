@@ -9,10 +9,8 @@
   "author": "imkrqte",
   "description": "Require client-side mod for XENON server",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.properties.Property",
     "com.mojang.authlib.properties.PropertyMap",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback",
     "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback.RegistrationHelper",
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
@@ -31,7 +29,6 @@
     "net.minecraft.client.renderer.entity.player.AvatarRenderer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.server.packs.FilePackResources",
     "net.minecraft.server.packs.FilePackResources.FileResourcesSupplier",
     "net.minecraft.server.packs.PackLocationInfo",
@@ -42,21 +39,24 @@
     "net.minecraft.server.packs.repository.PackRepository",
     "net.minecraft.server.packs.repository.PackSource",
     "net.minecraft.world.item.component.ResolvableProfile",
-    "NativeImage.getHeight()",
-    "NativeImage.getWidth()",
-    "NativeImage.read()",
-    "NativeImage.setPixel()",
+    "GameProfile.<init>()",
     "VertexConsumer.addVertex()",
     "VertexConsumer.setLight()",
     "VertexConsumer.setNormal()",
-    "and 43 more"
+    "VertexConsumer.setOverlay()",
+    "Camera.forwardVector()",
+    "Camera.isInitialized()",
+    "Minecraft.getEntityRenderDispatcher()",
+    "Minecraft.getGameProfile()",
+    "Minecraft.getResourcePackRepository()",
+    "and 18 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "XCore-1.1.0.jar",
     "published": "2026-11-16"
   },
@@ -84,5 +84,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 83
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 58
 }

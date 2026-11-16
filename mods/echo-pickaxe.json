@@ -13,7 +13,6 @@
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
     "net.minecraft.core.particles.DustParticleOptions",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.util.Brightness",
     "net.minecraft.world.entity.Display",
     "net.minecraft.world.entity.Display.BlockDisplay",
@@ -23,9 +22,6 @@
     "net.minecraft.world.scores.TeamColor",
     "BlockPos.distSqr()",
     "BlockPos.MutableBlockPos.set()",
-    "Registry.get()",
-    "RegistryAccess.lookupOrThrow()",
-    "MinecraftServer.execute()",
     "ServerLevel.getScoreboard()",
     "ServerLevel.sendParticles()",
     "ServerPlayer.isCrouching()",
@@ -34,15 +30,7 @@
     "SoundEvents.WARDEN_SONIC_BOOM",
     "EntityType.create()",
     "EntityTypes.BLOCK_DISPLAY",
-    "Items.ECHO_SHARD",
-    "Items.GOLDEN_PICKAXE",
-    "Items.IRON_PICKAXE",
-    "Items.NETHERITE_PICKAXE",
-    "Items.STONE_PICKAXE",
-    "Items.WOODEN_PICKAXE",
     "EnchantmentHelper.getItemEnchantmentLevel()",
-    "Enchantments.EFFICIENCY",
-    "Enchantments.FORTUNE",
     "Scoreboard.addPlayerTeam()",
     "Scoreboard.addPlayerToTeam()",
     "Scoreboard.getPlayerTeam()"
@@ -52,7 +40,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "echo_pickaxe-1.1.1-Fabric-MC26.3.jar",
     "published": "2026-09-23"
   },
@@ -83,7 +71,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 37,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 25,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

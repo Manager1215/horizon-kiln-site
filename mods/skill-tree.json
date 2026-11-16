@@ -9,15 +9,8 @@
   "author": "ZsoltMolnarrr",
   "description": "⭐️ Choose your path - Skills that shape your class",
   "needs": [
-    "net.minecraft.network.chat.ComponentContents",
-    "net.minecraft.network.chat.ComponentSerialization",
     "net.minecraft.network.chat.ComponentUtils",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.item.component.ItemLore",
-    "Holder.getRegisteredName()",
-    "Registry.wrapAsHolder()",
     "DataComponents.BREAK_SOUND",
-    "DataComponents.LORE",
     "BuiltInRegistries.ATTRIBUTE",
     "ServerPlayer.onEquippedItemBroken()",
     "SoundEvents.AMETHYST_CLUSTER_BREAK",
@@ -36,7 +29,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "skill_tree-fabric-1.6.2+26.3.jar",
     "published": "2026-09-29"
   },
@@ -69,7 +62,11 @@
     "spell_engine",
     "spell_power"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

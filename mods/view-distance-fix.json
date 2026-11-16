@@ -10,12 +10,8 @@
   "description": "A server side Fabric mod that fixes the fog when having a higher render distance on the client than on the server",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.api.DedicatedServerModInitializer",
-    "org.apache.logging.log4j.LogManager",
     "Connection.send()",
-    "ServerPlayer.connection",
-    "ServerGamePacketListenerImpl.send()",
     "PlayerList.getViewDistance()",
     "Player.<init>()"
   ],
@@ -24,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "viewdistancefix-fabric-1.0.2+26.3.jar",
     "published": "2026-09-15"
   },
@@ -42,7 +38,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,16 +10,10 @@
   "description": "Teleport using beacons in a vanilla way!",
   "needs": [
     "Mixin: 15 points inside the game's methods",
-    "net.minecraft.core.component.DataComponentPatch.Builder",
     "net.minecraft.world.item.EnderpearlItem",
-    "net.minecraft.world.item.component.ItemLore",
     "net.minecraft.world.item.component.ResolvableProfile.Static",
     "net.minecraft.world.level.block.entity.BeaconBlockEntity",
     "net.minecraft.world.level.block.entity.SignBlockEntity",
-    "CommandSourceStack.getServer()",
-    "DataComponents.CUSTOM_NAME",
-    "DataComponents.LORE",
-    "MutableComponent.withStyle()",
     "Identifier.toShortString()",
     "MinecraftServer.getAllLevels()",
     "ServerLevel.sendParticles()",
@@ -28,11 +22,7 @@
     "SoundEvents.END_PORTAL_SPAWN",
     "SoundEvents.PLAYER_TELEPORT",
     "ItemEntity.getItem()",
-    "MenuType.GENERIC_9x3",
     "ItemStack.consume()",
-    "Items.ARROW",
-    "Items.BEACON",
-    "Items.PAPER",
     "Level.getEntitiesOfClass()",
     "AABB.inflate()"
   ],
@@ -41,7 +31,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "beaconwaypoints-1.0.5.jar",
     "published": "2026-09-28"
   },
@@ -70,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

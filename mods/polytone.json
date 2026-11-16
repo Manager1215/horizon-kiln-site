@@ -47,10 +47,10 @@
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.BeforeGizmos",
     "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents",
     "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents.TagsLoaded",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.impl.client.rendering.ColorResolverRegistryImpl",
+    "net.fabricmc.fabric.impl.registry.sync.RegistrySyncManager",
+    "net.fabricmc.fabric.impl.tag.client.ClientTagsImpl",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "polytone-26.3-6.8.6-fabric.jar",
     "published": "2026-10-10"
   },
@@ -86,7 +86,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 847,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
+  },
+  "lacks": 724,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

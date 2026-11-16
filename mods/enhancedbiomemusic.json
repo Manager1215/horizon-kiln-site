@@ -11,12 +11,9 @@
   "needs": [
     "net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder",
     "net.fabricmc.fabric.api.event.registry.RegistryAttribute",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.sounds.MusicManager",
     "net.minecraft.sounds.Music",
     "ResourceManagerHelper.registerBuiltinResourcePack()",
-    "Minecraft.gameMode",
-    "SoundManager.stop()",
     "SoundManager.updateCategoryVolume()",
     "SoundEvents.MUSIC_CREATIVE",
     "Level.getBiome()",
@@ -49,14 +46,17 @@
     "Biomes.JAGGED_PEAKS",
     "Biomes.JUNGLE",
     "Biomes.LUKEWARM_OCEAN",
-    "and 25 more"
+    "Biomes.LUSH_CAVES",
+    "Biomes.MANGROVE_SWAMP",
+    "Biomes.MEADOW",
+    "and 24 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "enhancedbiomesmusic-fabric-2.2.5+26.3.jar",
     "published": "2026-11-11"
   },
@@ -82,7 +82,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 72,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 69,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

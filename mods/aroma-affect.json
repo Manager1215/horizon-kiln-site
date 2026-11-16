@@ -20,7 +20,6 @@
     "net.minecraft.advancements.triggers.UsedTotemTrigger",
     "net.minecraft.client.gui.components.MultiLineEditBox",
     "net.minecraft.client.gui.components.MultiLineEditBox.Builder",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.model.animal.golem.IronGolemModel",
     "net.minecraft.client.model.animal.sniffer.SnifferModel",
@@ -32,7 +31,6 @@
     "net.minecraft.client.model.geom.builders.PartDefinition",
     "net.minecraft.client.model.npc.VillagerModel",
     "net.minecraft.client.multiplayer.ClientChunkCache",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.entity.AgeableMobRenderer",
     "net.minecraft.client.renderer.entity.IronGolemRenderer",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
@@ -48,17 +46,19 @@
     "net.minecraft.client.renderer.entity.state.VillagerRenderState",
     "net.minecraft.client.renderer.rendertype.RenderSetup",
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.commands.arguments.IdentifierArgument",
+    "net.minecraft.core.UUIDUtil",
+    "net.minecraft.network.syncher.EntityDataAccessor",
+    "net.minecraft.network.syncher.EntityDataSerializers",
+    "net.minecraft.network.syncher.SynchedEntityData.Builder",
+    "net.minecraft.server.PlayerAdvancements",
     "and 80 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "aromaaffect-fabric-1.2.5+MC26.3.jar",
     "published": "2026-11-04"
   },
@@ -89,7 +89,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 548,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect into the game's classes; runs threads of its own; generates in the world"
+  },
+  "lacks": 329,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

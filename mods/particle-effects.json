@@ -26,14 +26,10 @@
     "net.minecraft.world.effect.SaturationMobEffect",
     "net.minecraft.world.entity.AreaEffectCloud",
     "net.minecraft.world.entity.projectile.arrow.Arrow",
-    "net.minecraft.world.item.alchemy.Potion",
-    "net.minecraft.world.item.alchemy.PotionContents",
     "Minecraft.levelRenderer",
     "Minecraft.particleEngine",
     "CameraRenderState.orientation",
-    "Registry.listElements()",
     "ColorParticleOption.color",
-    "BuiltInRegistries.POTION",
     "RandomSource.nextIntBetweenInclusive()",
     "Entity.<init>()"
   ],
@@ -42,7 +38,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ParticleEffects-1.6.0+26.3+fabric.jar",
     "published": "2026-09-22"
   },
@@ -72,7 +68,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
+  },
+  "lacks": 21,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,17 +10,13 @@
   "description": "Ride your friend(s) - with consent. Player Ladder mod inspired from ForwarD-NerN",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Leave",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
     "net.minecraft.server.commands.RideCommand",
     "net.minecraft.server.level.ServerPlayerGameMode",
     "net.minecraft.world.entity.projectile.ProjectileUtil",
-    "AttachmentRegistry.create()",
     "ServerPlayerEvents.LEAVE",
     "TagUtil.isIn()",
-    "CommandSourceStack.getPlayerOrException()",
-    "ServerPlayer.connection",
     "ServerPlayer.getFirstPassenger()",
     "ServerPlayer.getPassengers()",
     "ServerPlayer.getVehicle()",
@@ -28,7 +24,6 @@
     "ServerPlayer.isPassenger()",
     "ServerPlayer.isVehicle()",
     "ServerPlayer.stopRiding()",
-    "ServerGamePacketListenerImpl.send()",
     "Entity.getFirstPassenger()",
     "Entity.getVehicle()",
     "Entity.is()",
@@ -37,8 +32,6 @@
     "Entity.stopRiding()",
     "EntityType.canSerialize()",
     "EntityTypes.PLAYER",
-    "Player.getAttachedOrElse()",
-    "Player.setAttached()",
     "Player.startRiding()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
@@ -46,7 +39,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "modern-player-ladder-2.0.0.jar",
     "published": "2026-09-27"
   },
@@ -74,7 +67,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 30,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

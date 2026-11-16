@@ -9,23 +9,16 @@
   "author": "Wechirok",
   "description": "Lets you choose which weapons should ignore Better Combat.",
   "needs": [
-    "net.minecraft.server.permissions.Permissions",
-    "Minecraft.isSameThread()",
     "ClientPacketListener.setActionBarText()",
-    "CommandSourceStack.getEntity()",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "MinecraftServer.isSameThread()",
     "MinecraftServer.isSingleplayerOwner()",
-    "ServerPlayer.clientInformation()",
-    "ServerPlayer.nameAndId()"
+    "ServerPlayer.clientInformation()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "betterselectivecombat-fabric-1.2.2+26.3.jar",
     "published": "2026-10-04"
   },
@@ -54,7 +47,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

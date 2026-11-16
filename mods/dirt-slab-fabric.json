@@ -10,11 +10,8 @@
   "description": "Half-height dirt, grass, farmland, and more — with full vanilla parity for crops, plants, spreading, and worldgen",
   "needs": [
     "Mixin: 7 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.minecraft.data.worldgen.features.TreeFeatures",
     "net.minecraft.server.level.WorldGenRegion",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.ai.Brain",
     "net.minecraft.world.entity.ai.behavior.HarvestFarmland",
     "net.minecraft.world.entity.ai.goal.EatBlockGoal",
@@ -28,10 +25,8 @@
     "net.minecraft.world.level.StructureManager",
     "net.minecraft.world.level.block.AttachedStemBlock",
     "net.minecraft.world.level.block.BambooSaplingBlock",
-    "net.minecraft.world.level.block.BeetrootBlock",
     "net.minecraft.world.level.block.BonemealableFeaturePlacerBlock",
     "net.minecraft.world.level.block.CarpetBlock",
-    "net.minecraft.world.level.block.DoublePlantBlock",
     "net.minecraft.world.level.block.DryVegetationBlock",
     "net.minecraft.world.level.block.FarmlandBlock",
     "net.minecraft.world.level.block.FlowerBedBlock",
@@ -47,17 +42,22 @@
     "net.minecraft.world.level.block.TallFlowerBlock",
     "net.minecraft.world.level.block.TallGrassBlock",
     "net.minecraft.world.level.block.piston.MovingPistonBlock",
-    "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
     "net.minecraft.world.level.block.state.properties.SlabType",
     "net.minecraft.world.level.block.state.properties.Tilt",
-    "and 67 more"
+    "net.minecraft.world.level.gameevent.GameEvent.Context",
+    "net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings",
+    "net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessor",
+    "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate",
+    "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.StructureBlockInfo",
+    "net.minecraft.world.level.lighting.LightEngine",
+    "and 61 more"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dirt-slab-justfatlard-2.0.7.jar",
     "published": "2026-11-13"
   },
@@ -86,7 +86,11 @@
     "minecraft",
     "pandorical"
   ],
-  "lacks": 250,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 122,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

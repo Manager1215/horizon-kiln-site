@@ -10,8 +10,6 @@
   "description": "Fabric port of JoeFly's Tool Trims",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
     "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin",
     "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin.Context",
     "net.fabricmc.fabric.api.client.model.loading.v1.ModelModifier",
@@ -19,8 +17,6 @@
     "net.fabricmc.fabric.api.client.model.loading.v1.ModelModifier.OnLoadItem.Context",
     "net.fabricmc.fabric.api.client.rendering.v1.AtlasRegistry",
     "net.fabricmc.fabric.api.datagen.v1.provider.FabricCodecDataProvider",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys",
     "net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys.Client",
     "net.fabricmc.fabric.api.tag.client.v1.ClientTags",
@@ -50,14 +46,18 @@
     "net.minecraft.client.renderer.special.NoDataSpecialModelRenderer",
     "net.minecraft.client.renderer.special.SpecialModelRenderer.Unbaked",
     "net.minecraft.client.renderer.special.SpecialModelRenderers",
-    "and 80 more"
+    "net.minecraft.client.renderer.texture.atlas.SpriteSource",
+    "net.minecraft.client.renderer.texture.atlas.SpriteSource.Output",
+    "net.minecraft.client.renderer.texture.atlas.SpriteSources",
+    "net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations",
+    "and 42 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tooltrims-2.0.13+tt3.0.x+mc26.3.jar",
     "published": "2026-11-10"
   },
@@ -88,7 +88,11 @@
     "lootinj",
     "minecraft"
   ],
-  "lacks": 141,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 82,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

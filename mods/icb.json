@@ -20,13 +20,10 @@
     "net.minecraft.advancements.triggers.KilledTrigger",
     "net.minecraft.advancements.triggers.KilledTrigger.TriggerInstance",
     "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.multiplayer.chat.ChatListener",
     "net.minecraft.client.renderer.entity.ThrownItemRenderer",
     "net.minecraft.client.renderer.entity.ZombieRenderer",
     "net.minecraft.client.renderer.entity.state.ZombieRenderState",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.component.PatchedDataComponentMap",
     "net.minecraft.core.particles.BlockParticleOption",
     "net.minecraft.core.particles.ItemParticleOption",
@@ -36,7 +33,6 @@
     "net.minecraft.server.level.ServerPlayerGameMode",
     "net.minecraft.server.packs.resources.MultiPackResourceManager",
     "net.minecraft.tags.DamageTypeTags",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.util.valueproviders.ConstantInt",
     "net.minecraft.world.entity.ConversionParams",
     "net.minecraft.world.entity.ConversionParams.AfterConversion",
@@ -50,6 +46,10 @@
     "net.minecraft.world.entity.ai.goal.RunAroundLikeCrazyGoal",
     "net.minecraft.world.entity.animal.feline.Ocelot",
     "net.minecraft.world.entity.item.FallingBlockEntity",
+    "net.minecraft.world.entity.monster.Monster",
+    "net.minecraft.world.entity.monster.RangedAttackMob",
+    "net.minecraft.world.entity.monster.Shulker",
+    "net.minecraft.world.entity.monster.cubemob.SulfurCube",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ice_caves_backport-fabric-0.1.11+26.3.jar",
     "published": "2026-11-03"
   },
@@ -85,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 204,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; @modify-arg Kiln doesn't guard; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 163,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

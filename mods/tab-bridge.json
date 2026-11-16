@@ -9,26 +9,14 @@
   "author": "NEZNAMY",
   "description": "An addon for TAB when it is installed on a proxy.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.api.DedicatedServerModInitializer",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.networking.v1.ServerConfigurationNetworking.ConfigurationPacketHandler",
     "net.fabricmc.fabric.api.networking.v1.ServerConfigurationNetworking.Context",
-    "net.minecraft.network.chat.contents.PlainTextContents",
     "net.minecraft.server.level.ServerPlayerGameMode",
     "net.minecraft.world.level.storage.ServerLevelData",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "ServerConfigurationNetworking.registerGlobalReceiver()",
-    "Component.getContents()",
-    "Component.getSiblings()",
-    "Style.isObfuscated()",
-    "Style.isStrikethrough()",
-    "Style.isUnderlined()",
-    "ServerPlayer.createCommandSourceStack()",
     "ServerPlayer.gameMode",
     "ServerPlayer.getGameProfile()",
     "ServerConfigurationPacketListenerImpl.getOwner()",
@@ -39,7 +27,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "TAB-Bridge v6.2.3 - Fabric.jar",
     "published": "2026-09-19"
   },
@@ -58,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

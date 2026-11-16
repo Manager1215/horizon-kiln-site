@@ -10,16 +10,14 @@
   "description": "Logs tellraw command messages to the console.",
   "needs": [
     "net.minecraft.commands.arguments.ComponentArgument",
-    "net.minecraft.server.commands.TellRawCommand",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()"
+    "net.minecraft.server.commands.TellRawCommand"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "TellrawLogger-1.0.2.jar",
     "published": "2026-04-29"
   },
@@ -46,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite into the game's classes"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

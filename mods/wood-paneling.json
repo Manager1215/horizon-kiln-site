@@ -38,13 +38,11 @@
     "net.minecraft.world.level.block.Mirror",
     "net.minecraft.world.level.block.MultifaceBlock",
     "net.minecraft.world.level.material.PushReaction",
-    "FabricCreativeModeTabOutput.getSearchTabStacks()",
     "ClientItem.Properties.DEFAULT",
     "ItemStackRenderState.setAnimated()",
     "ItemStackRenderState.LayerRenderState.setFoilType()",
     "BakedQuad.MaterialInfo.of()",
     "DefaultedRegistry.iterator()",
-    "FeatureFlagSet.of()",
     "ItemStack.hasFoil()",
     "BlockBehaviour.Properties.pushReaction()"
   ],
@@ -53,7 +51,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "woodpaneling-fabric-1.0.1+26.3.jar",
     "published": "2026-09-27"
   },
@@ -84,7 +82,11 @@
     "minecraft",
     "rosetta"
   ],
-  "lacks": 37,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 35,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

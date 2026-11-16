@@ -11,26 +11,14 @@
   "needs": [
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-    "net.minecraft.tags.ItemTags",
     "BlockPos.betweenClosedStream()",
     "BlockPos.offset()",
     "BlockPos.MutableBlockPos.set()",
-    "ServerLevel.destroyBlock()",
     "ServerPlayer.hasCorrectToolForDrops()",
     "ServerPlayer.isCrouching()",
-    "BlockTags.DIRT",
     "BlockTags.ORES",
     "ItemStack.hurtAndBreak()",
     "Block.getDrops()",
-    "Blocks.ANCIENT_DEBRIS",
-    "Blocks.CRIMSON_NYLIUM",
-    "Blocks.NETHERRACK",
-    "Blocks.PODZOL",
-    "Blocks.SHORT_GRASS",
-    "Blocks.TALL_GRASS",
-    "Blocks.WARPED_NYLIUM",
-    "CropBlock.AGE",
-    "CropBlock.isMaxAge()",
     "LeavesBlock.PERSISTENT"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -38,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "collectall-fabric-26.3-1.3.2.jar",
     "published": "2026-09-24"
   },
@@ -67,7 +55,11 @@
     "minecraft",
     "rickcore"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

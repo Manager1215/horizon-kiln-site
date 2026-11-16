@@ -12,33 +12,19 @@
     "net.minecraft.client.renderer.entity.state.ArmedEntityRenderState",
     "net.minecraft.client.renderer.item.SpecialModelWrapper",
     "net.minecraft.client.renderer.special.ShieldSpecialRenderer",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "NativeImage.copyFrom()",
-    "NativeImage.fillRect()",
-    "NativeImage.getHeight()",
     "NativeImage.getPixels()",
-    "NativeImage.getWidth()",
-    "NativeImage.read()",
-    "NativeImage.setPixel()",
-    "Minecraft.execute()",
-    "Minecraft.gameDirectory",
     "GuiGraphicsExtractor.blit()",
     "GuiGraphicsExtractor.blurBeforeThisStratum()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseMoved()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()",
     "ItemStackRenderState.setAnimated()",
-    "RenderTypes.entitySolidGlint()",
-    "Items.SHIELD"
+    "RenderTypes.entitySolidGlint()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "AnimatedShields-26.3.jar",
     "published": "2026-10-29"
   },
@@ -67,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

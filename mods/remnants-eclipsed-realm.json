@@ -10,7 +10,6 @@
   "description": "Cross a Waygate into a realm of eternal dusk, rest at Grace Embers and raise four soulslike bosses with phased fights, boss gear and a Boss Hunts journal.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
     "com.mojang.blaze3d.vertex.BufferBuilder",
     "com.mojang.blaze3d.vertex.ByteBufferBuilder",
@@ -29,7 +28,6 @@
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
     "net.minecraft.client.gui.components.BossHealthOverlay",
     "net.minecraft.client.gui.components.LerpingBossEvent",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.LevelLoadingScreen",
     "net.minecraft.client.model.geom.PartPose",
     "net.minecraft.client.model.geom.builders.CubeDeformation",
@@ -46,10 +44,12 @@
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.core.particles.BlockParticleOption",
     "net.minecraft.core.particles.DustParticleOptions",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.network.syncher.EntityDataAccessor",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
+    "net.minecraft.server.level.ServerPlayer.RespawnConfig",
+    "net.minecraft.tags.DamageTypeTags",
+    "net.minecraft.tags.EntityTypeTags",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "remnant_bosses-fabric-26.3-3.1.1.jar",
     "published": "2026-11-03"
   },
@@ -88,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 474,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 418,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

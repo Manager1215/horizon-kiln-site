@@ -10,7 +10,6 @@
   "description": "Adds the waterlogged property to redstone components: dust, torches, repeaters, comparators, levers, buttons and pressure plates.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.world.item.context.DirectionalPlaceContext",
     "net.minecraft.world.level.block.DiodeBlock",
     "net.minecraft.world.level.block.LeverBlock",
@@ -20,15 +19,14 @@
     "MinecraftServer.overworld()",
     "ClientInformation.createDefault()",
     "ServerPlayer.<init>()",
-    "BlockItem.place()",
-    "Blocks.REDSTONE_WIRE"
+    "BlockItem.place()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "just-redstone-waterlog-fabric-26.3-1.1.0.jar",
     "published": "2026-11-14"
   },
@@ -45,5 +43,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 10
 }

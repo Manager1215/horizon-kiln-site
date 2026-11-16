@@ -9,33 +9,19 @@
   "author": "Catomon",
   "description": "Highlights your name and custom words in chat, changes message color, and plays sounds",
   "needs": [
-    "com.mojang.authlib.GameProfile",
-    "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowChat",
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.ModifyGame",
-    "net.minecraft.network.chat.PlayerChatMessage",
     "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
-    "ClientReceiveMessageEvents.ALLOW_CHAT",
     "ClientReceiveMessageEvents.MODIFY_GAME",
-    "Minecraft.setScreenAndShow()",
-    "AbstractSliderButton.keyPressed()",
-    "AbstractSliderButton.onDrag()",
-    "AbstractSliderButton.onRelease()",
-    "AbstractSliderButton.setValue()",
     "ChatComponent.addPlayerMessage()",
-    "Checkbox.selected()",
-    "Checkbox.Builder.maxWidth()",
-    "EditBox.setEditable()",
     "LocalPlayer.getGameProfile()",
-    "MutableComponent.setStyle()",
-    "MutableComponent.withStyle()",
-    "MutableComponent.withStyle()"
+    "PlayerChatMessage.signature()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "chat_highlight_n_sound-1.2.1.jar",
     "published": "2026-10-15"
   },
@@ -64,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

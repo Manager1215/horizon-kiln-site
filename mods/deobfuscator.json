@@ -10,11 +10,11 @@
   "description": "Deobfuscate obfuscated/magic text. Reveals hidden players on servers such as the DonutSMP.",
   "needs": [],
   "roadmap": "",
-  "evidence": "Everything its code calls is covered by Kiln 0.4.1 (16 classes, 16 members). Not run yet.",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (16 classes, 16 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "deobfuscator-1.0.0+26.3.jar",
     "published": "2026-09-18"
   },
@@ -41,6 +41,10 @@
     "fabricloader",
     "minecraft"
   ],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 0,
   "development": {
     "status": "not-checked",

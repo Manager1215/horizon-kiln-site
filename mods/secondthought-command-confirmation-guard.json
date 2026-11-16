@@ -10,11 +10,11 @@
   "description": "Confirm dangerous typed commands before they are sent. A configurable, client-side command safety guard for Fabric.",
   "needs": [],
   "roadmap": "",
-  "evidence": "Everything its code calls is covered by Kiln 0.4.1 (13 classes, 21 members). Not run yet.",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (13 classes, 21 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "secondthought-fabric-26.3-0.1.1.jar",
     "published": "2026-11-01"
   },
@@ -42,6 +42,10 @@
     "java",
     "minecraft"
   ],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 0,
   "development": {
     "status": "not-checked",

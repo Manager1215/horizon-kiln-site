@@ -11,23 +11,17 @@
   "needs": [
     "Mixin: 1 point inside the game's methods",
     "net.minecraft.client.multiplayer.ClientLevel.ClientLevelData",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.stats.StatsCounter",
     "net.minecraft.world.entity.monster.Enemy",
     "net.minecraft.world.phys.EntityHitResult",
-    "Minecraft.gameMode",
-    "Minecraft.hitResult",
     "Options.hideGui",
-    "GuiGraphicsExtractor.<init>()",
     "ClientLevel.getEntitiesOfClass()",
     "ClientLevel.getLevelData()",
     "ClientLevel.isRainingAt()",
+    "MultiPlayerGameMode.canHurtPlayer()",
+    "MultiPlayerGameMode.hasExperience()",
     "LocalPlayer.getStats()",
     "LocalPlayer.hurtTime",
     "LocalPlayer.isDeadOrDying()",
-    "Stats.CUSTOM",
-    "Stats.MOB_KILLS",
-    "Stats.PLAYER_KILLS",
     "LivingEntity.isAlive()",
     "Mob.canAttack()",
     "Mob.distanceToSqr()",
@@ -43,7 +37,6 @@
     "Player.isDeadOrDying()",
     "Player.isHurt()",
     "Player.tickCount",
-    "Items.TOTEM_OF_UNDYING",
     "Level.getDifficulty()",
     "Level.getLevelData()",
     "AABB.inflate()"
@@ -53,7 +46,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "AnimatedHearts-Fabric-2.3.0.jar",
     "published": "2026-11-10"
   },
@@ -82,7 +75,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 37,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @wrap-method into the game's classes"
+  },
+  "lacks": 30,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

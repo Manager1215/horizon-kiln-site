@@ -9,14 +9,12 @@
   "author": "KSSJW",
   "description": "Turn minecarts into automated machines for tunneling, roadbed construction, and track laying.",
   "needs": [
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.vehicle.minecart.MinecartHopper",
     "net.minecraft.world.level.block.BaseRailBlock",
     "BlockPos.containing()",
     "ItemStack.consume()",
     "ItemStack.hurtAndBreak()",
     "ItemStack.isCorrectToolForDrops()",
-    "Level.destroyBlock()",
     "Level.playSound()",
     "BlockState.canBeReplaced()",
     "BlockState.getCollisionShape()",
@@ -27,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "trt-minecart-1.0.2+26.3.jar",
     "published": "2026-10-02"
   },
@@ -54,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

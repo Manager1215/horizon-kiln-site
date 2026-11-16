@@ -9,28 +9,9 @@
   "author": "BoreasFury",
   "description": "A mod for rendering images or GIFs on screen!",
   "needs": [
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
-    "net.minecraft.client.gui.components.EditBox.TextFormatter",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
-    "InputConstants.isKeyDown()",
-    "NativeImage.setPixel()",
     "Window.selectCursor()",
-    "KeyMapping.getTranslatedKeyMessage()",
-    "Minecraft.execute()",
-    "Minecraft.gameDirectory",
-    "Minecraft.setScreenAndShow()",
-    "Font.plainSubstrByWidth()",
-    "GuiGraphicsExtractor.blit()",
-    "EditBox.addFormatter()",
-    "EditBox.setHint()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
     "GameRenderState.guiRenderState",
     "GuiRenderState.isHudHidden",
-    "MutableComponent.setStyle()",
-    "MutableComponent.withStyle()",
-    "FormattedCharSequence.forward()",
     "Util.ioPool()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -38,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ImageOverlay-26.3-1.1.3.jar",
     "published": "2026-09-16"
   },
@@ -66,7 +47,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

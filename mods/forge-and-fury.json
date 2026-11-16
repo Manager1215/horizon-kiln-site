@@ -20,14 +20,10 @@
     "net.minecraft.world.item.ItemCooldowns",
     "net.minecraft.world.phys.EntityHitResult",
     "BlockPos.containing()",
-    "RegistryAccess.lookupOrThrow()",
     "ParticleTypes.BLOCK",
-    "MinecraftServer.execute()",
     "MinecraftServer.setWeatherParameters()",
     "ServerLevel.clip()",
-    "ServerLevel.destroyBlock()",
     "ServerLevel.getEntitiesOfClass()",
-    "ServerLevel.isEmptyBlock()",
     "ServerLevel.sendParticles()",
     "SoundEvents.ANVIL_LAND",
     "SoundEvents.ARROW_SHOOT",
@@ -42,21 +38,25 @@
     "SoundEvents.PLAYER_HURT_FREEZE",
     "SoundEvents.WITHER_SHOOT",
     "SoundEvents.ZOMBIE_BREAK_WOODEN_DOOR",
-    "DamageSource.getEntity()",
     "DamageSources.fall()",
     "DamageSources.lightningBolt()",
     "DamageSources.mobAttack()",
     "Entity.isAlive()",
     "Entity.isInvulnerable()",
-    "Entity.isRemoved()",
-    "and 30 more"
+    "EntityTypes.ARROW",
+    "LightningBolt.snapTo()",
+    "LivingEntity.damageSources()",
+    "LivingEntity.distanceTo()",
+    "LivingEntity.distanceToSqr()",
+    "LivingEntity.distanceToSqr()",
+    "and 18 more"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "forgeandfury-1.0.0.jar",
     "published": "2026-10-01"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 78,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 58,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

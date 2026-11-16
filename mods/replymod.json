@@ -9,7 +9,6 @@
   "author": "AdelinaM17n",
   "description": "A client-side mod that adds a `/r` command which allows you to message the last player that has sent a direct message to you",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.client.multiplayer.chat.ChatListener",
     "net.minecraft.commands.arguments.MessageArgument",
     "net.minecraft.commands.arguments.MessageArgument.Message"
@@ -19,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "replymod-1.4.0.jar",
     "published": "2026-09-29"
   },
@@ -47,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,7 +10,6 @@
   "description": "Allows all passive mobs in Minecraft to autonomously breed and multiply when environmental conditions are ideal, while rewarding thoughtful pasture management and multi-generational genetics investment.",
   "needs": [
     "net.minecraft.core.particles.ItemParticleOption",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.ai.goal.Goal",
     "net.minecraft.world.entity.ai.goal.Goal.Flag",
     "net.minecraft.world.entity.ai.goal.GoalSelector",
@@ -31,14 +30,7 @@
     "net.minecraft.world.entity.animal.wolf.Wolf",
     "net.minecraft.world.entity.animal.wolf.WolfVariants",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrownEgg",
-    "net.minecraft.world.item.component.ItemLore",
-    "CommandSourceStack.getServer()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
-    "Registry.get()",
     "DataComponents.FROG_VARIANT",
-    "DataComponents.ITEM_NAME",
-    "DataComponents.LORE",
     "DataComponents.RABBIT_VARIANT",
     "DataComponents.WOLF_VARIANT",
     "ParticleTypes.ITEM",
@@ -49,14 +41,22 @@
     "ServerLevel.getBiome()",
     "ServerLevel.getEntitiesOfClass()",
     "ServerLevel.getEntity()",
-    "and 43 more"
+    "ServerLevel.getGameRules()",
+    "ServerLevel.sendParticles()",
+    "BlockTags.FENCES",
+    "BlockTags.FLOWERS",
+    "BlockTags.PLANKS",
+    "BlockTags.SLABS",
+    "BlockTags.TRAPDOORS",
+    "BlockTags.WALLS",
+    "and 41 more"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "natural-reproduction-1.4.32+26.3.jar",
     "published": "2026-10-11"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 224,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 141,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

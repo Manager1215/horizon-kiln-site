@@ -24,7 +24,6 @@
     "net.minecraft.world.level.levelgen.densityfunction.DensitySampler.Bound",
     "net.minecraft.world.level.levelgen.densityfunction.DensityVolume",
     "Registry.forEach()",
-    "RegistryAccess.Frozen.lookupOrThrow()",
     "Registries.BIOME",
     "Registries.BIOME_SOURCE",
     "Registries.LEVEL_STEM",
@@ -42,7 +41,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "modifiedbiomesource-fabric-0.0.4+hotfix+26.3.jar",
     "published": "2026-10-21"
   },
@@ -70,7 +69,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 26,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels"
+  },
+  "lacks": 25,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

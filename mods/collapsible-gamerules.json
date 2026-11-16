@@ -9,8 +9,6 @@
   "author": "dasikigaijin",
   "description": "Makes the GameRules UI screen collapsible by category. Tired of scrolling? Clean up your world settings.",
   "needs": [
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.CycleButton",
     "net.minecraft.client.gui.screens.worldselection.AbstractGameRulesScreen",
     "net.minecraft.client.gui.screens.worldselection.AbstractGameRulesScreen.BooleanRuleEntry",
     "net.minecraft.client.gui.screens.worldselection.AbstractGameRulesScreen.CategoryRuleEntry",
@@ -18,17 +16,7 @@
     "net.minecraft.client.gui.screens.worldselection.AbstractGameRulesScreen.IntegerRuleEntry",
     "net.minecraft.client.gui.screens.worldselection.AbstractGameRulesScreen.RuleEntry",
     "net.minecraft.client.gui.screens.worldselection.AbstractGameRulesScreen.RuleList",
-    "net.minecraft.network.chat.contents.TranslatableContents",
-    "Font.split()",
-    "Font.substrByWidth()",
-    "GuiGraphicsExtractor.setTooltipForNextFrame()",
-    "GuiGraphicsExtractor.text()",
     "NarrationElementOutput.add()",
-    "Language.getVisualOrder()",
-    "Component.getContents()",
-    "Component.getVisualOrderText()",
-    "FormattedText.composite()",
-    "Util.getMillis()",
     "GameRule.defaultValue()",
     "GameRule.getIdentifierWithFallback()",
     "GameRule.id()",
@@ -39,7 +27,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "collapsible-game-rules-1.0.47+26.3.jar",
     "published": "2026-11-15"
   },
@@ -69,7 +57,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

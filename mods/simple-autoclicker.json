@@ -9,21 +9,14 @@
   "author": "johnnyscriptt",
   "description": "Toggleable left/right autoclicking with per-button timings and an in-game settings screen. Client-side Fabric mod - clicks route through vanilla attack/use logic, pause in menus, and reset when you leave a world.",
   "needs": [
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-    "net.minecraft.client.gui.components.StringWidget",
-    "KeyMapping.setDown()",
-    "Minecraft.setScreenAndShow()",
-    "Options.keyAttack",
-    "Options.keyUse"
+    "KeyMapping.setDown()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "simpleautoclicker-1.1.0.jar",
     "published": "2026-10-22"
   },
@@ -51,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

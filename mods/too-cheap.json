@@ -10,8 +10,6 @@
   "description": "Removes annoying Too Expensive! message and level cost restriction on anvils.",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.minecraft.client.gui.screens.inventory.AnvilScreen",
-    "net.minecraft.world.inventory.AnvilMenu",
     "net.minecraft.world.inventory.DataSlot"
   ],
   "roadmap": "Machines (0.4), Mixin (0.5)",
@@ -19,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "too-cheap-1.4.1+mc26.3.jar",
     "published": "2026-09-18"
   },
@@ -48,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

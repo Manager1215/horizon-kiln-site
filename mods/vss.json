@@ -10,35 +10,25 @@
   "description": "Ever wanted to know what you're eating? This mod tells you exactly which effect suspicious stews grant and for how long!",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.data.AtlasIds",
-    "net.minecraft.world.item.component.ItemLore",
     "net.minecraft.world.item.component.SuspiciousStewEffects",
     "net.minecraft.world.item.component.SuspiciousStewEffects.Entry",
     "VertexConsumer.addVertex()",
     "VertexConsumer.setLight()",
     "VertexConsumer.setNormal()",
     "VertexConsumer.setOverlay()",
-    "Hud.getMobEffectSprite()",
     "ItemStackRenderState.LayerRenderState.setItemTransform()",
     "ItemStackRenderState.LayerRenderState.setLocalTransform()",
     "ItemStackRenderState.LayerRenderState.setParticleMaterial()",
     "ItemStackRenderState.LayerRenderState.setUsesBlockLight()",
     "ItemStackRenderState.LayerRenderState.setupSpecialModel()",
-    "SpriteContents.isTransparent()",
-    "TextureAtlasSprite.atlasLocation()",
-    "DataComponents.LORE",
-    "DataComponents.SUSPICIOUS_STEW_EFFECTS",
-    "MutableComponent.setStyle()",
-    "MutableComponent.withStyle()",
-    "Util.getMillis()",
-    "Items.SUSPICIOUS_STEW"
+    "SpriteContents.isTransparent()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "VSS-1.1.6+26.3.jar",
     "published": "2026-10-26"
   },
@@ -67,7 +57,11 @@
     "minecraft",
     "nebsconfiglib"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

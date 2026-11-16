@@ -10,7 +10,6 @@
   "description": "Run commands on offline players",
   "needs": [
     "Mixin: 20 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.impl.event.interaction.FakePlayerPacketListener",
     "net.minecraft.server.commands.AdvancementCommands",
     "net.minecraft.server.commands.AttributeCommand",
@@ -38,26 +37,25 @@
     "net.minecraft.server.level.ServerPlayer.SavedPosition",
     "net.minecraft.world.level.storage.ServerLevelData",
     "net.minecraft.world.level.storage.WorldData",
-    "CommandSourceStack.getServer()",
-    "EntityArgument.ERROR_NOT_SINGLE_ENTITY",
-    "EntityArgument.ERROR_NOT_SINGLE_PLAYER",
-    "EntityArgument.NO_ENTITIES_FOUND",
-    "EntitySelector.findEntities()",
-    "EntitySelector.findPlayers()",
     "MinecraftServer.getWorldData()",
     "MinecraftServer.managedBlock()",
     "MinecraftServer.overworld()",
     "MinecraftServer.registryAccess()",
     "MinecraftServer.services()",
     "ClientInformation.createDefault()",
-    "and 9 more"
+    "ServerPlayer.<init>()",
+    "ServerPlayer.problemPath()",
+    "ServerPlayer.snapTo()",
+    "PlayerList.loadPlayerData()",
+    "LevelData.RespawnData.dimension()",
+    "LevelData.RespawnData.pos()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "OfflineCommands-1.0.4+26.3.jar",
     "published": "2026-11-10"
   },
@@ -84,7 +82,11 @@
     "fabricloader",
     "java"
   ],
-  "lacks": 49,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 39,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

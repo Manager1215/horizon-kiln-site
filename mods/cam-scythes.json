@@ -11,13 +11,11 @@
   "needs": [
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.minecraft.core.particles.DustParticleOptions",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.phys.EntityHitResult",
     "ServerLevel.sendParticles()",
     "SoundEvents.PLAYER_ATTACK_SWEEP",
     "BlockTags.INCORRECT_FOR_NETHERITE_TOOL",
     "Entity.getBoundingBox()",
-    "LivingEntity.getBbHeight()",
     "LivingEntity.getBoundingBox()",
     "LivingEntity.setRemainingFireTicks()",
     "Player.getAttackStrengthScale()",
@@ -30,7 +28,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "cam-scythe.jar",
     "published": "2026-09-27"
   },
@@ -60,7 +58,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

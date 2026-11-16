@@ -14,8 +14,6 @@
     "net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint",
     "net.fabricmc.loader.api.metadata.ModOrigin",
     "net.fabricmc.loader.api.metadata.version.VersionPredicate",
-    "FabricLoader.getEntrypointContainers()",
-    "ModContainer.findPath()",
     "ModContainer.getOrigin()",
     "ModContainer.getRootPaths()",
     "ModMetadata.getType()"
@@ -25,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mod-loading-screen-1.0.5.jar",
     "published": "2025-02-25"
   },
@@ -40,7 +38,11 @@
   "depends": [
     "fabricloader"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

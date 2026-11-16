@@ -16,7 +16,6 @@
     "net.minecraft.advancements.predicates.LocationPredicate.Builder",
     "net.minecraft.client.particle.EndRodParticle",
     "net.minecraft.client.particle.EndRodParticle.Provider",
-    "net.minecraft.core.HolderSet.Direct",
     "net.minecraft.world.entity.monster.Phantom",
     "net.minecraft.world.level.block.AttachedStemBlock",
     "net.minecraft.world.level.block.StemBlock",
@@ -24,10 +23,8 @@
     "net.minecraft.world.level.storage.loot.predicates.LocationCheck",
     "BlockPos.toShortString()",
     "BlockPos.MutableBlockPos.set()",
-    "HolderSet.direct()",
     "BuiltInRegistries.TRIGGER_TYPES",
     "Registries.BIOME",
-    "ServerLevel.destroyBlock()",
     "ServerLevel.getEntitiesOfClass()",
     "ServerLevel.getMoonBrightness()",
     "ServerLevel.getPlayers()",
@@ -45,18 +42,17 @@
     "Biomes.SAVANNA",
     "Biomes.SAVANNA_PLATEAU",
     "Biomes.WINDSWEPT_SAVANNA",
-    "Blocks.MUD_BRICKS",
     "BlockBehaviour.Properties.pushReaction()",
     "LootPool.Builder.when()",
     "LootItemCondition.CODEC",
-    "and 1 more"
+    "Shapes.empty()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Phonolith-1.1-26.3.jar",
     "published": "2026-10-25"
   },
@@ -85,7 +81,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 41,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 37,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

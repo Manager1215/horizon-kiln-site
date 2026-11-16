@@ -11,14 +11,11 @@
   "needs": [
     "an access widener",
     "Mixin: 3 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.client.renderer.debug.EntityHitboxDebugRenderer",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.layers.CapeLayer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Camera.position",
     "Minecraft.getEntityRenderDispatcher()",
     "PlayerInfo.getProfile()",
@@ -35,7 +32,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "player-visibility-fabric-1.5.jar",
     "published": "2026-11-13"
   },
@@ -62,7 +59,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

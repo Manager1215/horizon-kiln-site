@@ -11,26 +11,15 @@
   "needs": [
     "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents",
     "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents.TagsLoaded",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTextTooltip",
-    "net.minecraft.client.server.IntegratedServer",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ChatFormatting.getByCode()",
-    "Minecraft.execute()",
-    "TextColor.parseColor()",
     "ByteBufCodecs.byteArray()",
-    "MinecraftServer.execute()",
-    "MinecraftServer.isSingleplayerOwner()",
-    "ServerPlayer.nameAndId()"
+    "MinecraftServer.isSingleplayerOwner()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "s-lib-fabric-4.0.1+26.3.jar",
     "published": "2026-11-14"
   },
@@ -60,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

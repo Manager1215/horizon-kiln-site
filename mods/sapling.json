@@ -10,18 +10,14 @@
   "description": "A Minecraft mod library that powers MapleMods 🍁",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.minecraft.IdentifierException",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.layers.BreezeEyesLayer",
     "net.minecraft.client.renderer.entity.layers.EyesLayer",
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
     "net.minecraft.server.level.ChunkMap",
-    "net.minecraft.server.permissions.Permissions",
-    "ServerLifecycleEvents.SERVER_STARTING",
     "RenderTypes.breezeEyes()",
     "RenderTypes.eyes()",
-    "CommandSourceStack.getServer()",
     "MinecraftServer.getAllLevels()",
     "ServerChunkCache.chunkMap",
     "ServerLevel.getAllEntities()",
@@ -38,7 +34,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sapling-fabric-26.3.0-3.3.jar",
     "published": "2026-10-28"
   },
@@ -67,7 +63,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; has network channels"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

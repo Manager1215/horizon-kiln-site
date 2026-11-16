@@ -13,21 +13,16 @@
     "net.minecraft.client.renderer.fog.FogData",
     "net.minecraft.client.renderer.fog.FogRenderer",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.item.component.BlockItemStateProperties",
     "net.minecraft.world.level.block.FireBlock",
     "net.minecraft.world.level.block.LanternBlock",
     "net.minecraft.world.level.block.state.properties.Half",
     "net.minecraft.world.level.material.PushReaction",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "ImmutableCollection.forEach()",
     "ImmutableList.stream()",
-    "FluidRenderingRegistry.register()",
     "Camera.blockPosition()",
     "DefaultedRegistry.forEach()",
     "Direction.Axis.getPlane()",
-    "DataComponents.BLOCK_STATE",
     "BuiltInRegistries.GAME_RULE",
     "ServerLevel.getEntitiesOfClass()",
     "ServerLevel.getGameRules()",
@@ -49,14 +44,19 @@
     "Entity.removePassenger()",
     "Entity.snapTo()",
     "Entity.xRotO",
-    "and 32 more"
+    "Entity.yRotO",
+    "Player.startRiding()",
+    "Projectile.mayInteract()",
+    "ItemStack.consume()",
+    "Level.addFreshEntity()",
+    "and 29 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "DecorativeBlocks-Reborn-fabric-26.3-8.0.0.jar",
     "published": "2026-09-23"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 97,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 83,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

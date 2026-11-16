@@ -16,21 +16,12 @@
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.ItemUsedOnLocationTrigger",
     "net.minecraft.core.dispenser.OptionalDispenseItemBehavior",
-    "net.minecraft.world.item.crafting.ShapelessRecipe",
     "net.minecraft.world.level.block.ColoredFallingBlock",
     "ServerLifecycleEvents.SYNC_DATA_PACK_CONTENTS",
     "LootTableEvents.MODIFY_DROPS",
-    "Holder.getRegisteredName()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
-    "Items.FLINT",
     "BlockPlaceContext.<init>()",
-    "Enchantments.FORTUNE",
     "Level.isUnobstructed()",
-    "Blocks.GRAVEL",
-    "SoundType.getPlaceSound()",
     "BlockState.canBeReplaced()",
-    "BlockState.getSoundType()",
     "GameEvent.BLOCK_PLACE",
     "CollisionContext.empty()"
   ],
@@ -39,7 +30,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "modestflintoverhaul--mc26.2--fab--1.50.4.jar",
     "published": "2026-10-28"
   },
@@ -52,7 +43,11 @@
   "entrypoints": {},
   "mixins": true,
   "depends": [],
-  "lacks": 24,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

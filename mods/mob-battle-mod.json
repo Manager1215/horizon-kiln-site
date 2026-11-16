@@ -17,19 +17,12 @@
     "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents.StopTracking",
     "net.minecraft.client.color.item.ItemTintSource",
     "net.minecraft.client.color.item.ItemTintSources",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
     "net.minecraft.client.gui.components.CycleButton.DisplayState",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.core.particles.DustParticleOptions",
     "net.minecraft.network.Utf8String",
-    "net.minecraft.network.chat.ComponentSerialization",
     "net.minecraft.util.CommonColors",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.EntityProcessor",
-    "net.minecraft.world.entity.EntitySpawnRequest",
     "net.minecraft.world.entity.PostSpawnProcessor",
     "net.minecraft.world.entity.ai.Brain",
     "net.minecraft.world.entity.ai.goal.Goal",
@@ -50,14 +43,21 @@
     "net.minecraft.world.entity.monster.cubemob.AbstractCubeMob",
     "net.minecraft.world.entity.monster.cubemob.Slime",
     "net.minecraft.world.entity.monster.warden.AngerLevel",
-    "and 76 more"
+    "net.minecraft.world.entity.monster.warden.Warden",
+    "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
+    "net.minecraft.world.item.BowItem",
+    "net.minecraft.world.level.BaseSpawner",
+    "net.minecraft.world.level.SpawnData",
+    "net.minecraft.world.level.block.entity.SpawnerBlockEntity",
+    "net.minecraft.world.level.pathfinder.Path",
+    "and 65 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mobbattle-26.3-2.8.1-fabric.jar",
     "published": "2026-09-19"
   },
@@ -84,7 +84,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 211,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 171,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

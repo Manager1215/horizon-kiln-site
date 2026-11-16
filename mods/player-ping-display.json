@@ -9,19 +9,10 @@
   "author": "Badeye",
   "description": "Shows a targeted player's live ping for five seconds after you hit them.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.network.chat.FontDescription",
     "net.minecraft.network.chat.FontDescription.Resource",
-    "Button.setTooltip()",
-    "EditBox.setTooltip()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
     "PlayerInfo.getProfile()",
-    "CommonComponents.GUI_DONE",
-    "MutableComponent.withStyle()",
     "Style.withFont()",
     "Player.getGameProfile()",
     "Player.isAlive()"
@@ -31,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "playerpingdisplay-1.2.0+mc26.3.jar",
     "published": "2026-10-19"
   },
@@ -60,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

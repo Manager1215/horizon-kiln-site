@@ -10,15 +10,14 @@
   "description": "Just play chess in Minecraft!",
   "needs": [
     "net.minecraft.references.BlockItemId",
-    "ItemStack.count()",
-    "Blocks.QUARTZ_BLOCK"
+    "ItemStack.count()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "simple_chess-fabric-26.3-1.2.1.jar",
     "published": "2026-09-17"
   },
@@ -46,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

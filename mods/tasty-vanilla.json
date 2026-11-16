@@ -26,7 +26,6 @@
     "net.minecraft.advancements.predicates.entity.EntityFlagsPredicate.Builder",
     "net.minecraft.advancements.predicates.entity.EntityPredicate",
     "net.minecraft.advancements.predicates.entity.EntityPredicate.Builder",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.component.predicates.DataComponentPredicate",
     "net.minecraft.core.component.predicates.DataComponentPredicate.Type",
     "net.minecraft.core.component.predicates.DataComponentPredicates",
@@ -34,12 +33,10 @@
     "net.minecraft.core.component.predicates.EnchantmentsPredicate.Enchantments",
     "net.minecraft.data.worldgen.placement.PlacementUtils",
     "net.minecraft.references.BlockItemId",
-    "net.minecraft.tags.EnchantmentTags",
     "net.minecraft.world.entity.animal.goat.Goat",
     "net.minecraft.world.food.FoodProperties",
     "net.minecraft.world.food.FoodProperties.Builder",
     "net.minecraft.world.food.VillagerFood",
-    "net.minecraft.world.item.component.Compostable",
     "net.minecraft.world.item.component.Consumable",
     "net.minecraft.world.item.component.Consumable.Builder",
     "net.minecraft.world.item.component.Consumables",
@@ -49,14 +46,17 @@
     "net.minecraft.world.level.block.state.BlockBehaviour.StateArgumentPredicate",
     "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
     "net.minecraft.world.level.gameevent.GameEvent.Context",
-    "and 77 more"
+    "net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate",
+    "net.minecraft.world.level.levelgen.feature.SimpleBlockFeature",
+    "net.minecraft.world.level.levelgen.placement.BiomeFilter",
+    "and 74 more"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Tasty Vanilla-2.2-26.3.jar",
     "published": "2026-10-02"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 143,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 131,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

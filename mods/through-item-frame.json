@@ -10,14 +10,10 @@
   "description": "A lightweight client-side mod that allows you to open containers behind item frames with a simple right-click.",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.network.protocol.game.ServerboundPlayerInputPacket",
     "net.minecraft.world.entity.decoration.ItemFrame",
     "net.minecraft.world.entity.player.Input",
     "net.minecraft.world.item.ItemFrameItem",
-    "Minecraft.gameMode",
-    "Minecraft.hitResult",
-    "Options.keyAttack",
     "ClientPacketListener.send()",
     "LocalPlayer.getLastSentInput()",
     "BlockState.getMenuProvider()"
@@ -27,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ThroughItemFrame-1.1.0-26.3-fabric.jar",
     "published": "2026-11-10"
   },
@@ -59,7 +55,11 @@
     "minecraft",
     "modmenu"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

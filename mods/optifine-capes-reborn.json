@@ -10,7 +10,6 @@
   "description": "Implements Optifine Capes to non optifine clients",
   "needs": [
     "an access widener",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.minecraft.SessionService",
     "com.mojang.util.UndashedUuid",
     "net.minecraft.client.gui.components.OptionsList",
@@ -19,19 +18,13 @@
     "net.minecraft.client.gui.screens.options.SkinCustomizationScreen",
     "net.minecraft.client.model.Model.Simple",
     "net.minecraft.client.model.geom.ModelLayers",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.util.Util.OS",
     "NativeImage.copyRect()",
-    "NativeImage.getHeight()",
-    "NativeImage.getWidth()",
-    "NativeImage.read()",
-    "Minecraft.execute()",
     "Minecraft.getEntityModels()",
     "Minecraft.getGameProfile()",
     "Minecraft.getSkinManager()",
     "Minecraft.services()",
     "GuiGraphicsExtractor.skin()",
-    "AbstractWidget.setPosition()",
     "EntityModelSet.bakeLayer()",
     "AbstractClientPlayer.getGameProfile()",
     "RenderTypes.entityTranslucent()",
@@ -45,7 +38,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "optifine_capes_reborn-1.0.1-26.3.jar",
     "published": "2026-10-01"
   },
@@ -75,7 +68,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 29,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

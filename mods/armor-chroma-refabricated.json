@@ -12,7 +12,6 @@
     "Mixin: 1 point inside the game's methods",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.util.CommonColors",
     "net.minecraft.util.profiling.ProfilerFiller",
@@ -20,22 +19,17 @@
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
     "net.minecraft.world.item.component.DyedItemColor",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "RenderPipeline.builder()",
+    "ResourceLoader.registerBuiltinPack()",
     "Options.glintStrength()",
-    "GuiGraphicsExtractor.blit()",
     "RenderPipelines.GLINT",
     "RenderPipelines.GUI_TEXTURED_SNIPPET",
     "RenderPipelines.register()",
-    "CommandSourceStack.getPlayerOrException()",
     "DataComponents.DYED_COLOR",
-    "DataComponents.ENCHANTMENT_GLINT_OVERRIDE",
     "Component.translatableEscape()",
     "EquipmentSlot.VALUES",
     "AttributeInstance.addTransientModifier()",
     "AttributeInstance.hasModifier()",
-    "Item.components()",
     "ItemStack.forEachModifier()",
     "ItemStack.hasFoil()",
     "EquipmentAssets.TURTLE_SCUTE"
@@ -45,7 +39,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "armorchroma-mc26.3-1.2.11+26.3.jar",
     "published": "2026-11-12"
   },
@@ -73,7 +67,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 29,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

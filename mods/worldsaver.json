@@ -9,23 +9,14 @@
   "author": "ohjona",
   "description": "This mod adds automatic backupping of your world, so you'll never loose a world again. (at the moment it only supports local backup) Its recommended to use mod menu with this mod for better configurability.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "net.minecraft.world.level.storage.LevelResource",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "CommandSourceStack.getServer()",
-    "MinecraftServer.execute()",
-    "MinecraftServer.getWorldPath()",
-    "MinecraftServer.saveEverything()",
-    "PlayerList.broadcastSystemMessage()"
+    "MinecraftServer.saveEverything()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "worldsaver-1.2.0+mc26.3.jar",
     "published": "2026-09-24"
   },
@@ -55,7 +46,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

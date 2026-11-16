@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
     "net.fabricmc.fabric.api.entity.FakePlayer",
@@ -33,11 +32,9 @@
     "net.minecraft.client.resources.model.EquipmentClientInfo",
     "net.minecraft.client.resources.model.EquipmentClientInfo.Layer",
     "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.component.DataComponentInitializers",
     "net.minecraft.core.component.DataComponentInitializers.SingleComponentInitializer",
     "net.minecraft.server.TickTask",
-    "net.minecraft.server.permissions.LevelBasedPermissionSet",
     "net.minecraft.tags.DamageTypeTags",
     "net.minecraft.world.damagesource.DamageTypes",
     "net.minecraft.world.entity.animal.sheep.Sheep",
@@ -51,14 +48,17 @@
     "net.minecraft.world.item.ShieldItem",
     "net.minecraft.world.item.component.BlocksAttacks",
     "net.minecraft.world.item.component.BlocksAttacks.DamageReduction",
-    "and 67 more"
+    "net.minecraft.world.item.component.BlocksAttacks.ItemDamageFunction",
+    "net.minecraft.world.level.block.Mirror",
+    "net.minecraft.world.level.block.state.BlockBehaviour.StatePredicate",
+    "and 60 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "everrose-1.5.1-fabric-26.3.jar",
     "published": "2026-10-13"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 133,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 100,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

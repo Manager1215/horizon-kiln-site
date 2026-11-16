@@ -36,7 +36,6 @@
     "net.minecraft.world.level.storage.loot.providers.number.ints.ConstantValue",
     "net.minecraft.world.phys.EntityHitResult",
     "Axis.ZP",
-    "FabricCreativeModeTabOutput.insertAfter()",
     "ClientLevel.getEntitiesOfClass()",
     "LocalPlayer.getActiveItem()",
     "LocalPlayer.getBoundingBox()",
@@ -44,12 +43,13 @@
     "LocalPlayer.isUsingItem()",
     "EntityRendererProvider.Context.getItemModelResolver()",
     "ItemModelResolver.updateForNonLiving()",
-    "HolderLookup.RegistryLookup.getOrThrow()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "SynchedEntityData.defineId()",
     "SynchedEntityData.get()",
     "SynchedEntityData.set()",
+    "ServerLevel.getEntity()",
+    "ServerLevel.sendParticles()",
+    "ServerPlayer.distanceToSqr()",
+    "SoundEvents.ARROW_HIT",
     "and 45 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "the-draupnir-1.5R.jar",
     "published": "2026-11-08"
   },
@@ -85,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 106,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 85,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

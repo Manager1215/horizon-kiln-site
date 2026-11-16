@@ -9,16 +9,12 @@
   "author": "Julian6513",
   "description": "Unofficial Fabric client mod that displays Armor Stand PvP tiers beside player name tags and in the TAB list.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.client.gui.components.PlayerTabOverlay",
     "net.minecraft.client.renderer.entity.player.AvatarRenderer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "net.minecraft.network.chat.FontDescription",
     "net.minecraft.network.chat.FontDescription.Resource",
-    "Minecraft.getCurrentServer()",
     "PlayerInfo.getProfile()",
-    "ServerData.ip",
-    "MutableComponent.setStyle()",
     "Style.withFont()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -26,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tier-badges-1.1.2+26.x.jar",
     "published": "2026-10-01"
   },
@@ -55,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,7 +10,6 @@
   "description": "Pig-people villages to your world, allowing you to trade carrots for enchanted items",
   "needs": [
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.model.geom.ModelLayers",
     "net.minecraft.client.model.geom.PartPose",
@@ -25,7 +24,6 @@
     "net.minecraft.network.syncher.EntityDataAccessor",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
     "net.minecraft.world.entity.ai.control.LookControl",
@@ -43,20 +41,22 @@
     "net.minecraft.world.entity.animal.pig.PigSoundVariant.PigSoundSet",
     "net.minecraft.world.entity.animal.pig.PigSoundVariants",
     "net.minecraft.world.entity.animal.pig.PigSoundVariants.SoundSet",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "net.minecraft.world.item.alchemy.Potions",
     "net.minecraft.world.level.StructureManager",
-    "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
     "net.minecraft.world.level.levelgen.LegacyRandomSource",
     "net.minecraft.world.level.levelgen.WorldgenRandom",
-    "and 65 more"
+    "net.minecraft.world.level.levelgen.structure.Structure.GenerationContext",
+    "net.minecraft.world.level.levelgen.structure.Structure.GenerationStub",
+    "net.minecraft.world.level.levelgen.structure.structures.JigsawStructure",
+    "net.minecraft.world.level.pathfinder.Node",
+    "net.minecraft.world.level.pathfinder.Path",
+    "and 60 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "pigfolk-villages-26.3-universal-1.9.4.jar",
     "published": "2026-11-08"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 150,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 111,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

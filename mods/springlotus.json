@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 38 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.exceptions.AuthenticationUnavailableException",
     "com.mojang.authlib.minecraft.SessionService",
     "com.mojang.authlib.services.ProfileResult",
@@ -24,9 +23,6 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Leave",
     "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.Unload",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
     "net.fabricmc.fabric.api.networking.v1.ServerConfigurationNetworking.ConfigurationPacketHandler",
@@ -36,8 +32,6 @@
     "net.minecraft.DefaultUncaughtExceptionHandler",
     "net.minecraft.client.gui.ActiveTextCollector",
     "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
-    "net.minecraft.client.gui.TextAlignment",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.nbt.visitors.CollectFields",
     "net.minecraft.nbt.visitors.FieldSelector",
@@ -51,14 +45,20 @@
     "net.minecraft.server.level.ChunkMap",
     "net.minecraft.server.network.PlayerChunkSender",
     "net.minecraft.server.network.ServerLoginPacketListenerImpl",
-    "and 80 more"
+    "net.minecraft.server.notifications.ServerActivityMonitor",
+    "net.minecraft.util.debug.DebugValueSource",
+    "net.minecraft.world.effect.WeavingMobEffect",
+    "net.minecraft.world.entity.PortalProcessor",
+    "net.minecraft.world.entity.SlotProvider",
+    "net.minecraft.world.entity.ai.behavior.HarvestFarmland",
+    "and 57 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "springlotus-fabric-1.2.2+26.3.jar",
     "published": "2026-11-14"
   },
@@ -87,5 +87,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 166
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 110
 }

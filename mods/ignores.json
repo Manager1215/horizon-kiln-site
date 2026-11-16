@@ -10,30 +10,29 @@
   "description": "A simple drop-in solution to allow players to ignore other players. This exists because the vanilla mute won't work on NoChatReports servers.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.network.chat.OutgoingChatMessage",
-    "net.minecraft.network.chat.PlayerChatMessage",
     "net.minecraft.server.commands.MsgCommand",
     "net.minecraft.server.players.CachedUserNameToIdResolver",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
     "ListTag.add()",
+    "PlayerChatMessage.decoratedContent()",
+    "PlayerChatMessage.hasExpiredServer()",
+    "PlayerChatMessage.hasSignature()",
+    "PlayerChatMessage.isFullyFiltered()",
     "MinecraftServer.getDataStorage()",
     "MinecraftServer.logChatMessage()",
     "MinecraftServer.overworld()",
     "MinecraftServer.services()",
     "ServerPlayer.getGameProfile()",
     "ServerPlayer.sendChatMessage()",
-    "ServerPlayer.sendSystemMessage()",
     "NameAndId.<init>()",
     "PlayerList.CHAT_FILTERED_FULL"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "panda-ignore-1.2.1+26.3.jar",
     "published": "2026-10-19"
   },
@@ -61,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

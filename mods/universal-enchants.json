@@ -24,11 +24,6 @@
     "net.minecraft.advancements.predicates.entity.EntityPredicate",
     "net.minecraft.advancements.predicates.entity.EntityPredicate.Builder",
     "net.minecraft.advancements.predicates.entity.MovementPredicate",
-    "net.minecraft.core.HolderSet.Direct",
-    "net.minecraft.core.HolderSet.ListBacked",
-    "net.minecraft.core.HolderSet.Named",
-    "net.minecraft.network.chat.contents.PlainTextContents",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.resources.RegistryOps.RegistryInfoLookup",
     "net.minecraft.tags.DamageTypeTags",
     "net.minecraft.util.valueproviders.ConstantFloat",
@@ -38,7 +33,6 @@
     "net.minecraft.world.item.ShearsItem",
     "net.minecraft.world.item.ShieldItem",
     "net.minecraft.world.item.TridentItem",
-    "net.minecraft.world.item.enchantment.Enchantable",
     "net.minecraft.world.item.enchantment.Enchantment.Builder",
     "net.minecraft.world.item.enchantment.EnchantmentHelper.EnchantmentInSlotVisitor",
     "net.minecraft.world.item.enchantment.EnchantmentTarget",
@@ -51,14 +45,20 @@
     "net.minecraft.world.item.enchantment.effects.AllOf.EntityEffects",
     "net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect",
     "net.minecraft.world.item.enchantment.effects.PlaySoundEffect",
-    "and 62 more"
+    "net.minecraft.world.item.enchantment.effects.ReplaceDisk",
+    "net.minecraft.world.item.enchantment.effects.SummonEntityEffect",
+    "net.minecraft.world.level.block.FarmlandBlock",
+    "net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate",
+    "net.minecraft.world.level.storage.loot.LootContext.EntityTarget",
+    "net.minecraft.world.level.storage.loot.predicates.AllOfCondition",
+    "and 39 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "universalenchants-v26.3.2-mc26.3.x+fabric.jar",
     "published": "2026-10-21"
   },
@@ -88,7 +88,11 @@
     "minecraft",
     "puzzleslib"
   ],
-  "lacks": 102,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-arg Kiln doesn't guard; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 79,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

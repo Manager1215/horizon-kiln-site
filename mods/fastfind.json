@@ -10,25 +10,19 @@
   "description": "FastFind is a powerful Minecraft mod that helps you easily locate specific items inside any inventory block. With its advanced scanning system and visual markers (ESP), you’ll never miss valuable resources again!",
   "needs": [
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.AfterTranslucentTerrain",
-    "net.minecraft.gizmos.GizmoStyle",
     "net.minecraft.world.level.block.ChestBlock",
     "net.minecraft.world.level.block.state.properties.ChestType",
     "LevelRenderEvents.AFTER_TRANSLUCENT_TERRAIN",
-    "Minecraft.execute()",
-    "CommandSourceStack.getEntity()",
-    "CommandSourceStack.getPlayerOrException()",
     "BlockPos.distSqr()",
-    "Direction.getNearest()",
     "Gizmos.cuboid()",
-    "ByteBufCodecs.registry()",
-    "ServerPlayer.sendSystemMessage()"
+    "ByteBufCodecs.registry()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fastfind-26.3-fabric-2.0.0.jar",
     "published": "2026-09-17"
   },
@@ -57,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

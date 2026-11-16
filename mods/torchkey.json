@@ -9,18 +9,14 @@
   "author": "alurienflame",
   "description": "Adds a hotkey to place a torch from your hotbar.",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "org.lwjgl.glfw.GLFW",
-    "Minecraft.gameMode",
-    "Minecraft.hitResult",
-    "HitResult.getType()"
+    "org.lwjgl.glfw.GLFW"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Torchkey-1.0.10.jar",
     "published": "2026-07-12"
   },
@@ -48,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

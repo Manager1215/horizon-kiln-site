@@ -10,19 +10,14 @@
   "description": "Allows for render distances greater than the server's view-distance",
   "needs": [
     "Mixin: 10 points inside the game's methods",
-    "net.minecraft.SharedConstants",
     "net.minecraft.TracingExecutor",
-    "net.minecraft.client.OptionInstance.IntRange",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.multiplayer.ClientChunkCache",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.extract.LevelExtractor",
     "net.minecraft.client.renderer.fog.FogData",
     "net.minecraft.client.renderer.fog.FogRenderer",
     "net.minecraft.client.renderer.fog.FogRenderer.FogMode",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.nbt.NbtAccounter",
-    "net.minecraft.nbt.NbtIo",
     "net.minecraft.server.level.ChunkMap",
     "net.minecraft.util.profiling.Profiler",
     "net.minecraft.util.profiling.ProfilerFiller",
@@ -37,8 +32,6 @@
     "net.minecraft.world.level.lighting.LightEngine",
     "net.minecraft.world.level.storage.WorldData",
     "net.minecraft.world.ticks.LevelChunkTicks",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Int2ObjectMap.isEmpty()",
     "Int2ObjectMap.Entry.getValue()",
     "IntSet.isEmpty()",
@@ -50,14 +43,21 @@
     "Object2LongMap.Entry.getKey()",
     "ObjectCollection.stream()",
     "ObjectIterator.hasNext()",
-    "and 49 more"
+    "ObjectIterator.next()",
+    "ObjectIterator.remove()",
+    "ObjectSet.removeIf()",
+    "SharedConstants.getCurrentVersion()",
+    "Minecraft.getFixerUpper()",
+    "Minecraft.getLevelSource()",
+    "Minecraft.levelExtractor",
+    "and 42 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bobby-5.2.16+mc26.3.jar",
     "published": "2026-10-06"
   },
@@ -85,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 126,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
+  },
+  "lacks": 112,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

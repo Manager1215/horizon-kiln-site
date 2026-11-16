@@ -9,28 +9,17 @@
   "author": "MincraftEinstein",
   "description": "A mod that allows players to fix their anvils by shift + right-clicking an anvil with an iron ingot",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.minecraft.core.dispenser.OptionalDispenseItemBehavior",
     "net.minecraft.world.level.block.AnvilBlock",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "ServerLifecycleEvents.END_DATA_PACK_RELOAD",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "DefaultedRegistry.getTagOrEmpty()",
     "SoundEvents.ANVIL_LAND",
-    "Player.swing()",
-    "Blocks.ANVIL",
-    "Blocks.CHIPPED_ANVIL",
-    "Blocks.DAMAGED_ANVIL",
     "DispenserBlock.DISPENSER_REGISTRY"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "MendableAnvils-fabric-26.1-1.2.5.jar",
     "published": "2026-11-09"
   },
@@ -58,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

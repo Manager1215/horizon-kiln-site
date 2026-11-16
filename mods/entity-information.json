@@ -9,11 +9,6 @@
   "author": "Serilum",
   "description": "ℹ️ Displays entity information on hit with the Information Stick. Useful for debugging and developing.",
   "needs": [
-    "net.minecraft.server.permissions.Permissions",
-    "CommandSourceStack.getEntity()",
-    "CommandSourceStack.getPlayerOrException()",
-    "DataComponents.CUSTOM_NAME",
-    "DamageSource.getEntity()",
     "Entity.isSilent()",
     "Entity.tickCount",
     "Player.addItem()",
@@ -24,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "entityinformation-26.3.0-4.0.jar",
     "published": "2026-10-02"
   },
@@ -53,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

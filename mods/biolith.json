@@ -12,7 +12,6 @@
     "an access widener",
     "Mixin: 9 points inside the game's methods",
     "net.fabricmc.fabric.api.biome.v1.TheEndBiomes",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.resource.v1.DataResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys",
     "net.fabricmc.fabric.impl.biome.TheEndBiomeData",
@@ -51,14 +50,15 @@
     "net.minecraft.world.level.levelgen.densityfunction.DensitySampler",
     "net.minecraft.world.level.levelgen.densityfunction.DensitySampler.Bound",
     "net.minecraft.world.level.levelgen.densityfunction.DensityVolume",
-    "and 50 more"
+    "net.minecraft.world.level.levelgen.densityfunction.SamplerContext",
+    "and 37 more"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "biolith-fabric-3.8.0-beta.2.jar",
     "published": "2026-10-24"
   },
@@ -86,7 +86,11 @@
     "minecraft",
     "mixinextras"
   ],
-  "lacks": 90,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes"
+  },
+  "lacks": 77,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

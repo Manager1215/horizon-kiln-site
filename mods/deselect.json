@@ -14,15 +14,14 @@
     "net.minecraft.world.entity.decoration.ArmorStand",
     "ClientPacketListener.send()",
     "Inventory.getFreeSlot()",
-    "Inventory.getSelectionSize()",
-    "Player.drop()"
+    "Inventory.getSelectionSize()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "deselect-2.0.3-fabric-26.3.jar",
     "published": "2026-09-21"
   },
@@ -49,7 +48,11 @@
     "fabric-api",
     "fabricloader"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,8 +11,6 @@
   "needs": [
     "com.mojang.blaze3d.Blaze3D",
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
     "net.minecraft.client.gui.components.PlayerFaceExtractor",
     "net.minecraft.client.gui.components.SelectableEntry",
     "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
@@ -21,29 +19,14 @@
     "net.minecraft.client.gui.screens.ConnectScreen",
     "net.minecraft.client.gui.screens.FaviconTexture",
     "net.minecraft.client.multiplayer.resolver.ServerAddress",
-    "net.minecraft.network.chat.ComponentContents",
-    "net.minecraft.network.chat.contents.TranslatableContents",
-    "net.minecraft.world.item.component.ResolvableProfile",
-    "NativeImage.getHeight()",
-    "NativeImage.getWidth()",
-    "NativeImage.read()",
-    "NativeImage.read()",
-    "Font.split()",
-    "GuiGraphicsExtractor.centeredText()",
-    "GuiGraphicsExtractor.text()",
-    "AbstractWidget.getMessage()",
-    "Button.Builder.width()",
-    "CommonComponents.GUI_BACK",
-    "CommonComponents.GUI_CANCEL",
-    "CommonComponents.NARRATION_SEPARATOR",
-    "Component.getContents()"
+    "net.minecraft.world.item.component.ResolvableProfile"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "servarium-1.0.jar",
     "published": "2026-11-03"
   },
@@ -71,7 +54,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

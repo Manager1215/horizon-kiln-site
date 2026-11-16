@@ -9,30 +9,18 @@
   "author": "CryonLabs",
   "description": "A simple farming technology mod that automatically creates, plants, harvests and manages farms from 3x3 to 15x15 using a single smart farming block.",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.world.flag.FeatureFlags",
     "net.minecraft.world.inventory.ContainerData",
-    "net.minecraft.world.inventory.MenuType.MenuSupplier",
     "net.minecraft.world.inventory.SimpleContainerData",
-    "Minecraft.gameMode",
     "AbstractContainerScreen.containerTick()",
-    "MenuType.<init>()",
-    "Blocks.BEETROOTS",
-    "Blocks.CARROTS",
-    "Blocks.COARSE_DIRT",
-    "Blocks.POTATOES",
-    "Blocks.PUMPKIN",
-    "Blocks.WHEAT",
-    "CropBlock.isMaxAge()",
-    "BlockState.canBeReplaced()",
-    "LootContextParams.BLOCK_ENTITY"
+    "MultiPlayerGameMode.handleInventoryButtonClick()",
+    "BlockState.canBeReplaced()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "farfuits-1.0.2+mc26.3.jar",
     "published": "2026-10-06"
   },
@@ -61,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

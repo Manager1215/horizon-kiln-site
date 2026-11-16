@@ -12,13 +12,7 @@
     "net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents",
     "net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents.AllowSleeping",
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
     "net.minecraft.client.gui.components.MultiLineTextWidget",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.server.level.ChunkMap",
     "net.minecraft.world.clock.ServerClockManager",
     "net.minecraft.world.clock.ServerClockManager.ServerClockInstance",
@@ -34,10 +28,6 @@
     "BlockPos.mutable()",
     "BlockPos.MutableBlockPos.set()",
     "BlockPos.MutableBlockPos.setY()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "Style.withUnderlined()",
     "MinecraftServer.getAllLevels()",
     "MinecraftServer.getTickCount()",
     "MinecraftServer.setWeatherParameters()",
@@ -49,14 +39,19 @@
     "ServerLevel.isInsideBuildHeight()",
     "ServerLevel.isRainingAt()",
     "ServerPlayer.chunkPosition()",
-    "and 10 more"
+    "Entity.discard()",
+    "Level.getHeightmapPos()",
+    "Level.getMaxY()",
+    "Block.handlePrecipitation()",
+    "BlockState.isCollisionShapeFullBlock()",
+    "DimensionType.defaultClock()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "alwaysraining-fabric-26.3-1.0.2.jar",
     "published": "2026-09-20"
   },
@@ -86,7 +81,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 50,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 36,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

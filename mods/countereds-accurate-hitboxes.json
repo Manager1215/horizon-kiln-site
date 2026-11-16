@@ -10,7 +10,6 @@
   "description": "A mod that changes hit calculation to use the actual entity model",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.model.EntityModel",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
@@ -18,8 +17,6 @@
     "net.minecraft.world.phys.EntityHitResult",
     "PoseStack.last()",
     "PoseStack.Pose.pose()",
-    "KeyMapping.matches()",
-    "Options.getCameraType()",
     "Options.keyDebugShowHitboxes",
     "ModelPart.translateAndRotate()",
     "ModelPart.visible",
@@ -30,12 +27,7 @@
     "ModelPart.Cube.minY",
     "ModelPart.Cube.minZ",
     "Frustum.isVisible()",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "DefaultedRegistry.iterator()",
-    "MinecraftServer.execute()",
     "ServerLevel.addFreshEntityWithPassengers()",
     "Entity.getBoundingBox()",
     "Entity.getPosition()",
@@ -52,7 +44,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "accurate_hitboxes-fabric-2.0.2.jar",
     "published": "2026-10-08"
   },
@@ -81,7 +73,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 36,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 28,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

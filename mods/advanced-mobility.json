@@ -10,15 +10,11 @@
   "description": "Adds more than just running and jumping! (Dashing, Wall jumping, Climbing, Crawling)",
   "needs": [
     "net.minecraft.core.particles.BlockParticleOption",
-    "net.minecraft.world.entity.Pose",
     "LocalPlayer.getPose()",
-    "LocalPlayer.horizontalCollision",
-    "LocalPlayer.isFallFlying()",
     "LocalPlayer.refreshDimensions()",
     "LocalPlayer.setPose()",
     "BlockPos.betweenClosed()",
     "ParticleTypes.FALLING_DUST",
-    "MinecraftServer.execute()",
     "ServerLevel.sendParticles()",
     "ServerPlayer.getPose()",
     "ServerPlayer.getSoundSource()",
@@ -29,9 +25,7 @@
     "SoundEvents.ZOMBIE_INFECT",
     "Player.getBoundingBox()",
     "Player.setDeltaMovement()",
-    "Player.syncVelocity",
     "FoodData.addExhaustion()",
-    "Blocks.GRAVEL",
     "BlockState.getCollisionShape()",
     "AABB.inflate()",
     "AABB.maxX",
@@ -47,7 +41,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mobilitymodifications-1.0.0+mc-26.3.jar",
     "published": "2026-10-23"
   },
@@ -77,7 +71,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 32,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 26,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -15,12 +15,9 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType.Builder",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType.Builder.Mob",
-    "net.minecraft.client.StringSplitter",
     "net.minecraft.client.model.animal.golem.IronGolemModel",
     "net.minecraft.client.model.geom.ModelLayers",
     "net.minecraft.client.renderer.entity.MobRenderer",
@@ -29,10 +26,6 @@
     "net.minecraft.client.renderer.entity.state.IronGolemRenderState",
     "net.minecraft.core.particles.BlockParticleOption",
     "net.minecraft.core.particles.DustParticleOptions",
-    "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.tags.DamageTypeTags",
     "net.minecraft.tags.EntityTypeTags",
     "net.minecraft.world.damagesource.DamageTypes",
@@ -49,14 +42,21 @@
     "net.minecraft.world.entity.ai.goal.MeleeAttackGoal",
     "net.minecraft.world.entity.ai.goal.RandomLookAroundGoal",
     "net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal",
-    "and 78 more"
+    "net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal",
+    "net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal",
+    "net.minecraft.world.entity.animal.golem.IronGolem",
+    "net.minecraft.world.entity.decoration.ArmorStand",
+    "net.minecraft.world.entity.monster.Blaze",
+    "net.minecraft.world.entity.monster.Enemy",
+    "net.minecraft.world.entity.monster.Guardian",
+    "and 70 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "remnants-skills-and-powers-fabric-26.3-2.0.2.jar",
     "published": "2026-11-03"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 159,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 113,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

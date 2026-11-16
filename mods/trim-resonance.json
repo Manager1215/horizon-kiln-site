@@ -35,14 +35,11 @@
     "ServerPlayer.getAdvancements()",
     "ServerPlayer.isAlive()",
     "SoundEvents.AMETHYST_BLOCK_RESONATE",
-    "DamageSource.is()",
     "LightningBolt.snapTo()",
     "AttributeInstance.addTransientModifier()",
     "AttributeInstance.getModifier()",
     "AttributeInstance.hasModifier()",
     "AttributeInstance.removeModifier()",
-    "Attributes.MINING_EFFICIENCY",
-    "Player.getBbHeight()",
     "Player.getBoundingBox()",
     "Player.isInWaterOrRain()",
     "Player.tickCount",
@@ -50,14 +47,17 @@
     "Level.getBiome()",
     "Level.getEntitiesOfClass()",
     "Level.getMaxLocalRawBrightness()",
-    "and 4 more"
+    "Level.isBrightOutside()",
+    "Biome.getBaseTemperature()",
+    "Blocks.LIGHTNING_ROD",
+    "and 1 more"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "trimresonance-fabric-3.0.2.jar",
     "published": "2026-11-07"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 44,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 41,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

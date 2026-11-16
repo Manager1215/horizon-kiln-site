@@ -13,7 +13,6 @@
     "Mixin: 6 points inside the game's methods",
     "net.minecraft.client.gui.screens.inventory.MerchantScreen",
     "net.minecraft.commands.arguments.ResourceArgument",
-    "net.minecraft.core.HolderSet.Direct",
     "net.minecraft.core.component.DataComponentExactPredicate",
     "net.minecraft.core.component.DataComponentExactPredicate.Builder",
     "net.minecraft.core.component.DataComponentPatch.SplitResult",
@@ -45,20 +44,21 @@
     "net.minecraft.world.level.storage.loot.entries.LootPoolEntry",
     "net.minecraft.world.level.storage.loot.functions.LootItemFunctions",
     "net.minecraft.world.level.storage.loot.functions.SetComponentsFunction",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "CommandBuildContext.getOrThrow()",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "and 52 more"
+    "HolderLookup.Provider.getOrThrow()",
+    "DataComponentPatch.split()",
+    "DataComponents.ADDITIONAL_TRADE_COST",
+    "DataComponents.DYED_COLOR",
+    "BuiltInRegistries.VILLAGER_PROFESSION",
+    "Registries.VILLAGER_PROFESSION",
+    "and 33 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "villagerconfig-fabric-4.6.0+26.3.jar",
     "published": "2026-09-23"
   },
@@ -89,7 +89,11 @@
     "fabricloader",
     "java"
   ],
-  "lacks": 92,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels"
+  },
+  "lacks": 73,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -25,7 +25,6 @@
     "net.minecraft.client.renderer.entity.CushionRenderer",
     "net.minecraft.client.renderer.entity.state.CushionRenderState",
     "net.minecraft.client.renderer.extract.LevelExtractor",
-    "net.minecraft.data.AtlasIds",
     "net.minecraft.server.level.ChunkMap",
     "net.minecraft.server.level.ChunkMap.TrackedEntity",
     "net.minecraft.server.level.DistanceManager",
@@ -38,9 +37,7 @@
     "PoseStack.Pose.transformNormal()",
     "VertexConsumer.putBlockBakedQuad()",
     "ReferenceLinkedOpenHashSet.toArray()",
-    "Minecraft.execute()",
     "Minecraft.getEntityModels()",
-    "Minecraft.isSameThread()",
     "Minecraft.levelExtractor",
     "EntityModelSet.bakeLayer()",
     "ModelPart.visit()",
@@ -50,14 +47,17 @@
     "Direction.fromYRot()",
     "Direction.getApproximateNearest()",
     "Direction.getUnitVec3f()",
-    "and 22 more"
+    "SectionPos.asLong()",
+    "SectionPos.asLong()",
+    "SectionPos.minBlockX()",
+    "and 17 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "optimizedcushions-fabric-mc26.3-1.2.0.jar",
     "published": "2026-10-11"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 62,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 57,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

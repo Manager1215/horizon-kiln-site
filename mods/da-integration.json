@@ -10,34 +10,19 @@
   "description": "Let your audience interact with your world through commands.",
   "needs": [
     "com.mojang.blaze3d.Blaze3D",
-    "com.mojang.blaze3d.platform.TextInputManager",
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
     "net.fabricmc.loader.api.metadata.ContactInformation",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "NativeImage.setPixel()",
     "VertexConsumer.addVertexWith2DPose()",
-    "FabricLoader.getEntrypointContainers()",
     "ModMetadata.getContact()",
-    "KeyMapping.getTranslatedKeyMessage()",
-    "Minecraft.execute()",
-    "Minecraft.setScreenAndShow()",
-    "Minecraft.textInputManager()",
-    "Hud.setSubtitle()",
-    "Hud.setTimes()",
-    "Hud.setTitle()",
-    "ClientPacketListener.sendChat()",
     "GuiRenderState.addGuiElement()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withUnderlined()"
+    "DynamicTexture.getSampler()",
+    "DynamicTexture.getTextureView()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "daintegrate-2.0.5.jar",
     "published": "2026-10-25"
   },
@@ -65,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

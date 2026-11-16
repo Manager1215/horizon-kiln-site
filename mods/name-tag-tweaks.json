@@ -10,12 +10,7 @@
   "description": "📛 Adds nametag crafting recipe, command, and named entities drop their tag on death.",
   "needs": [
     "net.minecraft.world.entity.monster.cubemob.Slime",
-    "CommandSourceStack.getEntity()",
-    "CommandSourceStack.getPlayerOrException()",
-    "DataComponents.CUSTOM_NAME",
-    "DataComponents.REPAIR_COST",
     "Entity.hasCustomName()",
-    "Items.NAME_TAG",
     "Level.addFreshEntity()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -23,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nametagtweaks-26.3.0-4.2.jar",
     "published": "2026-10-02"
   },
@@ -53,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

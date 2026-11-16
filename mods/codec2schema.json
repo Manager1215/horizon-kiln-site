@@ -13,8 +13,6 @@
     "Mixin: 5 points inside the game's methods",
     "net.fabricmc.fabric.impl.client.model.loading.CustomUnbakedBlockStateModelRegistry",
     "net.fabricmc.fabric.impl.dimension.FailSoftMapCodec",
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.PeriodicNotificationManager",
     "net.minecraft.client.gui.font.FontManager",
     "net.minecraft.client.gui.font.FontManager.FontDefinitionFile",
@@ -31,7 +29,6 @@
     "net.minecraft.core.registries.codec.RegistryFixedCodec",
     "net.minecraft.gametest.framework.GameTestInstance",
     "net.minecraft.gametest.framework.TestEnvironmentDefinition",
-    "net.minecraft.network.chat.ComponentSerialization",
     "net.minecraft.network.chat.ComponentSerialization.FuzzyCodec",
     "net.minecraft.network.chat.ComponentSerialization.StrictEither",
     "net.minecraft.resources.RegistryDataLoader",
@@ -51,14 +48,17 @@
     "net.minecraft.world.entity.animal.pig.PigSoundVariant",
     "net.minecraft.world.entity.animal.pig.PigVariant",
     "net.minecraft.world.entity.animal.wolf.WolfSoundVariant",
-    "and 65 more"
+    "net.minecraft.world.entity.animal.wolf.WolfVariant",
+    "net.minecraft.world.entity.decoration.painting.PaintingVariant",
+    "net.minecraft.world.item.Instrument",
+    "and 64 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "codec2schema-0.3.7+26.3-pre-1.jar",
     "published": "2026-09-02"
   },
@@ -78,7 +78,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 113,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 109,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

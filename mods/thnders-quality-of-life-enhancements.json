@@ -11,8 +11,6 @@
   "needs": [
     "Mixin: 5 points inside the game's methods",
     "com.mojang.blaze3d.platform.FramerateLimitTracker",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.block.ModelBlockRenderer",
     "net.minecraft.client.renderer.chunk.RenderRegionCache",
@@ -24,16 +22,10 @@
     "net.minecraft.client.renderer.extract.LevelExtractor",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.server.commands.ClearInventoryCommands",
-    "net.minecraft.server.permissions.Permissions",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.SimpleMenuProvider",
-    "net.minecraft.world.inventory.ChestMenu",
     "net.minecraft.world.inventory.ContainerLevelAccess",
-    "net.minecraft.world.inventory.CraftingMenu",
     "net.minecraft.world.inventory.DispenserMenu",
     "net.minecraft.world.inventory.HopperMenu",
-    "net.minecraft.world.inventory.MenuType.MenuSupplier",
     "net.minecraft.world.inventory.ShulkerBoxMenu",
     "net.minecraft.world.level.LightLayer",
     "net.minecraft.world.level.block.BeehiveBlock",
@@ -43,21 +35,29 @@
     "net.minecraft.world.level.block.entity.BeehiveBlockEntity",
     "net.minecraft.world.level.saveddata.WeatherData",
     "net.minecraft.world.phys.EntityHitResult",
-    "InputConstants.isKeyDown()",
     "Window.handle()",
     "VertexConsumer.setLight()",
-    "KeyMapping.matches()",
-    "Minecraft.execute()",
     "Minecraft.getBlockColors()",
     "Minecraft.getFramerateLimitTracker()",
-    "and 53 more"
+    "Minecraft.levelExtractor",
+    "Options.ambientOcclusion()",
+    "Options.discreteMouseScroll()",
+    "Options.framerateLimit()",
+    "Options.mouseWheelSensitivity()",
+    "Gui.overlay()",
+    "Screen.getTooltipFromItem()",
+    "ClientLevel.getMaxSectionY()",
+    "ClientLevel.getMinSectionY()",
+    "ClientLevel.getOverworldClockTime()",
+    "LocalPlayer.closeContainer()",
+    "and 31 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ThndersQOLEnhancements-2.0.0-104.jar",
     "published": "2026-11-15"
   },
@@ -87,5 +87,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 101
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels"
+  },
+  "lacks": 71
 }

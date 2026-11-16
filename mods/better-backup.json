@@ -9,26 +9,16 @@
   "author": "Allaycpvp",
   "description": "This mod creates backups of your world, GUI easy to use with /backup command",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.minecraft.nbt.NbtAccounter",
-    "net.minecraft.nbt.NbtIo",
-    "net.minecraft.world.level.storage.LevelResource",
     "net.minecraft.world.level.storage.WorldData",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "Minecraft.execute()",
     "Minecraft.setScreen()",
-    "CommandSourceStack.getPlayerOrException()",
     "ListTag.getDouble()",
     "ListTag.getFloat()",
-    "MinecraftServer.execute()",
+    "NbtIo.readCompressed()",
     "MinecraftServer.getTickCount()",
     "MinecraftServer.getWorldData()",
-    "MinecraftServer.getWorldPath()",
     "MinecraftServer.saveEverything()",
     "ServerPlayer.teleportTo()",
-    "PlayerList.broadcastSystemMessage()",
     "PlayerList.saveAll()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -36,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Better World Backup 2.0.0 - 26.3.jar",
     "published": "2026-10-07"
   },
@@ -65,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

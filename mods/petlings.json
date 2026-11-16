@@ -11,17 +11,14 @@
   "needs": [
     "an access widener",
     "Mixin: 10 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.client.networking.v1.ServerboundPlayChannelEvents",
     "net.fabricmc.fabric.api.client.networking.v1.ServerboundPlayChannelEvents.Register",
     "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback",
     "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback.RegistrationHelper",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.Screenshot",
     "net.minecraft.client.gui.components.PlayerFaceExtractor",
     "net.minecraft.client.gui.components.toasts.AdvancementToast",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.model.EntityModel",
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.model.player.PlayerModel",
@@ -34,8 +31,6 @@
     "net.minecraft.client.renderer.entity.state.SlimeRenderState",
     "net.minecraft.client.renderer.item.SpecialModelWrapper",
     "net.minecraft.client.renderer.special.SpecialModelRenderers",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.core.particles.BlockParticleOption",
     "net.minecraft.network.HashedStack.ActualItem",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
@@ -51,14 +46,19 @@
     "net.minecraft.world.entity.monster.Monster",
     "net.minecraft.world.entity.monster.cubemob.Slime",
     "net.minecraft.world.inventory.RemoteSlot.Synchronized",
-    "and 61 more"
+    "net.minecraft.world.level.storage.WorldData",
+    "NativeImage.writeToFile()",
+    "PoseStack.Pose.pose()",
+    "VertexConsumer.addVertex()",
+    "VertexConsumer.setColor()",
+    "and 56 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "petlings-0.8.3-26.3-fabric.jar",
     "published": "2026-10-04"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 206,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 155,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

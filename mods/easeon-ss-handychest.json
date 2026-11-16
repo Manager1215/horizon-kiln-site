@@ -9,25 +9,20 @@
   "author": "Teron",
   "description": "Open ender chests and shulker boxes instantly by right-clicking in the air while holding them.",
   "needs": [
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.SimpleMenuProvider",
-    "net.minecraft.world.inventory.ChestMenu",
     "net.minecraft.world.inventory.PlayerEnderChestContainer",
     "net.minecraft.world.inventory.ShulkerBoxMenu",
     "NonNullList.toArray()",
     "SoundEvents.ENDER_CHEST_CLOSE",
     "SoundEvents.SHULKER_BOX_CLOSE",
-    "SoundEvents.SHULKER_BOX_OPEN",
-    "Stats.OPEN_ENDERCHEST",
-    "Stats.OPEN_SHULKER_BOX"
+    "SoundEvents.SHULKER_BOX_OPEN"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "easeon.ss.handychest.teron.fabric-26.3.0.0+mc26.3.jar",
     "published": "2026-10-06"
   },
@@ -55,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

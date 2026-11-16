@@ -10,17 +10,11 @@
   "description": "A lightweight and configurable food nutrition system that works differently from \"Spice of\" mods and effects max health. A Fyxe's Features mod.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
     "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SyncDataPackContents",
     "net.minecraft.util.profiling.ProfilerFiller",
-    "AttachmentRegistry.builder()",
     "ServerLifecycleEvents.SYNC_DATA_PACK_CONTENTS",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
     "DefaultedRegistry.iterator()",
     "ListTag.add()",
-    "MutableComponent.setStyle()",
-    "MutableComponent.withStyle()",
     "ByteBufCodecs.TRUSTED_COMPOUND_TAG",
     "FileToIdConverter.json()",
     "ServerPlayer.tickCount",
@@ -40,7 +34,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ffnutrition-0.8.3+26.3-fabric.jar",
     "published": "2026-11-02"
   },
@@ -69,7 +63,11 @@
     "ffutilities",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

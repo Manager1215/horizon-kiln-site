@@ -9,14 +9,10 @@
   "author": "Simplezes",
   "description": "Slam your pickaxe into a wall mid-fall to slow your descent or lock yourself in place before you hit the ground.",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.core.particles.BlockParticleOption",
-    "net.minecraft.server.permissions.Permissions",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.player.Input",
     "net.minecraft.world.item.ItemCooldowns",
-    "Minecraft.gameMode",
-    "Options.keyUse",
+    "MultiPlayerGameMode.releaseUsingItem()",
     "LocalPlayer.fallDistance",
     "LocalPlayer.getBoundingBox()",
     "LocalPlayer.getCooldowns()",
@@ -25,8 +21,6 @@
     "LocalPlayer.setDeltaMovement()",
     "LocalPlayer.setNoGravity()",
     "LocalPlayer.tickCount",
-    "CommandSourceStack.getEntity()",
-    "CommandSourceStack.getServer()",
     "BlockPos.containing()",
     "ParticleTypes.BLOCK",
     "MinecraftServer.getTickCount()",
@@ -34,7 +28,6 @@
     "MinecraftServer.isSingleplayerOwner()",
     "ServerLevel.noCollision()",
     "ServerLevel.sendParticles()",
-    "ServerPlayer.connection",
     "ServerPlayer.fallDistance",
     "ServerPlayer.getBoundingBox()",
     "ServerPlayer.getCooldowns()",
@@ -44,19 +37,26 @@
     "ServerPlayer.isJumping()",
     "ServerPlayer.isNoGravity()",
     "ServerPlayer.isUsingItem()",
-    "ServerPlayer.nameAndId()",
     "ServerPlayer.setDeltaMovement()",
     "ServerPlayer.setNoGravity()",
     "ServerPlayer.startUsingItem()",
     "ServerPlayer.stopUsingItem()",
-    "and 21 more"
+    "SoundEvents.ARMOR_EQUIP_GENERIC",
+    "SoundEvents.CHAIN_STEP",
+    "SoundEvents.PLAYER_ATTACK_KNOCKBACK",
+    "Player.getBoundingBox()",
+    "Player.getCooldowns()",
+    "Player.getEyePosition()",
+    "Player.getViewVector()",
+    "Level.clip()",
+    "and 7 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "gouge-1.8.2-mc26.3-fabric.jar",
     "published": "2026-11-14"
   },
@@ -84,5 +84,9 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 61
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 47
 }

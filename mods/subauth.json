@@ -12,10 +12,6 @@
     "net.fabricmc.api.DedicatedServerModInitializer",
     "net.minecraft.server.players.ServerOpList",
     "net.minecraft.server.players.UserWhiteList",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "ServerPlayer.nameAndId()",
-    "ServerPlayer.sendSystemMessage()",
     "PlayerList.getOps()",
     "PlayerList.getWhiteList()"
   ],
@@ -24,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "subauth-fabric-26.3-1.7.4.1.jar",
     "published": "2026-09-16"
   },
@@ -44,7 +40,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

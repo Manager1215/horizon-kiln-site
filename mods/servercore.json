@@ -11,15 +11,12 @@
   "needs": [
     "an access widener",
     "Mixin: 43 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
     "net.minecraft.server.level.ChunkHolder",
     "net.minecraft.server.level.ChunkLevel",
     "net.minecraft.server.level.ChunkMap",
     "net.minecraft.server.level.ChunkResult",
     "net.minecraft.server.level.DistanceManager",
     "net.minecraft.server.level.SimulationChunkTracker",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.effect.InfestedMobEffect",
     "net.minecraft.world.entity.AreaEffectCloud",
     "net.minecraft.world.entity.EntitySelector",
@@ -51,6 +48,9 @@
     "net.minecraft.world.entity.animal.fish.WaterAnimal",
     "net.minecraft.world.entity.animal.frog.Tadpole",
     "net.minecraft.world.entity.animal.happyghast.HappyGhast",
+    "net.minecraft.world.entity.animal.sheep.Sheep",
+    "net.minecraft.world.entity.boss.enderdragon.EndCrystal",
+    "net.minecraft.world.entity.boss.enderdragon.EnderDragon",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "servercore-fabric-1.5.20+26.3.jar",
     "published": "2026-09-16"
   },
@@ -87,7 +87,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 201,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 188,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

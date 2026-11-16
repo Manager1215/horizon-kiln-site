@@ -11,28 +11,14 @@
   "needs": [
     "Mixin: 2 points inside the game's methods",
     "net.fabricmc.api.DedicatedServerModInitializer",
-    "net.fabricmc.fabric.api.message.v1.ServerMessageDecoratorEvent",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.ComponentContents",
-    "net.minecraft.network.chat.contents.PlainTextContents",
-    "net.minecraft.network.chat.contents.PlainTextContents.LiteralContents",
-    "net.minecraft.network.chat.contents.TranslatableContents",
-    "net.minecraft.server.permissions.Permissions",
-    "CommandSourceStack.sendSystemMessage()",
-    "Component.getContents()",
-    "Component.getSiblings()",
-    "Component.translatableWithFallback()",
-    "MutableComponent.create()",
-    "MutableComponent.setStyle()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()"
+    "net.fabricmc.fabric.api.message.v1.ServerMessageDecoratorEvent"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "chat-transform-26.3.0.jar",
     "published": "2026-09-15"
   },
@@ -53,7 +39,11 @@
     "libjf-config-core-v2",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

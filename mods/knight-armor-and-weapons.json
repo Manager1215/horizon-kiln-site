@@ -14,7 +14,6 @@
     "net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer.Factory",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.model.geom.PartPose",
@@ -28,12 +27,9 @@
     "net.minecraft.world.entity.monster.zombie.Zombie",
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow.Pickup",
-    "net.minecraft.world.inventory.GrindstoneMenu",
     "net.minecraft.world.item.ItemCooldowns",
     "net.minecraft.world.item.ItemUseAnimation",
     "net.minecraft.world.item.component.BlocksAttacks",
-    "net.minecraft.world.item.crafting.RepairItemRecipe",
-    "ServerLifecycleEvents.SERVER_STARTING",
     "ModelPart.getChild()",
     "ModelPart.hasChild()",
     "ModelPart.visible",
@@ -50,14 +46,18 @@
     "RenderTypes.armorCutoutNoCull()",
     "RenderTypes.armorCutoutNoCullGlint()",
     "DataComponents.BLOCKS_ATTACKS",
-    "and 34 more"
+    "ServerLevel.getEntitiesOfClass()",
+    "SoundEvents.PLAYER_ATTACK_STRONG",
+    "SoundEvents.TRIDENT_THROW",
+    "EntityReference.getUUID()",
+    "and 22 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "KnightArmorWeapons-1.1.1-Fabric-mc26.3.jar",
     "published": "2026-11-14"
   },
@@ -86,5 +86,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 74
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 62
 }

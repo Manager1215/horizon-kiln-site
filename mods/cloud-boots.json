@@ -10,13 +10,11 @@
   "description": "Adds Cloud Boots, which grant speed and jump boost!",
   "needs": [
     "net.minecraft.tags.DamageTypeTags",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.LivingEntity.Fallsounds",
     "LocalPlayer.getFallSounds()",
     "ServerPlayer.fallDistance",
     "SoundEvents.ARMOR_EQUIP_COPPER",
     "SoundEvents.ARMOR_EQUIP_NETHERITE",
-    "DamageSource.is()",
     "LivingEntity.<init>()",
     "AttributeInstance.addTransientModifier()",
     "AttributeInstance.hasModifier()",
@@ -32,7 +30,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "cloudboots-fabric-26.3-3.0.3.jar",
     "published": "2026-10-05"
   },
@@ -62,7 +60,11 @@
     "forgeconfigapiport",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

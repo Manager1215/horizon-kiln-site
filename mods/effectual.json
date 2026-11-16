@@ -11,14 +11,12 @@
   "needs": [
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.particle.ParticleEngine",
     "net.minecraft.client.particle.ParticleProvider",
     "net.minecraft.client.particle.SingleQuadParticle",
     "net.minecraft.client.particle.SingleQuadParticle.Layer",
     "net.minecraft.client.particle.SpriteSet",
     "net.minecraft.core.particles.BlockParticleOption",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.level.LightLayer",
     "net.minecraft.world.level.block.CampfireBlock",
     "net.minecraft.world.level.block.FireBlock",
@@ -38,25 +36,27 @@
     "ObjectIterator.hasNext()",
     "ObjectIterator.next()",
     "ObjectIterator.remove()",
-    "Minecraft.hitResult",
     "Minecraft.particleEngine",
     "ClientLevel.getEntitiesOfClass()",
     "ClientLevel.getNearestPlayer()",
     "LocalPlayer.getBoundingBox()",
-    "TextureAtlasSprite.getU0()",
-    "TextureAtlasSprite.getU1()",
-    "TextureAtlasSprite.getV0()",
-    "TextureAtlasSprite.getV1()",
     "BlockPos.asLong()",
     "BlockPos.distSqr()",
-    "and 36 more"
+    "BlockPos.getX()",
+    "BlockPos.getY()",
+    "BlockPos.getZ()",
+    "BlockPos.MutableBlockPos.set()",
+    "Registry.iterator()",
+    "ParticleTypes.BLOCK",
+    "Registries.PARTICLE_TYPE",
+    "and 34 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "effectual-fabric-1.4.2-26.3.jar",
     "published": "2026-09-24"
   },
@@ -89,7 +89,11 @@
     "minecraft",
     "tlib"
   ],
-  "lacks": 188,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 86,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

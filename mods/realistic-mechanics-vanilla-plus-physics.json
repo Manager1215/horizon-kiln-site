@@ -11,8 +11,6 @@
   "needs": [
     "net.minecraft.world.entity.projectile.throwableitemprojectile.AbstractThrownPotion",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.Snowball",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "net.minecraft.world.item.alchemy.Potions",
     "net.minecraft.world.item.crafting.RecipeManager.CachedCheck",
     "net.minecraft.world.level.block.AbstractCandleBlock",
     "net.minecraft.world.level.block.CampfireBlock",
@@ -21,7 +19,6 @@
     "net.minecraft.world.level.block.entity.CampfireBlockEntity",
     "net.minecraft.world.phys.EntityHitResult",
     "BlockPos.containing()",
-    "DataComponents.POTION_CONTENTS",
     "ServerLevel.isRainingAt()",
     "SoundEvents.GENERIC_EXTINGUISH_FIRE",
     "SoundEvents.WET_SPONGE_DRIES",
@@ -32,23 +29,16 @@
     "ItemEntity.setDeltaMovement()",
     "Items.BED",
     "Items.CARPET",
-    "Items.WOOL",
     "Level.levelEvent()",
-    "Blocks.FIRE",
-    "Blocks.SOUL_FIRE",
     "ColorCollection.asList()",
-    "CropBlock.getAge()",
-    "CropBlock.getStateForAge()",
-    "CropBlock.isMaxAge()",
-    "LayeredCauldronBlock.lowerFillLevel()",
-    "HitResult.getType()"
+    "LayeredCauldronBlock.lowerFillLevel()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "realistic-mechanics-1.0.1+mc26.3-fabric.jar",
     "published": "2026-10-19"
   },
@@ -78,7 +68,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 33,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

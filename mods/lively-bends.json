@@ -10,9 +10,7 @@
   "description": "Lively Bends brings player animations to life with bending limbs and smooth, expressive movement while walking, sprinting, jumping, swimming, flying, and fighting. A modern reimagining of the legendary Mo' Bends for newer Minecraft versions on Fabric.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.Screenshot",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.model.effects.SpearAnimations",
     "net.minecraft.client.model.geom.ModelPart.Polygon",
     "net.minecraft.client.model.geom.ModelPart.Vertex",
@@ -25,8 +23,6 @@
     "net.minecraft.client.renderer.entity.state.ArmedEntityRenderState",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.LivingEntity.SwingDescription",
     "net.minecraft.world.entity.player.Input",
     "net.minecraft.world.item.CrossbowItem",
@@ -42,22 +38,26 @@
     "VertexConsumer.setLight()",
     "VertexConsumer.setOverlay()",
     "KeyMapping.setDown()",
-    "Minecraft.gameDirectory",
-    "Minecraft.getSingleplayerServer()",
-    "Minecraft.hitResult",
-    "Minecraft.setScreenAndShow()",
-    "Options.getCameraType()",
     "Options.pauseOnLostFocus",
-    "Options.setCameraType()",
     "ModelPart.getChild()",
-    "and 43 more"
+    "ModelPart.getInitialPose()",
+    "ModelPart.hasChild()",
+    "ModelPart.resetPose()",
+    "ModelPart.setInitialPose()",
+    "ModelPart.x",
+    "ModelPart.y",
+    "ModelPart.z",
+    "ModelPart.Cube.maxX",
+    "ModelPart.Cube.maxY",
+    "ModelPart.Cube.maxZ",
+    "and 39 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "LivelyBends-0.5.29+26.3.jar",
     "published": "2026-09-29"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 133,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @redirect and @wrap-method into the game's classes; has network channels"
+  },
+  "lacks": 118,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

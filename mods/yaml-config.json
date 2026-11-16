@@ -11,35 +11,21 @@
   "needs": [
     "net.minecraft.client.OptionInstance.TooltipSupplier",
     "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
-    "net.minecraft.client.gui.components.CycleButton",
     "net.minecraft.client.gui.components.CycleButton.DisplayState",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
     "net.minecraft.client.gui.components.CycleButton.SpriteSupplier",
-    "net.minecraft.client.gui.components.CycleButton.ValueListSupplier",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.WidgetSprites",
-    "KeyMappingHelper.getBoundKeyOf()",
-    "KeyMapping.matches()",
-    "GuiGraphicsExtractor.blitSprite()",
-    "GuiGraphicsExtractor.setTooltipForNextFrame()",
     "GuiGraphicsExtractor.textRendererForWidget()",
-    "ScreenRectangle.containsPoint()",
     "MappedRegistry.<init>()",
-    "Registry.get()",
     "BuiltInRegistries.REGISTRY",
-    "Language.getVisualOrder()",
     "RegistryFriendlyByteBuf.readRegistryKey()",
-    "RegistryFriendlyByteBuf.writeResourceKey()",
-    "MutableComponent.withStyle()",
-    "ServerPlayer.permissions()",
-    "PermissionLevel.byId()"
+    "RegistryFriendlyByteBuf.writeResourceKey()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "yamlconfig-fabric-22.1.0.jar",
     "published": "2026-10-10"
   },
@@ -52,7 +38,11 @@
   "entrypoints": {},
   "mixins": false,
   "depends": [],
-  "lacks": 24,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

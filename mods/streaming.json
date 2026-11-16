@@ -10,7 +10,6 @@
   "description": "Allows you to hide your name & to hide other players' names.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.util.StringDecomposer",
     "PlayerInfo.getProfile()",
     "LocalPlayer.getGameProfile()"
@@ -20,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "streamer-mode-1.0.5.jar",
     "published": "2026-11-08"
   },
@@ -47,7 +46,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

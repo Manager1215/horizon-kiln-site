@@ -25,9 +25,6 @@
     "net.minecraft.world.level.levelgen.structure.pieces.StructurePiecesBuilder",
     "net.minecraft.world.level.levelgen.structure.templatesystem.BlockIgnoreProcessor",
     "net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings",
-    "CommandSourceStack.getPosition()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "BlockPos.asLong()",
     "BlockPos.betweenClosed()",
     "BlockPos.containing()",
@@ -35,11 +32,8 @@
     "BlockPos.toShortString()",
     "BlockPos.MutableBlockPos.move()",
     "BlockPos.MutableBlockPos.setWithOffset()",
-    "Holder.is()",
     "NonNullList.stream()",
-    "Registry.entrySet()",
     "Registry.getValueOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "BuiltInRegistries.REGISTRY",
     "Registries.BIOME",
     "Registries.STRUCTURE",
@@ -49,14 +43,20 @@
     "ServerLevel.getEntitiesOfClass()",
     "ServerLevel.getMaxY()",
     "ServerLevel.getMinY()",
-    "and 36 more"
+    "ServerLevel.isRainingAt()",
+    "ServerLevel.sendParticles()",
+    "ServerLevel.structureManager()",
+    "ServerPlayer.getEyeY()",
+    "ServerPlayer.getLuck()",
+    "SoundEvents.BUNDLE_INSERT",
+    "and 33 more"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fisherman_house-fabric-26.3-2.0.0.jar",
     "published": "2026-10-26"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 82,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 73,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

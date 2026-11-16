@@ -14,7 +14,6 @@
     "net.minecraft.world.entity.ai.navigation.PathNavigation",
     "net.minecraft.world.entity.monster.Enemy",
     "ServerLevel.getEntity()",
-    "DamageSource.getEntity()",
     "DamageSources.mobAttack()",
     "LivingEntity.hurt()",
     "LivingEntity.isAlive()",
@@ -37,7 +36,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "friendlyornot_1.0.5_mc26.3_fabric.jar",
     "published": "2026-09-25"
   },
@@ -63,7 +62,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 21,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

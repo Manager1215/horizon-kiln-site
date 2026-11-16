@@ -9,17 +9,15 @@
   "author": "Ciaodar",
   "description": "Simple. Hold to Attack. Nothing complicated. Precise.",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "Options.keyAttack",
-    "LocalPlayer.getAttackStrengthScale()",
-    "HitResult.getType()"
+    "MultiPlayerGameMode.stopDestroyBlock()",
+    "LocalPlayer.getAttackStrengthScale()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "HoldToAttack-2.0.26.3-universal-26.3.jar",
     "published": "2026-11-05"
   },
@@ -48,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,31 +9,20 @@
   "author": "Rousevv",
   "description": "This mod lets you put twitch and youtube chat in your in-game chat",
   "needs": [
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.network.chat.FontDescription",
     "net.minecraft.network.chat.FontDescription.Resource",
     "net.minecraft.server.packs.repository.PackRepository",
-    "Minecraft.execute()",
+    "ResourceLoader.registerBuiltinPack()",
     "Minecraft.getResourcePackRepository()",
-    "Font.split()",
-    "GuiGraphicsExtractor.text()",
-    "Hud.setSubtitle()",
-    "Hud.setTimes()",
-    "Hud.setTitle()",
-    "MutableComponent.setStyle()",
-    "Style.withFont()",
-    "Style.withObfuscated()",
-    "Style.withStrikethrough()",
-    "Style.withUnderlined()"
+    "Style.withFont()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "streamchat-26.3-1.1.jar",
     "published": "2026-09-28"
   },
@@ -64,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

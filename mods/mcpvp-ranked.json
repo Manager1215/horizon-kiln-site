@@ -9,7 +9,6 @@
   "author": "NeonGamer322",
   "description": "Real ELO ranked PvP for Minecraft — per-kit ratings, placement matches, match history, and leaderboards for pvp club & mcpvp",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.client.command.v2.ClientCommandManager",
     "net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper",
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.Chat",
@@ -49,6 +48,7 @@
     "net.minecraft.class_269",
     "net.minecraft.class_2960",
     "net.minecraft.class_304",
+    "net.minecraft.class_304.class_11900",
     "and 23 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -56,7 +56,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mcpvp-ranked-1.2.0.jar",
     "published": "2026-11-15"
   },
@@ -84,7 +84,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 86,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 85,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

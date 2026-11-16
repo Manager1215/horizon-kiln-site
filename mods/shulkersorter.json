@@ -9,22 +9,15 @@
   "author": "dennis.thegamer96",
   "description": "Sort, merge and label your shulker boxes with a single keypress.",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.world.level.block.ShulkerBoxBlock",
-    "InputConstants.isKeyDown()",
-    "Minecraft.execute()",
-    "Minecraft.gameMode",
-    "Minecraft.getSingleplayerServer()",
-    "DataComponents.CUSTOM_NAME",
-    "DataComponents.FOOD",
-    "MinecraftServer.execute()"
+    "DataComponents.FOOD"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "shulkersorter-fabric-1.2.1+mc26.3.jar",
     "published": "2026-09-27"
   },
@@ -55,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

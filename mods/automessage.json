@@ -9,10 +9,7 @@
   "author": "DMK",
   "description": "⚡ AutoMessage is a high-performance plugin for fully customizable automatic server-wide broadcasts.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.api.DedicatedServerModInitializer",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.minecraft.class_12087",
     "net.minecraft.class_12087.class_12088",
     "net.minecraft.class_12087.class_12089",
@@ -29,8 +26,6 @@
     "net.minecraft.class_3468",
     "net.minecraft.class_5321",
     "net.minecraft.class_8791",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "MinecraftServer.method_3760()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -38,7 +33,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "AutoMessage-Fabric v3.0.1 (1.21.11).jar",
     "published": "2026-10-11"
   },
@@ -60,7 +55,11 @@
     "litecommands",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,8 +10,6 @@
   "description": "Adds the pokeball, which catches a mob so you can let it out somewhere else.",
   "needs": [
     "net.minecraft.client.renderer.entity.ThrownItemRenderer",
-    "net.minecraft.network.chat.ComponentSerialization",
-    "net.minecraft.world.entity.EntitySpawnRequest",
     "net.minecraft.world.entity.boss.enderdragon.EnderDragon",
     "net.minecraft.world.entity.boss.enderdragon.EnderDragonPart",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile",
@@ -23,15 +21,14 @@
     "EntityType.create()",
     "LivingEntity.problemPath()",
     "LivingEntity.save()",
-    "Level.addFreshEntity()",
-    "HitResult.getType()"
+    "Level.addFreshEntity()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "assortedpokeball-fabric-26.3-2.0.0.jar",
     "published": "2026-10-24"
   },
@@ -61,7 +58,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

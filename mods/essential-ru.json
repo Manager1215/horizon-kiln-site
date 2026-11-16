@@ -9,16 +9,14 @@
   "author": "Maximych_modrinth",
   "description": "Essential Mod translations/localization.",
   "needs": [
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
-    "net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint",
-    "FabricLoader.getEntrypointContainers()"
+    "net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Essential-Localizer-3.0-Fabric-26.3.jar",
     "published": "2026-11-13"
   },
@@ -39,7 +37,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

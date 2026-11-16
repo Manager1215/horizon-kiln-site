@@ -9,8 +9,6 @@
   "author": "nobodyasidentity",
   "description": "A library for mods by Nobodyasidentity.",
   "needs": [
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AllowKeyPress",
     "org.lwjgl.opengl.GL",
     "org.lwjgl.opengl.GL11",
     "org.lwjgl.opengl.GL12",
@@ -24,9 +22,6 @@
     "org.lwjgl.system.MemoryStack",
     "org.lwjgl.system.MemoryUtil",
     "Window.handle()",
-    "KeyMappingHelper.getBoundKeyOf()",
-    "KeyMapping.isUnbound()",
-    "KeyMapping.matches()",
     "Options.enableVsync()",
     "Options.framerateLimit()"
   ],
@@ -35,7 +30,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nobodylib-0.1.0+26.3.jar",
     "published": "2026-10-24"
   },
@@ -64,7 +59,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

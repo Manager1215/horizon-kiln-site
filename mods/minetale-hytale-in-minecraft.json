@@ -10,14 +10,12 @@
   "description": "A community-driven mod that is adding Hytale to Minecraft",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
     "net.fabricmc.fabric.api.item.v1.BlockTransformerHelper",
     "net.fabricmc.fabric.api.loot.v3.LootTableEvents.ModifyDrops",
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
     "net.minecraft.client.gui.screens.inventory.HangingSignEditScreen",
     "net.minecraft.client.renderer.blockentity.HangingSignRenderer",
     "net.minecraft.client.renderer.blockentity.StandingSignRenderer",
@@ -29,13 +27,9 @@
     "net.minecraft.data.worldgen.placement.OrePlacements",
     "net.minecraft.world.SimpleMenuProvider",
     "net.minecraft.world.attribute.AmbientParticle",
-    "net.minecraft.world.entity.Pose",
     "net.minecraft.world.entity.item.FallingBlockEntity",
     "net.minecraft.world.entity.projectile.ProjectileUtil",
-    "net.minecraft.world.flag.FeatureFlags",
-    "net.minecraft.world.inventory.MenuType.MenuSupplier",
     "net.minecraft.world.item.HangingSignItem",
-    "net.minecraft.world.item.component.Compostable",
     "net.minecraft.world.level.biome.Biome.BiomeBuilder",
     "net.minecraft.world.level.biome.BiomeGenerationSettings.Builder",
     "net.minecraft.world.level.biome.BiomeSpecialEffects.Builder",
@@ -50,14 +44,20 @@
     "net.minecraft.world.level.block.WallHangingSignBlock",
     "net.minecraft.world.level.block.WallSignBlock",
     "net.minecraft.world.level.block.entity.SignBlockEntity",
-    "and 68 more"
+    "net.minecraft.world.level.block.state.BlockBehaviour.StatePredicate",
+    "net.minecraft.world.level.block.state.properties.SpeleothemThickness",
+    "net.minecraft.world.level.block.state.properties.WallSide",
+    "net.minecraft.world.level.levelgen.placement.BiomeFilter",
+    "net.minecraft.world.phys.EntityHitResult",
+    "net.minecraft.world.phys.shapes.Shapes.DoubleLineConsumer",
+    "and 61 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "minetale-0.5.23a.jar",
     "published": "2026-10-02"
   },
@@ -88,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 207,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 127,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

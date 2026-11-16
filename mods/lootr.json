@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 17 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.GameProfileRepository",
     "com.mojang.authlib.services.response.NameAndId",
     "net.fabricmc.fabric.api.blockgetter.v2.RenderDataBlockEntity",
@@ -21,10 +20,8 @@
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
     "net.fabricmc.fabric.api.entity.FakePlayer",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.advancements.predicates.MinMaxBounds.Ints",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
@@ -51,6 +48,9 @@
     "net.minecraft.client.renderer.blockentity.ShulkerBoxRenderer",
     "net.minecraft.client.renderer.blockentity.state.BrushableBlockRenderState",
     "net.minecraft.client.renderer.blockentity.state.ChestRenderState",
+    "net.minecraft.client.renderer.blockentity.state.DecoratedPotRenderState",
+    "net.minecraft.client.renderer.blockentity.state.ShulkerBoxRenderState",
+    "net.minecraft.client.renderer.chunk.SectionMesh",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "lootr-fabric-26.3-1.25.42.124.jar",
     "published": "2026-09-27"
   },
@@ -82,7 +82,11 @@
   },
   "mixins": true,
   "depends": [],
-  "lacks": 412,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
+  },
+  "lacks": 346,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

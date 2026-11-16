@@ -10,9 +10,7 @@
   "description": "Prevents players from moving items in any inventory slots.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.server.permissions.Permissions",
     "ServerPlayer.clientInformation()",
-    "DamageSource.is()",
     "Inventory.removeFromSelected()",
     "Player.damageSources()",
     "Player.isAlive()"
@@ -22,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nomove-1.2.0.jar",
     "published": "2026-10-24"
   },
@@ -50,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

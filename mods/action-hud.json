@@ -9,8 +9,6 @@
   "author": "IAMSOCOOL",
   "description": "See what you're doing at a glance — animated progress bars for 17 actions, zero mixins, zero clutter.",
   "needs": [
-    "net.minecraft.world.entity.Pose",
-    "net.minecraft.world.entity.projectile.FishingHook",
     "net.minecraft.world.item.BowItem",
     "net.minecraft.world.item.CrossbowItem",
     "net.minecraft.world.item.ItemCooldowns",
@@ -18,8 +16,6 @@
     "net.minecraft.world.item.SpyglassItem",
     "net.minecraft.world.item.TridentItem",
     "net.minecraft.world.item.component.Consumable",
-    "Minecraft.hitResult",
-    "Options.keyAttack",
     "Screen.extractRenderState()",
     "ClientLevel.getEntitiesOfClass()",
     "LocalPlayer.getAttackStrengthScale()",
@@ -29,34 +25,19 @@
     "LocalPlayer.getUseItem()",
     "LocalPlayer.getUseItemRemainingTicks()",
     "LocalPlayer.isCrouching()",
-    "LocalPlayer.isFallFlying()",
     "LocalPlayer.isSleeping()",
     "LocalPlayer.isUsingItem()",
     "DataComponents.CONSUMABLE",
     "ItemStack.getUseDuration()",
     "Items.BED",
-    "Items.BOW",
-    "Items.CARROT",
-    "Items.CLOCK",
-    "Items.COOKED_BEEF",
-    "Items.COOKED_CHICKEN",
-    "Items.COOKED_PORKCHOP",
-    "Items.CROSSBOW",
-    "Items.FIREWORK_ROCKET",
-    "Items.FISHING_ROD",
-    "Items.GOLDEN_APPLE",
-    "Items.GOLDEN_PICKAXE",
-    "Items.GOLDEN_SWORD",
-    "Items.HONEY_BOTTLE",
-    "Items.IRON_AXE",
-    "and 21 more"
+    "AABB.inflate()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "actionhud-1.3.8.jar",
     "published": "2026-11-14"
   },
@@ -85,7 +66,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 61,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

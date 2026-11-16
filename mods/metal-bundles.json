@@ -10,19 +10,16 @@
   "description": "Upgrade bundles beyond vanilla with larger capacities and intuitive inventory management.",
   "needs": [
     "an access widener",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.world.item.BundleItem",
-    "net.minecraft.world.item.component.BundleContents",
-    "DataComponents.BUNDLE_CONTENTS",
     "ColorCollection.NAMES",
     "ColorCollection.map()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "metalbundles-v26.3.4-mc26.3.x+fabric.jar",
     "published": "2026-11-09"
   },
@@ -53,7 +50,11 @@
     "minecraft",
     "puzzleslib"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

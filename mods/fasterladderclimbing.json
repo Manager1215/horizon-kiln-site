@@ -9,10 +9,7 @@
   "author": "Nikrecs",
   "description": "Climb ladders faster with the control scheme you choose — look up to ascend, look down to descend, or hold jump. Set your own ascent and descent speed from an in-game screen",
   "needs": [
-    "Minecraft.execute()",
     "Player.fallDistance",
-    "Player.horizontalCollision",
-    "Player.isFallFlying()",
     "Player.isLocalPlayer()",
     "Player.isPassenger()",
     "Player.move()",
@@ -21,12 +18,12 @@
     "Player.yo",
     "Player.zza"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fasterladderclimbing-fabric-26.3-1.2.0.jar",
     "published": "2026-10-28"
   },
@@ -57,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

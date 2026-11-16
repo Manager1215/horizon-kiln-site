@@ -9,14 +9,13 @@
   "author": "Sp0k",
   "description": "A lightweight client-side HUD mod for Minecraft that displays useful information to the player.",
   "needs": [
-    "net.minecraft.client.server.IntegratedServer",
-    "Minecraft.getSingleplayerServer()",
     "GuiGraphicsExtractor.blit()",
     "Hud.getDebugOverlay()",
     "LocalPlayer.chunkPosition()",
     "LocalPlayer.getBlockX()",
     "LocalPlayer.getBlockY()",
     "LocalPlayer.getBlockZ()",
+    "IntegratedServer.overworld()",
     "ServerLevel.getSeed()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -24,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sp0k-hud-1.2.1+26.3.jar",
     "published": "2026-10-14"
   },
@@ -55,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

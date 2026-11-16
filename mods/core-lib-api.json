@@ -11,29 +11,19 @@
   "needs": [
     "an access widener",
     "Mixin: 5 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.loader.api.metadata.ContactInformation",
     "net.fabricmc.loader.api.metadata.Person",
     "net.minecraft.DetectedVersion",
-    "net.minecraft.SharedConstants",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.server.MinecraftServer.MultiplayerScope",
     "net.minecraft.server.dedicated.DedicatedServer",
     "net.minecraft.server.network.config.PrepareSpawnTask",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "ImmutableList.get()",
     "ImmutableList.size()",
     "ModMetadata.getAuthors()",
     "ModMetadata.getContact()",
     "ModMetadata.getContributors()",
     "ModMetadata.getLicense()",
-    "CommandSourceStack.getTextName()",
-    "Component.plainCopy()",
-    "MutableComponent.withStyle()",
-    "Style.withHoverEvent()",
+    "SharedConstants.getCurrentVersion()",
     "ServerPlayer.getGameProfile()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -41,7 +31,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "core-lib-api-v0.3.0-mc26.3.jar",
     "published": "2026-09-22"
   },
@@ -67,7 +57,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

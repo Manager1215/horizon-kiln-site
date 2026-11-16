@@ -9,24 +9,17 @@
   "author": "Jahus",
   "description": "Announces in chat who is sleeping, with different wording for 1, 2, 3 and many players, and who leaves the bed during the night.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.world.entity.player.Player.BedSleepingProblem",
-    "MutableComponent.withStyle()",
-    "Style.withHoverEvent()",
     "ServerLevel.isDarkOutside()",
     "ServerPlayer.getGameProfile()",
-    "ServerPlayer.isSleeping()",
-    "PlayerList.broadcastSystemMessage()",
-    "Level.getDefaultClockTime()"
+    "ServerPlayer.isSleeping()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sleeping-messages-1.4.2+26.3.jar",
     "published": "2026-10-28"
   },
@@ -53,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

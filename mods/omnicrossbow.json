@@ -10,10 +10,6 @@
   "description": "Shoot every item from a crossbow, with a multitude of custom effects!",
   "needs": [
     "Mixin: 15 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
     "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin",
     "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin.Context",
     "net.fabricmc.fabric.api.client.model.loading.v1.ModelModifier",
@@ -25,7 +21,6 @@
     "net.fabricmc.fabric.api.event.registry.DynamicRegistries",
     "net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityDataRegistry",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.advancements.predicates.DataComponentMatchers",
     "net.minecraft.advancements.predicates.DataComponentMatchers.Builder",
     "net.minecraft.advancements.predicates.ItemPredicate",
@@ -35,7 +30,6 @@
     "net.minecraft.advancements.predicates.entity.EntityPredicate.Builder",
     "net.minecraft.advancements.predicates.entity.EntitySubPredicate",
     "net.minecraft.client.Camera.NearPlane",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.data.models.model.ItemModelUtils",
     "net.minecraft.client.model.geom.ModelLayers",
     "net.minecraft.client.model.object.crystal.EndCrystalModel",
@@ -50,6 +44,12 @@
     "net.minecraft.client.renderer.item.CompositeModel.Unbaked",
     "net.minecraft.client.renderer.item.ConditionalItemModel",
     "net.minecraft.client.renderer.item.ConditionalItemModel.Unbaked",
+    "net.minecraft.client.renderer.item.CuboidItemModelWrapper",
+    "net.minecraft.client.renderer.item.CuboidItemModelWrapper.Unbaked",
+    "net.minecraft.client.renderer.item.RangeSelectItemModel",
+    "net.minecraft.client.renderer.item.RangeSelectItemModel.Entry",
+    "net.minecraft.client.renderer.item.RangeSelectItemModel.Unbaked",
+    "net.minecraft.client.renderer.item.SelectItemModel.Unbaked",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "omnicrossbow-1.1.4+mc26.3.jar",
     "published": "2026-09-30"
   },
@@ -88,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 385,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 328,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

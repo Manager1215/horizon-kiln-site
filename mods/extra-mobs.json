@@ -12,7 +12,6 @@
     "Mixin: 6 points inside the game's methods",
     "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback",
     "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback.RegistrationHelper",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.client.model.AdultAndBabyModelPair",
     "net.minecraft.client.model.EntityModel",
     "net.minecraft.client.model.QuadrupedModel",
@@ -50,14 +49,15 @@
     "net.minecraft.client.renderer.entity.state.SheepRenderState",
     "net.minecraft.client.renderer.entity.state.WolfRenderState",
     "net.minecraft.client.renderer.entity.state.ZombieRenderState",
-    "and 72 more"
+    "net.minecraft.client.renderer.texture.MissingTextureAtlasSprite",
+    "and 62 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "moremobvariants-1.4.1.jar",
     "published": "2026-10-29"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 118,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; has network channels; generates in the world"
+  },
+  "lacks": 107,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

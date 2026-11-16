@@ -11,36 +11,31 @@
   "needs": [
     "net.minecraft.client.OptionInstance.CaptionBasedToString",
     "net.minecraft.client.OptionInstance.Enum",
-    "net.minecraft.client.OptionInstance.IntRange",
     "net.minecraft.client.OptionInstance.SliderableValueSet",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
     "net.minecraft.client.gui.components.OptionsList",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.options.OptionsSubScreen",
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
-    "net.minecraft.world.entity.Pose",
     "Minecraft.getEntityRenderDispatcher()",
     "OptionInstance.<init>()",
     "OptionInstance.<init>()",
     "OptionInstance.cachedConstantTooltip()",
     "OptionInstance.createBoolean()",
+    "OptionInstance.IntRange.xmap()",
     "Options.toggleCrouch()",
     "Options.toggleSprint()",
     "GuiGraphicsExtractor.entity()",
-    "GuiGraphicsExtractor.nextStratum()",
     "EntityRenderDispatcher.getRenderer()",
     "EntityRenderer.createRenderState()",
-    "EntityRenderState.shadowPieces",
-    "MutableComponent.withStyle()"
+    "EntityRenderState.shadowPieces"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "toggle-sprint-display-2.0.2.jar",
     "published": "2026-06-16"
   },
@@ -58,7 +53,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,19 +9,17 @@
   "author": "DimasKama",
   "description": "Minecraft Chromium Embedded Framework — mod and library for adding Chromium web browser into Minecraft",
   "needs": [
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "org.lwjgl.sdl.SDLKeycode",
     "org.lwjgl.sdl.SDLMouse",
     "org.lwjgl.system.MemoryUtil",
-    "Minecraft.submit()"
+    "CursorType.createStandardCursor()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mcef-modern-0.3.3+mc26.3.jcef146.0.10.jar",
     "published": "2026-09-24"
   },
@@ -47,7 +45,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,12 +10,8 @@
   "description": "Fancy Hitbox Practice is a client-side Fabric mod that lets you visually shrink player hitboxes (even invisibles) for PvP training, with dynamic colors — without affecting real combat or server mechanics",
   "needs": [
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionEvents.EndExtraction",
-    "net.minecraft.gizmos.GizmoStyle",
     "LevelExtractionEvents.END_EXTRACTION",
     "Minecraft.crosshairPickEntity",
-    "Minecraft.setScreenAndShow()",
-    "AbstractWidget.mouseDragged()",
-    "AbstractWidget.mouseReleased()",
     "Gizmos.cuboid()",
     "ARGB.colorFromFloat()",
     "Entity.getBoundingBox()",
@@ -34,7 +30,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fancy-hitbox-practice-26.3.jar",
     "published": "2026-09-19"
   },
@@ -63,7 +59,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

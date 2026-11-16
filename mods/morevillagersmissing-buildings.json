@@ -10,9 +10,6 @@
   "description": "Add missing buildings for More Villagers mod",
   "needs": [
     "an access widener",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "RegistryAccess.Frozen.lookupOrThrow()",
     "Registries.PROCESSOR_LIST",
     "Registries.TEMPLATE_POOL",
     "MinecraftServer.registryAccess()"
@@ -22,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "[fabric]morevillagers_mb-26.1-1.2.jar",
     "published": "2026-11-14"
   },
@@ -53,5 +50,9 @@
     "minecraft",
     "morevillagers"
   ],
-  "lacks": 6
+  "softOff": {
+    "class": "partial",
+    "why": "generates in the world"
+  },
+  "lacks": 3
 }

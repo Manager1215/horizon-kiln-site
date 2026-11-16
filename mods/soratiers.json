@@ -9,28 +9,12 @@
   "author": "ItsSafi",
   "description": "The universal tier tagger for all tierlists!",
   "needs": [
-    "com.mojang.authlib.GameProfile",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.gui.components.PlayerTabOverlay",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.renderer.entity.player.AvatarRenderer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "net.minecraft.network.chat.FontDescription",
     "net.minecraft.network.chat.FontDescription.Resource",
-    "net.minecraft.network.chat.contents.PlainTextContents",
-    "Minecraft.execute()",
-    "Options.getCameraType()",
-    "AbstractWidget.setMessage()",
-    "Button.setTooltip()",
-    "Button.setTooltipDelay()",
-    "Screen.charTyped()",
-    "Screen.mouseClicked()",
     "PlayerInfo.getProfile()",
-    "Component.getContents()",
-    "Component.getSiblings()",
-    "MutableComponent.create()",
-    "MutableComponent.setStyle()",
-    "MutableComponent.withStyle()",
     "Style.withFont()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -38,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SoraTiers_26.3.jar",
     "published": "2026-09-26"
   },
@@ -66,7 +50,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

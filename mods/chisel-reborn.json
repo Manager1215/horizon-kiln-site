@@ -9,37 +9,21 @@
   "author": "Slainlight",
   "description": "Adds lots of blocks that are variations of vanilla blocks",
   "needs": [
-    "net.minecraft.core.component.DataComponentPatch.Builder",
-    "net.minecraft.world.flag.FeatureFlags",
-    "net.minecraft.world.inventory.ContainerInput",
-    "net.minecraft.world.inventory.MenuType.MenuSupplier",
     "net.minecraft.world.item.BundleItem",
-    "net.minecraft.world.item.component.BundleContents",
     "net.minecraft.world.level.block.PoweredBlock",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "GuiGraphicsExtractor.fakeItem()",
     "AbstractContainerScreen.extractSlot()",
     "NonNullList.iterator()",
-    "DataComponentPatch.builder()",
-    "DataComponents.BUNDLE_CONTENTS",
     "DataComponents.MAX_STACK_SIZE",
-    "Inventory.findSlotMatchingItem()",
     "AbstractContainerMenu.clicked()",
-    "MenuType.<init>()",
     "Slot.getNoItemIcon()",
-    "Slot.isFake()",
-    "ItemStack.applyComponentsAndValidate()",
-    "Blocks.NETHER_BRICKS",
-    "Blocks.PURPUR_BLOCK",
-    "Blocks.QUARTZ_BLOCK"
+    "ItemStack.applyComponentsAndValidate()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "chisel-fabric-2.2.1+mc26.3.jar",
     "published": "2026-09-19"
   },
@@ -69,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

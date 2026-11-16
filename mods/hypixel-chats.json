@@ -2,22 +2,19 @@
   "id": "hypixel-chats",
   "name": "hypixel chats",
   "version": "0.0.4",
-  "status": "planned",
-  "statusLabel": "Planned",
-  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "status": "not-checked",
+  "statusLabel": "Not checked",
+  "statusMeaning": "In the catalogue, not checked yet.",
   "url": "https://modrinth.com/mod/hypixel-chats",
   "author": "FourTerms2",
   "description": "A client-side Fabric mod that adds quick-switch buttons for Hypixel chat modes (Normal, Party, Guild). Click buttons to instantly switch chat channels without typing /pc or /gc prefixes.",
-  "needs": [
-    "net.minecraft.client.gui.components.Button.Plain",
-    "Button.playDownSound()"
-  ],
-  "roadmap": "Minecraft's libraries and client API (0.2)",
-  "evidence": "Not run: Java did not start.",
+  "needs": [],
+  "roadmap": "",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (16 classes, 13 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hypixel-chat-modes.jar",
     "published": "2026-10-30"
   },
@@ -46,7 +43,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 2,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "status": "not-checked",
     "statusLabel": "Not checked",

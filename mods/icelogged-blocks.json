@@ -20,7 +20,6 @@
     "net.minecraft.client.renderer.special.NoDataSpecialModelRenderer.Unbaked",
     "net.minecraft.client.renderer.special.SpecialModelRenderer.Unbaked",
     "net.minecraft.client.renderer.special.SpecialModelRenderers",
-    "net.minecraft.tags.EnchantmentTags",
     "net.minecraft.world.item.enchantment.LevelBasedValue",
     "net.minecraft.world.item.enchantment.effects.ReplaceDisk",
     "net.minecraft.world.level.LightLayer",
@@ -50,14 +49,15 @@
     "GameRenderState.levelRenderState",
     "OptionsRenderState.ambientOcclusion",
     "OptionsRenderState.cutoutLeaves",
-    "and 24 more"
+    "BlockPos.MutableBlockPos.setWithOffset()",
+    "and 21 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "iceloggedblocks-fabric-26.3-1.1.1.jar",
     "published": "2026-10-11"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 64,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 61,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

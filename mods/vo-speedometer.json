@@ -10,11 +10,7 @@
   "description": "adding a dedicated F3 debug entry that shows your speed in blocks per second — the same unit your brain actually understands. It works fully independently, uses vanilla's own tick-based physics data, and even consolidates with player_speed",
   "needs": [
     "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
     "net.minecraft.client.gui.components.debug.DebugScreenEntry",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryStatus",
-    "Minecraft.debugEntries",
     "Entity.getKnownSpeed()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -22,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "speedometer-1.2.15+26.3.jar",
     "published": "2026-11-15"
   },
@@ -51,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

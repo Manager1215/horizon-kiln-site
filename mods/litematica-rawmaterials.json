@@ -9,31 +9,18 @@
   "author": "naari3",
   "description": "A Litematica addon that expands the material list into the raw materials you need to gather, following crafting recipes.",
   "needs": [
-    "net.minecraft.core.HolderSet.Named",
-    "net.minecraft.world.item.crafting.display.FurnaceRecipeDisplay",
-    "net.minecraft.world.item.crafting.display.ShapedCraftingRecipeDisplay",
-    "net.minecraft.world.item.crafting.display.ShapelessCraftingRecipeDisplay",
-    "net.minecraft.world.item.crafting.display.SlotDisplay.TagSlotDisplay",
-    "net.minecraft.world.item.crafting.display.StonecutterRecipeDisplay",
-    "org.apache.logging.log4j.Level",
     "org.apache.logging.log4j.core.config.Configurator",
     "ImmutableList.isEmpty()",
     "Object2IntMap.Entry.getKey()",
     "Object2IntMap.FastEntrySet.stream()",
-    "DefaultedRegistry.getTags()",
-    "DefaultedRegistry.wrapAsHolder()",
-    "HolderSet.iterator()",
-    "MutableComponent.withStyle()",
-    "ItemStack.<init>()",
-    "SlotDisplay.resolveForFirstStack()",
-    "SlotDisplay.resolveForStacks()"
+    "HolderSet.iterator()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "rawmats-fabric-26.3-0.5.0.jar",
     "published": "2026-11-03"
   },
@@ -60,7 +47,11 @@
     "malilib",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

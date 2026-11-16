@@ -13,15 +13,11 @@
     "net.minecraft.world.entity.Display",
     "net.minecraft.world.entity.Display.BillboardConstraints",
     "net.minecraft.world.entity.Display.TextDisplay",
-    "Minecraft.hitResult",
     "ClientLevel.addEntity()",
     "LocalPlayer.tickCount",
     "ListTag.iterator()",
-    "MutableComponent.setStyle()",
     "Entity.discard()",
-    "Entity.isRemoved()",
     "EntityTypes.TEXT_DISPLAY",
-    "ItemStack.getRarity()",
     "BlockEntity.saveCustomOnly()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
@@ -29,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "shelf-wits-1.2.0.jar",
     "published": "2026-11-08"
   },
@@ -57,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

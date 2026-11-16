@@ -9,18 +9,14 @@
   "author": "replaceitem",
   "description": "Adds some miscellaneous new functions like http requests to the scarpet language",
   "needs": [
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "ServerPlayer.connection",
-    "ServerGamePacketListenerImpl.send()",
     "PlayerList.broadcastAll()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "scarpet-additions-26.1-1.1.4.jar",
     "published": "2026-04-08"
   },
@@ -48,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

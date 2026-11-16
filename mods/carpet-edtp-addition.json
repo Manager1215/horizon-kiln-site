@@ -25,7 +25,6 @@
     "net.minecraft.world.entity.vehicle.minecart.OldMinecartBehavior",
     "net.minecraft.world.inventory.ShulkerBoxSlot",
     "net.minecraft.world.item.BundleItem",
-    "net.minecraft.world.item.component.BundleContents",
     "net.minecraft.world.item.crafting.RecipeManager.CachedCheck",
     "net.minecraft.world.item.trading.ItemCost",
     "net.minecraft.world.item.trading.MerchantOffer",
@@ -41,23 +40,24 @@
     "net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity",
     "net.minecraft.world.level.block.state.properties.SculkSensorPhase",
     "org.apache.commons.io.IOUtils",
-    "CommandSourceStack.getServer()",
     "Commands.sendCommands()",
-    "Registry.getOrThrow()",
-    "Registry.listElements()",
-    "RegistryAccess.lookupOrThrow()",
     "DefaultDispenseItemBehavior.playAnimation()",
     "DefaultDispenseItemBehavior.playSound()",
-    "MinecraftServer.getCommands()",
     "ServerLevel.getMinY()",
-    "and 35 more"
+    "ServerLevel.noCollision()",
+    "ServerGamePacketListenerImpl.<init>()",
+    "SoundEvents.BUCKET_EMPTY_POWDER_SNOW",
+    "SoundEvents.BUCKET_FILL_POWDER_SNOW",
+    "SoundEvents.RESPAWN_ANCHOR_SET_SPAWN",
+    "Mth.getSeed()",
+    "and 17 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "carpet_edtp_addition-1.11 (1).jar",
     "published": "2026-10-23"
   },
@@ -85,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 75,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes"
+  },
+  "lacks": 57,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

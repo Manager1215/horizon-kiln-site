@@ -30,7 +30,6 @@
     "net.minecraft.client.resources.model.EquipmentClientInfo.Layer",
     "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
     "net.minecraft.server.level.ServerPlayerGameMode",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal",
     "net.minecraft.world.entity.ai.targeting.TargetingConditions",
     "net.minecraft.world.entity.ai.targeting.TargetingConditions.Selector",
@@ -51,14 +50,15 @@
     "RenderTypes.entityTranslucent()",
     "EquipmentAssetManager.get()",
     "DataComponents.FOOD",
-    "and 44 more"
+    "MinecraftServer.getAllLevels()",
+    "and 31 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "usefulhats-fabric-26.3-7.3.0.0.jar",
     "published": "2026-10-02"
   },
@@ -89,7 +89,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 84,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 71,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

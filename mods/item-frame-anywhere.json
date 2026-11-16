@@ -14,7 +14,6 @@
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.AfterTranslucentFeatures",
     "net.minecraft.client.renderer.entity.ItemFrameRenderer",
     "net.minecraft.client.renderer.entity.PaintingRenderer",
-    "net.minecraft.gizmos.GizmoStyle",
     "net.minecraft.tags.PaintingVariantTags",
     "net.minecraft.world.entity.ContainerUser",
     "net.minecraft.world.entity.decoration.BlockAttachedEntity",
@@ -26,24 +25,17 @@
     "net.minecraft.world.item.HangingEntityItem",
     "net.minecraft.world.level.block.DiodeBlock",
     "LevelRenderEvents.AFTER_TRANSLUCENT_FEATURES",
-    "Minecraft.hitResult",
     "BlockPos.betweenClosedStream()",
-    "Registry.getTagOrEmpty()",
-    "RegistryAccess.lookupOrThrow()",
     "Registries.PAINTING_VARIANT",
     "Gizmos.cuboid()",
     "ServerEntity.getPositionBase()",
     "Avatar.<init>()",
     "Entity.<init>()",
-    "Items.GLOW_ITEM_FRAME",
-    "Items.ITEM_FRAME",
-    "Items.PAINTING",
     "BlockState.isSolid()",
     "AABB.getXsize()",
     "AABB.getYsize()",
     "AABB.getZsize()",
     "AABB.ofSize()",
-    "HitResult.getType()",
     "Vec3.relative()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -51,7 +43,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ItemFrameAnywhere-fabric-1.1.1.jar",
     "published": "2026-10-01"
   },
@@ -80,7 +72,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 34,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; has network channels"
+  },
+  "lacks": 26,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

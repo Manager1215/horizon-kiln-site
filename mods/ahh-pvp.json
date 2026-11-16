@@ -17,7 +17,6 @@
     "net.minecraft.advancements.triggers.EntityHurtPlayerTrigger",
     "net.minecraft.advancements.triggers.PlayerHurtEntityTrigger",
     "net.minecraft.client.Camera.NearPlane",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.model.EntityModel",
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.model.HumanoidModel.ArmPose",
@@ -47,9 +46,10 @@
     "net.minecraft.core.particles.ItemParticleOption",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.server.level.ServerPlayer.RespawnConfig",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.tags.DamageTypeTags",
     "net.minecraft.tags.EntityTypeTags",
+    "net.minecraft.util.CommonColors",
+    "net.minecraft.util.profiling.Profiler",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "pvp-1.4.6+mc26.3-fabric.jar",
     "published": "2026-10-06"
   },
@@ -88,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 405,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 330,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

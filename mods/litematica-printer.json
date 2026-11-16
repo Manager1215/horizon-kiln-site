@@ -9,7 +9,6 @@
   "author": "RandomGgames",
   "description": "This fork adds the missing printing functionality for Litematica",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.player.ClientInput",
     "net.minecraft.network.protocol.game.ServerboundMovePlayerPacket",
     "net.minecraft.network.protocol.game.ServerboundMovePlayerPacket.Rot",
@@ -49,14 +48,15 @@
     "net.minecraft.world.level.block.FarmlandBlock",
     "net.minecraft.world.level.block.GrindstoneBlock",
     "net.minecraft.world.level.block.HopperBlock",
-    "and 80 more"
+    "net.minecraft.world.level.block.JukeboxBlock",
+    "and 56 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "litematica-printer-26.3-3.2.3.jar",
     "published": "2026-09-27"
   },
@@ -83,7 +83,11 @@
     "malilib",
     "minecraft"
   ],
-  "lacks": 188,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 105,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

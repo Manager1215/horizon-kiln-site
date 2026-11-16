@@ -9,14 +9,13 @@
   "author": "warior456",
   "description": "a fix for the hardcoded lava level that doesn't break normal lava gen like MC-237017 FIX",
   "needs": [
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-    "net.minecraft.SharedConstants",
     "net.minecraft.world.level.levelgen.Aquifer",
     "net.minecraft.world.level.levelgen.Aquifer.FluidPicker",
     "net.minecraft.world.level.levelgen.Aquifer.FluidStatus",
     "net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator",
     "net.minecraft.world.level.levelgen.NoiseGeneratorSettings",
     "net.minecraft.world.level.levelgen.NoiseSettings",
+    "SharedConstants.DEBUG_DISABLE_FLUID_GENERATION",
     "GsonHelper.parse()",
     "DimensionType.MIN_Y"
   ],
@@ -25,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mc-fix-hardcoded-lava-level-1.3.1.jar",
     "published": "2026-09-20"
   },
@@ -53,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite into the game's classes"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

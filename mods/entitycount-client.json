@@ -9,21 +9,13 @@
   "author": "Gahaha",
   "description": "Count entities in your loaded chunks.",
   "needs": [
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
     "net.minecraft.commands.arguments.ResourceArgument",
     "net.minecraft.commands.synchronization.SuggestionProviders",
     "Object2IntMap.Entry.getKey()",
-    "Minecraft.debugEntries",
     "Font.isBidirectional()",
-    "GuiGraphicsExtractor.text()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
     "LocalPlayer.chunkPosition()",
     "SharedSuggestionProvider.enabledFeatures()",
     "SharedSuggestionProvider.suggestResource()",
-    "Component.getVisualOrderText()",
     "Entity.chunkPosition()",
     "EntityType.isEnabled()",
     "ItemEntity.getItem()",
@@ -35,7 +27,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "EntityCount-multiloader-0.6.2-26.3.jar",
     "published": "2026-09-16"
   },
@@ -64,7 +56,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

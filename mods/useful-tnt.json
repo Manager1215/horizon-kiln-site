@@ -17,16 +17,12 @@
     "net.minecraft.world.entity.vehicle.minecart.MinecartTNT",
     "net.minecraft.world.item.AdventureModePredicate",
     "net.minecraft.world.level.block.TntBlock",
-    "HolderLookup.listElements()",
     "MappedRegistry.<init>()",
     "MappedRegistry.freeze()",
     "MappedRegistry.register()",
     "DataComponents.CAN_BREAK",
     "ServerLevel.getGameRules()",
     "InteractionHand.asEquipmentSlot()",
-    "DamageSource.getDirectEntity()",
-    "DamageSource.getEntity()",
-    "DamageSource.is()",
     "PrimedTnt.setFuse()",
     "PrimedTnt.tickCount",
     "Player.blockInteractionRange()",
@@ -34,24 +30,17 @@
     "Player.getRootVehicle()",
     "Player.hasInfiniteMaterials()",
     "ItemStack.consume()",
-    "Items.FIRE_CHARGE",
-    "Items.FLINT_AND_STEEL",
-    "Items.GUNPOWDER",
-    "Items.SAND",
-    "Items.TNT",
-    "ShapedRecipePattern.of()",
     "Level.getEntitiesOfClass()",
     "GameRules.TNT_EXPLODES",
     "GameRules.get()",
-    "AABB.inflate()",
-    "HitResult.getType()"
+    "AABB.inflate()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "useful_tnt-3.1.0.jar",
     "published": "2026-10-29"
   },
@@ -80,7 +69,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 35,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes"
+  },
+  "lacks": 24,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

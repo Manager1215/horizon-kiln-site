@@ -26,16 +26,12 @@
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
     "net.minecraft.world.entity.ai.goal.SwellGoal",
     "net.minecraft.world.entity.monster.Creeper",
-    "net.minecraft.world.item.SpawnEggItem",
     "ModelPart.getChild()",
     "LayerDefinition.create()",
     "EntityRendererProvider.Context.bakeLayer()",
-    "Registry.wrapAsHolder()",
     "ServerLevel.getGameRules()",
     "RandomSource.nextIntBetweenInclusive()",
-    "LivingEntity.getRandom()",
     "Item.Properties.spawnEgg()",
-    "Items.CREEPER_SPAWN_EGG",
     "Level.addFreshEntity()",
     "Level.getEntitiesOfClass()",
     "GameRules.SPAWN_MOBS",
@@ -47,7 +43,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "creeperlings-1.2.0-26.3.jar",
     "published": "2026-09-16"
   },
@@ -77,7 +73,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 31,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 27,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

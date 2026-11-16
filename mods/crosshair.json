@@ -11,12 +11,6 @@
   "needs": [
     "Mixin: 2 points inside the game's methods",
     "net.minecraft.client.AttackIndicatorStatus",
-    "net.minecraft.client.CameraType",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.item.BowItem",
     "net.minecraft.world.item.BundleItem",
     "net.minecraft.world.item.CrossbowItem",
@@ -25,18 +19,9 @@
     "net.minecraft.world.level.block.ShulkerBoxBlock",
     "net.minecraft.world.phys.EntityHitResult",
     "net.minecraft.world.scores.PlayerTeam",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "NativeImage.read()",
     "Minecraft.crosshairPickEntity",
-    "Minecraft.debugEntries",
-    "Minecraft.gameMode",
-    "Minecraft.hitResult",
     "Options.attackIndicator()",
-    "Options.getCameraType()",
-    "GuiGraphicsExtractor.blit()",
-    "GuiGraphicsExtractor.blitSprite()",
-    "GuiGraphicsExtractor.blitSprite()",
+    "MultiPlayerGameMode.getDestroyStage()",
     "LocalPlayer.getAttackStrengthScale()",
     "LocalPlayer.getCooldowns()",
     "LocalPlayer.getCurrentItemAttackStrengthDelay()",
@@ -50,14 +35,16 @@
     "Entity.getViewXRot()",
     "Entity.getViewYRot()",
     "LivingEntity.isAlive()",
-    "and 7 more"
+    "Player.getTeam()",
+    "ItemStack.getUseAnimation()",
+    "ItemStack.getUseDuration()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "polycrosshair-2.0.9+26.3.jar",
     "published": "2026-11-08"
   },
@@ -85,7 +72,11 @@
     "minecraft",
     "oneconfigv1"
   ],
-  "lacks": 47,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method into the game's classes"
+  },
+  "lacks": 28,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

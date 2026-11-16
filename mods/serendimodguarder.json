@@ -11,7 +11,6 @@
   "needs": [
     "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking",
     "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking.LoginQueryRequestHandler",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.networking.v1.FriendlyByteBufs",
     "net.fabricmc.fabric.api.networking.v1.LoginPacketSender",
     "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents",
@@ -20,14 +19,9 @@
     "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginQueryResponseHandler",
     "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginSynchronizer",
     "net.minecraft.server.network.ServerLoginPacketListenerImpl",
-    "ServerLifecycleEvents.SERVER_STARTED",
     "ServerPlayNetworking.getReceived()",
     "ServerPlayNetworking.getSendable()",
-    "Minecraft.execute()",
     "CommandSourceStack.checkPermission()",
-    "CommandSourceStack.sendSystemMessage()",
-    "MinecraftServer.execute()",
-    "ServerPlayer.connection",
     "ServerPlayer.hasDisconnected()",
     "ServerGamePacketListenerImpl.disconnect()"
   ],
@@ -36,7 +30,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SerendiModGuarder-1.5.3.jar",
     "published": "2026-10-04"
   },
@@ -64,7 +58,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

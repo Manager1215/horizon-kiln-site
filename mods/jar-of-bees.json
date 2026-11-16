@@ -10,7 +10,6 @@
   "description": "A jar full of angry bees. Point it at a mob and the swarm stings it to death, then flies back home. Includes Bee Storm and Guard modes.",
   "needs": [
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.client.renderer.entity.BeeRenderer",
     "net.minecraft.client.renderer.entity.EntityRenderers",
@@ -22,6 +21,7 @@
     "net.minecraft.world.entity.projectile.ProjectileUtil",
     "net.minecraft.world.item.ItemCooldowns",
     "net.minecraft.world.phys.EntityHitResult",
+    "ResourceLoader.registerBuiltinPack()",
     "ServerLevel.clip()",
     "ServerLevel.getEntitiesOfClass()",
     "ServerLevel.sendParticles()",
@@ -37,26 +37,26 @@
     "LivingEntity.damageCooldownTime",
     "LivingEntity.distanceToSqr()",
     "LivingEntity.distanceToSqr()",
-    "LivingEntity.getBbHeight()",
-    "LivingEntity.getBbWidth()",
     "LivingEntity.getBoundingBox()",
-    "LivingEntity.getDisplayName()",
     "LivingEntity.isAlive()",
-    "LivingEntity.isRemoved()",
     "LivingEntity.isSpectator()",
     "LivingEntity.needsSync",
     "Player.distanceToSqr()",
     "Player.getBoundingBox()",
     "Player.getCooldowns()",
     "Player.getLastHurtByMob()",
-    "and 10 more"
+    "Player.getVehicle()",
+    "Player.isAlive()",
+    "AABB.expandTowards()",
+    "AABB.getCenter()",
+    "and 2 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "jar-of-bees-1.0.0+26.3.jar",
     "published": "2026-10-05"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 50,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 42,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -14,24 +14,16 @@
     "net.minecraft.world.level.block.CampfireBlock",
     "net.minecraft.world.level.block.entity.BeehiveBlockEntity",
     "net.minecraft.world.level.block.entity.BeehiveBlockEntity.BeeReleaseStatus",
-    "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
     "BlockPos.MutableBlockPos.set()",
     "ServerLevel.getEntities()",
     "ServerLevel.getMoonBrightness()",
     "ServerLevel.isDarkOutside()",
     "ServerLevel.precipitationAt()",
     "ServerLevel.sendParticles()",
-    "ServerPlayer.sendSystemMessage()",
     "SoundEvents.BEEHIVE_SHEAR",
     "SoundEvents.BEE_LOOP",
     "BlockTags.FLOWERS",
     "Mob.setTarget()",
-    "Player.drop()",
-    "Player.giveExperiencePoints()",
-    "Player.swing()",
-    "Items.HONEY_BOTTLE",
-    "SwingAnimation.DEFAULT",
-    "BlockStateProperties.DOUBLE_BLOCK_HALF",
     "GameEvent.SHEAR",
     "AABB.inflate()"
   ],
@@ -40,7 +32,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "apiary-4.9-mc26.3.jar",
     "published": "2026-11-04"
   },
@@ -68,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

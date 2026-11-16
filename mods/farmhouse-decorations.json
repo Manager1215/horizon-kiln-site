@@ -14,7 +14,6 @@
     "net.minecraft.world.level.block.state.BlockBehaviour.StatePredicate",
     "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
     "ServerLevel.getOverworldClockTime()",
-    "ProblemReporter.DISCARDING",
     "Entity.discard()",
     "Entity.ejectPassengers()",
     "Entity.entityTags()",
@@ -24,7 +23,6 @@
     "Level.addFreshEntity()",
     "Level.getEntitiesOfClass()",
     "HorizontalDirectionalBlock.FACING",
-    "SoundType.ANVIL",
     "SoundType.LANTERN",
     "SoundType.MOSS_CARPET",
     "SoundType.WOOL",
@@ -37,7 +35,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fdm-26.9-fabric-26.3.jar",
     "published": "2026-10-10"
   },
@@ -66,7 +64,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

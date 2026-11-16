@@ -11,16 +11,15 @@
   "needs": [
     "net.minecraft.tags.BlockItemTagId",
     "net.minecraft.tags.BlockItemTags",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.item.context.DirectionalPlaceContext",
-    "net.minecraft.world.level.block.PitcherCropBlock",
     "net.minecraft.world.level.block.state.BlockBehaviour.StateArgumentPredicate",
     "net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacer",
     "NonNullList.iterator()",
     "ServerLevel.getMaxLocalRawBrightness()",
     "Containers.dropContents()",
     "Containers.updateNeighboursAfterDestroy()",
+    "SimpleContainer.startOpen()",
+    "SimpleContainer.stopOpen()",
     "AbstractContainerMenu.getRedstoneSignalFromBlockEntity()",
     "BlockItem.place()",
     "WorldGenLevel.isStateAtPosition()",
@@ -34,7 +33,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "AutoPlanter-Fabric-26.3-26.3.3.jar",
     "published": "2026-10-20"
   },
@@ -62,7 +61,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

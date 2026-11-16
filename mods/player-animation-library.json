@@ -11,8 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 8 points inside the game's methods",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.entity.ClientMannequin",
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.model.geom.PartPose",
@@ -31,7 +29,6 @@
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
     "net.minecraft.client.renderer.extract.LevelExtractor",
-    "net.minecraft.commands.arguments.IdentifierArgument",
     "net.minecraft.commands.arguments.UuidArgument",
     "net.minecraft.world.entity.NeutralMob",
     "net.minecraft.world.entity.WalkAnimationState",
@@ -43,7 +40,6 @@
     "Axis.ZP",
     "Camera.isDetached()",
     "Minecraft.levelRenderer",
-    "Options.getCameraType()",
     "ModelPart.getInitialPose()",
     "ModelPart.translateAndRotate()",
     "ModelPart.visible",
@@ -51,14 +47,18 @@
     "ModelPart.xScale",
     "ModelPart.y",
     "ModelPart.yScale",
-    "and 45 more"
+    "ModelPart.z",
+    "ModelPart.zScale",
+    "ClientLevel.getEntity()",
+    "AbstractClientPlayer.isLocalPlayer()",
+    "and 42 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "PlayerAnimationLibMerged-1.2.9+mc.26.3.jar",
     "published": "2026-11-04"
   },
@@ -86,7 +86,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 100,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 91,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

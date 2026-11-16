@@ -9,7 +9,6 @@
   "author": "Novinity",
   "description": "A mod-plugin pair that allows server owners to see client mod lists and ban any mod.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
@@ -17,26 +16,14 @@
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
     "net.minecraft.server.packs.repository.Pack",
     "net.minecraft.server.packs.repository.PackRepository",
     "Minecraft.getGameProfile()",
     "Minecraft.getResourcePackRepository()",
-    "CommandSourceStack.getServer()",
-    "CommandSourceStack.sendSystemMessage()",
-    "Commands.LEVEL_OWNERS",
-    "Commands.hasPermission()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "MinecraftServer.execute()",
     "MinecraftServer.getTickCount()",
-    "ServerPlayer.connection",
     "ServerPlayer.getCamera()",
-    "ServerPlayer.sendSystemMessage()",
-    "ServerPlayer.setSprinting()",
     "ServerPlayer.setYBodyRot()",
     "ServerPlayer.setYHeadRot()",
-    "ServerPlayer.syncVelocity",
     "ServerGamePacketListenerImpl.disconnect()",
     "ServerGamePacketListenerImpl.teleport()",
     "PlayerList.getPlayer()",
@@ -50,7 +37,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ClientID-Fabric-1.1.4-26.3.jar",
     "published": "2026-09-16"
   },
@@ -78,7 +65,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 35,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

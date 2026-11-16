@@ -13,12 +13,8 @@
     "net.fabricmc.fabric.api.transfer.v1.storage.base.InsertionOnlyStorage",
     "net.fabricmc.fabric.api.transfer.v1.storage.base.SingleVariantStorage",
     "net.minecraft.references.BlockItemId",
-    "net.minecraft.world.SimpleContainer",
-    "net.minecraft.world.flag.FeatureFlags",
     "net.minecraft.world.inventory.ContainerData",
-    "net.minecraft.world.inventory.ContainerInput",
     "net.minecraft.world.inventory.FurnaceFuelSlot",
-    "net.minecraft.world.inventory.MenuType.MenuSupplier",
     "net.minecraft.world.inventory.SimpleContainerData",
     "net.minecraft.world.level.block.AbstractFurnaceBlock",
     "net.minecraft.world.level.block.Mirror",
@@ -26,14 +22,10 @@
     "net.minecraft.world.level.block.WeatheringCopper",
     "net.minecraft.world.level.block.WeatheringCopper.WeatherState",
     "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
-    "GuiGraphicsExtractor.blitSprite()",
     "Direction.stream()",
     "SoundEvents.BLASTFURNACE_FIRE_CRACKLE",
     "AbstractContainerMenu.clicked()",
-    "MenuType.<init>()",
-    "ItemContainerContents.copyOne()",
     "Level.hasNeighborSignal()",
-    "Blocks.FURNACE",
     "Blocks.register()",
     "SoundType.COPPER",
     "WeatheringCopperCollection.registerBlocks()",
@@ -50,12 +42,12 @@
     "MapColor.WARPED_NYLIUM",
     "MapColor.WARPED_STEM"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "heater-4.3+26.3.jar",
     "published": "2026-09-19"
   },
@@ -86,7 +78,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 40,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 32,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

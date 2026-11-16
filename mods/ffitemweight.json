@@ -9,32 +9,16 @@
   "author": "Fyxe",
   "description": "Adds weight and encumbrance built dynamically from crafting recipes and data. Insanely configurable.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.minecraft.util.context.ContextMap.Builder",
-    "net.minecraft.world.item.crafting.display.SlotDisplayContext",
-    "net.minecraft.world.level.storage.LevelResource",
-    "ServerLifecycleEvents.END_DATA_PACK_RELOAD",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "Minecraft.getSingleplayerServer()",
     "LocalPlayer.tickCount",
-    "CommandSourceStack.getServer()",
     "DefaultedRegistry.iterator()",
     "DefaultedRegistry.size()",
     "NonNullList.iterator()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
-    "MutableComponent.withStyle()",
-    "Style.withUnderlined()",
     "MinecraftServer.getResourceManager()",
-    "MinecraftServer.getWorldPath()",
     "MinecraftServer.registryAccess()",
-    "ContextMap.builder()",
-    "EquipmentSlot.isArmor()",
+    "ContextMap.Builder.buildAndValidate()",
     "Player.tickCount",
-    "SlotDisplay.resolveForFirstStack()",
+    "SlotDisplayContext.CONTEXT",
+    "SlotDisplayContext.REGISTRIES",
     "EnchantmentHelper.getEnchantmentLevel()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -42,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ffitemweight-0.10.3+26.3-fabric.jar",
     "published": "2026-11-02"
   },
@@ -71,7 +55,11 @@
     "ffutilities",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

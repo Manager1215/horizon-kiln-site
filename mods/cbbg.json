@@ -20,17 +20,13 @@
     "net.minecraft.client.GameNarrator",
     "net.minecraft.client.Screenshot",
     "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
     "net.minecraft.client.gui.components.debug.DebugScreenEntry",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryStatus",
     "net.minecraft.client.gui.components.debug.DebugScreenProfile",
     "net.minecraft.client.renderer.PostChain",
     "org.lwjgl.opengl.GL11",
     "org.lwjgl.opengl.GL30",
     "RenderTarget.destroyBuffers()",
     "RenderTarget.width",
-    "NativeImage.read()",
-    "NativeImage.setPixel()",
     "RenderSystem.assertOnRenderThread()",
     "RenderSystem.getCompiledPipeline()",
     "SamplerCache.getClampToEdge()",
@@ -50,14 +46,17 @@
     "RenderPipeline.isCull()",
     "RenderPipeline.pushConstantSize()",
     "Minecraft.getNarrator()",
-    "and 5 more"
+    "Options.getMenuBackgroundBlurriness()",
+    "Gui.overlay()",
+    "GameRenderer.levelLightmap()",
+    "RenderPipelines.TRACY_BLIT"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "cbbg-1.5.0+mc26.3-fabric.jar",
     "published": "2026-10-11"
   },
@@ -89,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 45,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-method into the game's classes; runs threads of its own"
+  },
+  "lacks": 40,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

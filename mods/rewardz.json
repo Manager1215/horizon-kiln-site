@@ -9,42 +9,18 @@
   "author": "Globox1997",
   "description": "Reward calendar which grants items accessible via inventory",
   "needs": [
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseClick",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-    "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-    "net.minecraft.server.permissions.LevelBasedPermissionSet",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.SimpleMenuProvider",
-    "net.minecraft.world.inventory.ContainerInput",
-    "AttachmentRegistry.create()",
-    "ServerLifecycleEvents.END_DATA_PACK_RELOAD",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "Minecraft.execute()",
-    "CommandSource.NULL",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
-    "Commands.performPrefixedCommand()",
-    "DataComponentPatch.CODEC",
-    "MinecraftServer.execute()",
-    "MinecraftServer.getCommands()",
     "MinecraftServer.getTickCount()",
     "MinecraftServer.registryAccess()",
-    "ServerPlayer.getDisplayName()",
     "ServerPlayer.getRotationVector()",
-    "AbstractContainerMenu.clicked()",
-    "ItemStack.<init>()"
+    "AbstractContainerMenu.clicked()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "rewardz-fabric-1.1.0+26.3.jar",
     "published": "2026-11-15"
   },
@@ -75,5 +51,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 29
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels"
+  },
+  "lacks": 5
 }

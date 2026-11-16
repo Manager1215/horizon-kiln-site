@@ -9,15 +9,14 @@
   "author": "pajic",
   "description": "Change the delay between mining and placing blocks in real-time using commands",
   "needs": [
-    "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode"
+    "Mixin: 2 points inside the game's methods"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+  "roadmap": "Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "cmd-1.0.3.jar",
     "published": "2026-03-25"
   },
@@ -44,7 +43,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 1,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

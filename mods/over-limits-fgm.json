@@ -9,25 +9,14 @@
   "author": "swilia",
   "description": "Allows you to go over the default limits for Female Gender Mod",
   "needs": [
-    "com.mojang.blaze3d.Blaze3D",
-    "net.minecraft.network.chat.ClickEvent.OpenFile",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "Minecraft.execute()",
-    "Font.split()",
-    "GuiGraphicsExtractor.centeredText()",
-    "GuiGraphicsExtractor.text()",
-    "Screen.mouseScrolled()",
-    "MutableComponent.setStyle()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withUnderlined()"
+    "com.mojang.blaze3d.Blaze3D"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "wildfireoverlimits-1.1.6-26.3.jar",
     "published": "2026-11-13"
   },
@@ -61,7 +50,11 @@
     "modmenu",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

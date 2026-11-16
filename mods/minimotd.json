@@ -10,8 +10,6 @@
   "description": "Minecraft plugin/mod to set the server list MOTD using MiniMessage for formatting, supporting RGB colors.",
   "needs": [
     "Mixin: 6 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.minecraft.commands.synchronization.ArgumentTypeInfos",
     "net.minecraft.commands.synchronization.ArgumentUtils",
     "net.minecraft.network.protocol.game.ClientboundCommandsPacket.ArgumentNodeStub",
@@ -24,10 +22,6 @@
     "net.minecraft.server.network.ServerHandshakePacketListenerImpl",
     "net.minecraft.server.network.ServerStatusPacketListenerImpl",
     "JsonArray.forEach()",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "Commands.LEVEL_ADMINS",
-    "Commands.hasPermission()",
     "MinecraftServer.getStatus()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -35,7 +29,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "minimotd-fabric-mc26.3-2.2.5.jar",
     "published": "2026-09-18"
   },
@@ -63,7 +57,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

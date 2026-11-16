@@ -10,11 +10,11 @@
   "description": "Automatically adjusts Minecraft GUI scale based on window resolution. Smart scaling for optimal readability on any screen size.",
   "needs": [],
   "roadmap": "",
-  "evidence": "Everything its code calls is covered by Kiln 0.4.1 (4 classes, 5 members). Not run yet.",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (4 classes, 5 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "guiscaler-26.3-1.6.0-fabric.jar",
     "published": "2026-09-21"
   },
@@ -44,6 +44,10 @@
     "java",
     "minecraft"
   ],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 0,
   "development": {
     "status": "not-checked",

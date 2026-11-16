@@ -20,12 +20,6 @@
     "net.fabricmc.fabric.api.client.rendering.v1.FabricOrderedSubmitNodeCollector",
     "net.fabricmc.fabric.api.client.rendering.v1.SubmitRenderPhases",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
-    "net.minecraft.client.gui.components.toasts.ToastManager.ToastInstance",
     "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
     "net.minecraft.client.model.EntityModel",
     "net.minecraft.client.model.geom.ModelPart.Vertex",
@@ -48,9 +42,15 @@
     "net.minecraft.client.renderer.entity.state.TropicalFishRenderState",
     "net.minecraft.client.renderer.feature.CustomFeatureRenderer",
     "net.minecraft.client.renderer.feature.CustomFeatureRenderer.Submit",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.client.renderer.texture.MissingTextureAtlasSprite",
-    "net.minecraft.client.server.IntegratedServer",
+    "net.minecraft.server.level.ChunkHolder",
+    "net.minecraft.server.level.ChunkMap",
+    "net.minecraft.world.biome.source.VanillaLayeredBiomeSource",
+    "net.minecraft.world.entity.Display",
+    "net.minecraft.world.entity.Interaction",
+    "net.minecraft.world.entity.animal.fish.Pufferfish",
+    "net.minecraft.world.entity.animal.fish.TropicalFish",
+    "net.minecraft.world.entity.animal.fish.TropicalFish.Base",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "confluxmap-26.3-0.1.17-rc.1.jar",
     "published": "2026-11-11"
   },
@@ -87,7 +87,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 288,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-method into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 191,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

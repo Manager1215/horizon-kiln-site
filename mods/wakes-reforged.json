@@ -12,9 +12,7 @@
     "com.mojang.blaze3d.vertex.DefaultVertexFormat",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
     "net.minecraft.client.gui.components.debug.DebugScreenEntry",
     "net.minecraft.client.particle.Particle",
     "net.minecraft.client.particle.ParticleProvider",
@@ -30,8 +28,6 @@
     "net.minecraft.client.renderer.feature.phase.SimpleFeatureRenderPhase",
     "net.minecraft.client.renderer.rendertype.RenderSetup",
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
-    "net.minecraft.gizmos.GizmoStyle",
-    "net.minecraft.world.entity.projectile.FishingHook",
     "net.minecraft.world.entity.vehicle.boat.AbstractBoat",
     "net.minecraft.world.level.LightLayer",
     "org.lwjgl.system.MemoryUtil",
@@ -44,19 +40,23 @@
     "VertexConsumer.setLight()",
     "BlendFunction.TRANSLUCENT",
     "RenderPipeline.builder()",
-    "Options.getCameraType()",
     "ClientLevel.getBrightness()",
     "RenderPipelines.BEACON_BEAM_TRANSLUCENT",
     "RenderPipelines.TRANSLUCENT_BLOCK",
     "SubmitNodeCollection.afterTerrain",
-    "and 23 more"
+    "Frustum.isVisible()",
+    "BlockPos.MutableBlockPos.set()",
+    "BlockPos.MutableBlockPos.set()",
+    "Gizmos.cuboid()",
+    "ARGB.colorFromFloat()",
+    "and 15 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "wakes-26.3-Fabric-1.4.1.jar",
     "published": "2026-09-22"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 63,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 55,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

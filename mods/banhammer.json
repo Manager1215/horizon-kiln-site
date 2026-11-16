@@ -10,9 +10,7 @@
   "description": "Simple, customisable punishment utility mod for Fabric",
   "needs": [
     "Mixin: 20 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.properties.PropertyMap",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowChatMessage",
     "net.fabricmc.fabric.api.permission.v1.MutablePermissionContext",
@@ -22,12 +20,7 @@
     "net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint",
     "net.fabricmc.loader.api.metadata.ContactInformation",
     "net.fabricmc.loader.api.metadata.Person",
-    "net.minecraft.core.component.DataComponentPatch.Builder",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.ComponentSerialization",
     "net.minecraft.network.chat.ComponentUtils",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.network.chat.LastSeenMessages.Update",
     "net.minecraft.network.chat.SignedMessageChain",
     "net.minecraft.network.chat.SignedMessageChain.DecodeException",
@@ -38,7 +31,6 @@
     "net.minecraft.server.commands.BanPlayerCommands",
     "net.minecraft.server.commands.KickCommand",
     "net.minecraft.server.commands.PardonCommand",
-    "net.minecraft.server.permissions.LevelBasedPermissionSet",
     "net.minecraft.server.players.IpBanList",
     "net.minecraft.server.players.IpBanListEntry",
     "net.minecraft.server.players.ServerOpList",
@@ -48,16 +40,24 @@
     "net.minecraft.server.players.UserBanListEntry",
     "net.minecraft.world.item.component.ResolvableProfile.Static",
     "net.minecraft.world.level.block.entity.SignBlockEntity",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "and 41 more"
+    "GameProfile.<init>()",
+    "ModContainer.getPath()",
+    "ModMetadata.getAuthors()",
+    "ModMetadata.getContact()",
+    "ModMetadata.getContributors()",
+    "CommandSourceStack.checkPermission()",
+    "CommandSourceStack.checkPermission()",
+    "CommandSourceStack.checkPermission()",
+    "Style.withShadowColor()",
+    "MinecraftServer.close()",
+    "and 15 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "banhammer-0.19.0+26.3.jar",
     "published": "2026-09-11"
   },
@@ -85,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 81,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 55,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

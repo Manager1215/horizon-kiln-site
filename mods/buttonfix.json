@@ -9,12 +9,8 @@
   "author": "BeagleNF404",
   "description": "A small client-side mod that fixes widget focus issues in any in-game GUI.",
   "needs": [
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AfterMouseClick",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AfterMouseRelease",
     "net.minecraft.client.gui.ComponentPath",
     "net.minecraft.client.gui.ComponentPath.Path",
-    "Screen.clearFocus()",
     "Screen.getCurrentFocusPath()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
@@ -22,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "buttonfix-1.1.0-fabric+26.1-26.3.jar",
     "published": "2026-09-20"
   },
@@ -50,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

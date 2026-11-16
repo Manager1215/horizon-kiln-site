@@ -35,20 +35,20 @@
     "net.minecraft.client.model.geom.builders.MeshDefinition",
     "net.minecraft.client.model.geom.builders.PartDefinition",
     "net.minecraft.client.model.geom.builders.UVPair",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.entity.MobRenderer",
     "net.minecraft.client.renderer.entity.layers.RenderLayer",
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.component.DataComponentInitializers",
     "net.minecraft.core.component.DataComponentInitializers.SingleComponentInitializer",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.AnimationState",
     "net.minecraft.world.entity.SpawnPlacementTypes",
     "net.minecraft.world.entity.SpawnPlacements",
     "net.minecraft.world.entity.SpawnPlacements.SpawnPredicate",
+    "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
+    "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
+    "net.minecraft.world.entity.ai.goal.BreedGoal",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
@@ -56,7 +56,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "custom-weapons-2.0.0+26.3.jar",
     "published": "2026-11-10"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 162,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 143,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

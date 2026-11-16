@@ -13,21 +13,20 @@
     "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents",
     "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.ModifyChat",
     "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.ModifyCommand",
-    "net.minecraft.util.StringUtil",
     "net.minecraft.world.entity.animal.feline.CatSoundVariant",
     "net.minecraft.world.entity.animal.feline.CatSoundVariant.CatSoundSet",
     "net.minecraft.world.entity.animal.feline.CatSoundVariants",
     "net.minecraft.world.entity.animal.feline.CatSoundVariants.SoundSet",
     "ClientReceiveMessageEvents.CHAT",
-    "ClientPacketListener.sendChat()",
-    "SoundEvents.CAT_SOUNDS"
+    "SoundEvents.CAT_SOUNDS",
+    "StringUtil.trimChatMessage()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "miumaupiupau-2.1.6.jar",
     "published": "2026-10-20"
   },
@@ -56,7 +55,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

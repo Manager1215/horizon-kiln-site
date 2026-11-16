@@ -11,10 +11,8 @@
   "needs": [
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.renderer.rendertype.RenderSetup",
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
-    "net.minecraft.world.entity.EquipmentSlot.Type",
     "net.minecraft.world.scores.ReadOnlyScoreInfo",
     "PoseStack.last()",
     "PoseStack.Pose.pose()",
@@ -33,11 +31,6 @@
     "Camera.rotation()",
     "Camera.xRot()",
     "Camera.yRot()",
-    "Minecraft.setScreenAndShow()",
-    "Font.split()",
-    "Button.getMessage()",
-    "Button.Builder.tooltip()",
-    "Screen.mouseScrolled()",
     "ClientLevel.getScoreboard()",
     "GameRenderer.mainCamera()",
     "RenderPipelines.DEBUG_FILLED_BOX",
@@ -46,17 +39,18 @@
     "ItemStackRenderState.pickParticleMaterial()",
     "RenderType.create()",
     "RenderTypes.debugFilledBox()",
-    "TextureAtlasSprite.atlasLocation()",
-    "TextureAtlasSprite.getU0()",
-    "TextureAtlasSprite.getU1()",
-    "and 9 more"
+    "Entity.distanceToSqr()",
+    "Player.distanceToSqr()",
+    "Player.getAbsorptionAmount()",
+    "Scoreboard.getDisplayObjective()",
+    "Scoreboard.getPlayerScoreInfo()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "PlayerIndicatorPlus-1.0.6-26.3.jar",
     "published": "2026-09-20"
   },
@@ -82,7 +76,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 49,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 35,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

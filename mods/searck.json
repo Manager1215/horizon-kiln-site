@@ -10,25 +10,18 @@
   "description": "A simple Minecraft mod that adds a Satisfactory-style, promptly available search bar. It tries to be as true to Vanilla as possible, so it integrates neatly into any gameplay.",
   "needs": [
     "an access widener",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
     "net.minecraft.client.resources.language.ClientLanguage",
-    "net.minecraft.world.inventory.ContainerInput",
-    "KeyMapping.matches()",
-    "GuiGraphicsExtractor.fakeItem()",
     "GuiGraphicsExtractor.setTooltipForNextFrame()",
-    "DefaultedRegistry.asHolderIdMap()",
-    "Inventory.findSlotMatchingItem()"
+    "InventoryScreen.slotClicked()",
+    "DefaultedRegistry.asHolderIdMap()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "searck-1.0.1+26.3.jar",
     "published": "2026-10-05"
   },
@@ -60,7 +53,11 @@
     "midnightlib",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

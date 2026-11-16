@@ -9,40 +9,19 @@
   "author": "official.andy",
   "description": "Make specific mobs ignore you like phantoms.",
   "needs": [
-    "net.minecraft.commands.arguments.IdentifierArgument",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.server.permissions.LevelBasedPermissionSet",
     "net.minecraft.world.entity.ai.targeting.TargetingConditions",
     "net.minecraft.world.entity.boss.enderdragon.phases.AbstractDragonPhaseInstance",
     "net.minecraft.world.entity.boss.enderdragon.phases.DragonChargePlayerPhase",
     "net.minecraft.world.entity.boss.enderdragon.phases.DragonStrafePlayerPhase",
     "net.minecraft.world.entity.monster.warden.Warden",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "CommandSourceStack.isPlayer()",
-    "Commands.performPrefixedCommand()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
-    "MutableComponent.setStyle()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "MinecraftServer.execute()",
-    "MinecraftServer.getCommands()",
-    "MinecraftServer.isSingleplayer()",
-    "ServerPlayer.createCommandSourceStack()",
-    "PermissionSet.union()"
+    "MinecraftServer.isSingleplayer()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mobignoreme-1.2.jar",
     "published": "2026-09-15"
   },
@@ -70,7 +49,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

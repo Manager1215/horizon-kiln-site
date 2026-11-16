@@ -9,8 +9,6 @@
   "author": "Keksuccino",
   "description": "OpenAL-based library mod for playing background music.",
   "needs": [
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Options.getFinalSoundSourceVolume()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
@@ -18,7 +16,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "melody_fabric_1.0.17_MC_26.3.jar",
     "published": "2026-09-18"
   },
@@ -46,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

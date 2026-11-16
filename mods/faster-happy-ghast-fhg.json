@@ -11,15 +11,14 @@
   "needs": [
     "Mixin: 3 points inside the game's methods",
     "net.minecraft.world.entity.animal.happyghast.HappyGhast",
-    "LocalPlayer.getVehicle()",
-    "Attributes.FLYING_SPEED"
+    "LocalPlayer.getVehicle()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "faster-happy-ghast-fabric-1.1.2.jar",
     "published": "2026-10-26"
   },
@@ -50,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

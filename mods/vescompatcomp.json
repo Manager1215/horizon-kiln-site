@@ -15,7 +15,6 @@
     "net.minecraft.world.level.entity.EntityTickList",
     "FabricLoader.getRawGameVersion()",
     "ClientLevel.getBrightness()",
-    "Identifier.tryBuild()",
     "Player.getOnPos()",
     "Level.getBiome()",
     "Level.getOverworldClockTime()",
@@ -27,7 +26,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "vcc-0.5.0-alpha.4-fabric+26.3.jar",
     "published": "2026-11-03"
   },
@@ -59,7 +58,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

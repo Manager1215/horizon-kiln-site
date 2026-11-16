@@ -11,15 +11,14 @@
   "needs": [
     "an access widener",
     "net.minecraft.world.item.component.CustomModelData",
-    "DataComponents.CUSTOM_MODEL_DATA",
-    "DataComponents.ITEM_NAME"
+    "DataComponents.CUSTOM_MODEL_DATA"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "musicalinstruments-fabric-26.3-26.3.0.0.jar",
     "published": "2026-11-02"
   },
@@ -47,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

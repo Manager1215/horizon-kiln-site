@@ -12,21 +12,13 @@
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
     "net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags",
-    "net.minecraft.commands.arguments.IdentifierArgument",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.server.permissions.Permissions",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
     "ServerLevel.getEntitiesOfClass()",
-    "Stats.BLOCK_MINED",
     "ExperienceOrb.setPos()",
     "ItemEntity.setDeltaMovement()",
     "Player.causeFoodExhaustion()",
     "ItemStack.isCorrectToolForDrops()",
     "ItemStack.mineBlock()",
     "Block.getDrops()",
-    "SoundType.getBreakSound()",
-    "BlockState.getSoundType()",
     "BlockState.requiresCorrectToolForDrops()",
     "BlockState.spawnAfterBreak()",
     "AABB.inflate()"
@@ -36,7 +28,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tethermine-1.2.3+26.3.jar",
     "published": "2026-09-20"
   },
@@ -64,7 +56,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

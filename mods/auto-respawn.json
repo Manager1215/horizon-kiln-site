@@ -9,8 +9,6 @@
   "author": "BlockLegend001",
   "description": "The AutoRespawn Mod respawns displays the death screen for a short delay before respawning automatically",
   "needs": [
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "LocalPlayer.isDeadOrDying()",
     "LocalPlayer.respawn()"
   ],
@@ -19,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "AutoRespawn-26.3-0.1.jar",
     "published": "2026-10-06"
   },
@@ -48,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

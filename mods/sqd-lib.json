@@ -10,11 +10,11 @@
   "description": "This is a library mod/plugin, primarily used by SQD Studios (but not limited to). This adds some stuff for developers to use, and I believe it's a pretty good tool for developers to migrate their plugins to mods",
   "needs": [],
   "roadmap": "",
-  "evidence": "Everything its code calls is covered by Kiln 0.4.1 (4 classes, 6 members). Not run yet.",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (4 classes, 6 members). Not run yet.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sqdlib-fabric-4.1.1.jar",
     "published": "2026-11-08"
   },
@@ -41,6 +41,10 @@
     "java",
     "minecraft"
   ],
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own; has network channels"
+  },
   "lacks": 0,
   "development": {
     "status": "not-checked",

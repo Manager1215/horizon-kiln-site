@@ -9,17 +9,11 @@
   "author": "inuk",
   "description": "Adds /mobpathfind command to make mobs pathfind to a location or entity. Useful for datapack and map creators.",
   "needs": [
-    "net.minecraft.commands.arguments.coordinates.Vec3Argument",
     "net.minecraft.world.entity.ai.goal.Goal",
     "net.minecraft.world.entity.ai.goal.Goal.Flag",
     "net.minecraft.world.entity.ai.goal.GoalSelector",
     "net.minecraft.world.entity.ai.navigation.PathNavigation",
     "net.minecraft.world.level.pathfinder.Path",
-    "EntityArgument.entities()",
-    "EntityArgument.entity()",
-    "EntityArgument.getEntities()",
-    "EntityArgument.getEntity()",
-    "Entity.isRemoved()",
     "Mob.distanceToSqr()",
     "Mob.getNavigation()"
   ],
@@ -28,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "pathfindcmd-1.1.0.jar",
     "published": "2026-10-25"
   },
@@ -56,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

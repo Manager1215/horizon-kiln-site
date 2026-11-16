@@ -9,15 +9,14 @@
   "author": "Fuzs",
   "description": "Nine hotbar slots aren't enough for you? Now you can cycle your whole inventory!",
   "needs": [
-    "an access widener",
-    "org.apache.logging.log4j.LogManager"
+    "an access widener"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+  "roadmap": "Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "slotcycler-v26.3.0-mc26.3.x+fabric.jar",
     "published": "2026-09-23"
   },
@@ -48,7 +47,11 @@
     "minecraft",
     "puzzleslib"
   ],
-  "lacks": 1,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

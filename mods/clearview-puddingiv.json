@@ -19,7 +19,6 @@
     "net.fabricmc.fabric.api.client.renderer.v1.sprite.SpriteFinder",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionEvents.EndExtraction",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.chunk.CompiledSectionMesh",
     "net.minecraft.client.renderer.chunk.SectionCompiler",
@@ -31,11 +30,9 @@
     "net.minecraft.client.renderer.extract.LevelExtractor",
     "net.minecraft.world.level.block.BigDripleafBlock",
     "net.minecraft.world.level.block.BigDripleafStemBlock",
-    "net.minecraft.world.level.block.DoublePlantBlock",
     "net.minecraft.world.level.block.GrowingPlantBlock",
     "net.minecraft.world.level.block.HangingMossBlock",
     "net.minecraft.world.level.block.VineBlock",
-    "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
     "PoseStack.last()",
     "PoseStack.mulPose()",
     "PoseStack.Pose.pose()",
@@ -49,15 +46,18 @@
     "Minecraft.getBlockColors()",
     "Minecraft.levelExtractor",
     "Options.ambientOcclusion()",
-    "Options.getCameraType()",
-    "and 12 more"
+    "Frustum.isVisible()",
+    "RenderTypes.translucentMovingBlock()",
+    "CameraRenderState.cullFrustum",
+    "BlockPos.betweenClosed()",
+    "and 7 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "clearview-V1.0.0+mc26.3.jar",
     "published": "2026-11-06"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 52,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 47,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,17 +9,11 @@
   "author": "BadutZY",
   "description": "Make Minecraft day like a real day.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.minecraft.world.clock.ServerClockManager",
     "net.minecraft.world.clock.WorldClocks",
     "net.minecraft.world.level.storage.WorldData",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "CommandSourceStack.getServer()",
     "RegistryAccess.Frozen.getOrThrow()",
     "MinecraftServer.clockManager()",
-    "MinecraftServer.execute()",
     "MinecraftServer.getAllLevels()",
     "MinecraftServer.getTickCount()",
     "MinecraftServer.getWorldData()",
@@ -36,7 +30,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "24-hours-1.6.0.jar",
     "published": "2026-10-17"
   },
@@ -66,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

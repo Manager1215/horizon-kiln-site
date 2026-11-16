@@ -12,7 +12,6 @@
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.core.particles.DustParticleOptions",
-    "net.minecraft.world.entity.EntitySpawnRequest",
     "net.minecraft.world.entity.PlayerRideableJumping",
     "net.minecraft.world.entity.ai.control.LookControl",
     "net.minecraft.world.entity.ai.goal.AvoidEntityGoal",
@@ -28,19 +27,14 @@
     "net.minecraft.world.entity.animal.fox.Fox",
     "net.minecraft.world.entity.animal.panda.Panda",
     "net.minecraft.world.entity.animal.sheep.Sheep",
-    "AttachmentRegistry.createPersistent()",
     "BlockPos.mutable()",
     "BlockPos.MutableBlockPos.move()",
-    "DataComponents.ENCHANTMENT_GLINT_OVERRIDE",
-    "DataComponents.ITEM_NAME",
     "BuiltInRegistries.TRIGGER_TYPES",
     "ServerLevel.sendParticles()",
     "ServerPlayer.addEffect()",
-    "ServerPlayer.getRandom()",
     "ServerPlayer.isPassenger()",
     "ServerPlayer.startRiding()",
     "SoundEvents.AMETHYST_BLOCK_HIT",
-    "Entity.setUUID()",
     "Entity.snapTo()",
     "EntityType.create()",
     "EntityTypes.ARMADILLO",
@@ -49,14 +43,20 @@
     "EntityTypes.BEE",
     "EntityTypes.FOX",
     "EntityTypes.FROG",
-    "and 39 more"
+    "EntityTypes.OCELOT",
+    "EntityTypes.PANDA",
+    "EntityTypes.RABBIT",
+    "EntityTypes.SHEEP",
+    "EntityTypes.STRIDER",
+    "EntityTypes.TURTLE",
+    "and 38 more"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "wildbound-1.4.0.jar",
     "published": "2026-09-16"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 116,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 86,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

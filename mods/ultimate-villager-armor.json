@@ -29,7 +29,6 @@
     "net.minecraft.client.renderer.entity.state.VillagerRenderState",
     "net.minecraft.client.resources.model.EquipmentClientInfo",
     "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
-    "net.minecraft.world.entity.EquipmentSlot.Type",
     "net.minecraft.world.entity.npc.villager.Villager",
     "net.minecraft.world.phys.EntityHitResult",
     "ModelPart.getChild()",
@@ -39,15 +38,14 @@
     "LayerDefinition.create()",
     "EntityRendererProvider.Context.bakeLayer()",
     "EntityRendererProvider.Context.getEquipmentRenderer()",
-    "SoundEvents.ARMOR_EQUIP_GENERIC",
-    "EquipmentSlot.getType()"
+    "SoundEvents.ARMOR_EQUIP_GENERIC"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ultimate_villager_armour-26.3.jar",
     "published": "2026-09-16"
   },
@@ -77,7 +75,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 32,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 30,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

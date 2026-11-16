@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 19 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.properties.Property",
     "com.mojang.authlib.properties.PropertyMap",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
@@ -19,12 +18,10 @@
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.IntegerRuleBuilder",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
     "net.minecraft.core.UUIDUtil",
-    "net.minecraft.core.component.DataComponentPatch.Builder",
     "net.minecraft.core.particles.ItemParticleOption",
     "net.minecraft.core.particles.SpellParticleOption",
     "net.minecraft.network.chat.FontDescription",
     "net.minecraft.network.chat.FontDescription.Resource",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.network.protocol.game.ClientboundLevelChunkPacketData.BlockEntityInfo",
     "net.minecraft.network.protocol.game.ClientboundMoveEntityPacket.Rot",
     "net.minecraft.network.syncher.EntityDataAccessor",
@@ -33,12 +30,10 @@
     "net.minecraft.server.network.ServerPlayerConnection",
     "net.minecraft.tags.DamageTypeTags",
     "net.minecraft.tags.EntityTypeTags",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.util.EncoderCache.2",
     "net.minecraft.util.TimeUtil",
     "net.minecraft.util.datafix.fixes.References",
     "net.minecraft.util.datafix.schemas.V1460",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.damagesource.DamageTypes",
     "net.minecraft.world.entity.AreaEffectCloud",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
@@ -51,6 +46,11 @@
     "net.minecraft.world.entity.ai.goal.Goal",
     "net.minecraft.world.entity.ai.goal.Goal.Flag",
     "net.minecraft.world.entity.ai.goal.GoalSelector",
+    "net.minecraft.world.entity.ai.goal.LookAtPlayerGoal",
+    "net.minecraft.world.entity.ai.goal.MeleeAttackGoal",
+    "net.minecraft.world.entity.ai.goal.RandomStrollGoal",
+    "net.minecraft.world.entity.ai.goal.RangedAttackGoal",
+    "net.minecraft.world.entity.ai.goal.RangedBowAttackGoal",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "illager_expansion-1.12.0+26.3.jar",
     "published": "2026-09-12"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 351,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; generates in the world"
+  },
+  "lacks": 281,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

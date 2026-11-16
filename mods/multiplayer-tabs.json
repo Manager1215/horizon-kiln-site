@@ -10,7 +10,6 @@
   "description": "Organize multiplayer servers into custom tabs for quick, clean, one-click filtering.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.FaviconTexture",
     "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
     "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList",
@@ -18,24 +17,17 @@
     "net.minecraft.client.multiplayer.ServerList",
     "net.minecraft.network.protocol.status.ServerStatus",
     "net.minecraft.network.protocol.status.ServerStatus.Players",
-    "NativeImage.read()",
-    "Minecraft.setScreenAndShow()",
-    "Button.setTooltip()",
-    "EditBox.setHint()",
     "ServerData.getIconBytes()",
-    "ServerData.ip",
     "ServerData.motd",
-    "ServerData.name",
     "ServerData.ping",
-    "ServerData.players",
-    "CommonComponents.GUI_DONE"
+    "ServerData.players"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "multiplayer-tabs-1.5.0+mc26.3.jar",
     "published": "2026-10-07"
   },
@@ -66,7 +58,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

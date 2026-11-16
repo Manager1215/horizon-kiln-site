@@ -9,21 +9,14 @@
   "author": "uku",
   "description": "shows how many potions you have left in your inventory",
   "needs": [
-    "net.minecraft.world.item.alchemy.Potion",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "net.minecraft.world.item.alchemy.Potions",
-    "Holder.getRegisteredName()",
-    "NonNullList.stream()",
-    "DataComponents.POTION_CONTENTS",
-    "BuiltInRegistries.POTION",
-    "Items.SPLASH_POTION"
+    "NonNullList.stream()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "potioncounter-fabric-1.12.1+mc26.3.jar",
     "published": "2026-09-15"
   },
@@ -42,7 +35,11 @@
     "minecraft",
     "ukulib"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

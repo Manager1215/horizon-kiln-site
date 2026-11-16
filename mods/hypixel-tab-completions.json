@@ -10,17 +10,13 @@
   "description": "A simple Fabric mod that adds tab completions to common commands on Hypixel",
   "needs": [
     "Mixin: 4 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.minecraft.SessionService",
     "com.mojang.authlib.services.ProfileResult",
     "net.minecraft.client.multiplayer.ClientSuggestionProvider",
     "net.minecraft.network.protocol.game.ClientboundCommandsPacket.NodeResolver",
     "Object2ObjectOpenHashMap.computeIfAbsent()",
-    "Minecraft.execute()",
     "Minecraft.services()",
     "ClientLevel.getEntity()",
-    "ClientPacketListener.serverBrand()",
-    "EntityArgument.player()",
     "Services.sessionService()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -28,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hypixel-tab-completions-1.6.0+26.3.jar",
     "published": "2026-11-15"
   },
@@ -57,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

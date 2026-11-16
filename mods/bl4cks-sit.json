@@ -20,7 +20,6 @@
     "net.minecraft.world.level.block.state.properties.BedPart",
     "net.minecraft.world.level.block.state.properties.Half",
     "net.minecraft.world.level.block.state.properties.SlabType",
-    "Registry.get()",
     "BuiltInRegistries.REGISTRY",
     "Entity.<init>()",
     "Entity.getDismountLocationForPassenger()",
@@ -43,7 +42,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sit-fabric-26.1.1-1.5.1.jar",
     "published": "2026-04-06"
   },
@@ -72,7 +71,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 26,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

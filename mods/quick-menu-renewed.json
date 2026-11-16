@@ -11,26 +11,9 @@
   "needs": [
     "net.minecraft.client.gui.components.MultiLineEditBox",
     "net.minecraft.client.gui.components.MultiLineEditBox.Builder",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.world.item.component.CustomModelData",
     "org.lwjgl.sdl.SDLMouse",
-    "InputConstants.isKeyDown()",
-    "InputConstants.Key.getDisplayName()",
-    "InputConstants.Type.getOrCreate()",
-    "KeyMapping.getTranslatedKeyMessage()",
-    "KeyMapping.matches()",
     "KeyMapping.setDown()",
-    "KeyMapping.Category.label()",
-    "Options.keyMappings",
-    "Button.DEFAULT_NARRATION",
-    "Button.setTooltip()",
-    "EditBox.setBordered()",
-    "EditBox.setHint()",
-    "Screen.charTyped()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "ClientPacketListener.sendChat()",
     "DataComponents.CUSTOM_MODEL_DATA"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -38,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "quickmenu-2.4.0+26.3.jar",
     "published": "2026-11-01"
   },
@@ -68,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

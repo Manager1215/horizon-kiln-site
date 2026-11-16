@@ -10,10 +10,6 @@
   "description": "This mod is an updated version of the Fishpaws Hearts resource pack",
   "needs": [
     "net.minecraft.client.multiplayer.ClientLevel.ClientLevelData",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
-    "NativeImage.setPixel()",
-    "Minecraft.execute()",
-    "Minecraft.gameDirectory",
     "ClientLevel.getLevelData()",
     "Player.getAbsorptionAmount()",
     "Player.getTicksFrozen()"
@@ -23,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fishpaws-hearts-fabric-26.3-1.0.0+26.3-fabric.jar",
     "published": "2026-10-08"
   },
@@ -51,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

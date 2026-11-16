@@ -13,7 +13,6 @@
     "Mixin: 1 point inside the game's methods",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
     "net.minecraft.advancements.triggers.BredAnimalsTrigger",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
@@ -28,13 +27,10 @@
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
-    "net.minecraft.server.permissions.Permissions",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.util.TimeUtil",
     "net.minecraft.world.entity.AnimationState",
     "net.minecraft.world.entity.EntityEvent",
     "net.minecraft.world.entity.NeutralMob",
-    "net.minecraft.world.entity.Pose",
     "net.minecraft.world.entity.WalkAnimationState",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
@@ -51,14 +47,18 @@
     "net.minecraft.world.entity.ai.goal.TemptGoal",
     "net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal",
     "net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal",
-    "and 64 more"
+    "net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal",
+    "net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal",
+    "net.minecraft.world.entity.ai.goal.target.ResetUniversalAngerTargetGoal",
+    "net.minecraft.world.entity.ai.navigation.PathNavigation",
+    "and 46 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "racoons-rabies+26.3-2.2.2.jar",
     "published": "2026-09-17"
   },
@@ -90,7 +90,11 @@
     "minecraft",
     "trinkets"
   ],
-  "lacks": 104,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 86,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 5 points inside the game's methods",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
     "net.fabricmc.fabric.api.attachment.v1.GlobalAttachmentsProvider",
     "net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents",
     "net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents.AllowBed",
@@ -51,14 +50,15 @@
     "net.minecraft.world.entity.monster.Zoglin",
     "net.minecraft.world.entity.monster.cubemob.Slime",
     "net.minecraft.world.entity.monster.hoglin.HoglinBase",
-    "and 77 more"
+    "net.minecraft.world.entity.monster.skeleton.AbstractSkeleton",
+    "and 76 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "magicmoon-1.9-mc26.3-fabric.jar",
     "published": "2026-11-15"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 126,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 120,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

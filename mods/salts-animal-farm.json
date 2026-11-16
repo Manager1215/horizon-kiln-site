@@ -13,14 +13,6 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDamage",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.state.ChickenRenderState",
     "net.minecraft.client.renderer.entity.state.CowRenderState",
@@ -49,14 +41,22 @@
     "net.minecraft.world.level.pathfinder.Path",
     "net.minecraft.world.level.pathfinder.PathComputationType",
     "net.minecraft.world.level.pathfinder.PathType",
-    "and 62 more"
+    "net.minecraft.world.level.pathfinder.WalkNodeEvaluator",
+    "net.minecraft.world.phys.EntityHitResult",
+    "Minecraft.getEntityRenderDispatcher()",
+    "GuiGraphicsExtractor.entity()",
+    "EntityRenderer.createRenderState()",
+    "EntityRenderState.ageInTicks",
+    "EntityRenderState.boundingBoxHeight",
+    "EntityRenderState.boundingBoxWidth",
+    "and 54 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "salts_animal_farm-26.3-Fabric-0.3.1.jar",
     "published": "2026-10-30"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 168,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 123,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

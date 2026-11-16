@@ -10,19 +10,14 @@
   "description": "This mod changes the range of beacons and how they work in the pyramid",
   "needs": [
     "net.minecraft.world.level.block.entity.BeaconBlockEntity",
-    "BlockPos.MutableBlockPos.set()",
-    "Blocks.DIAMOND_BLOCK",
-    "Blocks.EMERALD_BLOCK",
-    "Blocks.GOLD_BLOCK",
-    "Blocks.IRON_BLOCK",
-    "Blocks.NETHERITE_BLOCK"
+    "BlockPos.MutableBlockPos.set()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "BeaconsPlus-1.1.0-FABRIC.jar",
     "published": "2026-11-10"
   },
@@ -49,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

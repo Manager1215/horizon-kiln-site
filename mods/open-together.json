@@ -13,11 +13,7 @@
     "Mixin: 5 points inside the game's methods",
     "net.minecraft.server.network.ConfigurationTask",
     "net.minecraft.server.network.ConfigurationTask.Type",
-    "net.minecraft.world.level.block.state.properties.DoorHingeSide",
-    "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
-    "Minecraft.hitResult",
     "Minecraft.isLocalServer()",
-    "Minecraft.startUseItem()",
     "LocalPlayer.blockInteractionRange()",
     "LocalPlayer.isSecondaryUseActive()",
     "BlockPos.betweenClosedStream()",
@@ -25,27 +21,21 @@
     "BlockPos.offset()",
     "Direction.getClockWise()",
     "Direction.getUnitVec3i()",
-    "CommonComponents.OPTION_OFF",
-    "CommonComponents.OPTION_ON",
     "BlockTags.DOORS",
     "BlockTags.FENCE_GATES",
     "BlockTags.TRAPDOORS",
-    "DoorBlock.FACING",
-    "DoorBlock.HALF",
-    "DoorBlock.HINGE",
-    "DoorBlock.type()",
+    "LevelReader.isClientSide()",
     "FenceGateBlock.FACING",
     "TrapDoorBlock.FACING",
     "TrapDoorBlock.HALF",
-    "TrapDoorBlock.getType()",
-    "HitResult.getType()"
+    "TrapDoorBlock.getType()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "opentogether-v26.3.0-mc26.3.x+fabric.jar",
     "published": "2026-09-23"
   },
@@ -75,7 +65,11 @@
     "minecraft",
     "puzzleslib"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

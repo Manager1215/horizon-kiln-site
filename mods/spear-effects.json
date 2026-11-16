@@ -11,10 +11,8 @@
   "needs": [
     "an access widener",
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.model.geom.ModelLayers",
     "net.minecraft.client.model.player.PlayerModel",
     "net.minecraft.client.player.RemotePlayer",
@@ -34,7 +32,6 @@
     "Camera.rotation()",
     "Minecraft.getEntityModels()",
     "Minecraft.getEntityRenderDispatcher()",
-    "Options.getCameraType()",
     "EntityModelSet.bakeLayer()",
     "ModelPart.translateAndRotate()",
     "ModelPart.visible",
@@ -51,14 +48,17 @@
     "ModelPart.Cube.minY",
     "ModelPart.Cube.minZ",
     "RenderPipelines.DEBUG_FILLED_SNIPPET",
-    "and 36 more"
+    "RenderPipelines.LINES_SNIPPET",
+    "EntityRenderDispatcher.camera",
+    "EntityRenderDispatcher.getRenderer()",
+    "and 26 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SpearEffects-1.1.0+26.3.jar",
     "published": "2026-10-09"
   },
@@ -87,7 +87,11 @@
     "minecraft",
     "walksylib"
   ],
-  "lacks": 77,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 66,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

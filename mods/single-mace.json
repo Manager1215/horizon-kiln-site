@@ -9,38 +9,28 @@
   "author": "Carter-Cook",
   "description": "One Mace per minecraft server. Mace will tell everyone when dropped out of inventory that it is available again, and once one mace is created you can never make another mace again.",
   "needs": [
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.entity.decoration.ItemFrame",
-    "net.minecraft.world.inventory.AnvilMenu",
     "net.minecraft.world.inventory.EnchantmentMenu",
     "net.minecraft.world.inventory.PlayerEnderChestContainer",
     "net.minecraft.world.inventory.ResultSlot",
     "net.minecraft.world.inventory.ShulkerBoxSlot",
     "net.minecraft.world.level.block.entity.HopperBlockEntity",
-    "CommandSourceStack.getServer()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
     "NonNullList.stream()",
-    "Registry.wrapAsHolder()",
     "MinecraftServer.getAllLevels()",
     "MinecraftServer.overworld()",
     "ServerLevel.getAllEntities()",
-    "ServerPlayer.connection",
     "ServerPlayer.getEnderChestInventory()",
-    "ServerGamePacketListenerImpl.send()",
     "SoundEvents.LIGHTNING_BOLT_THUNDER",
     "SoundEvents.UI_TOAST_CHALLENGE_COMPLETE",
     "ItemEntity.getItem()",
-    "ItemEntity.isRemoved()",
-    "Inventory.contains()",
-    "Items.MACE"
+    "Inventory.contains()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "single-mace-1.0.0.jar",
     "published": "2026-09-29"
   },
@@ -68,7 +58,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

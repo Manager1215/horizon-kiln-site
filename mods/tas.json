@@ -9,41 +9,31 @@
   "author": "Icywhenhot",
   "description": "20+ sitting animations for an immersive experience!",
   "needs": [
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.player.ClientInput",
     "net.minecraft.core.UUIDUtil",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.player.Input",
-    "net.minecraft.world.item.FishingRodItem",
     "net.minecraft.world.level.block.AbstractFurnaceBlock",
     "net.minecraft.world.level.block.BedBlock",
     "net.minecraft.world.level.block.CampfireBlock",
     "net.minecraft.world.level.block.CarpetBlock",
     "net.minecraft.world.level.block.state.properties.SlabType",
-    "Minecraft.execute()",
-    "Minecraft.isWindowActive()",
-    "Options.getCameraType()",
-    "Options.setCameraType()",
     "LocalPlayer.input",
-    "LocalPlayer.isFallFlying()",
     "LocalPlayer.isPassenger()",
     "LocalPlayer.isSleeping()",
     "LocalPlayer.setPos()",
     "LocalPlayer.setXRot()",
     "LocalPlayer.setYRot()",
-    "MinecraftServer.execute()",
     "Level.clip()",
     "SlabBlock.TYPE",
     "StairBlock.FACING",
-    "BlockState.is()",
-    "HitResult.getType()"
+    "BlockState.is()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "takeaseat-1.0.4-26.3-fabric.jar",
     "published": "2026-10-14"
   },
@@ -74,7 +64,11 @@
     "minecraft",
     "player_animation_library"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

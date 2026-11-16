@@ -18,7 +18,6 @@
     "net.minecraft.client.renderer.CloudRenderer",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.entity.player.AvatarRenderer",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.world.entity.player.Input",
     "net.minecraft.world.entity.projectile.ProjectileUtil",
     "net.minecraft.world.level.LightLayer",
@@ -42,22 +41,23 @@
     "org.lwjgl.opengl.GL45C",
     "org.lwjgl.opengl.GLCapabilities",
     "RenderTarget.width",
-    "InputConstants.isKeyDown()",
-    "NativeImage.getHeight()",
-    "NativeImage.getPixel()",
-    "NativeImage.getWidth()",
-    "NativeImage.read()",
-    "NativeImage.setPixel()",
     "NativeImage.writeToFile()",
     "LevelRenderEvents.BEFORE_TRANSLUCENT_TERRAIN",
-    "and 51 more"
+    "Camera.rotation()",
+    "Camera.xRot()",
+    "Camera.yRot()",
+    "Options.bobView()",
+    "Options.sensitivity()",
+    "Options.smoothCamera",
+    "ClientLevel.clip()",
+    "and 38 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "snapmatica-1.3.5+26.3.jar",
     "published": "2026-09-25"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 94,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 78,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

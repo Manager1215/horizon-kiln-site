@@ -9,28 +9,20 @@
   "author": "MSMHJM",
   "description": "You can change the messages you send in the server chat, see the description for details.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowChatMessage",
-    "net.minecraft.network.chat.PlayerChatMessage",
-    "net.minecraft.network.chat.contents.TranslatableContents",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.level.storage.WorldData",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "CommandSourceStack.getServer()",
-    "Component.getContents()",
+    "PlayerChatMessage.decoratedContent()",
     "MinecraftServer.getServerDirectory()",
     "MinecraftServer.getWorldData()",
-    "MinecraftServer.isDedicatedServer()",
-    "ServerPlayer.getDisplayName()",
-    "PlayerList.broadcastSystemMessage()"
+    "MinecraftServer.isDedicatedServer()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "servercat-fabric-26.3-1.1.jar",
     "published": "2026-09-24"
   },
@@ -58,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

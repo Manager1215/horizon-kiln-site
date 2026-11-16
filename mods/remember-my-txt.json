@@ -11,16 +11,14 @@
   "needs": [
     "an access widener",
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.Options.FieldAccess",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger"
+    "net.minecraft.client.Options.FieldAccess"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "remember-my-txt-1.0.6+MC26.1.2.jar",
     "published": "2026-11-09"
   },
@@ -35,7 +33,11 @@
   "depends": [
     "fabricloader"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

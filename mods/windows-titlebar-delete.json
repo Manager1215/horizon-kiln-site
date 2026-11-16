@@ -9,8 +9,6 @@
   "author": "wvvern",
   "description": "A mod that hides the Windows titlebar. You can use this to maximize the game and make the window appear as if it's in fullscreen without entering fullscreen mode (borderless window mode).",
   "needs": [
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Options.fullscreen()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
@@ -18,7 +16,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "windowstitlebardelete-fabric-2.0.0+26.3.jar",
     "published": "2026-11-10"
   },
@@ -45,7 +43,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,8 +9,6 @@
   "author": "Teron",
   "description": "A client-side core that serves as the shared foundation for all Easeon modules.",
   "needs": [
-    "net.minecraft.client.gui.components.Button.Plain",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.resources.ClientPackSource",
     "net.minecraft.server.packs.PackLocationInfo",
     "net.minecraft.server.packs.PackSelectionConfig",
@@ -24,28 +22,15 @@
     "net.minecraft.server.packs.repository.PackCompatibility",
     "net.minecraft.server.packs.repository.PackSource",
     "net.minecraft.server.packs.repository.RepositorySource",
-    "net.minecraft.world.flag.FeatureFlags",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "InputConstants.Key.getDisplayName()",
-    "InputConstants.Type.getOrCreate()",
     "ModContainer.getRootPath()",
-    "ModContainer.getRootPaths()",
-    "Minecraft.execute()",
-    "Minecraft.setScreenAndShow()",
-    "GuiGraphicsExtractor.<init>()",
-    "Button.DEFAULT_NARRATION",
-    "Screen.addRenderableWidget()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()"
+    "ModContainer.getRootPaths()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "easeon.cs.core.teron.fabric-26.3.2.0+mc26.3.jar",
     "published": "2026-10-06"
   },
@@ -62,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 30,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

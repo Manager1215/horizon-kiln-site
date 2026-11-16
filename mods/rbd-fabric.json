@@ -22,14 +22,10 @@
     "net.minecraft.server.ServerAdvancementManager",
     "net.minecraft.server.level.ServerPlayer.RespawnConfig",
     "net.minecraft.stats.ServerRecipeBook",
-    "net.minecraft.stats.ServerStatsCounter",
-    "net.minecraft.stats.StatsCounter",
     "net.minecraft.tags.DamageTypeTags",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.clock.ServerClockManager",
     "net.minecraft.world.clock.ServerClockManager.ServerClockInstance",
     "net.minecraft.world.clock.WorldClocks",
-    "net.minecraft.world.entity.EntitySpawnRequest",
     "net.minecraft.world.entity.boss.enderdragon.EnderDragon",
     "net.minecraft.world.entity.boss.enderdragon.EnderDragonPart",
     "net.minecraft.world.entity.decoration.HangingEntity",
@@ -39,6 +35,7 @@
     "net.minecraft.world.inventory.PlayerEnderChestContainer",
     "net.minecraft.world.inventory.RecipeBookType",
     "net.minecraft.world.item.ItemCooldowns",
+    "net.minecraft.world.level.border.WorldBorder.Settings",
     "net.minecraft.world.level.saveddata.WeatherData",
     "net.minecraft.world.level.storage.ServerLevelData",
     "net.minecraft.world.ticks.LevelChunkTicks",
@@ -50,14 +47,17 @@
     "AdvancementHolder.value()",
     "AdvancementProgress.getCompletedCriteria()",
     "CommandSourceStack.checkPermission()",
-    "and 54 more"
+    "BuiltInRegistries.STAT_TYPE",
+    "Registries.WORLD_CLOCK",
+    "MinecraftServer.getAdvancements()",
+    "and 51 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "return-by-death-1.2.3.jar",
     "published": "2026-10-22"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 174,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 147,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

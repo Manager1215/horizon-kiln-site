@@ -11,22 +11,12 @@
   "needs": [
     "Mixin: 3 points inside the game's methods",
     "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.AfterSave",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.minecraft.nbt.NbtAccounter",
-    "net.minecraft.nbt.NbtIo",
-    "net.minecraft.network.chat.ComponentSerialization",
-    "net.minecraft.world.entity.projectile.FishingHook",
-    "net.minecraft.world.item.component.ItemLore",
     "net.minecraft.world.level.block.entity.BrushableBlockEntity",
-    "net.minecraft.world.level.storage.LevelResource",
     "ServerLifecycleEvents.AFTER_SAVE",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "DataComponents.LORE",
     "ListTag.add()",
     "ListTag.getLongArray()",
-    "MinecraftServer.getWorldPath()",
+    "NbtIo.readCompressed()",
     "MinecraftServer.registryAccess()",
     "ServerPlayer.getLuck()",
     "Player.createItemStackToDrop()",
@@ -37,7 +27,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "panda-archeology-1.2.5+26.3.jar",
     "published": "2026-10-19"
   },
@@ -65,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

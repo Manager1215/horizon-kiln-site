@@ -13,16 +13,7 @@
     "net.fabricmc.fabric.api.permission.v1.PermissionPredicates",
     "net.minecraft.commands.arguments.ComponentArgument",
     "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.ComponentSerialization",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "org.apache.commons.io.FilenameUtils",
-    "CommandSourceStack.getServer()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
     "ServerLevel.getEntitiesOfClass()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -30,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bettertellraw-1.1.0+26.3.jar",
     "published": "2026-11-07"
   },
@@ -56,7 +47,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,8 +9,6 @@
   "author": "kennytv",
   "description": "Allow older Java Edition clients to connect to newer servers.",
   "needs": [
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "BiMap.entrySet()",
     "BiMap.get()"
   ],
@@ -19,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ViaBackwards-5.12.3-SNAPSHOT.jar",
     "published": "2026-11-10"
   },
@@ -36,7 +34,11 @@
   "depends": [
     "viafabric"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

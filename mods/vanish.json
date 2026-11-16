@@ -10,17 +10,14 @@
   "description": "Fabric vanish mod to completely hide from other players using /vanish",
   "needs": [
     "Mixin: 48 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "io.netty.channel.ChannelFutureListener",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowChatMessage",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowCommandMessage",
     "net.fabricmc.fabric.api.util.TriState",
     "net.minecraft.advancements.predicates.entity.EntityFlagsPredicate",
-    "net.minecraft.commands.arguments.GameProfileArgument",
     "net.minecraft.network.chat.RemoteChatSession",
     "net.minecraft.network.chat.RemoteChatSession.Data",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.network.protocol.game.ClientboundLevelChunkPacketData.BlockEntityInfo",
     "net.minecraft.network.protocol.game.ClientboundPlayerInfoUpdatePacket.Entry",
     "net.minecraft.server.PlayerAdvancements",
@@ -50,14 +47,17 @@
     "net.minecraft.world.level.block.entity.ChestBlockEntity",
     "net.minecraft.world.level.block.entity.ContainerOpenersCounter",
     "net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity",
-    "and 37 more"
+    "net.minecraft.world.level.block.entity.trialspawner.PlayerDetector",
+    "net.minecraft.world.level.gameevent.GameEvent.Context",
+    "net.minecraft.world.level.gameevent.vibrations.VibrationSystem",
+    "and 22 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "vanish-1.6.16+26.3.jar",
     "published": "2026-09-27"
   },
@@ -84,7 +84,11 @@
     "fabricloader",
     "java"
   ],
-  "lacks": 77,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect and @wrap-method and @wrap-operation into the game's classes; runs threads of its own; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 62,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

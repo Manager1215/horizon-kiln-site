@@ -9,8 +9,6 @@
   "author": "KURONAMI",
   "description": "Drop a temporary Xaero's Minimap waypoint the instant a teammate (or you) pings a spot with Ping Wheel. No prompt, no edit screen, auto-expires after 30 seconds.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
-    "Minecraft.execute()",
     "ClientLevel.getPlayerByUUID()",
     "PlayerInfo.getProfile()",
     "AbstractClientPlayer.getGameProfile()",
@@ -21,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ping-to-map-xaero-1.1.2+fabric-26.3.jar",
     "published": "2026-11-13"
   },
@@ -51,7 +49,11 @@
     "minecraft",
     "pingwheel"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

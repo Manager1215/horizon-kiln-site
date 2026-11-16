@@ -10,7 +10,6 @@
   "description": "Removes the \"Allow Cheats\" button from the \"Open to LAN\" menu.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.gui.components.CycleButton",
     "net.minecraft.client.gui.layouts.GridLayout",
     "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
     "net.minecraft.client.gui.screens.WorldOptionsScreen",
@@ -21,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nolancheating-fabric-26.3-1.4.jar",
     "published": "2026-09-19"
   },
@@ -49,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

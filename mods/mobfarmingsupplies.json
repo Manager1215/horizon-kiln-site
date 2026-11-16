@@ -10,7 +10,6 @@
   "description": "Farm mobs with style!",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.blaze3d.vertex.QuadInstance",
     "com.mojang.math.Transformation",
     "net.fabricmc.fabric.api.client.model.loading.v1.ExtraModelKey",
@@ -23,10 +22,8 @@
     "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback",
     "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback.RegistrationHelper",
     "net.fabricmc.fabric.api.entity.FakePlayer",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorage.CombinedItemApiProvider",
     "net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorageUtil",
-    "net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariantAttributes",
     "net.fabricmc.fabric.api.transfer.v1.storage.base.ExtractionOnlyStorage",
     "net.fabricmc.fabric.api.transfer.v1.storage.base.FilteringStorage",
     "net.fabricmc.fabric.api.transfer.v1.storage.base.InsertionOnlyStorage",
@@ -34,7 +31,6 @@
     "net.minecraft.advancements.triggers.InventoryChangeTrigger",
     "net.minecraft.advancements.triggers.ItemUsedOnLocationTrigger",
     "net.minecraft.advancements.triggers.LootTableTrigger",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.Screenshot",
     "net.minecraft.client.gui.render.GuiItemAtlas",
     "net.minecraft.client.gui.render.GuiItemAtlas.SlotView",
@@ -44,12 +40,16 @@
     "net.minecraft.client.model.geom.ModelPart.Visitor",
     "net.minecraft.client.model.object.skull.SkullModelBase",
     "net.minecraft.client.model.object.skull.SkullModelBase.State",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.particle.FlyTowardsPositionParticle",
     "net.minecraft.client.particle.FlyTowardsPositionParticle.EnchantProvider",
     "net.minecraft.client.particle.Particle",
     "net.minecraft.client.particle.ParticleProvider",
     "net.minecraft.client.particle.SingleQuadParticle",
+    "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
+    "net.minecraft.client.renderer.blockentity.EnchantTableRenderer",
+    "net.minecraft.client.renderer.blockentity.SkullBlockRenderer",
+    "net.minecraft.client.renderer.blockentity.SpawnerRenderer",
+    "net.minecraft.client.renderer.blockentity.WallAndGroundTransformations",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mobfarmingsupplies-26.3.0.7-fabric.jar",
     "published": "2026-10-26"
   },
@@ -88,7 +88,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 580,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; generates in the world"
+  },
+  "lacks": 447,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

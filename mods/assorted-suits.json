@@ -11,7 +11,6 @@
   "needs": [
     "Mixin: 1 point inside the game's methods",
     "net.minecraft.world.damagesource.DamageTypes",
-    "net.minecraft.world.entity.EquipmentSlot.Type",
     "net.minecraft.world.entity.animal.chicken.ChickenSoundVariant",
     "net.minecraft.world.entity.animal.chicken.ChickenSoundVariant.ChickenSoundSet",
     "net.minecraft.world.entity.animal.chicken.ChickenSoundVariants",
@@ -22,19 +21,12 @@
     "LocalPlayer.jumpFromGround()",
     "LocalPlayer.needsSync",
     "LocalPlayer.setDeltaMovement()",
-    "Registry.get()",
-    "Registry.wrapAsHolder()",
-    "RegistryAccess.lookupOrThrow()",
-    "DataComponents.CUSTOM_NAME",
     "Registries.MOB_EFFECT",
     "SoundEvents.ARMOR_EQUIP_LEATHER",
     "SoundEvents.ARMOR_EQUIP_NETHERITE",
     "SoundEvents.CHICKEN_SOUNDS",
     "BlockTags.CAMPFIRES",
     "BlockTags.FIRE",
-    "DamageSource.is()",
-    "EquipmentSlot.getType()",
-    "EquipmentSlot.isArmor()",
     "LivingEntity.getBlockStateOn()",
     "LivingEntity.isInLava()",
     "Player.fallDistance",
@@ -42,8 +34,6 @@
     "Player.registryAccess()",
     "Player.setDeltaMovement()",
     "EnchantmentHelper.updateEnchantments()",
-    "ItemEnchantments.Mutable.set()",
-    "Blocks.MAGMA_BLOCK",
     "BlockState.getValueOrElse()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -51,7 +41,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "assortedsuits-fabric-26.3-2.0.0.jar",
     "published": "2026-10-24"
   },
@@ -82,7 +72,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 35,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 25,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,9 +10,7 @@
   "description": "A Minecraft mod that prevents changing the spawner type in survival mode.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
     "net.fabricmc.loader.api.metadata.Person",
-    "net.minecraft.world.item.SpawnEggItem",
     "net.minecraft.world.level.BaseSpawner",
     "net.minecraft.world.level.Spawner",
     "net.minecraft.world.level.block.entity.SpawnerBlockEntity",
@@ -20,7 +18,6 @@
     "net.minecraft.world.level.block.entity.trialspawner.TrialSpawner",
     "net.minecraft.world.level.block.entity.trialspawner.TrialSpawnerStateData",
     "net.minecraft.world.level.block.state.pattern.BlockInWorld",
-    "ServerLifecycleEvents.END_DATA_PACK_RELOAD",
     "ModMetadata.getAuthors()",
     "ItemStack.canPlaceOnBlockInAdventureMode()"
   ],
@@ -29,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "NoSpawnerChange-1.2.0-26.3.jar",
     "published": "2026-09-27"
   },
@@ -56,7 +53,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

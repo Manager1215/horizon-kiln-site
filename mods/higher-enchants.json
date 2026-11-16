@@ -10,15 +10,14 @@
   "description": "This project allows enchants for every book up to level 100.",
   "needs": [
     "net.minecraft.world.level.storage.loot.functions.EnchantRandomlyFunction",
-    "net.minecraft.world.level.storage.loot.functions.EnchantRandomlyFunction.Builder",
-    "MutableComponent.setStyle()"
+    "net.minecraft.world.level.storage.loot.functions.EnchantRandomlyFunction.Builder"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "higher-enchants-1.0.2+mc26.3.jar",
     "published": "2026-10-14"
   },
@@ -46,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

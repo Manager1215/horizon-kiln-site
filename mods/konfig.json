@@ -9,17 +9,14 @@
   "author": "iamkaf",
   "description": "Ergonomic multiloader configuration library with sync support.",
   "needs": [
-    "net.minecraft.server.permissions.Permissions",
-    "MinecraftServer.isSingleplayerOwner()",
-    "ServerPlayer.nameAndId()",
-    "ServerPlayer.permissions()"
+    "MinecraftServer.isSingleplayerOwner()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "konfig-fabric-0.10.3+26.3.jar",
     "published": "2026-11-08"
   },
@@ -48,7 +45,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

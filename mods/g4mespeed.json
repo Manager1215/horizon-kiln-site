@@ -11,19 +11,13 @@
   "needs": [
     "Mixin: 52 points inside the game's methods",
     "com.mojang.blaze3d.audio.Channel",
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
-    "net.minecraft.ReportedException",
     "net.minecraft.client.DeltaTracker.Timer",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.multiplayer.prediction.BlockStatePredictionHandler",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.blockentity.PistonHeadRenderer",
     "net.minecraft.client.renderer.extract.LevelExtractor",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.client.sounds.ChannelAccess",
     "net.minecraft.client.sounds.ChannelAccess.ChannelHandle",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.network.chat.contents.TranslatableFormatException",
     "net.minecraft.network.protocol.game.ServerboundAcceptTeleportationPacket",
     "net.minecraft.server.ServerTickRateManager",
@@ -35,7 +29,6 @@
     "net.minecraft.server.level.ChunkMap.TrackedEntity",
     "net.minecraft.server.level.GenerationChunkHolder",
     "net.minecraft.server.level.ServerPlayerGameMode",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.util.LightCoordsUtil.BrightnessGetter",
     "net.minecraft.util.profiling.Profiler",
     "net.minecraft.util.profiling.ProfilerFiller",
@@ -49,15 +42,22 @@
     "net.minecraft.world.level.entity.EntityTickList",
     "net.minecraft.world.level.lighting.BlockLightEngine",
     "net.minecraft.world.level.material.PushReaction",
-    "net.minecraft.world.level.storage.LevelResource",
-    "and 64 more"
+    "org.apache.commons.io.IOUtils",
+    "org.lwjgl.sdl.SDLScancode",
+    "Window.handle()",
+    "ReportedException.getCause()",
+    "Minecraft.levelExtractor",
+    "Options.keyQuickActions",
+    "Gui.overlay()",
+    "Gui.tick()",
+    "and 54 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "g4mespeed-1.6.1-mc26.3.jar",
     "published": "2026-09-26"
   },
@@ -85,7 +85,11 @@
     "g4mespeed-ui",
     "minecraft"
   ],
-  "lacks": 134,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; @modify-arg Kiln doesn't guard"
+  },
+  "lacks": 102,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

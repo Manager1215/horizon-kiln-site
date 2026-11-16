@@ -17,7 +17,6 @@
     "net.minecraft.world.item.component.Consumable.Builder",
     "net.minecraft.world.level.block.CakeBlock",
     "net.minecraft.world.level.levelgen.feature.EndPlatformFeature",
-    "net.minecraft.world.level.storage.LevelResource",
     "Window.handle()",
     "Options.discreteMouseScroll()",
     "Options.mouseWheelSensitivity()",
@@ -25,13 +24,9 @@
     "ClientPacketListener.send()",
     "LocalPlayer.getUsedItemHand()",
     "LocalPlayer.isUsingItem()",
-    "MinecraftServer.execute()",
-    "MinecraftServer.getWorldPath()",
     "ServerLevel.END_SPAWN_POINT",
-    "ServerLevel.destroyBlock()",
     "ServerLevel.getMaxY()",
     "ServerLevel.getMinY()",
-    "ServerLevel.isEmptyBlock()",
     "ServerPlayer.addTag()",
     "ServerPlayer.entityTags()",
     "ServerPlayer.findRespawnPositionAndUseSpawnBlock()",
@@ -40,7 +35,6 @@
     "ServerPlayer.isPassenger()",
     "ServerPlayer.removeTag()",
     "ServerPlayer.teleport()",
-    "Stats.EAT_CAKE_SLICE",
     "Player.canEat()",
     "Player.getCooldowns()",
     "Player.isPassenger()",
@@ -49,14 +43,20 @@
     "Item.finishUsingItem()",
     "Item.Properties.food()",
     "Item.Properties.food()",
-    "and 17 more"
+    "Item.Properties.useItemDescriptionPrefix()",
+    "CustomData.update()",
+    "LevelAccessor.removeBlock()",
+    "LevelAccessor.setBlock()",
+    "BlockState.isCollisionShapeFullBlock()",
+    "BlockStateProperties.BITES",
+    "and 5 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "TeleportCakes-fabric-26.2-v3.0.2.jar",
     "published": "2026-06-26"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 57,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 45,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

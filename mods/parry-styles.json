@@ -12,7 +12,6 @@
     "Mixin: 3 points inside the game's methods",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.model.player.PlayerModel",
     "net.minecraft.client.renderer.ItemInHandRenderer",
     "net.minecraft.client.renderer.LevelRenderer",
@@ -25,7 +24,6 @@
     "net.minecraft.client.renderer.extract.LevelExtractor",
     "net.minecraft.core.particles.DustParticleOptions",
     "net.minecraft.server.ServerTickRateManager",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.TickRateManager",
     "net.minecraft.world.entity.Display",
     "net.minecraft.world.entity.Display.BillboardConstraints",
@@ -43,21 +41,23 @@
     "net.minecraft.world.entity.projectile.hurtingprojectile.windcharge.AbstractWindCharge",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.AbstractThrownPotion",
     "net.minecraft.world.item.ItemUseAnimation",
-    "net.minecraft.world.item.alchemy.PotionContents",
     "net.minecraft.world.level.storage.CommandStorage",
     "net.minecraft.world.phys.EntityHitResult",
     "PoseStack.last()",
     "PoseStack.Pose.pose()",
     "Camera.isDetached()",
-    "Minecraft.execute()",
-    "and 56 more"
+    "Minecraft.getEntityRenderDispatcher()",
+    "GuiGraphicsExtractor.blit()",
+    "ModelPart.resetPose()",
+    "ModelPart.skipDraw",
+    "and 53 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "parrystyles-fabric-2.0.1+mc26.x.jar",
     "published": "2026-10-22"
   },
@@ -85,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 129,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels"
+  },
+  "lacks": 101,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

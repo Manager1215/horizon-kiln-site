@@ -9,13 +9,9 @@
   "author": "Tschipcraft",
   "description": "Hostile mobs dig out of the ground or poof into existence when they spawn!",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.minecraft.class_2168",
     "net.minecraft.class_2170",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "Commands.getDispatcher()",
     "MinecraftServer.createCommandSourceStack()",
-    "MinecraftServer.getCommands()",
     "MinecraftServer.method_3734()",
     "MinecraftServer.method_3739()"
   ],
@@ -24,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "spawnanimations-v1.11.6-mc1.17-26.3.9-mod.jar",
     "published": "2026-09-29"
   },
@@ -50,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

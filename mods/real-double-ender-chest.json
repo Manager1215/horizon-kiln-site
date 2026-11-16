@@ -14,11 +14,9 @@
     "net.minecraft.client.model.object.chest.ChestModel",
     "net.minecraft.client.renderer.MultiblockChestResources",
     "net.minecraft.client.renderer.blockentity.ChestRenderer",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.SimpleMenuProvider",
     "net.minecraft.world.entity.ContainerUser",
     "net.minecraft.world.entity.monster.piglin.PiglinAi",
-    "net.minecraft.world.inventory.ChestMenu",
     "net.minecraft.world.inventory.PlayerEnderChestContainer",
     "net.minecraft.world.level.LightLayer",
     "net.minecraft.world.level.block.ChestBlock",
@@ -39,8 +37,9 @@
     "BlockEntityRendererProvider.Context.bakeLayer()",
     "SpriteId.renderType()",
     "SoundEvents.ENDER_CHEST_CLOSE",
-    "Stats.OPEN_ENDERCHEST",
     "Util.makeEnumMap()",
+    "SimpleContainer.startOpen()",
+    "SimpleContainer.stopOpen()",
     "LivingEntity.isSpectator()",
     "Player.getEnderChestInventory()",
     "Level.blockEvent()",
@@ -48,16 +47,17 @@
     "BaseEntityBlock.updateShape()",
     "Block.boxZ()",
     "Block.column()",
-    "Blocks.ENDER_CHEST",
     "BlockState.isRedstoneConductor()",
-    "and 4 more"
+    "BlockStateProperties.CHEST_TYPE",
+    "FluidState.is()",
+    "and 2 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "double-ender-chest-1.2.1.jar",
     "published": "2026-09-18"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 44,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 42,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

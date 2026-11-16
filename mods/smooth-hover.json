@@ -10,16 +10,12 @@
   "description": "Smooth hover animation for GUI elements like buttons and inventory.",
   "needs": [
     "Mixin: 6 points inside the game's methods",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
     "net.minecraft.client.gui.components.MultiLineTextWidget",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.gui.components.TabButton",
     "net.minecraft.client.gui.components.WidgetSprites",
     "net.minecraft.client.gui.components.tabs.MenuTabBar",
     "net.minecraft.client.gui.components.tabs.MenuTabBar.MenuTabButton",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
     "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
     "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList",
     "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList.OnlineServerEntry",
@@ -30,29 +26,21 @@
     "net.minecraft.client.gui.screens.worldselection.WorldSelectionList",
     "net.minecraft.client.gui.screens.worldselection.WorldSelectionList.WorldListEntry",
     "net.minecraft.client.multiplayer.ServerList",
-    "net.minecraft.network.chat.ComponentContents",
     "net.minecraft.network.chat.ComponentUtils",
     "net.minecraft.server.packs.repository.PackCompatibility",
     "net.minecraft.world.level.storage.LevelSummary",
     "net.minecraft.world.level.storage.LevelSummary.CorruptedLevelSummary",
     "net.minecraft.world.level.storage.LevelSummary.SymlinkLevelSummary",
-    "Font.split()",
-    "GuiGraphicsExtractor.blitSprite()",
-    "GuiGraphicsExtractor.requestCursor()",
+    "SharedConstants.getCurrentVersion()",
     "GuiGraphicsExtractor.setTooltipForNextFrame()",
-    "GuiGraphicsExtractor.textRendererForWidget()",
-    "AbstractSelectionList.getRowLeft()",
-    "AbstractSelectionList.getRowWidth()",
-    "AbstractSelectionList.getSelected()",
-    "Component.getContents()",
-    "Component.getVisualOrderText()"
+    "GuiGraphicsExtractor.textRendererForWidget()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "smooth-hover-fabric-1.5.jar",
     "published": "2026-09-23"
   },
@@ -84,7 +72,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 36,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 24,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

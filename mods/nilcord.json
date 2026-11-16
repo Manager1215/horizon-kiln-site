@@ -10,7 +10,6 @@
   "description": "Yet another Discord bridge for Minecraft",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.minecraft.MinecraftProfileTexture",
     "com.mojang.authlib.minecraft.MinecraftProfileTextures",
     "com.mojang.authlib.minecraft.SessionService",
@@ -18,31 +17,18 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Leave",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.network.chat.PlayerChatMessage",
-    "net.minecraft.network.chat.contents.PlainTextContents",
     "net.minecraft.server.PlayerAdvancements",
     "ServerPlayerEvents.JOIN",
     "ServerPlayerEvents.LEAVE",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "AdvancementHolder.value()",
-    "MutableComponent.create()",
-    "Style.getHoverEvent()",
+    "PlayerChatMessage.decoratedContent()",
     "MinecraftServer.services()",
     "Services.sessionService()",
     "ServerLevel.getGameRules()",
     "ServerPlayer.getAdvancements()",
-    "ServerPlayer.getDisplayName()",
     "ServerPlayer.getGameProfile()",
-    "PlayerList.broadcastSystemMessage()",
     "DamageSource.getLocalizedDeathMessage()",
     "GameRules.SHOW_ADVANCEMENT_MESSAGES",
     "GameRules.get()"
@@ -52,7 +38,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nilcord-5.1+26.3+fabric.jar",
     "published": "2026-09-16"
   },
@@ -80,7 +66,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 36,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,32 +9,18 @@
   "author": "SwordfishBE",
   "description": "A minecraft teleportation mod. Add, link and teleport!",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.loader.api.VersionParsingException",
-    "net.minecraft.server.permissions.Permissions",
-    "net.minecraft.world.entity.EntityDimensions",
-    "net.minecraft.world.entity.Pose",
-    "net.minecraft.world.level.storage.LevelResource",
-    "ServerLifecycleEvents.SERVER_STARTED",
     "Version.parse()",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "MinecraftServer.execute()",
     "MinecraftServer.getAllLevels()",
     "MinecraftServer.getTickCount()",
-    "MinecraftServer.getWorldPath()",
     "MinecraftServer.isDedicatedServer()",
     "ServerChunkCache.getChunkNow()",
     "ServerLevel.getPlayers()",
-    "ServerLevel.getWorldBorder()",
     "ServerLevel.noCollision()",
     "ServerLevel.sendParticles()",
-    "ServerPlayer.createCommandSourceStack()",
-    "ServerPlayer.getDimensions()",
-    "ServerPlayer.sendSystemMessage()",
     "ServerPlayer.teleportTo()",
     "BlockTags.WOOL_CARPETS",
-    "WorldBorder.isWithinBounds()",
+    "EntityDimensions.makeBoundingBox()",
     "WorldBorder.isWithinBounds()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -42,7 +28,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "enderlink-1.1.2.jar",
     "published": "2026-10-21"
   },
@@ -70,7 +56,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

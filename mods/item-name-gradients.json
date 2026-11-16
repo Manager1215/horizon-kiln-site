@@ -9,40 +9,19 @@
   "author": "TheNev",
   "description": "Style item names with gradients based on rarity or custom settings.",
   "needs": [
-    "com.mojang.blaze3d.platform.TextInputManager",
+    "TextInputManager.setTextInputArea()",
     "Minecraft.onTextInputFocusChange()",
-    "Minecraft.setScreenAndShow()",
-    "Minecraft.textInputManager()",
     "GuiGraphicsExtractor.blit()",
-    "GuiGraphicsExtractor.blit()",
-    "GuiGraphicsExtractor.blit()",
-    "GuiGraphicsExtractor.blit()",
-    "GuiGraphicsExtractor.blitSprite()",
     "GuiGraphicsExtractor.getSprite()",
-    "GuiGraphicsExtractor.setPreeditOverlay()",
     "GuiGraphicsExtractor.setTooltipForNextFrame()",
-    "GuiGraphicsExtractor.setTooltipForNextFrame()",
-    "GuiGraphicsExtractor.text()",
-    "GuiGraphicsExtractor.text()",
-    "CharacterEvent.codepointAsString()",
-    "CharacterEvent.isAllowedChatCharacter()",
-    "KeyEvent.hasControlDownWithQuirk()",
-    "KeyEvent.isConfirmation()",
-    "KeyEvent.isCycleFocus()",
-    "KeyEvent.isDown()",
-    "KeyEvent.isPaste()",
-    "KeyEvent.isSelectAll()",
-    "KeyEvent.isUp()",
-    "KeyEvent.shortcutKey()",
-    "DefaultedRegistry.iterator()",
-    "ItemStack.getRarity()"
+    "DefaultedRegistry.iterator()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "item-names-1.0.2.jar",
     "published": "2026-09-15"
   },
@@ -71,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -15,7 +15,6 @@
     "net.minecraft.client.gui.screens.inventory.EffectsInInventory",
     "net.minecraft.client.renderer.LightmapRenderStateExtractor",
     "net.minecraft.client.renderer.fog.FogRenderer",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.world.attribute.EnvironmentAttributeProbe",
     "net.minecraft.world.effect.MobEffectUtil",
     "net.minecraft.world.level.LightLayer",
@@ -24,7 +23,6 @@
     "ClientLevel.getLightEngine()",
     "GameRenderer.mainCamera()",
     "Holder.Direct.<init>()",
-    "Component.getContents()",
     "EnvironmentAttributes.SKY_LIGHT_FACTOR",
     "LevelLightEngine.getLayerListener()"
   ],
@@ -33,7 +31,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Gamma-Utils-Fabric-3.2.2+mc26.3.jar",
     "published": "2026-10-14"
   },
@@ -63,7 +61,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

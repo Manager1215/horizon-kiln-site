@@ -14,9 +14,6 @@
     "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.Unload",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.BooleanRuleBuilder",
-    "net.minecraft.CrashReport",
-    "net.minecraft.CrashReportCategory",
-    "net.minecraft.ReportedException",
     "net.minecraft.commands.arguments.OperationArgument.SimpleOperation",
     "net.minecraft.core.dispenser.OptionalDispenseItemBehavior",
     "net.minecraft.network.protocol.game.ServerGamePacketListener",
@@ -35,15 +32,12 @@
     "net.minecraft.util.BlockUtil.FoundRectangle",
     "net.minecraft.util.profiling.Profiler",
     "net.minecraft.util.profiling.ProfilerFiller",
-    "net.minecraft.world.entity.EntityEquipment",
     "net.minecraft.world.entity.NeutralMob",
     "net.minecraft.world.entity.PortalProcessor",
     "net.minecraft.world.entity.ai.sensing.Sensor",
     "net.minecraft.world.entity.ai.targeting.TargetingConditions",
     "net.minecraft.world.entity.item.FallingBlockEntity",
-    "net.minecraft.world.entity.projectile.FishingHook",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrownEnderpearl",
-    "net.minecraft.world.item.FishingRodItem",
     "net.minecraft.world.level.block.CarvedPumpkinBlock",
     "net.minecraft.world.level.block.EndPortalBlock",
     "net.minecraft.world.level.block.EndPortalFrameBlock",
@@ -51,14 +45,20 @@
     "net.minecraft.world.level.block.Portal",
     "net.minecraft.world.level.block.RedstoneTorchBlock",
     "net.minecraft.world.level.block.RedstoneTorchBlock.Toggle",
-    "and 73 more"
+    "net.minecraft.world.level.block.RedstoneWireBlock",
+    "net.minecraft.world.level.block.WitherSkullBlock",
+    "net.minecraft.world.level.entity.EntityLookup",
+    "net.minecraft.world.level.entity.PersistentEntitySectionManager",
+    "net.minecraft.world.level.storage.PrimaryLevelData",
+    "net.minecraft.world.scores.PlayerScores",
+    "and 60 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Worldthreader-3.2.0.jar",
     "published": "2026-09-27"
   },
@@ -83,7 +83,11 @@
   "depends": [
     "minecraft"
   ],
-  "lacks": 113,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect and @wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 100,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

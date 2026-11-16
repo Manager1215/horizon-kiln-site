@@ -12,18 +12,14 @@
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
     "Entity.remove()",
-    "ItemEntity.getItem()",
-    "Items.COCOA_BEANS",
-    "Items.NETHER_WART",
-    "Blocks.COCOA",
-    "Blocks.NETHER_WART"
+    "ItemEntity.getItem()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "replantingcrops-26.3.0-5.7.jar",
     "published": "2026-10-02"
   },
@@ -53,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

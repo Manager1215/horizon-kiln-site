@@ -11,14 +11,11 @@
   "needs": [
     "an access widener",
     "Mixin: 133 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.logging.LogQueues",
     "com.mojang.logging.plugins.QueueLogAppender",
     "com.mojang.renderpearl.frontend.shaders.PipelineBuilder",
     "io.netty.channel.Channel",
     "io.netty.channel.local.LocalChannel",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.event.registry.DynamicRegistries",
     "net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder",
     "net.fabricmc.fabric.api.networking.v1.FriendlyByteBufs",
@@ -28,7 +25,6 @@
     "net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint",
     "net.minecraft.CharPredicate",
     "net.minecraft.IdentifierException",
-    "net.minecraft.SharedConstants",
     "net.minecraft.advancements.predicates.NbtPredicate",
     "net.minecraft.advancements.predicates.entity.EntityTypePredicate",
     "net.minecraft.client.gui.components.CommandSuggestions",
@@ -46,11 +42,15 @@
     "net.minecraft.client.resources.metadata.language.LanguageMetadataSection",
     "net.minecraft.commands.arguments.AngleArgument",
     "net.minecraft.commands.arguments.CompoundTagArgument",
-    "net.minecraft.commands.arguments.DimensionArgument",
     "net.minecraft.commands.arguments.GameModeArgument",
-    "net.minecraft.commands.arguments.GameProfileArgument",
     "net.minecraft.commands.arguments.HeightmapTypeArgument",
     "net.minecraft.commands.arguments.HexColorArgument",
+    "net.minecraft.commands.arguments.MessageArgument",
+    "net.minecraft.commands.arguments.MessageArgument.Message",
+    "net.minecraft.commands.arguments.NbtPathArgument.MatchElementNode",
+    "net.minecraft.commands.arguments.NbtPathArgument.MatchObjectNode",
+    "net.minecraft.commands.arguments.NbtPathArgument.MatchRootObjectNode",
+    "net.minecraft.commands.arguments.NbtTagArgument",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "command-crafter-0.8.3+26.3.jar",
     "published": "2026-10-24"
   },
@@ -92,7 +92,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 622,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; @modify-arg Kiln doesn't guard; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 512,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

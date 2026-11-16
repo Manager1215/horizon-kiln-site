@@ -9,20 +9,15 @@
   "author": "yesidodo73",
   "description": "Configurable self-kill command for Bukkit, Paper, Folia, Fabric, Forge, and NeoForge.",
   "needs": [
-    "ChatFormatting.getByCode()",
-    "CommandSourceStack.getPlayerOrException()",
-    "Commands.getDispatcher()",
-    "MutableComponent.setStyle()",
     "ServerPlayer.isAlive()",
-    "ServerPlayer.kill()",
-    "PermissionLevel.byId()"
+    "ServerPlayer.kill()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SimpleKillCommand-Fabric-mc26.3-2.1.0.jar",
     "published": "2026-10-01"
   },
@@ -49,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

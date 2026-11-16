@@ -9,8 +9,6 @@
   "author": "I-No-oNe",
   "description": "Mod that spawn effects upon entity death ✨",
   "needs": [
-    "net.minecraft.world.item.component.FireworkExplosion",
-    "net.minecraft.world.item.component.FireworkExplosion.Shape",
     "ClientLevel.addEntity()",
     "ClientLevel.createFireworks()",
     "ClientboundEntityEventPacket.getEntity()",
@@ -22,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Death-Effects-fabric-26.3-0.1.jar",
     "published": "2026-10-20"
   },
@@ -51,7 +49,11 @@
     "minecraft",
     "modmenu"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

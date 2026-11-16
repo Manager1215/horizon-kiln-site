@@ -9,21 +9,18 @@
   "author": "nNined",
   "description": "Particles that match what you actually see",
   "needs": [
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.particle.ParticleEngine",
     "net.minecraft.client.particle.SingleQuadParticle",
     "net.minecraft.client.particle.SingleQuadParticle.Layer",
     "net.minecraft.client.particle.TerrainParticle",
     "net.minecraft.world.phys.shapes.Shapes.DoubleLineConsumer",
+    "SharedConstants.getCurrentVersion()",
     "Minecraft.getBlockColors()",
     "Minecraft.particleEngine",
     "BlockColors.getTintSource()",
     "BlockTintSource.colorAsTerrainParticle()",
     "BlockTintSource.colorInWorld()",
-    "Entity.getBbWidth()",
     "Entity.getOnPosLegacy()",
-    "Entity.getRandom()",
-    "Blocks.MOVING_PISTON",
     "BlockState.getRenderShape()",
     "BlockState.getSeed()",
     "BlockState.getShape()",
@@ -44,7 +41,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "surfaceparticles-fabric-26.3-1.0.02.jar",
     "published": "2026-09-16"
   },
@@ -73,7 +70,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 29,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 26,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

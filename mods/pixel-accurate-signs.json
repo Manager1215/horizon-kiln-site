@@ -10,7 +10,6 @@
   "description": "Changes signs from 2/3 scale to full scale, and from entity to block models!",
   "needs": [
     "com.mojang.math.Transformation",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.client.gui.screens.inventory.SignEditScreen",
     "net.minecraft.client.renderer.blockentity.HangingSignRenderer",
@@ -25,6 +24,7 @@
     "net.minecraft.world.level.block.entity.SignBlockEntity",
     "net.minecraft.world.level.block.state.properties.RotationSegment",
     "net.minecraft.world.phys.shapes.Shapes.DoubleLineConsumer",
+    "ResourceLoader.registerBuiltinPack()",
     "NarrationElementOutput.add()",
     "Vec3.toVector3f()",
     "Shapes.empty()",
@@ -35,7 +35,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dusks_pixel_signs-1.2.0+26.3.jar",
     "published": "2026-10-29"
   },
@@ -65,6 +65,10 @@
     "java",
     "minecraft"
   ],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 20,
   "development": {
     "status": "planned",

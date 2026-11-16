@@ -19,18 +19,14 @@
     "net.minecraft.world.level.block.TorchBlock",
     "net.minecraft.world.level.block.WallTorchBlock",
     "Minecraft.particleEngine",
-    "SoundEvents.BLASTFURNACE_FIRE_CRACKLE",
-    "Blocks.COPPER_TORCH",
-    "Blocks.COPPER_WALL_TORCH",
-    "Blocks.SOUL_TORCH",
-    "Blocks.SOUL_WALL_TORCH"
+    "SoundEvents.BLASTFURNACE_FIRE_CRACKLE"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "noflamesmoke-1.2.2.jar",
     "published": "2026-09-24"
   },
@@ -58,7 +54,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,9 +11,7 @@
   "needs": [
     "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SyncDataPackContents",
     "net.fabricmc.fabric.api.resource.v1.DataResourceLoader",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.client.gui.ActiveTextCollector",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.resources.sounds.AbstractTickableSoundInstance",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.core.registries.codec.HolderSetCodec",
@@ -23,9 +21,6 @@
     "net.minecraft.util.ByIdMap.OutOfBoundsStrategy",
     "net.minecraft.util.StrictJsonParser",
     "net.minecraft.util.profiling.ProfilerFiller",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "org.apache.logging.log4j.MarkerManager",
     "IntSet.clear()",
     "IntSet.isEmpty()",
     "IntSet.size()",
@@ -36,10 +31,6 @@
     "GuiGraphicsExtractor.setTooltipForNextFrame()",
     "GuiGraphicsExtractor.textRenderer()",
     "SoundManager.isActive()",
-    "SoundManager.stop()",
-    "CommonComponents.GUI_CANCEL",
-    "CommonComponents.GUI_PROCEED",
-    "MutableComponent.withStyle()",
     "Style.withFont()",
     "ByteBufCodecs.TRUSTED_COMPOUND_TAG",
     "ByteBufCodecs.fromCodec()",
@@ -48,15 +39,21 @@
     "FileToIdConverter.fileToId()",
     "FileToIdConverter.json()",
     "FileToIdConverter.listMatchingResources()",
-    "Identifier.toLanguageKey()",
-    "and 14 more"
+    "ServerPlayer.registryAccess()",
+    "Player.addItem()",
+    "Player.isCrouching()",
+    "Player.registryAccess()",
+    "ItemStack.count()",
+    "ItemStack.getStyledHoverName()",
+    "Level.getPlayerByUUID()",
+    "Block.column()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "phoenix-fabric-1.0.3+26.3.jar",
     "published": "2026-09-22"
   },
@@ -86,7 +83,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 54,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 38,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

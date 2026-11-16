@@ -16,10 +16,8 @@
     "net.minecraft.world.inventory.ContainerLevelAccess",
     "net.minecraft.world.level.block.state.BlockBehaviour.StatePredicate",
     "StorageUtil.tryInsertStacking()",
-    "Registry.get()",
     "BuiltInRegistries.REGISTRY",
     "Registries.MENU",
-    "MutableComponent.setStyle()",
     "ServerLevel.sendParticles()",
     "SoundEvents.CHICKEN_EGG",
     "ItemEntity.discard()",
@@ -41,7 +39,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "theplopper-fabric-26.3-1.5.jar",
     "published": "2026-09-19"
   },
@@ -70,7 +68,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

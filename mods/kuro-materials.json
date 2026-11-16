@@ -16,7 +16,6 @@
     "net.minecraft.world.item.SmithingTemplateItem",
     "net.minecraft.world.item.equipment.trim.ArmorTrim",
     "ModelManager.getItemModel()",
-    "DataComponents.ENCHANTMENT_GLINT_OVERRIDE",
     "DataComponents.TRIM",
     "Registries.TRIM_MATERIAL",
     "ServerLevel.playSound()",
@@ -27,7 +26,6 @@
     "SoundEvents.PLAYER_TELEPORT",
     "BlockTags.INCORRECT_FOR_NETHERITE_TOOL",
     "Relative.ALL",
-    "Player.drop()",
     "Player.getCooldowns()",
     "Player.getCurrentSwing()",
     "Player.getUseItem()",
@@ -41,7 +39,6 @@
     "Item.Properties.useCooldown()",
     "ItemStack.consume()",
     "Level.playSound()",
-    "Blocks.NETHERITE_BLOCK",
     "SoundType.LODESTONE",
     "BlockBehaviour.Properties.ofLegacyCopy()",
     "MapColor.COLOR_BLACK",
@@ -52,7 +49,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "kuromaterials-26.3-1.0.5-fabric.jar",
     "published": "2026-09-18"
   },
@@ -80,7 +77,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 36,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 33,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,16 +10,11 @@
   "description": "Brings back the pre 1.21.11 debug renderers.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.SharedConstants",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.renderer.debug.ChunkBorderRenderer",
     "net.minecraft.client.renderer.debug.EntityHitboxDebugRenderer",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.gizmos.GizmoStyle",
     "net.minecraft.world.entity.boss.enderdragon.EnderDragon",
     "net.minecraft.world.entity.boss.enderdragon.EnderDragonPart",
-    "Minecraft.getSingleplayerServer()",
-    "Options.getCameraType()",
+    "SharedConstants.DEBUG_SHOW_LOCAL_SERVER_ENTITY_HIT_BOXES",
     "Frustum.isVisible()",
     "SectionPos.maxBlockX()",
     "SectionPos.maxBlockY()",
@@ -28,15 +23,11 @@
     "SectionPos.minBlockY()",
     "SectionPos.minBlockZ()",
     "SectionPos.of()",
-    "Gizmos.arrow()",
     "Gizmos.billboardText()",
     "Gizmos.cuboid()",
-    "Gizmos.line()",
-    "Gizmos.point()",
     "TextGizmo.Style.forColorAndCentered()",
     "ServerLevel.getEntity()",
     "ARGB.colorFromFloat()",
-    "Entity.getBbWidth()",
     "Entity.getBoundingBox()",
     "Entity.getPassengerRidingPosition()",
     "Entity.getPosition()",
@@ -55,7 +46,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "OldDebugRendering-26.2-v1.0.jar",
     "published": "2026-07-07"
   },
@@ -84,7 +75,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 39,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 30,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

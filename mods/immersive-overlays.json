@@ -17,13 +17,9 @@
     "net.minecraft.tags.BlockItemTagId",
     "net.minecraft.world.item.component.LodestoneTracker",
     "net.minecraft.world.level.MoonPhase",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "LocalPlayer.getLastDeathLocation()",
     "LocalPlayer.getRootVehicle()",
     "DataComponents.LODESTONE_TRACKER",
-    "Component.translatableWithFallback()",
-    "MutableComponent.withStyle()",
     "ResourceKey.asphodel$identifier()",
     "EnvironmentAttributeSystem.getValue()",
     "EnvironmentAttributes.MOON_PHASE",
@@ -42,7 +38,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "immersiveoverlays-1.8.7+26.3-fabric.jar",
     "published": "2026-11-12"
   },
@@ -71,7 +67,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 26,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

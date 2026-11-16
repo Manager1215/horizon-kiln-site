@@ -9,7 +9,6 @@
   "author": "AmberFrost",
   "description": "Reimplementation of the Gboard CAPS in Minecraft",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer",
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.model.geom.PartPose",
@@ -23,32 +22,25 @@
     "net.minecraft.util.CommonColors",
     "net.minecraft.world.item.equipment.ArmorMaterials",
     "PoseStack.mulPose()",
-    "KeyMapping.saveString()",
-    "Options.keyAttack",
-    "Options.keyPickItem",
-    "Options.keyUse",
     "ChatComponent.saveAsDraft()",
     "ModelPart.getChild()",
     "ModelPart.loadPose()",
     "ModelPart.storePose()",
     "LayerDefinition.bakeRoot()",
     "LayerDefinition.create()",
-    "ClientPacketListener.sendChat()",
     "AbstractClientPlayer.getGameProfile()",
     "LocalPlayer.getGameProfile()",
     "LocalPlayer.getUsedItemHand()",
     "LocalPlayer.getYHeadRot()",
-    "LocalPlayer.swing()",
     "SubmitNodeCollector.submitModelPart()",
-    "Item.Properties.useItemDescriptionPrefix()",
-    "SwingAnimation.DEFAULT"
+    "Item.Properties.useItemDescriptionPrefix()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "gcaps-fabric-1.1.1+26.3.jar",
     "published": "2026-10-10"
   },
@@ -76,7 +68,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 33,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 25,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

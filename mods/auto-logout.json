@@ -11,12 +11,8 @@
   "needs": [
     "net.minecraft.server.ServerTickRateManager",
     "JsonParseException.getMessage()",
-    "InputConstants.isKeyDown()",
-    "Minecraft.getSingleplayerServer()",
     "ClientLevel.getEntities()",
-    "ClientPacketListener.getConnection()",
     "Connection.disconnect()",
-    "MutableComponent.withStyle()",
     "MinecraftServer.getTickCount()",
     "MinecraftServer.getTickTimesNanos()",
     "MinecraftServer.tickRateManager()"
@@ -26,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "auto-logout-6.0.0.jar",
     "published": "2026-09-20"
   },
@@ -55,7 +51,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

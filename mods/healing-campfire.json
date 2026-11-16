@@ -9,7 +9,6 @@
   "author": "Serilum",
   "description": "🔥🩹 Creates an area around the (soul) campfire where players and passive mobs receive regeneration.",
   "needs": [
-    "RegistryAccess.lookupOrThrow()",
     "Registries.MOB_EFFECT",
     "ServerLevel.getEntities()",
     "ServerPlayer.tickCount",
@@ -21,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "healingcampfire-26.3.0-7.1.jar",
     "published": "2026-10-30"
   },
@@ -51,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -28,8 +28,6 @@
     "net.fabricmc.loader.api.metadata.version.VersionPredicate",
     "net.minecraft.client.PreferredGraphicsApi",
     "net.minecraft.client.renderer.BindGroupLayouts",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "org.lwjgl.opengl.GL11C",
     "org.lwjgl.opengl.GL30",
     "org.lwjgl.sdl.SDLKeyboard",
@@ -37,11 +35,8 @@
     "org.lwjgl.sdl.SDL_Event",
     "org.lwjgl.system.MemoryUtil",
     "RenderTarget.width",
-    "NativeImage.getHeight()",
     "NativeImage.getPixelBytes()",
-    "NativeImage.getWidth()",
     "NativeImage.isClosed()",
-    "NativeImage.read()",
     "Window.handle()",
     "RenderSystem.getCompiledPipelineNullable()",
     "SamplerCache.getClampToEdge()",
@@ -51,14 +46,15 @@
     "BlendFunction.TRANSLUCENT",
     "RenderPipeline.builder()",
     "VertexFormat.builder()",
-    "and 2 more"
+    "ModMetadata.getDependencies()",
+    "Options.preferredGraphicsBackend()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ImGuiB3D-1.1.2+26.3.jar",
     "published": "2026-10-14"
   },
@@ -86,7 +82,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 42,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own"
+  },
+  "lacks": 37,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

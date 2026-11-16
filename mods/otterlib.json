@@ -9,28 +9,14 @@
   "author": "Oth3r",
   "description": "A cool new simple library mod that everyone can use!",
   "needs": [
-    "net.minecraft.network.chat.ClickEvent.ChangePage",
-    "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-    "net.minecraft.network.chat.ClickEvent.OpenFile",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.server.commands.ReloadCommand",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "Style.withObfuscated()",
-    "Style.withStrikethrough()",
-    "Style.withUnderlined()"
+    "net.minecraft.server.commands.ReloadCommand"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "otterlib-0.4.0.2+26.3-fabric.jar",
     "published": "2026-09-30"
   },
@@ -59,7 +45,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

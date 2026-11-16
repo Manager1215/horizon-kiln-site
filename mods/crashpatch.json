@@ -10,29 +10,23 @@
   "description": "Stop crashes from closing your game! By Polyfrost, best with OneClient.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.CrashReport",
     "net.minecraft.ReportType",
     "net.minecraft.client.gui.screens.ConnectScreen",
     "net.minecraft.client.gui.screens.DisconnectedScreen",
-    "org.apache.logging.log4j.Level",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "org.apache.logging.log4j.core.Appender",
     "org.apache.logging.log4j.core.LogEvent",
     "org.apache.logging.log4j.core.Logger",
     "org.apache.logging.log4j.core.appender.AbstractAppender",
     "org.apache.logging.log4j.core.config.Property",
-    "org.apache.logging.log4j.message.Message",
-    "Font.split()",
-    "GuiGraphicsExtractor.text()",
-    "Screen.mouseClicked()"
+    "CrashReport.getFriendlyReport()",
+    "CrashReport.getSaveFile()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "CrashPatch-2.2.3+26.3.jar",
     "published": "2026-10-30"
   },
@@ -61,7 +55,11 @@
     "notenoughcrashes",
     "oneconfigv1"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

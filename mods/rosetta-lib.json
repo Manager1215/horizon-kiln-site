@@ -9,12 +9,8 @@
   "author": "jhughes-dev",
   "description": "A library mod for onboarding players to your mod.",
   "needs": [
-    "KeyMapping.getTranslatedKeyMessage()",
-    "Minecraft.setScreenAndShow()",
-    "Button.Builder.width()",
     "LocalPlayer.hurtTime",
     "LocalPlayer.isDeadOrDying()",
-    "LocalPlayer.isFallFlying()",
     "LocalPlayer.isSleeping()",
     "SoundEvents.UI_TOAST_IN",
     "SoundEvents.UI_TOAST_OUT"
@@ -24,7 +20,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "rosetta-0.1.1+26.3-fabric.jar",
     "published": "2026-09-17"
   },
@@ -52,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

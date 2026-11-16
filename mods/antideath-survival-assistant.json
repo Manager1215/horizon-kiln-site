@@ -10,7 +10,6 @@
   "description": "Client-side survival assistant for Minecraft 1.21.x–26.x. Provides various quality-of-life tools for survival gameplay. Requires MaLiLib.",
   "needs": [
     "Mixin: 16 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.blaze3d.vertex.VertexSorting",
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
     "net.fabricmc.fabric.impl.client.registry.sync.ClientRegistrySyncHandler",
@@ -20,16 +19,12 @@
     "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
     "net.minecraft.client.gui.screens.ConnectScreen",
     "net.minecraft.client.gui.screens.LevelLoadingScreen",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.ItemPickerMenu",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.gui.screens.inventory.ShulkerBoxScreen",
     "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
     "net.minecraft.client.gui.screens.multiplayer.ServerReconfigScreen",
     "net.minecraft.client.gui.spectator.RootSpectatorMenuCategory",
     "net.minecraft.client.gui.spectator.SpectatorMenuItem",
     "net.minecraft.client.gui.spectator.categories.TeleportToPlayerMenuCategory",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.multiplayer.resolver.ServerAddress",
     "net.minecraft.client.renderer.StagedVertexBuffer.Draw",
     "net.minecraft.client.renderer.entity.ItemEntityRenderer",
@@ -39,9 +34,7 @@
     "net.minecraft.client.renderer.entity.state.ItemFrameRenderState",
     "net.minecraft.client.renderer.feature.RenderTypeFeatureRenderer.Group",
     "net.minecraft.client.renderer.rendertype.PreparedRenderType",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.network.PacketDecoder",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
     "net.minecraft.network.codec.IdDispatchCodec",
     "net.minecraft.network.protocol.common.CommonPacketTypes",
     "net.minecraft.network.protocol.game.ServerboundUseItemOnPacket",
@@ -49,15 +42,22 @@
     "net.minecraft.util.profiling.Profiler",
     "net.minecraft.world.entity.decoration.ItemFrame",
     "net.minecraft.world.entity.monster.Creeper",
-    "net.minecraft.world.inventory.ChestMenu",
-    "and 61 more"
+    "net.minecraft.world.inventory.ShulkerBoxMenu",
+    "net.minecraft.world.level.block.ShulkerBoxBlock",
+    "net.minecraft.world.level.block.VaultBlock",
+    "net.minecraft.world.level.block.entity.SignBlockEntity",
+    "net.minecraft.world.level.block.entity.SignText",
+    "net.minecraft.world.level.block.entity.vault.VaultState",
+    "net.minecraft.world.level.chunk.LevelChunk.BoundTickingBlockEntity",
+    "net.minecraft.world.level.storage.WorldData",
+    "and 36 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "antideath-survival-assistant-v1.8.3-mc26.3.jar",
     "published": "2026-11-14"
   },
@@ -86,7 +86,11 @@
     "malilib",
     "minecraft"
   ],
-  "lacks": 101,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 76,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

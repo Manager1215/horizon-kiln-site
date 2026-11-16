@@ -11,8 +11,6 @@
   "needs": [
     "net.minecraft.world.entity.monster.Creeper",
     "Registry.iterator()",
-    "Registry.wrapAsHolder()",
-    "RegistryAccess.lookupOrThrow()",
     "Registries.MOB_EFFECT",
     "Entity.addTag()",
     "Entity.entityTags()"
@@ -22,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "randommobeffects-26.3.0-3.7.jar",
     "published": "2026-11-08"
   },
@@ -52,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

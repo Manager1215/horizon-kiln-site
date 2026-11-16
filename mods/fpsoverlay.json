@@ -12,8 +12,6 @@
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
     "net.minecraft.client.ClientClockManager",
     "net.minecraft.client.ClientClockManager.ClientClockInstance",
-    "net.minecraft.client.gui.components.Button.Plain",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.multiplayer.ClientLevel.ClientLevelData",
     "ClientLevel.clockManager()",
     "ClientLevel.getLevelData()",
@@ -24,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fpsoverlay-2.1-26.3.jar",
     "published": "2026-10-08"
   },
@@ -55,7 +53,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

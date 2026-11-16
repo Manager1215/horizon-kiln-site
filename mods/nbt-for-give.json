@@ -9,13 +9,9 @@
   "author": "KOTNK_XD",
   "description": "Copy any item as a precise /give command, inspect its components, or restore it from clipboard",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.commands.arguments.item.ItemParser",
     "net.minecraft.core.component.DataComponentPatch.SplitResult",
-    "Minecraft.execute()",
-    "Minecraft.gameMode",
     "ChatComponent.addRecentChat()",
-    "ClientPacketListener.sendChat()",
     "ItemInput.createItemStack()",
     "DataComponentPatch.split()",
     "TypedDataComponent.encodeValue()",
@@ -29,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nbt-for-give-1.5.1-mc26.2–26.3.jar",
     "published": "2026-11-09"
   },
@@ -57,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

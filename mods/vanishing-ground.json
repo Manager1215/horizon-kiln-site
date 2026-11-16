@@ -9,16 +9,13 @@
   "author": "Zurret",
   "description": "Solid ground disappears once no player is standing on it anymore.",
   "needs": [
-    "net.minecraft.server.permissions.LevelBasedPermissionSet",
     "net.minecraft.world.level.block.EndGatewayBlock",
     "net.minecraft.world.level.block.EndPortalBlock",
     "net.minecraft.world.level.block.NetherPortalBlock",
-    "CommandSourceStack.getServer()",
     "MinecraftServer.getTickCount()",
     "ServerLevel.sendParticles()",
     "ServerPlayer.getOnPos()",
     "ServerPlayer.getVehicle()",
-    "PermissionLevel.isEqualOrHigherThan()",
     "SoundEvents.TRIPWIRE_CLICK_ON"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -26,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "vanishing-ground-1.3.0.jar",
     "published": "2026-09-18"
   },
@@ -54,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

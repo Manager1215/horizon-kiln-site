@@ -15,12 +15,8 @@
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.MobRenderer",
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.SimpleMenuProvider",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.EntitySelector",
-    "net.minecraft.world.entity.Pose",
     "net.minecraft.world.entity.animal.AgeableWaterCreature",
     "net.minecraft.world.entity.animal.chicken.Chicken",
     "net.minecraft.world.entity.animal.squid.Squid",
@@ -34,12 +30,11 @@
     "net.minecraft.world.level.block.entity.Hopper",
     "net.minecraft.world.level.block.entity.HopperBlockEntity",
     "net.minecraft.world.phys.EntityHitResult",
-    "Minecraft.execute()",
-    "Minecraft.hitResult",
-    "Holder.Reference.is()",
     "ServerLevel.sendParticles()",
     "LightCoordsUtil.pack()",
     "Mth.nextDouble()",
+    "SimpleContainer.fromItemList()",
+    "SimpleContainer.storeAsItemList()",
     "Entity.getBoundingBox()",
     "Entity.getEyePosition()",
     "Entity.getViewVector()",
@@ -50,14 +45,19 @@
     "LivingEntity.hurtTime",
     "LivingEntity.isDeadOrDying()",
     "Mob.deathTime",
-    "and 32 more"
+    "Mob.getBoundingBox()",
+    "Mob.isBaby()",
+    "Mob.isDeadOrDying()",
+    "Mob.isPickable()",
+    "Mob.isSpectator()",
+    "and 23 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "rpgz-fabric-0.9.0+26.3.jar",
     "published": "2026-11-15"
   },
@@ -88,5 +88,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 72
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 63
 }

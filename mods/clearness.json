@@ -9,7 +9,6 @@
   "author": "AceOverDeuce",
   "description": "Something now waits far from spawn. Your compass knows where.\nWhat you do when you find it is your own affair.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
     "net.minecraft.server.dedicated.DedicatedServer",
     "net.minecraft.server.level.ServerPlayerGameMode",
@@ -17,9 +16,6 @@
     "net.minecraft.world.item.component.LodestoneTracker",
     "net.minecraft.world.level.StructureManager",
     "net.minecraft.world.level.block.VaultBlock",
-    "CommandSourceStack.getPosition()",
-    "Commands.getDispatcher()",
-    "Commands.performPrefixedCommand()",
     "BlockPos.containing()",
     "BlockPos.mutable()",
     "BlockPos.toShortString()",
@@ -27,11 +23,9 @@
     "BlockPos.MutableBlockPos.set()",
     "DefaultedRegistry.iterator()",
     "SectionPos.asLong()",
-    "DataComponents.CUSTOM_NAME",
     "DataComponents.LODESTONE_TRACKER",
     "MinecraftServer.createCommandSourceStack()",
     "MinecraftServer.getAllLevels()",
-    "MinecraftServer.getCommands()",
     "MinecraftServer.getTickCount()",
     "MinecraftServer.halt()",
     "MinecraftServer.overworld()",
@@ -49,14 +43,20 @@
     "ServerPlayer.addTag()",
     "ServerPlayer.gameMode",
     "ServerPlayer.getSleepingPos()",
-    "and 28 more"
+    "ServerPlayer.startSleeping()",
+    "ServerPlayer.stopSleepInBed()",
+    "ServerPlayer.teleportTo()",
+    "CommonListenerCookie.createInitial()",
+    "ServerGamePacketListenerImpl.<init>()",
+    "SoundEvents.WARDEN_SONIC_BOOM",
+    "and 27 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "clearness-fabric-26.3-3.0.0.jar",
     "published": "2026-10-25"
   },
@@ -82,7 +82,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 172,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 72,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

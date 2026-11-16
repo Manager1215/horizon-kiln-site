@@ -14,11 +14,9 @@
     "net.fabricmc.loader.impl.util.StringUtil",
     "net.minecraft.commands.arguments.blocks.BlockStateParser",
     "net.minecraft.commands.arguments.blocks.BlockStateParser.BlockResult",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.MappedRegistry.TagSet",
     "net.minecraft.core.component.DataComponentLookup",
     "net.minecraft.core.particles.DustParticleOptions",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.EntitySelector",
     "net.minecraft.world.entity.projectile.ProjectileUtil",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.Snowball",
@@ -32,9 +30,7 @@
     "Direction.getUnitVec3()",
     "Direction.Axis.getPositive()",
     "Registry.componentLookup()",
-    "RegistryAccess.lookupOrThrow()",
     "DataComponents.DAMAGE",
-    "DataComponents.DYE",
     "DataComponents.DYED_COLOR",
     "DataComponents.MAX_DAMAGE",
     "ServerLevel.sendParticles()",
@@ -50,14 +46,18 @@
     "Player.hasInfiniteMaterials()",
     "Player.startUsingItem()",
     "Projectile.shootFromRotation()",
-    "and 37 more"
+    "Item.BY_BLOCK",
+    "ItemStack.hurtAndBreak()",
+    "ItemStack.isBroken()",
+    "Level.addFreshEntity()",
+    "and 6 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "paint-brush-1.0.5+26.3.jar",
     "published": "2026-10-01"
   },
@@ -84,7 +84,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 105,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 46,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

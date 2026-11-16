@@ -9,11 +9,9 @@
   "author": "lindvall.io",
   "description": "A lightweight, client-side coordinate HUD. Displays your current location alongside color-coded, real-time conversions for the Nether/Overworld. Fully customizable position, padding, and toggles via Cloth Config.",
   "needs": [
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.world.level.StructureManager",
-    "Minecraft.getSingleplayerServer()",
+    "IntegratedServer.registryAccess()",
     "Registries.STRUCTURE",
-    "Component.translatableWithFallback()",
     "ServerLevel.structureManager()",
     "Biome.getGrassColor()",
     "Biome.getWaterColor()",
@@ -49,14 +47,16 @@
     "Biomes.LUKEWARM_OCEAN",
     "Biomes.LUSH_CAVES",
     "Biomes.MANGROVE_SWAMP",
-    "and 22 more"
+    "Biomes.MEADOW",
+    "Biomes.MUSHROOM_FIELDS",
+    "and 21 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "coordsonscreen-mc26.3_1.2.0.jar",
     "published": "2026-10-05"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 73,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 71,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

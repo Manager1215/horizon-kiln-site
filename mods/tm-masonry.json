@@ -10,17 +10,6 @@
   "description": "Create new decorative blocks using the Stonecutter!",
   "needs": [
     "net.minecraft.world.level.block.GlazedTerracottaBlock",
-    "Blocks.CHISELED_STONE_BRICKS",
-    "Blocks.CRACKED_STONE_BRICKS",
-    "Blocks.DARK_PRISMARINE",
-    "Blocks.MOSSY_COBBLESTONE",
-    "Blocks.MOSSY_STONE_BRICKS",
-    "Blocks.POLISHED_ANDESITE",
-    "Blocks.POLISHED_DIORITE",
-    "Blocks.POLISHED_GRANITE",
-    "Blocks.PRISMARINE",
-    "Blocks.STONECUTTER",
-    "Blocks.STONE_BRICKS",
     "BlockBehaviour.Properties.ofLegacyCopy()",
     "MapColor.COLOR_BLACK",
     "MapColor.COLOR_CYAN",
@@ -36,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Masonry-fabric-26.2-0.7.0.jar",
     "published": "2026-10-30"
   },
@@ -64,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

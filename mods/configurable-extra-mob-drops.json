@@ -9,17 +9,10 @@
   "author": "Serilum",
   "description": "✏️ Add any extra item drops to entities via commands and config, drop chance supported.",
   "needs": [
-    "net.minecraft.core.HolderSet.Named",
-    "net.minecraft.server.permissions.Permissions",
-    "net.minecraft.tags.EnchantmentTags",
-    "CommandSourceStack.getPlayerOrException()",
-    "Registry.get()",
-    "RegistryAccess.lookupOrThrow()",
     "MinecraftServer.overworld()",
     "EntityTypes.IRON_GOLEM",
     "EntityTypes.SNOW_GOLEM",
     "EntityTypes.VILLAGER",
-    "CustomData.copyTag()",
     "EnchantmentHelper.enchantItem()",
     "Level.addFreshEntity()"
   ],
@@ -28,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "configurableextramobdrops-26.3.0-4.1.jar",
     "published": "2026-11-08"
   },
@@ -58,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

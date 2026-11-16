@@ -32,7 +32,6 @@
     "net.minecraft.client.model.geom.builders.CubeListBuilder",
     "net.minecraft.client.model.geom.builders.MeshDefinition",
     "net.minecraft.client.model.geom.builders.PartDefinition",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.BindGroupLayouts",
     "net.minecraft.client.renderer.entity.MobRenderer",
     "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
@@ -41,23 +40,24 @@
     "net.minecraft.client.renderer.rendertype.RenderSetup",
     "net.minecraft.client.renderer.rendertype.RenderSetup.OutlineProperty",
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.AnimationState",
     "net.minecraft.world.entity.npc.villager.VillagerProfession",
-    "net.minecraft.world.inventory.AnvilMenu",
     "net.minecraft.world.inventory.DataSlot",
-    "net.minecraft.world.inventory.GrindstoneMenu",
     "net.minecraft.world.inventory.ItemCombinerMenu",
     "net.minecraft.world.inventory.ResultContainer",
     "net.minecraft.world.item.CrossbowItem",
-    "and 32 more"
+    "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
+    "PoseStack.rotate()",
+    "BlendFunction.TRANSLUCENT",
+    "RenderPipeline.builder()",
+    "and 22 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "archers-fabric-3.1.4+26.3.jar",
     "published": "2026-10-04"
   },
@@ -93,7 +93,11 @@
     "spell_engine",
     "structure_pool_api"
   ],
-  "lacks": 72,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 62,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

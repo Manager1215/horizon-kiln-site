@@ -9,20 +9,10 @@
   "author": "mozartsghost1212",
   "description": "A server-side only Fabric mod for Minecraft that allows you to configure the length of day and night.",
   "needs": [
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.world.clock.ServerClockManager",
     "net.minecraft.world.clock.ServerClockManager.ServerClockInstance",
     "net.minecraft.world.clock.WorldClocks",
-    "Commands.LEVEL_OWNERS",
-    "Commands.hasPermission()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.Frozen.lookupOrThrow()",
     "Registries.WORLD_CLOCK",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
     "MinecraftServer.clockManager()",
     "MinecraftServer.registryAccess()"
   ],
@@ -31,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mg-custom-day-night-mod-2.2.0.jar",
     "published": "2026-09-28"
   },
@@ -59,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

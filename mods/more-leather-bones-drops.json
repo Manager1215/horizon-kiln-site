@@ -12,20 +12,11 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
     "net.minecraft.tags.EntityTypeTags",
-    "Holder.is()",
-    "Registry.get()",
-    "Registry.wrapAsHolder()",
-    "RegistryAccess.lookupOrThrow()",
     "ServerLevel.getGameRules()",
-    "DamageSource.getEntity()",
     "LivingEntity.getBoundingBox()",
     "LivingEntity.registryAccess()",
-    "Animal.getRandom()",
     "Animal.registryAccess()",
-    "Items.BONE",
-    "Items.LEATHER",
     "EnchantmentHelper.getItemEnchantmentLevel()",
-    "Enchantments.LOOTING",
     "GameRules.MOB_DROPS",
     "GameRules.get()",
     "AABB.getXsize()",
@@ -36,7 +27,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "more-leather-and-bones-drops-1.0.0+MC26.3.jar",
     "published": "2026-10-31"
   },
@@ -65,7 +56,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

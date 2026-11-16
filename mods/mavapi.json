@@ -36,29 +36,25 @@
     "ClientAsset.ResourceTexture.CODEC",
     "ClientAsset.ResourceTexture.DEFAULT_FIELD_CODEC",
     "HolderLookup.Provider.get()",
-    "HolderLookup.RegistryLookup.get()",
-    "HolderLookup.RegistryLookup.listElements()",
-    "Registry.entrySet()",
     "RegistryAccess.get()",
     "RegistryAccess.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "DataComponents.AXOLOTL_VARIANT",
     "DataComponents.BUCKET_ENTITY_DATA",
-    "DataComponents.ITEM_MODEL",
-    "MutableComponent.setStyle()",
-    "MutableComponent.withStyle()",
     "EntityDataSerializer.forValueType()",
     "SynchedEntityData.defineId()",
     "SynchedEntityData.get()",
     "SynchedEntityData.set()",
-    "and 7 more"
+    "Util.getRandom()",
+    "LivingEntity.<init>()",
+    "ItemStack.copyFrom()",
+    "ItemStack.hasNonDefault()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mavapi-fabric-2.4.0+26.3.jar",
     "published": "2026-10-15"
   },
@@ -84,7 +80,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 47,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 37,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

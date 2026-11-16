@@ -11,26 +11,16 @@
   "needs": [
     "an access widener",
     "Mixin: 3 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.client.gui.components.debug.DebugEntryNoop",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
     "net.minecraft.client.gui.contextualbar.ContextualBar",
     "net.minecraft.server.packs.PackLocationInfo",
     "net.minecraft.server.packs.repository.Pack",
     "net.minecraft.server.packs.repository.ServerPacksSource",
     "net.minecraft.util.InclusiveRange",
     "net.minecraft.world.level.storage.LevelStorageSource.LevelDirectory",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "InputConstants.isKeyDown()",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "KeyMapping.matches()",
-    "Minecraft.debugEntries",
-    "Minecraft.execute()",
-    "MinecraftServer.execute()",
+    "ResourceLoader.registerBuiltinPack()",
+    "DebugScreenEntries.register()",
     "LevelStorageSource.LevelStorageAccess.getLevelDirectory()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -38,7 +28,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "experienceprogress-fabric-2.0.0+26.3.jar",
     "published": "2026-09-17"
   },
@@ -65,7 +55,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; has network channels"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

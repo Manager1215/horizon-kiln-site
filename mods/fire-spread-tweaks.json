@@ -11,10 +11,6 @@
   "needs": [
     "net.minecraft.world.level.block.FireBlock",
     "ServerLevel.getGameRules()",
-    "Blocks.MAGMA_BLOCK",
-    "Blocks.NETHERRACK",
-    "Blocks.SOUL_SAND",
-    "Blocks.SOUL_SOIL",
     "GameRules.FIRE_SPREAD_RADIUS_AROUND_PLAYER",
     "GameRules.get()",
     "GameRules.set()"
@@ -24,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "firespreadtweaks-26.3.0-2.9.jar",
     "published": "2026-10-02"
   },
@@ -54,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

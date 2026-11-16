@@ -9,35 +9,19 @@
   "author": "Dax226",
   "description": "A faster furnace designed specifically for smelting building blocks!",
   "needs": [
-    "net.minecraft.world.inventory.AbstractFurnaceMenu",
-    "net.minecraft.world.inventory.FurnaceMenu",
     "net.minecraft.world.inventory.RecipeBookMenu.PostPlaceAction",
     "net.minecraft.world.level.block.AbstractFurnaceBlock",
     "net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity",
-    "Items.CLAY",
-    "Items.COAL_ORE",
-    "Items.COPPER_ORE",
-    "Items.DEEPSLATE_COAL_ORE",
-    "Items.DEEPSLATE_EMERALD_ORE",
-    "Items.DEEPSLATE_IRON_ORE",
-    "Items.DEEPSLATE_LAPIS_ORE",
-    "Items.DIAMOND_ORE",
-    "Items.EMERALD_ORE",
-    "Items.GOLD_ORE",
-    "Items.LAPIS_ORE",
-    "Items.NETHERRACK",
-    "Items.NETHER_QUARTZ_ORE",
-    "Items.REDSTONE_ORE",
-    "Items.RED_SAND",
-    "Items.SAND",
-    "Blocks.FURNACE"
+    "FurnaceMenu.<init>()",
+    "FurnaceMenu.canSmelt()",
+    "FurnaceMenu.handlePlacement()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "blockfurnace-1.1.0.jar",
     "published": "2026-10-09"
   },
@@ -65,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -17,16 +17,14 @@
     "net.fabricmc.fabric.api.client.model.loading.v1.wrapper.WrapperBlockStateModel",
     "net.fabricmc.fabric.api.client.renderer.v1.mesh.MutableQuadView",
     "net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadEmitter",
-    "net.fabricmc.fabric.api.util.TriState",
-    "Blocks.FIRE",
-    "Blocks.SOUL_FIRE"
+    "net.fabricmc.fabric.api.util.TriState"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "low-static-fire-1.1.0+26.3.jar",
     "published": "2026-10-19"
   },
@@ -54,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

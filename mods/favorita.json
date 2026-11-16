@@ -10,33 +10,21 @@
   "description": "A basic item favoriting mod, allowing you to stop yourself from discarding of important items.",
   "needs": [
     "Mixin: 4 points inside the game's methods",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
     "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.SlotWrapper",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
     "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
-    "net.minecraft.world.inventory.ContainerInput",
-    "net.minecraft.world.level.storage.LevelResource",
     "net.minecraft.world.level.storage.WorldData",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "Minecraft.gameMode",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
     "Minecraft.isLocalServer()",
-    "ServerData.ip",
-    "ServerData.name",
+    "IntegratedServer.getWorldData()",
     "SoundEvents.NOTE_BLOCK_BASS",
-    "AbstractContainerMenu.clicked()",
-    "Items.BARRIER"
+    "AbstractContainerMenu.clicked()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "favorita-1.0.0+26.3.jar",
     "published": "2026-11-08"
   },
@@ -65,7 +53,11 @@
     "minecraft",
     "oneconfigv1"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

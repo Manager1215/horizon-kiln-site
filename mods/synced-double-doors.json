@@ -2,27 +2,19 @@
   "id": "synced-double-doors",
   "name": "Synced Double Doors",
   "version": "1.1.0",
-  "status": "planned",
-  "statusLabel": "Planned",
-  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "status": "not-checked",
+  "statusLabel": "Not checked",
+  "statusMeaning": "In the catalogue, not checked yet.",
   "url": "https://modrinth.com/mod/synced-double-doors",
   "author": "Jden7",
   "description": "This mod syncs double-doors to open simultaneously!",
-  "needs": [
-    "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
-    "DoorBlock.FACING",
-    "DoorBlock.HALF",
-    "DoorBlock.HINGE",
-    "DoorBlock.OPEN",
-    "DoorBlock.isWoodenDoor()",
-    "DoorBlock.setOpen()"
-  ],
-  "roadmap": "Code next to data (0.3)",
-  "evidence": "Not run: Java did not start.",
+  "needs": [],
+  "roadmap": "",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (11 classes, 20 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "double-doors-1.1.0.jar",
     "published": "2026-09-20"
   },
@@ -51,7 +43,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "status": "not-checked",
     "statusLabel": "Not checked",

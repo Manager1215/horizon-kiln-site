@@ -11,14 +11,10 @@
   "needs": [
     "net.minecraft.world.entity.animal.frog.Frog",
     "net.minecraft.world.entity.monster.cubemob.MagmaCube",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
-    "DamageSource.getEntity()",
     "Entity.tickCount",
     "ItemEntity.getItem()",
     "ItemEntity.remove()",
     "EnchantmentHelper.getEnchantmentLevel()",
-    "Enchantments.LOOTING",
     "Level.getEntities()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -26,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "alllootdrops-26.3.0-4.1.jar",
     "published": "2026-10-26"
   },
@@ -56,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

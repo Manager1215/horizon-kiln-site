@@ -9,28 +9,18 @@
   "author": "hanilr",
   "description": "A Minecraft mod that lets you toggle resource packs On/Off with keybinds. No more digging through the vanilla resource pack menu every time you want to switch packs.",
   "needs": [
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
     "net.minecraft.server.packs.repository.Pack",
     "net.minecraft.server.packs.repository.PackRepository",
-    "InputConstants.getKey()",
-    "KeyMapping.getTranslatedKeyMessage()",
     "KeyMapping.matches()",
-    "KeyMapping.resetMapping()",
-    "KeyMapping.setKey()",
-    "Minecraft.execute()",
     "Minecraft.getResourcePackRepository()",
-    "Minecraft.reloadResourcePacks()",
-    "Minecraft.setScreenAndShow()",
-    "Options.keyMappings",
-    "Screen.mouseClicked()"
+    "Minecraft.reloadResourcePacks()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "toggle-resource-pack-1.2.0.jar",
     "published": "2026-10-18"
   },
@@ -58,7 +48,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

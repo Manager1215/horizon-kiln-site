@@ -10,16 +10,12 @@
   "description": "A proximity voice chat mod with audio positioning and lots of features",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.minecraft.MinecraftProfileTexture",
     "com.mojang.authlib.minecraft.SessionService",
     "com.mojang.authlib.properties.Property",
     "com.mojang.authlib.properties.PropertyMap",
     "com.mojang.authlib.services.ProfileResult",
     "com.mojang.blaze3d.Blaze3D",
-    "com.mojang.blaze3d.platform.TextInputManager",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "com.mojang.blaze3d.vertex.DefaultVertexFormat",
     "com.mojang.math.Transformation",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
@@ -50,6 +46,10 @@
     "net.fabricmc.fabric.api.client.rendering.v1.SubmitRenderPhases",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionEvents.EndExtraction",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
+    "net.fabricmc.fabric.api.networking.v1.ClientboundConfigurationChannelEvents",
+    "net.fabricmc.fabric.api.networking.v1.ClientboundConfigurationChannelEvents.Register",
+    "net.fabricmc.fabric.api.networking.v1.ClientboundPlayChannelEvents",
+    "net.fabricmc.fabric.api.networking.v1.ClientboundPlayChannelEvents.Register",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "plasmovoice-fabric-26.3-2.2.0-beta.3.jar",
     "published": "2026-11-09"
   },
@@ -86,7 +86,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 224,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 175,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

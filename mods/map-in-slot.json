@@ -13,15 +13,14 @@
     "net.minecraft.world.item.MapItem",
     "Minecraft.getMapRenderer()",
     "MapRenderer.extractRenderState()",
-    "DataComponents.MAP_ID",
-    "Items.FILLED_MAP"
+    "DataComponents.MAP_ID"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "map-in-slot-3.5.0.jar",
     "published": "2026-04-22"
   },
@@ -37,7 +36,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

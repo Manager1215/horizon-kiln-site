@@ -10,30 +10,21 @@
   "description": "A hopper variant that pulls dropped items in a 3D radius before depositing them into the container below. Solves the universal \"items despawn around my mob farm\" pain in one dedicated block.",
   "needs": [
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.AfterTranslucentFeatures",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.world.SimpleContainer",
-    "net.minecraft.world.flag.FeatureFlags",
     "net.minecraft.world.inventory.ContainerData",
-    "net.minecraft.world.inventory.ContainerInput",
-    "net.minecraft.world.inventory.MenuType.MenuSupplier",
     "net.minecraft.world.inventory.SimpleContainerData",
     "net.minecraft.world.level.block.entity.HopperBlockEntity",
     "net.minecraft.world.phys.shapes.BooleanOp",
     "VertexConsumer.addVertex()",
     "VertexConsumer.setColor()",
     "LevelRenderEvents.AFTER_TRANSLUCENT_FEATURES",
-    "FabricCreativeModeTabOutput.insertAfter()",
-    "Minecraft.gameMode",
-    "Minecraft.hitResult",
     "AbstractContainerScreen.extractLabels()",
+    "MultiPlayerGameMode.handleInventoryButtonClick()",
     "BlockPos.MutableBlockPos.set()",
     "ServerLevel.getEntitiesOfClass()",
     "Entity.isAlive()",
     "ItemEntity.getItem()",
     "AbstractContainerMenu.clicked()",
     "AbstractContainerMenu.getRedstoneSignalFromBlockEntity()",
-    "MenuType.<init>()",
-    "ItemContainerContents.CODEC",
     "ItemContainerContents.STREAM_CODEC",
     "Level.getEntities()",
     "Level.hasNeighborSignal()",
@@ -50,7 +41,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "magnethopper-fabric-0.3.0.jar",
     "published": "2026-09-21"
   },
@@ -79,7 +70,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 35,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 26,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

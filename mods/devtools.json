@@ -14,12 +14,9 @@
     "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
     "net.minecraft.client.player.ClientInput",
     "net.minecraft.client.player.KeyboardInput",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.world.attribute.AmbientSounds",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.player.Input",
     "net.minecraft.world.entity.projectile.ProjectileUtil",
-    "net.minecraft.world.item.SpawnEggItem",
     "net.minecraft.world.level.BaseCommandBlock",
     "net.minecraft.world.level.BaseSpawner",
     "net.minecraft.world.level.EmptyBlockGetter",
@@ -49,14 +46,17 @@
     "net.minecraft.world.level.block.entity.ConduitBlockEntity",
     "net.minecraft.world.level.block.entity.CrafterBlockEntity",
     "net.minecraft.world.level.block.entity.DecoratedPotBlockEntity",
-    "and 80 more"
+    "net.minecraft.world.level.block.entity.DropperBlockEntity",
+    "net.minecraft.world.level.block.entity.EnchantingTableBlockEntity",
+    "net.minecraft.world.level.block.entity.HopperBlockEntity",
+    "and 79 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "devtools-1.1.jar",
     "published": "2026-11-04"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 242,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 199,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

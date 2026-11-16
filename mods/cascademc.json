@@ -19,7 +19,6 @@
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "com.mojang.renderpearl.api.vertex.VertexFormat.Builder",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.minecraft.client.renderer.BindGroupLayouts",
     "net.minecraft.client.renderer.PostChain",
     "net.minecraft.client.renderer.ShaderManager",
@@ -28,7 +27,6 @@
     "net.minecraft.client.renderer.rendertype.PreparedRenderType",
     "net.minecraft.client.renderer.rendertype.RenderSetup",
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "org.lwjgl.BufferUtils",
     "org.lwjgl.system.MemoryStack",
     "ProjectionType.vertexSorting()",
@@ -49,14 +47,16 @@
     "GpuBuffer.slice()",
     "CommandEncoder.createRenderPass()",
     "BindGroupLayout.builder()",
-    "and 37 more"
+    "BlendFunction.ADDITIVE",
+    "BlendFunction.TRANSLUCENT",
+    "and 27 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "cascade-fabric-1.0.0+26.3.jar",
     "published": "2026-10-20"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 77,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 67,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

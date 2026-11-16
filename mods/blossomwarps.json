@@ -9,36 +9,15 @@
   "author": "CodedSakura",
   "description": "Blossom-series /warp command and utilities",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.minecraft.commands.arguments.DimensionArgument",
-    "net.minecraft.commands.arguments.coordinates.Coordinates",
     "net.minecraft.commands.arguments.coordinates.RotationArgument",
-    "net.minecraft.commands.arguments.coordinates.Vec3Argument",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.world.level.storage.LevelResource",
-    "org.apache.logging.log4j.core.Logger",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "Commands.getDispatcher()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "MinecraftServer.getCommands()",
-    "MinecraftServer.getWorldPath()",
-    "Vec2.x",
-    "Vec2.y"
+    "org.apache.logging.log4j.core.Logger"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "blossom-warps-2.0.18+26.3.jar",
     "published": "2026-09-16"
   },
@@ -65,7 +44,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

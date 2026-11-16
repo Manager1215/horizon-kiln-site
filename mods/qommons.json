@@ -10,31 +10,14 @@
   "description": "Common library for mods by QORG",
   "needs": [
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.gui.components.Tooltip",
-    "Minecraft.schedule()",
-    "Minecraft.setScreenAndShow()",
-    "Font.substrByWidth()",
-    "AbstractWidget.setRectangle()",
-    "Button.setRectangle()",
-    "Button.Builder.tooltip()",
-    "EditBox.setTextColor()",
-    "EditBox.setTooltip()",
-    "CommonComponents.GUI_CANCEL",
-    "CommonComponents.GUI_DONE",
-    "Component.translatableWithFallback()"
+    "CycleButton.Builder.withTooltip()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "qommons-1.0.1.jar",
     "published": "2026-10-07"
   },
@@ -63,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

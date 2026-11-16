@@ -15,19 +15,7 @@
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.IntegerRuleBuilder",
     "net.minecraft.server.TickTask",
     "net.minecraft.world.item.BoneMealItem",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "CommandSourceStack.getEntity()",
-    "CommandSourceStack.getPosition()",
-    "CommandSourceStack.withLevel()",
-    "CommandSourceStack.withPosition()",
-    "CommandSourceStack.withSuppressedOutput()",
-    "Commands.LEVEL_OWNERS",
-    "Commands.hasPermission()",
-    "Commands.performPrefixedCommand()",
-    "Commands.CommandSelection.includeDedicated",
     "MinecraftServer.createCommandSourceStack()",
-    "MinecraftServer.getCommands()",
     "MinecraftServer.getTickCount()",
     "MinecraftServer.overworld()",
     "ServerLevel.getGameRules()",
@@ -41,17 +29,16 @@
     "LivingEntity.wasExperienceConsumed()",
     "ItemEntity.getItem()",
     "BlockPlaceContext.<init>()",
-    "Level.isEmptyBlock()",
     "GameRuleCategory.MISC",
     "GameRules.MOB_DROPS",
     "GameRules.get()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "the_shutdown_fabric-3.0.0-fabric-26.3.jar",
     "published": "2026-11-16"
   },
@@ -80,5 +67,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 36
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 23
 }

@@ -34,8 +34,6 @@
     "EntityRendererProvider.Context.getItemModelResolver()",
     "ItemModelResolver.updateForNonLiving()",
     "BlockPos.MutableBlockPos.set()",
-    "Registry.wrapAsHolder()",
-    "DataComponents.ITEM_MODEL",
     "BuiltInRegistries.TICKET_TYPE",
     "SynchedEntityData.defineId()",
     "SynchedEntityData.get()",
@@ -46,17 +44,19 @@
     "SoundEvents.ANVIL_LAND",
     "SoundEvents.NOTE_BLOCK_BIT",
     "Mth.rotLerp()",
-    "DamageSource.getEntity()",
     "Entity.<init>()",
     "Entity.getBoundingBox()",
-    "and 10 more"
+    "Entity.getInterpolation()",
+    "Entity.shouldRender()",
+    "EntityType.Builder.noLootTable()",
+    "and 6 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "airstrike-2.0.0+mc26.1-26.3-fabric.jar",
     "published": "2026-11-06"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 50,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 46,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

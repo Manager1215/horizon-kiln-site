@@ -9,13 +9,6 @@
   "author": "TelepathicGrunt",
   "description": "Spawn Jigsaw Structures by command!",
   "needs": [
-    "net.minecraft.commands.arguments.IdentifierArgument",
-    "net.minecraft.commands.arguments.blocks.BlockInput",
-    "net.minecraft.commands.arguments.blocks.BlockStateArgument",
-    "net.minecraft.commands.arguments.coordinates.Coordinates",
-    "net.minecraft.commands.arguments.coordinates.Vec3Argument",
-    "net.minecraft.commands.arguments.coordinates.WorldCoordinate",
-    "net.minecraft.commands.arguments.coordinates.WorldCoordinates",
     "net.minecraft.server.level.ChunkMap",
     "net.minecraft.server.level.ThreadedLevelLightEngine",
     "net.minecraft.world.level.biome.Climate",
@@ -42,21 +35,28 @@
     "net.minecraft.world.level.levelgen.structure.structures.JigsawStructure.MaxDistance",
     "net.minecraft.world.level.levelgen.structure.templatesystem.LiquidSettings",
     "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "org.apache.logging.log4j.core.Filter",
     "org.apache.logging.log4j.core.Filter.Result",
     "org.apache.logging.log4j.core.LogEvent",
     "org.apache.logging.log4j.core.Logger",
     "org.apache.logging.log4j.core.filter.AbstractFilter",
-    "and 58 more"
+    "SharedSuggestionProvider.suggestResource()",
+    "BlockPos.mutable()",
+    "BlockPos.MutableBlockPos.move()",
+    "BlockPos.MutableBlockPos.move()",
+    "BlockPos.MutableBlockPos.set()",
+    "BlockPos.MutableBlockPos.set()",
+    "BlockPos.MutableBlockPos.setY()",
+    "BlockPos.MutableBlockPos.setZ()",
+    "SectionPos.asLong()",
+    "and 36 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "command_structures-4.4.5+26.3.jar",
     "published": "2026-09-15"
   },
@@ -84,7 +84,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 98,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 76,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

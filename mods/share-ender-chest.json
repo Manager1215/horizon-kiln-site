@@ -9,40 +9,24 @@
   "author": "kripesh101",
   "description": "Provides a shared inventory for all players, accessible using an Ender Chest.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.nbt.NbtAccounter",
-    "net.minecraft.nbt.NbtIo",
     "net.minecraft.world.SimpleMenuProvider",
-    "net.minecraft.world.inventory.ChestMenu",
-    "net.minecraft.world.inventory.ContainerInput",
     "net.minecraft.world.level.block.EnderChestBlock",
-    "net.minecraft.world.level.storage.LevelResource",
     "org.lwjgl.sdl.SDLKeyboard",
     "org.lwjgl.sdl.SDLScancode",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "NonNullList.iterator()",
-    "MinecraftServer.getWorldPath()",
+    "NbtIo.readCompressed()",
+    "NbtIo.writeCompressed()",
     "MinecraftServer.registryAccess()",
-    "ServerPlayer.closeContainer()",
-    "ServerPlayer.connection",
-    "ServerGamePacketListenerImpl.send()",
-    "MenuType.GENERIC_9x1",
-    "MenuType.GENERIC_9x2",
-    "MenuType.GENERIC_9x3",
-    "MenuType.GENERIC_9x4",
-    "MenuType.GENERIC_9x5",
-    "MenuType.GENERIC_9x6"
+    "ServerPlayer.closeContainer()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "shareenderchest-2.0.5.jar",
     "published": "2026-09-15"
   },
@@ -71,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -27,10 +27,6 @@
     "Item.Properties.food()",
     "Item.Properties.usingConvertsTo()",
     "ItemStack.consume()",
-    "Items.GLASS_BOTTLE",
-    "Items.HONEY_BOTTLE",
-    "Items.MILK_BUCKET",
-    "Items.SUGAR",
     "Level.playSound()",
     "AbstractCauldronBlock.isFull()",
     "LayeredCauldronBlock.lowerFillLevel()",
@@ -38,7 +34,6 @@
     "MapColor.COLOR_BROWN",
     "MapColor.COLOR_LIGHT_GRAY",
     "LootContextParamSets.GIFT",
-    "LootContextParams.THIS_ENTITY",
     "ContextIntProviders.COMPOSTABLE_MEDIUM_HIGH"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
@@ -46,7 +41,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "choccy-1.1.0.jar",
     "published": "2026-09-20"
   },
@@ -74,7 +69,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 29,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 24,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

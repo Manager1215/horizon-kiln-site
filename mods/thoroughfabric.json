@@ -9,7 +9,6 @@
   "author": "fingerguns83",
   "description": "\"The beaten path is the safest, but the traffic's terrible.\"",
   "needs": [
-    "net.minecraft.tags.ItemTags",
     "ServerPlayer.gameMode()",
     "Entity.getFirstPassenger()",
     "Entity.hasControllingPassenger()",
@@ -23,19 +22,14 @@
     "EntityTypes.STRIDER",
     "EntityTypes.TRADER_LLAMA",
     "EntityTypes.ZOMBIE_HORSE",
-    "Player.playSound()",
-    "Blocks.COARSE_DIRT",
-    "Blocks.COBBLESTONE_SLAB",
-    "Blocks.DIRT_PATH",
-    "Blocks.MYCELIUM",
-    "Blocks.PODZOL"
+    "Player.playSound()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Thoroughfabric-1.2.6+26.3.jar",
     "published": "2026-09-27"
   },
@@ -61,7 +55,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

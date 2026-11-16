@@ -10,8 +10,6 @@
   "description": "Displays active Gateway of Doom portals directly on Xaero’s Minimap with color-coded markers and live synchronization.",
   "needs": [
     "net.minecraft.core.UUIDUtil",
-    "Minecraft.execute()",
-    "Options.keyPlayerList",
     "EntityRenderer.createRenderState()",
     "ByteBufCodecs.stringUtf8()",
     "Entity.isCurrentlyGlowing()"
@@ -21,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "gateway_of_doom_x_xaeros_minimap-fabric-26.3-1.1.4.jar",
     "published": "2026-11-03"
   },
@@ -51,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

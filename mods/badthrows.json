@@ -10,7 +10,6 @@
   "description": "A Fabric mod that always returns extreme projectile vector values. Made for testing projectile lineups.",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "LivingEntity.getRandom()",
     "ItemEntity.setDeltaMovement()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
@@ -18,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bad-throws-1.2.0.jar",
     "published": "2026-09-20"
   },
@@ -47,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 2,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

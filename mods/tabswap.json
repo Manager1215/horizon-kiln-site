@@ -9,19 +9,14 @@
   "author": "koutsie",
   "description": "Just swaps your hotbar with inventory rows on a button press!",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.world.inventory.ContainerInput",
-    "InputConstants.Type.getOrCreate()",
-    "KeyMapping.matches()",
-    "Minecraft.gameMode",
-    "Options.keyPlayerList"
+    "KeyMapping.matches()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tabswap-1.1.1.jar",
     "published": "2026-09-16"
   },
@@ -49,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

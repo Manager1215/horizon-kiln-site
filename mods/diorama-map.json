@@ -23,20 +23,12 @@
     "com.mojang.renderpearl.api.vertex.VertexFormat.Builder",
     "com.mojang.renderpearl.backend.opengl.GlSampler",
     "com.mojang.renderpearl.backend.opengl.GlStateManager",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.event.registry.RegistryIdRemapCallback",
     "net.fabricmc.fabric.api.event.registry.RegistryIdRemapCallback.RemapState",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
     "net.minecraft.client.gui.components.BossHealthOverlay",
     "net.minecraft.client.gui.components.MultiLineTextWidget",
     "net.minecraft.client.gui.components.PlayerFaceExtractor",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
-    "net.minecraft.client.gui.components.events.AbstractContainerEventHandler",
     "net.minecraft.client.gui.components.tabs.GridLayoutTab",
     "net.minecraft.client.gui.components.tabs.MenuTabBar",
     "net.minecraft.client.gui.components.tabs.MenuTabBar.Builder",
@@ -50,6 +42,14 @@
     "net.minecraft.client.multiplayer.ClientChunkCache",
     "net.minecraft.client.player.RemotePlayer",
     "net.minecraft.client.renderer.BindGroupLayouts",
+    "net.minecraft.client.renderer.BiomeColors",
+    "net.minecraft.client.renderer.DynamicGpuData",
+    "net.minecraft.client.renderer.entity.AgeableMobRenderer",
+    "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+    "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
+    "net.minecraft.client.renderer.texture.MissingTextureAtlasSprite",
+    "net.minecraft.commands.arguments.blocks.BlockStateParser",
+    "net.minecraft.commands.arguments.blocks.BlockStateParser.BlockResult",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "diorama-0.10.1+26.3.jar",
     "published": "2026-11-13"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 428,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 342,
   "development": {
     "status": "no-plans",
     "statusLabel": "No plans yet",

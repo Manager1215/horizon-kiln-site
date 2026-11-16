@@ -14,7 +14,6 @@
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
     "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.client.particle.ParticleEngine",
     "net.minecraft.client.particle.ParticleProvider",
     "net.minecraft.client.particle.ParticleResources",
@@ -33,15 +32,8 @@
     "net.minecraft.world.level.block.SnowLayerBlock",
     "net.minecraft.world.level.block.TintedParticleLeavesBlock",
     "net.minecraft.world.level.block.UntintedParticleLeavesBlock",
-    "org.apache.logging.log4j.Level",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "org.apache.logging.log4j.core.config.Configurator",
     "org.lwjgl.system.MemoryUtil",
-    "NativeImage.format()",
-    "NativeImage.getHeight()",
-    "NativeImage.getWidth()",
-    "Minecraft.execute()",
     "Minecraft.getBlockColors()",
     "Minecraft.particleEngine",
     "BlockColors.getTintSource()",
@@ -50,14 +42,22 @@
     "BakedQuad.MaterialInfo.isTinted()",
     "Registry.getId()",
     "RandomSource.createThreadLocalInstance()",
-    "and 10 more"
+    "Entity.collideBoundingBox()",
+    "Level.getBiome()",
+    "Level.getBlockCollisions()",
+    "Level.getHeightmapPos()",
+    "LeavesBlock.PERSISTENT",
+    "BlockState.getSeed()",
+    "FluidState.getFlow()",
+    "FluidState.getHeight()",
+    "and 1 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fallingleaves-2.0.8+26.3.jar",
     "published": "2026-09-15"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 50,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 41,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

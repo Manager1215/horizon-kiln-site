@@ -9,20 +9,14 @@
   "author": "breadmoirai",
   "description": "Auto rename items in the anvil",
   "needs": [
-    "net.minecraft.client.gui.screens.inventory.AnvilScreen",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.world.inventory.AnvilMenu",
-    "net.minecraft.world.inventory.ContainerInput",
-    "Minecraft.gameMode",
-    "NonNullList.iterator()",
-    "DataComponents.CUSTOM_NAME"
+    "NonNullList.iterator()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "one-click-anvil-1.1.1+26.3.jar",
     "published": "2026-09-17"
   },
@@ -49,7 +43,11 @@
     "fabricloader",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,18 +10,14 @@
   "description": "Library for many of the Choculaterie Mods",
   "needs": [
     "org.lwjgl.sdl.SDLMouse",
-    "InputConstants.isKeyDown()",
-    "Window.handle()",
-    "Font.plainSubstrByWidth()",
-    "GuiGraphicsExtractor.text()",
-    "AbstractWidget.playButtonClickSound()"
+    "Window.handle()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "vanilib-1.0.2.jar",
     "published": "2026-11-08"
   },
@@ -49,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

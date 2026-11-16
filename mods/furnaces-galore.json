@@ -9,13 +9,8 @@
   "author": "Inferis",
   "description": "This mod adds a few new furnace type, from copper to netherite. Each one is a bit faster than the other one!",
   "needs": [
-    "net.minecraft.client.gui.screens.inventory.AbstractFurnaceScreen",
-    "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
     "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent.TabInfo",
     "net.minecraft.client.gui.screens.recipebook.SearchRecipeBookCategory",
-    "net.minecraft.world.SimpleContainer",
-    "net.minecraft.world.inventory.AbstractFurnaceMenu",
-    "net.minecraft.world.inventory.MenuType.MenuSupplier",
     "net.minecraft.world.inventory.RecipeBookType",
     "net.minecraft.world.inventory.SimpleContainerData",
     "net.minecraft.world.item.crafting.RecipeBookCategories",
@@ -24,18 +19,15 @@
     "ObjectIterator.hasNext()",
     "ObjectIterator.next()",
     "Reference2IntMap.Entry.getKey()",
+    "AbstractFurnaceScreen.<init>()",
     "NonNullList.isEmpty()",
-    "Stats.INTERACT_WITH_FURNACE",
     "Container.forEach()",
     "ExperienceOrb.award()",
-    "FeatureFlagSet.of()",
-    "MenuType.<init>()",
+    "AbstractFurnaceMenu.<init>()",
     "Item.Properties.useItemDescriptionPrefix()",
-    "Items.PORKCHOP",
     "RecipeManager.byKey()",
     "RecipePropertySet.FURNACE_INPUT",
     "Level.playLocalSound()",
-    "Blocks.FURNACE",
     "MapColor.COLOR_BLACK",
     "MapColor.COLOR_ORANGE",
     "MapColor.DIAMOND",
@@ -47,7 +39,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "furnaces-galore-0.2.3-26.3.jar",
     "published": "2026-09-16"
   },
@@ -76,7 +68,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 32,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 24,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

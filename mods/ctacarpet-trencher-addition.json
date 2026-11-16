@@ -20,17 +20,12 @@
     "net.minecraft.world.level.block.BuddingAmethystBlock",
     "net.minecraft.world.level.block.FallingBlock",
     "net.minecraft.world.level.block.state.properties.Half",
-    "Minecraft.execute()",
     "ClientLevel.getEntity()",
-    "CommandSourceStack.getPlayerOrException()",
-    "EntityArgument.entities()",
-    "EntityArgument.getEntities()",
     "NonNullList.stream()",
     "ByteBufCodecs.collection()",
     "ServerLevel.getEntities()",
     "ServerLevel.isInWorldBounds()",
     "Util.shuffle()",
-    "DamageSource.getEntity()",
     "Entity.distanceToSqr()",
     "Entity.entityTags()",
     "Entity.ignoreExplosion()",
@@ -40,7 +35,6 @@
     "Entity.RemovalReason.shouldDestroy()",
     "LivingEntity.isBaby()",
     "LivingEntity.onExplosionHit()",
-    "Attributes.EXPLOSION_KNOCKBACK_RESISTANCE",
     "ItemEntity.areMergable()",
     "ItemEntity.merge()",
     "PrimedTnt.getFuse()",
@@ -50,14 +44,20 @@
     "Projectile.setOwner()",
     "ExplosionDamageCalculator.getBlockExplosionResistance()",
     "ExplosionDamageCalculator.getEntityDamageAmount()",
-    "and 7 more"
+    "ExplosionDamageCalculator.getKnockbackMultiplier()",
+    "ExplosionDamageCalculator.shouldBlockExplode()",
+    "ExplosionDamageCalculator.shouldDamageEntity()",
+    "ServerExplosion.getSeenPercent()",
+    "StairBlock.HALF",
+    "BlockState.onExplosionHit()",
+    "and 1 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "carpet-trencher-addition-1.2.5+mc26.2-26.3.jar",
     "published": "2026-11-07"
   },
@@ -86,7 +86,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 47,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 41,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,7 +10,6 @@
   "description": "Crystal0404's Carpet(fabric-carpet) Extension!",
   "needs": [
     "Mixin: 12 points inside the game's methods",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.effect.BadOmenMobEffect",
     "net.minecraft.world.entity.EntitySelector",
     "net.minecraft.world.entity.PortalProcessor",
@@ -43,21 +42,22 @@
     "net.minecraft.world.level.storage.loot.functions.EnchantedCountIncreaseFunction.Builder",
     "ImmutableMap.forEach()",
     "BlockPos.MutableBlockPos.set()",
-    "HolderLookup.RegistryLookup.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "Registries.BANNER_PATTERN",
     "ServerLevel.getDifficulty()",
     "ServerLevel.getGameRules()",
     "ServerLevel.getHeight()",
     "ServerLevel.getRaidAt()",
-    "and 20 more"
+    "ServerLevel.getRaids()",
+    "ServerLevel.hasChunksAt()",
+    "ServerLevel.isPositionEntityTicking()",
+    "and 10 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "CrystalCarpetAddition-v1.15.0+mc26.3.jar",
     "published": "2026-09-16"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 60,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 50,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

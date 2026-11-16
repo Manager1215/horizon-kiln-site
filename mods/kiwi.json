@@ -11,21 +11,12 @@
   "needs": [
     "an access widener",
     "Mixin: 20 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.math.OctahedralGroup",
     "net.fabricmc.api.DedicatedServerModInitializer",
     "net.fabricmc.api.Environment",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AllowKeyPress",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AllowKeyRelease",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AfterMouseClick",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseClick",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseRelease",
     "net.fabricmc.fabric.api.entity.FakePlayer",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
@@ -33,7 +24,6 @@
     "net.fabricmc.fabric.api.registry.VillagerInteractionRegistries",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags",
     "net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags",
     "net.fabricmc.fabric.impl.resource.conditions.ResourceConditionsImpl",
@@ -51,6 +41,16 @@
     "net.minecraft.advancements.predicates.BlockPredicate",
     "net.minecraft.advancements.predicates.BlockPredicate.Builder",
     "net.minecraft.advancements.predicates.DataComponentMatchers",
+    "net.minecraft.advancements.predicates.MinMaxBounds.Ints",
+    "net.minecraft.advancements.predicates.StatePropertiesPredicate",
+    "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
+    "net.minecraft.client.gui.components.debug.DebugScreenEntry",
+    "net.minecraft.client.gui.components.debug.DebugScreenProfile",
+    "net.minecraft.client.gui.screens.LoadingOverlay",
+    "net.minecraft.client.gui.screens.inventory.EffectsInInventory",
+    "net.minecraft.client.gui.screens.options.MouseSettingsScreen",
+    "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen",
+    "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Kiwi-mc26.3-Fabric-26.3.1.jar",
     "published": "2026-11-11"
   },
@@ -90,7 +90,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 794,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 648,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -23,10 +23,6 @@
     "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
     "net.minecraft.client.renderer.special.SpecialModelRenderer.Unbaked",
     "net.minecraft.client.renderer.special.SpecialModelRenderers",
-    "net.minecraft.network.chat.ComponentSerialization",
-    "net.minecraft.world.item.BannerItem",
-    "net.minecraft.world.item.crafting.display.ShapedCraftingRecipeDisplay",
-    "net.minecraft.world.item.crafting.display.SlotDisplay.ItemSlotDisplay",
     "net.minecraft.world.level.block.AbstractBannerBlock",
     "net.minecraft.world.level.block.Mirror",
     "net.minecraft.world.level.block.SupportType",
@@ -49,14 +45,18 @@
     "SubmitNodeCollector.submitModel()",
     "BlockEntityRenderer.extractRenderState()",
     "RenderTypes.bannerPattern()",
-    "and 45 more"
+    "SpriteId.renderType()",
+    "Direction.fromYRot()",
+    "ByteBufCodecs.registry()",
+    "BlockTags.ALL_HANGING_SIGNS",
+    "and 25 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "entflags-fabric-26.3-1.2.0.jar",
     "published": "2026-10-03"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 91,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 65,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

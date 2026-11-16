@@ -38,25 +38,25 @@
     "net.minecraft.world.entity.monster.zombie.Zombie",
     "net.minecraft.world.food.FoodProperties",
     "net.minecraft.world.food.FoodProperties.Builder",
-    "net.minecraft.world.item.SpawnEggItem",
     "BiomeModifications.addSpawn()",
     "EntityRendererProvider.Context.bakeLayer()",
     "EntityRendererProvider.Context.getEquipmentRenderer()",
     "EntityRendererProvider.Context.getModelSet()",
-    "DamageSource.getEntity()",
-    "DamageSource.is()",
     "Entity.setTicksFrozen()",
     "EntitySpawnReason.ignoresLightRequirements()",
     "EntityType.Builder.notInPeaceful()",
     "EntityType.Builder.ridingOffset()",
-    "and 20 more"
+    "LivingEntity.setTicksFrozen()",
+    "Mob.checkMobSpawnRules()",
+    "Mob.createMobAttributes()",
+    "and 12 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "frozen_zombie_castle-1.0.0 Fabric 26.3.jar",
     "published": "2026-10-25"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 60,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 52,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

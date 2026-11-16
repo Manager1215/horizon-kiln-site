@@ -13,18 +13,14 @@
     "net.minecraft.client.gui.screens.options.controls.KeyBindsList.Entry",
     "net.minecraft.client.gui.screens.options.controls.KeyBindsList.KeyEntry",
     "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket",
-    "Minecraft.gameMode",
     "Options.mouseWheelSensitivity()",
-    "GuiGraphicsExtractor.blit()",
     "GuiGraphicsExtractor.item()",
     "ClientPacketListener.send()",
     "ServerPlayer.getUsedItemHand()",
     "ServerPlayer.resetLastActionTime()",
     "ServerPlayer.stopUsingItem()",
     "HumanoidArm.getOpposite()",
-    "Player.getMainArm()",
     "ItemStack.getPopTime()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -32,7 +28,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tenthslot-26.3-2.2.0.jar",
     "published": "2026-11-12"
   },
@@ -62,7 +58,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

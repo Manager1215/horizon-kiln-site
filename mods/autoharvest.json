@@ -9,9 +9,6 @@
   "author": "KiteJs",
   "description": "The mod for automatic planting and harvesting of crops suitable for Fabric.",
   "needs": [
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.animal.allay.Allay",
     "net.minecraft.world.entity.animal.armadillo.Armadillo",
     "net.minecraft.world.entity.animal.axolotl.Axolotl",
@@ -38,25 +35,28 @@
     "net.minecraft.world.entity.animal.wolf.Wolf",
     "net.minecraft.world.entity.monster.Strider",
     "net.minecraft.world.entity.monster.hoglin.Hoglin",
-    "net.minecraft.world.entity.projectile.FishingHook",
-    "net.minecraft.world.inventory.ContainerInput",
     "net.minecraft.world.level.block.FlowerBedBlock",
     "net.minecraft.world.level.block.FlowerBlock",
     "net.minecraft.world.level.block.NetherFungusBlock",
     "net.minecraft.world.level.block.StemBlock",
     "net.minecraft.world.level.block.TallFlowerBlock",
     "net.minecraft.world.phys.EntityHitResult",
-    "Minecraft.execute()",
-    "Minecraft.gameMode",
     "ClientLevel.getEntities()",
-    "and 57 more"
+    "MultiPlayerGameMode.interact()",
+    "MultiPlayerGameMode.startDestroyBlock()",
+    "LocalPlayer.distanceToSqr()",
+    "BlockPos.containing()",
+    "BlockPos.offset()",
+    "BlockPos.withinManhattan()",
+    "DefaultedRegistry.iterator()",
+    "and 10 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "autoharvest-fabric-26.3-1.6.5.jar",
     "published": "2026-09-17"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 176,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 50,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

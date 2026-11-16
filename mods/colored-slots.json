@@ -11,17 +11,7 @@
   "needs": [
     "Mixin: 2 points inside the game's methods",
     "net.fabricmc.fabric.api.client.creativetab.v1.FabricCreativeModeInventoryScreen",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.BeforeMouseClick",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.BeforeMouseRelease",
-    "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.ItemPickerMenu",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-    "InputConstants.isKeyDown()",
-    "KeyMapping.getDefaultKey()",
-    "Minecraft.execute()",
-    "GuiGraphicsExtractor.blit()",
+    "CreativeModeInventoryScreen.getSelectedTab()",
     "Registry.getValueOrThrow()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -29,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "colored_slots-26.3.jar",
     "published": "2026-10-09"
   },
@@ -59,7 +49,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

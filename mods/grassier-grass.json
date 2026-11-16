@@ -28,7 +28,6 @@
     "net.fabricmc.fabric.api.client.model.loading.v1.ModelModifier.AfterBakeBlock",
     "net.fabricmc.fabric.api.client.model.loading.v1.ModelModifier.AfterBakeBlock.Context",
     "net.fabricmc.fabric.api.client.model.loading.v1.wrapper.WrapperBlockStateModel",
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
     "net.minecraft.client.model.geom.builders.UVPair",
     "net.minecraft.client.multiplayer.ClientChunkCache",
     "net.minecraft.client.particle.ParticleEngine",
@@ -40,24 +39,25 @@
     "net.minecraft.client.renderer.MappableRingBuffer",
     "net.minecraft.client.renderer.chunk.SectionCompiler",
     "net.minecraft.client.renderer.extract.LevelExtractor",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
-    "net.minecraft.data.AtlasIds",
-    "net.minecraft.world.level.block.DoublePlantBlock",
     "net.minecraft.world.level.block.FlowerBlock",
     "net.minecraft.world.level.block.SnowyBlock",
-    "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
     "net.minecraft.world.level.block.state.properties.SlabType",
     "org.lwjgl.opengl.GL",
     "org.lwjgl.opengl.GL11C",
     "org.lwjgl.opengl.GL13C",
-    "and 65 more"
+    "org.lwjgl.opengl.GL20C",
+    "org.lwjgl.opengl.GL30C",
+    "org.lwjgl.opengl.GL42C",
+    "org.lwjgl.opengl.GL43C",
+    "org.lwjgl.opengl.GLCapabilities",
+    "and 60 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "grassiergrass-fabric-1.4.5+mc26.3.jar",
     "published": "2026-10-21"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 116,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 103,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

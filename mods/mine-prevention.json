@@ -9,26 +9,12 @@
   "author": "BVengo",
   "description": "This is a simple client-side mod that gives you the ability to allow or disallow the mining of certain blocks.",
   "needs": [
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "com.mojang.text2speech.Narrator",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.util.CommonColors",
-    "GuiGraphicsExtractor.centeredText()",
-    "GuiGraphicsExtractor.fakeItem()",
-    "GuiGraphicsExtractor.requestCursor()",
     "GuiGraphicsExtractor.setTooltipForNextFrame()",
-    "AbstractScrollArea.defaultSettings()",
     "EditBox.SEARCH_HINT_STYLE",
-    "EditBox.getBottom()",
-    "EditBox.getRight()",
-    "EditBox.setHint()",
     "NarrationElementOutput.add()",
-    "Screen.mouseClicked()",
     "DefaultedRegistry.getId()",
-    "Component.getVisualOrderText()",
-    "MutableComponent.withStyle()",
     "ItemStack.getItemName()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -36,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mineprevention-1.1.1-mc26.3.jar",
     "published": "2026-09-24"
   },
@@ -66,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "no-plans",
     "statusLabel": "No plans yet",

@@ -10,16 +10,14 @@
   "description": "🌿 Kelp seaweed naturally filters sea water for rich nutrients. Kelp works like bone meal.",
   "needs": [
     "net.minecraft.world.item.BoneMealItem",
-    "Player.swingAndResetAttackStrength()",
-    "Items.KELP",
-    "SwingAnimation.DEFAULT"
+    "Player.swingAndResetAttackStrength()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "kelpfertilizer-26.3.0-3.5.jar",
     "published": "2026-10-02"
   },
@@ -48,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

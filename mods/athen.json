@@ -14,19 +14,15 @@
     "com.mojang.renderpearl.frontend.FrontendRenderPass",
     "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
     "net.minecraft.network.protocol.game.ServerboundChatPacket",
-    "net.minecraft.world.inventory.ContainerInput",
-    "Minecraft.execute()",
     "Minecraft.services()",
-    "Screen.mouseClicked()",
-    "Screen.mouseScrolled()",
     "Services.sessionService()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "athen-0.4.2+26.3.jar",
     "published": "2026-10-30"
   },
@@ -55,7 +51,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

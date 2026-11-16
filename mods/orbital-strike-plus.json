@@ -19,17 +19,11 @@
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow.Pickup",
     "net.minecraft.world.entity.projectile.arrow.Arrow",
     "net.minecraft.world.entity.projectile.hurtingprojectile.WitherSkull",
-    "net.minecraft.world.item.component.ItemLore",
-    "CommandSourceStack.getEntity()",
-    "DataComponents.CUSTOM_NAME",
     "DataComponents.DAMAGE",
-    "DataComponents.LORE",
-    "MinecraftServer.execute()",
     "ServerLevel.clip()",
     "ServerLevel.getHeight()",
     "ServerLevel.getMinY()",
     "ServerLevel.sendParticles()",
-    "ServerPlayer.connection",
     "ServerPlayer.getEyePosition()",
     "ServerPlayer.getViewVector()",
     "ServerGamePacketListenerImpl.teleport()",
@@ -46,17 +40,14 @@
     "Player.fishing",
     "Player.getEyePosition()",
     "Player.teleportTo()",
-    "ItemStack.hurtAndBreak()",
-    "Items.FISHING_ROD",
-    "Items.WOLF_ARMOR",
-    "and 1 more"
+    "ItemStack.hurtAndBreak()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "orbitalstrike+26.3-1.0.19.jar",
     "published": "2026-11-06"
   },
@@ -84,7 +75,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 41,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 32,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

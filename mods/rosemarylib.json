@@ -9,16 +9,14 @@
   "author": "sylvxa",
   "description": "a server-side library made with love <3",
   "needs": [
-    "Tag.asCompound()",
-    "MinecraftServer.execute()",
-    "MinecraftServer.isSameThread()"
+    "Tag.asCompound()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "rosemarylib-1.1.1-mc26.3.jar",
     "published": "2026-11-15"
   },
@@ -44,5 +42,9 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 3
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1
 }

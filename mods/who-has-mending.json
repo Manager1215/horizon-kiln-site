@@ -12,7 +12,6 @@
     "net.minecraft.client.gui.screens.inventory.MerchantScreen",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.world.entity.EntityAttachment",
     "net.minecraft.world.entity.EntityAttachments",
     "net.minecraft.world.entity.npc.villager.Villager",
@@ -22,28 +21,20 @@
     "net.minecraft.world.level.storage.WorldData",
     "net.minecraft.world.phys.EntityHitResult",
     "Object2IntMap.Entry.getKey()",
-    "Minecraft.gameDirectory",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
-    "Minecraft.hitResult",
     "ClientLevel.getEntitiesOfClass()",
-    "ServerData.ip",
     "LocalPlayer.getBoundingBox()",
-    "Items.ENCHANTED_BOOK",
-    "EnchantmentHelper.getEnchantmentsForCrafting()",
-    "ItemEnchantments.entrySet()",
+    "IntegratedServer.getWorldData()",
     "MerchantOffers.isEmpty()",
     "MerchantOffers.iterator()",
     "MerchantOffers.size()",
-    "AABB.inflate()",
-    "HitResult.getType()"
+    "AABB.inflate()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "whohasmending-fabric-2.0.2-26.3.jar",
     "published": "2026-09-20"
   },
@@ -72,7 +63,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 19,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

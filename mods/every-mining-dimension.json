@@ -9,21 +9,16 @@
   "author": "MrPup",
   "description": "This mod adds mining worlds such as: overworld, nether and the end",
   "needs": [
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
     "net.minecraft.world.entity.monster.Enemy",
-    "AttachmentRegistry.create()",
     "Registries.DIMENSION_TYPE",
-    "Entity.discard()",
-    "Player.getAttached()",
-    "Player.setAttached()",
-    "Blocks.IRON_BLOCK"
+    "Entity.discard()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "everyminingdimension-fabric-26.3-3.0.0.jar",
     "published": "2026-09-23"
   },
@@ -51,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,16 +10,11 @@
   "description": "Client-side Fabric mod for full control over brightness and visual effects: gamma boost, night vision, darkness resistance, and blindness resistance.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.renderer.LightmapRenderStateExtractor",
     "net.minecraft.client.renderer.fog.FogData",
     "net.minecraft.client.renderer.fog.environment.AtmosphericFogEnvironment",
     "net.minecraft.client.renderer.fog.environment.BlindnessFogEnvironment",
     "net.minecraft.client.renderer.fog.environment.DarknessFogEnvironment",
-    "Minecraft.setScreenAndShow()",
-    "AbstractSliderButton.setTooltip()",
-    "Button.setTooltip()",
-    "Button.Builder.width()",
     "LocalPlayer.getEffectBlendFactor()",
     "GameRenderer.nightVisionScale()"
   ],
@@ -28,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fullbrightutils-1.3.1.jar",
     "published": "2026-10-11"
   },
@@ -58,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

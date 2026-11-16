@@ -10,7 +10,6 @@
   "description": "Place hoppers in all 6 directions and rotate both push and pull independently with a compass. Six faces, full control.",
   "needs": [
     "com.mojang.math.OctahedralGroup",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
     "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
     "net.minecraft.server.level.ServerPlayerGameMode",
@@ -20,10 +19,8 @@
     "net.minecraft.world.level.block.entity.HopperBlockEntity",
     "net.minecraft.world.phys.shapes.BooleanOp",
     "Direction.orderedByNearest()",
-    "ServerPlayer.sendSystemMessage()",
     "SoundEvents.ITEM_FRAME_ROTATE_ITEM",
     "BlockTags.DOES_NOT_BLOCK_HOPPERS",
-    "Items.COMPASS",
     "Block.boxZ()",
     "Block.column()",
     "BlockState.isCollisionShapeFullBlock()",
@@ -37,7 +34,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hexhopper-1.0.0+mc26.3.jar",
     "published": "2026-09-15"
   },
@@ -66,7 +63,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite into the game's classes"
+  },
+  "lacks": 19,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,13 +9,10 @@
   "author": "beanbeanjuice",
   "description": "[Bungee Chat Sync + Velocity Chat Sync] A simple plugin to allow global cross-server communication and messaging with support for PlaceholderAPI, LuckPerms, LiteBans, AdvancedBan, NetworkManager, and Discord.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.api.DedicatedServerModInitializer",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
-    "net.minecraft.network.chat.PlayerChatMessage",
-    "ServerLifecycleEvents.SERVER_STOPPING",
+    "PlayerChatMessage.signedContent()",
     "ServerPlayer.getGameProfile()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -23,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SimpleProxyChatHelper-Fabric-1.0.4.jar",
     "published": "2026-10-23"
   },
@@ -43,7 +40,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

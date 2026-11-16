@@ -10,8 +10,6 @@
   "description": "A fork of Replay Voice Chat that works with Plasmo Voice allowing you to record voice chat with ReplayMod.",
   "needs": [
     "net.minecraft.client.player.RemotePlayer",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "org.lwjgl.openal.ALC10",
     "org.lwjgl.openal.ALC11",
     "org.lwjgl.openal.SOFTLoopback",
@@ -23,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "pv-addon-replaymod-26.1.2-2.1.5.jar",
     "published": "2026-04-21"
   },
@@ -51,7 +49,11 @@
     "plasmovoice",
     "replaymod"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

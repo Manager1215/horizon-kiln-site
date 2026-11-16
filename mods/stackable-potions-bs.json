@@ -14,17 +14,14 @@
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyContext",
     "net.minecraft.world.item.component.UseCooldown",
     "DataComponents.MAX_STACK_SIZE",
-    "DataComponents.USE_COOLDOWN",
-    "Items.LINGERING_POTION",
-    "Items.POTION",
-    "Items.SPLASH_POTION"
+    "DataComponents.USE_COOLDOWN"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "stackable-potions-fabric-1.0.0.jar",
     "published": "2026-08-24"
   },
@@ -52,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

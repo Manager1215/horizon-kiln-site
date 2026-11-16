@@ -9,21 +9,19 @@
   "author": "ivoiddragoni",
   "description": "This anti-cheat ensures fair gameplay by verifying client mods and textures, blocking hacked clients and unauthorized tools, and giving server owners full visibility and control to keep their SMP secure and competitive.",
   "needs": [
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.gui.components.debugchart.ProfilerPieChart",
     "net.minecraft.network.protocol.game.ServerboundMovePlayerPacket",
     "net.minecraft.server.packs.repository.Pack",
     "net.minecraft.server.packs.repository.PackRepository",
-    "Minecraft.execute()",
-    "Minecraft.getResourcePackRepository()",
-    "Minecraft.isSameThread()"
+    "SharedConstants.getCurrentVersion()",
+    "Minecraft.getResourcePackRepository()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mtsanticheat-mod-0.1.0+26.3.jar",
     "published": "2026-09-26"
   },
@@ -51,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

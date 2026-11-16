@@ -9,10 +9,6 @@
   "author": "Schwabelo",
   "description": "This Project lets you toggle mods on and off.",
   "needs": [
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AfterKeyPress",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseClick",
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
     "net.fabricmc.loader.api.VersionParsingException",
     "net.fabricmc.loader.api.metadata.ModDependency",
@@ -21,16 +17,14 @@
     "net.fabricmc.loader.api.metadata.ModOrigin.Kind",
     "net.fabricmc.loader.api.metadata.version.VersionPredicate",
     "ModContainer.getOrigin()",
-    "ModMetadata.getDependencies()",
-    "EditBox.setHint()",
-    "Screen.mouseScrolled()"
+    "ModMetadata.getDependencies()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mod-toggle-menu-mc26.3.jar",
     "published": "2026-10-01"
   },
@@ -59,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

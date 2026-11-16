@@ -11,31 +11,20 @@
   "needs": [
     "an access widener",
     "Mixin: 16 points inside the game's methods",
-    "net.minecraft.core.component.DataComponentPatch.Builder",
     "net.minecraft.util.Brightness",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.player.Input",
     "net.minecraft.world.item.component.CustomModelData",
     "net.minecraft.world.item.component.ResolvableProfile.Static",
     "net.minecraft.world.level.block.entity.SignBlockEntity",
     "org.apache.commons.io.FilenameUtils",
     "org.apache.commons.io.IOUtils",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "CommandSourceStack.getPlayerOrException()",
     "DataComponents.CUSTOM_MODEL_DATA",
-    "DataComponents.ITEM_MODEL",
     "ServerPlayer.getLastClientInput()",
     "ServerPlayer.getVehicle()",
     "ServerPlayer.isPassenger()",
-    "ServerPlayer.permissions()",
     "ServerPlayer.startRiding()",
-    "PermissionLevel.byId()",
     "Entity.stopRiding()",
-    "Player.getDisplayName()",
-    "MenuType.HOPPER",
     "Items.CONCRETE",
-    "Items.PAPER",
     "Items.STAINED_GLASS_PANE",
     "Vec3.<init>()",
     "Vec3.yRot()"
@@ -45,7 +34,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "BlockBoyArcade-1.1.0+26.3.jar",
     "published": "2026-10-01"
   },
@@ -74,7 +63,11 @@
     "filament",
     "minecraft"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

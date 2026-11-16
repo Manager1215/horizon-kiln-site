@@ -9,18 +9,18 @@
   "author": "Invisiblezappie",
   "description": "Hear a ping when another player mentions your exact Minecraft username. Automatic name detection, Mod Menu toggle, and sound that works with UI volume muted.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.Chat",
-    "net.minecraft.network.chat.PlayerChatMessage",
     "ClientReceiveMessageEvents.CHAT",
-    "PlayerInfo.getProfile()"
+    "PlayerInfo.getProfile()",
+    "PlayerChatMessage.decoratedContent()",
+    "PlayerChatMessage.sender()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "chat-ping-1.0.5+mc26.3.jar",
     "published": "2026-10-17"
   },
@@ -49,5 +49,9 @@
     "java",
     "minecraft"
   ],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 5
 }

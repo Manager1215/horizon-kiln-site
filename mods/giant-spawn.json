@@ -24,7 +24,6 @@
     "net.minecraft.world.entity.monster.Giant",
     "net.minecraft.world.entity.monster.zombie.ZombifiedPiglin",
     "net.minecraft.world.entity.npc.villager.AbstractVillager",
-    "RegistryAccess.lookupOrThrow()",
     "ServerLevel.getGameRules()",
     "ServerLevel.isBrightOutside()",
     "SoundEvents.TURTLE_EGG_BREAK",
@@ -40,23 +39,16 @@
     "Mob.getHurtSound()",
     "Mob.getVoicePitch()",
     "Mob.playStepSound()",
-    "Attributes.FOLLOW_RANGE",
-    "Items.CHAINMAIL_BOOTS",
-    "Items.CHAINMAIL_CHESTPLATE",
-    "Items.CHAINMAIL_HELMET",
-    "Items.CHAINMAIL_LEGGINGS",
-    "Items.GOLDEN_BOOTS",
-    "Items.GOLDEN_CHESTPLATE",
-    "Items.GOLDEN_LEGGINGS",
-    "Items.IRON_CHESTPLATE",
-    "and 12 more"
+    "Level.addFreshEntity()",
+    "GameRules.MOB_DROPS",
+    "GameRules.get()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "giantspawn-26.3.0-5.6.jar",
     "published": "2026-10-20"
   },
@@ -86,7 +78,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 52,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 33,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

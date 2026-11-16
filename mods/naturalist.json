@@ -19,7 +19,6 @@
     "net.minecraft.advancements.triggers.BredAnimalsTrigger",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.FilledBucketTrigger",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.animation.AnimationChannel",
     "net.minecraft.client.animation.AnimationChannel.Interpolation",
     "net.minecraft.client.animation.AnimationChannel.Interpolations",
@@ -30,7 +29,6 @@
     "net.minecraft.client.animation.Keyframe",
     "net.minecraft.client.animation.KeyframeAnimation",
     "net.minecraft.client.animation.KeyframeAnimations",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.model.EntityModel",
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.model.Model.Simple",
@@ -51,14 +49,16 @@
     "net.minecraft.client.renderer.blockentity.BannerRenderer",
     "net.minecraft.client.renderer.debug.EntityHitboxDebugRenderer",
     "net.minecraft.client.renderer.entity.ItemEntityRenderer",
+    "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+    "net.minecraft.client.renderer.entity.MobRenderer",
     "and 80 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "naturalist-2.0.7-fabric-26.3.jar",
     "published": "2026-10-21"
   },
@@ -88,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 890,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 758,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

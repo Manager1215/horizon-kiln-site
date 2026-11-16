@@ -10,13 +10,8 @@
   "description": "Put fireflies in bottles and move them between bushes",
   "needs": [
     "net.minecraft.world.item.BottleItem",
-    "DataComponents.ENCHANTMENT_GLINT_OVERRIDE",
     "SoundEvents.BEE_POLLINATE",
     "Player.blockInteractionRange()",
-    "Player.drop()",
-    "Items.GLASS_BOTTLE",
-    "Blocks.BUSH",
-    "Blocks.FIREFLY_BUSH",
     "GameEvent.BLOCK_CHANGE"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -24,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "firefly-in-a-bottle-0.1.2-fabric-26.1.1-26.1.2.jar",
     "published": "2026-05-05"
   },
@@ -52,7 +47,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

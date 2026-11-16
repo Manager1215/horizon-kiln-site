@@ -9,12 +9,7 @@
   "author": "JCS",
   "description": "This is the updated version of Individual Keep Inventory which is a Server-side Fabric mod that makes keepInventory work on an individual basis.",
   "needs": [
-    "net.minecraft.server.permissions.Permission.Atom",
-    "CommandSourceStack.sendSystemMessage()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
     "MinecraftServer.overworld()",
-    "ServerPlayer.restoreFrom()",
     "Inventory.dropAll()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -22,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "individualkeepinv-1.0.0+26.3.jar",
     "published": "2026-11-12"
   },
@@ -50,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

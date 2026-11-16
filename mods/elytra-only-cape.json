@@ -10,25 +10,18 @@
   "description": "Only show your cape when wearing an elytra.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.options.SkinCustomizationScreen",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.world.entity.player.PlayerModelPart",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
     "Options.broadcastOptions()",
     "Options.isModelPartEnabled()",
-    "Options.setModelPart()",
-    "AbstractWidget.setTooltip()",
-    "ServerData.ip",
-    "ServerData.isRealm()"
+    "Options.setModelPart()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "elytra-only-cape-1.1.0+mc26.2.jar",
     "published": "2026-06-25"
   },
@@ -55,7 +48,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -21,10 +21,6 @@
     "com.mojang.math.Transformation",
     "net.fabricmc.loader.api.metadata.CustomValue",
     "net.fabricmc.loader.api.metadata.CustomValue.CvArray",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.font.AllMissingGlyphProvider",
     "net.minecraft.client.gui.font.CodepointMap",
     "net.minecraft.client.gui.font.CodepointMap.Output",
@@ -51,14 +47,18 @@
     "net.minecraft.client.renderer.texture.SpriteContents.FrameInfo",
     "net.minecraft.client.renderer.texture.Stitcher.SpriteLoader",
     "net.minecraft.client.renderer.texture.atlas.SpriteResourceLoader",
-    "and 67 more"
+    "net.minecraft.client.resources.SplashManager",
+    "net.minecraft.client.resources.model.BlockStateModelLoader",
+    "net.minecraft.client.resources.model.BlockStateModelLoader.LoadedModels",
+    "net.minecraft.client.resources.model.ModelManager.ReloadState",
+    "and 47 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dashloader-5.1.0-beta.9.8+26.3.jar",
     "published": "2026-10-04"
   },
@@ -78,7 +78,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 109,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 87,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

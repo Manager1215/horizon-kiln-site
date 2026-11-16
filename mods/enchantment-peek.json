@@ -11,22 +11,16 @@
   "needs": [
     "Mixin: 1 point inside the game's methods",
     "net.minecraft.client.gui.screens.inventory.EnchantmentScreen",
-    "net.minecraft.core.HolderSet.Named",
-    "net.minecraft.tags.EnchantmentTags",
     "net.minecraft.world.inventory.EnchantmentMenu",
     "net.minecraft.world.item.enchantment.EnchantmentInstance",
-    "Minecraft.execute()",
-    "Registry.get()",
-    "RegistryAccess.lookupOrThrow()",
-    "Enchantment.getFullname()",
     "EnchantmentHelper.selectEnchantment()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "enchant-peek-1.0.0+26.3.jar",
     "published": "2026-10-01"
   },
@@ -54,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; has network channels"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

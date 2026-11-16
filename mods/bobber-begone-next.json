@@ -10,19 +10,16 @@
   "description": "Fabric client mod that removes the bobber/fishing hook overlay when you get hooked by yourself/another player",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.renderer.entity.FishingHookRenderer",
     "net.minecraft.client.renderer.entity.state.FishingHookRenderState",
-    "net.minecraft.world.entity.projectile.FishingHook",
-    "Options.getCameraType()",
     "RenderTypes.entityTranslucent()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bobberbegone-26.3-2.0.1.jar",
     "published": "2026-09-22"
   },
@@ -50,7 +47,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

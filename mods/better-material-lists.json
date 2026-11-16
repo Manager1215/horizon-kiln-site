@@ -9,31 +9,20 @@
   "author": "Tomyto",
   "description": "Adds another way of managing your Litematica material lists!",
   "needs": [
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
     "net.minecraft.client.gui.components.SpriteIconButton",
     "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.world.level.block.ShulkerBoxBlock",
     "ImmutableList.isEmpty()",
-    "KeyMapping.matches()",
-    "Minecraft.gameDirectory",
-    "Button.setTooltip()",
-    "EditBox.setHint()",
     "LocalPlayer.closeContainer()",
     "DefaultedRegistry.iterator()",
-    "NonNullList.iterator()",
-    "ItemContainerContents.nonEmptyItems()"
+    "NonNullList.iterator()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tomys-lists-5.0.0.jar",
     "published": "2026-11-06"
   },
@@ -63,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

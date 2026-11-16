@@ -10,19 +10,11 @@
   "description": "Smoother Automobility handling, driving tunes, cruise control, and a compact speed HUD for Minecraft 26.x Fabric.",
   "needs": [
     "org.lwjgl.sdl.SDLScancode",
-    "InputConstants.isKeyDown()",
-    "Minecraft.execute()",
-    "Font.split()",
-    "GuiGraphicsExtractor.text()",
     "LocalPlayer.getVehicle()",
     "LocalPlayer.setXRot()",
     "LocalPlayer.setYRot()",
-    "CommandSourceStack.getServer()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "ByteBufCodecs.stringUtf8()",
     "SynchedEntityData.get()",
-    "MinecraftServer.execute()",
     "ServerPlayer.getVehicle()",
     "Entity.getControllingPassenger()",
     "Entity.getFirstPassenger()",
@@ -34,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "momentum-1.0.0-beta.2+26.3-fabric.jar",
     "published": "2026-10-04"
   },
@@ -66,7 +58,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

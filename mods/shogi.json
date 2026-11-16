@@ -11,19 +11,10 @@
   "needs": [
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.client.gui.components.MultilineTextField.StringView",
-    "net.minecraft.commands.arguments.IdentifierArgument",
-    "net.minecraft.network.chat.ComponentSerialization",
-    "Minecraft.schedule()",
-    "ClientPacketListener.registryAccess()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
+    "ComponentSerialization.STREAM_CODEC",
     "ByteBufCodecs.either()",
     "ByteBufCodecs.holderSet()",
-    "Identifier.isValidNamespace()",
-    "Identifier.isValidPath()",
-    "RegistryOps.create()",
     "ValueInput.TypedInputList.iterator()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -31,7 +22,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "shogi-fabric-26.3-26.3.0.3.jar",
     "published": "2026-09-26"
   },
@@ -60,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

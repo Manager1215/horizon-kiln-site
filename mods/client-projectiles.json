@@ -28,18 +28,14 @@
     "net.minecraft.world.item.SplashPotionItem",
     "net.minecraft.world.item.ThrowablePotionItem",
     "net.minecraft.world.item.WindChargeItem",
-    "net.minecraft.world.item.alchemy.Potion",
-    "net.minecraft.world.item.alchemy.PotionContents",
     "net.minecraft.world.item.component.ChargedProjectiles",
     "net.minecraft.world.phys.EntityHitResult",
-    "Minecraft.isSameThread()",
     "ClientLevel.addEntity()",
     "ClientLevel.clip()",
     "ClientLevel.getEntitiesOfClass()",
     "ClientLevel.removeEntity()",
     "ClientLevel.trackExplosionEffects()",
     "DataComponents.CHARGED_PROJECTILES",
-    "DataComponents.POTION_CONTENTS",
     "ClientboundAddEntityPacket.getMovement()",
     "ClientboundAddEntityPacket.getType()",
     "ClientboundAddEntityPacket.getUUID()",
@@ -50,14 +46,18 @@
     "ClientboundSoundEntityPacket.getSound()",
     "ClientboundSoundPacket.getSound()",
     "VecDeltaCodec.getBase()",
-    "and 30 more"
+    "SoundEvents.ENDER_PEARL_THROW",
+    "SoundEvents.EXPERIENCE_BOTTLE_THROW",
+    "SoundEvents.LINGERING_POTION_THROW",
+    "SoundEvents.SPLASH_POTION_THROW",
+    "and 23 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ClientProjectiles-1.1.1+26.3.jar",
     "published": "2026-10-10"
   },
@@ -86,7 +86,11 @@
     "minecraft",
     "walksylib"
   ],
-  "lacks": 70,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes"
+  },
+  "lacks": 63,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

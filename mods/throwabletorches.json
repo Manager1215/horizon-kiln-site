@@ -19,31 +19,17 @@
     "net.minecraft.world.level.block.WallTorchBlock",
     "ClientPacketListener.send()",
     "ServerPlayer.getEyeY()",
-    "ServerPlayer.getRandom()",
     "SoundEvents.SNOWBALL_THROW",
-    "LivingEntity.swing()",
     "ItemEntity.setDefaultPickUpDelay()",
-    "Items.REDSTONE_TORCH",
-    "Items.SOUL_TORCH",
-    "Items.TORCH",
-    "SwingAnimation.DEFAULT",
     "Level.addFreshEntity()",
-    "Blocks.REDSTONE_TORCH",
-    "Blocks.REDSTONE_WALL_TORCH",
-    "Blocks.SOUL_TORCH",
-    "Blocks.SOUL_WALL_TORCH",
-    "Blocks.TORCH",
-    "Blocks.WALL_TORCH",
-    "SoundType.getPlaceSound()",
-    "BlockState.canBeReplaced()",
-    "BlockState.getSoundType()"
+    "BlockState.canBeReplaced()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "throwabletorches-fabric-26.3-1.1.1.jar",
     "published": "2026-11-06"
   },
@@ -73,7 +59,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

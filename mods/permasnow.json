@@ -10,16 +10,14 @@
   "description": "Replace all rain with snow (client side)",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.renderer.WeatherEffectRenderer",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger"
+    "net.minecraft.client.renderer.WeatherEffectRenderer"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "permasnow-1.1.0+26.1-26.3.jar",
     "published": "2026-10-18"
   },
@@ -48,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

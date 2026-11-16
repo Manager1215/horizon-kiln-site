@@ -10,7 +10,6 @@
   "description": "Remove the sense of smell from Warden so that it can only locate by sound.",
   "needs": [
     "net.fabricmc.api.DedicatedServerModInitializer",
-    "net.minecraft.world.entity.Pose",
     "net.minecraft.world.entity.ai.Brain",
     "net.minecraft.world.entity.ai.behavior.warden.Sniffing",
     "net.minecraft.world.entity.ai.memory.MemoryModuleType",
@@ -22,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "realwarden-1.0.0-Fabric-1.19+.jar",
     "published": "2026-11-07"
   },
@@ -39,7 +38,11 @@
   "depends": [
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,34 +10,28 @@
   "description": "A Minecraft Fabric mod that automatically adds comprehensive metadata to your screenshots, making them easier to organize and search.",
   "needs": [
     "net.minecraft.client.Screenshot",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.world.level.LightLayer",
     "net.minecraft.world.level.lighting.LayerLightEventListener",
     "net.minecraft.world.level.storage.WorldData",
     "net.minecraft.world.phys.EntityHitResult",
-    "Minecraft.gameMode",
-    "Minecraft.getCurrentServer()",
     "Minecraft.getResourcePackRepository()",
-    "Minecraft.getSingleplayerServer()",
-    "Minecraft.hitResult",
     "Minecraft.isLocalServer()",
     "Options.simulationDistance()",
     "ClientLevel.getLightEngine()",
-    "ServerData.ip",
-    "ServerData.name",
+    "IntegratedServer.getWorldData()",
+    "IntegratedServer.overworld()",
     "ServerLevel.getSeed()",
     "Util.ioPool()",
     "Entity.getCustomName()",
     "Entity.hasCustomName()",
-    "LevelLightEngine.getLayerListener()",
-    "HitResult.getType()"
+    "LevelLightEngine.getLayerListener()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "screenshotmetadata-mc26.3-1.4.3.jar",
     "published": "2026-11-07"
   },
@@ -66,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

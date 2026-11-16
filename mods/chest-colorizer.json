@@ -16,7 +16,6 @@
     "net.minecraft.client.renderer.blockentity.state.ChestRenderState.ChestMaterialType",
     "net.minecraft.client.renderer.chunk.RenderSectionRegion",
     "net.minecraft.client.renderer.chunk.SectionCompiler",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.world.item.DyeItem",
     "net.minecraft.world.level.block.BarrelBlock",
     "net.minecraft.world.level.block.ChestBlock",
@@ -24,23 +23,17 @@
     "net.minecraft.world.level.block.state.properties.ChestType",
     "net.minecraft.world.level.storage.WorldData",
     "org.apache.commons.io.FileUtils",
-    "Minecraft.gameDirectory",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
-    "ServerData.ip",
     "Sheets.CHEST_SHEET",
+    "IntegratedServer.getWorldData()",
     "BlockPos.offset()",
-    "Direction.getUnitVec3i()",
-    "DataComponents.DYE",
-    "Items.PAPER",
-    "Blocks.BARREL"
+    "Direction.getUnitVec3i()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "chest-colorizer-2.1.0-26.3.jar",
     "published": "2026-10-05"
   },
@@ -67,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

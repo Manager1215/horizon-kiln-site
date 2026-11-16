@@ -9,25 +9,17 @@
   "author": "NyaShulker",
   "description": "A client-side mod that adds a keybinding to sort container inventories in the order of creative mode inventory tabs.",
   "needs": [
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.world.inventory.ChestMenu",
-    "net.minecraft.world.inventory.ContainerInput",
     "net.minecraft.world.inventory.ShulkerBoxMenu",
     "net.minecraft.world.item.BundleItem",
-    "KeyMapping.matches()",
-    "KeyMapping.matchesMouse()",
-    "Minecraft.execute()",
-    "Minecraft.gameMode",
+    "CreativeModeInventoryScreen.isInventoryOpen()",
     "Item.getId()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "easysort-1.0.1.jar",
     "published": "2026-09-26"
   },
@@ -55,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

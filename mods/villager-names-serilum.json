@@ -12,11 +12,9 @@
     "Mixin: 1 point inside the game's methods",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
     "net.minecraft.client.gui.screens.inventory.MerchantScreen",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.entity.npc.villager.Villager",
     "net.minecraft.world.entity.npc.villager.VillagerData",
     "net.minecraft.world.entity.npc.wanderingtrader.WanderingTrader",
-    "Holder.getRegisteredName()",
     "ServerLevel.getAllEntities()",
     "Entity.addTag()",
     "Entity.entityTags()",
@@ -30,7 +28,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "villagernames-26.3.0-9.0.jar",
     "published": "2026-11-08"
   },
@@ -60,7 +58,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

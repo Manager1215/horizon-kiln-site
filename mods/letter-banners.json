@@ -11,32 +11,18 @@
   "needs": [
     "net.minecraft.network.chat.ComponentUtils",
     "net.minecraft.server.ServerFunctionManager",
-    "net.minecraft.server.permissions.PermissionCheck",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "CommandSourceStack.withSuppressedOutput()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
-    "Commands.performPrefixedCommand()",
     "ClientboundClearDialogPacket.INSTANCE",
-    "MinecraftServer.getCommands()",
     "MinecraftServer.getFunctions()",
     "Dialog.DIRECT_CODEC",
-    "ServerPlayer.connection",
-    "ServerPlayer.createCommandSourceStack()",
     "ServerPlayer.openDialog()",
-    "ServerPlayer.permissions()",
-    "ServerPlayer.registryAccess()",
-    "ServerGamePacketListenerImpl.send()",
-    "DyeColor.byName()",
-    "DyeColor.getTextureDiffuseColor()"
+    "ServerPlayer.registryAccess()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "letter-banners-fabric-1.1.0.jar",
     "published": "2026-09-17"
   },
@@ -64,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

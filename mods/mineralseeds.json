@@ -10,18 +10,14 @@
   "description": "🌱Plant mineral seeds on farmland to harvest ores.",
   "needs": [
     "net.minecraft.world.inventory.ResultSlot",
-    "net.minecraft.world.item.crafting.display.ShapelessCraftingRecipeDisplay",
-    "net.minecraft.world.item.crafting.display.SlotDisplay.ItemSlotDisplay",
-    "CraftingInput.ingredientCount()",
-    "Ingredient.display()",
-    "Blocks.WHEAT"
+    "CraftingInput.ingredientCount()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mineralseeds-2.1.6+26.3.jar",
     "published": "2026-11-16"
   },
@@ -50,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 2,
   "development": {
     "status": "not-checked",
     "statusLabel": "Not checked",

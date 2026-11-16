@@ -10,42 +10,26 @@
   "description": "✦ Prism Mod Menu  Super Cool Animations ⚡",
   "needs": [
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
     "net.fabricmc.loader.api.metadata.ContactInformation",
     "net.fabricmc.loader.api.metadata.CustomValue",
     "net.fabricmc.loader.api.metadata.ModDependency",
     "net.fabricmc.loader.api.metadata.ModDependency.Kind",
     "net.fabricmc.loader.api.metadata.ModEnvironment",
     "net.fabricmc.loader.api.metadata.Person",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "JsonArray.forEach()",
-    "NativeImage.read()",
-    "FabricLoader.getEntrypointContainers()",
-    "ModContainer.findPath()",
     "ModMetadata.getAuthors()",
     "ModMetadata.getContact()",
     "ModMetadata.getCustomValue()",
     "ModMetadata.getDependencies()",
     "ModMetadata.getEnvironment()",
-    "ModMetadata.getIconPath()",
-    "ModMetadata.getLicense()",
-    "Font.plainSubstrByWidth()",
-    "AbstractWidget.getMessage()",
-    "Screen.charTyped()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()",
-    "KeyEvent.hasAltDown()",
-    "KeyEvent.hasShiftDown()",
-    "MutableComponent.setStyle()"
+    "ModMetadata.getLicense()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "prism-modmenu-4.0.0.jar",
     "published": "2026-11-09"
   },
@@ -73,7 +57,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 30,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

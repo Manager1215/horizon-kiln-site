@@ -11,24 +11,9 @@
   "needs": [
     "Mixin: 4 points inside the game's methods",
     "net.fabricmc.api.DedicatedServerModInitializer",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.network.protocol.game.ClientboundLevelChunkPacketData.BlockEntityInfo",
-    "net.minecraft.server.permissions.PermissionCheck",
     "net.minecraft.util.EncoderCache.2",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "CommandSourceStack.getServer()",
-    "CommandSourceStack.isPlayer()",
-    "CommandSourceStack.sendSystemMessage()",
-    "Commands.LEVEL_ADMINS",
-    "Commands.hasPermission()",
-    "MutableComponent.setStyle()",
-    "Style.withClickEvent()",
-    "Style.withUnderlined()",
     "MinecraftServer.isSingleplayerOwner()",
-    "ServerPlayer.nameAndId()",
-    "ServerPlayer.permissions()",
     "Util.anyOf()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -36,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "simpleupdatechecker-1.7.0+26.3-rc-1.jar",
     "published": "2026-09-11"
   },
@@ -65,7 +50,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; runs threads of its own; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

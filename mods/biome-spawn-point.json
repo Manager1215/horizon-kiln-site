@@ -9,20 +9,12 @@
   "author": "Serilum",
   "description": "🌲 Allows specifying which biome and dimension players will spawn in on new world creation.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.minecraft.commands.arguments.ResourceOrTagKeyArgument",
     "net.minecraft.commands.arguments.ResourceOrTagKeyArgument.Result",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.level.levelgen.WorldGenSettings",
     "net.minecraft.world.level.levelgen.WorldOptions",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "CommandSourceStack.getServer()",
     "SharedSuggestionProvider.suggestResource()",
     "SharedSuggestionProvider.suggestResource()",
-    "Holder.is()",
-    "Registry.get()",
-    "RegistryAccess.lookupOrThrow()",
-    "RegistryAccess.Frozen.lookupOrThrow()",
     "Registries.BIOME",
     "Registries.LEVEL_STEM",
     "MinecraftServer.getWorldGenSettings()",
@@ -43,7 +35,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "biomespawnpoint-26.3.0-4.1.jar",
     "published": "2026-11-07"
   },
@@ -73,7 +65,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,7 +10,6 @@
   "description": "Interactive bulk storage solution",
   "needs": [
     "an access widener",
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.blockgetter.v2.FabricBlockGetter",
     "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin",
     "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin.Context",
@@ -24,20 +23,13 @@
     "net.fabricmc.fabric.api.client.renderer.v1.model.FabricBlockStateModel",
     "net.fabricmc.fabric.api.client.rendering.v1.ClientTooltipComponentCallback",
     "net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents.Load",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
-    "net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner",
     "net.minecraft.client.renderer.block.dispatch.BlockStateModel.UnbakedRoot",
     "net.minecraft.client.resources.model.cuboid.CuboidModelElement",
     "net.minecraft.client.resources.model.cuboid.UnbakedCuboidGeometry",
-    "net.minecraft.core.HolderSet.Named",
-    "net.minecraft.network.chat.ComponentSerialization",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.EntitySelector",
     "net.minecraft.world.inventory.ClickAction",
     "net.minecraft.world.inventory.ContainerLevelAccess",
-    "net.minecraft.world.inventory.MenuType.MenuSupplier",
     "net.minecraft.world.item.ItemCooldowns",
     "net.minecraft.world.level.block.DoubleBlockCombiner",
     "net.minecraft.world.level.block.DoubleBlockCombiner.BlockType",
@@ -49,15 +41,23 @@
     "net.minecraft.world.ticks.LevelTickAccess",
     "net.minecraft.world.ticks.LevelTicks",
     "org.apache.commons.io.IOUtils",
-    "org.apache.logging.log4j.LogManager",
-    "and 61 more"
+    "PoseStack.last()",
+    "PoseStack.mulPose()",
+    "PoseStack.Pose.normal()",
+    "PoseStack.Pose.pose()",
+    "PoseStack.Pose.trustedNormals",
+    "VertexConsumer.addVertex()",
+    "VertexConsumer.setColor()",
+    "VertexConsumer.setLight()",
+    "VertexConsumer.setNormal()",
+    "and 51 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "StorageDrawers-fabric-26.3.0.1.jar",
     "published": "2026-09-29"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 174,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 121,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -12,15 +12,9 @@
     "an access widener",
     "Mixin: 3 points inside the game's methods",
     "com.mojang.renderpearl.frontend.shaders.PipelineBuilder",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
     "net.minecraft.client.gui.screens.packs.PackSelectionScreen.Watcher",
     "net.minecraft.client.resources.language.ClientLanguage",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.commands.arguments.IdentifierArgument",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.server.packs.FilePackResources",
     "net.minecraft.server.packs.FilePackResources.SharedZipFileAccess",
     "net.minecraft.server.packs.FixedPathPackResources",
@@ -36,13 +30,11 @@
     "net.minecraft.world.level.WorldDataConfiguration",
     "net.minecraft.world.level.storage.WorldData",
     "org.apache.commons.io.IOUtils",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "Minecraft.getSingleplayerServer()",
     "Minecraft.reloadResourcePacks()",
     "Options.resourcePacks",
+    "IntegratedServer.getPackRepository()",
+    "IntegratedServer.reloadResources()",
     "Language.loadFromJson()",
-    "MutableComponent.withStyle()",
-    "Style.withHoverEvent()",
     "MinecraftServer.getPackRepository()",
     "MinecraftServer.getWorldData()",
     "MinecraftServer.reloadResources()",
@@ -57,7 +49,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "respackopts-26.3.0.jar",
     "published": "2026-09-15"
   },
@@ -95,7 +87,11 @@
     "libjf-data-manipulation-v0",
     "minecraft"
   ],
-  "lacks": 40,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 32,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -12,8 +12,6 @@
     "net.minecraft.world.entity.NeutralMob",
     "net.minecraft.world.entity.ai.navigation.PathNavigation",
     "net.minecraft.world.entity.monster.Enemy",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "MinecraftServer.getAllLevels()",
     "ServerLevel.getAllEntities()",
     "DamageSources.mobAttack()",
@@ -26,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mobsseeyou-1.0.0.jar",
     "published": "2026-09-30"
   },
@@ -54,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

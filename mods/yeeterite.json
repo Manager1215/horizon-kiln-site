@@ -13,19 +13,17 @@
     "Mixin: 2 points inside the game's methods",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
-    "net.minecraft.world.inventory.AnvilMenu",
     "net.minecraft.world.inventory.DataSlot",
     "net.minecraft.world.inventory.ItemCombinerMenu",
     "net.minecraft.world.inventory.ResultContainer",
     "net.minecraft.world.item.SmithingTemplateItem",
     "net.minecraft.world.level.storage.loot.entries.EmptyLootItem",
     "net.minecraft.world.level.storage.loot.predicates.LootItemKilledByPlayerCondition",
-    "DataComponents.CUSTOM_NAME",
     "DataComponents.MAX_DAMAGE",
     "BlockTags.INCORRECT_FOR_NETHERITE_TOOL",
     "Player.gameMode()",
     "Player.getDestroySpeed()",
-    "Items.BEDROCK",
+    "AnvilMenu.createInputSlotDefinitions()",
     "BlockGetter.getMinY()",
     "SoundType.AMETHYST",
     "MapColor.GOLD",
@@ -36,7 +34,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Yeeterite-4.1.2-1.26.3.jar",
     "published": "2026-09-22"
   },
@@ -65,7 +63,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

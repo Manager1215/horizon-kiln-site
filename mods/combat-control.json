@@ -10,13 +10,10 @@
   "description": "Bring back classic combat from 1.8.9 and earlier. Remove the attack cooldown, re-introduce sword blocking and more!",
   "needs": [
     "Mixin: 122 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.minecraft.client.AttackIndicatorStatus",
     "net.minecraft.client.model.ArmedModel",
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.model.HumanoidModel.ArmPose",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.player.FirstPersonHandsAndItems",
     "net.minecraft.client.renderer.entity.layers.ItemInHandLayer",
     "net.minecraft.client.renderer.entity.layers.RenderLayer",
@@ -25,8 +22,6 @@
     "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
     "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState",
     "net.minecraft.client.renderer.state.level.PlayerRenderState",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.commands.arguments.IdentifierArgument",
     "net.minecraft.server.PlayerAdvancements",
     "net.minecraft.server.dedicated.DedicatedServer",
     "net.minecraft.server.level.ServerPlayerGameMode",
@@ -50,14 +45,19 @@
     "net.minecraft.world.entity.decoration.HangingEntity",
     "net.minecraft.world.entity.decoration.ItemFrame",
     "net.minecraft.world.entity.decoration.LeashFenceKnotEntity",
-    "and 80 more"
+    "net.minecraft.world.entity.monster.Enderman",
+    "net.minecraft.world.entity.monster.Shulker",
+    "net.minecraft.world.entity.monster.hoglin.Hoglin",
+    "net.minecraft.world.entity.monster.piglin.AbstractPiglin",
+    "net.minecraft.world.entity.monster.warden.Warden",
+    "and 75 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "combat-control-1.14.0+26.3.jar",
     "published": "2026-09-15"
   },
@@ -94,7 +94,11 @@
     "kibu-scheduler-api",
     "minecraft"
   ],
-  "lacks": 177,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; @modify-arg Kiln doesn't guard; runs threads of its own; has network channels"
+  },
+  "lacks": 140,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

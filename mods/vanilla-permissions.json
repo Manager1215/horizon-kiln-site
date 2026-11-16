@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 36 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.networking.v1.LoginPacketSender",
     "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents",
     "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents.QueryStart",
@@ -20,8 +19,6 @@
     "net.fabricmc.fabric.api.util.TriState",
     "net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen",
     "net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen.GameModeIcon",
-    "net.minecraft.commands.arguments.GameProfileArgument",
-    "net.minecraft.commands.arguments.ScoreHolderArgument",
     "net.minecraft.commands.arguments.WaypointArgument",
     "net.minecraft.commands.arguments.selector.EntitySelectorParser",
     "net.minecraft.network.protocol.game.ServerboundChangeGameModePacket",
@@ -32,7 +29,6 @@
     "net.minecraft.server.dedicated.DedicatedServer",
     "net.minecraft.server.level.ServerPlayerGameMode",
     "net.minecraft.server.network.ServerLoginPacketListenerImpl",
-    "net.minecraft.server.permissions.LevelBasedPermissionSet",
     "net.minecraft.util.debug.ServerDebugSubscribers",
     "net.minecraft.world.entity.vehicle.minecart.MinecartCommandBlock",
     "net.minecraft.world.item.DebugStickItem",
@@ -40,25 +36,18 @@
     "net.minecraft.world.level.block.CommandBlock",
     "net.minecraft.world.level.block.JigsawBlock",
     "net.minecraft.world.level.block.entity.StructureBlockEntity",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "CommandSource.NULL",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "CommandSourceStack.withPermission()",
-    "CommandSourceStack.withSource()",
-    "CommandSourceStack.withSuppressedOutput()",
-    "Commands.getDispatcher()",
-    "Commands.getParseException()",
-    "EntityArgument.ERROR_SELECTORS_NOT_ALLOWED",
-    "and 17 more"
+    "ServerPlayer.commandSource()",
+    "ServerPlayer.getGameProfile()",
+    "ServerPlayer.getRootVehicle()",
+    "Player.<init>()",
+    "Player.getGameProfile()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "vanilla-permissions-0.3.6+26.1.2.jar",
     "published": "2026-05-18"
   },
@@ -85,7 +74,11 @@
     "fabric-permissions-api-v0",
     "fabricloader"
   ],
-  "lacks": 57,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect and @wrap-operation into the game's classes"
+  },
+  "lacks": 30,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

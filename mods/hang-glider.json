@@ -10,7 +10,6 @@
   "description": "Soar through the skies and explore the world's beauty with your brand-new hang glider!",
   "needs": [
     "an access widener",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.model.EntityModel",
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.model.HumanoidModel.ArmPose",
@@ -28,10 +27,7 @@
     "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperty",
     "net.minecraft.client.renderer.state.level.PlayerRenderState",
     "net.minecraft.world.entity.EntityTypeIds",
-    "net.minecraft.world.entity.Pose",
     "net.minecraft.world.entity.WalkAnimationState",
-    "Options.getCameraType()",
-    "Options.setCameraType()",
     "GuiGraphicsExtractor.getSprite()",
     "ModelPart.getChild()",
     "LayerDefinition.create()",
@@ -42,22 +38,26 @@
     "RenderTypes.armorCutoutNoCullGlint()",
     "TextureAtlas.LOCATION_ITEMS",
     "DataComponents.GLIDER",
-    "Identifier.withPath()",
-    "ServerPlayer.connection",
     "ServerGamePacketListenerImpl.aboveGroundTickCount",
     "ServerGamePacketListenerImpl.aboveGroundVehicleTickCount",
     "Mth.rotLerp()",
     "LivingEntity.<init>()",
     "Player.fallDistance",
-    "Player.getRandom()",
-    "and 12 more"
+    "Player.getViewVector()",
+    "Player.isDescending()",
+    "Player.isPassenger()",
+    "Player.setDeltaMovement()",
+    "Player.setYRot()",
+    "Player.walkAnimation",
+    "Player.yHeadRot",
+    "and 4 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hangglider-v26.3.0-mc26.3.x+fabric.jar",
     "published": "2026-09-26"
   },
@@ -87,7 +87,11 @@
     "minecraft",
     "puzzleslib"
   ],
-  "lacks": 52,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 44,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

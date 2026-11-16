@@ -11,33 +11,21 @@
   "needs": [
     "Mixin: 2 points inside the game's methods",
     "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.state.gui.GuiItemRenderState",
-    "net.minecraft.commands.arguments.coordinates.Coordinates",
     "net.minecraft.commands.arguments.coordinates.Vec2Argument",
-    "net.minecraft.commands.arguments.coordinates.Vec3Argument",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.world.item.CompassItem",
     "net.minecraft.world.item.component.LodestoneTracker",
     "FabricClientCommandSource.getRotation()",
-    "Minecraft.gameMode",
     "GuiGraphicsExtractor.item()",
     "NonNullList.iterator()",
-    "DataComponents.LODESTONE_TRACKER",
-    "MutableComponent.setStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "PermissionSet.ALL_PERMISSIONS",
-    "Items.COMPASS"
+    "DataComponents.LODESTONE_TRACKER"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "EasyNavigator+26.3-1.7.0.jar",
     "published": "2026-09-18"
   },
@@ -66,7 +54,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

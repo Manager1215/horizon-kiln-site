@@ -9,16 +9,14 @@
   "author": "RayStormThunder",
   "description": "This is a simple mod that randomizes the text of the MOTD (Message of the Day) on the serverlist",
   "needs": [
-    "net.fabricmc.api.DedicatedServerModInitializer",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "ServerLifecycleEvents.SERVER_STARTING"
+    "net.fabricmc.api.DedicatedServerModInitializer"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "random-motd-1.0.3-26.1+.jar",
     "published": "2026-03-26"
   },
@@ -38,7 +36,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

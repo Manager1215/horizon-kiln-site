@@ -23,12 +23,9 @@
     "io.netty.channel.epoll.EpollSocketChannel",
     "io.netty.channel.nio.NioEventLoopGroup",
     "io.netty.channel.socket.nio.NioSocketChannel",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.Screenshot",
     "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
     "net.minecraft.client.gui.components.OptionsList",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.gui.screens.options.OptionsSubScreen",
     "net.minecraft.client.gui.screens.options.SkinCustomizationScreen",
     "net.minecraft.client.model.geom.PartPose",
@@ -43,20 +40,23 @@
     "net.minecraft.client.renderer.entity.player.AvatarRenderer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
-    "net.minecraft.server.packs.resources.ReloadableResourceManager",
-    "net.minecraft.world.entity.Pose",
     "net.minecraft.world.entity.player.PlayerSkin.Patch",
     "org.apache.commons.io.FileUtils",
     "org.apache.commons.io.IOUtils",
-    "org.apache.logging.log4j.LogManager",
-    "and 66 more"
+    "org.apache.logging.log4j.core.LoggerContext",
+    "org.apache.logging.log4j.core.config.Configuration",
+    "org.apache.logging.log4j.core.lookup.Interpolator",
+    "org.apache.logging.log4j.core.lookup.StrSubstitutor",
+    "org.lwjgl.opengl.GL11",
+    "NativeImage.writeToFile()",
+    "and 46 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "MoreCosmetics-Fabric-26.3.jar",
     "published": "2026-09-24"
   },
@@ -84,7 +84,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 116,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 86,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

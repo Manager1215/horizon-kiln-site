@@ -11,19 +11,10 @@
   "needs": [
     "net.minecraft.client.renderer.entity.ArmorStandRenderer",
     "net.minecraft.client.renderer.entity.MobRenderer",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.world.entity.Display",
     "net.minecraft.world.entity.Display.TextDisplay",
     "net.minecraft.world.entity.decoration.ArmorStand",
-    "Hud.getMobEffectSprite()",
     "ClientPacketListener.getCommands()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "Style.withUnderlined()",
     "SoundEvents.ANVIL_BREAK",
     "SoundEvents.BEACON_DEACTIVATE"
   ],
@@ -32,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hologram-hider-fabric-26.3-1.4.8.jar",
     "published": "2026-10-26"
   },
@@ -60,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

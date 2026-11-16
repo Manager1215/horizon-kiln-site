@@ -9,32 +9,16 @@
   "author": "tomalbrc",
   "description": "Potion and dye support for Cauldrons! Serverside through polymer. Requires a resource-pack",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "net.minecraft.world.item.alchemy.Potions",
     "net.minecraft.world.item.component.DyedItemColor",
     "net.minecraft.world.level.chunk.storage.SerializableChunkData",
     "net.minecraft.world.level.gameevent.GameEvent.Context",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "DataComponents.DYE",
     "DataComponents.DYED_COLOR",
-    "DataComponents.ITEM_MODEL",
-    "DataComponents.POTION_CONTENTS",
     "ParticleTypes.ENTITY_EFFECT",
     "ServerLevel.sendParticles()",
     "SoundEvents.BOTTLE_EMPTY",
     "SoundEvents.POINTED_DRIPSTONE_DRIP_WATER_INTO_CAULDRON",
-    "DyeColor.getTextureDiffuseColor()",
     "Item.BY_BLOCK",
     "ItemStack.consume()",
-    "Items.ARROW",
-    "Items.GLASS_BOTTLE",
-    "Items.LINGERING_POTION",
-    "Items.PAPER",
-    "Items.POTION",
-    "Items.SPLASH_POTION",
-    "Items.TIPPED_ARROW",
     "Level.gameEvent()",
     "BlockBehaviour.Properties.ofLegacyCopy()",
     "GameEvent.BLOCK_CHANGE"
@@ -44,7 +28,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bedrock-cauldrons-1.1.1+26.3.jar",
     "published": "2026-10-14"
   },
@@ -72,7 +56,11 @@
     "minecraft",
     "polymer-core"
   ],
-  "lacks": 29,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,16 +9,11 @@
   "author": "Muffin_Master",
   "description": "Hurt one member of the herd and watch the whole flock lose it – now with Farm Fear™ panic intensity. Server-side Fabric mod. Now supports Minecraft 26.3.",
   "needs": [
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.entity.ai.goal.PanicGoal",
     "net.minecraft.world.entity.ai.navigation.PathNavigation",
-    "DefaultedRegistry.wrapAsHolder()",
-    "Holder.is()",
     "MinecraftServer.getAllLevels()",
     "ServerLevel.getEntitiesOfClass()",
     "ServerLevel.getEntity()",
-    "DamageSource.getDirectEntity()",
-    "DamageSource.getEntity()",
     "PathfinderMob.distanceToSqr()",
     "PathfinderMob.getNavigation()",
     "PathfinderMob.setLastHurtByMob()"
@@ -28,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mc-herd-hysteria-1.1.1+26.3.jar",
     "published": "2026-09-20"
   },
@@ -59,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

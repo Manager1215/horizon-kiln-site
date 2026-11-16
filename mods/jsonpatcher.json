@@ -11,9 +11,7 @@
   "needs": [
     "an access widener",
     "Mixin: 4 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.resource.v1.pack.ModPackResources",
-    "net.minecraft.SharedConstants",
     "net.minecraft.resources.RegistryDataLoader",
     "net.minecraft.resources.RegistryDataLoader.RegistryData",
     "net.minecraft.server.packs.AbstractPackMetadataResources",
@@ -33,8 +31,6 @@
     "net.minecraft.server.packs.repository.ServerPacksSource",
     "net.minecraft.server.packs.resources.MultiPackResourceManager",
     "net.minecraft.server.packs.resources.ResourceMetadata",
-    "org.apache.logging.log4j.Level",
-    "org.apache.logging.log4j.LogManager",
     "org.apache.logging.log4j.core.Logger",
     "org.apache.logging.log4j.core.LoggerContext",
     "org.apache.logging.log4j.core.appender.AbstractAppender",
@@ -44,21 +40,18 @@
     "org.apache.logging.log4j.core.config.Configuration",
     "org.apache.logging.log4j.core.layout.PatternLayout",
     "org.apache.logging.log4j.core.layout.PatternLayout.Builder",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "ModContainer.findPath()",
+    "SharedConstants.getCurrentVersion()",
     "FileToIdConverter.fileToId()",
     "FileToIdConverter.listMatchingResources()",
-    "Identifier.tryBuild()",
-    "Identifier.withPath()",
-    "ServerPlayer.nameAndId()",
-    "and 3 more"
+    "PackType.getDirectory()",
+    "GsonHelper.convertToJsonObject()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "JsonPatcher-2.0.0-beta.9+mc.26.3.jar",
     "published": "2026-11-14"
   },
@@ -86,7 +79,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 43,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 34,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,7 +10,6 @@
   "description": "Restore the old spear lunge animation.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.effect.MobEffectUtil",
     "net.minecraft.world.entity.LivingEntity.SwingDescription",
     "net.minecraft.world.entity.LivingEntity.SwingState",
@@ -21,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "stab-animation-restorer-1.0.0.jar",
     "published": "2026-11-10"
   },
@@ -37,7 +36,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

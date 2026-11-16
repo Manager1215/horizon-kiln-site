@@ -12,8 +12,6 @@
     "Mixin: 6 points inside the game's methods",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
@@ -35,9 +33,6 @@
     "net.minecraft.client.particle.SpriteSet",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.resources.RegistryLoadTask.PendingRegistration",
-    "net.minecraft.server.packs.resources.PreparableReloadListener.StateKey",
-    "net.minecraft.stats.ServerStatsCounter",
-    "net.minecraft.stats.StatsCounter",
     "net.minecraft.util.StrictJsonParser",
     "net.minecraft.world.level.block.AttachedStemBlock",
     "net.minecraft.world.level.block.entity.DecoratedPotBlockEntity",
@@ -48,16 +43,21 @@
     "net.minecraft.world.level.block.entity.vault.VaultBlockEntity",
     "net.minecraft.world.level.block.entity.vault.VaultBlockEntity.Server",
     "RenderPipeline.builder()",
-    "AttachmentRegistry.create()",
-    "GuiGraphicsExtractor.blitSprite()",
-    "and 33 more"
+    "ClientLevel.getPlayerByUUID()",
+    "RenderPipelines.GUI_TEXTURED_SNIPPET",
+    "RenderPipelines.register()",
+    "BuiltInRegistries.CUSTOM_STAT",
+    "BuiltInRegistries.STAT_TYPE",
+    "ClientboundTakeItemEntityPacket.getItemId()",
+    "ClientboundTakeItemEntityPacket.getPlayerId()",
+    "and 12 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "wellearnedxp-1.1.1-26.3.jar",
     "published": "2026-10-10"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 73,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 52,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

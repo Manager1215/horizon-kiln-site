@@ -9,31 +9,14 @@
   "author": "shimik",
   "description": "Minecraft mod that add a command to change entities motion (including the player)",
   "needs": [
-    "net.minecraft.commands.arguments.coordinates.Coordinates",
-    "net.minecraft.commands.arguments.coordinates.Vec3Argument",
-    "CommandSourceStack.getRotation()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
-    "EntityArgument.entities()",
-    "EntityArgument.entity()",
-    "EntityArgument.getEntities()",
-    "EntityArgument.getEntity()",
-    "ServerPlayer.connection",
-    "ServerGamePacketListenerImpl.send()",
-    "Entity.addDeltaMovement()",
-    "Entity.getDisplayName()",
-    "Entity.setDeltaMovement()",
-    "Entity.syncVelocity",
-    "LivingEntity.applyPostImpulseGraceTime()",
-    "Vec2.x",
-    "Vec2.y"
+    "Entity.setDeltaMovement()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "launch-command-r1.4-26.3[fabric].jar",
     "published": "2026-09-18"
   },
@@ -61,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

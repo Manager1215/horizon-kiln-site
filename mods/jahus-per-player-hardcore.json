@@ -11,22 +11,10 @@
   "needs": [
     "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
     "net.minecraft.server.level.ServerPlayer.RespawnConfig",
-    "AttachmentRegistry.createPersistent()",
-    "CommandSourceStack.getServer()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
-    "MinecraftServer.execute()",
     "MinecraftServer.overworld()",
     "ServerLevel.getRespawnData()",
-    "ServerPlayer.getAttached()",
-    "ServerPlayer.hasAttached()",
     "ServerPlayer.hasDisconnected()",
     "ServerPlayer.isAlive()",
-    "ServerPlayer.removeAttached()",
-    "ServerPlayer.setAttached()",
-    "ServerPlayer.setGameMode()",
     "ServerPlayer.setRespawnPosition()",
     "ServerPlayer.teleportTo()",
     "LevelData.RespawnData.of()",
@@ -37,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "perplayerhardcore-1.0.0.jar",
     "published": "2026-10-17"
   },
@@ -65,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

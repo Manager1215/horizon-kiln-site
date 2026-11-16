@@ -10,31 +10,16 @@
   "description": "Simple, but configurable nicknaming mod allowing your server's players (and admins) to change their nickname with full formatting support",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.util.TriState",
     "net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint",
     "net.minecraft.util.filefix.fixes.PlayerStorageFileFix",
     "net.minecraft.world.scores.PlayerTeam",
     "net.minecraft.world.scores.TeamColor",
     "org.apache.commons.io.IOUtils",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STARTING",
     "CommandSourceStack.checkPermission()",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
     "ByteTag.TYPE",
     "StringTag.TYPE",
     "Identifier.toShortLanguageKey()",
-    "MinecraftServer.isSameThread()",
-    "ServerPlayer.connection",
-    "ServerPlayer.createCommandSourceStack()",
-    "ServerPlayer.getDisplayName()",
     "ServerPlayer.getGameProfile()",
     "PlayerList.broadcastAll()",
     "LivingEntity.<init>()",
@@ -47,7 +32,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "styled-nicknames-1.14.0+26.3.jar",
     "published": "2026-09-11"
   },
@@ -74,7 +59,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 31,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

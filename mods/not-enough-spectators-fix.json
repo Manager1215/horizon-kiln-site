@@ -34,9 +34,7 @@
     "io.netty.handler.flow.FlowControlHandler",
     "io.netty.handler.timeout.ReadTimeoutHandler",
     "io.netty.handler.timeout.TimeoutException",
-    "net.minecraft.SharedConstants",
     "net.minecraft.core.UUIDUtil",
-    "net.minecraft.core.component.DataComponentPatch.Builder",
     "net.minecraft.core.particles.BlockParticleOption",
     "net.minecraft.network.CompressionDecoder",
     "net.minecraft.network.HiddenByteBuf",
@@ -50,14 +48,16 @@
     "net.minecraft.network.UnconfiguredPipelineHandler.InboundConfigurationTask",
     "net.minecraft.network.UnconfiguredPipelineHandler.Outbound",
     "net.minecraft.network.UnconfiguredPipelineHandler.OutboundConfigurationTask",
-    "and 59 more"
+    "net.minecraft.network.VarInt",
+    "net.minecraft.network.Varint21FrameDecoder",
+    "and 49 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "not-enough-spectators-1.4-26.3.jar",
     "published": "2026-09-24"
   },
@@ -89,7 +89,11 @@
     "minecraft",
     "modmenu"
   ],
-  "lacks": 121,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 106,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

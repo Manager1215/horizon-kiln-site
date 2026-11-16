@@ -26,12 +26,8 @@
     "com.mojang.renderpearl.backend.vulkan.VulkanDevice",
     "com.mojang.renderpearl.backend.vulkan.VulkanGpuBuffer",
     "com.mojang.renderpearl.frontend.FrontendGpuDevice",
-    "net.minecraft.CrashReport",
-    "net.minecraft.CrashReportCategory",
-    "net.minecraft.ReportedException",
     "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
     "net.minecraft.client.gui.components.MultiLineTextWidget",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.gui.layouts.FrameLayout",
     "net.minecraft.client.gui.layouts.GridLayout",
     "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
@@ -51,14 +47,18 @@
     "net.minecraft.client.particle.ItemPickupParticleGroup",
     "net.minecraft.client.particle.Particle",
     "net.minecraft.client.particle.Particle.LifetimeAlpha",
-    "and 75 more"
+    "net.minecraft.client.particle.ParticleEngine",
+    "net.minecraft.client.particle.ParticleGroup",
+    "net.minecraft.client.particle.ParticleRenderType",
+    "net.minecraft.client.particle.QuadParticleGroup",
+    "and 65 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "AsyncParticles-26.3.2.1+26.3.jar",
     "published": "2026-10-18"
   },
@@ -87,7 +87,11 @@
     "mixinextras",
     "mixinsquared"
   ],
-  "lacks": 185,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect and @wrap-method and @wrap-operation into the game's classes"
+  },
+  "lacks": 165,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,26 +9,13 @@
   "author": "BlueColored",
   "description": "A Minecraft mapping tool that creates 3D models of your Minecraft worlds and displays them in a web viewer.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "net.minecraft.SharedConstants",
-    "net.minecraft.network.chat.ComponentSerialization",
     "net.minecraft.server.level.ServerPlayerGameMode",
     "net.minecraft.world.level.LightLayer",
     "net.minecraft.world.level.lighting.LayerLightEventListener",
-    "net.minecraft.world.level.storage.LevelResource",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "CommandSourceStack.getPosition()",
-    "CommandSourceStack.getTextName()",
-    "CommandSourceStack.isPlayer()",
-    "CommandSourceStack.sendSystemMessage()",
+    "SharedConstants.getCurrentVersion()",
     "DefaultedRegistry.iterator()",
     "MinecraftServer.getAllLevels()",
     "MinecraftServer.getServerDirectory()",
-    "MinecraftServer.getWorldPath()",
     "ServerLevel.getLightEngine()",
     "ServerLevel.save()",
     "ServerPlayer.gameMode",
@@ -36,12 +23,12 @@
     "Property.Value.valueName()",
     "LevelLightEngine.getLayerListener()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bluemap-5.29-fabric.jar",
     "published": "2026-10-10"
   },
@@ -69,7 +56,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 26,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

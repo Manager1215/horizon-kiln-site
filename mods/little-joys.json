@@ -27,7 +27,6 @@
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.server.PlayerAdvancements",
     "net.minecraft.server.ServerAdvancementManager",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.tags.DamageTypeTags",
     "net.minecraft.util.ByIdMap",
     "net.minecraft.util.ByIdMap.OutOfBoundsStrategy",
@@ -39,7 +38,6 @@
     "net.minecraft.world.entity.ai.village.poi.PoiManager.Occupancy",
     "net.minecraft.world.entity.ai.village.poi.PoiType",
     "net.minecraft.world.entity.animal.wolf.Wolf",
-    "net.minecraft.world.entity.projectile.FishingHook",
     "net.minecraft.world.food.FoodProperties",
     "net.minecraft.world.level.block.LightBlock",
     "AdvancementProgress.getRemainingCriteria()",
@@ -47,17 +45,19 @@
     "ItemModelResolver.updateForNonLiving()",
     "ItemStackRenderState.getModelBoundingBox()",
     "ItemStackRenderState.isEmpty()",
-    "SoundManager.stop()",
-    "CommandSourceStack.getPlayerOrException()",
-    "EntityArgument.getPlayer()",
-    "and 52 more"
+    "Registry.getRandom()",
+    "Registry.iterator()",
+    "ParticleTypes.INSTANT_EFFECT",
+    "Registries.MOB_EFFECT",
+    "Registries.POINT_OF_INTEREST_TYPE",
+    "and 50 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "littlejoys-fabric-26.3-26.3.0.2.jar",
     "published": "2026-11-02"
   },
@@ -89,7 +89,11 @@
     "minecraft",
     "shogi"
   ],
-  "lacks": 129,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 106,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

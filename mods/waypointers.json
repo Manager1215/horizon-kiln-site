@@ -10,37 +10,21 @@
   "description": "Save coordinates without leaving the game",
   "needs": [
     "an access widener",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
     "net.minecraft.client.gui.layouts.LayoutSettings",
     "net.minecraft.client.gui.layouts.LinearLayout",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.commands.arguments.coordinates.WorldCoordinate",
-    "net.minecraft.commands.arguments.coordinates.WorldCoordinates",
     "net.minecraft.util.CommonColors",
-    "net.minecraft.world.level.storage.LevelResource",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
     "Minecraft.isLocalServer()",
-    "Button.setSize()",
-    "EditBox.insertText()",
-    "EditBox.setPosition()",
-    "EditBox.setSize()",
-    "EditBox.setTextColor()",
-    "KeyEvent.isConfirmation()",
-    "ServerData.ip",
+    "EditBox.<init>()",
     "Vec3i.ZERO",
-    "Vec3i.toShortString()",
-    "CommonComponents.GUI_BACK"
+    "Vec3i.toShortString()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "waypointers-fabric-0.4.1+26.3.jar",
     "published": "2026-11-16"
   },
@@ -66,5 +50,9 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 24
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8
 }

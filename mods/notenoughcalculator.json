@@ -9,35 +9,15 @@
   "author": "Rijz",
   "description": "A NEU-style calculator that works standalone or inside Roughly Enough Items (REI) & Skyblock Item List search bars!",
   "needs": [
-    "com.mojang.blaze3d.platform.TextInputManager",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AllowCharType",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AllowKeyPress",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AfterMouseRelease",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseClick",
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "InputConstants.isKeyDown()",
-    "Minecraft.execute()",
-    "Minecraft.onTextInputFocusChange()",
-    "Minecraft.textInputManager()",
-    "Font.plainSubstrByWidth()",
-    "Button.Builder.tooltip()",
-    "EditBox.setHint()",
-    "Screen.clearFocus()",
-    "MutableComponent.setStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()"
+    "TextInputManager.setTextInputArea()",
+    "Minecraft.onTextInputFocusChange()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "notenoughcalculator-3.1.1.jar",
     "published": "2026-11-09"
   },
@@ -67,7 +47,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

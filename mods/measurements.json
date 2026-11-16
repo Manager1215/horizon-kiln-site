@@ -11,21 +11,16 @@
   "needs": [
     "Mixin: 1 point inside the game's methods",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.AfterTranslucentTerrain",
-    "net.minecraft.gizmos.GizmoStyle",
     "PoseStack.last()",
     "PoseStack.Pose.pose()",
     "LevelRenderEvents.AFTER_TRANSLUCENT_TERRAIN",
     "Camera.rotation()",
-    "Minecraft.hitResult",
     "GameRenderer.mainCamera()",
     "Frustum.prepare()",
     "CameraRenderState.viewRotationMatrix",
     "Gizmos.cuboid()",
-    "Component.getVisualOrderText()",
     "ARGB.colorFromFloat()",
     "Player.isHolding()",
-    "DyeColor.getTextColor()",
-    "DyeColor.getTextureDiffuseColor()",
     "AABB.distanceToSqr()",
     "AABB.getCenter()",
     "AABB.getMaxPosition()",
@@ -39,15 +34,14 @@
     "AABB.maxZ",
     "AABB.minX",
     "AABB.minY",
-    "AABB.minZ",
-    "HitResult.getType()"
+    "AABB.minZ"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Measurements-fabric-26.3-6.0.0.jar",
     "published": "2026-09-17"
   },
@@ -79,7 +73,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 31,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 25,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

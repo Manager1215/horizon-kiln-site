@@ -11,13 +11,8 @@
   "needs": [
     "an access widener",
     "net.minecraft.client.Screenshot",
-    "NativeImage.getHeight()",
-    "NativeImage.getPixel()",
-    "NativeImage.getWidth()",
     "Camera.leftVector()",
     "Camera.yRot()",
-    "Minecraft.execute()",
-    "Minecraft.gameDirectory",
     "GameRenderer.extract()",
     "Entity.setPos()",
     "Entity.setXRot()",
@@ -28,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sbsshot-fabric-26.3-1.0.7.jar",
     "published": "2026-09-20"
   },
@@ -57,7 +52,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

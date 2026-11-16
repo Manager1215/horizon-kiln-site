@@ -10,7 +10,6 @@
   "description": "Adds Terraria-inspired explosives as weapon and useful tool.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.minecraft.client.renderer.entity.ThrownItemRenderer",
     "net.minecraft.world.entity.projectile.Projectile.ProjectileFactory",
     "net.minecraft.world.entity.projectile.ProjectileUtil",
@@ -22,7 +21,6 @@
     "net.minecraft.world.level.storage.loot.providers.number.ints.ConstantValue",
     "net.minecraft.world.level.storage.loot.providers.number.ints.UniformGenerator",
     "net.minecraft.world.phys.EntityHitResult",
-    "ServerLifecycleEvents.SERVER_STARTED",
     "Entity.collideBoundingBox()",
     "Entity.distanceToSqr()",
     "LivingEntity.getEyeY()",
@@ -32,7 +30,6 @@
     "Explosion.getDefaultDamageSource()",
     "Level.clip()",
     "Level.explode()",
-    "Level.getWorldBorder()",
     "DispenserBlock.registerProjectileBehavior()",
     "BlockState.getCollisionShape()",
     "WorldBorder.getCollisionShape()",
@@ -53,7 +50,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "yo_bombs-fabric-1.1.0+26.3.jar",
     "published": "2026-10-25"
   },
@@ -84,7 +81,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 37,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 34,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

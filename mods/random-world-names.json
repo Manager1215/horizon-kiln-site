@@ -11,18 +11,13 @@
   "needs": [
     "an access widener",
     "Mixin: 2 points inside the game's methods",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.client.gui.components.SpriteIconButton",
     "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.layouts.LinearLayout",
     "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen",
     "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen.GameTab",
     "net.minecraft.client.gui.screens.worldselection.WorldCreationUiState",
     "Minecraft.getLevelSource()",
-    "Button.setTooltip()",
-    "Button.setTooltipDelay()",
-    "PreparableReloadListener.SharedState.resourceManager()",
     "LevelStorageSource.getBaseDir()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -30,7 +25,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "random-world-names-1.2.0+26.1.jar",
     "published": "2026-04-02"
   },
@@ -58,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

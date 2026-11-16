@@ -9,7 +9,6 @@
   "author": "pcal43",
   "description": "Serverside rules to limit mob spawning",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.minecraft.server.ServerScoreboard",
     "net.minecraft.server.level.WorldGenRegion",
     "net.minecraft.world.level.LightLayer",
@@ -18,14 +17,8 @@
     "net.minecraft.world.level.NaturalSpawner.SpawnState",
     "net.minecraft.world.level.storage.ServerLevelData",
     "net.minecraft.world.scores.ReadOnlyScoreInfo",
-    "net.minecraft.world.scores.ScoreHolder",
-    "org.apache.logging.log4j.Level",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "org.apache.logging.log4j.core.config.Configurator",
-    "ServerLifecycleEvents.SERVER_STARTING",
     "BlockPos.get()",
-    "RegistryAccess.lookupOrThrow()",
     "Registries.BIOME",
     "ServerLevel.getBiome()",
     "ServerLevel.getBrightness()",
@@ -37,7 +30,6 @@
     "ServerLevel.isRainingAt()",
     "EnvironmentAttributes.MOON_PHASE",
     "Entity.remove()",
-    "Mob.isRemoved()",
     "Biome.coldEnoughToSnow()",
     "Biome.hasPrecipitation()"
   ],
@@ -46,7 +38,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mobfilter-fabric-0.29.0+26.3.jar",
     "published": "2026-09-24"
   },
@@ -74,7 +66,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 31,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -40,16 +40,16 @@
     "com.mojang.renderpearl.frontend.FrontendGpuDevice",
     "com.mojang.renderpearl.frontend.FrontendRenderPass",
     "com.mojang.renderpearl.util.TextureViewAndSampler",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.CloudStatus",
     "net.minecraft.client.FramerateLimiter",
     "net.minecraft.client.PreferredGraphicsApi",
     "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
     "net.minecraft.client.gui.components.debug.DebugScreenEntry",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryStatus",
     "net.minecraft.client.gui.screens.Overlay",
+    "net.minecraft.client.gui.screens.options.OptionsScreen",
+    "net.minecraft.client.multiplayer.ClientChunkCache",
+    "net.minecraft.client.particle.Particle",
+    "net.minecraft.client.particle.ParticleEngine",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "metalrender-v2.0.3+2.jar",
     "published": "2026-11-09"
   },
@@ -85,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 310,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect into the game's classes; runs threads of its own"
+  },
+  "lacks": 275,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

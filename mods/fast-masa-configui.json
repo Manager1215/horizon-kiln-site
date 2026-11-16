@@ -9,26 +9,13 @@
   "author": "YureHiran",
   "description": "Added a quick configuration UI for Malilib mods, so you don’t have to worry about running out of hotkeys anymore",
   "needs": [
-    "com.mojang.blaze3d.platform.TextInputManager",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "com.mojang.blaze3d.vertex.BufferBuilder",
     "com.mojang.blaze3d.vertex.MeshData",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.state.level.BlockBreakingRenderState",
-    "org.apache.logging.log4j.Logger",
     "ImmutableList.size()",
-    "KeyMapping.matches()",
-    "KeyMapping.saveString()",
+    "TextInputManager.stopTextInput()",
     "KeyMapping.setDown()",
-    "Minecraft.gameDirectory",
-    "Minecraft.gameMode",
-    "Minecraft.setScreenAndShow()",
-    "Minecraft.textInputManager()",
-    "Options.keyInventory",
-    "GuiGraphicsExtractor.requestCursor()",
-    "Screen.charTyped()",
-    "ClientPacketListener.sendChat()",
     "GameRenderer.mainCamera()",
     "LevelRenderState.blockBreakingRenderStates",
     "ARGB.srgbLerp()",
@@ -51,7 +38,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fast-masa-config-26.3-5.4.0.jar",
     "published": "2026-10-31"
   },
@@ -81,7 +68,11 @@
     "malilib",
     "minecraft"
   ],
-  "lacks": 36,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -13,20 +13,14 @@
     "net.fabricmc.loader.api.SemanticVersion",
     "net.fabricmc.loader.api.VersionParsingException",
     "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
-    "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "org.apache.logging.log4j.util.Supplier",
-    "InputConstants.getKey()",
-    "Minecraft.pauseGame()",
-    "Screen.shouldCloseOnEsc()"
+    "Minecraft.pauseGame()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "thorough-keybindings-3.2.1+fabric-unobf.jar",
     "published": "2026-09-24"
   },
@@ -53,7 +47,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

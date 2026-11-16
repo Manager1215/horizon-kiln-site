@@ -10,27 +10,16 @@
   "description": "Provides an easy to access configuration screen for all installed mods on Fabric",
   "needs": [
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
-    "net.fabricmc.loader.api.EntrypointException",
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
-    "net.minecraft.client.gui.components.Button.Plain",
     "net.minecraft.client.gui.components.OptionsList",
     "net.minecraft.client.gui.layouts.GridLayout",
-    "net.minecraft.client.gui.screens.options.OptionsSubScreen",
-    "net.minecraft.network.chat.ComponentContents",
-    "org.apache.logging.log4j.Level",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "FabricLoader.getEntrypointContainers()",
-    "AbstractWidget.getMessage()",
-    "Component.getContents()",
-    "MutableComponent.getContents()"
+    "net.minecraft.client.gui.screens.options.OptionsSubScreen"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ModSettings-1.2.0+26.3.jar",
     "published": "2026-09-20"
   },
@@ -57,7 +46,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

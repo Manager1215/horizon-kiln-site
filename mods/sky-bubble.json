@@ -15,7 +15,6 @@
     "com.mojang.blaze3d.vertex.MeshData",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.renderer.BindGroupLayouts",
     "net.minecraft.client.renderer.DynamicGpuData",
     "RenderTarget.width",
@@ -30,8 +29,6 @@
     "BlendFunction.TRANSLUCENT",
     "RenderPipeline.builder()",
     "VertexFormat.getVertexSize()",
-    "Minecraft.execute()",
-    "Options.getCameraType()",
     "ClientLevel.getPlayerByUUID()",
     "RenderPipelines.register()",
     "CameraRenderState.orientation",
@@ -52,7 +49,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sky-bubble-26.3-1.0.1.jar",
     "published": "2026-10-12"
   },
@@ -81,7 +78,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 37,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 34,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

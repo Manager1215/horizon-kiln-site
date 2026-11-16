@@ -9,13 +9,7 @@
   "author": "halfstorm",
   "description": "Mod that allows Vivecraft players to run by swinging their arms like Blade and Sorcery!",
   "needs": [
-    "org.apache.logging.log4j.Level",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "org.apache.logging.log4j.core.config.Configurator",
-    "Minecraft.execute()",
-    "LocalPlayer.setSprinting()",
-    "MinecraftServer.execute()",
     "AttributeInstance.addTransientModifier()",
     "AttributeInstance.getModifier()",
     "AttributeInstance.removeModifier()",
@@ -26,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "vss-fabric-26.3-1.1.3.jar",
     "published": "2026-09-21"
   },
@@ -56,7 +50,11 @@
     "minecraft",
     "vivecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -13,7 +13,6 @@
     "net.fabricmc.fabric.api.networking.v1.FriendlyByteBufs",
     "net.minecraft.client.gui.contextualbar.ContextualBar",
     "net.minecraft.client.gui.contextualbar.ExperienceBar",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
     "net.minecraft.world.entity.decoration.ArmorStand",
@@ -26,15 +25,11 @@
     "VertexConsumer.setOverlay()",
     "ServerPlayNetworking.createClientboundPacket()",
     "Camera.rotation()",
-    "Minecraft.execute()",
     "Minecraft.getEntityRenderDispatcher()",
-    "GuiGraphicsExtractor.blit()",
-    "Hud.getGuiTicks()",
     "EntityRenderDispatcher.camera",
     "EntityRenderer.getRenderOffset()",
     "RenderTypes.entityTranslucent()",
     "RenderTypes.solidMovingBlock()",
-    "FormattedCharSequence.forward()",
     "EntityTypes.ENDER_DRAGON",
     "EntityTypes.WITHER",
     "LivingEntity.distanceTo()",
@@ -50,14 +45,14 @@
     "Player.getVehicle()",
     "Player.isEyeInFluid()",
     "Player.isFullyFrozen()",
-    "and 1 more"
+    "FoodData.setSaturation()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "asteorbar-fabric-26.3-1.5.3.jar",
     "published": "2026-10-05"
   },
@@ -86,7 +81,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 41,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; has network channels"
+  },
+  "lacks": 36,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -12,22 +12,19 @@
     "net.minecraft.client.OptionInstance.CaptionBasedToString",
     "net.minecraft.client.OptionInstance.SliderableEnum",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
     "net.minecraft.client.gui.components.OptionsList",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
     "net.minecraft.client.gui.screens.options.OptionsSubScreen",
     "net.minecraft.client.gui.screens.options.VideoSettingsScreen",
-    "OptionInstance.<init>()",
-    "Options.keyPlayerList"
+    "OptionInstance.<init>()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "scalable-fabric-1.0.5-26.2.jar",
     "published": "2026-07-02"
   },
@@ -58,7 +55,11 @@
     "minecraft",
     "sodium"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

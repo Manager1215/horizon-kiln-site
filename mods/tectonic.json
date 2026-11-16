@@ -14,15 +14,10 @@
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditionType",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.gui.screens.worldselection.WorldCreationUiState",
     "net.minecraft.client.gui.screens.worldselection.WorldCreationUiState.WorldTypeEntry",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
     "net.minecraft.network.chat.ComponentUtils",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.resources.RegistryOps.RegistryInfoLookup",
     "net.minecraft.util.InclusiveRange",
     "net.minecraft.util.Interval",
@@ -51,14 +46,19 @@
     "net.minecraft.world.level.levelgen.densityfunction.generator.ConstantFunction",
     "net.minecraft.world.level.levelgen.densityfunction.generator.ConstantFunction.Sampler",
     "net.minecraft.world.level.levelgen.densityfunction.op.ClampFunction",
-    "and 40 more"
+    "net.minecraft.world.level.levelgen.densityfunction.op.ClampFunction.Sampler",
+    "net.minecraft.world.level.levelgen.synth.Noise",
+    "net.minecraft.world.level.levelgen.synth.NormalNoise",
+    "ResourceLoader.registerBuiltinPack()",
+    "SharedConstants.DEBUG_DISABLE_FLUID_GENERATION",
+    "and 24 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tectonic-3.1.0+beta2-fabric-26.3.jar",
     "published": "2026-11-07"
   },
@@ -87,7 +87,11 @@
     "lithostitched",
     "minecraft"
   ],
-  "lacks": 80,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 64,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

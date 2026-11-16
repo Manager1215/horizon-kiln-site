@@ -11,24 +11,16 @@
   "needs": [
     "an access widener",
     "Mixin: 26 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.object.builder.v1.entity.MinecartComparatorLogic",
     "net.fabricmc.fabric.api.object.builder.v1.entity.MinecartComparatorLogicRegistry",
-    "net.minecraft.CrashReport",
-    "net.minecraft.CrashReportCategory",
-    "net.minecraft.ReportedException",
     "net.minecraft.advancements.predicates.entity.EntityPredicate",
     "net.minecraft.advancements.predicates.entity.EntityPredicate.Builder",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.PlayerTrigger",
     "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.dispenser.DispenseItemBehavior.9",
     "net.minecraft.data.worldgen.features.EndFeatures",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
     "net.minecraft.network.chat.ComponentUtils",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.references.BlockItemId",
     "net.minecraft.server.dedicated.DedicatedServerProperties",
     "net.minecraft.server.level.ServerPlayer.RespawnConfig",
@@ -51,6 +43,14 @@
     "net.minecraft.world.entity.ai.Brain",
     "net.minecraft.world.entity.ai.Brain.Packed",
     "net.minecraft.world.entity.ai.behavior.Behavior",
+    "net.minecraft.world.entity.ai.behavior.LookAtTargetSink",
+    "net.minecraft.world.entity.ai.behavior.MoveToTargetSink",
+    "net.minecraft.world.entity.ai.behavior.RamTarget",
+    "net.minecraft.world.entity.ai.behavior.Swim",
+    "net.minecraft.world.entity.ai.behavior.warden.SonicBoom",
+    "net.minecraft.world.entity.ai.goal.AvoidEntityGoal",
+    "net.minecraft.world.entity.ai.goal.Goal",
+    "net.minecraft.world.entity.ai.goal.Goal.Flag",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "carpetskyadditions-26.3-6.7.0.jar",
     "published": "2026-10-04"
   },
@@ -91,7 +91,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 450,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 348,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

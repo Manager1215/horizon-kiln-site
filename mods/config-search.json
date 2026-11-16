@@ -10,26 +10,15 @@
   "description": "Search every installed mod's config options from one bar in Mod Menu. Type a word, jump straight to the setting. Reads YACL, Cloth, MidnightLib, Forge Config API Port and Configured.",
   "needs": [
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
     "net.minecraft.client.gui.components.SpriteIconButton",
-    "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.network.chat.contents.TranslatableContents",
-    "FabricLoader.getEntrypointContainers()",
-    "Font.plainSubstrByWidth()",
-    "Button.getMessage()",
-    "EditBox.setHint()",
-    "CommonComponents.GUI_DONE",
-    "Component.getContents()"
+    "net.minecraft.client.gui.components.SpriteIconButton.Builder"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ConfigSearch-fabric-26.3-1.1.0.jar",
     "published": "2026-09-27"
   },
@@ -58,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,21 +10,15 @@
   "description": "Feather Remake Client is made to mimic the functionality of popular client with great UI experience for Linux devices which runs minecraft eg. Feather client",
   "needs": [
     "Mixin: 4 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.blaze3d.Blaze3D",
     "com.mojang.blaze3d.buffers.Std140Builder",
     "com.mojang.blaze3d.framegraph.FrameGraphBuilder",
     "com.mojang.blaze3d.framegraph.FramePass",
     "com.mojang.blaze3d.resource.ResourceHandle",
-    "net.minecraft.SharedConstants",
-    "net.minecraft.client.CameraType",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
     "net.minecraft.client.gui.components.BossHealthOverlay",
     "net.minecraft.client.gui.components.ChatComponent.DisplayMode",
     "net.minecraft.client.gui.components.LerpingBossEvent",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
     "net.minecraft.client.gui.components.SplashRenderer",
     "net.minecraft.client.gui.components.spectator.SpectatorGui",
     "net.minecraft.client.gui.screens.ConnectScreen",
@@ -48,16 +42,22 @@
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
     "net.minecraft.client.renderer.fog.FogData",
     "net.minecraft.client.renderer.fog.FogRenderer",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.client.telemetry.TelemetryProperty",
-    "and 70 more"
+    "net.minecraft.network.chat.numbers.StyledFormat",
+    "net.minecraft.server.packs.repository.Pack",
+    "net.minecraft.server.packs.repository.PackRepository",
+    "net.minecraft.server.packs.resources.ReloadInstance",
+    "net.minecraft.world.phys.EntityHitResult",
+    "net.minecraft.world.phys.shapes.Shapes.DoubleLineConsumer",
+    "net.minecraft.world.scores.PlayerScoreEntry",
+    "and 46 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "feather_legacy-1.4.0.jar",
     "published": "2026-09-26"
   },
@@ -83,7 +83,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 124,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 86,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

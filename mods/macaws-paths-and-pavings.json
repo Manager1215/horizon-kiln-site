@@ -9,23 +9,9 @@
   "author": "sketchmacaw",
   "description": "Adds vanila styled paths and pavings!",
   "needs": [
-    "net.minecraft.tags.ItemTags",
     "SoundEvents.SHOVEL_FLATTEN",
     "SoundEvents.UI_STONECUTTER_TAKE_RESULT",
     "InteractionHand.asEquipmentSlot()",
-    "Blocks.ANDESITE",
-    "Blocks.BRICKS",
-    "Blocks.COBBLED_DEEPSLATE",
-    "Blocks.DARK_PRISMARINE",
-    "Blocks.DEEPSLATE",
-    "Blocks.DIORITE",
-    "Blocks.GRANITE",
-    "Blocks.GRAVEL",
-    "Blocks.MOSSY_COBBLESTONE",
-    "Blocks.MUD_BRICKS",
-    "Blocks.RED_SAND",
-    "Blocks.RED_SANDSTONE",
-    "Blocks.SANDSTONE",
     "HorizontalDirectionalBlock.FACING",
     "SoundType.BAMBOO_WOOD",
     "SoundType.CHERRY_WOOD",
@@ -48,7 +34,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mcw-paths-1.1.1-mc26.3fabric.jar",
     "published": "2026-09-29"
   },
@@ -76,7 +62,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 33,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 19,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

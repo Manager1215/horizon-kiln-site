@@ -21,9 +21,7 @@
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
     "net.minecraft.client.renderer.extract.LevelExtractor",
     "net.minecraft.client.renderer.state.level.ParticlesRenderState",
-    "net.minecraft.data.AtlasIds",
     "net.minecraft.network.syncher.EntityDataAccessor",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.TickRateManager",
     "net.minecraft.world.entity.EntityAttachment",
     "net.minecraft.world.entity.EntityAttachments",
@@ -50,14 +48,16 @@
     "net.minecraft.world.item.BowItem",
     "net.minecraft.world.item.CrossbowItem",
     "net.minecraft.world.item.EndCrystalItem",
-    "and 65 more"
+    "net.minecraft.world.item.MaceItem",
+    "net.minecraft.world.item.ThrowablePotionItem",
+    "and 56 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "torohealth-continued-fabric-26.3-1.5.2.jar",
     "published": "2026-09-15"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 109,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 96,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

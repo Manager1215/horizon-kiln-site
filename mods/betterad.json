@@ -12,8 +12,6 @@
     "net.minecraft.advancements.AdvancementNode",
     "net.minecraft.advancements.AdvancementTree",
     "net.minecraft.advancements.CriterionProgress",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
     "net.minecraft.client.multiplayer.ClientAdvancements.Listener",
     "JsonArray.forEach()",
     "Advancement.isRoot()",
@@ -25,26 +23,16 @@
     "AdvancementProgress.hasProgress()",
     "AdvancementProgress.update()",
     "AdvancementRequirements.names()",
-    "KeyMapping.getTranslatedKeyMessage()",
-    "KeyMapping.matches()",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.setScreenAndShow()",
-    "Font.plainSubstrByWidth()",
-    "Font.split()",
-    "GuiGraphicsExtractor.text()",
-    "Checkbox.Builder.maxWidth()",
-    "Screen.mouseScrolled()",
     "ClientAdvancements.setListener()",
     "ClientAdvancements.setSelectedTab()",
-    "ClientAdvancements.tree()",
-    "ServerData.ip"
+    "ClientAdvancements.tree()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "BAD-fabric-26.3.jar",
     "published": "2026-10-09"
   },
@@ -72,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 29,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

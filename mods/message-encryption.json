@@ -10,18 +10,11 @@
   "description": "This mod encrypts messages end to end to the recipient",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.exceptions.AuthenticationException",
     "com.mojang.authlib.minecraft.SessionService",
-    "net.minecraft.SharedConstants",
-    "net.minecraft.nbt.NbtIo",
-    "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "org.apache.commons.codec.digest.DigestUtils",
     "IntObjectHashMap.forEach()",
-    "Minecraft.execute()",
+    "SharedConstants.getCurrentVersion()",
     "Minecraft.services()",
     "ChatComponent.addPlayerMessage()",
     "PlayerInfo.getProfile()",
@@ -29,21 +22,18 @@
     "CompoundTag.entrySet()",
     "ListTag.add()",
     "ListTag.iterator()",
+    "NbtIo.read()",
+    "NbtIo.write()",
     "Tag.asString()",
-    "MutableComponent.setStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "Style.withUnderlined()",
     "Services.sessionService()",
-    "SoundEvents.ARROW_HIT_PLAYER",
-    "Util.getMillis()"
+    "SoundEvents.ARROW_HIT_PLAYER"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ep-msg-encryption-fabric-2.1.0-26.3.jar",
     "published": "2026-10-04"
   },
@@ -71,7 +61,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

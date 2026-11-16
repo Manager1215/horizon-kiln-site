@@ -11,9 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.ai.Brain",
     "net.minecraft.world.entity.ai.memory.MemoryModuleType",
     "net.minecraft.world.entity.monster.piglin.AbstractPiglin",
@@ -21,17 +18,11 @@
     "net.minecraft.world.entity.monster.piglin.PiglinAi",
     "net.minecraft.world.inventory.ContainerData",
     "net.minecraft.world.inventory.ContainerLevelAccess",
-    "net.minecraft.world.inventory.MenuType.MenuSupplier",
     "net.minecraft.world.inventory.SimpleContainerData",
     "net.minecraft.world.item.SmithingTemplateItem",
     "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
-    "Minecraft.gameMode",
-    "GuiGraphicsExtractor.blitSprite()",
-    "GuiGraphicsExtractor.fakeItem()",
     "GuiGraphicsExtractor.fill()",
-    "Button.DEFAULT_NARRATION",
-    "AbstractContainerScreen.SLOT_HIGHLIGHT_BACK_SPRITE",
-    "AbstractContainerScreen.SLOT_HIGHLIGHT_FRONT_SPRITE",
+    "MultiPlayerGameMode.handleInventoryButtonClick()",
     "RenderPipelines.GUI",
     "BlockEntityRenderer.extractRenderState()",
     "ItemStackRenderState.clear()",
@@ -41,9 +32,6 @@
     "LivingEntity.getBrain()",
     "AbstractContainerMenu.getRedstoneSignalFromBlockEntity()",
     "ItemStack.copyAndClear()",
-    "ItemStack.isStackable()",
-    "Items.PIGLIN_HEAD",
-    "SwingAnimation.DEFAULT",
     "Level.getEntitiesOfClass()",
     "Level.getNearestPlayer()",
     "SoundType.NETHER_WOOD",
@@ -55,7 +43,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "barteringstation-v26.3.0-mc26.3.x+fabric.jar",
     "published": "2026-09-24"
   },
@@ -85,7 +73,11 @@
     "minecraft",
     "puzzleslib"
   ],
-  "lacks": 38,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 26,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

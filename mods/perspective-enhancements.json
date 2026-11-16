@@ -10,17 +10,9 @@
   "description": "Allows you to configure the behavior of the perspective key",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.CameraType",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
     "net.minecraft.client.gui.components.OptionsList",
     "net.minecraft.client.gui.screens.options.OptionsSubScreen",
     "net.minecraft.client.gui.screens.options.controls.ControlsScreen",
-    "Minecraft.gameDirectory",
-    "Options.getCameraType()",
-    "Options.keyTogglePerspective",
-    "Options.setCameraType()",
     "GameRenderer.checkEntityPostEffect()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
@@ -28,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "perspective-enhancements-1.2.1-26.2.jar",
     "published": "2026-06-19"
   },
@@ -57,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

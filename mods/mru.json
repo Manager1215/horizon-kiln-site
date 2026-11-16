@@ -10,15 +10,8 @@
   "description": "A library mod used by Cassian and IMB11's mods to function.",
   "needs": [
     "an access widener",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "FabricLoader.invokeEntrypoints()",
     "Minecraft.isLocalServer()",
-    "LocalPlayer.canUseGameMasterBlocks()",
     "ByteBufCodecs.stringUtf8()",
-    "MinecraftServer.execute()",
-    "ServerPlayer.canUseGameMasterBlocks()",
-    "ServerPlayer.connection",
     "ServerGamePacketListenerImpl.disconnect()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -26,7 +19,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mru-1.0.45+26.3-fabric.jar",
     "published": "2026-11-02"
   },
@@ -54,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

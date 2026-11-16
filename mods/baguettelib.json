@@ -10,32 +10,21 @@
   "description": "Ever tried to make a mod that needs proper death handling or inventory tracking? Yeah, NeoForge events suck for that.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.network.protocol.game.ServerboundPlayerAbilitiesPacket",
     "net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket",
-    "net.minecraft.stats.ServerStatsCounter",
-    "net.minecraft.world.entity.EquipmentSlot.Type",
-    "net.minecraft.world.level.storage.LevelResource",
     "MinecraftServer.getDataStorage()",
-    "MinecraftServer.getWorldPath()",
     "MinecraftServer.services()",
     "ServerPlayer.getGameProfile()",
-    "ServerPlayer.getStats()",
-    "ServerPlayer.isRemoved()",
-    "EquipmentSlot.getType()",
-    "LivingEntity.isRemoved()",
     "ItemEntity.getItem()",
-    "Player.isRemoved()",
-    "CustomData.copyTag()",
     "CustomData.update()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "baguettelib-26.3-Fabric-2.0.8.jar",
     "published": "2026-10-11"
   },
@@ -64,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

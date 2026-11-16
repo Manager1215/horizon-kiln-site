@@ -10,22 +10,12 @@
   "description": "Smoother chunk loading with network-aware send rates, multiplayer fair share, and in-game tuning.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.multiplayer.ChunkBatchSizeCalculator",
-    "net.minecraft.network.chat.ComponentContents",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.server.level.ChunkHolder",
     "net.minecraft.server.level.ChunkMap",
     "net.minecraft.server.network.PlayerChunkSender",
-    "Minecraft.execute()",
-    "Button.getMessage()",
-    "Button.Builder.tooltip()",
-    "Checkbox.selected()",
-    "PauseScreen.children()",
-    "Component.getContents()",
     "MinecraftServer.getAverageTickTimeNanos()",
     "ServerPlayer.chunkPosition()",
-    "ServerPlayer.connection",
     "ServerPlayer.getViewVector()",
     "ServerGamePacketListenerImpl.latency()"
   ],
@@ -34,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "seamlesschunks-fabric-0.1.0-beta.7.jar",
     "published": "2026-09-23"
   },
@@ -66,7 +56,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

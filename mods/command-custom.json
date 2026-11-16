@@ -9,24 +9,14 @@
   "author": "BadutZY",
   "description": "Customize any Minecraft command to your own alias!",
   "needs": [
-    "net.fabricmc.fabric.api.client.screen.v1.Screens",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "Minecraft.setScreenAndShow()",
-    "EditBox.setHint()",
-    "Screen.mouseClicked()",
-    "Screen.mouseScrolled()",
-    "Commands.getDispatcher()",
-    "MinecraftServer.getCommands()"
+    "net.fabricmc.fabric.api.client.screen.v1.Screens"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "command-custom-1.4.0.jar",
     "published": "2026-10-18"
   },
@@ -55,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

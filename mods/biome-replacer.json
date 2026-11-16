@@ -20,22 +20,15 @@
     "net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator",
     "net.minecraft.world.level.storage.LevelDataAndDimensions",
     "net.minecraft.world.level.storage.LevelDataAndDimensions.WorldDataAndGenSettings",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "Registry.entrySet()",
-    "Registry.get()",
-    "Registry.getOrThrow()",
-    "Registry.getTagOrEmpty()",
-    "RegistryAccess.Frozen.lookupOrThrow()",
     "Registries.BIOME",
     "Registries.LEVEL_STEM"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "biomereplacer-3.1-newt-fabric.jar",
     "published": "2026-06-18"
   },
@@ -61,7 +54,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

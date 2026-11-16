@@ -10,12 +10,12 @@
   "description": "A library that allows resource manipulation at runtime",
   "needs": [
     "net.minecraft.nbt.NbtAccounter",
-    "net.minecraft.nbt.NbtIo",
     "net.minecraft.server.Bootstrap",
     "net.minecraft.server.packs.resources.FallbackResourceManager",
     "net.minecraft.server.packs.resources.MultiPackResourceManager",
-    "net.minecraft.server.packs.resources.ReloadableResourceManager",
     "org.apache.commons.io.FileUtils",
+    "NbtIo.readCompressed()",
+    "NbtIo.writeCompressed()",
     "Resource.<init>()",
     "Resource.metadata()"
   ],
@@ -24,7 +24,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mixson-2.2.1-multiloader.jar",
     "published": "2026-09-29"
   },
@@ -41,6 +41,10 @@
     "java",
     "minecraft"
   ],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 9,
   "development": {
     "status": "planned",

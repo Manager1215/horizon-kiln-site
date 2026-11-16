@@ -9,33 +9,18 @@
   "author": "Widder",
   "description": "A simple mod that lets you marry other players.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
     "net.minecraft.world.entity.projectile.FireworkRocketEntity",
-    "net.minecraft.world.item.component.FireworkExplosion",
-    "net.minecraft.world.item.component.FireworkExplosion.Shape",
-    "net.minecraft.world.item.component.Fireworks",
-    "Minecraft.execute()",
-    "CommandSourceStack.getServer()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
-    "DataComponents.FIREWORKS",
-    "MutableComponent.withStyle()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "TextColor.parseColor()",
     "ServerLevel.sendParticles()",
     "ServerPlayer.getGameProfile()",
     "PlayerList.broadcastAll()",
-    "Player.getGameProfile()",
-    "Items.FIREWORK_ROCKET"
+    "Player.getGameProfile()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "marry-1.2.2.jar",
     "published": "2026-09-25"
   },
@@ -64,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

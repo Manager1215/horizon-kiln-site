@@ -11,23 +11,16 @@
   "needs": [
     "an access widener",
     "Mixin: 7 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.properties.Property",
     "com.mojang.authlib.properties.PropertyMap",
     "com.mojang.blaze3d.Blaze3D",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.OptionInstance.CaptionBasedToString",
     "net.minecraft.client.OptionInstance.Enum",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
     "net.minecraft.client.gui.components.PlayerFaceExtractor",
     "net.minecraft.client.gui.components.SpriteIconButton",
     "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.tabs.GridLayoutTab",
     "net.minecraft.client.gui.components.tabs.MenuTabBar",
     "net.minecraft.client.gui.components.tabs.MenuTabBar.Builder",
@@ -51,14 +44,21 @@
     "net.minecraft.client.model.geom.builders.PartDefinition",
     "net.minecraft.client.model.object.equipment.ElytraModel",
     "net.minecraft.client.model.player.PlayerCapeModel",
-    "and 80 more"
+    "net.minecraft.client.model.player.PlayerModel",
+    "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
+    "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+    "net.minecraft.client.renderer.entity.layers.CapeLayer",
+    "net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer",
+    "net.minecraft.client.renderer.entity.layers.RenderLayer",
+    "net.minecraft.client.renderer.entity.layers.WingsLayer",
+    "and 76 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "BedrockSkins-26.3-2.2.0.jar",
     "published": "2026-10-12"
   },
@@ -87,7 +87,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 162,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 116,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

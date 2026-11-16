@@ -10,18 +10,11 @@
   "description": "Fancy storage for fancy folks. A unique alternatives to your average backpack mod.",
   "needs": [
     "an access widener",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.core.HolderSet.Named",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.SimpleMenuProvider",
-    "net.minecraft.world.inventory.ChestMenu",
-    "net.minecraft.world.inventory.ContainerInput",
     "net.minecraft.world.inventory.NonInteractiveResultSlot",
     "net.minecraft.world.item.enchantment.Enchantment.Builder",
     "Int2ObjectMap.Entry.getValue()",
-    "HolderGetter.getOrThrow()",
     "ByteBufCodecs.collection()",
-    "ServerPlayer.getRandom()",
     "SoundEvents.BUNDLE_DROP_CONTENTS",
     "InteractionHand.STREAM_CODEC",
     "InteractionHand.asEquipmentSlot()",
@@ -29,27 +22,21 @@
     "ItemEntity.getItem()",
     "Inventory.EQUIPMENT_SLOT_MAPPING",
     "Player.isSecondaryUseActive()",
+    "ChestMenu.clicked()",
     "Item.STREAM_CODEC",
-    "Item.Properties.enchantable()",
-    "ItemStack.<init>()",
     "ItemUtils.onContainerDestroyed()",
-    "ItemContainerContents.nonEmptyItemCopyStream()",
-    "TooltipDisplay.DEFAULT",
-    "TooltipDisplay.withHidden()",
     "Enchantment.definition()",
     "Enchantment.dynamicCost()",
     "Enchantment.enchantment()",
     "EnchantmentHelper.getItemEnchantmentLevel()",
-    "EnchantmentHelper.updateEnchantments()",
-    "ItemEnchantments.Mutable.getLevel()",
-    "ItemEnchantments.Mutable.set()"
+    "EnchantmentHelper.updateEnchantments()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bagofholding-v26.3.6-mc26.3.x+fabric.jar",
     "published": "2026-11-09"
   },
@@ -80,7 +67,11 @@
     "minecraft",
     "puzzleslib"
   ],
-  "lacks": 33,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

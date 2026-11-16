@@ -9,11 +9,6 @@
   "author": "Nordes",
   "description": "An update of the original AdvancedChatLog(With fixes). A simple way to filter and view mass amounts of Minecraft messages",
   "needs": [
-    "com.mojang.authlib.GameProfile",
-    "net.minecraft.network.chat.ComponentSerialization",
-    "org.apache.logging.log4j.Level",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "org.apache.logging.log4j.core.Logger",
     "org.apache.logging.log4j.core.LoggerContext",
     "org.apache.logging.log4j.core.appender.AbstractAppender",
@@ -26,23 +21,16 @@
     "org.apache.logging.log4j.core.appender.rolling.TimeBasedTriggeringPolicy",
     "org.apache.logging.log4j.core.appender.rolling.TimeBasedTriggeringPolicy.Builder",
     "JsonParseException.getMessage()",
-    "MouseButtonEvent.hasShiftDown()",
     "PlayerInfo.getProfile()",
     "RegistryAccess.EMPTY",
-    "Component.getSiblings()",
-    "MutableComponent.withStyle()",
-    "Style.getClickEvent()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "Style.withInsertion()",
-    "Util.getMillis()"
+    "Style.withInsertion()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "AdvancedChatLog-26.3-1.9.0.jar",
     "published": "2026-09-18"
   },
@@ -71,7 +59,11 @@
     "malilib",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

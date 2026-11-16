@@ -13,7 +13,6 @@
     "net.minecraft.client.renderer.entity.state.SulfurCubeRenderState",
     "net.minecraft.util.valueproviders.FloatProvider",
     "net.minecraft.world.entity.Bucketable",
-    "net.minecraft.world.entity.EntitySpawnRequest",
     "net.minecraft.world.entity.PostSpawnProcessor",
     "net.minecraft.world.entity.SulfurCubeArchetype",
     "net.minecraft.world.entity.SulfurCubeArchetype.ContactDamage",
@@ -22,7 +21,6 @@
     "net.minecraft.world.item.MobBucketItem",
     "net.minecraft.world.level.block.CauldronBlock",
     "net.minecraft.world.phys.shapes.BooleanOp",
-    "Minecraft.execute()",
     "BlockEntityRenderer.extractRenderState()",
     "EntityRenderDispatcher.extractEntity()",
     "EntityRenderDispatcher.submit()",
@@ -34,11 +32,8 @@
     "SoundEvents.BUCKET_EMPTY_SULFUR_CUBE",
     "SoundEvents.SULFUR_CUBE_ABSORB",
     "SoundEvents.SULFUR_CUBE_EJECT",
-    "ProblemReporter.DISCARDING",
     "InteractionHand.asEquipmentSlot()",
     "Entity.registryAccess()",
-    "Entity.saveWithoutId()",
-    "Entity.setId()",
     "Entity.snapTo()",
     "EntityType.createDefaultStackConfig()",
     "EntityType.loadEntityRecursive()",
@@ -49,14 +44,19 @@
     "ItemEntity.setPickUpDelay()",
     "PrimedTnt.USED_PORTAL_DAMAGE_CALCULATOR",
     "PrimedTnt.getRandomShortFuse()",
-    "and 22 more"
+    "BucketItem.getEmptySuccessItem()",
+    "ItemStack.consume()",
+    "TypedEntityData.codec()",
+    "TypedEntityData.copyTagWithoutId()",
+    "TypedEntityData.loadInto()",
+    "and 13 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "cauldroncubes-fabric-26.3-1.0.01.jar",
     "published": "2026-09-16"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 62,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 53,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,34 +10,18 @@
   "description": "Monitors the chat and warns you about potentonal scammers",
   "needs": [
     "an access widener",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.blaze3d.Blaze3D",
-    "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowChat",
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.Chat",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.network.chat.PlayerChatMessage",
-    "ClientReceiveMessageEvents.ALLOW_CHAT",
     "ClientReceiveMessageEvents.ALLOW_GAME",
-    "ClientReceiveMessageEvents.CHAT",
-    "Minecraft.execute()",
-    "EditBox.setEditable()",
-    "EditBox.setSuggestion()",
-    "MutableComponent.setStyle()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "Style.withStrikethrough()"
+    "ClientReceiveMessageEvents.CHAT"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "scamscreener-2.7.0+26.3.jar",
     "published": "2026-11-01"
   },
@@ -66,7 +50,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

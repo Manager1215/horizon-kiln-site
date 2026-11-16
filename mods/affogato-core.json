@@ -17,7 +17,6 @@
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyCallback",
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyConsumer",
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyContext",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags",
     "net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags",
@@ -29,12 +28,10 @@
     "net.minecraft.client.tutorial.FindTreeTutorialStepInstance",
     "net.minecraft.client.tutorial.PunchTreeTutorialStepInstance",
     "net.minecraft.client.tutorial.TutorialSteps",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.server.dedicated.DedicatedServerProperties",
     "net.minecraft.server.level.WorldGenRegion",
     "net.minecraft.server.packs.repository.Pack",
     "net.minecraft.tags.DamageTypeTags",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.attribute.AmbientMoodSettings",
     "net.minecraft.world.effect.HungerMobEffect",
     "net.minecraft.world.entity.ai.behavior.ResetProfession",
@@ -51,14 +48,17 @@
     "net.minecraft.world.entity.monster.illager.Pillager",
     "net.minecraft.world.entity.monster.skeleton.WitherSkeleton",
     "net.minecraft.world.entity.monster.zombie.Drowned",
-    "and 80 more"
+    "net.minecraft.world.entity.monster.zombie.Zombie",
+    "net.minecraft.world.entity.npc.villager.AbstractVillager",
+    "net.minecraft.world.entity.npc.wanderingtrader.WanderingTrader",
+    "and 64 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "affogatocore-26.3.0.jar",
     "published": "2026-11-14"
   },
@@ -87,5 +87,9 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 157
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 119
 }

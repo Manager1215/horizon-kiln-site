@@ -9,15 +9,6 @@
   "author": "LasaJoniHD",
   "description": "A discord bot, showing the current status of your server as embed, activity and more.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "net.minecraft.server.permissions.Permissions",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "MutableComponent.withStyle()",
-    "Style.withObfuscated()",
-    "Style.withStrikethrough()",
-    "Style.withUnderlined()",
     "MinecraftServer.getLocalIp()",
     "MinecraftServer.getMaxPlayers()",
     "MinecraftServer.getPlayerNames()"
@@ -27,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Status4Discord-1.6-fabric-26.3.jar",
     "published": "2026-09-19"
   },
@@ -55,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -2,27 +2,19 @@
   "id": "what-the-bucket",
   "name": "What The Bucket",
   "version": "26.3.0.1",
-  "status": "planned",
-  "statusLabel": "Planned",
-  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "status": "not-checked",
+  "statusLabel": "Not checked",
+  "statusMeaning": "In the catalogue, not checked yet.",
   "url": "https://modrinth.com/mod/what-the-bucket",
   "author": "Darkhax",
   "description": "Fixes some bucket items not leaving an empty bucket behind when used as a recipe ingredient.",
-  "needs": [
-    "Items.AXOLOTL_BUCKET",
-    "Items.COD_BUCKET",
-    "Items.PUFFERFISH_BUCKET",
-    "Items.SALMON_BUCKET",
-    "Items.SULFUR_CUBE_BUCKET",
-    "Items.TADPOLE_BUCKET",
-    "Items.TROPICAL_FISH_BUCKET"
-  ],
-  "roadmap": "Code next to data (0.3)",
-  "evidence": "Not run: Java did not start.",
+  "needs": [],
+  "roadmap": "",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (6 classes, 12 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "WhatTheBucket-fabric-MC26.3-26.3.0.1.jar",
     "published": "2026-09-25"
   },
@@ -51,7 +43,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

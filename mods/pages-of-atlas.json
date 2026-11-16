@@ -37,10 +37,6 @@
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
     "net.minecraft.client.renderer.texture.MissingTextureAtlasSprite",
     "org.lwjgl.opengl.GL33C",
-    "NativeImage.fillRect()",
-    "NativeImage.getHeight()",
-    "NativeImage.getWidth()",
-    "NativeImage.read()",
     "RenderSystem.assertOnRenderThread()",
     "RenderSystem.isOnRenderThread()",
     "RenderSystem.queueFencedTask()",
@@ -49,16 +45,20 @@
     "ColorTargetState.DEFAULT",
     "DepthStencilState.DEFAULT",
     "RenderPipeline.builder()",
-    "Minecraft.execute()",
     "Options.maxAnisotropyBit()",
-    "and 20 more"
+    "Options.textureFiltering()",
+    "RenderPipelines.GLOBALS_SNIPPET",
+    "RenderPipelines.ITEM_CUTOUT",
+    "RenderPipelines.ITEM_SNIPPET",
+    "RenderPipelines.ITEM_TRANSLUCENT",
+    "and 13 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "pagesofatlas-0.4.1-26.3.jar",
     "published": "2026-10-04"
   },
@@ -88,7 +88,11 @@
     "minecraft",
     "sodium"
   ],
-  "lacks": 60,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own"
+  },
+  "lacks": 53,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -17,16 +17,14 @@
     "net.minecraft.world.level.block.RepeaterBlock",
     "net.minecraft.world.level.block.piston.PistonBaseBlock",
     "net.minecraft.world.level.redstone.DefaultRedstoneWireEvaluator",
-    "Minecraft.execute()",
-    "Minecraft.getCurrentServer()",
     "BlockPos.toShortString()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "devjg-smart-counter-26.3-2.2.0.jar",
     "published": "2026-09-15"
   },
@@ -54,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

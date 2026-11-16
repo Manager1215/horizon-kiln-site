@@ -9,22 +9,18 @@
   "author": "I-No-oNe",
   "description": "A simple mod that automatically disconnect you when a certain condition is met 🛜",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
     "net.minecraft.network.protocol.game.ClientboundPlayerInfoUpdatePacket.Entry",
     "net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket",
     "net.minecraft.world.entity.boss.enderdragon.EndCrystal",
     "net.minecraft.world.level.block.RespawnAnchorBlock",
-    "Screen.shouldCloseOnEsc()",
     "ClientLevel.getEntitiesOfClass()",
-    "ClientPacketListener.getConnection()",
     "LocalPlayer.getBoundingBox()",
     "Connection.disconnect()",
     "Connection.send()",
     "ClientboundPlayerInfoUpdatePacket.entries()",
     "EntityTypes.END_CRYSTAL",
     "EntityTypes.PLAYER",
-    "Blocks.RESPAWN_ANCHOR",
     "AABB.inflate()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -32,7 +28,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "auto-disconnect-0.5-26.3-fabric.jar",
     "published": "2026-10-20"
   },
@@ -61,7 +57,11 @@
     "midnightlib",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

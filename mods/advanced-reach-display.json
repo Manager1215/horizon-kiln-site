@@ -9,26 +9,14 @@
   "author": "Blueskiez77",
   "description": "A configurable visual representation of your reach and hit distances",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.world.entity.boss.enderdragon.EnderDragonPart",
     "net.minecraft.world.item.component.AttackRange",
     "net.minecraft.world.phys.EntityHitResult",
     "org.lwjgl.sdl.SDLScancode",
-    "Minecraft.hitResult",
     "Minecraft.onTextInputFocusChange()",
-    "Minecraft.setScreenAndShow()",
-    "Screen.charTyped()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()",
-    "CharacterEvent.codepointAsString()",
-    "KeyEvent.isPaste()",
     "DataComponents.KINETIC_WEAPON",
     "DataComponents.PIERCING_WEAPON",
     "ClientboundDamageEventPacket.getSource()",
-    "DamageSource.getDirectEntity()",
-    "DamageSource.getEntity()",
     "Entity.getBoundingBox()",
     "Entity.isInvisibleTo()",
     "Player.getAttackRangeWith()",
@@ -41,15 +29,14 @@
     "AABB.maxZ",
     "AABB.minX",
     "AABB.minY",
-    "AABB.minZ",
-    "HitResult.getType()"
+    "AABB.minZ"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "AdvancedReachDisplay-3.1.0-26.3.jar",
     "published": "2026-10-23"
   },
@@ -78,7 +65,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 34,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 21,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,9 +10,6 @@
   "description": "Adds asphalt with slope/stair variants, crash barriers, street lights, and road marking tools for building realistic roads, highways, and on-ramps.",
   "needs": [
     "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
-    "net.minecraft.server.permissions.Permissions",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.level.block.Mirror",
     "net.minecraft.world.level.block.SnowLayerBlock",
     "net.minecraft.world.level.block.state.BlockBehaviour.StatePredicate",
@@ -23,8 +20,6 @@
     "VertexConsumer.setOverlay()",
     "AbstractContainerScreen.extractContents()",
     "RenderTypes.entityTranslucent()",
-    "CommandSourceStack.sendSystemMessage()",
-    "MinecraftServer.execute()",
     "MinecraftServer.overworld()",
     "ServerLevel.getBiome()",
     "ServerLevel.getHeightmapPos()",
@@ -33,12 +28,10 @@
     "ServerPlayer.closeContainer()",
     "SoundEvents.ANVIL_BREAK",
     "Item.Properties.useItemDescriptionPrefix()",
-    "CustomData.copyTag()",
     "Level.getChunk()",
     "LevelAccessor.setBlock()",
     "Biome.getPrecipitationAt()",
     "Block.getDestroyProgress()",
-    "Blocks.SNOW",
     "HorizontalDirectionalBlock.FACING",
     "SlabBlock.TYPE",
     "SoundType.SNOW",
@@ -54,7 +47,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Saros-Road-Blocks-Fabric-26.3-5.14.jar",
     "published": "2026-09-19"
   },
@@ -83,7 +76,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 39,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 32,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,8 +10,6 @@
   "description": "This mod contains crystal and anchor macros",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.authlib.GameProfile",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.player.ClientInput",
     "net.minecraft.client.player.KeyboardInput",
     "net.minecraft.network.chat.FontDescription",
@@ -21,10 +19,8 @@
     "net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket",
     "net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket.Action",
     "net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.boss.enderdragon.EndCrystal",
     "net.minecraft.world.entity.projectile.FireworkRocketEntity",
-    "net.minecraft.world.entity.projectile.FishingHook",
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
     "net.minecraft.world.entity.projectile.arrow.ThrownTrident",
     "net.minecraft.world.entity.projectile.hurtingprojectile.AbstractHurtingProjectile",
@@ -34,13 +30,11 @@
     "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrownEgg",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrownEnderpearl",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrownExperienceBottle",
-    "net.minecraft.world.inventory.ContainerInput",
     "net.minecraft.world.item.BowItem",
     "net.minecraft.world.item.CrossbowItem",
     "net.minecraft.world.item.EggItem",
     "net.minecraft.world.item.EnderpearlItem",
     "net.minecraft.world.item.ExperienceBottleItem",
-    "net.minecraft.world.item.FishingRodItem",
     "net.minecraft.world.item.PotionItem",
     "net.minecraft.world.item.SnowballItem",
     "net.minecraft.world.item.SplashPotionItem",
@@ -50,14 +44,20 @@
     "net.minecraft.world.item.component.ChargedProjectiles",
     "net.minecraft.world.level.block.RespawnAnchorBlock",
     "net.minecraft.world.level.block.ShulkerBoxBlock",
-    "and 63 more"
+    "net.minecraft.world.phys.EntityHitResult",
+    "org.lwjgl.glfw.GLFW",
+    "org.lwjgl.sdl.SDLMouse",
+    "Camera.getViewRotationProjectionMatrix()",
+    "Camera.isInitialized()",
+    "Camera.xRot()",
+    "and 57 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "cpvp-macros-3.6-26.3.jar",
     "published": "2026-10-18"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 201,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own"
+  },
+  "lacks": 141,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

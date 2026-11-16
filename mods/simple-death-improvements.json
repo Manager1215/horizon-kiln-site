@@ -10,19 +10,16 @@
   "description": "Less frustrating deaths - no item despawn, no item splatter, item safeguards and more",
   "needs": [
     "Mixin: 5 points inside the game's methods",
-    "net.minecraft.world.entity.EntityEquipment",
     "DefaultedRegistry.getValueOrThrow()",
     "ServerLevel.getGameRules()",
     "BlockTags.AIR",
     "ExperienceOrb.setPos()",
     "LivingEntity.drop()",
-    "LivingEntity.getDisplayName()",
     "LivingEntity.isDeadOrDying()",
     "ItemEntity.setUnlimitedLifetime()",
     "Inventory.replaceWith()",
     "Player.<init>()",
     "Player.getBlockStateOn()",
-    "Player.getDisplayName()",
     "Player.getOnPos()",
     "Player.isDeadOrDying()",
     "Player.isInLava()",
@@ -37,7 +34,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "simple_death_improvements-fabric-1.7.0+26.3.jar",
     "published": "2026-11-03"
   },
@@ -66,7 +63,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @wrap-method and @wrap-operation into the game's classes"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

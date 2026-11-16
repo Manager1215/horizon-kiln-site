@@ -12,28 +12,22 @@
     "an access widener",
     "Mixin: 2 points inside the game's methods",
     "net.minecraft.world.inventory.ResultSlot",
-    "Minecraft.execute()",
     "NonNullList.iterator()",
     "NonNullList.stream()",
-    "ServerLevel.getAttached()",
-    "ServerLevel.getAttachedOrCreate()",
     "Entity.<init>()",
     "LivingEntity.<init>()",
-    "Ingredient.getCustomIngredient()",
     "Level.addFreshEntity()",
-    "Level.hasChunksAt()",
     "Level.hasNeighborSignal()",
     "Level.holderLookup()",
-    "LevelChunk.isUnsaved()",
     "FlowingFluid.createFluidStateDefinition()",
     "FluidState.getValue()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "RebornCore-6.2.1.jar",
     "published": "2026-10-23"
   },
@@ -62,7 +56,11 @@
     "minecraft",
     "team_reborn_energy"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

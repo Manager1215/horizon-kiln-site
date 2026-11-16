@@ -2,22 +2,19 @@
   "id": "haste-potion-v2",
   "name": "Haste Potion",
   "version": "1.1.0-fabric-26.3",
-  "status": "planned",
-  "statusLabel": "Planned",
-  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "status": "not-checked",
+  "statusLabel": "Not checked",
+  "statusMeaning": "In the catalogue, not checked yet.",
   "url": "https://modrinth.com/mod/haste-potion-v2",
   "author": "Zelytow",
   "description": "Ever dreamed to mine faster thanks to a potion ? Download this mod to fulfill your wish",
-  "needs": [
-    "net.minecraft.world.item.alchemy.Potion",
-    "BuiltInRegistries.POTION"
-  ],
-  "roadmap": "Code next to data (0.3)",
-  "evidence": "Not run: Java did not start.",
+  "needs": [],
+  "roadmap": "",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (9 classes, 6 members). Not run yet.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hastepotion-fabric-26.3-1.0.0.jar",
     "published": "2026-11-15"
   },
@@ -44,5 +41,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 2
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 0
 }

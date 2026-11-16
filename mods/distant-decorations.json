@@ -11,15 +11,12 @@
   "needs": [
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
     "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.Unload",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.minecraft.IdentifierException",
     "net.minecraft.client.multiplayer.ClientChunkCache",
     "net.minecraft.server.level.ChunkResult",
     "net.minecraft.world.level.LightLayer",
-    "net.minecraft.world.level.storage.LevelResource",
     "LevelRenderEvents.COLLECT_SUBMITS",
     "ServerLevelEvents.UNLOAD",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "Camera.getCullFrustum()",
     "Camera.getFov()",
     "Options.entityDistanceScaling()",
@@ -29,14 +26,9 @@
     "LocalPlayer.getBlockZ()",
     "GameRenderer.mainCamera()",
     "Frustum.isVisible()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "BlockPos.distToCenterSqr()",
     "FriendlyByteBuf.readResourceKey()",
     "FriendlyByteBuf.writeResourceKey()",
-    "MinecraftServer.execute()",
-    "MinecraftServer.getWorldPath()",
-    "MinecraftServer.isSameThread()",
     "ServerLevel.getBrightness()",
     "ServerPlayer.getBlockX()",
     "ServerPlayer.getBlockZ()",
@@ -54,7 +46,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "distant-decorations-2.0.0.jar",
     "published": "2026-09-27"
   },
@@ -83,7 +75,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 39,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 31,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,22 +9,14 @@
   "author": "Mr_Lan123",
   "description": "Quickly mark blocks, mobs and players with compact on-screen pings that show the name and live distance. Press a single key (V) to ping what you are looking at. SmartPing Smart Ping Fabric 26.3",
   "needs": [
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.world.level.storage.WorldData",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
-    "EditBox.setHint()",
     "ClientLevel.clip()",
-    "ServerData.ip",
     "LocalPlayer.getEyePosition()",
     "LocalPlayer.getViewVector()",
     "LocalPlayer.getViewXRot()",
     "LocalPlayer.getViewYRot()",
-    "MutableComponent.withStyle()",
-    "Entity.getBbHeight()",
+    "IntegratedServer.getWorldData()",
     "Entity.getBoundingBox()",
-    "Entity.isRemoved()",
     "Entity.isSpectator()",
     "AABB.clip()",
     "AABB.inflate()"
@@ -34,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "smart-ping-26.3-1.0.0.jar",
     "published": "2026-10-04"
   },
@@ -63,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

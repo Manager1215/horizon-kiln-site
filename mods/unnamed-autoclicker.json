@@ -9,19 +9,18 @@
   "author": "LunaticTi",
   "description": "An unnamed autoclicker, disable it in settings if you plan to play in multiplayer, fabric only. Requires mod menu and cloth config.",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.world.phys.EntityHitResult",
-    "KeyMapping.resetMapping()",
-    "Minecraft.gameMode",
-    "Minecraft.hitResult",
-    "Minecraft.setScreenAndShow()"
+    "MultiPlayerGameMode.attack()",
+    "MultiPlayerGameMode.interact()",
+    "MultiPlayerGameMode.startDestroyBlock()",
+    "MultiPlayerGameMode.stopDestroyBlock()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "autoclicker-1.0.0.jar",
     "published": "2026-10-13"
   },
@@ -51,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

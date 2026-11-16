@@ -11,23 +11,14 @@
   "needs": [
     "an access widener",
     "Mixin: 38 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.math.Transformation",
     "io.netty.channel.embedded.EmbeddedChannel",
     "net.fabricmc.api.DedicatedServerModInitializer",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "net.minecraft.CrashReport",
-    "net.minecraft.CrashReportCategory",
-    "net.minecraft.ReportedException",
-    "net.minecraft.commands.arguments.blocks.BlockInput",
-    "net.minecraft.commands.arguments.blocks.BlockStateArgument",
     "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.core.component.PatchedDataComponentMap",
     "net.minecraft.data.worldgen.features.EndFeatures",
     "net.minecraft.nbt.NbtAccounter",
-    "net.minecraft.nbt.NbtIo",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.server.level.ChunkHolder",
     "net.minecraft.server.level.ChunkMap",
@@ -51,6 +42,15 @@
     "net.minecraft.world.entity.ai.behavior.CopyMemoryWithExpiry",
     "net.minecraft.world.entity.ai.behavior.CountDownCooldownTicks",
     "net.minecraft.world.entity.ai.behavior.Croak",
+    "net.minecraft.world.entity.ai.behavior.CrossbowAttack",
+    "net.minecraft.world.entity.ai.behavior.DismountOrSkipMounting",
+    "net.minecraft.world.entity.ai.behavior.DoNothing",
+    "net.minecraft.world.entity.ai.behavior.FollowTemptation",
+    "net.minecraft.world.entity.ai.behavior.GateBehavior",
+    "net.minecraft.world.entity.ai.behavior.GiveGiftToHero",
+    "net.minecraft.world.entity.ai.behavior.GoAndGiveItemsToTarget",
+    "net.minecraft.world.entity.ai.behavior.GoToClosestVillage",
+    "net.minecraft.world.entity.ai.behavior.GoToPotentialJobSite",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "REMS-Carpet-Addition-mc26.3-v1.3.35.jar",
     "published": "2026-10-17"
   },
@@ -87,7 +87,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 556,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-method and @wrap-operation into the game's classes"
+  },
+  "lacks": 493,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

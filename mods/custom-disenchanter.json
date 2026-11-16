@@ -9,40 +9,22 @@
   "author": "OSAMA1",
   "description": "Precision enchantment removal - keep what you want, remove what you don't.",
   "needs": [
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "net.minecraft.references.BlockItemId",
-    "net.minecraft.tags.EnchantmentTags",
-    "net.minecraft.world.SimpleContainer",
     "Object2IntMap.Entry.getKey()",
-    "Font.plainSubstrByWidth()",
-    "GuiGraphicsExtractor.requestCursor()",
-    "AbstractContainerScreen.mouseDragged()",
-    "AbstractContainerScreen.mouseScrolled()",
-    "Holder.is()",
     "NonNullList.getFirst()",
-    "Registry.get()",
-    "RegistryAccess.lookupOrThrow()",
-    "DataComponents.REPAIR_COST",
-    "ServerPlayer.giveExperienceLevels()",
     "Containers.dropContents()",
     "Inventory.hasAnyMatching()",
     "ItemStack.getEnchantments()",
     "ItemStack.limitSize()",
-    "Items.ENCHANTED_BOOK",
-    "Enchantment.getFullname()",
     "EnchantmentHelper.getItemEnchantmentLevel()",
-    "EnchantmentHelper.updateEnchantments()",
-    "ItemEnchantments.entrySet()",
-    "ItemEnchantments.isEmpty()",
-    "ItemEnchantments.Mutable.set()"
+    "EnchantmentHelper.updateEnchantments()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "CustomDisenchanter-3.9.0.jar",
     "published": "2026-10-15"
   },
@@ -72,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

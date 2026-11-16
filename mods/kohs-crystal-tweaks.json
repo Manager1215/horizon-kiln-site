@@ -10,7 +10,6 @@
   "description": "Customize crystal glow, colors, sounds, and other-player crystal profiles.",
   "needs": [
     "Mixin: 4 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.blaze3d.audio.SoundBuffer",
     "com.mojang.blaze3d.font.GlyphProvider",
     "com.mojang.blaze3d.font.GlyphProvider.Conditional",
@@ -26,8 +25,6 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDamage",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.minecraft.client.DeltaTracker.Timer",
@@ -35,7 +32,6 @@
     "net.minecraft.client.gui.GlyphSource",
     "net.minecraft.client.gui.components.BossHealthOverlay",
     "net.minecraft.client.gui.components.LerpingBossEvent",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.font.FontManager",
     "net.minecraft.client.gui.font.FontOption",
     "net.minecraft.client.gui.font.FontOption.Filter",
@@ -50,6 +46,10 @@
     "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
     "net.minecraft.client.model.geom.ModelPart.Polygon",
     "net.minecraft.client.model.geom.ModelPart.Vertex",
+    "net.minecraft.client.model.geom.ModelPart.Visitor",
+    "net.minecraft.client.model.geom.PartPose",
+    "net.minecraft.client.model.object.crystal.EndCrystalModel",
+    "net.minecraft.client.multiplayer.ClientChunkCache",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "crystal-tweaks-26.3-2.8.0.jar",
     "published": "2026-11-02"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 449,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 322,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

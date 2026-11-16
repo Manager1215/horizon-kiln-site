@@ -11,11 +11,9 @@
   "needs": [
     "net.minecraft.world.entity.animal.equine.AbstractHorse",
     "net.minecraft.world.item.BoneMealItem",
-    "RegistryAccess.lookupOrThrow()",
     "MinecraftServer.getTickCount()",
     "Animal.addTag()",
     "Animal.entityTags()",
-    "Animal.getRandom()",
     "Animal.isAlive()",
     "Animal.isFood()",
     "Animal.removeTag()",
@@ -26,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "manure-26.3.0-5.0.jar",
     "published": "2026-11-09"
   },
@@ -56,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

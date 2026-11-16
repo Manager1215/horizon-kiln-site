@@ -29,16 +29,8 @@
     "net.minecraft.server.network.ServerStatusPacketListenerImpl",
     "net.minecraft.server.players.IpBanList",
     "net.minecraft.server.players.IpBanListEntry",
-    "ModContainer.findPath()",
-    "CommandSourceStack.getServer()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "Connection.disconnect()",
-    "Connection.getLoggableAddress()",
     "Connection.getRemoteAddress()",
-    "Connection.isMemoryConnection()",
-    "Component.translatableWithFallback()",
-    "Component.translatableWithFallback()",
     "MinecraftServer.createCommandSourceStack()",
     "MinecraftServer.getGameRules()",
     "MinecraftServer.getMotd()",
@@ -52,7 +44,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "status_hider-26.1-1.5.5.jar",
     "published": "2026-07-18"
   },
@@ -69,7 +61,11 @@
     "minecraft",
     "unruled_api"
   ],
-  "lacks": 36,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 28,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

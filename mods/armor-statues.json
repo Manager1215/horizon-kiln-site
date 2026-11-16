@@ -11,8 +11,6 @@
   "needs": [
     "an access widener",
     "net.minecraft.core.Rotations",
-    "net.minecraft.network.chat.ComponentSerialization",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.entity.EntityTypeIds",
     "net.minecraft.world.entity.ai.attributes.AttributeMap",
     "net.minecraft.world.entity.decoration.ArmorStand",
@@ -23,18 +21,9 @@
     "CompoundTag.storeNullable()",
     "ListTag.add()",
     "Identifier.toLanguageKey()",
-    "Identifier.toLanguageKey()",
     "Entity.is()",
     "LivingEntity.getAttributes()",
-    "LivingEntity.getDisplayName()",
-    "LivingEntity.getScale()",
     "LivingEntity.isAlive()",
-    "Player.swing()",
-    "Items.ARMOR_STAND",
-    "Items.GRASS_BLOCK",
-    "Items.WRITTEN_BOOK",
-    "SwingAnimation.DEFAULT",
-    "HitResult.getType()",
     "Vec3.align()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -42,7 +31,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "armorstatues-v26.3.0-mc26.3.x+fabric.jar",
     "published": "2026-09-22"
   },
@@ -73,7 +62,11 @@
     "puzzleslib",
     "statuemenus"
   ],
-  "lacks": 26,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

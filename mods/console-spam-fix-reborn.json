@@ -10,10 +10,6 @@
   "description": "A log filter that hide configured messages or errors from console and logs.",
   "needs": [
     "net.fabricmc.loader.api.MappingResolver",
-    "org.apache.logging.log4j.Level",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "org.apache.logging.log4j.Marker",
     "org.apache.logging.log4j.core.Filter",
     "org.apache.logging.log4j.core.Filter.Result",
     "org.apache.logging.log4j.core.LifeCycle",
@@ -23,7 +19,6 @@
     "org.apache.logging.log4j.core.LoggerContext",
     "org.apache.logging.log4j.core.config.Configuration",
     "org.apache.logging.log4j.core.config.LoggerConfig",
-    "org.apache.logging.log4j.message.Message",
     "FabricLoader.getMappingResolver()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
@@ -31,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ConsoleSpamFixReborn-2.1.0.jar",
     "published": "2026-08-16"
   },
@@ -59,7 +54,11 @@
     "fabricloader",
     "java"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

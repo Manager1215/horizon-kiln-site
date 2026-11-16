@@ -9,13 +9,10 @@
   "author": "mt1006",
   "description": "Adds iron door key to open iron doors and trapdoors",
   "needs": [
-    "DoorBlock.isOpen()",
-    "DoorBlock.setOpen()",
     "FenceGateBlock.FACING",
     "FenceGateBlock.OPEN",
     "TrapDoorBlock.OPEN",
     "TrapDoorBlock.WATERLOGGED",
-    "BlockSetType.IRON",
     "GameEvent.BLOCK_CLOSE",
     "GameEvent.BLOCK_OPEN"
   ],
@@ -24,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "IronDoorKey-FABRIC-26.3-1.2.2.jar",
     "published": "2026-09-30"
   },
@@ -52,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

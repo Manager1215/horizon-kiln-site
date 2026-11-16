@@ -9,16 +9,12 @@
   "author": "jahirtrap",
   "description": "Easy crafting for base metals",
   "needs": [
-    "net.minecraft.world.item.crafting.RepairItemRecipe",
     "net.minecraft.world.item.equipment.trim.ArmorTrim",
     "ModelManager.getItemModel()",
     "DataComponents.TRIM",
     "Registries.TRIM_MATERIAL",
     "BlockTags.INCORRECT_FOR_NETHERITE_TOOL",
     "Item.Properties.trimMaterial()",
-    "ToolMaterial.COPPER",
-    "ToolMaterial.GOLD",
-    "ToolMaterial.STONE",
     "SoundType.COPPER",
     "MapColor.COLOR_BLUE",
     "MapColor.COLOR_GRAY",
@@ -31,7 +27,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ingotcraft-26.3-2.4.11-fabric.jar",
     "published": "2026-09-18"
   },
@@ -59,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

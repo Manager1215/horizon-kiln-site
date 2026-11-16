@@ -10,16 +10,11 @@
   "description": "Snap the view to 360°, 180°, 90° or any custom angle. Smooth controls and a stylish UI deliver precise perspective shifts instantly",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.gui.components.Tooltip",
     "org.lwjgl.sdl.SDLMouse",
-    "InputConstants.isKeyDown()",
     "KeyMapping.click()",
     "KeyMapping.matches()",
-    "KeyMapping.matches()",
-    "Minecraft.isWindowActive()",
     "Options.toggleCrouch()",
     "Hud.extractDeferredSubtitles()",
-    "Button.setTooltip()",
     "ConfirmLinkScreen.confirmLink()",
     "LocalPlayer.setXRot()",
     "LocalPlayer.setYHeadRot()",
@@ -39,7 +34,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "FlickView-3.6.0-Fabric+mc26.3.jar",
     "published": "2026-10-15"
   },
@@ -67,7 +62,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,18 +10,16 @@
   "description": "A Minecraft performance control mod with customizable profiles, FPS limit, Render Distance, and Simulation Distance controls.",
   "needs": [
     "com.mojang.blaze3d.platform.FramerateLimitTracker",
-    "Minecraft.gameDirectory",
     "Minecraft.getFramerateLimitTracker()",
     "Options.framerateLimit()",
-    "Options.simulationDistance()",
-    "Button.getMessage()"
+    "Options.simulationDistance()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Eternal-FPS-4.0.0-MC-26.3.jar",
     "published": "2026-10-06"
   },
@@ -49,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

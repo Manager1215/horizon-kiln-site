@@ -17,9 +17,7 @@
     "net.minecraft.client.resources.model.EquipmentClientInfo",
     "net.minecraft.client.resources.model.EquipmentClientInfo.Builder",
     "net.minecraft.core.particles.TrailParticleOption",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.util.TriState",
-    "net.minecraft.world.entity.Pose",
     "net.minecraft.world.entity.animal.bee.Bee",
     "net.minecraft.world.item.ShearsItem",
     "net.minecraft.world.item.equipment.Equippable.Builder",
@@ -43,20 +41,22 @@
     "SoundEvents.EYEBLOSSOM_OPEN_LONG",
     "SoundEvents.GRASS_FALL",
     "SoundEvents.GROWING_PLANT_CROP",
-    "Stats.POT_FLOWER",
     "RandomSource.nextIntBetweenInclusive()",
     "InteractionHand.asEquipmentSlot()",
     "EnvironmentAttributes.EYEBLOSSOM_OPEN",
     "DamageSources.wither()",
     "Entity.makeStuckInBlock()",
-    "and 39 more"
+    "EntityTypes.BEE",
+    "EntityTypes.FOX",
+    "LivingEntity.isInvulnerableTo()",
+    "and 16 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Floral Enchantment-fabric-26.3-1.4.0.jar",
     "published": "2026-10-30"
   },
@@ -84,7 +84,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 92,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 56,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

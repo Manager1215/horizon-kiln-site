@@ -10,19 +10,16 @@
   "description": "This is a better intro that make the mc java intro much better!",
   "needs": [
     "net.minecraft.client.gui.screens.LoadingOverlay",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "org.lwjgl.system.MemoryUtil",
     "NativeImage.getPointer()",
-    "Minecraft.gameDirectory",
-    "GuiGraphicsExtractor.blit()",
-    "Screen.extractRenderStateWithTooltipAndSubtitles()"
+    "GuiGraphicsExtractor.blit()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "better-intro-4.0.1-28_beta.jar",
     "published": "2026-10-09"
   },
@@ -49,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

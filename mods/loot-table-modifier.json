@@ -10,7 +10,6 @@
   "description": "Allows datapacks and mods to modify loot tables instead of replacing them.\nLoot modification is applied at data loading, so there's no performance impact during gameplay.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.core.HolderSet.Direct",
     "net.minecraft.resources.RegistryDataLoader",
     "net.minecraft.resources.RegistryDataLoader.RegistryData",
     "net.minecraft.resources.RegistryLoadTask",
@@ -21,13 +20,7 @@
     "org.apache.commons.io.file.Counters",
     "org.apache.commons.io.file.Counters.PathCounters",
     "org.apache.commons.io.file.PathUtils",
-    "CommandSourceStack.getServer()",
-    "DefaultedRegistry.wrapAsHolder()",
-    "HolderSet.direct()",
-    "Identifier.withPath()",
-    "RegistryOps.create()",
     "MinecraftServer.registryAccess()",
-    "Item.CODEC",
     "LootPool.CODEC",
     "LootTable.DIRECT_CODEC",
     "LootItemCondition.DIRECT_CODEC"
@@ -37,7 +30,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "loot-table-modifier-fabric-26.3-2.5.0+fabric+26.3.jar",
     "published": "2026-10-20"
   },
@@ -66,7 +59,11 @@
     "minecraft",
     "monkeylib538"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

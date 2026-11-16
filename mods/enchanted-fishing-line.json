@@ -10,13 +10,10 @@
   "description": "Replaces the stiff vanilla fishing line with a realistic, physics simulated line thas bends, and collides with blocks! 100% Client-Side.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.player.FirstPersonHandsAndItems",
     "net.minecraft.client.renderer.entity.FishingHookRenderer",
     "net.minecraft.world.entity.LivingEntity.SwingDescription",
-    "net.minecraft.world.entity.projectile.FishingHook",
     "net.minecraft.world.item.CrossbowItem",
-    "net.minecraft.world.item.FishingRodItem",
     "net.minecraft.world.item.component.DyedItemColor",
     "RenderSystem.getModelViewMatrixCopy()",
     "PoseStack.last()",
@@ -28,10 +25,8 @@
     "Axis.ZP",
     "Minecraft.getEntityRenderDispatcher()",
     "Options.bobView()",
-    "Options.getCameraType()",
     "LocalPlayer.firstPersonHandsAndItems()",
     "LocalPlayer.getCurrentSwing()",
-    "LocalPlayer.getMainArm()",
     "LocalPlayer.getSwingAnimation()",
     "LocalPlayer.getUseItem()",
     "LocalPlayer.getUseItemRemainingTicks()",
@@ -50,14 +45,19 @@
     "EntityRenderState.x",
     "EntityRenderState.y",
     "EntityRenderState.z",
-    "and 24 more"
+    "ItemModelResolver.swapAnimationScale()",
+    "RenderType.primitiveTopology()",
+    "GameRenderState.levelRenderState",
+    "CameraRenderState.hudFov",
+    "CameraRenderState.projectionMatrix",
+    "and 16 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "enchanted_fishing_line-1.1.1-fabric-26.3.jar",
     "published": "2026-11-14"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 64,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 56,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

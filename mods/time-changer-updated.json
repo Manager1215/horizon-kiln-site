@@ -11,7 +11,6 @@
   "needs": [
     "net.minecraft.client.ClientClockManager",
     "net.minecraft.client.ClientClockManager.ClientClockInstance",
-    "Minecraft.getCurrentServer()",
     "EnvironmentAttributeSystem.invalidateTickCache()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -19,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "timechangerupdated+26.3-1.7.0.jar",
     "published": "2026-09-18"
   },
@@ -46,7 +45,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method into the game's classes"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

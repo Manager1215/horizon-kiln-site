@@ -35,7 +35,6 @@
     "net.minecraft.client.renderer.feature.ModelFeatureRenderer.Submit",
     "net.minecraft.client.renderer.feature.phase.SimpleFeatureRenderPhase",
     "net.minecraft.tags.DamageTypeTags",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.AnimationState",
     "net.minecraft.world.entity.npc.villager.VillagerProfession",
     "PoseStack.last()",
@@ -46,17 +45,18 @@
     "EntityRendererProvider.Context.bakeLayer()",
     "RenderTypes.eyes()",
     "RenderTypes.outline()",
-    "Holder.getRegisteredName()",
     "BuiltInRegistries.POINT_OF_INTEREST_TYPE",
     "BuiltInRegistries.VILLAGER_PROFESSION",
-    "and 5 more"
+    "Registries.TRADE_SET",
+    "Registries.VILLAGER_PROFESSION",
+    "and 2 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "wizards-fabric-3.1.4+26.3.jar",
     "published": "2026-10-04"
   },
@@ -91,7 +91,11 @@
     "spell_engine",
     "structure_pool_api"
   ],
-  "lacks": 45,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 42,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

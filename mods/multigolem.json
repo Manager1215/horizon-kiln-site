@@ -10,8 +10,6 @@
   "description": "This project adds the ability to create new golems out of Lapis, Copper, Gold, Redstone, Emerald, Diamond, and Netherite blocks that have special abilities beyond the basic Iron Golem",
   "needs": [
     "Mixin: 6 points inside the game's methods",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
     "net.fabricmc.fabric.api.entity.event.v1.effect.ServerMobEffectEvents",
@@ -46,18 +44,20 @@
     "net.minecraft.world.entity.npc.villager.Villager",
     "net.minecraft.world.entity.npc.wanderingtrader.WanderingTrader",
     "net.minecraft.world.item.HoneycombItem",
-    "net.minecraft.world.item.SpawnEggItem",
     "net.minecraft.world.level.BaseSpawner",
     "net.minecraft.world.level.SpawnData",
     "net.minecraft.world.level.block.CarvedPumpkinBlock",
-    "and 69 more"
+    "net.minecraft.world.level.block.WeatheringCopper",
+    "net.minecraft.world.level.block.WeatheringCopper.WeatherState",
+    "net.minecraft.world.level.block.entity.SpawnerBlockEntity",
+    "and 51 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "multigolem-fabric-0.8.2+mc26.3.jar",
     "published": "2026-09-21"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 120,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels"
+  },
+  "lacks": 91,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

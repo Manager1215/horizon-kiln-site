@@ -9,33 +9,18 @@
   "author": "Miraculixx",
   "description": "BlueMap extension - Add a marker command to easily setup your markers & marker sets ingame without touching any configs",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.minecraft.commands.arguments.ComponentArgument",
     "net.minecraft.commands.arguments.CompoundTagArgument",
-    "net.minecraft.commands.arguments.GameProfileArgument",
-    "net.minecraft.commands.arguments.GameProfileArgument.Result",
-    "net.minecraft.commands.arguments.IdentifierArgument",
     "net.minecraft.commands.arguments.NbtTagArgument",
     "net.minecraft.commands.arguments.ParticleArgument",
     "net.minecraft.commands.arguments.TeamColorArgument",
     "net.minecraft.commands.arguments.UuidArgument",
-    "net.minecraft.commands.arguments.blocks.BlockInput",
-    "net.minecraft.commands.arguments.blocks.BlockStateArgument",
     "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
-    "net.minecraft.commands.arguments.coordinates.Coordinates",
     "net.minecraft.commands.arguments.coordinates.Vec2Argument",
-    "net.minecraft.commands.arguments.coordinates.Vec3Argument",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "CommandSourceStack.getServer()",
-    "CommandSourceStack.getTextName()",
-    "CommandSourceStack.isPlayer()",
     "CommandSourceStack.sendMessage()",
-    "Commands.getDispatcher()",
     "Commands.sendCommands()",
     "ResourceKey.key()",
     "MinecraftServer.getAllLevels()",
-    "MinecraftServer.getCommands()",
-    "ServerPlayer.permissions()",
     "ServerPlayer.teleportTo()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -43,7 +28,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bmm-fabric-2.1.19.jar",
     "published": "2026-09-28"
   },
@@ -74,7 +59,11 @@
     "minecraft",
     "silk-core"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; has network channels"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

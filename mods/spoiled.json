@@ -9,7 +9,6 @@
   "author": "Mrbysco",
   "description": "Spoiling your food supply since 2020",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditionType",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions",
@@ -20,10 +19,6 @@
     "net.minecraft.world.entity.decoration.ItemFrame",
     "net.minecraft.world.item.crafting.RecipeBookCategories",
     "net.minecraft.world.level.block.state.properties.ChestType",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "CommandSourceStack.getTextName()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "DataComponents.FOOD",
     "Registries.RECIPE_SERIALIZER",
     "ServerChunkCache.chunkMap",
@@ -31,6 +26,7 @@
     "Entity.isAlive()",
     "Player.addItem()",
     "Level.addFreshEntity()",
+    "LevelReader.hasChunksAt()",
     "BlockStateProperties.CHEST_TYPE",
     "ChunkAccess.getBlockEntitiesPos()"
   ],
@@ -39,7 +35,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Spoiled-fabric-26.3-13.0.1.jar",
     "published": "2026-11-15"
   },
@@ -71,7 +67,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

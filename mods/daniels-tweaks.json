@@ -16,7 +16,6 @@
     "net.minecraft.client.gui.Font.GlyphVisitor",
     "net.minecraft.client.gui.Font.PreparedText",
     "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
-    "net.minecraft.client.gui.TextAlignment",
     "net.minecraft.client.gui.components.MultiLineLabel",
     "net.minecraft.client.gui.font.TextRenderable",
     "net.minecraft.client.gui.font.TextRenderable.Styled",
@@ -40,23 +39,24 @@
     "RenderPipeline.getPrimitiveTopology()",
     "RenderPipeline.getVertexFormatBinding()",
     "Camera.forwardVector()",
-    "Minecraft.execute()",
-    "Minecraft.setScreenAndShow()",
     "Font.prepareText()",
     "GuiGraphicsExtractor.textRendererForWidget()",
-    "AbstractWidget.setHeight()",
     "GuiEventListener.getRectangle()",
-    "GuiEventListener.isMouseOver()",
     "TextureSetup.singleTextureWithLightmap()",
     "ClientPacketListener.getServerData()",
-    "and 19 more"
+    "GameRenderer.mainCamera()",
+    "RenderPipelines.DEBUG_FILLED_SNIPPET",
+    "RenderPipelines.LINES_SNIPPET",
+    "RenderPipelines.TEXT_SNIPPET",
+    "RenderPipelines.register()",
+    "and 9 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "daniels-tweaks-0.0.1.jar",
     "published": "2026-10-30"
   },
@@ -84,7 +84,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 59,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 49,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

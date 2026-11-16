@@ -16,7 +16,6 @@
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Canceled",
     "net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags",
-    "net.minecraft.client.CameraType",
     "net.minecraft.core.particles.DustParticleOptions",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
@@ -29,15 +28,11 @@
     "net.minecraft.world.level.block.GameMasterBlock",
     "net.minecraft.world.level.material.PushReaction",
     "net.minecraft.world.phys.EntityHitResult",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "PoseStack.Pose.pose()",
     "VertexConsumer.addVertex()",
     "VertexConsumer.setColor()",
     "Object2IntMap.Entry.getKey()",
     "LevelRenderEvents.AFTER_BLOCK_OUTLINE_EXTRACTION",
-    "Minecraft.gameDirectory",
-    "Options.getCameraType()",
     "RenderTypes.debugQuads()",
     "RenderTypes.lightning()",
     "BlockPos.containing()",
@@ -50,14 +45,19 @@
     "MinecraftServer.getTickCount()",
     "MinecraftServer.schedule()",
     "ServerLevel.getEntitiesOfClass()",
-    "and 41 more"
+    "ServerLevel.sendParticles()",
+    "ServerPlayer.blockActionRestricted()",
+    "ServerPlayer.gameMode",
+    "ServerPlayer.getCooldowns()",
+    "ServerPlayer.hasCorrectToolForDrops()",
+    "and 38 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hammers-2.2-26.3-fabric.jar",
     "published": "2026-10-30"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 119,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 105,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

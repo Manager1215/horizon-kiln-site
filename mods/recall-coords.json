@@ -11,28 +11,15 @@
   "needs": [
     "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents",
     "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.AllowChat",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.world.level.storage.LevelResource",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
-    "ServerData.ip",
     "LocalPlayer.isDeadOrDying()",
-    "RegistryAccess.lookupOrThrow()",
-    "Registries.BIOME",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()"
+    "Registries.BIOME"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Recall-Coords-1.0.16+26.3.jar",
     "published": "2026-09-18"
   },
@@ -60,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

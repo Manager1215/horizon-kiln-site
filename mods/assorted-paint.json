@@ -9,22 +9,19 @@
   "author": "grim3212",
   "description": "Adds paint rollers that recolor wool, concrete, siding, fluro blocks and road markings.",
   "needs": [
-    "net.minecraft.core.component.DataComponentPatch.Builder",
     "net.minecraft.world.entity.animal.sheep.Sheep",
-    "DataComponentPatch.builder()",
     "DataComponents.DAMAGE",
     "DataComponents.MAX_DAMAGE",
     "Registries.RECIPE_SERIALIZER",
     "SoundEvents.DYE_USE",
-    "InteractionHand.asEquipmentSlot()",
-    "DyeColor.getName()"
+    "InteractionHand.asEquipmentSlot()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "assortedpaint-fabric-26.3-2.0.0.jar",
     "published": "2026-10-24"
   },
@@ -53,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

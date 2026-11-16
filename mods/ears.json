@@ -10,7 +10,6 @@
   "description": "More skin customization options for just about every version + skin back​ports/fixes for pre-1.9 versions.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.gui.contextualbar.LocatorBar",
     "net.minecraft.client.gui.contextualbar.LocatorBarRenderer",
     "net.minecraft.client.model.HumanoidModel",
@@ -24,17 +23,11 @@
     "net.minecraft.client.renderer.entity.player.AvatarRenderer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.client.resources.WaypointStyle",
     "net.minecraft.util.Util.OS",
     "net.minecraft.world.item.component.DyedItemColor",
     "NativeImage.copyFrom()",
-    "NativeImage.format()",
-    "NativeImage.getHeight()",
-    "NativeImage.getPixel()",
-    "NativeImage.getWidth()",
     "NativeImage.read()",
-    "NativeImage.setPixel()",
     "PoseStack.last()",
     "PoseStack.Pose.copy()",
     "PoseStack.Pose.normal()",
@@ -45,19 +38,26 @@
     "VertexConsumer.setLight()",
     "VertexConsumer.setNormal()",
     "VertexConsumer.setOverlay()",
+    "SharedConstants.getCurrentVersion()",
     "Options.improvedTransparency()",
     "ClientAvatarState.getInterpolatedBob()",
     "ClientAvatarState.getInterpolatedCloakX()",
     "ClientAvatarState.getInterpolatedCloakY()",
     "ClientAvatarState.getInterpolatedCloakZ()",
-    "and 21 more"
+    "ClientAvatarState.getInterpolatedWalkDistance()",
+    "GuiGraphicsExtractor.blit()",
+    "ConfirmLinkScreen.<init>()",
+    "ModelPart.getRandomCube()",
+    "ModelPart.isEmpty()",
+    "ModelPart.translateAndRotate()",
+    "and 13 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ears-thermite-2.2.1-d.jar",
     "published": "2026-09-16"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 61,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 53,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "net.minecraft.client.gui.Hud.HeartType",
-    "net.minecraft.data.AtlasIds",
     "net.minecraft.network.chat.contents.objects.AtlasSprite",
     "net.minecraft.tags.EntityTypeTags",
     "net.minecraft.world.entity.EntityAttachment",
@@ -37,9 +36,6 @@
     "EntityRenderState.nameTagAttachment",
     "CameraRenderState.orientation",
     "DataComponents.ATTACK_RANGE",
-    "CommonComponents.OPTION_OFF",
-    "CommonComponents.OPTION_ON",
-    "Component.getVisualOrderText()",
     "Component.object()",
     "Entity.getAttachments()",
     "Entity.getEyePosition()",
@@ -50,14 +46,18 @@
     "EntityReference.matches()",
     "EquipmentSlot.VALUES",
     "LivingEntity.getAbsorptionAmount()",
-    "and 23 more"
+    "LivingEntity.getAirSupply()",
+    "LivingEntity.getAttachments()",
+    "LivingEntity.getEyePosition()",
+    "LivingEntity.getMaxAirSupply()",
+    "and 18 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mobplaques-v26.3.1-mc26.3.x+fabric.jar",
     "published": "2026-11-14"
   },
@@ -87,7 +87,11 @@
     "minecraft",
     "puzzleslib"
   ],
-  "lacks": 63,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 58,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,17 +10,9 @@
   "description": "Allows you to open and manipulate the inventories and ender chests of online and offline players. Server Side",
   "needs": [
     "Mixin: 15 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.minecraft.commands.arguments.GameProfileArgument",
-    "net.minecraft.core.component.DataComponentPatch.Builder",
-    "net.minecraft.nbt.NbtIo",
     "net.minecraft.world.inventory.PlayerEnderChestContainer",
     "net.minecraft.world.item.component.ResolvableProfile.Static",
     "net.minecraft.world.level.block.entity.SignBlockEntity",
-    "net.minecraft.world.level.storage.LevelResource",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "MinecraftServer.getWorldPath()",
     "MinecraftServer.overworld()",
     "MinecraftServer.registryAccess()",
     "ClientInformation.createDefault()",
@@ -28,24 +20,14 @@
     "ServerPlayer.getEnderChestInventory()",
     "ServerPlayer.problemPath()",
     "ServerPlayer.registryAccess()",
-    "ServerPlayer.saveWithoutId()",
-    "PlayerList.loadPlayerData()",
-    "Util.safeReplaceFile()",
-    "Entity.load()",
-    "MenuType.GENERIC_9x1",
-    "MenuType.GENERIC_9x2",
-    "MenuType.GENERIC_9x3",
-    "MenuType.GENERIC_9x4",
-    "MenuType.GENERIC_9x5",
-    "MenuType.GENERIC_9x6",
-    "Items.BARRIER"
+    "PlayerList.loadPlayerData()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "InvView-1.4.22-26.3+.jar",
     "published": "2026-09-26"
   },
@@ -73,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 29,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

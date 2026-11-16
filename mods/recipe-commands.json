@@ -10,11 +10,6 @@
   "description": "💬 Receive the pattern and ingredients of any item recipe via chat commands.",
   "needs": [
     "net.minecraft.commands.arguments.ResourceKeyArgument",
-    "CommandSourceStack.getEntity()",
-    "CommandSourceStack.getPlayerOrException()",
-    "Registry.get()",
-    "RegistryAccess.lookupOrThrow()",
-    "ItemStack.<init>()",
     "ItemStack.tags()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -22,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "recipecommands-26.3.0-3.8.jar",
     "published": "2026-10-02"
   },
@@ -51,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

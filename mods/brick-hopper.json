@@ -9,12 +9,10 @@
   "author": "cech12",
   "description": "Adds a Brick Hopper to the game.",
   "needs": [
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.vehicle.ContainerEntity",
     "net.minecraft.world.level.block.HopperBlock",
     "net.minecraft.world.level.block.entity.Hopper",
     "net.minecraft.world.level.block.entity.HopperBlockEntity",
-    "Stats.INSPECT_HOPPER",
     "BlockTags.DOES_NOT_BLOCK_HOPPERS",
     "Container.startOpen()",
     "Container.stopOpen()",
@@ -34,7 +32,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "brickhopper-fabric-26.3-4.2.1.0.jar",
     "published": "2026-10-01"
   },
@@ -65,7 +63,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

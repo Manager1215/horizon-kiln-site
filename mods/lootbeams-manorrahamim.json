@@ -11,9 +11,6 @@
   "needs": [
     "net.minecraft.client.renderer.entity.ItemEntityRenderer",
     "net.minecraft.client.renderer.entity.state.ItemEntityRenderState",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.util.StringUtil",
-    "net.minecraft.world.item.alchemy.PotionContents",
     "net.minecraft.world.item.component.DyedItemColor",
     "VertexConsumer.addVertex()",
     "VertexConsumer.setLight()",
@@ -25,20 +22,15 @@
     "LocalPlayer.isCrouching()",
     "RenderTypes.beaconBeam()",
     "DataComponents.DYED_COLOR",
-    "DataComponents.POTION_CONTENTS",
-    "MutableComponent.withStyle()",
     "Entity.getEyeY()",
-    "ItemEntity.getItem()",
-    "ItemStack.getRarity()",
-    "CustomData.copyTag()",
-    "CustomData.isEmpty()"
+    "ItemEntity.getItem()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "lootbeams-1.0.0+26.3.jar",
     "published": "2026-09-26"
   },
@@ -66,7 +58,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

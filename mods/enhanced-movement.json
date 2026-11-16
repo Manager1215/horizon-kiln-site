@@ -10,15 +10,12 @@
   "description": "A mod that enables double jump, dash in any direction, and ledge grabbing! Enhanced with modern config GUI.",
   "needs": [
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.AfterTranslucentFeatures",
-    "net.minecraft.client.CameraType",
     "PoseStack.Pose.pose()",
     "VertexConsumer.addVertex()",
     "VertexConsumer.setColor()",
     "VertexConsumer.setLight()",
     "VertexConsumer.setOverlay()",
     "LevelRenderEvents.AFTER_TRANSLUCENT_FEATURES",
-    "Minecraft.execute()",
-    "Options.getCameraType()",
     "ClientLevel.getPlayerByUUID()",
     "LocalPlayer.causeFoodExhaustion()",
     "LocalPlayer.fallDistance",
@@ -26,7 +23,6 @@
     "LocalPlayer.setDeltaMovement()",
     "GameRenderer.mainCamera()",
     "RenderTypes.entityTranslucentEmissive()",
-    "MinecraftServer.execute()",
     "ServerPlayer.fallDistance",
     "Player.fallDistance",
     "BlockState.getCollisionShape()",
@@ -37,7 +33,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "enhanced-movement-fabric-2.3.0.jar",
     "published": "2026-09-21"
   },
@@ -67,7 +63,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

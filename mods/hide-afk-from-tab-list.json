@@ -9,10 +9,7 @@
   "author": "paraf0x",
   "description": "Client-side Fabric mod that filters AFK players from the tab list. Toggle with a keybind to declutter your player list on busy servers.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.client.gui.components.PlayerTabOverlay",
-    "KeyMapping.getTranslatedKeyMessage()",
-    "Minecraft.execute()",
     "PlayerInfo.getProfile()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
@@ -20,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "afk-filter-1.2.1.jar",
     "published": "2026-11-10"
   },
@@ -48,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

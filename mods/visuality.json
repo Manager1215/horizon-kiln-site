@@ -12,7 +12,6 @@
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
     "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.particle.ParticleProvider",
     "net.minecraft.client.particle.RisingParticle",
     "net.minecraft.client.particle.SingleQuadParticle",
@@ -28,13 +27,11 @@
     "net.minecraft.world.entity.monster.zombie.Zombie",
     "net.minecraft.world.level.block.AmethystBlock",
     "net.minecraft.world.level.block.AmethystClusterBlock",
-    "Options.getCameraType()",
     "Options.particles()",
     "ClientLevel.getHeightmapPos()",
     "AbstractClientPlayer.getOnPos()",
     "SynchedEntityData.get()",
     "BlockTags.WITHER_SUMMON_BASE_BLOCKS",
-    "DamageSource.getEntity()",
     "Entity.<init>()",
     "Entity.hurtClient()",
     "Biome.getPrecipitationAt()",
@@ -45,7 +42,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "visuality-0.7.15+26.3.jar",
     "published": "2026-09-20"
   },
@@ -75,7 +72,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 30,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 27,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

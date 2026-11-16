@@ -14,11 +14,9 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.fabricmc.loader.api.MappingResolver",
     "net.fabricmc.loader.api.metadata.CustomValue",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.WidgetTooltipHolder",
     "net.minecraft.client.gui.screens.options.SoundOptionsScreen",
     "net.minecraft.client.particle.Particle",
@@ -31,7 +29,6 @@
     "net.minecraft.client.sounds.MusicManager",
     "net.minecraft.commands.arguments.blocks.BlockStateParser",
     "net.minecraft.commands.arguments.blocks.BlockStateParser.BlockResult",
-    "net.minecraft.commands.arguments.coordinates.Vec3Argument",
     "net.minecraft.core.particles.BlockParticleOption",
     "net.minecraft.core.particles.DustColorTransitionOptions",
     "net.minecraft.core.particles.DustParticleOptions",
@@ -40,7 +37,6 @@
     "net.minecraft.core.particles.ShriekParticleOption",
     "net.minecraft.network.protocol.game.ServerboundPunchPacket",
     "net.minecraft.network.syncher.EntityDataAccessor",
-    "net.minecraft.server.permissions.LevelBasedPermissionSet",
     "net.minecraft.world.entity.ai.control.LookControl",
     "net.minecraft.world.entity.ai.control.MoveControl",
     "net.minecraft.world.entity.ai.control.MoveControl.Operation",
@@ -50,14 +46,18 @@
     "net.minecraft.world.entity.ai.goal.WrappedGoal",
     "net.minecraft.world.entity.ai.navigation.PathNavigation",
     "net.minecraft.world.entity.monster.Monster",
-    "and 65 more"
+    "net.minecraft.world.entity.projectile.EvokerFangs",
+    "net.minecraft.world.entity.projectile.ProjectileDeflection",
+    "net.minecraft.world.item.ItemCooldowns",
+    "net.minecraft.world.phys.EntityHitResult",
+    "and 60 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dochi_battleworks-0.1.6-fabric-26.3.jar",
     "published": "2026-10-28"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 200,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 152,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

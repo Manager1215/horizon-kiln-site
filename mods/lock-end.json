@@ -12,20 +12,11 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterEntityChange",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.permission.v1.PermissionContextOwner",
     "net.fabricmc.fabric.api.permission.v1.PermissionPredicates",
-    "net.minecraft.server.permissions.Permissions",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "CommandSourceStack.getEntity()",
-    "CommandSourceStack.getTextName()",
     "MinecraftServer.overworld()",
     "ServerLevel.getRespawnData()",
-    "ServerPlayer.permissions()",
     "ServerPlayer.teleport()",
-    "PlayerList.broadcastSystemMessage()",
     "LevelData.RespawnData.pos()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -33,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "lock-end-fabric-4.0.0.jar",
     "published": "2026-11-08"
   },
@@ -61,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

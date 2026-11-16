@@ -12,7 +12,6 @@
     "an access widener",
     "Mixin: 1 point inside the game's methods",
     "net.minecraft.nbt.NbtAccounter",
-    "net.minecraft.nbt.NbtIo",
     "net.minecraft.nbt.StreamTagVisitor",
     "net.minecraft.nbt.StreamTagVisitor.EntryResult",
     "net.minecraft.nbt.visitors.FieldSelector",
@@ -49,16 +48,17 @@
     "ListTag.TYPE",
     "ListTag.add()",
     "ListTag.iterator()",
+    "NbtIo.parse()",
     "ServerLevel.getStructureTemplateManager()",
-    "BlockTags.DIRT",
-    "and 47 more"
+    "BlockTags.HUGE_BROWN_MUSHROOM_CAN_PLACE_ON",
+    "and 33 more"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ohthetreesyoullgrow-fabric-26.3-12.0.4.jar",
     "published": "2026-11-06"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 87,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 73,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

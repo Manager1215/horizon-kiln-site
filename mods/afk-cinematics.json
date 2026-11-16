@@ -10,27 +10,16 @@
   "description": "A mod that starts cinematic shots when the player goes AFK",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.CameraType",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.sounds.MusicManager",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
     "net.minecraft.sounds.Music",
     "net.minecraft.sounds.Musics",
-    "KeyMapping.getTranslatedKeyMessage()",
     "Minecraft.getMusicManager()",
-    "Options.getCameraType()",
     "Options.getSoundSourceOptionInstance()",
     "Options.getSoundSourceVolume()",
-    "Options.setCameraType()",
     "GuiGraphicsExtractor.blurBeforeThisStratum()",
-    "GuiGraphicsExtractor.nextStratum()",
     "Hud.toggle()",
     "ConfirmLinkScreen.confirmLinkNow()",
-    "MutableComponent.setStyle()",
-    "Style.withClickEvent()",
-    "Style.withUnderlined()",
     "Mth.rotLerp()",
-    "Entity.getBbHeight()",
     "Entity.isAlive()",
     "Entity.isSpectator()",
     "Player.getBoundingBox()",
@@ -39,15 +28,14 @@
     "Level.getEntities()",
     "Level.getHeight()",
     "Level.getLevelData()",
-    "AABB.inflate()",
-    "HitResult.getType()"
+    "AABB.inflate()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "afk-cinematics-2.11.26+mc26.3.jar",
     "published": "2026-11-14"
   },
@@ -75,7 +63,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 31,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 19,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

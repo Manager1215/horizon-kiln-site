@@ -10,17 +10,11 @@
   "description": "Source Engine Movement and Bhopping in Minecraft for a Better Parkour Experience",
   "needs": [
     "Mixin: 7 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.AttackIndicatorStatus",
     "net.minecraft.client.Screenshot",
     "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
     "net.minecraft.client.gui.components.spectator.SpectatorGui",
     "net.minecraft.client.gui.contextualbar.ExperienceBar",
     "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
@@ -45,19 +39,25 @@
     "net.minecraft.client.renderer.rendertype.LayeringTransform",
     "net.minecraft.client.renderer.rendertype.RenderSetup",
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.network.protocol.game.ServerboundClientCommandPacket",
     "net.minecraft.network.protocol.game.ServerboundClientCommandPacket.Action",
-    "and 80 more"
+    "net.minecraft.network.protocol.game.ServerboundMovePlayerPacket",
+    "net.minecraft.network.protocol.game.ServerboundMovePlayerPacket.Pos",
+    "net.minecraft.network.protocol.game.ServerboundPlayerInputPacket",
+    "net.minecraft.network.protocol.game.ServerboundTeleportToEntityPacket",
+    "net.minecraft.network.syncher.EntityDataSerializers",
+    "net.minecraft.network.syncher.SynchedEntityData.Builder",
+    "net.minecraft.server.ServerTickRateManager",
+    "net.minecraft.server.level.ChunkMap",
+    "net.minecraft.server.level.ChunkMap.TrackedEntity",
+    "and 73 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "minehop-fabric-26.3-1.1.8.jar",
     "published": "2026-10-17"
   },
@@ -89,7 +89,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 347,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
+  },
+  "lacks": 247,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,22 +9,14 @@
   "author": "GalvinPython",
   "description": "Server Day Counter is a mod (designed for servers) to broadcast and show the day of the world, just like you can in singleplayer!",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.minecraft.server.permissions.Permissions",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "CommandSourceStack.getServer()",
-    "CommandSourceStack.sendSystemMessage()",
-    "MinecraftServer.overworld()",
-    "ServerLevel.getDefaultClockTime()",
-    "ServerPlayer.sendSystemMessage()",
-    "PlayerList.broadcastSystemMessage()"
+    "MinecraftServer.overworld()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ServerDayCounter-1.1.2+26.3.jar",
     "published": "2026-10-01"
   },
@@ -52,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

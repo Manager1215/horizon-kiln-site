@@ -9,19 +9,16 @@
   "author": "CG360",
   "description": "Reacharound Placement / Bedrock Bridging for Fabric, Forge & Quilt with a few extra tweaks",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.world.level.block.BaseTorchBlock",
     "net.minecraft.world.level.block.state.properties.SlabType",
     "PoseStack.mulPose()",
     "Camera.forwardVector()",
-    "Minecraft.hitResult",
     "LocalPlayer.blockInteractionRange()",
     "LocalPlayer.hasInfiniteMaterials()",
     "LocalPlayer.isCrouching()",
     "LocalPlayer.isHandsBusy()",
     "LocalPlayer.itemUsed()",
-    "LocalPlayer.swing()",
     "GameRenderer.mainCamera()",
     "RenderPipelines.CROSSHAIR",
     "GameRenderState.guiRenderState",
@@ -32,18 +29,14 @@
     "BlockPos.subtract()",
     "Direction.getUnitVec3i()",
     "Vec3i.multiply()",
-    "Identifier.tryBuild()",
     "InteractionResult.SwingSource.PREDICTED",
     "Entity.getEyePosition()",
     "Entity.getViewVector()",
     "Player.getBoundingBox()",
-    "ItemStack.getInteractAnimation()",
-    "Level.isEmptyBlock()",
     "SlabBlock.TYPE",
     "BlockState.canBeReplaced()",
     "AABB.intersects()",
     "AABB.intersects()",
-    "HitResult.getType()",
     "Vec3.<init>()",
     "Vec3.atLowerCornerWithOffset()",
     "Vec3.toVector3f()"
@@ -53,7 +46,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "BridgingMod-2.7.0+26.3.fabric-release.jar",
     "published": "2026-09-21"
   },
@@ -84,7 +77,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 38,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 31,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

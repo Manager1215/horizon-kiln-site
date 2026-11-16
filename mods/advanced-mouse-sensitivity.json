@@ -11,26 +11,21 @@
   "needs": [
     "an access widener",
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.OptionInstance.CaptionBasedToString",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
     "net.minecraft.client.OptionInstance.UnitDouble",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
     "net.minecraft.client.Options.FieldAccess",
     "net.minecraft.client.gui.components.OptionsList",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.options.MouseSettingsScreen",
     "net.minecraft.client.tutorial.Tutorial",
     "OptionInstance.<init>()",
     "OptionInstance.createBoolean()",
     "OptionInstance.noTooltip()",
-    "Options.getCameraType()",
     "Options.invertMouseY()",
     "Options.percentValueLabel()",
     "Options.sensitivity()",
     "Options.smoothCamera",
-    "AbstractWidget.setTooltip()",
     "LocalPlayer.isScoping()",
     "LocalPlayer.turn()"
   ],
@@ -39,7 +34,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "advanced-mouse-sensitivity-mc26.3-1.0.1.jar",
     "published": "2026-09-16"
   },
@@ -64,7 +59,11 @@
   "depends": [
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @redirect into the game's classes"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

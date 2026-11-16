@@ -11,22 +11,20 @@
   "needs": [
     "org.lwjgl.glfw.GLFW",
     "InputConstants.Type.KEYSYM",
-    "KeyMapping.matches()",
     "KeyMapping.setDown()",
     "Minecraft.screen",
     "Minecraft.setScreen()",
     "Options.hideGui",
     "Options.toggleCrouch()",
     "Options.toggleSprint()",
-    "LocalPlayer.isCrouching()",
-    "LocalPlayer.setSprinting()"
+    "LocalPlayer.isCrouching()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "AutoRunPlus-26.x-1.0.0.jar",
     "published": "2026-10-13"
   },
@@ -54,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

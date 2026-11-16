@@ -10,14 +10,9 @@
   "description": "Bring back the classic camel-case gamerules to MC 1.21.11+",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.server.commands.GameRuleCommand",
     "org.apache.commons.io.IOUtils",
     "CommandBuildContext.enabledFeatures()",
-    "CommandSourceStack.getEntity()",
-    "CommandSourceStack.getServer()",
-    "CommandSourceStack.sendSystemMessage()",
-    "MutableComponent.getContents()",
     "ServerLevel.getGameRules()",
     "FeatureFlagSet.isSubsetOf()",
     "GameRule.argument()",
@@ -50,14 +45,19 @@
     "GameRules.LOG_ADMIN_COMMANDS",
     "GameRules.MAX_BLOCK_MODIFICATIONS",
     "GameRules.MAX_COMMAND_FORKS",
-    "and 23 more"
+    "GameRules.MAX_COMMAND_SEQUENCE_LENGTH",
+    "GameRules.MAX_ENTITY_CRAMMING",
+    "GameRules.MAX_MINECART_SPEED",
+    "GameRules.MAX_SNOW_ACCUMULATION_HEIGHT",
+    "GameRules.MOB_DROPS",
+    "and 22 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "classic-gamerule-v1.0.6-mc26.3.jar",
     "published": "2026-09-17"
   },
@@ -83,7 +83,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 73,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 68,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

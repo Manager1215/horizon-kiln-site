@@ -24,15 +24,11 @@
     "net.minecraft.world.item.MinecartItem",
     "net.minecraft.world.level.block.BaseRailBlock",
     "net.minecraft.world.level.block.state.properties.RailShape",
-    "org.apache.logging.log4j.LogManager",
     "Minecraft.isLocalServer()",
-    "Minecraft.isSameThread()",
     "ClientLevel.addEntity()",
     "ClientLevel.getEntities()",
-    "ClientLevel.isEmptyBlock()",
     "ClientLevel.removeEntity()",
     "ClientLevel.tickRateManager()",
-    "ClientPacketListener.getConnection()",
     "NonNullList.iterator()",
     "Connection.genericsFtw()",
     "Connection.getPacketListener()",
@@ -47,18 +43,22 @@
     "ClientboundBundlePacket.subPackets()",
     "SynchedEntityData.getNonDefaultValues()",
     "BlockTags.RAILS",
-    "Util.getNanos()",
     "Entity.getEntityData()",
     "Entity.getPassengers()",
     "Entity.getVehicle()",
-    "and 26 more"
+    "Entity.getYHeadRot()",
+    "Entity.isPassenger()",
+    "Entity.removalReason",
+    "Entity.remove()",
+    "Entity.updateDataBeforeSync()",
+    "and 17 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "eslium-4.9.0-alpha+26.3.jar",
     "published": "2026-10-19"
   },
@@ -75,7 +75,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 66,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 57,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

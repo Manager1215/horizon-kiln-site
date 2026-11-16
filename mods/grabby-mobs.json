@@ -17,14 +17,12 @@
     "net.minecraft.world.entity.monster.zombie.Zombie",
     "ServerLevel.getEntitiesOfClass()",
     "ServerLevel.getGameRules()",
-    "EquipmentSlot.isArmor()",
     "Mob.getBoundingBox()",
     "Mob.getEquipmentSlotForItem()",
     "Mob.isAlive()",
     "Mob.wantsToPickUp()",
     "ItemEntity.getItem()",
     "ItemEntity.hasPickUpDelay()",
-    "ItemEntity.isRemoved()",
     "GameRules.MOB_GRIEFING",
     "GameRules.get()",
     "AABB.inflate()"
@@ -34,7 +32,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "grabbymobs-26.3.0-2.0.jar",
     "published": "2026-11-03"
   },
@@ -64,7 +62,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

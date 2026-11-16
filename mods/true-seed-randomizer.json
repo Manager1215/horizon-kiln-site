@@ -10,9 +10,7 @@
   "description": "Improves the randomness of creating a world with a random seed and also adds a shortcut in the game menu to create a random world instantly.",
   "needs": [
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.world.level.LevelSettings",
     "net.minecraft.world.level.LevelSettings.DifficultySettings",
     "net.minecraft.world.level.levelgen.WorldOptions",
@@ -20,8 +18,7 @@
     "net.minecraft.world.level.storage.WorldData",
     "Minecraft.createWorldOpenFlows()",
     "Minecraft.getLevelSource()",
-    "Minecraft.getSingleplayerServer()",
-    "Button.Builder.tooltip()",
+    "IntegratedServer.getWorldData()",
     "LevelStorageSource.levelExists()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -29,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "true-seed-randomizer-1.0.0.jar",
     "published": "2026-09-19"
   },
@@ -58,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

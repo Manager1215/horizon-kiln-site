@@ -10,7 +10,6 @@
   "description": "Explore a freezing polar biome, meet the Avali, those nomadic space chickens, earn their trust, trade with their villages and survive the cold with their tech.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
     "net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry",
@@ -18,7 +17,6 @@
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.model.HumanoidModel.ArmPose",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.particle.BubbleParticle",
     "net.minecraft.client.particle.BubbleParticle.Provider",
     "net.minecraft.client.particle.Particle",
@@ -35,9 +33,6 @@
     "net.minecraft.client.resources.model.EquipmentClientInfo.Dyeable",
     "net.minecraft.client.resources.model.EquipmentClientInfo.Layer",
     "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
-    "net.minecraft.commands.arguments.IdentifierArgument",
-    "net.minecraft.core.HolderSet.Direct",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.core.component.DataComponentInitializers",
     "net.minecraft.core.component.DataComponentInitializers.SingleComponentInitializer",
@@ -50,6 +45,11 @@
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.server.level.ServerPlayerGameMode",
+    "net.minecraft.server.level.WorldGenRegion",
+    "net.minecraft.tags.DamageTypeTags",
+    "net.minecraft.util.Ease",
+    "net.minecraft.world.CompoundContainer",
+    "net.minecraft.world.SimpleMenuProvider",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "avalinexus-fabric-1.0.0.jar",
     "published": "2026-10-23"
   },
@@ -90,7 +90,11 @@
     "minecraft",
     "terrablender"
   ],
-  "lacks": 588,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 502,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

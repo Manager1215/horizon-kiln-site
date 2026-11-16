@@ -9,20 +9,16 @@
   "author": "Diantina",
   "description": "Adds an ON/OFF button for sprinting in the Controls menu",
   "needs": [
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
     "net.minecraft.client.gui.components.OptionsList",
     "net.minecraft.client.gui.screens.options.OptionsSubScreen",
-    "net.minecraft.client.gui.screens.options.controls.ControlsScreen",
-    "LocalPlayer.setSprinting()"
+    "net.minecraft.client.gui.screens.options.controls.ControlsScreen"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sprint-toggle-1.0.0.jar",
     "published": "2026-10-10"
   },
@@ -50,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

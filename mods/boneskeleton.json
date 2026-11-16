@@ -14,21 +14,14 @@
     "net.minecraft.world.entity.monster.skeleton.Bogged",
     "net.minecraft.world.entity.monster.skeleton.Parched",
     "net.minecraft.world.entity.monster.skeleton.Skeleton",
-    "net.minecraft.world.entity.monster.skeleton.Stray",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "net.minecraft.world.item.alchemy.Potions",
-    "DataComponents.POTION_CONTENTS",
-    "Items.BONE",
-    "Items.COD",
-    "Items.DEAD_BUSH",
-    "Items.TIPPED_ARROW"
+    "net.minecraft.world.entity.monster.skeleton.Stray"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "boneskeleton-1.2.0+26.3.jar",
     "published": "2026-11-14"
   },
@@ -55,5 +48,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 5
 }

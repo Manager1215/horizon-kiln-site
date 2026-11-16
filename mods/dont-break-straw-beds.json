@@ -9,15 +9,14 @@
   "author": "Wiblegon",
   "description": "Keep your straw bed after sleeping. Choose whether it always drops itself, drops on a configurable chance, or stays untouched — and whether it breaks at all.",
   "needs": [
-    "net.minecraft.world.level.block.StrawBedBlock",
-    "Items.STRAW_BED"
+    "net.minecraft.world.level.block.StrawBedBlock"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dontbreakstrawbeds-fabric-1.0.0.jar",
     "published": "2026-09-16"
   },
@@ -45,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 2,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

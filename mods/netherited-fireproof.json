@@ -10,22 +10,15 @@
   "description": "Adds an enchantment that prevents items from burning in lava and fire.",
   "needs": [
     "net.minecraft.world.level.block.ShulkerBoxBlock",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Object2IntMap.Entry.getKey()",
-    "DataComponents.STORED_ENCHANTMENTS",
-    "Unit.CODEC",
-    "Items.ENCHANTED_BOOK",
-    "ItemEnchantments.entrySet()",
-    "ItemEnchantments.isEmpty()",
-    "LootContextParams.BLOCK_ENTITY"
+    "Unit.CODEC"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "netherited-fabric-26.2-2.1.1.jar",
     "published": "2026-06-16"
   },
@@ -53,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

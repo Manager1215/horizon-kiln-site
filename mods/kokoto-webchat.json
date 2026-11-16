@@ -9,29 +9,12 @@
   "author": "KOKOTO",
   "description": "Multi-platform Minecraft web chat with map/standalone UI, DM & groups, secure server relay, moderation/content filters, rich media, notifications, and optional ImageEmojis-Bero/SimpleNicks-Bero integration.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowChatMessage",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "ChatFormatting.getByCode()",
-    "CommandSourceStack.getTextName()",
-    "MutableComponent.setStyle()",
     "Style.applyLegacyFormat()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
     "MinecraftServer.createCommandSourceStack()",
-    "MinecraftServer.execute()",
-    "MinecraftServer.getCommands()",
-    "MinecraftServer.isSameThread()",
     "ServerPlayer.getCustomName()",
-    "ServerPlayer.getDisplayName()",
     "ServerPlayer.getGameProfile()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -39,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "KOKOTO-WebChat-5.3.3-Fabric-26.3.jar",
     "published": "2026-10-04"
   },
@@ -67,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

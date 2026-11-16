@@ -10,12 +10,8 @@
   "description": "Set the time instantly with /day, /night, /noon and /midnight. No more remembering tick numbers, no GUI and no config to set up.",
   "needs": [
     "net.minecraft.world.clock.ServerClockManager",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
     "ServerLevel.clockManager()",
     "ServerLevel.dimensionTypeRegistration()",
-    "ServerPlayer.nameAndId()",
-    "PlayerList.isOp()",
     "DimensionType.defaultClock()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -23,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Saros-Easy-Time-Fabric-26.3-1.0.2.jar",
     "published": "2026-09-19"
   },
@@ -51,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

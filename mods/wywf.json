@@ -10,10 +10,6 @@
   "description": "Minecraft seed finder right in the world creation menu in the seed input field",
   "needs": [
     "an access widener",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.gui.components.tabs.GridLayoutTab",
     "net.minecraft.client.gui.layouts.GridLayout",
     "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen",
@@ -43,21 +39,25 @@
     "net.minecraft.world.level.levelgen.structure.placement.RandomSpreadStructurePlacement",
     "net.minecraft.world.level.levelgen.structure.placement.StructurePlacement",
     "ModContainer.getRoot()",
-    "Minecraft.execute()",
-    "Minecraft.setScreenAndShow()",
-    "AbstractWidget.mouseDragged()",
-    "AbstractWidget.mouseReleased()",
-    "Button.mouseReleased()",
-    "Button.Builder.width()",
-    "EditBox.mouseDragged()",
-    "and 25 more"
+    "HolderSet.iterator()",
+    "Registries.BIOME",
+    "Registries.MULTI_NOISE_BIOME_SOURCE_PARAMETER_LIST",
+    "Registries.NOISE",
+    "Registries.NOISE_SETTINGS",
+    "Registries.STRUCTURE",
+    "Registries.STRUCTURE_SET",
+    "RandomSource.fork()",
+    "BiomeSource.createResolver()",
+    "BiomeSource.findBiomeHorizontal()",
+    "Biomes.FOREST",
+    "and 5 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "wywf-1.4.1+26.3.jar",
     "published": "2026-09-15"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 65,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 45,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

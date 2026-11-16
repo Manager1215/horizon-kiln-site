@@ -9,15 +9,15 @@
   "author": "naomi",
   "description": "Removes structures, items, mobs and bosses from Incendium, leaving only the biomes and terrain.",
   "needs": [
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-    "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType"
+    "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
+    "ResourceLoader.registerBuiltinPack()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ibo-3.2.0-fabric-26.3.jar",
     "published": "2026-11-05"
   },
@@ -43,6 +43,10 @@
     "fabricloader",
     "incendium"
   ],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 2,
   "development": {
     "status": "planned",

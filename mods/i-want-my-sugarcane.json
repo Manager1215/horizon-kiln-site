@@ -10,15 +10,14 @@
   "description": "For the people that want it, so now, YOU CAN BONEMEAL SUGARCANE!\nsorry for the bad image!",
   "needs": [
     "net.minecraft.world.item.BoneMealItem",
-    "ServerLevel.sendParticles()",
-    "Blocks.SUGAR_CANE"
+    "ServerLevel.sendParticles()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "iwantmysugarcane-26.3.jar",
     "published": "2026-11-02"
   },
@@ -45,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

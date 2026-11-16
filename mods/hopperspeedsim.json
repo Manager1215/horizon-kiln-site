@@ -13,15 +13,14 @@
     "net.fabricmc.loader.api.VersionParsingException",
     "net.minecraft.server.commands.GameModeCommand",
     "net.minecraft.world.level.block.entity.HopperBlockEntity",
-    "Version.parse()",
-    "Commands.hasPermission()"
+    "Version.parse()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Hopper Speed Simulator-2.0.2.jar",
     "published": "2026-10-24"
   },
@@ -37,7 +36,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect into the game's classes"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

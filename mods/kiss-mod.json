@@ -10,22 +10,16 @@
   "description": "A mod that lets you kiss entities",
   "needs": [
     "net.minecraft.network.protocol.game.ServerboundPunchPacket",
-    "Minecraft.execute()",
-    "Minecraft.getCurrentServer()",
     "ClientLevel.getEntities()",
     "ClientPacketListener.send()",
-    "ServerData.ip",
     "LocalPlayer.entityInteractionRange()",
-    "LocalPlayer.swing()",
     "ServerLevel.getEntity()",
     "Entity.distanceToSqr()",
-    "Entity.getBbHeight()",
     "Entity.getBoundingBox()",
     "Entity.getEyePosition()",
     "Entity.getViewVector()",
     "Entity.isAlive()",
     "Entity.isSpectator()",
-    "SwingAnimation.DEFAULT",
     "Level.addParticle()",
     "AABB.clip()",
     "AABB.inflate()"
@@ -35,7 +29,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "kiss-mod-1.0.1-26.3.jar",
     "published": "2026-09-21"
   },
@@ -65,7 +59,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

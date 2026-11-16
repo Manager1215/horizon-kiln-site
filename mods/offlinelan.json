@@ -11,22 +11,20 @@
   "needs": [
     "an access widener",
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
     "net.minecraft.client.gui.layouts.GridLayout",
     "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
     "net.minecraft.client.gui.layouts.LinearLayout",
     "net.minecraft.client.gui.screens.WorldOptionsScreen",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.server.MinecraftServer.MultiplayerScope"
+    "net.minecraft.server.MinecraftServer.MultiplayerScope",
+    "IntegratedServer.setUsesAuthentication()",
+    "IntegratedServer.usesAuthentication()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "offlinelan-2.0.0+26.3.jar",
     "published": "2026-09-17"
   },
@@ -52,7 +50,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

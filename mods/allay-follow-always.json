@@ -2,21 +2,19 @@
   "id": "allay-follow-always",
   "name": "Allay Follow Always",
   "version": "1.5-SNAPSHOT1+26.3",
-  "status": "planned",
-  "statusLabel": "Planned",
-  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "status": "not-checked",
+  "statusLabel": "Not checked",
+  "statusMeaning": "In the catalogue, not checked yet.",
   "url": "https://modrinth.com/mod/allay-follow-always",
   "author": "michiruf",
   "description": "Allays will follow the player that gave them an item always, even through portals.",
-  "needs": [
-    "CommandSourceStack.sendSystemMessage()"
-  ],
-  "roadmap": "Code next to data (0.3)",
-  "evidence": "Not run: Java did not start.",
+  "needs": [],
+  "roadmap": "",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (28 classes, 40 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "allay-follow-always-1.5-SNAPSHOT1.180+26.3.jar",
     "published": "2026-10-16"
   },
@@ -43,7 +41,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 1,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "status": "not-checked",
     "statusLabel": "Not checked",

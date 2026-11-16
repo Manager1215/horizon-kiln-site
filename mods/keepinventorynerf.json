@@ -10,19 +10,13 @@
   "description": "Tweaks the Keep Inventory gamerule to result in losing only a small amount of items and experience.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.BooleanRuleBuilder",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.IntegerRuleBuilder",
     "net.minecraft.client.gui.ActiveTextCollector",
-    "net.minecraft.client.gui.TextAlignment",
-    "Font.split()",
-    "GuiGraphicsExtractor.requestCursor()",
     "GuiGraphicsExtractor.setTooltipForNextFrame()",
     "GuiGraphicsExtractor.textRenderer()",
     "ServerLevel.getGameRules()",
-    "ServerPlayer.getRandom()",
-    "ServerPlayer.giveExperiencePoints()",
     "ARGB.colorFromFloat()",
     "Mth.nextFloat()",
     "RandomSource.nextIntBetweenInclusive()",
@@ -44,7 +38,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "keepinventorynerf-1.2.0-26.3.jar",
     "published": "2026-10-04"
   },
@@ -74,7 +68,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @wrap-operation into the game's classes; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

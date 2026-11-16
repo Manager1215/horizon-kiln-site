@@ -10,21 +10,13 @@
   "description": "Shows a tiny player model on screen when performing actions like sprinting, swimming, and flying.",
   "needs": [
     "an access widener",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
     "net.minecraft.client.renderer.rendertype.RenderSetup",
     "net.minecraft.client.renderer.rendertype.RenderSetup.TextureBinding",
     "net.minecraft.util.profiling.Profiler",
     "net.minecraft.util.profiling.ProfilerFiller",
-    "net.minecraft.world.entity.Pose",
-    "org.apache.logging.log4j.LogManager",
     "Minecraft.getEntityRenderDispatcher()",
-    "Options.getCameraType()",
     "GuiGraphicsExtractor.entity()",
-    "ScreenRectangle.bottom()",
-    "ScreenRectangle.left()",
-    "ScreenRectangle.right()",
-    "ScreenRectangle.top()",
     "LocalPlayer.isPassenger()",
     "EntityRenderDispatcher.getRenderer()",
     "EntityRenderer.createRenderState()",
@@ -37,7 +29,6 @@
     "Player.getSwimAmount()",
     "Player.isAutoSpinAttack()",
     "Player.isCrouching()",
-    "Player.isFallFlying()",
     "Player.isPassenger()",
     "Player.isUsingItem()",
     "Player.isVisuallyCrawling()",
@@ -50,7 +41,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "paperdoll-v26.3.0-mc26.3.x+fabric.jar",
     "published": "2026-09-24"
   },
@@ -80,7 +71,11 @@
     "minecraft",
     "puzzleslib"
   ],
-  "lacks": 34,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 25,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -23,13 +23,10 @@
     "net.minecraft.client.color.item.ItemTintSource",
     "net.minecraft.client.renderer.item.CuboidItemModelWrapper",
     "net.minecraft.client.resources.model.geometry.BakedQuad.MaterialFlags",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.IdMapper",
     "net.minecraft.core.component.DataComponentExactPredicate",
     "net.minecraft.core.component.predicates.EnchantmentsPredicate",
     "net.minecraft.core.component.predicates.EnchantmentsPredicate.Enchantments",
-    "net.minecraft.data.AtlasIds",
-    "net.minecraft.network.chat.ComponentSerialization",
     "net.minecraft.server.level.BlockDestructionProgress",
     "net.minecraft.server.level.ServerPlayerGameMode",
     "net.minecraft.world.item.crafting.RecipeBookCategories",
@@ -50,15 +47,18 @@
     "net.minecraft.world.level.storage.loot.providers.number.ints.BinomialDistributionGenerator",
     "net.minecraft.world.level.storage.loot.providers.number.ints.ConstantValue",
     "net.minecraft.world.level.storage.loot.providers.number.ints.UniformGenerator",
-    "Minecraft.getSingleplayerServer()",
-    "and 59 more"
+    "BlockStateModel.createGeometryKey()",
+    "BlockStateModel.emitQuads()",
+    "BlockStateModel.hasMaterialFlag()",
+    "BlockStateModel.materialFlags()",
+    "and 33 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "oregrowth-1.2.0-fabric-mc26.3.jar",
     "published": "2026-09-15"
   },
@@ -92,7 +92,11 @@
     "supermartijn642configlib",
     "supermartijn642corelib"
   ],
-  "lacks": 105,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 73,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

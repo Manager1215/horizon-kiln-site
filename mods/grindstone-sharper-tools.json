@@ -10,19 +10,15 @@
   "description": "⚔ The grindstone (wet stone) can temporarily increase the damage of tools used on it.",
   "needs": [
     "net.minecraft.world.level.block.GrindstoneBlock",
-    "DataComponents.CUSTOM_NAME",
     "Component.toFlatList()",
-    "MutableComponent.withStyle()",
-    "DamageSource.getEntity()",
-    "Player.isCrouching()",
-    "CustomData.copyTag()"
+    "Player.isCrouching()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "grindstonesharpertools-26.3.0-4.3.jar",
     "published": "2026-10-02"
   },
@@ -52,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

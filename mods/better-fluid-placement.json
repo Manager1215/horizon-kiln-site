@@ -10,24 +10,14 @@
   "description": "A small mod that lets you control if fluids should be placed inside a block or next to it via sneaking.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.tags.ItemTags",
-    "BlockTags.SMALL_FLOWERS",
-    "Blocks.BUSH",
-    "Blocks.DEAD_BUSH",
-    "Blocks.FERN",
-    "Blocks.FIREFLY_BUSH",
-    "Blocks.LEAF_LITTER",
-    "Blocks.PINK_PETALS",
-    "Blocks.SHORT_DRY_GRASS",
-    "Blocks.SHORT_GRASS",
-    "Blocks.WILDFLOWERS"
+    "BlockTags.SMALL_FLOWERS"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "better-fluid-placement-1.0.0+mc26.2.jar",
     "published": "2026-06-28"
   },
@@ -54,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args into the game's classes"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

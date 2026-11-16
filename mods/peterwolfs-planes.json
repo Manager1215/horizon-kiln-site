@@ -16,7 +16,6 @@
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.model.EntityModel",
     "net.minecraft.client.model.geom.ModelLayers",
     "net.minecraft.client.model.geom.PartPose",
@@ -49,15 +48,16 @@
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow.Pickup",
     "net.minecraft.world.entity.projectile.arrow.Arrow",
     "net.minecraft.world.item.ItemCooldowns",
-    "net.minecraft.world.item.SpawnEggItem",
-    "and 61 more"
+    "net.minecraft.world.level.StructureManager",
+    "VertexConsumer.addVertex()",
+    "and 59 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "peterwolfs-planes-1.6.1.jar",
     "published": "2026-11-15"
   },
@@ -87,7 +87,11 @@
     "minecraft",
     "pw_wind_n_sails"
   ],
-  "lacks": 176,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 157,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

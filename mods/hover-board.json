@@ -25,7 +25,6 @@
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.tags.DamageTypeTags",
     "net.minecraft.world.entity.Entity.MoveFunction",
-    "net.minecraft.world.entity.Pose",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
     "net.minecraft.world.item.DyeItem",
@@ -38,25 +37,26 @@
     "SynchedEntityData.set()",
     "ServerLevel.sendParticles()",
     "SoundEvents.BRUSH_GENERIC",
-    "DamageSource.getEntity()",
-    "DamageSource.is()",
     "Entity.getVehicle()",
     "LivingEntity.<init>()",
     "LivingEntity.addAdditionalSaveData()",
     "LivingEntity.createLivingAttributes()",
     "LivingEntity.defineSynchedData()",
-    "LivingEntity.die()",
     "LivingEntity.positionRider()",
     "LivingEntity.readAdditionalSaveData()",
     "LivingEntity.setPose()",
-    "and 13 more"
+    "LivingEntity.travel()",
+    "Player.isSecondaryUseActive()",
+    "Player.startRiding()",
+    "Player.xxa",
+    "and 3 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hoverboard-1.0.2-26.3.jar",
     "published": "2026-09-29"
   },
@@ -84,7 +84,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 53,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 43,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

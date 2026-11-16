@@ -10,20 +10,15 @@
   "description": "A lightweight client-side Fabric mod for customizable entity hitboxes, visual indicators, and advanced hitbox controls.",
   "needs": [
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.AfterSolidFeatures",
-    "net.minecraft.gizmos.GizmoStyle",
     "LevelRenderEvents.AFTER_SOLID_FEATURES",
     "GameRenderer.mainCamera()",
     "Gizmos.billboardTextOverMob()",
     "Gizmos.cuboid()",
-    "Gizmos.line()",
-    "Gizmos.point()",
     "Entity.getBoundingBox()",
     "Entity.getEyePosition()",
     "Entity.getPosition()",
     "Entity.getViewVector()",
-    "Entity.isRemoved()",
     "Player.distanceToSqr()",
-    "Player.isFallFlying()",
     "AABB.move()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -31,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hitboxplus-26.3-1.0.0.jar",
     "published": "2026-10-22"
   },
@@ -59,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

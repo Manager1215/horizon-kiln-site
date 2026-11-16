@@ -33,31 +33,25 @@
     "SoundEvents.STONE_BUTTON_CLICK_OFF",
     "SoundEvents.STONE_BUTTON_CLICK_ON",
     "ItemEntity.setDeltaMovement()",
-    "Item.Properties.enchantable()",
     "Item.Properties.jukeboxPlayable()",
     "Item.Properties.repairable()",
     "Level.addFreshEntity()",
     "Level.hasNeighborSignal()",
-    "Block.builtInRegistryHolder()",
-    "Blocks.ACACIA_PLANKS",
-    "Blocks.BAMBOO_PLANKS",
-    "Blocks.BIRCH_PLANKS",
-    "Blocks.CHERRY_PLANKS",
-    "Blocks.CRIMSON_PLANKS",
-    "Blocks.DARK_OAK_PLANKS",
-    "Blocks.JUNGLE_PLANKS",
-    "Blocks.MANGROVE_PLANKS",
-    "Blocks.PALE_OAK_PLANKS",
-    "Blocks.POPLAR_PLANKS",
-    "Blocks.SPRUCE_PLANKS",
-    "and 11 more"
+    "SoundType.BAMBOO_WOOD",
+    "SoundType.CHERRY_WOOD",
+    "BlockBehaviour.Properties.isRedstoneConductor()",
+    "BlockBehaviour.Properties.isSuffocating()",
+    "BlockBehaviour.Properties.isValidSpawn()",
+    "BlockBehaviour.Properties.isViewBlocking()",
+    "BlockBehaviour.Properties.pushReaction()",
+    "LootPool.Builder.when()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "laboratoryblocks-1.0-fabric-mc26.3.jar",
     "published": "2026-11-08"
   },
@@ -88,7 +82,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 51,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 35,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

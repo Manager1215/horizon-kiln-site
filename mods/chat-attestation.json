@@ -10,21 +10,19 @@
   "description": "Allows users to verify the origin of chat messages sent in an untrusted context using a centralized key server.",
   "needs": [
     "Mixin: 9 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "io.netty.channel.ChannelFutureListener",
     "net.minecraft.client.multiplayer.chat.ChatListener",
     "net.minecraft.commands.synchronization.ArgumentTypeInfos",
     "net.minecraft.commands.synchronization.ArgumentUtils",
-    "net.minecraft.network.chat.PlayerChatMessage",
     "net.minecraft.network.protocol.game.ClientboundCommandsPacket.ArgumentNodeStub",
     "net.minecraft.network.protocol.game.ServerboundChatCommandPacket",
     "net.minecraft.network.protocol.game.ServerboundChatCommandSignedPacket",
-    "net.minecraft.util.StringUtil",
     "org.apache.commons.compress.compressors.zstandard.ZstdCompressorInputStream",
     "org.apache.commons.compress.compressors.zstandard.ZstdCompressorOutputStream",
-    "Minecraft.schedule()",
     "ClientPacketListener.getLocalGameProfile()",
-    "MutableComponent.withStyle()",
+    "PlayerChatMessage.sender()",
+    "PlayerChatMessage.signedContent()",
+    "StringUtil.trimChatMessage()",
     "Util.NIL_UUID"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -32,7 +30,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "chat-attestation-3.0.0.jar",
     "published": "2026-09-18"
   },
@@ -62,7 +60,11 @@
     "messaging-lib",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,13 +9,10 @@
   "author": "HoneyBerries",
   "description": "Clutching so that you don't die thanks to the Ender Dragon",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "Minecraft.gameMode",
     "LocalPlayer.fallDistance",
     "LocalPlayer.gameMode()",
     "LocalPlayer.getEyeY()",
     "BlockPos.MutableBlockPos.set()",
-    "MutableComponent.withStyle()",
     "BlockState.isCollisionShapeFullBlock()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -23,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "autoclutch-1.1.0.jar",
     "published": "2026-11-05"
   },
@@ -55,7 +52,11 @@
     "modmenu",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,18 +10,14 @@
   "description": "With SimpleVoiceDistance, players can now cycle between Whisper, Normal, and Shout modes with a single key press—perfect for roleplay servers!",
   "needs": [
     "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents",
-    "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.ModifyChat",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "MutableComponent.withStyle()",
-    "Style.withUnderlined()"
+    "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.ModifyChat"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "simplevoicedistance-1.6.1-fabric26.3.jar",
     "published": "2026-09-28"
   },
@@ -52,7 +48,11 @@
     "minecraft",
     "voicechat_api"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

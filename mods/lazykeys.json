@@ -9,17 +9,14 @@
   "author": "nothub",
   "description": "Automated key-pressing for enhanced afk farming efficiency",
   "needs": [
-    "KeyMapping.getTranslatedKeyMessage()",
-    "KeyMapping.setDown()",
-    "Options.keyAttack",
-    "Options.keyUse"
+    "KeyMapping.setDown()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "lazykeys-0.8.4+26.3-fabric.jar",
     "published": "2026-10-30"
   },
@@ -46,7 +43,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,7 +9,6 @@
   "author": "Sealix",
   "description": "Europium — Expand Minecraft's visual customization with configurable colors, particles, and rendering options.",
   "needs": [
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.particle.ParticleEngine",
     "net.minecraft.client.renderer.BiomeColors",
     "net.minecraft.client.renderer.LevelRenderer",
@@ -19,11 +18,6 @@
     "net.minecraft.client.renderer.state.level.SkyRenderState",
     "Minecraft.getBlockColors()",
     "Minecraft.levelRenderer",
-    "Minecraft.setScreenAndShow()",
-    "Button.getMessage()",
-    "Button.Builder.tooltip()",
-    "EditBox.setHint()",
-    "EditBox.setTextColor()",
     "ClientLevel.clearTintCaches()",
     "GameRenderer.mainCamera()"
   ],
@@ -32,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "europium-2.2.0 - Copy.jar",
     "published": "2026-11-14"
   },
@@ -52,7 +46,11 @@
     "minecraft",
     "sodium"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

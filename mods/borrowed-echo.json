@@ -9,11 +9,8 @@
   "author": "not.unnamed",
   "description": "Something in your world has learned your friends’ faces, stolen their voices, might even be yours, and now it’s calling your name.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.model.geom.PartPose",
@@ -45,18 +42,21 @@
     "net.minecraft.world.item.component.WrittenBookContent",
     "net.minecraft.world.level.block.BedBlock",
     "net.minecraft.world.level.block.state.properties.BedPart",
-    "AttachmentRegistry.builder()",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "Minecraft.getEntityRenderDispatcher()",
     "ModelPart.getChild()",
-    "and 56 more"
+    "ModelPart.skipDraw",
+    "ModelPart.visible",
+    "ModelPart.x",
+    "ModelPart.xScale",
+    "ModelPart.y",
+    "and 53 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "borrowed-echo-1.0.5.jar",
     "published": "2026-10-20"
   },
@@ -88,7 +88,11 @@
     "minecraft",
     "voicechat"
   ],
-  "lacks": 144,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 113,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

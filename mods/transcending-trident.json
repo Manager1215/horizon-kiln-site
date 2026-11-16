@@ -11,19 +11,9 @@
   "needs": [
     "Mixin: 1 point inside the game's methods",
     "net.minecraft.world.item.TridentItem",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "net.minecraft.world.item.alchemy.Potions",
-    "RegistryAccess.lookupOrThrow()",
-    "DataComponents.POTION_CONTENTS",
     "MinecraftServer.isSingleplayerOwner()",
-    "ServerPlayer.nameAndId()",
-    "ServerPlayer.syncVelocity",
     "Player.getBoundingBox()",
-    "Player.isFallFlying()",
     "AbstractContainerMenu.sendAllDataToRemote()",
-    "Items.GLASS_BOTTLE",
-    "Items.POTION",
-    "Items.TRIDENT",
     "EnchantmentHelper.getTridentSpinAttackStrength()",
     "Level.isRainingAt()",
     "AABB.maxY"
@@ -33,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "transcendingtrident-26.3.0-6.0.jar",
     "published": "2026-11-01"
   },
@@ -63,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

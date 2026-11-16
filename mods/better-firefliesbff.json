@@ -42,21 +42,21 @@
     "RenderTypes.eyes()",
     "BlockPos.MutableBlockPos.move()",
     "BlockPos.MutableBlockPos.set()",
-    "Holder.is()",
-    "ServerPlayer.drop()",
     "ServerPlayer.getCooldowns()",
     "BiomeTags.IS_JUNGLE",
     "Mth.approachDegrees()",
     "Entity.<init>()",
     "Entity.onClientRemoval()",
-    "and 13 more"
+    "Entity.remove()",
+    "Player.getCooldowns()",
+    "and 9 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "firefly-fabric-26.3-1.0.5-26.3.jar",
     "published": "2026-10-28"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 53,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 49,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

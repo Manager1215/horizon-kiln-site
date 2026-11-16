@@ -15,12 +15,8 @@
     "com.mojang.blaze3d.vertex.MeshData.SortState",
     "com.mojang.blaze3d.vertex.VertexSorting",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.AfterSolidFeatures",
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
     "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
     "net.minecraft.client.gui.components.debug.DebugScreenEntry",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryStatus",
     "net.minecraft.client.multiplayer.ClientChunkCache",
     "net.minecraft.client.renderer.SectionBufferBuilderPack",
     "net.minecraft.client.renderer.ShaderDefines.Builder",
@@ -50,14 +46,18 @@
     "ClientLevel.getSectionsCount()",
     "LocalPlayer.getBlockX()",
     "LocalPlayer.getBlockZ()",
-    "and 35 more"
+    "GameRenderer.mainCamera()",
+    "RenderTypes.debugQuads()",
+    "BakedQuad.packedUV()",
+    "BakedQuad.position()",
+    "and 22 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "greedy-meshing-0.6.2+26.3.jar",
     "published": "2026-11-15"
   },
@@ -87,7 +87,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 75,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 62,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

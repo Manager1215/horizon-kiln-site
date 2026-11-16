@@ -14,7 +14,6 @@
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.core.particles.ItemParticleOption",
     "net.minecraft.world.level.block.BaseRailBlock",
-    "org.apache.logging.log4j.LogManager",
     "ParticleTypes.ITEM",
     "ServerLevel.getEntity()",
     "ServerLevel.sendParticles()",
@@ -41,7 +40,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "linkart-6.2.0+26.3.jar",
     "published": "2026-09-23"
   },
@@ -68,7 +67,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 24,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

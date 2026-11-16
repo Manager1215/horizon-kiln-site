@@ -10,18 +10,14 @@
   "description": "Make enchantments can be combined without limits",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.world.inventory.AnvilMenu",
-    "net.minecraft.world.inventory.DataSlot",
-    "Items.ENCHANTED_BOOK",
-    "EnchantmentHelper.getEnchantmentsForCrafting()",
-    "ItemEnchantments.isEmpty()"
+    "net.minecraft.world.inventory.DataSlot"
   ],
-  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "unlimited-combination-enchantment-1.4.0.jar",
     "published": "2026-10-16"
   },
@@ -49,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

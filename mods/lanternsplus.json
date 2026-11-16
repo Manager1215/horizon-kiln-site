@@ -33,30 +33,25 @@
     "ServerLevel.enabledFeatures()",
     "ServerLevel.gameEvent()",
     "ServerLevel.sendParticles()",
-    "Stats.INTERACT_WITH_CAMPFIRE",
     "Util.fetchChoiceType()",
     "ItemStack.consumeAndReturn()",
     "ItemStack.isItemEnabled()",
     "RecipeManager.createCheck()",
     "Level.getSignal()",
     "Level.levelEvent()",
-    "Blocks.CAMPFIRE",
-    "Blocks.IRON_CHAIN",
-    "Blocks.LANTERN",
-    "Blocks.REDSTONE_WIRE",
-    "Blocks.SOUL_LANTERN",
-    "Blocks.TORCH",
     "SoundType.LANTERN",
     "BlockEntity.applyImplicitComponents()",
     "BlockEntity.collectImplicitComponents()",
-    "and 3 more"
+    "BlockEntityType.addValidBlock()",
+    "BlockBehaviour.Properties.pushReaction()",
+    "GameEvent.BLOCK_CHANGE"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "lantersplus-1.0.1.jar",
     "published": "2026-09-25"
   },
@@ -86,7 +81,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 43,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 36,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

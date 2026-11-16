@@ -12,7 +12,6 @@
     "Mixin: 27 points inside the game's methods",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.ShotCrossbowTrigger",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
     "net.minecraft.client.gui.components.ItemDisplayWidget",
     "net.minecraft.client.gui.screens.achievement.StatsScreen",
     "net.minecraft.client.gui.screens.achievement.StatsScreen.GeneralStatisticsList",
@@ -27,9 +26,6 @@
     "net.minecraft.commands.synchronization.ArgumentTypeInfo.Template",
     "net.minecraft.commands.synchronization.SingletonArgumentInfo",
     "net.minecraft.core.UUIDUtil",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.server.permissions.Permissions",
-    "net.minecraft.stats.StatsCounter",
     "net.minecraft.tags.DamageTypeTags",
     "net.minecraft.util.CommonColors",
     "net.minecraft.world.entity.Attackable",
@@ -42,7 +38,6 @@
     "net.minecraft.world.entity.monster.Creeper",
     "net.minecraft.world.entity.monster.Monster",
     "net.minecraft.world.entity.projectile.FireworkRocketEntity",
-    "net.minecraft.world.inventory.BrewingStandMenu",
     "net.minecraft.world.inventory.BrewingStandMenu.PotionSlot",
     "net.minecraft.world.inventory.ContainerLevelAccess",
     "net.minecraft.world.inventory.DataSlot",
@@ -50,14 +45,19 @@
     "net.minecraft.world.inventory.ItemCombinerMenuSlotDefinition",
     "net.minecraft.world.inventory.ItemCombinerMenuSlotDefinition.SlotDefinition",
     "net.minecraft.world.inventory.ResultContainer",
-    "and 47 more"
+    "net.minecraft.world.inventory.ResultSlot",
+    "net.minecraft.world.inventory.StonecutterMenu",
+    "net.minecraft.world.item.CrossbowItem",
+    "net.minecraft.world.item.JukeboxPlayable",
+    "net.minecraft.world.item.PlaceOnWaterBlockItem",
+    "and 26 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fix-mc-stats-fabric-26.3-2.6.1.jar",
     "published": "2026-11-10"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 87,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 66,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

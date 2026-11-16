@@ -9,18 +9,13 @@
   "author": "KAkos1220",
   "description": "The most vanilla way to turn off phantoms in your survival world.",
   "needs": [
-    "net.minecraft.world.level.storage.LevelResource",
-    "MinecraftServer.getWorldPath()",
     "MinecraftServer.isSingleplayer()",
     "ServerLevel.getGameRules()",
     "ServerLevel.hasNeighborSignal()",
     "ServerLevel.playSound()",
-    "ServerPlayer.connection",
     "ServerGamePacketListenerImpl.disconnect()",
     "SoundEvents.STONE_BUTTON_CLICK_OFF",
     "SoundEvents.STONE_BUTTON_CLICK_ON",
-    "Player.swing()",
-    "SwingAnimation.DEFAULT",
     "BlockBehaviour.Properties.mapColor()",
     "GameRules.SPAWN_PHANTOMS",
     "GameRules.set()"
@@ -30,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "PhantomSwitch-26.3-v3.1.jar",
     "published": "2026-09-17"
   },
@@ -59,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

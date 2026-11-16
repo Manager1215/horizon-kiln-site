@@ -19,10 +19,7 @@
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
     "net.minecraft.world.scores.Team",
     "net.minecraft.world.waypoints.TrackedWaypoint.PitchDirection",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "org.lwjgl.sdl.SDLMouse",
-    "InputConstants.isKeyDown()",
     "PoseStack.Pose.pose()",
     "VertexConsumer.addVertex()",
     "VertexConsumer.setColor()",
@@ -32,11 +29,6 @@
     "LevelRenderEvents.COLLECT_SUBMITS",
     "LevelRenderEvents.END_EXTRACTION",
     "Camera.getCullFrustum()",
-    "KeyMapping.key",
-    "GuiGraphicsExtractor.blitSprite()",
-    "GuiGraphicsExtractor.blitSprite()",
-    "Button.DEFAULT_NARRATION",
-    "LocalPlayer.getRandom()",
     "GameRenderer.mainCamera()",
     "RenderPipelines.OUTLINE_SNIPPET",
     "RenderPipelines.register()",
@@ -47,17 +39,17 @@
     "CameraRenderState.orientation",
     "LevelRenderState.getData()",
     "LevelRenderState.setData()",
-    "TextureAtlasSprite.atlasLocation()",
-    "TextureAtlasSprite.getU0()",
-    "TextureAtlasSprite.getU1()",
-    "and 6 more"
+    "ServerPlayer.getTeam()",
+    "Util.memoize()",
+    "Blocks.STAINED_GLASS",
+    "Vec3.rotateClockwise90()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Ping-fabric-26.3-1.17.0.jar",
     "published": "2026-10-30"
   },
@@ -87,7 +79,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 46,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 33,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

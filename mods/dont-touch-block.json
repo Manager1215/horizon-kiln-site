@@ -9,9 +9,6 @@
   "author": "Letors1s",
   "description": "Adds a \"donttouch\" command, which specifies a block that cannot be stepped on.",
   "needs": [
-    "net.minecraft.commands.arguments.blocks.BlockInput",
-    "net.minecraft.commands.arguments.blocks.BlockStateArgument",
-    "CommandSourceStack.getPlayerOrException()",
     "DefaultedRegistry.getId()",
     "ServerPlayer.damageSources()",
     "ServerPlayer.hurt()",
@@ -23,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dont-touch-block-1.0.1.jar",
     "published": "2026-11-11"
   },
@@ -52,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

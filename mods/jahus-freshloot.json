@@ -19,10 +19,7 @@
     "net.minecraft.world.level.block.entity.ChestBlockEntity",
     "net.minecraft.world.level.block.state.properties.ChestType",
     "ResourceKey.codec()",
-    "MinecraftServer.execute()",
-    "ServerLevel.destroyBlock()",
     "ServerPlayer.closeContainer()",
-    "PlayerList.broadcastSystemMessage()",
     "BlockItem.updatePlacementContext()",
     "RandomizableContainerBlockEntity.unpackLootTable()"
   ],
@@ -31,7 +28,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "freshloot-2.0.0+26.3.jar",
     "published": "2026-09-26"
   },
@@ -59,7 +56,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

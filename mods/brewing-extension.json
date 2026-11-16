@@ -12,24 +12,17 @@
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
     "net.minecraft.world.entity.animal.equine.AbstractHorse",
     "net.minecraft.world.item.ItemCooldowns",
-    "net.minecraft.world.item.alchemy.Potion",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "net.minecraft.world.item.alchemy.Potions",
     "net.minecraft.world.item.component.Consumable",
     "net.minecraft.world.phys.EntityHitResult",
     "DataComponents.CONSUMABLE",
-    "DataComponents.POTION_CONTENTS",
-    "BuiltInRegistries.POTION",
     "MobEffectInstance.withScaledDuration()",
     "Entity.gameEvent()",
-    "Entity.getRandom()",
     "TamableAnimal.isTame()",
     "Player.addItem()",
     "Player.getCooldowns()",
     "Player.hasInfiniteMaterials()",
     "Player.isCrouching()",
-    "Items.GLASS_BOTTLE",
-    "Items.POTION",
+    "PotionContents.applyToLivingEntity()",
     "GameEvent.DRINK"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -37,7 +30,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "brewext-mc26.3-1.1.jar",
     "published": "2026-11-12"
   },
@@ -65,7 +58,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

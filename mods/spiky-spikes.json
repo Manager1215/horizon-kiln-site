@@ -40,7 +40,6 @@
     "net.minecraft.client.resources.model.cuboid.CuboidModelElement",
     "net.minecraft.client.resources.model.cuboid.UnbakedCuboidGeometry",
     "net.minecraft.client.resources.model.geometry.QuadCollection.Builder",
-    "net.minecraft.tags.EnchantmentTags",
     "net.minecraft.world.entity.EntitySelector",
     "net.minecraft.world.entity.decoration.ArmorStand",
     "net.minecraft.world.item.enchantment.EnchantedItemInUse",
@@ -51,14 +50,15 @@
     "net.minecraft.world.level.pathfinder.PathType",
     "net.minecraft.world.level.storage.loot.functions.EnchantedCountIncreaseFunction",
     "net.minecraft.world.level.storage.loot.predicates.LootItemKilledByPlayerCondition",
-    "and 62 more"
+    "net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceWithEnchantedBonusCondition",
+    "and 61 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "spikyspikes-v26.3.1-mc26.3.x+fabric.jar",
     "published": "2026-10-21"
   },
@@ -88,7 +88,11 @@
     "minecraft",
     "puzzleslib"
   ],
-  "lacks": 128,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 116,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

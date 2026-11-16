@@ -14,11 +14,7 @@
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
     "net.minecraft.client.gui.components.OptionsList",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.options.OptionsSubScreen",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
@@ -33,9 +29,7 @@
     "VertexConsumer.setOverlay()",
     "IntSet.clear()",
     "LevelRenderEvents.COLLECT_SUBMITS",
-    "Minecraft.hitResult",
-    "Minecraft.schedule()",
-    "Button.Builder.tooltip()",
+    "CycleButton.Builder.withTooltip()",
     "Model.root()",
     "Model.setupAnim()",
     "ModelPart.skipDraw",
@@ -50,14 +44,20 @@
     "ModelPart.Cube.minZ",
     "ClientLevel.getEntities()",
     "LocalPlayer.entityInteractionRange()",
-    "and 33 more"
+    "LocalPlayer.getViewVector()",
+    "GameRenderer.mainCamera()",
+    "BakedQuad.MaterialInfo.isTinted()",
+    "BlockPos.asLong()",
+    "BlockPos.MutableBlockPos.move()",
+    "BlockPos.MutableBlockPos.set()",
+    "and 28 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ragdolls-1.5.0+mc26.3.jar",
     "published": "2026-11-12"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 76,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 68,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,34 +11,18 @@
   "needs": [
     "an access widener",
     "Mixin: 4 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.client.multiplayer.chat.ChatListener",
     "net.minecraft.client.multiplayer.chat.ChatListener.Message",
     "net.minecraft.commands.arguments.MessageArgument",
     "net.minecraft.commands.arguments.MessageArgument.Message",
-    "net.minecraft.commands.arguments.MessageArgument.Part",
-    "net.minecraft.network.chat.ComponentContents",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.network.chat.contents.PlainTextContents",
-    "net.minecraft.network.chat.contents.PlainTextContents.LiteralContents",
-    "net.minecraft.network.chat.contents.TranslatableContents",
-    "Component.getContents()",
-    "Component.getSiblings()",
-    "Component.getVisualOrderText()",
-    "Component.translatableWithFallback()",
-    "MutableComponent.create()",
-    "MutableComponent.setStyle()",
-    "MutableComponent.withStyle()",
-    "Style.getHoverEvent()",
-    "Style.withHoverEvent()"
+    "net.minecraft.commands.arguments.MessageArgument.Part"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "google-chat-26.3.0.jar",
     "published": "2026-09-15"
   },
@@ -70,7 +54,11 @@
     "libjf-translate-v1",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

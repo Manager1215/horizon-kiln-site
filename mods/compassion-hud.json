@@ -9,18 +9,16 @@
   "author": "uberpookie",
   "description": "Compassion HUD adds a compass and coordinate readout to the top of your screen",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "LocalPlayer.getBlockX()",
     "LocalPlayer.getBlockY()",
     "LocalPlayer.getBlockZ()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "compassion-hud-1.0.1+26.3.jar",
     "published": "2026-09-18"
   },
@@ -53,7 +51,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

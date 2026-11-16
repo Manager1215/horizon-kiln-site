@@ -13,8 +13,6 @@
     "BuiltInRegistries.GAME_RULE",
     "ServerLevel.getGameRules()",
     "LivingEntity.canGlideUsing()",
-    "Player.isFallFlying()",
-    "FeatureFlagSet.of()",
     "GameRuleCategory.MISC",
     "GameRuleTypeVisitor.visitInteger()",
     "GameRules.get()"
@@ -24,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "elytraportalfix-fabric-0.0.1+26.1.jar",
     "published": "2026-07-23"
   },
@@ -52,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

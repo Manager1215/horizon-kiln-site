@@ -17,18 +17,11 @@
     "net.minecraft.world.item.component.Consumable.Builder",
     "net.minecraft.world.item.component.Consumables",
     "net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect",
-    "KeyMapping.matches()",
-    "Minecraft.setScreenAndShow()",
-    "Options.keyInventory",
-    "DataComponents.ENCHANTMENT_GLINT_OVERRIDE",
-    "ServerLevel.destroyBlock()",
     "ServerPlayer.addTag()",
-    "ServerPlayer.drop()",
     "ServerPlayer.teleportTo()",
     "SoundEvents.ARMOR_EQUIP_NETHERITE",
     "SoundEvents.BOOK_PAGE_TURN",
     "BlockTags.INCORRECT_FOR_NETHERITE_TOOL",
-    "DamageSource.getEntity()",
     "EntityType.spawn()",
     "EntityTypes.BLAZE",
     "EntityTypes.CAVE_SPIDER",
@@ -49,14 +42,21 @@
     "EntityTypes.WITHER",
     "EntityTypes.WITHER_SKELETON",
     "EntityTypes.ZOMBIE",
-    "and 28 more"
+    "LightningBolt.setPos()",
+    "LightningBolt.setPos()",
+    "LightningBolt.setVisualOnly()",
+    "ItemEntity.setDefaultPickUpDelay()",
+    "ItemEntity.setDeltaMovement()",
+    "PrimedTnt.setFuse()",
+    "Item.mineBlock()",
+    "and 5 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "more-lucky-blocks-2-too-much-lucky-blocks-1.6.0-26.3.jar",
     "published": "2026-10-14"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 90,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 45,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

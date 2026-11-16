@@ -9,13 +9,12 @@
   "author": "foxinerd",
   "description": "Improves Cinnabar and adds Mercury to the game.",
   "needs": [
-    "net.minecraft.tags.EnchantmentTags",
     "net.minecraft.world.entity.AreaEffectCloud",
     "net.minecraft.world.item.SolidBucketItem",
     "net.minecraft.world.level.block.PowderSnowBlock",
-    "RegistryAccess.lookupOrThrow()",
     "ServerLevel.getGameRules()",
     "SoundEvents.BUCKET_EMPTY_POWDER_SNOW",
+    "EnchantmentTags.PREVENTS_INFESTED_SPAWNS",
     "Mth.randomBetween()",
     "MobEffect.applyEffectTick()",
     "Entity.getInBlockState()",
@@ -24,7 +23,6 @@
     "Entity.zOld",
     "LivingEntity.addEffect()",
     "Item.Properties.useItemDescriptionPrefix()",
-    "Items.GLASS_BOTTLE",
     "EnchantmentHelper.hasTag()",
     "Level.getBestNeighborSignal()",
     "LevelAccessor.addFreshEntity()",
@@ -40,7 +38,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mercury_madness-2.0.0-26.3.jar",
     "published": "2026-09-16"
   },
@@ -68,7 +66,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

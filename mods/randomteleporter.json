@@ -9,35 +9,20 @@
   "author": "TheWhiteDog9487",
   "description": "Added two commands for random teleportation",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.reloader.SimpleReloadListener",
     "net.minecraft.commands.arguments.coordinates.Vec2Argument",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.getDispatcher()",
-    "Commands.hasPermission()",
     "Commands.sendCommands()",
-    "EntityArgument.entity()",
-    "EntityArgument.getEntity()",
     "BlockPos.MutableBlockPos.set()",
-    "Component.translatableWithFallback()",
-    "Component.translatableWithFallback()",
-    "MinecraftServer.getCommands()",
     "Entity.teleportTo()",
     "Level.getChunk()",
-    "Level.getHeight()",
-    "Blocks.SHORT_GRASS",
-    "Blocks.VINE",
-    "Vec2.x",
-    "Vec2.y"
+    "Level.getHeight()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "RandomTeleporter-0.5.4 mc26.3.jar",
     "published": "2026-09-17"
   },
@@ -66,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

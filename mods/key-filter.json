@@ -10,36 +10,20 @@
   "description": "Manages keybinding visibility, input handling, and rebind protection",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
     "net.minecraft.client.gui.components.FocusableTextWidget",
     "net.minecraft.client.gui.components.FocusableTextWidget.BackgroundFill",
     "net.minecraft.client.gui.components.FocusableTextWidget.Builder",
     "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
     "net.minecraft.client.gui.layouts.LinearLayout",
     "net.minecraft.client.gui.screens.options.controls.KeyBindsList",
-    "net.minecraft.client.gui.screens.options.controls.KeyBindsList.KeyEntry",
-    "InputConstants.getKey()",
-    "InputConstants.Type.getOrCreate()",
-    "KeyMapping.getTranslatedKeyMessage()",
-    "KeyMapping.isUnbound()",
-    "KeyMapping.resetMapping()",
-    "KeyMapping.same()",
-    "KeyMapping.setKey()",
-    "KeyMapping.Category.label()",
-    "Options.keyMappings",
-    "Button.setPosition()",
-    "Button.Builder.width()",
-    "Screen.mouseClicked()",
-    "CommonComponents.GUI_DONE",
-    "Util.getMillis()"
+    "net.minecraft.client.gui.screens.options.controls.KeyBindsList.KeyEntry"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "keyfilter-fabric-0.1.2+mc26.3.jar",
     "published": "2026-09-16"
   },
@@ -68,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

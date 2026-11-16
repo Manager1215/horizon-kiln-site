@@ -20,9 +20,6 @@
     "com.mojang.renderpearl.backend.vulkan.VulkanCommandEncoder",
     "net.minecraft.IdentifierException",
     "net.minecraft.client.CloudStatus",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.tabs.TabManager",
     "net.minecraft.client.gui.components.tabs.TabNavigationBar",
     "net.minecraft.client.multiplayer.chat.ChatListener",
@@ -34,8 +31,6 @@
     "net.minecraft.client.renderer.fog.environment.AtmosphericFogEnvironment",
     "net.minecraft.client.renderer.oit.OitRenderPassProvider",
     "net.minecraft.client.renderer.oit.OitRenderPassProvider.Parameters",
-    "net.minecraft.network.chat.ClickEvent.OpenFile",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
     "net.minecraft.server.packs.PackLocationInfo",
     "net.minecraft.util.profiling.Profiler",
     "net.minecraft.util.profiling.ProfilerFiller",
@@ -50,14 +45,19 @@
     "net.minecraft.world.timeline.Timeline",
     "net.minecraft.world.timeline.Timelines",
     "org.apache.commons.codec.digest.DigestUtils",
-    "and 61 more"
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntry",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStream",
+    "org.apache.commons.io.FileUtils",
+    "org.apache.commons.io.FilenameUtils",
+    "org.lwjgl.sdl.SDLScancode",
+    "and 39 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "better-clouds-1.15.0+26.3-fabric.jar",
     "published": "2026-11-02"
   },
@@ -88,7 +88,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 101,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 79,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

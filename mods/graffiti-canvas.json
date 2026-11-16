@@ -10,35 +10,27 @@
   "description": "Add the Canvas Block. You can paint on it or load image.",
   "needs": [
     "net.fabricmc.fabric.api.client.rendering.v1.ClientTooltipComponentCallback",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.world.item.DyeItem",
-    "NativeImage.setPixel()",
     "VertexConsumer.addVertex()",
     "VertexConsumer.setLight()",
     "VertexConsumer.setOverlay()",
-    "Minecraft.execute()",
-    "Minecraft.hitResult",
     "GameRenderer.mainCamera()",
     "BlockEntityRenderer.extractRenderState()",
     "RenderTypes.LINES",
     "RenderTypes.entitySolidZOffsetForward()",
     "BlockPos.subtract()",
-    "DataComponents.DYE",
     "ByteBufCodecs.fromCodec()",
     "SoundEvents.GENERIC_SPLASH",
     "Player.getViewVector()",
-    "DyeColor.getTextureDiffuseColor()",
-    "BaseEntityBlock.getDrops()",
-    "LootContextParams.BLOCK_ENTITY"
+    "BaseEntityBlock.getDrops()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "graffiti-canvas-1.0.2-26.3.jar",
     "published": "2026-10-17"
   },
@@ -68,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

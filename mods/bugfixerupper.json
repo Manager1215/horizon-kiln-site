@@ -27,9 +27,7 @@
     "net.minecraft.world.phys.shapes.SubShape",
     "BlockPos.offset()",
     "Direction.getUnitVec3i()",
-    "DamageSource.getDirectEntity()",
     "Entity.<init>()",
-    "Entity.getBbWidth()",
     "Entity.isPickable()",
     "Entity.setYRot()",
     "Leashable.angularFriction()",
@@ -54,7 +52,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bug-fixer-upper-1.11.0.jar",
     "published": "2026-09-27"
   },
@@ -80,7 +78,11 @@
   "depends": [
     "fabricloader"
   ],
-  "lacks": 38,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 36,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

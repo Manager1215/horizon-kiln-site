@@ -12,15 +12,10 @@
     "com.mojang.math.Transformation",
     "net.fabricmc.fabric.api.event.client.player.ClientPlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.client.player.ClientPlayerBlockBreakEvents.After",
-    "net.minecraft.commands.arguments.blocks.BlockInput",
-    "net.minecraft.commands.arguments.blocks.BlockStateArgument",
     "LocalPlayer.getOnPos()",
     "BlockPos.betweenClosedStream()",
     "Level.getHeight()",
     "Level.getMinY()",
-    "Blocks.BARRIER",
-    "Blocks.LIGHT",
-    "Blocks.STRUCTURE_VOID",
     "AABB.maxY",
     "AABB.minY",
     "AABB.setMaxY()",
@@ -31,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "block-to-display-1.2.0.jar",
     "published": "2026-06-24"
   },
@@ -58,7 +53,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

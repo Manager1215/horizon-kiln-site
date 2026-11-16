@@ -9,34 +9,18 @@
   "author": "dasikigaijin",
   "description": "Complete control over item durability in Minecraft 26.1+. Multiply durability by any factor or make items completely unbreakable — all through GameRules. Works automatically with modded items via vanilla tags. Part of the Instant Gratification Collection.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.item.BowItem",
     "net.minecraft.world.item.BrushItem",
     "net.minecraft.world.item.CrossbowItem",
-    "net.minecraft.world.item.FishingRodItem",
     "net.minecraft.world.item.FlintAndSteelItem",
     "net.minecraft.world.item.FoodOnAStickItem",
     "net.minecraft.world.item.MaceItem",
     "net.minecraft.world.item.ShearsItem",
     "net.minecraft.world.item.ShieldItem",
     "net.minecraft.world.item.TridentItem",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "DataComponents.GLIDER",
     "DataComponents.MAX_DAMAGE",
-    "Item.components()",
     "ItemStack.hurtAndBreak()",
-    "Items.BOW",
-    "Items.BRUSH",
-    "Items.CROSSBOW",
-    "Items.FISHING_ROD",
-    "Items.FLINT_AND_STEEL",
-    "Items.MACE",
-    "Items.SHIELD",
-    "Items.TRIDENT",
-    "Items.WARPED_FUNGUS_ON_A_STICK",
     "GameRule.category()",
     "GameRuleCategory.register()"
   ],
@@ -45,7 +29,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "durability-multiplier-1.2.16+26.3.jar",
     "published": "2026-09-08"
   },
@@ -76,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 30,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

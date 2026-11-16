@@ -12,7 +12,6 @@
     "an access widener",
     "net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags",
     "net.minecraft.client.renderer.item.CuboidItemModelWrapper",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.IdMapper",
     "PoseStack.rotate()",
     "Axis.ZP",
@@ -36,11 +35,8 @@
     "LevelRenderState.getData()",
     "LevelRenderState.setData()",
     "ItemTransforms.getTransform()",
-    "Registry.get()",
-    "Registry.get()",
     "ServerChunkCache.mainThread",
     "Player.isCrouching()",
-    "Items.ENDER_PEARL",
     "Block.BLOCK_STATE_REGISTRY",
     "Block.stateById()",
     "BlockState.getAnalogOutputSignal()",
@@ -50,14 +46,18 @@
     "BlockState.getSeed()",
     "BlockState.getShape()",
     "BlockState.getSignal()",
-    "and 10 more"
+    "BlockState.hasAnalogOutputSignal()",
+    "ChunkSource.getChunkNow()",
+    "MapColor.COLOR_BROWN",
+    "AABB.getCenter()",
+    "and 6 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "entangled-1.3.21-fabric-mc26.3.jar",
     "published": "2026-09-15"
   },
@@ -89,7 +89,11 @@
     "supermartijn642configlib",
     "supermartijn642corelib"
   ],
-  "lacks": 50,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 46,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

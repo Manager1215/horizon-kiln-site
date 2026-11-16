@@ -12,7 +12,6 @@
     "Mixin: 8 points inside the game's methods",
     "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents",
     "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents.TagsLoaded",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.util.profiling.ProfilerFiller",
     "net.minecraft.world.level.block.UntintedParticleLeavesBlock",
@@ -22,7 +21,7 @@
     "net.minecraft.world.ticks.LevelTicks",
     "net.minecraft.world.ticks.SavedTick",
     "net.minecraft.world.ticks.ScheduledTick",
-    "Identifier.withPrefix()",
+    "ResourceLoader.registerBuiltinPack()",
     "BlockTags.PREVENTS_NEARBY_LEAF_DECAY",
     "RandomSource.nextIntBetweenInclusive()",
     "Level.<init>()"
@@ -32,7 +31,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "quickleafdecay-mc26.3-1.0.0.jar",
     "published": "2026-09-16"
   },
@@ -60,7 +59,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

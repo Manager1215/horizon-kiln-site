@@ -11,9 +11,9 @@
   "needs": [
     "Mixin: 3 points inside the game's methods",
     "net.minecraft.client.gui.screens.WorldOptionsScreen",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.server.MinecraftServer.MultiplayerScope",
     "LocalPlayer.nameAndId()",
+    "IntegratedServer.getGuestCommandAccess()",
     "PlayerList.deop()",
     "PlayerList.op()"
   ],
@@ -22,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "HDF-fabric-1.1+mc26.3.jar",
     "published": "2026-10-19"
   },
@@ -39,6 +39,10 @@
     "fabricloader",
     "minecraft"
   ],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 6,
   "development": {
     "status": "planned",

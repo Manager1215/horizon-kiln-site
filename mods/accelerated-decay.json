@@ -13,7 +13,6 @@
     "net.minecraft.world.level.block.BaseFireBlock",
     "net.minecraft.world.level.gameevent.GameEvent.Context",
     "Level.gameEvent()",
-    "Block.dropResources()",
     "BlockStateProperties.DISTANCE",
     "BlockStateProperties.PERSISTENT",
     "GameEvent.BLOCK_DESTROY"
@@ -23,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "accelerated-decay-fabric-26.3.0.1.jar",
     "published": "2026-09-19"
   },
@@ -49,7 +48,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

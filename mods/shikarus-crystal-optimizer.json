@@ -9,31 +9,20 @@
   "author": "Shikaru",
   "description": "Optimizes client-sided packets related to Crystal PvP",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.world.entity.boss.enderdragon.EndCrystal",
     "net.minecraft.world.item.EndCrystalItem",
     "net.minecraft.world.phys.EntityHitResult",
-    "Minecraft.execute()",
-    "Minecraft.gameMode",
-    "Minecraft.hitResult",
-    "Options.keyAttack",
-    "Options.keyUse",
     "ClientLevel.clip()",
     "ClientLevel.getEntities()",
-    "ClientLevel.isEmptyBlock()",
-    "ClientPacketListener.getConnection()",
-    "LocalPlayer.swing()",
     "Connection.disconnect()",
-    "Entity.setRemoved()",
-    "ItemStack.getInteractAnimation()",
-    "Blocks.OBSIDIAN"
+    "Entity.setRemoved()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "crystal-optimizer-1.0.0.jar",
     "published": "2026-11-06"
   },
@@ -63,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

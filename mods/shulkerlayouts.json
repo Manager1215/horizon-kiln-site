@@ -9,26 +9,16 @@
   "author": "s_a_d",
   "description": "Client-side shulker box layouts with item previews, placement safeguards, and smart shift-click routing.",
   "needs": [
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.inventory.ShulkerBoxScreen",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.network.chat.ComponentContents",
-    "net.minecraft.network.chat.contents.TranslatableContents",
-    "net.minecraft.world.inventory.ContainerInput",
     "net.minecraft.world.inventory.ShulkerBoxMenu",
-    "ChatFormatting.stripFormatting()",
-    "Minecraft.gameMode",
-    "GuiGraphicsExtractor.fakeItem()",
-    "Button.DEFAULT_NARRATION",
-    "NonNullList.indexOf()",
-    "Component.getContents()"
+    "NonNullList.indexOf()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "shulker-layouts-1.0+26.3.jar",
     "published": "2026-11-11"
   },
@@ -58,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

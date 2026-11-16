@@ -10,17 +10,16 @@
   "description": "This is a mod which aims to improve the Minecraft Crash Report so that it will be clearer to know what the error is and why it happens.",
   "needs": [
     "net.fabricmc.loader.api.metadata.Person",
-    "net.minecraft.CrashReport",
-    "net.minecraft.CrashReportCategory",
     "net.minecraft.SystemReport",
-    "ModMetadata.getAuthors()"
+    "ModMetadata.getAuthors()",
+    "CrashReportCategory.getStacktrace()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "better-crash-reports-1.4.0-26.3.jar",
     "published": "2026-10-24"
   },
@@ -49,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

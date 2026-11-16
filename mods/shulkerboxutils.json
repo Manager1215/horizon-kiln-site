@@ -11,13 +11,11 @@
   "needs": [
     "net.fabricmc.fabric.api.client.rendering.v1.ClientTooltipComponentCallback",
     "net.minecraft.client.gui.screens.inventory.ShulkerBoxScreen",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
     "net.minecraft.client.renderer.blockentity.ShulkerBoxRenderer",
     "net.minecraft.client.renderer.blockentity.state.ShulkerBoxRenderState",
     "net.minecraft.world.inventory.ShulkerBoxMenu",
     "net.minecraft.world.level.block.ShulkerBoxBlock",
     "net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity",
-    "Minecraft.setScreenAndShow()",
     "ItemStackRenderState.isEmpty()",
     "NonNullList.iterator()",
     "NonNullList.stream()"
@@ -27,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "shulkerboxutils-1.4.1.jar",
     "published": "2026-10-11"
   },
@@ -57,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

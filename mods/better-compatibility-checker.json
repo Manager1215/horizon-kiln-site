@@ -14,13 +14,11 @@
     "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList.Entry",
     "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList.OnlineServerEntry",
     "net.minecraft.client.multiplayer.ServerStatusPinger.1",
-    "net.minecraft.network.chat.ComponentSerialization",
     "net.minecraft.network.protocol.status.ClientboundStatusResponsePacket",
     "net.minecraft.network.protocol.status.ServerStatus",
     "net.minecraft.network.protocol.status.ServerStatus.Favicon",
     "net.minecraft.network.protocol.status.ServerStatus.Players",
     "net.minecraft.network.protocol.status.ServerStatus.Version",
-    "Font.split()",
     "GuiGraphicsExtractor.setTooltipForNextFrame()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -28,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "better-compatability-checker-fabric-26.3.0.1.jar",
     "published": "2026-09-19"
   },
@@ -55,7 +53,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

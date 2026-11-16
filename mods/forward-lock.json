@@ -2,21 +2,19 @@
   "id": "forward-lock",
   "name": "Forward Lock",
   "version": "1.2.0",
-  "status": "planned",
-  "statusLabel": "Planned",
-  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "status": "not-checked",
+  "statusLabel": "Not checked",
+  "statusMeaning": "In the catalogue, not checked yet.",
   "url": "https://modrinth.com/mod/forward-lock",
   "author": "lyuwenhan",
   "description": "Double-tap forward to lock forward movement and sprinting until forward, backward, or crouch is pressed.",
-  "needs": [
-    "LocalPlayer.setSprinting()"
-  ],
-  "roadmap": "Minecraft's libraries and client API (0.2)",
-  "evidence": "Not run: Java did not start.",
+  "needs": [],
+  "roadmap": "",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (11 classes, 12 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "forward-lock-1.2.0.jar",
     "published": "2026-09-21"
   },
@@ -44,7 +42,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 1,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "status": "not-checked",
     "statusLabel": "Not checked",

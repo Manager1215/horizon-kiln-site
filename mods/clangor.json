@@ -11,11 +11,7 @@
   "needs": [
     "Mixin: 1 point inside the game's methods",
     "com.mojang.blaze3d.Blaze3D",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.IdentifierException",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
-    "net.minecraft.network.chat.ClickEvent.OpenFile",
     "net.minecraft.server.packs.PackLocationInfo",
     "net.minecraft.server.packs.PackSelectionConfig",
     "net.minecraft.server.packs.PathPackResources",
@@ -25,35 +21,15 @@
     "net.minecraft.server.packs.repository.Pack.ResourcesSupplier",
     "net.minecraft.server.packs.repository.PackRepository",
     "net.minecraft.server.packs.repository.PackSource",
-    "Minecraft.execute()",
-    "Minecraft.gameDirectory",
-    "Minecraft.hitResult",
-    "Checkbox.selected()",
-    "Checkbox.Builder.maxWidth()",
-    "EditBox.isVisible()",
-    "EditBox.setHint()",
-    "ScreenRectangle.left()",
-    "Screen.mouseClicked()",
-    "Screen.resize()",
-    "Holder.tags()",
     "DataComponents.BLOCKS_ATTACKS",
-    "CommonComponents.GUI_CANCEL",
-    "MutableComponent.setStyle()",
-    "Style.withClickEvent()",
-    "Style.withUnderlined()",
-    "EquipmentSlotGroup.test()",
-    "LivingEntity.isUsingItem()",
-    "Player.getRandom()",
-    "Items.BOW",
-    "Items.TRIDENT",
-    "HitResult.getType()"
+    "LivingEntity.isUsingItem()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "clangor-2.1.4-fabric-26.3.jar",
     "published": "2026-10-01"
   },
@@ -84,7 +60,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 37,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

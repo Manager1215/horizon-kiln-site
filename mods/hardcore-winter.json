@@ -10,7 +10,6 @@
   "description": "A survival mod set in an endless blizzard. Warmth, light, and shelter actually matter. Farming still works, but different No tutorial — find your way by trial and error, and by reading what the survivors before you left behind.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "io.netty.channel.embedded.EmbeddedChannel",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
@@ -18,9 +17,6 @@
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
@@ -50,6 +46,10 @@
     "net.minecraft.client.renderer.LightmapRenderStateExtractor",
     "net.minecraft.client.renderer.SkyRenderer",
     "net.minecraft.client.renderer.entity.BoatRenderer",
+    "net.minecraft.client.renderer.entity.HumanoidMobRenderer",
+    "net.minecraft.client.renderer.entity.MobRenderer",
+    "net.minecraft.client.renderer.entity.layers.RenderLayer",
+    "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hardcore-winter-1.5+26.3-fabric.jar",
     "published": "2026-10-26"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 572,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 348,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

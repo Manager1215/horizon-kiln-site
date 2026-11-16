@@ -9,11 +9,9 @@
   "author": "lilgallon",
   "description": "A lightweight mod that shows the stats of horses (health, jump height, speed, owner and slots for Llamas). Client-sided mod, you don't need it for your server!",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
     "net.minecraft.client.gui.screens.inventory.AbstractMountInventoryScreen",
     "net.minecraft.client.gui.screens.inventory.HorseInventoryScreen",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.world.entity.EntityAttachment",
     "net.minecraft.world.entity.EntityAttachments",
     "net.minecraft.world.entity.animal.camel.Camel",
@@ -27,18 +25,13 @@
     "net.minecraft.world.entity.animal.equine.ZombieHorse",
     "net.minecraft.world.entity.projectile.ProjectileUtil",
     "net.minecraft.world.phys.EntityHitResult",
-    "Minecraft.hitResult",
     "Minecraft.services()",
-    "Options.keyPickItem",
-    "GuiGraphicsExtractor.nextStratum()",
     "GuiGraphicsExtractor.textWithBackdrop()",
     "LocalPlayer.getVehicle()",
     "EntityRenderState.distanceToCameraSq",
     "EntityRenderState.isDiscrete",
     "EntityRenderState.nameTag",
     "EntityRenderState.scoreText",
-    "Component.getContents()",
-    "Component.translatableWithFallback()",
     "Entity.getAttachments()",
     "Entity.getBoundingBox()",
     "Entity.getVehicle()",
@@ -48,15 +41,14 @@
     "EntityReference.getUUID()",
     "Attribute.sanitizeValue()",
     "AABB.expandTowards()",
-    "AABB.inflate()",
-    "and 1 more"
+    "AABB.inflate()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "horsestatsmod-fabric-26.3-3.6.0.jar",
     "published": "2026-10-09"
   },
@@ -86,7 +78,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 41,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 33,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

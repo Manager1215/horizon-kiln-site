@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 96 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.properties.Property",
     "com.mojang.authlib.properties.PropertyMap",
     "com.mojang.authlib.services.MinecraftServicesKeyInfo",
@@ -24,7 +23,6 @@
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "com.mojang.text2speech.Narrator",
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.tag.client.v1.ClientTags",
     "net.fabricmc.fabric.impl.datagen.FabricDataGenHelper",
     "net.minecraft.IdentifierException",
@@ -33,10 +31,7 @@
     "net.minecraft.client.color.item.Constant",
     "net.minecraft.client.gui.Font.PreparedTextBuilder",
     "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.WidgetSprites",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
     "net.minecraft.client.gui.font.GlyphRenderTypes",
     "net.minecraft.client.gui.font.glyphs.BakedSheetGlyph",
     "net.minecraft.client.gui.font.glyphs.BakedSheetGlyph.EffectInstance",
@@ -50,7 +45,12 @@
     "net.minecraft.client.gui.layouts.SpacerElement",
     "net.minecraft.client.gui.render.GuiItemAtlas",
     "net.minecraft.client.gui.screens.ConnectScreen",
-    "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
+    "net.minecraft.client.model.EntityModel",
+    "net.minecraft.client.model.geom.ModelLayers",
+    "net.minecraft.client.multiplayer.ServerData.ServerPackStatus",
+    "net.minecraft.client.multiplayer.chat.ChatListener",
+    "net.minecraft.client.multiplayer.resolver.ServerAddress",
+    "net.minecraft.client.particle.HugeExplosionParticle",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SkyOcean-1.18.2-26.3.jar",
     "published": "2026-10-17"
   },
@@ -96,7 +96,11 @@
     "resourcefullib",
     "skyblock-api"
   ],
-  "lacks": 444,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 340,
   "development": {
     "status": "no-plans",
     "statusLabel": "No plans yet",

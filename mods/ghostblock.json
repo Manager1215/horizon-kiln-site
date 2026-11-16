@@ -11,7 +11,6 @@
   "needs": [
     "Mixin: 2 points inside the game's methods",
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.player.ClientInput",
     "net.minecraft.client.player.KeyboardInput",
     "net.minecraft.client.renderer.LevelRenderer",
@@ -40,24 +39,25 @@
     "net.minecraft.world.level.block.SignBlock",
     "net.minecraft.world.level.block.entity.SignBlockEntity",
     "KeyMapping.setDown()",
-    "Minecraft.gameMode",
     "Minecraft.getEntityRenderDispatcher()",
-    "Minecraft.hitResult",
     "Minecraft.setCameraEntity()",
-    "Options.keyPickItem",
-    "Options.keyUse",
     "ClientLevel.levelEvent()",
     "ClientLevel.removeEntity()",
+    "MultiPlayerGameMode.getPreviousPlayerMode()",
+    "MultiPlayerGameMode.setLocalMode()",
+    "MultiPlayerGameMode.setLocalMode()",
     "LocalPlayer.deathTime",
     "LocalPlayer.getBoundingBox()",
-    "and 28 more"
+    "LocalPlayer.getEyeY()",
+    "LocalPlayer.input",
+    "and 20 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "GhostBlock-2.3+26.3.jar",
     "published": "2026-09-20"
   },
@@ -85,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 68,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @redirect into the game's classes; runs threads of its own"
+  },
+  "lacks": 60,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

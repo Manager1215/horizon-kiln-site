@@ -12,9 +12,7 @@
     "Mixin: 1 point inside the game's methods",
     "net.minecraft.client.OptionInstance.CaptionBasedToString",
     "net.minecraft.client.OptionInstance.Enum",
-    "net.minecraft.client.OptionInstance.IntRange",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
     "net.minecraft.client.gui.components.ChatComponent.DisplayMode",
     "net.minecraft.client.gui.components.OptionsList",
@@ -26,31 +24,21 @@
     "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
     "net.minecraft.client.gui.screens.options.OptionsSubScreen",
-    "net.minecraft.world.item.crafting.display.SlotDisplayContext",
     "AdvancementHolder.value()",
-    "Minecraft.setScreenAndShow()",
     "OptionInstance.<init>()",
     "OptionInstance.<init>()",
     "OptionInstance.cachedConstantTooltip()",
     "OptionInstance.createBoolean()",
     "OptionInstance.noTooltip()",
-    "Font.plainSubstrByWidth()",
-    "Font.split()",
-    "GuiGraphicsExtractor.text()",
-    "Hud.getMobEffectSprite()",
-    "Button.Builder.width()",
     "ChatComponent.isChatFocused()",
-    "Identifier.toShortString()",
-    "Items.OAK_LOG",
-    "Items.OAK_PLANKS",
-    "SlotDisplay.resolveForFirstStack()"
+    "Identifier.toShortString()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dynamic-island-1.2.0.jar",
     "published": "2026-10-26"
   },
@@ -79,7 +67,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 34,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

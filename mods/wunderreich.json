@@ -24,7 +24,6 @@
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleEvents.ValueUpdate",
     "net.fabricmc.fabric.api.registry.FlammableBlockRegistry.Entry",
     "net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry",
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
     "net.minecraft.advancements.AdvancementTree",
     "net.minecraft.advancements.predicates.DataComponentMatchers",
     "net.minecraft.advancements.predicates.DataComponentMatchers.Builder",
@@ -36,7 +35,6 @@
     "net.minecraft.advancements.predicates.StatePropertiesPredicate.Builder",
     "net.minecraft.advancements.triggers.PlayerTrigger",
     "net.minecraft.advancements.triggers.PlayerTrigger.TriggerInstance",
-    "net.minecraft.client.gui.components.Button.Plain",
     "net.minecraft.client.gui.screens.inventory.MerchantScreen",
     "net.minecraft.client.model.geom.ModelLayers",
     "net.minecraft.client.model.object.chest.ChestModel",
@@ -51,6 +49,8 @@
     "net.minecraft.client.renderer.blockentity.BrightnessCombiner",
     "net.minecraft.client.renderer.blockentity.ChestRenderer",
     "net.minecraft.client.renderer.special.SpecialModelRenderer.Unbaked",
+    "net.minecraft.client.renderer.special.SpecialModelRenderers",
+    "net.minecraft.core.Registry.PendingTags",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "wunderreich-26.302.1.jar",
     "published": "2026-11-01"
   },
@@ -94,7 +94,11 @@
     "minecraft",
     "wunderlib"
   ],
-  "lacks": 381,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 253,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

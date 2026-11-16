@@ -9,7 +9,6 @@
   "author": "ProfessionalFlare",
   "description": "A great way to dominate in Minecraft pvp, especially with crystals!",
   "needs": [
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.network.HashedPatchMap",
     "net.minecraft.network.HashedPatchMap.HashGenerator",
     "net.minecraft.network.HashedStack",
@@ -17,20 +16,18 @@
     "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
     "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
     "net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket",
-    "net.minecraft.world.inventory.ContainerInput",
     "InputConstants.Type.KEYSYM",
     "ClientPacketListener.decoratedHashOpsGenenerator()",
     "ClientPacketListener.send()",
     "Inventory.isHotbarSlot()",
-    "AbstractContainerMenu.getStateId()",
-    "Items.TOTEM_OF_UNDYING"
+    "AbstractContainerMenu.getStateId()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "auto-totem-2.0.7+mc26.2.jar",
     "published": "2026-06-20"
   },
@@ -59,7 +56,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

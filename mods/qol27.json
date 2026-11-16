@@ -11,26 +11,20 @@
   "needs": [
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
     "net.minecraft.client.OptionInstance.CaptionBasedToString",
-    "net.minecraft.client.OptionInstance.IntRange",
     "net.minecraft.client.OptionInstance.SliderableValueSet",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
     "net.minecraft.world.level.block.CarpetBlock",
     "OptionInstance.<init>()",
     "OptionInstance.noTooltip()",
+    "OptionInstance.IntRange.xmap()",
     "Options.gamma()",
     "Options.genericValueLabel()",
     "BlockTags.BAMBOO_BLOCKS",
     "ItemStack.getEnchantments()",
-    "Blocks.BUDDING_AMETHYST",
     "Blocks.CARPET",
-    "Blocks.ENDER_CHEST",
-    "Blocks.GLASS_PANE",
-    "Blocks.RESPAWN_ANCHOR",
     "Blocks.STAINED_GLASS",
     "Blocks.STAINED_GLASS_PANE",
-    "Blocks.TINTED_GLASS",
     "ColorCollection.asList()",
     "BlockStateProvider.getOptionalState()"
   ],
@@ -39,7 +33,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Qol27-0.3.9.jar",
     "published": "2026-10-05"
   },
@@ -69,7 +63,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

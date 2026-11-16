@@ -10,30 +10,15 @@
   "description": "Add samples to distinguish different subtitles, while providing custom settings for individual subtitles.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.client.gui.components.SubtitleOverlay",
-    "net.minecraft.client.gui.components.SubtitleOverlay.Subtitle",
-    "net.minecraft.network.chat.contents.TranslatableContents",
-    "InputConstants.isKeyDown()",
-    "ChatFormatting.getByCode()",
-    "KeyMapping.saveString()",
-    "KeyMapping.setKey()",
-    "Options.keyMappings",
-    "Options.showSubtitles()",
-    "MutableComponent.getContents()",
-    "MutableComponent.setStyle()",
-    "MutableComponent.withStyle()",
-    "Style.withObfuscated()",
-    "Style.withStrikethrough()",
-    "Style.withUnderlined()",
-    "PreparableReloadListener.SharedState.resourceManager()"
+    "net.minecraft.client.gui.components.SubtitleOverlay.Subtitle"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Subtitle-Highlight-1.0.4+fabric.26.3.jar",
     "published": "2026-11-03"
   },
@@ -63,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @redirect into the game's classes; runs threads of its own; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

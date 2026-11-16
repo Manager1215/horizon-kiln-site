@@ -22,23 +22,17 @@
     "net.minecraft.world.entity.monster.skeleton.AbstractSkeleton",
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
     "net.minecraft.world.entity.projectile.arrow.Arrow",
-    "net.minecraft.world.item.alchemy.PotionContents",
     "net.minecraft.world.item.component.ChargedProjectiles",
-    "Holder.Reference.getRegisteredName()",
     "DataComponents.CHARGED_PROJECTILES",
-    "DataComponents.POTION_CONTENTS",
     "ExtraCodecs.RGB_COLOR_CODEC",
-    "LivingEntity.getProjectile()",
-    "Items.ARROW",
-    "Items.BOW",
-    "Items.TIPPED_ARROW"
+    "LivingEntity.getProjectile()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "real-arrow-tip-0.3.1+mc26.3.jar",
     "published": "2026-09-16"
   },
@@ -66,7 +60,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

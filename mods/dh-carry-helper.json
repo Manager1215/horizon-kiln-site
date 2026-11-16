@@ -10,30 +10,19 @@
   "description": "A mod that makes counting carries on servers using the Dungeon Hub Bot easier.",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.blaze3d.Blaze3D",
     "net.minecraft.client.gui.components.PlayerTabOverlay",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
     "net.minecraft.world.entity.decoration.ArmorStand",
     "net.minecraft.world.phys.EntityHitResult",
     "net.minecraft.world.scores.PlayerScoreEntry",
     "net.minecraft.world.scores.PlayerTeam",
-    "ChatFormatting.stripFormatting()",
-    "Minecraft.execute()",
     "Minecraft.isLocalPlayer()",
-    "Minecraft.schedule()",
     "Hud.getTabList()",
     "ClientLevel.getScoreboard()",
     "PlayerInfo.getProfile()",
     "PlayerInfo.getTeam()",
-    "MutableComponent.setStyle()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withUnderlined()",
     "LivingEntity.isDeadOrDying()",
     "Level.getEntity()",
-    "HitResult.getType()",
     "Scoreboard.getDisplayObjective()",
     "Scoreboard.getPlayersTeam()",
     "Scoreboard.listPlayerScores()"
@@ -43,7 +32,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dh-carry-helper-0.3.4-26.3.jar",
     "published": "2026-11-11"
   },
@@ -72,7 +61,11 @@
     "minecraft",
     "resourcefulconfig"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

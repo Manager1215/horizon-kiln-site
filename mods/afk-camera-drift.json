@@ -9,8 +9,6 @@
   "author": "xFeneq",
   "description": "Keep the world feeling alive agin.",
   "needs": [
-    "Options.keyAttack",
-    "Options.keyUse",
     "LocalPlayer.setXRot()",
     "LocalPlayer.setYRot()"
   ],
@@ -19,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "v2.0 Fabric 26.3.jar",
     "published": "2026-11-04"
   },
@@ -49,7 +47,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

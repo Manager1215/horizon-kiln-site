@@ -11,13 +11,7 @@
   "needs": [
     "InputConstants.Type.KEYSYM",
     "Camera.isDetached()",
-    "Font.plainSubstrByWidth()",
-    "GuiGraphicsExtractor.blit()",
     "NarrationElementOutput.add()",
-    "Screen.mouseScrolled()",
-    "KeyEvent.isConfirmation()",
-    "KeyEvent.isLeft()",
-    "KeyEvent.isRight()",
     "GameRenderState.guiRenderState",
     "GuiRenderState.isHudHidden"
   ],
@@ -26,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Zoom-Extended-1.3.3+fabric26.3.jar",
     "published": "2026-09-30"
   },
@@ -55,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

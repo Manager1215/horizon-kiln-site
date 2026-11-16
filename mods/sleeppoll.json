@@ -12,19 +12,11 @@
     "net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents",
     "net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents.AllowResettingTime",
     "net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents.StartSleeping",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.world.attribute.EnvironmentAttributeSystem.Builder",
     "net.minecraft.world.clock.ServerClockManager",
     "net.minecraft.world.clock.ServerClockManager.ServerClockInstance",
     "net.minecraft.world.level.saveddata.WeatherData",
-    "ServerLifecycleEvents.SERVER_STARTED",
     "HolderSet.forEach()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
     "MinecraftServer.clockManager()",
     "MinecraftServer.overworld()",
     "ServerBossEvent.removeAllPlayers()",
@@ -37,8 +29,6 @@
     "ServerPlayer.isSleeping()",
     "ServerPlayer.resetStat()",
     "ServerPlayer.stopSleepInBed()",
-    "Stats.CUSTOM",
-    "Stats.TIME_SINCE_REST",
     "EnvironmentAttributeSystem.builder()",
     "EnvironmentAttributes.SKY_LIGHT_LEVEL",
     "LivingEntity.isSleeping()",
@@ -53,7 +43,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sleeppoll-3.1.0-26.3.jar",
     "published": "2026-10-13"
   },
@@ -82,7 +72,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 38,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 28,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

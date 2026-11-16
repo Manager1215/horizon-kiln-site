@@ -11,17 +11,15 @@
   "needs": [
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
-    "KeyMapping.getTranslatedKeyMessage()",
-    "KeyMapping.isUnbound()",
     "DefaultedRegistry.iterator()",
     "Holder.Reference.areComponentsBound()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "antiitembreak-2.1.1+26.3.jar",
     "published": "2026-11-12"
   },
@@ -50,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

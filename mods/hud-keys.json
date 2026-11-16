@@ -2,23 +2,19 @@
   "id": "hud-keys",
   "name": "Hud Keys",
   "version": "1.0-alpha-1+mc26.3",
-  "status": "planned",
-  "statusLabel": "Planned",
-  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "status": "not-checked",
+  "statusLabel": "Not checked",
+  "statusMeaning": "In the catalogue, not checked yet.",
   "url": "https://modrinth.com/mod/hud-keys",
   "author": "AlexTGG",
   "description": "A simple Minecraft Fabric mod that adds MOBA like visible key binds to the hotbar.",
-  "needs": [
-    "KeyMapping.getTranslatedKeyMessage()",
-    "Options.keyAttack",
-    "Options.keyHotbarSlots"
-  ],
-  "roadmap": "Minecraft's libraries and client API (0.2)",
-  "evidence": "Not run: Java did not start.",
+  "needs": [],
+  "roadmap": "",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (22 classes, 37 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hudk-mc26.3-1.0-alpha-1.jar",
     "published": "2026-10-08"
   },
@@ -48,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "status": "not-checked",
     "statusLabel": "Not checked",

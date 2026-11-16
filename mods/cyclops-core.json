@@ -10,7 +10,6 @@
   "description": "Library mod for EvilCraft, Integrated Dynamics and others.",
   "needs": [
     "an access widener",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.blaze3d.Blaze3D",
     "com.mojang.blaze3d.vertex.DefaultVertexFormat",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
@@ -18,15 +17,11 @@
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
     "net.fabricmc.fabric.api.entity.FakePlayer",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditionType",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions",
-    "net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariantAttributes",
     "net.fabricmc.fabric.impl.gametest.FabricGameTestModInitializer",
     "net.fabricmc.fabric.impl.menu.Networking",
     "net.fabricmc.loader.impl.FabricLoaderImpl",
-    "net.minecraft.CrashReport",
-    "net.minecraft.SharedConstants",
     "net.minecraft.advancements.predicates.ItemPredicate",
     "net.minecraft.client.GraphicsPreset",
     "net.minecraft.client.color.item.ItemTintSources",
@@ -48,8 +43,13 @@
     "net.minecraft.commands.synchronization.ArgumentTypeInfos",
     "net.minecraft.commands.synchronization.SingletonArgumentInfo",
     "net.minecraft.commands.synchronization.SingletonArgumentInfo.Template",
-    "net.minecraft.core.Holder.Kind",
-    "net.minecraft.core.HolderSet.Named",
+    "net.minecraft.core.WritableRegistry",
+    "net.minecraft.core.particles.BlockParticleOption",
+    "net.minecraft.gametest.framework.GameTestAssertException",
+    "net.minecraft.gametest.framework.GameTestHelper",
+    "net.minecraft.gametest.framework.GameTestInstance",
+    "net.minecraft.gametest.framework.TestData",
+    "net.minecraft.network.HashedStack",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "cyclopscore-26.3-fabric-1.30.0-1250.jar",
     "published": "2026-11-15"
   },
@@ -84,7 +84,11 @@
     "fabricloader",
     "java"
   ],
-  "lacks": 236,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
+  },
+  "lacks": 191,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

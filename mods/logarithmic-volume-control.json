@@ -10,11 +10,11 @@
   "description": "Fixes volume sliders to work on the correct scale matching our perception",
   "needs": [],
   "roadmap": "",
-  "evidence": "Everything its code calls is covered by Kiln 0.4.1 (2 classes, 1 members). Not run yet.",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (2 classes, 1 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "logarithmic-volume-control-1.0.0-26.1-snapshot-1.jar",
     "published": "2026-01-10"
   },
@@ -31,6 +31,10 @@
     "java",
     "minecraft"
   ],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 0,
   "development": {
     "status": "not-checked",

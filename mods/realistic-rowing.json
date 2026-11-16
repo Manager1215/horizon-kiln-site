@@ -10,12 +10,10 @@
   "description": "Makes rowing more realistic. May or may not improve your boating experience.",
   "needs": [
     "Mixin: 5 points inside the game's methods",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.model.object.boat.AbstractBoatModel",
     "net.minecraft.client.renderer.entity.AbstractBoatRenderer",
     "net.minecraft.client.renderer.entity.state.BoatRenderState",
     "net.minecraft.world.entity.vehicle.boat.AbstractBoat",
-    "Options.getCameraType()",
     "ModelPart.x",
     "Mth.degreesDifferenceAbs()",
     "Entity.<init>()",
@@ -26,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "realistic-rowing-1.2.2.jar",
     "published": "2026-10-04"
   },
@@ -53,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

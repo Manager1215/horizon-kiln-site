@@ -9,13 +9,8 @@
   "author": "FinnDog_123",
   "description": "A simple paths mod, adds awesome vanilla looking paths to your world",
   "needs": [
-    "net.minecraft.commands.arguments.IdentifierArgument",
     "net.minecraft.core.QuartPos",
     "net.minecraft.core.registries.codec.RegistryCodecs",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.util.ExtraCodecs.TagOrElementLocation",
     "net.minecraft.util.valueproviders.IntProviders",
     "net.minecraft.world.level.StructureManager",
@@ -38,25 +33,30 @@
     "net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings",
     "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate",
     "net.minecraft.world.level.material.PushReaction",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "LongIterator.hasNext()",
     "BiomeModifications.addFeature()",
-    "CommandSourceStack.getPosition()",
-    "CommandSourceStack.getServer()",
     "CommandSourceStack.registryAccess()",
     "BlockPos.asLong()",
     "BlockPos.containing()",
     "BlockPos.getX()",
     "BlockPos.getY()",
-    "and 51 more"
+    "BlockPos.getZ()",
+    "BlockPos.offset()",
+    "BlockPos.MutableBlockPos.set()",
+    "Direction.CODEC",
+    "SectionPos.bottomOf()",
+    "Vec3i.CODEC",
+    "BuiltInRegistries.FEATURE_TYPE",
+    "Registries.BIOME",
+    "Registries.STRUCTURE",
+    "and 44 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "MoogsPaths-fabric-26.3-1.2.0.jar",
     "published": "2026-10-12"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 109,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; generates in the world"
+  },
+  "lacks": 86,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

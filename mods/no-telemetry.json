@@ -18,16 +18,14 @@
     "net.fabricmc.loader.api.VersionParsingException",
     "net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
-    "net.minecraft.client.telemetry.ClientTelemetryManager",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger"
+    "net.minecraft.client.telemetry.ClientTelemetryManager"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "no-telemetry-1.10.0.jar",
     "published": "2026-01-09"
   },
@@ -46,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

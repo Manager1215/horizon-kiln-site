@@ -15,12 +15,8 @@
     "com.mojang.renderpearl.api.pipeline.BindGroupLayout.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.renderer.rendertype.RenderSetup",
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.data.registries.VanillaRegistries",
     "net.minecraft.world.level.FoliageColor",
     "net.minecraft.world.level.GrassColor",
@@ -49,14 +45,18 @@
     "net.minecraft.world.level.levelgen.densityfunction.DensityVolume",
     "net.minecraft.world.level.levelgen.densityfunction.SamplerContext",
     "net.minecraft.world.level.levelgen.densityfunction.ScopedDensityBuffer",
-    "and 62 more"
+    "net.minecraft.world.level.storage.WorldData",
+    "NativeImage.getPixelBytes()",
+    "PoseStack.last()",
+    "PoseStack.Pose.pose()",
+    "and 57 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "seedatlas-xaero-2.0.1-mc26.3-fabric.jar",
     "published": "2026-11-12"
   },
@@ -85,7 +85,11 @@
     "minecraft",
     "xaeroworldmap"
   ],
-  "lacks": 133,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 97,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

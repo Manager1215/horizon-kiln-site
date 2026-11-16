@@ -15,26 +15,18 @@
     "com.mojang.renderpearl.frontend.FrontendGpuSurface",
     "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
     "Minecraft.canInterruptScreen()",
-    "Minecraft.execute()",
-    "Minecraft.setScreenAndShow()",
     "GuiGraphicsExtractor.scissorStack",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()",
-    "LocalPlayer.getMainArm()",
     "ItemModelResolver.updateForLiving()",
     "ItemStackRenderState.clear()",
     "ItemStackRenderState.isEmpty()",
-    "PictureInPictureRenderState.getBounds()",
-    "Util.getMillis()"
+    "PictureInPictureRenderState.getBounds()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "schrumbohud-1.4.6+26.3.jar",
     "published": "2026-10-23"
   },
@@ -63,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

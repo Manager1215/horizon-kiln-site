@@ -18,27 +18,16 @@
     "VertexConsumer.setNormal()",
     "VertexConsumer.setOverlay()",
     "Object2IntMap.Entry.getKey()",
-    "Minecraft.hitResult",
     "Options.getBackgroundOpacity()",
     "RenderTypes.itemCutoutGlintSpecial()",
-    "CameraRenderState.orientation",
-    "DataComponents.CUSTOM_NAME",
-    "DataComponents.STORED_ENCHANTMENTS",
-    "Component.getVisualOrderText()",
-    "Items.ENCHANTED_BOOK",
-    "Items.WRITTEN_BOOK",
-    "Enchantment.getFullname()",
-    "ItemEnchantments.entrySet()",
-    "ItemEnchantments.isEmpty()",
-    "ItemEnchantments.size()",
-    "HitResult.getType()"
+    "CameraRenderState.orientation"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "handybookshelf-2.4.0.jar",
     "published": "2026-09-16"
   },
@@ -68,7 +57,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

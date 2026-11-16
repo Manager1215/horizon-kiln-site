@@ -23,26 +23,18 @@
     "net.minecraft.client.gui.screens.worldselection.WorldSelectionList.WorldListEntry",
     "net.minecraft.client.multiplayer.resolver.ServerAddress",
     "net.minecraft.client.quickplay.QuickPlay",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.world.level.storage.LevelSummary",
-    "NativeImage.getHeight()",
-    "NativeImage.getWidth()",
-    "NativeImage.read()",
-    "Minecraft.execute()",
-    "Minecraft.getSingleplayerServer()",
     "Minecraft.isLocalServer()",
     "Options.menuBackgroundBlurriness()",
-    "GuiGraphicsExtractor.blit()",
     "GuiGraphicsExtractor.blurBeforeThisStratum()",
-    "GuiGraphicsExtractor.nextStratum()"
+    "IntegratedServer.getWorldScreenshotFile()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "seamless-loading-screen-rethinking-1.0.3+26.3-fabric.jar",
     "published": "2026-11-01"
   },
@@ -72,7 +64,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 26,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 18,
   "development": {
     "status": "no-plans",
     "statusLabel": "No plans yet",

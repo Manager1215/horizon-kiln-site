@@ -9,37 +9,23 @@
   "author": "tech.anupam",
   "description": "G1axCrystalOptimizer optimizes end crystal placement and breaking with efficient client-side processing, reducing perceived delay and delivering a faster, smoother Crystal PvP experience.",
   "needs": [
-    "net.minecraft.SharedConstants",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.network.chat.HoverEvent",
     "net.minecraft.network.protocol.game.ServerboundInteractPacket",
     "net.minecraft.world.entity.boss.enderdragon.EndCrystal",
     "net.minecraft.world.item.EndCrystalItem",
     "net.minecraft.world.phys.EntityHitResult",
-    "ChatFormatting.getByCode()",
-    "Minecraft.execute()",
-    "Minecraft.gameMode",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.hitResult",
     "Minecraft.isLocalServer()",
-    "Options.keyUse",
     "ClientLevel.clip()",
     "ClientLevel.getEntities()",
-    "ServerData.ip",
     "LocalPlayer.getViewVector()",
-    "LocalPlayer.swing()",
-    "MutableComponent.withStyle()",
-    "Style.withHoverEvent()",
     "Entity.isAlive()",
-    "Entity.setRemoved()",
-    "Blocks.OBSIDIAN"
+    "Entity.setRemoved()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "g1axcrystaloptimizer-1.0.7.jar",
     "published": "2026-10-02"
   },
@@ -66,7 +52,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

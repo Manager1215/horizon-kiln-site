@@ -19,8 +19,6 @@
     "com.mojang.blaze3d.vertex.QuadInstance",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.model.geom.builders.UVPair",
     "net.minecraft.client.model.object.equipment.ShieldModel",
     "net.minecraft.client.model.object.projectile.TridentModel",
@@ -32,7 +30,6 @@
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
     "net.minecraft.client.renderer.special.ShieldSpecialRenderer",
     "net.minecraft.client.renderer.special.TridentSpecialRenderer",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.world.level.block.entity.BannerPatternLayers",
     "RenderSystem.getSequentialBuffer()",
     "PoseStack.last()",
@@ -47,17 +44,20 @@
     "BlendFunction.TRANSLUCENT",
     "RenderPipeline.builder()",
     "IntList.isEmpty()",
-    "Minecraft.gameDirectory",
-    "Minecraft.setScreenAndShow()",
-    "Options.getCameraType()",
-    "and 41 more"
+    "GuiGraphicsExtractor.fill()",
+    "ModelPart.render()",
+    "RenderPipelines.GLOBALS_SNIPPET",
+    "RenderPipelines.GUI_TEXT_HIGHLIGHT",
+    "Sheets.SHIELD_BASE",
+    "Sheets.SHIELD_BASE_NO_PATTERN",
+    "and 13 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "custom-glow-enchantment-outline-fabric-26.3-1.2.3.jar",
     "published": "2026-10-06"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 81,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 53,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

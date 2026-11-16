@@ -18,15 +18,11 @@
     "net.minecraft.client.renderer.BindGroupLayouts",
     "net.minecraft.client.renderer.rendertype.RenderSetup",
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
-    "net.minecraft.world.SimpleContainer",
     "BlendFunction.TRANSLUCENT",
     "RenderPipeline.builder()",
-    "GuiGraphicsExtractor.fakeItem()",
     "GameRenderer.mainCamera()",
     "RenderType.create()",
     "ByteBufCodecs.fromCodec()",
-    "MinecraftServer.execute()",
-    "ServerPlayer.sendSystemMessage()",
     "ItemStack.count()",
     "Shapes.create()"
   ],
@@ -35,7 +31,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "blockscanner-1.0.0-26.3.jar",
     "published": "2026-09-16"
   },
@@ -64,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

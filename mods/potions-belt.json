@@ -10,15 +10,10 @@
   "description": "Potion Belt addresses inventory management by introducing a specialized item container designed solely for potions.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.SimpleMenuProvider",
     "net.minecraft.world.item.ItemCooldowns",
     "net.minecraft.world.item.component.Consumable",
     "net.minecraft.world.item.component.Consumables",
-    "Options.keyHotbarSlots",
-    "Options.keyInventory",
-    "Options.keyUse",
-    "LocalPlayer.getMainArm()",
     "LocalPlayer.getUseItem()",
     "LocalPlayer.isUsingItem()",
     "DataComponents.CONSUMABLE",
@@ -29,16 +24,14 @@
     "Player.hasInfiniteMaterials()",
     "Player.isUsingItem()",
     "Player.startUsingItem()",
-    "Player.stopUsingItem()",
-    "Items.GLASS_BOTTLE",
-    "Items.POTION"
+    "Player.stopUsingItem()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fabric-potions-belt-1.1.0+26.3.jar",
     "published": "2026-10-14"
   },
@@ -67,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

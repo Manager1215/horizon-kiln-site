@@ -15,7 +15,6 @@
     "net.minecraft.client.Screenshot",
     "net.minecraft.client.main.Main",
     "net.minecraft.client.multiplayer.ClientLevel.ClientLevelData",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.ScreenEffectRenderer",
     "net.minecraft.client.renderer.entity.layers.PlayerItemInHandLayer",
     "net.minecraft.client.renderer.fog.FogData",
@@ -23,27 +22,20 @@
     "net.minecraft.client.renderer.fog.environment.FogEnvironment",
     "net.minecraft.server.packs.repository.Pack",
     "KeyMapping.click()",
-    "KeyMapping.saveString()",
-    "Minecraft.execute()",
-    "Minecraft.schedule()",
     "Options.discreteMouseScroll()",
     "Options.gamma()",
-    "Options.keyAttack",
     "Options.mouseWheelSensitivity()",
     "Options.smoothCamera",
     "LocalPlayer.getAttackStrengthScale()",
     "LocalPlayer.isAlive()",
-    "Entity.isAlwaysTicking()",
-    "Items.SHIELD",
-    "Items.TOTEM_OF_UNDYING",
-    "Blocks.BARRIER"
+    "Entity.isAlwaysTicking()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "utools-1.8.4+26.3+fabric.jar",
     "published": "2026-11-10"
   },
@@ -73,7 +65,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 19,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

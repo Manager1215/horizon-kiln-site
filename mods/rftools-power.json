@@ -10,7 +10,6 @@
   "description": "RFTools addon for all power generator/storage",
   "needs": [
     "an access widener",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
     "net.minecraft.advancements.triggers.InventoryChangeTrigger",
     "net.minecraft.advancements.triggers.InventoryChangeTrigger.TriggerInstance",
     "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperties",
@@ -21,14 +20,9 @@
     "VertexConsumer.addVertex()",
     "VertexConsumer.setLight()",
     "VertexConsumer.setOverlay()",
-    "AttachmentRegistry.create()",
     "BlockEntityRenderer.extractRenderState()",
     "RenderTypes.cutoutMovingBlock()",
     "CameraRenderState.orientation",
-    "TextureAtlasSprite.getU0()",
-    "TextureAtlasSprite.getU1()",
-    "TextureAtlasSprite.getV0()",
-    "TextureAtlasSprite.getV1()",
     "BlockPos.distSqr()",
     "BlockPos.distToCenterSqr()",
     "RegistryAccess.EMPTY",
@@ -36,17 +30,7 @@
     "ShapedRecipeBuilder.define()",
     "ListTag.add()",
     "BlockTags.BLOCKS_MOTION_NO_LEAVES",
-    "Items.BLAZE_ROD",
-    "Items.CHARCOAL",
-    "Items.COMPARATOR",
-    "Items.ENDER_PEARL",
-    "Items.GHAST_TEAR",
-    "Items.PAPER",
-    "Items.QUARTZ",
-    "Items.REDSTONE_TORCH",
     "Level.getEntitiesOfClass()",
-    "Level.isEmptyBlock()",
-    "Blocks.COAL_BLOCK",
     "BlockBehaviour.Properties.isRedstoneConductor()",
     "AABB.inflate()"
   ],
@@ -55,7 +39,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "rftoolspower-fabric-26.3-10.0.2-fabric.jar",
     "published": "2026-11-11"
   },
@@ -88,7 +72,11 @@
     "minecraft",
     "rftoolsbase"
   ],
-  "lacks": 39,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

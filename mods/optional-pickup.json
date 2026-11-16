@@ -10,30 +10,15 @@
   "description": "Pick up items with your own choice.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.item.TooltipFlag.Default",
-    "KeyMapping.getTranslatedKeyMessage()",
     "ClientLevel.getEntitiesOfClass()",
     "LocalPlayer.getBoundingBox()",
     "DataComponents.FOOD",
     "ServerLevel.getEntity()",
-    "ServerPlayer.isRemoved()",
     "ItemEntity.closerThan()",
     "ItemEntity.distanceToSqr()",
     "ItemEntity.getItem()",
-    "ItemEntity.isRemoved()",
     "ItemEntity.playerTouch()",
-    "Item.TooltipContext.of()",
-    "ItemStack.getTooltipLines()",
     "ItemStack.hashItemAndComponents()",
-    "Items.HONEY_BOTTLE",
-    "Items.LINGERING_POTION",
-    "Items.MILK_BUCKET",
-    "Items.PAINTING",
-    "Items.POTION",
-    "Items.SPLASH_POTION",
-    "Items.SUSPICIOUS_STEW",
-    "TooltipFlag.NORMAL",
     "AABB.inflate()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -41,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "optional_pickup-0.1.5-mc26.3.jar",
     "published": "2026-10-07"
   },
@@ -72,7 +57,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

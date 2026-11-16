@@ -15,7 +15,6 @@
     "net.minecraft.util.datafix.fixes.References",
     "net.minecraft.util.datafix.schemas.NamespacedSchema",
     "net.minecraft.util.datafix.schemas.V1460",
-    "net.minecraft.world.entity.EntitySpawnRequest",
     "net.minecraft.world.entity.ai.goal.FollowOwnerGoal",
     "net.minecraft.world.entity.ai.goal.GoalSelector",
     "net.minecraft.world.entity.ai.goal.WrappedGoal",
@@ -44,7 +43,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "proper-pet-tp-1.2.6.jar",
     "published": "2026-10-16"
   },
@@ -71,7 +70,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 27,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

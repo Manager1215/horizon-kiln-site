@@ -14,8 +14,6 @@
     "net.fabricmc.loader.api.metadata.CustomValue.CvArray",
     "net.fabricmc.loader.api.metadata.CustomValue.CvObject",
     "net.fabricmc.loader.api.metadata.CustomValue.CvType",
-    "org.apache.logging.log4j.message.FormattedMessageFactory",
-    "org.apache.logging.log4j.message.Message",
     "ModContainer.getRootPaths()",
     "ModMetadata.containsCustomValue()",
     "ModMetadata.getCustomValue()"
@@ -25,7 +23,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "allium-0.5.0.jar",
     "published": "2026-03-24"
   },
@@ -52,7 +50,11 @@
     "fabricloader",
     "java"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

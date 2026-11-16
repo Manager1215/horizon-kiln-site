@@ -11,23 +11,13 @@
   "needs": [
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.Chat",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "org.lwjgl.sdl.SDLVideo",
     "Window.handle()",
     "ClientReceiveMessageEvents.ALLOW_GAME",
     "ClientReceiveMessageEvents.CHAT",
-    "Minecraft.gameMode",
-    "ClientPacketListener.getConnection()",
     "Connection.getRemoteAddress()",
-    "Component.getSiblings()",
-    "MutableComponent.getSiblings()",
-    "MutableComponent.setStyle()",
-    "Style.getHoverEvent()",
-    "Style.withHoverEvent()",
     "SoundEvents.NOTE_BLOCK_BANJO",
-    "SoundEvents.NOTE_BLOCK_BASEDRUM",
     "SoundEvents.NOTE_BLOCK_BASS",
-    "SoundEvents.NOTE_BLOCK_BELL",
     "SoundEvents.NOTE_BLOCK_BIT",
     "SoundEvents.NOTE_BLOCK_CHIME",
     "SoundEvents.NOTE_BLOCK_COW_BELL",
@@ -49,7 +39,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "jamboree-0.0.20+26.3.jar",
     "published": "2026-09-15"
   },
@@ -81,7 +71,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 34,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 24,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

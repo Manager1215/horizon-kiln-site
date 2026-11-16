@@ -10,25 +10,14 @@
   "description": "Permanent buff effect system using Ender Chest",
   "needs": [
     "net.minecraft.world.inventory.PlayerEnderChestContainer",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "DataComponents.GLIDER",
-    "DataComponents.POTION_CONTENTS",
-    "Items.CONDUIT",
-    "Items.ENCHANTED_GOLDEN_APPLE",
-    "Items.LINGERING_POTION",
-    "Items.NETHERITE_BLOCK",
-    "Items.NETHERITE_CHESTPLATE",
-    "Items.NETHERITE_PICKAXE",
-    "Items.POTION",
-    "Items.SPLASH_POTION",
-    "Items.TOTEM_OF_UNDYING"
+    "DataComponents.GLIDER"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "easeon.ss.enderbuff.teron.fabric-26.3.4.0+mc26.3.jar",
     "published": "2026-10-06"
   },
@@ -56,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

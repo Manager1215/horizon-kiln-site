@@ -10,33 +10,18 @@
   "description": "A simple way to share and sync mods, resource packs, shaders, and other Minecraft content with your friends or community.",
   "needs": [
     "net.minecraft.client.gui.components.MultiLineTextWidget",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.client.gui.components.events.AbstractContainerEventHandler",
     "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
     "net.minecraft.client.gui.screens.worldselection.SelectWorldScreen",
-    "Minecraft.execute()",
-    "Minecraft.setScreenAndShow()",
-    "Font.split()",
     "GuiGraphicsExtractor.fill()",
-    "GuiGraphicsExtractor.text()",
-    "AbstractWidget.onClick()",
-    "AbstractWidget.setMessage()",
-    "Checkbox.selected()",
-    "EditBox.setHint()",
-    "EditBox.setSuggestion()",
     "NarrationElementOutput.add()",
-    "Screen.mouseScrolled()",
-    "RenderPipelines.GUI",
-    "MutableComponent.withStyle()",
-    "Identifier.tryBuild()"
+    "RenderPipelines.GUI"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "simplemodsync-fabric-26.3-1.4.1.jar",
     "published": "2026-09-16"
   },
@@ -64,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

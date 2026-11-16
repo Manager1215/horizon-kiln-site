@@ -10,38 +10,19 @@
   "description": "A feature-rich soundboard for Simple Voice Chat and Plasmo Voice.",
   "needs": [
     "com.mojang.blaze3d.Blaze3D",
-    "com.mojang.blaze3d.platform.TextInputManager",
     "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "org.lwjgl.sdl.SDLMouse",
-    "InputConstants.isKeyDown()",
-    "InputConstants.Key.getDisplayName()",
-    "InputConstants.Type.getOrCreate()",
-    "NativeImage.read()",
     "Window.handle()",
-    "KeyMapping.getTranslatedKeyMessage()",
-    "KeyMapping.isUnbound()",
-    "KeyMapping.saveString()",
-    "Minecraft.execute()",
-    "Minecraft.textInputManager()",
     "Options.getSoundSourceVolume()",
-    "Font.plainSubstrByWidth()",
-    "Font.split()",
-    "GuiGraphicsExtractor.blit()",
     "GuiGraphicsExtractor.setTooltipForNextFrame()",
-    "Screen.charTyped()",
-    "Screen.extractMenuBackgroundTexture()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()"
+    "Screen.extractMenuBackgroundTexture()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "opensoundboard-0.6.1+mc26.3.jar",
     "published": "2026-10-31"
   },
@@ -71,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 26,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

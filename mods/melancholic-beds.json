@@ -11,7 +11,6 @@
   "needs": [
     "net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents",
     "net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents.AllowSleeping",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleEvents",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleEvents.ValueUpdate",
     "net.fabricmc.fabric.api.loot.v3.LootTableEvents.ModifyDrops",
@@ -37,26 +36,27 @@
     "net.minecraft.world.entity.monster.Monster",
     "net.minecraft.world.entity.monster.Phantom",
     "net.minecraft.world.entity.player.Player.BedSleepingProblem",
-    "ServerLifecycleEvents.SERVER_STARTED",
     "LootTableEvents.MODIFY_DROPS",
-    "Minecraft.getSingleplayerServer()",
     "LocalPlayer.permissions()",
-    "MutableComponent.setStyle()",
     "MinecraftServer.getGameRules()",
     "MinecraftServer.getPackRepository()",
     "MinecraftServer.reloadResources()",
     "ServerLevel.getDifficulty()",
-    "ServerPlayer.permissions()",
     "WeightedList.unwrap()",
     "EntityType.Builder.eyeHeight()",
-    "and 15 more"
+    "EntityType.Builder.notInPeaceful()",
+    "EntityType.Builder.passengerAttachments()",
+    "EntityType.Builder.ridingOffset()",
+    "Mob.createMobAttributes()",
+    "Level.getBiome()",
+    "and 7 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "melancholic_beds-1.0-26.3.jar",
     "published": "2026-09-15"
   },
@@ -87,7 +87,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 55,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 47,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

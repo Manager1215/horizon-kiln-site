@@ -19,7 +19,6 @@
     "net.minecraft.server.level.ChunkMap.TrackedEntity",
     "net.minecraft.util.Brightness",
     "net.minecraft.world.entity.Entity.MovementEmission",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.SpawnPlacementTypes",
     "net.minecraft.world.entity.SpawnPlacements",
     "net.minecraft.world.entity.SpawnPlacements.SpawnPredicate",
@@ -51,14 +50,15 @@
     "net.minecraft.world.level.BlockCollisions",
     "net.minecraft.world.level.Spawner",
     "net.minecraft.world.level.pathfinder.BinaryHeap",
-    "and 70 more"
+    "net.minecraft.world.level.pathfinder.Node",
+    "and 69 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Spiders-2.0-1.1.1+26.3.jar",
     "published": "2026-10-01"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 124,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; generates in the world"
+  },
+  "lacks": 114,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

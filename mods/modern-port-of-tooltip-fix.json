@@ -9,19 +9,14 @@
   "author": "Itamio",
   "description": "Fixes tooltips from running off the screen; wraps long tooltip lines and flips overflowing tooltips to the other side of the cursor.",
   "needs": [
-    "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTextTooltip",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
-    "Font.split()",
-    "Component.getSiblings()",
-    "MutableComponent.setStyle()"
+    "Mixin: 1 point inside the game's methods"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Mixin (0.5)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tooltipfix263-1.0.0.jar",
     "published": "2026-11-09"
   },
@@ -39,7 +34,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

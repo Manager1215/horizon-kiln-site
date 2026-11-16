@@ -9,14 +9,9 @@
   "author": "TechMonkey",
   "description": "Place invisible light sources that start at light level 15 and can be diluted using water bottles to fine-tune brightness.",
   "needs": [
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "net.minecraft.world.item.alchemy.Potions",
     "net.minecraft.world.phys.shapes.EntityCollisionContext",
-    "DataComponents.POTION_CONTENTS",
     "ServerLevel.sendParticles()",
     "SoundEvents.GLASS_BREAK",
-    "Items.GLASS_BOTTLE",
-    "Items.POTION",
     "Block.updateShape()",
     "Shapes.empty()"
   ],
@@ -25,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bottledlight-1.0.2.jar",
     "published": "2026-10-12"
   },
@@ -54,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

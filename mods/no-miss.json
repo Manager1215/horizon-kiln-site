@@ -9,18 +9,15 @@
   "author": "Seyit",
   "description": "A client-side Fabric mod that prevents accidental attacks when no entity is in your crosshair.",
   "needs": [
-    "net.minecraft.tags.ItemTags",
-    "Minecraft.hitResult",
     "ItemStack.getEnchantments()",
-    "Enchantments.LUNGE",
-    "HitResult.getType()"
+    "Enchantments.LUNGE"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "No-Miss-26.3.jar",
     "published": "2026-10-24"
   },
@@ -47,7 +44,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

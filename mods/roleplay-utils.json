@@ -9,24 +9,14 @@
   "author": "VanJackal",
   "description": "A mod which adds simple roleplay utilities.",
   "needs": [
-    "net.minecraft.commands.arguments.IdentifierArgument",
-    "net.minecraft.core.component.DataComponentPatch.Builder",
-    "net.minecraft.world.item.component.ItemLore",
-    "DataComponentPatch.builder()",
-    "DataComponents.CUSTOM_NAME",
-    "DataComponents.ENCHANTMENT_GLINT_OVERRIDE",
-    "DataComponents.ITEM_MODEL",
-    "DataComponents.ITEM_NAME",
-    "DataComponents.LORE",
-    "ItemStack.applyComponents()",
-    "ItemContainerContents.nonEmptyItemCopyStream()"
+    "ItemStack.applyComponents()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "roleplay_utils-1.0.5-26.3.jar",
     "published": "2026-09-24"
   },
@@ -55,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

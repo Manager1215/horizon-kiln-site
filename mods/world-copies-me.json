@@ -11,22 +11,14 @@
   "needs": [
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
-    "net.minecraft.SharedConstants",
     "net.minecraft.world.level.block.LeverBlock",
-    "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
-    "CommandSourceStack.getServer()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
+    "SharedConstants.getCurrentVersion()",
     "MinecraftServer.getAllLevels()",
-    "ServerLevel.destroyBlock()",
-    "ServerLevel.getWorldBorder()",
     "ServerLevel.isOutsideBuildHeight()",
     "BlockTags.BUTTONS",
     "BlockTags.DOORS",
     "BlockTags.FENCE_GATES",
     "BlockTags.TRAPDOORS",
-    "BlockStateProperties.DOUBLE_BLOCK_HALF",
-    "WorldBorder.isWithinBounds()",
     "WorldBorder.isWithinBounds()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -34,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "worldcopiesme-fabric-1.0.0+26.3.jar",
     "published": "2026-10-07"
   },
@@ -61,7 +53,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

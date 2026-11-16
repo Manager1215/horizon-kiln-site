@@ -11,16 +11,10 @@
   "needs": [
     "net.fabricmc.api.DedicatedServerModInitializer",
     "net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents.Load",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.minecraft.world.level.block.SignBlock",
     "net.minecraft.world.level.block.entity.SignBlockEntity",
     "net.minecraft.world.level.block.entity.SignText",
-    "net.minecraft.world.level.storage.LevelResource",
     "ServerBlockEntityEvents.BLOCK_ENTITY_LOAD",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "MinecraftServer.getWorldPath()",
     "LevelChunk.getBlockEntity()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
@@ -28,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bluemapsignmarkers-26.3-1.0.1.89.jar",
     "published": "2026-10-08"
   },
@@ -49,7 +43,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

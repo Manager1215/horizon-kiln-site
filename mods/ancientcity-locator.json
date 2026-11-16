@@ -11,16 +11,11 @@
   "needs": [
     "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperties",
     "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty",
-    "net.minecraft.core.HolderSet.Direct",
     "net.minecraft.world.TickRateManager",
     "net.minecraft.world.level.levelgen.structure.BuiltinStructures",
-    "FabricCreativeModeTabOutput.insertAfter()",
     "BlockPos.distSqr()",
     "BlockPos.distToCenterSqr()",
     "BlockPos.toShortString()",
-    "HolderSet.direct()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "Registries.STRUCTURE",
     "Component.keybind()",
     "ItemOwner.asLivingEntity()",
@@ -35,7 +30,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "AncientCityLocator-26.3-v1.0.jar",
     "published": "2026-09-17"
   },
@@ -64,7 +59,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,7 +9,6 @@
   "author": "UltimateGamerMC",
   "description": "A cute, loyal girlfriend companion for Minecraft. She follows you, protects you, picks you flowers, chats with you and grows closer every day. Fabric 26.3.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents",
     "net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents.StartSleeping",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
@@ -17,20 +16,16 @@
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.model.geom.ModelLayers",
     "net.minecraft.client.model.player.PlayerModel",
     "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
     "net.minecraft.client.renderer.entity.HumanoidMobRenderer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
-    "net.minecraft.network.chat.PlayerChatMessage",
     "net.minecraft.network.syncher.EntityDataAccessor",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.tags.BlockItemTagId",
     "net.minecraft.tags.BlockItemTags",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.util.StringUtil",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
     "net.minecraft.world.entity.ai.control.LookControl",
@@ -48,15 +43,20 @@
     "net.minecraft.world.item.component.ResolvableProfile",
     "net.minecraft.world.item.component.ResolvableProfile.Static",
     "Minecraft.crosshairPickEntity",
-    "Font.plainSubstrByWidth()",
-    "and 58 more"
+    "PlayerSkinRenderCache.getOrDefault()",
+    "EntityRendererProvider.Context.bakeLayer()",
+    "EntityRendererProvider.Context.getPlayerSkinRenderCache()",
+    "EntityRenderState.entityType",
+    "BlockPos.MutableBlockPos.set()",
+    "PlayerChatMessage.signedContent()",
+    "and 41 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "girlfriend-mod-2.3.0-mc26.3.jar",
     "published": "2026-10-21"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 124,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 81,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

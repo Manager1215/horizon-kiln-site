@@ -9,20 +9,14 @@
   "author": "MineChook",
   "description": "This project adds search bars to chest and shulker boxes to help you find items by highlighting matching words.",
   "needs": [
-    "net.minecraft.client.gui.screens.inventory.ContainerScreen",
-    "net.minecraft.client.gui.screens.inventory.ShulkerBoxScreen",
-    "KeyMapping.matches()",
-    "EditBox.setEditable()",
-    "AbstractContainerScreen.setFocused()",
-    "DataComponents.STORED_ENCHANTMENTS",
-    "Enchantment.getFullname()"
+    "net.minecraft.client.gui.screens.inventory.ShulkerBoxScreen"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ChestSearch-1.2.5.jar",
     "published": "2026-10-02"
   },
@@ -51,7 +45,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

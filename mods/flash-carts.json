@@ -10,12 +10,10 @@
   "description": "Faster Minecarts, speedometers, and rail building tools without breaking your Redstone machines or needing client mods!",
   "needs": [
     "Mixin: 9 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.StartDataPackReload",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditionType",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions",
     "net.minecraft.resources.RegistryOps.RegistryInfoLookup",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.Display",
     "net.minecraft.world.entity.Display.BlockDisplay",
     "net.minecraft.world.entity.EntitySelector",
@@ -26,7 +24,6 @@
     "net.minecraft.world.entity.vehicle.minecart.MinecartHopper",
     "net.minecraft.world.entity.vehicle.minecart.MinecartTNT",
     "net.minecraft.world.entity.vehicle.minecart.OldMinecartBehavior",
-    "net.minecraft.world.flag.FeatureFlags",
     "net.minecraft.world.level.block.BaseRailBlock",
     "net.minecraft.world.level.block.DetectorRailBlock",
     "net.minecraft.world.level.block.PoweredRailBlock",
@@ -34,10 +31,6 @@
     "net.minecraft.world.level.block.entity.SignBlockEntity",
     "net.minecraft.world.level.block.entity.SignText",
     "net.minecraft.world.level.block.state.properties.RailShape",
-    "org.apache.logging.log4j.Level",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "ServerLifecycleEvents.START_DATA_PACK_RELOAD",
     "BlockPos.distChessboard()",
     "BlockPos.offset()",
     "BlockPos.subtract()",
@@ -48,16 +41,23 @@
     "ClientboundEntityPositionSyncPacket.of()",
     "VecDeltaCodec.setBase()",
     "SynchedEntityData.getNonDefaultValues()",
-    "ServerPlayer.connection",
-    "ServerPlayer.getRandom()",
-    "and 35 more"
+    "SoundEvents.METAL_PLACE",
+    "Mth.packDegrees()",
+    "EntityTypes.BLOCK_DISPLAY",
+    "Player.<init>()",
+    "Player.getEyePosition()",
+    "Player.getViewVector()",
+    "Player.isCrouching()",
+    "AbstractMinecart.getBehavior()",
+    "AbstractMinecart.getBoundingBox()",
+    "and 14 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Flash Carts-1.3.1+26.3.jar",
     "published": "2026-10-16"
   },
@@ -84,7 +84,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 75,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 54,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 107 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.minecraft.MinecraftProfileTexture",
     "com.mojang.authlib.minecraft.MinecraftProfileTextures",
     "com.mojang.authlib.minecraft.SessionService",
@@ -19,8 +18,6 @@
     "com.mojang.authlib.properties.PropertyMap",
     "com.mojang.renderpearl.backend.opengl.GlProgram",
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
-    "net.minecraft.SharedConstants",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.gui.ActiveTextCollector",
     "net.minecraft.client.gui.ActiveTextCollector.ClickableStyleFinder",
     "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
@@ -30,27 +27,30 @@
     "net.minecraft.client.gui.components.MultiLineEditBox",
     "net.minecraft.client.gui.components.MultilineTextField",
     "net.minecraft.client.gui.components.PlayerTabOverlay",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.WidgetSprites",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
     "net.minecraft.client.gui.screens.LevelLoadingScreen",
-    "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
-    "net.minecraft.client.gui.screens.inventory.AnvilScreen",
-    "net.minecraft.client.gui.screens.inventory.ContainerScreen",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
     "net.minecraft.client.gui.screens.inventory.EffectsInInventory",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
     "net.minecraft.client.model.object.projectile.ArrowModel",
     "net.minecraft.client.multiplayer.ClientHandshakePacketListenerImpl",
     "net.minecraft.client.multiplayer.ClientPacketListener.CommandCheckResult",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.multiplayer.chat.GuiMessage.Line",
     "net.minecraft.client.player.FirstPersonHandsAndItems",
     "net.minecraft.client.renderer.CubeMap",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.LightmapRenderStateExtractor",
     "net.minecraft.client.renderer.ScreenEffectRenderer",
+    "net.minecraft.client.renderer.StagedVertexBuffer.Draw",
+    "net.minecraft.client.renderer.entity.ItemEntityRenderer",
+    "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+    "net.minecraft.client.renderer.entity.layers.StuckInBodyLayer",
+    "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+    "net.minecraft.client.renderer.extract.LevelExtractor",
+    "net.minecraft.client.renderer.fog.FogData",
+    "net.minecraft.client.renderer.fog.FogRenderer",
+    "net.minecraft.client.renderer.fog.environment.FogEnvironment",
+    "net.minecraft.client.renderer.state.gui.GuiTextRenderState",
+    "net.minecraft.client.resources.language.ClientLanguage",
+    "net.minecraft.core.component.PatchedDataComponentMap",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nofrills-26.3-0.4.16.jar",
     "published": "2026-11-14"
   },
@@ -86,5 +86,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 414
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 287
 }

@@ -13,7 +13,6 @@
     "Mixin: 1 point inside the game's methods",
     "net.minecraft.client.gui.screens.inventory.MerchantScreen",
     "net.minecraft.client.gui.screens.inventory.MerchantScreen.TradeOfferButton",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.world.entity.ReputationEventHandler",
     "net.minecraft.world.entity.npc.villager.AbstractVillager",
     "net.minecraft.world.entity.npc.villager.Villager",
@@ -23,10 +22,8 @@
     "net.minecraft.world.inventory.MerchantMenu",
     "net.minecraft.world.item.trading.Merchant",
     "net.minecraft.world.item.trading.MerchantOffer",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
-    "ServerData.ip",
     "LocalPlayer.getViewVector()",
+    "IntegratedServer.getServerDirectory()",
     "Entity.isAlive()",
     "MerchantOffers.CODEC",
     "MerchantOffers.STREAM_CODEC",
@@ -42,7 +39,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "villager-trade-tweaks-26.3-1.2.2.jar",
     "published": "2026-09-17"
   },
@@ -71,7 +68,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

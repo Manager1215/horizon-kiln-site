@@ -24,7 +24,6 @@
     "net.minecraft.client.gui.Font.GlyphVisitor",
     "net.minecraft.client.gui.Font.PreparedText",
     "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.font.TextRenderable",
     "net.minecraft.client.renderer.BindGroupLayouts",
     "net.minecraft.client.renderer.feature.submit.TranslucentSubmit",
@@ -32,15 +31,9 @@
     "net.minecraft.client.renderer.rendertype.PreparedRenderType.Texture",
     "net.minecraft.client.renderer.rendertype.RenderSetup",
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.network.chat.FontDescription",
     "net.minecraft.network.chat.FontDescription.Resource",
     "net.minecraft.world.level.material.FogType",
-    "NativeImage.getHeight()",
-    "NativeImage.getPixel()",
-    "NativeImage.getWidth()",
-    "NativeImage.read()",
-    "NativeImage.setPixel()",
     "RenderSystem.getModelViewMatrixCopy()",
     "RenderSystem.getProjectionMatrixBuffer()",
     "RenderSystem.getProjectionType()",
@@ -51,14 +44,21 @@
     "VertexConsumer.addVertexWith2DPose()",
     "RenderPassDescriptor.builder()",
     "BlendFunction.TRANSLUCENT",
-    "and 45 more"
+    "RenderPipeline.builder()",
+    "RenderPipeline.getDepthStencilState()",
+    "LevelExtractionEvents.END_EXTRACTION",
+    "LevelRenderEvents.AFTER_RENDER_PASS",
+    "LevelRenderEvents.COLLECT_SUBMITS",
+    "Camera.getFluidInCamera()",
+    "Camera.xRot()",
+    "and 41 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "amo2-0.1-fabric-26.3.jar",
     "published": "2026-11-12"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 104,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 81,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

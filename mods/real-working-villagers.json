@@ -13,9 +13,6 @@
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.server.network.Filterable",
-    "net.minecraft.server.permissions.Permissions",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.ai.Brain",
     "net.minecraft.world.entity.ai.control.LookControl",
     "net.minecraft.world.entity.ai.memory.MemoryModuleType",
@@ -29,10 +26,7 @@
     "net.minecraft.world.entity.projectile.ProjectileUtil",
     "net.minecraft.world.entity.projectile.arrow.Arrow",
     "net.minecraft.world.item.MapItem",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "net.minecraft.world.item.alchemy.Potions",
     "net.minecraft.world.item.component.DyedItemColor",
-    "net.minecraft.world.item.component.ItemLore",
     "net.minecraft.world.item.component.WrittenBookContent",
     "net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity",
     "net.minecraft.world.level.block.entity.BlastFurnaceBlockEntity",
@@ -49,14 +43,20 @@
     "VertexConsumer.setOverlay()",
     "Object2IntMap.Entry.getKey()",
     "EntityRenderer.shouldRender()",
-    "and 54 more"
+    "RenderTypes.entityCutoutCull()",
+    "CameraRenderState.orientation",
+    "BlockPos.distSqr()",
+    "BlockPos.MutableBlockPos.set()",
+    "BlockPos.MutableBlockPos.set()",
+    "BlockPos.MutableBlockPos.setY()",
+    "and 48 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "real-working-villagers-26.3.jar",
     "published": "2026-10-23"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 237,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 119,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

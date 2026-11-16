@@ -10,20 +10,14 @@
   "description": "A lightweight holographic selection and measurement tool — mark two positions, instantly see dimensions, distance, area and volume.",
   "needs": [
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.BeforeGizmos",
-    "net.minecraft.gizmos.GizmoStyle",
-    "LevelRenderEvents.BEFORE_GIZMOS",
-    "Minecraft.hitResult",
-    "Options.keyAttack",
-    "Options.keyUse",
-    "Gizmos.cuboid()",
-    "Gizmos.line()"
+    "LevelRenderEvents.BEFORE_GIZMOS"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ruler-1.0.2.jar",
     "published": "2026-09-18"
   },
@@ -53,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

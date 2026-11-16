@@ -9,10 +9,7 @@
   "author": "VictorWinner",
   "description": "Syncs Minecraft's day/night cycle with your real-world clock. It's night outside? It's night in-game.",
   "needs": [
-    "CommandSourceStack.withSuppressedOutput()",
-    "Commands.performPrefixedCommand()",
     "MinecraftServer.createCommandSourceStack()",
-    "MinecraftServer.getCommands()",
     "MinecraftServer.getTickCount()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -20,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "reallifetime-1.0.0- 26.3.jar",
     "published": "2026-10-03"
   },
@@ -50,7 +47,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

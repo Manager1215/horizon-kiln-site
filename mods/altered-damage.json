@@ -10,11 +10,11 @@
   "description": "🔪 Alters damage taken and dealt by players and other entities with a modifier.",
   "needs": [],
   "roadmap": "",
-  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers. Everything its code calls is covered by Kiln 0.4.1 (4 classes, 2 members). Not run yet.",
+  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers. Everything its code calls is covered by Kiln 0.4.5 (4 classes, 2 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "altereddamage-26.3.0-3.8.jar",
     "published": "2026-10-02"
   },
@@ -44,6 +44,10 @@
     "java",
     "minecraft"
   ],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 0,
   "development": {
     "status": "not-checked",

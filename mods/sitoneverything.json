@@ -9,10 +9,7 @@
   "author": "Nikrecs",
   "description": "Sit on almost any block or entity with configurable seat positions, vanilla presets, and quick hotkey support.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.Marker",
     "net.minecraft.world.entity.NeutralMob",
     "net.minecraft.world.entity.ai.Brain",
@@ -25,12 +22,7 @@
     "net.minecraft.world.level.EmptyBlockGetter",
     "net.minecraft.world.phys.EntityHitResult",
     "Window.handle()",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "Minecraft.hitResult",
     "LocalPlayer.isPassenger()",
-    "CommandSourceStack.getPlayerOrException()",
-    "MinecraftServer.execute()",
     "ServerLevel.getEntity()",
     "ServerLevel.getEntity()",
     "ServerPlayer.getBoundingBox()",
@@ -46,17 +38,25 @@
     "Entity.discard()",
     "Entity.ejectPassengers()",
     "Entity.entityTags()",
-    "Entity.getBbWidth()",
     "Entity.getBoundingBox()",
     "Entity.getVehicleAttachmentPoint()",
-    "and 35 more"
+    "Entity.isAlive()",
+    "Entity.isPassenger()",
+    "Entity.isPickable()",
+    "Entity.isSpectator()",
+    "Entity.setPermanentlyInvulnerable()",
+    "Entity.startRiding()",
+    "EntityDimensions.makeBoundingBox()",
+    "LivingEntity.isBaby()",
+    "LivingEntity.yBodyRot",
+    "and 31 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sitoneverything-fabric-26.3-1.2.0.jar",
     "published": "2026-10-23"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 84,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 71,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

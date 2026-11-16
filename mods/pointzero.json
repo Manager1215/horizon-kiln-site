@@ -9,12 +9,8 @@
   "author": "ergghur",
   "description": "PointZero is an anti-cheat mod that ensures you can only join the server with allowed mods.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.client.networking.v1.ClientConfigurationConnectionEvents",
     "net.fabricmc.fabric.api.client.networking.v1.ClientConfigurationConnectionEvents.Disconnect",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.networking.v1.ServerConfigurationConnectionEvents.Disconnect",
     "net.fabricmc.fabric.api.networking.v1.ServerConfigurationNetworking.ConfigurationPacketHandler",
     "net.fabricmc.fabric.api.networking.v1.ServerConfigurationNetworking.Context",
@@ -29,34 +25,25 @@
     "net.minecraft.server.packs.repository.Pack",
     "net.minecraft.server.packs.repository.PackRepository",
     "net.minecraft.server.packs.repository.PackSource",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "ServerConfigurationConnectionEvents.DISCONNECT",
     "ServerConfigurationNetworking.registerGlobalReceiver()",
     "ModContainer.getOrigin()",
-    "Minecraft.execute()",
     "Minecraft.getResourcePackDirectory()",
     "Minecraft.getResourcePackRepository()",
-    "Commands.LEVEL_ADMINS",
-    "Commands.hasPermission()",
-    "Commands.CommandSelection.includeDedicated",
-    "MinecraftServer.execute()",
     "MinecraftServer.isDedicatedServer()",
-    "ServerPlayer.connection",
     "ServerConfigurationPacketListenerImpl.addTask()",
     "ServerConfigurationPacketListenerImpl.completeTask()",
     "ServerConfigurationPacketListenerImpl.getOwner()",
     "ServerConfigurationPacketListenerImpl.send()",
     "ServerGamePacketListenerImpl.disconnect()",
-    "and 2 more"
+    "NameAndId.<init>()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "pointzero-fabric-3.3.0+26.3.jar",
     "published": "2026-11-09"
   },
@@ -88,7 +75,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 42,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 28,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -13,24 +13,18 @@
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.blockentity.BlockEntityWithBoundingBoxRenderer",
     "net.minecraft.client.renderer.blockentity.state.BlockEntityWithBoundingBoxRenderState",
-    "net.minecraft.gizmos.GizmoStyle",
     "net.minecraft.world.level.block.BarrierBlock",
     "net.minecraft.world.level.block.LightBlock",
     "net.minecraft.world.level.block.StructureVoidBlock",
     "net.minecraft.world.level.block.entity.BoundingBoxRenderable",
     "net.minecraft.world.level.block.entity.BoundingBoxRenderable.Mode",
-    "org.apache.logging.log4j.LogManager",
     "Frustum.isVisible()",
     "CameraRenderState.cullFrustum",
     "BlockPos.containing()",
     "BlockPos.MutableBlockPos.set()",
     "Gizmos.cuboid()",
-    "Items.LIGHT",
     "Block.canBeReplaced()",
     "Block.getCollisionShape()",
-    "Blocks.BARRIER",
-    "Blocks.LIGHT",
-    "Blocks.STRUCTURE_VOID",
     "LevelChunk.getSections()",
     "LevelChunkSection.getStates()",
     "Shapes.empty()",
@@ -42,7 +36,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "structure_void_toggle-Fabric-4.5.6+26.3.jar",
     "published": "2026-09-15"
   },
@@ -70,7 +64,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 26,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

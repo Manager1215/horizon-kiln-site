@@ -10,12 +10,6 @@
   "description": "Drag and drop to reorder and sort your multiplayer server list, singleplayer worlds, resource packs and data packs.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
-    "net.minecraft.client.gui.components.Button.Plain",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
     "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList",
     "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList.OnlineServerEntry",
@@ -35,29 +29,14 @@
     "net.minecraft.server.packs.repository.Pack",
     "net.minecraft.server.packs.repository.Pack.Position",
     "net.minecraft.world.level.storage.LevelSummary",
-    "GuiGraphicsExtractor.blitSprite()",
-    "GuiGraphicsExtractor.nextStratum()",
-    "GuiGraphicsExtractor.requestCursor()",
-    "AbstractSelectionList.getBottom()",
-    "AbstractSelectionList.scrollAmount()",
-    "AbstractSelectionList.setScrollAmount()",
-    "EditBox.getRight()",
-    "LayoutElement.getRectangle()",
-    "ScreenRectangle.bottom()",
-    "ScreenRectangle.containsPoint()",
-    "ScreenRectangle.left()",
-    "ScreenRectangle.top()",
-    "Screen.children()",
-    "KeyEvent.hasShiftDown()",
-    "KeyEvent.isDown()",
-    "and 2 more"
+    "LayoutElement.getRectangle()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "rearrange-1.1.1+26.3-fabric.jar",
     "published": "2026-11-14"
   },
@@ -74,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 42,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

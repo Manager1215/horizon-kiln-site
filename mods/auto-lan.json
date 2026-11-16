@@ -10,16 +10,14 @@
   "description": "Opens up a world to LAN automatically - cut the manual work!",
   "needs": [
     "net.minecraft.server.MinecraftServer.MultiplayerScope",
-    "net.minecraft.util.HttpUtil",
-    "MinecraftServer.execute()",
-    "PlayerList.broadcastSystemMessage()"
+    "net.minecraft.util.HttpUtil"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "auto-lan-1.1.1+26.3.0.jar",
     "published": "2026-09-22"
   },
@@ -47,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

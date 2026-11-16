@@ -12,16 +12,16 @@
     "an access widener",
     "net.minecraft.network.HashedStack",
     "net.minecraft.network.protocol.game.ServerboundContainerClickPacket",
-    "net.minecraft.world.inventory.ContainerInput",
     "ByteBufCodecs.CONTAINER_ID",
-    "ByteBufCodecs.map()"
+    "ByteBufCodecs.map()",
+    "ContainerInput.STREAM_CODEC"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "pufferfishapi-1.3.3-26.3-fabric.jar",
     "published": "2026-09-17"
   },
@@ -49,6 +49,10 @@
     "java",
     "minecraft"
   ],
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
   "lacks": 5,
   "development": {
     "status": "planned",

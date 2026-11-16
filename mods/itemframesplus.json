@@ -11,19 +11,15 @@
   "needs": [
     "Mixin: 2 points inside the game's methods",
     "net.minecraft.world.entity.decoration.ItemFrame",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "MutableComponent.setStyle()",
-    "MinecraftServer.execute()",
     "AABB.ofSize()",
     "Vec3.relative()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "itemframesplus-fabric-1.2.1+26.2.jar",
     "published": "2026-10-07"
   },
@@ -55,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

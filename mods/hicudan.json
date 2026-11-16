@@ -11,16 +11,12 @@
   "needs": [
     "net.minecraft.client.gui.Font.GlyphVisitor",
     "net.minecraft.client.gui.Font.PreparedText",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.font.TextRenderable",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
     "net.minecraft.client.particle.Particle",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.feature.FeatureRendererMap",
     "net.minecraft.client.renderer.feature.phase.SimpleFeatureRenderPhase",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.network.chat.FontDescription",
     "net.minecraft.network.chat.FontDescription.Resource",
     "net.minecraft.server.packs.PackLocationInfo",
@@ -38,10 +34,6 @@
     "net.minecraft.util.InclusiveRange",
     "net.minecraft.util.profiling.Profiler",
     "net.minecraft.util.profiling.ProfilerFiller",
-    "NativeImage.getHeight()",
-    "NativeImage.getWidth()",
-    "NativeImage.read()",
-    "NativeImage.setPixel()",
     "PoseStack.last()",
     "PoseStack.Pose.pose()",
     "Axis.ZP",
@@ -49,14 +41,22 @@
     "ObjectIterator.next()",
     "Camera.xRot()",
     "Camera.yRot()",
-    "and 26 more"
+    "Minecraft.reloadResourcePacks()",
+    "Font.prepareText()",
+    "GameRenderer.mainCamera()",
+    "SubmitNodeCollection.alwaysOnTopGizmos",
+    "SubmitNodeStorage.getSubmitsPerOrder()",
+    "FeatureRendererType.create()",
+    "Style.withFont()",
+    "PackType.getDirectory()",
+    "and 7 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "highly_customizable_damage_numbers-fabric-26.3-1.2.01.jar",
     "published": "2026-10-26"
   },
@@ -84,7 +84,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 66,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 47,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

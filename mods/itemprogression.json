@@ -10,40 +10,28 @@
   "description": "Adds restrictions on item usage based on invested experience points. Inspired by Skillable",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
     "net.minecraft.client.gui.ActiveTextCollector",
-    "net.minecraft.client.gui.TextAlignment",
     "net.minecraft.client.gui.components.ImageButton",
     "net.minecraft.client.gui.components.WidgetSprites",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.server.level.ServerPlayerGameMode",
     "net.minecraft.world.level.block.SpawnerBlock",
     "ServerPlayerEvents.JOIN",
-    "ServerLifecycleEvents.END_DATA_PACK_RELOAD",
-    "Minecraft.setScreenAndShow()",
-    "GuiGraphicsExtractor.blitSprite()",
-    "GuiGraphicsExtractor.fakeItem()",
     "GuiGraphicsExtractor.textRenderer()",
-    "Screen.mouseScrolled()",
     "MinecraftServer.overworld()",
     "ServerPlayer.addItem()",
     "ServerPlayer.getGameProfile()",
-    "ServerPlayer.giveExperiencePoints()",
-    "EquipmentSlot.isArmor()",
     "ExperienceOrb.award()",
-    "ItemStack.copyAndClear()",
-    "CropBlock.isMaxAge()"
+    "ItemStack.copyAndClear()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Item Progression.jar",
     "published": "2026-09-27"
   },
@@ -71,7 +59,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-arg Kiln doesn't guard; has network channels"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

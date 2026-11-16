@@ -26,7 +26,6 @@
     "net.minecraft.server.packs.repository.PackSource",
     "net.minecraft.server.packs.resources.FallbackResourceManager",
     "net.minecraft.server.packs.resources.MultiPackResourceManager",
-    "net.minecraft.server.packs.resources.ReloadableResourceManager",
     "net.minecraft.world.item.component.DyedItemColor",
     "net.minecraft.world.level.FoliageColor",
     "net.minecraft.world.level.GrassColor",
@@ -50,14 +49,15 @@
     "net.minecraft.world.level.block.StandingSignBlock",
     "net.minecraft.world.level.block.WallHangingSignBlock",
     "net.minecraft.world.level.block.WallSignBlock",
-    "and 68 more"
+    "net.minecraft.world.level.block.WaterloggedTransparentBlock",
+    "and 43 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "polymer-patch-bundle-1.1.7+26.3.jar",
     "published": "2026-10-27"
   },
@@ -84,7 +84,11 @@
     "fabricloader",
     "java"
   ],
-  "lacks": 108,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 83,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

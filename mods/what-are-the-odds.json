@@ -11,9 +11,7 @@
   "needs": [
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowChatMessage",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
     "net.minecraft.network.chat.ClickEvent.ShowDialog",
-    "net.minecraft.network.chat.PlayerChatMessage",
     "net.minecraft.server.dialog.ActionButton",
     "net.minecraft.server.dialog.CommonButtonData",
     "net.minecraft.server.dialog.MultiActionDialog",
@@ -24,12 +22,7 @@
     "net.minecraft.server.dialog.body.PlainMessage",
     "net.minecraft.server.dialog.input.TextInput",
     "net.minecraft.server.dialog.input.TextInput.MultilineOptions",
-    "CommandSourceStack.getServer()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withUnderlined()",
+    "PlayerChatMessage.signedContent()",
     "ServerPlayer.openDialog()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -37,7 +30,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "wato-1.1.2+mc26.3.jar",
     "published": "2026-10-17"
   },
@@ -66,7 +59,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

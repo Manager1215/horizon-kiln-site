@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 7 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
@@ -21,10 +20,8 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
     "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.AfterSave",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.item.v1.ItemComponentTooltipProviderRegistry",
     "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.UsedTotemTrigger",
@@ -34,7 +31,6 @@
     "net.minecraft.client.model.geom.builders.MeshDefinition",
     "net.minecraft.client.model.geom.builders.PartDefinition",
     "net.minecraft.client.model.player.PlayerModel",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.multiplayer.chat.report.ReportingContext",
     "net.minecraft.client.particle.ParticleProvider",
     "net.minecraft.client.particle.SimpleAnimatedParticle",
@@ -47,18 +43,22 @@
     "net.minecraft.commands.synchronization.ArgumentTypeInfo.Template",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.nbt.NbtAccounter",
-    "net.minecraft.nbt.NbtIo",
-    "net.minecraft.network.chat.ComponentSerialization",
     "net.minecraft.network.protocol.game.ServerboundClientCommandPacket",
     "net.minecraft.network.protocol.game.ServerboundClientCommandPacket.Action",
-    "and 80 more"
+    "net.minecraft.references.ItemIds",
+    "net.minecraft.server.players.UserBanList",
+    "net.minecraft.server.players.UserBanListEntry",
+    "net.minecraft.util.CommonColors",
+    "net.minecraft.world.entity.ai.attributes.AttributeMap",
+    "net.minecraft.world.entity.decoration.HangingEntity",
+    "and 74 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "divorcesteal-2.0.0.jar",
     "published": "2026-11-14"
   },
@@ -88,7 +88,11 @@
     "minecraft",
     "pneumonocore"
   ],
-  "lacks": 175,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 134,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

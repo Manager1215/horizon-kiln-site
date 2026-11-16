@@ -17,7 +17,6 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
     "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SyncDataPackContents",
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
     "net.minecraft.client.TextureFilteringMethod",
     "net.minecraft.client.renderer.BindGroupLayouts",
     "net.minecraft.client.renderer.CloudRenderer",
@@ -42,22 +41,23 @@
     "net.minecraft.server.PlayerAdvancements",
     "net.minecraft.server.ServerAdvancementManager",
     "net.minecraft.tags.DamageTypeTags",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.WalkAnimationState",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile",
     "net.minecraft.world.inventory.ResultSlot",
     "net.minecraft.world.item.ItemCooldowns",
     "net.minecraft.world.item.ItemUseAnimation",
-    "net.minecraft.world.item.crafting.BrewingRecipe",
-    "net.minecraft.world.item.crafting.PotionIngredient",
-    "and 67 more"
+    "net.minecraft.world.level.block.state.BlockBehaviour.StateArgumentPredicate",
+    "net.minecraft.world.level.block.state.BlockBehaviour.StatePredicate",
+    "net.minecraft.world.level.material.PushReaction",
+    "net.minecraft.world.phys.shapes.EntityCollisionContext",
+    "and 60 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "deos-portal-gun-mod-2.5.0+26.3.jar",
     "published": "2026-11-15"
   },
@@ -87,5 +87,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 241
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
+  },
+  "lacks": 191
 }

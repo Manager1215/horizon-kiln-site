@@ -9,10 +9,6 @@
   "author": "periklis20m",
   "description": "Smooth drag-and-drop reordering for multiplayer servers and selected resource packs, with easy transfers between Available and Selected.",
   "needs": [
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseClick",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseDrag",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseRelease",
     "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
     "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList",
     "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList.Entry",
@@ -26,23 +22,14 @@
     "net.minecraft.client.multiplayer.ServerList",
     "net.minecraft.server.packs.repository.Pack",
     "net.minecraft.server.packs.repository.Pack.Position",
-    "net.minecraft.server.packs.repository.PackCompatibility",
-    "GuiGraphicsExtractor.nextStratum()",
-    "AbstractSelectionList.getBottom()",
-    "AbstractSelectionList.getRight()",
-    "AbstractSelectionList.getRowLeft()",
-    "AbstractSelectionList.scrollAmount()",
-    "AbstractSelectionList.setScrollAmount()",
-    "Screen.children()",
-    "Screen.getFont()",
-    "MouseButtonEvent.hasShiftDown()"
+    "net.minecraft.server.packs.repository.PackCompatibility"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "rowglide-1.0.2+26.3.jar",
     "published": "2026-10-27"
   },
@@ -71,7 +58,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

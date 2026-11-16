@@ -10,11 +10,11 @@
   "description": "Unlocks all crafting recipes automatically.",
   "needs": [],
   "roadmap": "",
-  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers. Everything its code calls is covered by Kiln 0.4.1 (7 classes, 5 members). Not run yet.",
+  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers. Everything its code calls is covered by Kiln 0.4.5 (7 classes, 5 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "recipes_unlocker-1.0.0.jar",
     "published": "2026-11-13"
   },
@@ -41,6 +41,10 @@
     "java",
     "minecraft"
   ],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 0,
   "development": {
     "status": "not-checked",

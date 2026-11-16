@@ -10,9 +10,7 @@
   "description": "This mod removes the delay you get from swinging a sword, axe, pickaxe or any item Including crystal pvp, anchor pvp, cart pvp, optimizing bows, eating & ender pearls. This mod fixes waiting on the server to do things.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.minecraft.SessionService",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.gui.components.PlayerFaceExtractor",
     "net.minecraft.client.gui.components.PlayerTabOverlay",
     "net.minecraft.client.gui.screens.ConnectScreen",
@@ -21,7 +19,6 @@
     "net.minecraft.client.model.geom.ModelLayers",
     "net.minecraft.client.model.monster.dragon.EnderDragonModel",
     "net.minecraft.client.model.player.PlayerModel",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.multiplayer.resolver.ServerAddress",
     "net.minecraft.client.particle.Particle",
     "net.minecraft.client.particle.ParticleEngine",
@@ -36,28 +33,31 @@
     "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
     "net.minecraft.client.renderer.extract.LevelExtractor",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.client.resources.DefaultPlayerSkin",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.core.particles.DustParticleOptions",
     "net.minecraft.network.chat.FontDescription",
     "net.minecraft.network.chat.FontDescription.Resource",
     "net.minecraft.world.entity.EntityAttachment",
     "net.minecraft.world.entity.EntityAttachments",
     "net.minecraft.world.entity.EntityEvent",
-    "net.minecraft.world.entity.Pose",
     "net.minecraft.world.entity.boss.enderdragon.DragonFlightHistory",
     "net.minecraft.world.entity.boss.enderdragon.EndCrystal",
     "net.minecraft.world.entity.player.PlayerModelPart",
     "net.minecraft.world.item.ItemUseAnimation",
-    "and 62 more"
+    "net.minecraft.world.level.block.RespawnAnchorBlock",
+    "Window.handle()",
+    "VertexConsumer.addVertex()",
+    "VertexConsumer.addVertexWith2DPose()",
+    "VertexConsumer.setLight()",
+    "VertexConsumer.setNormal()",
+    "and 55 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "pvpoptimizer-1.6+mc26.3.jar",
     "published": "2026-11-07"
   },
@@ -85,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 219,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 137,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

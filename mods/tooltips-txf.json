@@ -9,26 +9,15 @@
   "author": "jahirtrap",
   "description": "Additional info on tooltips such as durability, food & more",
   "needs": [
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.server.packs.VanillaPackResources",
     "net.minecraft.server.packs.repository.ServerPacksSource",
     "net.minecraft.util.StrictJsonParser",
     "net.minecraft.world.food.FoodProperties",
     "net.minecraft.world.item.JukeboxPlayable",
     "net.minecraft.world.item.JukeboxSong",
-    "net.minecraft.world.item.component.Compostable",
     "net.minecraft.world.item.component.UseCooldown",
-    "net.minecraft.world.item.enchantment.Enchantable",
-    "net.minecraft.world.level.storage.loot.providers.number.ints.ResolvableInt.Constant",
-    "net.minecraft.world.level.storage.loot.providers.number.ints.ResolvableInt.Reference",
-    "InputConstants.isKeyDown()",
-    "Registry.get()",
-    "RegistryAccess.lookupOrThrow()",
-    "DataComponents.COMPOSTABLE",
-    "DataComponents.ENCHANTABLE",
     "DataComponents.FOOD",
     "DataComponents.JUKEBOX_PLAYABLE",
-    "DataComponents.REPAIR_COST",
     "DataComponents.USE_COOLDOWN",
     "TypedDataComponent.encodeValue()",
     "FileToIdConverter.idToFile()",
@@ -37,17 +26,14 @@
     "BlockTags.ENCHANTMENT_POWER_PROVIDER",
     "Tool.isCorrectForDrops()",
     "Block.defaultDestroyTime()",
-    "Block.getExplosionResistance()",
-    "Blocks.ANCIENT_DEBRIS",
-    "Blocks.DIAMOND_ORE",
-    "Blocks.IRON_ORE"
+    "Block.getExplosionResistance()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tooltipstxf-26.3-1.0.8-fabric.jar",
     "published": "2026-09-18"
   },
@@ -75,7 +61,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 32,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

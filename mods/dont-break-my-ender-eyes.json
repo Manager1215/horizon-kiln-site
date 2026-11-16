@@ -9,15 +9,14 @@
   "author": "3CTeam",
   "description": "Makes thrown Eyes of Ender never break. Configurable shatter chance.",
   "needs": [
-    "net.minecraft.world.entity.projectile.EyeOfEnder",
-    "Entity.getRandom()"
+    "net.minecraft.world.entity.projectile.EyeOfEnder"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dbmee-fabric-1.1.4.1+mc26.3.jar",
     "published": "2026-10-08"
   },
@@ -45,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 2,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

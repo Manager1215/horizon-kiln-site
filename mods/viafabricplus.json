@@ -12,7 +12,6 @@
     "an access widener",
     "Mixin: 225 points inside the game's methods",
     "com.mojang.authlib.DiscoveryService",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.GameProfileRepository",
     "com.mojang.authlib.HttpDiscoveryService",
     "com.mojang.authlib.exceptions.MinecraftClientException",
@@ -51,6 +50,7 @@
     "net.fabricmc.fabric.impl.registry.sync.RegistrySyncManager",
     "net.fabricmc.loader.api.metadata.ContactInformation",
     "net.fabricmc.loader.api.metadata.CustomValue",
+    "net.fabricmc.loader.api.metadata.Person",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ViaFabricPlus-5.1.3.jar",
     "published": "2026-11-01"
   },
@@ -83,7 +83,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 780,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @overwrite and @redirect and @wrap-operation into the game's classes; @modify-constant Kiln doesn't guard; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 604,
   "development": {
     "status": "no-plans",
     "statusLabel": "No plans yet",

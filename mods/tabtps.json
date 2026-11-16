@@ -10,23 +10,14 @@
   "description": "Monitor your server's performance in the tab menu, boss bar, and action bar",
   "needs": [
     "Mixin: 5 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.minecraft.commands.arguments.selector.EntitySelectorParser",
     "net.minecraft.commands.synchronization.ArgumentTypeInfos",
     "net.minecraft.commands.synchronization.ArgumentUtils",
     "net.minecraft.network.protocol.game.ClientboundCommandsPacket.ArgumentNodeStub",
-    "net.minecraft.server.permissions.LevelBasedPermissionSet",
     "JsonArray.forEach()",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "CommandSourceStack.getEntity()",
-    "CommandSourceStack.getServer()",
     "Commands.sendCommands()",
-    "MinecraftServer.getCommands()",
     "MinecraftServer.getMaxPlayers()",
     "MinecraftServer.isDedicatedServer()",
-    "MinecraftServer.operatorUserPermissions()",
-    "ServerPlayer.connection",
-    "ServerPlayer.getDisplayName()",
     "ServerGamePacketListenerImpl.latency()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -34,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tabtps-fabric-mc26.3-1.4.3.jar",
     "published": "2026-11-04"
   },
@@ -65,7 +56,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

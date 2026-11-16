@@ -16,14 +16,7 @@
     "net.minecraft.util.profiling.Profiler",
     "net.minecraft.util.profiling.ProfilerFiller",
     "Options.attackIndicator()",
-    "GuiGraphicsExtractor.blitSprite()",
-    "Rect2i.getHeight()",
-    "Rect2i.getX()",
-    "Rect2i.getY()",
-    "Rect2i.setHeight()",
-    "Rect2i.setY()",
     "Player.getAttackStrengthScale()",
-    "Player.getMainArm()",
     "Player.makeSound()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -31,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fixpots-armor-hud-1.1.0+mc26.3.jar",
     "published": "2026-09-16"
   },
@@ -60,7 +53,11 @@
     "fixlib",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

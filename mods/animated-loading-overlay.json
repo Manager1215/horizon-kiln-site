@@ -15,18 +15,15 @@
     "net.minecraft.client.renderer.texture.TextureContents",
     "net.minecraft.server.packs.resources.ReloadInstance",
     "net.minecraft.server.packs.resources.SimpleReloadInstance",
-    "NativeImage.read()",
     "Options.getSoundSourceVolume()",
-    "GuiGraphicsExtractor.blit()",
-    "TextureManager.registerAndLoad()",
-    "Util.getMillis()"
+    "TextureManager.registerAndLoad()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "animated-loading-overlay-1.0.3+26.3-fabric.jar",
     "published": "2026-11-11"
   },
@@ -54,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

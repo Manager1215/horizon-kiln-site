@@ -11,22 +11,14 @@
   "needs": [
     "net.minecraft.network.chat.FontDescription",
     "net.minecraft.network.chat.FontDescription.Resource",
-    "net.minecraft.stats.ServerStatsCounter",
     "DataComponents.FOOD",
     "RegistryFriendlyByteBuf.readOptional()",
     "RegistryFriendlyByteBuf.writeOptional()",
-    "MutableComponent.withStyle()",
     "Style.withFont()",
-    "ServerPlayer.getStats()",
-    "Stats.CUSTOM",
-    "Stats.TIME_SINCE_REST",
-    "StringRepresentable.EnumCodec.optionalFieldOf()",
     "Inventory.contains()",
     "Player.getSleepTimer()",
     "Player.isSleeping()",
-    "DyeColor.CODEC",
     "DyeColor.STREAM_CODEC",
-    "DyeColor.getTextColor()",
     "Item.inventoryTick()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -34,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "DarkUtilities-fabric-MC26.3-26.3.0.1.jar",
     "published": "2026-09-28"
   },
@@ -63,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

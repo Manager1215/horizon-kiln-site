@@ -10,16 +10,10 @@
   "description": "Bad Packets allows packet messaging between different modding platforms.",
   "needs": [
     "Mixin: 7 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.network.protocol.common.custom.CustomPacketPayload.1",
     "net.minecraft.server.network.ConfigurationTask",
     "net.minecraft.server.network.ConfigurationTask.Type",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "ClientPacketListener.getConnection()",
-    "ClientPacketListener.registryAccess()",
     "Connection.disconnect()",
-    "Connection.isConnected()",
     "Connection.send()",
     "Connection.send()",
     "ClientboundCustomPayloadPacket.CONFIG_STREAM_CODEC",
@@ -28,15 +22,14 @@
     "ServerboundCustomPayloadPacket.STREAM_CODEC",
     "ServerboundPongPacket.getId()",
     "MinecraftServer.registryAccess()",
-    "ServerPlayer.connection",
     "ServerConfigurationPacketListenerImpl.getOwner()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "badpackets-fabric-0.12.3.jar",
     "published": "2026-11-08"
   },
@@ -52,7 +45,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

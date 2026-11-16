@@ -9,18 +9,8 @@
   "author": "BizCub",
   "description": "Automatically teleports the player after executing the /locate command.",
   "needs": [
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.server.commands.LocateCommand",
-    "CommandSourceStack.getEntity()",
-    "CommandSourceStack.sendSystemMessage()",
     "BlockPos.toShortString()",
-    "Component.translatableWithFallback()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "ServerPlayer.getDisplayName()",
     "ServerPlayer.teleportTo()",
     "Level.getHeight()",
     "ChunkSource.getChunk()"
@@ -30,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "auto-tp-1.0-fabric+26.1.jar",
     "published": "2026-07-02"
   },
@@ -43,7 +33,11 @@
   "entrypoints": {},
   "mixins": true,
   "depends": [],
-  "lacks": 15,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,7 +9,6 @@
   "author": "xiao364",
   "description": "Give Minecraft mobs the strength they deserve!",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.minecraft.tags.DamageTypeTags",
     "net.minecraft.world.entity.DropChances",
     "net.minecraft.world.entity.ai.control.JumpControl",
@@ -34,8 +33,6 @@
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.Snowball",
     "net.minecraft.world.entity.raid.Raider",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "net.minecraft.world.item.alchemy.Potions",
     "net.minecraft.world.item.component.DyedItemColor",
     "net.minecraft.world.item.equipment.trim.ArmorTrim",
     "net.minecraft.world.item.equipment.trim.TrimMaterials",
@@ -45,18 +42,21 @@
     "net.minecraft.world.level.block.BaseRailBlock",
     "net.minecraft.world.level.block.LadderBlock",
     "net.minecraft.world.phys.EntityHitResult",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "Minecraft.execute()",
     "Options.hideGui",
     "BlockPos.distManhattan()",
-    "and 56 more"
+    "BlockPos.distToCenterSqr()",
+    "DataComponents.DYED_COLOR",
+    "DataComponents.TRIM",
+    "Registries.STRUCTURE",
+    "Registries.TRIM_MATERIAL",
+    "and 53 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "distant-dread-26x-0.10.jar",
     "published": "2026-07-01"
   },
@@ -85,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 274,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 124,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

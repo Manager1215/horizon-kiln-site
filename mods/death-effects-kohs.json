@@ -9,7 +9,6 @@
   "author": "zymery_dria",
   "description": "Animated, configurable death effects for players: ragdolls, angels, hellfire, a reaper, weapon fatalities and 45 special ones, with a live 3D preview of your own skin, a playable sandbox and The Soul Vault. Contains blood and gore.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.minecraft.SessionService",
     "com.mojang.authlib.properties.Property",
     "com.mojang.authlib.properties.PropertyMap",
@@ -27,7 +26,6 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.gui.Font.Provider",
     "net.minecraft.client.gui.GlyphSource",
     "net.minecraft.client.gui.components.PlayerFaceExtractor",
@@ -49,6 +47,8 @@
     "net.minecraft.client.renderer.entity.state.BreezeRenderState",
     "net.minecraft.client.renderer.entity.state.CatRenderState",
     "net.minecraft.client.renderer.entity.state.ChickenRenderState",
+    "net.minecraft.client.renderer.entity.state.CreakingRenderState",
+    "net.minecraft.client.renderer.entity.state.CreeperRenderState",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -56,7 +56,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "kohs_death_effects-2.3.0+mc26.3.jar",
     "published": "2026-11-13"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 509,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 443,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

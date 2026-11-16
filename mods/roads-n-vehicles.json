@@ -9,7 +9,6 @@
   "author": "TLOTD",
   "description": "A small road decor mod, that adds asphalt (with and without markings), guardrails, delineators and a whole bunch of European and a few American style street signs.",
   "needs": [
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.core.ClientAsset.DownloadedTexture",
     "net.minecraft.network.chat.FontDescription",
     "net.minecraft.network.chat.FontDescription.Resource",
@@ -17,9 +16,6 @@
     "net.minecraft.world.level.block.RedstoneTorchBlock",
     "net.minecraft.world.level.block.state.properties.Half",
     "net.minecraft.world.level.block.state.properties.SlabType",
-    "NativeImage.read()",
-    "Minecraft.execute()",
-    "MutableComponent.withStyle()",
     "Style.withFont()",
     "ServerLevel.hasNeighborSignal()",
     "Player.isCrouching()",
@@ -37,12 +33,12 @@
     "MapColor.QUARTZ",
     "MapColor.TERRACOTTA_GREEN"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "roads-n-vehicles-0.1.2+26.3.X.jar",
     "published": "2026-10-11"
   },
@@ -73,7 +69,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

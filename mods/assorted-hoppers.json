@@ -9,8 +9,6 @@
   "author": "grim3212",
   "description": "Adds hoppers in many materials that hold far more than a vanilla one, and the better ones move items faster.",
   "needs": [
-    "net.minecraft.world.item.crafting.display.ShapedCraftingRecipeDisplay",
-    "net.minecraft.world.item.crafting.display.SlotDisplay.ItemSlotDisplay",
     "net.minecraft.world.level.block.HopperBlock",
     "net.minecraft.world.level.block.entity.HopperBlockEntity",
     "Registries.MENU",
@@ -18,23 +16,16 @@
     "ItemStack.applyComponents()",
     "CraftingRecipe.CraftingBookInfo.MAP_CODEC",
     "CraftingRecipe.CraftingBookInfo.STREAM_CODEC",
-    "Ingredient.display()",
     "PlacementInfo.createFromOptionals()",
     "Recipe.CommonInfo.MAP_CODEC",
-    "Recipe.CommonInfo.STREAM_CODEC",
-    "ShapedRecipePattern.MAP_CODEC",
-    "ShapedRecipePattern.STREAM_CODEC",
-    "ShapedRecipePattern.height()",
-    "ShapedRecipePattern.ingredients()",
-    "ShapedRecipePattern.matches()",
-    "ShapedRecipePattern.width()"
+    "Recipe.CommonInfo.STREAM_CODEC"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "assortedhoppers-fabric-26.3-2.0.0.jar",
     "published": "2026-10-24"
   },
@@ -64,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

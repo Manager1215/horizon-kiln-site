@@ -44,20 +44,20 @@
     "net.minecraft.world.ticks.LevelTickAccess",
     "ResourceManagerHelper.registerBuiltinResourcePack()",
     "Registry.iterator()",
-    "Items.AMETHYST_SHARD",
-    "Items.LANTERN",
-    "Items.REDSTONE_TORCH",
     "Level.getBlockTicks()",
     "Level.hasSignal()",
-    "Blocks.AZALEA",
-    "and 15 more"
+    "SoundType.LANTERN",
+    "BlockBehaviour.Properties.forceSolidOn()",
+    "BlockBehaviour.Properties.pushReaction()",
+    "BlockState.isRedstoneConductor()",
+    "and 1 more"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "expanded-redstone-fabric-26.3-0.0.1-beta.1.jar",
     "published": "2026-11-12"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 55,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 41,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

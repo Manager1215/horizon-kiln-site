@@ -10,18 +10,12 @@
   "description": "Difficult survival mod specifically designed for the modpack 'Dangerous World'",
   "needs": [
     "Mixin: 12 points inside the game's methods",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
     "net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider.ItemTagsProvider",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.minecraft.client.gui.components.CycleButton",
     "net.minecraft.client.gui.components.LockIconButton",
     "net.minecraft.client.gui.components.OptionsList",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.gui.screens.WorldOptionsScreen",
     "net.minecraft.client.gui.screens.WorldOptionsScreen.DifficultyButtons",
-    "net.minecraft.client.gui.screens.inventory.AnvilScreen",
     "net.minecraft.client.gui.screens.inventory.EnchantmentNames",
     "net.minecraft.client.gui.screens.inventory.EnchantmentScreen",
     "net.minecraft.client.gui.screens.inventory.ItemCombinerScreen",
@@ -29,11 +23,9 @@
     "net.minecraft.client.gui.screens.options.VideoSettingsScreen",
     "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen",
     "net.minecraft.client.gui.screens.worldselection.WorldCreationUiState",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
     "net.minecraft.client.renderer.entity.state.SheepRenderState",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.network.protocol.game.ServerboundPunchPacket",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
@@ -50,6 +42,14 @@
     "net.minecraft.server.commands.KillCommand",
     "net.minecraft.server.commands.PublishCommand",
     "net.minecraft.server.commands.SetSpawnCommand",
+    "net.minecraft.server.commands.SpreadPlayersCommand",
+    "net.minecraft.server.commands.TeleportCommand",
+    "net.minecraft.server.commands.WeatherCommand",
+    "net.minecraft.server.level.ChunkMap",
+    "net.minecraft.server.level.ServerPlayerGameMode",
+    "net.minecraft.server.network.Filterable",
+    "net.minecraft.tags.StructureTags",
+    "net.minecraft.util.CommonColors",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "AliveAndWell-3.0.16+mc26.3-fabric-public.jar",
     "published": "2026-11-02"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 542,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 363,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

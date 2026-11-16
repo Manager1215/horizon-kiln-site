@@ -11,21 +11,11 @@
   "needs": [
     "net.fabricmc.fabric.api.message.v1.ServerMessageDecoratorEvent",
     "net.minecraft.client.gui.components.ChatComponent.DisplayMode",
-    "net.minecraft.client.gui.components.EditBox.TextFormatter",
     "net.minecraft.client.multiplayer.chat.GuiMessage.Line",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowItem",
     "Options.chatLineSpacing()",
-    "Font.split()",
     "GuiGraphicsExtractor.setTooltipForNextFrame()",
-    "EditBox.addFormatter()",
     "GuiMessage.splitLines()",
-    "DataComponents.CUSTOM_NAME",
-    "Component.getVisualOrderText()",
     "Component.toFlatList()",
-    "MutableComponent.setStyle()",
-    "Style.getHoverEvent()",
-    "Style.withHoverEvent()",
     "Items.STAINED_GLASS_PANE"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -33,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "showoff-1.1.0.jar",
     "published": "2026-09-22"
   },
@@ -61,7 +51,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

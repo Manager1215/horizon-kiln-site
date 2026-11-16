@@ -10,21 +10,15 @@
   "description": "Adds essential enchantments to elevate your tools: Vein Mining, Excavate, Grapple, and more.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
     "net.minecraft.advancements.predicates.DamageSourcePredicate",
     "net.minecraft.advancements.predicates.DamageSourcePredicate.Builder",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.extract.LevelExtractor",
     "net.minecraft.core.CompositeDirection",
     "net.minecraft.core.CompositeDirection.Direction8",
-    "net.minecraft.core.HolderSet.Direct",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.server.level.ServerPlayerGameMode",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.util.CommonColors",
     "net.minecraft.world.TickRateManager",
-    "net.minecraft.world.entity.projectile.FishingHook",
     "net.minecraft.world.item.ItemCooldowns",
     "net.minecraft.world.item.enchantment.Enchantment.Builder",
     "net.minecraft.world.item.enchantment.EnchantmentHelper.EnchantmentVisitor",
@@ -40,7 +34,6 @@
     "net.minecraft.world.level.storage.loot.functions.EnchantRandomlyFunction.Builder",
     "net.minecraft.world.level.storage.loot.predicates.DamageSourceCondition",
     "net.minecraft.world.phys.shapes.BooleanOp",
-    "AttachmentRegistry.create()",
     "Camera.getCullFrustum()",
     "Minecraft.levelExtractor",
     "Minecraft.levelRenderer",
@@ -50,14 +43,21 @@
     "GameRenderer.mainCamera()",
     "BlockPos.betweenClosed()",
     "BlockPos.offset()",
-    "and 50 more"
+    "BlockPos.subtract()",
+    "ParticleTypes.CODEC",
+    "ParticleTypes.STREAM_CODEC",
+    "BuiltInRegistries.ENCHANTMENT_EFFECT_COMPONENT_TYPE",
+    "ServerLevel.getAllEntities()",
+    "ServerPlayer.gameMode",
+    "ServerPlayer.hasCorrectToolForDrops()",
+    "and 44 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "instrumentum-1.1.0-26.3.jar",
     "published": "2026-10-04"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 116,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 92,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

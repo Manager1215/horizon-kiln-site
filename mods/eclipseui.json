@@ -9,22 +9,15 @@
   "author": "Coredex",
   "description": "A modern config and config UI lib.",
   "needs": [
-    "Font.split()",
     "GuiGraphicsExtractor.blit()",
-    "GuiGraphicsExtractor.text()",
-    "NarrationElementOutput.add()",
-    "Screen.charTyped()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()"
+    "NarrationElementOutput.add()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "EclipseUI-fabric-1.0.5-fabric-26.3.jar",
     "published": "2026-09-16"
   },
@@ -52,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

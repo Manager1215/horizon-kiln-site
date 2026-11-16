@@ -11,15 +11,11 @@
   "needs": [
     "an access widener",
     "Mixin: 34 points inside the game's methods",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
     "net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityType",
     "net.minecraft.advancements.predicates.ItemPredicate",
     "net.minecraft.advancements.predicates.MinMaxBounds.Ints",
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.client.gui.screens.inventory.AnvilScreen",
     "net.minecraft.client.gui.screens.inventory.ItemCombinerScreen",
     "net.minecraft.client.model.geom.ModelLayers",
     "net.minecraft.client.model.object.equipment.ShieldModel",
@@ -41,16 +37,20 @@
     "net.minecraft.client.renderer.special.SpecialModelRenderer.Unbaked",
     "net.minecraft.client.renderer.special.SpecialModelRenderers",
     "net.minecraft.client.renderer.special.TridentSpecialRenderer",
-    "net.minecraft.core.HolderSet.Direct",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.component.DataComponentInitializers",
     "net.minecraft.core.component.DataComponentInitializers.SingleComponentInitializer",
     "net.minecraft.core.dispenser.ShearsDispenseItemBehavior",
     "net.minecraft.core.dispenser.ShulkerBoxDispenseBehavior",
-    "net.minecraft.network.chat.ComponentSerialization",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.references.BlockItemId",
+    "net.minecraft.resources.RegistryLoadTask.PendingRegistration",
+    "net.minecraft.tags.DamageTypeTags",
+    "net.minecraft.util.CommonColors",
+    "net.minecraft.world.LockCode",
+    "net.minecraft.world.entity.animal.cow.MushroomCow",
+    "net.minecraft.world.entity.animal.golem.CopperGolem",
+    "net.minecraft.world.entity.animal.golem.SnowGolem",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "netherite-plus-mod-3.0.1.jar",
     "published": "2026-11-02"
   },
@@ -87,7 +87,11 @@
     "minecraft",
     "ranged_weapon_api"
   ],
-  "lacks": 191,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 140,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

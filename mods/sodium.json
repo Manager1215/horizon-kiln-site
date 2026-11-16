@@ -13,11 +13,8 @@
     "Mixin: 25 points inside the game's methods",
     "com.mojang.blaze3d.Blaze3D",
     "com.mojang.blaze3d.buffers.Std140Builder",
-    "com.mojang.blaze3d.platform.MacosUtil",
     "com.mojang.blaze3d.platform.Monitor",
     "com.mojang.blaze3d.platform.VideoMode",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "com.mojang.blaze3d.vertex.BufferBuilder",
     "com.mojang.blaze3d.vertex.ByteBufferBuilder",
     "com.mojang.blaze3d.vertex.CompactVectorArray",
@@ -51,6 +48,9 @@
     "net.fabricmc.fabric.api.client.renderer.v1.mesh.ShadeMode",
     "net.fabricmc.fabric.api.client.renderer.v1.render.submit.ExtendedBlockModelSubmit",
     "net.fabricmc.fabric.api.client.renderer.v1.render.submit.ExtendedItemSubmit",
+    "net.fabricmc.fabric.api.util.TriState",
+    "net.minecraft.client.AttackIndicatorStatus",
+    "net.minecraft.client.CloudStatus",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sodium-fabric-0.9.3-beta.5+mc26.3.jar",
     "published": "2026-11-12"
   },
@@ -88,7 +88,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 491,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect and @wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 415,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

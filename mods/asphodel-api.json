@@ -12,18 +12,17 @@
     "an access widener",
     "net.minecraft.references.BlockItemId",
     "net.minecraft.tags.BlockItemTagId",
-    "FabricLoader.invokeEntrypoints()",
     "ResourceKey.asphodel$identifier()",
     "TagKey.asphodel$identifier()",
     "TagKey.asphodel$key()",
     "ItemStack.tags()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "asphodel_api-1.1.4+26.3-fabric.jar",
     "published": "2026-11-15"
   },
@@ -52,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

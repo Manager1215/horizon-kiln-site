@@ -10,28 +10,21 @@
   "description": "Low durability fishing rods that call orbital strikes, there are two shot types, works in both survival and creative",
   "needs": [
     "net.minecraft.world.inventory.ResultSlot",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
     "BlockPos.containing()",
     "BlockPos.MutableBlockPos.set()",
-    "MinecraftServer.execute()",
     "ServerLevel.getMaxY()",
     "ServerLevel.getMinY()",
-    "ServerLevel.isEmptyBlock()",
     "ServerPlayer.addItem()",
     "PrimedTnt.setDeltaMovement()",
     "PrimedTnt.setFuse()",
-    "ItemStackTemplate.get()",
-    "Items.TNT",
-    "CustomData.copyTag()",
-    "HitResult.getType()"
+    "ItemStackTemplate.get()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SimpleOrbitalStrike-v1.0.8-mc26.3-fabric.jar",
     "published": "2026-09-27"
   },
@@ -61,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

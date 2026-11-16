@@ -11,7 +11,6 @@
   "needs": [
     "KeyMapping.setDown()",
     "Minecraft.crosshairPickEntity",
-    "CommandSourceStack.getEntity()",
     "Entity.isAlive()",
     "Mob.getBodyArmorItem()",
     "TamableAnimal.isInSittingPose()",
@@ -25,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "guifollowers-26.3.0-5.1.jar",
     "published": "2026-10-17"
   },
@@ -56,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

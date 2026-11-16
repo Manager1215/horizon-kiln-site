@@ -10,11 +10,7 @@
   "description": "Create custom dimensions at runtime with commands!",
   "needs": [
     "Mixin: 108 points inside the game's methods",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.commands.arguments.DimensionArgument",
-    "net.minecraft.commands.arguments.IdentifierArgument",
     "net.minecraft.commands.arguments.coordinates.Vec2Argument",
-    "net.minecraft.commands.arguments.coordinates.Vec3Argument",
     "net.minecraft.commands.synchronization.ArgumentTypeInfos",
     "net.minecraft.core.RegistryAccess.ImmutableRegistryAccess",
     "net.minecraft.network.protocol.game.ClientboundCommandsPacket.ArgumentNodeStub",
@@ -50,14 +46,18 @@
     "net.minecraft.world.entity.item.FallingBlockEntity",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrownEnderpearl",
     "net.minecraft.world.flag.FeatureFlagRegistry",
-    "and 51 more"
+    "net.minecraft.world.item.component.ResolvableProfile",
+    "net.minecraft.world.item.component.ResolvableProfile.Dynamic",
+    "net.minecraft.world.item.component.ResolvableProfile.Partial",
+    "net.minecraft.world.item.component.ResolvableProfile.Static",
+    "and 41 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Multiverse-0.6.1+26.3.jar",
     "published": "2026-11-02"
   },
@@ -90,7 +90,11 @@
     "fabric-language-kotlin",
     "minecraft"
   ],
-  "lacks": 95,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
+  },
+  "lacks": 81,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

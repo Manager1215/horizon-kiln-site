@@ -9,9 +9,6 @@
   "author": "Denizoz",
   "description": "A client-side Fabric mod that replaces spiders and cave spiders with cute, non-spider creatures for players with arachnophobia.",
   "needs": [
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
     "net.minecraft.client.gui.components.OptionsList",
     "net.minecraft.client.gui.screens.options.OptionsSubScreen",
     "net.minecraft.client.gui.screens.options.VideoSettingsScreen",
@@ -25,8 +22,6 @@
     "net.minecraft.client.renderer.entity.layers.SlimeOuterLayer",
     "net.minecraft.client.renderer.entity.state.SlimeRenderState",
     "net.minecraft.world.entity.monster.spider.Spider",
-    "Minecraft.execute()",
-    "Minecraft.isSameThread()",
     "Minecraft.reloadResourcePacks()",
     "EntityRendererProvider.Context.bakeLayer()",
     "EntityRendererProvider.Context.getModelSet()",
@@ -43,7 +38,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "no_more_arachnophobia-fabric-1.2.1+26.3.jar",
     "published": "2026-10-22"
   },
@@ -70,7 +65,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,9 +10,7 @@
   "description": "Bring some life to your builds with player statues of your favorite Minecrafters!",
   "needs": [
     "an access widener",
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.client.gui.components.ImageButton",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.model.AdultAndBabyModelPair",
     "net.minecraft.client.model.EntityModel",
     "net.minecraft.client.model.HumanoidModel",
@@ -36,28 +34,30 @@
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.tags.DamageTypeTags",
-    "net.minecraft.util.StringUtil",
     "net.minecraft.util.datafix.fixes.ItemStackComponentizationFix",
-    "net.minecraft.world.entity.EntityDimensions",
-    "net.minecraft.world.entity.EntityEquipment",
     "net.minecraft.world.entity.EntityEvent",
-    "net.minecraft.world.entity.EquipmentSlot.Type",
     "net.minecraft.world.entity.LivingEntity.Fallsounds",
-    "net.minecraft.world.entity.Pose",
     "net.minecraft.world.entity.PostSpawnProcessor",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
     "net.minecraft.world.entity.decoration.ArmorStand",
     "net.minecraft.world.entity.decoration.ArmorStand.ArmorStandPose",
     "net.minecraft.world.entity.decoration.Mannequin",
-    "and 64 more"
+    "net.minecraft.world.entity.player.PlayerModelPart",
+    "net.minecraft.world.entity.player.PlayerSkin.Patch",
+    "net.minecraft.world.item.component.ResolvableProfile",
+    "net.minecraft.world.phys.EntityHitResult",
+    "Axis.ZP",
+    "Minecraft.getEntityRenderDispatcher()",
+    "Minecraft.playerSkinRenderCache()",
+    "and 55 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "strawstatues-v26.3.0-mc26.3.x+fabric.jar",
     "published": "2026-09-22"
   },
@@ -88,7 +88,11 @@
     "puzzleslib",
     "statuemenus"
   ],
-  "lacks": 117,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 95,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

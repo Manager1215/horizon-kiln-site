@@ -9,7 +9,6 @@
   "author": "peterwolfpl",
   "description": "Water World - Atolls is an immersive Minecraft mod (Fabric) that breathes life into ocean biomes by introducing procedurally generated Atoll structures, complete with custom villager AI behaviors, dynamic fishing, and unique blocks to ease water buildin",
   "needs": [
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.ai.navigation.PathNavigation",
     "net.minecraft.world.entity.npc.villager.Villager",
     "net.minecraft.world.entity.npc.villager.VillagerData",
@@ -31,8 +30,6 @@
     "net.minecraft.world.level.levelgen.structure.StructureType",
     "net.minecraft.world.level.levelgen.structure.pieces.StructurePiecesBuilder",
     "BlockPos.distSqr()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "BuiltInRegistries.STRUCTURE_PIECE",
     "BuiltInRegistries.STRUCTURE_TYPE",
     "Registries.VILLAGER_PROFESSION",
@@ -42,21 +39,24 @@
     "SoundEvents.FISHING_BOBBER_SPLASH",
     "SoundEvents.FISHING_BOBBER_THROW",
     "Entity.distanceToSqr()",
-    "Items.COD",
-    "Items.FISHING_ROD",
-    "Items.NETHERITE_SCRAP",
-    "Items.PUFFERFISH",
-    "Items.RAW_GOLD",
-    "Items.SALMON",
-    "Items.TROPICAL_FISH",
-    "and 41 more"
+    "MerchantOffers.add()",
+    "MerchantOffers.iterator()",
+    "ChunkPos.getMiddleBlockPosition()",
+    "Level.addFreshEntity()",
+    "Level.getEntitiesOfClass()",
+    "LevelReader.hasChunkAt()",
+    "WorldGenLevel.addFreshEntity()",
+    "WorldGenLevel.isClientSide()",
+    "WorldGenLevel.registryAccess()",
+    "WorldGenLevel.setBlock()",
+    "and 14 more"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "water-world-atoll-1.0.6.jar",
     "published": "2026-09-18"
   },
@@ -84,7 +84,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 85,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 54,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

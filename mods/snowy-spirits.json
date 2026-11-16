@@ -20,7 +20,6 @@
     "net.minecraft.client.renderer.SkyRenderer",
     "net.minecraft.client.renderer.WeatherEffectRenderer",
     "net.minecraft.client.resources.sounds.DirectionalSoundInstance",
-    "net.minecraft.data.AtlasIds",
     "net.minecraft.gametest.framework.TestEnvironmentDefinition",
     "net.minecraft.gametest.framework.TestEnvironmentDefinition.Weather",
     "net.minecraft.gametest.framework.TestEnvironmentDefinition.Weather.Type",
@@ -31,8 +30,6 @@
     "net.minecraft.world.level.dimension.DimensionType.Skybox",
     "net.minecraft.world.timeline.AttributeTrackSampler",
     "RenderSystem.isOnRenderThread()",
-    "Minecraft.schedule()",
-    "Minecraft.setScreenAndShow()",
     "GuiGraphicsExtractor.fill()",
     "ClientLevel.getBlockRandomPos()",
     "ClientLevel.getHeightmapPos()",
@@ -40,6 +37,7 @@
     "GameRenderer.mainCamera()",
     "RenderPipelines.GUI",
     "RenderPipelines.GUI_OPAQUE_TEXTURED_BACKGROUND",
+    "AtlasIds.CELESTIALS",
     "SoundEvents.LIGHTNING_BOLT_IMPACT",
     "SoundEvents.LIGHTNING_BOLT_THUNDER",
     "SoundEvents.WEATHER_END_FLASH",
@@ -51,14 +49,16 @@
     "Level.<init>()",
     "Level.canHaveWeather()",
     "Level.getBiome()",
-    "and 6 more"
+    "Level.getHeightmapPos()",
+    "Level.getSeaLevel()",
+    "and 4 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SnowySpirits-0.7.0-26.3.jar",
     "published": "2026-09-22"
   },
@@ -86,7 +86,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 46,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 44,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

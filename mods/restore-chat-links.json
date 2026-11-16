@@ -10,8 +10,6 @@
   "description": "Clickable player chat links",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.authlib.GameProfile",
-    "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowChat",
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.ModifyGame",
     "net.fabricmc.loader.api.VersionParsingException",
     "net.fabricmc.loader.api.metadata.ModOrigin",
@@ -24,17 +22,9 @@
     "net.minecraft.client.multiplayer.chat.LoggedChatMessage.Player",
     "net.minecraft.client.multiplayer.chat.LoggedChatMessage.System",
     "net.minecraft.client.multiplayer.chat.report.ReportingContext",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.ComponentContents",
-    "net.minecraft.network.chat.PlayerChatMessage",
-    "net.minecraft.network.chat.contents.PlainTextContents",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.util.StringDecomposer",
     "org.apache.commons.codec.digest.DigestUtils",
     "org.apache.commons.io.IOUtils",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "ClientReceiveMessageEvents.ALLOW_CHAT",
     "ClientReceiveMessageEvents.MODIFY_GAME",
     "ModContainer.getOrigin()",
     "Version.parse()",
@@ -44,20 +34,16 @@
     "ChatComponent.addPlayerMessage()",
     "GuiMessageTag.system()",
     "ChatType.Bound.decorateNarration()",
-    "Component.getContents()",
-    "Component.getSiblings()",
-    "MutableComponent.getSiblings()",
-    "MutableComponent.setStyle()",
-    "Style.withClickEvent()",
-    "Style.withUnderlined()",
-    "and 1 more"
+    "PlayerChatMessage.decoratedContent()",
+    "PlayerChatMessage.signature()",
+    "PlayerChatMessage.unsigned()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "RestoreChatLinks-0.2.7+26.1.jar",
     "published": "2026-09-21"
   },
@@ -82,7 +68,11 @@
   "depends": [
     "minecraft"
   ],
-  "lacks": 41,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 27,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

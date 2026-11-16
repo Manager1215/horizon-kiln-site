@@ -25,7 +25,6 @@
     "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
     "net.minecraft.client.CloudStatus",
     "net.minecraft.client.Screenshot",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.particle.ParticleProvider",
     "net.minecraft.client.particle.ParticleRenderType",
     "net.minecraft.client.particle.SingleQuadParticle",
@@ -43,21 +42,22 @@
     "net.minecraft.client.renderer.oit.OitRenderPassProvider",
     "net.minecraft.client.renderer.oit.OitRenderPassProvider.Parameters",
     "net.minecraft.client.renderer.state.level.SkyRenderState",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.network.chat.FontDescription",
     "net.minecraft.network.chat.FontDescription.Resource",
     "net.minecraft.world.attribute.EnvironmentAttributeLayer",
     "net.minecraft.world.attribute.EnvironmentAttributeLayer.Positional",
     "net.minecraft.world.attribute.EnvironmentAttributeSystem.Builder",
-    "and 68 more"
+    "net.minecraft.world.level.LightLayer",
+    "net.minecraft.world.level.material.FogType",
+    "net.minecraft.world.level.storage.WorldData",
+    "and 65 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "atmospherics-2.6.8-mc-26.3.jar",
     "published": "2026-10-22"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 185,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @redirect into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
+  },
+  "lacks": 144,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

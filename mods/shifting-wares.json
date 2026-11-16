@@ -25,9 +25,6 @@
     "net.minecraft.world.item.trading.VillagerTrade",
     "HolderSet.iterator()",
     "Registry.getOptional()",
-    "RegistryAccess.lookupOrThrow()",
-    "DataComponents.ITEM_MODEL",
-    "DataComponents.ITEM_NAME",
     "DataComponents.MAP_ID",
     "Registries.TRADE_SET",
     "ServerLevel.getGameRules()",
@@ -41,15 +38,14 @@
     "GameRules.get()",
     "LootContext.getRandom()",
     "LootContextParamSets.VILLAGER_TRADE",
-    "LootContextParams.ADDITIONAL_COST_COMPONENT_ALLOWED",
-    "LootContextParams.THIS_ENTITY"
+    "LootContextParams.ADDITIONAL_COST_COMPONENT_ALLOWED"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "shifting-wares-4.0.0+26.3.jar",
     "published": "2026-09-17"
   },
@@ -77,7 +73,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 33,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 29,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

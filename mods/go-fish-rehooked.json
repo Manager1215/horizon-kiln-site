@@ -24,10 +24,8 @@
     "net.minecraft.client.renderer.special.NoDataSpecialModelRenderer.Unbaked",
     "net.minecraft.client.renderer.special.SpecialModelRenderers",
     "net.minecraft.world.attribute.BedRule",
-    "net.minecraft.world.entity.projectile.FishingHook",
     "net.minecraft.world.food.FoodProperties",
     "net.minecraft.world.food.FoodProperties.Builder",
-    "net.minecraft.world.item.FishingRodItem",
     "net.minecraft.world.item.component.Consumable",
     "net.minecraft.world.item.component.Consumable.Builder",
     "net.minecraft.world.item.component.Consumables",
@@ -40,24 +38,26 @@
     "VertexConsumer.setColor()",
     "MinMaxBounds.Doubles.atLeast()",
     "RenderTypes.endPortal()",
-    "CommandSourceStack.getPlayerOrException()",
-    "DefaultedRegistry.entrySet()",
-    "Holder.is()",
-    "HolderLookup.RegistryLookup.getOrThrow()",
     "NonNullList.iterator()",
     "BuiltInRegistries.LOOT_CONDITION_TYPE",
     "Registries.BIOME",
     "ResourceKey.codec()",
     "ServerLevel.getBiome()",
     "ServerLevel.sendParticles()",
-    "and 45 more"
+    "ServerPlayer.getUsedItemHand()",
+    "SoundEvents.FISHING_BOBBER_RETRIEVE",
+    "SoundEvents.FISHING_BOBBER_THROW",
+    "SoundEvents.GENERIC_BURN",
+    "SoundEvents.SKELETON_STEP",
+    "SoundEvents.SLIME_JUMP",
+    "and 32 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "gofish-fabric-26.3-2.1.0.jar",
     "published": "2026-10-05"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 87,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 72,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

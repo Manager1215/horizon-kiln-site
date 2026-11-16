@@ -1,7 +1,7 @@
 {
   "id": "treeliable",
   "name": "Treeliable",
-  "version": "1.4.1-26.3-fabric",
+  "version": "1.4.2-26.3-fabric",
   "status": "planned",
   "statusLabel": "Planned",
   "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -14,23 +14,14 @@
     "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents.TagsLoaded",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
-    "net.minecraft.commands.arguments.coordinates.Coordinates",
     "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
     "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
     "net.minecraft.server.level.ServerPlayerGameMode",
-    "net.minecraft.server.permissions.Permissions",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "org.apache.logging.log4j.MarkerManager",
-    "Minecraft.hitResult",
-    "GuiGraphicsExtractor.blit()",
     "ClientPacketListener.send()",
     "RenderPipelines.CROSSHAIR",
     "BlockPos.distManhattan()",
     "BlockPos.offset()",
-    "DefaultedRegistry.getTagOrEmpty()",
     "Vec3i.distManhattan()",
     "ServerPlayer.blockActionRestricted()",
     "ServerPlayer.causeFoodExhaustion()",
@@ -39,20 +30,18 @@
     "ItemStack.isCorrectToolForDrops()",
     "ItemStack.mineBlock()",
     "Block.destroy()",
-    "Block.dropResources()",
     "LeavesBlock.DISTANCE",
     "LeavesBlock.PERSISTENT",
-    "BlockState.requiresCorrectToolForDrops()",
-    "HitResult.getType()"
+    "BlockState.requiresCorrectToolForDrops()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
-    "file": "treeliable-fabric-26.3-1.4.1.jar",
-    "published": "2026-10-20"
+    "kiln": "0.4.5",
+    "file": "treeliable-fabric-26.3-1.4.2.jar",
+    "published": "2026-11-16"
   },
   "reports": {
     "works": 0,
@@ -62,8 +51,8 @@
   },
   "run": {
     "passed": false,
-    "date": "2026-11-05",
-    "kiln": "0.3.0",
+    "date": "2026-11-16",
+    "kiln": "0.4.5",
     "ticks": 0,
     "hud": false,
     "why": "Java did not start"
@@ -81,7 +70,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 35,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 24,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

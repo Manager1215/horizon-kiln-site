@@ -11,17 +11,14 @@
   "needs": [
     "Mixin: 6 points inside the game's methods",
     "net.fabricmc.fabric.api.client.rendering.v1.ClientTooltipComponentCallback",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
     "net.minecraft.client.gui.screens.inventory.tooltip.TooltipRenderUtil",
     "net.minecraft.client.renderer.state.MapRenderState",
-    "net.minecraft.data.AtlasIds",
     "net.minecraft.world.TickRateManager",
     "net.minecraft.world.effect.MobEffectUtil",
     "net.minecraft.world.entity.decoration.painting.PaintingVariant",
     "net.minecraft.world.food.FoodProperties",
     "net.minecraft.world.item.HangingEntityItem",
     "net.minecraft.world.item.MapItem",
-    "net.minecraft.world.item.alchemy.PotionContents",
     "net.minecraft.world.item.component.Bees",
     "net.minecraft.world.item.component.BlockItemStateProperties",
     "net.minecraft.world.level.block.BeehiveBlock",
@@ -29,30 +26,21 @@
     "net.minecraft.world.level.block.entity.BeehiveBlockEntity",
     "net.minecraft.world.level.block.entity.BeehiveBlockEntity.Occupant",
     "Minecraft.getMapRenderer()",
-    "GuiGraphicsExtractor.blitSprite()",
     "GuiGraphicsExtractor.map()",
-    "Hud.getMobEffectSprite()",
     "ClientLevel.tickRateManager()",
     "MapRenderer.extractRenderState()",
     "DataComponents.BEES",
-    "DataComponents.BLOCK_STATE",
     "DataComponents.CONSUMABLE",
     "DataComponents.FOOD",
     "DataComponents.MAP_ID",
-    "DataComponents.PAINTING_VARIANT",
-    "DataComponents.POTION_CONTENTS",
-    "DataComponents.POTION_DURATION_SCALE",
-    "Component.getSiblings()",
-    "MobEffectCategory.getTooltipFormatting()",
-    "DyeColor.getTextureDiffuseColor()",
-    "ItemContainerContents.nonEmptyItems()"
+    "DataComponents.POTION_DURATION_SCALE"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "improved-tooltips-1.0.1+26.3.jar",
     "published": "2026-11-11"
   },
@@ -81,7 +69,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 36,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 24,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

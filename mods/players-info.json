@@ -10,29 +10,18 @@
   "description": "Adds menu with players information",
   "needs": [
     "org.lwjgl.glfw.GLFW",
-    "InputConstants.isKeyDown()",
-    "InputConstants.Key.getDisplayName()",
-    "InputConstants.Type.getOrCreate()",
     "Window.handle()",
     "Object2IntMap.Entry.getKey()",
     "Minecraft.crosshairPickEntity",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
     "AbstractClientPlayer.getBoundingBox()",
     "AbstractClientPlayer.isAlive()",
-    "Holder.getRegisteredName()",
     "LivingEntity.getBoundingBox()",
     "LivingEntity.isAlive()",
-    "Attributes.FOLLOW_RANGE",
     "Player.getAbsorptionAmount()",
     "Player.getAirSupply()",
     "Player.getSpeed()",
     "Player.isCurrentlyGlowing()",
-    "Player.isFallFlying()",
     "ItemStack.getEnchantments()",
-    "Enchantment.getFullname()",
-    "ItemEnchantments.entrySet()",
     "AABB.inflate()",
     "AABB.maxX",
     "AABB.maxY",
@@ -46,7 +35,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "PlayerInfo-1.1.2-MC26.3.jar",
     "published": "2026-10-07"
   },
@@ -75,7 +64,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 31,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

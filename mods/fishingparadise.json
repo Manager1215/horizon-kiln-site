@@ -11,20 +11,15 @@
   "needs": [
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.FishingRodHookedTrigger",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.EntityEvent",
-    "net.minecraft.world.entity.projectile.FishingHook",
     "net.minecraft.world.food.FoodProperties",
     "net.minecraft.world.food.FoodProperties.Builder",
-    "net.minecraft.world.item.FishingRodItem",
     "net.minecraft.world.item.component.Consumable",
     "net.minecraft.world.item.component.Consumable.Builder",
     "net.minecraft.world.item.component.Consumables",
     "net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect",
-    "net.minecraft.world.item.crafting.ShapelessRecipe",
     "SoundEvents.FISHING_BOBBER_RETRIEVE",
     "SoundEvents.FISHING_BOBBER_THROW",
-    "Stats.FISH_CAUGHT",
     "InteractionHand.asEquipmentSlot()",
     "Entity.<init>()",
     "ItemEntity.setDeltaMovement()",
@@ -33,7 +28,8 @@
     "Player.fishing",
     "Player.getLuck()",
     "Player.isAlive()",
-    "Player.isRemoved()",
+    "FishingHook.<init>()",
+    "FishingHook.retrieve()",
     "Projectile.spawnProjectile()",
     "Item.Properties.food()",
     "Item.Properties.food()",
@@ -48,15 +44,14 @@
     "Level.broadcastEntityEvent()",
     "GameEvent.ITEM_INTERACT_FINISH",
     "GameEvent.ITEM_INTERACT_START",
-    "LootParams.Builder.withLuck()",
-    "and 1 more"
+    "LootParams.Builder.withLuck()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fishingparadise-1.2-26.2.jar",
     "published": "2026-09-16"
   },
@@ -85,7 +80,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 41,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 36,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

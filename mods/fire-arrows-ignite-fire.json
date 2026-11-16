@@ -10,15 +10,14 @@
   "description": "Fire Arrows set Blocks on Fire",
   "needs": [
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
-    "net.minecraft.world.level.block.BaseFireBlock",
-    "Level.destroyBlock()"
+    "net.minecraft.world.level.block.BaseFireBlock"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "firearrows-fabric-26.3-13.5.jar",
     "published": "2026-10-31"
   },
@@ -46,7 +45,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

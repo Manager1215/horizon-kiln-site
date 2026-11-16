@@ -11,15 +11,9 @@
   "needs": [
     "net.minecraft.client.renderer.entity.player.AvatarRenderer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.client.renderer.texture.TextureContents",
     "NativeImage.copyFrom()",
-    "NativeImage.format()",
-    "NativeImage.getHeight()",
-    "NativeImage.getPixel()",
     "NativeImage.getPixelsABGR()",
-    "NativeImage.getWidth()",
-    "NativeImage.setPixel()",
     "Int2ObjectMap.Entry.getValue()",
     "ObjectIterator.hasNext()",
     "ObjectIterator.next()",
@@ -31,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dryeye-mod-0.3.1.jar",
     "published": "2026-10-03"
   },
@@ -60,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

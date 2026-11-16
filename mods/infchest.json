@@ -9,40 +9,31 @@
   "author": "Kotori316",
   "description": "Add a chest which can hold nearly unlimited items of one kind of item",
   "needs": [
-    "com.mojang.authlib.GameProfile",
-    "net.minecraft.network.chat.ComponentSerialization",
     "net.minecraft.world.level.block.entity.HopperBlockEntity",
     "net.minecraft.world.level.block.state.BlockBehaviour.StateArgumentPredicate",
     "net.minecraft.world.level.material.PushReaction",
-    "Minecraft.execute()",
     "AbstractContainerScreen.extractLabels()",
     "NonNullList.stream()",
-    "DataComponents.CUSTOM_NAME",
     "BuiltInRegistries.LOOT_FUNCTION_TYPE",
     "ServerPlayer.getGameProfile()",
-    "ProblemReporter.DISCARDING",
     "Containers.updateNeighboursAfterDestroy()",
     "Nameable.hasCustomName()",
     "Player.getGameProfile()",
     "Player.isCrouching()",
     "BlockItem.setBlockEntityData()",
-    "ItemStack.<init>()",
-    "ItemStack.getDisplayName()",
     "TypedEntityData.copyTagWithoutId()",
     "BaseEntityBlock.getCloneItemStack()",
     "BlockBehaviour.Properties.isValidSpawn()",
     "BlockBehaviour.Properties.pushReaction()",
-    "TagValueOutput.createWithoutContext()",
     "LootContext.getOptional()",
-    "LootItemConditionalFunction.simpleBuilder()",
-    "LootContextParams.BLOCK_ENTITY"
+    "LootItemConditionalFunction.simpleBuilder()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "InfChest-Fabric-26.3-26.3.2.jar",
     "published": "2026-10-20"
   },
@@ -71,7 +62,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

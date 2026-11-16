@@ -9,25 +9,17 @@
   "author": "mobilelize",
   "description": "Team Chat lets you create and join teams and chat with your teammates in-game. It connects to the Team Chat server to keep everything synced. More features will be added over time.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "InputConstants.isKeyDown()",
-    "Minecraft.execute()",
-    "Minecraft.gameDirectory",
     "Minecraft.getGameProfile()",
-    "Minecraft.setScreenAndShow()",
     "ChatComponent.addRecentChat()",
-    "SharedSuggestionProvider.matchesSubStr()",
-    "MutableComponent.setStyle()",
-    "Style.withObfuscated()",
-    "Style.withStrikethrough()",
-    "Style.withUnderlined()"
+    "SharedSuggestionProvider.matchesSubStr()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "teamchatmod-26.2+0.6.1-beta.jar",
     "published": "2026-09-12"
   },
@@ -57,7 +49,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

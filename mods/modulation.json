@@ -25,9 +25,7 @@
     "net.minecraft.client.gui.components.ChatComponent.AlphaCalculator",
     "net.minecraft.client.gui.components.ImageButton",
     "net.minecraft.client.gui.components.WidgetSprites",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.model.geom.builders.UVPair",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.particle.FallingParticle",
     "net.minecraft.client.particle.Particle",
     "net.minecraft.client.particle.ParticleEngine",
@@ -50,15 +48,17 @@
     "net.minecraft.core.dispenser.ShearsDispenseItemBehavior",
     "net.minecraft.core.particles.BlockParticleOption",
     "net.minecraft.core.particles.ItemParticleOption",
-    "net.minecraft.network.chat.ClickEvent.OpenFile",
+    "net.minecraft.server.level.ServerPlayerGameMode",
+    "net.minecraft.tags.DamageTypeTags",
+    "net.minecraft.tags.EntityTypeTags",
     "and 80 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "modulation-4.0.9+26.3-fabric.jar",
     "published": "2026-11-16"
   },
@@ -88,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 414,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 352,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

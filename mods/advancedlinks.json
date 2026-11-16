@@ -9,24 +9,15 @@
   "author": "Luncaaa",
   "description": "Create server links in the links menu! (1.21 feature)",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "net.minecraft.network.chat.ComponentSerialization",
-    "net.minecraft.server.permissions.Permissions",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "CommandSourceStack.sendSystemMessage()",
     "MinecraftServer.createCommandSourceStack()",
-    "MinecraftServer.isShutdown()",
-    "ServerPlayer.connection",
-    "ServerGamePacketListenerImpl.send()"
+    "MinecraftServer.isShutdown()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "AdvancedLinks-mod-26.x-2.2.jar",
     "published": "2026-07-12"
   },
@@ -53,7 +44,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

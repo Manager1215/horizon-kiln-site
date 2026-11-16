@@ -12,18 +12,16 @@
     "net.minecraft.world.item.BowItem",
     "SoundEvents.ARMOR_EQUIP_NETHERITE",
     "BlockTags.INCORRECT_FOR_NETHERITE_TOOL",
-    "Item.Properties.enchantable()",
     "Item.Properties.horseArmor()",
     "Item.Properties.nautilusArmor()",
-    "Item.Properties.spear()",
-    "ArmorType.getDurability()"
+    "Item.Properties.spear()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ToolsOfObsidian-fabric-26.3-1.10.0.jar",
     "published": "2026-10-13"
   },
@@ -51,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

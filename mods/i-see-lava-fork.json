@@ -10,11 +10,11 @@
   "description": "A client-side mod that makes lava translucent.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.client.renderer.block.FluidRenderer",
     "net.minecraft.client.renderer.block.FluidRenderer.Output",
     "net.minecraft.client.renderer.extract.LevelExtractor",
+    "ResourceLoader.registerBuiltinPack()",
     "Minecraft.levelExtractor"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -22,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "iseelava-26.3-1.2.4-menu.jar",
     "published": "2026-09-17"
   },
@@ -50,6 +50,10 @@
     "java",
     "minecraft"
   ],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 6,
   "development": {
     "status": "planned",

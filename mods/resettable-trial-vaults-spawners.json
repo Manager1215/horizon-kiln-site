@@ -13,16 +13,11 @@
     "net.minecraft.commands.functions.CommandFunction",
     "net.minecraft.server.ServerFunctionManager",
     "net.minecraft.server.TickTask",
-    "net.minecraft.server.permissions.LevelBasedPermissionSet",
     "net.minecraft.world.item.BoneMealItem",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "CommandSource.NULL",
     "MinecraftServer.getFunctions()",
     "MinecraftServer.getTickCount()",
     "ServerLevel.getGameRules()",
     "ServerLevel.sendParticles()",
-    "ServerPlayer.sendSystemMessage()",
     "ServerPlayer.takeXpDelay",
     "LivingEntity.getExperienceReward()",
     "LivingEntity.getLastHurtByPlayer()",
@@ -35,18 +30,16 @@
     "Player.gameMode()",
     "Player.getUsedItemHand()",
     "BlockPlaceContext.<init>()",
-    "Level.isEmptyBlock()",
     "LevelAccessor.setBlock()",
     "GameRules.MOB_DROPS",
-    "GameRules.get()",
-    "Vec2.ZERO"
+    "GameRules.get()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "resettable_trial_chambers-1.1.0-fabric-26.3.jar",
     "published": "2026-10-21"
   },
@@ -75,7 +68,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 30,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

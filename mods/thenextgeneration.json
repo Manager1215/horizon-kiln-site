@@ -40,7 +40,6 @@
     "RenderTypes.entityCutoutDissolve()",
     "BlockPos.asLong()",
     "BlockPos.offset()",
-    "HolderGetter.get()",
     "Registries.BIOME",
     "ServerBossEvent.setName()",
     "ServerLevel.addFreshEntityWithPassengers()",
@@ -50,14 +49,15 @@
     "ServerLevel.getDragons()",
     "ServerLevel.getEntities()",
     "ServerLevel.getNearestPlayer()",
-    "and 16 more"
+    "ServerLevel.getSeed()",
+    "and 15 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "the-next-generation-1.0.2.jar",
     "published": "2026-10-01"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 56,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 55,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

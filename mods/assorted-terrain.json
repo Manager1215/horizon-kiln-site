@@ -9,7 +9,6 @@
   "author": "grim3212",
   "description": "Adds randomite ore, desert wells, crop fields, melons, stray saplings, tree stumps, cactus fields and sand pits.",
   "needs": [
-    "net.minecraft.core.RegistrySetBuilder",
     "net.minecraft.data.worldgen.placement.PlacementUtils",
     "net.minecraft.world.level.block.ChestBlock",
     "net.minecraft.world.level.block.FarmlandBlock",
@@ -29,34 +28,30 @@
     "net.minecraft.world.level.levelgen.placement.OffsetPlacement",
     "net.minecraft.world.level.levelgen.placement.PlacementFilter",
     "net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest",
-    "Holder.is()",
     "Registries.BIOME",
     "Registries.FEATURE_TYPE",
     "Registries.PLACEMENT_MODIFIER_TYPE",
     "BlockTags.DEEPSLATE_ORE_REPLACEABLES",
     "BlockTags.STONE_ORE_REPLACEABLES",
-    "BlockTags.SUPPORTS_VEGETATION",
-    "RandomSource.nextLong()",
     "WorldGenLevel.getBiome()",
     "WorldGenLevel.getBlockEntity()",
     "WorldGenLevel.getHeightmapPos()",
     "WorldGenLevel.getMinY()",
-    "WorldGenLevel.isEmptyBlock()",
     "WorldGenLevel.setBlock()",
-    "Blocks.ACACIA_LOG",
-    "Blocks.ACACIA_SAPLING",
-    "Blocks.BEETROOTS",
-    "Blocks.BIRCH_LOG",
-    "Blocks.BIRCH_SAPLING",
-    "Blocks.CARROTS",
-    "and 28 more"
+    "BlockBehaviour.Properties.instrument()",
+    "BlockState.canBeReplaced()",
+    "VerticalAnchor.BOTTOM",
+    "VerticalAnchor.TOP",
+    "BlockStateProvider.of()",
+    "MapColor.DEEPSLATE",
+    "MapColor.STONE"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "assortedterrain-fabric-26.3-2.0.0.jar",
     "published": "2026-10-23"
   },
@@ -85,7 +80,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 68,
+  "softOff": {
+    "class": "partial",
+    "why": "generates in the world"
+  },
+  "lacks": 36,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

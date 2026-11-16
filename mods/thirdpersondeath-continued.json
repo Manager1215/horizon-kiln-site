@@ -9,30 +9,22 @@
   "author": "CaffeinePX",
   "description": "Bedrock-styled cinematic death camera for Java, updated with new features and maintained for modern versions.",
   "needs": [
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.gui.ActiveTextCollector",
     "net.minecraft.client.gui.ActiveTextCollector.Parameters",
     "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
-    "net.minecraft.client.gui.TextAlignment",
     "net.minecraft.client.multiplayer.ClientLevel.ClientLevelData",
     "net.minecraft.network.chat.FontDescription",
     "net.minecraft.network.chat.FontDescription.Resource",
     "net.minecraft.network.protocol.game.ServerboundClientCommandPacket",
     "net.minecraft.network.protocol.game.ServerboundClientCommandPacket.Action",
     "Minecraft.disconnectWithSavingScreen()",
-    "Minecraft.execute()",
-    "Minecraft.setScreenAndShow()",
-    "Options.getCameraType()",
-    "Options.setCameraType()",
     "GuiGraphicsExtractor.textRenderer()",
-    "Screen.mouseClicked()",
     "ClientLevel.DEFAULT_QUIT_MESSAGE",
     "ClientLevel.disconnect()",
     "ClientLevel.getLevelData()",
     "ClientPacketListener.send()",
     "LocalPlayer.respawn()",
     "LocalPlayer.shouldShowDeathScreen()",
-    "MutableComponent.setStyle()",
     "Style.withFont()",
     "Entity.getViewVector()"
   ],
@@ -41,7 +33,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "thirdpersondeath-1.2.4.jar",
     "published": "2026-09-17"
   },
@@ -68,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 26,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

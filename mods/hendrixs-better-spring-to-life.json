@@ -45,11 +45,11 @@
     "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.util.ByIdMap",
     "net.minecraft.util.ByIdMap.OutOfBoundsStrategy",
     "net.minecraft.world.entity.ConversionParams",
     "net.minecraft.world.entity.ConversionParams.AfterConversion",
+    "net.minecraft.world.entity.Shearable",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "BetterSpringToLife-1.4-Fabric.jar",
     "published": "2026-09-30"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 241,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 179,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

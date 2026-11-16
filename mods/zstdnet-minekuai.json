@@ -10,15 +10,10 @@
   "description": "A transparent proxy that ZSTD-compresses relayed client↔server traffic to cut public bandwidth by up to ~95% on high-repetition (Create / big modpack / FRP) servers — players notice nothing.",
   "needs": [
     "Mixin: 4 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.minecraft.SessionService",
     "com.mojang.authlib.properties.Property",
     "com.mojang.authlib.properties.PropertyMap",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.minecraft.client.gui.components.PlayerTabOverlay",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.layouts.GridLayout",
     "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
     "net.minecraft.client.gui.screens.ConnectScreen",
@@ -34,11 +29,7 @@
     "net.minecraft.client.multiplayer.resolver.ResolvedServerAddress",
     "net.minecraft.client.multiplayer.resolver.ServerAddress",
     "net.minecraft.client.multiplayer.resolver.ServerNameResolver",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.client.server.LanServer",
-    "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.network.protocol.handshake.ClientIntentionPacket",
     "net.minecraft.network.protocol.login.ClientboundCustomQueryPacket",
     "net.minecraft.network.protocol.login.ServerboundCustomQueryAnswerPacket",
@@ -50,14 +41,23 @@
     "net.minecraft.server.dedicated.DedicatedServerSettings",
     "net.minecraft.server.network.ServerHandshakePacketListenerImpl",
     "net.minecraft.server.network.ServerLoginPacketListenerImpl",
-    "and 40 more"
+    "net.minecraft.util.HttpUtil",
+    "GameProfile.<init>()",
+    "Minecraft.services()",
+    "EditBox.<init>()",
+    "ClientPacketListener.onlineMode()",
+    "LocalPlayer.permissions()",
+    "Connection.disconnect()",
+    "Connection.getRemoteAddress()",
+    "Connection.send()",
+    "and 12 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "zstdnet-26.3-fabric-1.4.2-m2.10.jar",
     "published": "2026-11-07"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 80,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 52,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

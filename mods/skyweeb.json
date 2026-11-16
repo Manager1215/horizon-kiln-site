@@ -9,8 +9,6 @@
   "author": "whyic",
   "description": "a weebified skyblock rpc mod! with custom anime icons!",
   "needs": [
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseClick",
     "net.minecraft.world.scores.PlayerScoreEntry",
     "net.minecraft.world.scores.PlayerTeam",
     "Version.parse()",
@@ -25,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SkyWeeb-3.0.1-26.3-dev.jar",
     "published": "2026-11-14"
   },
@@ -60,7 +58,11 @@
     "resourcefullib",
     "skyblock-api"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

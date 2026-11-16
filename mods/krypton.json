@@ -16,7 +16,6 @@
     "io.netty.channel.ChannelHandler.Sharable",
     "io.netty.channel.ChannelHandlerContext",
     "io.netty.channel.ChannelPipeline",
-    "net.minecraft.SharedConstants",
     "net.minecraft.network.CompressionDecoder",
     "net.minecraft.network.CompressionEncoder",
     "net.minecraft.network.LocalFrameEncoder",
@@ -24,16 +23,14 @@
     "net.minecraft.network.VarInt",
     "net.minecraft.network.Varint21FrameDecoder",
     "net.minecraft.server.network.LegacyQueryHandler",
-    "net.minecraft.server.network.ServerLoginPacketListenerImpl",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger"
+    "net.minecraft.server.network.ServerLoginPacketListenerImpl"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "krypton-0.3.2.jar",
     "published": "2026-09-30"
   },
@@ -61,7 +58,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect into the game's classes"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -14,19 +14,17 @@
     "net.fabricmc.fabric.api.resource.v1.DataResourceLoader",
     "net.minecraft.advancements.predicates.DamageSourcePredicate",
     "net.minecraft.advancements.predicates.entity.EntityPredicate",
-    "org.apache.logging.log4j.LogManager",
     "FileToIdConverter.registry()",
     "SimpleJsonResourceReloadListener.<init>()",
-    "DamageSource.getEntity()",
     "Player.<init>()",
     "GameRules.KEEP_INVENTORY"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "smart_keep_inventory-26.3-1.1.0-fabric.jar",
     "published": "2026-09-18"
   },
@@ -52,7 +50,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

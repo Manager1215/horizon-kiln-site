@@ -10,11 +10,9 @@
   "description": "Old Menu restores the compact Minecraft 26.1 title and pause-menu layouts in Minecraft Java Edition 26.2.",
   "needs": [
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.gui.components.FriendsButton",
     "net.minecraft.client.gui.components.SpriteIconButton",
     "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.WidgetSprites",
     "net.minecraft.client.gui.layouts.FrameLayout",
     "net.minecraft.client.gui.layouts.GridLayout",
@@ -25,27 +23,17 @@
     "net.minecraft.client.gui.screens.options.OptionsScreen",
     "net.minecraft.client.gui.screens.social.SocialInteractionsScreen",
     "net.minecraft.client.multiplayer.chat.report.ReportingContext",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.network.chat.ComponentContents",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.util.CommonLinks",
+    "SharedConstants.getCurrentVersion()",
     "Minecraft.getReportingContext()",
-    "Minecraft.getSingleplayerServer()",
     "Minecraft.isLocalServer()",
     "MouseHandler.grabMouse()",
-    "AbstractWidget.getMessage()",
-    "AbstractWidget.setPosition()",
-    "Button.setTooltip()",
-    "Button.Builder.tooltip()",
-    "Button.Builder.width()",
     "ConfirmLinkScreen.confirmLink()",
-    "Screen.children()",
     "ClientLevel.DEFAULT_QUIT_MESSAGE",
     "ClientPacketListener.getSeenPlayers()",
     "ClientPacketListener.showDialog()",
     "LocalPlayer.getStats()",
     "CommonComponents.disconnectButtonLabel()",
-    "Component.getContents()",
     "CommonDialogData.computeExternalTitle()",
     "DataVersion.isSideSeries()"
   ],
@@ -54,7 +42,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "old-menu-1.1.0.jar",
     "published": "2026-10-05"
   },
@@ -72,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 39,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 27,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

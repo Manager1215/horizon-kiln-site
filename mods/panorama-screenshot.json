@@ -2,24 +2,19 @@
   "id": "panorama-screenshot",
   "name": "Panorama Screenshot",
   "version": "1.1.3-26.3",
-  "status": "planned",
-  "statusLabel": "Planned",
-  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "status": "not-checked",
+  "statusLabel": "Not checked",
+  "statusMeaning": "In the catalogue, not checked yet.",
   "url": "https://modrinth.com/mod/panorama-screenshot",
   "author": "Fridtjof-DE",
   "description": "Take panorama screenshots just like Mojang!",
-  "needs": [
-    "net.minecraft.network.chat.ClickEvent.OpenFile",
-    "Minecraft.grabPanoramixScreenshot()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()"
-  ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
-  "evidence": "Not run: Java did not start.",
+  "needs": [],
+  "roadmap": "",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (21 classes, 24 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "PanoramaScreenshot-1.1.3-26.3.jar",
     "published": "2026-10-26"
   },
@@ -47,7 +42,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "status": "not-checked",
     "statusLabel": "Not checked",

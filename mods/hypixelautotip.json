@@ -10,27 +10,15 @@
   "description": "Automatically tips players around every 15 minutes using /tipall so you dont have to",
   "needs": [
     "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
     "net.minecraft.client.gui.components.debug.DebugScreenEntry",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryStatus",
-    "net.minecraft.client.gui.components.debug.DebugScreenProfile",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "Minecraft.execute()",
-    "Minecraft.getCurrentServer()",
-    "ServerData.ip",
-    "MutableComponent.withStyle()",
-    "Style.getHoverEvent()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()"
+    "net.minecraft.client.gui.components.debug.DebugScreenProfile"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hypixelautotip-1.5.1+26.3.jar",
     "published": "2026-10-06"
   },
@@ -59,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

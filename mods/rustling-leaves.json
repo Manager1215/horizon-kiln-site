@@ -27,23 +27,17 @@
     "net.fabricmc.fabric.api.client.model.loading.v1.wrapper.WrapperBlockStateModel",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionEvents.EndExtraction",
     "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryStatus",
     "net.minecraft.client.gui.components.debug.DebugScreenProfile",
     "net.minecraft.client.multiplayer.ClientChunkCache",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.DynamicGpuData",
     "net.minecraft.client.renderer.DynamicGpuData.Transform",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.extract.LevelExtractor",
-    "net.minecraft.data.AtlasIds",
     "net.minecraft.server.level.ChunkTrackingView",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.LivingEntity.SwingDescription",
     "net.minecraft.world.level.LightLayer",
     "net.minecraft.world.level.block.LeafLitterBlock",
     "net.minecraft.world.level.block.UntintedParticleLeavesBlock",
-    "net.minecraft.world.level.storage.LevelResource",
     "org.lwjgl.system.MemoryUtil",
     "RenderSystem.assertOnRenderThread()",
     "RenderSystem.getCompiledPipeline()",
@@ -51,14 +45,20 @@
     "RenderSystem.getSequentialBuffer()",
     "SamplerCache.getClampToEdge()",
     "SamplerCache.getSampler()",
-    "and 54 more"
+    "GpuBuffer.slice()",
+    "GpuBuffer.slice()",
+    "BlendFunction.TRANSLUCENT",
+    "RenderPipeline.builder()",
+    "RenderPipeline.getLocation()",
+    "Long2ObjectMap.Entry.getValue()",
+    "and 48 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "rustling_leaves-fabric-26.3-2.8.2.jar",
     "published": "2026-11-04"
   },
@@ -88,5 +88,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 133
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 109
 }

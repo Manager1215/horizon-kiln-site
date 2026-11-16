@@ -9,28 +9,17 @@
   "author": "sillyygoober",
   "description": "Allows you to automatically reequip a totem after popping one",
   "needs": [
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.world.inventory.ContainerInput",
-    "Minecraft.execute()",
-    "Minecraft.gameMode",
-    "Minecraft.setScreenAndShow()",
     "LocalPlayer.isAlive()",
     "ClientboundEntityEventPacket.getEntity()",
     "ClientboundEntityEventPacket.getEventId()",
-    "ItemStack.getItemName()",
-    "Items.SHIELD",
-    "Items.TOTEM_OF_UNDYING"
+    "ItemStack.getItemName()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sillyautototem-fabric-26.3-2.3.6.jar",
     "published": "2026-09-15"
   },
@@ -59,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

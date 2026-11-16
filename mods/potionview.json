@@ -9,30 +9,15 @@
   "author": "Draaagonix",
   "description": "Displays your potions, counts and details on a fully customizable HUD",
   "needs": [
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.world.item.PotionItem",
-    "net.minecraft.world.item.alchemy.Potion",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "Minecraft.execute()",
-    "Options.keyPlayerList",
-    "DataComponents.POTION_CONTENTS",
-    "BuiltInRegistries.POTION",
-    "Component.getContents()",
-    "Component.getSiblings()",
-    "Component.plainCopy()",
-    "Component.translatableWithFallback()",
-    "MutableComponent.setStyle()",
     "MobEffect.createModifiers()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "potionview-fabric-26.3-1.0.0.jar",
     "published": "2026-11-01"
   },
@@ -62,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

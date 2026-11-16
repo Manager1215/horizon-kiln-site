@@ -9,9 +9,6 @@
   "author": "KGriffon",
   "description": "Allows you to see contents of a shulker without placing it.",
   "needs": [
-    "KeyMapping.matches()",
-    "Minecraft.setScreenAndShow()",
-    "GuiGraphicsExtractor.blit()",
     "GuiGraphicsExtractor.setTooltipForNextFrame()",
     "Items.DYED_SHULKER_BOX"
   ],
@@ -20,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "shulker-preview-1.2.0+26.3.jar",
     "published": "2026-09-16"
   },
@@ -48,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

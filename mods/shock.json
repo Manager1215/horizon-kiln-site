@@ -9,11 +9,6 @@
   "author": "ScoreUnder",
   "description": "Get zapped by your shock collar when you take damage! Supports PiShock, OpenShock, and more.",
   "needs": [
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "org.apache.logging.log4j.Level",
     "org.apache.logging.log4j.core.config.Configurator",
     "org.lwjgl.sdl.SDLScancode",
     "Int2ObjectMap.isEmpty()",
@@ -21,22 +16,14 @@
     "IntList.size()",
     "ObjectCollection.stream()",
     "ObjectSet.stream()",
-    "Minecraft.execute()",
-    "Font.isBidirectional()",
-    "GuiGraphicsExtractor.text()",
-    "Component.getVisualOrderText()",
-    "MutableComponent.setStyle()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "Style.withUnderlined()"
+    "Font.isBidirectional()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "pishock-zap-2.4.2+26.3.jar",
     "published": "2026-09-29"
   },
@@ -66,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

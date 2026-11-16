@@ -9,25 +9,13 @@
   "author": "ZYNX_TWN",
   "description": "A simple mod that adds a straightforward crafting recipe for the enchanted golden apple",
   "needs": [
-    "org.apache.logging.log4j.LogManager",
     "org.apache.logging.log4j.core.Filter",
     "org.apache.logging.log4j.core.Filter.Result",
     "org.apache.logging.log4j.core.LoggerContext",
     "org.apache.logging.log4j.core.config.Configuration",
     "org.apache.logging.log4j.core.config.LoggerConfig",
     "org.apache.logging.log4j.core.filter.AbstractFilter",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "CommandSourceStack.withSuppressedOutput()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.getDispatcher()",
-    "Commands.hasPermission()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
     "ItemInput.createItemStack()",
-    "Holder.getRegisteredName()",
-    "MinecraftServer.getCommands()",
-    "ServerPlayer.createCommandSourceStack()",
     "Inventory.placeItemBackInInventory()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -35,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "better-craftable-gapple-1.0.1+26.3-fabric.jar",
     "published": "2026-11-07"
   },
@@ -64,7 +52,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

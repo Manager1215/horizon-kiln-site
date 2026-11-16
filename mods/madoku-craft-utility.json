@@ -15,7 +15,6 @@
     "net.minecraft.client.sounds.MusicManager.MusicFrequency",
     "net.minecraft.client.sounds.WeighedSoundEvents",
     "net.minecraft.util.valueproviders.ConstantFloat",
-    "net.minecraft.world.inventory.AbstractFurnaceMenu",
     "net.minecraft.world.inventory.ContainerData",
     "net.minecraft.world.inventory.RecipeBookType",
     "net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity",
@@ -24,10 +23,8 @@
     "Options.getSoundSourceVolume()",
     "Options.musicFrequency()",
     "SoundManager.isActive()",
-    "SoundManager.stop()",
     "FileToIdConverter.idToFile()",
     "ServerLevel.getOverworldClockTime()",
-    "RandomSource.nextLong()",
     "Level.recipeAccess()",
     "Biomes.PALE_GARDEN"
   ],
@@ -36,7 +33,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "madoku-craft-utility-26.3-1.1.7-V1.jar",
     "published": "2026-10-31"
   },
@@ -66,7 +63,11 @@
     "madoku-craft-core",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

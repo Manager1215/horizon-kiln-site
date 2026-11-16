@@ -10,13 +10,10 @@
   "description": "Fabric mod that allows you to toggle armor visibility with WGFM support.",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.minecraft.client.OptionInstance.CaptionBasedToString",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
     "net.minecraft.client.OptionInstance.UnitDouble",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.model.object.equipment.ShieldModel",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.layers.CapeLayer",
@@ -30,32 +27,20 @@
     "net.minecraft.client.resources.model.EquipmentClientInfo",
     "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
     "net.minecraft.world.item.ShieldItem",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "Minecraft.gameMode",
     "OptionInstance.<init>()",
     "OptionInstance.createButton()",
     "OptionInstance.noTooltip()",
     "Options.mainHand()",
-    "GuiGraphicsExtractor.blit()",
     "LocalPlayer.isBlocking()",
     "Sheets.SHIELD_BASE",
-    "RenderTypes.entityTranslucent()",
-    "CommonComponents.GUI_CANCEL",
-    "CommonComponents.GUI_DONE",
-    "Items.COMPASS",
-    "Items.ENCHANTED_BOOK",
-    "Items.IRON_CHESTPLATE",
-    "Items.MAP",
-    "Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE",
-    "Items.PAPER",
-    "Items.SHIELD"
+    "RenderTypes.entityTranslucent()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "HideYourArmor-1.7.1+mc26.3-universal.jar",
     "published": "2026-10-23"
   },
@@ -84,7 +69,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 39,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; has network channels"
+  },
+  "lacks": 24,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

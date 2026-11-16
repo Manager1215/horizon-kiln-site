@@ -14,12 +14,6 @@
     "com.mojang.blaze3d.audio.Channel",
     "com.mojang.blaze3d.audio.Library",
     "com.mojang.blaze3d.audio.Library.ChannelPool",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.gui.layouts.GridLayout",
     "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
     "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
@@ -33,25 +27,17 @@
     "net.minecraft.client.sounds.ChannelAccess.ChannelHandle",
     "net.minecraft.client.sounds.WeighedSoundEvents",
     "net.minecraft.util.CommonColors",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "Button.setPosition()",
-    "Button.Builder.width()",
     "EditBox.SEARCH_HINT_STYLE",
-    "EditBox.setHint()",
     "NarrationElementOutput.add()",
     "SoundInstance.getSound()",
-    "SoundManager.soundEngine",
-    "CommonComponents.GUI_DONE",
-    "CommonComponents.OPTION_OFF",
-    "MutableComponent.setStyle()"
+    "SoundManager.soundEngine"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "audio_engine_tweaks-1.2.16+MC26.3 build 2.jar",
     "published": "2026-09-15"
   },
@@ -78,7 +64,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 34,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

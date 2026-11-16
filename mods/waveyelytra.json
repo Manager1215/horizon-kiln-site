@@ -13,7 +13,6 @@
     "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
     "net.minecraft.client.renderer.entity.layers.WingsLayer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.client.resources.model.EquipmentClientInfo",
     "net.minecraft.client.resources.model.EquipmentClientInfo.Dyeable",
     "net.minecraft.client.resources.model.EquipmentClientInfo.Layer",
@@ -21,11 +20,7 @@
     "net.minecraft.client.resources.sounds.AbstractTickableSoundInstance",
     "net.minecraft.client.resources.sounds.ElytraOnPlayerSoundInstance",
     "net.minecraft.world.item.component.DyedItemColor",
-    "NativeImage.getHeight()",
-    "NativeImage.getPixel()",
-    "NativeImage.getWidth()",
     "NativeImage.isClosed()",
-    "NativeImage.read()",
     "VertexConsumer.addVertex()",
     "VertexConsumer.setLight()",
     "VertexConsumer.setNormal()",
@@ -34,14 +29,11 @@
     "ObjectIterator.hasNext()",
     "ObjectIterator.next()",
     "ObjectIterator.remove()",
-    "LocalPlayer.isFallFlying()",
-    "LocalPlayer.isRemoved()",
     "RenderTypes.armorCutoutNoCull()",
     "RenderTypes.armorCutoutNoCullGlint()",
     "EquipmentAssetManager.get()",
     "LivingEntity.distanceToSqr()",
     "LivingEntity.isCrouching()",
-    "LivingEntity.isFallFlying()",
     "LivingEntity.yBodyRot",
     "ItemStack.hasFoil()"
   ],
@@ -50,7 +42,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "waveyelytra-1.0.0.jar",
     "published": "2026-11-01"
   },
@@ -79,7 +71,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 34,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 26,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,8 +9,6 @@
   "author": "Mark_Snicket",
   "description": "Displays your health as a number underneath your crosshair",
   "needs": [
-    "net.minecraft.client.CameraType",
-    "Options.getCameraType()",
     "LocalPlayer.gameMode()",
     "LocalPlayer.getAbsorptionAmount()"
   ],
@@ -19,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "crosshair-health-indicator-v1.3.0-26.1-3.jar",
     "published": "2026-10-23"
   },
@@ -49,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

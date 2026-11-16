@@ -10,18 +10,13 @@
   "description": "CookieCapes lets you upload your own custom capes. Anyone with the mod can see your cape in-game.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.minecraft.SessionService",
-    "net.minecraft.CrashReport",
-    "net.minecraft.ReportedException",
     "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
     "net.minecraft.client.gui.components.MultiLineEditBox",
     "net.minecraft.client.gui.components.MultiLineEditBox.Builder",
     "net.minecraft.client.gui.components.MultiLineTextWidget",
     "net.minecraft.client.gui.components.ScrollableLayout",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.gui.components.StringWidget.TextOverflow",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.layouts.AbstractLayout.AbstractChildWrapper",
     "net.minecraft.client.gui.layouts.FrameLayout",
     "net.minecraft.client.gui.layouts.GridLayout",
@@ -39,8 +34,6 @@
     "net.minecraft.client.renderer.entity.layers.CapeLayer",
     "net.minecraft.client.renderer.entity.player.AvatarRenderer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
     "org.apache.commons.io.IOUtils",
     "org.lwjgl.PointerBuffer",
     "org.lwjgl.system.Checks",
@@ -48,16 +41,23 @@
     "org.lwjgl.system.MemoryStack",
     "org.lwjgl.system.MemoryUtil",
     "org.lwjgl.system.Platform",
-    "NativeImage.getHeight()",
-    "NativeImage.getPixel()",
-    "and 36 more"
+    "NativeImage.read()",
+    "VertexConsumer.addVertex()",
+    "VertexConsumer.setLight()",
+    "VertexConsumer.setNormal()",
+    "VertexConsumer.setOverlay()",
+    "Camera.getCullFrustum()",
+    "Minecraft.getGameProfile()",
+    "Minecraft.services()",
+    "Gui.chatListener()",
+    "and 11 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "cookiecapes-fabric-26.3-6.0.0.jar",
     "published": "2026-11-04"
   },
@@ -77,7 +77,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 76,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own"
+  },
+  "lacks": 51,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

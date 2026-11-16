@@ -9,28 +9,17 @@
   "author": "Mcjunky33",
   "description": "Customizable Armor Hud with customizable durability HUD",
   "needs": [
-    "net.minecraft.client.gui.components.Tooltip",
     "Object2IntMap.Entry.getKey()",
-    "Minecraft.setScreenAndShow()",
     "Options.languageCode",
-    "GuiGraphicsExtractor.fakeItem()",
-    "GuiGraphicsExtractor.nextStratum()",
     "GuiGraphicsExtractor.textWithBackdrop()",
-    "Button.Builder.tooltip()",
-    "LocalPlayer.getMainArm()",
-    "MutableComponent.withStyle()",
-    "ItemStack.getEnchantments()",
-    "Items.CHAINMAIL_BOOTS",
-    "Items.GOLDEN_CHESTPLATE",
-    "Items.LEATHER_LEGGINGS",
-    "ItemEnchantments.entrySet()"
+    "ItemStack.getEnchantments()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "armor_Hud-0.10-26.3.jar",
     "published": "2026-11-11"
   },
@@ -59,7 +48,11 @@
     "minecraft",
     "modmenu"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

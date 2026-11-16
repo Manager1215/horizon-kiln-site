@@ -19,12 +19,10 @@
     "com.mojang.blaze3d.vertex.DefaultVertexFormat",
     "com.mojang.blaze3d.vertex.MeshData",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionEvents.EndExtraction",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.event.registry.DynamicRegistries",
     "net.fabricmc.fabric.api.event.registry.DynamicRegistries.SyncOption",
     "net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder",
     "net.fabricmc.fabric.api.event.registry.RegistryAttribute",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.client.renderer.DynamicGpuData",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.LevelTargetBundle",
@@ -46,19 +44,21 @@
     "net.minecraft.util.valueproviders.FloatProvider",
     "net.minecraft.util.valueproviders.FloatProviders",
     "net.minecraft.util.valueproviders.IntProviders",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.ai.village.poi.PoiManager",
     "net.minecraft.world.entity.ai.village.poi.PoiManager.Occupancy",
     "net.minecraft.world.entity.ai.village.poi.PoiRecord",
     "net.minecraft.world.entity.ai.village.poi.PoiTypes",
+    "net.minecraft.world.entity.npc.wanderingtrader.WanderingTraderSpawner",
+    "net.minecraft.world.entity.projectile.hurtingprojectile.windcharge.WindCharge",
+    "net.minecraft.world.level.BaseSpawner",
     "and 80 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "StarrySkies-5.1.0+26.3.jar",
     "published": "2026-11-05"
   },
@@ -88,7 +88,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 279,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 219,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,25 +9,16 @@
   "author": "anvian",
   "description": "Fast and easy inventory sorter",
   "needs": [
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.world.inventory.ContainerInput",
-    "KeyMapping.matches()",
-    "KeyMapping.matchesMouse()",
-    "Minecraft.gameMode",
     "SoundEvents.IRON_GOLEM_REPAIR",
     "Inventory.getSelectionSize()",
-    "Item.getId()",
-    "ItemStack.getDisplayName()",
-    "ItemStack.getRarity()"
+    "Item.getId()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "inventorytweak-fabric-26.3-4.2.jar",
     "published": "2026-10-04"
   },
@@ -58,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

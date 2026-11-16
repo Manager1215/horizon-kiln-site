@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 30 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.properties.Property",
     "com.mojang.authlib.properties.PropertyMap",
     "com.mojang.blaze3d.Blaze3D",
@@ -27,19 +26,11 @@
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.GameCanceled",
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.ModifyGame",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.BeforeKeyPress",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseClick",
     "net.fabricmc.loader.api.SemanticVersion",
     "net.fabricmc.loader.api.VersionParsingException",
     "net.fabricmc.loader.api.metadata.CustomValue",
     "net.fabricmc.loader.api.metadata.CustomValue.CvObject",
     "net.fabricmc.loader.impl.util.version.VersionParser",
-    "net.minecraft.CrashReport",
-    "net.minecraft.CrashReportCategory",
-    "net.minecraft.ReportedException",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.gui.Font.PreparedText",
     "net.minecraft.client.gui.Font.PreparedTextBuilder",
     "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
@@ -51,6 +42,15 @@
     "net.minecraft.client.gui.font.GlyphRenderTypes",
     "net.minecraft.client.gui.font.TextRenderable",
     "net.minecraft.client.gui.font.TextRenderable.Styled",
+    "net.minecraft.client.gui.font.glyphs.BakedSheetGlyph",
+    "net.minecraft.client.gui.font.glyphs.BakedSheetGlyph.GlyphInstance",
+    "net.minecraft.client.gui.layouts.GridLayout",
+    "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
+    "net.minecraft.client.gui.screens.DisconnectedScreen",
+    "net.minecraft.client.gui.screens.inventory.tooltip.TooltipRenderUtil",
+    "net.minecraft.client.gui.screens.options.controls.KeyBindsList",
+    "net.minecraft.client.multiplayer.ClientChunkCache",
+    "net.minecraft.client.multiplayer.chat.GuiMessage.Line",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SkyblockAddons-2.5.3+1244-for-MC-26.3.jar",
     "published": "2026-10-25"
   },
@@ -90,7 +90,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 502,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @redirect and @wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 289,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

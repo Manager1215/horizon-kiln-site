@@ -12,28 +12,18 @@
     "net.fabricmc.fabric.api.item.v1.ItemComponentTooltipProviderRegistry",
     "net.minecraft.advancements.triggers.ConsumeItemTrigger",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.inventory.ContainerLevelAccess",
     "net.minecraft.world.inventory.ResultContainer",
     "net.minecraft.world.item.ItemUseAnimation",
-    "KeyMapping.matches()",
-    "Options.keyInventory",
     "NarrationElementOutput.add()",
     "AbstractContainerScreen.extractLabels()",
-    "KeyEvent.isConfirmation()",
-    "KeyEvent.shortcutKey()",
     "BuiltInRegistries.CUSTOM_STAT",
     "StatFormatter.DEFAULT",
     "StatType.get()",
-    "Stats.CUSTOM",
     "LivingEntity.gameEvent()",
     "Player.getScore()",
-    "Player.giveExperienceLevels()",
     "Player.increaseScore()",
     "ItemUtils.startUsingInstantly()",
-    "Items.GLASS_BOTTLE",
-    "CustomData.copyTag()",
     "CustomData.update()",
     "BlockState.getMenuProvider()",
     "GameEvent.DRINK"
@@ -43,7 +33,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "experiencebottler-26.3+build.1.jar",
     "published": "2026-09-18"
   },
@@ -71,7 +61,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

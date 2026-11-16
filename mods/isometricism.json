@@ -10,8 +10,6 @@
   "description": "A mod which adds an isometric camera into Minecraft",
   "needs": [
     "Mixin: 5 points inside the game's methods",
-    "net.minecraft.client.CameraType",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.DynamicGpuData",
     "net.minecraft.client.renderer.DynamicGpuData.TerrainTransform",
     "net.minecraft.client.renderer.LevelRenderer",
@@ -25,9 +23,7 @@
     "net.minecraft.world.item.BoatItem",
     "net.minecraft.world.item.BottleItem",
     "net.minecraft.world.item.PlaceOnWaterBlockItem",
-    "net.minecraft.world.item.SpawnEggItem",
     "net.minecraft.world.item.component.AttackRange",
-    "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
     "net.minecraft.world.phys.EntityHitResult",
     "Window.handle()",
     "VertexConsumer.addVertex()",
@@ -38,11 +34,7 @@
     "Camera.isPanoramicMode()",
     "Camera.yRot()",
     "Minecraft.crosshairPickEntity",
-    "Minecraft.gameMode",
-    "Minecraft.hitResult",
-    "Options.keyAttack",
     "Options.keyDebugModifier",
-    "Options.keyUse",
     "Options.sensitivity()",
     "Gui.overlay()",
     "ClientLevel.clip()",
@@ -50,14 +42,22 @@
     "LocalPlayer.blockInteractionRange()",
     "LocalPlayer.entityInteractionRange()",
     "LocalPlayer.getActiveItem()",
-    "and 39 more"
+    "LocalPlayer.getAttackRangeWith()",
+    "LocalPlayer.getEyePosition()",
+    "LocalPlayer.isPassenger()",
+    "LocalPlayer.isUsingItem()",
+    "LocalPlayer.isWithinBlockInteractionRange()",
+    "LocalPlayer.setXRot()",
+    "LocalPlayer.setYRot()",
+    "GameRenderer.mainCamera()",
+    "and 35 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "isometricism-fabric-26.3-26.3.0.0.jar",
     "published": "2026-11-01"
   },
@@ -75,7 +75,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 94,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 78,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

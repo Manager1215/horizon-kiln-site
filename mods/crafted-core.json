@@ -14,20 +14,14 @@
     "net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents.AllowNearbyMonsters",
     "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.Unload",
     "net.fabricmc.fabric.api.util.EventResult",
-    "net.minecraft.CrashReport",
-    "net.minecraft.CrashReportCategory",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.resources.RegistryDataLoader",
     "net.minecraft.resources.RegistryDataLoader.RegistryData",
     "net.minecraft.server.PlayerAdvancements",
     "net.minecraft.world.clock.ServerClockManager",
     "net.minecraft.world.clock.ServerClockManager.MoveResult",
-    "NativeImage.read()",
     "ServerLevelEvents.UNLOAD",
     "ClientPacketListener.send()",
-    "CommandSourceStack.getServer()",
     "ListTag.add()",
     "ListTag.iterator()",
     "FileToIdConverter.fileToId()",
@@ -35,10 +29,7 @@
     "FileToIdConverter.listMatchingResources()",
     "MinecraftServer.getAllLevels()",
     "ServerLevel.clockManager()",
-    "ServerLevel.getDefaultClockTime()",
-    "ServerPlayer.connection",
     "ServerPlayer.getSleepingPos()",
-    "ServerGamePacketListenerImpl.send()",
     "GsonHelper.fromJson()",
     "Player.getAirSupply()",
     "Player.getMaxAirSupply()",
@@ -51,7 +42,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "craftedcore-fabric-8.3.2.jar",
     "published": "2026-10-13"
   },
@@ -80,7 +71,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 35,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 26,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

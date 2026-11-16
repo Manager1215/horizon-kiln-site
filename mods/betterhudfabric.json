@@ -9,7 +9,6 @@
   "author": "DSNS",
   "description": "A simple HUD with essential information easily accessible for Minecraft Fabric.",
   "needs": [
-    "Holder.getRegisteredName()",
     "Player.getBlockX()",
     "Player.getBlockY()",
     "Player.getBlockZ()",
@@ -21,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "betterhud-2.1.1+mc26.2.jar",
     "published": "2026-07-07"
   },
@@ -52,7 +51,11 @@
     "minecraft",
     "modmenu"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

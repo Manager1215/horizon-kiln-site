@@ -10,10 +10,8 @@
   "description": "Overhauls the Lunge enchantment for the new spear weapon to be more versatile and fun while keeping it vanilla friendly",
   "needs": [
     "AbstractClientPlayer.<init>()",
-    "LocalPlayer.isFallFlying()",
     "LocalPlayer.isInLava()",
     "ServerPlayer.causeFoodExhaustion()",
-    "ServerPlayer.isFallFlying()",
     "ServerPlayer.isInLava()",
     "Player.<init>()",
     "Enchantments.LUNGE"
@@ -23,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Lunge Improvement 26.3.jar",
     "published": "2026-09-16"
   },
@@ -51,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

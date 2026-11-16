@@ -10,7 +10,6 @@
   "description": "Competitive 1v1 Bingo Race!!!!",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.exceptions.AuthenticationException",
     "com.mojang.authlib.exceptions.AuthenticationUnavailableException",
     "com.mojang.authlib.exceptions.InvalidCredentialsException",
@@ -49,15 +48,16 @@
     "net.minecraft.client.model.Model.Simple",
     "net.minecraft.client.model.geom.ModelLayers",
     "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
-    "and 68 more"
+    "net.minecraft.client.resources.DefaultPlayerSkin",
+    "net.minecraft.world.item.component.ResolvableProfile",
+    "and 43 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Bingo_Ranked.jar",
     "published": "2026-11-14"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 108,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own"
+  },
+  "lacks": 83,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

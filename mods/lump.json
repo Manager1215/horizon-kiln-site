@@ -23,7 +23,6 @@
     "net.minecraft.world.level.LightLayer",
     "net.minecraft.world.phys.shapes.BooleanOp",
     "LevelRenderEvents.BEFORE_GIZMOS",
-    "Minecraft.execute()",
     "ClientLevel.getBrightness()",
     "BlockPos.distSqr()",
     "SectionPos.cube()",
@@ -35,28 +34,29 @@
     "SectionPos.z()",
     "BuiltInRegistries.POINT_OF_INTEREST_TYPE",
     "Registries.POINT_OF_INTEREST_TYPE",
-    "Gizmos.line()",
     "ByteBufCodecs.collection()",
-    "MinecraftServer.execute()",
     "ServerLevel.getPoiManager()",
     "EntityTypes.CREEPER",
     "Item.Properties.equippable()",
     "Item.Properties.requiredFeatures()",
-    "Items.TORCH",
     "ChunkPos.rangeClosed()",
     "ServerLevelAccessor.dimensionType()",
     "ServerLevelAccessor.getBrightness()",
     "Block.requiredFeatures()",
     "Blocks.register()",
     "SoundType.AMETHYST",
-    "and 5 more"
+    "BlockBehaviour.Properties.emissiveRendering()",
+    "DimensionType.monsterSpawnBlockLightLimit()",
+    "MapColor.COLOR_PURPLE",
+    "Shapes.empty()",
+    "and 1 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "lump-fabric-26.3-0.3.1.jar",
     "published": "2026-11-15"
   },
@@ -86,5 +86,9 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 45
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 41
 }

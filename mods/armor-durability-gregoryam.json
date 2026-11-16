@@ -2,21 +2,19 @@
   "id": "armor-durability-gregoryam",
   "name": "Armor Durability",
   "version": "1.0.0",
-  "status": "planned",
-  "statusLabel": "Planned",
-  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "status": "not-checked",
+  "statusLabel": "Not checked",
+  "statusMeaning": "In the catalogue, not checked yet.",
   "url": "https://modrinth.com/mod/armor-durability-gregoryam",
   "author": "GregoryAM",
   "description": "Shows your equipped armor icons and durability bars to the left of the hotbar.",
-  "needs": [
-    "LocalPlayer.getMainArm()"
-  ],
-  "roadmap": "Minecraft's libraries and client API (0.2)",
-  "evidence": "Not run: Java did not start.",
+  "needs": [],
+  "roadmap": "",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (13 classes, 24 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "armor-durability-1.0.0-mc26.3.jar",
     "published": "2026-10-25"
   },
@@ -44,7 +42,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 1,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "status": "not-checked",
     "statusLabel": "Not checked",

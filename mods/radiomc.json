@@ -9,26 +9,15 @@
   "author": "gatosmias",
   "description": "Official RadioMC player. Stream 51,000+ live radio stations, podcasts, and YouTube audio via a seamless native interface. Supports MP3, AAC+, HLS, and video platforms through robust FFmpeg integration.",
   "needs": [
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "org.lwjgl.sdl.SDLMouse",
-    "org.lwjgl.sdl.SDLScancode",
-    "InputConstants.isKeyDown()",
-    "NativeImage.fillRect()",
-    "Minecraft.execute()",
-    "Minecraft.gameDirectory",
-    "EditBox.setBordered()",
-    "EditBox.setHint()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()"
+    "org.lwjgl.sdl.SDLScancode"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "radiomc-26.3-V9.jar",
     "published": "2026-09-30"
   },
@@ -56,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

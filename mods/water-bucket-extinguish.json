@@ -9,11 +9,8 @@
   "author": "RpYT",
   "description": "PvP water bucket utility: one key puts out fire, frees you from cobwebs or refills your bucket, then hands your weapon back. Works on any server.",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "Minecraft.gameMode",
     "LocalPlayer.getBoundingBox()",
     "SoundEvents.NOTE_BLOCK_HAT",
-    "Blocks.COBWEB",
     "AABB.maxX",
     "AABB.maxY",
     "AABB.maxZ",
@@ -26,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "waterbucket-1.4.4+mc26.3.jar",
     "published": "2026-11-03"
   },
@@ -56,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

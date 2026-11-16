@@ -9,18 +9,6 @@
   "author": "Kalpe",
   "description": "kUI is the shared interface layer behind the KALPE mods.",
   "needs": [
-    "InputConstants.isKeyDown()",
-    "Minecraft.setScreenAndShow()",
-    "Font.plainSubstrByWidth()",
-    "GuiGraphicsExtractor.<init>()",
-    "ScreenRectangle.bottom()",
-    "ScreenRectangle.left()",
-    "ScreenRectangle.right()",
-    "ScreenRectangle.top()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()",
     "GuiRenderState.addGlyphToCurrentLayer()",
     "GuiRenderState.addGuiElement()",
     "GuiRenderState.addItem()",
@@ -31,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "kui-1.2.0+mc26.3.jar",
     "published": "2026-11-03"
   },
@@ -59,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

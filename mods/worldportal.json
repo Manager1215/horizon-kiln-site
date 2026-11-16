@@ -29,8 +29,6 @@
     "SectionPos.blocksInside()",
     "SectionPos.of()",
     "BuiltInRegistries.POINT_OF_INTEREST_TYPE",
-    "Identifier.tryBuild()",
-    "Identifier.withPath()",
     "ServerLevel.getChunk()",
     "ServerLevel.getMaxSectionY()",
     "ServerLevel.getMinSectionY()",
@@ -39,17 +37,14 @@
     "Entity.isOnPortalCooldown()",
     "Entity.setAsInsidePortal()",
     "Entity.setPortalCooldown()",
-    "ChunkPos.rangeClosed()",
-    "Blocks.END_PORTAL",
-    "Blocks.NETHER_PORTAL",
-    "Blocks.OBSIDIAN"
+    "ChunkPos.rangeClosed()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "worldportal-fabric-0.0.13+26.3.jar",
     "published": "2026-11-10"
   },
@@ -78,7 +73,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 33,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels"
+  },
+  "lacks": 28,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

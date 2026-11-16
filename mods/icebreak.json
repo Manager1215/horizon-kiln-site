@@ -10,8 +10,6 @@
   "description": "Who knew jumping on ice would cause it to break! Made for WinterJam 2024",
   "needs": [
     "net.minecraft.world.level.block.IceBlock",
-    "MinecraftServer.execute()",
-    "ServerLevel.destroyBlock()",
     "BlockTags.ICE",
     "HalfTransparentBlock.fallOn()"
   ],
@@ -20,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "icebreak-1.0.1+26.1.2.jar",
     "published": "2026-10-03"
   },
@@ -41,7 +39,11 @@
     "mru",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -16,7 +16,6 @@
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
     "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents",
     "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents.TagsLoaded",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
     "net.minecraft.client.color.item.ItemTintSource",
     "net.minecraft.client.color.item.ItemTintSources",
@@ -28,15 +27,12 @@
     "net.minecraft.client.particle.ParticleProvider",
     "net.minecraft.client.particle.SonicBoomParticle",
     "net.minecraft.client.renderer.entity.EntityRenderers",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.core.component.DataComponentInitializers",
     "net.minecraft.core.component.DataComponentInitializers.SingleComponentInitializer",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.tags.DamageTypeTags",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.SimpleMenuProvider",
     "net.minecraft.world.entity.Display",
     "net.minecraft.world.entity.Display.ItemDisplay",
@@ -47,17 +43,21 @@
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow.Pickup",
     "net.minecraft.world.entity.projectile.arrow.Arrow",
-    "net.minecraft.world.flag.FeatureFlags",
-    "net.minecraft.world.inventory.MenuType.MenuSupplier",
     "net.minecraft.world.item.BoneMealItem",
-    "and 80 more"
+    "net.minecraft.world.item.FlintAndSteelItem",
+    "net.minecraft.world.item.HoneycombItem",
+    "net.minecraft.world.item.ItemCooldowns",
+    "net.minecraft.world.item.ItemUseAnimation",
+    "net.minecraft.world.item.ProjectileItem",
+    "net.minecraft.world.item.ProjectileItem.DispenseConfig",
+    "and 75 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "techextensions-3.0.0.jar",
     "published": "2026-11-09"
   },
@@ -89,7 +89,11 @@
     "reborncore",
     "techreborn"
   ],
-  "lacks": 236,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 175,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

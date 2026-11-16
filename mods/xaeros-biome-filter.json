@@ -11,19 +11,15 @@
   "needs": [
     "VertexConsumer.addVertex()",
     "VertexConsumer.setColor()",
-    "Minecraft.setScreenAndShow()",
-    "EditBox.setHint()",
     "LocalPlayer.getBlockY()",
-    "RegistryAccess.lookupOrThrow()",
-    "Registries.BIOME",
-    "Identifier.toLanguageKey()"
+    "Registries.BIOME"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "xaeros-biome-filter-1.1.2.jar",
     "published": "2026-09-16"
   },
@@ -51,7 +47,11 @@
     "minecraft",
     "xaeroworldmap"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

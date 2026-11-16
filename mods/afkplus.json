@@ -10,8 +10,6 @@
   "description": "New AFK management mod, with full AFK Time/Duration/Reason handling; and full Placeholder API formatting support.  Also works in Single Player; and can provide this information to other mods via Placeholder API.  Supports Luck Permissions.",
   "needs": [
     "Mixin: 8 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.network.protocol.game.ServerboundMovePlayerPacket",
     "net.minecraft.server.dedicated.DedicatedServer",
     "net.minecraft.server.level.ServerPlayerGameMode",
@@ -19,18 +17,12 @@
     "net.minecraft.server.packs.repository.PackRepository",
     "net.minecraft.server.players.SleepStatus",
     "net.minecraft.world.level.levelgen.PhantomSpawner",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
+    "IntegratedServer.getServerModName()",
     "CommandSourceStack.checkPermission()",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getTextName()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
     "MinecraftServer.getPackRepository()",
     "MinecraftServer.getServerModName()",
     "MinecraftServer.sendSystemMessage()",
     "ServerPlayer.checkPermission()",
-    "ServerPlayer.connection",
     "ServerPlayer.gameMode",
     "ServerPlayer.getEyeY()",
     "ServerPlayer.getGameProfile()",
@@ -40,10 +32,7 @@
     "ServerPlayer.setPermanentlyInvulnerable()",
     "ServerGamePacketListenerImpl.disconnect()",
     "ServerGamePacketListenerImpl.isAcceptingMessages()",
-    "PermissionLevel.byId()",
-    "PermissionLevel.id()",
     "PlayerList.broadcastAll()",
-    "Util.getMillis()",
     "Entity.<init>()",
     "Entity.checkPermission()",
     "Entity.isPushable()",
@@ -56,7 +45,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "afkplus-v1.7.17-mc26.3.jar",
     "published": "2026-09-23"
   },
@@ -85,7 +74,11 @@
     "more-color-api",
     "placeholder-api"
   ],
-  "lacks": 40,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own"
+  },
+  "lacks": 29,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

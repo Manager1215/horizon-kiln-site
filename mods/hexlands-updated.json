@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "net.minecraft.core.Holder.Reference.Type",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.QuartPos",
     "net.minecraft.util.Interval",
     "net.minecraft.world.level.levelgen.Aquifer",
@@ -42,8 +41,6 @@
     "RandomSource.nextIntBetweenInclusive()",
     "BiomeSource.CODEC",
     "BiomeSource.createCachingResolver()",
-    "Blocks.NETHER_BRICKS",
-    "Blocks.STONE_BRICKS",
     "ChunkAccess.setBlockState()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
@@ -51,7 +48,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hexlands-6.4.0.jar",
     "published": "2026-09-12"
   },
@@ -79,7 +76,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 35,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 32,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

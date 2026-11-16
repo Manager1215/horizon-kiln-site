@@ -9,8 +9,6 @@
   "author": "JustErikSK",
   "description": "Mine everything with one tool!",
   "needs": [
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "BlockTransformer.transformBlock()",
     "Registries.BLOCK_TRANSFORMER",
     "BlockTags.INCORRECT_FOR_COPPER_TOOL",
@@ -27,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "thetruepaxels-fabric-26.3-1.1.2.jar",
     "published": "2026-10-06"
   },
@@ -55,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -18,20 +18,15 @@
     "net.minecraft.world.level.levelgen.synth.NoiseStack",
     "net.minecraft.world.level.levelgen.synth.NoiseStack.Builder",
     "net.minecraft.world.level.levelgen.synth.SimplexNoise",
-    "FluidRenderingRegistry.register()",
     "ResourceManagerHelper.registerBuiltinResourcePack()",
-    "Minecraft.reloadResourcePacks()",
-    "Blocks.NETHERRACK",
-    "Blocks.RED_SAND",
-    "Blocks.SOUL_SAND",
-    "Blocks.SOUL_SOIL"
+    "Minecraft.reloadResourcePacks()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Rougher Environment-fabric-26.3-2.1.0.jar",
     "published": "2026-11-08"
   },
@@ -59,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "no-plans",
     "statusLabel": "No plans yet",

@@ -20,8 +20,6 @@
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.BooleanRuleBuilder",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleEvents",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleEvents.ValueUpdate",
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.model.EntityModel",
     "net.minecraft.client.model.object.equipment.ElytraModel",
     "net.minecraft.client.renderer.BindGroupLayouts",
@@ -36,7 +34,6 @@
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
     "net.minecraft.commands.arguments.ParticleArgument",
     "net.minecraft.data.registries.VanillaRegistries",
-    "net.minecraft.world.entity.Pose",
     "net.minecraft.world.entity.projectile.FireworkRocketEntity",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile",
     "net.minecraft.world.level.levelgen.synth.PerlinNoise",
@@ -51,14 +48,17 @@
     "Axis.ZP",
     "BindGroupLayout.builder()",
     "BlendFunction.TRANSLUCENT",
-    "and 49 more"
+    "ColorTargetState.DEFAULT",
+    "RenderPipeline.builder()",
+    "ObjectCollection.stream()",
+    "and 46 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "elytratrails-1.6.10-26.3.jar",
     "published": "2026-11-12"
   },
@@ -87,7 +87,11 @@
     "fabricloader",
     "java"
   ],
-  "lacks": 115,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; has network channels"
+  },
+  "lacks": 101,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

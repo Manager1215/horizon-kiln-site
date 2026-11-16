@@ -18,15 +18,14 @@
     "net.minecraft.world.entity.projectile.hurtingprojectile.AbstractHurtingProjectile",
     "net.minecraft.world.entity.projectile.hurtingprojectile.DragonFireball",
     "ServerLevel.sendParticles()",
-    "SoundEvents.DRAGON_FIREBALL_EXPLODE",
-    "Blocks.SNOW"
+    "SoundEvents.DRAGON_FIREBALL_EXPLODE"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "enderdragondestroysendisland-2.2.2+mc26.3-fabric.jar",
     "published": "2026-10-04"
   },
@@ -55,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

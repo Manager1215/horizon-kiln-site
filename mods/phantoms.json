@@ -9,7 +9,6 @@
   "author": "TreeOfSelf",
   "description": "Drop-in mod for making phantoms less annoying without completely removing them.",
   "needs": [
-    "net.minecraft.stats.ServerStatsCounter",
     "net.minecraft.world.entity.SpawnGroupData",
     "net.minecraft.world.entity.monster.Phantom",
     "net.minecraft.world.level.NaturalSpawner",
@@ -21,9 +20,6 @@
     "ServerLevel.getGameRules()",
     "ServerLevel.getSeaLevel()",
     "ServerLevel.getSkyDarken()",
-    "ServerPlayer.getStats()",
-    "Stats.CUSTOM",
-    "Stats.TIME_SINCE_REST",
     "DifficultyInstance.getDifficulty()",
     "DifficultyInstance.isHarderThan()",
     "EntityTypes.PHANTOM",
@@ -35,7 +31,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "panda-nerf-phantoms-1.0.2+26.3.jar",
     "published": "2026-10-04"
   },
@@ -63,7 +59,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

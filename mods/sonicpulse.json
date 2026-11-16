@@ -9,26 +9,12 @@
   "author": "watkins.steve",
   "description": "A professional, high-fidelity music player and reactive visualizer for Minecraft. Stream from any source with a premium, customizable HUD that pulses to your beats.",
   "needs": [
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.sounds.MusicManager",
     "net.minecraft.network.chat.FontDescription",
     "net.minecraft.network.chat.FontDescription.Resource",
     "net.minecraft.util.Util.OS",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "KeyMapping.matches()",
-    "Minecraft.execute()",
-    "Minecraft.gameDirectory",
-    "Font.plainSubstrByWidth()",
-    "GuiGraphicsExtractor.setTooltipForNextFrame()",
-    "AbstractSliderButton.setTooltip()",
-    "Button.Builder.tooltip()",
-    "EditBox.setTooltip()",
     "ConfirmLinkScreen.confirmLink()",
-    "SoundManager.stop()",
-    "MutableComponent.setStyle()",
     "Style.withFont()",
-    "MinecraftServer.execute()",
     "Util.getPlatform()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -36,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SonicPulse-1.1.0.jar",
     "published": "2026-10-02"
   },
@@ -66,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

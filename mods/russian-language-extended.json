@@ -10,13 +10,10 @@
   "description": "Русификатор Шахта и Ремесла(Майнкрафта) с сильным внимании на культурную адаптацию достижений и сплешей и дебагг оверлей на кнопку F3.",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.OptionInstance.CaptionBasedToString",
-    "net.minecraft.client.OptionInstance.IntRange",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
     "net.minecraft.client.gui.ActiveTextCollector",
     "net.minecraft.client.gui.ActiveTextCollector.Parameters",
-    "net.minecraft.client.gui.TextAlignment",
     "net.minecraft.client.gui.components.OptionsList",
     "net.minecraft.client.gui.components.SplashRenderer",
     "net.minecraft.client.gui.screens.LevelLoadingScreen",
@@ -24,23 +21,18 @@
     "net.minecraft.client.gui.screens.options.OptionsScreen",
     "net.minecraft.client.gui.screens.options.OptionsSubScreen",
     "net.minecraft.client.resources.SplashManager",
-    "KeyMapping.getTranslatedKeyMessage()",
-    "KeyMapping.isUnbound()",
+    "SharedConstants.getCurrentVersion()",
     "Minecraft.getOverlay()",
     "OptionInstance.noTooltip()",
     "GuiGraphicsExtractor.textRenderer()",
-    "Button.Builder.width()",
-    "TextureManager.registerAndLoad()",
-    "Component.getVisualOrderText()",
-    "MutableComponent.setStyle()",
-    "Util.getMillis()"
+    "TextureManager.registerAndLoad()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Russian_Language_Extended-2.5.0.jar",
     "published": "2026-09-28"
   },
@@ -67,7 +59,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,25 +9,21 @@
   "author": "wildbeast42",
   "description": "Gives the last few raiders of each wave a glowing effect to prevent them from getting lost in corners or caves",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.minecraft.world.entity.raid.Raid",
     "net.minecraft.world.entity.raid.Raider",
     "net.minecraft.world.scores.PlayerTeam",
     "net.minecraft.world.scores.TeamColor",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "Level.getScoreboard()",
     "Scoreboard.addPlayerTeam()",
     "Scoreboard.addPlayerToTeam()",
     "Scoreboard.getPlayerTeam()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "reveal-hidden-raiders-2.0.0+26.3.jar",
     "published": "2026-10-14"
   },
@@ -55,7 +51,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

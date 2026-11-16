@@ -19,8 +19,6 @@
     "net.minecraft.client.gui.components.ScrollableLayout.ReserveStrategy",
     "net.minecraft.client.gui.components.SpriteIconButton",
     "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.WidgetSprites",
     "net.minecraft.client.gui.components.tabs.TabNavigationBar",
     "net.minecraft.client.gui.components.tabs.TabNavigationBar.Builder",
@@ -43,7 +41,6 @@
     "Minecraft.getPlayerSocialManager()",
     "Minecraft.playerSkinRenderCache()",
     "GuiGraphicsExtractor.scissorStack",
-    "Button.setPosition()",
     "PlayerSkinRenderCache.getOrDefault()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -51,7 +48,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "FriendPlus-1.1.1+26.3.jar",
     "published": "2026-09-15"
   },
@@ -78,7 +75,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 34,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 31,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

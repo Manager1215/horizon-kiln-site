@@ -10,8 +10,6 @@
   "description": "Switch between four seasonal themes with festive mobs, scenery, items, and music—all from one menu.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.SharedConstants",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
     "net.minecraft.client.resources.sounds.Sound",
     "net.minecraft.client.sounds.MusicManager",
@@ -28,20 +26,16 @@
     "net.minecraft.server.packs.repository.PackRepository",
     "net.minecraft.server.packs.repository.PackSource",
     "net.minecraft.sounds.Music",
-    "Minecraft.gameDirectory",
+    "SharedConstants.getCurrentVersion()",
     "Minecraft.getMusicManager()",
     "Minecraft.getResourcePackRepository()",
     "Minecraft.getSituationalMusic()",
     "Minecraft.reloadResourcePacks()",
-    "Font.plainSubstrByWidth()",
     "Gui.overlay()",
-    "Button.setTooltip()",
-    "EditBox.setHint()",
     "SimpleSoundInstance.forMusic()",
     "SimpleSoundInstance.getOrResolve()",
     "SoundInstance.getSound()",
     "SoundManager.getSoundEvent()",
-    "SoundManager.stop()",
     "PackResources.getMetadataSection()",
     "PackResources.getNamespaces()",
     "PackResources.getResource()",
@@ -55,7 +49,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "seasonal-studio-fabric-26.3-0.2.3.jar",
     "published": "2026-10-22"
   },
@@ -85,7 +79,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 39,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 33,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

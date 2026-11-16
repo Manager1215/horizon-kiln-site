@@ -10,13 +10,8 @@
   "description": "Give your redstone contraptions a whole new level",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.EntitySelector",
-    "net.minecraft.world.flag.FeatureFlags",
     "net.minecraft.world.inventory.ContainerData",
-    "net.minecraft.world.inventory.ContainerInput",
-    "net.minecraft.world.inventory.MenuType.MenuSupplier",
     "net.minecraft.world.inventory.SimpleContainerData",
     "net.minecraft.world.level.block.AmethystClusterBlock",
     "net.minecraft.world.level.block.BuddingAmethystBlock",
@@ -47,17 +42,22 @@
     "SoundEvents.AMETHYST_BLOCK_RESONATE",
     "SoundEvents.SCULK_CLICKING",
     "SoundEvents.SCULK_CLICKING_STOP",
-    "Stats.PLAY_NOTEBLOCK",
-    "Stats.TUNE_NOTEBLOCK",
     "BlockTags.CHAINS",
-    "and 32 more"
+    "BlockTags.VIBRATION_RESONATORS",
+    "ItemTags.NOTE_BLOCK_TOP_INSTRUMENTS",
+    "Container.startOpen()",
+    "Container.stopOpen()",
+    "Containers.updateNeighboursAfterDestroy()",
+    "Player.getUsedItemHand()",
+    "AbstractContainerMenu.clicked()",
+    "and 13 more"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "redstone-overpower-0.1.1-26.3.jar",
     "published": "2026-09-16"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 72,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 53,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

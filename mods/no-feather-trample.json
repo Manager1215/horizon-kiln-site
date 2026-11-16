@@ -10,8 +10,6 @@
   "description": "🪶 Prevents farmland blocks from being trampled while having Feather/Slow Falling.",
   "needs": [
     "net.minecraft.world.level.block.FarmlandBlock",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "EnchantmentHelper.getEnchantmentLevel()",
     "Enchantments.FEATHER_FALLING"
   ],
@@ -20,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nofeathertrample-26.3.0-1.4.jar",
     "published": "2026-10-02"
   },
@@ -49,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

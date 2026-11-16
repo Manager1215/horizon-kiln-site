@@ -16,7 +16,6 @@
     "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
     "net.minecraft.server.TickTask",
     "net.minecraft.server.network.FilteredText",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.server.players.UserBanList",
     "net.minecraft.world.level.block.BarrelBlock",
     "net.minecraft.world.level.block.ChestBlock",
@@ -30,19 +29,10 @@
     "net.minecraft.world.level.block.entity.SignBlockEntity",
     "net.minecraft.world.level.block.entity.SignText",
     "net.minecraft.world.level.block.state.properties.ChestType",
-    "CommandSourceStack.getEntity()",
-    "CommandSourceStack.getServer()",
-    "CommandSourceStack.getTextName()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
     "ListTag.add()",
-    "MinecraftServer.execute()",
     "MinecraftServer.getTickCount()",
     "MinecraftServer.overworld()",
     "MinecraftServer.schedule()",
-    "ServerPlayer.connection",
-    "ServerPlayer.permissions()",
-    "ServerGamePacketListenerImpl.send()",
     "PlayerList.getBans()",
     "AbstractContainerMenu.sendAllDataToRemote()",
     "BlockState.canBeReplaced()",
@@ -53,7 +43,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "private-chests-1.5.0+26.3.jar",
     "published": "2026-11-01"
   },
@@ -82,7 +72,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 38,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 28,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

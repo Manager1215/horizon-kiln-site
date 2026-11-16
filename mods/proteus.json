@@ -11,10 +11,8 @@
   "needs": [
     "Mixin: 12 points inside the game's methods",
     "com.mojang.blaze3d.vertex.DefaultVertexFormat",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.client.gui.ActiveTextCollector",
     "net.minecraft.client.gui.ActiveTextCollector.Parameters",
-    "net.minecraft.client.gui.TextAlignment",
     "net.minecraft.client.gui.components.ChatComponent.1",
     "net.minecraft.client.gui.components.ChatComponent.ChatGraphicsAccess",
     "net.minecraft.client.gui.components.ChatComponent.DisplayMode",
@@ -33,7 +31,6 @@
     "net.minecraft.client.gui.components.toasts.RecipeToast",
     "net.minecraft.client.gui.components.toasts.TutorialToast",
     "net.minecraft.client.gui.screens.inventory.EffectsInInventory",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTextTooltip",
     "net.minecraft.client.gui.screens.inventory.tooltip.TooltipRenderUtil",
     "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList",
     "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList.OnlineServerEntry",
@@ -42,22 +39,25 @@
     "net.minecraft.client.multiplayer.chat.GuiMessage.Line",
     "net.minecraft.client.renderer.BindGroupLayouts",
     "net.minecraft.client.resources.DefaultPlayerSkin",
-    "net.minecraft.network.chat.ComponentContents",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.world.TickRateManager",
     "org.lwjgl.glfw.GLFW",
     "RenderTarget.width",
-    "InputConstants.getKey()",
     "AdvancementHolder.value()",
     "AdvancementType.getDisplayName()",
-    "and 45 more"
+    "Minecraft.isDemo()",
+    "Options.chatLineSpacing()",
+    "Options.getMenuBackgroundBlurriness()",
+    "Options.textBackgroundOpacity()",
+    "GuiGraphicsExtractor.blurBeforeThisStratum()",
+    "ClientLevel.tickRateManager()",
+    "and 7 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "proteus-fabric-26.3-1.1.0.jar",
     "published": "2026-11-11"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 85,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 47,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,10 +9,6 @@
   "author": "Serilum",
   "description": "🙊 Silence or mute mobs and villager with The Silence Stick.",
   "needs": [
-    "net.minecraft.server.permissions.Permissions",
-    "CommandSourceStack.getEntity()",
-    "DataComponents.CUSTOM_NAME",
-    "DamageSource.getEntity()",
     "Entity.addTag()",
     "Entity.entityTags()",
     "Entity.getCustomName()",
@@ -28,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "silencemobs-26.3.0-4.1.jar",
     "published": "2026-10-02"
   },
@@ -58,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

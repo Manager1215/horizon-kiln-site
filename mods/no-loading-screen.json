@@ -9,17 +9,14 @@
   "author": "GRIZZLY_DEV",
   "description": "Removes the annoying bright red Mojang loading screen completely. No compromises",
   "needs": [
-    "net.minecraft.client.gui.screens.LoadingOverlay",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
-    "NativeImage.setPixel()",
-    "GuiGraphicsExtractor.nextStratum()"
+    "net.minecraft.client.gui.screens.LoadingOverlay"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nomojang-1.3.1+mc26.3.jar",
     "published": "2026-10-21"
   },
@@ -48,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

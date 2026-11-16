@@ -10,15 +10,14 @@
   "description": "This mod uses skin overrides to fetch sk launcher skins of players",
   "needs": [
     "net.minecraft.client.gui.layouts.GridLayout",
-    "org.apache.commons.io.FileUtils",
-    "Button.Builder.width()"
+    "org.apache.commons.io.FileUtils"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "skin_overrides_skskins-fabric-0.2.1+26.3.jar",
     "published": "2026-10-30"
   },
@@ -44,7 +43,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

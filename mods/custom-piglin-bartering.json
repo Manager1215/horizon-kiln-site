@@ -12,15 +12,11 @@
     "Mixin: 4 points inside the game's methods",
     "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents",
     "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents.TagsLoaded",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.world.entity.monster.piglin.Piglin",
     "net.minecraft.world.entity.monster.piglin.PiglinAi",
-    "DefaultedRegistry.get()",
-    "Holder.Reference.is()",
+    "ResourceLoader.registerBuiltinPack()",
     "Registry.getOptional()",
-    "RegistryAccess.lookupOrThrow()",
     "LootTable.EMPTY"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
@@ -28,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "custom_piglin_bartering-1.10.0+MC26.3.x.jar",
     "published": "2026-09-27"
   },
@@ -55,7 +51,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect and @wrap-operation into the game's classes"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,24 +9,14 @@
   "author": "Tncnd",
   "description": "A really detailed Armor HUD that you can infinitely configure and edit. Has a compact config, a customizable and clear HUD and supports fabric and will support quilt.",
   "needs": [
-    "Minecraft.onTextInputFocusChange()",
-    "Minecraft.setScreenAndShow()",
-    "GuiGraphicsExtractor.blitSprite()",
-    "GuiGraphicsExtractor.nextStratum()",
-    "Screen.charTyped()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "CharacterEvent.codepointAsString()",
-    "KeyEvent.hasShiftDown()",
-    "MouseButtonEvent.hasShiftDown()"
+    "Minecraft.onTextInputFocusChange()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Customizable Armor HUD-1.0.1+mc26.3.jar",
     "published": "2026-10-03"
   },
@@ -55,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

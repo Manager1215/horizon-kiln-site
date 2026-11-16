@@ -9,12 +9,6 @@
   "author": "bewf",
   "description": "Hit confirm Range, Knockback, CPS, and Combo HUDs. OneConfig Support.",
   "needs": [
-    "KeyMapping.matches()",
-    "KeyMapping.matchesMouse()",
-    "Minecraft.execute()",
-    "Minecraft.getSingleplayerServer()",
-    "Options.keyAttack",
-    "Options.keyUse",
     "Entity.getBoundingBox()",
     "Entity.getEyePosition()",
     "Entity.getPickRadius()",
@@ -25,12 +19,12 @@
     "AABB.clip()",
     "AABB.inflate()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hitspan-1.4.2+26.3.jar",
     "published": "2026-11-07"
   },
@@ -59,7 +53,11 @@
     "minecraft",
     "oneconfigv1"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

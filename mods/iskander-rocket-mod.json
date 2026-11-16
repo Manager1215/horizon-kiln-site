@@ -21,7 +21,6 @@
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.InterpolationHandler",
     "net.minecraft.world.entity.LinearInterpolationHandler",
     "net.minecraft.world.entity.item.FallingBlockEntity",
@@ -32,9 +31,6 @@
     "net.minecraft.world.level.material.PushReaction",
     "PoseStack.mulPose()",
     "Minecraft.particleEngine",
-    "EditBox.canConsumeInput()",
-    "EditBox.setBordered()",
-    "EditBox.setTextColor()",
     "EditBox.setTextShadow()",
     "AbstractContainerScreen.containerTick()",
     "ClientLevel.getHeight()",
@@ -45,18 +41,22 @@
     "BlockPos.containing()",
     "BlockPos.distToCenterSqr()",
     "BlockPos.MutableBlockPos.set()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
-    "DataComponents.ITEM_MODEL",
     "BuiltInRegistries.TICKET_TYPE",
-    "and 41 more"
+    "StreamCodec.composite()",
+    "SynchedEntityData.defineId()",
+    "SynchedEntityData.get()",
+    "SynchedEntityData.set()",
+    "MinecraftServer.getTickCount()",
+    "ServerChunkCache.getChunkNow()",
+    "ServerChunkCache.randomState()",
+    "and 40 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "iskander-2.0.1+mc26.1-26.3-fabric.jar",
     "published": "2026-11-10"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 105,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 82,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -23,7 +23,6 @@
     "net.fabricmc.fabric.api.tag.convention.v2.ConventionalBiomeTags",
     "net.fabricmc.fabric.impl.client.rendering.EntityRendererRegistryImpl",
     "net.fabricmc.fabric.mixin.client.rendering.ModelLayersAccessor",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.model.object.boat.BoatModel",
     "net.minecraft.client.particle.FallingLeavesParticle",
     "net.minecraft.client.particle.FallingLeavesParticle.CherryProvider",
@@ -35,8 +34,6 @@
     "net.minecraft.client.renderer.fog.FogData",
     "net.minecraft.client.renderer.fog.FogRenderer",
     "net.minecraft.client.renderer.fog.environment.FogEnvironment",
-    "net.minecraft.core.HolderSet.Direct",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.IdMapper",
     "net.minecraft.core.registries.codec.RegistryCodecs",
     "net.minecraft.data.worldgen.BiomeDefaultFeatures",
@@ -50,6 +47,9 @@
     "net.minecraft.data.worldgen.placement.CavePlacements",
     "net.minecraft.data.worldgen.placement.NetherPlacements",
     "net.minecraft.data.worldgen.placement.OrePlacements",
+    "net.minecraft.data.worldgen.placement.PlacementUtils",
+    "net.minecraft.data.worldgen.placement.VegetationPlacements",
+    "net.minecraft.util.random.WeightedList.Builder",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "jirbiomes-1.2.2a-26.3.jar",
     "published": "2026-11-15"
   },
@@ -89,5 +89,9 @@
     "minecraft",
     "terrablender"
   ],
-  "lacks": 541
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 485
 }

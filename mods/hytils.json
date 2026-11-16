@@ -10,7 +10,6 @@
   "description": "Hypixel-focused Quality of Life mod.",
   "needs": [
     "Mixin: 13 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.exceptions.AuthenticationException",
     "com.mojang.authlib.minecraft.SessionService",
     "com.mojang.blaze3d.platform.FramerateLimitTracker",
@@ -39,25 +38,26 @@
     "net.minecraft.client.renderer.extract.LevelExtractor",
     "net.minecraft.client.renderer.rendertype.RenderSetup",
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
-    "net.minecraft.network.chat.ComponentContents",
-    "net.minecraft.network.chat.ComponentSerialization",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.network.chat.contents.PlainTextContents",
     "net.minecraft.network.protocol.game.ClientboundCommandsPacket.NodeResolver",
     "net.minecraft.world.entity.animal.feline.CatSoundVariant",
     "net.minecraft.world.entity.animal.feline.CatSoundVariant.CatSoundSet",
     "net.minecraft.world.entity.animal.feline.CatSoundVariants",
     "net.minecraft.world.entity.animal.feline.CatSoundVariants.SoundSet",
     "net.minecraft.world.entity.animal.wolf.WolfSoundVariant",
-    "and 67 more"
+    "net.minecraft.world.entity.animal.wolf.WolfSoundVariant.WolfSoundSet",
+    "net.minecraft.world.entity.animal.wolf.WolfSoundVariants",
+    "net.minecraft.world.entity.animal.wolf.WolfSoundVariants.SoundSet",
+    "net.minecraft.world.entity.decoration.ArmorStand",
+    "net.minecraft.world.entity.npc.villager.Villager",
+    "net.minecraft.world.level.block.entity.ChestBlockEntity",
+    "and 61 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hytils-reborn-2.1.0+26.3.jar",
     "published": "2026-09-15"
   },
@@ -87,7 +87,11 @@
     "minecraft",
     "oneconfigv1"
   ],
-  "lacks": 127,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @wrap-operation into the game's classes"
+  },
+  "lacks": 101,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

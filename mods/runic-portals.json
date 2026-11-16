@@ -11,20 +11,13 @@
   "needs": [
     "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
     "net.minecraft.nbt.NbtAccounter",
-    "net.minecraft.nbt.NbtIo",
-    "net.minecraft.world.level.storage.LevelResource",
     "PoseStack.Pose.pose()",
     "VertexConsumer.addVertex()",
     "VertexConsumer.setLight()",
     "VertexConsumer.setOverlay()",
     "Axis.ZP",
-    "Minecraft.execute()",
-    "Minecraft.setScreenAndShow()",
-    "EditBox.setHint()",
-    "Screen.mouseScrolled()",
     "ListTag.add()",
-    "MinecraftServer.execute()",
-    "MinecraftServer.getWorldPath()",
+    "NbtIo.readCompressed()",
     "ServerLevel.getEntitiesOfClass()",
     "ServerLevel.sendParticles()",
     "ServerPlayer.closeContainer()",
@@ -32,7 +25,6 @@
     "TicketType.PORTAL",
     "SoundEvents.PLAYER_TELEPORT",
     "DamageSources.magic()",
-    "Entity.isRemoved()",
     "LevelAccessor.isClientSide()",
     "BaseEntityBlock.destroy()",
     "SoundType.LODESTONE",
@@ -48,7 +40,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "runic-portals-1.0.0.jar",
     "published": "2026-09-18"
   },
@@ -77,5 +69,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 33
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 25
 }

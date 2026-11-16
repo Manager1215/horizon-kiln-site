@@ -9,25 +9,15 @@
   "author": "xiao364",
   "description": "Displays a title when entering structures",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.world.level.storage.WorldData",
     "Long2ObjectMap.Entry.getValue()",
     "LongSet.isEmpty()",
-    "Minecraft.execute()",
-    "Minecraft.gameMode",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
     "ClientLevel.getHeight()",
-    "ServerData.ip",
     "LocalPlayer.getBlockX()",
     "LocalPlayer.getBlockZ()",
+    "IntegratedServer.getWorldData()",
     "BlockPos.distSqr()",
-    "RegistryAccess.lookupOrThrow()",
     "Registries.STRUCTURE",
-    "MutableComponent.withStyle()",
-    "Style.withStrikethrough()",
-    "Style.withUnderlined()",
     "MinecraftServer.getTickCount()",
     "ServerChunkCache.getChunkNow()",
     "ServerLevel.clip()",
@@ -52,7 +42,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "first-steps-26x-2.30.jar",
     "published": "2026-10-02"
   },
@@ -81,7 +71,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 37,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 27,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

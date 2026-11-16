@@ -10,22 +10,12 @@
   "description": "Shows where the items in the inventory came from.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.impl.transfer.item.ItemVariantImpl",
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
     "net.minecraft.network.protocol.game.ServerboundSetCreativeModeSlotPacket",
     "net.minecraft.world.inventory.MerchantResultSlot",
     "net.minecraft.world.item.trading.Merchant",
     "net.minecraft.world.level.StructureManager",
-    "FabricLoader.getEntrypointContainers()",
-    "Options.advancedItemTooltips",
-    "Font.split()",
-    "GuiGraphicsExtractor.text()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "BlockPos.containing()",
-    "RegistryAccess.lookupOrThrow()",
     "DataComponentPatch.forget()",
     "BuiltInRegistries.LOOT_FUNCTION_TYPE",
     "Registries.STRUCTURE",
@@ -36,16 +26,14 @@
     "Player.getGameProfile()",
     "ItemStack.hashItemAndComponents()",
     "LootContext.getOptional()",
-    "LootTable.Builder.apply()",
-    "LootContextParams.LAST_DAMAGE_PLAYER",
-    "LootContextParams.THIS_ENTITY"
+    "LootTable.Builder.apply()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "chestdna-1.03q-mc26.3-fabric-quilt.jar",
     "published": "2026-10-02"
   },
@@ -74,7 +62,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 29,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

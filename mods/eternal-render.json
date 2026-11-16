@@ -9,7 +9,6 @@
   "author": "_sh4dowK1ngxX",
   "description": "A Minecraft rendering optimization mod with adaptive Render Distance and entity render distance adjustments.",
   "needs": [
-    "Minecraft.gameDirectory",
     "Options.entityDistanceScaling()",
     "Options.framerateLimit()"
   ],
@@ -18,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Eternal-Render-2.0.0-MC-26.3.jar",
     "published": "2026-10-06"
   },
@@ -46,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

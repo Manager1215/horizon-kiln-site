@@ -16,7 +16,6 @@
     "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking",
     "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginQueryResponseHandler",
     "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginSynchronizer",
-    "net.minecraft.network.chat.ComponentSerialization",
     "net.minecraft.server.network.ConfigurationTask",
     "net.minecraft.server.network.ConfigurationTask.Type",
     "net.minecraft.server.network.ServerLoginPacketListenerImpl",
@@ -24,8 +23,7 @@
     "PacketSender.sendPacket()",
     "ServerConfigurationNetworking.registerGlobalReceiver()",
     "ServerConfigurationNetworking.send()",
-    "MinecraftServer.execute()",
-    "ServerPlayer.connection",
+    "ComponentSerialization.STREAM_CODEC",
     "ServerConfigurationPacketListenerImpl.addTask()",
     "ServerConfigurationPacketListenerImpl.completeTask()"
   ],
@@ -34,7 +32,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ModernNetworking-fabric-2.0.1+26.1.2.jar",
     "published": "2026-08-22"
   },
@@ -52,7 +50,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

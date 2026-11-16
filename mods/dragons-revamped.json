@@ -10,8 +10,6 @@
   "description": "Highly difficult Ender Dragon fight with custom terrain, attacks & abilities.",
   "needs": [
     "Mixin: 19 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.minecraft.commands.synchronization.ArgumentTypeInfos",
     "net.minecraft.commands.synchronization.ArgumentUtils",
     "net.minecraft.core.particles.PowerParticleOption",
@@ -50,14 +48,16 @@
     "net.minecraft.world.entity.projectile.ProjectileUtil",
     "net.minecraft.world.entity.projectile.arrow.Arrow",
     "net.minecraft.world.entity.projectile.hurtingprojectile.DragonFireball",
-    "and 75 more"
+    "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrownEnderpearl",
+    "net.minecraft.world.item.equipment.trim.ArmorTrim",
+    "and 73 more"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dragons-revamped-2.0.2+26.3.jar",
     "published": "2026-10-27"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 182,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 141,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

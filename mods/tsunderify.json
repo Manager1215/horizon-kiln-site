@@ -10,17 +10,14 @@
   "description": "A mod that makes you sound like a tsundere!",
   "needs": [
     "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents",
-    "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.ModifyChat",
-    "KeyMapping.matches()",
-    "ChatScreen.children()",
-    "ClientPacketListener.sendChat()"
+    "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.ModifyChat"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tsunderify-1.5.0+26.3.jar",
     "published": "2026-10-30"
   },
@@ -49,7 +46,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -25,9 +25,7 @@
     "com.mojang.renderpearl.backend.vulkan.init.VulkanFeature",
     "com.mojang.renderpearl.frontend.FrontendGpuDevice",
     "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
     "net.minecraft.client.gui.components.debug.DebugScreenEntry",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryStatus",
     "net.minecraft.client.gui.components.debug.DebugScreenProfile",
     "net.minecraft.client.renderer.BindGroupLayouts",
     "net.minecraft.util.profiling.Profiler",
@@ -46,19 +44,18 @@
     "CommandEncoder.createRenderPass()",
     "ColorTargetState.DEFAULT",
     "RenderPipeline.builder()",
-    "Minecraft.isWindowActive()",
     "Gui.overlay()",
     "RenderPipelines.TRACY_BLIT",
     "WindowRenderState.guiScale",
     "WindowRenderState.height",
-    "and 1 more"
+    "WindowRenderState.width"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "renderscale-2.0.0-beta.1-fabric+26.3.jar",
     "published": "2026-10-16"
   },
@@ -91,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 41,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 38,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,7 +10,6 @@
   "description": "An offline skin patch for Minecraft that allows offline players to load custom skins and capes while maintaining compatibility with the official skin system for premium players./一个用于 Minecraft 的离线皮肤补丁，允许离线玩家加载自定义皮肤和披风，同时保持对正版玩家官方皮肤系统的兼容。",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.minecraft.MinecraftProfileTexture",
     "com.mojang.authlib.minecraft.MinecraftProfileTexture.Type",
     "net.minecraft.client.gui.components.PlayerFaceExtractor",
@@ -40,7 +39,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "wskinloader-1.6.2.jar",
     "published": "2026-09-19"
   },
@@ -70,7 +69,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

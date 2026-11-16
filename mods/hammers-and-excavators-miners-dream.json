@@ -11,7 +11,6 @@
   "needs": [
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.server.level.ServerPlayerGameMode",
-    "Minecraft.hitResult",
     "LocalPlayer.isCrouching()",
     "Direction.orderedByNearest()",
     "ServerPlayer.gameMode",
@@ -21,10 +20,7 @@
     "Player.getViewVector()",
     "Item.mineBlock()",
     "ItemStack.isCorrectToolForDrops()",
-    "SoundType.getBreakSound()",
-    "BlockState.getSoundType()",
     "AABB.clip()",
-    "HitResult.getType()",
     "VoxelShape.isEmpty()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -32,7 +28,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hammersandexcavators-1.0.1-26.3.jar",
     "published": "2026-09-20"
   },
@@ -61,7 +57,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

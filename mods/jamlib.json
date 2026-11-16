@@ -11,22 +11,16 @@
   "needs": [
     "Mixin: 7 points inside the game's methods",
     "net.minecraft.client.gui.components.ImageWidget.Sprite",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.network.protocol.game.ServerboundUseItemOnPacket",
     "net.minecraft.server.level.ServerPlayerGameMode",
-    "InputConstants.Type.getOrCreate()",
-    "KeyMapping.click()",
-    "KeyMapping.matches()",
-    "KeyMapping.matchesMouse()",
-    "EditBox.canConsumeInput()",
-    "Screen.getFocused()"
+    "KeyMapping.click()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "jamlib-fabric-2.3.3-26.3.x.jar",
     "published": "2026-11-15"
   },
@@ -54,7 +48,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

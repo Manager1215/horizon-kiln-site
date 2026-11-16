@@ -10,18 +10,14 @@
   "description": "Be expressive as much as you want in front 3rd person without accidental interactions!",
   "needs": [
     "net.fabricmc.fabric.api.event.client.player.ClientPreAttackCallback",
-    "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-    "net.minecraft.client.CameraType",
-    "Options.getCameraType()",
-    "LocalPlayer.swing()",
-    "SwingAnimation.DEFAULT"
+    "net.fabricmc.fabric.api.event.player.UseEntityCallback"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nsi-26.3-1.0.1.2.jar",
     "published": "2026-11-14"
   },
@@ -50,7 +46,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

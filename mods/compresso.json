@@ -11,12 +11,7 @@
   "needs": [
     "net.minecraft.TracingExecutor",
     "net.minecraft.client.Screenshot",
-    "net.minecraft.network.chat.ClickEvent.OpenFile",
-    "NativeImage.getHeight()",
     "NativeImage.getPixels()",
-    "NativeImage.getWidth()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
     "Util.getFilenameFormattedDateTime()",
     "Util.ioPool()"
   ],
@@ -25,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "compresso-1.1.0+26.3-fabric.jar",
     "published": "2026-10-24"
   },
@@ -55,7 +50,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

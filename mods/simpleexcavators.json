@@ -18,28 +18,16 @@
     "BlockTags.INCORRECT_FOR_WOODEN_TOOL",
     "BlockTags.MINEABLE_WITH_SHOVEL",
     "Player.hasCorrectToolForDrops()",
-    "Player.swing()",
     "Item.inventoryTick()",
     "Item.mineBlock()",
-    "Item.Properties.enchantable()",
-    "Item.Properties.repairable()",
-    "ItemStack.isCorrectToolForDrops()",
-    "SwingAnimation.DEFAULT",
-    "Level.destroyBlock()",
-    "Block.dropResources()",
-    "Blocks.COARSE_DIRT",
-    "Blocks.DIRT_PATH",
-    "Blocks.MYCELIUM",
-    "Blocks.PODZOL",
-    "Blocks.ROOTED_DIRT",
-    "HitResult.getType()"
+    "ItemStack.isCorrectToolForDrops()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "simpleexcavators-fabric-26.3-1.0.5.jar",
     "published": "2026-09-28"
   },
@@ -67,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

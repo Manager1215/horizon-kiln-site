@@ -11,20 +11,16 @@
   "needs": [
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "KeyMapping.setDown()",
     "Minecraft.crosshairPickEntity",
-    "Minecraft.gameMode",
-    "Options.keyAttack",
-    "Options.keyUse",
     "ClientLevel.getEntities()",
+    "MultiPlayerGameMode.attack()",
     "LocalPlayer.getAttackStrengthScale()",
     "LocalPlayer.getBoundingBox()",
     "LocalPlayer.getEyePosition()",
     "LocalPlayer.hasLineOfSight()",
     "LocalPlayer.setXRot()",
     "LocalPlayer.setYRot()",
-    "LocalPlayer.swing()",
     "LocalPlayer.xRotO",
     "LocalPlayer.yRotO",
     "DefaultedRegistry.iterator()",
@@ -34,8 +30,6 @@
     "Entity.isAlive()",
     "Player.getEyePosition()",
     "Player.getEyeY()",
-    "Items.SHIELD",
-    "SwingAnimation.DEFAULT",
     "AABB.clip()",
     "AABB.getCenter()",
     "AABB.inflate()"
@@ -45,7 +39,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "‏‏midnight-assist-26.3-Fabric+Quilt-1.3.2 .jar",
     "published": "2026-09-25"
   },
@@ -78,7 +72,11 @@
     "minecraft",
     "modmenu"
   ],
-  "lacks": 30,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 24,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

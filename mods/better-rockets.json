@@ -12,18 +12,12 @@
     "net.fabricmc.fabric.api.item.v1.ItemComponentTooltipProviderRegistry",
     "net.minecraft.world.entity.projectile.FireworkRocketEntity",
     "net.minecraft.world.inventory.ClickAction",
-    "net.minecraft.world.item.component.Fireworks",
-    "DataComponents.FIREWORKS",
-    "DataComponents.LORE",
     "SoundEvents.BUNDLE_INSERT",
     "SoundEvents.BUNDLE_REMOVE_ONE",
     "ARGB.colorFromFloat()",
     "Entity.playSound()",
-    "Player.isFallFlying()",
     "Player.startUsingItem()",
-    "Slot.allowModification()",
     "Item.inventoryTick()",
-    "Items.FIREWORK_ROCKET",
     "Level.addFreshEntity()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
@@ -31,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "better-rockets-1.0.6+26.3.jar",
     "published": "2026-10-17"
   },
@@ -60,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

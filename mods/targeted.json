@@ -11,13 +11,11 @@
   "needs": [
     "Mixin: 2 points inside the game's methods",
     "net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.advancements.predicates.StatePropertiesPredicate",
     "net.minecraft.util.profiling.ProfilerFiller",
     "net.minecraft.world.item.HoneycombItem",
     "net.minecraft.world.phys.EntityHitResult",
     "BiMap.containsValue()",
-    "Minecraft.hitResult",
     "RenderPipelines.CROSSHAIR",
     "Registry.iterator()",
     "FileToIdConverter.json()",
@@ -28,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "targeted-0.3-snapshot-2.jar",
     "published": "2026-11-15"
   },
@@ -56,5 +54,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 10
 }

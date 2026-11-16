@@ -13,9 +13,7 @@
     "net.minecraft.client.gui.font.FontManager.CachedFontProvider",
     "net.minecraft.client.gui.screens.inventory.BeaconScreen",
     "net.minecraft.client.gui.screens.inventory.BeaconScreen.BeaconPowerButton",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.world.TickRateManager",
-    "net.minecraft.world.item.alchemy.PotionContents",
     "net.minecraft.world.item.component.Consumable",
     "net.minecraft.world.item.component.DeathProtection",
     "net.minecraft.world.item.component.OminousBottleAmplifier",
@@ -27,18 +25,15 @@
     "ClientLevel.tickRateManager()",
     "DataComponents.CONSUMABLE",
     "DataComponents.DEATH_PROTECTION",
-    "DataComponents.OMINOUS_BOTTLE_AMPLIFIER",
-    "DataComponents.POTION_CONTENTS",
-    "DataComponents.SUSPICIOUS_STEW_EFFECTS",
     "Registries.MOB_EFFECT",
-    "Component.getContents()"
+    "PotionContents.addPotionTooltip()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "effectinsights-v26.3.1-mc26.3.x+fabric.jar",
     "published": "2026-09-26"
   },
@@ -69,7 +64,11 @@
     "puzzleslib",
     "tooltipinsights"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

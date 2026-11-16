@@ -11,14 +11,12 @@
   "needs": [
     "an access widener",
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
     "net.fabricmc.fabric.api.entity.FakePlayer",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.item.v1.BlockTransformerHelper",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
     "net.minecraft.client.model.EntityModel",
@@ -39,7 +37,6 @@
     "net.minecraft.core.registries.codec.RegistryCodecs",
     "net.minecraft.server.TickTask",
     "net.minecraft.world.damagesource.DamageTypes",
-    "net.minecraft.world.entity.EquipmentSlot.Type",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
     "net.minecraft.world.entity.ai.goal.FloatGoal",
@@ -51,6 +48,9 @@
     "net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal",
     "net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal",
     "net.minecraft.world.entity.ai.sensing.Sensing",
+    "net.minecraft.world.entity.animal.golem.IronGolem",
+    "net.minecraft.world.entity.monster.Monster",
+    "net.minecraft.world.entity.monster.piglin.PiglinAi",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "pinginchan-2.0.0-fabric-26.3.jar",
     "published": "2026-10-26"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 186,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 151,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

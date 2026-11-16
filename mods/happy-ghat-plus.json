@@ -9,14 +9,10 @@
   "author": "Melworks",
   "description": "Happy Ghast+ improves tamed Happy Ghasts on the server with a more compact size, fire resistance, and more reliable riding/menu behavior. Java players can join without installing any client-side mods, since all features run server-side.",
   "needs": [
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.entity.animal.happyghast.HappyGhast",
     "net.minecraft.world.scores.ReadOnlyScoreInfo",
     "net.minecraft.world.scores.ScoreAccess",
-    "net.minecraft.world.scores.ScoreHolder",
-    "CommandSourceStack.getServer()",
     "MinecraftServer.getScoreboard()",
-    "Attributes.FLYING_SPEED",
     "Scoreboard.getObjective()",
     "Scoreboard.getOrCreatePlayerScore()",
     "Scoreboard.getPlayerScoreInfo()"
@@ -26,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "happy-ghast-plus-26.3.jar",
     "published": "2026-10-23"
   },
@@ -42,7 +38,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

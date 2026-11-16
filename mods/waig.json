@@ -10,25 +10,20 @@
   "description": "Fabric mod for Minecraft, adds a minimal RPG-inspired compass HUD to the game.",
   "needs": [
     "net.minecraft.client.gui.components.BossHealthOverlay",
-    "net.minecraft.world.entity.EntityEquipment",
-    "org.apache.logging.log4j.Level",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "ObjectCollection.stream()",
     "Hud.getBossOverlay()",
     "Hud.getFont()",
     "LocalPlayer.yHeadRot",
     "NonNullList.stream()",
     "Inventory.EQUIPMENT_SLOT_MAPPING",
-    "Item.getId()",
-    "Items.COMPASS"
+    "Item.getId()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "waig-1.1.13-mc26.3.jar",
     "published": "2026-09-21"
   },
@@ -55,7 +50,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

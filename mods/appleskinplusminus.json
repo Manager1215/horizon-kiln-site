@@ -9,24 +9,15 @@
   "author": "jetdafih",
   "description": "Always on saturation and exhaustion HUD visualization, with no language changes and a minimal layout. Not compatible with AppleSkin, remove AppleSkin first.",
   "needs": [
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
     "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
     "net.minecraft.client.gui.components.debug.DebugScreenEntry",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Object2IntMap.Entry.getKey()",
-    "FabricLoader.getEntrypointContainers()",
-    "Minecraft.execute()",
-    "GuiGraphicsExtractor.blit()",
-    "Hud.getGuiTicks()",
-    "LocalPlayer.isFallFlying()",
+    "DebugScreenEntries.register()",
     "LocalPlayer.isPassenger()",
     "ServerLevel.getGameRules()",
     "FoodData.setSaturation()",
     "ItemStack.getEnchantments()",
     "Enchantments.LUNGE",
-    "ItemEnchantments.entrySet()",
     "GameRules.NATURAL_HEALTH_REGENERATION",
     "GameRules.get()"
   ],
@@ -35,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "appleskin+--1.3-26.3-v1.3-26.3.jar",
     "published": "2026-09-25"
   },
@@ -62,7 +53,11 @@
     "fabric-api",
     "fabricloader"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

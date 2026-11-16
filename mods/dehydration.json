@@ -14,17 +14,13 @@
     "net.fabricmc.fabric.api.client.rendering.v1.ClientTooltipComponentCallback",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
     "net.fabricmc.fabric.api.loot.v3.FabricLootTableBuilder",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorage.CombinedItemApiProvider",
     "net.fabricmc.fabric.api.transfer.v1.storage.base.ExtractionOnlyStorage",
     "net.fabricmc.fabric.api.transfer.v1.storage.base.ResourceAmount",
     "net.fabricmc.fabric.api.transfer.v1.storage.base.SingleVariantStorage",
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
     "net.minecraft.advancements.triggers.ConsumeItemTrigger",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
     "net.minecraft.client.renderer.BiomeColors",
     "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperties",
     "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperty",
@@ -35,9 +31,6 @@
     "net.minecraft.world.item.ItemUseAnimation",
     "net.minecraft.world.item.PotionItem",
     "net.minecraft.world.item.ThrowablePotionItem",
-    "net.minecraft.world.item.alchemy.Potion",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "net.minecraft.world.item.alchemy.Potions",
     "net.minecraft.world.item.component.Consumable",
     "net.minecraft.world.item.component.Consumables",
     "net.minecraft.world.item.consume_effects.ConsumeEffect",
@@ -46,18 +39,25 @@
     "net.minecraft.world.level.material.PushReaction",
     "net.minecraft.world.level.material.WaterFluid",
     "net.minecraft.world.phys.shapes.BooleanOp",
-    "org.apache.logging.log4j.Level",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "FluidRenderingRegistry.register()",
-    "and 59 more"
+    "FluidRenderingRegistry.setBlockTransparency()",
+    "FluidStorage.combinedItemApiProvider()",
+    "BlockTintSources.water()",
+    "AbstractClientPlayer.<init>()",
+    "BlockEntityRenderer.extractRenderState()",
+    "ItemStackRenderState.clear()",
+    "ItemStackRenderState.isEmpty()",
+    "CauldronInteractions.POWDER_SNOW",
+    "CauldronInteractions.emptyBucket()",
+    "DataComponents.CONSUMABLE",
+    "DataComponents.FOOD",
+    "and 49 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dehydration-fabric-1.5.0+26.3.jar",
     "published": "2026-11-14"
   },
@@ -88,5 +88,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 137
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 103
 }

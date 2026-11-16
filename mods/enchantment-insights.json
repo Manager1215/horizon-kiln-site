@@ -12,28 +12,17 @@
     "an access widener",
     "net.minecraft.client.gui.font.FontManager.CachedFontProvider",
     "net.minecraft.client.gui.screens.inventory.EnchantmentScreen",
-    "net.minecraft.network.chat.contents.TranslatableContents",
-    "net.minecraft.tags.EnchantmentTags",
     "Object2IntMap.Entry.getKey()",
-    "Holder.is()",
-    "HolderLookup.RegistryLookup.listElements()",
-    "DataComponents.STORED_ENCHANTMENTS",
-    "CommonComponents.SPACE",
-    "Component.getContents()",
-    "MutableComponent.setStyle()",
-    "Style.applyTo()",
     "TextColor.GOLD",
     "TextColor.GREEN",
-    "TextColor.RED",
-    "Enchantment.getMaxLevel()",
-    "ItemEnchantments.entrySet()"
+    "TextColor.RED"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "enchantmentinsights-v26.3.0-mc26.3.x+fabric.jar",
     "published": "2026-09-26"
   },
@@ -64,7 +53,11 @@
     "puzzleslib",
     "tooltipinsights"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

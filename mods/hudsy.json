@@ -9,14 +9,9 @@
   "author": "Blexyel",
   "description": "Adds a HUD. That's it really",
   "needs": [
-    "Minecraft.getCurrentServer()",
     "Minecraft.isLocalServer()",
-    "Minecraft.setScreenAndShow()",
-    "GuiGraphicsExtractor.<init>()",
     "Hud.getDebugOverlay()",
-    "ServerData.ip",
     "LocalPlayer.chunkPosition()",
-    "Holder.getRegisteredName()",
     "Entity.getOnPos()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -24,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hudsy-3.3.0.jar",
     "published": "2026-09-18"
   },
@@ -55,7 +50,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

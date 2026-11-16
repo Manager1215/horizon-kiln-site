@@ -10,7 +10,6 @@
   "description": "Stay. Even when you walk away.",
   "needs": [
     "net.minecraft.world.entity.animal.happyghast.HappyGhast",
-    "MinecraftServer.execute()",
     "Player.getRootVehicle()",
     "Level.players()",
     "AABB.contains()",
@@ -26,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "immobilizehappyghast-1.0.0.jar",
     "published": "2026-09-26"
   },
@@ -55,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

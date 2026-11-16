@@ -19,10 +19,6 @@
     "io.netty.channel.EventLoop",
     "io.netty.channel.SimpleChannelInboundHandler",
     "io.netty.handler.timeout.ReadTimeoutHandler",
-    "net.minecraft.CrashReport",
-    "net.minecraft.CrashReportCategory",
-    "net.minecraft.ReportedException",
-    "net.minecraft.SharedConstants",
     "net.minecraft.TracingExecutor",
     "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList",
     "net.minecraft.client.multiplayer.ClientChunkCache",
@@ -34,14 +30,11 @@
     "net.minecraft.client.multiplayer.resolver.ServerAddressResolver",
     "net.minecraft.client.particle.Particle",
     "net.minecraft.client.renderer.chunk.SectionRenderDispatcher",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.commands.arguments.DimensionArgument",
     "net.minecraft.commands.arguments.coordinates.ColumnPosArgument",
     "net.minecraft.core.IdMap",
     "net.minecraft.core.QuartPos",
     "net.minecraft.nbt.NbtAccounter",
     "net.minecraft.nbt.NbtFormatException",
-    "net.minecraft.nbt.NbtIo",
     "net.minecraft.nbt.NbtIo.StringFallbackDataOutput",
     "net.minecraft.nbt.ReportedNbtException",
     "net.minecraft.network.PacketProcessor",
@@ -51,6 +44,13 @@
     "net.minecraft.server.ServerTickRateManager",
     "net.minecraft.server.TickTask",
     "net.minecraft.server.dedicated.DedicatedServer",
+    "net.minecraft.server.dedicated.DedicatedServerProperties",
+    "net.minecraft.server.dedicated.ServerWatchdog",
+    "net.minecraft.server.dedicated.Settings",
+    "net.minecraft.server.level.ChunkHolder",
+    "net.minecraft.server.level.ChunkHolder.LevelChangeListener",
+    "net.minecraft.server.level.ChunkHolder.PlayerProvider",
+    "net.minecraft.server.level.ChunkLevel",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Moonrise-Fabric-1.2.2+35bacce.jar",
     "published": "2026-11-01"
   },
@@ -86,7 +86,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 505,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
+  },
+  "lacks": 478,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

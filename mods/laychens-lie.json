@@ -10,16 +10,10 @@
   "description": "Laychen's Lie that lets you catch and spawn any creatures!",
   "needs": [
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-    "net.minecraft.world.entity.EntitySpawnRequest",
-    "DataComponents.CUSTOM_NAME",
-    "ProblemReporter.DISCARDING",
     "Entity.setPos()",
     "EntityType.create()",
     "LivingEntity.discard()",
     "LivingEntity.isAlive()",
-    "LivingEntity.saveWithoutId()",
-    "Player.drop()",
-    "CustomData.copyTag()",
     "Level.addFreshEntity()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -27,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "laychenslie-fabric-26.3-2.0.0.jar",
     "published": "2026-09-20"
   },
@@ -56,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

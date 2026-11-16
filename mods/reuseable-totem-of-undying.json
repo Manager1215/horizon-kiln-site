@@ -10,16 +10,14 @@
   "description": "This mod enables the ability to reuse the Totem of Undying by repairing it after it has been used.",
   "needs": [
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
-    "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath",
-    "MinecraftServer.execute()",
-    "Items.TOTEM_OF_UNDYING"
+    "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Reusable_Totem_of_Undying_fabric_26.2-3-1.5.jar",
     "published": "2026-09-17"
   },
@@ -48,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,19 +11,12 @@
   "needs": [
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Leave",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SyncDataPackContents",
     "net.minecraft.server.dedicated.DedicatedServer",
-    "FabricCreativeModeTabOutput.acceptAll()",
     "FabricCreativeModeTabOutput.insertAfter()",
     "FabricCreativeModeTabOutput.insertBefore()",
     "ServerPlayerEvents.JOIN",
     "ServerPlayerEvents.LEAVE",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "ServerLifecycleEvents.SYNC_DATA_PACK_CONTENTS"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -31,7 +24,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "monkeylib538-fabric-26.2-5.4.0+fabric+26.2.jar",
     "published": "2026-11-05"
   },
@@ -61,7 +54,11 @@
     "minecraft",
     "placeholder-api"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

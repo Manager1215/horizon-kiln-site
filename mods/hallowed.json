@@ -17,8 +17,6 @@
     "net.fabricmc.fabric.api.entity.FakePlayer",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
     "net.fabricmc.fabric.api.object.builder.v1.world.poi.PoiHelper",
     "net.minecraft.client.model.EntityModel",
@@ -50,6 +48,8 @@
     "net.minecraft.server.ServerAdvancementManager",
     "net.minecraft.world.attribute.AmbientAdditionsSettings",
     "net.minecraft.world.attribute.AmbientParticle",
+    "net.minecraft.world.attribute.AmbientSounds",
+    "net.minecraft.world.attribute.EnvironmentAttributeLayer",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hallowed-fabric-26.3-1.0.0.jar",
     "published": "2026-10-30"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 261,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 215,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

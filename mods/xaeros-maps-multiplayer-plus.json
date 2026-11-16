@@ -25,22 +25,11 @@
     "io.netty.channel.socket.nio.NioSocketChannel",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.minecraft.SharedConstants",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.world.level.storage.LevelResource",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "Minecraft.execute()",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
-    "ClientPacketListener.getConnection()",
-    "ServerData.ip",
+    "SharedConstants.getCurrentVersion()",
     "Registries.BIOME",
     "Connection.disconnect()",
     "FriendlyByteBuf.readResourceKey()",
     "FriendlyByteBuf.writeResourceKey()",
-    "MinecraftServer.getWorldPath()",
-    "ServerPlayer.connection",
     "ServerGamePacketListenerImpl.disconnect()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -48,7 +37,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "xmmp-1.2.4+26.2-fabric.jar",
     "published": "2026-10-27"
   },
@@ -80,7 +69,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 33,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

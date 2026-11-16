@@ -9,25 +9,15 @@
   "author": "HiBloxSterYt",
   "description": "Random Item Effects shakes up vanilla gameplay by assigning every item in the game a random status effect that applies while it's held or worn, anything from Speed and Regeneration to Poison and Wither. Effects are seeded, so you can reroll the whole pool",
   "needs": [
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-    "net.minecraft.server.permissions.Permissions",
-    "Minecraft.execute()",
-    "Minecraft.setScreenAndShow()",
-    "CommandSourceStack.getServer()",
     "DefaultedRegistry.iterator()",
-    "NonNullList.iterator()",
-    "DataComponents.BUNDLE_CONTENTS",
-    "MinecraftServer.execute()",
-    "ServerPlayer.permissions()"
+    "NonNullList.iterator()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "randomeffects-1.1.0.jar",
     "published": "2026-09-20"
   },
@@ -56,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

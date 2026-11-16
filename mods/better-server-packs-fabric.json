@@ -10,30 +10,18 @@
   "description": "Easily manage server-side resourcepacks without having to restart the server!",
   "needs": [
     "net.fabricmc.api.DedicatedServerModInitializer",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.minecraft.commands.arguments.ComponentArgument",
     "net.minecraft.nbt.SnbtGrammar",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.ComponentSerialization",
     "net.minecraft.util.parsing.packrat.commands.CommandArgumentParser",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "CommandSourceStack.getServer()",
     "CommandSourceStack.registryAccess()",
-    "Commands.LEVEL_ADMINS",
-    "Commands.hasPermission()",
-    "Component.translatableWithFallback()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "ServerPlayer.connection",
-    "ServerPlayer.registryAccess()",
-    "ServerGamePacketListenerImpl.send()"
+    "ServerPlayer.registryAccess()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "BetterServerPacksFabric-1.2.2+26.3.jar",
     "published": "2026-09-21"
   },
@@ -52,7 +40,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

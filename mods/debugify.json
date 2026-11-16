@@ -12,17 +12,12 @@
     "Mixin: 76 points inside the game's methods",
     "com.mojang.authlib.minecraft.TelemetryEvent",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
-    "net.minecraft.CrashReport",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.OptionInstance.CaptionBasedToString",
     "net.minecraft.client.OptionInstance.Enum",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
     "net.minecraft.client.Options.FieldAccess",
     "net.minecraft.client.gui.components.CommandSuggestions",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.contextualbar.ExperienceBar",
     "net.minecraft.client.gui.layouts.LinearLayout",
     "net.minecraft.client.gui.screens.DirectJoinServerScreen",
@@ -39,7 +34,6 @@
     "net.minecraft.client.gui.screens.worldselection.WorldSelectionList.Entry",
     "net.minecraft.client.gui.screens.worldselection.WorldSelectionList.EntryType",
     "net.minecraft.client.gui.screens.worldselection.WorldSelectionList.WorldListEntry",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.entity.ArmorStandRenderer",
     "net.minecraft.client.renderer.entity.FishingHookRenderer",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
@@ -50,14 +44,20 @@
     "net.minecraft.client.renderer.extract.LevelExtractor",
     "net.minecraft.client.renderer.fog.environment.AtmosphericFogEnvironment",
     "net.minecraft.client.resources.sounds.AbstractTickableSoundInstance",
-    "and 64 more"
+    "net.minecraft.client.resources.sounds.GuardianAttackSoundInstance",
+    "net.minecraft.client.telemetry.TelemetryEventInstance",
+    "net.minecraft.network.protocol.game.ServerboundSetCommandMinecartPacket",
+    "net.minecraft.network.syncher.EntityDataSerializers",
+    "net.minecraft.server.commands.LocateCommand",
+    "net.minecraft.server.dedicated.Settings",
+    "and 53 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "debugify-26.3.0.0.jar",
     "published": "2026-09-24"
   },
@@ -86,7 +86,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 147,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes"
+  },
+  "lacks": 125,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

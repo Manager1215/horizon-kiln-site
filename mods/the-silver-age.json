@@ -13,7 +13,6 @@
     "Mixin: 2 points inside the game's methods",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.StartDataPackReload",
     "net.fabricmc.fabric.api.loot.v3.LootTableEvents.Loaded",
     "net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition",
@@ -37,7 +36,6 @@
     "net.minecraft.util.valueproviders.ConstantInt",
     "net.minecraft.world.damagesource.DamageTypes",
     "net.minecraft.world.entity.EntitySelector",
-    "net.minecraft.world.entity.EquipmentSlot.Type",
     "net.minecraft.world.entity.ai.goal.Goal",
     "net.minecraft.world.entity.ai.goal.Goal.Flag",
     "net.minecraft.world.entity.ai.goal.GoalSelector",
@@ -51,6 +49,8 @@
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow.Pickup",
     "net.minecraft.world.item.ArrowItem",
+    "net.minecraft.world.item.equipment.trim.TrimMaterial",
+    "net.minecraft.world.item.equipment.trim.TrimMaterials",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "thesilverage-fabric-26.3-1.4.0.jar",
     "published": "2026-11-04"
   },
@@ -90,7 +90,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 233,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; generates in the world"
+  },
+  "lacks": 163,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

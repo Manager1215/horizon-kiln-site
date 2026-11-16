@@ -21,10 +21,6 @@
     "com.mojang.renderpearl.backend.opengl.GlConst",
     "com.mojang.renderpearl.backend.opengl.GlStateManager",
     "com.mojang.renderpearl.backend.opengl.GlTexture",
-    "net.minecraft.client.gui.components.Button.Plain",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.WidgetTooltipHolder",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.LevelTargetBundle",
@@ -34,9 +30,6 @@
     "net.minecraft.client.renderer.entity.state.ItemFrameRenderState",
     "net.minecraft.client.renderer.extract.LevelExtractor",
     "net.minecraft.client.resources.language.ClientLanguage",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.ComponentContents",
-    "net.minecraft.network.chat.contents.PlainTextContents",
     "org.apache.commons.io.FileUtils",
     "org.lwjgl.BufferUtils",
     "org.lwjgl.opengl.GL11",
@@ -50,14 +43,21 @@
     "org.lwjgl.opengl.GL41",
     "org.lwjgl.system.MemoryStack",
     "org.lwjgl.system.MemoryUtil",
-    "and 27 more"
+    "RenderTarget.width",
+    "RenderSystem.assertOnRenderThread()",
+    "SamplerCache.getClampToEdge()",
+    "GpuBuffer.slice()",
+    "GpuBuffer.slice()",
+    "Minecraft.levelExtractor",
+    "Options.getEffectiveRenderDistance()",
+    "and 14 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "chunksfadein-fabric-3.0.29-26.3.jar",
     "published": "2026-09-18"
   },
@@ -87,7 +87,11 @@
     "minecraft",
     "sodium"
   ],
-  "lacks": 67,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 54,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

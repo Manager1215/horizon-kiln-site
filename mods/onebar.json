@@ -21,9 +21,7 @@
     "net.minecraft.client.gui.contextualbar.LocatorBar",
     "net.minecraft.client.gui.screens.inventory.EnchantmentScreen",
     "net.minecraft.client.multiplayer.ClientLevel.ClientLevelData",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.waypoints.ClientWaypointManager",
-    "net.minecraft.world.entity.EquipmentSlot.Type",
     "net.minecraft.world.entity.PlayerRideableJumping",
     "net.minecraft.world.entity.animal.camel.Camel",
     "net.minecraft.world.entity.animal.equine.AbstractHorse",
@@ -36,7 +34,6 @@
     "net.minecraft.world.level.block.BaseFireBlock",
     "net.minecraft.world.level.block.SoulFireBlock",
     "FabricLoader.getObjectShare()",
-    "Minecraft.gameMode",
     "Options.attackIndicator()",
     "Options.forceUnicodeFont()",
     "Options.mainHand()",
@@ -44,21 +41,24 @@
     "DebugScreenOverlay.showNetworkCharts()",
     "ClientLevel.getLevelData()",
     "ClientPacketListener.getWaypointManager()",
+    "MultiPlayerGameMode.canHurtPlayer()",
     "LocalPlayer.getControlledVehicle()",
     "LocalPlayer.getJumpRidingScale()",
     "LocalPlayer.jumpableVehicle()",
-    "RegistryAccess.lookupOrThrow()",
     "DataComponents.BLOCKS_ATTACKS",
     "DataComponents.FOOD",
     "Entity.isAlwaysTicking()",
-    "and 43 more"
+    "Player.displayFireAnimation()",
+    "Player.getAbsorptionAmount()",
+    "Player.getAirSupply()",
+    "and 19 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "onebar-5.4.0.jar",
     "published": "2026-09-24"
   },
@@ -87,7 +87,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 83,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 59,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

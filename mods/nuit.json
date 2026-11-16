@@ -24,7 +24,6 @@
     "com.mojang.renderpearl.api.vertex.VertexFormatElement",
     "com.mojang.renderpearl.backend.opengl.GlConst",
     "net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.client.ClientClockManager",
     "net.minecraft.client.ClientClockManager.ClientClockInstance",
     "net.minecraft.client.gui.components.BossHealthOverlay",
@@ -40,8 +39,6 @@
     "net.minecraft.world.level.MoonPhase",
     "net.minecraft.world.level.dimension.DimensionType.Skybox",
     "net.minecraft.world.level.material.FogType",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "org.lwjgl.system.MemoryUtil",
     "RenderTarget.hasDepth()",
     "RenderSystem.getCompiledPipeline()",
@@ -50,14 +47,17 @@
     "RenderSystem.getScissorStateForRenderTypeDraws()",
     "RenderSystem.getSequentialBuffer()",
     "RenderSystem.setShaderFog()",
-    "and 53 more"
+    "PoseStack.mulPose()",
+    "VertexConsumer.setColor()",
+    "Axis.ZP",
+    "and 47 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nuit-fabric-1.0.0-beta.6+mc26.3.jar",
     "published": "2026-09-16"
   },
@@ -84,7 +84,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 94,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
+  },
+  "lacks": 87,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

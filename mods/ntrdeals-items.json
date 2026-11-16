@@ -45,12 +45,12 @@
     "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
     "net.minecraft.commands.arguments.StringRepresentableArgument",
     "net.minecraft.commands.synchronization.SingletonArgumentInfo",
-    "net.minecraft.core.HolderSet.Direct",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.component.PatchedDataComponentMap",
     "net.minecraft.recipebook.PlaceRecipeHelper",
     "net.minecraft.references.BlockItemId",
     "net.minecraft.references.BlockItemIds",
+    "net.minecraft.world.damagesource.CombatRules",
+    "net.minecraft.world.entity.Attackable",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ntrdeals_items-3.3.1.jar",
     "published": "2026-10-04"
   },
@@ -90,7 +90,11 @@
     "minecraft",
     "realapi"
   ],
-  "lacks": 176,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 143,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

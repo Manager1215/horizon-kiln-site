@@ -41,15 +41,15 @@
     "com.mojang.realmsclient.dto.WorldTemplate.WorldTemplateType",
     "com.mojang.realmsclient.dto.WorldTemplatePaginatedList",
     "com.mojang.realmsclient.exception.RealmsServiceException",
-    "net.minecraft.SharedConstants",
-    "net.minecraft.world.item.component.ResolvableProfile"
+    "net.minecraft.world.item.component.ResolvableProfile",
+    "SharedConstants.getCurrentVersion()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "eg_realms_tester-1.1.0+26.3-fabric.jar",
     "published": "2026-10-31"
   },
@@ -75,6 +75,10 @@
     "fabricloader",
     "minecraft"
   ],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 33,
   "development": {
     "status": "no-plans",

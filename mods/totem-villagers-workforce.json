@@ -11,7 +11,6 @@
   "needs": [
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
     "net.minecraft.client.gui.screens.inventory.MerchantScreen",
     "net.minecraft.client.model.EntityModel",
     "net.minecraft.client.model.geom.PartPose",
@@ -19,7 +18,6 @@
     "net.minecraft.client.model.geom.builders.MeshDefinition",
     "net.minecraft.client.model.geom.builders.PartDefinition",
     "net.minecraft.client.model.npc.VillagerModel",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.VillagerRenderer",
     "net.minecraft.client.renderer.entity.layers.RenderLayer",
@@ -27,14 +25,8 @@
     "net.minecraft.commands.arguments.UuidArgument",
     "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
     "net.minecraft.core.FrontAndTop",
-    "net.minecraft.core.HolderSet.ListBacked",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.UUIDUtil",
-    "net.minecraft.server.permissions.Permissions",
-    "net.minecraft.tags.EnchantmentTags",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.tags.StructureTags",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.LivingEntity.SwingDescription",
     "net.minecraft.world.entity.ai.Brain",
     "net.minecraft.world.entity.ai.memory.MemoryModuleType",
@@ -49,6 +41,14 @@
     "net.minecraft.world.entity.npc.villager.VillagerProfession",
     "net.minecraft.world.entity.npc.villager.VillagerType",
     "net.minecraft.world.food.FoodProperties",
+    "net.minecraft.world.inventory.ContainerLevelAccess",
+    "net.minecraft.world.inventory.DataSlot",
+    "net.minecraft.world.inventory.MerchantMenu",
+    "net.minecraft.world.inventory.ResultContainer",
+    "net.minecraft.world.item.BoneMealItem",
+    "net.minecraft.world.item.CrossbowItem",
+    "net.minecraft.world.item.ItemUseAnimation",
+    "net.minecraft.world.item.MapItem",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
@@ -56,7 +56,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "totem-villagers-0.1.39.jar",
     "published": "2026-09-17"
   },
@@ -87,7 +87,11 @@
     "minecraft",
     "totem-core"
   ],
-  "lacks": 418,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 194,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

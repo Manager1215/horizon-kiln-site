@@ -9,15 +9,13 @@
   "author": "Cassian",
   "description": "Let Ender Chests have a Christmas texture too - a port of Ender Christmas to modern versions.",
   "needs": [
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.client.renderer.MultiblockChestResources",
     "net.minecraft.client.renderer.SpriteMapper",
     "net.minecraft.client.renderer.blockentity.ChestRenderer",
     "net.minecraft.client.renderer.blockentity.state.ChestRenderState",
     "net.minecraft.client.renderer.blockentity.state.ChestRenderState.ChestMaterialType",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
+    "ResourceLoader.registerBuiltinPack()",
     "Sheets.CHEST_CHRISTMAS",
     "Sheets.CHEST_MAPPER"
   ],
@@ -26,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ender-christmas-plus-1.2.2+26.1-fabric.jar",
     "published": "2026-03-24"
   },
@@ -54,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

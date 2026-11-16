@@ -42,7 +42,6 @@
     "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
     "net.minecraft.network.protocol.game.ServerboundSetCreativeModeSlotPacket",
     "net.minecraft.server.ServerScoreboard",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
     "net.minecraft.world.entity.ai.goal.FloatGoal",
@@ -50,14 +49,15 @@
     "net.minecraft.world.entity.ai.goal.LookAtPlayerGoal",
     "net.minecraft.world.entity.ai.goal.RandomLookAroundGoal",
     "net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal",
-    "and 71 more"
+    "net.minecraft.world.entity.player.Input",
+    "and 66 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "r1-halloween-tort-1.0.0.jar",
     "published": "2026-10-06"
   },
@@ -87,7 +87,11 @@
     "minecraft",
     "player_animation_library"
   ],
-  "lacks": 131,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 109,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,7 +10,6 @@
   "description": "Adds the ability to sit, lie down, and more!",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.player.AvatarRenderer",
@@ -19,16 +18,12 @@
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.world.entity.Entity.MoveFunction",
-    "net.minecraft.world.entity.Pose",
     "net.minecraft.world.level.block.state.properties.Half",
     "net.minecraft.world.level.block.state.properties.SlabType",
     "Axis.ZP",
-    "Options.getCameraType()",
-    "Options.setCameraType()",
     "LocalPlayer.getPose()",
     "LocalPlayer.getVehicle()",
     "LocalPlayer.setPose()",
-    "CommandSourceStack.getPlayerOrException()",
     "SynchedEntityData.defineId()",
     "SynchedEntityData.get()",
     "SynchedEntityData.set()",
@@ -36,7 +31,6 @@
     "ServerPlayer.getPose()",
     "ServerPlayer.getVehicle()",
     "ServerPlayer.isPassenger()",
-    "ServerPlayer.sendSystemMessage()",
     "ServerPlayer.setDeltaMovement()",
     "ServerPlayer.setPose()",
     "ServerPlayer.startRiding()",
@@ -49,15 +43,21 @@
     "EntityReference.getEntity()",
     "EntityReference.getUUID()",
     "EntityReference.of()",
-    "LivingEntity.getDimensions()",
-    "and 10 more"
+    "LivingEntity.isAutoSpinAttack()",
+    "Player.getPose()",
+    "Player.getVehicle()",
+    "Player.refreshDimensions()",
+    "Player.setPose()",
+    "Level.addFreshEntity()",
+    "SlabBlock.TYPE",
+    "and 3 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sitandlay-1.6-fabric+26.3.jar",
     "published": "2026-09-17"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 50,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 43,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

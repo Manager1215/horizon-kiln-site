@@ -10,9 +10,6 @@
   "description": "Make foxes your friends: tame them, dress them in armor and let them guard you",
   "needs": [
     "Mixin: 4 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
     "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking",
     "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking.LoginQueryRequestHandler",
     "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback",
@@ -21,7 +18,6 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterEntityChange",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
     "net.fabricmc.fabric.api.networking.v1.LoginPacketSender",
     "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents",
@@ -29,7 +25,6 @@
     "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking",
     "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginQueryResponseHandler",
     "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginSynchronizer",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.advancements.predicates.MinMaxBounds.Ints",
     "net.minecraft.advancements.predicates.entity.EntityPredicate",
@@ -43,21 +38,26 @@
     "net.minecraft.client.renderer.entity.state.FoxRenderState",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.server.network.ServerLoginPacketListenerImpl",
-    "net.minecraft.stats.ServerStatsCounter",
     "net.minecraft.tags.DamageTypeTags",
     "net.minecraft.world.entity.ai.control.LookControl",
     "net.minecraft.world.entity.ai.control.MoveControl",
     "net.minecraft.world.entity.ai.goal.Goal",
     "net.minecraft.world.entity.ai.goal.Goal.Flag",
     "net.minecraft.world.entity.ai.goal.GoalSelector",
-    "and 80 more"
+    "net.minecraft.world.entity.ai.goal.MoveTowardsRestrictionGoal",
+    "net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal",
+    "net.minecraft.world.entity.ai.goal.target.TargetGoal",
+    "net.minecraft.world.entity.ai.navigation.PathNavigation",
+    "net.minecraft.world.entity.ai.targeting.TargetingConditions",
+    "net.minecraft.world.entity.ai.targeting.TargetingConditions.Selector",
+    "and 76 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "foxyfriends-fabric-26.3-0.3.1.jar",
     "published": "2026-11-14"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 151,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 122,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

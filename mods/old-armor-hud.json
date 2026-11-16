@@ -10,11 +10,6 @@
   "description": "Gives the old armor hud position",
   "needs": [
     "GuiGraphicsExtractor.blit()",
-    "TextureAtlasSprite.atlasLocation()",
-    "TextureAtlasSprite.getU0()",
-    "TextureAtlasSprite.getU1()",
-    "TextureAtlasSprite.getV0()",
-    "TextureAtlasSprite.getV1()",
     "Player.getAbsorptionAmount()",
     "Player.getAirSupply()",
     "Player.getMaxAirSupply()",
@@ -25,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "old-armor-hud-1.0.4.jar",
     "published": "2026-09-25"
   },
@@ -43,7 +38,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

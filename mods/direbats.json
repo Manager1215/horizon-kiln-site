@@ -30,7 +30,6 @@
     "net.minecraft.core.particles.SpellParticleOption",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.EntitySelector",
     "net.minecraft.world.entity.SpawnPlacementTypes",
     "net.minecraft.world.entity.SpawnPlacements",
@@ -50,14 +49,15 @@
     "net.minecraft.world.entity.ai.sensing.Sensing",
     "net.minecraft.world.entity.ai.util.AirAndWaterRandomPos",
     "net.minecraft.world.entity.ai.util.HoverRandomPos",
-    "and 77 more"
+    "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
+    "and 74 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "direbats-4.0.0+26.3.jar",
     "published": "2026-10-01"
   },
@@ -86,7 +86,11 @@
     "fabric-language-kotlin",
     "minecraft"
   ],
-  "lacks": 136,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 128,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

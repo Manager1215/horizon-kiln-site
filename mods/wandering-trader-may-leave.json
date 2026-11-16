@@ -9,18 +9,12 @@
   "author": "Serilum",
   "description": "💨 Adds a button to the Wandering Trader's screen which makes it disappear without violence.",
   "needs": [
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.WidgetSprites",
     "net.minecraft.client.gui.screens.inventory.MerchantScreen",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.entity.animal.equine.TraderLlama",
     "net.minecraft.world.entity.npc.wanderingtrader.WanderingTrader",
     "net.minecraft.world.entity.npc.wanderingtrader.WanderingTraderSpawner",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "net.minecraft.world.item.alchemy.Potions",
     "net.minecraft.world.item.trading.Merchant",
-    "GuiGraphicsExtractor.blitSprite()",
-    "CommandSourceStack.isPlayer()",
     "MinecraftServer.getDataStorage()",
     "SoundEvents.WANDERING_TRADER_DISAPPEARED",
     "Entity.discard()",
@@ -30,7 +24,6 @@
     "LivingEntity.isAlive()",
     "LivingEntity.playSound()",
     "LivingEntity.startUsingItem()",
-    "Items.POTION",
     "Level.getEntities()",
     "Level.getEntitiesOfClass()",
     "Level.getEntity()"
@@ -40,7 +33,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "wanderingtradermayleave-26.3.0-2.0.jar",
     "published": "2026-10-21"
   },
@@ -71,7 +64,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

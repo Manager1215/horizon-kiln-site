@@ -10,34 +10,22 @@
   "description": "Disables the mace when you hit a player. The cooldown doesen't start if you hit a entity.",
   "needs": [
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.world.inventory.AnvilMenu",
     "net.minecraft.world.inventory.DataSlot",
     "net.minecraft.world.inventory.EnchantmentMenu",
     "net.minecraft.world.item.ItemCooldowns",
     "net.minecraft.world.phys.EntityHitResult",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
     "ServerPlayer.damageSources()",
     "ServerPlayer.fallDistance",
     "ServerPlayer.getCooldowns()",
-    "ServerPlayer.permissions()",
-    "ServerPlayer.sendSystemMessage()",
     "DamageSources.genericKill()",
-    "ItemStack.getEnchantments()",
-    "Items.ENDER_PEARL",
-    "Items.MACE",
-    "ItemEnchantments.isEmpty()"
+    "ItemStack.getEnchantments()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mace-cooldown-fabric-26.3.jar",
     "published": "2026-10-30"
   },
@@ -64,7 +52,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

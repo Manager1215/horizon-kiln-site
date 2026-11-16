@@ -21,14 +21,10 @@
     "net.minecraft.world.entity.projectile.throwableitemprojectile.AbstractThrownPotion",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile",
     "net.minecraft.world.entity.vehicle.minecart.MinecartTNT",
-    "net.minecraft.world.item.alchemy.PotionContents",
     "ImmutableList.getFirst()",
     "ImmutableList.stream()",
     "ServerPlayerEvents.JOIN",
-    "Holder.is()",
-    "DataComponents.POTION_CONTENTS",
     "BuiltInRegistries.TRIGGER_TYPES",
-    "Registries.POTION",
     "SynchedEntityData.set()",
     "ServerLevel.getGameRules()",
     "Entity.<init>()",
@@ -39,24 +35,18 @@
     "EntityTypes.TNT_MINECART",
     "Inventory.getSlot()",
     "ItemStack.count()",
-    "Items.GLASS_BOTTLE",
-    "Items.LINGERING_POTION",
-    "Items.POTION",
-    "Items.SPLASH_POTION",
-    "Items.TNT",
-    "Items.TNT_MINECART",
     "Level.getEntitiesOfClass()",
     "GameRules.ENTITY_DROPS",
     "GameRules.get()",
     "AABB.inflate()",
-    "and 1 more"
+    "AABB.inflate()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tnt_defuse-1.2.2+fabric+26.3.jar",
     "published": "2026-09-15"
   },
@@ -85,7 +75,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 41,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 31,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

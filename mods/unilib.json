@@ -11,31 +11,20 @@
   "needs": [
     "an access widener",
     "net.fabricmc.loader.impl.FabricLoaderImpl",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.ClientBrandRetriever",
     "net.minecraft.client.gui.screens.LoadingOverlay",
     "net.minecraft.client.gui.screens.options.controls.ControlsScreen",
-    "net.minecraft.server.packs.resources.ReloadableResourceManager",
     "org.lwjgl.sdl.SDLKeyboard",
-    "InputConstants.getKey()",
-    "InputConstants.isKeyDown()",
-    "KeyMapping.getDefaultKey()",
-    "KeyMapping.key",
-    "KeyMapping.resetMapping()",
-    "KeyMapping.setKey()",
-    "Options.keyMappings",
+    "SharedConstants.getCurrentVersion()",
     "Options.languageCode",
-    "Gui.overlay()",
-    "Screen.getFocused()",
-    "Identifier.toLanguageKey()",
-    "Entity.getDisplayName()"
+    "Gui.overlay()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "UniLib-1.2.1+26.3-fabric.jar",
     "published": "2026-09-20"
   },
@@ -62,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,10 +9,10 @@
   "author": "NemoNotFound",
   "description": "Upgrade almost all of your tools, weapons, and armor with templates!",
   "needs": [
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.world.item.SmithingTemplateItem",
     "net.minecraft.world.level.storage.loot.entries.EmptyLootItem",
+    "ResourceLoader.registerBuiltinPack()",
     "BlockItem.registerBlocks()",
     "Item.BY_BLOCK",
     "LootTable.Builder.pool()"
@@ -22,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nemos-upgrade-templates-26.3-1.2.jar",
     "published": "2026-09-16"
   },
@@ -52,6 +52,10 @@
     "java",
     "minecraft"
   ],
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
   "lacks": 7,
   "development": {
     "status": "planned",

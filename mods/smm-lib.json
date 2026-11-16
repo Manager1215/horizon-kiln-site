@@ -13,9 +13,7 @@
     "net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder",
     "net.minecraft.client.gui.ActiveTextCollector",
     "net.minecraft.client.gui.ActiveTextCollector.Parameters",
-    "net.minecraft.client.gui.TextAlignment",
     "net.minecraft.client.gui.components.SplashRenderer",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.AlertScreen",
     "net.minecraft.client.gui.screens.ConnectScreen",
     "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
@@ -26,16 +24,11 @@
     "net.minecraft.client.multiplayer.resolver.ServerAddress",
     "Minecraft.createWorldOpenFlows()",
     "Minecraft.disconnectWithProgressScreen()",
-    "Minecraft.execute()",
     "Minecraft.getLevelSource()",
-    "Minecraft.setScreenAndShow()",
     "Options.skipMultiplayerWarning",
-    "Button.Builder.tooltip()",
     "ClientLevel.disconnect()",
-    "ServerData.ip",
     "ServerData.setResourcePackStatus()",
     "Registry.iterator()",
-    "MutableComponent.setStyle()",
     "LevelStorageSource.levelExists()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -43,7 +36,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SimpleMainMenu-Lib-3.1.1.jar",
     "published": "2026-11-06"
   },
@@ -74,7 +67,11 @@
     "minecraft",
     "modmenu"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect and @wrap-operation into the game's classes"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

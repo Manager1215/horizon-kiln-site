@@ -10,12 +10,9 @@
   "description": "Free custom capes and cosmetics for Minecraft",
   "needs": [
     "Mixin: 9 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.blaze3d.Blaze3D",
     "net.minecraft.client.gui.Font.PreparedTextBuilder",
     "net.minecraft.client.gui.components.PlayerTabOverlay",
-    "net.minecraft.client.gui.screens.inventory.AnvilScreen",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.gui.screens.inventory.ItemCombinerScreen",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
     "net.minecraft.client.gui.screens.options.SkinCustomizationScreen",
@@ -45,19 +42,22 @@
     "net.minecraft.util.profiling.ProfilerFiller",
     "net.minecraft.world.entity.decoration.ArmorStand",
     "net.minecraft.world.entity.projectile.ProjectileUtil",
-    "net.minecraft.world.inventory.AnvilMenu",
     "net.minecraft.world.phys.EntityHitResult",
-    "InputConstants.getKey()",
     "KeyMapping.click()",
-    "KeyMapping.isUnbound()",
-    "and 20 more"
+    "KeyMapping.set()",
+    "Gui.chatListener()",
+    "GuiGraphicsExtractor.blit()",
+    "ToastManager.getNotificationDisplayTimeMultiplier()",
+    "ClientLevel.getPlayerByUUID()",
+    "AbstractClientPlayer.<init>()",
+    "and 8 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "cosmetica-fabric-2.0.2-26.3.jar",
     "published": "2026-11-02"
   },
@@ -86,7 +86,11 @@
     "kupe",
     "minecraft"
   ],
-  "lacks": 60,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own"
+  },
+  "lacks": 48,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

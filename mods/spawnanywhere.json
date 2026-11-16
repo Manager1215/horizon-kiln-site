@@ -10,15 +10,10 @@
   "description": "Set your world spawn/respawn location to anywhere.",
   "needs": [
     "Mixin: 4 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.minecraft.nbt.NbtAccounter",
-    "net.minecraft.nbt.NbtIo",
     "net.minecraft.server.network.config.PrepareSpawnTask",
-    "net.minecraft.world.level.storage.LevelResource",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "MinecraftServer.getWorldPath()",
+    "NbtIo.readCompressed()",
+    "NbtIo.writeCompressed()",
     "Player.<init>()",
     "Level.RESOURCE_KEY_CODEC"
   ],
@@ -27,7 +22,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "spawnanywhere-1.2.0+26.3.jar",
     "published": "2026-09-28"
   },
@@ -53,7 +48,11 @@
     "fabricloader",
     "java"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

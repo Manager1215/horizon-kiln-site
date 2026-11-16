@@ -9,10 +9,9 @@
   "author": "AsOne2020",
   "description": "Automatically retries taming horse-like animals until successful, making taming in Minecraft easier.",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.world.entity.animal.equine.AbstractHorse",
     "net.minecraft.world.phys.EntityHitResult",
-    "Minecraft.gameMode",
+    "MultiPlayerGameMode.interact()",
     "LocalPlayer.getVehicle()",
     "Player.getVehicle()"
   ],
@@ -21,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "autotame-v1.0.2-mc26.3-fabric.jar",
     "published": "2026-09-21"
   },
@@ -47,7 +46,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

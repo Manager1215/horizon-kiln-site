@@ -11,9 +11,6 @@
   "needs": [
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
-    "net.minecraft.server.permissions.Permissions",
-    "CommandSourceStack.getTextName()",
-    "CommandSourceStack.isPlayer()",
     "ServerLevel.getEntities()",
     "ItemEntity.getAge()",
     "ItemEntity.getItem()",
@@ -26,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "multiplieddrops-1.1.4.jar",
     "published": "2026-10-10"
   },
@@ -54,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

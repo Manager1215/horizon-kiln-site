@@ -29,7 +29,6 @@
     "net.minecraft.client.resources.model.EquipmentClientInfo",
     "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
     "net.minecraft.client.resources.palette.PalettedTextureManager.Handle",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.world.entity.animal.sheep.Sheep",
@@ -37,13 +36,7 @@
     "net.minecraft.world.inventory.LoomMenu",
     "net.minecraft.world.inventory.LoomMenu.5",
     "net.minecraft.world.inventory.LoomMenu.6",
-    "net.minecraft.world.item.BannerItem",
     "net.minecraft.world.item.SmithingTemplateItem",
-    "net.minecraft.world.item.alchemy.Potion",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "net.minecraft.world.item.crafting.ShieldDecorationRecipe",
-    "net.minecraft.world.item.crafting.SmithingRecipe",
-    "net.minecraft.world.item.crafting.SmithingRecipeInput",
     "net.minecraft.world.level.block.AbstractBannerBlock",
     "net.minecraft.world.level.block.AirBlock",
     "net.minecraft.world.level.block.DecoratedPotBlock",
@@ -51,14 +44,21 @@
     "net.minecraft.world.level.block.MultifaceSpreader",
     "net.minecraft.world.level.block.TorchBlock",
     "net.minecraft.world.level.block.WallTorchBlock",
-    "and 56 more"
+    "net.minecraft.world.level.block.entity.BannerBlockEntity",
+    "net.minecraft.world.level.block.entity.BannerPatternLayers",
+    "net.minecraft.world.level.block.entity.BlockEntityTypes",
+    "net.minecraft.world.level.block.entity.DecoratedPotBlockEntity",
+    "net.minecraft.world.level.block.entity.PotDecorations",
+    "PoseStack.last()",
+    "PoseStack.Pose.set()",
+    "and 28 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "MoogsGlowUp-fabric-26.3-2.3.0.jar",
     "published": "2026-10-15"
   },
@@ -88,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 96,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 68,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

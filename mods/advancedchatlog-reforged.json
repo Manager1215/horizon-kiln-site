@@ -9,15 +9,8 @@
   "author": "flyingfinger.te",
   "description": "View and search your full, persistent chat history for AdvancedChat. Refurbished Minecraft 26.x version of DarkKronicle AdvancedChatLog.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.client.gui.ActiveTextCollector",
     "net.minecraft.client.gui.ActiveTextCollector.ClickableStyleFinder",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-    "net.minecraft.network.chat.ComponentSerialization",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "org.apache.logging.log4j.core.Logger",
     "org.apache.logging.log4j.core.LoggerContext",
     "org.apache.logging.log4j.core.appender.AbstractAppender",
@@ -29,24 +22,15 @@
     "org.apache.logging.log4j.core.appender.rolling.OnStartupTriggeringPolicy",
     "org.apache.logging.log4j.core.appender.rolling.TimeBasedTriggeringPolicy",
     "org.apache.logging.log4j.core.appender.rolling.TimeBasedTriggeringPolicy.Builder",
-    "Minecraft.setScreenAndShow()",
     "PlayerInfo.getProfile()",
-    "Component.getSiblings()",
-    "MutableComponent.getSiblings()",
-    "MutableComponent.withStyle()",
-    "Style.getClickEvent()",
-    "Style.getHoverEvent()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "Style.withInsertion()",
-    "Util.getMillis()"
+    "Style.withInsertion()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "AdvancedChatLog-1.3.1-26.3.jar",
     "published": "2026-10-09"
   },
@@ -76,7 +60,11 @@
     "malilib",
     "minecraft"
   ],
-  "lacks": 31,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,11 +10,11 @@
   "description": "Disables the rendering of filled maps, which can be useful for Twitch streamers who want to stream on servers with ToS violating map arts.",
   "needs": [],
   "roadmap": "",
-  "evidence": "Everything its code calls is covered by Kiln 0.4.1 (2 classes, 0 members). Not run yet.",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (2 classes, 0 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "maprenderingdisabler-1.0.0+26.1.jar",
     "published": "2026-03-25"
   },
@@ -41,6 +41,10 @@
     "java",
     "minecraft"
   ],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 0,
   "development": {
     "status": "not-checked",

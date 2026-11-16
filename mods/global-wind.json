@@ -13,16 +13,12 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
     "net.minecraft.client.particle.Particle",
     "net.minecraft.world.level.LightLayer",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "Minecraft.execute()",
     "ClientLevel.getOverworldClockTime()",
     "ClientLevel.playPlayerSound()",
     "LocalPlayer.isInLava()",
     "LocalPlayer.needsSync",
     "LocalPlayer.onClimbable()",
     "LocalPlayer.push()",
-    "MinecraftServer.execute()",
     "ServerLevel.getSeed()",
     "Entity.needsSync",
     "Entity.push()",
@@ -35,7 +31,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "globalwind-1.2.4+26.1-.jar",
     "published": "2026-10-19"
   },
@@ -64,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

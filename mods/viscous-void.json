@@ -29,7 +29,6 @@
     "net.fabricmc.fabric.api.object.builder.v1.world.poi.PoiHelper",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.ItemUsedOnLocationTrigger",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.gui.screens.LevelLoadingScreen",
     "net.minecraft.client.model.EntityModel",
     "net.minecraft.client.model.geom.PartPose",
@@ -50,6 +49,7 @@
     "net.minecraft.client.renderer.blockentity.state.CampfireRenderState",
     "net.minecraft.client.renderer.blockentity.state.ConduitRenderState",
     "net.minecraft.client.renderer.blockentity.state.SkullBlockRenderState",
+    "net.minecraft.client.renderer.entity.MobRenderer",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "viscous-void-1.0.0.jar",
     "published": "2026-10-04"
   },
@@ -86,5 +86,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 546
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 448
 }

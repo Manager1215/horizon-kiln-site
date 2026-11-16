@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 5 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "io.netty.channel.ChannelHandler",
     "io.netty.channel.embedded.EmbeddedChannel",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
@@ -40,7 +39,6 @@
     "net.minecraft.client.model.geom.builders.PartDefinition",
     "net.minecraft.client.model.monster.zombie.ZombieVillagerModel",
     "net.minecraft.client.model.player.PlayerModel",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.particle.EmissiveRisingParticle",
     "net.minecraft.client.particle.EmissiveRisingParticle.Provider",
     "net.minecraft.client.renderer.BiomeColors",
@@ -51,6 +49,8 @@
     "net.minecraft.client.renderer.entity.EvokerRenderer",
     "net.minecraft.client.renderer.entity.HumanoidMobRenderer",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+    "net.minecraft.client.renderer.entity.MobRenderer",
+    "net.minecraft.client.renderer.entity.NoopRenderer",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "seasonal-fabric-1.5.1+26.3.jar",
     "published": "2026-10-31"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 631,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 514,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

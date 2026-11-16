@@ -9,8 +9,6 @@
   "author": "ArdilaVene",
   "description": "This is a simple Fabric serverside chat based biblebot MOD.\n\nExcellent for protection while playing  a terror modpack.",
   "needs": [
-    "net.minecraft.server.permissions.Permissions",
-    "CommandSourceStack.getServer()",
     "MinecraftServer.isDedicatedServer()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -18,7 +16,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "biblebot-1.0.1.jar",
     "published": "2026-11-12"
   },
@@ -45,7 +43,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

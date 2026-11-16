@@ -10,7 +10,6 @@
   "description": "Health indicator on player screen",
   "needs": [
     "net.fabricmc.fabric.api.tag.convention.v2.ConventionalEntityTypeTags",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
     "net.minecraft.client.multiplayer.ClientLevel.ClientLevelData",
     "net.minecraft.client.particle.Particle",
     "net.minecraft.client.particle.ParticleEngine",
@@ -29,13 +28,10 @@
     "PoseStack.last()",
     "PoseStack.Pose.pose()",
     "Camera.rotation()",
-    "Minecraft.debugEntries",
     "Minecraft.particleEngine",
     "Font.wordWrapHeight()",
-    "GuiGraphicsExtractor.blit()",
     "ClientLevel.getLevelData()",
     "BlockPos.containing()",
-    "Direction.getApproximateNearest()",
     "Entity.getBoundingBox()",
     "Entity.getEyePosition()",
     "Entity.getViewVector()",
@@ -46,17 +42,21 @@
     "LivingEntity.distanceTo()",
     "LivingEntity.getAbsorptionAmount()",
     "LivingEntity.getBoundingBox()",
-    "LivingEntity.getDisplayName()",
     "LivingEntity.getRemainingFireTicks()",
     "LivingEntity.getTicksFrozen()",
-    "and 13 more"
+    "LivingEntity.getTicksRequiredToFreeze()",
+    "LivingEntity.is()",
+    "LivingEntity.isCurrentlyGlowing()",
+    "Player.getEyePosition()",
+    "BlockGetter.traverseBlocks()",
+    "and 6 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "healthindicatortxf-26.3-1.3.13-fabric.jar",
     "published": "2026-11-04"
   },
@@ -84,7 +84,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 53,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 46,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -20,9 +20,6 @@
     "net.minecraft.client.model.animal.sheep.SheepModel",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
-    "net.minecraft.core.HolderSet.Named",
-    "net.minecraft.server.permissions.Permissions",
-    "net.minecraft.tags.EnchantmentTags",
     "net.minecraft.world.entity.ai.control.LookControl",
     "net.minecraft.world.entity.ai.goal.Goal",
     "net.minecraft.world.entity.ai.goal.Goal.Flag",
@@ -39,24 +36,27 @@
     "Object2IntMap.Entry.getKey()",
     "ModelPart.getChild()",
     "ModelPart.z",
-    "CommandSourceStack.getPosition()",
-    "CommandSourceStack.getServer()",
-    "CommandSourceStack.sendSystemMessage()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "MinecraftServer.getTickCount()",
     "MinecraftServer.overworld()",
     "ServerLevel.getEntitiesOfClass()",
     "ServerLevel.getOverworldClockTime()",
-    "ServerPlayer.getBbWidth()",
-    "and 47 more"
+    "ServerPlayer.isAlive()",
+    "ServerPlayer.knockback()",
+    "DamageSources.mobAttack()",
+    "EntityTypes.COW",
+    "EntityTypes.PIG",
+    "EntityTypes.SHEEP",
+    "LivingEntity.distanceToSqr()",
+    "LivingEntity.getSwingAnimation()",
+    "LivingEntity.isAlive()",
+    "and 28 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "progressivedifficulty-1.0.1.jar",
     "published": "2026-09-18"
   },
@@ -85,5 +85,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 113
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 68
 }

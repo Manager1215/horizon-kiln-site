@@ -10,27 +10,10 @@
   "description": "A lightweight Fabric and Neoforge server-side mod that adds various teleportation related commands",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.world.level.storage.LevelResource",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "Commands.getDispatcher()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
     "MinecraftServer.getAllLevels()",
-    "MinecraftServer.getWorldPath()",
     "ServerLevel.getLevelData()",
     "ServerLevel.sendParticles()",
     "ServerPlayer.clientInformation()",
-    "ServerPlayer.permissions()",
-    "ServerPlayer.sendSystemMessage()",
     "ServerPlayer.teleportTo()",
     "BlockState.getCollisionShape()",
     "LevelData.RespawnData.pos()",
@@ -41,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "teleport_commands-merged-26.3-v1.3.5.jar",
     "published": "2026-10-21"
   },
@@ -68,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -15,18 +15,15 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
     "net.fabricmc.fabric.api.event.client.player.ClientPreAttackCallback",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityDataRegistry",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.ItemDurabilityTrigger",
     "net.minecraft.client.ScrollWheelHandler",
     "net.minecraft.client.gui.screens.inventory.EnchantmentNames",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTextTooltip",
     "net.minecraft.client.gui.screens.inventory.tooltip.MenuTooltipPositioner",
     "net.minecraft.client.model.geom.ModelLayers",
     "net.minecraft.client.model.object.book.BookModel",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.particle.ParticleProvider",
     "net.minecraft.client.particle.SingleQuadParticle",
     "net.minecraft.client.particle.SingleQuadParticle.Layer",
@@ -38,18 +35,21 @@
     "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperties",
     "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty",
     "net.minecraft.client.renderer.item.properties.numeric.UseDuration",
-    "net.minecraft.core.HolderSet.Named",
-    "net.minecraft.network.chat.ComponentSerialization",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.server.level.ServerPlayerGameMode",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.SimpleMenuProvider",
     "net.minecraft.world.damagesource.DamageTypes",
     "net.minecraft.world.entity.AreaEffectCloud",
     "net.minecraft.world.entity.ai.targeting.TargetingConditions",
+    "net.minecraft.world.entity.ai.targeting.TargetingConditions.Selector",
+    "net.minecraft.world.entity.monster.zombie.Zombie",
+    "net.minecraft.world.entity.projectile.ProjectileUtil",
+    "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
+    "net.minecraft.world.entity.projectile.arrow.AbstractArrow.Pickup",
+    "net.minecraft.world.entity.projectile.hurtingprojectile.AbstractHurtingProjectile",
+    "net.minecraft.world.entity.projectile.hurtingprojectile.windcharge.AbstractWindCharge",
+    "net.minecraft.world.inventory.ContainerData",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "spellgems-1.2.0+26.3-fabric.jar",
     "published": "2026-11-15"
   },
@@ -88,5 +88,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 359
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 288
 }

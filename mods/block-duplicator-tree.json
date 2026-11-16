@@ -9,23 +9,14 @@
   "author": "hadrykkxd",
   "description": "DUPLICATE YOUR BLOCKS AND GET OP QUICKLY. Inspired by the Orespawn tree.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.minecraft.world.level.block.BushBlock",
     "net.minecraft.world.level.material.PushReaction",
-    "ServerLifecycleEvents.SERVER_STARTING",
     "SoundEvents.GRASS_PLACE",
     "BlockItem.placeBlock()",
-    "Blocks.DIAMOND_BLOCK",
-    "Blocks.EMERALD_BLOCK",
-    "Blocks.OAK_LEAVES",
-    "Blocks.OAK_LOG",
-    "Blocks.OAK_SAPLING",
     "LeavesBlock.DISTANCE",
     "LeavesBlock.PERSISTENT",
-    "SoundType.getPlaceSound()",
     "BlockBehaviour.Properties.pushReaction()",
     "BlockState.canBeReplaced()",
-    "BlockState.getSoundType()",
     "MapColor.DIAMOND",
     "MapColor.EMERALD"
   ],
@@ -34,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "duplicator_tree_release_26.3_fabric.jar",
     "published": "2026-11-13"
   },
@@ -62,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

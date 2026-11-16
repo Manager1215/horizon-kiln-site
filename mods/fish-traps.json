@@ -9,7 +9,6 @@
   "author": "TechMonkey",
   "description": "Automate fishing because clicking is hard",
   "needs": [
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.inventory.ContainerData",
     "net.minecraft.world.inventory.SimpleContainerData",
     "AbstractContainerScreen.extractContents()",
@@ -18,17 +17,13 @@
     "BlockPos.south()",
     "BlockPos.west()",
     "NonNullList.stream()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "ServerLevel.isRainingAt()",
     "ServerLevel.sendParticles()",
     "Containers.dropContents()",
     "ItemStack.isBroken()",
-    "Items.FISHING_ROD",
     "EnchantmentHelper.getItemEnchantmentLevel()",
     "Enchantments.LUCK_OF_THE_SEA",
     "Enchantments.LURE",
-    "Enchantments.MENDING",
     "BaseEntityBlock.updateShape()",
     "BlockState.getValueOrElse()",
     "LootParams.Builder.withLuck()",
@@ -39,7 +34,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fishtraps-1.0.7.jar",
     "published": "2026-10-13"
   },
@@ -67,7 +62,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 19,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -17,7 +17,6 @@
     "net.minecraft.client.particle.SingleQuadParticle",
     "net.minecraft.util.BlockUtil",
     "net.minecraft.util.BlockUtil.FoundRectangle",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.ai.village.poi.PoiManager",
     "net.minecraft.world.entity.ai.village.poi.PoiManager.Occupancy",
     "net.minecraft.world.entity.ai.village.poi.PoiRecord",
@@ -33,15 +32,12 @@
     "BlockPos.offset()",
     "BlockPos.subtract()",
     "Direction.fromAxisAndDirection()",
-    "DataComponents.DYE",
     "MinecraftServer.overworld()",
     "ServerLevel.getMaxY()",
     "ServerLevel.getMinY()",
     "ServerLevel.getPoiManager()",
     "ServerLevel.getPortalForcer()",
-    "ServerLevel.getWorldBorder()",
     "Entity.canUsePortal()",
-    "Entity.getDimensions()",
     "Entity.getPose()",
     "Entity.getRelativePortalPosition()",
     "Entity.placePortalTicket()",
@@ -50,14 +46,18 @@
     "Relative.ROTATION",
     "Relative.union()",
     "LevelAccessor.setBlock()",
-    "and 32 more"
+    "BlockState.canBeReplaced()",
+    "BlockState.getCollisionShape()",
+    "WorldBorder.clampToBounds()",
+    "FluidState.is()",
+    "and 4 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "BetterNetherPortals-26.3.jar",
     "published": "2026-09-24"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 72,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 44,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

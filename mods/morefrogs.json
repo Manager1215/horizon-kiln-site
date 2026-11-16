@@ -51,14 +51,14 @@
     "net.minecraft.world.entity.ai.behavior.RunOne",
     "net.minecraft.world.entity.ai.behavior.SetEntityLookTargetSometimes",
     "net.minecraft.world.entity.ai.behavior.SetWalkTargetFromLookTarget",
-    "and 75 more"
+    "and 62 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "morefrogs-fabric-26.3-1.26.10.1.jar",
     "published": "2026-10-29"
   },
@@ -89,7 +89,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 118,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
+  },
+  "lacks": 104,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

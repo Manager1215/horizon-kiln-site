@@ -13,26 +13,20 @@
     "com.mojang.blaze3d.platform.FramerateLimitTracker",
     "com.mojang.blaze3d.platform.VideoMode",
     "net.minecraft.client.OptionInstance.CaptionBasedToString",
-    "net.minecraft.client.OptionInstance.IntRange",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
     "Window.getActiveVideoMode()",
     "Minecraft.getFramerateLimitTracker()",
     "OptionInstance.<init>()",
     "OptionInstance.noTooltip()",
-    "Options.genericValueLabel()",
-    "Options.keyMappings",
-    "GuiGraphicsExtractor.text()",
-    "MutableComponent.setStyle()",
-    "FormattedCharSequence.EMPTY"
+    "Options.genericValueLabel()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "accuratefpsplus-26.3-1.4-r1-fabric.jar",
     "published": "2026-10-31"
   },
@@ -60,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

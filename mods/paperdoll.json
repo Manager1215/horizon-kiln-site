@@ -9,25 +9,18 @@
   "author": "tr7zw",
   "description": "Get a highly customizable (bedrock like) preview of yourself",
   "needs": [
-    "net.minecraft.client.CameraType",
-    "net.minecraft.client.gui.components.toasts.ToastManager.ToastInstance",
     "net.minecraft.client.gui.render.pip.GuiEntityRenderer",
-    "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "net.minecraft.client.renderer.state.gui.pip.GuiEntityRenderState",
-    "net.minecraft.world.entity.Pose",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Minecraft.getEntityRenderDispatcher()",
-    "Options.getCameraType()",
     "GuiGraphicsExtractor.entity()",
+    "ToastManager.ToastInstance.hasFinishedRendering()",
     "EntityRenderDispatcher.getRenderer()",
     "EntityRenderDispatcher.submit()",
     "EntityRenderer.createRenderState()",
     "EntityRenderState.shadowPieces",
     "EntityRenderState.y",
     "CameraRenderState.orientation",
-    "CommonComponents.GUI_DONE",
     "Entity.getPassengers()",
     "Entity.getRootVehicle()",
     "Entity.getVehicle()",
@@ -39,7 +32,6 @@
     "LivingEntity.isAutoSpinAttack()",
     "LivingEntity.isBlocking()",
     "LivingEntity.isCrouching()",
-    "LivingEntity.isFallFlying()",
     "LivingEntity.isInPowderSnow",
     "LivingEntity.isPassenger()",
     "LivingEntity.isSwinging()",
@@ -55,7 +47,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "paperdoll-fabric-1.5.3-mc26.3.jar",
     "published": "2026-09-19"
   },
@@ -82,7 +74,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 40,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 32,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,24 +9,16 @@
   "author": "qMace_",
   "description": "this just lets you choose your dimension on joining the world for the first time!",
   "needs": [
-    "Minecraft.execute()",
-    "Minecraft.setScreenAndShow()",
-    "MinecraftServer.execute()",
     "ServerPlayer.addTag()",
     "ServerPlayer.entityTags()",
-    "ServerPlayer.teleport()",
-    "Items.END_STONE",
-    "Items.GRASS_BLOCK",
-    "Items.NETHERRACK",
-    "Blocks.MAGMA_BLOCK",
-    "Blocks.NETHERRACK"
+    "ServerPlayer.teleport()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dimension-choose-26.3.jar",
     "published": "2026-11-02"
   },
@@ -55,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

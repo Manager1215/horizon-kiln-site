@@ -10,7 +10,6 @@
   "description": "A free camera for Minecraft activated with a single button!",
   "needs": [
     "net.minecraft.client.multiplayer.ClientChunkCache",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.multiplayer.prediction.BlockStatePredictionHandler",
     "net.minecraft.client.player.ItemActivation",
     "net.minecraft.client.player.KeyboardInput",
@@ -32,12 +31,11 @@
     "net.minecraft.network.protocol.game.ServerboundUseItemOnPacket",
     "net.minecraft.network.protocol.game.ServerboundUseItemPacket",
     "net.minecraft.world.entity.player.Input",
-    "Minecraft.gameMode",
     "Minecraft.packetProcessor()",
-    "Options.keyMappings",
     "ClientLevel.addEntity()",
     "ClientLevel.getChunkSource()",
-    "ClientPacketListener.getConnection()",
+    "MultiPlayerGameMode.setLocalMode()",
+    "MultiPlayerGameMode.stopDestroyBlock()",
     "LocalPlayer.<init>()",
     "LocalPlayer.aiStep()",
     "LocalPlayer.getGameProfile()",
@@ -49,14 +47,16 @@
     "LocalPlayer.setDeltaMovement()",
     "LocalPlayer.setPos()",
     "LocalPlayer.setXRot()",
-    "and 21 more"
+    "LocalPlayer.setYRot()",
+    "LocalPlayer.stopFallFlying()",
+    "and 18 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fabric-0.19.5-26.3_freecam_by_jasonzli-26.3.0.jar",
     "published": "2026-09-16"
   },
@@ -73,7 +73,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 61,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 58,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

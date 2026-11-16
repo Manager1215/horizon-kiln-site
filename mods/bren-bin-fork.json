@@ -17,11 +17,9 @@
     "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback.RegistrationHelper",
     "net.fabricmc.fabric.api.client.rendering.v1.SubmitRenderPhases",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.networking.v1.FriendlyByteBufs",
     "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
     "net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.model.ArmedModel",
     "net.minecraft.client.model.HeadedModel",
     "net.minecraft.client.model.HumanoidModel",
@@ -49,14 +47,16 @@
     "PoseStack.rotate()",
     "VertexConsumer.setColor()",
     "Axis.YN",
-    "and 57 more"
+    "Axis.ZN",
+    "Axis.ZP",
+    "and 55 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bren-0.9.9c-26.3.jar",
     "published": "2026-11-14"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 116,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 96,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

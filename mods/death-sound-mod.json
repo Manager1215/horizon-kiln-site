@@ -10,27 +10,14 @@
   "description": "Playes a wither death sound when a player dies within your simulation distance. You can also change the sound to whatever you want, via gui or commands!",
   "needs": [
     "com.mojang.blaze3d.Blaze3D",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
     "net.minecraft.client.particle.ParticleEngine",
     "net.minecraft.core.particles.ShriekParticleOption",
-    "net.minecraft.network.chat.contents.TranslatableContents",
-    "Minecraft.execute()",
-    "Minecraft.gameDirectory",
     "Minecraft.particleEngine",
     "Minecraft.reloadResourcePacks()",
-    "Minecraft.setScreenAndShow()",
-    "AbstractWidget.getMessage()",
-    "Button.setAlpha()",
-    "Button.Builder.tooltip()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
     "ClientLevel.addEntity()",
     "LocalPlayer.distanceTo()",
     "LocalPlayer.getEyeY()",
-    "SoundManager.stop()",
-    "Component.getContents()",
     "ClientboundEntityEventPacket.getEntity()",
     "ClientboundEntityEventPacket.getEventId()",
     "SoundEvents.AMETHYST_BLOCK_BREAK",
@@ -47,16 +34,16 @@
     "SoundEvents.TRIAL_SPAWNER_OMINOUS_ACTIVATE",
     "SoundEvents.VILLAGER_NO",
     "SoundEvents.WARDEN_HEARTBEAT",
-    "SoundEvents.WITHER_SPAWN",
-    "LightningBolt.setId()",
-    "and 3 more"
+    "LightningBolt.setPos()",
+    "LightningBolt.setSilent()",
+    "LightningBolt.setVisualOnly()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "deathsound-1.2.3-26.3+.jar",
     "published": "2026-10-02"
   },
@@ -84,7 +71,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 43,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own"
+  },
+  "lacks": 28,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -12,13 +12,9 @@
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowChatMessage",
     "net.minecraft.commands.arguments.MessageArgument",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.network.chat.OutgoingChatMessage",
-    "net.minecraft.network.chat.PlayerChatMessage",
     "net.minecraft.server.commands.EmoteCommands",
     "net.minecraft.server.commands.MsgCommand",
-    "CommandSourceStack.getServer()",
     "CommandSourceStack.sendChatMessage()",
     "CommandSourceStack.shouldFilterMessageTo()",
     "ChatType.CHAT",
@@ -26,18 +22,13 @@
     "ChatType.MSG_COMMAND_INCOMING",
     "ChatType.MSG_COMMAND_OUTGOING",
     "ChatType.bind()",
-    "MutableComponent.setStyle()",
-    "Style.withHoverEvent()",
-    "ServerPlayer.getDisplayName()",
+    "PlayerChatMessage.decoratedContent()",
     "ServerPlayer.getGameProfile()",
-    "ServerPlayer.giveExperiencePoints()",
     "ServerPlayer.sendChatMessage()",
     "ServerPlayer.shouldFilterMessageTo()",
     "NameAndId.<init>()",
     "PlayerList.broadcastSystemMessage()",
-    "PlayerList.isOp()",
     "Player.getCustomName()",
-    "Player.getDisplayName()",
     "Player.hasCustomName()",
     "FoodData.setFoodLevel()"
   ],
@@ -46,7 +37,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "localizedchat-fabric-26.3-5.5.0.jar",
     "published": "2026-10-01"
   },
@@ -76,7 +67,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 31,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

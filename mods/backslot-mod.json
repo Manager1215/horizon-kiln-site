@@ -10,7 +10,6 @@
   "description": "This mod adds Another inventory Slot: The Backslot!",
   "needs": [
     "Mixin: 6 points inside the game's methods",
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
     "net.fabricmc.fabric.impl.resource.pack.ModPackResourcesUtil",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
     "net.minecraft.client.model.player.PlayerModel",
@@ -19,31 +18,18 @@
     "net.minecraft.client.renderer.entity.layers.RenderLayer",
     "net.minecraft.client.renderer.entity.player.AvatarRenderer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.entity.Attackable",
     "net.minecraft.world.entity.Bucketable",
-    "net.minecraft.world.item.BannerItem",
     "net.minecraft.world.item.ShieldItem",
     "net.minecraft.world.item.TridentItem",
     "Axis.YN",
     "Axis.ZN",
     "Axis.ZP",
-    "KeyMapping.matches()",
-    "Options.keyHotbarSlots",
-    "Options.keySwapOffhand",
     "ModelPart.translateAndRotate()",
     "EntityRendererProvider.Context.getItemModelResolver()",
     "ModelManager.getItemModel()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
     "DefaultedRegistry.iterator()",
-    "Holder.Reference.is()",
-    "DataComponents.CUSTOM_NAME",
-    "ServerPlayer.sendSystemMessage()",
     "Entity.<init>()",
-    "Player.drop()",
-    "Player.getDisplayName()",
-    "Player.getMainArm()",
     "Player.hasItemInSlot()",
     "ItemStack.inventoryTick()"
   ],
@@ -52,7 +38,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "backslot-1.2.2.jar",
     "published": "2026-09-19"
   },
@@ -82,7 +68,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 36,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

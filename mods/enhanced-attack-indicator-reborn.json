@@ -10,13 +10,11 @@
   "description": "Uses the attack indicator for more than just melee attacks.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.world.item.BowItem",
     "net.minecraft.world.item.CrossbowItem",
     "net.minecraft.world.item.ItemCooldowns",
-    "net.minecraft.world.item.component.BundleContents",
     "Minecraft.crosshairPickEntity",
-    "Minecraft.gameMode",
+    "MultiPlayerGameMode.getDestroyStage()",
     "LocalPlayer.getAttackStrengthScale()",
     "LocalPlayer.getCooldowns()",
     "LocalPlayer.getCurrentItemAttackStrengthDelay()",
@@ -24,22 +22,16 @@
     "LocalPlayer.getUseItem()",
     "LocalPlayer.getUseItemRemainingTicks()",
     "RenderPipelines.CROSSHAIR",
-    "DataComponents.BUNDLE_CONTENTS",
     "DataComponents.FOOD",
     "LivingEntity.isAlive()",
-    "Item.components()",
-    "ItemStack.getUseDuration()",
-    "Items.BOW",
-    "Items.CROSSBOW",
-    "Items.POTION",
-    "Items.TRIDENT"
+    "ItemStack.getUseDuration()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "enhanced_attack_indicator_reborn-1.2.1+26.3-fabric.jar",
     "published": "2026-09-16"
   },
@@ -68,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

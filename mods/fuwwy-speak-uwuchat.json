@@ -9,27 +9,18 @@
   "author": "notfuz",
   "description": "Makes your chat all fuwwy and uwu :3",
   "needs": [
-    "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowChat",
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.ModifyGame",
     "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents",
     "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.ModifyChat",
-    "net.minecraft.network.chat.ComponentContents",
-    "net.minecraft.network.chat.contents.PlainTextContents",
-    "net.minecraft.network.chat.contents.TranslatableContents",
-    "ClientReceiveMessageEvents.ALLOW_CHAT",
     "ClientReceiveMessageEvents.MODIFY_GAME",
-    "ChatType.Bound.decorate()",
-    "Component.getContents()",
-    "Component.getSiblings()",
-    "MutableComponent.create()",
-    "MutableComponent.setStyle()"
+    "ChatType.Bound.decorate()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fuwwy-speak-mod-1.0.0.jar",
     "published": "2026-11-14"
   },
@@ -57,5 +48,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 14
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5
 }

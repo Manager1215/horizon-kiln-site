@@ -21,25 +21,18 @@
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
     "net.minecraft.world.entity.ai.attributes.RangedAttribute",
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
-    "net.minecraft.world.item.alchemy.Potion",
-    "net.minecraft.world.item.alchemy.Potions",
     "Camera.yRot()",
     "BuiltInRegistries.ATTRIBUTE",
-    "BuiltInRegistries.POTION",
     "ClientboundAnimatePacket.getAction()",
     "ClientboundAnimatePacket.getId()",
     "ServerChunkCache.sendToTrackingPlayersAndSelf()",
     "MobEffect.addAttributeModifier()",
-    "Entity.getBbHeight()",
-    "Entity.getBbWidth()",
     "Entity.isAlive()",
-    "Entity.isRemoved()",
     "Entity.xo",
     "Entity.yo",
     "Entity.zo",
     "AttributeInstance.addPermanentModifier()",
     "Player.getAttributes()",
-    "Player.getRandom()",
     "Player.tickCount",
     "Vec3.directionFromRotation()",
     "Vec3.xRot()",
@@ -50,7 +43,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "critical_strike-fabric-1.0.6+26.3.jar",
     "published": "2026-09-28"
   },
@@ -80,7 +73,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 34,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 27,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

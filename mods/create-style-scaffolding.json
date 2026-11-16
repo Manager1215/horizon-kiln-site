@@ -10,11 +10,10 @@
   "description": "Makes vanilla scaffolding act like Create's metal scaffolding",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.world.item.ScaffoldingBlockItem",
     "net.minecraft.world.level.block.ScaffoldingBlock",
-    "Inventory.contains()",
+    "ResourceLoader.registerBuiltinPack()",
     "Player.addItem()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
@@ -22,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "createscaffolding-1.0.0.jar",
     "published": "2026-07-20"
   },
@@ -51,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method into the game's classes; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,8 +10,6 @@
   "description": "Modifies combat to prevent friendly fire to pets and other mobs.",
   "needs": [
     "net.minecraft.world.entity.monster.Enemy",
-    "ServerPlayer.sendSystemMessage()",
-    "DamageSource.getEntity()",
     "AgeableMob.isBaby()",
     "Entity.is()",
     "Entity.isCrouching()",
@@ -24,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "FriendlyFire-fabric-MC26.3-26.3.0.1.jar",
     "published": "2026-09-28"
   },
@@ -53,7 +51,11 @@
     "minecraft",
     "prickle"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

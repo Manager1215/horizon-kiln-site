@@ -11,16 +11,13 @@
   "needs": [
     "Mixin: 1 point inside the game's methods",
     "net.minecraft.client.OptionInstance.CaptionBasedToString",
-    "net.minecraft.client.OptionInstance.IntRange",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
     "net.minecraft.client.ToggleKeyMapping",
     "net.minecraft.client.gui.components.OptionsList",
     "net.minecraft.client.gui.screens.options.OptionsSubScreen",
     "net.minecraft.client.gui.screens.options.controls.ControlsScreen",
     "KeyMapping.setDown()",
-    "Minecraft.gameDirectory",
     "OptionInstance.<init>()",
     "OptionInstance.cachedConstantTooltip()",
     "Options.genericValueLabel()"
@@ -30,7 +27,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SmartToggles-1.0.0+26.2.jar",
     "published": "2026-07-09"
   },
@@ -57,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

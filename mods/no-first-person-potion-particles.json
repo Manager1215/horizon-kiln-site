@@ -9,16 +9,14 @@
   "author": "dbrighthd",
   "description": "Hides potion particles coming from you in first person",
   "needs": [
-    "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.CameraType",
-    "Options.getCameraType()"
+    "Mixin: 1 point inside the game's methods"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+  "roadmap": "Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nofirstpersonpotions-1.2.0-26.3.jar",
     "published": "2026-09-15"
   },
@@ -47,7 +45,11 @@
     "fabricloader",
     "java"
   ],
-  "lacks": 2,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 0,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

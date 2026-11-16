@@ -9,7 +9,6 @@
   "author": "downloadableduck",
   "description": "adds a /fart command",
   "needs": [
-    "LocalPlayer.getRandom()",
     "LocalPlayer.playSound()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
@@ -17,7 +16,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fart-1.0.0-26.3.jar",
     "published": "2026-09-15"
   },
@@ -46,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 2,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

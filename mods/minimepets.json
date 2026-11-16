@@ -9,7 +9,6 @@
   "author": "tr7zw",
   "description": "Swap named wolves and cats with tiny players.",
   "needs": [
-    "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
     "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
@@ -18,8 +17,6 @@
     "net.minecraft.client.renderer.entity.state.WolfRenderState",
     "net.minecraft.world.item.component.DyedItemColor",
     "net.minecraft.world.item.component.ResolvableProfile",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Minecraft.getEntityRenderDispatcher()",
     "Minecraft.playerSkinRenderCache()",
     "Minecraft.services()",
@@ -27,18 +24,15 @@
     "EntityRenderDispatcher.getRenderer()",
     "EntityRenderer.createRenderState()",
     "DataComponents.DYED_COLOR",
-    "CommonComponents.GUI_DONE",
     "Util.nonCriticalIoPool()",
-    "LivingEntity.getCustomName()",
-    "Items.BARRIER",
-    "Items.LEATHER_CHESTPLATE"
+    "LivingEntity.getCustomName()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "minimepets-fabric-1.2.1-mc26.3.jar",
     "published": "2026-11-07"
   },
@@ -65,7 +59,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

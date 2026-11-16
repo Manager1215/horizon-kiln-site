@@ -9,26 +9,15 @@
   "author": "xiaoze_qwq_",
   "description": "A non-consumable firework rocket has been added, which can only be obtained in the End City or by command.\n增加了不会消耗的仅飞行用烟花火箭，只能在末地城或用指令获取。",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.world.item.ItemCooldowns",
-    "net.minecraft.world.item.component.Fireworks",
-    "net.minecraft.world.level.storage.LevelResource",
     "net.minecraft.world.level.storage.loot.functions.SetComponentsFunction",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "DataComponents.FIREWORKS",
-    "MinecraftServer.getWorldPath()",
-    "ServerPlayer.isFallFlying()",
-    "ServerPlayer.permissions()",
     "SoundEvents.FIREWORK_ROCKET_LAUNCH",
     "Entity.<init>()",
     "LivingEntity.getHandHoldingItemAngle()",
     "LivingEntity.isAlive()",
-    "LivingEntity.isFallFlying()",
     "LivingEntity.setDeltaMovement()",
     "Player.getCooldowns()",
-    "Player.isFallFlying()",
-    "Items.FIREWORK_ROCKET",
     "Level.addFreshEntity()",
     "LootPool.Builder.apply()",
     "LootPool.Builder.when()"
@@ -38,7 +27,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "eternal_firework_rocket-26.3-1.2.0+26.3.jar",
     "published": "2026-11-07"
   },
@@ -67,7 +56,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

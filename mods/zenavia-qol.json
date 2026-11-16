@@ -10,21 +10,15 @@
   "description": "Quality of Life client mod for the Infecté game mode on the Zenavia Minecraft server.",
   "needs": [
     "Mixin: 9 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.blaze3d.Blaze3D",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.Chat",
     "net.fabricmc.fabric.api.client.networking.v1.ClientConfigurationConnectionEvents",
     "net.fabricmc.fabric.api.client.networking.v1.ClientConfigurationConnectionEvents.Start",
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
     "net.fabricmc.loader.api.metadata.ContactInformation",
     "net.fabricmc.loader.api.metadata.CustomValue",
     "net.fabricmc.loader.api.metadata.CustomValue.CvObject",
     "net.fabricmc.loader.api.metadata.CustomValue.CvType",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.Screenshot",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.WidgetSprites",
     "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
     "net.minecraft.client.gui.layouts.LinearLayout",
@@ -50,14 +44,20 @@
     "net.minecraft.client.renderer.entity.state.PiglinRenderState",
     "net.minecraft.client.renderer.entity.state.SkeletonRenderState",
     "net.minecraft.client.renderer.entity.state.ZombieRenderState",
-    "and 80 more"
+    "net.minecraft.world.entity.InterpolationHandler",
+    "net.minecraft.world.entity.LinearInterpolationHandler",
+    "net.minecraft.world.entity.LivingEntity.SwingDescription",
+    "net.minecraft.world.entity.player.Input",
+    "net.minecraft.world.entity.vehicle.boat.AbstractBoat",
+    "net.minecraft.world.entity.vehicle.boat.AbstractBoat.Status",
+    "and 67 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "zenavia-qol-mc26.3-2.0.0.jar",
     "published": "2026-10-15"
   },
@@ -85,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 197,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 127,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

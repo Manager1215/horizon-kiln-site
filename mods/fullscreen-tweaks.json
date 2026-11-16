@@ -11,8 +11,6 @@
   "needs": [
     "Mixin: 1 point inside the game's methods",
     "com.mojang.blaze3d.platform.DisplayData",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
     "org.lwjgl.sdl.SDLHints",
     "org.lwjgl.sdl.SDLVideo",
@@ -21,10 +19,6 @@
     "OptionInstance.createButton()",
     "Options.exclusiveFullscreen()",
     "Options.fullscreen()",
-    "AbstractWidget.getMessage()",
-    "AbstractWidget.setMessage()",
-    "AbstractWidget.setTooltip()",
-    "Button.setTooltip()",
     "Screen.FOOTER_SEPARATOR",
     "Screen.HEADER_SEPARATOR",
     "Screen.INWORLD_FOOTER_SEPARATOR",
@@ -35,7 +29,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fullscreen_tweaks-2.0.1+26.3-fabric.jar",
     "published": "2026-09-24"
   },
@@ -63,7 +57,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

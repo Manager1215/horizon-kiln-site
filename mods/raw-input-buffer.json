@@ -9,12 +9,9 @@
   "author": "Walksy",
   "description": "Reduces input lag and frame rate drops caused by mouse polling events - allowing you to use high polling rate mice",
   "needs": [
-    "org.apache.logging.log4j.util.TriConsumer",
     "Window.getX()",
     "Window.getY()",
     "Window.handle()",
-    "Minecraft.execute()",
-    "Minecraft.isWindowActive()",
     "MouseHandler.grabMouse()",
     "MouseHandler.releaseMouse()"
   ],
@@ -23,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "RawInputBuffer-1.2.0+26.3.jar",
     "published": "2026-10-14"
   },
@@ -51,7 +48,11 @@
     "minecraft",
     "walksylib"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -13,7 +13,6 @@
     "net.fabricmc.fabric.api.command.v2.ArgumentTypeRegistry",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
@@ -23,7 +22,6 @@
     "net.minecraft.commands.synchronization.ArgumentTypeInfo",
     "net.minecraft.commands.synchronization.ArgumentTypeInfo.Template",
     "net.minecraft.server.level.ServerPlayerGameMode",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.util.ByIdMap",
     "net.minecraft.util.ByIdMap.OutOfBoundsStrategy",
     "net.minecraft.world.attribute.BedRule",
@@ -47,17 +45,19 @@
     "net.minecraft.world.level.StructureManager",
     "net.minecraft.world.level.block.AbstractBedBlock",
     "net.minecraft.world.phys.EntityHitResult",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "Minecraft.hitResult",
-    "Options.advancedItemTooltips",
-    "and 50 more"
+    "Registry.get()",
+    "Registry.getId()",
+    "BuiltInRegistries.CUSTOM_STAT",
+    "BuiltInRegistries.TRIGGER_TYPES",
+    "Registries.STRUCTURE",
+    "and 34 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "thief-fabric-26.3-1.2.7.jar",
     "published": "2026-09-22"
   },
@@ -86,7 +86,11 @@
     "forgeconfigapiport",
     "minecraft"
   ],
-  "lacks": 90,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 74,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

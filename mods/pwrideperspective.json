@@ -10,11 +10,9 @@
   "description": "A mod that enhances riding mechanics with a free camera, allowing you to look around and fight smoothly while on horses or other mobs.",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.player.ClientInput",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.player.Input",
     "net.minecraft.world.entity.vehicle.boat.AbstractBoat",
     "net.minecraft.world.item.BowItem",
@@ -24,12 +22,7 @@
     "net.minecraft.world.item.SnowballItem",
     "net.minecraft.world.item.TridentItem",
     "net.minecraft.world.item.WindChargeItem",
-    "InputConstants.isKeyDown()",
     "Window.handle()",
-    "Options.getCameraType()",
-    "Options.keyAttack",
-    "Options.keyUse",
-    "Options.setCameraType()",
     "LocalPlayer.getEyePosition()",
     "LocalPlayer.getUseItem()",
     "LocalPlayer.getVehicle()",
@@ -38,7 +31,6 @@
     "LocalPlayer.input",
     "LocalPlayer.isInWaterOrRain()",
     "LocalPlayer.isUsingItem()",
-    "LocalPlayer.setSprinting()",
     "LocalPlayer.setXRot()",
     "LocalPlayer.setYBodyRot()",
     "LocalPlayer.setYHeadRot()",
@@ -50,14 +42,18 @@
     "Entity.isInWaterOrRain()",
     "Entity.setYRot()",
     "LivingEntity.setYBodyRot()",
-    "and 6 more"
+    "LivingEntity.setYHeadRot()",
+    "Player.getVehicle()",
+    "EnchantmentHelper.getTridentSpinAttackStrength()",
+    "Level.clip()",
+    "Vec3.directionFromRotation()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "PWrideperspective-1.0.29+26.3.jar",
     "published": "2026-10-27"
   },
@@ -88,7 +84,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 46,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 37,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

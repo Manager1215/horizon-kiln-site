@@ -33,31 +33,31 @@
     "net.minecraft.world.item.enchantment.effects.EnchantmentAttributeEffect",
     "net.minecraft.world.level.storage.loot.entries.UniformContainerBase.EntryBase",
     "ServerPlayerEvents.JOIN",
-    "Minecraft.execute()",
     "DataComponents.FOOD",
     "MinecraftServer.isHardcore()",
     "ServerLevel.getDifficulty()",
     "ServerPlayer.damageSources()",
-    "ServerPlayer.getRandom()",
     "ServerPlayer.isAlive()",
     "ServerPlayer.isDeadOrDying()",
     "ServerPlayer.setAbsorptionAmount()",
     "SoundEvents.PLAYER_ATTACK_CRIT",
     "SoundEvents.PLAYER_ATTACK_STRONG",
     "SoundEvents.PLAYER_ATTACK_WEAK",
-    "DamageSource.getEntity()",
-    "DamageSource.is()",
-    "DamageSource.is()",
     "DamageSources.starve()",
     "DamageSources.wither()",
-    "and 16 more"
+    "MobEffect.addAttributeModifiers()",
+    "MobEffect.removeAttributeModifiers()",
+    "Entity.hurtOrSimulate()",
+    "LivingEntity.setDeltaMovement()",
+    "AttributeInstance.addOrUpdateTransientModifier()",
+    "and 10 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "madoku-craft-attributes-26.3-1.2.8-V1.jar",
     "published": "2026-10-31"
   },
@@ -87,7 +87,11 @@
     "madoku-craft-core",
     "minecraft"
   ],
-  "lacks": 56,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; has network channels"
+  },
+  "lacks": 50,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

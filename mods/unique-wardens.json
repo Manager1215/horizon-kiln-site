@@ -19,7 +19,6 @@
     "net.minecraft.client.particle.FlameParticle",
     "net.minecraft.client.particle.ParticleProvider",
     "net.minecraft.client.particle.SpriteSet",
-    "net.minecraft.core.HolderSet.Direct",
     "net.minecraft.util.SpawnUtil",
     "net.minecraft.util.SpawnUtil.Strategy",
     "net.minecraft.world.entity.monster.warden.Warden",
@@ -30,12 +29,8 @@
     "BlockPos.offset()",
     "BlockPos.subtract()",
     "BlockPos.MutableBlockPos.set()",
-    "HolderSet.direct()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "Registries.STRUCTURE",
     "ServerChunkCache.getChunkNow()",
-    "ServerLevel.destroyBlock()",
     "ServerLevel.getEntitiesOfClass()",
     "ServerLevel.sendParticles()",
     "ServerLevel.structureManager()",
@@ -47,18 +42,20 @@
     "BlockTags.CANDLES",
     "BlockTags.CANDLE_CAKES",
     "EntityTypes.WARDEN",
-    "Blocks.CANDLE",
-    "Blocks.LANTERN",
-    "Blocks.LIGHT",
-    "Blocks.SCULK",
-    "and 13 more"
+    "BlockStateProperties.CANDLES",
+    "ChunkGenerator.findNearestMapStructure()",
+    "LevelChunk.getAllStarts()",
+    "BoundingBox.getCenter()",
+    "StructureStart.getBoundingBox()",
+    "StructureStart.isValid()",
+    "AABB.inflate()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "uniquewardens-fabric-26.3-0.1.0.jar",
     "published": "2026-10-09"
   },
@@ -87,7 +84,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 53,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 38,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

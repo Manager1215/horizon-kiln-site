@@ -10,22 +10,14 @@
   "description": "This mod allows configuring the location screenshots are saved. Useful for saving screenshots from various instances in a global folder.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.Screenshot",
-    "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "CommandSourceStack.sendSystemMessage()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "Style.withUnderlined()"
+    "net.minecraft.client.Screenshot"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "screenshot-location-fabric-26.1-1.0.1+fabric+26.1.jar",
     "published": "2026-06-18"
   },
@@ -53,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

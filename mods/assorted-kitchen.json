@@ -9,7 +9,6 @@
   "author": "grim3212",
   "description": "Adds cheese, butter, chocolate, eggs and pies, with the machines and kitchen tools to make them.",
   "needs": [
-    "net.minecraft.core.component.DataComponentPatch.Builder",
     "net.minecraft.world.food.FoodProperties",
     "net.minecraft.world.item.component.Consumable",
     "net.minecraft.world.item.component.Consumable.Builder",
@@ -19,7 +18,6 @@
     "net.minecraft.world.level.material.PushReaction",
     "NonNullList.isEmpty()",
     "NonNullList.stream()",
-    "DataComponentPatch.builder()",
     "DataComponents.DAMAGE",
     "DataComponents.MAX_DAMAGE",
     "Registries.RECIPE_BOOK_CATEGORY",
@@ -34,13 +32,9 @@
     "Item.Properties.food()",
     "Item.Properties.usingConvertsTo()",
     "ItemStack.limitSize()",
-    "Items.BOWL",
     "CraftingRecipe.defaultCraftingReminder()",
-    "Ingredient.display()",
     "SoundType.WOOL",
-    "SoundType.getBreakSound()",
     "BlockBehaviour.Properties.pushReaction()",
-    "BlockState.getSoundType()",
     "MapColor.DIRT",
     "MapColor.SAND",
     "MapColor.STONE"
@@ -50,7 +44,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "assortedkitchen-fabric-26.3-2.0.0.jar",
     "published": "2026-10-23"
   },
@@ -80,7 +74,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 35,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 29,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -19,17 +19,13 @@
     "net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadAtlas",
     "net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadEmitter",
     "net.fabricmc.fabric.api.client.renderer.v1.model.FabricBlockStateModel",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys",
     "net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys.Client",
     "net.fabricmc.fabric.api.util.TriState",
-    "net.minecraft.SharedConstants",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.extract.LevelExtractor",
     "net.minecraft.client.resources.model.geometry.BakedQuad.MaterialFlags",
-    "net.minecraft.world.entity.Pose",
     "net.minecraft.world.level.block.SnowLayerBlock",
     "PoseStack.last()",
     "PoseStack.Pose.normal()",
@@ -37,9 +33,10 @@
     "VertexConsumer.addVertex()",
     "Int2ObjectMap.Entry.getValue()",
     "IntSet.isEmpty()",
+    "ResourceLoader.registerBuiltinPack()",
+    "SharedConstants.getCurrentVersion()",
     "Minecraft.getEntityRenderDispatcher()",
     "Minecraft.levelExtractor",
-    "Options.getCameraType()",
     "Model.root()",
     "Model.setupAnim()",
     "ModelPart.skipDraw",
@@ -50,14 +47,17 @@
     "ModelPart.Cube.maxZ",
     "ModelPart.Cube.minX",
     "ModelPart.Cube.minY",
-    "and 41 more"
+    "ModelPart.Cube.minZ",
+    "LocalPlayer.xo",
+    "LocalPlayer.yo",
+    "and 37 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "softimprints-fabric-26.3-2.8.01.jar",
     "published": "2026-09-16"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 88,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 78,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

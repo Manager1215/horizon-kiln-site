@@ -9,27 +9,8 @@
   "author": "Ash",
   "description": "Server-side mod for pronouns!",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "net.minecraft.network.chat.ComponentSerialization",
-    "net.minecraft.world.level.storage.LevelResource",
     "JsonArray.forEach()",
     "Object2IntMap.Entry.getKey()",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "CommandSourceStack.getPlayerOrException()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
-    "MutableComponent.setStyle()",
-    "Style.isObfuscated()",
-    "Style.isStrikethrough()",
-    "Style.isUnderlined()",
-    "Style.withObfuscated()",
-    "Style.withStrikethrough()",
-    "Style.withUnderlined()",
-    "TextColor.parseColor()",
-    "MinecraftServer.getWorldPath()",
-    "ServerPlayer.getDisplayName()",
     "GsonHelper.parse()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -37,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "player-pronouns-2.5.0+26.2.jar",
     "published": "2026-07-01"
   },
@@ -66,7 +47,11 @@
     "minecraft",
     "placeholder-api"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

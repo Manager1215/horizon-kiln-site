@@ -9,40 +9,23 @@
   "author": "Sowiastyy",
   "description": "Built in minecraft head editor",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.properties.Property",
     "com.mojang.authlib.properties.PropertyMap",
-    "net.minecraft.client.gui.components.EditBox.TextFormatter",
     "net.minecraft.network.protocol.game.ServerboundSetCreativeModeSlotPacket",
     "net.minecraft.world.item.component.ResolvableProfile",
-    "NativeImage.getHeight()",
-    "NativeImage.getPixel()",
-    "NativeImage.getWidth()",
-    "NativeImage.read()",
-    "NativeImage.setPixel()",
-    "Minecraft.execute()",
-    "EditBox.addFormatter()",
-    "EditBox.mouseDragged()",
-    "EditBox.setHint()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "KeyEvent.hasShiftDown()",
+    "GameProfile.properties()",
     "ClientPacketListener.send()",
     "PlayerInfo.getProfile()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "DataComponents.PROFILE",
     "ListTag.add()",
-    "Inventory.getFreeSlot()",
-    "Items.PLAYER_HEAD"
+    "Inventory.getFreeSlot()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "headlab-1.0.0+26.3.jar",
     "published": "2026-10-01"
   },
@@ -71,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

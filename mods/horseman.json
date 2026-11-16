@@ -11,18 +11,12 @@
   "needs": [
     "Mixin: 13 points inside the game's methods",
     "net.fabricmc.fabric.api.command.v2.ArgumentTypeRegistry",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.minecraft.advancements.predicates.entity.EntityPredicate",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.gui.components.ImageButton",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.WidgetSprites",
     "net.minecraft.client.gui.screens.inventory.AbstractMountInventoryScreen",
-    "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.model.EntityModel",
     "net.minecraft.client.model.animal.equine.AbstractEquineModel",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.entity.AbstractHorseRenderer",
     "net.minecraft.client.renderer.entity.AgeableMobRenderer",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
@@ -34,8 +28,6 @@
     "net.minecraft.commands.synchronization.ArgumentTypeInfo",
     "net.minecraft.commands.synchronization.ArgumentTypeInfo.Template",
     "net.minecraft.core.UUIDUtil",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.EntityAttachment",
     "net.minecraft.world.entity.EntityAttachments",
     "net.minecraft.world.entity.PlayerRideableJumping",
@@ -50,14 +42,22 @@
     "net.minecraft.world.entity.decoration.BlockAttachedEntity",
     "net.minecraft.world.entity.decoration.LeashFenceKnotEntity",
     "net.minecraft.world.entity.vehicle.boat.AbstractBoat",
-    "and 72 more"
+    "net.minecraft.world.entity.vehicle.boat.Boat",
+    "net.minecraft.world.inventory.AbstractMountInventoryMenu",
+    "net.minecraft.world.inventory.HorseInventoryMenu",
+    "net.minecraft.world.item.ItemCooldowns",
+    "net.minecraft.world.item.LeadItem",
+    "net.minecraft.world.item.ShearsItem",
+    "net.minecraft.world.level.block.PowderSnowBlock",
+    "net.minecraft.world.level.gameevent.GameEvent.Context",
+    "and 64 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "horseman-fabric-26.3-1.7.5.jar",
     "published": "2026-10-05"
   },
@@ -87,7 +87,11 @@
     "forgeconfigapiport",
     "minecraft"
   ],
-  "lacks": 135,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 109,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

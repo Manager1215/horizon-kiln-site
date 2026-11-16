@@ -9,23 +9,18 @@
   "author": "grim3212",
   "description": "Opens both doors of a double door at once. Works with trapdoors and fence gates too.",
   "needs": [
-    "net.minecraft.world.level.block.state.properties.DoorHingeSide",
-    "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
     "BlockTags.DOORS",
     "BlockTags.FENCE_GATES",
     "BlockTags.TRAPDOORS",
     "Player.isSecondaryUseActive()",
-    "BlockStateProperties.DOOR_HINGE",
-    "BlockStateProperties.DOUBLE_BLOCK_HALF",
-    "BlockStateProperties.HALF",
-    "BlockHitResult.withPosition()"
+    "BlockStateProperties.HALF"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "assorteddoubledoors-fabric-26.3-2.0.0.jar",
     "published": "2026-10-23"
   },
@@ -54,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -19,14 +19,9 @@
     "net.minecraft.client.renderer.entity.MinecartRenderer",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.vehicle.minecart.MinecartHopper",
-    "net.minecraft.world.flag.FeatureFlags",
     "net.minecraft.world.inventory.HopperMenu",
-    "net.minecraft.world.inventory.MenuType.MenuSupplier",
     "net.minecraft.world.item.MinecartItem",
-    "net.minecraft.world.item.crafting.RecipeAccess",
     "net.minecraft.world.item.crafting.RecipeManager.CachedCheck",
     "net.minecraft.world.level.block.BaseRailBlock",
     "net.minecraft.world.level.block.CampfireBlock",
@@ -51,14 +46,19 @@
     "BlockPos.mutable()",
     "BlockPos.MutableBlockPos.relative()",
     "NonNullList.stream()",
-    "and 54 more"
+    "SynchedEntityData.defineId()",
+    "SynchedEntityData.get()",
+    "SynchedEntityData.set()",
+    "ServerLevel.enabledFeatures()",
+    "ServerLevel.gameEvent()",
+    "and 49 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "paritem-1.2.1+26.3.jar",
     "published": "2026-11-03"
   },
@@ -88,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 119,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 94,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -13,34 +13,26 @@
     "net.minecraft.client.gui.components.FriendsButton",
     "net.minecraft.client.gui.components.SpriteIconButton",
     "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
     "net.minecraft.client.gui.screens.worldselection.SelectWorldScreen",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "org.lwjgl.sdl.SDLDialog",
     "org.lwjgl.sdl.SDL_DialogFileCallback",
     "org.lwjgl.sdl.SDL_DialogFileFilter",
     "org.lwjgl.sdl.SDL_DialogFileFilter.Buffer",
     "org.lwjgl.system.MemoryUtil",
-    "NativeImage.getHeight()",
     "NativeImage.getPixelBytes()",
-    "NativeImage.getWidth()",
     "NativeImage.isClosed()",
-    "NativeImage.read()",
     "Window.handle()",
     "SamplerCache.getClampToEdge()",
-    "Minecraft.execute()",
     "GuiGraphicsExtractor.blit()",
-    "GuiGraphicsExtractor.nextStratum()",
-    "AbstractWidget.shouldTakeFocusAfterInteraction()",
-    "Button.setTooltip()"
+    "DynamicTexture.getTextureView()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "titlescape-1.1-fabric-mc26.3.jar",
     "published": "2026-10-01"
   },
@@ -68,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

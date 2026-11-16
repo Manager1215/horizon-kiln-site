@@ -9,12 +9,10 @@
   "author": "Fayber",
   "description": "Lets you trade infinitely without Trades locking up with per player configuration",
   "needs": [
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.entity.npc.villager.AbstractVillager",
     "net.minecraft.world.entity.npc.villager.Villager",
     "net.minecraft.world.entity.npc.villager.VillagerData",
     "net.minecraft.world.item.trading.MerchantOffer",
-    "CommandSourceStack.getServer()",
     "MinecraftServer.isDedicatedServer()",
     "MinecraftServer.isSingleplayer()",
     "Player.sendMerchantOffers()",
@@ -25,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "infinitetrading-1.1.8.jar",
     "published": "2026-10-21"
   },
@@ -53,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

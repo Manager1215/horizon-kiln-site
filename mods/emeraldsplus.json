@@ -19,7 +19,6 @@
     "net.minecraft.client.resources.model.EquipmentClientInfo.Layer",
     "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
     "net.minecraft.client.resources.palette.PalettedTextureManager.Handle",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.component.DataComponentInitializers",
     "net.minecraft.core.component.DataComponentInitializers.SingleComponentInitializer",
     "net.minecraft.core.particles.BlockParticleOption",
@@ -35,11 +34,8 @@
     "net.minecraft.world.item.component.BlocksAttacks.DamageReduction",
     "net.minecraft.world.item.component.BlocksAttacks.ItemDamageFunction",
     "net.minecraft.world.item.component.DyedItemColor",
-    "net.minecraft.world.item.crafting.RepairItemRecipe",
     "net.minecraft.world.item.equipment.trim.ArmorTrim",
     "net.minecraft.world.item.equipment.trim.TrimPattern",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "ModelPart.visible",
     "RenderTypes.armorCutoutNoCull()",
     "RenderTypes.armorCutoutNoCullGlint()",
@@ -47,17 +43,21 @@
     "RenderTypes.trimmedArmorGlint()",
     "EquipmentAssetManager.get()",
     "HolderLookup.Provider.getOrThrow()",
-    "HolderLookup.Provider.lookup()",
-    "HolderLookup.RegistryLookup.get()",
-    "Registry.getOrThrow()",
-    "and 50 more"
+    "DataComponents.BLOCKS_ATTACKS",
+    "DataComponents.BREAK_SOUND",
+    "DataComponents.TRIM",
+    "ParticleTypes.BLOCK",
+    "MinecraftServer.getTickCount()",
+    "ServerLevel.getEntitiesOfClass()",
+    "ServerLevel.getGameRules()",
+    "and 34 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "emeraldsplus-fabric-3.2.0+mc26.3.jar",
     "published": "2026-11-07"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 98,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 74,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

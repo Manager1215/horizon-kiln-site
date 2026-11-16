@@ -10,12 +10,7 @@
   "description": "Eliminates vanilla jump delay for instant, ultra-responsive movement. Lightweight client-side mod for Fabric & NeoForge with smart server auto-tuning, perfect for PvP & parkour.",
   "needs": [
     "org.lwjgl.sdl.SDLKeycode",
-    "Minecraft.gameDirectory",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.setScreenAndShow()",
-    "ServerData.ip",
     "LocalPlayer.isAlive()",
-    "LocalPlayer.isFallFlying()",
     "LocalPlayer.isPassenger()",
     "LocalPlayer.isSleeping()",
     "LocalPlayer.isVisuallyCrawling()",
@@ -26,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "jumpdelayfix-fabric-26.3-1.4.2.jar",
     "published": "2026-10-28"
   },
@@ -54,7 +49,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

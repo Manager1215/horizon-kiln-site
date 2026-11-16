@@ -11,11 +11,9 @@
   "needs": [
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.player.ClientInput",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.Entity.MoveFunction",
     "net.minecraft.world.entity.player.Input",
     "net.minecraft.world.level.block.ChainBlock",
@@ -25,8 +23,6 @@
     "net.minecraft.world.level.block.state.BlockBehaviour.StatePredicate",
     "net.minecraft.world.level.pathfinder.PathComputationType",
     "net.minecraft.world.phys.shapes.BooleanOp",
-    "Options.getCameraType()",
-    "Options.setCameraType()",
     "LocalPlayer.input",
     "BlockPos.MutableBlockPos.set()",
     "ShapedRecipeBuilder.define()",
@@ -36,8 +32,6 @@
     "SynchedEntityData.set()",
     "BlockTags.CLIMBABLE",
     "BlockTags.MINEABLE_WITH_AXE",
-    "Entity.getBbHeight()",
-    "Entity.getBbWidth()",
     "Entity.getBoundingBox()",
     "Entity.getYHeadRot()",
     "Entity.isAlive()",
@@ -47,16 +41,22 @@
     "Entity.setYHeadRot()",
     "Entity.setYRot()",
     "Entity.stopRiding()",
-    "Player.getBbWidth()",
     "Player.isCrouching()",
-    "and 31 more"
+    "Player.isPassenger()",
+    "Player.jumpFromGround()",
+    "Player.startRiding()",
+    "Level.addFreshEntity()",
+    "Level.getEntity()",
+    "LevelReader.hasSignal()",
+    "FenceBlock.EAST",
+    "and 23 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "adpoles-26.3.0.0-fabric-build.0062.jar",
     "published": "2026-09-19"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 71,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 63,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

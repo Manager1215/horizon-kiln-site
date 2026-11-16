@@ -10,7 +10,6 @@
   "description": "Allows you to stop rendering particles,overlays,world  and entity good for pvp and fps",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.particle.FireworkParticles.Starter",
     "net.minecraft.client.particle.ParticleEngine",
     "net.minecraft.client.particle.TerrainParticle",
@@ -47,17 +46,18 @@
     "net.minecraft.world.entity.vehicle.minecart.Minecart",
     "net.minecraft.world.level.block.SnowLayerBlock",
     "Minecraft.levelExtractor",
-    "Minecraft.setScreenAndShow()",
     "Gui.overlay()",
-    "AbstractWidget.getMessage()",
-    "and 35 more"
+    "CameraRenderState.entityRenderState",
+    "DataComponents.FOOD",
+    "ParticleTypes.BLOCK",
+    "and 23 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "NoRender-1.0.7,26.3.jar",
     "published": "2026-09-17"
   },
@@ -83,7 +83,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 75,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 63,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

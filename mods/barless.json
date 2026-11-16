@@ -10,8 +10,6 @@
   "description": "A mod that removes the ugly top bar from your Minecraft window",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "net.minecraft.util.Util.OS",
     "org.lwjgl.sdl.SDLMouse",
     "org.lwjgl.sdl.SDLProperties",
@@ -20,10 +18,8 @@
     "org.lwjgl.system.MemoryUtil",
     "Window.selectCursor()",
     "Window.setFullscreen()",
+    "CursorType.createStandardCursor()",
     "Minecraft.resizeGui()",
-    "GuiGraphicsExtractor.<init>()",
-    "GuiGraphicsExtractor.blit()",
-    "GuiGraphicsExtractor.nextStratum()",
     "Util.getPlatform()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -31,7 +27,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "barless-1.4.jar",
     "published": "2026-09-15"
   },
@@ -60,7 +56,11 @@
     "minecraft",
     "timelesslib"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

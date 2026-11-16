@@ -30,7 +30,6 @@
     "net.minecraft.client.model.geom.builders.PartDefinition",
     "net.minecraft.client.renderer.entity.AgeableMobRenderer",
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
-    "net.minecraft.network.chat.contents.PlainTextContents",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.util.TimeUtil",
@@ -49,14 +48,15 @@
     "net.minecraft.world.entity.ai.goal.PanicGoal",
     "net.minecraft.world.entity.ai.goal.SitWhenOrderedToGoal",
     "net.minecraft.world.entity.ai.goal.TemptGoal",
-    "and 45 more"
+    "net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal",
+    "and 39 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "animalgarden-meerkat-1.0.6-fabric-26.3-0.161.0.jar",
     "published": "2026-09-22"
   },
@@ -83,7 +83,11 @@
     "aquarius_libs",
     "fabric-api"
   ],
-  "lacks": 85,
+  "softOff": {
+    "class": "partial",
+    "why": "generates in the world"
+  },
+  "lacks": 79,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

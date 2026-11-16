@@ -11,7 +11,6 @@
   "needs": [
     "com.mojang.text2speech.Narrator",
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.gui.screens.ConnectScreen",
     "net.minecraft.client.gui.screens.DirectJoinServerScreen",
     "net.minecraft.client.gui.screens.DisconnectedScreen",
@@ -22,41 +21,30 @@
     "net.minecraft.client.gui.screens.worldselection.SelectWorldScreen",
     "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
     "net.minecraft.client.multiplayer.resolver.ServerAddress",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.world.entity.player.PlayerModelPart",
     "net.minecraft.world.item.component.WrittenBookContent",
     "net.minecraft.world.level.storage.WorldData",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "ClientReceiveMessageEvents.ALLOW_GAME",
     "Minecraft.createWorldOpenFlows()",
-    "Minecraft.execute()",
-    "Minecraft.getCurrentServer()",
     "Minecraft.getLevelSource()",
-    "Minecraft.getSingleplayerServer()",
     "Minecraft.isLocalServer()",
     "Minecraft.resizeGui()",
-    "Minecraft.setScreenAndShow()",
     "Options.chatVisibility()",
     "Options.gamma()",
     "Options.getSoundSourceOptionInstance()",
     "Options.isModelPartEnabled()",
-    "Options.setCameraType()",
     "Options.setModelPart()",
-    "GuiGraphicsExtractor.fakeItem()",
-    "Hud.resetTitleTimes()",
-    "Hud.setSubtitle()",
-    "Hud.setTitle()",
     "ClientLevel.disconnect()",
-    "and 9 more"
+    "IntegratedServer.getWorldData()",
+    "DataComponents.WRITTEN_BOOK_CONTENT",
+    "LevelStorageSource.levelExists()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "effectmc-fabric-26.3-3.1.0.jar",
     "published": "2026-11-15"
   },
@@ -84,5 +72,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 49
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 29
 }

@@ -10,23 +10,17 @@
   "description": "Makes Hypixel's rank tags look cleaner and more visually appealing.",
   "needs": [
     "an access widener",
-    "com.mojang.authlib.GameProfile",
-    "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowChat",
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
-    "net.minecraft.network.chat.PlayerChatMessage",
-    "net.minecraft.util.StringUtil",
     "net.minecraft.world.scores.PlayerTeam",
     "net.minecraft.world.scores.TeamColor",
-    "ClientReceiveMessageEvents.ALLOW_CHAT",
     "ClientReceiveMessageEvents.ALLOW_GAME",
-    "Minecraft.execute()",
-    "Minecraft.getCurrentServer()",
     "ChatComponent.addPlayerMessage()",
     "ChatComponent.addServerSystemMessage()",
     "ClientLevel.getScoreboard()",
-    "ClientPacketListener.sendChat()",
     "PlayerInfo.getProfile()",
     "PlayerInfo.getTeam()",
+    "PlayerChatMessage.decoratedContent()",
+    "PlayerChatMessage.signature()",
     "Objective.getName()",
     "Scoreboard.getDisplayObjective()"
   ],
@@ -35,7 +29,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fancyrank-0.9.3-26.3.jar",
     "published": "2026-09-16"
   },
@@ -64,7 +58,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

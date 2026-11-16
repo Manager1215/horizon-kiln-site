@@ -10,28 +10,20 @@
   "description": "Server Auto-Connect Minecraft Mod",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.gui.layouts.LinearLayout",
     "net.minecraft.client.gui.layouts.SpacerElement",
     "net.minecraft.client.gui.screens.ConnectScreen",
     "net.minecraft.client.gui.screens.DisconnectedScreen",
     "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
     "net.minecraft.client.multiplayer.resolver.ServerAddress",
-    "Font.wordWrapHeight()",
-    "AbstractWidget.getBottom()",
-    "Button.Builder.width()",
-    "GuiEventListener.charTyped()",
-    "GuiEventListener.keyPressed()",
-    "GuiEventListener.mouseDragged()",
-    "GuiEventListener.mouseReleased()",
-    "ServerData.ip"
+    "Font.wordWrapHeight()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "autoconnect-fabric-26.9.1-26.3.jar",
     "published": "2026-09-18"
   },
@@ -49,7 +41,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

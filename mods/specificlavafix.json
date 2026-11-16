@@ -10,12 +10,8 @@
   "description": "This mod fixes the lava chunk blending issue for skyblock infinit",
   "needs": [
     "net.minecraft.world.level.levelgen.blending.Blender",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
     "BlockPos.MutableBlockPos.set()",
     "ServerChunkCache.getChunkNow()",
-    "ServerPlayer.nameAndId()",
-    "PlayerList.isOp()",
     "LevelChunk.getBlendingData()",
     "LevelChunk.getFluidState()",
     "LevelChunk.getHeight()",
@@ -28,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "LavaFix-1.0.0.jar",
     "published": "2026-10-05"
   },
@@ -57,7 +53,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

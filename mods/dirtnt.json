@@ -31,7 +31,6 @@
     "net.minecraft.server.packs.PackLocationInfo",
     "net.minecraft.server.packs.PackResources.ResourceOutput",
     "net.minecraft.server.packs.repository.PackSource",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.tags.TagEntry",
     "net.minecraft.tags.TagLoader",
     "net.minecraft.tags.TagLoader.EntryWithSource",
@@ -40,24 +39,25 @@
     "net.minecraft.world.level.block.FireBlock",
     "net.minecraft.world.level.block.TntBlock",
     "net.minecraft.world.level.block.state.BlockBehaviour.StatePredicate",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "NativeImage.copyFrom()",
-    "NativeImage.getHeight()",
-    "NativeImage.getPixel()",
-    "NativeImage.getWidth()",
-    "NativeImage.read()",
     "BlockStateModelDispatcher.CODEC",
     "BlockStateModelDispatcher.SimpleModelSelectors.instantiate()",
     "ClientItem.CODEC",
-    "and 31 more"
+    "BlockPos.MutableBlockPos.set()",
+    "FileToIdConverter.idToFile()",
+    "ServerLevel.getGameRules()",
+    "ServerPlayer.distanceToSqr()",
+    "SoundEvents.GENERIC_EXPLODE",
+    "BlockTags.ENDERMAN_HOLDABLE",
+    "ItemTags.SULFUR_CUBE_ARCHETYPE_EXPLOSIVE",
+    "and 21 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "DirTNT-1.9.0-26.3.jar",
     "published": "2026-09-16"
   },
@@ -85,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 71,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own"
+  },
+  "lacks": 61,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -41,8 +41,6 @@
     "net.minecraft.world.entity.ai.village.poi.PoiType",
     "net.minecraft.world.entity.player.Input",
     "net.minecraft.world.item.ShieldItem",
-    "net.minecraft.world.item.alchemy.Potion",
-    "net.minecraft.world.item.alchemy.Potions",
     "net.minecraft.world.item.component.CustomModelData",
     "net.minecraft.world.item.crafting.RecipeBookCategories",
     "net.minecraft.world.level.block.BarrierBlock",
@@ -50,14 +48,16 @@
     "net.minecraft.world.level.block.CeilingHangingSignBlock",
     "net.minecraft.world.level.block.ChainBlock",
     "net.minecraft.world.level.block.IronBarsBlock",
-    "and 74 more"
+    "net.minecraft.world.level.block.LanternBlock",
+    "net.minecraft.world.level.block.RedstoneWireBlock",
+    "and 71 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "enderscape-polymer-patch-3.0.3.0+26.3.jar",
     "published": "2026-10-12"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 163,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 117,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

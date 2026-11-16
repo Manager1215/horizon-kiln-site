@@ -10,25 +10,12 @@
   "description": "The VM Chinese Translation Group mod is used to check Chinese localization patches and some other utility features",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.util.Util.OS",
     "org.apache.commons.io.FileUtils",
     "org.apache.commons.io.IOUtils",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "org.apache.logging.log4j.MarkerManager",
     "GuiGraphicsExtractor.blit()",
-    "Checkbox.Builder.tooltip()",
-    "PlainTextButton.setTooltip()",
     "ConfirmLinkScreen.<init>()",
     "RenderPipelines.GUI_TEXTURED",
-    "MutableComponent.withStyle()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
     "Util.getPlatform()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -36,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "vmtranslationupdate-fabric-5.3.1+mc26.2.jar",
     "published": "2026-10-07"
   },
@@ -65,7 +52,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

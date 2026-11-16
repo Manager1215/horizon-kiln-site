@@ -12,13 +12,10 @@
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
     "net.minecraft.client.CloudStatus",
     "net.minecraft.client.GraphicsPreset",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
     "net.minecraft.client.gui.screens.options.VideoSettingsScreen",
     "org.lwjgl.opengl.GL",
     "org.lwjgl.opengl.GL11",
-    "Minecraft.execute()",
-    "Minecraft.setScreenAndShow()",
     "Options.biomeBlendRadius()",
     "Options.bobView()",
     "Options.cloudStatus()",
@@ -29,15 +26,14 @@
     "Options.graphicsPreset()",
     "Options.particles()",
     "Options.simulationDistance()",
-    "GuiGraphicsExtractor.blit()",
-    "AbstractWidget.getMessage()"
+    "GuiGraphicsExtractor.blit()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "aethertune-1.1.0-26x.jar",
     "published": "2026-10-22"
   },
@@ -66,7 +62,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

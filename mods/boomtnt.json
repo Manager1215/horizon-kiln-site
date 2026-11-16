@@ -17,7 +17,6 @@
     "net.minecraft.world.entity.animal.pig.Pig",
     "net.minecraft.world.entity.animal.sheep.Sheep",
     "net.minecraft.world.entity.monster.Creeper",
-    "Minecraft.execute()",
     "LocalPlayer.hurtDuration",
     "LocalPlayer.hurtTime",
     "ServerLevel.broadcastEntityEvent()",
@@ -27,8 +26,6 @@
     "SoundEvents.CREEPER_PRIMED",
     "SoundEvents.FIREWORK_ROCKET_BLAST",
     "SoundEvents.GENERIC_EXPLODE",
-    "ProblemReporter.DISCARDING",
-    "RandomSource.nextLong()",
     "InteractionHand.asEquipmentSlot()",
     "Entity.isAlive()",
     "EntityTypes.CHICKEN",
@@ -37,13 +34,9 @@
     "EntityTypes.PIG",
     "EntityTypes.SHEEP",
     "Mob.discard()",
-    "Mob.getRandom()",
     "Mob.isAlive()",
-    "Mob.isRemoved()",
     "Animal.setPos()",
     "PrimedTnt.getBoundingBox()",
-    "Items.FLINT_AND_STEEL",
-    "Items.TNT",
     "Level.addFreshEntity()",
     "Level.getEntities()",
     "Level.getEntitiesOfClass()",
@@ -56,7 +49,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "BoomTNT 1.0.0-26.3.jar",
     "published": "2026-10-05"
   },
@@ -85,7 +78,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 40,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 33,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

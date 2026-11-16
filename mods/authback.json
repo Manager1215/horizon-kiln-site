@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 9 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.GameProfileRepository",
     "com.mojang.authlib.HttpDiscoveryService",
     "com.mojang.authlib.SignatureState",
@@ -50,15 +49,16 @@
     "net.minecraft.client.GameNarrator",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
     "net.minecraft.client.PresenceSharing",
-    "net.minecraft.client.gui.components.CycleButton",
-    "and 46 more"
+    "net.minecraft.client.gui.components.OptionsList",
+    "net.minecraft.client.gui.components.OptionsList.Entry",
+    "and 39 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "authback-1.9.1.jar",
     "published": "2026-11-15"
   },
@@ -84,7 +84,11 @@
   },
   "mixins": true,
   "depends": [],
-  "lacks": 88,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 79,
   "development": {
     "status": "no-plans",
     "statusLabel": "No plans yet",

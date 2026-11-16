@@ -15,29 +15,21 @@
     "net.minecraft.world.item.component.Consumables",
     "net.minecraft.world.item.enchantment.EnchantmentInstance",
     "net.minecraft.world.level.block.PowderSnowBlock",
-    "HolderLookup.RegistryLookup.get()",
-    "Registry.get()",
-    "RegistryAccess.lookupOrThrow()",
     "DataComponents.CONSUMABLE",
-    "DataComponents.CUSTOM_NAME",
     "DataComponents.DAMAGE",
-    "DataComponents.REPAIR_COST",
     "SoundEvents.BUBBLE_COLUMN_BUBBLE_POP",
     "SoundEvents.BUCKET_EMPTY_POWDER_SNOW",
     "SoundEvents.COW_MILK",
-    "Player.giveExperiencePoints()",
     "Item.finishUsingItem()",
-    "Item.Properties.enchantable()",
     "EnchantmentHelper.createBook()",
-    "EnchantmentHelper.getItemEnchantmentLevel()",
-    "Blocks.POWDER_SNOW"
+    "EnchantmentHelper.getItemEnchantmentLevel()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "buckets_update-fabric-1.2.1+mc26.3.jar",
     "published": "2026-09-19"
   },
@@ -66,7 +58,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

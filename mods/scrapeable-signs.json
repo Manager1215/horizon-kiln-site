@@ -10,7 +10,6 @@
   "description": "Scrape waxed signs with an axe.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.level.block.SignBlock",
     "net.minecraft.world.level.block.entity.SignBlockEntity",
     "net.minecraft.world.level.gameevent.GameEvent.Context",
@@ -25,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "scrapeable-signs-0.1.0+26.3.jar",
     "published": "2026-09-22"
   },
@@ -53,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,16 +9,14 @@
   "author": "jpenilla",
   "description": "Allows mods to register commands using the Cloud Command Framework",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.minecraft.commands.arguments.selector.EntitySelectorParser",
-    "ServerLifecycleEvents.SERVER_STARTING"
+    "net.minecraft.commands.arguments.selector.EntitySelectorParser"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "cloud-fabric-2.1.0.jar",
     "published": "2026-09-16"
   },
@@ -47,7 +45,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

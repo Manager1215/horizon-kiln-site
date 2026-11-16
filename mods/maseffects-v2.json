@@ -24,15 +24,11 @@
     "net.minecraft.client.particle.SpriteSet",
     "net.minecraft.client.particle.TotemParticle",
     "net.minecraft.client.renderer.debug.EntityHitboxDebugRenderer",
-    "net.minecraft.gizmos.GizmoStyle",
     "net.minecraft.network.protocol.PacketUtils",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.projectile.hurtingprojectile.windcharge.WindCharge",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrownEnderpearl",
     "Minecraft.packetProcessor()",
     "AbstractClientPlayer.deathTime",
-    "LocalPlayer.isFallFlying()",
     "QuadParticleRenderState.add()",
     "Gizmos.cuboid()",
     "ClientboundEntityEventPacket.getEntity()",
@@ -40,23 +36,22 @@
     "ARGB.colorFromFloat()",
     "RandomSource.nextIntBetweenInclusive()",
     "Entity.getBoundingBox()",
-    "Entity.getDimensions()",
     "Entity.getPose()",
     "Entity.getPosition()",
-    "LivingEntity.getDimensions()",
     "LivingEntity.getPose()",
     "Player.fallDistance",
-    "Player.getDimensions()",
     "Player.getPose()",
     "Player.isBlocking()",
-    "and 8 more"
+    "ItemStack.getEnchantments()",
+    "Enchantments.BREACH",
+    "AABB.move()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "maseffects-2.4.0+26.3.jar",
     "published": "2026-09-16"
   },
@@ -87,7 +82,11 @@
     "minecraft",
     "ukulib"
   ],
-  "lacks": 48,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 36,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

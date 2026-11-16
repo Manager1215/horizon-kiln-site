@@ -19,13 +19,8 @@
     "com.mojang.blaze3d.font.TrueTypeGlyphProvider",
     "com.mojang.blaze3d.font.UnbakedGlyph",
     "com.mojang.blaze3d.platform.TextureUtil",
-    "net.minecraft.ReportedException",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
     "net.minecraft.client.gui.components.SpriteIconButton",
     "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.font.AllMissingGlyphProvider",
     "net.minecraft.client.gui.font.CodepointMap",
     "net.minecraft.client.gui.font.CodepointMap.Output",
@@ -50,15 +45,20 @@
     "net.minecraft.server.packs.FilePackResources.SharedZipFileAccess",
     "net.minecraft.server.packs.PathPackResources",
     "net.minecraft.server.packs.resources.ReloadInstance",
-    "net.minecraft.server.packs.resources.ReloadableResourceManager",
-    "and 29 more"
+    "net.minecraft.server.packs.resources.SimpleReloadInstance",
+    "net.minecraft.util.profiling.ProfilerFiller",
+    "org.lwjgl.system.MemoryUtil",
+    "NativeImage.getPixels()",
+    "NativeImage.getPointer()",
+    "Int2ObjectMap.putAll()",
+    "and 15 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "packforge-fabric-1.4.2-mc26.1-26.3.jar",
     "published": "2026-11-13"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 69,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 55,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

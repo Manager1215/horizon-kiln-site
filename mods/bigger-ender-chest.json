@@ -11,7 +11,6 @@
   "needs": [
     "Mixin: 3 points inside the game's methods",
     "net.minecraft.world.SimpleMenuProvider",
-    "net.minecraft.world.inventory.ChestMenu",
     "net.minecraft.world.inventory.PlayerEnderChestContainer",
     "net.minecraft.world.level.block.EnderChestBlock",
     "Player.getEnderChestInventory()"
@@ -21,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "biggerenderchest-26.3-0.1.1+mc26.3.jar",
     "published": "2026-10-15"
   },
@@ -47,7 +46,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

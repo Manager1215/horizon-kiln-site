@@ -13,7 +13,6 @@
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
     "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.particle.ParticleProvider",
     "net.minecraft.client.particle.SimpleAnimatedParticle",
     "net.minecraft.client.particle.SingleQuadParticle",
@@ -21,18 +20,12 @@
     "net.minecraft.client.particle.SingleQuadParticle.Layer",
     "net.minecraft.tags.EntityTypeTags",
     "net.minecraft.world.damagesource.DamageTypes",
-    "net.minecraft.world.entity.EntityDimensions",
-    "Options.getCameraType()",
     "BlockPos.containing()",
     "RegistryAccess.getOrThrow()",
     "SoundEvents.WIND_CHARGE_BURST",
     "RandomSource.triangle()",
     "RandomSource.triangle()",
-    "DamageSource.getEntity()",
-    "DamageSource.is()",
-    "DamageSource.isDirect()",
     "Entity.fireImmune()",
-    "Entity.getDimensions()",
     "Entity.getPose()",
     "Entity.is()",
     "Entity.xo",
@@ -45,7 +38,6 @@
     "Enchantments.BANE_OF_ARTHROPODS",
     "Enchantments.FIRE_ASPECT",
     "Enchantments.KNOCKBACK",
-    "Enchantments.SHARPNESS",
     "Enchantments.SMITE",
     "Level.addParticle()"
   ],
@@ -54,7 +46,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "enchantment-effects-1.1.0+26.3.jar",
     "published": "2026-09-15"
   },
@@ -83,7 +75,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 38,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 30,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

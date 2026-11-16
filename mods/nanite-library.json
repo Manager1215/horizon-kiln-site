@@ -10,11 +10,8 @@
   "description": "Bespoke library mod for the mods in the Nanite family",
   "needs": [
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "ImmutableList.stream()",
     "ServerPlayerEvents.JOIN",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "Minecraft.execute()",
     "Minecraft.isLocalServer()",
     "ByteBufCodecs.stringUtf8()"
   ],
@@ -23,7 +20,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nanite-library-fabric-26.3.0.6.jar",
     "published": "2026-09-27"
   },
@@ -53,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

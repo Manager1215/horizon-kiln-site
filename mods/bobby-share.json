@@ -11,13 +11,9 @@
   "needs": [
     "net.minecraft.server.level.ChunkMap",
     "net.minecraft.world.level.chunk.storage.SerializableChunkData",
-    "Minecraft.execute()",
     "ClientLevel.getChunkSource()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "ListTag.compoundStream()",
     "ByteBufCodecs.OPTIONAL_COMPOUND_TAG",
-    "MinecraftServer.execute()",
     "MinecraftServer.getAllLevels()",
     "ServerChunkCache.chunkMap",
     "ServerPlayer.chunkPosition()",
@@ -28,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bobbyshare-1.4.0+mc26.3.jar",
     "published": "2026-11-03"
   },
@@ -56,7 +52,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

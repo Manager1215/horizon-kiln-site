@@ -30,8 +30,6 @@
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
     "net.minecraft.world.entity.monster.spider.CaveSpider",
-    "net.minecraft.world.item.SpawnEggItem",
-    "net.minecraft.world.item.alchemy.Potion",
     "net.minecraft.world.level.block.PotentSulfurBlock",
     "net.minecraft.world.level.block.RedStoneOreBlock",
     "net.minecraft.world.level.block.entity.PotentSulfurBlockEntity",
@@ -43,21 +41,23 @@
     "BlockPos.mutable()",
     "BlockPos.MutableBlockPos.move()",
     "BlockPos.MutableBlockPos.set()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "BuiltInRegistries.ENTITY_SUB_PREDICATE_TYPE",
     "BuiltInRegistries.FEATURE_TYPE",
-    "BuiltInRegistries.POTION",
     "Registries.BIOME",
     "Registries.MOB_EFFECT",
-    "and 46 more"
+    "ServerLevel.getDifficulty()",
+    "ServerLevel.getGameRules()",
+    "ServerLevel.sendParticles()",
+    "BlockTags.CAUSES_CONTINUOUS_GEYSER_ERUPTIONS",
+    "DamageSources.mobAttack()",
+    "and 32 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sulfurcavesplus-1.1.8-26.3.jar",
     "published": "2026-09-16"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 92,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 72,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

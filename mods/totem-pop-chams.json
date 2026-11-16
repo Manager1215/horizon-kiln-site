@@ -10,7 +10,6 @@
   "description": "Captures player entity states on totem pops and displays a ghosted version in it's place",
   "needs": [
     "an access widener",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "net.minecraft.client.model.geom.ModelLayers",
@@ -50,14 +49,15 @@
     "EntityRenderDispatcher.camera",
     "EntityRenderDispatcher.getRenderer()",
     "EntityRenderer.createRenderState()",
-    "and 18 more"
+    "RenderType.create()",
+    "and 17 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "TotemPopChams-1.1.1+26.3.jar",
     "published": "2026-10-10"
   },
@@ -86,7 +86,11 @@
     "minecraft",
     "walksylib"
   ],
-  "lacks": 58,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 57,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -15,7 +15,6 @@
     "net.minecraft.server.level.ServerPlayer.RespawnConfig",
     "net.minecraft.stats.ServerRecipeBook",
     "net.minecraft.stats.ServerRecipeBook.Packed",
-    "net.minecraft.world.entity.EntityEquipment",
     "net.minecraft.world.entity.ai.attributes.AttributeInstance.Packed",
     "net.minecraft.world.entity.ai.attributes.AttributeMap",
     "net.minecraft.world.entity.ai.attributes.DefaultAttributes",
@@ -29,7 +28,6 @@
     "ServerPlayer.addPostEffect()",
     "ServerPlayer.addTag()",
     "ServerPlayer.clearPostEffects()",
-    "ServerPlayer.connection",
     "ServerPlayer.currentImpulseImpactPos",
     "ServerPlayer.entityTags()",
     "ServerPlayer.fallDistance",
@@ -37,8 +35,6 @@
     "ServerPlayer.getEnderChestInventory()",
     "ServerPlayer.getLastHurtByMobTimestamp()",
     "ServerPlayer.getLastHurtByPlayerMemoryTime()",
-    "ServerPlayer.getMainArm()",
-    "ServerPlayer.getRandom()",
     "ServerPlayer.getRecipeBook()",
     "ServerPlayer.hurtDuration",
     "ServerPlayer.hurtTime",
@@ -49,14 +45,18 @@
     "ServerPlayer.setRaidOmenPosition()",
     "ServerPlayer.setRespawnPosition()",
     "ServerPlayer.setSpawnExtraParticlesOnFall()",
-    "and 32 more"
+    "ServerPlayer.startFallFlying()",
+    "ServerPlayer.stopFallFlying()",
+    "ServerPlayer.teleportTo()",
+    "ServerPlayer.tickCount",
+    "and 26 more"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "modifyplayerdata-fabric-0.4.3-26.3.jar",
     "published": "2026-09-16"
   },
@@ -72,7 +72,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 72,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 66,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

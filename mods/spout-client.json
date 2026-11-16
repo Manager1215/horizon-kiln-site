@@ -13,13 +13,11 @@
     "Mixin: 2 points inside the game's methods",
     "net.minecraft.client.gui.screens.LoadingOverlay",
     "net.minecraft.client.multiplayer.ClientHandshakePacketListenerImpl",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.multiplayer.ServerData.ServerPackStatus",
     "net.minecraft.client.renderer.texture.ReloadableTexture",
     "net.minecraft.client.renderer.texture.TextureContents",
     "net.minecraft.client.resources.server.DownloadedPackSource",
     "net.minecraft.client.resources.server.ServerPackManager",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.IdMap",
     "net.minecraft.core.IdMapper",
     "net.minecraft.core.RegistrationInfo",
@@ -38,7 +36,6 @@
     "net.minecraft.util.valueproviders.IntProviders",
     "net.minecraft.world.flag.FeatureFlag",
     "net.minecraft.world.flag.FeatureFlagRegistry",
-    "net.minecraft.world.flag.FeatureFlags",
     "net.minecraft.world.item.DoubleHighBlockItem",
     "net.minecraft.world.item.EggItem",
     "net.minecraft.world.item.component.SuspiciousStewEffects",
@@ -51,6 +48,9 @@
     "net.minecraft.world.level.block.AttachedStemBlock",
     "net.minecraft.world.level.block.AzaleaBlock",
     "net.minecraft.world.level.block.BambooSaplingBlock",
+    "net.minecraft.world.level.block.BannerBlock",
+    "net.minecraft.world.level.block.BarrelBlock",
+    "net.minecraft.world.level.block.BarrierBlock",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "spoutcraft-2.8.jar",
     "published": "2026-11-02"
   },
@@ -75,7 +75,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 401,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 383,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

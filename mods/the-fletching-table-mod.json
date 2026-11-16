@@ -10,27 +10,14 @@
   "description": "This mod makes the unused Fletching Table block useful!",
   "needs": [
     "an access widener",
-    "net.minecraft.data.AtlasIds",
-    "net.minecraft.world.SimpleContainer",
-    "net.minecraft.world.flag.FeatureFlags",
-    "net.minecraft.world.inventory.MenuType.MenuSupplier",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "DataComponents.POTION_CONTENTS",
-    "BuiltInRegistries.RECIPE_BOOK_CATEGORY",
-    "MenuType.<init>()",
-    "Items.ARROW",
-    "Items.LINGERING_POTION",
-    "Items.POTION",
-    "Items.SPLASH_POTION",
-    "PlacementInfo.create()",
-    "Blocks.FLETCHING_TABLE"
+    "PlacementInfo.create()"
   ],
-  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "the_fletching_table_mod-fabric-26.3-1.4.jar",
     "published": "2026-09-18"
   },
@@ -61,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

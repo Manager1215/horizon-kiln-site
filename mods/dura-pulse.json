@@ -10,35 +10,16 @@
   "description": "Animated durability HUD for tools, armor and effects with a drag & drop editor, Safe Mode, auto totem & refill and elytra warnings. 100% client-side.",
   "needs": [
     "net.minecraft.client.gui.screens.LoadingOverlay",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.world.inventory.ContainerInput",
-    "KeyMapping.getTranslatedKeyMessage()",
-    "Minecraft.execute()",
-    "Minecraft.gameMode",
     "Options.darkMojangStudiosBackground()",
-    "Font.split()",
-    "GuiGraphicsExtractor.blit()",
-    "GuiGraphicsExtractor.blitSprite()",
-    "GuiGraphicsExtractor.text()",
-    "Hud.getMobEffectSprite()",
-    "Screen.mouseClicked()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()",
-    "MouseButtonEvent.hasShiftDown()",
-    "LocalPlayer.isFallFlying()",
     "SoundEvents.ANVIL_LAND",
-    "SoundEvents.BELL_BLOCK",
-    "Util.getMillis()",
-    "Util.getNanos()",
-    "Items.SHIELD",
-    "Items.TOTEM_OF_UNDYING"
+    "SoundEvents.BELL_BLOCK"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "DuraPulse-2.0.1+26.3.jar",
     "published": "2026-11-06"
   },
@@ -66,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

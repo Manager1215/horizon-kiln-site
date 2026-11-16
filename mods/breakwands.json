@@ -11,15 +11,14 @@
   "needs": [
     "net.minecraft.server.level.ServerPlayerGameMode",
     "ServerPlayer.gameMode",
-    "ItemStack.hurtAndBreak()",
-    "ToolMaterial.COPPER"
+    "ItemStack.hurtAndBreak()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "breakwands-1.2.0.jar",
     "published": "2026-09-25"
   },
@@ -47,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

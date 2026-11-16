@@ -12,16 +12,14 @@
     "net.minecraft.client.resources.sounds.EntityBoundSoundInstance",
     "net.minecraft.world.item.JukeboxPlayable",
     "net.minecraft.world.item.JukeboxSong",
-    "SoundManager.stop()",
-    "DataComponents.JUKEBOX_PLAYABLE",
-    "Items.JUKEBOX"
+    "DataComponents.JUKEBOX_PLAYABLE"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "pockettunes-1.0.0-26.3.jar",
     "published": "2026-09-21"
   },
@@ -50,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

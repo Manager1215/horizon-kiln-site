@@ -9,19 +9,14 @@
   "author": "Daylight",
   "description": "Toggle mouse locking to assist you with repetitive tasks where you need to go in a straight line, such as farming, planting crops when already aligned to an angle",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "InputConstants.isKeyDown()",
-    "KeyMappingHelper.getBoundKeyOf()",
-    "Minecraft.execute()",
-    "Minecraft.gameMode",
-    "Minecraft.setScreenAndShow()"
+    "MultiPlayerGameMode.canHurtPlayer()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mouselock-fabric-1.0.0-26.3.jar",
     "published": "2026-11-07"
   },
@@ -52,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

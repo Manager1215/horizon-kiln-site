@@ -18,15 +18,11 @@
     "net.minecraft.commands.arguments.AngleArgument",
     "net.minecraft.commands.arguments.ComponentArgument",
     "net.minecraft.commands.arguments.CompoundTagArgument",
-    "net.minecraft.commands.arguments.DimensionArgument",
     "net.minecraft.commands.arguments.GameModeArgument",
-    "net.minecraft.commands.arguments.GameProfileArgument",
     "net.minecraft.commands.arguments.HeightmapTypeArgument",
     "net.minecraft.commands.arguments.HexColorArgument",
-    "net.minecraft.commands.arguments.IdentifierArgument",
     "net.minecraft.commands.arguments.MessageArgument",
     "net.minecraft.commands.arguments.NbtTagArgument",
-    "net.minecraft.commands.arguments.ObjectiveArgument",
     "net.minecraft.commands.arguments.ObjectiveCriteriaArgument",
     "net.minecraft.commands.arguments.OperationArgument",
     "net.minecraft.commands.arguments.ParticleArgument",
@@ -46,19 +42,23 @@
     "net.minecraft.commands.arguments.ResourceOrTagArgument",
     "net.minecraft.commands.arguments.ResourceOrTagKeyArgument",
     "net.minecraft.commands.arguments.ResourceSelectorArgument",
-    "net.minecraft.commands.arguments.ScoreHolderArgument",
     "net.minecraft.commands.arguments.ScoreboardSlotArgument",
     "net.minecraft.commands.arguments.SlotArgument",
     "net.minecraft.commands.arguments.SlotSourceArgument",
     "net.minecraft.commands.arguments.SlotSourceArgument.Result",
-    "and 79 more"
+    "net.minecraft.commands.arguments.SlotsArgument",
+    "net.minecraft.commands.arguments.StyleArgument",
+    "net.minecraft.commands.arguments.SwingAnimationArgument",
+    "net.minecraft.commands.arguments.TeamArgument",
+    "net.minecraft.commands.arguments.TeamColorArgument",
+    "and 52 more"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "declarative-ui-1.3.2+26.3.jar",
     "published": "2026-09-30"
   },
@@ -86,7 +86,11 @@
     "minecraft",
     "sgui"
   ],
-  "lacks": 160,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 119,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

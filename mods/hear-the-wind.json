@@ -11,8 +11,6 @@
   "needs": [
     "net.minecraft.client.resources.sounds.AbstractTickableSoundInstance",
     "net.minecraft.client.resources.sounds.ElytraOnPlayerSoundInstance",
-    "SoundManager.stop()",
-    "SoundManager.stop()",
     "SoundEvents.ELYTRA_FLYING",
     "Player.getVehicle()",
     "Player.isAlive()",
@@ -23,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hear_the_wind-0.2.0+26.3-fabric.jar",
     "published": "2026-09-20"
   },
@@ -52,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

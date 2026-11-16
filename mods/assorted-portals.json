@@ -13,7 +13,6 @@
     "net.minecraft.advancements.triggers.ItemUsedOnLocationTrigger",
     "net.minecraft.client.renderer.blockentity.AbstractEndPortalRenderer",
     "net.minecraft.client.renderer.blockentity.state.EndPortalRenderState",
-    "net.minecraft.core.RegistrySetBuilder",
     "net.minecraft.world.level.block.BaseFireBlock",
     "net.minecraft.world.level.block.Mirror",
     "net.minecraft.world.level.block.Portal",
@@ -30,9 +29,7 @@
     "net.minecraft.world.level.storage.loot.entries.NestedLootTable",
     "RenderTypes.endPortal()",
     "Direction.fromAxisAndDirection()",
-    "Holder.is()",
     "Registries.BIOME",
-    "ServerLevel.destroyBlock()",
     "ServerPlayer.seenCredits",
     "ServerPlayer.showEndCredits()",
     "SoundEvents.END_PORTAL_SPAWN",
@@ -42,21 +39,24 @@
     "Entity.setAsInsidePortal()",
     "Block.boxZ()",
     "Block.column()",
-    "Blocks.END_PORTAL",
     "RotatedPillarBlock.rotatePillar()",
     "SoundType.WOOL",
     "BlockBehaviour.Properties.instrument()",
     "BlockBehaviour.Properties.pushReaction()",
     "BlockState.canBeReplaced()",
     "BlockState.getShape()",
-    "and 7 more"
+    "GameEvent.BLOCK_PLACE",
+    "MapColor.COLOR_BLACK",
+    "MapColor.COLOR_GREEN",
+    "MapColor.COLOR_PURPLE",
+    "and 3 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "assortedportals-fabric-26.3-2.0.0.jar",
     "published": "2026-10-23"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 47,
+  "softOff": {
+    "class": "partial",
+    "why": "generates in the world"
+  },
+  "lacks": 43,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

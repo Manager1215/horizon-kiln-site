@@ -10,7 +10,6 @@
   "description": "Design elaborate buildings within a minute. A maintained port of simibubi's The Mighty Architect for Fabric, NeoForge and Forge — Minecraft 1.19.4 to 26.3.",
   "needs": [
     "com.mojang.blaze3d.Blaze3D",
-    "com.mojang.blaze3d.platform.TextInputManager",
     "com.mojang.blaze3d.resource.GraphicsResourceAllocator",
     "com.mojang.blaze3d.vertex.BufferBuilder",
     "com.mojang.blaze3d.vertex.ByteBufferBuilder",
@@ -19,15 +18,12 @@
     "com.mojang.blaze3d.vertex.MeshData.DrawState",
     "com.mojang.renderpearl.api.vertex.VertexFormatElement",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.LevelTargetBundle",
     "net.minecraft.client.renderer.PostChain",
     "net.minecraft.client.renderer.ShaderManager",
     "net.minecraft.client.renderer.block.ModelBlockRenderer",
     "net.minecraft.commands.arguments.blocks.BlockStateParser",
     "net.minecraft.nbt.NbtAccounter",
-    "net.minecraft.nbt.NbtIo",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.util.Continuation",
     "net.minecraft.world.level.CardinalLighting.Type",
     "net.minecraft.world.level.LightLayer",
@@ -44,19 +40,23 @@
     "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.StructureBlockInfo",
     "net.minecraft.world.level.storage.WritableLevelData",
     "net.minecraft.world.ticks.BlackholeTickAccess",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "InputConstants.isKeyDown()",
     "PoseStack.last()",
     "PoseStack.Pose.normal()",
-    "and 57 more"
+    "PoseStack.Pose.pose()",
+    "VertexConsumer.addVertex()",
+    "VertexConsumer.addVertex()",
+    "VertexConsumer.putBakedQuad()",
+    "VertexConsumer.setColor()",
+    "VertexConsumer.setLight()",
+    "VertexConsumer.setNormal()",
+    "and 51 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mightyarchitect-3.2.2+mc26.3-fabric.jar",
     "published": "2026-11-12"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 199,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 142,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

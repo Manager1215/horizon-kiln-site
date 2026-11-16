@@ -18,9 +18,7 @@
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.BeforeGizmos",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.color.ColorLerper",
     "net.minecraft.client.color.ColorLerper.Type",
     "net.minecraft.client.model.EntityModel",
@@ -31,7 +29,6 @@
     "net.minecraft.client.model.geom.builders.CubeListBuilder",
     "net.minecraft.client.model.geom.builders.MeshDefinition",
     "net.minecraft.client.model.geom.builders.PartDefinition",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.particle.BubbleColumnUpParticle",
     "net.minecraft.client.particle.BubbleColumnUpParticle.Provider",
     "net.minecraft.client.particle.BubbleParticle",
@@ -51,6 +48,9 @@
     "net.minecraft.client.particle.HeartParticle.Provider",
     "net.minecraft.client.particle.LargeSmokeParticle",
     "net.minecraft.client.particle.LargeSmokeParticle.Provider",
+    "net.minecraft.client.particle.LavaParticle",
+    "net.minecraft.client.particle.NoRenderParticle",
+    "net.minecraft.client.particle.Particle",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SubtleEffects-fabric-26.3-1.15.2.jar",
     "published": "2026-11-13"
   },
@@ -87,7 +87,11 @@
     "fzzy_config",
     "java"
   ],
-  "lacks": 722,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 582,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

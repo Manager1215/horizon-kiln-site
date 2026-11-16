@@ -9,8 +9,6 @@
   "author": "Glam_Ardor",
   "description": "Resource-pack-driven block sound overrides: break, fall, hit, place, step and ambient (idle) sounds per blockstate, with volume, pitch, chance and condition settings in blockmap.json.",
   "needs": [
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-    "Minecraft.isSameThread()",
     "BlockPos.MutableBlockPos.set()",
     "ClientboundSoundPacket.getPitch()",
     "ClientboundSoundPacket.getSeed()",
@@ -21,20 +19,14 @@
     "ClientboundSoundPacket.getY()",
     "ClientboundSoundPacket.getZ()",
     "RandomSource.nextIntBetweenInclusive()",
-    "Level.getOverworldClockTime()",
-    "SoundType.getBreakSound()",
-    "SoundType.getFallSound()",
-    "SoundType.getHitSound()",
-    "SoundType.getPlaceSound()",
-    "SoundType.getStepSound()",
-    "BlockState.getSoundType()"
+    "Level.getOverworldClockTime()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "customblocksounds-1.0.1+26.jar",
     "published": "2026-10-16"
   },
@@ -62,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

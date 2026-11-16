@@ -28,20 +28,15 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDamage",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
     "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRenderHandler",
-    "net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariantAttributes",
     "net.fabricmc.fabric.api.transfer.v1.item.base.SingleItemStorage",
     "net.fabricmc.fabric.api.transfer.v1.storage.base.SidedStorageBlockEntity",
     "net.fabricmc.fabric.api.transfer.v1.storage.base.SingleVariantStorage",
     "net.minecraft.advancements.triggers.ConsumeItemTrigger",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.animation.AnimationChannel",
     "net.minecraft.client.animation.AnimationChannel.Interpolation",
     "net.minecraft.client.animation.AnimationChannel.Interpolations",
@@ -51,6 +46,11 @@
     "net.minecraft.client.animation.AnimationDefinition.Builder",
     "net.minecraft.client.animation.Keyframe",
     "net.minecraft.client.animation.KeyframeAnimation",
+    "net.minecraft.client.animation.KeyframeAnimations",
+    "net.minecraft.client.gui.components.MultiLineEditBox",
+    "net.minecraft.client.gui.components.MultiLineEditBox.Builder",
+    "net.minecraft.client.model.HumanoidModel",
+    "net.minecraft.client.model.geom.PartPose",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "kaleidoscope_tavern-1.2.0.15-fabric+mc26.3.jar",
     "published": "2026-11-15"
   },
@@ -93,7 +93,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 443,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 359,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

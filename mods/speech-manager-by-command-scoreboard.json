@@ -9,22 +9,16 @@
   "author": "wifi-left",
   "description": "Manager the speech in your server by command 'scoreboard'!",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
     "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowChatMessage",
-    "net.minecraft.network.chat.PlayerChatMessage",
     "net.minecraft.server.ServerScoreboard",
     "net.minecraft.world.scores.PlayerTeam",
     "net.minecraft.world.scores.ReadOnlyScoreInfo",
-    "net.minecraft.world.scores.ScoreHolder",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "CommandSourceStack.getServer()",
+    "PlayerChatMessage.decoratedContent()",
+    "PlayerChatMessage.signedContent()",
     "MinecraftServer.getScoreboard()",
     "ServerLevel.getScoreboard()",
-    "ServerPlayer.getDisplayName()",
     "ServerPlayer.getTeam()",
-    "ServerPlayer.sendSystemMessage()",
-    "PlayerList.broadcastSystemMessage()",
     "ObjectiveCriteria.DUMMY"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -32,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "MuteByCMD-1.1.0.jar",
     "published": "2026-07-11"
   },
@@ -60,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

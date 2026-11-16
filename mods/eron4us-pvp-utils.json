@@ -9,29 +9,19 @@
   "author": "eron4u",
   "description": "Essential client-side PvP utilities: slot lock protection, custom HUD, low health/hunger alerts, and quick inventory kits with anti-ban delays.",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.world.inventory.ContainerInput",
-    "InputConstants.isKeyDown()",
-    "KeyMapping.getTranslatedKeyMessage()",
-    "Minecraft.gameMode",
-    "GuiGraphicsExtractor.blit()",
-    "GuiGraphicsExtractor.blitSprite()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()",
+    "MultiPlayerGameMode.dropItem()",
     "Player.getAbsorptionAmount()",
     "Player.getInvulnerableTime()",
     "Player.isFullyFrozen()",
     "ItemStack.getEnchantments()",
     "Level.getLevelData()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "pvputils-26.3-2.0.0.jar",
     "published": "2026-10-21"
   },
@@ -60,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -27,7 +27,6 @@
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
     "net.minecraft.world.entity.ai.attributes.RangedAttribute",
     "net.minecraft.world.entity.animal.happyghast.HappyGhast",
-    "net.minecraft.world.inventory.ChestMenu",
     "ModelPart.getChild()",
     "ModelPart.loadPose()",
     "ModelPart.resetPose()",
@@ -42,21 +41,14 @@
     "SoundEvents.SHEEP_SHEAR",
     "Entity.distanceToSqr()",
     "Entity.isAlive()",
-    "Entity.isRemoved()",
-    "Player.isSecondaryUseActive()",
-    "MenuType.GENERIC_9x1",
-    "MenuType.GENERIC_9x2",
-    "MenuType.GENERIC_9x3",
-    "MenuType.GENERIC_9x4",
-    "MenuType.GENERIC_9x5",
-    "and 2 more"
+    "Player.isSecondaryUseActive()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "happy_ghast_inventory-1.1.1-26.3+.jar",
     "published": "2026-09-15"
   },
@@ -85,7 +77,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 42,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 33,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

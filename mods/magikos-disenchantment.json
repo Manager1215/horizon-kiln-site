@@ -11,14 +11,9 @@
   "needs": [
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.BooleanRuleBuilder",
-    "net.fabricmc.fabric.api.item.v1.EnchantingContext",
-    "net.minecraft.network.chat.ComponentSerialization",
     "net.minecraft.server.network.Filterable",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.flag.FeatureFlagRegistry",
-    "net.minecraft.world.flag.FeatureFlags",
     "net.minecraft.world.inventory.ContainerData",
-    "net.minecraft.world.inventory.MenuType.MenuSupplier",
     "net.minecraft.world.inventory.SimpleContainerData",
     "net.minecraft.world.item.WrittenBookItem",
     "net.minecraft.world.item.component.WrittenBookContent",
@@ -27,25 +22,11 @@
     "Object2IntMap.Entry.getKey()",
     "BlockEntityRenderer.extractRenderState()",
     "NonNullList.addAll()",
-    "DataComponents.ENCHANTMENT_GLINT_OVERRIDE",
-    "DataComponents.STORED_ENCHANTMENTS",
     "DataComponents.WRITTEN_BOOK_CONTENT",
     "MinecraftServer.getGameRules()",
-    "Player.giveExperienceLevels()",
-    "MenuType.<init>()",
-    "Item.Properties.enchantable()",
-    "ItemStack.canBeEnchantedWith()",
+    "FeatureFlags.REGISTRY",
     "ItemStack.getEnchantments()",
-    "Items.ENCHANTED_BOOK",
-    "Items.FEATHER",
-    "Enchantment.areCompatible()",
-    "Enchantment.canEnchant()",
-    "Enchantment.getMaxLevel()",
-    "EnchantmentHelper.canStoreEnchantments()",
     "EnchantmentHelper.updateEnchantments()",
-    "ItemEnchantments.entrySet()",
-    "ItemEnchantments.Mutable.removeIf()",
-    "ItemEnchantments.Mutable.set()",
     "GameRuleCategory.MISC",
     "GameRules.get()"
   ],
@@ -54,7 +35,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "magikos-disenchantment_26.3_0.20.1-1.1.1.jar",
     "published": "2026-11-15"
   },
@@ -83,5 +64,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 39
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 20
 }

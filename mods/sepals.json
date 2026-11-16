@@ -10,7 +10,6 @@
   "description": "An extremely radical and experimental optimization for Minecraft server performances.",
   "needs": [
     "Mixin: 8 points inside the game's methods",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.util.debug.LevelDebugSynchronizers",
     "net.minecraft.world.entity.EntitySelector",
     "net.minecraft.world.entity.NeutralMob",
@@ -50,6 +49,7 @@
     "net.minecraft.world.entity.ai.behavior.RunOne",
     "net.minecraft.world.entity.ai.behavior.SetClosestHomeAsWalkTarget",
     "net.minecraft.world.entity.ai.behavior.SetEntityLookTarget",
+    "net.minecraft.world.entity.ai.behavior.SetEntityLookTargetSometimes",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Sepals-fabric-1.0.31.jar",
     "published": "2026-10-15"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 199,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes"
+  },
+  "lacks": 186,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

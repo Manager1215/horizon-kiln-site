@@ -10,7 +10,6 @@
   "description": "Allows players to sprint up ladders & other climbable blocks",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "LocalPlayer.horizontalCollision",
     "LocalPlayer.onClimbable()",
     "Direction.getFacingAxis()"
   ],
@@ -19,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ladder-sprint-fabric-1.0.0+26.3.jar",
     "published": "2026-11-05"
   },
@@ -36,7 +35,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

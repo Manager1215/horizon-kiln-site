@@ -10,8 +10,6 @@
   "description": "Bringing first-person animations to the third-person",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.CameraType",
-    "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
     "net.minecraft.client.model.ArmedModel",
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.model.HumanoidModel.ArmPose",
@@ -26,7 +24,6 @@
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
     "net.minecraft.client.renderer.state.MapRenderState",
     "net.minecraft.world.entity.LivingEntity.SwingDescription",
-    "net.minecraft.world.entity.Pose",
     "net.minecraft.world.entity.WalkAnimationState",
     "net.minecraft.world.entity.animal.equine.AbstractHorse",
     "net.minecraft.world.entity.projectile.ProjectileUtil",
@@ -38,8 +35,6 @@
     "net.minecraft.world.item.ShieldItem",
     "net.minecraft.world.level.block.LadderBlock",
     "net.minecraft.world.phys.EntityHitResult",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "PoseStack.last()",
     "PoseStack.Pose.pose()",
     "VertexConsumer.addVertex()",
@@ -47,17 +42,22 @@
     "VertexConsumer.setLight()",
     "Minecraft.getEntityRenderDispatcher()",
     "Minecraft.getMapRenderer()",
-    "Options.getCameraType()",
     "ModelPart.visible",
     "AbstractClientPlayer.canFreeze()",
-    "and 50 more"
+    "AbstractClientPlayer.fallDistance",
+    "AbstractClientPlayer.getBoundingBox()",
+    "AbstractClientPlayer.getCurrentSwing()",
+    "AbstractClientPlayer.getEyePosition()",
+    "AbstractClientPlayer.getInBlockState()",
+    "AbstractClientPlayer.getLastClimbablePos()",
+    "and 43 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "notenoughanimations-fabric-1.12.7-mc26.3.jar",
     "published": "2026-11-01"
   },
@@ -84,7 +84,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 97,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 83,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

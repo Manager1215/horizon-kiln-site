@@ -2,24 +2,19 @@
   "id": "toggle-keybinds",
   "name": "Toggle Keybinds",
   "version": "1.1.0",
-  "status": "planned",
-  "statusLabel": "Planned",
-  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "status": "not-checked",
+  "statusLabel": "Not checked",
+  "statusMeaning": "In the catalogue, not checked yet.",
   "url": "https://modrinth.com/mod/toggle-keybinds",
   "author": "kwak0",
   "description": "A mod that adds keybinds that let you toggle between hotbar slots.",
-  "needs": [
-    "net.minecraft.world.inventory.ContainerInput",
-    "InputConstants.getKey()",
-    "InputConstants.Key.getDisplayName()",
-    "InputConstants.Type.getOrCreate()"
-  ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4)",
-  "evidence": "Not run: Java did not start.",
+  "needs": [],
+  "roadmap": "",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (33 classes, 44 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "toggle-keybinds_1.1.0_26.3.jar",
     "published": "2026-10-22"
   },
@@ -48,7 +43,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

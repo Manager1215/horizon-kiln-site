@@ -2,24 +2,19 @@
   "id": "simple-voice-chat-music-addon",
   "name": "Simple Voice Chat Music Addon",
   "version": "1.0.0",
-  "status": "planned",
-  "statusLabel": "Planned",
-  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "status": "not-checked",
+  "statusLabel": "Not checked",
+  "statusMeaning": "In the catalogue, not checked yet.",
   "url": "https://modrinth.com/mod/simple-voice-chat-music-addon",
   "author": "rjiangame",
   "description": "Add music function for Simple Voice Chat mod",
-  "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "CommandSourceStack.getServer()",
-    "MinecraftServer.execute()"
-  ],
-  "roadmap": "Code next to data (0.3)",
-  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+  "needs": [],
+  "roadmap": "",
+  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers. Everything its code calls is covered by Kiln 0.4.5 (25 classes, 38 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "music-fabric_26.3.jar",
     "published": "2026-09-19"
   },
@@ -49,7 +44,11 @@
     "minecraft",
     "voicechat_api"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 0,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

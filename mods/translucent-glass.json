@@ -9,15 +9,15 @@
   "author": "JustinTimeCuber",
   "description": "Glass shouldn't have opaque pixels! Gives a translucent texture to glass, glass panes, and beacons.",
   "needs": [
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-    "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType"
+    "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
+    "ResourceLoader.registerBuiltinPack()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "translucent-glass-0.3.0.jar",
     "published": "2026-06-25"
   },
@@ -45,6 +45,10 @@
     "java",
     "minecraft"
   ],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 2,
   "development": {
     "status": "planned",

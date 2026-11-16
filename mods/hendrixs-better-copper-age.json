@@ -19,10 +19,8 @@
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.ItemUsedOnLocationTrigger",
     "net.minecraft.client.renderer.blockentity.CampfireRenderer",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.references.BlockItemId",
     "net.minecraft.tags.InstrumentTags",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.AnimationState",
     "net.minecraft.world.entity.ai.behavior.DoNothing",
     "net.minecraft.world.entity.ai.behavior.TransportItemsBetweenContainers",
@@ -40,7 +38,6 @@
     "net.minecraft.world.item.InstrumentItem",
     "net.minecraft.world.item.Instruments",
     "net.minecraft.world.item.ItemCooldowns",
-    "net.minecraft.world.item.SpawnEggItem",
     "net.minecraft.world.item.component.InstrumentComponent",
     "net.minecraft.world.item.crafting.RecipeManager.CachedCheck",
     "net.minecraft.world.level.block.BaseFireBlock",
@@ -50,14 +47,17 @@
     "net.minecraft.world.level.block.IronBarsBlock",
     "net.minecraft.world.level.block.LanternBlock",
     "net.minecraft.world.level.block.ShelfBlock",
-    "and 71 more"
+    "net.minecraft.world.level.block.WaterloggedTransparentBlock",
+    "net.minecraft.world.level.block.WeatheringCopper",
+    "net.minecraft.world.level.block.WeatheringCopper.WeatherState",
+    "and 68 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "BetterCopperAge-1.5-Fabric.jar",
     "published": "2026-09-30"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 139,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 109,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

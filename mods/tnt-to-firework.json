@@ -11,24 +11,16 @@
   "needs": [
     "net.minecraft.world.entity.projectile.FireworkRocketEntity",
     "net.minecraft.world.entity.vehicle.minecart.MinecartTNT",
-    "net.minecraft.world.item.component.FireworkExplosion",
-    "net.minecraft.world.item.component.FireworkExplosion.Shape",
-    "net.minecraft.world.item.component.Fireworks",
     "net.minecraft.world.level.storage.WorldData",
-    "DataComponents.FIREWORKS",
-    "MinecraftServer.execute()",
     "MinecraftServer.getWorldData()",
-    "ServerPlayer.canUseGameMasterBlocks()",
-    "Entity.discard()",
-    "PrimedTnt.isRemoved()",
-    "Items.FIREWORK_ROCKET"
+    "Entity.discard()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tnt-to-rocket-1.0.1-26.3.jar",
     "published": "2026-09-19"
   },
@@ -55,7 +47,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,7 +11,6 @@
   "needs": [
     "net.fabricmc.loader.api.metadata.ModOrigin",
     "ModContainer.getOrigin()",
-    "Minecraft.execute()",
     "ByteBufCodecs.BYTE_ARRAY"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -19,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hand-shaker-fabric-7.0.1-26.1-s.jar",
     "published": "2026-05-19"
   },
@@ -49,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

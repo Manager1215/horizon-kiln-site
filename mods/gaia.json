@@ -10,26 +10,21 @@
   "description": "A lightweight arena management mod/plugin",
   "needs": [
     "net.fabricmc.api.DedicatedServerModInitializer",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
     "net.fabricmc.loader.api.metadata.Person",
-    "net.minecraft.SharedConstants",
     "net.minecraft.core.IdMapper",
     "net.minecraft.server.level.ChunkResult",
     "net.minecraft.server.level.ServerPlayerGameMode",
     "net.minecraft.util.datafix.DataFixers",
     "net.minecraft.util.datafix.fixes.References",
     "Object2IntMap.Entry.getKey()",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "ModMetadata.getAuthors()",
+    "SharedConstants.getCurrentVersion()",
     "BlockPos.MutableBlockPos.set()",
     "MinecraftServer.getAllLevels()",
     "ServerChunkCache.blockChanged()",
     "ServerChunkCache.getChunkFuture()",
     "ServerChunkCache.getChunkNow()",
-    "ServerPlayer.createCommandSourceStack()",
     "ServerPlayer.gameMode",
     "ServerPlayer.get()",
     "ServerPlayer.teleportTo()",
@@ -47,7 +42,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "gaia-fabric-mc26.3-2.0.13.jar",
     "published": "2026-09-28"
   },
@@ -68,7 +63,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 32,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 27,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

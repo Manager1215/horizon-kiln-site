@@ -10,7 +10,6 @@
   "description": "This mod adds many well-known products from McDonald's.",
   "needs": [
     "an access widener",
-    "net.minecraft.tags.EnchantmentTags",
     "net.minecraft.world.food.FoodProperties",
     "net.minecraft.world.food.FoodProperties.Builder",
     "net.minecraft.world.item.component.Consumables",
@@ -25,7 +24,6 @@
     "net.minecraft.world.level.levelgen.placement.InSquarePlacement",
     "net.minecraft.world.level.material.PushReaction",
     "net.minecraft.world.level.storage.loot.functions.SmeltItemFunction",
-    "Holder.is()",
     "Registries.BIOME",
     "EntityType.getDefaultLootTable()",
     "EntityTypes.COW",
@@ -33,8 +31,6 @@
     "Item.Properties.food()",
     "Item.Properties.food()",
     "Item.Properties.useItemDescriptionPrefix()",
-    "Blocks.FERN",
-    "Blocks.SHORT_GRASS",
     "SoundType.SAND",
     "BlockBehaviour.Properties.instrument()",
     "BlockBehaviour.Properties.mapColor()",
@@ -45,8 +41,6 @@
     "LootContext.getRandom()",
     "LootContext.hasParameter()",
     "LootItemFunction.apply()",
-    "LootContextParams.DIRECT_ATTACKING_ENTITY",
-    "LootContextParams.THIS_ENTITY",
     "ContextIntProviders.COMPOSTABLE_MEDIUM"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
@@ -54,7 +48,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "better_mcdonalds_mod-fabric-5.0.5+26.3.jar",
     "published": "2026-09-25"
   },
@@ -84,7 +78,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 38,
+  "softOff": {
+    "class": "partial",
+    "why": "generates in the world"
+  },
+  "lacks": 32,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

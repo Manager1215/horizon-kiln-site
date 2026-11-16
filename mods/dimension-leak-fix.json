@@ -11,21 +11,22 @@
   "needs": [
     "net.minecraft.advancements.AdvancementTree",
     "net.minecraft.client.ClientRecipeBook",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.server.ServerAdvancementManager",
     "net.minecraft.server.ServerFunctionLibrary",
     "net.minecraft.server.ServerFunctionManager",
     "net.minecraft.server.level.ChunkMap",
     "net.minecraft.stats.RecipeBook",
-    "net.minecraft.world.item.crafting.RecipeAccess",
     "net.minecraft.world.level.entity.EntityLookup",
     "net.minecraft.world.level.entity.EntitySectionStorage",
     "net.minecraft.world.level.entity.PersistentEntitySectionManager",
     "net.minecraft.world.level.pathfinder.WalkNodeEvaluator",
-    "Minecraft.getSingleplayerServer()",
     "ClientLevel.getChunkSource()",
-    "ClientPacketListener.recipes()",
     "LocalPlayer.getRecipeBook()",
+    "IntegratedServer.getAdvancements()",
+    "IntegratedServer.getFunctions()",
+    "IntegratedServer.getRunningThread()",
+    "IntegratedServer.getStructureTemplateManager()",
+    "IntegratedServer.overworld()",
     "MinecraftServer.getAdvancements()",
     "MinecraftServer.getAllLevels()",
     "MinecraftServer.getFunctions()",
@@ -37,7 +38,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dimension-leak-fix-mc26.3-fabric-1.0.4.jar",
     "published": "2026-11-08"
   },
@@ -64,7 +65,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,29 +9,20 @@
   "author": "zeroteam",
   "description": "Track your pets' health, sitting state, location, and distance from one private remote dashboard.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
     "net.minecraft.core.UUIDUtil",
-    "net.minecraft.network.chat.ComponentSerialization",
     "net.minecraft.world.entity.animal.equine.AbstractHorse",
     "Minecraft.crosshairPickEntity",
-    "Minecraft.gameDirectory",
     "PlayerInfo.getProfile()",
     "BlockPos.distSqr()",
-    "Component.translatableWithFallback()",
-    "MinecraftServer.execute()",
+    "ComponentSerialization.STREAM_CODEC",
     "MinecraftServer.getAllLevels()",
     "MinecraftServer.overworld()",
     "ServerLevel.getAllEntities()",
     "ServerLevel.getEntity()",
     "ServerPlayer.hasDisconnected()",
     "Entity.getCustomName()",
-    "Entity.getDisplayName()",
     "Entity.isAlive()",
     "EntityReference.getUUID()",
-    "LivingEntity.getDisplayName()",
     "LivingEntity.isAlive()",
     "OwnableEntity.getOwner()",
     "OwnableEntity.getOwnerReference()",
@@ -43,7 +34,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "pet-status-26.3-fabric-1.0.1.jar",
     "published": "2026-10-21"
   },
@@ -74,7 +65,11 @@
     "minecraft",
     "zeroteam_zero_lib"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 19,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

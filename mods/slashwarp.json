@@ -9,24 +9,13 @@
   "author": "jag3dagster",
   "description": "A Minecraft mod that adds a simple /warp command set to singleplayer and multiplayer alike for quick traversal to previously visited landmarks and points of interest.",
   "needs": [
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.server.permissions.Permissions",
-    "CommandSourceStack.getServer()",
     "BlockPos.mutable()",
     "BlockPos.MutableBlockPos.move()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "Style.withUnderlined()",
     "MinecraftServer.getTickCount()",
     "MinecraftServer.overworld()",
     "ServerLevel.getEntities()",
     "ServerPlayer.getVehicle()",
     "ServerPlayer.isPassenger()",
-    "ServerPlayer.permissions()",
     "ServerPlayer.teleportTo()",
     "Entity.hasPassenger()",
     "Entity.teleportTo()",
@@ -36,11 +25,6 @@
     "TamableAnimal.tryToTeleportToOwner()",
     "Player.getLastDeathLocation()",
     "Level.getHeightmapPos()",
-    "Blocks.CAMPFIRE",
-    "Blocks.FIRE",
-    "Blocks.MAGMA_BLOCK",
-    "Blocks.POWDER_SNOW",
-    "Blocks.SOUL_CAMPFIRE",
     "BlockState.getCollisionShape()",
     "EntityTypeTest.forClass()",
     "Vec3.CODEC",
@@ -53,7 +37,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "slashwarp-fabric-26.3.0-2.2.0.jar",
     "published": "2026-09-19"
   },
@@ -81,7 +65,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 38,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

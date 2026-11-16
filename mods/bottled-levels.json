@@ -12,18 +12,13 @@
     "net.minecraft.world.item.ItemCooldowns",
     "net.minecraft.world.item.ItemUseAnimation",
     "net.minecraft.world.item.component.CustomModelData",
-    "net.minecraft.world.level.storage.LevelResource",
-    "CommandSourceStack.getServer()",
     "DataComponents.CUSTOM_MODEL_DATA",
-    "MinecraftServer.getWorldPath()",
     "SoundEvents.BOTTLE_EMPTY",
     "SoundEvents.GENERIC_DRINK",
     "DamageSources.generic()",
     "Player.getCooldowns()",
     "Player.getUsedItemHand()",
-    "Player.giveExperienceLevels()",
     "Player.startUsingItem()",
-    "CustomData.copyTag()",
     "CustomData.update()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -31,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bottledlevels-1.0.3+26.3.jar",
     "published": "2026-10-02"
   },
@@ -59,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -12,15 +12,11 @@
     "an access widener",
     "net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadEmitter",
     "net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.AreaEffectCloud",
     "net.minecraft.world.entity.animal.fox.Fox",
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow.Pickup",
     "net.minecraft.world.entity.projectile.arrow.Arrow",
-    "net.minecraft.world.item.alchemy.Potion",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "net.minecraft.world.item.alchemy.Potions",
     "net.minecraft.world.level.block.SnowLayerBlock",
     "Minecraft.getBlockColors()",
     "BlockColors.getTintSources()",
@@ -29,7 +25,6 @@
     "BlockModelRenderState.tintLayers()",
     "BlockStateModel.emitQuads()",
     "BlockStateModel.hasMaterialFlag()",
-    "DataComponents.POTION_CONTENTS",
     "SoundEvents.CHORUS_FRUIT_TELEPORT",
     "SoundEvents.FOX_TELEPORT",
     "BlockTags.CONSUMABLE_DOES_NOT_TELEPORT_TO",
@@ -49,15 +44,20 @@
     "LivingEntity.randomTeleport()",
     "LivingEntity.stopRiding()",
     "Player.isCrouching()",
-    "Items.ARROW",
-    "and 32 more"
+    "Level.addFreshEntity()",
+    "Level.explode()",
+    "Level.getEntitiesOfClass()",
+    "Level.getEntitiesOfClass()",
+    "Level.getHeight()",
+    "BlockState.getCollisionShape()",
+    "and 6 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "landmines-1.0.7-fabric-mc26.3.jar",
     "published": "2026-09-15"
   },
@@ -88,7 +88,11 @@
     "supermartijn642configlib",
     "supermartijn642corelib"
   ],
-  "lacks": 72,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 46,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

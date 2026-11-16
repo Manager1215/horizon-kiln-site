@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 10 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.minecraft.MinecraftProfileTexture",
     "com.mojang.authlib.minecraft.MinecraftProfileTextures",
     "com.mojang.authlib.minecraft.SessionService",
@@ -19,17 +18,11 @@
     "com.mojang.authlib.properties.PropertyMap",
     "com.mojang.blaze3d.Blaze3D",
     "com.mojang.blaze3d.platform.TextureUtil",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "io.netty.channel.Channel",
     "net.fabricmc.fabric.api.client.rendering.v1.SubmitRenderPhases",
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
-    "net.minecraft.SharedConstants",
     "net.minecraft.TracingExecutor",
     "net.minecraft.client.ClientBrandRetriever",
     "net.minecraft.client.DeltaTracker.Timer",
@@ -51,6 +44,13 @@
     "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
     "net.minecraft.client.renderer.blockentity.SkullBlockRenderer",
     "net.minecraft.client.renderer.blockentity.state.SkullBlockRenderState",
+    "net.minecraft.client.renderer.entity.ArmorModelSet",
+    "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+    "net.minecraft.client.renderer.entity.RenderLayerParent",
+    "net.minecraft.client.renderer.entity.layers.CapeLayer",
+    "net.minecraft.client.renderer.entity.layers.CustomHeadLayer",
+    "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
+    "net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "CustomPlayerModels-Fabric-26.3-0.6.27f.jar",
     "published": "2026-10-15"
   },
@@ -87,7 +87,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 283,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 216,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

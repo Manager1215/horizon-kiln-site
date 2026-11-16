@@ -9,16 +9,8 @@
   "author": "CIOCOLATA47",
   "description": "A mod that makes you walk in all directions",
   "needs": [
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.world.entity.monster.Monster",
     "KeyMapping.setDown()",
-    "Minecraft.execute()",
-    "Minecraft.isSameThread()",
-    "Minecraft.setScreenAndShow()",
-    "Options.keyUse",
-    "Button.getMessage()",
-    "Button.Builder.tooltip()",
-    "Screen.mouseScrolled()",
     "DataComponents.FOOD",
     "Player.getBoundingBox()",
     "Player.hurtTime",
@@ -26,10 +18,6 @@
     "Player.setYHeadRot()",
     "Player.setYRot()",
     "Level.getEntitiesOfClass()",
-    "Blocks.FIRE",
-    "Blocks.MAGMA_BLOCK",
-    "Blocks.SOUL_FIRE",
-    "Blocks.SWEET_BERRY_BUSH",
     "BlockState.isSolid()",
     "FluidState.is()",
     "AABB.inflate()"
@@ -39,7 +27,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "AutoWalk-1.5,26.3.jar",
     "published": "2026-09-16"
   },
@@ -65,7 +53,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

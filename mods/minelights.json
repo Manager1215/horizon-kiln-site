@@ -9,21 +9,16 @@
   "author": "MegaBytesMe",
   "description": "MineLights is a Minecraft mod that brings RGB lighting integrations to Minecraft Java Edition and Horizon - OpenRGB, Corsair iCUE, Logitech G HUB, Razer Chroma, MSI Mystic Light, ASUS Aura, SteelSeries GameSense, and Wooting.",
   "needs": [
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.gui.contextualbar.ExperienceBar",
     "net.minecraft.client.gui.contextualbar.JumpableVehicleBar",
     "net.minecraft.client.gui.contextualbar.LocatorBar",
     "net.minecraft.client.multiplayer.ClientLevel.ClientLevelData",
     "net.minecraft.client.renderer.EndFlashState",
     "net.minecraft.client.waypoints.ClientWaypointManager",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
     "net.minecraft.world.item.component.LodestoneTracker",
     "net.minecraft.world.level.LightLayer",
     "net.minecraft.world.waypoints.Waypoint.Icon",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "KeyMapping.getTranslatedKeyMessage()",
-    "Options.keyChat",
+    "SharedConstants.getCurrentVersion()",
     "ClientLevel.endFlashState()",
     "ClientLevel.getBrightness()",
     "ClientLevel.getLevelData()",
@@ -36,10 +31,7 @@
     "LocalPlayer.getMaxAirSupply()",
     "LocalPlayer.hurtTime",
     "DataComponents.LODESTONE_TRACKER",
-    "MutableComponent.setStyle()",
-    "Style.withClickEvent()",
     "Player.getLastDeathLocation()",
-    "Items.COMPASS",
     "LevelData.RespawnData.dimension()",
     "LevelData.RespawnData.pos()",
     "TrackedWaypoint.distanceSquared()",
@@ -52,7 +44,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "minelights-2.4.0+26.3-fabric.jar",
     "published": "2026-11-07"
   },
@@ -79,7 +71,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 37,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 29,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

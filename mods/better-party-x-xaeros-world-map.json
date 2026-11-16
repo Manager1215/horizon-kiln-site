@@ -10,15 +10,6 @@
   "description": "Display Better Party members on Xaero's World Map as player heads or colored dots, with party-admin visibility controls and personal client settings.",
   "needs": [
     "net.minecraft.client.resources.DefaultPlayerSkin",
-    "Minecraft.execute()",
-    "Font.plainSubstrByWidth()",
-    "Font.split()",
-    "GuiGraphicsExtractor.text()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseMoved()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()",
     "PlayerInfo.getSkin()",
     "MinecraftServer.getTickCount()"
   ],
@@ -27,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "better-party-x-xaeros-world-map-fabric-26.3-1.0.3.jar",
     "published": "2026-11-12"
   },
@@ -58,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

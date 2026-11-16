@@ -13,28 +13,17 @@
     "net.minecraft.client.gui.components.ChatComponent.DisplayMode",
     "net.minecraft.client.multiplayer.chat.GuiMessage.Line",
     "Window.handle()",
-    "KeyMapping.getTranslatedKeyMessage()",
-    "KeyMapping.matches()",
-    "Minecraft.setScreenAndShow()",
     "Options.chatLineSpacing()",
     "Options.textBackgroundOpacity()",
-    "Font.split()",
-    "GuiGraphicsExtractor.nextStratum()",
-    "GuiGraphicsExtractor.text()",
     "GuiGraphicsExtractor.textRenderer()",
-    "ChatComponent.rescaleChat()",
-    "ScreenRectangle.bottom()",
-    "ScreenRectangle.left()",
-    "ScreenRectangle.right()",
-    "ScreenRectangle.top()",
-    "Screen.resize()"
+    "ChatComponent.rescaleChat()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Precise-GUI-Scale-Fabric-26.3-1.0.5.jar",
     "published": "2026-10-19"
   },
@@ -64,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

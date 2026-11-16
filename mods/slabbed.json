@@ -10,10 +10,6 @@
   "description": "Put torches on slabs! Hang lanterns from slabs! Place blocks on slabs! Stack blocks on those blocks on those slabs! Slabbed makes it work! Slabbed!!!",
   "needs": [
     "Mixin: 45 points inside the game's methods",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget.OnAttachedSet",
     "net.fabricmc.fabric.api.client.model.loading.v1.ExtraModelKey",
     "net.fabricmc.fabric.api.client.model.loading.v1.FabricModelManager",
     "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin",
@@ -38,18 +34,22 @@
     "net.fabricmc.loader.api.VersionParsingException",
     "net.fabricmc.loader.api.metadata.version.VersionPredicate",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
     "net.minecraft.client.gui.components.FittingMultiLineTextWidget",
     "net.minecraft.client.gui.components.MultiLineEditBox",
     "net.minecraft.client.gui.components.MultiLineEditBox.Builder",
     "net.minecraft.client.gui.components.MultiLineTextWidget",
     "net.minecraft.client.gui.components.ScrollableLayout",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.debug.DebugEntryLookingAt.BlockStateInfo",
     "net.minecraft.client.gui.components.debug.DebugEntryLookingAt.BlockTagInfo",
     "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
+    "net.minecraft.client.gui.layouts.LinearLayout",
+    "net.minecraft.client.gui.screens.options.OptionsScreen",
+    "net.minecraft.client.multiplayer.ClientChunkCache",
+    "net.minecraft.client.multiplayer.prediction.PredictiveAction",
+    "net.minecraft.client.particle.Particle",
+    "net.minecraft.client.particle.TerrainParticle",
+    "net.minecraft.client.renderer.LevelEventHandler",
+    "net.minecraft.client.renderer.ScreenEffectRenderer",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "slabbed-0.7.1-alpha+26.2-26.3.jar",
     "published": "2026-11-15"
   },
@@ -86,7 +86,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 295,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; @modify-arg Kiln doesn't guard; has network channels"
+  },
+  "lacks": 228,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -25,12 +25,10 @@
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
     "net.minecraft.client.renderer.item.SpecialModelWrapper",
     "net.minecraft.client.renderer.special.SpecialModelRenderers",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.network.HashedStack.ActualItem",
     "net.minecraft.network.syncher.EntityDataAccessor",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.SpawnPlacementTypes",
     "net.minecraft.world.entity.SpawnPlacements",
     "net.minecraft.world.entity.SpawnPlacements.SpawnPredicate",
@@ -50,14 +48,16 @@
     "net.minecraft.world.entity.ai.goal.SitWhenOrderedToGoal",
     "net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal",
     "net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal",
-    "and 76 more"
+    "net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal",
+    "net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal",
+    "and 58 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "companions_ravens-26.3-2.0.jar",
     "published": "2026-09-18"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 121,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
+  },
+  "lacks": 98,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

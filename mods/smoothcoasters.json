@@ -10,18 +10,14 @@
   "description": "Server-side camera rotation",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
     "net.minecraft.client.gui.components.debug.DebugScreenEntry",
     "net.minecraft.client.renderer.entity.ArmorStandRenderer",
     "net.minecraft.client.renderer.entity.state.ArmorStandRenderState",
     "net.minecraft.core.Rotations",
     "net.minecraft.network.syncher.EntityDataAccessor",
     "net.minecraft.world.entity.decoration.ArmorStand",
-    "Minecraft.execute()",
-    "Minecraft.isSameThread()",
-    "Options.getCameraType()",
+    "DebugScreenEntries.register()",
     "LocalPlayer.setXRot()",
     "LocalPlayer.setYHeadRot()",
     "LocalPlayer.setYRot()",
@@ -38,7 +34,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SmoothCoasters-Fabric-26.3-v1.jar",
     "published": "2026-10-04"
   },
@@ -69,7 +65,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

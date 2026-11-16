@@ -10,26 +10,22 @@
   "description": "Client-side fabric mod that rotates the camera while turning during elytra flight. Uses actual physics to imitate aircraft roll maneuvers.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
     "net.minecraft.world.entity.projectile.FireworkRocketEntity",
     "org.lwjgl.sdl.SDLKeycode",
-    "Options.getCameraType()",
     "AbstractClientPlayer.<init>()",
     "AbstractClientPlayer.travel()",
     "AbstractClientPlayer.turn()",
     "LocalPlayer.getForward()",
-    "LocalPlayer.isFallFlying()",
     "LocalPlayer.isInLava()",
-    "LocalPlayer.turn()",
-    "LivingEntity.isFallFlying()"
+    "LocalPlayer.turn()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "cool_elytra-1.5.5+mc-26.3.jar",
     "published": "2026-09-21"
   },
@@ -58,7 +54,11 @@
     "midnightlib",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

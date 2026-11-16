@@ -13,7 +13,6 @@
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
     "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.client.data.models.ItemModelGenerators",
     "net.minecraft.client.data.models.model.ItemModelUtils",
@@ -28,24 +27,19 @@
     "net.minecraft.client.renderer.item.CuboidItemModelWrapper",
     "net.minecraft.client.renderer.item.CuboidItemModelWrapper.Unbaked",
     "net.minecraft.client.resources.model.cuboid.CuboidModel.Deserializer",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
+    "ResourceLoader.registerBuiltinPack()",
     "ItemModelOutput.accept()",
     "ItemModels.CODEC",
     "ItemStackRenderState.getDataOrDefault()",
     "ItemStackRenderState.setData()",
-    "DataComponents.CUSTOM_NAME",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withUnderlined()",
-    "GsonHelper.getAsBoolean()",
-    "Items.TOTEM_OF_UNDYING"
+    "GsonHelper.getAsBoolean()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "blahaj-totem-1.7.4+26.3.jar",
     "published": "2026-11-11"
   },
@@ -75,7 +69,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 29,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

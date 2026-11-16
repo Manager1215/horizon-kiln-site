@@ -16,7 +16,6 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDamage",
     "net.minecraft.client.gui.components.ImageButton",
     "net.minecraft.client.gui.screens.inventory.MerchantScreen",
-    "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.model.HumanoidModel.ArmPose",
     "net.minecraft.client.model.geom.ModelLayers",
@@ -37,8 +36,6 @@
     "net.minecraft.network.syncher.EntityDataAccessor",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.ai.ActivityData",
     "net.minecraft.world.entity.ai.Brain",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
@@ -50,14 +47,17 @@
     "net.minecraft.world.entity.ai.memory.NearestVisibleLivingEntities",
     "net.minecraft.world.entity.animal.golem.IronGolem",
     "net.minecraft.world.entity.npc.ClientSideMerchant",
-    "and 43 more"
+    "net.minecraft.world.entity.npc.villager.Villager",
+    "net.minecraft.world.entity.npc.wanderingtrader.WanderingTrader",
+    "net.minecraft.world.entity.schedule.Activity",
+    "and 35 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "villager_self_defense-1.4.0.jar",
     "published": "2026-10-30"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 83,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 75,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

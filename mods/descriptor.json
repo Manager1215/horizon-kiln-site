@@ -11,14 +11,10 @@
   "needs": [
     "an access widener",
     "Mixin: 5 points inside the game's methods",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.client.gui.components.CommandSuggestions",
     "net.minecraft.client.gui.components.CommandSuggestions.SuggestionsList",
     "net.minecraft.client.gui.screens.inventory.EffectsInInventory",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
-    "net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner",
     "net.minecraft.commands.arguments.ResourceArgument",
-    "net.minecraft.network.chat.ComponentContents",
     "net.minecraft.util.StrictJsonParser",
     "net.minecraft.world.TickRateManager",
     "net.minecraft.world.effect.MobEffectUtil",
@@ -26,21 +22,14 @@
     "net.minecraft.world.item.HangingEntityItem",
     "net.minecraft.world.item.JukeboxPlayable",
     "net.minecraft.world.item.JukeboxSong",
-    "net.minecraft.world.item.alchemy.PotionContents",
     "BiMap.containsKey()",
     "BiMap.get()",
     "Minecraft.isDemo()",
-    "Options.advancedItemTooltips",
-    "GuiGraphicsExtractor.setTooltipForNextFrameInternal()",
     "ClientLevel.tickRateManager()",
     "Sheets.PAINTINGS_SHEET",
-    "HolderLookup.listElementIds()",
-    "Registry.listElements()",
     "Registries.MOB_EFFECT",
-    "CommonComponents.SPACE",
     "TextColor.GRAY",
     "FileToIdConverter.json()",
-    "Identifier.toLanguageKey()",
     "Identifier.toLanguageKey()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -48,7 +37,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "descriptor-0.0.6+26.3.jar",
     "published": "2026-09-23"
   },
@@ -78,7 +67,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 31,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

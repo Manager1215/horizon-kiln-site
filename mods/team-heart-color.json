@@ -13,8 +13,6 @@
     "Mixin: 1 point inside the game's methods",
     "net.minecraft.world.scores.Team",
     "net.minecraft.world.scores.TeamColor",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "FabricLoader.getRawGameVersion()",
     "LocalPlayer.getTeam()"
   ],
@@ -23,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "teamhearts-1.1.0+26.3-fabric.jar",
     "published": "2026-09-20"
   },
@@ -46,7 +44,11 @@
   },
   "mixins": true,
   "depends": [],
-  "lacks": 6,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

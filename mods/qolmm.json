@@ -11,18 +11,13 @@
   "needs": [
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-    "Registry.get()",
-    "RegistryAccess.lookupOrThrow()",
     "MinecraftServer.getAllLevels()",
-    "ServerLevel.destroyBlock()",
-    "ServerLevel.destroyBlock()",
     "ServerLevel.getEntitiesOfClass()",
     "ServerPlayer.getBoundingBox()",
     "ItemEntity.hasPickUpDelay()",
     "Player.onEquippedItemBroken()",
     "ItemStack.hurtAndBreak()",
     "EnchantmentHelper.getItemEnchantmentLevel()",
-    "Level.destroyBlock()",
     "Block.getDrops()",
     "AABB.inflate()"
   ],
@@ -31,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "magnetism-26.3.jar",
     "published": "2026-09-15"
   },
@@ -60,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,7 +9,6 @@
   "author": "bsharou",
   "description": "Moves phantoms from the Overworld to the End",
   "needs": [
-    "net.minecraft.stats.ServerStatsCounter",
     "net.minecraft.world.entity.SpawnGroupData",
     "net.minecraft.world.entity.monster.Phantom",
     "net.minecraft.world.level.CustomSpawner",
@@ -22,9 +21,6 @@
     "ServerLevel.getEntities()",
     "ServerLevel.getGameRules()",
     "ServerLevel.isSpawningMonsters()",
-    "ServerPlayer.getStats()",
-    "Stats.CUSTOM",
-    "Stats.TIME_SINCE_REST",
     "DifficultyInstance.getDifficulty()",
     "EntityTypes.PHANTOM",
     "LivingEntity.isAlive()",
@@ -36,7 +32,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "phantoms-in-the-end-1.0.2+26.3.X.jar",
     "published": "2026-10-23"
   },
@@ -64,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

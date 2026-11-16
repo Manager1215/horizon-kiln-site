@@ -10,12 +10,8 @@
   "description": "A powerful & lightweight config library for Minecraft mods",
   "needs": [
     "com.mojang.blaze3d.Blaze3D",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
     "net.minecraft.client.gui.components.SpriteIconButton",
     "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.tabs.GridLayoutTab",
     "net.minecraft.client.gui.components.tabs.MenuTabBar",
     "net.minecraft.client.gui.components.tabs.MenuTabBar.Builder",
@@ -24,22 +20,7 @@
     "net.minecraft.client.gui.components.tabs.TabNavigationBar",
     "net.minecraft.util.Util.OS",
     "Minecraft.isLocalServer()",
-    "Font.split()",
-    "GuiGraphicsExtractor.requestCursor()",
-    "GuiGraphicsExtractor.text()",
-    "AbstractWidget.setMessage()",
-    "AbstractWidget.setTooltip()",
-    "Button.setPosition()",
-    "Button.Builder.tooltip()",
-    "EditBox.insertText()",
-    "EditBox.setEditable()",
-    "EditBox.setTextColor()",
-    "EditBox.setTooltip()",
     "Holder.areComponentsBound()",
-    "CommonComponents.GUI_BACK",
-    "CommonComponents.GUI_CANCEL",
-    "CommonComponents.GUI_DONE",
-    "MutableComponent.setStyle()",
     "ByteBufCodecs.BYTE_ARRAY",
     "Util.getPlatform()"
   ],
@@ -48,7 +29,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "configlibtxf-26.3-2.0.5-fabric.jar",
     "published": "2026-09-16"
   },
@@ -72,7 +53,11 @@
   },
   "mixins": false,
   "depends": [],
-  "lacks": 33,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

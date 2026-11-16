@@ -9,27 +9,10 @@
   "author": "Krysztok",
   "description": "A simple, server-friendly mod that lets you set named homes and teleport to them.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.server.permissions.PermissionProviderCheck",
-    "net.minecraft.world.level.storage.LevelResource",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "CommandSourceStack.getEntity()",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
     "MinecraftServer.getAllLevels()",
-    "MinecraftServer.getWorldPath()",
     "MinecraftServer.isDedicatedServer()",
     "MinecraftServer.isSingleplayerOwner()",
     "ServerPlayer.getSoundSource()",
-    "ServerPlayer.nameAndId()",
     "ServerPlayer.setXRot()",
     "ServerPlayer.setYRot()",
     "ServerPlayer.teleport()",
@@ -41,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "(FABRIC) EssentialHomes 26.3.jar",
     "published": "2026-09-19"
   },
@@ -69,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 26,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

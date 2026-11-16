@@ -13,7 +13,6 @@
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
     "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.particle.ParticleGroup",
     "net.minecraft.client.particle.ParticleProvider",
     "net.minecraft.client.particle.SingleQuadParticle",
@@ -24,14 +23,12 @@
     "net.minecraft.client.renderer.fog.FogData",
     "net.minecraft.client.renderer.fog.FogRenderer",
     "net.minecraft.client.resources.sounds.AbstractTickableSoundInstance",
-    "Options.getCameraType()",
     "ClientLevel.getHeight()",
     "ClientLevel.hasChunkAt()",
     "LocalPlayer.isAlive()",
     "LocalPlayer.xo",
     "LocalPlayer.yo",
     "LocalPlayer.zo",
-    "SoundManager.stop()",
     "SoundEvents.WEATHER_RAIN",
     "SoundEvents.WEATHER_RAIN_ABOVE",
     "Level.getBiome()",
@@ -43,7 +40,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Particle-Snow-1.4.4-26.3.jar",
     "published": "2026-11-02"
   },
@@ -74,7 +71,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 24,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

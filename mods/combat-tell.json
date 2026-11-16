@@ -10,9 +10,6 @@
   "description": "Displays damage and healing as particles whenever an entity takes damage or is healed.",
   "needs": [
     "net.fabricmc.fabric.api.client.particle.v1.ParticleGroupRegistry",
-    "net.minecraft.CrashReport",
-    "net.minecraft.CrashReportCategory",
-    "net.minecraft.ReportedException",
     "net.minecraft.client.particle.Particle",
     "net.minecraft.client.particle.ParticleEngine",
     "net.minecraft.client.particle.ParticleGroup",
@@ -25,10 +22,6 @@
     "Frustum.pointInFrustum()",
     "CameraRenderState.xRot",
     "CameraRenderState.yRot",
-    "LivingEntity.getBbHeight()",
-    "LivingEntity.getBbWidth()",
-    "LivingEntity.getRandom()",
-    "LivingEntity.getScale()",
     "LivingEntity.tickCount"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -36,7 +29,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "combattell-0.1.2+26.3.jar",
     "published": "2026-09-30"
   },
@@ -66,7 +59,11 @@
     "minecraft",
     "relib"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

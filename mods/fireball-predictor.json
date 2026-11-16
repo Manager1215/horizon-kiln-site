@@ -13,7 +13,6 @@
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents",
     "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents.StartTracking",
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
     "net.minecraft.advancements.predicates.DamageSourcePredicate",
     "net.minecraft.advancements.predicates.TagPredicate",
     "net.minecraft.client.renderer.LevelRenderer",
@@ -21,11 +20,6 @@
     "net.minecraft.client.renderer.feature.submit.TranslucentSubmit",
     "net.minecraft.client.renderer.rendertype.RenderSetup",
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.tags.DamageTypeTags",
     "net.minecraft.world.damagesource.CombatRules",
     "net.minecraft.world.entity.boss.enderdragon.EnderDragon",
@@ -49,14 +43,20 @@
     "net.minecraft.world.level.storage.loot.predicates.DamageSourceCondition",
     "net.minecraft.world.level.storage.loot.predicates.InvertedLootItemCondition",
     "net.minecraft.world.phys.EntityHitResult",
-    "and 60 more"
+    "PoseStack.last()",
+    "PoseStack.Pose.pose()",
+    "VertexConsumer.addVertex()",
+    "RenderPipeline.builder()",
+    "LongIterator.hasNext()",
+    "LongSet.size()",
+    "and 54 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fireballpredictor-1.12.0+26.3-fabric.jar",
     "published": "2026-10-22"
   },
@@ -87,7 +87,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 160,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 115,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

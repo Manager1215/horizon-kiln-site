@@ -17,13 +17,8 @@
     "net.minecraft.world.entity.npc.villager.VillagerData",
     "net.minecraft.world.inventory.MerchantMenu",
     "net.minecraft.world.item.trading.Merchant",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "org.lwjgl.sdl.SDLScancode",
-    "KeyMapping.matches()",
-    "GuiGraphicsExtractor.setTooltipForNextFrame()",
     "AbstractButton.handleCursor()",
-    "MinecraftServer.execute()",
     "ServerPlayer.sendMerchantOffers()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
@@ -31,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "trade-cycling-fabric-1.0.23+26.3.jar",
     "published": "2026-10-13"
   },
@@ -58,7 +53,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

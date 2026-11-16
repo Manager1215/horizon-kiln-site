@@ -9,14 +9,11 @@
   "author": "NhatNgx",
   "description": "VNMC TierTag dựa trên Tier Tagger",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.client.gui.components.PlayerTabOverlay",
     "net.minecraft.client.renderer.entity.player.AvatarRenderer",
     "net.minecraft.network.chat.FontDescription",
     "net.minecraft.network.chat.FontDescription.Resource",
-    "Minecraft.execute()",
     "PlayerInfo.getProfile()",
-    "MutableComponent.withStyle()",
     "Style.withFont()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -24,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "vnmctiertag-26.3-1.0.9.jar",
     "published": "2026-10-25"
   },
@@ -52,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

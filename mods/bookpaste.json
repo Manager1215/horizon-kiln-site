@@ -11,7 +11,6 @@
   "needs": [
     "Mixin: 4 points inside the game's methods",
     "net.minecraft.client.gui.components.MultiLineEditBox",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.inventory.AbstractSignEditScreen",
     "net.minecraft.client.gui.screens.inventory.BookEditScreen",
     "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
@@ -19,33 +18,16 @@
     "net.minecraft.world.item.component.WritableBookContent",
     "org.lwjgl.sdl.SDLKeyboard",
     "org.lwjgl.sdl.SDLMouse",
-    "InputConstants.getKey()",
-    "InputConstants.isKeyDown()",
-    "InputConstants.Type.getOrCreate()",
     "Window.handle()",
-    "KeyMapping.getDefaultKey()",
-    "KeyMapping.getTranslatedKeyMessage()",
-    "KeyMapping.resetMapping()",
-    "KeyMapping.setKey()",
-    "Minecraft.getSingleplayerServer()",
-    "Minecraft.setScreenAndShow()",
-    "Font.split()",
-    "Button.Builder.tooltip()",
-    "EditBox.setEditable()",
-    "EditBox.setTextColor()",
-    "EditBox.setTooltip()",
-    "Screen.getFocused()",
-    "KeyEvent.isPaste()",
     "ByteBufCodecs.readCount()",
-    "ByteBufCodecs.writeCount()",
-    "MinecraftServer.execute()"
+    "ByteBufCodecs.writeCount()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bookpaste-fabric-2.2+26.3.jar",
     "published": "2026-10-30"
   },
@@ -77,7 +59,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 29,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,7 +11,6 @@
   "needs": [
     "Mixin: 2 points inside the game's methods",
     "net.minecraft.server.commands.EnchantCommand",
-    "net.minecraft.world.inventory.AnvilMenu",
     "net.minecraft.world.item.MaceItem",
     "net.minecraft.world.level.block.CampfireBlock",
     "SoundEvents.HOE_TILL",
@@ -19,29 +18,17 @@
     "BlockTags.MINEABLE_WITH_AXE",
     "BlockTags.MINEABLE_WITH_HOE",
     "BlockTags.MINEABLE_WITH_SHOVEL",
-    "Item.BASE_ATTACK_DAMAGE_ID",
-    "Item.BASE_ATTACK_SPEED_ID",
-    "Item.Properties.attributes()",
-    "Item.Properties.enchantable()",
     "Item.Properties.repairable()",
-    "Items.BREEZE_ROD",
-    "Items.ENCHANTED_BOOK",
     "ToolMaterial.applyToolProperties()",
-    "Enchantment.canEnchant()",
     "Level.levelEvent()",
-    "Blocks.COARSE_DIRT",
-    "Blocks.DIRT_PATH",
-    "Blocks.MYCELIUM",
-    "Blocks.PODZOL",
-    "Blocks.ROOTED_DIRT",
     "GameEvent.BLOCK_CHANGE"
   ],
-  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "scythe-1.0.0-mc26.3.jar",
     "published": "2026-10-01"
   },
@@ -70,7 +57,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

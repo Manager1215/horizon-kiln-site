@@ -11,34 +11,13 @@
   "needs": [
     "net.fabricmc.fabric.api.event.client.player.ClientPlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.client.player.ClientPlayerBlockBreakEvents.After",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.level.block.PitcherCropBlock",
-    "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
-    "Minecraft.gameMode",
     "ClientLevel.clip()",
     "ClientPacketListener.send()",
+    "MultiPlayerGameMode.isSpectator()",
     "LocalPlayer.isAlive()",
     "LocalPlayer.isUsingItem()",
     "LocalPlayer.isWithinBlockInteractionRange()",
-    "Items.BEETROOT_SEEDS",
-    "Items.CARROT",
-    "Items.NETHER_WART",
-    "Items.PITCHER_POD",
-    "Items.POTATO",
-    "Items.TORCHFLOWER_SEEDS",
-    "Items.WHEAT_SEEDS",
-    "Blocks.BEETROOTS",
-    "Blocks.CARROTS",
-    "Blocks.NETHER_WART",
-    "Blocks.PITCHER_CROP",
-    "Blocks.POTATOES",
-    "Blocks.SOUL_SAND",
-    "Blocks.TORCHFLOWER",
-    "Blocks.TORCHFLOWER_CROP",
-    "Blocks.WHEAT",
-    "CropBlock.isMaxAge()",
     "BlockState.getCollisionShape()",
     "VoxelShape.max()"
   ],
@@ -47,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "autoreplants-1.3.0.jar",
     "published": "2026-10-03"
   },
@@ -76,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 32,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

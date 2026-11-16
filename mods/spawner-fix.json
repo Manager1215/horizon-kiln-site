@@ -16,19 +16,12 @@
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleEvents",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleEvents.ValueUpdate",
     "net.minecraft.client.renderer.blockentity.SpawnerRenderer",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.world.level.BaseSpawner",
     "net.minecraft.world.level.block.SpawnerBlock",
     "net.minecraft.world.level.block.entity.SpawnerBlockEntity",
-    "CommandSourceStack.getPlayerOrException()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
-    "DataComponents.ITEM_NAME",
-    "Component.getContents()",
     "MinecraftServer.getGameRules()",
     "ServerLevel.getGameRules()",
     "EnchantmentHelper.getItemEnchantmentLevel()",
-    "Blocks.SPAWNER",
     "BlockEntity.saveCustomOnly()",
     "GameRuleCategory.SPAWNING",
     "GameRules.get()"
@@ -38,7 +31,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "spawner-fix-1.1.2.jar",
     "published": "2026-09-30"
   },
@@ -66,7 +59,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; has network channels"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

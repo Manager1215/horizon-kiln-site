@@ -10,37 +10,21 @@
   "description": "Fork of AriKeys for moden versions. AriKeys is a client-side mod for Minecraft, which allows your client to receive and send keypresses between servers using the AriKeys plugin.",
   "needs": [
     "net.minecraft.IdentifierException",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
     "net.minecraft.client.gui.components.ImageButton",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.WidgetSprites",
     "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
     "net.minecraft.client.gui.layouts.LinearLayout",
     "net.minecraft.client.gui.screens.options.OptionsSubScreen",
     "net.minecraft.client.gui.screens.options.controls.ControlsScreen",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "InputConstants.getKey()",
-    "InputConstants.isKeyDown()",
-    "InputConstants.Key.getDisplayName()",
-    "InputConstants.Type.getOrCreate()",
-    "KeyMapping.resetMapping()",
-    "KeyMapping.saveString()",
-    "Minecraft.execute()",
-    "Minecraft.gameDirectory",
     "Minecraft.isLocalServer()",
-    "Options.keyMappings",
-    "Button.Builder.createNarration()",
-    "NarrationElementOutput.add()",
-    "CommonComponents.GUI_DONE"
+    "NarrationElementOutput.add()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "arikeys-fabric-2.6.jar",
     "published": "2026-10-27"
   },
@@ -68,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

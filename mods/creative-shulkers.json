@@ -9,8 +9,8 @@
   "author": "FireDasher",
   "description": "This mod allows you to open shulkers without placing them in Creative Mode.",
   "needs": [
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.ItemPickerMenu",
+    "CreativeModeInventoryScreen.ItemPickerMenu.items",
+    "CreativeModeInventoryScreen.ItemPickerMenu.scrollTo()",
     "NonNullList.add()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
@@ -18,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "creativeshulkers.jar",
     "published": "2026-09-30"
   },
@@ -35,6 +35,10 @@
     "java",
     "minecraft"
   ],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 3,
   "development": {
     "status": "planned",

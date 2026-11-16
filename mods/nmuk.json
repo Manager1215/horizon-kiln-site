@@ -11,31 +11,18 @@
   "needs": [
     "an access widener",
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.options.controls.KeyBindsList",
     "net.minecraft.client.gui.screens.options.controls.KeyBindsList.Entry",
     "net.minecraft.client.gui.screens.options.controls.KeyBindsList.KeyEntry",
     "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
-    "org.apache.logging.log4j.Level",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "KeyMapping.getDefaultKey()",
-    "KeyMapping.isDefault()",
-    "KeyMapping.matches()",
-    "KeyMapping.matchesMouse()",
-    "KeyMapping.resetMapping()",
-    "KeyMapping.saveString()",
-    "KeyMapping.setDown()",
-    "KeyMapping.setKey()",
-    "Minecraft.gameDirectory",
-    "Button.setTooltip()"
+    "KeyMapping.setDown()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nmuk-1.2.5+mc26.3.jar",
     "published": "2026-11-15"
   },
@@ -50,5 +37,9 @@
   "depends": [
     "fabricloader"
   ],
-  "lacks": 18
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5
 }

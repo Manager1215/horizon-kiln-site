@@ -9,41 +9,16 @@
   "author": "FanyaOff",
   "description": "Client-side mod that calculates optimal enchantment paths to save XP and levels when enchanting gear, tools, weapons, and armor.",
   "needs": [
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.client.gui.screens.inventory.AnvilScreen",
     "net.minecraft.client.gui.screens.inventory.ItemCombinerScreen",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.world.inventory.AnvilMenu",
-    "net.minecraft.world.inventory.ContainerInput",
-    "Minecraft.gameMode",
-    "Font.split()",
-    "GuiGraphicsExtractor.nextStratum()",
-    "GuiGraphicsExtractor.setTooltipForNextFrame()",
-    "GuiGraphicsExtractor.text()",
-    "Button.getMessage()",
-    "Button.setAlpha()",
-    "Button.setTooltip()",
-    "EditBox.setHint()",
     "LocalPlayer.hasInfiniteMaterials()",
-    "HolderLookup.listElements()",
-    "RegistryAccess.lookupOrThrow()",
-    "DataComponents.REPAIR_COST",
-    "DataComponents.STORED_ENCHANTMENTS",
-    "ClientboundSetExperiencePacket.getExperienceLevel()",
-    "Items.ENCHANTED_BOOK",
-    "Enchantment.areCompatible()",
-    "Enchantment.canEnchant()",
-    "Enchantment.getAnvilCost()",
-    "Enchantment.getFullname()",
-    "Enchantment.getMaxLevel()",
-    "ItemEnchantments.size()"
+    "ClientboundSetExperiencePacket.getExperienceLevel()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "enchantmentcalculator-2.0.1+26.3.jar",
     "published": "2026-11-11"
   },
@@ -71,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

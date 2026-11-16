@@ -23,23 +23,14 @@
     "io.netty.channel.socket.nio.NioSocketChannel",
     "io.netty.handler.proxy.Socks4ProxyHandler",
     "io.netty.handler.proxy.Socks5ProxyHandler",
-    "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
-    "Minecraft.execute()",
-    "Minecraft.setScreenAndShow()",
-    "Button.getBottom()",
-    "Button.getRight()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()",
-    "Screen.resize()"
+    "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ProxySwitcher-2.0.0+26.3.jar",
     "published": "2026-10-20"
   },
@@ -67,7 +58,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

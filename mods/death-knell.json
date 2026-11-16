@@ -9,9 +9,7 @@
   "author": "Darkhax",
   "description": "Spice up the game with new player death messages.",
   "needs": [
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.tags.DamageTypeTags",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.damagesource.CombatEntry",
     "net.minecraft.world.damagesource.DamageTypes",
     "net.minecraft.world.entity.animal.golem.IronGolem",
@@ -21,21 +19,14 @@
     "net.minecraft.world.entity.monster.cubemob.Slime",
     "net.minecraft.world.entity.monster.spider.CaveSpider",
     "net.minecraft.world.entity.monster.zombie.Drowned",
-    "DataComponents.CUSTOM_NAME",
-    "Component.getContents()",
-    "DamageSource.is()",
-    "DamageSource.is()",
-    "LivingEntity.getDisplayName()",
-    "LivingEntity.getKillCredit()",
-    "ItemStack.getDisplayName()",
-    "Items.COOKIE"
+    "LivingEntity.getKillCredit()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "DeathKnell-fabric-MC26.3-26.3.0.1.jar",
     "published": "2026-09-27"
   },
@@ -65,7 +56,11 @@
     "minecraft",
     "prickle"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

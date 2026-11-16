@@ -23,8 +23,6 @@
     "net.minecraft.world.level.chunk.ProtoChunk",
     "net.minecraft.world.level.levelgen.WorldgenRandom",
     "net.minecraft.world.level.portal.PortalShape",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "FabricLoader.getGameInstance()",
     "ModContainer.getRootPaths()",
     "Version.parse()",
@@ -39,7 +37,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Potatoptimize-2.2.2.jar",
     "published": "2026-09-07"
   },
@@ -55,7 +53,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect and @wrap-method into the game's classes"
+  },
+  "lacks": 21,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

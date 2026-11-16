@@ -10,11 +10,7 @@
   "description": "Stop mob from spawning in a specific region.",
   "needs": [
     "an access widener",
-    "net.minecraft.commands.arguments.DimensionArgument",
-    "net.minecraft.commands.arguments.coordinates.Vec3Argument",
     "net.minecraft.world.level.NaturalSpawner",
-    "CommandSourceStack.getPosition()",
-    "CommandSourceStack.getServer()",
     "Identifier.resolveAgainst()",
     "MinecraftServer.getDataStorage()",
     "MobCategory.CODEC",
@@ -25,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "regionalpeace-0.57.jar",
     "published": "2026-09-22"
   },
@@ -53,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -20,7 +20,6 @@
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
     "net.fabricmc.fabric.api.event.client.player.ClientPreAttackCallback",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
@@ -29,16 +28,12 @@
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityDataRegistry",
     "net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags",
     "net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags",
-    "net.minecraft.CrashReport",
-    "net.minecraft.CrashReportCategory",
-    "net.minecraft.ReportedException",
     "net.minecraft.advancements.triggers.BredAnimalsTrigger",
     "net.minecraft.advancements.triggers.ConsumeItemTrigger",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.FilledBucketTrigger",
     "net.minecraft.advancements.triggers.TameAnimalTrigger",
     "net.minecraft.client.Camera.NearPlane",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.color.item.ItemTintSource",
     "net.minecraft.client.color.item.ItemTintSources",
     "net.minecraft.client.gui.render.pip.GuiEntityRenderer",
@@ -51,6 +46,11 @@
     "net.minecraft.client.model.geom.builders.CubeDeformation",
     "net.minecraft.client.model.geom.builders.CubeListBuilder",
     "net.minecraft.client.model.geom.builders.MeshDefinition",
+    "net.minecraft.client.model.geom.builders.PartDefinition",
+    "net.minecraft.client.model.npc.VillagerModel",
+    "net.minecraft.client.particle.Particle",
+    "net.minecraft.client.particle.ParticleProvider",
+    "net.minecraft.client.particle.ParticleRenderType",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "alexsmobs-2.3.0-fabric+26.3.jar",
     "published": "2026-11-07"
   },
@@ -88,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 1676,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
+  },
+  "lacks": 1416,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

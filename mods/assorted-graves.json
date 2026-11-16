@@ -9,20 +9,14 @@
   "author": "grim3212",
   "description": "Adds graves that keep your items and experience when you die.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.world.level.material.PushReaction",
     "BlockEntityRenderer.extractRenderState()",
     "CompoundTag.storeNullable()",
-    "Component.getVisualOrderText()",
     "ServerLevel.getGameRules()",
     "ServerLevel.getMaxY()",
     "ServerLevel.getMinY()",
-    "ServerLevel.getWorldBorder()",
     "ServerLevel.isOutsideBuildHeight()",
-    "ServerPlayer.drop()",
-    "ServerPlayer.getPlainTextName()",
-    "ServerPlayer.giveExperiencePoints()",
     "ExperienceOrb.award()",
     "Player.getGameProfile()",
     "EnchantmentEffectComponents.PREVENT_EQUIPMENT_DROP",
@@ -30,7 +24,6 @@
     "HorizontalDirectionalBlock.updateShape()",
     "BlockBehaviour.Properties.pushReaction()",
     "BlockState.canBeReplaced()",
-    "WorldBorder.isWithinBounds()",
     "GameRules.KEEP_INVENTORY",
     "GameRules.get()",
     "MapColor.STONE",
@@ -42,7 +35,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "assortedgraves-fabric-26.3-2.0.0.jar",
     "published": "2026-10-23"
   },
@@ -72,7 +65,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

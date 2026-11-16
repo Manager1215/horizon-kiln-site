@@ -9,18 +9,7 @@
   "author": "QWERTZexe",
   "description": "ModernConfig is a Configuration Library for Modern Fabric Mods",
   "needs": [
-    "Font.plainSubstrByWidth()",
-    "AbstractWidget.charTyped()",
-    "AbstractWidget.keyPressed()",
-    "GuiEventListener.mouseClicked()",
-    "GuiEventListener.mouseDragged()",
-    "GuiEventListener.mouseReleased()",
     "NarrationElementOutput.add()",
-    "Screen.charTyped()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()",
     "DefaultedRegistry.forEach()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -28,7 +17,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ModernConfig-1.5.jar",
     "published": "2026-09-28"
   },
@@ -56,7 +45,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

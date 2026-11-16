@@ -10,7 +10,6 @@
   "description": "Mod for fabric 1.20.1+ which brings back the jump tilt from before 1.14 Pre-release 2",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "org.apache.logging.log4j.LogManager",
     "LocalPlayer.xRotO"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
@@ -18,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "jump-tilt-1.5.4.jar",
     "published": "2026-11-10"
   },
@@ -46,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 2,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

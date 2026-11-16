@@ -14,21 +14,13 @@
     "net.fabricmc.fabric.api.event.registry.DynamicRegistries",
     "net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder",
     "net.fabricmc.fabric.api.event.registry.RegistryAttribute",
-    "net.minecraft.SharedConstants",
     "net.minecraft.TracingExecutor",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
     "net.minecraft.client.gui.layouts.LinearLayout",
     "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen",
     "net.minecraft.client.gui.screens.worldselection.WorldCreationContext",
     "net.minecraft.client.gui.screens.worldselection.WorldCreationContext.DimensionsUpdater",
     "net.minecraft.client.gui.screens.worldselection.WorldCreationUiState",
-    "net.minecraft.core.RegistrySetBuilder",
     "net.minecraft.core.registries.codec.RegistryCodecs",
     "net.minecraft.data.worldgen.NoiseData",
     "net.minecraft.data.worldgen.TerrainProvider",
@@ -51,6 +43,14 @@
     "net.minecraft.world.level.biome.Climate.ParameterPoint",
     "net.minecraft.world.level.biome.MultiNoiseBiomeSource",
     "net.minecraft.world.level.biome.MultiNoiseBiomeSourceParameterList",
+    "net.minecraft.world.level.biome.MultiNoiseBiomeSourceParameterList.Preset",
+    "net.minecraft.world.level.biome.MultiNoiseBiomeSourceParameterList.Preset.SourceProvider",
+    "net.minecraft.world.level.biome.MultiNoiseBiomeSourceParameterLists",
+    "net.minecraft.world.level.biome.OverworldBiomeBuilder",
+    "net.minecraft.world.level.levelgen.Aquifer",
+    "net.minecraft.world.level.levelgen.Aquifer.FluidPicker",
+    "net.minecraft.world.level.levelgen.Aquifer.FluidStatus",
+    "net.minecraft.world.level.levelgen.Beardifier",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "superflatbiomeextension-0.3-beta-26.3-fabric.jar",
     "published": "2026-09-18"
   },
@@ -88,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 236,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; generates in the world"
+  },
+  "lacks": 199,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

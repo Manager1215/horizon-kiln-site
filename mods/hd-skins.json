@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 7 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.exceptions.AuthenticationException",
     "com.mojang.authlib.exceptions.AuthenticationUnavailableException",
     "com.mojang.authlib.exceptions.InvalidCredentialsException",
@@ -25,15 +24,12 @@
     "com.mojang.authlib.services.ProfileResult",
     "com.mojang.blaze3d.Blaze3D",
     "com.mojang.util.UUIDTypeAdapter",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.loader.api.VersionParsingException",
     "net.minecraft.TracingExecutor",
     "net.minecraft.client.ClientBrandRetriever",
     "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
     "net.minecraft.client.gui.components.FriendsButton",
     "net.minecraft.client.gui.components.SpriteIconButton",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.font.GlyphRenderTypes",
     "net.minecraft.client.gui.screens.inventory.tooltip.TooltipRenderUtil",
     "net.minecraft.client.renderer.CubeMap",
@@ -44,21 +40,25 @@
     "net.minecraft.client.renderer.entity.state.BoatRenderState",
     "net.minecraft.client.renderer.state.gui.PanoramaRenderState",
     "net.minecraft.client.renderer.texture.CubeMapTexture",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.client.resources.DefaultPlayerSkin",
-    "net.minecraft.core.component.DataComponentPatch.Builder",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
     "net.minecraft.server.network.ServerLoginPacketListenerImpl",
     "net.minecraft.server.network.ServerLoginPacketListenerImpl.1",
     "net.minecraft.server.packs.PackResources.ResourceOutput",
-    "and 80 more"
+    "net.minecraft.util.CommonColors",
+    "net.minecraft.util.Util.OS",
+    "net.minecraft.world.entity.LivingEntity.SwingDescription",
+    "net.minecraft.world.entity.LivingEntity.SwingState",
+    "net.minecraft.world.entity.WalkAnimationState",
+    "net.minecraft.world.entity.player.PlayerSkin.Patch",
+    "net.minecraft.world.item.component.ResolvableProfile",
+    "and 71 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hdskins-6.16.2+26.3.jar",
     "published": "2026-09-24"
   },
@@ -90,7 +90,11 @@
     "fabricloader",
     "java"
   ],
-  "lacks": 164,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 120,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,8 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 9 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.minecraft.client.gui.screens.inventory.StructureBlockEditScreen",
     "net.minecraft.commands.arguments.ResourceOrTagKeyArgument",
     "net.minecraft.commands.arguments.ResourceOrTagKeyArgument.Result",
@@ -21,7 +19,6 @@
     "net.minecraft.data.worldgen.Pools",
     "net.minecraft.server.commands.LocateCommand",
     "net.minecraft.server.level.WorldGenRegion",
-    "net.minecraft.tags.EnchantmentTags",
     "net.minecraft.util.InclusiveRange",
     "net.minecraft.util.valueproviders.ConstantInt",
     "net.minecraft.util.valueproviders.IntProviders",
@@ -41,7 +38,6 @@
     "net.minecraft.world.level.block.ChorusFlowerBlock",
     "net.minecraft.world.level.block.ChorusPlantBlock",
     "net.minecraft.world.level.block.DetectorRailBlock",
-    "net.minecraft.world.level.block.DoublePlantBlock",
     "net.minecraft.world.level.block.EndPortalFrameBlock",
     "net.minecraft.world.level.block.EndRodBlock",
     "net.minecraft.world.level.block.FallingBlock",
@@ -51,6 +47,10 @@
     "net.minecraft.world.level.block.Mirror",
     "net.minecraft.world.level.block.MushroomBlock",
     "net.minecraft.world.level.block.PipeBlock",
+    "net.minecraft.world.level.block.PoweredRailBlock",
+    "net.minecraft.world.level.block.RailBlock",
+    "net.minecraft.world.level.block.SeaPickleBlock",
+    "net.minecraft.world.level.block.ShelfMushroomBlock",
     "and 80 more"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "repurposed_structures-7.8.4+26.3-fabric.jar",
     "published": "2026-10-11"
   },
@@ -88,7 +88,11 @@
     "midnightlib",
     "minecraft"
   ],
-  "lacks": 449,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 302,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

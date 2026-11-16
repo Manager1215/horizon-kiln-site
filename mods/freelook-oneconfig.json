@@ -9,19 +9,14 @@
   "author": "awruff",
   "description": "Allows you to change your perspective without rotating your player.",
   "needs": [
-    "Mixin: 3 points inside the game's methods",
-    "net.minecraft.client.CameraType",
-    "Minecraft.getCurrentServer()",
-    "Options.getCameraType()",
-    "Options.setCameraType()",
-    "ServerData.ip"
+    "Mixin: 3 points inside the game's methods"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+  "roadmap": "Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "freelook-2.3.3+mc26.3.jar",
     "published": "2026-11-01"
   },
@@ -49,7 +44,11 @@
     "minecraft",
     "oneconfigv1"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args into the game's classes; has network channels"
+  },
+  "lacks": 0,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

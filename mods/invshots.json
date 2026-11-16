@@ -9,27 +9,16 @@
   "author": "Finsh",
   "description": "Save interactive snapshots of your inventory and ender chest, revisit them anytime with full item tooltips and enchantment details.",
   "needs": [
-    "net.minecraft.commands.arguments.GameProfileArgument",
     "net.minecraft.nbt.NbtAccounter",
-    "net.minecraft.nbt.NbtIo",
-    "net.minecraft.server.permissions.LevelBasedPermissionSet",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.inventory.PlayerEnderChestContainer",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
     "CommandSourceStack.registryAccess()",
+    "NbtIo.readCompressed()",
     "MinecraftServer.getProfilePermissions()",
     "ServerPlayer.registryAccess()",
-    "PermissionLevel.isEqualOrHigherThan()",
     "EquipmentSlot.VALUES",
-    "EquipmentSlot.isArmor()",
     "Inventory.save()",
     "Player.getEnderChestInventory()",
     "Player.registryAccess()",
-    "MenuType.GENERIC_9x3",
-    "MenuType.GENERIC_9x5",
-    "TagValueOutput.list()",
-    "TagValueOutput.putLong()",
     "ValueInput.TypedInputList.iterator()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
@@ -37,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "InvShots-1.0.0-26.3+.jar",
     "published": "2026-10-10"
   },
@@ -64,7 +53,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,14 +9,12 @@
   "author": "Fayber",
   "description": "Allows ominous (and normal) trial vaults to be opened repeatedly with keys, plus configurable spawner cooldowns.",
   "needs": [
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.level.block.VaultBlock",
     "net.minecraft.world.level.block.entity.trialspawner.TrialSpawner",
     "net.minecraft.world.level.block.entity.vault.VaultBlockEntity",
     "net.minecraft.world.level.block.entity.vault.VaultBlockEntity.Server",
     "net.minecraft.world.level.block.entity.vault.VaultServerData",
     "net.minecraft.world.level.block.entity.vault.VaultSharedData",
-    "CommandSourceStack.getServer()",
     "MinecraftServer.isSingleplayer()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
@@ -24,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "unlimited-trial-vaults-1.0.9.jar",
     "published": "2026-10-10"
   },
@@ -53,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

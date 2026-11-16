@@ -10,15 +10,8 @@
   "description": "Minimal client-side adjustments to match the modified server of Livia SMP",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.gui.screens.inventory.AnvilScreen",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.world.entity.Pose",
-    "net.minecraft.world.inventory.AnvilMenu",
     "net.minecraft.world.inventory.ItemCombinerMenu",
     "net.minecraft.world.item.trading.MerchantOffer",
-    "KeyMapping.resetMapping()",
-    "KeyMapping.saveString()",
-    "KeyMapping.setKey()",
     "LocalPlayer.isCrouching()",
     "LocalPlayer.tickCount",
     "Player.getPose()",
@@ -30,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "livia-client-26.3.1.jar",
     "published": "2026-10-23"
   },
@@ -59,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; has network channels"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

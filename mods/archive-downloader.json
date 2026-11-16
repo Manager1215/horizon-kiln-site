@@ -10,30 +10,16 @@
   "description": "Download and use the latest redstone contraptions made by the Storage Catalog community and other archives",
   "needs": [
     "com.mojang.blaze3d.Blaze3D",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
-    "net.minecraft.client.server.IntegratedServer",
     "org.lwjgl.sdl.SDLMouse",
-    "InputConstants.isKeyDown()",
-    "NativeImage.getHeight()",
-    "NativeImage.getWidth()",
-    "NativeImage.read()",
     "Window.handle()",
-    "Minecraft.execute()",
-    "Minecraft.getSingleplayerServer()",
-    "Font.split()",
-    "GuiGraphicsExtractor.text()",
-    "Button.extractWidgetRenderState()",
-    "Button.playDownSound()",
-    "ToastManager.getNotificationDisplayTimeMultiplier()",
-    "MouseButtonEvent.hasAltDown()",
-    "MouseButtonEvent.hasShiftDown()"
+    "ToastManager.getNotificationDisplayTimeMultiplier()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "archive-downloader-1.0.24+26.3.jar",
     "published": "2026-09-26"
   },
@@ -60,7 +46,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

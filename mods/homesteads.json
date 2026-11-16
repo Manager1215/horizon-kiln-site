@@ -10,22 +10,15 @@
   "description": "Homesteads is for the villagers who would prefer to forge their own path in the wilds. This mod adds 5 new Villagers, the Beekeeper, The Lumberjack, The Trapper, The Prospector and The Forager. As well as a variety of new structures for them to inhabit.",
   "needs": [
     "net.fabricmc.fabric.api.object.builder.v1.world.poi.PoiHelper",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.SimpleMenuProvider",
     "net.minecraft.world.entity.npc.villager.VillagerProfession",
-    "net.minecraft.world.flag.FeatureFlags",
     "net.minecraft.world.inventory.ContainerData",
     "net.minecraft.world.inventory.ContainerLevelAccess",
     "net.minecraft.world.inventory.DataSlot",
-    "net.minecraft.world.inventory.MenuType.MenuSupplier",
     "net.minecraft.world.inventory.SimpleContainerData",
-    "GuiGraphicsExtractor.blitSprite()",
     "GuiGraphicsExtractor.setTooltipForNextFrame()",
     "AbstractContainerScreen.extractContents()",
-    "DefaultedRegistry.entrySet()",
     "NonNullList.iterator()",
-    "Registry.entrySet()",
-    "DataComponents.CUSTOM_NAME",
     "BuiltInRegistries.POINT_OF_INTEREST_TYPE",
     "BuiltInRegistries.VILLAGER_PROFESSION",
     "Registries.POINT_OF_INTEREST_TYPE",
@@ -42,21 +35,15 @@
     "SoundEvents.WOOD_HIT",
     "Containers.dropContents()",
     "Player.addItem()",
-    "MenuType.<init>()",
-    "Items.ACACIA_BUTTON",
-    "Items.ACACIA_DOOR",
-    "Items.ACACIA_FENCE",
-    "Items.ACACIA_FENCE_GATE",
-    "Items.ACACIA_LOG",
-    "Items.ACACIA_PLANKS",
-    "and 30 more"
+    "Items.DYE",
+    "HorizontalDirectionalBlock.FACING"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "homesteads-3.0.0-for-fabric-26.3.jar",
     "published": "2026-10-17"
   },
@@ -85,7 +72,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 204,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 28,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

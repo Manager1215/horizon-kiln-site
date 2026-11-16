@@ -15,10 +15,7 @@
     "net.minecraft.world.level.block.BarrelBlock",
     "net.minecraft.world.level.block.entity.BarrelBlockEntity",
     "DefaultedRegistry.addAlias()",
-    "Registry.get()",
     "BuiltInRegistries.POINT_OF_INTEREST_TYPE",
-    "Items.BARREL",
-    "Blocks.BARREL",
     "SoundType.BAMBOO_WOOD",
     "SoundType.CHERRY_WOOD",
     "SoundType.NETHER_WOOD",
@@ -40,7 +37,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "MoreBarrelVariants-2.1.1+26.3-Fabric.jar",
     "published": "2026-10-15"
   },
@@ -68,7 +65,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 21,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

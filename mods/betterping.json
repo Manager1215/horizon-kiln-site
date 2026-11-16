@@ -10,16 +10,14 @@
   "description": "See every player's real ping in milliseconds in the tab list, color-coded from green to red. Client-side, works on any server. Fabric 26.3.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.gui.components.PlayerTabOverlay",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger"
+    "net.minecraft.client.gui.components.PlayerTabOverlay"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "BetterPingDisplay-Fabric-26.3-1.2.0.jar",
     "published": "2026-10-08"
   },
@@ -45,7 +43,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

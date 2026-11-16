@@ -39,7 +39,6 @@
     "net.minecraft.world.entity.AnimationState",
     "net.minecraft.world.entity.ConversionParams",
     "net.minecraft.world.entity.ConversionParams.AfterConversion",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
     "net.minecraft.world.entity.ai.control.MoveControl",
@@ -50,14 +49,15 @@
     "net.minecraft.world.entity.ai.goal.MoveThroughVillageGoal",
     "net.minecraft.world.entity.ai.goal.RandomLookAroundGoal",
     "net.minecraft.world.entity.ai.goal.RestrictSunGoal",
-    "and 79 more"
+    "net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal",
+    "and 73 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ghostbulb-1.1.2.jar",
     "published": "2026-11-02"
   },
@@ -91,7 +91,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 122,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 113,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

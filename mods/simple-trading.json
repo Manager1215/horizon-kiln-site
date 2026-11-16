@@ -9,34 +9,16 @@
   "author": "Monte_Carlo_Simulations",
   "description": "Server plugin that enables GUI trading with players. Vanilla friendly. No client install required.",
   "needs": [
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.world.SimpleContainer",
-    "net.minecraft.world.inventory.ChestMenu",
-    "net.minecraft.world.inventory.ContainerInput",
-    "net.minecraft.world.item.component.ItemLore",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "CommandSourceStack.getPlayerOrException()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
-    "DataComponents.CUSTOM_NAME",
-    "DataComponents.LORE",
-    "MutableComponent.setStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
     "ServerPlayer.closeContainer()",
-    "ServerPlayer.drop()",
     "Items.DYE",
     "Items.STAINED_GLASS_PANE"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "simpletrading-fabric-2.0.2.jar",
     "published": "2026-10-20"
   },
@@ -64,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

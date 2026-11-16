@@ -9,17 +9,14 @@
   "author": "WILD_DRS",
   "description": "Zoomax, zoom all the way to the max.",
   "needs": [
-    "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.gui.components.Tooltip",
-    "Minecraft.setScreenAndShow()",
-    "Button.Builder.tooltip()"
+    "Mixin: 1 point inside the game's methods"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+  "roadmap": "Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "zoomax-1.4.0.jar",
     "published": "2026-09-23"
   },
@@ -49,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

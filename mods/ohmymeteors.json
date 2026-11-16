@@ -16,9 +16,6 @@
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
     "net.fabricmc.fabric.api.command.v2.ArgumentTypeRegistry",
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
     "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
     "net.minecraft.client.animation.AnimationChannel",
@@ -44,12 +41,15 @@
     "net.minecraft.client.renderer.entity.EntityRenderers",
     "net.minecraft.client.renderer.entity.state.CatRenderState",
     "net.minecraft.client.renderer.fog.environment.AtmosphericFogEnvironment",
-    "net.minecraft.commands.arguments.IdentifierArgument",
     "net.minecraft.commands.arguments.StringRepresentableArgument",
     "net.minecraft.commands.synchronization.SingletonArgumentInfo",
     "net.minecraft.network.syncher.EntityDataAccessor",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
+    "net.minecraft.tags.DamageTypeTags",
+    "net.minecraft.tags.EntityTypeTags",
+    "net.minecraft.util.profiling.Profiler",
+    "net.minecraft.util.profiling.ProfilerFiller",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ohmymeteors-1.6.0+26.3.jar",
     "published": "2026-11-16"
   },
@@ -89,5 +89,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 207
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 167
 }

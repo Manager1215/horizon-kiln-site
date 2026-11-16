@@ -9,13 +9,9 @@
   "author": "blockcraftstudio",
   "description": "Adds real vanilla-shader blur behind inventory, furnaces, smokers, other containers, chat, and the pause menu. Configurable radius, fade animation, per-screen toggles, and Mod Menu support.",
   "needs": [
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
     "net.minecraft.client.renderer.GlobalSettingsUniform",
     "Options.getMenuBackgroundBlurriness()",
     "Options.menuBackgroundBlurriness()",
-    "Button.Builder.width()",
     "GameRenderer.processBlurEffect()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
@@ -23,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Better-Blur-Fabric-26_3.jar",
     "published": "2026-11-16"
   },
@@ -51,5 +47,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4
 }

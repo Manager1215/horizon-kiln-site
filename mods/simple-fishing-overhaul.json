@@ -20,7 +20,6 @@
     "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState",
     "net.minecraft.client.renderer.state.level.PlayerRenderState",
     "net.minecraft.network.syncher.EntityDataAccessor",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.ai.control.MoveControl",
     "net.minecraft.world.entity.ai.goal.FollowFlockLeaderGoal",
     "net.minecraft.world.entity.ai.goal.Goal",
@@ -29,11 +28,8 @@
     "net.minecraft.world.entity.animal.fish.AbstractFish",
     "net.minecraft.world.entity.animal.fish.AbstractFish.FishMoveControl",
     "net.minecraft.world.entity.animal.fish.WaterAnimal",
-    "net.minecraft.world.entity.projectile.FishingHook",
-    "net.minecraft.world.item.FishingRodItem",
     "net.minecraft.world.item.ItemCooldowns",
     "Axis.ZP",
-    "GuiGraphicsExtractor.blitSprite()",
     "LocalPlayer.getUseItem()",
     "LocalPlayer.getUseItemRemainingTicks()",
     "SynchedEntityData.get()",
@@ -46,19 +42,22 @@
     "Player.getUsedItemHand()",
     "Player.releaseUsingItem()",
     "Player.startUsingItem()",
+    "FishingHook.getEntityData()",
     "Item.getUseDuration()",
     "Item.releaseUsing()",
-    "Item.Properties.enchantable()",
     "Item.Properties.repairable()",
-    "Items.FISHING_ROD",
-    "and 9 more"
+    "Level.addFreshEntity()",
+    "Level.getEntities()",
+    "LootContextParamSets.ENTITY",
+    "AABB.expandTowards()",
+    "AABB.inflate()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "simple_fishing_overhaul-fabric-1.0.3+26.3.jar",
     "published": "2026-09-25"
   },
@@ -88,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 49,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 40,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

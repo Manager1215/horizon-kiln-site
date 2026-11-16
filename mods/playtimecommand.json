@@ -9,32 +9,14 @@
   "author": "SpoonySimone",
   "description": "See users' playtime with a simple command!",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.stats.ServerStatsCounter",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "CommandSourceStack.isPlayer()",
-    "MutableComponent.setStyle()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "MinecraftServer.execute()",
-    "MinecraftServer.getPlayerNames()",
-    "ServerPlayer.getStats()",
-    "Stats.CUSTOM",
-    "Stats.PLAY_TIME"
+    "MinecraftServer.getPlayerNames()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "PlaytimeCommand-fabric-1.4.0.jar",
     "published": "2026-05-01"
   },
@@ -60,7 +42,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

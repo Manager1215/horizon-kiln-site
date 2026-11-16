@@ -20,21 +20,17 @@
     "net.minecraft.world.attribute.BedRule",
     "net.minecraft.world.attribute.BedRule.Rule",
     "net.minecraft.world.level.saveddata.WeatherData",
-    "net.minecraft.world.level.storage.LevelResource",
     "net.minecraft.world.level.storage.loot.predicates.WeatherCheck",
     "PoseStack.Pose.pose()",
     "VertexConsumer.addVertex()",
     "LevelRenderEvents.COLLECT_SUBMITS",
-    "Minecraft.isSameThread()",
     "Options.getEffectiveRenderDistance()",
     "ClientLevel.getHeight()",
     "ClientLevel.setRainLevel()",
     "ClientLevel.setThunderLevel()",
     "RenderTypes.debugFilledBox()",
-    "CommandSourceStack.getPosition()",
     "BlockPos.containing()",
     "MinecraftServer.getAllLevels()",
-    "MinecraftServer.getWorldPath()",
     "MinecraftServer.overworld()",
     "ServerLevel.getBiome()",
     "ServerLevel.getGameRules()",
@@ -50,14 +46,18 @@
     "ServerPlayer.isSleeping()",
     "SoundEvents.LIGHTNING_BOLT_THUNDER",
     "SoundEvents.WEATHER_RAIN",
-    "and 8 more"
+    "Biome.getBaseTemperature()",
+    "Biome.getPrecipitationAt()",
+    "Biome.hasPrecipitation()",
+    "GameRules.ADVANCE_WEATHER",
+    "and 2 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "localweather-1.4.3+26.3.jar",
     "published": "2026-10-28"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 48,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; has network channels"
+  },
+  "lacks": 42,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,37 +9,22 @@
   "author": "16andpregz",
   "description": "Multi-loader mod, that allows users to create item lists for builds within Minecraft. Removing the need to have a multi-display setup.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.world.level.block.AbstractChestBlock",
     "net.minecraft.world.level.block.BarrelBlock",
     "net.minecraft.world.level.block.ChestBlock",
     "net.minecraft.world.level.block.ShulkerBoxBlock",
     "net.minecraft.world.level.block.state.properties.ChestType",
-    "Minecraft.execute()",
-    "Minecraft.setScreenAndShow()",
-    "Font.plainSubstrByWidth()",
-    "GuiGraphicsExtractor.nextStratum()",
-    "EditBox.setHint()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()",
     "PlayerInfo.getProfile()",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
     "DefaultedRegistry.iterator()",
-    "MinecraftServer.overworld()",
-    "Items.BARRIER"
+    "MinecraftServer.overworld()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "itemlist-26.3 - 1.7.0+fabric.jar",
     "published": "2026-09-19"
   },
@@ -68,7 +53,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,14 +9,9 @@
   "author": "GallonEmilien",
   "description": "This lightweight server-side mod allows you to enable keepinventory for a single specific player (your gf for example) without turning it on for everyone else.",
   "needs": [
-    "CommandSourceStack.getServer()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
     "ServerPlayer.addTag()",
     "ServerPlayer.entityTags()",
-    "ServerPlayer.nameAndId()",
     "ServerPlayer.removeTag()",
-    "PlayerList.isOp()",
     "GameRules.KEEP_INVENTORY"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -24,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "singleplayerkeepinventory-1.0.0.jar",
     "published": "2026-10-04"
   },
@@ -52,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

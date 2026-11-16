@@ -10,11 +10,11 @@
   "description": "🧊 Crops growing with ice underneath will remain in the same stage, for design purposes.",
   "needs": [],
   "roadmap": "",
-  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers. Everything its code calls is covered by Kiln 0.4.1 (7 classes, 9 members). Not run yet.",
+  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers. Everything its code calls is covered by Kiln 0.4.5 (7 classes, 9 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "icepreventscropgrowth-26.3.0-3.7.jar",
     "published": "2026-10-02"
   },
@@ -43,6 +43,10 @@
     "java",
     "minecraft"
   ],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 0,
   "development": {
     "status": "not-checked",

@@ -13,8 +13,6 @@
     "net.minecraft.client.particle.Particle",
     "net.minecraft.client.particle.ParticleEngine",
     "net.minecraft.client.particle.SmokeParticle",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Minecraft.particleEngine",
     "BlockPos.asLong()",
     "BlockState.getCollisionShape()",
@@ -25,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "swirling_smoke-fabric-26.3-1.1.0.jar",
     "published": "2026-11-06"
   },
@@ -53,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

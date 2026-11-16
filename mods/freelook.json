@@ -9,21 +9,14 @@
   "author": "Celibistrial",
   "description": "This mod allows you to \"move your head\" without moving your player's heads rotation. Much like you can in lunar / badlion client, hold/press the keybind and look around while staying in whichever direction you are moving.",
   "needs": [
-    "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.CameraType",
-    "Minecraft.gameDirectory",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.setScreenAndShow()",
-    "Options.getCameraType()",
-    "Options.setCameraType()",
-    "ServerData.ip"
+    "Mixin: 1 point inside the game's methods"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+  "roadmap": "Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "freelook-1.4.4.jar",
     "published": "2026-09-16"
   },
@@ -52,7 +45,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

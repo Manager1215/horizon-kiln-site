@@ -11,12 +11,8 @@
   "needs": [
     "an access widener",
     "Mixin: 25 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.blaze3d.buffers.Std140Builder",
     "com.mojang.blaze3d.pipeline.TextureTarget",
-    "com.mojang.blaze3d.platform.TextInputManager",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "com.mojang.blaze3d.vertex.BufferBuilder",
     "com.mojang.blaze3d.vertex.ByteBufferBuilder",
     "com.mojang.blaze3d.vertex.DefaultVertexFormat",
@@ -35,8 +31,6 @@
     "com.mojang.renderpearl.backend.opengl.GlTexture",
     "com.mojang.renderpearl.util.TextureViewAndSampler",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionEvents.EndExtraction",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
@@ -49,16 +43,22 @@
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
     "net.fabricmc.fabric.impl.client.rendering.BlockEntityRendererRegistryImpl",
     "net.fabricmc.fabric.impl.client.rendering.GuiRendererExtensions",
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
     "net.fabricmc.loader.api.metadata.CustomValue",
+    "net.minecraft.IdentifierException",
+    "net.minecraft.client.ClientClockManager",
+    "net.minecraft.client.ClientClockManager.ClientClockInstance",
+    "net.minecraft.client.DeltaTracker.Timer",
+    "net.minecraft.client.SectionUpdateTracker",
+    "net.minecraft.client.SectionUpdateTracker.SectionDirtyState",
+    "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
     "and 80 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bbs-2.4-26.3.jar",
     "published": "2026-10-30"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 791,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @redirect and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 693,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,13 +10,11 @@
   "description": "Highlights the mobs that are preventing you from sleeping.",
   "needs": [
     "net.minecraft.client.multiplayer.chat.ChatListener",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.world.attribute.BedRule",
     "net.minecraft.world.entity.monster.Monster",
     "net.minecraft.world.entity.player.Player.BedSleepingProblem",
     "net.minecraft.world.level.block.AbstractBedBlock",
     "ClientLevel.getEntitiesOfClass()",
-    "Component.getContents()",
     "ServerLevel.getEntitiesOfClass()",
     "Entity.<init>()"
   ],
@@ -25,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "monsters_in_the_closet_reborn-1.0.3+26.3-fabric.jar",
     "published": "2026-09-16"
   },
@@ -53,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

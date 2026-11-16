@@ -9,7 +9,6 @@
   "author": "adamjaroui23",
   "description": "A simple Fabric mod that spawns primed TNT on every player every 5 seconds.",
   "needs": [
-    "CommandSourceStack.getTextName()",
     "MinecraftServer.getAllLevels()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -17,7 +16,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tntstorm-2.0.1+26.3-mc26.3.jar",
     "published": "2026-10-22"
   },
@@ -45,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 2,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

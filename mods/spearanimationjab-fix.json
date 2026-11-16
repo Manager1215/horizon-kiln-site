@@ -10,7 +10,6 @@
   "description": "Stops the spear lunge/jab animation from carrying over to a non-spear item when you do swap hotbar slots mid-swing (MC-310695).",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.effect.MobEffectUtil",
     "net.minecraft.world.entity.LivingEntity.SwingDescription",
     "net.minecraft.world.entity.LivingEntity.SwingState",
@@ -21,7 +20,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SpearAnimationJab-Fix-1.0.2.jar",
     "published": "2026-11-14"
   },
@@ -38,7 +37,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

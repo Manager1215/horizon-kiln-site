@@ -11,7 +11,6 @@
   "needs": [
     "com.mojang.blaze3d.vertex.BufferBuilder",
     "net.minecraft.IdentifierException",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.DeltaTracker.Timer",
     "net.minecraft.client.model.AdultAndBabyModelPair",
     "net.minecraft.client.model.EntityModel",
@@ -49,6 +48,7 @@
     "net.minecraft.client.renderer.entity.state.ItemFrameRenderState",
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
     "net.minecraft.client.renderer.entity.state.SulfurCubeRenderState",
+    "net.minecraft.client.renderer.feature.ModelFeatureRenderer.Submit",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -56,7 +56,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "entity_model_features-3.3.12-26.3-fabric.jar",
     "published": "2026-10-15"
   },
@@ -69,7 +69,11 @@
   "entrypoints": {},
   "mixins": true,
   "depends": [],
-  "lacks": 203,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method into the game's classes"
+  },
+  "lacks": 183,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

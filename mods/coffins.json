@@ -11,13 +11,9 @@
   "needs": [
     "an access widener",
     "Mixin: 8 points inside the game's methods",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "com.mojang.blaze3d.vertex.DefaultVertexFormat",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionEvents.EndExtraction",
@@ -26,13 +22,10 @@
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleEvents",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleEvents.ValueUpdate",
     "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.client.gui.components.ScrollableLayout",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
     "net.minecraft.client.gui.layouts.LinearLayout",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.particle.ParticleProvider",
     "net.minecraft.client.particle.QuadParticleGroup",
     "net.minecraft.client.particle.SingleQuadParticle",
@@ -42,23 +35,30 @@
     "net.minecraft.client.renderer.extract.LevelExtractor",
     "net.minecraft.core.BlockBox",
     "net.minecraft.core.UUIDUtil",
-    "net.minecraft.network.chat.ComponentSerialization",
     "net.minecraft.references.BlockItemId",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.util.Ease",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.TickRateManager",
     "net.minecraft.world.entity.ContainerUser",
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow.Pickup",
-    "and 67 more"
+    "net.minecraft.world.entity.projectile.arrow.ThrownTrident",
+    "net.minecraft.world.inventory.DataSlot",
+    "net.minecraft.world.item.ItemCooldowns",
+    "net.minecraft.world.level.block.SupportType",
+    "net.minecraft.world.level.material.PushReaction",
+    "BlendFunction.TRANSLUCENT",
+    "RenderPipeline.builder()",
+    "LevelExtractionEvents.END_EXTRACTION",
+    "ServerPlayerEvents.JOIN",
+    "ResourceLoader.registerBuiltinPack()",
+    "and 55 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "coffins-3.2-26.3.jar",
     "published": "2026-11-14"
   },
@@ -87,5 +87,9 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 158
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 116
 }

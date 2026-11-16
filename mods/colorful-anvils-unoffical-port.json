@@ -10,25 +10,14 @@
   "description": "Add colors and formatting to item names in anvils using & codes! Supports &c (red), &l (bold), hex colors, gradients, and more. Unofficial port for 1.21.8+.",
   "needs": [
     "an access widener",
-    "net.minecraft.client.gui.screens.inventory.AnvilScreen",
-    "net.minecraft.world.inventory.AnvilMenu",
-    "net.minecraft.world.item.component.ItemLore",
-    "ChatFormatting.stripFormatting()",
-    "CommandSourceStack.getEntity()",
-    "NonNullList.iterator()",
-    "DataComponents.CUSTOM_NAME",
-    "DataComponents.LORE",
-    "MutableComponent.setStyle()",
-    "Style.withObfuscated()",
-    "Style.withStrikethrough()",
-    "Style.withUnderlined()"
+    "NonNullList.iterator()"
   ],
-  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "colorfulanvils-3.1.0+26.3.jar",
     "published": "2026-11-04"
   },
@@ -56,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

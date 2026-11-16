@@ -9,18 +9,13 @@
   "author": "tiigerbones",
   "description": "A horror-themed Minecraft mod that punishes players for lingering in complete darkness.",
   "needs": [
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.reloader.SimpleReloadListener",
     "net.minecraft.client.resources.sounds.AbstractTickableSoundInstance",
-    "RegistryAccess.lookupOrThrow()",
     "Registries.BIOME",
-    "MutableComponent.withStyle()",
     "ServerLevel.clip()",
     "ServerLevel.getBiome()",
     "ServerLevel.getEntitiesOfClass()",
     "ServerLevel.getMaxLocalRawBrightness()",
-    "ServerPlayer.sendSystemMessage()",
-    "PreparableReloadListener.SharedState.resourceManager()",
     "MobEffect.addAttributeModifiers()",
     "ItemEntity.getItem()",
     "Player.isAlive()"
@@ -30,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "themurk-1.0.2+26.3.jar",
     "published": "2026-09-20"
   },
@@ -61,7 +56,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

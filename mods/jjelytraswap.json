@@ -10,31 +10,21 @@
   "description": "Mod that swaps elytra and chestplate when required",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket",
     "net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket.Action",
-    "net.minecraft.world.inventory.ContainerInput",
-    "Minecraft.gameMode",
     "ClientPacketListener.send()",
-    "LocalPlayer.isFallFlying()",
     "LocalPlayer.isInLiquid()",
     "LocalPlayer.startFallFlying()",
-    "Registry.get()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
-    "DataComponents.CUSTOM_NAME",
     "DataComponents.GLIDER",
     "EnchantmentHelper.getItemEnchantmentLevel()",
-    "Enchantments.BINDING_CURSE",
-    "Enchantments.MENDING",
-    "Enchantments.PROTECTION"
+    "Enchantments.BINDING_CURSE"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "jjelytraswap-fabric-2.4.0+26.3-dev.jar",
     "published": "2026-10-01"
   },
@@ -60,7 +50,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

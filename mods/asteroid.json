@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 80 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.minecraft.SessionService",
     "com.mojang.authlib.services.MinecraftServicesDiscoveryService",
     "com.mojang.authlib.services.ServicesKeyType",
@@ -20,10 +19,7 @@
     "com.mojang.blaze3d.buffers.Std140SizeCalculator",
     "com.mojang.blaze3d.pipeline.PipelineCache",
     "com.mojang.blaze3d.pipeline.TextureTarget",
-    "com.mojang.blaze3d.platform.TextInputManager",
     "com.mojang.blaze3d.platform.TextureUtil",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "com.mojang.blaze3d.resource.ResourceHandle",
     "com.mojang.blaze3d.vertex.DefaultVertexFormat",
     "com.mojang.blaze3d.vertex.QuadInstance",
@@ -50,7 +46,11 @@
     "io.netty.handler.proxy.Socks5ProxyHandler",
     "net.fabricmc.fabric.api.client.renderer.v1.mesh.MutableQuadView",
     "net.fabricmc.fabric.impl.client.indigo.renderer.render.AltModelBlockRendererImpl",
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
+    "net.fabricmc.loader.api.metadata.CustomValue",
+    "net.fabricmc.loader.api.metadata.Person",
+    "net.minecraft.IdentifierException",
+    "net.minecraft.client.OptionInstance.ValueUpdateListener",
+    "net.minecraft.client.ResourceLoadStateTracker.ReloadState",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "asteroid-0.4.2.jar",
     "published": "2026-10-18"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 1041,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @redirect and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 807,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

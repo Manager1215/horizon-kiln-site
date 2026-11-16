@@ -10,41 +10,26 @@
   "description": "Extend vanilla pick block to reach inside your carried shulker boxes, automatically pulling matching items into your hand without needing to place the box down first. This mod also integrates with Litematica's Easy Place.",
   "needs": [
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.layouts.GridLayout",
     "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
     "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
     "net.minecraft.client.gui.layouts.LinearLayout",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket",
     "net.minecraft.world.level.block.ShulkerBoxBlock",
-    "Minecraft.execute()",
-    "Minecraft.gameMode",
-    "Minecraft.getSingleplayerServer()",
-    "Minecraft.hitResult",
-    "Button.Builder.tooltip()",
-    "Button.Builder.width()",
+    "CycleButton.Builder.withTooltip()",
     "ClientPacketListener.send()",
-    "CommonComponents.GUI_CANCEL",
-    "CommonComponents.GUI_DONE",
     "ByteBufCodecs.registry()",
-    "MinecraftServer.execute()",
     "ServerPlayer.isAlive()",
     "Inventory.getSuitableHotbarSlot()",
     "InventoryMenu.sendAllDataToRemote()",
-    "BlockState.getCloneItemStack()",
-    "HitResult.getType()"
+    "BlockState.getCloneItemStack()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "shulker-pick-block - 26.3 - 1.1.1.jar",
     "published": "2026-10-22"
   },
@@ -74,7 +59,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 29,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

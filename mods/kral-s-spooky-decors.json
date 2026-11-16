@@ -34,7 +34,6 @@
     "net.minecraft.client.renderer.entity.state.ParrotRenderState",
     "net.minecraft.client.renderer.entity.state.SkeletonRenderState",
     "net.minecraft.core.particles.BlockParticleOption",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.AnimationState",
     "net.minecraft.world.item.ItemCooldowns",
     "net.minecraft.world.item.component.BlockItemStateProperties",
@@ -44,19 +43,20 @@
     "net.minecraft.world.level.block.state.BlockBehaviour.StateArgumentPredicate",
     "net.minecraft.world.level.block.state.BlockBehaviour.StatePredicate",
     "net.minecraft.world.level.block.state.properties.BedPart",
-    "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
     "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
     "net.minecraft.world.level.material.PushReaction",
     "Axis.ZN",
     "Axis.ZP",
-    "and 58 more"
+    "EntityModelSet.bakeLayer()",
+    "BlockEntityRenderer.extractRenderState()",
+    "and 56 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "spookydecor-0.1.0+26.3.jar",
     "published": "2026-10-16"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 137,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 120,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,18 +9,14 @@
   "author": "MapleSyrup_17",
   "description": "A mod that makes suspicious sand and gravel craftable with any item inside",
   "needs": [
-    "net.minecraft.world.level.block.entity.BrushableBlockEntity",
-    "Items.SAND",
-    "Items.SUSPICIOUS_GRAVEL",
-    "Items.SUSPICIOUS_SAND",
-    "ItemContainerContents.copyOne()"
+    "net.minecraft.world.level.block.entity.BrushableBlockEntity"
   ],
-  "roadmap": "Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Machines (0.4)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "suspiciouscraftable-1.1.0.jar",
     "published": "2026-11-06"
   },
@@ -48,7 +44,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

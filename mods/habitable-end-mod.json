@@ -23,8 +23,6 @@
     "net.minecraft.client.particle.EndRodParticle.Provider",
     "net.minecraft.client.renderer.entity.AgeableMobRenderer",
     "net.minecraft.client.renderer.entity.state.PolarBearRenderState",
-    "net.minecraft.core.HolderSet.Direct",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.data.worldgen.features.FeatureUtils",
     "net.minecraft.network.syncher.EntityDataAccessor",
     "net.minecraft.network.syncher.EntityDataSerializers",
@@ -35,7 +33,6 @@
     "net.minecraft.world.entity.EntityAttachment",
     "net.minecraft.world.entity.EntityAttachments",
     "net.minecraft.world.entity.EntityAttachments.Builder",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.ItemBasedSteering",
     "net.minecraft.world.entity.ItemSteerable",
     "net.minecraft.world.entity.SpawnPlacementTypes",
@@ -49,14 +46,17 @@
     "net.minecraft.world.entity.ai.goal.GoalSelector",
     "net.minecraft.world.entity.ai.goal.LookAtPlayerGoal",
     "net.minecraft.world.entity.ai.goal.PanicGoal",
+    "net.minecraft.world.entity.ai.goal.RandomLookAroundGoal",
+    "net.minecraft.world.entity.ai.goal.TemptGoal",
+    "net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal",
     "and 80 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "habitable end mod-4.0.1.jar",
     "published": "2026-09-16"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 171,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 155,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

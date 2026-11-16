@@ -37,27 +37,27 @@
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.tags.DamageTypeTags",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.damagesource.DamageTypes",
     "net.minecraft.world.entity.animal.equine.AbstractHorse",
     "net.minecraft.world.entity.animal.fish.WaterAnimal",
     "net.minecraft.world.entity.decoration.BlockAttachedEntity",
     "net.minecraft.world.entity.decoration.ItemFrame",
     "net.minecraft.world.entity.projectile.FireworkRocketEntity",
-    "net.minecraft.world.flag.FeatureFlags",
     "net.minecraft.world.food.FoodProperties",
     "net.minecraft.world.inventory.ContainerData",
-    "net.minecraft.world.inventory.MenuType.MenuSupplier",
     "net.minecraft.world.inventory.SimpleContainerData",
     "net.minecraft.world.item.BottleItem",
-    "and 79 more"
+    "net.minecraft.world.item.ItemUseAnimation",
+    "net.minecraft.world.item.equipment.Equippable.Builder",
+    "net.minecraft.world.level.block.FireBlock",
+    "and 75 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "adpother-26.3.0.2-fabric-build.0152.jar",
     "published": "2026-10-31"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 246,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; generates in the world"
+  },
+  "lacks": 208,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

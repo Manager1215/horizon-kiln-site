@@ -9,16 +9,14 @@
   "author": "Lumareth",
   "description": "A mod that removes knockback resistance from Minecraft to make Maces and windcharges work on full potential while wearing netherite or blast protection armor.",
   "needs": [
-    "net.minecraft.tags.DamageTypeTags",
-    "DamageSource.is()",
-    "Attributes.EXPLOSION_KNOCKBACK_RESISTANCE"
+    "net.minecraft.tags.DamageTypeTags"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "noknockback-1.1.0+mc26.3.jar",
     "published": "2026-09-28"
   },
@@ -45,7 +43,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -33,21 +33,14 @@
     "Biomes.TAIGA",
     "Biomes.WINDSWEPT_GRAVELLY_HILLS",
     "Biomes.WINDSWEPT_HILLS",
-    "Biomes.WINDSWEPT_SAVANNA",
-    "Blocks.BROWN_MUSHROOM",
-    "Blocks.GLOW_LICHEN",
-    "Blocks.MOSS_BLOCK",
-    "Blocks.MOSS_CARPET",
-    "Blocks.RED_MUSHROOM",
-    "Blocks.SCULK",
-    "Blocks.SCULK_VEIN"
+    "Biomes.WINDSWEPT_SAVANNA"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "cavemushroomfix-fabric-1.0.0+26.3.jar",
     "published": "2026-09-30"
   },
@@ -60,7 +53,11 @@
   "entrypoints": {},
   "mixins": false,
   "depends": [],
-  "lacks": 32,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 25,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

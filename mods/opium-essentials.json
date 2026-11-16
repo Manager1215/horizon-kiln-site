@@ -9,26 +9,21 @@
   "author": "Carbon4",
   "description": "Adds special commands to make your multiplayer experience better",
   "needs": [
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.SimpleMenuProvider",
-    "net.minecraft.world.inventory.AnvilMenu",
-    "net.minecraft.world.inventory.ChestMenu",
     "net.minecraft.world.inventory.ContainerLevelAccess",
-    "net.minecraft.world.inventory.GrindstoneMenu",
     "net.minecraft.world.inventory.StonecutterMenu",
-    "net.minecraft.world.level.storage.LevelResource",
-    "CommandSourceStack.getServer()",
     "MinecraftServer.getPlayerNames()",
-    "MinecraftServer.getWorldPath()",
     "ServerPlayer.getEnderChestInventory()",
-    "ServerPlayer.teleport()"
+    "ServerPlayer.teleport()",
+    "AnvilMenu.<init>()",
+    "GrindstoneMenu.<init>()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "opium-essentials-mc26.3+maj03+1.0-Release.jar",
     "published": "2026-09-22"
   },
@@ -57,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

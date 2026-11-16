@@ -10,7 +10,6 @@
   "description": "This mod allows you to fly faster in creative mod.",
   "needs": [
     "net.minecraft.world.entity.player.Abilities.Packed",
-    "MutableComponent.setStyle()",
     "Abilities.apply()",
     "Abilities.pack()"
   ],
@@ -19,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "evilcreativefly-2.0.0-26.3-fabric.jar",
     "published": "2026-10-08"
   },
@@ -49,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

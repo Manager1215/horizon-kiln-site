@@ -9,16 +9,10 @@
   "author": "FNewel",
   "description": "Keep XP on death with optional penalty!\nFor all players or based by permission.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.permission.v1.PermissionEvents",
     "net.fabricmc.fabric.api.permission.v1.PermissionNode",
     "net.fabricmc.fabric.api.util.TriState",
-    "net.minecraft.server.permissions.PermissionProviderCheck",
-    "ServerLifecycleEvents.SERVER_STARTED",
     "CommandSourceStack.checkPermission()",
-    "CommandSourceStack.getServer()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "MinecraftServer.getDataStorage()",
     "ServerLevel.getGameRules()",
     "ServerPlayer.checkPermission()",
@@ -32,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "keep-xp-2.0.0+26.3.jar",
     "published": "2026-10-25"
   },
@@ -61,7 +55,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

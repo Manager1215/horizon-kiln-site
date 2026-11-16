@@ -9,9 +9,7 @@
   "author": "SmotiiVe",
   "description": "Brings back the classic /toggledownfall command.",
   "needs": [
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.level.saveddata.WeatherData",
-    "CommandSourceStack.getServer()",
     "MinecraftServer.getWeatherData()",
     "MinecraftServer.setWeatherParameters()"
   ],
@@ -20,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "toggledownfall-1.8.7.jar",
     "published": "2026-10-02"
   },
@@ -48,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

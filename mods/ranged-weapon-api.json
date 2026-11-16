@@ -18,7 +18,6 @@
     "net.minecraft.client.renderer.item.properties.numeric.UseDuration",
     "net.minecraft.core.component.DataComponentInitializers",
     "net.minecraft.core.component.DataComponentInitializers.Initializer",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.ai.attributes.AttributeMap",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
@@ -35,29 +34,24 @@
     "net.minecraft.world.item.CrossbowItem",
     "net.minecraft.world.item.ItemUseAnimation",
     "net.minecraft.world.item.ProjectileWeaponItem",
-    "net.minecraft.world.item.alchemy.Potion",
-    "net.minecraft.world.item.component.ItemAttributeModifiers.Display.Default",
     "AbstractClientPlayer.getUseItem()",
     "BuiltInRegistries.ATTRIBUTE",
-    "BuiltInRegistries.POTION",
-    "CommonComponents.space()",
     "MobEffect.addAttributeModifier()",
     "Entity.<init>()",
     "ItemOwner.asLivingEntity()",
     "LivingEntity.getUseItem()",
     "LivingEntity.isUsingItem()",
     "Mob.getAttributes()",
-    "AttributeModifier.is()",
-    "Item.components()",
     "ItemStack.getUseAnimation()",
-    "and 5 more"
+    "ItemStack.getUseDuration()",
+    "EnchantmentHelper.modifyCrossbowChargingTime()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ranged_weapon_api-fabric-4.0.0+26.3.jar",
     "published": "2026-09-28"
   },
@@ -87,7 +81,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 45,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 35,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

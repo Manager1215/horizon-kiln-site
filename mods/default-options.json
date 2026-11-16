@@ -10,27 +10,21 @@
   "description": "Ship default options or keybinds without having to overwrite an existing options.txt.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.gui.components.CycleButton",
     "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen",
     "net.minecraft.client.gui.screens.worldselection.WorldCreationUiState",
-    "net.minecraft.client.main.GameConfig",
     "net.minecraft.client.main.GameConfig.FolderData",
     "net.minecraft.client.main.GameConfig.GameData",
     "net.minecraft.client.main.GameConfig.QuickPlayData",
     "net.minecraft.client.main.GameConfig.UserData",
     "org.apache.commons.io.FileUtils",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "Minecraft.gameDirectory",
-    "Options.getFile()",
-    "Options.keyMappings"
+    "Options.getFile()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "defaultoptions-fabric-26.3-26.3.0.1.jar",
     "published": "2026-09-16"
   },
@@ -59,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,27 +10,14 @@
   "description": "Automatically turns coordinates in chat into clickable links that instantly create a Xaero's Minimap waypoint. Highly customizable!",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.authlib.GameProfile",
-    "net.minecraft.client.multiplayer.chat.ChatListener",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "Minecraft.execute()",
-    "EditBox.setPosition()",
-    "EditBox.setTextColor()",
-    "Screen.mouseClicked()",
-    "Screen.mouseScrolled()",
-    "MutableComponent.setStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "Style.withUnderlined()"
+    "net.minecraft.client.multiplayer.chat.ChatListener"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "chatwaypoint-2.0.2-mc26.3.jar",
     "published": "2026-09-24"
   },
@@ -60,7 +47,11 @@
     "minecraft",
     "xaerominimap"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

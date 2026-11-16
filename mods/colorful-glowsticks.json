@@ -12,17 +12,16 @@
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
     "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.client.particle.ParticleProvider",
     "net.minecraft.client.particle.SingleQuadParticle",
     "net.minecraft.client.particle.SingleQuadParticle.Layer",
     "net.minecraft.client.particle.SpriteSet",
+    "ResourceLoader.registerBuiltinPack()",
     "ServerLevel.sendParticles()",
     "LivingEntity.getBoundingBox()",
     "LivingEntity.getEyeY()",
     "Player.getEyeY()",
-    "Player.getMainArm()",
     "Player.startUsingItem()",
     "Item.hurtEnemy()",
     "AABB.getXsize()",
@@ -33,7 +32,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "colorglowsticks-1.0.0-26.3.jar",
     "published": "2026-11-01"
   },
@@ -63,7 +62,11 @@
     "minecraft",
     "player_animation_library"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,7 +9,6 @@
   "author": "grim3212",
   "description": "Adds gunpowder reed and glowstone seeds.",
   "needs": [
-    "net.minecraft.core.RegistrySetBuilder",
     "net.minecraft.data.worldgen.features.NetherFeatures",
     "net.minecraft.data.worldgen.placement.PlacementUtils",
     "net.minecraft.util.valueproviders.BiasedToBottomInt",
@@ -24,13 +23,10 @@
     "net.minecraft.world.level.levelgen.placement.RarityFilter",
     "net.minecraft.world.level.material.PushReaction",
     "net.minecraft.world.level.pathfinder.PathComputationType",
-    "Holder.is()",
-    "Registry.get()",
-    "RegistryAccess.lookupOrThrow()",
+    "LevelReader.dimensionType()",
     "Block.column()",
     "Block.isPathfindable()",
     "Block.updateShape()",
-    "Blocks.NETHERRACK",
     "BlockBehaviour.Properties.isRedstoneConductor()",
     "BlockBehaviour.Properties.pushReaction()",
     "BlockStateProvider.of()",
@@ -42,7 +38,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "assortedplants-fabric-26.3-2.0.0.jar",
     "published": "2026-10-23"
   },
@@ -71,7 +67,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "partial",
+    "why": "generates in the world"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

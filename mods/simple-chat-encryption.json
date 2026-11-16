@@ -11,21 +11,14 @@
   "needs": [
     "Mixin: 1 point inside the game's methods",
     "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents",
-    "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.ModifyChat",
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.util.StringUtil",
-    "InputConstants.isKeyDown()",
-    "Minecraft.setScreenAndShow()",
-    "GuiGraphicsExtractor.blit()",
-    "CommonComponents.GUI_DONE",
-    "CommonComponents.NEW_LINE"
+    "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.ModifyChat"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "chat-encryption-1.0.1.jar",
     "published": "2026-09-20"
   },
@@ -54,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args into the game's classes"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

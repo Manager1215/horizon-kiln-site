@@ -9,39 +9,21 @@
   "author": "Anxbiss",
   "description": "Create customizable shortcuts Directly to your Survival Inventory",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.loader.api.metadata.ModOrigin",
-    "net.minecraft.SharedConstants",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "InputConstants.isKeyDown()",
     "ModContainer.getOrigin()",
-    "KeyMapping.isUnbound()",
-    "KeyMapping.saveString()",
-    "Minecraft.execute()",
+    "SharedConstants.getCurrentVersion()",
     "MouseHandler.releaseMouse()",
     "GuiGraphicsExtractor.blit()",
-    "AbstractWidget.playButtonClickSound()",
-    "EditBox.setHint()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()",
     "ClientLevel.getOverworldClockTime()",
-    "ClientPacketListener.sendChat()",
     "LocalPlayer.getGameProfile()",
-    "DefaultedRegistry.iterator()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withUnderlined()",
-    "Items.BARRIER"
+    "DefaultedRegistry.iterator()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "inventoryshortcuts-1.0.0.jar",
     "published": "2026-10-19"
   },
@@ -69,7 +51,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 26,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

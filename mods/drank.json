@@ -19,7 +19,6 @@
     "net.minecraft.world.item.component.Consumable.Builder",
     "net.minecraft.world.level.storage.loot.predicates.LootItemKilledByPlayerCondition",
     "net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceWithEnchantedBonusCondition",
-    "Registry.wrapAsHolder()",
     "DataComponents.CONSUMABLE",
     "SoundEvents.EMPTY",
     "Avatar.getUseItemRemainingTicks()",
@@ -35,7 +34,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "drank-1.0.0.jar",
     "published": "2026-11-02"
   },
@@ -64,7 +63,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

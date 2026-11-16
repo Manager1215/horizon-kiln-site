@@ -9,7 +9,6 @@
   "author": "Tcleo",
   "description": "Skins for offline nicknames, loaded from disk. No capes or cosmetics. !Only if you have TClauncher!",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.SignatureState",
     "com.mojang.authlib.minecraft.MinecraftProfileTexture",
     "com.mojang.authlib.minecraft.MinecraftProfileTextures",
@@ -24,7 +23,6 @@
     "net.minecraft.class_437",
     "net.minecraft.client.gui.FocusableGui",
     "net.minecraft.client.gui.INestedGuiEventHandler",
-    "net.minecraft.client.gui.components.events.AbstractContainerEventHandler",
     "net.minecraft.client.gui.screen.Screen",
     "net.minecraft.client.resources.SkinManager.1",
     "net.minecraft.client.resources.SkinManager.2",
@@ -35,7 +33,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mclskin-1.5-fabric-26.3.jar",
     "published": "2026-11-10"
   },
@@ -50,7 +48,11 @@
   "depends": [
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

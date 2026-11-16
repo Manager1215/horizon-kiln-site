@@ -11,28 +11,16 @@
   "needs": [
     "an access widener",
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.world.inventory.ContainerInput",
-    "net.minecraft.world.level.block.BeetrootBlock",
     "net.minecraft.world.level.block.CarrotBlock",
     "net.minecraft.world.level.block.PotatoBlock",
-    "Minecraft.gameMode",
-    "LocalPlayer.swing()",
-    "Items.BEETROOT_SEEDS",
-    "Items.CARROT",
-    "Items.NETHER_WART",
-    "Items.POTATO",
-    "Items.WHEAT_SEEDS",
-    "SwingAnimation.DEFAULT",
-    "Blocks.SOUL_SAND",
-    "CropBlock.isMaxAge()"
+    "MultiPlayerGameMode.startDestroyBlock()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "autocrop-1.4-mc26.3.jar",
     "published": "2026-10-10"
   },
@@ -63,7 +51,11 @@
     "minecraft",
     "modmenu"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

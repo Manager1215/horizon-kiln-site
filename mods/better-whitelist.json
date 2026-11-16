@@ -18,7 +18,6 @@
     "net.fabricmc.loader.api.metadata.ModEnvironment",
     "net.fabricmc.loader.api.metadata.Person",
     "net.minecraft.client.multiplayer.ClientHandshakePacketListenerImpl",
-    "net.minecraft.network.chat.ComponentContents",
     "net.minecraft.server.packs.repository.Pack",
     "net.minecraft.server.packs.repository.PackRepository",
     "ModMetadata.getAuthors()",
@@ -27,15 +26,14 @@
     "ModMetadata.getDependencies()",
     "ModMetadata.getEnvironment()",
     "ModMetadata.getLicense()",
-    "Minecraft.getResourcePackRepository()",
-    "Component.getContents()"
+    "Minecraft.getResourcePackRepository()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "better-whitelist-26.3.0.jar",
     "published": "2026-09-15"
   },
@@ -65,7 +63,11 @@
     "libjf-base",
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

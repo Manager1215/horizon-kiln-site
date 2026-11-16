@@ -10,21 +10,15 @@
   "description": "Add-on for the Farmer's Delight mod. Adds 2 new professions to villagers. Chef and Cook.\n\nDepends on Farmer's Delight.",
   "needs": [
     "an access widener",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.object.builder.v1.world.poi.PoiHelper",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.world.entity.npc.villager.VillagerProfession",
     "net.minecraft.world.item.trading.TradeSet",
     "net.minecraft.world.level.levelgen.structure.pools.SinglePoolElement",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "HolderGetter.getOrThrow()",
-    "RegistryAccess.Frozen.lookupOrThrow()",
     "BuiltInRegistries.VILLAGER_PROFESSION",
     "Registries.POINT_OF_INTEREST_TYPE",
     "Registries.TEMPLATE_POOL",
     "Registries.TRADE_SET",
     "Registries.VILLAGER_TRADE",
-    "Identifier.withPrefix()",
     "MinecraftServer.registryAccess()",
     "SoundEvents.BUBBLE_COLUMN_UPWARDS_AMBIENT",
     "StructureTemplatePool.rawTemplates"
@@ -34,7 +28,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "chefsdelight-1.0.61-fa-26.3.jar",
     "published": "2026-11-09"
   },
@@ -65,7 +59,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

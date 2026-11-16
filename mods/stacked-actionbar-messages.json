@@ -9,11 +9,8 @@
   "author": "JustAlittleWolf",
   "description": "Stacks actionbar messages so they stay readable",
   "needs": [
-    "Minecraft.getCurrentServer()",
     "Minecraft.isLocalServer()",
-    "GuiGraphicsExtractor.nextStratum()",
     "GuiGraphicsExtractor.textWithBackdrop()",
-    "ServerData.ip",
     "ARGB.white()",
     "Mth.hsvToArgb()"
   ],
@@ -22,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "StackedActionbarMessages+26.2-1.1.2.jar",
     "published": "2026-10-17"
   },
@@ -51,7 +48,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

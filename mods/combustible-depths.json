@@ -32,9 +32,7 @@
     "EntityRenderer.getBlockLightLevel()",
     "OverlayTexture.pack()",
     "OverlayTexture.u()",
-    "Registry.wrapAsHolder()",
     "RegistryAccess.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "BuiltInRegistries.FEATURE_TYPE",
     "ByteBufCodecs.idMapper()",
     "ClientboundAddEntityPacket.getData()",
@@ -50,14 +48,16 @@
     "Biomes.SOUL_SAND_VALLEY",
     "Block.BLOCK_STATE_REGISTRY",
     "Block.stateById()",
-    "and 13 more"
+    "RotatedPillarBlock.onProjectileHit()",
+    "SoundType.BASALT",
+    "and 10 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "combustible_depths-v1d.jar",
     "published": "2026-09-20"
   },
@@ -86,7 +86,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 53,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 50,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

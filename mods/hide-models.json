@@ -10,7 +10,6 @@
   "description": "Client-side mod hides model pieces from rendering",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.renderer.entity.ArmorStandRenderer",
     "net.minecraft.client.renderer.entity.DisplayRenderer",
     "net.minecraft.client.renderer.entity.DisplayRenderer.ItemDisplayRenderer",
@@ -20,14 +19,6 @@
     "net.minecraft.world.entity.Display",
     "net.minecraft.world.entity.Display.ItemDisplay",
     "net.minecraft.world.entity.decoration.ArmorStand",
-    "KeyMapping.saveString()",
-    "Minecraft.execute()",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.setScreenAndShow()",
-    "Options.getCameraType()",
-    "ServerData.ip",
-    "ServerData.isLan()",
-    "ServerData.isRealm()",
     "Registry.iterator()",
     "Entity.distanceToSqr()",
     "Entity.getEyeY()"
@@ -37,7 +28,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hidemodels-2.2.1+mc26.1-26.3-fabric.jar",
     "published": "2026-10-16"
   },
@@ -66,7 +57,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

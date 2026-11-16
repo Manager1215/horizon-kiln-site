@@ -2,24 +2,19 @@
   "id": "saros-easy-fly",
   "name": "Saro's Easy Fly",
   "version": "1.0.2",
-  "status": "planned",
-  "statusLabel": "Planned",
-  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "status": "not-checked",
+  "statusLabel": "Not checked",
+  "statusMeaning": "In the catalogue, not checked yet.",
   "url": "https://modrinth.com/mod/saros-easy-fly",
   "author": "Sarocesch",
   "description": "Toggle creative-style flight with a simple /fly command, also for other players (e.g. /fly <playername>). No GUI, no config, works in any game mode.",
-  "needs": [
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "ServerPlayer.nameAndId()",
-    "PlayerList.isOp()"
-  ],
-  "roadmap": "Code next to data (0.3)",
-  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+  "needs": [],
+  "roadmap": "",
+  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers. Everything its code calls is covered by Kiln 0.4.5 (19 classes, 31 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Saros-Easy-Fly-Fabric-26.3-1.0.2.jar",
     "published": "2026-09-19"
   },
@@ -47,7 +42,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "status": "not-checked",
     "statusLabel": "Not checked",

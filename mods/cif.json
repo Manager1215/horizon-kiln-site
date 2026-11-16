@@ -11,17 +11,10 @@
   "needs": [
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
-    "net.minecraft.world.item.component.BundleContents",
     "net.minecraft.world.level.block.ShulkerBoxBlock",
     "net.minecraft.world.level.block.entity.ChestBlockEntity",
     "net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity",
-    "CommandSourceStack.getPosition()",
-    "CommandSourceStack.getServer()",
-    "CommandSourceStack.isPlayer()",
-    "CommandSourceStack.sendSystemMessage()",
-    "DataComponents.BUNDLE_CONTENTS",
     "MinecraftServer.getAllLevels()",
-    "ServerPlayer.permissions()",
     "Level.getChunk()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
@@ -29,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "containeritemfinder-0.2.jar",
     "published": "2026-10-13"
   },
@@ -57,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

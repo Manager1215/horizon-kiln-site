@@ -10,29 +10,22 @@
   "description": "Reacharound block placement.",
   "needs": [
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.world.level.block.state.properties.SlabType",
     "VertexConsumer.addVertex()",
     "LevelRenderEvents.COLLECT_SUBMITS",
-    "Minecraft.gameMode",
-    "Minecraft.hitResult",
     "LocalPlayer.blockInteractionRange()",
     "LocalPlayer.itemUsed()",
-    "LocalPlayer.swing()",
     "RenderTypes.debugFilledBox()",
     "Direction.fromYRot()",
-    "Direction.getNearest()",
     "ARGB.colorFromFloat()",
     "Entity.getEyeHeight()",
     "Entity.getPose()",
-    "ItemStack.getInteractAnimation()",
     "Level.clip()",
     "Level.getMaxY()",
     "Level.getMinY()",
     "Level.isUnobstructed()",
     "BlockState.canBeReplaced()",
     "BlockStateProperties.SLAB_TYPE",
-    "HitResult.getType()",
     "CollisionContext.empty()",
     "Shapes.create()"
   ],
@@ -41,7 +34,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "reacharound+26.3-1.4.2.jar",
     "published": "2026-10-10"
   },
@@ -70,7 +63,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 26,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 19,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

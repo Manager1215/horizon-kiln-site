@@ -9,31 +9,20 @@
   "author": "IVENing",
   "description": "Collect new unique items to expand the border. Can you collect your way all the way to the stronghold?",
   "needs": [
-    "com.mojang.authlib.GameProfile",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.minecraft.client.gui.ActiveTextCollector",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.resources.DefaultPlayerSkin",
     "org.lwjgl.glfw.GLFW",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "Minecraft.execute()",
     "GuiGraphicsExtractor.blit()",
     "GuiGraphicsExtractor.textRenderer()",
-    "EditBox.setHint()",
-    "EditBox.setPosition()",
     "PlayerInfo.getProfile()",
     "PlayerInfo.getSkin()",
     "RenderPipelines.GUI_TEXTURED",
     "DefaultedRegistry.forEach()",
-    "Holder.Reference.is()",
     "NonNullList.iterator()",
-    "MutableComponent.withStyle()",
     "ByteBufCodecs.registry()",
     "MinecraftServer.getGameRules()",
     "MinecraftServer.overworld()",
-    "ServerLevel.getWorldBorder()",
     "ServerLevel.setRespawnData()",
-    "PlayerList.broadcastSystemMessage()",
     "WorldBorder.lerpSizeBetween()",
     "WorldBorder.setCenter()",
     "WorldBorder.setSize()",
@@ -47,7 +36,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "item-equals-border-1.2.1.jar",
     "published": "2026-10-19"
   },
@@ -76,7 +65,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 32,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 21,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

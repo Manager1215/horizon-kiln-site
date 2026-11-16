@@ -11,9 +11,7 @@
   "needs": [
     "an access widener",
     "net.fabricmc.fabric.api.event.registry.DynamicRegistries",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
-    "net.minecraft.SharedConstants",
     "net.minecraft.core.QuartPos",
     "net.minecraft.core.registries.codec.RegistryFileCodec",
     "net.minecraft.data.worldgen.NoiseData",
@@ -43,21 +41,23 @@
     "net.minecraft.world.level.levelgen.densityfunction.ScopedDensityBuffer",
     "net.minecraft.world.level.levelgen.synth.Noise",
     "net.minecraft.world.level.levelgen.synth.NormalNoise",
+    "ResourceLoader.registerBuiltinPack()",
+    "SharedConstants.DEBUG_DISABLE_FLUID_GENERATION",
     "Registry.addAlias()",
     "BuiltInRegistries.BIOME_SOURCE",
     "BuiltInRegistries.CHUNK_GENERATOR",
     "BuiltInRegistries.DENSITY_FUNCTION_TYPE",
     "Registries.BIOME",
     "Registries.elementsDirPath()",
-    "Identifier.withPath()",
-    "and 11 more"
+    "ResourceKey.codec()",
+    "and 10 more"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "novoatlas-fabric-1.9.1+26.3.x.jar",
     "published": "2026-10-08"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 51,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 50,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

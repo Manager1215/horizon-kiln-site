@@ -10,7 +10,6 @@
   "description": "Toggle visibility of armor and other render stuff.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
     "net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer",
@@ -26,19 +25,17 @@
     "net.minecraft.client.renderer.special.ShieldSpecialRenderer",
     "net.minecraft.client.resources.model.EquipmentClientInfo",
     "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
-    "Button.setTooltip()",
     "SubmitNodeCollector.submitModel()",
     "RenderTypes.armorCutoutNoCull()",
     "RenderTypes.entityTranslucent()",
-    "SpriteId.renderType()",
-    "Items.SHIELD"
+    "SpriteId.renderType()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hiddenarmour-2.4.0.jar",
     "published": "2026-09-15"
   },
@@ -69,7 +66,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 19,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

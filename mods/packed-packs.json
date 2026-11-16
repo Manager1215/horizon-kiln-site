@@ -11,8 +11,6 @@
   "needs": [
     "Mixin: 18 points inside the game's methods",
     "com.mojang.blaze3d.Blaze3D",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "net.fabricmc.fabric.impl.resource.pack.BuiltinModPackSource",
     "net.fabricmc.fabric.impl.resource.pack.ModResourcePackCreator",
     "net.minecraft.TracingExecutor",
@@ -23,9 +21,7 @@
     "net.minecraft.client.gui.components.MultiLineEditBox.Builder",
     "net.minecraft.client.gui.components.MultiLineTextWidget",
     "net.minecraft.client.gui.components.SelectableEntry",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.WidgetSprites",
-    "net.minecraft.client.gui.components.events.AbstractContainerEventHandler",
     "net.minecraft.client.gui.layouts.Layout",
     "net.minecraft.client.gui.layouts.LinearLayout",
     "net.minecraft.client.gui.navigation.FocusNavigationEvent",
@@ -33,7 +29,6 @@
     "net.minecraft.client.gui.navigation.FocusNavigationEvent.InitialFocus",
     "net.minecraft.client.gui.navigation.FocusNavigationEvent.TabNavigation",
     "net.minecraft.client.gui.navigation.ScreenAxis",
-    "net.minecraft.client.gui.navigation.ScreenDirection",
     "net.minecraft.client.gui.screens.AlertScreen",
     "net.minecraft.client.gui.screens.NoticeWithLinkScreen",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
@@ -44,20 +39,25 @@
     "net.minecraft.client.gui.screens.packs.PackSelectionScreen",
     "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen",
     "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen.MoreTab",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.client.resources.ClientPackSource",
-    "net.minecraft.network.chat.ComponentContents",
     "net.minecraft.network.chat.ComponentUtils",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.server.packs.PackLocationInfo",
-    "and 79 more"
+    "net.minecraft.server.packs.PackMetadataResources",
+    "net.minecraft.server.packs.PackResources.ResourceOutput",
+    "net.minecraft.server.packs.PackSelectionConfig",
+    "net.minecraft.server.packs.repository.FolderRepositorySource",
+    "net.minecraft.server.packs.repository.Pack",
+    "net.minecraft.server.packs.repository.Pack.Metadata",
+    "net.minecraft.server.packs.repository.Pack.Position",
+    "net.minecraft.server.packs.repository.Pack.ResourcesSupplier",
+    "and 42 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "packed_packs-fabric-2.4.0+26.3.jar",
     "published": "2026-11-14"
   },
@@ -79,7 +79,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 127,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 82,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

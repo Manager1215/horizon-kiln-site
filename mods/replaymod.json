@@ -9,9 +9,7 @@
   "author": "Johni0702",
   "description": "A Minecraft Mod to record, relive and share your experience.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "com.mojang.blaze3d.Blaze3D",
-    "com.mojang.blaze3d.platform.TextInputManager",
     "com.mojang.blaze3d.resource.CrossFrameResourcePool",
     "com.mojang.blaze3d.resource.ResourceDescriptor",
     "io.netty.channel.Channel",
@@ -29,17 +27,9 @@
     "io.netty.channel.EventLoop",
     "io.netty.channel.embedded.EmbeddedChannel",
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
-    "net.minecraft.CrashReport",
-    "net.minecraft.CrashReportCategory",
     "net.minecraft.ReportType",
-    "net.minecraft.ReportedException",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.ClientRecipeBook",
     "net.minecraft.client.DeltaTracker.Timer",
-    "net.minecraft.client.StringSplitter",
-    "net.minecraft.client.gui.components.Button.Plain",
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
     "net.minecraft.client.gui.screens.AlertScreen",
     "net.minecraft.client.gui.screens.LevelLoadingScreen",
     "net.minecraft.client.gui.screens.ManageServerScreen",
@@ -49,6 +39,16 @@
     "net.minecraft.client.multiplayer.ClientChunkCache",
     "net.minecraft.client.multiplayer.ClientHandshakePacketListenerImpl",
     "net.minecraft.client.player.ItemActivation",
+    "net.minecraft.client.renderer.DynamicGpuData",
+    "net.minecraft.client.renderer.LevelRenderer",
+    "net.minecraft.client.resources.server.DownloadedPackSource",
+    "net.minecraft.client.resources.server.ServerPackManager",
+    "net.minecraft.client.resources.server.ServerPackManager.PackPromptStatus",
+    "net.minecraft.network.PacketDecoder",
+    "net.minecraft.network.PacketProcessor",
+    "net.minecraft.network.ProtocolInfo",
+    "net.minecraft.network.UnconfiguredPipelineHandler",
+    "net.minecraft.network.UnconfiguredPipelineHandler.Inbound",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -56,7 +56,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "replaymod-26.3-2.6.28.jar",
     "published": "2026-10-18"
   },
@@ -88,7 +88,11 @@
     "fabric-resource-loader-v0",
     "fabricloader"
   ],
-  "lacks": 269,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 215,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

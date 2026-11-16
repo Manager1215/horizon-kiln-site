@@ -12,16 +12,11 @@
     "Mixin: 2 points inside the game's methods",
     "net.minecraft.client.Screenshot",
     "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
     "net.minecraft.client.gui.components.debug.DebugScreenEntry",
-    "net.minecraft.network.chat.ClickEvent.OpenFile",
     "net.minecraft.util.thread.ReentrantBlockableEventLoop",
     "KeyMapping.matches()",
     "KeyboardHandler.usedDebugKeyAsModifier",
-    "Options.keyScreenshot",
-    "Component.translatableWithFallback()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
+    "DebugScreenEntries.allEntries()",
     "Util.getFilenameFormattedDateTime()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -29,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "F3Screenshot-1.1.2-MC26.3.jar",
     "published": "2026-11-04"
   },
@@ -55,7 +50,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

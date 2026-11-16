@@ -9,16 +9,11 @@
   "author": "MarsThePlanet",
   "description": "Fully Configurable Ambient Horror Mod",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.properties.Property",
     "com.mojang.authlib.properties.PropertyMap",
     "net.minecraft.commands.arguments.ResourceOrTagKeyArgument",
     "net.minecraft.commands.arguments.ResourceOrTagKeyArgument.Result",
     "net.minecraft.core.particles.DustParticleOptions",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.network.chat.PlayerChatMessage",
     "net.minecraft.server.ServerInfo",
     "net.minecraft.server.commands.LocateCommand",
     "net.minecraft.util.thread.ReentrantBlockableEventLoop",
@@ -44,19 +39,24 @@
     "net.minecraft.world.scores.PlayerTeam",
     "net.minecraft.world.scores.Team",
     "net.minecraft.world.scores.Team.Visibility",
-    "CommandSourceStack.getServer()",
-    "CommandSourceStack.sendSystemMessage()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "BlockPos.distToCenterSqr()",
-    "and 55 more"
+    "BlockPos.mutable()",
+    "BlockPos.MutableBlockPos.move()",
+    "Direction.Plane.getRandomDirection()",
+    "Holder.Direct.<init>()",
+    "DataComponents.PROFILE",
+    "Registries.STRUCTURE",
+    "Connection.getPacketListener()",
+    "ChatType.CHAT",
+    "ChatType.bind()",
+    "and 50 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "serversidehorror-26.3-fabric-5.2.jar",
     "published": "2026-11-13"
   },
@@ -84,7 +84,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 136,
+  "softOff": {
+    "class": "partial",
+    "why": "generates in the world"
+  },
+  "lacks": 98,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

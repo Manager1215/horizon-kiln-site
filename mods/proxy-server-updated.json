@@ -25,18 +25,14 @@
     "io.netty.handler.proxy.Socks5ProxyHandler",
     "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
     "net.minecraft.network.Connection.1",
-    "org.apache.commons.io.FileUtils",
-    "Minecraft.gameDirectory",
-    "Minecraft.setScreenAndShow()",
-    "Checkbox.selected()",
-    "EditBox.setHint()"
+    "org.apache.commons.io.FileUtils"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ProxyServerUpdated-1.9,26.2.jar",
     "published": "2026-06-19"
   },
@@ -59,7 +55,11 @@
   },
   "mixins": true,
   "depends": [],
-  "lacks": 21,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

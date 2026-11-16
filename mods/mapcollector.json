@@ -9,18 +9,9 @@
   "author": "Laztec",
   "description": "Save map as image. Use map image data to detect duplicates in your collection.",
   "needs": [
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.network.chat.ClickEvent.OpenFile",
     "net.minecraft.world.item.MapItem",
-    "net.minecraft.world.level.storage.LevelResource",
-    "Minecraft.gameDirectory",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
     "Minecraft.isLocalServer()",
-    "ServerData.ip",
     "DataComponents.MAP_ID",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
     "MapItemSavedData.colors"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -28,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "map-collector-1.1.0+26.3.jar",
     "published": "2026-10-25"
   },
@@ -56,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

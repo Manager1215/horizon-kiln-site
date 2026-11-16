@@ -10,7 +10,6 @@
   "description": "Adds handcrafted structures from ancient civilizations (Mayan, Roman, Japanese, Germanic) with custom loot, mobs, and secrets",
   "needs": [
     "net.minecraft.world.level.StructureManager",
-    "RegistryAccess.lookupOrThrow()",
     "BuiltInRegistries.TRIGGER_TYPES",
     "Registries.STRUCTURE",
     "ServerLevel.structureManager()",
@@ -22,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ancientstructures-fabric-26.3-0.4.0.jar",
     "published": "2026-10-24"
   },
@@ -52,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

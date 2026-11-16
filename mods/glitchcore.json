@@ -25,35 +25,29 @@
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyContext",
     "net.fabricmc.fabric.api.networking.v1.ServerConfigurationNetworking.ConfigurationPacketHandler",
     "net.fabricmc.fabric.api.networking.v1.ServerConfigurationNetworking.Context",
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
     "net.minecraft.core.component.BlockTransformer.BlockTransformData.Builder",
     "net.minecraft.server.network.ConfigurationTask",
     "net.minecraft.server.network.ConfigurationTask.Type",
-    "net.minecraft.world.item.component.Compostable",
     "net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate",
     "net.minecraft.world.level.levelgen.feature.stateproviders.CopyPropertiesProvider",
     "net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedStateProvider",
     "net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedStateProvider.Builder",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "ServerConfigurationNetworking.registerGlobalReceiver()",
     "ServerConfigurationNetworking.send()",
     "ServerPlayNetworking.createClientboundPacket()",
-    "FabricLoader.getEntrypointContainers()",
     "BlockTransformer.BlockTransformData.builder()",
-    "DataComponents.COMPOSTABLE",
     "BuiltInRegistries.LOADERS",
     "BuiltInRegistries.REGISTRY",
     "PlayerList.broadcastAll()",
     "Player.<init>()",
-    "HitResult.getType()"
+    "Compostable.<init>()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "GlitchCore-fabric-26.3-26.3.0.0.5.jar",
     "published": "2026-10-11"
   },
@@ -82,7 +76,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 36,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 30,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

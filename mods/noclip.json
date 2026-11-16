@@ -10,9 +10,7 @@
   "description": "Adds a way to noclip in any game mode, like spectator mode",
   "needs": [
     "Mixin: 31 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.StartDataPackReload",
     "net.minecraft.client.ToggleKeyMapping",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.player.ClientInput",
     "net.minecraft.client.renderer.ScreenEffectRenderer",
     "net.minecraft.client.renderer.entity.player.AvatarRenderer",
@@ -27,7 +25,6 @@
     "net.minecraft.world.effect.BadOmenMobEffect",
     "net.minecraft.world.effect.RaidOmenMobEffect",
     "net.minecraft.world.entity.EntitySelector",
-    "net.minecraft.world.entity.Pose",
     "net.minecraft.world.entity.ai.goal.LandOnOwnersShoulderGoal",
     "net.minecraft.world.entity.ai.village.VillageSiege",
     "net.minecraft.world.entity.projectile.ProjectileUtil",
@@ -43,21 +40,24 @@
     "net.minecraft.world.waypoints.WaypointTransmitter.EntityAzimuthConnection",
     "net.minecraft.world.waypoints.WaypointTransmitter.EntityBlockConnection",
     "net.minecraft.world.waypoints.WaypointTransmitter.EntityChunkConnection",
-    "ServerLifecycleEvents.START_DATA_PACK_RELOAD",
-    "Minecraft.gameMode",
-    "Minecraft.schedule()",
-    "GuiGraphicsExtractor.blit()",
+    "MultiPlayerGameMode.canHurtPlayer()",
     "AbstractClientPlayer.<init>()",
     "LocalPlayer.travel()",
     "CameraRenderState.smartCull",
-    "and 16 more"
+    "TextColor.GRAY",
+    "ServerChunkCache.move()",
+    "ServerLevel.getGameRules()",
+    "ServerPlayer.gameMode",
+    "Entity.<init>()",
+    "Entity.collideBoundingBox()",
+    "and 5 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "noclip-1.5.0+26.3.jar",
     "published": "2026-10-04"
   },
@@ -86,7 +86,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 56,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @wrap-method and @wrap-operation into the game's classes; has network channels"
+  },
+  "lacks": 45,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

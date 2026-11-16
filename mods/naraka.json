@@ -38,19 +38,19 @@
     "net.minecraft.client.animation.KeyframeAnimations",
     "net.minecraft.client.color.item.ItemTintSource",
     "net.minecraft.client.gui.components.BossHealthOverlay",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
     "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
     "net.minecraft.client.gui.layouts.LinearLayout",
     "net.minecraft.client.gui.layouts.LinearLayout.Orientation",
     "net.minecraft.client.gui.screens.recipebook.CraftingRecipeBookComponent",
     "net.minecraft.client.gui.screens.recipebook.GhostSlots",
-    "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
     "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent.TabInfo",
     "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
     "net.minecraft.client.model.AnimationUtils",
     "net.minecraft.client.model.EntityModel",
     "net.minecraft.client.model.Model.Simple",
+    "net.minecraft.client.model.geom.PartPose",
+    "net.minecraft.client.model.geom.builders.CubeDeformation",
+    "net.minecraft.client.model.geom.builders.CubeListBuilder",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "naraka-fabric-26.3-1.1.4.jar",
     "published": "2026-10-14"
   },
@@ -91,7 +91,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 748,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
+  },
+  "lacks": 632,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

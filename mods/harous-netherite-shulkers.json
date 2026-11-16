@@ -49,15 +49,15 @@
     "Direction.getRotation()",
     "SoundEvents.SHULKER_BOX_CLOSE",
     "SoundEvents.SHULKER_BOX_OPEN",
-    "Stats.OPEN_SHULKER_BOX",
-    "and 40 more"
+    "Util.makeEnumMap()",
+    "and 37 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "harous-netherite-shulkers-1.1.0+26.3.X.jar",
     "published": "2026-10-23"
   },
@@ -88,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 80,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 77,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

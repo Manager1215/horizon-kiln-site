@@ -11,14 +11,8 @@
   "needs": [
     "Mixin: 3 points inside the game's methods",
     "net.fabricmc.fabric.api.util.TriState",
-    "net.minecraft.client.gui.screens.inventory.AnvilScreen",
-    "net.minecraft.server.permissions.Permissions",
-    "net.minecraft.util.StringUtil",
-    "net.minecraft.world.inventory.AnvilMenu",
     "net.minecraft.world.inventory.ItemCombinerMenu",
     "Tag.asString()",
-    "Component.getSiblings()",
-    "MutableComponent.setStyle()",
     "Player.checkPermission()",
     "Player.permissions()"
   ],
@@ -27,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "styled_renaming-1.4.0+26.2.jar",
     "published": "2026-06-16"
   },
@@ -55,7 +49,11 @@
     "placeholder-api",
     "polymer-core"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

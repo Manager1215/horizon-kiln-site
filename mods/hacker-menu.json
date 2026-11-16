@@ -12,35 +12,25 @@
     "net.minecraft.client.gui.components.ImageButton",
     "net.minecraft.client.gui.components.WidgetSprites",
     "GuiGraphicsExtractor.blit()",
-    "EditBox.setSuggestion()",
     "AbstractContainerScreen.extractContents()",
-    "CommandSource.NULL",
-    "CommandSourceStack.withSuppressedOutput()",
-    "Commands.performPrefixedCommand()",
     "NonNullList.iterator()",
-    "MinecraftServer.getCommands()",
     "MinecraftServer.isSingleplayerOwner()",
     "ServerPlayer.getBlockX()",
     "ServerPlayer.getBlockY()",
     "ServerPlayer.getBlockZ()",
     "ServerPlayer.getGameProfile()",
-    "ServerPlayer.giveExperienceLevels()",
     "ServerPlayer.removeAllEffects()",
-    "ServerPlayer.setGameMode()",
-    "PermissionSet.ALL_PERMISSIONS",
     "NameAndId.<init>()",
-    "Player.drop()",
     "Player.getBlockX()",
     "Player.getBlockY()",
-    "Player.getBlockZ()",
-    "Vec2.ZERO"
+    "Player.getBlockZ()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "hackermenu_rewritten_fabric-5.0.jar",
     "published": "2026-10-14"
   },
@@ -69,7 +59,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,7 +9,6 @@
   "author": "TerrorSitoG2",
   "description": "A simple mod: you die, and instead of leaving a grave, YOUR zombie appears. You fight it, and if you win, the XP orb it drops will give you your entire inventory back",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath",
@@ -20,7 +19,6 @@
     "net.minecraft.client.renderer.entity.state.ZombieRenderState",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
     "net.minecraft.world.entity.monster.zombie.Zombie",
@@ -34,7 +32,6 @@
     "SynchedEntityData.set()",
     "ServerLevel.getGameRules()",
     "ServerPlayer.getProfile()",
-    "ServerPlayer.getRandom()",
     "ServerPlayer.removeAllEffects()",
     "MobEffectInstance.CODEC",
     "ExperienceOrb.addAdditionalSaveData()",
@@ -42,7 +39,6 @@
     "ExperienceOrb.remove()",
     "ItemEntity.setNoPickUpDelay()",
     "Inventory.getFreeSlot()",
-    "Player.giveExperiencePoints()",
     "Level.addFreshEntity()",
     "GameRules.KEEP_INVENTORY",
     "GameRules.set()",
@@ -53,7 +49,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "gravewalker-fabric-1.1.1+mc26.x.jar",
     "published": "2026-09-23"
   },
@@ -81,7 +77,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 38,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 34,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

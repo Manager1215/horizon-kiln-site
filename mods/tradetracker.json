@@ -11,26 +11,16 @@
   "needs": [
     "net.minecraft.client.gui.screens.inventory.MerchantScreen",
     "net.minecraft.client.renderer.entity.state.VillagerRenderState",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.world.entity.npc.villager.AbstractVillager",
     "net.minecraft.world.inventory.MerchantContainer",
     "net.minecraft.world.inventory.MerchantMenu",
     "net.minecraft.world.inventory.MerchantResultSlot",
     "net.minecraft.world.item.trading.Merchant",
     "net.minecraft.world.item.trading.MerchantOffer",
-    "net.minecraft.world.level.storage.LevelResource",
     "Object2IntMap.Entry.getKey()",
-    "KeyMapping.getTranslatedKeyMessage()",
     "Minecraft.crosshairPickEntity",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
-    "Screen.charTyped()",
-    "Screen.mouseClicked()",
-    "CharacterEvent.codepointAsString()",
-    "CharacterEvent.isAllowedChatCharacter()",
     "ClientLevel.getEntitiesOfClass()",
     "ClientLevel.getOverworldClockTime()",
-    "ServerData.ip",
     "LocalPlayer.getBoundingBox()",
     "EntityRenderState.nameTag",
     "EntityRenderState.nameTagAttachment",
@@ -38,12 +28,6 @@
     "EntityRenderState.y",
     "EntityRenderState.z",
     "CameraRenderState.orientation",
-    "DataComponents.STORED_ENCHANTMENTS",
-    "Component.getVisualOrderText()",
-    "MutableComponent.withStyle()",
-    "Enchantment.getFullname()",
-    "ItemEnchantments.entrySet()",
-    "ItemEnchantments.isEmpty()",
     "MerchantOffers.isEmpty()",
     "MerchantOffers.iterator()",
     "AABB.inflate()"
@@ -53,7 +37,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tradetracker-fabric-1.4.1+mc26.3.jar",
     "published": "2026-09-27"
   },
@@ -84,7 +68,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 38,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

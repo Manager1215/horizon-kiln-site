@@ -11,16 +11,12 @@
   "needs": [
     "an access widener",
     "Mixin: 19 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.advancements.predicates.MinMaxBounds.Ints",
     "net.minecraft.advancements.triggers.AnyBlockInteractionTrigger",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.PlayerInteractTrigger",
     "net.minecraft.commands.FunctionInstantiationException",
     "net.minecraft.commands.arguments.ComponentArgument",
-    "net.minecraft.commands.arguments.DimensionArgument",
-    "net.minecraft.commands.arguments.IdentifierArgument",
-    "net.minecraft.commands.arguments.ObjectiveArgument",
     "net.minecraft.commands.arguments.RangeArgument",
     "net.minecraft.commands.arguments.RangeArgument.Floats",
     "net.minecraft.commands.arguments.RangeArgument.Ints",
@@ -28,14 +24,11 @@
     "net.minecraft.commands.arguments.ResourceOrIdArgument.LootPredicateArgument",
     "net.minecraft.commands.arguments.ResourceOrTagArgument",
     "net.minecraft.commands.arguments.ResourceOrTagArgument.Result",
-    "net.minecraft.commands.arguments.ScoreHolderArgument",
     "net.minecraft.commands.arguments.SlotSourceArgument",
     "net.minecraft.commands.arguments.SlotSourceArgument.Result",
     "net.minecraft.commands.arguments.TimeArgument",
     "net.minecraft.commands.arguments.blocks.BlockPredicateArgument",
     "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
-    "net.minecraft.commands.arguments.coordinates.Coordinates",
-    "net.minecraft.commands.arguments.coordinates.Vec3Argument",
     "net.minecraft.commands.arguments.item.FunctionArgument",
     "net.minecraft.commands.arguments.item.ItemPredicateArgument",
     "net.minecraft.commands.arguments.item.ItemPredicateArgument.Result",
@@ -51,6 +44,13 @@
     "net.minecraft.commands.execution.tasks.BuildContexts.Continuation",
     "net.minecraft.commands.execution.tasks.CallFunction",
     "net.minecraft.commands.execution.tasks.FallthroughTask",
+    "net.minecraft.commands.execution.tasks.IsolatedCall",
+    "net.minecraft.commands.functions.CommandFunction",
+    "net.minecraft.commands.functions.InstantiatedFunction",
+    "net.minecraft.commands.synchronization.ArgumentUtils",
+    "net.minecraft.core.MappedRegistry.TagSet",
+    "net.minecraft.core.RegistrationInfo",
+    "net.minecraft.core.Registry.PendingTags",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "packtest-2.8.0.jar",
     "published": "2026-10-17"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 194,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; runs threads of its own; generates in the world"
+  },
+  "lacks": 156,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

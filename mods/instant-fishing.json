@@ -9,29 +9,23 @@
   "author": "NotchArrow",
   "description": "Instant Fish Catching and Other Tweaks",
   "needs": [
-    "net.minecraft.world.entity.projectile.FishingHook",
     "Object2IntMap.Entry.getKey()",
     "DefaultedRegistry.byId()",
     "DefaultedRegistry.size()",
-    "Holder.getRegisteredName()",
-    "DataComponents.STORED_ENCHANTMENTS",
     "SoundEvents.FISHING_BOBBER_SPLASH",
     "Entity.<init>()",
     "ItemEntity.setPickUpDelay()",
     "ItemStack.getEnchantments()",
     "ItemStack.nextDamageWillBreak()",
-    "Items.ENCHANTED_BOOK",
-    "ItemEnchantments.entrySet()",
     "Level.addFreshEntity()",
-    "BuiltInLootTables.all()",
-    "LootContextParams.THIS_ENTITY"
+    "BuiltInLootTables.all()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "instant-fishing-1.2.0+mc26.3.jar",
     "published": "2026-10-18"
   },
@@ -60,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

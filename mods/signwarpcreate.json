@@ -12,26 +12,17 @@
     "Mixin: 15 points inside the game's methods",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-    "net.minecraft.SharedConstants",
-    "net.minecraft.core.component.DataComponentPatch.Builder",
     "net.minecraft.world.item.component.ResolvableProfile.Static",
     "net.minecraft.world.level.block.SignBlock",
     "net.minecraft.world.level.block.WallSignBlock",
     "net.minecraft.world.level.block.entity.SignBlockEntity",
     "net.minecraft.world.level.block.entity.SignText",
     "net.minecraft.world.level.block.entity.SignText.Mutable",
-    "net.minecraft.world.level.storage.LevelResource",
-    "DataComponents.CUSTOM_NAME",
+    "SharedConstants.getCurrentVersion()",
     "ResourceKey.codec()",
     "MinecraftServer.getDataStorage()",
-    "MinecraftServer.getWorldPath()",
     "ServerPlayer.teleportTo()",
-    "MenuType.GENERIC_9x1",
-    "MenuType.GENERIC_9x2",
-    "MenuType.GENERIC_9x3",
-    "MenuType.GENERIC_9x4",
-    "MenuType.GENERIC_9x5",
-    "MenuType.GENERIC_9x6",
+    "LevelResource.DATA",
     "SavedDataStorage.readTagFromDisk()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -39,7 +30,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "warper-1.1.0+26.3.jar",
     "published": "2026-09-21"
   },
@@ -67,7 +58,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

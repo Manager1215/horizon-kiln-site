@@ -13,9 +13,6 @@
     "net.fabricmc.fabric.impl.client.indigo.renderer.aocalc.AoCalculator",
     "net.fabricmc.fabric.impl.client.indigo.renderer.aocalc.FlatLighter",
     "net.minecraft.client.gui.components.BossHealthOverlay",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
     "net.minecraft.client.multiplayer.ClientChunkCache",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.LightmapRenderStateExtractor",
@@ -50,14 +47,16 @@
     "CameraRenderState.fogType",
     "LevelRenderState.skyRenderState",
     "ARGB.colorFromVector3f()",
-    "and 3 more"
+    "ARGB.vector4fFromARGB32()",
+    "EnvironmentAttributes.CLOUD_FOG_END_DISTANCE",
+    "EnvironmentAttributes.SKY_FOG_END_DISTANCE"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "lumaclear-1.0.1+mc26.3.jar",
     "published": "2026-11-13"
   },
@@ -86,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 43,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 40,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

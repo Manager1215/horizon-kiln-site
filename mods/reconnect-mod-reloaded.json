@@ -10,33 +10,22 @@
   "description": "Reconnect anywhere you want! This mod allows you to reconnect via the \"/reconnect\" command, or inside your in-game menu screen while in Multiplayer or Realms, and more.",
   "needs": [
     "com.mojang.realmsclient.RealmsMainScreen",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.layouts.GridLayout",
     "net.minecraft.client.gui.layouts.LayoutSettings",
     "net.minecraft.client.gui.layouts.LinearLayout",
     "net.minecraft.client.gui.screens.ConnectScreen",
     "net.minecraft.client.gui.screens.DisconnectedScreen",
     "net.minecraft.client.multiplayer.resolver.ServerAddress",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "Minecraft.allowsMultiplayer()",
-    "Minecraft.execute()",
-    "Minecraft.getCurrentServer()",
     "Minecraft.isLocalServer()",
-    "Button.getMessage()",
-    "Button.setTooltip()",
-    "Button.Builder.width()",
-    "ClientLevel.disconnect()",
-    "ServerData.ip",
-    "ServerData.isRealm()",
-    "Component.getContents()"
+    "ClientLevel.disconnect()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "reconnect-fabric-3.0-26.3.jar",
     "published": "2026-10-31"
   },
@@ -63,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 10,
   "development": {
     "status": "no-plans",
     "statusLabel": "No plans yet",

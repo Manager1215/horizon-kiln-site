@@ -20,20 +20,12 @@
     "VertexConsumer.setOverlay()",
     "BlockEntityRenderer.extractRenderState()",
     "RenderTypes.translucentMovingBlock()",
-    "TextureAtlasSprite.getU0()",
-    "TextureAtlasSprite.getU1()",
-    "TextureAtlasSprite.getV0()",
-    "TextureAtlasSprite.getV1()",
     "TextureAtlasSprite.wrap()",
     "Direction.getYRot()",
-    "Identifier.withPrefix()",
     "BlockTags.BARS",
     "BlockTags.WALLS",
-    "StringRepresentable.EnumCodec.optionalFieldOf()",
     "Util.toMap()",
     "Player.addItem()",
-    "Player.drop()",
-    "DyeColor.CODEC",
     "BaseEntityBlock.getDrops()",
     "BaseEntityBlock.mirror()",
     "BaseEntityBlock.skipRendering()",
@@ -49,14 +41,22 @@
     "ColorCollection.map()",
     "ColorCollection.prefixWithColor()",
     "ColorCollection.zipMap()",
-    "and 10 more"
+    "SoundType.IRON",
+    "BlockEntity.applyImplicitComponents()",
+    "BlockEntity.collectImplicitComponents()",
+    "BlockBehaviour.Properties.instrument()",
+    "BlockState.getValueOrElse()",
+    "GameEvent.BLOCK_CHANGE",
+    "FluidState.is()",
+    "Shapes.empty()",
+    "and 1 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "leadlight-fabric-26.3-1.0.0+26.3.jar",
     "published": "2026-10-18"
   },
@@ -84,7 +84,11 @@
     "fabric-api",
     "java"
   ],
-  "lacks": 50,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 41,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

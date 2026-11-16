@@ -9,10 +9,7 @@
   "author": "XxPVPGODALYKxX",
   "description": "This is a simple mod that allows automatic uploading of screenshots to any type of webhook like discord, fluxer, slack and most others.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.client.Screenshot",
-    "Minecraft.execute()",
-    "Minecraft.gameDirectory",
     "LocalPlayer.getGameProfile()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
@@ -20,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ScreenshotWebhookSender.jar",
     "published": "2026-09-16"
   },
@@ -49,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -2,25 +2,19 @@
   "id": "compact-chat",
   "name": "Compact Chat",
   "version": "3.2.0",
-  "status": "planned",
-  "statusLabel": "Planned",
-  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "status": "not-checked",
+  "statusLabel": "Not checked",
+  "statusMeaning": "In the catalogue, not checked yet.",
   "url": "https://modrinth.com/mod/compact-chat",
   "author": "caoimhe",
   "description": "Clean up your chat by removing duplicate messages!",
-  "needs": [
-    "net.minecraft.network.chat.contents.PlainTextContents",
-    "Component.getContents()",
-    "MutableComponent.create()",
-    "MutableComponent.getSiblings()",
-    "MutableComponent.setStyle()"
-  ],
-  "roadmap": "Code next to data (0.3)",
-  "evidence": "Not run: Java did not start.",
+  "needs": [],
+  "roadmap": "",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (13 classes, 14 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "compact-chat-26.1-fabric-3.2.0.jar",
     "published": "2026-10-20"
   },
@@ -49,7 +43,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

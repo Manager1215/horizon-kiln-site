@@ -11,16 +11,14 @@
   "needs": [
     "net.minecraft.world.damagesource.DamageTypes",
     "ServerLevel.sendParticles()",
-    "DamageSource.is()",
-    "Player.tickCount",
-    "Items.TOTEM_OF_UNDYING"
+    "Player.tickCount"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "totem_flight-2.0.0.jar",
     "published": "2026-10-30"
   },
@@ -47,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

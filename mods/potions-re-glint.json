@@ -10,8 +10,6 @@
   "description": "Add back the enchantment glint to potions",
   "needs": [
     "net.minecraft.world.item.PotionItem",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "DataComponents.POTION_CONTENTS",
     "Item.isFoil()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -19,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "potionsreglint-1.2.0-26.1-fabric.jar",
     "published": "2026-06-19"
   },
@@ -49,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

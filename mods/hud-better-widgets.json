@@ -10,41 +10,18 @@
   "description": "Build your own HUD with fully customizable, draggable, interactive widgets",
   "needs": [
     "net.minecraft.world.level.LightLayer",
-    "InputConstants.isKeyDown()",
     "Minecraft.crosshairPickEntity",
-    "Minecraft.hitResult",
-    "Options.keyAttack",
-    "Options.keyUse",
-    "GuiGraphicsExtractor.nextStratum()",
-    "Hud.getMobEffectSprite()",
-    "Screen.charTyped()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()",
-    "KeyEvent.hasControlDownWithQuirk()",
-    "KeyEvent.hasShiftDown()",
-    "KeyEvent.isConfirmation()",
-    "KeyEvent.shortcutKey()",
     "ClientLevel.getBrightness()",
     "ClientLevel.getRawBrightness()",
     "LocalPlayer.getAbsorptionAmount()",
-    "Holder.getRegisteredName()",
-    "LivingEntity.isAlive()",
-    "Items.ARROW",
-    "Items.ENCHANTED_GOLDEN_APPLE",
-    "Items.ENDER_PEARL",
-    "Items.FIREWORK_ROCKET",
-    "Items.GOLDEN_APPLE",
-    "Items.TOTEM_OF_UNDYING",
-    "Items.WIND_CHARGE"
+    "LivingEntity.isAlive()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "[26.3]HUD_BW-4.1.0.jar",
     "published": "2026-10-26"
   },
@@ -73,7 +50,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 29,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

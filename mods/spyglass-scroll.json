@@ -10,9 +10,7 @@
   "description": "Zoom the spyglass using the scroll wheel, just like in vanilla Minecraft.",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.minecraft.client.CameraType",
     "net.minecraft.util.CommonColors",
-    "Options.getCameraType()",
     "Options.smoothCamera",
     "LocalPlayer.isScoping()"
   ],
@@ -21,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "spyglass-scroll-1.1.0+mc26.3.jar",
     "published": "2026-10-15"
   },
@@ -49,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

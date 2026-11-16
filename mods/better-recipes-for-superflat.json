@@ -10,22 +10,18 @@
   "description": "Makes Superflat Survival 100% beatable: Balanced crafting recipes, expanded villager trades, wandering traders, fishing, and unique mob loot.",
   "needs": [
     "an access widener",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.minecraft.world.entity.ai.village.poi.PoiTypes",
     "net.minecraft.world.entity.npc.villager.VillagerProfession",
-    "ServerLifecycleEvents.SERVER_STARTING",
     "BuiltInRegistries.POINT_OF_INTEREST_TYPE",
     "BuiltInRegistries.VILLAGER_PROFESSION",
     "Registries.POINT_OF_INTEREST_TYPE",
     "Registries.TRADE_SET",
     "Registries.VILLAGER_PROFESSION",
-    "SoundEvents.VILLAGER_WORK_CARTOGRAPHER",
     "SoundEvents.VILLAGER_WORK_CLERIC",
     "SoundEvents.VILLAGER_WORK_FISHERMAN",
     "SoundEvents.VILLAGER_WORK_LIBRARIAN",
     "SoundEvents.VILLAGER_WORK_MASON",
     "SoundEvents.VILLAGER_WORK_TOOLSMITH",
-    "Blocks.IRON_BLOCK",
     "SoundType.AMETHYST"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
@@ -33,7 +29,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "betterrecipes-1.0.0.jar",
     "published": "2026-09-17"
   },
@@ -62,7 +58,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

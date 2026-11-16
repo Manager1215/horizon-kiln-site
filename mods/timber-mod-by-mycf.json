@@ -9,7 +9,6 @@
   "author": "0xmycf",
   "description": "Chop down trees with only breaking one block!",
   "needs": [
-    "net.minecraft.tags.ItemTags",
     "ServerLevel.getGameRules()",
     "GameRules.get()"
   ],
@@ -18,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ctimber-2.0.0+26.3.jar",
     "published": "2026-10-08"
   },
@@ -48,7 +47,11 @@
     "minecraft",
     "timber"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; has network channels"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

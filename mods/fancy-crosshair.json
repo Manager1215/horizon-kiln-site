@@ -9,42 +9,25 @@
   "author": "TigreSoto1",
   "description": "Highly customizable PvP crosshair mod for Fabric with presets, target crosshair, hit animations, cooldown editor, shield/elytra indicators and more.",
   "needs": [
-    "net.minecraft.client.CameraType",
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.world.phys.EntityHitResult",
     "Camera.xRot()",
     "Camera.yRot()",
     "Minecraft.crosshairPickEntity",
-    "Minecraft.hitResult",
-    "Minecraft.setScreenAndShow()",
-    "Options.getCameraType()",
-    "GuiGraphicsExtractor.blitSprite()",
-    "GuiGraphicsExtractor.blitSprite()",
-    "AbstractWidget.mouseReleased()",
-    "Button.Builder.tooltip()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
     "LocalPlayer.getAttackStrengthScale()",
     "LocalPlayer.getCurrentItemAttackStrengthDelay()",
     "GameRenderer.mainCamera()",
-    "CommonComponents.GUI_BACK",
-    "CommonComponents.GUI_DONE",
-    "Entity.getBbHeight()",
     "Entity.xOld",
     "Entity.yOld",
     "Entity.zOld",
     "LivingEntity.isAlive()",
-    "Player.isBlocking()",
-    "HitResult.getType()"
+    "Player.isBlocking()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fancy-crosshair-26.3.jar",
     "published": "2026-09-19"
   },
@@ -73,7 +56,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 29,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

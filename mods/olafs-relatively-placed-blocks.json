@@ -20,13 +20,10 @@
     "net.fabricmc.fabric.api.client.renderer.v1.mesh.MutableQuadView",
     "net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadEmitter",
     "net.fabricmc.fabric.api.client.renderer.v1.mesh.ShadeMode",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
     "net.fabricmc.fabric.api.event.registry.RegistryEntryAddedCallback",
     "net.minecraft.client.model.geom.builders.UVPair",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.block.dispatch.BlockStateModel.UnbakedRoot",
     "net.minecraft.client.renderer.item.CuboidItemModelWrapper",
@@ -43,21 +40,24 @@
     "net.minecraft.world.phys.shapes.BooleanOp",
     "net.minecraft.world.ticks.LevelTicks",
     "Window.getAppropriateLineWidth()",
-    "ServerLifecycleEvents.END_DATA_PACK_RELOAD",
-    "ServerLifecycleEvents.SERVER_STARTED",
     "Minecraft.getBlockColors()",
-    "Minecraft.hitResult",
     "BlockColors.getTintSource()",
     "BlockTintSource.colorInWorld()",
     "GameRenderer.mainCamera()",
-    "and 52 more"
+    "BlockAndTintGetter.getBlockEntityRenderData()",
+    "BlockStateModel.emitQuads()",
+    "BlockStateModel.materialFlags()",
+    "BlockStateModel.particleMaterial()",
+    "ClientItem.Properties.DEFAULT",
+    "ItemStackRenderState.LayerRenderState.setLocalTransform()",
+    "and 49 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "olafsrelativeblocks-2.0.2+mc26.3.jar",
     "published": "2026-11-10"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 118,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 101,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

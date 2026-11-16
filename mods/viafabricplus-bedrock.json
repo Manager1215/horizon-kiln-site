@@ -24,10 +24,8 @@
     "io.netty.channel.SimpleChannelInboundHandler",
     "io.netty.handler.timeout.ReadTimeoutHandler",
     "net.minecraft.client.gui.components.MultiLineTextWidget",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.ConnectScreen",
     "net.minecraft.client.gui.screens.ConnectScreen.1",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
     "net.minecraft.client.multiplayer.ClientSuggestionProvider",
     "net.minecraft.client.multiplayer.ServerData.State",
@@ -51,14 +49,16 @@
     "net.minecraft.world.level.block.EndPortalFrameBlock",
     "net.minecraft.world.level.block.EnderChestBlock",
     "net.minecraft.world.level.block.HoneyBlock",
-    "and 46 more"
+    "net.minecraft.world.level.block.LadderBlock",
+    "net.minecraft.world.level.block.LanternBlock",
+    "and 32 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "viafabricplus-bedrock-1.2.0.jar",
     "published": "2026-11-01"
   },
@@ -77,7 +77,11 @@
     "minecraft",
     "viafabricplus"
   ],
-  "lacks": 86,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 72,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

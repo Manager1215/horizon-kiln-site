@@ -9,22 +9,14 @@
   "author": "OliverPerring",
   "description": "One Eye fortress finder updated for 26.2. Saves alot of time working out the maths on servers and personally I find it far to useful",
   "needs": [
-    "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.world.entity.projectile.EyeOfEnder",
-    "Minecraft.execute()",
-    "MutableComponent.setStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()"
+    "net.minecraft.world.entity.projectile.EyeOfEnder"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "one_eye_stronghold_finder-1.1+26.3.jar",
     "published": "2026-09-17"
   },
@@ -53,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,23 +11,11 @@
   "needs": [
     "net.fabricmc.fabric.api.event.client.player.ClientPlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.client.player.ClientPlayerBlockBreakEvents.After",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.gui.layouts.FrameLayout",
     "net.minecraft.client.gui.layouts.GridLayout",
     "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
     "net.minecraft.client.gui.layouts.LayoutSettings",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.world.level.block.ShulkerBoxBlock",
-    "Hud.setSubtitle()",
-    "Hud.setTimes()",
-    "Hud.setTitle()",
-    "Button.Builder.width()",
-    "MutableComponent.setStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "Style.withUnderlined()",
     "SoundEvents.ANVIL_LAND"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -35,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "didyouunpause-1.1.0+26.3.jar",
     "published": "2026-09-29"
   },
@@ -65,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

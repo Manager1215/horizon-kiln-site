@@ -11,21 +11,17 @@
   "needs": [
     "net.minecraft.world.entity.ContainerUser",
     "net.minecraft.world.entity.monster.piglin.PiglinAi",
-    "net.minecraft.world.inventory.ChestMenu",
     "net.minecraft.world.level.block.Mirror",
     "net.minecraft.world.level.block.entity.ContainerOpenersCounter",
-    "net.minecraft.world.level.storage.loot.providers.number.ints.ResolvableInt.Constant",
     "Direction.getUnitVec3i()",
     "SoundEvents.BARREL_CLOSE",
     "SoundEvents.BARREL_OPEN",
     "SoundEvents.WOODEN_TRAPDOOR_CLOSE",
     "SoundEvents.WOODEN_TRAPDOOR_OPEN",
-    "Stats.OPEN_BARREL",
     "LivingEntity.isSpectator()",
     "AbstractContainerMenu.getRedstoneSignalFromBlockEntity()",
     "BlockItem.registerBlocks()",
     "Item.BY_BLOCK",
-    "Blocks.BARREL",
     "SoundType.BAMBOO_WOOD",
     "SoundType.CHERRY_WOOD",
     "SoundType.NETHER_WOOD",
@@ -37,7 +33,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "storagedelight-26.10.05-26.3-fabric.jar",
     "published": "2026-10-05"
   },
@@ -65,7 +61,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

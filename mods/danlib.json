@@ -10,19 +10,15 @@
   "description": "a lib for my mods and extends vanilla for future mods like keeping block guis open no matter what block calls them.",
   "needs": [
     "an access widener",
-    "net.minecraft.world.inventory.AnvilMenu",
     "net.minecraft.world.inventory.CartographyTableMenu",
-    "net.minecraft.world.inventory.CraftingMenu",
-    "net.minecraft.world.inventory.LoomMenu",
-    "net.minecraft.world.inventory.SmithingMenu",
-    "DataComponents.ENCHANTMENT_GLINT_OVERRIDE"
+    "net.minecraft.world.inventory.LoomMenu"
   ],
-  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "danlib-3.0.0.jar",
     "published": "2026-10-03"
   },
@@ -50,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

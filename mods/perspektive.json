@@ -10,17 +10,14 @@
   "description": "Freelook/Perspective mod for Fabric",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.minecraft.client.CameraType",
-    "net.minecraft.client.ScrollWheelHandler",
-    "Options.getCameraType()",
-    "Options.setCameraType()"
+    "net.minecraft.client.ScrollWheelHandler"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "perspektive-1.4.8.jar",
     "published": "2026-11-10"
   },
@@ -49,7 +46,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

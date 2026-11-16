@@ -9,9 +9,6 @@
   "author": "leaf26",
   "description": "Off-tick random teleport engine with spatial memory",
   "needs": [
-    "com.mojang.authlib.GameProfile",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.util.TriState",
     "net.minecraft.class_124",
     "net.minecraft.class_1259",
@@ -49,14 +46,17 @@
     "net.minecraft.class_2784",
     "net.minecraft.class_2791",
     "net.minecraft.class_2960",
-    "and 33 more"
+    "net.minecraft.class_3213",
+    "net.minecraft.class_3215",
+    "net.minecraft.class_3218",
+    "and 30 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "LeafRTP-3.3.2.jar",
     "published": "2026-11-02"
   },
@@ -84,7 +84,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 84,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 75,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

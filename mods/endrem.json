@@ -21,9 +21,6 @@
     "net.minecraft.client.model.geom.builders.MeshDefinition",
     "net.minecraft.client.model.geom.builders.PartDefinition",
     "net.minecraft.client.renderer.SpriteMapper",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.tags.StructureTags",
     "net.minecraft.world.entity.projectile.EyeOfEnder",
     "net.minecraft.world.inventory.EnchantmentMenu",
@@ -46,18 +43,21 @@
     "OrderedSubmitNodeCollector.submitModel()",
     "Sheets.BLOCKS_MAPPER",
     "BlockEntityRendererProvider.Context.bakeLayer()",
-    "CommandSourceStack.getPosition()",
     "HolderLookup.Provider.getOrThrow()",
-    "MutableComponent.withStyle()",
-    "Style.withHoverEvent()",
-    "and 22 more"
+    "ServerLevel.findNearestMapStructure()",
+    "ServerPlayer.addItem()",
+    "ServerPlayer.getOnPos()",
+    "SoundEvents.ENDER_EYE_LAUNCH",
+    "Player.getY()",
+    "Player.startUsingItem()",
+    "and 10 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "endrem-fabric-26.3-6.2.2.jar",
     "published": "2026-10-05"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 62,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 50,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -17,7 +17,6 @@
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyCallback",
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyContext",
     "net.minecraft.client.renderer.special.ShieldSpecialRenderer",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.component.DataComponentInitializers",
     "net.minecraft.core.component.DataComponentInitializers.SingleComponentInitializer",
     "net.minecraft.tags.DamageTypeTags",
@@ -30,18 +29,14 @@
     "net.minecraft.world.level.block.RedstoneWireBlock",
     "net.minecraft.world.level.block.entity.BannerPatternLayers",
     "net.minecraft.world.level.redstone.RedstoneWireEvaluator",
-    "net.minecraft.world.level.storage.loot.providers.number.ints.ResolvableInt.Constant",
     "Sheets.SHIELD_SHEET",
     "HolderLookup.Provider.getOrThrow()",
-    "DataComponents.BANNER_PATTERNS",
     "DataComponents.BLOCKS_ATTACKS",
     "DataComponents.BREAK_SOUND",
     "ServerLevel.sendParticles()",
     "ServerPlayer.addItem()",
     "ServerPlayer.damageSources()",
-    "ServerPlayer.drop()",
     "ServerPlayer.fallDistance",
-    "ServerPlayer.getRandom()",
     "ServerPlayer.getUseItem()",
     "ServerPlayer.getUsedItemHand()",
     "ServerPlayer.isBlocking()",
@@ -49,15 +44,20 @@
     "ServerPlayer.onEquippedItemBroken()",
     "ServerPlayer.resetFallDistance()",
     "ServerPlayer.setDeltaMovement()",
-    "ServerPlayer.syncVelocity",
-    "and 31 more"
+    "ServerPlayer.tickCount",
+    "SoundEvents.ARMOR_EQUIP_CHAIN",
+    "SoundEvents.ARMOR_EQUIP_COPPER",
+    "SoundEvents.ARMOR_EQUIP_LEATHER",
+    "SoundEvents.ARMOR_EQUIP_NETHERITE",
+    "SoundEvents.ARMOR_EQUIP_WOLF",
+    "and 18 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dream-equipment-0.1.0-FIX.jar",
     "published": "2026-10-13"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 71,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 58,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

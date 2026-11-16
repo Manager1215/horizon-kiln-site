@@ -9,7 +9,6 @@
   "author": "shapira0000",
   "description": "This mod allows Sponges to soak up lava just like they do with water.",
   "needs": [
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.level.block.SpongeBlock",
     "ServerLevel.sendParticles()"
   ],
@@ -18,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "lavasponge-1.0.0.jar",
     "published": "2026-09-19"
   },
@@ -46,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

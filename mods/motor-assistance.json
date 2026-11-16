@@ -11,13 +11,10 @@
   "needs": [
     "net.minecraft.world.phys.EntityHitResult",
     "Minecraft.crosshairPickEntity",
-    "Minecraft.hitResult",
-    "Options.keyAttack",
     "Entity.getEyeHeight()",
     "Entity.getPose()",
     "Entity.isAlive()",
     "Entity.isPickable()",
-    "Entity.isRemoved()",
     "Entity.setXRot()",
     "Entity.setYRot()",
     "LivingEntity.isAlive()",
@@ -29,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "motorassistancemod-fabric-26.3-3.2.0.jar",
     "published": "2026-10-09"
   },
@@ -59,7 +56,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

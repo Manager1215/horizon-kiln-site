@@ -13,12 +13,8 @@
     "net.fabricmc.fabric.api.event.player.BlockEvents.UseItemOnCallback",
     "net.minecraft.world.level.gameevent.GameEvent.Context",
     "net.minecraft.world.level.material.PushReaction",
-    "Registry.get()",
     "BuiltInRegistries.REGISTRY",
     "Level.gameEvent()",
-    "Level.isEmptyBlock()",
-    "Blocks.REINFORCED_DEEPSLATE",
-    "SoundType.getPlaceSound()",
     "BlockBehaviour.Properties.pushReaction()",
     "BlockState.canBeReplaced()",
     "GameEvent.BLOCK_PLACE"
@@ -28,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "horizontalreinforceddeepslate-fabric-26.3-1.1.1.jar",
     "published": "2026-10-03"
   },
@@ -55,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

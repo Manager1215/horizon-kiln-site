@@ -9,11 +9,8 @@
   "author": "Brolen2",
   "description": "Compass mod that will point you in direction without using f3",
   "needs": [
-    "com.mojang.authlib.GameProfile",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.resources.WaypointStyle",
     "net.minecraft.client.resources.WaypointStyleManager",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.client.waypoints.ClientWaypointManager",
     "net.minecraft.world.TickRateManager",
     "net.minecraft.world.attribute.BedRule",
@@ -22,18 +19,14 @@
     "net.minecraft.world.waypoints.PartialTickSupplier",
     "net.minecraft.world.waypoints.TrackedWaypoint.PitchDirection",
     "net.minecraft.world.waypoints.Waypoint.Icon",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
-    "Options.keyPlayerList",
-    "GuiGraphicsExtractor.blitSprite()",
     "Hud.getWaypointStyles()",
     "ClientPacketListener.getWaypointManager()",
     "PlayerInfo.getProfile()",
-    "ServerData.ip",
     "LocalPlayer.getBlockX()",
     "LocalPlayer.getBlockY()",
     "LocalPlayer.getBlockZ()",
     "GameRenderer.mainCamera()",
+    "IntegratedServer.getWorldData()",
     "ARGB.setBrightness()",
     "Level.tickRateManager()",
     "Vec3.rotateClockwise90()",
@@ -48,7 +41,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "arcompass-1.2.2.jar",
     "published": "2026-09-29"
   },
@@ -77,7 +70,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 33,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 26,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,31 +10,22 @@
   "description": "Makes item naming mechanically meaningful by preventing natural despawn of named items, while preserving all vanilla loss mechanics like lava and the void.",
   "needs": [
     "Mixin: 4 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.minecraft.world.item.component.BundleContents",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "DataComponents.BUNDLE_CONTENTS",
-    "MinecraftServer.execute()",
     "ServerPlayer.getGameProfile()",
     "NameAndId.<init>()",
-    "PlayerList.isOp()",
-    "Entity.getDisplayName()",
     "ItemEntity.getCustomName()",
     "ItemEntity.getItem()",
     "ItemEntity.isCustomNameVisible()",
-    "ItemEntity.isRemoved()",
     "ItemEntity.setCustomName()",
     "ItemEntity.setCustomNameVisible()",
     "ItemStack.getCustomName()",
-    "ItemStack.getItemName()",
-    "ItemContainerContents.nonEmptyItemCopyStream()"
+    "ItemStack.getItemName()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "named-item-preserver-0.1.3.jar",
     "published": "2026-10-01"
   },
@@ -64,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

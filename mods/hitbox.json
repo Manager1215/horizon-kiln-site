@@ -10,7 +10,6 @@
   "description": "Improves performance of hitbox rendering and adds per-hover and per-damaged (i-frame) colors. By Polyfrost, best with OneClient.",
   "needs": [
     "an access widener",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.debug.EntityHitboxDebugRenderer",
     "net.minecraft.client.renderer.extract.LevelExtractor",
@@ -24,13 +23,11 @@
     "net.minecraft.world.entity.projectile.hurtingprojectile.WitherSkull",
     "Camera.forwardVector()",
     "Camera.getFov()",
-    "KeyMapping.matches()",
     "Minecraft.crosshairPickEntity",
     "Minecraft.getEntityRenderDispatcher()",
     "Minecraft.levelExtractor",
     "Minecraft.showOnlyReducedInfo()",
     "Options.chunkSectionFadeInTime()",
-    "Options.getCameraType()",
     "Options.keyDebugShowHitboxes",
     "Frustum.isVisible()",
     "EntityRenderDispatcher.camera",
@@ -50,14 +47,17 @@
     "AABB.hasNaN()",
     "AABB.inflate()",
     "AABB.maxX",
-    "and 8 more"
+    "AABB.maxY",
+    "AABB.maxZ",
+    "AABB.minX",
+    "and 5 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "polyhitbox-1.4.2+26.3.jar",
     "published": "2026-11-15"
   },
@@ -86,7 +86,11 @@
     "minecraft",
     "oneconfigv1"
   ],
-  "lacks": 48,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 45,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

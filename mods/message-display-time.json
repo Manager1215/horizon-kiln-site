@@ -11,9 +11,7 @@
   "needs": [
     "an access widener",
     "net.minecraft.client.OptionInstance.CaptionBasedToString",
-    "net.minecraft.client.OptionInstance.IntRange",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
     "net.minecraft.client.Options.FieldAccess",
     "net.minecraft.client.gui.screens.options.ChatOptionsScreen",
@@ -26,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "message-display-time-1.2.1-fabric+26.2.jar",
     "published": "2026-08-24"
   },
@@ -49,7 +47,11 @@
   },
   "mixins": true,
   "depends": [],
-  "lacks": 10,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -15,7 +15,6 @@
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.DefaultBlockInteractionTrigger",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
     "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
     "net.minecraft.network.protocol.game.ServerboundUseItemOnPacket",
@@ -23,16 +22,8 @@
     "net.minecraft.world.entity.animal.wolf.Wolf",
     "net.minecraft.world.phys.EntityHitResult",
     "ClientLevel.enabledFeatures()",
-    "ClientLevel.getWorldBorder()",
     "LocalPlayer.isSecondaryUseActive()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
-    "Holder.Reference.is()",
-    "Component.translatableWithFallback()",
-    "ServerPlayer.connection",
-    "ServerPlayer.getRandom()",
     "ServerPlayer.isSecondaryUseActive()",
-    "ServerGamePacketListenerImpl.send()",
     "LivingEntity.getUseItem()",
     "LivingEntity.isUsingItem()",
     "LivingEntity.stopUsingItem()",
@@ -40,16 +31,14 @@
     "AttributeInstance.removeModifier()",
     "ItemStack.forEachModifier()",
     "Level.enabledFeatures()",
-    "Block.isEnabled()",
-    "WorldBorder.isWithinBounds()",
-    "HitResult.getType()"
+    "Block.isEnabled()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nobroken-mc26.3-fabric-1.0.2.jar",
     "published": "2026-11-12"
   },
@@ -76,7 +65,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 33,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

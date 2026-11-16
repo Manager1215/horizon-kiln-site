@@ -9,32 +9,22 @@
   "author": "BlockMiner2k",
   "description": "Auto-equips your Elytra when you double-jump.",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket",
     "net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket.Action",
-    "net.minecraft.world.inventory.ContainerInput",
-    "Minecraft.gameMode",
     "Gui.getChat()",
     "ClientPacketListener.send()",
-    "LocalPlayer.isFallFlying()",
     "LocalPlayer.isInLava()",
     "LocalPlayer.tryToStartFallFlying()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
-    "DataComponents.CUSTOM_NAME",
     "DataComponents.GLIDER",
-    "ItemAttributeModifiers.compute()",
     "EnchantmentHelper.getItemEnchantmentLevel()",
-    "Enchantments.BINDING_CURSE",
-    "Enchantments.MENDING",
-    "Enchantments.PROTECTION"
+    "Enchantments.BINDING_CURSE"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "AutoElytra-Fabric-1.4.3-26.3.jar",
     "published": "2026-09-22"
   },
@@ -62,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

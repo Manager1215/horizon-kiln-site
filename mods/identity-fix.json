@@ -11,16 +11,12 @@
   "needs": [
     "an access widener",
     "Mixin: 12 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.event.registry.DynamicRegistries",
     "net.fabricmc.fabric.api.event.registry.DynamicRegistries.SyncOption",
     "net.fabricmc.fabric.api.event.registry.DynamicRegistrySetupCallback",
     "net.fabricmc.fabric.api.event.registry.DynamicRegistryView",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.model.EntityModel",
     "net.minecraft.client.model.player.PlayerModel",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.entity.EnderDragonRenderer",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
@@ -33,14 +29,12 @@
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
     "net.minecraft.client.renderer.extract.LevelExtractor",
     "net.minecraft.commands.arguments.CompoundTagArgument",
-    "net.minecraft.commands.arguments.IdentifierArgument",
     "net.minecraft.commands.functions.CommandFunction",
     "net.minecraft.data.registries.VanillaRegistries",
     "net.minecraft.network.protocol.PacketUtils",
     "net.minecraft.server.ServerFunctionManager",
     "net.minecraft.server.level.ServerEntityGetter",
     "net.minecraft.server.network.Filterable",
-    "net.minecraft.server.permissions.PermissionCheck",
     "net.minecraft.tags.DamageTypeTags",
     "net.minecraft.tags.EntityTypeTags",
     "net.minecraft.util.ClassInstanceMultiMap",
@@ -48,17 +42,23 @@
     "net.minecraft.world.entity.AnimationState",
     "net.minecraft.world.entity.AreaEffectCloud",
     "net.minecraft.world.entity.Entity.MovementEmission",
-    "net.minecraft.world.entity.EntityDimensions",
-    "net.minecraft.world.entity.EntityEquipment",
     "net.minecraft.world.entity.EntitySelector",
+    "net.minecraft.world.entity.LivingEntity.SwingDescription",
+    "net.minecraft.world.entity.LivingEntity.SwingState",
+    "net.minecraft.world.entity.WalkAnimationState",
+    "net.minecraft.world.entity.ai.attributes.AttributeMap",
+    "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
+    "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
+    "net.minecraft.world.entity.ai.goal.FloatGoal",
+    "net.minecraft.world.entity.ai.goal.GoalSelector",
     "and 80 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "identity2-fabric-2.2.4.3.jar",
     "published": "2026-10-31"
   },
@@ -89,5 +89,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 462
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 392
 }

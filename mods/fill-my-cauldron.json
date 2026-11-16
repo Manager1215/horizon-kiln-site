@@ -10,20 +10,14 @@
   "description": "Adds bucket+dispenser fluid interactions to cauldrons",
   "needs": [
     "net.fabricmc.fabric.api.transfer.v1.fluid.CauldronFluidContent",
-    "net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariantAttributes",
     "net.fabricmc.fabric.impl.transfer.fluid.CauldronStorage",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "net.minecraft.world.item.alchemy.Potions",
+    "FluidVariantAttributes.getEmptySound()",
+    "FluidVariantAttributes.getFillSound()",
     "DefaultedRegistry.iterator()",
-    "Holder.getRegisteredName()",
-    "DataComponents.POTION_CONTENTS",
     "SoundEvents.BOTTLE_EMPTY",
     "SoundEvents.BUCKET_EMPTY_POWDER_SNOW",
     "SoundEvents.BUCKET_FILL_POWDER_SNOW",
-    "Items.GLASS_BOTTLE",
-    "Items.POTION",
     "AbstractCauldronBlock.isFull()",
-    "Blocks.POWDER_SNOW_CAULDRON",
     "DispenserBlock.DISPENSER_REGISTRY"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
@@ -31,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fill-my-cauldron+26.3-1.1.1.jar",
     "published": "2026-11-04"
   },
@@ -59,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

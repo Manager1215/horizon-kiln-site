@@ -11,13 +11,9 @@
   "needs": [
     "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperty",
     "net.minecraft.world.item.ItemCooldowns",
-    "net.minecraft.world.item.component.ItemLore",
     "net.minecraft.world.item.component.LodestoneTracker",
     "DataComponents.LODESTONE_TRACKER",
-    "DataComponents.LORE",
-    "MutableComponent.withStyle()",
     "Player.getCooldowns()",
-    "CustomData.copyTag()",
     "CustomData.update()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -25,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "playertrackingcompass-26.3.0-4.0.jar",
     "published": "2026-10-29"
   },
@@ -56,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

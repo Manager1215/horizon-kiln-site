@@ -14,13 +14,8 @@
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
     "net.minecraft.world.entity.projectile.hurtingprojectile.LargeFireball",
     "net.minecraft.world.inventory.EnchantmentMenu",
-    "net.minecraft.world.item.enchantment.Enchantable",
     "net.minecraft.world.item.enchantment.EnchantmentInstance",
     "net.minecraft.world.phys.EntityHitResult",
-    "Registry.get()",
-    "RegistryAccess.lookupOrThrow()",
-    "DataComponents.CUSTOM_NAME",
-    "DataComponents.ENCHANTABLE",
     "MinecraftServer.getTickCount()",
     "ServerLevel.clip()",
     "ServerLevel.getEntities()",
@@ -31,7 +26,6 @@
     "SoundEvents.GENERIC_EXPLODE",
     "DamageSources.explosion()",
     "Entity.discard()",
-    "Entity.getBbWidth()",
     "Entity.getCustomName()",
     "Entity.hasCustomName()",
     "Entity.isAlive()",
@@ -41,20 +35,15 @@
     "LivingEntity.isAlive()",
     "LivingEntity.isVehicle()",
     "LivingEntity.setSpeed()",
-    "Attributes.FLYING_SPEED",
-    "Inventory.contains()",
-    "Player.drop()",
-    "Items.BLAZE_ROD",
     "EnchantmentHelper.getItemEnchantmentLevel()",
-    "GameEvent.ENTITY_PLACE",
-    "HitResult.getType()"
+    "GameEvent.ENTITY_PLACE"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "happy-ghast-fireball-1.0.2-26.3.jar",
     "published": "2026-09-19"
   },
@@ -82,7 +71,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 39,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 28,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

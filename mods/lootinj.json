@@ -14,9 +14,7 @@
     "net.fabricmc.fabric.api.loot.v3.FabricLootTableBuilder",
     "net.minecraft.world.level.storage.loot.entries.LootPoolEntries",
     "net.minecraft.world.level.storage.loot.functions.LootItemFunctions",
-    "MappedRegistry.get()",
     "Registry.iterator()",
-    "RegistryAccess.lookupOrThrow()",
     "ResourceKey.codec()",
     "ExtraCodecs.compactListCodec()",
     "ExtraCodecs.compactListCodec()",
@@ -34,7 +32,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "lootinj-1.0.5+mc26.3.jar",
     "published": "2026-11-06"
   },
@@ -62,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

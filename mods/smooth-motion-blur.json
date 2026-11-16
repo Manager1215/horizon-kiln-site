@@ -15,7 +15,6 @@
     "com.mojang.renderpearl.api.pipeline.BindGroupLayout.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.renderer.MappableRingBuffer",
     "RenderSystem.getCompiledPipeline()",
     "SamplerCache.getClampToEdge()",
@@ -23,7 +22,6 @@
     "BindGroupLayout.builder()",
     "ColorTargetState.DEFAULT",
     "RenderPipeline.builder()",
-    "Options.getCameraType()",
     "LocalPlayer.isPassenger()",
     "RenderPipelines.TRACY_BLIT",
     "CameraRenderState.viewRotationMatrix"
@@ -33,7 +31,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "smooth-motion-blur-26.3-1.1.0.jar",
     "published": "2026-10-18"
   },
@@ -63,7 +61,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

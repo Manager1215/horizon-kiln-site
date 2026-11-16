@@ -23,27 +23,13 @@
     "ClientReceiveMessageEvents.CHAT",
     "Camera.leftVector()",
     "Camera.upVector()",
-    "Minecraft.execute()",
     "Options.screenEffectScale()",
     "LocalPlayer.getLastDamageSource()",
     "LocalPlayer.isDeadOrDying()",
     "GameRenderer.mainCamera()",
-    "RegistryAccess.lookupOrThrow()",
-    "DataComponents.ENCHANTMENT_GLINT_OVERRIDE",
-    "DataComponents.ITEM_NAME",
     "Registries.PARTICLE_TYPE",
     "ServerLevel.sendParticles()",
-    "ServerPlayer.connection",
-    "ServerPlayer.getBbWidth()",
-    "ServerPlayer.getRandom()",
     "ServerPlayer.yBodyRot",
-    "ServerGamePacketListenerImpl.send()",
-    "DamageSource.getDirectEntity()",
-    "DamageSource.getEntity()",
-    "DamageSource.getMsgId()",
-    "DamageSource.is()",
-    "DamageSource.is()",
-    "DamageSource.typeHolder()",
     "Equippable.builder()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -51,7 +37,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "shockcraft-fabric-2.0.0+mc26.3.jar",
     "published": "2026-10-18"
   },
@@ -83,7 +69,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 36,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

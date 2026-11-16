@@ -9,23 +9,20 @@
   "author": "Rakambda",
   "description": "Changes the behaviour of Mending to repair things in your inventory",
   "needs": [
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "ServerConfigurationNetworking.send()",
     "MinecraftServer.isDedicatedServer()",
     "ExperienceOrb.discard()",
     "ExperienceOrb.getValue()",
-    "Player.giveExperiencePoints()",
     "Player.take()",
     "Player.takeXpDelay",
     "EnchantmentHelper.hasTag()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "OverpoweredMending-26.3-25.jar",
     "published": "2026-10-10"
   },
@@ -55,7 +52,11 @@
     "fabricloader",
     "java"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

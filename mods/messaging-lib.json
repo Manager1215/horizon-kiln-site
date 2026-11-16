@@ -11,11 +11,9 @@
   "needs": [
     "net.fabricmc.fabric.api.client.networking.v1.ServerboundPlayChannelEvents",
     "net.fabricmc.fabric.api.client.networking.v1.ServerboundPlayChannelEvents.Register",
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
     "net.fabricmc.loader.api.metadata.ContactInformation",
     "net.fabricmc.loader.api.metadata.Person",
     "net.minecraft.core.UUIDUtil",
-    "FabricLoader.getEntrypointContainers()",
     "ModMetadata.getAuthors()",
     "ModMetadata.getContact()",
     "ModMetadata.getContributors()"
@@ -25,7 +23,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "messaging-lib-4.0.2.jar",
     "published": "2026-09-29"
   },
@@ -54,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

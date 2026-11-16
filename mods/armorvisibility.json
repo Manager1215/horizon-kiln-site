@@ -11,8 +11,6 @@
   "needs": [
     "Mixin: 6 points inside the game's methods",
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.model.object.projectile.TridentModel",
     "net.minecraft.client.renderer.blockentity.BannerRenderer",
     "net.minecraft.client.renderer.entity.layers.CapeLayer",
@@ -28,27 +26,24 @@
     "net.minecraft.client.resources.model.EquipmentClientInfo",
     "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
     "IntList.size()",
-    "AbstractWidget.getMessage()",
     "Model.renderType()",
     "Model.renderType()",
-    "LocalPlayer.getDisplayName()",
     "RenderTypes.armorCutoutNoCull()",
     "RenderTypes.armorCutoutNoCullGlint()",
     "RenderTypes.entityTranslucentCull()",
     "RenderTypes.itemTranslucent()",
     "RenderTypes.itemTranslucentGlint()",
     "RenderTypes.itemTranslucentGlintSpecial()",
-    "TextureAtlasSprite.atlasLocation()",
     "BakedQuad.MaterialInfo.isTinted()",
     "SpriteId.renderType()",
     "ItemStack.hasFoil()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "armorvisibility-0.40.1.jar",
     "published": "2026-11-08"
   },
@@ -77,7 +72,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 32,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @overwrite and @redirect into the game's classes"
+  },
+  "lacks": 27,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

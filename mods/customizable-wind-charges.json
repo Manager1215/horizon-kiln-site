@@ -10,20 +10,15 @@
   "description": "Adds gamerules to change how Wind Charges work",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.DoubleRuleBuilder",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.IntegerRuleBuilder",
     "net.minecraft.world.entity.projectile.hurtingprojectile.windcharge.BreezeWindCharge",
     "net.minecraft.world.entity.projectile.hurtingprojectile.windcharge.WindCharge",
     "net.minecraft.world.item.ItemCooldowns",
-    "ServerLifecycleEvents.SERVER_STARTED",
     "MinecraftServer.getGameRules()",
-    "DamageSource.getDirectEntity()",
-    "DamageSource.getEntity()",
     "EntityTypes.BREEZE_WIND_CHARGE",
     "EntityTypes.WIND_CHARGE",
-    "Items.WIND_CHARGE",
     "ExplosionDamageCalculator.getKnockbackMultiplier()",
     "ServerExplosion.getDamageSource()",
     "GameRuleCategory.MOBS",
@@ -35,7 +30,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "customizable_wind_charges-6.0.0.jar",
     "published": "2026-09-18"
   },
@@ -63,7 +58,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

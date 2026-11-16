@@ -12,13 +12,11 @@
     "Mixin: 1 point inside the game's methods",
     "com.mojang.blaze3d.vertex.SheetedDecalTextureGenerator",
     "com.mojang.math.OctahedralGroup",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
     "net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
@@ -50,6 +48,8 @@
     "net.minecraft.client.model.geom.PartPose",
     "net.minecraft.client.model.geom.builders.CubeDeformation",
     "net.minecraft.client.model.geom.builders.CubeListBuilder",
+    "net.minecraft.client.model.geom.builders.MeshDefinition",
+    "net.minecraft.client.model.geom.builders.PartDefinition",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "arlo-the-little-guy-1.1.0-26.3.jar",
     "published": "2026-10-02"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 314,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 272,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

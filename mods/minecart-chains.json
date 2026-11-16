@@ -20,12 +20,10 @@
     "VertexConsumer.setOverlay()",
     "BlockPos.containing()",
     "Direction.getApproximateNearest()",
-    "Component.translatableWithFallback()",
     "SynchedEntityData.defineId()",
     "SynchedEntityData.get()",
     "SynchedEntityData.set()",
     "ServerLevel.getEntity()",
-    "ServerPlayer.sendSystemMessage()",
     "SoundEvents.CHAIN_PLACE",
     "Entity.<init>()",
     "Entity.distanceToSqr()",
@@ -49,14 +47,16 @@
     "Level.addFreshEntity()",
     "Level.getEntitiesOfClass()",
     "Level.getEntitiesOfClass()",
-    "and 3 more"
+    "Level.getEntity()",
+    "AABB.inflate()",
+    "and 1 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "MinecartChains-26.3.jar",
     "published": "2026-10-14"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 43,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 41,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

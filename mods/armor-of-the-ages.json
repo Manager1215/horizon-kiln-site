@@ -28,8 +28,6 @@
     "net.minecraft.world.item.equipment.Equippable.Builder",
     "net.minecraft.world.level.storage.loot.providers.number.floats.ConstantValue",
     "net.minecraft.world.level.storage.loot.providers.number.ints.ConstantValue",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Minecraft.getEntityModels()",
     "EntityModelSet.bakeLayer()",
     "ModelPart.getChild()",
@@ -40,23 +38,25 @@
     "LayerDefinition.create()",
     "RenderTypes.armorCutoutNoCull()",
     "RenderTypes.armorCutoutNoCullGlint()",
-    "DefaultedRegistry.getTagOrEmpty()",
-    "Component.plainCopy()",
-    "Identifier.tryBuild()",
-    "MinecraftServer.execute()",
     "SoundEvents.ARMOR_EQUIP_CHAIN",
     "SoundEvents.ARMOR_EQUIP_LEATHER",
     "Player.getBoundingBox()",
-    "Item.Properties.attributes()",
-    "Item.Properties.enchantable()",
-    "and 15 more"
+    "Item.Properties.equippable()",
+    "Item.Properties.repairable()",
+    "ItemStack.hasFoil()",
+    "ArmorMaterial.createAttributes()",
+    "Equippable.builder()",
+    "Level.getBiome()",
+    "Level.getEntitiesOfClass()",
+    "Level.isDarkOutside()",
+    "and 4 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "armoroftheages-fabric-26.3-1.8.0.jar",
     "published": "2026-10-19"
   },
@@ -87,7 +87,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 55,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 44,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

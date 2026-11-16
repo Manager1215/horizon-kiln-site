@@ -27,9 +27,6 @@
     "Axis.ZP",
     "EntityRendererProvider.Context.getItemModelResolver()",
     "ItemModelResolver.updateForNonLiving()",
-    "Holder.is()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "SynchedEntityData.defineId()",
     "SynchedEntityData.get()",
     "SynchedEntityData.set()",
@@ -38,26 +35,29 @@
     "SoundEvents.TRIDENT_HIT",
     "SoundEvents.TRIDENT_RETURN",
     "SoundEvents.TRIDENT_THROW",
-    "DamageSource.getEntity()",
     "DamageSource.getWeaponItem()",
-    "DamageSource.is()",
     "Entity.hurtOrSimulate()",
     "Entity.isAlive()",
     "Entity.isSpectator()",
     "Entity.registryAccess()",
     "EntityTypes.ENDERMAN",
-    "LivingEntity.getRandom()",
     "LivingEntity.getUsedItemHand()",
     "LivingEntity.getVisualRotationYInDegrees()",
     "Inventory.removeItem()",
-    "and 14 more"
+    "Player.startUsingItem()",
+    "ItemStack.hurtAndBreak()",
+    "EnchantmentHelper.doPostAttackEffectsWithItemSourceOnBreak()",
+    "EnchantmentHelper.getTridentReturnToOwnerAcceleration()",
+    "EnchantmentHelper.modifyDamage()",
+    "Level.addFreshEntity()",
+    "and 2 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "spartanweapons-fabric-1.1.0+26.3.jar",
     "published": "2026-11-15"
   },
@@ -89,5 +89,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 54
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 42
 }

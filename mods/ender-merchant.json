@@ -9,7 +9,6 @@
   "author": "RealMikoto",
   "description": "An End-themed villager profession & enchantment extraction mod for Minecraft 26.2.",
   "needs": [
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.SimpleMenuProvider",
     "net.minecraft.world.entity.ai.behavior.GiveGiftToHero",
     "net.minecraft.world.entity.ai.village.poi.PoiType",
@@ -17,29 +16,19 @@
     "net.minecraft.world.entity.npc.villager.Villager",
     "net.minecraft.world.entity.npc.villager.VillagerData",
     "net.minecraft.world.entity.npc.villager.VillagerProfession",
-    "net.minecraft.world.flag.FeatureFlags",
     "net.minecraft.world.inventory.ContainerLevelAccess",
     "net.minecraft.world.inventory.DataSlot",
-    "net.minecraft.world.inventory.MenuType.MenuSupplier",
     "net.minecraft.world.inventory.ResultContainer",
     "Object2IntMap.Entry.getKey()",
     "AbstractContainerScreen.extractLabels()",
     "LocalPlayer.hasInfiniteMaterials()",
-    "Registry.getOrThrow()",
-    "DataComponents.REPAIR_COST",
     "BuiltInRegistries.POINT_OF_INTEREST_TYPE",
     "BuiltInRegistries.VILLAGER_PROFESSION",
     "Registries.POINT_OF_INTEREST_TYPE",
     "Registries.TRADE_SET",
     "Registries.VILLAGER_PROFESSION",
     "SoundEvents.VILLAGER_WORK_CLERIC",
-    "Player.giveExperienceLevels()",
     "Player.hasInfiniteMaterials()",
-    "MenuType.<init>()",
-    "Items.ENCHANTED_BOOK",
-    "Enchantment.getAnvilCost()",
-    "ItemEnchantments.entrySet()",
-    "ItemEnchantments.isEmpty()",
     "SoundType.AMETHYST",
     "BlockState.getMenuProvider()"
   ],
@@ -48,7 +37,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ender-merchant-1.1.0.jar",
     "published": "2026-09-26"
   },
@@ -77,7 +66,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 33,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

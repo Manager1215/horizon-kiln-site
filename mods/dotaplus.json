@@ -18,12 +18,7 @@
     "net.minecraft.world.entity.ai.navigation.PathNavigation",
     "net.minecraft.world.item.BoneMealItem",
     "net.minecraft.world.item.ItemCooldowns",
-    "net.minecraft.world.item.crafting.RepairItemRecipe",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "BiomeModifications.addFeature()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "DataComponents.MAX_DAMAGE",
     "BuiltInRegistries.FEATURE_TYPE",
     "MinecraftServer.getTickCount()",
@@ -51,14 +46,19 @@
     "Items.registerItem()",
     "Items.registerItem()",
     "BlockPlaceContext.<init>()",
-    "and 10 more"
+    "CraftingInput.ingredientCount()",
+    "Enchantments.VANISHING_CURSE",
+    "LevelAccessor.getEntitiesOfClass()",
+    "LevelAccessor.registryAccess()",
+    "Block.spawnAfterBreak()",
+    "and 4 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dota-1.2.4-fabric-26.3.jar",
     "published": "2026-11-15"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 50,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 44,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

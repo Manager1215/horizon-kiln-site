@@ -10,10 +10,6 @@
   "description": "This mod highlights blocks and entities with colored outlines that change based on what you're holding.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.PostChain",
     "net.minecraft.client.renderer.PostChainConfig",
@@ -26,7 +22,6 @@
     "net.minecraft.network.syncher.EntityDataAccessor",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.attribute.BedRule",
     "net.minecraft.world.entity.Bucketable",
     "net.minecraft.world.entity.NeutralMob",
@@ -50,6 +45,11 @@
     "net.minecraft.world.entity.animal.nautilus.AbstractNautilus",
     "net.minecraft.world.entity.animal.panda.Panda",
     "net.minecraft.world.entity.animal.polarbear.PolarBear",
+    "net.minecraft.world.entity.animal.sheep.Sheep",
+    "net.minecraft.world.entity.animal.wolf.Wolf",
+    "net.minecraft.world.entity.decoration.ArmorStand",
+    "net.minecraft.world.entity.decoration.Cushion",
+    "net.minecraft.world.entity.decoration.ItemFrame",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dynamicoutlines-26.3-2.1.0.jar",
     "published": "2026-11-14"
   },
@@ -87,5 +87,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 299
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 191
 }

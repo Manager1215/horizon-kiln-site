@@ -14,9 +14,6 @@
     "net.minecraft.world.level.block.PoweredRailBlock",
     "AbstractMinecart.getCurrentBlockPosOrRailBelow()",
     "AbstractMinecart.getFirstPassenger()",
-    "Items.POWERED_RAIL",
-    "Blocks.POWERED_RAIL",
-    "Blocks.RAIL",
     "BlockBehaviour.Properties.ofLegacyCopy()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
@@ -24,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "diamondrails-1.4-mc26.3.jar",
     "published": "2026-10-03"
   },
@@ -52,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

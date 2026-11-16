@@ -9,10 +9,7 @@
   "author": "VgLevelUp",
   "description": "Helps the Minecraft content developer by making the Structure Void block easier to use and visible like barriers.",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.gizmos.GizmoStyle",
     "net.minecraft.world.level.block.StructureVoidBlock",
-    "Minecraft.gameMode",
     "OptionInstance.createBoolean()",
     "ClientLevel.cardinalLighting()",
     "ClientLevel.getLightEngine()",
@@ -25,9 +22,6 @@
     "BlockPos.distToCenterSqr()",
     "Gizmos.cuboid()",
     "Block.getShape()",
-    "Blocks.DEEPSLATE",
-    "Blocks.NETHERRACK",
-    "Blocks.STRUCTURE_VOID",
     "AABB.deflate()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -35,7 +29,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "structurevoidable-fabric-26.3-1.0.4.jar",
     "published": "2026-11-12"
   },
@@ -66,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

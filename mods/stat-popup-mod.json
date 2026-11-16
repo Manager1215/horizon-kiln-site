@@ -9,22 +9,18 @@
   "author": "Athosdream",
   "description": "Displays a popup with stats when mining or placing blocks.",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.network.protocol.game.ServerboundClientCommandPacket",
     "net.minecraft.network.protocol.game.ServerboundClientCommandPacket.Action",
-    "net.minecraft.stats.StatsCounter",
-    "net.minecraft.world.item.FireworkRocketItem",
     "ClientPacketListener.send()",
     "LocalPlayer.getStats()",
-    "DataComponents.FOOD",
-    "Stats.BLOCK_MINED"
+    "DataComponents.FOOD"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "stat_popup-1.1.1.jar",
     "published": "2026-11-10"
   },
@@ -54,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

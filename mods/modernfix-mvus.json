@@ -22,17 +22,12 @@
     "com.mojang.text2speech.OperatingSystem",
     "net.fabricmc.fabric.impl.client.model.loading.UnbakedModelDeserializerRegistry",
     "net.fabricmc.fabric.impl.datagen.FabricDataGenHelper",
-    "net.minecraft.CrashReport",
     "net.minecraft.DefaultUncaughtExceptionHandlerWithName",
     "net.minecraft.ReportType",
-    "net.minecraft.ReportedException",
-    "net.minecraft.SharedConstants",
     "net.minecraft.TracingExecutor",
     "net.minecraft.client.GameNarrator",
     "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
     "net.minecraft.client.gui.components.debug.DebugScreenEntry",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryStatus",
     "net.minecraft.client.gui.font.providers.GlyphProviderDefinition",
     "net.minecraft.client.gui.font.providers.GlyphProviderDefinition.Loader",
     "net.minecraft.client.gui.font.providers.GlyphProviderDefinition.Reference",
@@ -51,14 +46,19 @@
     "net.minecraft.client.multiplayer.ClientChunkCache.Storage",
     "net.minecraft.client.multiplayer.ProfileKeyPairManager",
     "net.minecraft.client.multiplayer.SessionSearchTrees",
-    "and 80 more"
+    "net.minecraft.client.multiplayer.chat.ChatTrustLevel",
+    "net.minecraft.client.renderer.block.dispatch.BlockStateModel.UnbakedRoot",
+    "net.minecraft.client.renderer.chunk.SectionCompiler",
+    "net.minecraft.client.renderer.chunk.SectionRenderDispatcher",
+    "net.minecraft.client.renderer.entity.EntityRenderers",
+    "and 76 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "modernfix-5.27.20-build.2.jar",
     "published": "2026-09-25"
   },
@@ -87,7 +87,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 196,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect and @wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 178,
   "development": {
     "status": "no-plans",
     "statusLabel": "No plans yet",

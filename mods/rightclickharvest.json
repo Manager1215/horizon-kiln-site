@@ -13,34 +13,24 @@
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Canceled",
-    "net.minecraft.tags.ItemTags",
     "BlockPos.distManhattan()",
     "BlockPos.relative()",
-    "MutableComponent.withStyle()",
     "SoundEvents.CROP_PLANTED",
     "SoundEvents.NETHER_WART_PLANTED",
-    "Stats.BLOCK_MINED",
     "ExperienceOrb.award()",
     "Player.causeFoodExhaustion()",
-    "Player.getRandom()",
-    "Player.giveExperiencePoints()",
     "Player.isCrouching()",
-    "Items.CACTUS",
-    "Items.SUGAR_CANE",
     "BlockTransformers.HOE",
     "Block.getDrops()",
-    "Blocks.SUGAR_CANE",
-    "CropBlock.isMaxAge()",
     "BlockState.getCloneItemStack()",
-    "BlockState.spawnAfterBreak()",
-    "BlockHitResult.withPosition()"
+    "BlockState.spawnAfterBreak()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "rightclickharvest-fabric-4.7.1-26.3.x.jar",
     "published": "2026-11-15"
   },
@@ -67,7 +57,11 @@
     "jamlib",
     "minecraft"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

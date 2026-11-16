@@ -9,11 +9,6 @@
   "author": "kevin_802eu",
   "description": "Have a chest monster and have no idea where you put your valuable boats and hoes?",
   "needs": [
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AfterMouseClick",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.world.level.block.ChestBlock",
     "net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity",
     "net.minecraft.world.level.block.entity.BarrelBlockEntity",
@@ -22,28 +17,20 @@
     "net.minecraft.world.level.block.entity.HopperBlockEntity",
     "net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity",
     "net.minecraft.world.level.block.state.properties.ChestType",
-    "net.minecraft.world.level.storage.LevelResource",
     "net.minecraft.world.level.storage.WorldData",
     "Camera.getViewRotationProjectionMatrix()",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
     "Minecraft.isLocalServer()",
-    "Minecraft.setScreenAndShow()",
-    "EditBox.setHint()",
-    "ServerData.ip",
-    "ServerData.name",
     "GameRenderer.mainCamera()",
+    "IntegratedServer.getWorldData()",
     "NonNullList.iterator()",
-    "MinecraftServer.getWorldData()",
-    "MinecraftServer.getWorldPath()",
-    "ItemContainerContents.nonEmptyItemCopyStream()"
+    "MinecraftServer.getWorldData()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "wdipt-0.2.0.jar",
     "published": "2026-10-01"
   },
@@ -75,7 +62,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

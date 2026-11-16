@@ -9,29 +9,12 @@
   "author": "MixoMax",
   "description": "A client-side Fabric mod for Minecraft that lets you harvest and replant crops in a single right-click. Works on any vanilla server, supports Fortune tools, and automatically selects the correct seed for each crop type.",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
     "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
     "net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket",
-    "Minecraft.gameMode",
     "ClientPacketListener.send()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
-    "Items.BEETROOT_SEEDS",
-    "Items.CARROT",
-    "Items.COCOA_BEANS",
-    "Items.NETHER_WART",
-    "Items.POTATO",
-    "Items.WHEAT_SEEDS",
+    "MultiPlayerGameMode.startDestroyBlock()",
     "EnchantmentHelper.getItemEnchantmentLevel()",
-    "Enchantments.FORTUNE",
-    "Blocks.BEETROOTS",
-    "Blocks.CARROTS",
-    "Blocks.COCOA",
-    "Blocks.NETHER_WART",
-    "Blocks.POTATOES",
-    "Blocks.WHEAT",
-    "CropBlock.isMaxAge()",
     "HorizontalDirectionalBlock.FACING"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -39,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "clientside-harvest-mod-1.0.2.jar",
     "published": "2026-11-02"
   },
@@ -67,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

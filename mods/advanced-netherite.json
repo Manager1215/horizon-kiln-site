@@ -40,23 +40,20 @@
     "net.minecraft.world.level.storage.loot.predicates.LootItemEntityPropertyCondition",
     "net.minecraft.world.level.storage.loot.predicates.MatchBlock",
     "net.minecraft.world.level.storage.loot.predicates.MatchTool",
-    "HolderLookup.RegistryLookup.getOrThrow()",
     "SoundEvents.ARMOR_EQUIP_NETHERITE",
     "Item.getBarColor()",
-    "Item.Properties.attributes()",
-    "Item.Properties.enchantable()",
-    "Item.Properties.repairable()",
     "Item.Properties.spear()",
-    "Items.BEETROOT",
-    "Items.CARROT",
-    "and 14 more"
+    "ArmorMaterial.createAttributes()",
+    "Equippable.builder()",
+    "LootPool.Builder.apply()",
+    "LootPool.Builder.when()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "advancednetherite-fabric-2.4.4-26.3.jar",
     "published": "2026-10-03"
   },
@@ -86,7 +83,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 54,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 38,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

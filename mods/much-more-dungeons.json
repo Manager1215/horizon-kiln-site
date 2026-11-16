@@ -23,13 +23,8 @@
     "net.minecraft.world.level.levelgen.structure.templatesystem.BlockIgnoreProcessor",
     "net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings",
     "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate",
-    "CommandSourceStack.getPosition()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "BlockPos.containing()",
     "BlockPos.toShortString()",
-    "Registry.entrySet()",
-    "RegistryAccess.lookupOrThrow()",
     "BuiltInRegistries.REGISTRY",
     "Registries.STRUCTURE",
     "Registries.STRUCTURE_PIECE",
@@ -38,7 +33,6 @@
     "ServerLevel.getMaxY()",
     "ServerLevel.getMinY()",
     "ServerLevel.structureManager()",
-    "RandomSource.nextLong()",
     "Entity.getCustomName()",
     "Entity.hasCustomName()",
     "Mob.addTag()",
@@ -48,15 +42,21 @@
     "Mob.setCustomNameVisible()",
     "Mob.setPersistenceRequired()",
     "Mob.snapTo()",
-    "Items.FILLED_MAP",
-    "and 22 more"
+    "ServerLevelAccessor.addFreshEntityWithPassengers()",
+    "ServerLevelAccessor.setBlock()",
+    "Rotation.getRandom()",
+    "RandomizableContainerBlockEntity.setLootTable()",
+    "RandomizableContainerBlockEntity.unpackLootTable()",
+    "ChunkGenerator.getFirstOccupiedHeight()",
+    "ChunkGenerator.getSeaLevel()",
+    "and 14 more"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "muchmoredungeons-fabric-26.3-2.0.1.jar",
     "published": "2026-11-03"
   },
@@ -84,7 +84,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 62,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 54,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

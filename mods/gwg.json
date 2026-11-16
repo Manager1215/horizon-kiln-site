@@ -10,7 +10,6 @@
   "description": "Exactly 89.67% of the world is gone! Take this challenge and try thriving in a world where terrain is sparse, resources are scattered, and every block counts. Can you survive in the void between the grid?",
   "needs": [
     "an access widener",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen",
     "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen.WorldTab",
     "net.minecraft.client.gui.screens.worldselection.WorldCreationUiState",
@@ -27,9 +26,7 @@
     "net.minecraft.world.level.levelgen.densityfunction.DensityVolume",
     "net.minecraft.world.level.levelgen.densityfunction.ScopedDensityBuffer",
     "net.minecraft.world.level.levelgen.presets.WorldPreset",
-    "Minecraft.setScreenAndShow()",
     "BlockPos.MutableBlockPos.set()",
-    "SectionPos.sectionRelative()",
     "BuiltInRegistries.CHUNK_GENERATOR",
     "BiomeSource.CODEC",
     "ChunkAccess.getOrCreateHeightmapUnprimed()",
@@ -44,7 +41,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "gridgen-1.1.0.jar",
     "published": "2026-09-25"
   },
@@ -72,7 +69,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 25,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

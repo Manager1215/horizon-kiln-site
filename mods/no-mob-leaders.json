@@ -9,15 +9,7 @@
   "author": "SyntaxFree",
   "description": "Configurable removal of mob \"leaders\"",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.minecraft.world.entity.monster.zombie.Zombie",
-    "ServerLifecycleEvents.END_DATA_PACK_RELOAD",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
-    "DefaultedRegistry.wrapAsHolder()",
-    "Holder.is()",
     "AttributeInstance.getModifiers()",
     "AttributeInstance.removeModifier()",
     "Attributes.SPAWN_REINFORCEMENTS_CHANCE"
@@ -27,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "no-mob-leaders-1.0.0+26.3.jar",
     "published": "2026-09-17"
   },
@@ -54,7 +46,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -2,21 +2,19 @@
   "id": "pop-up-emotes-online-addon",
   "name": "Pop-up Emotes Online Addon",
   "version": "1.5.5",
-  "status": "planned",
-  "statusLabel": "Planned",
-  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "status": "not-checked",
+  "statusLabel": "Not checked",
+  "statusMeaning": "In the catalogue, not checked yet.",
   "url": "https://modrinth.com/mod/pop-up-emotes-online-addon",
   "author": "Catomon",
   "description": "Pop-up Emotes addon that lets you use and see emotes on vanilla servers",
-  "needs": [
-    "Minecraft.execute()"
-  ],
-  "roadmap": "Minecraft's libraries and client API (0.2)",
-  "evidence": "Not run: Java did not start.",
+  "needs": [],
+  "roadmap": "",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (9 classes, 22 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "pop_up_emotes_online-1.5.5.jar",
     "published": "2026-09-30"
   },
@@ -47,7 +45,11 @@
     "minecraft",
     "pop_up_emotes"
   ],
-  "lacks": 1,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "status": "not-checked",
     "statusLabel": "Not checked",

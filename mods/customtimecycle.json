@@ -11,7 +11,6 @@
   "needs": [
     "Mixin: 6 points inside the game's methods",
     "net.minecraft.client.gui.components.MultiLineTextWidget",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.gui.components.tabs.GridLayoutTab",
     "net.minecraft.client.gui.layouts.GridLayout",
     "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
@@ -21,14 +20,10 @@
     "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen",
     "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen.MoreTab",
     "net.minecraft.client.gui.screens.worldselection.WorldCreationUiState",
-    "net.minecraft.commands.arguments.IdentifierArgument",
     "net.minecraft.commands.arguments.ResourceArgument",
     "net.minecraft.commands.arguments.TimeArgument",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.server.ServerInfo",
     "net.minecraft.server.commands.TimeCommand",
-    "net.minecraft.util.StringUtil",
     "net.minecraft.util.datafix.DataFixers",
     "net.minecraft.util.filefix.FileFixerUpper",
     "net.minecraft.util.thread.ReentrantBlockableEventLoop",
@@ -50,14 +45,19 @@
     "net.minecraft.world.level.storage.WorldData",
     "net.minecraft.world.timeline.Timeline",
     "net.minecraft.world.timeline.Timeline.Builder",
-    "and 14 more"
+    "net.minecraft.world.timeline.Timelines",
+    "Registries.WORLD_CLOCK",
+    "MinecraftServer.clockManager()",
+    "MinecraftServer.getDataStorage()",
+    "PlayerList.broadcastAll()",
+    "and 3 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "customtimecycle-fabric-0.2.1-26.3.jar",
     "published": "2026-10-01"
   },
@@ -88,7 +88,11 @@
     "filefixutils",
     "minecraft"
   ],
-  "lacks": 54,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 43,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

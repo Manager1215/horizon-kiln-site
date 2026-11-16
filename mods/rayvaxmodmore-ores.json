@@ -9,8 +9,6 @@
   "author": "RayvaxLux1206",
   "description": "This mod mainly adds ores, tools and armors.",
   "needs": [
-    "net.minecraft.core.HolderSet.Direct",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.component.DataComponentInitializers",
     "net.minecraft.core.component.DataComponentInitializers.SingleComponentInitializer",
     "net.minecraft.world.damagesource.DamageTypes",
@@ -20,9 +18,7 @@
     "net.minecraft.world.item.component.PiercingWeapon",
     "net.minecraft.world.item.component.UseEffects",
     "BiomeModifications.addFeature()",
-    "HolderGetter.getOrThrow()",
     "HolderLookup.Provider.getOrThrow()",
-    "HolderSet.direct()",
     "DataComponents.ATTACK_ANIMATION",
     "DataComponents.ATTACK_RANGE",
     "DataComponents.DAMAGE_TYPE",
@@ -48,15 +44,19 @@
     "ItemEntity.setNeverPickUp()",
     "ItemEntity.setSharedFlagOnFire()",
     "BlockItem.inventoryTick()",
-    "Item.BASE_ATTACK_DAMAGE_ID",
-    "and 26 more"
+    "Item.inventoryTick()",
+    "Item.postHurtEnemy()",
+    "Item.Properties.delayedComponent()",
+    "Item.Properties.delayedHolderComponent()",
+    "Item.Properties.horseArmor()",
+    "and 7 more"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "more-ores-1.1.0.jar",
     "published": "2026-10-15"
   },
@@ -84,7 +84,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 66,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 47,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

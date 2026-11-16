@@ -9,15 +9,14 @@
   "author": "Walksy",
   "description": "Allows you to rebind the quick swap action (holding shift and clicking in the inventory)",
   "needs": [
-    "Mixin: 3 points inside the game's methods",
-    "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent"
+    "Mixin: 3 points inside the game's methods"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+  "roadmap": "Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "RebindQuickSwap-2.1.0+26.3.jar",
     "published": "2026-10-09"
   },
@@ -46,7 +45,11 @@
     "minecraft",
     "walksylib"
   ],
-  "lacks": 1,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 0,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

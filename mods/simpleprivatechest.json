@@ -23,17 +23,14 @@
     "VertexConsumer.setOverlay()",
     "LevelRenderEvents.COLLECT_SUBMITS",
     "GameRenderer.mainCamera()",
-    "ServerPlayer.sendSystemMessage()",
-    "PlayerList.isOp()",
-    "Player.nameAndId()",
-    "Items.NAME_TAG"
+    "Player.nameAndId()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "simpleprivatechest-2.1+mc26.3-fabric.jar",
     "published": "2026-09-25"
   },
@@ -62,7 +59,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

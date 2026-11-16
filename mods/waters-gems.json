@@ -17,23 +17,15 @@
     "net.minecraft.world.level.block.CampfireBlock",
     "net.minecraft.world.level.gameevent.GameEvent.Context",
     "BiomeModifications.addFeature()",
-    "Registry.get()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
     "BlockTransformer.transformBlock()",
     "Registries.BLOCK_TRANSFORMER",
-    "ServerLevel.destroyBlock()",
     "InteractionHand.asEquipmentSlot()",
     "Item.mineBlock()",
     "Item.Properties.food()",
     "BlockTransformers.HOE",
     "BlockTransformers.SHOVEL",
-    "Enchantment.getMaxLevel()",
     "EnchantmentHelper.getItemEnchantmentLevel()",
-    "Enchantments.EFFICIENCY",
-    "Enchantments.FORTUNE",
     "Enchantments.KNOCKBACK",
-    "Enchantments.MENDING",
     "Level.gameEvent()",
     "Level.levelEvent()",
     "Block.getDrops()",
@@ -49,14 +41,17 @@
     "MapColor.COLOR_LIGHT_GRAY",
     "MapColor.COLOR_ORANGE",
     "MapColor.COLOR_PINK",
-    "and 4 more"
+    "MapColor.COLOR_PURPLE",
+    "MapColor.COLOR_RED",
+    "MapColor.COLOR_YELLOW",
+    "MapColor.QUARTZ"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "watersgems-1.2+26.3.jar",
     "published": "2026-09-17"
   },
@@ -84,7 +79,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 44,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 36,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

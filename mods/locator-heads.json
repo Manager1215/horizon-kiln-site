@@ -10,7 +10,6 @@
   "description": "Show player heads on the locator bar and other usefull settings.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.client.gui.contextualbar.ExperienceBar",
     "net.minecraft.client.gui.contextualbar.LocatorBar",
     "net.minecraft.client.resources.WaypointStyle",
@@ -18,9 +17,7 @@
     "net.minecraft.world.scores.PlayerTeam",
     "net.minecraft.world.scores.TeamColor",
     "net.minecraft.world.waypoints.Waypoint.Icon",
-    "Options.keyPlayerList",
     "GuiGraphicsExtractor.blit()",
-    "GuiGraphicsExtractor.blitSprite()",
     "Hud.getWaypointStyles()",
     "ClientLevel.getPlayerByUUID()",
     "PlayerInfo.getProfile()",
@@ -39,7 +36,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "locator-heads-2.5.0.jar",
     "published": "2026-09-15"
   },
@@ -70,7 +67,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

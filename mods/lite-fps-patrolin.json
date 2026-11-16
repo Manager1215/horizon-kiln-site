@@ -9,15 +9,14 @@
   "author": "Patrolin",
   "description": "Minecraft mod to fix the framerate limiter.",
   "needs": [
-    "net.minecraft.client.FramerateLimiter",
-    "org.apache.logging.log4j.LogManager"
+    "net.minecraft.client.FramerateLimiter"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "litefps-1.0.0+fabric-26.3.jar",
     "published": "2026-09-24"
   },
@@ -45,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 2,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite into the game's classes"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

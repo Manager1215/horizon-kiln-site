@@ -21,7 +21,6 @@
     "Camera.isInitialized()",
     "Minecraft.getEntityRenderDispatcher()",
     "Minecraft.getFramerateLimitTracker()",
-    "Minecraft.isWindowActive()",
     "Minecraft.shouldEntityAppearGlowing()",
     "GameRenderer.mainCamera()",
     "EntityRenderDispatcher.getRenderer()",
@@ -29,13 +28,10 @@
     "EntityRenderer.getBoundingBoxForCulling()",
     "BlockPos.distToCenterSqr()",
     "BlockPos.MutableBlockPos.set()",
-    "Util.getMillis()",
-    "Util.getNanos()",
     "Entity.getBoundingBox()",
     "Entity.getPassengers()",
     "Entity.hasCustomName()",
     "Entity.isPassenger()",
-    "Entity.isRemoved()",
     "EntityTypes.CHICKEN",
     "EntityTypes.COW",
     "EntityTypes.CREEPER",
@@ -50,14 +46,18 @@
     "AABB.getSize()",
     "AABB.inflate()",
     "AABB.maxX",
-    "and 7 more"
+    "AABB.maxY",
+    "AABB.maxZ",
+    "AABB.minX",
+    "AABB.minY",
+    "and 3 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "potassium-1.0.0.jar",
     "published": "2026-11-13"
   },
@@ -89,7 +89,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 47,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 43,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

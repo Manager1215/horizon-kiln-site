@@ -10,7 +10,6 @@
   "description": "Transform into a mob!",
   "needs": [
     "Mixin: 15 points inside the game's methods",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.model.EntityModel",
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.model.QuadrupedModel",
@@ -50,6 +49,7 @@
     "net.minecraft.commands.arguments.UuidArgument",
     "net.minecraft.commands.synchronization.SuggestionProviders",
     "net.minecraft.core.IdMap",
+    "net.minecraft.core.UUIDUtil",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "walkers-fabric-8.4.0.jar",
     "published": "2026-10-13"
   },
@@ -85,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 594,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 499,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

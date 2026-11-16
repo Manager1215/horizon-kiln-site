@@ -11,27 +11,21 @@
   "needs": [
     "com.mojang.realmsclient.RealmsMainScreen.ServerEntry",
     "com.mojang.realmsclient.dto.RealmsServer",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
     "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList",
     "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList.OnlineServerEntry",
     "net.minecraft.client.gui.screens.worldselection.WorldSelectionList",
     "net.minecraft.client.gui.screens.worldselection.WorldSelectionList.WorldListEntry",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.world.level.storage.LevelSummary",
     "net.minecraft.world.level.storage.WorldData",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
-    "ServerData.ip",
-    "ServerData.isRealm()",
-    "ServerData.name"
+    "IntegratedServer.getServerDirectory()",
+    "IntegratedServer.getWorldData()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fixpot-s-server-playtime-1.1.0-no-playtime-label.jar",
     "published": "2026-10-10"
   },
@@ -59,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 10,
   "development": {
     "status": "no-plans",
     "statusLabel": "No plans yet",

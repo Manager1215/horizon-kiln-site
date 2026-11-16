@@ -9,16 +9,14 @@
   "author": "SSH",
   "description": "Adds a confirmation menu before disconnecting from a server or leaving a world.",
   "needs": [
-    "Minecraft.isLocalServer()",
-    "Button.getMessage()",
-    "CommonComponents.GUI_CANCEL"
+    "Minecraft.isLocalServer()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "are-you-sure-you-want-to-leave-1.0.1+26.3.jar",
     "published": "2026-10-23"
   },
@@ -36,7 +34,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

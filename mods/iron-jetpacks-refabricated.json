@@ -38,26 +38,26 @@
     "LocalPlayer.input",
     "SubmitNodeCollector.submitModelPart()",
     "RenderTypes.armorCutoutNoCull()",
-    "SoundManager.stop()",
-    "MinecraftServer.execute()",
     "MinecraftServer.getTickCount()",
-    "ServerPlayer.connection",
     "ServerPlayer.fallDistance",
     "ServerPlayer.getEyeY()",
-    "ServerPlayer.sendSystemMessage()",
     "ItemEntity.setPickUpDelay()",
     "Player.isAlive()",
     "Player.isDeadOrDying()",
-    "Player.isFallFlying()",
     "Player.isInLava()",
-    "and 15 more"
+    "Player.isPassenger()",
+    "Player.isSleeping()",
+    "Player.yBodyRot",
+    "AbstractContainerMenu.broadcastFullState()",
+    "InventoryMenu.sendAllDataToRemote()",
+    "and 3 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "iron-jetpacks-refabricated-fabric-26.3-1.0.2.jar",
     "published": "2026-10-18"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 55,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 43,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

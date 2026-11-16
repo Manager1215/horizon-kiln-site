@@ -11,37 +11,20 @@
   "needs": [
     "net.minecraft.commands.Commands.ParseFunction",
     "net.minecraft.commands.SharedSuggestionProvider.TextCoordinates",
-    "net.minecraft.commands.arguments.coordinates.Vec3Argument",
-    "net.minecraft.commands.arguments.coordinates.WorldCoordinate",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.network.chat.contents.PlainTextContents",
-    "net.minecraft.network.chat.contents.PlainTextContents.LiteralContents",
     "FabricClientCommandSource.getRotation()",
-    "Minecraft.getCurrentServer()",
     "Minecraft.isLocalServer()",
-    "ServerData.isLan()",
     "LocalPlayer.setXRot()",
     "LocalPlayer.setYRot()",
     "Commands.createValidator()",
     "SharedSuggestionProvider.getRelevantCoordinates()",
-    "SharedSuggestionProvider.suggestCoordinates()",
-    "MutableComponent.create()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "HitResult.getType()",
-    "Vec2.ZERO",
-    "Vec2.x",
-    "Vec2.y"
+    "SharedSuggestionProvider.suggestCoordinates()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "viewlock-fabric-26.3+-1.2.6.jar",
     "published": "2026-09-28"
   },
@@ -69,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 26,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

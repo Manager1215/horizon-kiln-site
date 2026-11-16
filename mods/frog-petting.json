@@ -10,29 +10,24 @@
   "description": "Pet frogs, dogs, cats, and more! and watch them react with delight!",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.client.animation.AnimationChannel",
     "net.minecraft.client.animation.AnimationChannel.Interpolation",
     "net.minecraft.client.animation.AnimationChannel.Interpolations",
     "net.minecraft.client.animation.Keyframe",
     "net.minecraft.client.animation.KeyframeAnimations",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
     "net.minecraft.world.entity.AnimationState",
     "net.minecraft.world.entity.animal.equine.AbstractHorse",
     "net.minecraft.world.entity.npc.villager.AbstractVillager",
     "net.minecraft.world.phys.EntityHitResult",
-    "Minecraft.hitResult",
     "Model.getChildPart()",
     "ModelPart.offsetPos()",
     "ModelPart.offsetRotation()",
     "ModelPart.offsetScale()",
     "LocalPlayer.isWithinEntityInteractionRange()",
-    "LocalPlayer.swing()",
     "EntityRenderState.ageInTicks",
     "EntityRenderState.entityType",
-    "Identifier.tryBuild()",
     "Mth.binarySearch()",
     "Mth.catmullrom()",
     "Entity.<init>()",
@@ -40,16 +35,14 @@
     "LivingEntity.<init>()",
     "LivingEntity.hasItemInSlot()",
     "Player.isCrouching()",
-    "SwingAnimation.DEFAULT",
-    "Level.playLocalSound()",
-    "HitResult.getType()"
+    "Level.playLocalSound()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "frog_petting-5.1+26.3.jar",
     "published": "2026-09-20"
   },
@@ -80,7 +73,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 33,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 26,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

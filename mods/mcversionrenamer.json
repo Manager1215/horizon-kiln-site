@@ -11,33 +11,21 @@
   "needs": [
     "Mixin: 3 points inside the game's methods",
     "com.mojang.blaze3d.Blaze3D",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.ClientBrandRetriever",
     "net.minecraft.client.gui.ActiveTextCollector.ClickableStyleFinder",
     "net.minecraft.client.gui.components.SplashRenderer",
     "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
     "net.minecraft.client.gui.components.debug.DebugScreenEntry",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
     "net.minecraft.world.level.storage.LevelSummary",
-    "InputConstants.isKeyDown()",
     "Window.setTitle()",
-    "KeyMapping.saveString()",
-    "Minecraft.gameDirectory",
-    "Minecraft.setScreenAndShow()",
-    "Button.getMessage()",
-    "PauseScreen.children()",
-    "MutableComponent.setStyle()",
-    "Style.withClickEvent()",
-    "Style.withObfuscated()",
-    "Items.WOOL"
+    "SharedConstants.getCurrentVersion()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mcversionrenamer-26.3-1.0.6-REFACTOR-ALPHA.jar",
     "published": "2026-10-29"
   },
@@ -70,7 +58,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

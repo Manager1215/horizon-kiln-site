@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.SharedConstants",
     "net.minecraft.advancements.predicates.MobEffectsPredicate",
     "net.minecraft.advancements.predicates.MobEffectsPredicate.MobEffectInstancePredicate",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
@@ -29,12 +28,10 @@
     "net.minecraft.world.entity.raid.Raider",
     "net.minecraft.world.entity.raid.Raids",
     "Int2ObjectMap.containsValue()",
+    "SharedConstants.DEBUG_RAIDS",
     "BlockPos.containing()",
     "BlockPos.MutableBlockPos.set()",
-    "Holder.is()",
-    "RegistryAccess.lookupOrThrow()",
     "Registries.BANNER_PATTERN",
-    "CommonComponents.SPACE",
     "ServerBossEvent.setName()",
     "ServerBossEvent.setVisible()",
     "ServerLevel.getDifficulty()",
@@ -47,18 +44,21 @@
     "ServerLevel.hasChunksAt()",
     "ServerLevel.isPositionEntityTicking()",
     "ServerLevel.isVillage()",
-    "Stats.RAID_TRIGGER",
-    "Stats.RAID_WIN",
     "EnvironmentAttributes.CAN_START_RAID",
-    "DamageSource.getEntity()",
-    "and 8 more"
+    "Entity.isSpectator()",
+    "EntityTypes.RAVAGER",
+    "Player.removeEffectNoUpdate()",
+    "GameRuleCategory.MOBS",
+    "GameRules.RAIDS",
+    "GameRules.get()",
+    "and 1 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "raid-restore-1.6.0.jar",
     "published": "2026-09-15"
   },
@@ -81,7 +81,11 @@
   },
   "mixins": true,
   "depends": [],
-  "lacks": 48,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 41,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,27 +9,12 @@
   "author": "liyueovo",
   "description": "Xaero 小地图/世界地图附加mod，在地图中显示玩家具体位置，方便寻找 Xaero minimap/World map additional mod, showing the player's specific location in the map, easy to find",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.client.gui.components.PlayerFaceExtractor",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.social.PlayerEntry",
     "net.minecraft.client.resources.DefaultPlayerSkin",
     "net.minecraft.commands.arguments.UuidArgument",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "InputConstants.isKeyDown()",
-    "Minecraft.setScreenAndShow()",
-    "Button.setTooltip()",
-    "EditBox.getCursorPosition()",
-    "EditBox.setCursorPosition()",
     "PlayerInfo.getProfile()",
     "PlayerInfo.getSkin()",
-    "CommandSourceStack.getPlayerOrException()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "MinecraftServer.execute()",
     "MinecraftServer.getTickCount()",
     "MinecraftServer.overworld()",
     "ServerLevel.getSeed()",
@@ -40,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "xaeros-playerposition-fabric-1.0.0-26.3.jar",
     "published": "2026-09-16"
   },
@@ -69,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -13,7 +13,6 @@
     "net.minecraft.world.entity.projectile.throwableitemprojectile.AbstractThrownPotion",
     "net.minecraft.world.item.ItemCooldowns",
     "net.minecraft.world.item.ItemCooldowns.CooldownInstance",
-    "net.minecraft.world.item.alchemy.PotionContents",
     "BuiltInRegistries.GAME_RULE",
     "MinecraftServer.getGameRules()",
     "ServerLevel.getEntitiesOfClass()",
@@ -24,8 +23,7 @@
     "Entity.distanceToSqr()",
     "Entity.getBoundingBox()",
     "Player.getCooldowns()",
-    "FeatureFlagSet.of()",
-    "Items.FIREWORK_ROCKET",
+    "PotionContents.is()",
     "GameRuleCategory.PLAYER",
     "GameRuleTypeVisitor.visitBoolean()",
     "GameRuleTypeVisitor.visitInteger()",
@@ -37,7 +35,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "drenchedwings-0.4.1+26.3-fabric.jar",
     "published": "2026-11-03"
   },
@@ -65,7 +63,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

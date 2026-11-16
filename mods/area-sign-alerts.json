@@ -9,26 +9,12 @@
   "author": "A5ho9999",
   "description": "Server-side Area \"claims\" using Signs with popup alerts",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.minecraft.core.particles.DustParticleOptions",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.world.level.block.SignBlock",
     "net.minecraft.world.level.block.entity.SignBlockEntity",
     "net.minecraft.world.level.block.entity.SignText",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "CommandSourceStack.getPlayerOrException()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "BlockPos.distSqr()",
     "BlockPos.toShortString()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "MinecraftServer.execute()",
     "MinecraftServer.getAllLevels()",
     "MinecraftServer.overworld()",
     "ServerBossEvent.removeAllPlayers()",
@@ -38,9 +24,7 @@
     "ServerLevel.getMinY()",
     "ServerLevel.getRespawnData()",
     "ServerPlayer.chunkPosition()",
-    "ServerPlayer.connection",
     "ServerPlayer.getEyeY()",
-    "ServerGamePacketListenerImpl.send()",
     "PlayerList.getViewDistance()",
     "BlockTags.ALL_SIGNS",
     "BlockTags.STANDING_SIGNS",
@@ -54,7 +38,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SignAlerts-2.0.2-1.26.3.jar",
     "published": "2026-09-20"
   },
@@ -82,7 +66,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 39,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

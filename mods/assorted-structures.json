@@ -9,9 +9,7 @@
   "author": "grim3212",
   "description": "Adds ruins, spires, pyramids, fountains, snowballs, water domes, sandstone pillars and the runes found in them.",
   "needs": [
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.QuartPos",
-    "net.minecraft.core.RegistrySetBuilder",
     "net.minecraft.data.worldgen.placement.PlacementUtils",
     "net.minecraft.util.random.WeightedRandom",
     "net.minecraft.world.level.StructureManager",
@@ -38,8 +36,6 @@
     "net.minecraft.world.level.levelgen.structure.placement.RandomSpreadType",
     "BlockPos.distSqr()",
     "BlockPos.offset()",
-    "Holder.is()",
-    "HolderGetter.getOrThrow()",
     "Registries.BIOME",
     "Registries.FEATURE_TYPE",
     "Registries.PLACEMENT_MODIFIER_TYPE",
@@ -48,15 +44,19 @@
     "Registries.STRUCTURE_SET",
     "Registries.STRUCTURE_TYPE",
     "BiomeTags.HAS_OCEAN_RUIN_WARM",
-    "RandomSource.nextLong()",
-    "and 47 more"
+    "EntityTypes.CAVE_SPIDER",
+    "EntityTypes.CREEPER",
+    "EntityTypes.SILVERFISH",
+    "EntityTypes.SKELETON",
+    "EntityTypes.SPIDER",
+    "and 24 more"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "assortedstructures-fabric-26.3-2.0.0.jar",
     "published": "2026-10-23"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 98,
+  "softOff": {
+    "class": "partial",
+    "why": "generates in the world"
+  },
+  "lacks": 64,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,23 +9,18 @@
   "author": "BogTheMudWing",
   "description": "A fast and easy fuzzy-search item grabber.",
   "needs": [
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.world.inventory.ContainerInput",
-    "Minecraft.gameMode",
-    "Minecraft.setScreenAndShow()",
     "LocalPlayer.clientSideCloseContainer()",
     "NonNullList.stream()",
     "MutableComponent.toFlatList()",
     "Inventory.getFreeSlot()",
     "ItemStack.getItemName()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "blip-2.0.1.jar",
     "published": "2026-09-29"
   },
@@ -54,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

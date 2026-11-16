@@ -13,10 +13,6 @@
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.server.level.ServerPlayerGameMode",
-    "net.minecraft.tags.ItemTags",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "Minecraft.hitResult",
     "ServerLevel.clip()",
     "ServerPlayer.gameMode",
     "ServerPlayer.getEyePosition()",
@@ -28,7 +24,6 @@
     "BlockTags.INCORRECT_FOR_WOODEN_TOOL",
     "BlockTags.MINEABLE_WITH_SHOVEL",
     "AABB.inflate()",
-    "HitResult.getType()",
     "Shapes.create()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -36,7 +31,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "OnlyHammersAndExcavators-26.3-0.1.jar",
     "published": "2026-10-06"
   },
@@ -66,7 +61,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

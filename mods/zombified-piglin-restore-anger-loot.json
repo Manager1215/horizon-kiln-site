@@ -15,8 +15,6 @@
     "net.minecraft.world.entity.monster.zombie.Zombie",
     "net.minecraft.world.entity.monster.zombie.ZombifiedPiglin",
     "ServerLevel.getGameRules()",
-    "Items.GOLDEN_SWORD",
-    "Blocks.MAGMA_BLOCK",
     "GameRuleCategory.MOBS",
     "GameRules.get()",
     "GameRules.registerBoolean()"
@@ -26,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "zombified-piglin-restore-anger-loot-1.4.0.jar",
     "published": "2026-09-17"
   },
@@ -49,7 +47,11 @@
   },
   "mixins": true,
   "depends": [],
-  "lacks": 9,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method into the game's classes"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

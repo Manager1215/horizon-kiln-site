@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 78 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.SignatureState",
     "com.mojang.authlib.minecraft.MinecraftProfileTexture",
     "com.mojang.authlib.minecraft.MinecraftProfileTexture.Type",
@@ -24,7 +23,6 @@
     "com.mojang.blaze3d.pipeline.TextureTarget",
     "com.mojang.blaze3d.platform.SDLEventHandler",
     "com.mojang.blaze3d.platform.TextureUtil",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
     "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
     "com.mojang.blaze3d.vertex.BufferBuilder",
     "com.mojang.blaze3d.vertex.ByteBufferBuilder",
@@ -51,6 +49,8 @@
     "com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen",
     "com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen",
     "com.mojang.realmsclient.gui.screens.configuration.RealmsInviteScreen",
+    "com.mojang.realmsclient.gui.screens.configuration.RealmsSlotOptionsScreen",
+    "com.mojang.renderpearl.api.pipeline.BindGroupLayout.Builder",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "fancymenu_fabric_3.10.0_MC_26.3.jar",
     "published": "2026-11-10"
   },
@@ -88,7 +88,11 @@
     "melody",
     "minecraft"
   ],
-  "lacks": 863,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @wrap-operation into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 636,
   "development": {
     "status": "no-plans",
     "statusLabel": "No plans yet",

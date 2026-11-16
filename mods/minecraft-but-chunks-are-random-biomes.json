@@ -13,7 +13,6 @@
     "net.minecraft.world.level.biome.Climate",
     "net.minecraft.world.level.biome.Climate.Sampler",
     "net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator",
-    "Holder.is()",
     "BuiltInRegistries.BIOME_SOURCE",
     "ServerLevel.getSeed()",
     "BiomeTags.IS_NETHER",
@@ -26,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "chunk-random-biomes-1.1.0.jar",
     "published": "2026-09-21"
   },
@@ -53,7 +52,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

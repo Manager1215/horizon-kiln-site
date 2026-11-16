@@ -13,19 +13,12 @@
     "net.minecraft.TracingExecutor",
     "net.minecraft.client.Screenshot",
     "net.minecraft.client.renderer.item.TrackingItemStackRenderState",
-    "org.apache.logging.log4j.Level",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "RenderTarget.destroyBuffers()",
     "RenderTarget.width",
     "NativeImage.writeToFile()",
     "ServerPlayNetworking.registerReceiver()",
-    "Minecraft.execute()",
-    "Minecraft.gameDirectory",
-    "GuiGraphicsExtractor.fakeItem()",
     "GameRenderer.featureRenderDispatcher()",
     "SubmitNodeStorage.submitText()",
-    "MinecraftServer.execute()",
     "Util.ioPool()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -33,7 +26,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "wunderlib-26.301.4.jar",
     "published": "2026-11-01"
   },
@@ -61,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

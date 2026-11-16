@@ -10,16 +10,10 @@
   "description": "Use Create contraptions for Farmer's Delight",
   "needs": [
     "an access widener",
-    "net.minecraft.core.HolderSet.Direct",
     "net.minecraft.resources.RegistryLoadTask",
     "net.minecraft.resources.RegistryLoadTask.PendingRegistration",
     "net.minecraft.server.ReloadableServerResources",
-    "DefaultedRegistry.wrapAsHolder()",
-    "HolderLookup.getOrThrow()",
-    "HolderSet.direct()",
-    "Ingredient.of()",
     "EnchantmentHelper.getItemEnchantmentLevel()",
-    "Enchantments.FORTUNE",
     "Level.holderLookup()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
@@ -27,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "FarmersCreate-2.0+fly-mc26.3.jar",
     "published": "2026-11-09"
   },
@@ -57,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

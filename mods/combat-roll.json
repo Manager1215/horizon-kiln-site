@@ -21,10 +21,6 @@
     "net.minecraft.world.entity.player.Input",
     "ServerConfigurationNetworking.canSend()",
     "ServerConfigurationNetworking.registerGlobalReceiver()",
-    "KeyMapping.getTranslatedKeyMessage()",
-    "Minecraft.execute()",
-    "Options.keyAttack",
-    "GuiGraphicsExtractor.blit()",
     "LocalPlayer.getAttackStrengthScale()",
     "LocalPlayer.getFluidHeight()",
     "LocalPlayer.getVehicle()",
@@ -46,18 +42,21 @@
     "StatFormatter.DEFAULT",
     "StatFormatter.DISTANCE",
     "StatType.get()",
-    "Stats.CUSTOM",
     "ARGB.colorFromFloat()",
     "Player.<init>()",
     "Player.canSimulateMovement()",
-    "and 8 more"
+    "Player.getRandomX()",
+    "Player.getRandomZ()",
+    "Player.getY()",
+    "Block.getFriction()",
+    "Vec3.yRot()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "combat_roll-fabric-3.0.1+26.3.jar",
     "published": "2026-09-17"
   },
@@ -88,7 +87,11 @@
     "minecraft",
     "player_animation_library"
   ],
-  "lacks": 48,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 40,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

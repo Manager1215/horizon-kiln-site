@@ -32,17 +32,14 @@
     "net.fabricmc.fabric.api.client.renderer.v1.sprite.FabricTextureAtlas",
     "net.fabricmc.fabric.api.client.renderer.v1.sprite.SpriteFinder",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
     "net.fabricmc.fabric.impl.client.indigo.renderer.aocalc.AoCalculator",
     "net.fabricmc.fabric.impl.client.indigo.renderer.render.AltModelBlockRendererImpl",
     "net.minecraft.client.Camera.NearPlane",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.gui.Font.PreparedText",
     "net.minecraft.client.gui.components.WidgetSprites",
     "net.minecraft.client.gui.screens.inventory.BookViewScreen",
     "net.minecraft.client.model.geom.builders.UVPair",
     "net.minecraft.client.multiplayer.ClientChunkCache",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.multiplayer.chat.ChatListener",
     "net.minecraft.client.particle.Particle",
     "net.minecraft.client.particle.ParticleEngine",
@@ -51,6 +48,9 @@
     "net.minecraft.client.particle.SingleQuadParticle",
     "net.minecraft.client.particle.SingleQuadParticle.Layer",
     "net.minecraft.client.renderer.DynamicGpuData",
+    "net.minecraft.client.renderer.LevelRenderer",
+    "net.minecraft.client.renderer.LightmapRenderStateExtractor",
+    "net.minecraft.client.renderer.SectionOcclusionGraph",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "lucidity-3.0.0+26.3.jar",
     "published": "2026-11-09"
   },
@@ -89,7 +89,11 @@
     "minecraft",
     "ryansrenderingkit"
   ],
-  "lacks": 620,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 499,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

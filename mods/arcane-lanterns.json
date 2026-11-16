@@ -12,12 +12,8 @@
     "an access widener",
     "net.minecraft.world.entity.EntitySelector",
     "net.minecraft.world.item.crafting.RecipeManager.CachedCheck",
-    "net.minecraft.world.item.crafting.ShapelessRecipe",
-    "net.minecraft.world.item.crafting.display.ShapelessCraftingRecipeDisplay",
-    "net.minecraft.world.item.crafting.display.SlotDisplay.ItemSlotDisplay",
     "net.minecraft.world.level.block.LanternBlock",
     "net.minecraft.world.level.material.PushReaction",
-    "org.apache.logging.log4j.LogManager",
     "BlockEntityRenderer.extractRenderState()",
     "ItemStackRenderState.isEmpty()",
     "BlockPos.mutable()",
@@ -27,7 +23,6 @@
     "BlockPos.MutableBlockPos.move()",
     "NonNullList.iterator()",
     "Registries.RECIPE_SERIALIZER",
-    "ServerLevel.destroyBlock()",
     "ServerLevel.getEntitiesOfClass()",
     "ServerLevel.getEntitiesOfClass()",
     "ServerLevel.getGameRules()",
@@ -50,14 +45,19 @@
     "Animal.setLastHurtByPlayer()",
     "Animal.shouldDropExperience()",
     "Animal.skipDropExperience()",
-    "and 22 more"
+    "ItemEntity.setDefaultPickUpDelay()",
+    "Player.isSecondaryUseActive()",
+    "StackedItemContents.accountSimpleStack()",
+    "RecipeManager.createCheck()",
+    "ShapelessRecipe.MAP_CODEC",
+    "and 12 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "arcanelanterns-v26.3.1-mc26.3.x+fabric.jar",
     "published": "2026-09-29"
   },
@@ -90,7 +90,11 @@
     "minecraft",
     "puzzleslib"
   ],
-  "lacks": 62,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 52,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

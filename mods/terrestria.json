@@ -15,7 +15,6 @@
     "net.fabricmc.fabric.api.client.particle.v1.ParticleRenderEvents",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleRenderEvents.AllowTerrainParticleTint",
     "net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.event.registry.FabricRegistry",
     "net.fabricmc.fabric.api.item.v1.BlockTransformerHelper",
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents",
@@ -51,6 +50,7 @@
     "net.minecraft.world.entity.ai.goal.EatBlockGoal",
     "net.minecraft.world.entity.animal.fish.WaterAnimal",
     "net.minecraft.world.entity.animal.rabbit.Rabbit.RaidGardenGoal",
+    "net.minecraft.world.entity.npc.villager.VillagerType",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "terrestria-8.2.0-alpha.1.jar",
     "published": "2026-10-27"
   },
@@ -92,7 +92,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 361,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 273,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,14 +10,10 @@
   "description": "An efficient and non-locational redstone dust implementation",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.level.block.RedstoneWireBlock",
     "net.minecraft.world.level.redstone.InstantNeighborUpdater",
     "net.minecraft.world.level.redstone.NeighborUpdater",
     "net.minecraft.world.level.redstone.Redstone",
-    "net.minecraft.world.level.storage.LevelResource",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Long2ObjectMap.isEmpty()",
     "Long2ObjectMap.Entry.getValue()",
     "MinecraftServer.overworld()",
@@ -26,8 +22,6 @@
     "ServerLevel.getMaxY()",
     "ServerLevel.getMinY()",
     "ServerLevel.getSectionIndex()",
-    "Block.dropResources()",
-    "Blocks.REDSTONE_WIRE",
     "BlockState.getDirectSignal()",
     "BlockState.getSignal()",
     "BlockState.isRedstoneConductor()",
@@ -39,15 +33,14 @@
     "LevelChunkSection.setBlockState()",
     "Orientation.getFront()",
     "Orientation.getUp()",
-    "Orientation.withFront()",
-    "LevelStorageSource.LevelStorageAccess.getLevelPath()"
+    "Orientation.withFront()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "alternate-current-mc26.3-1.9.0.jar",
     "published": "2026-09-15"
   },
@@ -72,7 +65,11 @@
   "depends": [
     "minecraft"
   ],
-  "lacks": 31,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 24,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

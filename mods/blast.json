@@ -30,7 +30,6 @@
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.references.BlockItemId",
     "net.minecraft.util.random.WeightedList.Builder",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.item.FallingBlockEntity",
     "net.minecraft.world.entity.projectile.FireworkRocketEntity",
     "net.minecraft.world.entity.projectile.ItemSupplier",
@@ -41,7 +40,6 @@
     "net.minecraft.world.item.EnderEyeItem",
     "net.minecraft.world.item.ItemCooldowns",
     "net.minecraft.world.item.ProjectileItem",
-    "net.minecraft.world.item.component.BundleContents",
     "net.minecraft.world.item.component.BundleContents.Mutable",
     "net.minecraft.world.item.component.ChargedProjectiles",
     "net.minecraft.world.item.consume_effects.ConsumeEffect",
@@ -51,14 +49,16 @@
     "net.minecraft.world.level.block.IceBlock",
     "net.minecraft.world.level.block.Mirror",
     "net.minecraft.world.level.storage.loot.functions.ApplyBonusCount",
-    "and 62 more"
+    "net.minecraft.world.level.storage.loot.predicates.BonusLevelTableCondition",
+    "net.minecraft.world.phys.EntityHitResult",
+    "and 60 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "BLAST-fabric-1.14-26.3.jar",
     "published": "2026-09-16"
   },
@@ -89,7 +89,11 @@
     "minecraft",
     "strawberrylib"
   ],
-  "lacks": 141,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 123,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

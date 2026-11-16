@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.SharedConstants",
     "net.minecraft.server.level.WorldGenRegion",
     "net.minecraft.util.BitStorage",
     "net.minecraft.util.InclusiveRange",
@@ -51,14 +50,15 @@
     "net.minecraft.world.level.levelgen.material.rule.RuleEvaluator",
     "net.minecraft.world.level.levelgen.material.rule.SequenceRule",
     "net.minecraft.world.level.levelgen.placement.CaveSurface",
-    "and 20 more"
+    "net.minecraft.world.level.levelgen.synth.Noise",
+    "and 21 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "zmatcomp-1.1.5+26.3.jar",
     "published": "2026-11-13"
   },
@@ -76,7 +76,11 @@
     "minecraft",
     "zconfig"
   ],
-  "lacks": 60,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @wrap-method into the game's classes"
+  },
+  "lacks": 61,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

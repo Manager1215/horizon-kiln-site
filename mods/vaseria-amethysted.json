@@ -21,9 +21,6 @@
     "net.minecraft.world.food.FoodProperties",
     "net.minecraft.world.food.FoodProperties.Builder",
     "net.minecraft.world.item.BoneMealItem",
-    "net.minecraft.world.item.crafting.RepairItemRecipe",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "ModelPart.visible",
     "ModelPart.x",
     "ModelPart.xScale",
@@ -31,7 +28,6 @@
     "ModelPart.yScale",
     "ModelPart.z",
     "ModelPart.zScale",
-    "Registry.wrapAsHolder()",
     "Registries.JUKEBOX_SONG",
     "MinecraftServer.getTickCount()",
     "ServerLevel.getGameRules()",
@@ -51,14 +47,15 @@
     "Items.registerItem()",
     "BlockPlaceContext.<init>()",
     "CraftingInput.ingredientCount()",
-    "and 3 more"
+    "GameRules.MOB_DROPS",
+    "GameRules.get()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "vaseria_amethyst-1.0.2-fabric-26.3.jar",
     "published": "2026-10-12"
   },
@@ -87,7 +84,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 43,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 38,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

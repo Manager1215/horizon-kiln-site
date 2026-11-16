@@ -12,19 +12,14 @@
     "net.minecraft.client.resources.server.DownloadedPackSource",
     "net.minecraft.client.resources.server.PackReloadConfig",
     "net.minecraft.client.resources.server.PackReloadConfig.IdAndPath",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "NativeImage.read()",
-    "NativeImage.writeToFile()",
-    "Minecraft.getCurrentServer()",
-    "ServerData.ip"
+    "NativeImage.writeToFile()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "server-unpacker-2.3.2.jar",
     "published": "2026-05-22"
   },
@@ -50,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

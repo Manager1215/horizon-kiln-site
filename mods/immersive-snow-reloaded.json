@@ -15,12 +15,8 @@
     "net.minecraft.server.level.ChunkMap",
     "net.minecraft.world.level.LightLayer",
     "net.minecraft.world.level.block.IceBlock",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "ServerLevelEvents.UNLOAD",
-    "CommandSourceStack.sendSystemMessage()",
     "BlockPos.toShortString()",
-    "Holder.getRegisteredName()",
     "ServerChunkCache.chunkMap",
     "ServerLevel.getBiome()",
     "ServerLevel.getHeightmapPos()",
@@ -30,16 +26,14 @@
     "Biome.coldEnoughToSnow()",
     "Biome.shouldFreeze()",
     "Biome.shouldSnow()",
-    "Biome.warmEnoughToRain()",
-    "Blocks.LEAF_LITTER",
-    "Blocks.SNOW"
+    "Biome.warmEnoughToRain()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "immersive_snow_reloaded-fabric-2.2.1+26.1.jar",
     "published": "2026-10-03"
   },
@@ -65,7 +59,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

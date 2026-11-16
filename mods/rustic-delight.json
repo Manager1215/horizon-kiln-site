@@ -10,14 +10,12 @@
   "description": "An add-on for Farmer's Delight that adds Pancakes, Cotton, Coffee, Bell Peppers, fried foods and more!",
   "needs": [
     "an access widener",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents",
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyCallback",
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyContext",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditionType",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions",
-    "net.minecraft.core.HolderSet.Direct",
     "net.minecraft.core.particles.BlockParticleOption",
     "net.minecraft.data.worldgen.placement.PlacementUtils",
     "net.minecraft.resources.RegistryOps.RegistryInfoLookup",
@@ -28,8 +26,6 @@
     "net.minecraft.world.food.FoodProperties",
     "net.minecraft.world.food.FoodProperties.Builder",
     "net.minecraft.world.food.VillagerFood",
-    "net.minecraft.world.item.alchemy.Potion",
-    "net.minecraft.world.item.component.Compostable",
     "net.minecraft.world.item.component.Consumable",
     "net.minecraft.world.item.component.Consumable.Builder",
     "net.minecraft.world.item.component.Consumables",
@@ -50,14 +46,18 @@
     "net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList",
     "net.minecraft.world.level.storage.loot.functions.EnchantedCountIncreaseFunction",
     "net.minecraft.world.level.storage.loot.functions.EnchantedCountIncreaseFunction.Builder",
-    "and 55 more"
+    "net.minecraft.world.level.storage.loot.providers.number.floats.ResolvableFloat.Constant",
+    "net.minecraft.world.phys.shapes.BooleanOp",
+    "net.minecraft.world.phys.shapes.Shapes.DoubleLineConsumer",
+    "BiomeModifications.addFeature()",
+    "and 31 more"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "rusticdelight-fabric-26.3-1.7.0.jar",
     "published": "2026-09-17"
   },
@@ -89,7 +89,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 95,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 71,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

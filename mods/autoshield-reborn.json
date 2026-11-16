@@ -9,23 +9,12 @@
   "author": "Kishku7",
   "description": "Auto-block with a shield in either hand, within a 180-degree arc, with server-set durability cost. Fabric + NeoForge, MC 26.x.",
   "needs": [
-    "net.minecraft.server.permissions.PermissionCheck",
-    "net.minecraft.server.permissions.PermissionCheck.Require",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
     "net.minecraft.world.item.component.BlocksAttacks",
-    "CommandSourceStack.getServer()",
-    "Commands.hasPermission()",
     "DataComponents.BLOCKS_ATTACKS",
-    "ServerPlayer.permissions()",
     "SoundEvents.SHIELD_BLOCK",
-    "DamageSource.getDirectEntity()",
-    "DamageSource.getSourcePosition()",
-    "DamageSource.typeHolder()",
     "LivingEntity.getItemBlockingWith()",
     "LivingEntity.getYHeadRot()",
-    "Player.swing()",
-    "ItemStack.getInteractAnimation()",
     "ItemStack.hurtAndBreak()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -33,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "autoshield-reborn-1.3.0+26.3.jar",
     "published": "2026-09-19"
   },
@@ -62,7 +51,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

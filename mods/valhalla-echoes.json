@@ -24,7 +24,6 @@
     "net.minecraft.client.renderer.entity.WitherSkeletonRenderer",
     "net.minecraft.client.renderer.entity.state.PiglinRenderState",
     "net.minecraft.client.renderer.entity.state.SkeletonRenderState",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.component.DataComponentInitializers",
     "net.minecraft.core.component.DataComponentInitializers.SingleComponentInitializer",
     "net.minecraft.util.profiling.Profiler",
@@ -49,14 +48,15 @@
     "net.minecraft.world.entity.ai.behavior.SetEntityLookTarget",
     "net.minecraft.world.entity.ai.behavior.SetWalkTargetFromAttackTargetIfTargetOutOfReach",
     "net.minecraft.world.entity.ai.behavior.StartAttacking",
-    "and 61 more"
+    "net.minecraft.world.entity.ai.behavior.StartAttacking.TargetFinder",
+    "and 54 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "valhalla-echoes-v0.6.1-beta.jar",
     "published": "2026-11-16"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 112,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 103,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -22,10 +22,6 @@
     "com.mojang.blaze3d.vertex.MeshData.DrawState",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
-    "net.minecraft.SharedConstants",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.gui.components.tabs.MenuTabBar",
     "net.minecraft.client.gui.components.tabs.MenuTabBar.Builder",
     "net.minecraft.client.gui.components.tabs.Tab",
@@ -46,18 +42,22 @@
     "net.minecraft.client.renderer.state.level.CameraEntityRenderState",
     "net.minecraft.client.renderer.state.level.SkyRenderState",
     "net.minecraft.client.renderer.state.level.WeatherRenderState",
-    "net.minecraft.data.AtlasIds",
     "net.minecraft.server.packs.repository.PackRepository",
     "net.minecraft.world.attribute.EnvironmentAttributeSystem.Builder",
     "net.minecraft.world.level.MoonPhase",
-    "and 57 more"
+    "net.minecraft.world.level.dimension.DimensionType.Skybox",
+    "net.minecraft.world.level.material.FogType",
+    "RenderSystem.getCompiledPipeline()",
+    "RenderSystem.getDynamicUniforms()",
+    "RenderSystem.getSequentialBuffer()",
+    "and 41 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sky_aesthetics-fabric-2.1.4.jar",
     "published": "2026-09-30"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 97,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 81,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,8 +9,6 @@
   "author": "PeteMC",
   "description": "This mod adds a day counter with customizable location, size and color to the screen.",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "Minecraft.gameMode",
     "ClientLevel.getOverworldClockTime()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
@@ -18,7 +16,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "DayCount-1.6.1-Fabric-mc26.3.jar",
     "published": "2026-11-10"
   },
@@ -49,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

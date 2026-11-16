@@ -26,7 +26,6 @@
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.layers.RenderLayer",
     "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
-    "net.minecraft.network.chat.PlayerChatMessage",
     "net.minecraft.world.entity.animal.feline.CatSoundVariant",
     "net.minecraft.world.entity.animal.feline.CatSoundVariant.CatSoundSet",
     "net.minecraft.world.entity.animal.feline.CatSoundVariants",
@@ -36,10 +35,9 @@
     "LayerDefinition.create()",
     "EntityRendererProvider.Context.bakeLayer()",
     "RenderTypes.armorCutoutNoCullGlint()",
+    "PlayerChatMessage.signedBody()",
     "MinecraftServer.getTickCount()",
-    "ServerPlayer.getRandom()",
     "SoundEvents.CAT_SOUNDS",
-    "DyeColor.getName()",
     "ItemStack.hasFoil()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -47,7 +45,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "catears-fabric-26.3-1.2.2.jar",
     "published": "2026-11-04"
   },
@@ -76,7 +74,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 32,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 30,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

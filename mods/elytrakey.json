@@ -9,32 +9,16 @@
   "author": "Packsolite",
   "description": "A mod to help you (un)equip your elytra faster than ever before!",
   "needs": [
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.world.inventory.ContainerInput",
     "KeyMapping.setDown()",
-    "Minecraft.gameMode",
-    "Minecraft.hitResult",
-    "Minecraft.setScreenAndShow()",
-    "Options.keyUse",
-    "Button.Builder.tooltip()",
-    "Checkbox.selected()",
-    "Screen.mouseClicked()",
-    "LocalPlayer.isFallFlying()",
     "LocalPlayer.jumpFromGround()",
-    "LocalPlayer.swing()",
-    "Inventory.getFreeSlot()",
-    "Items.FIREWORK_ROCKET",
-    "SwingAnimation.DEFAULT",
-    "ItemEnchantments.entrySet()",
-    "HitResult.getType()"
+    "Inventory.getFreeSlot()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "elytrakey-fabric-mc26.3-1.2.4.jar",
     "published": "2026-09-15"
   },
@@ -61,7 +45,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

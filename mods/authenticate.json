@@ -10,11 +10,6 @@
   "description": "A Minecraft Fabric mod that provides player authentication functionality for servers.",
   "needs": [
     "net.minecraft.network.protocol.game.ServerboundChatPacket",
-    "Commands.LEVEL_OWNERS",
-    "Commands.hasPermission()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
-    "ServerPlayer.connection",
     "ServerGamePacketListenerImpl.disconnect()",
     "ServerGamePacketListenerImpl.getRemoteAddress()"
   ],
@@ -23,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Authenticate-26.3-1.1.1.jar",
     "published": "2026-09-24"
   },
@@ -52,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -38,7 +38,6 @@
     "net.minecraft.client.renderer.special.SpecialModelRenderers",
     "net.minecraft.client.resources.model.EquipmentClientInfo",
     "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.component.DataComponentInitializers",
     "net.minecraft.core.component.DataComponentInitializers.SingleComponentInitializer",
     "net.minecraft.core.dispenser.FlintAndSteelDispenseItemBehavior",
@@ -46,18 +45,19 @@
     "net.minecraft.references.BlockItemId",
     "net.minecraft.references.ItemIds",
     "net.minecraft.tags.DamageTypeTags",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
     "net.minecraft.world.entity.ai.attributes.RangedAttribute",
-    "and 80 more"
+    "net.minecraft.world.entity.animal.cow.MushroomCow",
+    "net.minecraft.world.entity.animal.golem.CopperGolem",
+    "and 74 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "equipmisc-1.0.1+mc26.3.jar",
     "published": "2026-11-10"
   },
@@ -88,7 +88,11 @@
     "lootinj",
     "minecraft"
   ],
-  "lacks": 144,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 115,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

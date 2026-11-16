@@ -33,7 +33,6 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
     "net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents.Load",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
@@ -49,15 +48,16 @@
     "net.minecraft.client.animation.Keyframe",
     "net.minecraft.client.animation.KeyframeAnimation",
     "net.minecraft.client.animation.KeyframeAnimations",
-    "net.minecraft.client.gui.components.CycleButton",
+    "net.minecraft.client.model.EntityModel",
+    "net.minecraft.client.model.animal.golem.IronGolemModel",
     "and 80 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "bbyj's Pet Bunny-1.5.2-fabric+26.3.jar",
     "published": "2026-11-13"
   },
@@ -88,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 569,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 406,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

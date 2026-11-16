@@ -16,10 +16,8 @@
     "ServerLevel.getHeight()",
     "ServerLevel.getMaxY()",
     "ServerLevel.getMinY()",
-    "ServerLevel.getWorldBorder()",
     "ServerLevel.sendParticles()",
     "ServerPlayer.isAlive()",
-    "ServerPlayer.isRemoved()",
     "ServerPlayer.resetFallDistance()",
     "ServerPlayer.stopRiding()",
     "ServerPlayer.teleportTo()",
@@ -28,17 +26,7 @@
     "SoundEvents.AMETHYST_CLUSTER_HIT",
     "SoundEvents.PORTAL_AMBIENT",
     "BlockTags.FIRE",
-    "Blocks.COBWEB",
-    "Blocks.END_GATEWAY",
-    "Blocks.END_PORTAL",
-    "Blocks.MAGMA_BLOCK",
-    "Blocks.NETHER_PORTAL",
-    "Blocks.POWDER_SNOW",
-    "Blocks.SWEET_BERRY_BUSH",
-    "Blocks.WITHER_ROSE",
     "BlockState.getCollisionShape()",
-    "WorldBorder.isWithinBounds()",
-    "WorldBorder.isWithinBounds()",
     "ChunkGenerator.getBaseColumn()",
     "VoxelShape.isEmpty()"
   ],
@@ -47,7 +35,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "magic-teleportation-coin-2.0.0+mc26.1-26.3-fabric.jar",
     "published": "2026-11-14"
   },
@@ -76,5 +64,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 32
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 20
 }

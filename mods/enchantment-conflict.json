@@ -11,20 +11,14 @@
   "needs": [
     "an access widener",
     "Mixin: 2 points inside the game's methods",
-    "InputConstants.isKeyDown()",
-    "Object2IntMap.Entry.getKey()",
-    "KeyMapping.getTranslatedKeyMessage()",
-    "KeyMapping.key",
-    "HolderLookup.RegistryLookup.listElements()",
-    "DataComponents.STORED_ENCHANTMENTS",
-    "ItemEnchantments.entrySet()"
+    "Object2IntMap.Entry.getKey()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "enchantment-conflict-2026.9.1.jar",
     "published": "2026-09-27"
   },
@@ -55,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

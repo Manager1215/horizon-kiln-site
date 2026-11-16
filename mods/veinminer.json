@@ -10,34 +10,24 @@
   "description": "Mine the whole vein on mining a single ore/block. Make the tedious mining experience to something satisfying and fun! FTB Ultimine alternative",
   "needs": [
     "an access widener",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
     "net.minecraft.DetectedVersion",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
     "net.minecraft.server.packs.repository.PackRepository",
     "net.minecraft.server.packs.repository.ServerPacksSource",
-    "net.minecraft.server.permissions.LevelBasedPermissionSet",
-    "net.minecraft.server.permissions.Permissions",
-    "ServerLifecycleEvents.SERVER_STARTING",
     "FabricLoader.getRawGameVersion()",
-    "CommandSourceStack.getServer()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
     "MinecraftServer.getProfilePermissions()",
     "MinecraftServer.isDedicatedServer()",
     "MinecraftServer.isSingleplayerOwner()",
-    "ServerPlayer.nameAndId()",
-    "ServerPlayer.server",
-    "PermissionLevel.id()"
+    "ServerPlayer.server"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "veinminer-fabric-2.14.0.jar",
     "published": "2026-11-14"
   },
@@ -66,7 +56,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

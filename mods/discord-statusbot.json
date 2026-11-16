@@ -9,10 +9,6 @@
   "author": "mopsy14",
   "description": "A discord bot, that shows the status of your server! Made for Spigot, NeoForge, Fabric, Forge, Bungee, and many more.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "MinecraftServer.getMaxPlayers()",
     "MinecraftServer.getMotd()",
     "MinecraftServer.getPlayerNames()",
@@ -23,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Statusbot-24.0-Fabric-26.1+.jar",
     "published": "2026-05-08"
   },
@@ -51,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

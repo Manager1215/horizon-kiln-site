@@ -11,23 +11,19 @@
   "needs": [
     "Mixin: 7 points inside the game's methods",
     "net.fabricmc.fabric.impl.gamerule.EnumRuleCommand",
-    "net.minecraft.commands.arguments.DimensionArgument",
     "net.minecraft.network.chat.ComponentUtils",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.network.protocol.game.ClientboundLevelChunkPacketData.BlockEntityInfo",
     "net.minecraft.util.EncoderCache.2",
     "net.minecraft.util.filefix.FileFix",
     "net.minecraft.util.filefix.access.FileRelation",
     "net.minecraft.util.filefix.fixes.DimensionStorageFileFix",
     "net.minecraft.util.filefix.operations.FileFixOperations",
-    "CommandSourceStack.getServer()",
     "Registry.iterator()",
     "BuiltInRegistries.GAME_RULE",
     "MinecraftServer.getAllLevels()",
     "MinecraftServer.levelKeys()",
     "ServerChunkCache.getDataStorage()",
     "ServerLevel.getGameRules()",
-    "FeatureFlagSet.of()",
     "Level.<init>()",
     "GameRule.argument()",
     "GameRule.deserialize()",
@@ -46,7 +42,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "world-gamerules-1.3.8+26.3.jar",
     "published": "2026-10-27"
   },
@@ -72,7 +68,11 @@
     "fabric-api",
     "fabricloader"
   ],
-  "lacks": 30,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect and @wrap-operation into the game's classes; runs threads of its own; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 26,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

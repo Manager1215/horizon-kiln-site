@@ -10,8 +10,6 @@
   "description": "Gain Fire Resistance when wearing a full set of Netherite armour.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.loader.api.VersionParsingException",
     "net.minecraft.client.renderer.ScreenEffectRenderer",
     "net.minecraft.client.renderer.state.level.PlayerRenderState",
@@ -19,11 +17,7 @@
     "net.minecraft.world.item.component.CustomModelData",
     "net.minecraft.world.level.pathfinder.PathType",
     "net.minecraft.world.level.pathfinder.WalkNodeEvaluator",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "Version.parse()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "DataComponents.CUSTOM_MODEL_DATA",
     "MinecraftServer.getAllLevels()",
     "ServerLevel.getEntities()",
@@ -32,21 +26,14 @@
     "EntityTypes.HORSE",
     "LivingEntity.getRemainingFireTicks()",
     "LivingEntity.isInLava()",
-    "LivingEntity.setRemainingFireTicks()",
-    "Items.NETHERITE_BOOTS",
-    "Items.NETHERITE_CHESTPLATE",
-    "Items.NETHERITE_HELMET",
-    "Items.NETHERITE_HORSE_ARMOR",
-    "Items.NETHERITE_LEGGINGS",
-    "CustomData.copyTag()",
-    "ItemAttributeModifiers.compute()"
+    "LivingEntity.setRemainingFireTicks()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "enhancednetheritearmour-1.0.7.jar",
     "published": "2026-10-20"
   },
@@ -76,7 +63,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 30,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -19,7 +19,6 @@
     "net.minecraft.client.gui.components.debug.DebugEntryLookingAt.FluidTagInfo",
     "net.minecraft.client.gui.components.debug.DebugEntryPosition",
     "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
     "FabricLoader.getRawGameVersion()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
@@ -27,7 +26,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "cleanerf3-1.4+26.3-fabric.jar",
     "published": "2026-09-15"
   },
@@ -52,7 +51,11 @@
   },
   "mixins": true,
   "depends": [],
-  "lacks": 10,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @redirect and @wrap-operation into the game's classes"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

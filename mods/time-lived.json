@@ -11,7 +11,6 @@
   "needs": [
     "MinecraftServer.overworld()",
     "ServerLevel.getOverworldClockTime()",
-    "ServerPlayer.getDisplayName()",
     "ServerPlayer.isAlive()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -19,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "time-lived-1.1.0+26.1.jar",
     "published": "2026-08-23"
   },
@@ -47,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

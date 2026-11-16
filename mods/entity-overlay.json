@@ -10,20 +10,10 @@
   "description": "Entity Overlay displays a customizable overlay around an entity's hitbox whenever it's within your reach.",
   "needs": [
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.BeforeGizmos",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.world.phys.EntityHitResult",
-    "InputConstants.getKey()",
-    "InputConstants.isKeyDown()",
-    "InputConstants.Key.getDisplayName()",
-    "NativeImage.setPixel()",
     "VertexConsumer.addVertex()",
     "VertexConsumer.setNormal()",
     "LevelRenderEvents.BEFORE_GIZMOS",
-    "Minecraft.execute()",
-    "Minecraft.hitResult",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
     "LocalPlayer.getEyePosition()",
     "RenderTypes.debugFilledBox()",
     "RenderTypes.secondaryBlockOutline()",
@@ -45,7 +35,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "entityoverlay-1.0.9-mc26.3.jar",
     "published": "2026-09-23"
   },
@@ -74,7 +64,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 30,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

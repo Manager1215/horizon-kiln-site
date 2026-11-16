@@ -9,12 +9,9 @@
   "author": "Motschen",
   "description": "Common library providing a lightweight configuration system",
   "needs": [
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
     "net.minecraft.client.gui.components.MultiLineTextWidget",
     "net.minecraft.client.gui.components.SpriteIconButton",
     "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.tabs.GridLayoutTab",
     "net.minecraft.client.gui.components.tabs.MenuTabBar",
     "net.minecraft.client.gui.components.tabs.MenuTabBar.Builder",
@@ -23,7 +20,6 @@
     "net.minecraft.client.gui.components.tabs.TabNavigationBar",
     "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
     "net.minecraft.client.gui.screens.options.OptionsScreen",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "org.lwjgl.sdl.SDLDialog",
     "org.lwjgl.sdl.SDL_DialogFileCallbackI",
     "org.lwjgl.sdl.SDL_DialogFileFilter",
@@ -31,32 +27,17 @@
     "org.lwjgl.system.MemoryStack",
     "org.lwjgl.system.MemoryUtil",
     "org.lwjgl.system.Pointer",
-    "Minecraft.setScreenAndShow()",
-    "Minecraft.submit()",
-    "GuiGraphicsExtractor.fakeItem()",
-    "GuiGraphicsExtractor.nextStratum()",
-    "AbstractWidget.setMessage()",
-    "AbstractWidget.setTooltip()",
-    "Button.setPosition()",
-    "Button.setTooltip()",
-    "Button.Builder.tooltip()",
-    "EditBox.setTextColor()",
-    "EditBox.setTooltip()",
     "Screen.FOOTER_SEPARATOR",
     "Screen.INWORLD_FOOTER_SEPARATOR",
-    "Screen.resize()",
     "Holder.direct()",
-    "DataComponents.ITEM_MODEL",
-    "CommonComponents.GUI_CANCEL",
-    "CommonComponents.GUI_DONE",
-    "and 4 more"
+    "Identifier.read()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "midnightlib-fabric-1.10.0+26.3.jar",
     "published": "2026-10-14"
   },
@@ -84,7 +65,11 @@
     "fabric-resource-loader-v0",
     "minecraft"
   ],
-  "lacks": 44,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

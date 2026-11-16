@@ -17,8 +17,6 @@
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.tags.DamageTypeTags",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.EntityEvent",
     "net.minecraft.world.entity.LivingEntity.Fallsounds",
     "net.minecraft.world.entity.PostSpawnProcessor",
@@ -26,7 +24,6 @@
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
     "net.minecraft.world.item.component.DyedItemColor",
     "RenderTypes.armorCutoutNoCull()",
-    "DataComponents.CUSTOM_NAME",
     "ParticleTypes.BLOCK",
     "SynchedEntityData.defineId()",
     "SynchedEntityData.get()",
@@ -41,23 +38,26 @@
     "SoundEvents.ARMOR_STAND_FALL",
     "SoundEvents.ARMOR_STAND_HIT",
     "SoundEvents.ARMOR_STAND_PLACE",
-    "DamageSource.getEntity()",
-    "DamageSource.is()",
-    "DamageSource.isCreativePlayer()",
+    "EntityDimensions.makeBoundingBox()",
     "EntityType.create()",
     "EntityType.createDefaultStackConfig()",
-    "EntityType.getDimensions()",
     "LivingEntity.<init>()",
     "LivingEntity.addAdditionalSaveData()",
     "LivingEntity.createLivingAttributes()",
-    "and 14 more"
+    "LivingEntity.defineSynchedData()",
+    "LivingEntity.handleEntityEvent()",
+    "LivingEntity.readAdditionalSaveData()",
+    "Mob.getBodyArmorItem()",
+    "Item.Properties.wolfArmor()",
+    "BlockPlaceContext.<init>()",
+    "and 5 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mws-2.0.0+26.3.jar",
     "published": "2026-09-20"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 54,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 45,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

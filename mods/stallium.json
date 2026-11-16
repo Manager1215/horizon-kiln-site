@@ -11,11 +11,6 @@
   "needs": [
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.network.chat.FontDescription",
     "net.minecraft.network.chat.FontDescription.Resource",
     "net.minecraft.world.TickRateManager",
@@ -28,35 +23,26 @@
     "net.minecraft.world.entity.animal.equine.Llama",
     "LevelRenderEvents.COLLECT_SUBMITS",
     "Minecraft.getEntityRenderDispatcher()",
-    "Minecraft.getSingleplayerServer()",
     "GuiGraphicsExtractor.textWithBackdrop()",
     "ClientLevel.tickRateManager()",
     "LocalPlayer.getVehicle()",
     "LocalPlayer.getViewVector()",
     "EntityRenderDispatcher.getPackedLightCoords()",
-    "CommonComponents.GUI_DONE",
-    "MutableComponent.withStyle()",
+    "IntegratedServer.overworld()",
     "Style.withFont()",
     "ServerLevel.getEntityInAnyDimension()",
     "ARGB.white()",
     "AgeableMob.getAge()",
     "Entity.getTeam()",
-    "Items.CARROT",
-    "Items.ENCHANTED_GOLDEN_APPLE",
-    "Items.GOLDEN_APPLE",
-    "Items.GOLDEN_CARROT",
-    "Items.HAY_BLOCK",
-    "Items.SUGAR",
-    "Items.WHEAT",
     "AABB.clip()",
-    "and 1 more"
+    "AABB.inflate()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "stallium-1.0.0+26.3.jar",
     "published": "2026-10-02"
   },
@@ -85,7 +71,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 41,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 27,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

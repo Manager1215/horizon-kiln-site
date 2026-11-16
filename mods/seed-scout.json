@@ -13,16 +13,8 @@
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.Chat",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-    "net.minecraft.SharedConstants",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
     "net.minecraft.client.renderer.rendertype.RenderSetup",
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.resources.RegistryDataLoader",
     "net.minecraft.resources.RegistryDataLoader.RegistryData",
     "net.minecraft.server.packs.VanillaPackResources",
@@ -49,14 +41,22 @@
     "net.minecraft.world.level.levelgen.structure.placement.ConcentricRingsStructurePlacement",
     "net.minecraft.world.level.levelgen.structure.placement.RandomSpreadStructurePlacement",
     "net.minecraft.world.level.levelgen.structure.placement.StructurePlacement",
-    "and 65 more"
+    "net.minecraft.world.level.levelgen.structure.structures.JigsawStructure",
+    "net.minecraft.world.level.levelgen.structure.structures.MineshaftStructure",
+    "net.minecraft.world.level.levelgen.structure.structures.OceanMonumentStructure",
+    "net.minecraft.world.level.levelgen.structure.structures.StrongholdStructure",
+    "net.minecraft.world.level.levelgen.structure.structures.WoodlandMansionStructure",
+    "VertexConsumer.addVertex()",
+    "RenderPipeline.builder()",
+    "ClientReceiveMessageEvents.CHAT",
+    "and 37 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "seedscout-0.3.0+26.3.jar",
     "published": "2026-11-09"
   },
@@ -84,7 +84,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 122,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 77,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

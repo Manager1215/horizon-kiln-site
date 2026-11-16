@@ -19,15 +19,11 @@
     "com.mojang.blaze3d.font.GlyphProvider.Conditional",
     "com.mojang.blaze3d.font.UnbakedGlyph",
     "com.mojang.blaze3d.platform.TextureUtil",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "com.mojang.renderpearl.api.pipeline.BindGroupLayout.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.fabricmc.loader.api.VersionParsingException",
-    "net.minecraft.client.StringSplitter",
     "net.minecraft.client.StringSplitter.LinePosConsumer",
     "net.minecraft.client.StringSplitter.WidthProvider",
     "net.minecraft.client.gui.Font.GlyphVisitor",
@@ -51,14 +47,18 @@
     "net.minecraft.client.gui.font.FontSet",
     "net.minecraft.client.gui.font.FontSet.DelayedBake",
     "net.minecraft.client.gui.font.GlyphRenderTypes",
-    "and 80 more"
+    "net.minecraft.client.gui.font.TextFieldHelper",
+    "net.minecraft.client.gui.font.TextRenderable",
+    "net.minecraft.client.gui.font.TextRenderable.Styled",
+    "net.minecraft.client.gui.font.glyphs.BakedGlyph",
+    "and 70 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "caxton-fabric-26.3-1.2.0-alpha.3.jar",
     "published": "2026-10-23"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 144,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 119,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

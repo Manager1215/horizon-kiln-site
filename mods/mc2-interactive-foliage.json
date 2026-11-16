@@ -41,24 +41,24 @@
     "net.fabricmc.fabric.api.client.model.loading.v1.ModelModifier.AfterBakeBlock.Context",
     "net.fabricmc.fabric.api.client.model.loading.v1.wrapper.WrapperBlockStateModel",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionEvents.EndExtraction",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.multiplayer.ClientChunkCache",
     "net.minecraft.client.renderer.BindGroupLayouts",
     "net.minecraft.client.renderer.DynamicGpuData",
     "net.minecraft.client.renderer.DynamicGpuData.Transform",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.block.BlockQuadOutput",
-    "and 79 more"
+    "net.minecraft.client.renderer.block.ModelBlockRenderer",
+    "net.minecraft.client.renderer.chunk.RenderSectionRegion",
+    "net.minecraft.client.renderer.chunk.SectionRenderDispatcher",
+    "net.minecraft.client.renderer.chunk.SectionRenderDispatcher.RenderSection",
+    "and 73 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mc2_interactivefoliage-2.2.1-fabric+26.3.jar",
     "published": "2026-10-19"
   },
@@ -90,7 +90,11 @@
     "minecraft",
     "sway"
   ],
-  "lacks": 146,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 134,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

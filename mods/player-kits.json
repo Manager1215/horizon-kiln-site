@@ -9,28 +9,18 @@
   "author": "spunkyinsaan",
   "description": "Allows you to store and load your custom kits from anywhere!",
   "needs": [
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.player.RemotePlayer",
-    "net.minecraft.nbt.NbtIo",
-    "Minecraft.execute()",
-    "Minecraft.gameMode",
     "GuiGraphicsExtractor.setTooltipForNextFrame()",
-    "Screen.mouseClicked()",
-    "ClientPacketListener.registryAccess()",
     "LocalPlayer.getGameProfile()",
     "LocalPlayer.getPose()",
-    "ListTag.add()",
-    "MutableComponent.withStyle()",
-    "RegistryOps.create()",
-    "Util.safeReplaceFile()"
+    "ListTag.add()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "PlayerKits-26.3.jar",
     "published": "2026-09-24"
   },
@@ -58,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,10 +11,6 @@
   "needs": [
     "net.minecraft.world.inventory.ContainerLevelAccess",
     "net.minecraft.world.inventory.EnchantmentMenu",
-    "net.minecraft.world.level.storage.LevelResource",
-    "MinecraftServer.getWorldPath()",
-    "Items.LAPIS_LAZULI",
-    "Blocks.ENCHANTING_TABLE",
     "LevelChunk.getBlockEntities()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
@@ -22,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "staylapis-fabric-26.3-1.1.0.jar",
     "published": "2026-10-25"
   },
@@ -51,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

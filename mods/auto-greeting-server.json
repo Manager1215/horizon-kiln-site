@@ -10,19 +10,14 @@
   "description": "Automatically sends greeting messages to players based on configured conditions.",
   "needs": [
     "net.fabricmc.api.DedicatedServerModInitializer",
-    "Commands.LEVEL_ADMINS",
-    "Commands.hasPermission()",
-    "Commands.performPrefixedCommand()",
-    "MinecraftServer.createCommandSourceStack()",
-    "MinecraftServer.getCommands()",
-    "PlayerList.broadcastSystemMessage()"
+    "MinecraftServer.createCommandSourceStack()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "auto-greeting-server-1.2.0.jar",
     "published": "2026-09-21"
   },
@@ -42,7 +37,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

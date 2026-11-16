@@ -9,15 +9,9 @@
   "author": "Kartonek",
   "description": "A simple, lightweight client-side mod for changing your height.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
     "net.minecraft.client.gui.components.PlayerFaceExtractor",
     "net.minecraft.client.renderer.entity.player.AvatarRenderer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
-    "Minecraft.schedule()",
-    "Checkbox.Builder.maxWidth()",
-    "EditBox.setHint()",
     "PlayerInfo.getProfile()",
     "PlayerInfo.getSkin()",
     "AbstractClientPlayer.getGameProfile()",
@@ -28,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tiny-1.0.1+26.3.jar",
     "published": "2026-09-17"
   },
@@ -56,7 +50,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -15,12 +15,7 @@
     "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty",
     "net.minecraft.world.TickRateManager",
     "net.minecraft.world.item.ItemCooldowns",
-    "net.minecraft.world.item.component.ItemLore",
     "BlockPos.distSqr()",
-    "DataComponents.CUSTOM_NAME",
-    "DataComponents.LORE",
-    "DataComponents.TOOLTIP_STYLE",
-    "MutableComponent.setStyle()",
     "SoundEvents.LODESTONE_COMPASS_LOCK",
     "Entity.getVisualRotationYInDegrees()",
     "ItemOwner.asLivingEntity()",
@@ -29,7 +24,6 @@
     "Item.allowComponentsUpdateAnimation()",
     "Level.getChunkAt()",
     "Level.tickRateManager()",
-    "Blocks.ANCIENT_DEBRIS",
     "LevelChunk.findBlocks()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -37,7 +31,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "netherite-compass-1.17.0.jar",
     "published": "2026-09-19"
   },
@@ -68,7 +62,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

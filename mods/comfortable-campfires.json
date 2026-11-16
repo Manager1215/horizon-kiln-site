@@ -9,10 +9,6 @@
   "author": "Cassian",
   "description": "Sitting by the campfire is now just a little more comfortable. Lit campfires now give nearby players Regeneration or a configured effect.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "ServerLifecycleEvents.SERVER_STARTED",
     "BlockPos.containing()",
     "Player.<init>()",
     "Player.isLocalPlayer()",
@@ -20,12 +16,12 @@
     "AABB.expandTowards()",
     "AABB.inflate()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "comfortable_campfires-2.0.1+26.1-snapshot-10-fabric.jar",
     "published": "2026-02-25"
   },
@@ -53,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

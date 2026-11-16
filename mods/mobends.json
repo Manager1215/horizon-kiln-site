@@ -10,8 +10,6 @@
   "description": "If you think that Minecraft characters could be more realistic, instead of steady and rigid animations, this mod is just for you! It makes players seem alive, and adds epic sword animations!",
   "needs": [
     "an access widener",
-    "com.mojang.authlib.GameProfile",
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
     "net.fabricmc.loader.api.metadata.ModOrigin",
     "net.fabricmc.loader.api.metadata.ModOrigin.Kind",
     "net.minecraft.IdentifierException",
@@ -50,6 +48,8 @@
     "net.minecraft.client.renderer.entity.layers.WolfArmorLayer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "net.minecraft.client.renderer.entity.state.WolfRenderState",
+    "net.minecraft.world.entity.WalkAnimationState",
+    "net.minecraft.world.entity.animal.chicken.Chicken",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mobends-2.0.0-alpha.4+26.3-fabric.jar",
     "published": "2026-11-12"
   },
@@ -84,7 +84,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 187,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 173,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

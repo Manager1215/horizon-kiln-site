@@ -11,11 +11,8 @@
   "needs": [
     "an access widener",
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
-    "net.minecraft.commands.arguments.coordinates.Vec3Argument",
     "net.minecraft.server.players.UserWhiteList",
-    "net.minecraft.world.entity.Pose",
     "net.minecraft.world.entity.SpawnPlacementType",
     "net.minecraft.world.entity.SpawnPlacementTypes",
     "net.minecraft.world.entity.ai.targeting.TargetingConditions",
@@ -25,11 +22,6 @@
     "net.minecraft.world.item.component.ResolvableProfile.Dynamic",
     "net.minecraft.world.level.CustomSpawner",
     "net.minecraft.world.level.LightLayer",
-    "AttachmentRegistry.createPersistent()",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "CommandSourceStack.getPosition()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "BlockPos.containing()",
     "ServerLevel.addFreshEntityWithPassengers()",
     "ServerLevel.broadcastEntityEvent()",
@@ -41,24 +33,18 @@
     "PlayerList.getWhiteList()",
     "EntityReference.of()",
     "EntityTypes.MANNEQUIN",
-    "Items.BOW",
-    "Items.CROSSBOW",
-    "Items.DIAMOND_HOE",
-    "Items.GOLDEN_AXE",
-    "Items.GOLDEN_HOE",
-    "Items.GOLDEN_PICKAXE",
-    "Items.GOLDEN_SWORD",
-    "Items.IRON_AXE",
-    "Items.IRON_HOE",
-    "Items.IRON_PICKAXE",
-    "and 22 more"
+    "Level.<init>()",
+    "ServerLevelAccessor.getBrightness()",
+    "ServerLevelAccessor.getMaxLocalRawBrightness()",
+    "ServerLevelAccessor.getMaxLocalRawBrightness()",
+    "AABB.inflate()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "DistantFriends-fabric-26.3-0.17.1.jar",
     "published": "2026-11-15"
   },
@@ -89,7 +75,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 62,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 27,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,7 +10,6 @@
   "description": "A configurable enhanced Ender Dragon Fight staying true to vanilla",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.damagesource.DamageTypes",
     "net.minecraft.world.entity.boss.enderdragon.EndCrystal",
     "net.minecraft.world.entity.boss.enderdragon.EnderDragon",
@@ -25,10 +24,6 @@
     "ServerLevel.getEntitiesOfClass()",
     "ServerLevel.getGameRules()",
     "ServerLevel.getHeightmapPos()",
-    "ServerPlayer.giveExperiencePoints()",
-    "PlayerList.broadcastSystemMessage()",
-    "DamageSource.getEntity()",
-    "DamageSource.is()",
     "EntityTypes.END_CRYSTAL",
     "EntityTypes.SHULKER",
     "ExperienceOrb.award()",
@@ -36,8 +31,6 @@
     "ServerLevelAccessor.addFreshEntity()",
     "ServerLevelAccessor.getEntitiesOfClass()",
     "ServerLevelAccessor.setBlock()",
-    "Blocks.FIRE",
-    "Blocks.OBSIDIAN",
     "GameRules.MOB_DROPS",
     "GameRules.get()",
     "AABB.inflate()"
@@ -47,7 +40,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "BetterVanillaDragonFight-v1.0.1+26.3.0.jar",
     "published": "2026-10-29"
   },
@@ -76,7 +69,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 31,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 24,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

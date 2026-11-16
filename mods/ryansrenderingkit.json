@@ -24,8 +24,6 @@
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "com.mojang.renderpearl.api.vertex.VertexFormatElement",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
     "net.minecraft.client.renderer.DynamicGpuData",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.StagedVertexBuffer.Draw",
@@ -38,7 +36,6 @@
     "net.minecraft.client.renderer.rendertype.RenderSetup",
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
     "net.minecraft.client.renderer.rendertype.TextureTransform",
-    "net.minecraft.gizmos.GizmoStyle",
     "net.minecraft.util.profiling.Profiler",
     "net.minecraft.util.profiling.ProfilerFiller",
     "RenderTarget.hasDepth()",
@@ -50,14 +47,17 @@
     "PoseStack.last()",
     "PoseStack.mulPose()",
     "PoseStack.translate()",
-    "and 51 more"
+    "PoseStack.Pose.pose()",
+    "VertexConsumer.addVertex()",
+    "VertexConsumer.addVertex()",
+    "and 48 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ryansrenderingkit-1.3.3+26.3.jar",
     "published": "2026-10-31"
   },
@@ -83,7 +83,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 101,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 91,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

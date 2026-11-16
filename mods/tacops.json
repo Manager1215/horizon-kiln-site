@@ -12,8 +12,6 @@
     "Mixin: 12 points inside the game's methods",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
     "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionEvents.EndExtraction",
@@ -22,12 +20,9 @@
     "net.fabricmc.fabric.api.item.v1.ItemComponentTooltipProviderRegistry",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
     "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
-    "net.minecraft.client.CameraType",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.model.HumanoidModel.ArmPose",
     "net.minecraft.client.model.player.PlayerModel",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.particle.SingleQuadParticle",
     "net.minecraft.client.particle.SingleQuadParticle.Layer",
     "net.minecraft.client.particle.SpriteSet",
@@ -49,15 +44,20 @@
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.tags.DamageTypeTags",
-    "net.minecraft.tags.ItemTags",
-    "and 80 more"
+    "net.minecraft.util.random.WeightedList.Builder",
+    "net.minecraft.world.entity.LivingEntity.Fallsounds",
+    "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
+    "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
+    "net.minecraft.world.entity.monster.Enemy",
+    "net.minecraft.world.entity.projectile.Projectile.ProjectileFactory",
+    "and 71 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "TacOps-1.0.0.jar",
     "published": "2026-10-11"
   },
@@ -89,7 +89,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 290,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 229,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

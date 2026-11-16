@@ -10,30 +10,23 @@
   "description": "Customize the Wardens health and attack damage. Get rewarded with loot.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.loader.api.VersionParsingException",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.entity.ai.behavior.warden.SonicBoom",
     "net.minecraft.world.entity.monster.warden.Warden",
     "net.minecraft.world.level.storage.loot.providers.number.ints.ConstantValue",
     "net.minecraft.world.level.storage.loot.providers.number.ints.UniformGenerator",
-    "ServerLifecycleEvents.SERVER_STARTED",
     "Version.parse()",
     "ServerLevel.getEntity()",
-    "DamageSource.getEntity()",
     "AttributeInstance.addPermanentModifier()",
     "AttributeInstance.getModifier()",
-    "AttributeInstance.removeModifier()",
-    "Items.ECHO_SHARD",
-    "Items.NETHERITE_SCRAP",
-    "Items.SCULK_CATALYST"
+    "AttributeInstance.removeModifier()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "harder-wardens-1.1.11.jar",
     "published": "2026-10-31"
   },
@@ -61,7 +54,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

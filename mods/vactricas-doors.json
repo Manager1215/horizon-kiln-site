@@ -29,7 +29,6 @@
     "net.minecraft.world.level.pathfinder.PathType",
     "net.minecraft.world.level.pathfinder.WalkNodeEvaluator",
     "Axis.ZP",
-    "Minecraft.hitResult",
     "RenderTypes.itemCutout()",
     "BlockPos.MutableBlockPos.set()",
     "Resource.<init>()",
@@ -42,22 +41,23 @@
     "ClipContext.getTo()",
     "Level.clip()",
     "Level.clipIncludingBorder()",
-    "Level.destroyBlock()",
     "Level.hasNeighborSignal()",
     "BaseEntityBlock.onExplosionHit()",
     "BaseEntityBlock.updateShape()",
-    "Blocks.LIGHT",
-    "DoorBlock.isOpen()",
     "DoorBlock.isWoodenDoor()",
-    "DoorBlock.setOpen()",
-    "and 8 more"
+    "BlockBehaviour.Properties.pushReaction()",
+    "BlockState.canBeReplaced()",
+    "BlockState.is()",
+    "GameEvent.BLOCK_CLOSE",
+    "GameEvent.BLOCK_OPEN",
+    "and 2 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Vactrica's Doors Mod v1.1.0 (26.3).jar",
     "published": "2026-09-16"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 48,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 42,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

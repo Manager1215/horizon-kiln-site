@@ -9,20 +9,13 @@
   "author": "HachizuOrigami",
   "description": "Yes, this mod will mess up your crafting recipe every 10 minute (even modpack)",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.minecraft.world.level.storage.WorldData",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "CommandSourceStack.getServer()",
     "Registry.iterator()",
     "MinecraftServer.getTickCount()",
     "MinecraftServer.getWorldData()",
     "ServerBossEvent.getPlayers()",
     "ServerBossEvent.removeAllPlayers()",
     "ServerBossEvent.setName()",
-    "PermissionLevel.byId()",
-    "PlayerList.broadcastSystemMessage()",
     "PlayerList.reloadResources()",
     "RecipeManager.finalizeRecipeLoading()"
   ],
@@ -31,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "randomcraft-fabric-26.3-1.2.0.jar",
     "published": "2026-10-07"
   },
@@ -59,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

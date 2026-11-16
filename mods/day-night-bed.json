@@ -10,10 +10,6 @@
   "description": "Use a vanilla bed at any time to toggle world time between day and night.",
   "needs": [
     "Mixin: 4 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.network.chat.ComponentContents",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.server.level.ServerPlayer.RespawnConfig",
     "net.minecraft.world.attribute.BedRule",
     "net.minecraft.world.clock.ClockTimeMarkers",
@@ -22,14 +18,10 @@
     "net.minecraft.world.entity.player.Player.BedSleepingProblem",
     "net.minecraft.world.level.block.AbstractBedBlock",
     "net.minecraft.world.level.block.state.properties.BedPart",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "Minecraft.getSingleplayerServer()",
     "Minecraft.isLocalServer()",
     "LocalPlayer.getSleepTimer()",
     "LocalPlayer.isSleeping()",
     "BlockPos.toShortString()",
-    "Component.getContents()",
     "MinecraftServer.clockManager()",
     "ServerLevel.getGameRules()",
     "ServerLevel.resetWeatherCycle()",
@@ -40,7 +32,6 @@
     "ServerPlayer.isSleepingLongEnough()",
     "ServerPlayer.resetStat()",
     "ServerPlayer.setRespawnPosition()",
-    "Level.getDefaultClockTime()",
     "Level.isBrightOutside()",
     "Level.isDarkOutside()",
     "HorizontalDirectionalBlock.FACING",
@@ -54,7 +45,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "day_night_bed-2.0.0.jar",
     "published": "2026-10-29"
   },
@@ -83,7 +74,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 38,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 29,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

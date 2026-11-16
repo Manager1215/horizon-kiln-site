@@ -9,7 +9,6 @@
   "author": "Neerajisafk",
   "description": "This mod gives you the cleanest blur\nAlmost 90% similar to lunar motion blur",
   "needs": [
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.renderer.LevelTargetBundle",
     "net.minecraft.client.renderer.PostChain",
     "net.minecraft.client.renderer.ShaderManager",
@@ -17,7 +16,6 @@
     "RenderTarget.resize()",
     "RenderTarget.width",
     "Minecraft.getShaderManager()",
-    "Options.getCameraType()",
     "GameRenderer.getAppliedPostEffects()",
     "GameRenderer.getRequestedPostEffects()"
   ],
@@ -26,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "afkzmotionblur-1.0+26.3.jar",
     "published": "2026-09-20"
   },
@@ -53,7 +51,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

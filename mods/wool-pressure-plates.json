@@ -11,14 +11,11 @@
   "needs": [
     "an access widener",
     "net.minecraft.references.BlockItemId",
-    "FabricCreativeModeTabOutput.acceptAll()",
     "FabricCreativeModeTabOutput.insertAfter()",
-    "Registry.get()",
     "BuiltInRegistries.REGISTRY",
     "SoundEvents.EMPTY",
     "SoundEvents.WOODEN_PRESSURE_PLATE_CLICK_OFF",
     "SoundEvents.WOODEN_PRESSURE_PLATE_CLICK_ON",
-    "Items.STONE_PRESSURE_PLATE",
     "Level.playSound()",
     "Level.setBlocksDirty()",
     "ColorCollection.NAMES",
@@ -35,7 +32,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "woolplates-fabric-26.3-1.6.jar",
     "published": "2026-09-19"
   },
@@ -64,7 +61,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

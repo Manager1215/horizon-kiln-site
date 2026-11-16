@@ -15,8 +15,6 @@
     "net.minecraft.core.particles.BlockParticleOption",
     "net.minecraft.core.particles.DustParticleOptions",
     "net.minecraft.server.level.ServerPlayerGameMode",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Direction.Plane.shuffledCopy()",
     "ParticleTypes.BLOCK",
     "ServerLevel.getMaxY()",
@@ -27,18 +25,14 @@
     "ServerPlayer.gameMode",
     "ServerPlayer.mayInteract()",
     "SoundEvents.STONE_BREAK",
-    "Blocks.TORCH",
-    "Blocks.WALL_TORCH",
-    "SoundType.getPlaceSound()",
-    "BlockState.canBeReplaced()",
-    "BlockState.getSoundType()"
+    "BlockState.canBeReplaced()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "miners_dream-fabric-26.3-1.0.1.jar",
     "published": "2026-10-12"
   },
@@ -66,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

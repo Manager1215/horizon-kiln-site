@@ -9,10 +9,7 @@
   "author": "SwordfishBE",
   "description": "Adds naturally spawning undead horsemen to the overworld surface. Six types in total, each tied to a fitting biome.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.loader.api.VersionParsingException",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.damagesource.DamageTypes",
     "net.minecraft.world.entity.animal.equine.AbstractHorse",
     "net.minecraft.world.entity.animal.equine.SkeletonHorse",
@@ -30,14 +27,7 @@
     "net.minecraft.world.entity.monster.zombie.ZombifiedPiglin",
     "net.minecraft.world.level.StructureManager",
     "net.minecraft.world.level.levelgen.structure.BuiltinStructures",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "Version.parse()",
-    "CommandSourceStack.getPlayerOrException()",
-    "Registry.getOrThrow()",
-    "RegistryAccess.lookupOrThrow()",
-    "MinecraftServer.execute()",
-    "MinecraftServer.isSameThread()",
     "ServerChunkCache.getChunkNow()",
     "ServerLevel.getAllEntities()",
     "ServerLevel.getBiome()",
@@ -49,14 +39,24 @@
     "ServerLevel.getMaxY()",
     "ServerLevel.getMinY()",
     "ServerLevel.getOverworldClockTime()",
-    "and 41 more"
+    "ServerLevel.getPlayers()",
+    "ServerLevel.isPositionEntityTicking()",
+    "ServerLevel.isSpawningMonsters()",
+    "ServerLevel.structureManager()",
+    "ServerPlayer.isAlive()",
+    "EnvironmentAttributeSystem.getValue()",
+    "EnvironmentAttributes.MONSTERS_BURN",
+    "Entity.addTag()",
+    "Entity.entityTags()",
+    "Entity.getFirstPassenger()",
+    "and 38 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "undead-riders-1.2.7.jar",
     "published": "2026-10-25"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 123,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 82,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

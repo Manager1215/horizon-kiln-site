@@ -13,7 +13,6 @@
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.client.model.geom.PartPose",
     "net.minecraft.client.model.geom.builders.CubeListBuilder",
     "net.minecraft.client.model.geom.builders.MeshDefinition",
@@ -39,25 +38,21 @@
     "FileToIdConverter.registry()",
     "PackResources.location()",
     "SoundEvents.FLINTANDSTEEL_USE",
-    "Stats.INTERACT_WITH_CAMPFIRE",
     "InteractionHand.asEquipmentSlot()",
     "Player.addItem()",
-    "Player.getRandom()",
     "Level.gameEvent()",
     "Level.isRainingAt()",
     "Level.levelEvent()",
-    "Blocks.CAMPFIRE",
-    "Blocks.SOUL_CAMPFIRE",
     "BlockState.is()",
     "DimensionType.infiniburn()",
-    "and 1 more"
+    "GameEvent.BLOCK_CHANGE"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "11.0.0-beta+26.3-fabric.jar",
     "published": "2026-09-24"
   },
@@ -86,7 +81,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 41,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 36,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

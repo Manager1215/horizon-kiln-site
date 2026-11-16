@@ -12,23 +12,16 @@
     "an access widener",
     "net.minecraft.world.item.PotionItem",
     "net.minecraft.world.item.TippedArrowItem",
-    "net.minecraft.world.item.alchemy.Potion",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "net.minecraft.world.item.alchemy.Potions",
-    "org.apache.logging.log4j.LogManager",
-    "DataComponents.POTION_CONTENTS",
     "Registries.MOB_EFFECT",
-    "Registries.POTION",
     "Registries.elementsDirPath()",
-    "Identifier.toLanguageKey()",
-    "DyeColor.getTextureDiffuseColor()"
+    "Identifier.toLanguageKey()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "distinctpotions-v26.3.0-mc26.3.x+fabric.jar",
     "published": "2026-09-27"
   },
@@ -58,7 +51,11 @@
     "minecraft",
     "puzzleslib"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

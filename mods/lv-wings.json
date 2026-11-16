@@ -10,7 +10,6 @@
   "description": "Soaring through the sky with wings",
   "needs": [
     "Mixin: 5 points inside the game's methods",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
     "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback",
     "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback.RegistrationHelper",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
@@ -27,7 +26,6 @@
     "net.fabricmc.fabric.api.event.registry.RegistryAttribute",
     "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents",
     "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents.StartTracking",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.model.geom.ModelLayers",
     "net.minecraft.client.model.geom.PartPose",
     "net.minecraft.client.model.geom.builders.CubeDeformation",
@@ -48,16 +46,18 @@
     "net.minecraft.client.resources.sounds.AbstractTickableSoundInstance",
     "net.minecraft.commands.arguments.ResourceArgument",
     "net.minecraft.server.level.ServerPlayerGameMode",
-    "net.minecraft.server.permissions.PermissionCheck",
-    "net.minecraft.server.permissions.PermissionCheck.Require",
-    "and 72 more"
+    "net.minecraft.world.entity.ai.navigation.PathNavigation",
+    "net.minecraft.world.entity.ambient.Bat",
+    "net.minecraft.world.entity.monster.Enemy",
+    "net.minecraft.world.item.MapItem",
+    "and 64 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "wings-26.3-Fabric-1.1.11.jar",
     "published": "2026-09-15"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 150,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 115,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

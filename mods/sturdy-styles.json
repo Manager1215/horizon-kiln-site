@@ -28,8 +28,6 @@
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
     "net.minecraft.client.renderer.entity.state.ZombieRenderState",
-    "net.minecraft.network.chat.contents.TranslatableContents",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.monster.piglin.Piglin",
     "net.minecraft.world.entity.monster.skeleton.AbstractSkeleton",
     "net.minecraft.world.entity.monster.zombie.Zombie",
@@ -39,9 +37,6 @@
     "EntityRendererProvider.Context.getItemModelResolver()",
     "ModelManager.getItemModel()",
     "DataComponents.DYED_COLOR",
-    "MutableComponent.create()",
-    "MutableComponent.withStyle()",
-    "Mob.getRandom()",
     "Item.Properties.equippable()",
     "Items.HARNESS",
     "Level.getDifficulty()"
@@ -51,7 +46,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sturdy_styles-1.2.0.jar",
     "published": "2026-09-25"
   },
@@ -80,7 +75,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 35,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 30,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

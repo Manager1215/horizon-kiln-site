@@ -9,16 +9,14 @@
   "author": "csgd",
   "description": "Shows your coordinates with a keybind.",
   "needs": [
-    "org.lwjgl.sdl.SDLMouse",
-    "InputConstants.isKeyDown()",
-    "KeyMapping.saveString()"
+    "org.lwjgl.sdl.SDLMouse"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "coordsmod-1.1.0+mc26.3.jar",
     "published": "2026-11-08"
   },
@@ -49,7 +47,11 @@
     "minecraft",
     "modmenu"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

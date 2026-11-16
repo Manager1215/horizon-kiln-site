@@ -11,26 +11,17 @@
   "needs": [
     "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
     "net.minecraft.core.UUIDUtil",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.inventory.ContainerLevelAccess",
-    "CommandSourceStack.getPlayerOrException()",
-    "Commands.LEVEL_ADMINS",
-    "Commands.hasPermission()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
     "NonNullList.iterator()",
     "MinecraftServer.getDataStorage()",
-    "ServerPlayer.drop()",
-    "ServerPlayer.sendSystemMessage()",
-    "AbstractContainerMenu.stillValid()",
-    "HitResult.getType()"
+    "AbstractContainerMenu.stillValid()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "aps-fabric-26.3-1.2.1.jar",
     "published": "2026-10-03"
   },
@@ -59,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

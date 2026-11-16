@@ -10,8 +10,6 @@
   "description": "Reload dialogs added in Minecraft 1.21.6 without restarting server,",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.minecraft.core.Holder.Kind",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.LayeredRegistryAccess",
     "net.minecraft.core.RegistrationInfo",
     "net.minecraft.core.RegistryAccess.ImmutableRegistryAccess",
@@ -28,17 +26,9 @@
     "net.minecraft.tags.TagLoader",
     "net.minecraft.tags.TagLoader.ElementLookup",
     "net.minecraft.util.StrictJsonParser",
-    "Holder.kind()",
-    "HolderGetter.get()",
-    "HolderGetter.get()",
-    "HolderGetter.getOrThrow()",
     "HolderLookup.Provider.create()",
     "HolderLookup.Provider.listRegistries()",
     "MappedRegistry.<init>()",
-    "MappedRegistry.get()",
-    "MappedRegistry.get()",
-    "MappedRegistry.getOrThrow()",
-    "MappedRegistry.getOrThrow()",
     "RegistryAccess.Frozen.listRegistries()",
     "Registries.DIALOG",
     "Registries.WORLD_PRESET",
@@ -46,7 +36,6 @@
     "FileToIdConverter.fileToId()",
     "FileToIdConverter.listMatchingResources()",
     "FileToIdConverter.registry()",
-    "RegistryOps.create()",
     "Dialog.DIRECT_CODEC"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
@@ -54,7 +43,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "unobfuscated.jar",
     "published": "2026-09-29"
   },
@@ -69,7 +58,11 @@
   "depends": [
     "minecraft"
   ],
-  "lacks": 38,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 27,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,21 +9,13 @@
   "author": "thegwimweeper",
   "description": "A simple way to edit the position of F3 elements via the F3 + F6 menu",
   "needs": [
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
     "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
     "net.minecraft.client.gui.components.debug.DebugScreenEntry",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
     "net.minecraft.client.gui.screens.debug.DebugOptionsScreen",
     "net.minecraft.client.gui.screens.debug.DebugOptionsScreen.AbstractOptionEntry",
     "net.minecraft.client.gui.screens.debug.DebugOptionsScreen.OptionEntry",
     "net.minecraft.client.gui.screens.debug.DebugOptionsScreen.OptionList",
-    "Minecraft.debugEntries",
-    "GuiGraphicsExtractor.setTooltipForNextFrame()",
+    "DebugScreenEntries.getEntry()",
     "CommonComponents.optionNameValue()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -31,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "f3-editor-1.0.0.jar",
     "published": "2026-10-17"
   },
@@ -59,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

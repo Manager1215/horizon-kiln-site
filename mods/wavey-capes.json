@@ -10,7 +10,6 @@
   "description": "The cape shouldn't be a static slab",
   "needs": [
     "net.minecraft.client.entity.ClientMannequin",
-    "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
     "net.minecraft.client.model.geom.PartPose",
     "net.minecraft.client.model.geom.builders.CubeDeformation",
     "net.minecraft.client.model.geom.builders.CubeListBuilder",
@@ -22,8 +21,6 @@
     "net.minecraft.client.renderer.entity.layers.RenderLayer",
     "net.minecraft.client.renderer.entity.player.AvatarRenderer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "PoseStack.last()",
     "PoseStack.Pose.pose()",
     "PoseStack.Pose.set()",
@@ -34,7 +31,6 @@
     "RenderTypes.armorCutoutNoCull()",
     "RenderTypes.entityTranslucent()",
     "RenderTypes.trimmedArmorGlint()",
-    "CommonComponents.GUI_DONE",
     "Avatar.isCrouching()",
     "Avatar.isVisuallySwimming()",
     "Avatar.xo",
@@ -49,7 +45,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "waveycapes-fabric-1.11.3-mc26.3.jar",
     "published": "2026-10-17"
   },
@@ -76,7 +72,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 34,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 30,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

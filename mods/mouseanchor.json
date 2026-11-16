@@ -11,16 +11,13 @@
   "needs": [
     "Mixin: 2 points inside the game's methods",
     "net.minecraft.client.OptionInstance.CaptionBasedToString",
-    "net.minecraft.client.OptionInstance.IntRange",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
     "net.minecraft.client.gui.components.OptionsList",
     "net.minecraft.client.gui.screens.options.MouseSettingsScreen",
     "net.minecraft.client.gui.screens.options.OptionsSubScreen",
     "org.lwjgl.sdl.SDLMouse",
     "Window.handle()",
-    "Minecraft.gameDirectory",
     "OptionInstance.<init>()",
     "OptionInstance.cachedConstantTooltip()",
     "Options.genericValueLabel()"
@@ -30,7 +27,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "MouseAnchor-1.0.1+26.3.jar",
     "published": "2026-10-14"
   },
@@ -57,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

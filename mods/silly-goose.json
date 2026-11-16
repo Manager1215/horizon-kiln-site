@@ -39,7 +39,6 @@
     "net.minecraft.client.renderer.entity.state.ArmedEntityRenderState",
     "net.minecraft.client.renderer.texture.MissingTextureAtlasSprite",
     "net.minecraft.client.resources.SplashManager",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.core.particles.ItemParticleOption",
     "net.minecraft.core.registries.codec.RegistryFixedCodec",
@@ -47,8 +46,9 @@
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.server.PlayerAdvancements",
     "net.minecraft.server.ServerAdvancementManager",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.SimpleContainer",
+    "net.minecraft.world.entity.AnimationState",
+    "net.minecraft.world.entity.SpawnGroupData",
+    "net.minecraft.world.entity.SpawnPlacementTypes",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -56,7 +56,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "silly-goose-1.1.0-26.3.jar",
     "published": "2026-09-28"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 177,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 160,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

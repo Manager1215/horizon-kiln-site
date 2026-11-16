@@ -9,33 +9,15 @@
   "author": "Walksy",
   "description": "Store and load custom kits",
   "needs": [
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.gui.screens.recipebook.CraftingRecipeBookComponent",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.network.chat.contents.TranslatableContents",
-    "net.minecraft.world.entity.EntityEquipment",
-    "net.minecraft.world.inventory.ChestMenu",
-    "net.minecraft.world.inventory.ContainerInput",
-    "KeyMapping.matches()",
-    "Minecraft.execute()",
-    "Minecraft.gameMode",
-    "Options.keyInventory",
-    "Button.getRight()",
-    "Button.setRectangle()",
-    "Button.Builder.tooltip()",
-    "Screen.charTyped()",
-    "ClientPacketListener.getCommands()",
-    "Component.getContents()",
-    "Inventory.<init>()"
+    "ClientPacketListener.getCommands()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ClientKits-2.1.0+26.3.jar",
     "published": "2026-10-09"
   },
@@ -64,7 +46,11 @@
     "minecraft",
     "walksylib"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

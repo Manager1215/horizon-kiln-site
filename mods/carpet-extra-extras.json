@@ -15,7 +15,6 @@
     "net.minecraft.server.level.DistanceManager",
     "net.minecraft.server.level.ServerPlayerGameMode",
     "net.minecraft.server.players.SleepStatus",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.projectile.ProjectileUtil",
     "net.minecraft.world.entity.projectile.ThrowableProjectile",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile",
@@ -29,14 +28,9 @@
     "net.minecraft.world.scores.PlayerTeam",
     "net.minecraft.world.scores.TeamColor",
     "org.apache.commons.io.IOUtils",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
     "BlockPos.betweenClosedStream()",
     "BlockPos.containing()",
-    "SectionPos.blockToSectionCoord()",
-    "MutableComponent.withStyle()",
     "ResourceKey.codec()",
-    "MinecraftServer.execute()",
     "MinecraftServer.getScoreboard()",
     "MinecraftServer.getTickCount()",
     "MinecraftServer.isDedicatedServer()",
@@ -47,17 +41,23 @@
     "ServerLevel.getGameRules()",
     "ServerLevel.noCollision()",
     "ServerPlayer.absSnapTo()",
-    "ServerPlayer.connection",
     "ServerPlayer.gameMode",
     "ServerPlayer.getBoundingBox()",
-    "and 39 more"
+    "ServerPlayer.getPose()",
+    "ServerPlayer.getRotationVector()",
+    "ServerPlayer.isAlive()",
+    "ServerPlayer.isChangingDimension()",
+    "ServerPlayer.isPassenger()",
+    "ServerPlayer.isSleeping()",
+    "ServerPlayer.noPhysics",
+    "and 30 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "carpet-extra-extras-26.3-1.5.0.jar",
     "published": "2026-10-15"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 84,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes"
+  },
+  "lacks": 70,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

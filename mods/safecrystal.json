@@ -10,19 +10,14 @@
   "description": "Prevents punching obsidian while holding an end crystal (client-side).",
   "needs": [
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
-    "InputConstants.Type.getOrCreate()",
-    "KeyMapping.resetMapping()",
-    "KeyMapping.saveString()",
-    "KeyMapping.setKey()",
-    "ClientPacketListener.setActionBarText()",
-    "Blocks.OBSIDIAN"
+    "ClientPacketListener.setActionBarText()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nocrystalbreak-S1+mc26.3-fabric.jar",
     "published": "2026-10-04"
   },
@@ -52,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

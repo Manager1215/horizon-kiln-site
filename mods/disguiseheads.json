@@ -9,8 +9,6 @@
   "author": "tr7zw",
   "description": "Swap skins when wearing a player head",
   "needs": [
-    "com.mojang.authlib.GameProfile",
-    "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
     "net.minecraft.client.model.player.PlayerModel",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.layers.CustomHeadLayer",
@@ -21,11 +19,9 @@
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
     "net.minecraft.client.resources.DefaultPlayerSkin",
     "net.minecraft.core.UUIDUtil",
-    "net.minecraft.world.entity.EntityEquipment",
     "net.minecraft.world.item.component.ResolvableProfile",
     "net.minecraft.world.level.block.AbstractSkullBlock",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
+    "GameProfile.properties()",
     "Minecraft.getEntityRenderDispatcher()",
     "Minecraft.getSkinManager()",
     "EntityRenderDispatcher.getRenderer()",
@@ -33,17 +29,14 @@
     "SkinManager.get()",
     "DataComponents.CUSTOM_MODEL_DATA",
     "DataComponents.PROFILE",
-    "CommonComponents.GUI_DONE",
-    "Player.<init>()",
-    "Items.ARMOR_STAND",
-    "Items.PLAYER_HEAD"
+    "Player.<init>()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "disguiseheads-fabric-1.4.2-mc26.3.jar",
     "published": "2026-09-24"
   },
@@ -70,7 +63,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; has network channels"
+  },
+  "lacks": 21,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

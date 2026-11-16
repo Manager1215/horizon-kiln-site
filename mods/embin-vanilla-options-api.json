@@ -15,11 +15,9 @@
     "net.minecraft.client.OptionInstance.Enum",
     "net.minecraft.client.OptionInstance.SliderableEnum",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
     "net.minecraft.client.Options.FieldAccess",
     "net.minecraft.client.gui.components.OptionsList",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.layouts.GridLayout",
     "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
     "net.minecraft.client.gui.screens.CreditsAndAttributionScreen",
@@ -36,27 +34,22 @@
     "net.minecraft.client.gui.screens.options.controls.ControlsScreen",
     "net.minecraft.client.gui.screens.packs.PackSelectionScreen",
     "net.minecraft.client.gui.screens.telemetry.TelemetryInfoScreen",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Minecraft.allowsTelemetry()",
     "Minecraft.getResourcePackDirectory()",
     "Minecraft.getResourcePackRepository()",
-    "Minecraft.setScreenAndShow()",
     "OptionInstance.<init>()",
     "OptionInstance.cachedConstantTooltip()",
     "OptionInstance.createBoolean()",
     "OptionInstance.createButton()",
     "OptionInstance.noTooltip()",
-    "Options.updateResourcePacks()",
-    "Button.setTooltip()",
-    "Identifier.toLanguageKey()"
+    "Options.updateResourcePacks()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "vanillaoptionsapi-1.2.0.jar",
     "published": "2026-05-28"
   },
@@ -84,7 +77,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 39,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 32,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

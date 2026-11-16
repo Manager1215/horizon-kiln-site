@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 22 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.minecraft.MinecraftProfileTexture",
     "com.mojang.authlib.minecraft.MinecraftProfileTexture.Type",
     "com.mojang.authlib.minecraft.MinecraftProfileTextures",
@@ -40,25 +39,26 @@
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "com.mojang.util.UUIDTypeAdapter",
     "net.fabricmc.fabric.api.client.rendering.v1.ClientTooltipComponentCallback",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AfterKeyPress",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-    "net.minecraft.CrashReport",
-    "net.minecraft.CrashReportCategory",
-    "net.minecraft.ReportedException",
     "net.minecraft.client.ClientRecipeBook",
     "net.minecraft.client.GameNarrator",
     "net.minecraft.client.TextureFilteringMethod",
     "net.minecraft.client.entity.ClientMannequin",
     "net.minecraft.client.gui.ActiveTextCollector",
+    "net.minecraft.client.gui.ActiveTextCollector.ClickableStyleFinder",
+    "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
+    "net.minecraft.client.gui.components.MultiLineTextWidget",
+    "net.minecraft.client.gui.components.WidgetTooltipHolder",
+    "net.minecraft.client.gui.render.GuiItemAtlas",
+    "net.minecraft.client.gui.render.GuiRenderer.Draw",
+    "net.minecraft.client.gui.render.pip.GuiBannerResultRenderer",
     "and 80 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "wikirenderer-2.6+26.3.jar",
     "published": "2026-09-20"
   },
@@ -85,7 +85,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 750,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @overwrite and @redirect and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 640,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

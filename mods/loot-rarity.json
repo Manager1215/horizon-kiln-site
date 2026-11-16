@@ -10,7 +10,6 @@
   "description": "Inspirated from an outdated mod, a fully redesigned loot rarity mod that is indicated by beams of light from the items on the ground.  Fully customizable!",
   "needs": [
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-    "net.minecraft.world.item.TooltipFlag.Default",
     "VertexConsumer.addVertex()",
     "VertexConsumer.setColor()",
     "VertexConsumer.setLight()",
@@ -23,19 +22,10 @@
     "LocalPlayer.getEyeY()",
     "LocalPlayer.isCrouching()",
     "RenderTypes.entityTranslucent()",
-    "DefaultedRegistry.wrapAsHolder()",
-    "Holder.is()",
-    "Component.getSiblings()",
-    "FormattedCharSequence.forward()",
     "Entity.getEyeY()",
     "EntityTypes.ITEM",
     "ItemEntity.getBoundingBox()",
     "ItemEntity.getItem()",
-    "Item.TooltipContext.EMPTY",
-    "ItemStack.getRarity()",
-    "ItemStack.getTooltipLines()",
-    "TooltipFlag.NORMAL",
-    "CustomData.copyTag()",
     "AABB.inflate()",
     "AABB.maxY"
   ],
@@ -44,7 +34,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "lootrarity-1.1.0.jar",
     "published": "2026-10-01"
   },
@@ -73,7 +63,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 29,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 19,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

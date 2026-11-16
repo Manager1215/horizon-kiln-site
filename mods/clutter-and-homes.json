@@ -12,8 +12,6 @@
     "an access widener",
     "net.minecraft.server.TickTask",
     "net.minecraft.world.item.BoneMealItem",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "MinecraftServer.getTickCount()",
     "ServerLevel.getGameRules()",
     "ServerPlayer.takeXpDelay",
@@ -26,16 +24,15 @@
     "LivingEntity.wasExperienceConsumed()",
     "ItemEntity.getItem()",
     "BlockPlaceContext.<init>()",
-    "Level.isEmptyBlock()",
     "GameRules.MOB_DROPS",
     "GameRules.get()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "clutter_and_homes-7.0.0-fabric-26.3.jar",
     "published": "2026-11-08"
   },
@@ -64,7 +61,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "partial",
+    "why": "generates in the world"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

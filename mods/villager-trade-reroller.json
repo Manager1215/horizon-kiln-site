@@ -10,10 +10,6 @@
   "description": "Quickly reroll villager trades instantly using a hotkey or button without breaking workstations.",
   "needs": [
     "an access widener",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AllowKeyPress",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AllowKeyRelease",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.inventory.MerchantScreen",
     "net.minecraft.client.gui.screens.inventory.MerchantScreen.TradeOfferButton",
     "net.minecraft.world.entity.npc.villager.Villager",
@@ -22,10 +18,6 @@
     "net.minecraft.world.inventory.MerchantMenu",
     "net.minecraft.world.item.trading.Merchant",
     "net.minecraft.world.item.trading.MerchantOffer",
-    "KeyMapping.getTranslatedKeyMessage()",
-    "KeyMapping.isUnbound()",
-    "KeyMapping.matches()",
-    "Button.Builder.tooltip()",
     "ServerLevel.sendParticles()",
     "ServerPlayer.distanceToSqr()",
     "ServerPlayer.sendMerchantOffers()",
@@ -35,12 +27,12 @@
     "MerchantOffers.iterator()",
     "MerchantOffers.size()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "villager-trade-reroller-1.0.3.jar",
     "published": "2026-09-17"
   },
@@ -69,7 +61,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

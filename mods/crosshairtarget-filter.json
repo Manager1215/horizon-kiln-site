@@ -13,13 +13,10 @@
     "net.minecraft.DetectedVersion",
     "net.minecraft.network.chat.Component.Serializer",
     "net.minecraft.resources.ResourceLocation",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "org.lwjgl.glfw.GLFW",
     "InputConstants.Type.KEYSYM",
     "KeyMapping.<init>()",
     "DefaultedRegistry.getOptional()",
-    "DefaultedRegistry.getTagOrEmpty()",
     "TagKey.create()",
     "GsonHelper.parse()",
     "EntityType.byString()",
@@ -32,7 +29,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "crosshairtargetfilter-1.1.4-fabric-26.1+.jar",
     "published": "2026-11-09"
   },
@@ -60,7 +57,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

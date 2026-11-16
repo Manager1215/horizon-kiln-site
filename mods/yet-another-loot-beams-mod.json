@@ -15,16 +15,12 @@
     "net.minecraft.client.renderer.rendertype.LayeringTransform",
     "net.minecraft.client.renderer.rendertype.RenderSetup",
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
-    "net.minecraft.network.chat.contents.PlainTextContents",
-    "net.minecraft.network.chat.contents.PlainTextContents.LiteralContents",
     "net.minecraft.world.item.BowItem",
     "net.minecraft.world.item.CrossbowItem",
     "net.minecraft.world.item.MaceItem",
     "net.minecraft.world.item.ShieldItem",
     "net.minecraft.world.item.TridentItem",
     "net.minecraft.world.phys.EntityHitResult",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "ImmutableList.stream()",
     "PoseStack.last()",
     "PoseStack.Pose.copy()",
@@ -36,7 +32,6 @@
     "VertexConsumer.setOverlay()",
     "Camera.rotation()",
     "Minecraft.getEntityRenderDispatcher()",
-    "Minecraft.hitResult",
     "GuiGraphicsExtractor.setTooltipForNextFrame()",
     "LocalPlayer.distanceToSqr()",
     "LocalPlayer.getEyePosition()",
@@ -50,14 +45,19 @@
     "EntityRenderer.getRenderOffset()",
     "RenderType.create()",
     "RenderTypes.beaconBeam()",
-    "and 27 more"
+    "SoundManager.getSoundEvent()",
+    "Identifier.bySeparator()",
+    "Util.memoize()",
+    "Entity.xOld",
+    "Entity.yOld",
+    "and 15 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Yet Another Loot Beams Mod-fabric-26.3-3.5.0.jar",
     "published": "2026-10-10"
   },
@@ -84,7 +84,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 67,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 55,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -15,22 +15,14 @@
     "BlockPos.MutableBlockPos.move()",
     "ServerLevel.getMinY()",
     "ServerPlayer.onEquippedItemBroken()",
-    "ItemStack.hurtAndBreak()",
-    "Block.dropResources()",
-    "Blocks.CAVE_VINES",
-    "Blocks.CAVE_VINES_PLANT",
-    "Blocks.TWISTING_VINES",
-    "Blocks.TWISTING_VINES_PLANT",
-    "Blocks.VINE",
-    "Blocks.WEEPING_VINES",
-    "Blocks.WEEPING_VINES_PLANT"
+    "ItemStack.hurtAndBreak()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "vinescutter-1.0.1-26.3.jar",
     "published": "2026-09-19"
   },
@@ -58,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

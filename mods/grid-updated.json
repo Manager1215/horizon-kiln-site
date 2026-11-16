@@ -10,13 +10,10 @@
   "description": "Updated mod from gbl to 1.21+, which displays a configurable grid-like overlay over the world",
   "needs": [
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.world.level.LightLayer",
     "net.minecraft.world.level.levelgen.WorldgenRandom",
-    "org.apache.logging.log4j.LogManager",
     "VertexConsumer.setColor()",
     "LevelRenderEvents.COLLECT_SUBMITS",
-    "Minecraft.getSingleplayerServer()",
     "Minecraft.isLocalServer()",
     "ClientLevel.getBrightness()",
     "RenderTypes.linesTranslucent()",
@@ -34,7 +31,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Grid-Updated-26.3-2.0.1-alpha1.jar",
     "published": "2026-10-01"
   },
@@ -65,7 +62,11 @@
     "minecraft",
     "modmenu"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

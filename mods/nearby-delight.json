@@ -10,15 +10,11 @@
   "description": "Nearby Delight lets Farmer's Delight Cooking Pots automatically use ingredients from nearby storage. Pick a recipe, and the pot does the rest.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
     "net.minecraft.recipebook.ServerPlaceRecipe",
     "net.minecraft.recipebook.ServerPlaceRecipe.CraftingMenuAccess",
-    "net.minecraft.world.inventory.AbstractFurnaceMenu",
     "net.minecraft.world.inventory.RecipeBookMenu.PostPlaceAction",
-    "net.minecraft.world.inventory.SmokerMenu",
     "net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity",
     "net.minecraft.world.level.block.entity.SmokerBlockEntity",
-    "Minecraft.execute()",
     "BlockPos.distSqr()",
     "NonNullList.iterator()",
     "ByteBufCodecs.CONTAINER_ID",
@@ -26,17 +22,17 @@
     "ServerChunkCache.getChunkNow()",
     "StackedItemContents.accountSimpleStack()",
     "StackedItemContents.accountStack()",
-    "MenuType.SMOKER",
+    "SmokerMenu.handlePlacement()",
     "ItemStack.OPTIONAL_LIST_STREAM_CODEC",
     "RecipeManager.byKey()",
     "LevelChunk.getBlockEntities()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nearby-delight-1.6.0.jar",
     "published": "2026-11-14"
   },
@@ -67,7 +63,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,7 +10,6 @@
   "description": "Trigger commands shortened into real ones",
   "needs": [
     "net.minecraft.client.multiplayer.ClientSuggestionProvider",
-    "Minecraft.execute()",
     "ClientPacketListener.getCommands()",
     "ClientPacketListener.getSuggestionsProvider()"
   ],
@@ -19,7 +18,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "triggerless-9.jar",
     "published": "2026-10-30"
   },
@@ -47,7 +46,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

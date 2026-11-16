@@ -12,10 +12,8 @@
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.model.HumanoidModel.ArmPose",
     "net.minecraft.client.renderer.entity.player.AvatarRenderer",
-    "net.minecraft.network.chat.ComponentSerialization",
-    "DataComponents.CUSTOM_NAME",
+    "ComponentSerialization.STREAM_CODEC",
     "BlockItem.onCraftedBy()",
-    "Item.Properties.attributes()",
     "Item.Properties.equippableUnswappable()",
     "ItemStack.addToTooltip()",
     "Blocks.WOOL",
@@ -26,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "blahaj-replushed-4.0.0+26.3.jar",
     "published": "2026-10-22"
   },
@@ -54,7 +52,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

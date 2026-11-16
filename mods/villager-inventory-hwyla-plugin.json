@@ -9,7 +9,6 @@
   "author": "kphrx",
   "description": "Show villager's inventory slots to Jade/WTHIT's tooltip.",
   "needs": [
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.npc.InventoryCarrier",
     "ItemStack.OPTIONAL_LIST_STREAM_CODEC"
   ],
@@ -18,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "villager-inventory-hwyla-plugin-2.0.3.jar",
     "published": "2026-06-16"
   },
@@ -37,7 +36,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

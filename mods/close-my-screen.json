@@ -10,20 +10,15 @@
   "description": "Close the current screen by double clicking outside the GUI.",
   "needs": [
     "an access widener",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AfterMouseClick",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-    "net.minecraft.world.inventory.ContainerInput",
     "FabricLoader.getRawGameVersion()",
-    "Minecraft.execute()",
     "LocalPlayer.closeContainer()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "closemyscreen-0.2.0-fabric+26.3.jar",
     "published": "2026-09-22"
   },
@@ -52,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method into the game's classes"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

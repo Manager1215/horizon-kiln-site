@@ -13,16 +13,8 @@
     "net.minecraft.world.clock.ServerClockManager",
     "net.minecraft.world.clock.WorldClocks",
     "net.minecraft.world.level.block.BedBlock",
-    "CommandSourceStack.getEntity()",
-    "CommandSourceStack.getPlayerOrException()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "RegistryAccess.get()",
     "MinecraftServer.clockManager()",
-    "PlayerList.broadcastSystemMessage()",
-    "ItemStack.getDisplayName()",
-    "EnchantmentHelper.getEnchantmentsForCrafting()",
-    "ItemEnchantments.Mutable.set()",
     "Level.getOverworldClockTime()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -30,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sleep-vote-1.0.0+26.1-26.3.jar",
     "published": "2026-09-29"
   },
@@ -58,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

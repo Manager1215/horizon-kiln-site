@@ -9,7 +9,6 @@
   "author": "Bishops_exe",
   "description": "A Fabric client mod that watches your active resource packs for file changes and automatically reloads them.",
   "needs": [
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.minecraft.server.packs.repository.Pack",
     "net.minecraft.server.packs.repository.PackRepository",
     "BiMap.clear()",
@@ -17,8 +16,6 @@
     "BiMap.get()",
     "BiMap.keySet()",
     "BiMap.remove()",
-    "Minecraft.execute()",
-    "Minecraft.gameDirectory",
     "Minecraft.getResourcePackRepository()",
     "Minecraft.reloadResourcePacks()"
   ],
@@ -27,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "rhmr-2.0.0.jar",
     "published": "2026-09-29"
   },
@@ -56,7 +53,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

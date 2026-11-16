@@ -10,25 +10,11 @@
   "description": "Display the current season on the Hud or under the minimap",
   "needs": [
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.gui.components.Button.Plain",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.network.chat.FontDescription",
     "net.minecraft.network.chat.FontDescription.Resource",
-    "Minecraft.getCurrentServer()",
-    "AbstractSliderButton.onDrag()",
-    "EditBox.setHint()",
-    "EditBox.setTextColor()",
+    "CycleButton.Builder.withTooltip()",
     "LocalPlayer.isScoping()",
-    "Holder.is()",
-    "CommonComponents.GUI_CANCEL",
-    "CommonComponents.GUI_DONE",
-    "MutableComponent.withStyle()",
     "Style.withFont()",
-    "Inventory.contains()",
     "Player.getOnPos()",
     "Level.getBiome()",
     "Level.getSeaLevel()",
@@ -39,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "seasonhud-fabric-26.3-2.0.12.jar",
     "published": "2026-11-13"
   },
@@ -71,7 +57,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

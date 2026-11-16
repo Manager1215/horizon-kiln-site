@@ -9,23 +9,14 @@
   "author": "zhuravelllll",
   "description": "Zhuravel NoteBook is a convenient in-game notebook with a translucent grey interface. Easily resize the window, copy and paste text, and enjoy automatic saving so your notes are never lost.",
   "needs": [
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
-    "Window.selectCursor()",
-    "Minecraft.setScreenAndShow()",
-    "Screen.charTyped()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()",
-    "KeyEvent.hasShiftDown()",
-    "MouseButtonEvent.hasShiftDown()"
+    "Window.selectCursor()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "zhuravelnotebook26.3.jar",
     "published": "2026-10-21"
   },
@@ -54,7 +45,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

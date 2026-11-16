@@ -14,27 +14,14 @@
     "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
     "net.minecraft.client.multiplayer.ServerList",
     "net.minecraft.client.multiplayer.resolver.ServerAddress",
-    "net.minecraft.network.chat.contents.TranslatableContents",
-    "Minecraft.getCurrentServer()",
-    "Font.plainSubstrByWidth()",
-    "Button.getMessage()",
-    "PauseScreen.addRenderableWidget()",
-    "PauseScreen.children()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "ServerData.copyFrom()",
-    "ServerData.ip",
-    "ServerData.name",
-    "ServerData.type()",
-    "Component.getContents()"
+    "ServerData.copyFrom()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "namserverswitcher-26.3-1.1.4.jar",
     "published": "2026-10-01"
   },
@@ -64,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 18,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

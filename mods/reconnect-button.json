@@ -11,15 +11,14 @@
   "needs": [
     "net.minecraft.client.gui.layouts.LinearLayout",
     "net.minecraft.client.gui.screens.ConnectScreen",
-    "net.minecraft.client.gui.screens.DisconnectedScreen",
-    "Button.Builder.width()"
+    "net.minecraft.client.gui.screens.DisconnectedScreen"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "reconnect-button-1.0.0.jar",
     "published": "2026-07-10"
   },
@@ -46,7 +45,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

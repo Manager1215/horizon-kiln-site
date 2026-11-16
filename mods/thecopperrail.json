@@ -13,8 +13,6 @@
     "net.minecraft.world.entity.vehicle.minecart.OldMinecartBehavior",
     "net.minecraft.world.level.block.PoweredRailBlock",
     "net.minecraft.world.level.block.state.properties.RailShape",
-    "Items.ACTIVATOR_RAIL",
-    "Blocks.POWERED_RAIL",
     "BlockStateProperties.INVERTED",
     "LootTable.Builder.modifyPools()"
   ],
@@ -23,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "thecopperrail-0.9.12.jar",
     "published": "2026-11-09"
   },
@@ -51,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -33,8 +33,6 @@
     "net.minecraft.advancements.predicates.entity.EntityPredicate",
     "net.minecraft.client.color.item.ItemTintSource",
     "net.minecraft.client.color.item.ItemTintSources",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.resources.model.cuboid.CuboidFace",
     "net.minecraft.client.resources.model.cuboid.CuboidFace.UVs",
     "net.minecraft.client.resources.model.cuboid.CuboidRotation",
@@ -50,14 +48,16 @@
     "net.minecraft.server.level.ServerPlayerGameMode",
     "net.minecraft.util.ByIdMap",
     "net.minecraft.util.ByIdMap.OutOfBoundsStrategy",
-    "and 75 more"
+    "net.minecraft.world.SimpleMenuProvider",
+    "net.minecraft.world.food.FoodProperties",
+    "and 62 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "chalk-fabric-26.3-2.0.4.jar",
     "published": "2026-11-09"
   },
@@ -86,7 +86,11 @@
     "forgeconfigapiport",
     "minecraft"
   ],
-  "lacks": 134,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 102,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

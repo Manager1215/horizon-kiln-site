@@ -9,37 +9,17 @@
   "author": "SwordfishBE",
   "description": "Sleep Menu turns every bed into a quick server-side control panel for time and weather.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.server.permissions.Permissions",
-    "ServerLifecycleEvents.SERVER_STARTING",
     "Version.parse()",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "CommandSourceStack.withPermission()",
-    "CommandSourceStack.withSuppressedOutput()",
-    "Commands.performPrefixedCommand()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
     "MinecraftServer.createCommandSourceStack()",
-    "MinecraftServer.execute()",
-    "MinecraftServer.getCommands()",
-    "ServerPlayer.permissions()",
-    "PermissionSet.ALL_PERMISSIONS",
-    "PlayerList.broadcastSystemMessage()",
     "SoundEvents.STRAW_BED_BREAK_LEAVE",
-    "BlockTags.BEDS",
-    "Blocks.STRAW_BED"
+    "BlockTags.BEDS"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "sleepmenu-1.2.1.jar",
     "published": "2026-10-21"
   },
@@ -69,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

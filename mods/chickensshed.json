@@ -9,16 +9,12 @@
   "author": "dns54",
   "description": "Chickens shed their feathers occasionally.",
   "needs": [
-    "net.minecraft.client.gui.components.StringWidget",
     "ModelManager.getItemModel()",
     "Holder.direct()",
-    "DataComponents.ITEM_MODEL",
     "ServerLevel.getGameRules()",
-    "LivingEntity.getRandom()",
     "LivingEntity.isAlive()",
     "LivingEntity.isBaby()",
     "ItemEntity.setDefaultPickUpDelay()",
-    "ItemStack.<init>()",
     "GameRules.MOB_DROPS",
     "GameRules.get()"
   ],
@@ -27,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "chickensshed-2.0.0+26.3.jar",
     "published": "2026-10-15"
   },
@@ -54,7 +50,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

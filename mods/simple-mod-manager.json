@@ -10,20 +10,11 @@
   "description": "This is a lightweight mod that allows the user to toggle mods, shaders, and resource packs, all in one place.",
   "needs": [
     "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.server.packs.repository.PackRepository",
-    "NativeImage.read()",
-    "Minecraft.execute()",
-    "Minecraft.gameDirectory",
     "Minecraft.getResourcePackRepository()",
     "Minecraft.reloadResourcePacks()",
     "Options.resourcePacks",
     "GuiGraphicsExtractor.textRendererForWidget()",
-    "Button.DEFAULT_NARRATION",
-    "Button.extractWidgetRenderState()",
-    "Button.setTooltip()",
-    "EditBox.setEditable()",
     "Identifier.bySeparator()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -31,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "simple-mod-manager-1.6.2.jar",
     "published": "2026-11-10"
   },
@@ -59,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

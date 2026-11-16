@@ -9,19 +9,14 @@
   "author": "Tontoque28",
   "description": "Faster creepers, instant explosions, and a chance for naturally spawned charged creepers with double damage and double explosion radius.",
   "needs": [
-    "net.minecraft.commands.arguments.coordinates.Vec3Argument",
     "net.minecraft.world.entity.ai.goal.GoalSelector",
     "net.minecraft.world.entity.ai.goal.SwellGoal",
     "net.minecraft.world.entity.ai.goal.WrappedGoal",
     "net.minecraft.world.entity.monster.Creeper",
-    "CommandSourceStack.getPlayerOrException()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "DamageSources.magic()",
     "EntityTypes.CREEPER",
     "LightningBolt.setVisualOnly()",
     "LightningBolt.snapTo()",
-    "Attributes.FOLLOW_RANGE",
     "Level.explode()",
     "Level.getDifficulty()",
     "Level.getEntities()",
@@ -34,7 +29,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "CreeperInstaBoom-1.1.1-Fabric-26.3.jar",
     "published": "2026-11-09"
   },
@@ -62,7 +57,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,19 +10,18 @@
   "description": "Add the 2x2 crafting slots to the creative inventory screen.",
   "needs": [
     "an access widener",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
     "net.minecraft.network.protocol.game.ServerboundContainerClosePacket",
     "net.minecraft.network.protocol.game.ServerboundSetCreativeModeSlotPacket",
     "org.lwjgl.glfw.GLFW",
     "ClientPacketListener.send()",
     "NonNullList.indexOf()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "creativecrafting-0.4.2.jar",
     "published": "2026-05-27"
   },
@@ -50,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

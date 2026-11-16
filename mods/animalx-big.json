@@ -9,8 +9,6 @@
   "author": "CraftiX",
   "description": "27 farm and wild animals grow up to three times bigger; feed one a Giant Treat and it becomes a companion you can saddle, ride and load with a Saddlebag.",
   "needs": [
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
     "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback",
     "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback.RegistrationHelper",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
@@ -20,7 +18,6 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath",
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
     "net.fabricmc.fabric.api.loot.v3.LootTableEvents.ModifyDrops",
@@ -36,27 +33,30 @@
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.server.PlayerAdvancements",
     "net.minecraft.server.ServerAdvancementManager",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.SimpleMenuProvider",
     "net.minecraft.world.damagesource.DamageTypes",
     "net.minecraft.world.entity.ConversionParams",
     "net.minecraft.world.entity.ConversionParams.AfterConversion",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.EntityProcessor",
-    "net.minecraft.world.entity.EntitySpawnRequest",
     "net.minecraft.world.entity.ai.Brain",
     "net.minecraft.world.entity.ai.behavior.EntityTracker",
     "net.minecraft.world.entity.ai.control.FlyingMoveControl",
     "net.minecraft.world.entity.ai.control.LookControl",
     "net.minecraft.world.entity.ai.goal.Goal",
-    "and 80 more"
+    "net.minecraft.world.entity.ai.goal.Goal.Flag",
+    "net.minecraft.world.entity.ai.goal.GoalSelector",
+    "net.minecraft.world.entity.ai.goal.WrappedGoal",
+    "net.minecraft.world.entity.ai.memory.MemoryModuleType",
+    "net.minecraft.world.entity.ai.memory.WalkTarget",
+    "net.minecraft.world.entity.ai.navigation.PathNavigation",
+    "and 71 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "animalx_big-1.0.2+fabric-26.3.jar",
     "published": "2026-11-03"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 217,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 156,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

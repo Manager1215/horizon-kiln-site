@@ -10,18 +10,13 @@
   "description": "All-in-one, toggleable logic gate as a redstone component.",
   "needs": [
     "net.minecraft.core.particles.DustParticleOptions",
-    "net.minecraft.server.permissions.PermissionCheck",
-    "net.minecraft.server.permissions.PermissionCheck.Require",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.level.block.DiodeBlock",
     "net.minecraft.world.level.block.RedstoneWireBlock",
     "net.minecraft.world.level.block.state.properties.RedstoneSide",
     "net.minecraft.world.level.material.PushReaction",
-    "Commands.hasPermission()",
     "SoundEvents.COMPARATOR_CLICK",
     "Player.isCrouching()",
     "Level.hasSignal()",
-    "Blocks.REDSTONE_WIRE",
     "BlockBehaviour.Properties.pushReaction()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -29,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "logic_gate-1.0.4+26.3-fabric.jar",
     "published": "2026-11-03"
   },
@@ -59,7 +54,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,9 +11,7 @@
   "needs": [
     "net.minecraft.world.entity.SulfurCubeArchetype",
     "net.minecraft.world.entity.monster.cubemob.SulfurCube",
-    "Registry.listElements()",
     "Registries.SULFUR_CUBE_ARCHETYPE",
-    "Component.translatableWithFallback()",
     "ItemStack.is()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -21,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "jadesulfuradd-1.0.0.jar",
     "published": "2026-11-12"
   },
@@ -50,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

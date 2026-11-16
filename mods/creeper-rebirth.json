@@ -32,13 +32,11 @@
     "net.minecraft.client.renderer.item.SpecialModelWrapper",
     "net.minecraft.client.renderer.special.SpecialModelRenderers",
     "net.minecraft.core.particles.BlockParticleOption",
-    "net.minecraft.data.AtlasIds",
     "net.minecraft.network.HashedStack.ActualItem",
     "net.minecraft.network.syncher.EntityDataAccessor",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.tags.DamageTypeTags",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.damagesource.DamageTypes",
     "net.minecraft.world.entity.AreaEffectCloud",
     "net.minecraft.world.entity.NeutralMob",
@@ -50,6 +48,8 @@
     "net.minecraft.world.entity.ai.control.LookControl",
     "net.minecraft.world.entity.ai.goal.AvoidEntityGoal",
     "net.minecraft.world.entity.ai.goal.FloatGoal",
+    "net.minecraft.world.entity.ai.goal.Goal",
+    "net.minecraft.world.entity.ai.goal.Goal.Flag",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "(Fabric26.3)creeperrebirth-1.0.0.jar",
     "published": "2026-11-03"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 203,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
+  },
+  "lacks": 157,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

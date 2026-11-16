@@ -21,13 +21,9 @@
     "net.minecraft.world.phys.shapes.BooleanOp",
     "BlockPos.offset()",
     "Direction.getUnitVec3i()",
-    "Holder.is()",
-    "Identifier.withPrefix()",
     "ResourceKey.codec()",
     "ExtraCodecs.JAVA",
     "Items.COPPER_LANTERN",
-    "Items.LANTERN",
-    "Items.SOUL_LANTERN",
     "Level.<init>()",
     "Level.clockManager()",
     "Level.dimensionTypeRegistration()",
@@ -45,18 +41,22 @@
     "Level.getScoreboard()",
     "Level.getSeaLevel()",
     "Level.getUncachedNoiseBiome()",
-    "Level.getWorldBorder()",
     "Level.isDebug()",
     "Level.levelEvent()",
     "Level.playSeededSound()",
-    "and 15 more"
+    "Level.playSeededSound()",
+    "Level.playSeededSound()",
+    "Level.players()",
+    "Level.recipeAccess()",
+    "Level.setRespawnData()",
+    "and 9 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "walllanterns-3.5.1.jar",
     "published": "2026-11-14"
   },
@@ -86,7 +86,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 55,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 49,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

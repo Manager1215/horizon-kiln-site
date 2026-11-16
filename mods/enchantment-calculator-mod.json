@@ -9,41 +9,14 @@
   "author": "ChapmanOfficial",
   "description": "Calculates the cheapest anvil order for any item and enchantment set - without leaving the game.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.world.level.storage.LevelResource",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
-    "Minecraft.setScreenAndShow()",
-    "GuiGraphicsExtractor.fakeItem()",
-    "GuiGraphicsExtractor.setTooltipForNextFrame()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()",
-    "ServerData.ip",
-    "LocalPlayer.getGameProfile()",
-    "Items.BOW",
-    "Items.BRUSH",
-    "Items.CROSSBOW",
-    "Items.DIAMOND_HOE",
-    "Items.DIAMOND_NAUTILUS_ARMOR",
-    "Items.DIAMOND_SPEAR",
-    "Items.FISHING_ROD",
-    "Items.FLINT_AND_STEEL",
-    "Items.MACE",
-    "Items.PUMPKIN",
-    "Items.SHIELD",
-    "Items.TRIDENT",
-    "Items.WARPED_FUNGUS_ON_A_STICK",
-    "Items.WOLF_ARMOR"
+    "LocalPlayer.getGameProfile()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "enchant_calculator-26.3-2.2.2.jar",
     "published": "2026-09-16"
   },
@@ -70,7 +43,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

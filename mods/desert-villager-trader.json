@@ -11,7 +11,6 @@
   "needs": [
     "net.minecraft.world.entity.ai.village.poi.PoiTypes",
     "net.minecraft.world.entity.npc.villager.VillagerProfession",
-    "Registry.wrapAsHolder()",
     "BuiltInRegistries.POINT_OF_INTEREST_TYPE",
     "BuiltInRegistries.VILLAGER_PROFESSION",
     "Registries.POINT_OF_INTEREST_TYPE",
@@ -26,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "desert_villager_trader-1.0.0 Fabric 26.3.jar",
     "published": "2026-11-11"
   },
@@ -54,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

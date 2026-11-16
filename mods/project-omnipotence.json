@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 6 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.CuredZombieVillagerTrigger",
     "net.minecraft.advancements.triggers.KilledTrigger",
@@ -19,12 +18,7 @@
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.server.commands.KillCommand",
     "net.minecraft.server.level.ServerPlayerGameMode",
-    "net.minecraft.server.permissions.PermissionCheck",
-    "net.minecraft.server.permissions.PermissionCheck.Require",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.tags.DamageTypeTags",
-    "net.minecraft.tags.EnchantmentTags",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.Bucketable",
     "net.minecraft.world.entity.ConversionParams",
     "net.minecraft.world.entity.ConversionParams.AfterConversion",
@@ -51,14 +45,20 @@
     "net.minecraft.world.item.trading.MerchantOffer",
     "net.minecraft.world.level.block.entity.BeaconBlockEntity",
     "net.minecraft.world.level.block.entity.trialspawner.TrialSpawner",
-    "and 63 more"
+    "net.minecraft.world.level.dimension.end.EnderDragonFight",
+    "net.minecraft.world.level.storage.loot.functions.ApplyBonusCount",
+    "org.apache.commons.io.FileUtils",
+    "ImmutableSet.stream()",
+    "Camera.isDetached()",
+    "AbstractClientPlayer.<init>()",
+    "and 57 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "project-omnipotence-1.5.4-26.3.jar",
     "published": "2026-09-15"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 191,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 159,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

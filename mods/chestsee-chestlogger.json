@@ -9,17 +9,12 @@
   "author": "MafuuuX",
   "description": "Fabric chest logger for servers. Logs chests and containers to .txt files, with in-game inspect, player search and optional LuckPerms.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-    "net.minecraft.commands.arguments.DimensionArgument",
     "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
     "net.minecraft.world.CompoundContainer",
     "net.minecraft.world.entity.vehicle.ContainerEntity",
     "net.minecraft.world.entity.vehicle.boat.AbstractChestBoat",
@@ -35,18 +30,8 @@
     "net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity",
     "net.minecraft.world.level.block.state.properties.ChestType",
     "net.minecraft.world.level.dimension.BuiltinDimensionTypes",
-    "net.minecraft.world.level.storage.LevelResource",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
     "NonNullList.isEmpty()",
-    "MutableComponent.withStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "MinecraftServer.execute()",
-    "MinecraftServer.getWorldPath()",
     "ServerLevel.dimensionTypeRegistration()",
-    "ServerPlayer.createCommandSourceStack()",
     "Level.dimensionTypeRegistration()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4)",
@@ -54,7 +39,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ChestSee-1.2.0+26.3.jar",
     "published": "2026-11-05"
   },
@@ -82,7 +67,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 39,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 24,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,24 +9,16 @@
   "author": "eyman_26",
   "description": "A plugin that prevents players from wearing armor! (heavily inspired by naked and afraid)",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.minecraft.world.item.component.ItemLore",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "DataComponents.LORE",
     "ServerPlayer.damageSources()",
     "ServerPlayer.hasDisconnected()",
-    "ServerPlayer.nameAndId()",
-    "ServerPlayer.sendSystemMessage()",
-    "DamageSources.starve()",
-    "EquipmentSlot.isArmor()",
-    "CustomData.copyTag()"
+    "DamageSources.starve()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "PreventArmor-fabric-26.3-2.2.0.jar",
     "published": "2026-10-31"
   },
@@ -54,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

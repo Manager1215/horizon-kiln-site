@@ -10,17 +10,14 @@
   "description": "This mod allows you to put all the eyes of ender in the portal frames in one click!",
   "needs": [
     "net.minecraft.world.level.block.EndPortalFrameBlock",
-    "SoundEvents.END_PORTAL_SPAWN",
-    "Items.ENDER_EYE",
-    "Blocks.END_PORTAL",
-    "Blocks.END_PORTAL_FRAME"
+    "SoundEvents.END_PORTAL_SPAWN"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "instant-ender-portal-1.1.0.jar",
     "published": "2026-09-20"
   },
@@ -48,7 +45,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

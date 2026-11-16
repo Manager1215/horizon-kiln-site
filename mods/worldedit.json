@@ -10,21 +10,13 @@
   "description": "A Minecraft Map Editor... that runs in-game!\nWith selections, schematics, copy and paste, brushes, and scripting.\nUse it in creative, or use it temporarily in survival.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
     "net.fabricmc.fabric.api.permission.v1.PermissionNode",
     "net.fabricmc.fabric.api.util.TriState",
     "net.fabricmc.loader.api.metadata.version.VersionPredicate",
-    "net.minecraft.SharedConstants",
-    "net.minecraft.core.HolderSet.ListBacked",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.data.worldgen.placement.EndPlacements",
     "net.minecraft.data.worldgen.placement.TreePlacements",
-    "net.minecraft.network.chat.ComponentSerialization",
     "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
     "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
     "net.minecraft.server.dedicated.DedicatedServer",
@@ -32,7 +24,6 @@
     "net.minecraft.server.level.ChunkResult",
     "net.minecraft.server.level.ServerPlayerGameMode",
     "net.minecraft.server.level.ThreadedLevelLightEngine",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.util.datafix.DataFixers",
     "net.minecraft.util.datafix.fixes.References",
     "net.minecraft.world.entity.ambient.AmbientCreature",
@@ -50,14 +41,23 @@
     "net.minecraft.world.level.EmptyBlockGetter",
     "net.minecraft.world.level.biome.Climate",
     "net.minecraft.world.level.biome.Climate.Sampler",
-    "and 73 more"
+    "net.minecraft.world.level.block.entity.BlockEntityTypes",
+    "net.minecraft.world.level.chunk.LevelChunk.EntityCreationType",
+    "net.minecraft.world.level.levelgen.RandomState",
+    "net.minecraft.world.level.levelgen.densityfunction.SamplerContext",
+    "net.minecraft.world.level.levelgen.densityfunction.SamplerContext.Builder",
+    "net.minecraft.world.level.levelgen.feature.CoralTreeFeature",
+    "net.minecraft.world.level.levelgen.feature.FallenTreeFeature",
+    "net.minecraft.world.level.levelgen.feature.TreeFeature",
+    "net.minecraft.world.level.material.PushReaction",
+    "and 62 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "worldedit-mod-7.4.6.jar",
     "published": "2026-10-15"
   },
@@ -89,7 +89,11 @@
     "fabricloader",
     "worldeditcui_protocol"
   ],
-  "lacks": 224,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 189,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

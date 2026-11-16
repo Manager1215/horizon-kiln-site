@@ -10,8 +10,6 @@
   "description": "Use shears on vines to stop them from growing!",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.ItemUsedOnLocationTrigger",
@@ -23,24 +21,19 @@
     "net.minecraft.world.level.block.VineBlock",
     "net.minecraft.world.level.gameevent.GameEvent.Context",
     "net.minecraft.world.level.storage.LevelStorageSource.LevelDirectory",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "InputConstants.isKeyDown()",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "Minecraft.execute()",
-    "MinecraftServer.execute()",
+    "ResourceLoader.registerBuiltinPack()",
     "SoundEvents.GROWING_PLANT_CROP",
     "InteractionHand.asEquipmentSlot()",
     "Level.gameEvent()",
     "GameEvent.BLOCK_CHANGE",
     "LevelStorageSource.LevelStorageAccess.getLevelDirectory()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "shearablevines-fabric-2.0.0+26.3.jar",
     "published": "2026-09-17"
   },
@@ -66,7 +59,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; has network channels"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

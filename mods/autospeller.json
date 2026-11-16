@@ -10,27 +10,17 @@
   "description": "A mod which adds advanced spell checking and suggestions to chat.",
   "needs": [
     "an access widener",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "net.minecraft.client.gui.ActiveTextCollector",
-    "net.minecraft.client.gui.TextAlignment",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipPositioner",
     "org.lwjgl.sdl.SDLKeyboard",
     "FabricLoader.getRawGameVersion()",
-    "Font.plainSubstrByWidth()",
-    "GuiGraphicsExtractor.requestCursor()",
-    "GuiGraphicsExtractor.textRenderer()",
-    "GuiGraphicsExtractor.tooltip()",
-    "EditBox.getInnerWidth()",
-    "EditBox.isVisible()",
-    "FormattedCharSequence.forward()"
+    "GuiGraphicsExtractor.textRenderer()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "autospeller-1.7.0-fabric+26.3.jar",
     "published": "2026-09-24"
   },
@@ -63,7 +53,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

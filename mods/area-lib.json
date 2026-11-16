@@ -10,21 +10,11 @@
   "description": "Library mod that allows for creating arbitrary areas",
   "needs": [
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.BeforeGizmos",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.commands.arguments.HexColorArgument",
-    "net.minecraft.commands.arguments.IdentifierArgument",
     "net.minecraft.commands.arguments.NbtTagArgument",
-    "net.minecraft.commands.arguments.coordinates.Vec3Argument",
-    "net.minecraft.gizmos.GizmoStyle",
     "LevelRenderEvents.BEFORE_GIZMOS",
     "ServerConfigurationNetworking.send()",
-    "Minecraft.gameMode",
     "Minecraft.showDebugChat()",
-    "CommandSourceStack.getPosition()",
-    "CommandSourceStack.getServer()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
-    "Gizmos.addGizmo()",
     "Gizmos.cuboid()",
     "CompoundTag.entrySet()",
     "ListTag.add()",
@@ -53,7 +43,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "area_lib-0.9.1+26.3.jar",
     "published": "2026-09-20"
   },
@@ -81,7 +71,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 38,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 28,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

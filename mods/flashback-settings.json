@@ -9,26 +9,11 @@
   "author": "ayden100",
   "description": "A mod that adds more Flashback settings starting with changing the replay folder location and adding subfolders.",
   "needs": [
-    "net.minecraft.SharedConstants",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.network.chat.FontDescription",
     "net.minecraft.network.chat.FontDescription.Resource",
     "net.minecraft.util.Util.OS",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.setScreenAndShow()",
-    "GuiGraphicsExtractor.blitSprite()",
-    "AbstractWidget.getRight()",
-    "AbstractWidget.setPosition()",
-    "AbstractWidget.setSize()",
-    "Button.createNarrationMessage()",
-    "Button.setRectangle()",
-    "Button.Builder.tooltip()",
-    "EditBox.setBordered()",
-    "EditBox.setEditable()",
-    "EditBox.setHint()",
+    "SharedConstants.getCurrentVersion()",
     "EditBox.setTextShadow()",
-    "ServerData.ip",
-    "MutableComponent.withStyle()",
     "Style.withFont()",
     "Util.getPlatform()"
   ],
@@ -37,7 +22,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "flashback-settings-1.5.0+26.3.jar",
     "published": "2026-11-02"
   },
@@ -67,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

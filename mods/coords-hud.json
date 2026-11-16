@@ -10,18 +10,16 @@
   "description": "An efficient and customizable action bar HUD for servers!",
   "needs": [
     "net.minecraft.commands.arguments.ComponentArgument",
-    "net.minecraft.network.chat.ComponentSerialization",
     "MinecraftServer.getTickCount()",
     "MinecraftServer.overworld()",
-    "ServerLevel.getOverworldClockTime()",
-    "ServerPlayer.sendSystemMessage()"
+    "ServerLevel.getOverworldClockTime()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "coordshud-1.2.8-mc26.1.jar",
     "published": "2026-05-30"
   },
@@ -51,7 +49,11 @@
     "minecraft",
     "placeholder-api"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

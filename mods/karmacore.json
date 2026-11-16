@@ -9,32 +9,16 @@
   "author": "raylix2",
   "description": "Make PvP victories and revenge matter: Karma levels, effects, rewards, consumables and a player menu. Configurable messages and anti-farm protection.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.minecraft.network.protocol.game.ServerboundUseItemPacket",
-    "net.minecraft.world.level.storage.LevelResource",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "CommandSourceStack.getEntity()",
-    "CommandSourceStack.withSuppressedOutput()",
-    "Commands.performPrefixedCommand()",
-    "DataComponents.CUSTOM_NAME",
     "MinecraftServer.createCommandSourceStack()",
-    "MinecraftServer.execute()",
-    "MinecraftServer.getCommands()",
-    "MinecraftServer.getWorldPath()",
-    "PermissionLevel.byId()",
-    "DamageSource.getEntity()",
-    "Items.DYE",
-    "Items.NETHERITE_SCRAP",
-    "CustomData.copyTag()"
+    "Items.DYE"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "KarmaCore-1.1.0-alpha.1-26.3-fabric.jar",
     "published": "2026-10-16"
   },
@@ -62,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

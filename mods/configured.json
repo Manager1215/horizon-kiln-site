@@ -11,9 +11,6 @@
   "needs": [
     "Mixin: 10 points inside the game's methods",
     "net.fabricmc.api.DedicatedServerModInitializer",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-    "net.minecraft.commands.arguments.GameProfileArgument",
-    "net.minecraft.commands.arguments.GameProfileArgument.Result",
     "net.minecraft.network.protocol.status.ServerStatus",
     "net.minecraft.server.dedicated.DedicatedPlayerList",
     "net.minecraft.server.dedicated.DedicatedServer",
@@ -24,18 +21,13 @@
     "net.minecraft.world.entity.boss.enderdragon.EndCrystal",
     "net.minecraft.world.entity.vehicle.minecart.MinecartTNT",
     "net.minecraft.world.item.EnderEyeItem",
-    "net.minecraft.world.item.FireworkRocketItem",
     "net.minecraft.world.level.block.EndPortalBlock",
     "net.minecraft.world.level.block.entity.TheEndGatewayBlockEntity",
     "net.minecraft.world.waypoints.WaypointTransmitter",
-    "ServerLifecycleEvents.END_DATA_PACK_RELOAD",
     "MinecraftServer.services()",
     "ServerPlayer.getTeam()",
     "PlayerList.setSimulationDistance()",
     "PlayerList.setViewDistance()",
-    "DamageSource.getDirectEntity()",
-    "DamageSource.getEntity()",
-    "DamageSource.is()",
     "LivingEntity.getTeam()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -43,7 +35,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Configured-mc26.3-v1.9.8.jar",
     "published": "2026-10-04"
   },
@@ -63,7 +55,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-arg Kiln doesn't guard"
+  },
+  "lacks": 19,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

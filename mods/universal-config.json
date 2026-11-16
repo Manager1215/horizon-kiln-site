@@ -10,36 +10,18 @@
   "description": "Sync Minecraft configs across instances and versions",
   "needs": [
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
-    "net.minecraft.SharedConstants",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.core.component.PatchedDataComponentMap",
     "FabricLoader.getLaunchArguments()",
-    "KeyMapping.resetMapping()",
-    "Minecraft.gameDirectory",
-    "Minecraft.schedule()",
-    "Font.plainSubstrByWidth()",
-    "Font.split()",
-    "GuiGraphicsExtractor.blit()",
-    "GuiGraphicsExtractor.nextStratum()",
-    "GuiGraphicsExtractor.text()",
-    "Button.Builder.createNarration()",
-    "Checkbox.selected()",
-    "Checkbox.Builder.maxWidth()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()",
+    "SharedConstants.getCurrentVersion()",
     "Holder.Reference.areComponentsBound()",
-    "DataComponents.COMMON_ITEM_COMPONENTS",
-    "DataComponents.ITEM_MODEL",
-    "ItemStack.<init>()"
+    "DataComponents.COMMON_ITEM_COMPONENTS"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "universal-config-1.1.0-mc26.3.jar",
     "published": "2026-09-18"
   },
@@ -69,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

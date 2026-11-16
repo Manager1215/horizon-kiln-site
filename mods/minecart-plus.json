@@ -19,11 +19,8 @@
     "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.vehicle.minecart.Minecart",
     "net.minecraft.world.entity.vehicle.minecart.MinecartFurnace",
-    "net.minecraft.world.flag.FeatureFlags",
     "net.minecraft.world.inventory.ContainerData",
     "net.minecraft.world.inventory.ContainerLevelAccess",
     "net.minecraft.world.inventory.SimpleContainerData",
@@ -36,7 +33,6 @@
     "VertexConsumer.setLight()",
     "VertexConsumer.setNormal()",
     "VertexConsumer.setOverlay()",
-    "GuiGraphicsExtractor.blitSprite()",
     "MinecartRenderState.entityType",
     "ItemStackRenderState.clear()",
     "BlockPos.containing()",
@@ -50,14 +46,18 @@
     "ServerLevel.noBlockCollision()",
     "SoundEvents.BLASTFURNACE_FIRE_CRACKLE",
     "LightCoordsUtil.max()",
-    "and 39 more"
+    "LightCoordsUtil.pack()",
+    "Containers.dropContents()",
+    "Containers.updateNeighboursAfterDestroy()",
+    "Entity.getBoundingBox()",
+    "and 26 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "minecart-plus-0.1.0.jar",
     "published": "2026-10-03"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 79,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 66,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

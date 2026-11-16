@@ -9,11 +9,7 @@
   "author": "mysticdrew",
   "description": "Web Map for JourneyMap",
   "needs": [
-    "com.mojang.authlib.GameProfile",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "org.apache.commons.io.FileUtils",
-    "org.apache.logging.log4j.Logger",
-    "NativeImage.read()",
     "PlayerInfo.getProfile()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
@@ -21,7 +17,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "journeymap-webmap-fabric-26.3-1.0.13.jar",
     "published": "2026-09-19"
   },
@@ -50,7 +46,11 @@
     "journeymap",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

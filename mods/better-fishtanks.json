@@ -10,10 +10,8 @@
   "description": "Build the aquarium of your dreams for your vanilla and modded fish. This mod adds functional tanks, decorations, and systems to manage your aquatic ecosystem!",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.block.FluidRenderer",
     "net.minecraft.client.renderer.block.FluidRenderer.Output",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.ai.goal.MoveToBlockGoal",
     "net.minecraft.world.entity.ai.navigation.PathNavigation",
     "net.minecraft.world.entity.animal.axolotl.Axolotl",
@@ -31,13 +29,11 @@
     "net.minecraft.world.inventory.SimpleContainerData",
     "net.minecraft.world.level.block.Mirror",
     "net.minecraft.world.level.block.PipeBlock",
-    "net.minecraft.world.level.block.state.properties.DoubleBlockHalf",
     "net.minecraft.world.level.pathfinder.Path",
-    "Minecraft.gameMode",
+    "MultiPlayerGameMode.handleInventoryButtonClick()",
     "BlockPos.toShortString()",
     "NonNullList.iterator()",
     "Registry.iterator()",
-    "MutableComponent.setStyle()",
     "MinecraftServer.registryAccess()",
     "ServerPlayer.isInvulnerable()",
     "ServerPlayer.setPermanentlyInvulnerable()",
@@ -45,19 +41,23 @@
     "SoundEvents.BUCKET_FILL_FISH",
     "SoundEvents.GENERIC_SPLASH",
     "Containers.dropContents()",
-    "Entity.getDisplayName()",
     "Entity.setDeltaMovement()",
     "Entity.setPermanentlyInvulnerable()",
     "Entity.setPos()",
     "LivingEntity.fireImmune()",
-    "and 43 more"
+    "LivingEntity.hurt()",
+    "LivingEntity.setPermanentlyInvulnerable()",
+    "Mob.getNavigation()",
+    "Mob.isAlive()",
+    "Mob.remove()",
+    "and 31 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "betterfishtanks-1.4.2-26.3-fabric.jar",
     "published": "2026-10-30"
   },
@@ -88,7 +88,11 @@
     "minecraft",
     "mint_lib"
   ],
-  "lacks": 165,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; generates in the world"
+  },
+  "lacks": 71,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

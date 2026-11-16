@@ -9,28 +9,20 @@
   "author": "JacobTheIdiot",
   "description": "automatic farming for minecraft 1.21.4-26.3",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.world.entity.decoration.ItemFrame",
     "net.minecraft.world.phys.EntityHitResult",
     "KeyMapping.setDown()",
-    "Minecraft.gameMode",
-    "Minecraft.hitResult",
-    "Minecraft.setScreenAndShow()",
-    "Options.keyUse",
-    "ClientPacketListener.getConnection()",
+    "MultiPlayerGameMode.attack()",
     "LocalPlayer.getAttackStrengthScale()",
-    "LocalPlayer.swing()",
     "DataComponents.FOOD",
-    "Connection.disconnect()",
-    "Item.components()",
-    "SwingAnimation.DEFAULT"
+    "Connection.disconnect()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "autofarm-1.1.3-26.3.jar",
     "published": "2026-10-05"
   },
@@ -59,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,16 +9,10 @@
   "author": "Meneleet",
   "description": "Randomspawn - teleports players to a random safe location on the surface within the world border, on first join and on respawn without a bed. Optional radius limit via /gamerule respawn_radius.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.minecraft.server.level.ServerPlayer.RespawnConfig",
-    "net.minecraft.server.permissions.LevelBasedPermissionSet",
     "net.minecraft.world.level.block.BedBlock",
     "net.minecraft.world.level.block.RespawnAnchorBlock",
     "net.minecraft.world.level.storage.WorldData",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "CommandSourceStack.getEntity()",
-    "CommandSourceStack.getServer()",
-    "MinecraftServer.execute()",
     "MinecraftServer.getAllLevels()",
     "MinecraftServer.getWorldData()",
     "MinecraftServer.isStopped()",
@@ -27,18 +21,11 @@
     "ServerLevel.getMinY()",
     "ServerLevel.getRespawnData()",
     "ServerLevel.getSeed()",
-    "ServerLevel.getWorldBorder()",
     "ServerPlayer.getRespawnConfig()",
-    "ServerPlayer.isRemoved()",
     "ServerPlayer.resetFallDistance()",
     "ServerPlayer.setYRot()",
     "ServerPlayer.teleportTo()",
-    "PermissionLevel.byId()",
-    "PermissionLevel.isEqualOrHigherThan()",
     "BlockState.isSolid()",
-    "WorldBorder.getCenterX()",
-    "WorldBorder.getCenterZ()",
-    "WorldBorder.getSize()",
     "LevelData.RespawnData.dimension()",
     "LevelData.RespawnData.pos()"
   ],
@@ -47,7 +34,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "RandomSpawnPlus-fabric-26.3-2.0.1.jar",
     "published": "2026-09-25"
   },
@@ -75,7 +62,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 32,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 19,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

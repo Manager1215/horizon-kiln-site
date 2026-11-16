@@ -15,7 +15,6 @@
     "net.minecraft.server.packs.repository.PackSource",
     "net.minecraft.server.packs.repository.ServerPacksSource",
     "net.minecraft.world.flag.FeatureFlagRegistry",
-    "net.minecraft.world.flag.FeatureFlags",
     "net.minecraft.world.level.DataPackConfig",
     "FeatureFlagSet.join()",
     "FeatureFlagSet.of()"
@@ -25,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "experimentalist-2.0.5+26.1-fabric.jar",
     "published": "2026-03-31"
   },
@@ -42,7 +41,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

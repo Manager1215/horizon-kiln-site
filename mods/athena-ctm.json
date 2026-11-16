@@ -33,7 +33,6 @@
     "net.minecraft.client.resources.model.BlockStateModelLoader",
     "net.minecraft.client.resources.model.BlockStateModelLoader.LoadedModels",
     "net.minecraft.client.resources.model.geometry.BakedQuad.MaterialFlags",
-    "net.minecraft.data.AtlasIds",
     "BiMap.get()",
     "BiMap.getOrDefault()",
     "Int2ObjectMap.Entry.getValue()",
@@ -50,14 +49,15 @@
     "TextureAtlas.missingSprite()",
     "TextureAtlas.spriteFinder()",
     "Material.CODEC",
-    "and 8 more"
+    "Direction.CODEC",
+    "and 5 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "athena-4.7.4.jar",
     "published": "2026-10-31"
   },
@@ -83,7 +83,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 48,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method into the game's classes"
+  },
+  "lacks": 45,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

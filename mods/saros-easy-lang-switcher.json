@@ -9,23 +9,17 @@
   "author": "Sarocesch",
   "description": "Switch the in-game language instantly with a hotkey. Set up multiple toggles between your favorite languages and swap in one keypress. Client-side only.",
   "needs": [
-    "InputConstants.isKeyDown()",
-    "InputConstants.Key.getDisplayName()",
-    "InputConstants.Type.getOrCreate()",
     "Minecraft.reloadResourcePacks()",
-    "Minecraft.setScreenAndShow()",
     "Options.languageCode",
     "LanguageManager.getLanguages()",
-    "LanguageManager.setSelected()",
-    "CommonComponents.GUI_CANCEL",
-    "CommonComponents.GUI_DONE"
+    "LanguageManager.setSelected()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Saros-Easy-Lang-Switcher-Fabric-26.3-1.0.1.jar",
     "published": "2026-09-19"
   },
@@ -53,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -16,7 +16,6 @@
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
     "net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.model.EntityModel",
     "net.minecraft.client.model.HeadedModel",
     "net.minecraft.client.model.geom.PartPose",
@@ -38,26 +37,27 @@
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
     "net.minecraft.tags.DamageTypeTags",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.tags.TagEntry",
     "net.minecraft.tags.TagLoader",
     "net.minecraft.tags.TagLoader.EntryWithSource",
     "net.minecraft.util.random.WeightedList.Builder",
     "net.minecraft.util.valueproviders.ConstantInt",
     "net.minecraft.util.valueproviders.WeightedListInt",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.LivingEntity.Fallsounds",
     "net.minecraft.world.entity.PostSpawnProcessor",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
-    "and 65 more"
+    "net.minecraft.world.item.ShearsItem",
+    "net.minecraft.world.item.component.CustomModelData",
+    "net.minecraft.world.item.component.DyedItemColor",
+    "and 61 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "simplehats-fabric-26.3-0.4.1.jar",
     "published": "2026-11-13"
   },
@@ -88,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 131,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 119,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

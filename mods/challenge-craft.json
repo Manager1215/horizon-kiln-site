@@ -10,14 +10,11 @@
   "description": "51 stackable challenge runs: Lockout Bingo, Force Item Battle, All Biomes, Void Trail, a casino and more. Earn Lifetime XP and level up across worlds.",
   "needs": [
     "Mixin: 11 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.blaze3d.Blaze3D",
     "io.netty.channel.embedded.EmbeddedChannel",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
-    "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseClick",
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDamage",
@@ -25,8 +22,6 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath",
     "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
@@ -36,12 +31,10 @@
     "net.minecraft.advancements.triggers.BredAnimalsTrigger",
     "net.minecraft.advancements.triggers.TameAnimalTrigger",
     "net.minecraft.advancements.triggers.TradeTrigger",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.Screenshot",
     "net.minecraft.client.gui.ComponentPath",
     "net.minecraft.client.gui.components.OptionsList",
     "net.minecraft.client.gui.components.PlayerFaceExtractor",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.tabs.GridLayoutTab",
     "net.minecraft.client.gui.components.tabs.MenuTabBar",
     "net.minecraft.client.gui.components.tabs.Tab",
@@ -50,6 +43,13 @@
     "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen",
     "net.minecraft.client.gui.screens.worldselection.SelectWorldScreen",
     "net.minecraft.client.gui.screens.worldselection.WorldCreationUiState",
+    "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
+    "net.minecraft.client.model.geom.PartPose",
+    "net.minecraft.client.model.geom.builders.CubeListBuilder",
+    "net.minecraft.client.model.geom.builders.MeshDefinition",
+    "net.minecraft.client.model.geom.builders.PartDefinition",
+    "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
+    "net.minecraft.core.HolderLookup.RegistryLookup.Delegate",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "challengecraft-1.1.4.jar",
     "published": "2026-11-09"
   },
@@ -89,7 +89,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 1197,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
+  },
+  "lacks": 743,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

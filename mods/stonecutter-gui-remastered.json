@@ -11,26 +11,20 @@
   "needs": [
     "an access widener",
     "Mixin: 3 points inside the game's methods",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.client.gui.screens.inventory.StonecutterScreen",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.world.inventory.ContainerInput",
     "net.minecraft.world.inventory.StonecutterMenu",
-    "net.minecraft.world.item.crafting.display.SlotDisplayContext",
-    "Minecraft.execute()",
-    "Minecraft.gameMode",
+    "ResourceLoader.registerBuiltinPack()",
     "GuiGraphicsExtractor.setTooltipForNextFrame()",
-    "AbstractContainerScreen.mouseDragged()",
-    "SoundEvents.UI_STONECUTTER_SELECT_RECIPE",
-    "SlotDisplay.resolveForFirstStack()"
+    "MultiPlayerGameMode.handleInventoryButtonClick()",
+    "SoundEvents.UI_STONECUTTER_SELECT_RECIPE"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "StonecutterRemastered-2.1.1-1.26.3.jar",
     "published": "2026-09-19"
   },
@@ -58,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

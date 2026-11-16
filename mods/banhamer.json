@@ -9,33 +9,17 @@
   "author": "raylix2",
   "description": "Survival Ban & Pardon hammers, staff moderation, custom crafts and optional weapon effects. Configurable messages, safeguards and optional resource packs.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.minecraft.server.players.UserBanList",
     "net.minecraft.server.players.UserBanListEntry",
-    "net.minecraft.world.level.storage.LevelResource",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "DataComponents.CUSTOM_NAME",
-    "MinecraftServer.execute()",
-    "MinecraftServer.getWorldPath()",
-    "ServerPlayer.connection",
-    "ServerPlayer.createCommandSourceStack()",
-    "ServerPlayer.nameAndId()",
     "ServerGamePacketListenerImpl.disconnect()",
-    "PermissionLevel.byId()",
-    "PlayerList.getBans()",
-    "DamageSource.getDirectEntity()",
-    "DamageSource.getEntity()",
-    "Items.MACE",
-    "CustomData.copyTag()"
+    "PlayerList.getBans()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "BanHammer-1.2.0-alpha.1-26.3-fabric.jar",
     "published": "2026-10-15"
   },
@@ -63,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 20,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

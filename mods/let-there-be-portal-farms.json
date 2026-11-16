@@ -12,14 +12,10 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterEntityChange",
     "JsonSyntaxException.getMessage()",
-    "AttachmentRegistry.createPersistent()",
     "ServerLevel.getEntity()",
     "Entity.hasCustomName()",
-    "Mob.getAttachedOrElse()",
-    "Mob.hasAttached()",
     "Mob.is()",
     "Mob.isPersistenceRequired()",
-    "Mob.setAttached()",
     "Mob.setPersistenceRequired()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -27,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "portal-fix-1.0.1.jar",
     "published": "2026-09-28"
   },
@@ -55,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

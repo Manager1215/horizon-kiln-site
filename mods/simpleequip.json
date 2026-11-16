@@ -13,7 +13,6 @@
     "Mixin: 2 points inside the game's methods",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.UsedTotemTrigger",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.model.player.PlayerModel",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer",
@@ -23,7 +22,6 @@
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
     "net.minecraft.tags.DamageTypeTags",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.item.component.DeathProtection",
     "net.minecraft.world.item.component.ResolvableProfile",
     "net.minecraft.world.item.enchantment.EnchantedItemInUse",
@@ -34,7 +32,6 @@
     "Axis.YN",
     "Axis.rotateDegrees()",
     "Object2IntMap.Entry.getKey()",
-    "GuiGraphicsExtractor.<init>()",
     "ModelPart.translateAndRotate()",
     "ClientLevel.getOverworldClockTime()",
     "ItemModelResolver.updateForLiving()",
@@ -43,22 +40,21 @@
     "DataComponents.DEATH_PROTECTION",
     "DataComponents.GLIDER",
     "DataComponents.PROFILE",
-    "MinecraftServer.execute()",
     "Util.getRandom()",
     "Util.getRandomSafe()",
-    "DamageSource.is()",
     "EquipmentSlot.VALUES",
-    "LivingEntity.getRandom()",
     "Slot.setByPlayer()",
     "ItemStack.nextDamageWillBreak()",
-    "and 19 more"
+    "Enchantment.matchingSlot()",
+    "Level.broadcastEntityEvent()",
+    "ValueInput.TypedInputList.iterator()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "SimpleEquip-1.3.jar",
     "published": "2026-09-30"
   },
@@ -88,5 +84,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 59
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; has network channels"
+  },
+  "lacks": 37
 }

@@ -15,7 +15,6 @@
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "net.minecraft.client.gui.Hud.HeartType",
     "net.minecraft.client.gui.components.BossHealthOverlay",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.particle.Particle",
     "net.minecraft.client.particle.ParticleGroup",
     "net.minecraft.client.particle.ParticleProvider",
@@ -25,7 +24,6 @@
     "net.minecraft.client.renderer.oit.OitPipelineSet.Builder",
     "net.minecraft.client.renderer.rendertype.RenderSetup",
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
-    "net.minecraft.data.AtlasIds",
     "net.minecraft.network.chat.contents.objects.AtlasSprite",
     "net.minecraft.world.entity.EntityAttachment",
     "net.minecraft.world.entity.EntityAttachments",
@@ -44,20 +42,22 @@
     "RenderPipeline.builder()",
     "Minecraft.getEntityRenderDispatcher()",
     "Options.getBackgroundColor()",
-    "Font.substrByWidth()",
-    "GuiGraphicsExtractor.<init>()",
-    "GuiGraphicsExtractor.blitSprite()",
     "ClientLevel.getEntity()",
     "LocalPlayer.blockInteractionRange()",
     "LocalPlayer.entityInteractionRange()",
-    "and 47 more"
+    "LocalPlayer.filterHitResult()",
+    "LocalPlayer.getActiveItem()",
+    "LocalPlayer.getTeam()",
+    "GameRenderer.mainCamera()",
+    "RenderPipelines.TEXT_SEE_THROUGH",
+    "and 39 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "healthbars-v26.3.2-mc26.3.x+fabric.jar",
     "published": "2026-11-14"
   },
@@ -87,7 +87,11 @@
     "minecraft",
     "puzzleslib"
   ],
-  "lacks": 98,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 79,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,24 +10,16 @@
   "description": "The anvil has no expensive restrictions and compatible to any enchantment.",
   "needs": [
     "Mixin: 5 points inside the game's methods",
-    "net.minecraft.client.gui.screens.inventory.AnvilScreen",
-    "net.minecraft.world.inventory.AnvilMenu",
     "net.minecraft.world.inventory.DataSlot",
     "net.minecraft.world.inventory.ItemCombinerMenu",
-    "net.minecraft.world.inventory.ResultContainer",
-    "CommandBuildContext.lookup()",
-    "Holder.getRegisteredName()",
-    "HolderLookup.RegistryLookup.listElementIds()",
-    "MutableComponent.withStyle()",
-    "Enchantment.areCompatible()",
-    "Enchantment.getMaxLevel()"
+    "net.minecraft.world.inventory.ResultContainer"
   ],
-  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "NoExpensive-26.3-1.11.1.jar",
     "published": "2026-10-06"
   },
@@ -58,7 +50,11 @@
     "mineconf",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

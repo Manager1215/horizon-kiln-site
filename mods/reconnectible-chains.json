@@ -20,16 +20,13 @@
     "net.minecraft.client.model.object.banner.BannerFlagModel",
     "net.minecraft.client.renderer.BiomeColors",
     "net.minecraft.client.renderer.blockentity.BannerRenderer",
-    "net.minecraft.commands.arguments.IdentifierArgument",
     "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.tags.DamageTypeTags",
     "net.minecraft.util.profiling.ProfilerFiller",
     "net.minecraft.world.entity.decoration.HangingEntity",
     "net.minecraft.world.entity.decoration.LeashFenceKnotEntity",
-    "net.minecraft.world.item.BannerItem",
     "net.minecraft.world.level.LightLayer",
     "net.minecraft.world.level.block.LightBlock",
     "net.minecraft.world.level.block.entity.BannerPatternLayers",
@@ -44,19 +41,22 @@
     "VertexConsumer.setLight()",
     "VertexConsumer.setNormal()",
     "VertexConsumer.setOverlay()",
-    "Minecraft.execute()",
     "Minecraft.getBlockEntityRenderDispatcher()",
     "LayerDefinition.bakeRoot()",
     "LayerDefinition.create()",
     "ClientLevel.cardinalLighting()",
-    "and 47 more"
+    "ClientLevel.getLightEngine()",
+    "LocalPlayer.tickCount",
+    "LocalPlayer.xOld",
+    "LocalPlayer.zOld",
+    "and 44 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "connectiblechains-2.5.1+26.3-fabric.jar",
     "published": "2026-11-13"
   },
@@ -87,7 +87,11 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 160,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 133,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

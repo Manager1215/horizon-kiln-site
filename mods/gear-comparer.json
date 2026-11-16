@@ -9,35 +9,20 @@
   "author": "inatorcreator",
   "description": "Minecraft mod to compare gear, primarily modded gear.",
   "needs": [
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipPositioner",
     "net.minecraft.client.gui.screens.inventory.tooltip.TooltipRenderUtil",
-    "net.minecraft.core.HolderSet.Named",
-    "net.minecraft.tags.EnchantmentTags",
-    "InputConstants.isKeyDown()",
-    "KeyMappingHelper.getBoundKeyOf()",
-    "GuiGraphicsExtractor.tooltip()",
     "Screen.getTooltipFromItem()",
-    "Holder.is()",
-    "Registry.get()",
-    "RegistryAccess.lookupOrThrow()",
-    "DataComponents.TOOLTIP_STYLE",
-    "Component.getVisualOrderText()",
-    "Attribute.getStyle()",
     "Attribute.sanitizeValue()",
     "AttributeInstance.getModifiers()",
     "Player.registryAccess()",
     "ItemStack.forEachModifier()",
-    "ItemStack.getEnchantments()",
-    "ItemStack.getTooltipImage()",
-    "Enchantment.getFullname()"
+    "ItemStack.getEnchantments()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "gearcompare-1.0.0.jar",
     "published": "2026-11-09"
   },
@@ -65,5 +50,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7
 }

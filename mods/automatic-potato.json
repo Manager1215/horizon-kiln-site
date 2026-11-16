@@ -10,11 +10,7 @@
   "description": "This mod provides Forge-like mod version checker.",
   "needs": [
     "net.fabricmc.loader.api.VersionParsingException",
-    "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
     "net.fabricmc.loader.api.metadata.CustomValue",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "FabricLoader.getEntrypointContainers()",
     "Version.parse()",
     "ModMetadata.containsCustomValue()",
     "ModMetadata.getCustomValue()"
@@ -24,7 +20,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "VersionCheckerMod-3.0.2.jar",
     "published": "2026-09-19"
   },
@@ -48,7 +44,11 @@
   },
   "mixins": false,
   "depends": [],
-  "lacks": 9,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

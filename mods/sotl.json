@@ -9,23 +9,16 @@
   "author": "Paulem79",
   "description": "Stand on the blocks starting with this letter! As a Fabric mod and a paper plugin!",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "BlockPos.MutableBlockPos.set()",
     "DefaultedRegistry.spliterator()",
-    "Registry.wrapAsHolder()",
     "MinecraftServer.getAllLevels()",
     "ServerLevel.getEntities()",
     "ServerLevel.getMaxY()",
     "ServerLevel.getMinY()",
     "ServerLevel.getSeed()",
-    "ServerPlayer.connection",
     "ServerPlayer.getBlockX()",
     "ServerPlayer.getBlockY()",
     "ServerPlayer.getBlockZ()",
-    "ServerGamePacketListenerImpl.send()",
-    "ProblemReporter.DISCARDING",
-    "RandomSource.nextLong()",
     "Entity.discard()",
     "Entity.save()",
     "Entity.setPos()",
@@ -36,7 +29,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "StandOnTheLetter-1.1.0-fabric.jar",
     "published": "2026-10-12"
   },
@@ -64,7 +57,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

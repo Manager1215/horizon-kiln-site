@@ -13,7 +13,6 @@
     "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents",
     "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents.TagsLoaded",
     "net.minecraft.advancements.predicates.ItemPredicate",
-    "net.minecraft.core.HolderSet.Direct",
     "net.minecraft.core.dispenser.ShearsDispenseItemBehavior",
     "net.minecraft.world.entity.animal.cow.MushroomCow",
     "net.minecraft.world.entity.animal.golem.CopperGolem",
@@ -22,22 +21,19 @@
     "net.minecraft.world.entity.decoration.LeashFenceKnotEntity",
     "net.minecraft.world.entity.monster.cubemob.SulfurCube",
     "net.minecraft.world.entity.monster.skeleton.Bogged",
-    "net.minecraft.world.inventory.GrindstoneMenu",
     "net.minecraft.world.item.ShearsItem",
-    "net.minecraft.world.item.crafting.RepairItemRecipe",
     "net.minecraft.world.level.block.BeehiveBlock",
     "net.minecraft.world.level.block.TripWireBlock",
     "net.minecraft.world.level.storage.loot.predicates.MatchTool",
-    "DefaultedRegistry.wrapAsHolder()",
     "DataComponents.DAMAGE",
     "DataComponents.MAX_DAMAGE"
   ],
-  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "woodenshears-fabric-26.3-4.2.1.1.jar",
     "published": "2026-11-14"
   },
@@ -67,7 +63,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

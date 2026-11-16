@@ -19,10 +19,8 @@
     "net.minecraft.client.renderer.special.SpecialModelRenderers",
     "net.minecraft.core.component.DataComponentPatch.SplitResult",
     "net.minecraft.core.particles.ItemParticleOption",
-    "net.minecraft.world.item.BannerItem",
     "net.minecraft.world.item.ShearsItem",
     "net.minecraft.world.item.TridentItem",
-    "net.minecraft.world.item.crafting.RecipeAccess",
     "net.minecraft.world.item.crafting.RecipeManager.CachedCheck",
     "net.minecraft.world.level.block.entity.BannerPatternLayers",
     "net.minecraft.world.level.block.entity.BannerPatternLayers.Builder",
@@ -35,13 +33,7 @@
     "BlockEntityRenderer.extractRenderState()",
     "BlockEntityRenderState.lightCoords",
     "SpriteId.renderType()",
-    "HolderLookup.getOrThrow()",
-    "HolderLookup.Provider.lookup()",
-    "HolderLookup.RegistryLookup.get()",
     "DataComponentPatch.split()",
-    "DataComponents.BANNER_PATTERNS",
-    "DataComponents.CUSTOM_NAME",
-    "DataComponents.ITEM_NAME",
     "ParticleTypes.ITEM",
     "Registries.BANNER_PATTERN",
     "ServerLevel.sendParticles()",
@@ -49,14 +41,21 @@
     "Player.isSecondaryUseActive()",
     "ItemStack.hashItemAndComponents()",
     "ItemStack.hurtAndBreak()",
-    "and 10 more"
+    "Items.BANNER",
+    "RecipeAccess.propertySet()",
+    "RecipeManager.createCheck()",
+    "RecipePropertySet.test()",
+    "EnchantmentHelper.getItemEnchantmentLevel()",
+    "Level.holderLookup()",
+    "Level.levelEvent()",
+    "Level.recipeAccess()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "choppersdelight-fabric-26.3-1.2.1.jar",
     "published": "2026-11-07"
   },
@@ -87,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 50,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 40,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

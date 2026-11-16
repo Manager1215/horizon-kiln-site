@@ -20,8 +20,6 @@
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "com.mojang.renderpearl.api.vertex.VertexFormatElement",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
     "net.fabricmc.fabric.api.client.model.loading.v1.ExtraModelKey",
     "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin",
     "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin.Context",
@@ -39,7 +37,6 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
@@ -48,9 +45,12 @@
     "net.fabricmc.loader.api.VersionParsingException",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.TargetBlockTrigger",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
-    "net.minecraft.client.gui.components.Button.Plain",
+    "net.minecraft.client.gui.components.SubtitleOverlay",
+    "net.minecraft.client.gui.contextualbar.ExperienceBar",
+    "net.minecraft.client.gui.contextualbar.JumpableVehicleBar",
+    "net.minecraft.client.model.AnimationUtils",
+    "net.minecraft.client.model.EntityModel",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "avalight-26.3-fabric-2.4.1.jar",
     "published": "2026-10-24"
   },
@@ -90,7 +90,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 730,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
+  },
+  "lacks": 535,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

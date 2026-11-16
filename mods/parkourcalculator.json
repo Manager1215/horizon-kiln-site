@@ -11,9 +11,7 @@
   "needs": [
     "an access widener",
     "Mixin: 5 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.blaze3d.Blaze3D",
-    "com.mojang.blaze3d.platform.TextInputManager",
     "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
     "com.mojang.blaze3d.vertex.BufferBuilder",
     "com.mojang.blaze3d.vertex.ByteBufferBuilder",
@@ -28,15 +26,12 @@
     "com.mojang.renderpearl.backend.opengl.GlTexture",
     "com.mojang.renderpearl.frontend.FrontendGpuDevice",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.player.ClientInput",
     "net.minecraft.client.renderer.DynamicGpuData",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.fog.FogRenderer",
     "net.minecraft.client.renderer.rendertype.RenderSetup",
     "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.network.LpVec3",
     "net.minecraft.network.PacketProcessor",
     "net.minecraft.network.protocol.game.ServerboundAcceptTeleportationPacket",
@@ -51,14 +46,19 @@
     "net.minecraft.network.protocol.game.ServerboundPlayerInputPacket",
     "net.minecraft.network.protocol.game.ServerboundPlayerLoadedPacket",
     "net.minecraft.network.protocol.ping.ServerboundPingRequestPacket",
-    "and 79 more"
+    "net.minecraft.server.PlayerAdvancements",
+    "net.minecraft.server.level.ChunkMap",
+    "net.minecraft.server.level.ServerPlayerGameMode",
+    "net.minecraft.world.entity.ai.attributes.AttributeMap",
+    "net.minecraft.world.entity.player.Input",
+    "and 73 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "pkc-fabric-26.3-1.18.0.jar",
     "published": "2026-11-15"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 244,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own"
+  },
+  "lacks": 206,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -26,12 +26,10 @@
     "net.fabricmc.fabric.api.client.renderer.v1.sprite.SpriteFinder",
     "net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.StartDataPackReload",
     "net.fabricmc.fabric.api.loot.v3.LootTableEvents.Loaded",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditionType",
     "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions",
-    "net.minecraft.SharedConstants",
     "net.minecraft.advancements.triggers.PlayerTrigger",
     "net.minecraft.client.gui.screens.inventory.StonecutterScreen",
     "net.minecraft.client.model.geom.builders.UVPair",
@@ -51,6 +49,8 @@
     "net.minecraft.client.particle.WhiteSmokeParticle.Provider",
     "net.minecraft.client.renderer.BiomeColors",
     "net.minecraft.client.renderer.block.FluidRenderer",
+    "net.minecraft.client.renderer.entity.FallingBlockRenderer",
+    "net.minecraft.client.renderer.extract.LevelExtractor",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "theleadage-fabric-26.3-1.2.1.jar",
     "published": "2026-11-10"
   },
@@ -90,7 +90,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 438,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; generates in the world"
+  },
+  "lacks": 346,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

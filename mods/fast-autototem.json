@@ -2,24 +2,19 @@
   "id": "fast-autototem",
   "name": "fast-autototem",
   "version": "26.3",
-  "status": "planned",
-  "statusLabel": "Planned",
-  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "status": "not-checked",
+  "statusLabel": "Not checked",
+  "statusMeaning": "In the catalogue, not checked yet.",
   "url": "https://modrinth.com/mod/fast-autototem",
   "author": "potatottototbs",
   "description": "A simple autototem mod. If your totem pops in your offhand, it automatically gets replaced. The mod can be opted out on the server side.  NOTE: THIS MOD IS NOT MEANT TO BE USED FOR BREAKING ANY SERVER RULES",
-  "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.world.inventory.ContainerInput",
-    "Minecraft.gameMode",
-    "Items.TOTEM_OF_UNDYING"
-  ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
-  "evidence": "Not run: Java did not start.",
+  "needs": [],
+  "roadmap": "",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (21 classes, 22 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "autototem-kotlin-26.3.jar",
     "published": "2026-09-15"
   },
@@ -48,7 +43,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 4,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

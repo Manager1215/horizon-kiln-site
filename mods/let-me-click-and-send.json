@@ -2,21 +2,19 @@
   "id": "let-me-click-and-send",
   "name": "Let Me Click And Send",
   "version": "v1.2.3-mc26.3",
-  "status": "planned",
-  "statusLabel": "Planned",
-  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "status": "not-checked",
+  "statusLabel": "Not checked",
+  "statusMeaning": "In the catalogue, not checked yet.",
   "url": "https://modrinth.com/mod/let-me-click-and-send",
   "author": "fallen-breath",
   "description": "A simple Minecraft client-side mod, that reverts the `run_command` click event restriction introduced in 1.19.1-rc1, so non-command messages can be sent freely via `run_command` click event again",
-  "needs": [
-    "ClientPacketListener.sendChat()"
-  ],
-  "roadmap": "Minecraft's libraries and client API (0.2)",
-  "evidence": "Not run: Java did not start.",
+  "needs": [],
+  "roadmap": "",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.5 (7 classes, 9 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "LetMeClickAndSend-v1.2.3-mc26.3.jar",
     "published": "2026-09-17"
   },
@@ -42,7 +40,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 1,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "status": "not-checked",
     "statusLabel": "Not checked",

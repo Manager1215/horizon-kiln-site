@@ -9,8 +9,6 @@
   "author": "Serilum",
   "description": "🗿 Allows the collection of player heads via command or death event.",
   "needs": [
-    "net.minecraft.server.permissions.Permissions",
-    "CommandSourceStack.getEntity()",
     "ServerPlayer.spawnAtLocation()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -18,7 +16,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "justplayerheads-26.3.0-4.5.jar",
     "published": "2026-10-02"
   },
@@ -48,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

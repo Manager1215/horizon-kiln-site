@@ -12,8 +12,6 @@
     "Mixin: 1 point inside the game's methods",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
     "net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents.Load",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
     "net.minecraft.client.renderer.blockentity.BeaconRenderer",
@@ -29,21 +27,18 @@
     "VertexConsumer.addVertex()",
     "LevelRenderEvents.COLLECT_SUBMITS",
     "ServerBlockEntityEvents.BLOCK_ENTITY_LOAD",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "Options.getEffectiveRenderDistance()",
     "GameRenderer.mainCamera()",
     "RenderTypes.lightning()",
     "MinecraftServer.getAllLevels()",
-    "MinecraftServer.getDataStorage()",
-    "Blocks.BEACON"
+    "MinecraftServer.getDataStorage()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "distant-beacons-1.1-voxy.jar",
     "published": "2026-09-17"
   },
@@ -73,7 +68,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,11 +10,11 @@
   "description": "Stop leads (leashes) from breaking. No matter your speed or distance from the leashed entity, the lead will never snap.",
   "needs": [],
   "roadmap": "",
-  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers. Everything its code calls is covered by Kiln 0.4.1 (2 classes, 0 members). Not run yet.",
+  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers. Everything its code calls is covered by Kiln 0.4.5 (2 classes, 0 members). Not run yet.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "unbreakable_leads-1.0.5+26.3.jar",
     "published": "2026-10-13"
   },
@@ -27,6 +27,10 @@
   "entrypoints": {},
   "mixins": true,
   "depends": [],
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
   "lacks": 0,
   "development": {
     "status": "not-checked",

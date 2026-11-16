@@ -9,35 +9,23 @@
   "author": "Mattivous",
   "description": "Makes wind charges behave like the wind charges in spear mace on Minemen Club and more!",
   "needs": [
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.entity.projectile.hurtingprojectile.windcharge.WindCharge",
     "net.minecraft.world.item.ItemCooldowns",
     "net.minecraft.world.item.WindChargeItem",
     "ServerLevel.sendParticles()",
     "ServerPlayer.fallDistance",
     "ServerPlayer.isAlive()",
-    "ServerPlayer.isRemoved()",
     "ServerPlayer.setDeltaMovement()",
-    "ServerPlayer.syncVelocity",
     "SoundEvents.WIND_CHARGE_BURST",
     "DamageSources.generic()",
-    "Inventory.contains()",
-    "Player.getCooldowns()",
-    "Items.COPPER_SPEAR",
-    "Items.DIAMOND_SPEAR",
-    "Items.GOLDEN_SPEAR",
-    "Items.IRON_SPEAR",
-    "Items.NETHERITE_SPEAR",
-    "Items.STONE_SPEAR",
-    "Items.WIND_CHARGE",
-    "Items.WOODEN_SPEAR"
+    "Player.getCooldowns()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "WindTweaks-Fabric-26.3-2.1.1.jar",
     "published": "2026-10-19"
   },
@@ -65,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

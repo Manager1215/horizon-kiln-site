@@ -10,12 +10,8 @@
   "description": "Mod for detailed mob/animal spawn configuration",
   "needs": [
     "net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents.AllowLoad",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.minecraft.commands.arguments.IdentifierArgument",
-    "net.minecraft.server.permissions.Permissions",
     "JsonSyntaxException.getMessage()",
     "ServerEntityEvents.ALLOW_LOAD",
-    "ServerLifecycleEvents.SERVER_STARTING",
     "DefaultedRegistry.iterator()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -23,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "YepBlocked-1.1.0-Fabric-26.3.jar",
     "published": "2026-11-12"
   },
@@ -52,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

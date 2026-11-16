@@ -10,7 +10,6 @@
   "description": "Potions are not consumed when drank",
   "needs": [
     "net.minecraft.world.item.PotionItem",
-    "net.minecraft.world.item.alchemy.PotionContents",
     "net.minecraft.world.item.component.Consumable",
     "DataComponents.CONSUMABLE",
     "MobEffect.applyInstantaneousEffect()"
@@ -20,7 +19,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "infinitepotion-fabric-26.3-1.0.jar",
     "published": "2026-11-01"
   },
@@ -48,7 +47,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 5,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite into the game's classes"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

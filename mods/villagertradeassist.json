@@ -12,17 +12,12 @@
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
     "net.minecraft.client.gui.components.SpriteIconButton",
     "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.WidgetSprites",
     "net.minecraft.client.gui.screens.inventory.MerchantScreen",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.network.protocol.game.ServerboundSelectTradePacket",
-    "net.minecraft.world.inventory.ContainerInput",
     "net.minecraft.world.inventory.MerchantMenu",
     "net.minecraft.world.item.trading.Merchant",
     "net.minecraft.world.item.trading.MerchantOffer",
-    "Minecraft.gameMode",
-    "Button.setTooltip()",
     "ClientPacketListener.send()",
     "NonNullList.iterator()",
     "Inventory.getFreeSlot()",
@@ -37,7 +32,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "VillagerTradeAssist-1.0.6.jar",
     "published": "2026-10-15"
   },
@@ -65,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

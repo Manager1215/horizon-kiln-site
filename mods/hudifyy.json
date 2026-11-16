@@ -9,8 +9,6 @@
   "author": "ayh_hora",
   "description": "Displays a customizable HUD with coordinates, biome, FPS, time, ping, playtime, armor durability, and horse stats.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.inventory.AbstractMountInventoryScreen",
     "net.minecraft.client.renderer.extract.LevelExtractor",
     "net.minecraft.world.TickRateManager",
@@ -21,24 +19,12 @@
     "net.minecraft.world.entity.animal.equine.Mule",
     "net.minecraft.world.entity.animal.equine.SkeletonHorse",
     "net.minecraft.world.entity.animal.equine.ZombieHorse",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
     "Minecraft.isLocalServer()",
     "Minecraft.levelExtractor",
-    "AbstractWidget.playButtonClickSound()",
-    "Button.setTooltip()",
-    "Button.Builder.tooltip()",
-    "EditBox.setTooltip()",
-    "Screen.charTyped()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()",
     "ClientLevel.getEntityCount()",
     "ClientLevel.tickRateManager()",
     "ClientPacketListener.getServerData()",
     "PlayerInfo.getProfile()",
-    "ServerData.ip",
     "ServerData.ping",
     "LocalPlayer.getVehicle()",
     "MinecraftServer.getCurrentSmoothedTickTime()",
@@ -47,7 +33,6 @@
     "Player.getBlockZ()",
     "Player.getGameProfile()",
     "Level.getBiome()",
-    "Level.getDefaultClockTime()",
     "Level.getOverworldClockTime()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
@@ -55,7 +40,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Hudifyy.jar",
     "published": "2026-10-04"
   },
@@ -83,7 +68,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 40,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 25,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

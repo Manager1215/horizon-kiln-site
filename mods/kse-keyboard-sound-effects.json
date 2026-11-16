@@ -10,21 +10,14 @@
   "description": "This mod adds sound effects to key presses and mouse clicks, featuring pleasant built-in sounds. You can also load your own sound files directly from the in-game settings menu.",
   "needs": [
     "org.lwjgl.PointerBuffer",
-    "org.lwjgl.system.MemoryStack",
-    "InputConstants.Key.getDisplayName()",
-    "InputConstants.Type.getOrCreate()",
-    "Minecraft.execute()",
-    "Screen.mouseClicked()",
-    "Screen.mouseDragged()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()"
+    "org.lwjgl.system.MemoryStack"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "kse-26.3-1.0.1.jar",
     "published": "2026-10-19"
   },
@@ -53,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

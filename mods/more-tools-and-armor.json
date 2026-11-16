@@ -11,16 +11,13 @@
   "needs": [
     "an access widener",
     "Mixin: 2 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.StartDataPackReload",
     "net.fabricmc.fabric.api.loot.v3.LootTableEvents.Replace",
     "net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.component.BlockTransformer.BlockTransformData.Builder",
     "net.minecraft.core.component.DataComponentInitializers",
     "net.minecraft.core.component.DataComponentInitializers.SingleComponentInitializer",
     "net.minecraft.references.BlockItemId",
     "net.minecraft.references.BlockItemIds",
-    "net.minecraft.tags.ItemTags",
     "net.minecraft.world.entity.animal.golem.IronGolem",
     "net.minecraft.world.entity.monster.Enderman",
     "net.minecraft.world.entity.monster.Phantom",
@@ -49,16 +46,19 @@
     "net.minecraft.world.level.storage.loot.functions.ApplyBonusCount",
     "BiMap.entrySet()",
     "BiomeModifications.addFeature()",
-    "ServerLifecycleEvents.START_DATA_PACK_RELOAD",
     "LootTableEvents.REPLACE",
-    "and 56 more"
+    "HolderLookup.Provider.getOrThrow()",
+    "BlockTransformer.BlockTransformData.builder()",
+    "BlockTransformer.BlockTransformData.builder()",
+    "DataComponents.GLIDER",
+    "and 41 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "More Tools and Armor-11.3+26.3.jar",
     "published": "2026-09-16"
   },
@@ -89,7 +89,11 @@
     "java",
     "modmenu"
   ],
-  "lacks": 127,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 81,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

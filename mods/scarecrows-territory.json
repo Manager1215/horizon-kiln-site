@@ -27,7 +27,6 @@
     "net.minecraft.world.level.StructureManager",
     "ServerLevelEvents.UNLOAD",
     "BlockPos.MutableBlockPos.set()",
-    "DataComponents.DYE",
     "MinecraftServer.schedule()",
     "ServerChunkCache.getLastSpawnState()",
     "ServerChunkCache.isPositionTicking()",
@@ -50,14 +49,15 @@
     "Mob.isMaxGroupSizeReached()",
     "Mob.isPersistenceRequired()",
     "Mob.removeWhenFarAway()",
-    "and 24 more"
+    "Mob.requiresCustomPersistence()",
+    "and 18 more"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "scarecrowsterritory-1.1.12-fabric-mc26.3.jar",
     "published": "2026-09-18"
   },
@@ -88,7 +88,11 @@
     "supermartijn642configlib",
     "supermartijn642corelib"
   ],
-  "lacks": 64,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 58,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

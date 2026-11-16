@@ -11,33 +11,18 @@
   "needs": [
     "net.minecraft.client.color.item.ItemTintSource",
     "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperty",
-    "net.minecraft.world.SimpleContainer",
-    "net.minecraft.world.inventory.ContainerInput",
     "net.minecraft.world.inventory.PlayerEnderChestContainer",
-    "net.minecraft.world.item.crafting.display.ShapedCraftingRecipeDisplay",
-    "net.minecraft.world.item.crafting.display.SlotDisplay.ItemSlotDisplay",
     "Registries.MENU",
     "Registries.RECIPE_SERIALIZER",
     "ServerPlayer.closeContainer()",
     "Player.getEnderChestInventory()",
     "AbstractContainerMenu.clicked()",
-    "DyeColor.byId()",
-    "DyeColor.getFireworkColor()",
-    "DyeColor.getId()",
-    "DyeColor.getName()",
     "ItemStack.applyComponents()",
     "CraftingRecipe.CraftingBookInfo.MAP_CODEC",
     "CraftingRecipe.CraftingBookInfo.STREAM_CODEC",
-    "Ingredient.display()",
     "PlacementInfo.createFromOptionals()",
     "Recipe.CommonInfo.MAP_CODEC",
     "Recipe.CommonInfo.STREAM_CODEC",
-    "ShapedRecipePattern.MAP_CODEC",
-    "ShapedRecipePattern.STREAM_CODEC",
-    "ShapedRecipePattern.height()",
-    "ShapedRecipePattern.ingredients()",
-    "ShapedRecipePattern.matches()",
-    "ShapedRecipePattern.width()",
     "Level.playSound()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
@@ -45,7 +30,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "assortedbags-fabric-26.3-2.0.1.jar",
     "published": "2026-10-31"
   },
@@ -75,7 +60,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 30,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

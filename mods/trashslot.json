@@ -9,29 +9,12 @@
   "author": "BlayTheNinth",
   "description": "Adds a draggable trash slot to all inventory screens. Press T to toggle.",
   "needs": [
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.util.profiling.ProfilerFiller",
-    "net.minecraft.world.inventory.ContainerInput",
     "net.minecraft.world.inventory.ResultSlot",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "InputConstants.Key.getDisplayName()",
-    "Minecraft.gameDirectory",
     "GuiGraphicsExtractor.setTooltipForNextFrame()",
-    "Rect2i.contains()",
-    "Rect2i.getHeight()",
-    "Rect2i.getWidth()",
-    "Rect2i.getX()",
-    "Rect2i.getY()",
     "FileToIdConverter.fileToId()",
     "FileToIdConverter.json()",
     "FileToIdConverter.listMatchingResources()",
-    "RegistryOps.create()",
-    "ServerPlayer.connection",
-    "ServerGamePacketListenerImpl.send()",
-    "StringRepresentable.EnumCodec.fieldOf()",
-    "StringRepresentable.EnumCodec.optionalFieldOf()",
     "Player.registryAccess()",
     "AbstractContainerMenu.clicked()",
     "AbstractContainerMenu.isValidSlotIndex()"
@@ -41,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "trashslot-fabric-26.3-26.3.0.2.jar",
     "published": "2026-11-02"
   },
@@ -71,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 26,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

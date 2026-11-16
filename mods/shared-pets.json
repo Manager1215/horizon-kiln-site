@@ -10,9 +10,7 @@
   "description": "Share your tamed wolves and cats with friends! Add co-owners, configure follow modes, transfer ownership — all via in-game GUI. Works even when the main owner is offline. Supports  : Fabric, Forge & NeoForge.",
   "needs": [
     "an access widener",
-    "com.mojang.authlib.GameProfile",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
     "net.minecraft.world.entity.ai.control.LookControl",
     "net.minecraft.world.entity.ai.goal.FollowOwnerGoal",
     "net.minecraft.world.entity.ai.goal.Goal",
@@ -28,15 +26,8 @@
     "net.minecraft.world.entity.animal.wolf.Wolf",
     "net.minecraft.world.level.pathfinder.PathType",
     "net.minecraft.world.phys.EntityHitResult",
-    "Minecraft.execute()",
-    "Minecraft.setScreenAndShow()",
-    "Screen.mouseScrolled()",
     "PlayerInfo.getProfile()",
-    "CommandSourceStack.getServer()",
-    "MutableComponent.setStyle()",
-    "Style.withClickEvent()",
     "SynchedEntityData.getNonDefaultValues()",
-    "MinecraftServer.execute()",
     "MinecraftServer.getTickCount()",
     "ServerChunkCache.sendToTrackingPlayersAndSelf()",
     "ServerLevel.getEntity()",
@@ -50,14 +41,23 @@
     "TamableAnimal.getLookControl()",
     "TamableAnimal.getMaxHeadXRot()",
     "TamableAnimal.getNavigation()",
-    "and 10 more"
+    "TamableAnimal.getOwner()",
+    "TamableAnimal.getPathfindingMalus()",
+    "TamableAnimal.isAlliedTo()",
+    "TamableAnimal.isInSittingPose()",
+    "TamableAnimal.isLeashed()",
+    "TamableAnimal.isOrderedToSit()",
+    "TamableAnimal.isPassenger()",
+    "TamableAnimal.isTame()",
+    "TamableAnimal.setPathfindingMalus()",
+    "and 1 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "shared_pets-fabric-26.3-1.0.1.jar",
     "published": "2026-10-01"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 50,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 41,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

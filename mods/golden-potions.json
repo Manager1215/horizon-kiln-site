@@ -10,30 +10,22 @@
   "description": "Brew potions from golden food items instead of eating them",
   "needs": [
     "Mixin: 8 points inside the game's methods",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.world.food.FoodProperties",
     "net.minecraft.world.food.Foods",
     "net.minecraft.world.item.PotionItem",
     "net.minecraft.world.item.TippedArrowItem",
-    "net.minecraft.world.item.alchemy.Potion",
-    "net.minecraft.world.item.alchemy.PotionContents",
-    "net.minecraft.world.item.alchemy.Potions",
     "net.minecraft.world.item.component.Consumable",
     "net.minecraft.world.item.component.Consumables",
-    "DataComponents.POTION_CONTENTS",
-    "BuiltInRegistries.POTION",
-    "Item.isFoil()",
-    "Items.ENCHANTED_GOLDEN_APPLE",
-    "Items.GOLDEN_APPLE",
-    "Items.GOLDEN_CARROT"
+    "ResourceLoader.registerBuiltinPack()",
+    "Item.isFoil()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "goldenpotions-fabric-1.0.9+26.3.jar",
     "published": "2026-09-24"
   },
@@ -65,7 +57,11 @@
     "minecraft",
     "mixson"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

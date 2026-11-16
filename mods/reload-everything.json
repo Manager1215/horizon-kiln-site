@@ -10,26 +10,21 @@
   "description": "Tired of relaunching the game through the launcher? Click the reload button and get back in instantly.",
   "needs": [
     "net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.packs.PackSelectionScreen",
     "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.server.packs.repository.PackRepository",
     "net.minecraft.world.level.storage.WorldData",
     "Minecraft.createWorldOpenFlows()",
-    "Minecraft.execute()",
-    "Minecraft.getSingleplayerServer()",
     "Minecraft.isLocalServer()",
     "Minecraft.reloadResourcePacks()",
-    "Button.getMessage()",
-    "Button.setTooltip()"
+    "IntegratedServer.getWorldData()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "reload-everything-1.2.3+26.3.jar",
     "published": "2026-11-14"
   },
@@ -61,7 +56,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -32,11 +32,9 @@
     "net.minecraft.client.renderer.special.SpecialModelRenderer.Unbaked",
     "net.minecraft.core.particles.VibrationParticleOption",
     "net.minecraft.tags.GameEventTags",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.ContainerUser",
     "net.minecraft.world.entity.monster.piglin.PiglinAi",
     "net.minecraft.world.inventory.ContainerData",
-    "net.minecraft.world.inventory.MenuType.MenuSupplier",
     "net.minecraft.world.inventory.SimpleContainerData",
     "net.minecraft.world.level.block.ChestBlock",
     "net.minecraft.world.level.block.EnderChestBlock",
@@ -50,14 +48,16 @@
     "net.minecraft.world.level.gameevent.GameEventListener.Provider",
     "net.minecraft.world.level.gameevent.PositionSource",
     "net.minecraft.world.level.gameevent.vibrations.VibrationSystem",
-    "and 38 more"
+    "net.minecraft.world.level.gameevent.vibrations.VibrationSystem.Listener",
+    "EntityModelSet.bakeLayer()",
+    "and 31 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "echochest-v26.3.0-mc26.3.x+fabric.jar",
     "published": "2026-09-28"
   },
@@ -87,7 +87,11 @@
     "minecraft",
     "puzzleslib"
   ],
-  "lacks": 78,
+  "softOff": {
+    "class": "partial",
+    "why": "data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 71,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

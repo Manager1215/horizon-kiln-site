@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 9 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.minecraft.MinecraftProfileTexture",
     "com.mojang.authlib.minecraft.MinecraftProfileTextures",
     "com.mojang.authlib.minecraft.SessionService",
@@ -24,20 +23,14 @@
     "net.fabricmc.fabric.api.client.networking.v1.ClientLoginConnectionEvents",
     "net.fabricmc.fabric.api.client.networking.v1.ClientLoginConnectionEvents.Init",
     "net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.impl.client.rendering.ArmorRendererRegistryImpl",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.animation.AnimationDefinition",
     "net.minecraft.client.animation.KeyframeAnimation",
     "net.minecraft.client.animation.definitions.CopperGolemAnimation",
     "net.minecraft.client.gui.components.FriendsButton",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.debug.DebugEntryNoop",
     "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntries",
     "net.minecraft.client.gui.components.debug.DebugScreenEntry",
-    "net.minecraft.client.gui.components.debug.DebugScreenEntryList",
     "net.minecraft.client.model.AnimationUtils",
     "net.minecraft.client.model.ArmedModel",
     "net.minecraft.client.model.EntityModel",
@@ -51,6 +44,13 @@
     "net.minecraft.client.model.animal.pig.PigModel",
     "net.minecraft.client.model.effects.SpearAnimations",
     "net.minecraft.client.model.geom.ModelLayers",
+    "net.minecraft.client.model.geom.ModelPart.Polygon",
+    "net.minecraft.client.model.geom.ModelPart.Vertex",
+    "net.minecraft.client.model.geom.PartPose",
+    "net.minecraft.client.model.geom.builders.CubeDefinition",
+    "net.minecraft.client.model.geom.builders.CubeDeformation",
+    "net.minecraft.client.model.geom.builders.CubeListBuilder",
+    "net.minecraft.client.model.geom.builders.MaterialDefinition",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "minelittlepony-4.16.6+26.3.jar",
     "published": "2026-09-19"
   },
@@ -91,7 +91,11 @@
     "minecraft",
     "mson"
   ],
-  "lacks": 435,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+  },
+  "lacks": 392,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

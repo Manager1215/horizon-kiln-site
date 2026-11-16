@@ -11,27 +11,16 @@
   "needs": [
     "net.minecraft.client.multiplayer.ClientSuggestionProvider",
     "net.minecraft.server.level.ServerPlayerGameMode",
-    "net.minecraft.server.permissions.Permissions",
-    "CommandSourceStack.getEntity()",
-    "CommandSourceStack.withPermission()",
-    "Commands.performPrefixedCommand()",
     "Commands.sendCommands()",
-    "Component.translatableWithFallback()",
-    "MinecraftServer.getCommands()",
     "ServerPlayer.clientInformation()",
-    "ServerPlayer.createCommandSourceStack()",
-    "ServerPlayer.gameMode",
-    "ServerPlayer.permissions()",
-    "ServerPlayer.sendSystemMessage()",
-    "PermissionSet.ALL_PERMISSIONS",
-    "PermissionSet.union()"
+    "ServerPlayer.gameMode"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "onlytp-fabric-26.3-1.7.0.jar",
     "published": "2026-11-10"
   },
@@ -61,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

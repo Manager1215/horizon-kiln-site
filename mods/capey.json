@@ -9,15 +9,11 @@
   "author": "JGJ52",
   "description": "Have a custom cape which others who use this mod can see too",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "io.netty.channel.ChannelHandlerContext",
     "net.minecraft.client.renderer.entity.layers.WingsLayer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.network.protocol.login.ClientboundLoginDisconnectPacket",
     "JsonArray.forEach()",
-    "NativeImage.read()",
-    "Minecraft.execute()",
     "Minecraft.getSkinManager()",
     "Minecraft.services()",
     "PlayerInfo.getProfile()",
@@ -29,7 +25,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "capey-1.0.0-alpha.3+26.3.jar",
     "published": "2026-09-18"
   },
@@ -58,7 +54,11 @@
     "modmenu",
     "screenapi"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

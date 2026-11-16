@@ -10,16 +10,11 @@
   "description": "🛡️ Server-side AntiXray & ore obfuscation for Fabric/NeoForge. 💎 Hides unexposed ores from X-ray clients. 🚀 No client install. Minecraft 26.1–26.3.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
     "net.fabricmc.loader.api.metadata.ModOrigin",
     "net.fabricmc.loader.api.metadata.ModOrigin.Kind",
-    "net.minecraft.SharedConstants",
     "net.minecraft.core.IdMapper",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.Action",
     "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
     "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
     "net.minecraft.server.dedicated.DedicatedPlayerList",
@@ -35,10 +30,8 @@
     "Long2ObjectMap.Entry.getValue()",
     "ShortIterator.hasNext()",
     "ShortIterator.remove()",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "ServerLifecycleEvents.SERVER_STOPPING",
     "ModContainer.getOrigin()",
-    "CommandSourceStack.getServer()",
+    "SharedConstants.getCurrentVersion()",
     "BlockPos.MutableBlockPos.set()",
     "SectionPos.asLong()",
     "SectionPos.asLong()",
@@ -50,14 +43,21 @@
     "SectionPos.sectionRelativePos()",
     "SectionPos.x()",
     "SectionPos.y()",
-    "and 32 more"
+    "SectionPos.z()",
+    "ServerChunkCache.blockChanged()",
+    "ServerChunkCache.getChunkNow()",
+    "ServerLevel.getLightEngine()",
+    "ServerLevel.getSectionIndexFromSectionY()",
+    "ServerLevel.getSectionYFromSectionIndex()",
+    "ServerLevel.getSeed()",
+    "and 12 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "meowantixray-fabric-1.7.0.jar",
     "published": "2026-09-24"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 72,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; runs threads of its own"
+  },
+  "lacks": 52,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

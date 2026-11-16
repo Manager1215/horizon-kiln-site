@@ -19,10 +19,7 @@
     "net.minecraft.server.TickTask",
     "net.minecraft.world.entity.monster.piglin.PiglinAi",
     "net.minecraft.world.item.BoneMealItem",
-    "net.minecraft.world.item.crafting.RepairItemRecipe",
     "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "BiomeModifications.addFeature()",
     "ModelPart.visible",
     "ModelPart.x",
@@ -31,7 +28,6 @@
     "ModelPart.yScale",
     "ModelPart.z",
     "ModelPart.zScale",
-    "Registry.wrapAsHolder()",
     "Registries.BIOME",
     "MinecraftServer.getTickCount()",
     "ServerLevel.getGameRules()",
@@ -48,17 +44,19 @@
     "Item.BY_BLOCK",
     "BlockPlaceContext.<init>()",
     "CraftingInput.ingredientCount()",
-    "Level.isEmptyBlock()",
     "Blocks.register()",
     "SoundType.COPPER",
-    "and 4 more"
+    "BlockBehaviour.Properties.instrument()",
+    "GameRules.MOB_DROPS",
+    "GameRules.get()",
+    "MapColor.COLOR_ORANGE"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Nox mod V0.4.jar",
     "published": "2026-11-12"
   },
@@ -87,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 44,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 39,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

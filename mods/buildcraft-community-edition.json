@@ -10,7 +10,6 @@
   "description": "BuildCraft Community Edition - port of original BC to newer versions",
   "needs": [
     "an access widener",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.blaze3d.Blaze3D",
     "com.mojang.blaze3d.vertex.BufferBuilder",
     "com.mojang.blaze3d.vertex.DefaultVertexFormat",
@@ -29,9 +28,6 @@
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
     "net.fabricmc.fabric.api.entity.FakePlayer",
     "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.Unload",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
     "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
@@ -44,12 +40,16 @@
     "net.fabricmc.fabric.api.registry.fluid.EntityFluidInteractionRegistry",
     "net.fabricmc.fabric.api.registry.fluid.FluidBehavior",
     "net.fabricmc.fabric.api.registry.fluid.FluidBehavior.Builder",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-    "net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariantAttributes",
-    "net.minecraft.CrashReport",
-    "net.minecraft.CrashReportCategory",
     "net.minecraft.IdentifierException",
-    "net.minecraft.ReportedException",
+    "net.minecraft.client.ClientRecipeBook",
+    "net.minecraft.client.OptionInstance.TooltipSupplier",
+    "net.minecraft.client.color.item.ItemTintSource",
+    "net.minecraft.client.color.item.ItemTintSources",
+    "net.minecraft.client.gui.components.CycleButton.DisplayState",
+    "net.minecraft.client.gui.components.CycleButton.SpriteSupplier",
+    "net.minecraft.client.gui.components.ImageButton",
+    "net.minecraft.client.gui.components.WidgetSprites",
+    "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "BuildCraft-Community-Edition-8.0.30+26.3+fabric.jar",
     "published": "2026-11-15"
   },
@@ -89,5 +89,9 @@
     "minecraft",
     "team_reborn_energy"
   ],
-  "lacks": 767
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
+  },
+  "lacks": 567
 }

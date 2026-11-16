@@ -10,24 +10,14 @@
   "description": "A lightweight utility mod for creating and snapping to custom viewing angles. design process.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.gui.components.ObjectSelectionList",
-    "net.minecraft.client.gui.components.ObjectSelectionList.Entry",
-    "net.minecraft.client.gui.components.StringWidget",
     "net.minecraft.client.renderer.LevelRenderer",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.gizmos.Gizmos.TemporaryCollection",
     "net.minecraft.world.level.storage.WorldData",
     "Camera.rotation()",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
-    "Screen.mouseClicked()",
-    "Screen.mouseScrolled()",
-    "ServerData.ip",
     "LocalPlayer.setXRot()",
     "LocalPlayer.setYRot()",
     "GameRenderer.mainCamera()",
+    "IntegratedServer.getWorldData()",
     "Gizmos.billboardText()",
-    "Gizmos.line()",
     "TextGizmo.Style.forColorAndCentered()",
     "TextGizmo.Style.withScale()",
     "Vec3.directionFromRotation()"
@@ -37,7 +27,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "palmselegant-1.0.3.jar",
     "published": "2026-10-06"
   },
@@ -66,7 +56,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes"
+  },
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

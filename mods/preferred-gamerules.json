@@ -11,10 +11,8 @@
   "needs": [
     "net.minecraft.client.gui.screens.worldselection.WorldCreationGameRulesScreen",
     "net.minecraft.world.flag.FeatureFlagRegistry",
-    "net.minecraft.world.flag.FeatureFlags",
-    "Minecraft.setScreenAndShow()",
-    "Registry.listElementIds()",
     "BuiltInRegistries.GAME_RULE",
+    "FeatureFlags.REGISTRY",
     "GameRule.serialize()",
     "GameRules.availableRules()",
     "GameRules.get()",
@@ -25,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "preferred-gamerules-2.0.1+26.2.jar",
     "published": "2026-09-16"
   },
@@ -44,7 +42,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite into the game's classes"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

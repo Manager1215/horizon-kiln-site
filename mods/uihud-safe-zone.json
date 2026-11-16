@@ -10,16 +10,14 @@
   "description": "Adjust your HUD and menu UI within a centered safe zone on ultrawide monitors.",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.minecraft.client.gui.components.ChatComponent.DisplayMode",
-    "Minecraft.execute()",
-    "Minecraft.setScreenAndShow()"
+    "net.minecraft.client.gui.components.ChatComponent.DisplayMode"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ui_safe_zone-26.3-0.2.7.jar",
     "published": "2026-10-31"
   },
@@ -47,7 +45,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 3,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

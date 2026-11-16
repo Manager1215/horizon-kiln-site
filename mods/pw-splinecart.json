@@ -22,12 +22,10 @@
     "net.minecraft.network.syncher.EntityDataAccessor",
     "net.minecraft.network.syncher.EntityDataSerializers",
     "net.minecraft.network.syncher.SynchedEntityData.Builder",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.entity.Entity.MoveFunction",
     "net.minecraft.world.entity.InterpolationHandler",
     "net.minecraft.world.entity.LinearInterpolationHandler",
     "net.minecraft.world.item.MinecartItem",
-    "net.minecraft.world.item.component.ItemLore",
     "net.minecraft.world.level.LightLayer",
     "net.minecraft.world.level.block.BaseRailBlock",
     "net.minecraft.world.level.block.state.properties.RailShape",
@@ -42,22 +40,24 @@
     "VertexConsumer.setLight()",
     "VertexConsumer.setNormal()",
     "VertexConsumer.setOverlay()",
-    "KeyMapping.getTranslatedKeyMessage()",
-    "Minecraft.hitResult",
-    "Options.keyUse",
     "LocalPlayer.getVehicle()",
     "BlockEntityRenderer.shouldRender()",
     "Frustum.getNearPlaneBounds()",
     "RenderTypes.entityCutoutZOffset()",
     "CameraRenderState.smartCull",
-    "and 43 more"
+    "BlockPos.containing()",
+    "BlockPos.distSqr()",
+    "Direction.getApproximateNearest()",
+    "Direction.getRotation()",
+    "EntityDataSerializer.forValueType()",
+    "and 41 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "splinecart-26.3-0.5.5+26.3.jar",
     "published": "2026-11-01"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 112,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 95,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

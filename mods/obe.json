@@ -11,16 +11,12 @@
   "needs": [
     "an access widener",
     "Mixin: 3 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.properties.Property",
     "com.mojang.authlib.properties.PropertyMap",
     "com.mojang.blaze3d.platform.Transparency",
     "com.mojang.blaze3d.vertex.BufferBuilder",
     "com.mojang.blaze3d.vertex.VertexSorting",
     "com.mojang.math.Transformation",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-    "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
     "net.minecraft.client.model.geom.ModelLayers",
     "net.minecraft.client.model.geom.ModelPart.Polygon",
     "net.minecraft.client.model.geom.ModelPart.Vertex",
@@ -51,14 +47,18 @@
     "net.minecraft.client.renderer.entity.CushionRenderer",
     "net.minecraft.client.renderer.extract.LevelExtractor",
     "net.minecraft.client.resources.model.SimpleModelWrapper",
-    "and 69 more"
+    "net.minecraft.client.resources.model.cuboid.FaceBakery",
+    "net.minecraft.client.resources.model.geometry.BakedQuad.MaterialFlags",
+    "net.minecraft.client.resources.model.geometry.QuadCollection.Builder",
+    "net.minecraft.world.entity.animal.golem.CopperGolemOxidationLevel",
+    "and 60 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "obe+26.3-1.2.5.jar",
     "published": "2026-11-15"
   },
@@ -90,7 +90,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 142,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes"
+  },
+  "lacks": 128,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

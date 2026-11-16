@@ -10,15 +10,10 @@
   "description": "Adds more clipboard features",
   "needs": [
     "com.mojang.blaze3d.platform.ClipboardManager",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
     "net.minecraft.nbt.StringTagVisitor",
-    "net.minecraft.server.permissions.PermissionCheck",
-    "InputConstants.isKeyDown()",
     "LocalPlayer.permissions()",
-    "Commands.LEVEL_GAMEMASTERS",
     "CompoundTag.entrySet()",
     "Tag.accept()",
-    "ServerPlayer.permissions()",
     "InventoryMenu.broadcastFullState()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
@@ -26,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "betterclipboard-fabric-26.3-1.0.4.jar",
     "published": "2026-09-15"
   },
@@ -55,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

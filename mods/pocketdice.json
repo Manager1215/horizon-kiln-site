@@ -9,11 +9,6 @@
   "author": "sepehrhn",
   "description": "Dungeons & Dragons (D&D) dice (/roll) with proximity radius. Configurable XdY, color-formatted messages, and anti-spam limits. Supports all 1.21.x. Works on Paper/Folia.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "net.minecraft.network.chat.ComponentSerialization",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "CommandSourceStack.getServer()",
-    "CommandSourceStack.isPlayer()",
     "CommandSourceStack.registryAccess()",
     "MinecraftServer.isSingleplayer()",
     "MinecraftServer.registryAccess()",
@@ -26,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "PocketDice-0.6.0-Fabric.jar",
     "published": "2026-10-12"
   },
@@ -54,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

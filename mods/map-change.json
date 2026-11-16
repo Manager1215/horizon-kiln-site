@@ -10,22 +10,19 @@
   "description": "get desired maps by id",
   "needs": [
     "an access widener",
-    "net.minecraft.core.component.DataComponentPatch.Builder",
     "net.minecraft.world.level.saveddata.maps.MapIndex",
-    "CommandSourceStack.getServer()",
-    "DataComponentPatch.builder()",
+    "DataComponentPatch.Builder.set()",
     "DataComponents.MAP_ID",
     "TypedDataComponent.createUnchecked()",
     "MinecraftServer.getDataStorage()",
-    "ItemStack.applyComponentsAndValidate()",
-    "Items.FILLED_MAP"
+    "ItemStack.applyComponentsAndValidate()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "mapchange-1.6.jar",
     "published": "2026-09-22"
   },
@@ -53,7 +50,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,13 +11,10 @@
   "needs": [
     "an access widener",
     "Mixin: 2 points inside the game's methods",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
     "net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder",
     "net.fabricmc.fabric.api.event.registry.RegistryEntryAddedCallback",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys",
     "net.fabricmc.fabric.impl.resource.FabricResourceReloader",
     "net.minecraft.advancements.predicates.BlockPredicate",
@@ -51,6 +48,9 @@
     "net.minecraft.advancements.predicates.StatePropertiesPredicate.ValueMatcher",
     "net.minecraft.advancements.predicates.TagPredicate",
     "net.minecraft.advancements.predicates.entity.CubeMobPredicate",
+    "net.minecraft.advancements.predicates.entity.DistanceToPlayerPredicate",
+    "net.minecraft.advancements.predicates.entity.EntityEffectsPredicate",
+    "net.minecraft.advancements.predicates.entity.EntityEquipmentPredicate",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "researcher-0.5.0-beta.2+26.3.jar",
     "published": "2026-09-25"
   },
@@ -90,7 +90,11 @@
     "minecraft",
     "trutils"
   ],
-  "lacks": 368,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 278,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

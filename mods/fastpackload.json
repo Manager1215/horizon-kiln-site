@@ -17,7 +17,6 @@
     "com.mojang.blaze3d.font.TrueTypeGlyphProvider",
     "com.mojang.blaze3d.font.UnbakedGlyph",
     "com.mojang.blaze3d.platform.TextureUtil",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.gui.font.AllMissingGlyphProvider",
     "net.minecraft.client.gui.font.FontManager",
     "net.minecraft.client.gui.font.FontOption",
@@ -48,16 +47,17 @@
     "net.minecraft.server.packs.repository.PackRepository",
     "net.minecraft.server.packs.resources.ProfiledReloadInstance",
     "net.minecraft.server.packs.resources.ProfiledReloadInstance.State",
-    "net.minecraft.server.packs.resources.ReloadableResourceManager",
-    "net.minecraft.util.FileUtil",
-    "and 20 more"
+    "org.apache.commons.io.IOUtils",
+    "org.lwjgl.system.MemoryUtil",
+    "NativeImage.getPointer()",
+    "and 14 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "FastPackLoad-fabric-26.2-26.3-1.2.1.jar",
     "published": "2026-10-29"
   },
@@ -84,7 +84,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 60,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 54,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

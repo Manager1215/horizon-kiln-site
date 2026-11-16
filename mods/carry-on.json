@@ -10,8 +10,6 @@
   "description": "Carry On allows you to pick up Tile Entities and Mobs and carry them around!",
   "needs": [
     "Mixin: 4 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath",
@@ -23,7 +21,6 @@
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.renderer.entity.LivingEntityRenderer",
     "net.minecraft.client.renderer.entity.layers.RenderLayer",
@@ -33,15 +30,11 @@
     "net.minecraft.commands.arguments.blocks.BlockStateParser",
     "net.minecraft.commands.arguments.blocks.BlockStateParser.BlockResult",
     "net.minecraft.commands.arguments.item.ItemParser",
-    "net.minecraft.core.RegistrySetBuilder",
     "net.minecraft.server.PlayerAdvancements",
     "net.minecraft.server.ServerAdvancementManager",
     "net.minecraft.server.level.ServerPlayerGameMode",
     "net.minecraft.world.entity.AreaEffectCloud",
     "net.minecraft.world.entity.Entity.MoveFunction",
-    "net.minecraft.world.entity.EntityDimensions",
-    "net.minecraft.world.entity.EntitySpawnRequest",
-    "net.minecraft.world.entity.Pose",
     "net.minecraft.world.entity.animal.equine.Horse",
     "net.minecraft.world.level.block.ChestBlock",
     "org.apache.commons.io.FileUtils",
@@ -50,14 +43,21 @@
     "PoseStack.mulPose()",
     "PoseStack.Pose.pose()",
     "CommandSyntaxException.printStackTrace()",
-    "and 55 more"
+    "Axis.ZN",
+    "Axis.ZP",
+    "ServerLifecycleEvents.SYNC_DATA_PACK_CONTENTS",
+    "Minecraft.getEntityRenderDispatcher()",
+    "EntityRenderDispatcher.extractEntity()",
+    "EntityRenderDispatcher.getRenderer()",
+    "EntityRenderState.leashStates",
+    "and 48 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "carryon-fabric-26.3-2.12.2.jar",
     "published": "2026-11-09"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 182,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 144,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

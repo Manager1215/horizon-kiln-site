@@ -9,21 +9,15 @@
   "author": "dexflex_yt",
   "description": "a datapacking utility mod that adds more useful interactions between the server and the client",
   "needs": [
-    "KeyMapping.matches()",
-    "KeyMapping.matchesMouse()",
-    "Options.keyAttack",
-    "Options.keyPickItem",
-    "Options.keyUse",
     "BuiltInRegistries.LOOT_CONDITION_TYPE",
-    "LootContext.getOptional()",
-    "LootContextParams.THIS_ENTITY"
+    "LootContext.getOptional()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "staticparticlemod-3.9-26.3-BASIC.jar",
     "published": "2026-10-13"
   },
@@ -52,7 +46,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 8,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

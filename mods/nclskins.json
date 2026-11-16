@@ -11,25 +11,18 @@
   "needs": [
     "an access widener",
     "Mixin: 11 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.minecraft.MinecraftProfileTexture",
     "com.mojang.authlib.minecraft.MinecraftProfileTextures",
     "com.mojang.authlib.minecraft.SessionService",
     "com.mojang.authlib.properties.Property",
     "com.mojang.authlib.properties.PropertyMap",
     "com.mojang.blaze3d.Blaze3D",
-    "com.mojang.blaze3d.platform.cursor.CursorType",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.client.InputType",
     "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.tabs.GridLayoutTab",
     "net.minecraft.client.gui.components.tabs.MenuTabBar",
     "net.minecraft.client.gui.components.tabs.MenuTabBar.Builder",
@@ -51,6 +44,13 @@
     "net.minecraft.client.model.player.PlayerModel",
     "net.minecraft.client.player.RemotePlayer",
     "net.minecraft.client.renderer.BindGroupLayouts",
+    "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
+    "net.minecraft.client.renderer.StagedVertexBuffer.ExecuteInfo",
+    "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+    "net.minecraft.client.renderer.entity.layers.CapeLayer",
+    "net.minecraft.client.renderer.entity.layers.RenderLayer",
+    "net.minecraft.client.renderer.entity.player.AvatarRenderer",
+    "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "nclskins-1.4.0-beta.1+26.3-fabric.jar",
     "published": "2026-11-09"
   },
@@ -88,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 209,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own; has network channels"
+  },
+  "lacks": 153,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

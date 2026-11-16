@@ -10,37 +10,22 @@
   "description": "Mod for Fabric that adds snowball, egg and ender pearl knockback to players.",
   "needs": [
     "Mixin: 4 points inside the game's methods",
-    "net.minecraft.core.HolderSet.Direct",
-    "net.minecraft.core.HolderSet.Named",
-    "net.minecraft.world.entity.projectile.FishingHook",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.Snowball",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrownEgg",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrownEnderpearl",
-    "net.minecraft.world.level.storage.LevelResource",
-    "org.apache.logging.log4j.Level",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
-    "HolderSet.direct()",
-    "Registry.get()",
-    "Registry.wrapAsHolder()",
-    "RegistryAccess.Frozen.lookupOrThrow()",
     "Entity.typeHolder()",
     "EntityTypes.PLAYER",
     "LivingEntity.isInvulnerable()",
     "LivingEntity.knockback()",
-    "LivingEntity.push()",
-    "LivingEntity.syncVelocity",
-    "LevelStorageSource.LevelStorageAccess.getLevelPath()"
+    "LivingEntity.push()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "snowballkb-1.6-26.3.jar",
     "published": "2026-10-25"
   },
@@ -66,7 +51,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

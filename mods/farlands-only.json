@@ -9,16 +9,13 @@
   "author": "Bebu",
   "description": "Transform your entire Minecraft world into the Far Lands, with bizarre, stretched terrain and massive formations in every direction!",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.minecraft.SharedConstants",
     "net.minecraft.server.level.WorldGenRegion",
     "net.minecraft.world.level.StructureManager",
     "net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator",
     "net.minecraft.world.level.levelgen.densityfunction.DensityVolume",
     "net.minecraft.world.level.levelgen.synth.GradientNoise",
     "net.minecraft.world.level.levelgen.synth.NoiseStack.SmearedPerlin",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "CommandSourceStack.getEntity()",
+    "SharedConstants.DEBUG_ENABLE_FARLANDS",
     "BlockPos.MutableBlockPos.set()",
     "ServerLevel.getHeight()",
     "ServerLevel.getHeight()",
@@ -40,7 +37,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "edit-farlands-only-world-1.1.0.jar",
     "published": "2026-10-29"
   },
@@ -69,7 +66,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 25,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite into the game's classes"
+  },
+  "lacks": 22,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

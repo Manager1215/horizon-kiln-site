@@ -10,9 +10,6 @@
   "description": "Natural Temperature is a mod that overhauls the way biomes are placed in the world, creating a layout that more closely resembles Earth’s climate zones with cold biomes in the north and warm biomes in the south.",
   "needs": [
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.core.QuartPos",
     "net.minecraft.server.level.WorldGenRegion",
     "net.minecraft.world.level.biome.Climate",
@@ -30,11 +27,6 @@
     "net.minecraft.world.level.levelgen.densityfunction.SamplerContext",
     "net.minecraft.world.level.levelgen.synth.Noise",
     "net.minecraft.world.level.levelgen.synth.NormalNoise",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "Minecraft.setScreenAndShow()",
-    "Button.setTooltip()",
-    "Screen.mouseReleased()",
-    "Screen.mouseScrolled()",
     "MinecraftServer.getWorldGenSettings()",
     "ChunkGenerator.getBiomeSource()"
   ],
@@ -43,7 +35,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "natural-temperature-1.2.3-FABRIC-MC-26.3.jar",
     "published": "2026-11-14"
   },
@@ -72,7 +64,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

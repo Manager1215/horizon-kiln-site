@@ -11,17 +11,13 @@
   "needs": [
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
     "net.minecraft.world.entity.animal.golem.IronGolem",
     "net.minecraft.world.entity.npc.villager.Villager",
     "net.minecraft.world.entity.npc.villager.VillagerData",
     "JsonArray.forEach()",
-    "MutableComponent.withStyle()",
-    "MutableComponent.withStyle()",
     "Entity.getCustomName()",
     "Entity.hasCustomName()",
     "Player.getBoundingBox()",
-    "Player.getRandom()",
     "Level.getEntitiesOfClass()",
     "Level.getEntity()",
     "Level.isDarkOutside()",
@@ -32,7 +28,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "villagerphrases-fabric-1.11.0+mc26.3.jar",
     "published": "2026-10-29"
   },
@@ -61,7 +57,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

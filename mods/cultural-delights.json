@@ -11,8 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 3 points inside the game's methods",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
     "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
     "net.fabricmc.fabric.api.entity.event.v1.effect.ServerMobEffectEvents",
@@ -38,8 +36,6 @@
     "net.minecraft.server.packs.repository.Pack.Position",
     "net.minecraft.server.packs.repository.PackSource",
     "net.minecraft.tags.BlockItemTagId",
-    "net.minecraft.tags.ItemTags",
-    "net.minecraft.world.SimpleContainer",
     "net.minecraft.world.entity.player.StackedContents",
     "net.minecraft.world.entity.player.StackedContents.Output",
     "net.minecraft.world.entity.vehicle.boat.ChestRaft",
@@ -51,6 +47,10 @@
     "net.minecraft.world.inventory.SimpleContainerData",
     "net.minecraft.world.item.BoatItem",
     "net.minecraft.world.item.DoubleHighBlockItem",
+    "net.minecraft.world.item.HangingSignItem",
+    "net.minecraft.world.item.ItemUseAnimation",
+    "net.minecraft.world.item.component.Consumable",
+    "net.minecraft.world.item.component.Consumable.Builder",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "culturaldelights-26.3-0.19.8.3-refabricated.jar",
     "published": "2026-11-12"
   },
@@ -92,7 +92,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 243,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 187,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

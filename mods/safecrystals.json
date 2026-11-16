@@ -9,16 +9,13 @@
   "author": "sawiq_",
   "description": "A client mod that prevents end crystal from exploding next to valuable items.",
   "needs": [
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.world.entity.boss.enderdragon.EndCrystal",
-    "InputConstants.Type.getOrCreate()",
     "LocalPlayer.getBoundingBox()",
     "BlockPos.distSqr()",
     "ItemEntity.getItem()",
     "Player.isAlive()",
     "Level.getEntitiesOfClass()",
     "Level.players()",
-    "Blocks.OBSIDIAN",
     "AABB.inflate()",
     "AABB.inflate()"
   ],
@@ -27,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "safecrystal-1.1.0+mc26.3.jar",
     "published": "2026-10-30"
   },
@@ -56,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,22 +11,17 @@
   "needs": [
     "net.minecraft.client.resources.language.ClientLanguage",
     "net.minecraft.util.text.translation.LanguageMap",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
-    "org.apache.logging.log4j.Marker",
-    "org.apache.logging.log4j.MarkerManager",
     "BiMap.entrySet()",
     "BiMap.get()",
     "BiMap.getOrDefault()",
-    "BiMap.remove()",
-    "FabricLoader.invokeEntrypoints()"
+    "BiMap.remove()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "enchlevel-langpatch-3.11.0.jar",
     "published": "2026-11-12"
   },
@@ -51,7 +46,11 @@
   "depends": [
     "fabricloader"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

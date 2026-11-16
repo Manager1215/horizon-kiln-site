@@ -11,23 +11,19 @@
   "needs": [
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.IntegerRuleBuilder",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.world.entity.monster.Enemy",
     "net.minecraft.world.entity.monster.Ghast",
     "net.minecraft.world.level.block.NetherPortalBlock",
+    "ResourceLoader.registerBuiltinPack()",
     "Direction.get()",
     "BuiltInRegistries.TRIGGER_TYPES",
-    "ServerLevel.destroyBlock()",
     "ServerLevel.getEntitiesOfClass()",
     "ServerLevel.getGameRules()",
     "RandomSource.nextIntBetweenInclusive()",
     "Entity.<init>()",
     "EntityTypes.GHAST",
     "Level.isInSpawnableBounds()",
-    "Blocks.CRYING_OBSIDIAN",
-    "Blocks.NETHER_PORTAL",
-    "Blocks.OBSIDIAN",
     "GameRules.MOB_GRIEFING",
     "GameRules.get()",
     "LootItemCondition.CODEC",
@@ -39,7 +35,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "ghastly_wail-1.10.0+MC26.3.x.jar",
     "published": "2026-09-27"
   },
@@ -66,7 +62,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

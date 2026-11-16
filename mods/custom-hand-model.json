@@ -10,24 +10,17 @@
   "description": "A mod to fully customize your first-person hands, item positions, and combat animations. Refreshed version of DulkirMod.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.player.FirstPersonHandsAndItems",
     "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState",
-    "net.minecraft.tags.ItemTags",
     "Axis.ZP",
-    "Options.keyUse",
-    "Button.Builder.tooltip()",
-    "Checkbox.Builder.tooltip()",
-    "EditBox.setHint()",
-    "LocalPlayer.getItemSwapScale()",
-    "LocalPlayer.getMainArm()"
+    "LocalPlayer.getItemSwapScale()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "customhandmodel-1.0.1.jar",
     "published": "2026-11-13"
   },
@@ -55,7 +48,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 11,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -10,10 +10,7 @@
   "description": "Nickname and favorite your friends to get a clearer overview of your friends list with the Better Friends List mod!",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
-    "net.minecraft.client.gui.components.StringWidget",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.friends.AbstractFriendsEntryContainerWidget",
     "net.minecraft.client.gui.screens.friends.FriendsOverlayScreen",
     "net.minecraft.client.gui.screens.social.PlayerSocialManager",
@@ -24,21 +21,14 @@
     "net.minecraft.world.item.component.ResolvableProfile",
     "Minecraft.playerSkinRenderCache()",
     "GuiGraphicsExtractor.scissorStack",
-    "Button.setPosition()",
-    "Button.Builder.tooltip()",
-    "GuiEventListener.isMouseOver()",
-    "GuiEventListener.mouseClicked()",
-    "GuiEventListener.shouldTakeFocusAfterInteraction()",
-    "PlayerSkinRenderCache.getOrDefault()",
-    "CommonComponents.GUI_CANCEL",
-    "CommonComponents.GUI_DONE"
+    "PlayerSkinRenderCache.getOrDefault()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "better-friends-list-0.2.2+26.3.jar",
     "published": "2026-09-16"
   },
@@ -66,7 +56,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 22,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args into the game's classes"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

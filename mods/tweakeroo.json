@@ -11,14 +11,10 @@
   "needs": [
     "an access widener",
     "Mixin: 53 points inside the game's methods",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.DebugQueryHandler",
     "net.minecraft.client.SectionUpdateTracker",
     "net.minecraft.client.gui.Hud.ContextualInfo",
     "net.minecraft.client.gui.components.BossHealthOverlay",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
     "net.minecraft.client.gui.components.LerpingBossEvent",
     "net.minecraft.client.gui.components.PlayerTabOverlay",
     "net.minecraft.client.gui.screens.CreateFlatWorldScreen",
@@ -26,8 +22,6 @@
     "net.minecraft.client.gui.screens.inventory.AbstractCommandBlockEditScreen",
     "net.minecraft.client.gui.screens.inventory.AbstractSignEditScreen",
     "net.minecraft.client.gui.screens.inventory.CommandBlockEditScreen",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.ItemPickerMenu",
     "net.minecraft.client.gui.screens.inventory.EffectsInInventory",
     "net.minecraft.client.gui.screens.inventory.HangingSignEditScreen",
     "net.minecraft.client.gui.screens.inventory.SignEditScreen",
@@ -39,7 +33,6 @@
     "net.minecraft.client.multiplayer.ClientChunkCache",
     "net.minecraft.client.multiplayer.ClientLevel.ClientLevelData",
     "net.minecraft.client.multiplayer.ClientSuggestionProvider",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.multiplayer.chat.ChatAbilities",
     "net.minecraft.client.particle.HugeExplosionSeedParticle",
     "net.minecraft.client.particle.NoRenderParticle",
@@ -51,6 +44,13 @@
     "net.minecraft.client.renderer.DebugCrosshairRenderer",
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.ScreenEffectRenderer",
+    "net.minecraft.client.renderer.ViewArea",
+    "net.minecraft.client.renderer.WeatherEffectRenderer",
+    "net.minecraft.client.renderer.blockentity.BeaconRenderer",
+    "net.minecraft.client.renderer.blockentity.SpawnerRenderer",
+    "net.minecraft.client.renderer.extract.LevelExtractor",
+    "net.minecraft.client.renderer.fog.FogData",
+    "net.minecraft.client.renderer.fog.FogRenderer",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "tweakeroo-fabric-26.3-0.30.1.jar",
     "published": "2026-09-27"
   },
@@ -85,7 +85,11 @@
     "malilib",
     "minecraft"
   ],
-  "lacks": 471,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @wrap-method and @wrap-operation into the game's classes"
+  },
+  "lacks": 305,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

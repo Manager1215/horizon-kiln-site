@@ -27,7 +27,6 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
     "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents",
     "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents.TagsLoaded",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
@@ -35,11 +34,9 @@
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents",
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyCallback",
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyContext",
-    "net.fabricmc.fabric.api.item.v1.EnchantingContext",
     "net.fabricmc.fabric.api.item.v1.EnchantmentEvents",
     "net.fabricmc.fabric.api.item.v1.EnchantmentEvents.AllowEnchanting",
     "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys",
     "net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys.Client",
@@ -51,6 +48,9 @@
     "net.fabricmc.fabric.mixin.client.rendering.HudAccessor",
     "net.minecraft.advancements.predicates.DamagePredicate",
     "net.minecraft.advancements.predicates.DamageSourcePredicate",
+    "net.minecraft.advancements.predicates.DamageSourcePredicate.Builder",
+    "net.minecraft.advancements.predicates.MinMaxBounds.Ints",
+    "net.minecraft.advancements.predicates.TagPredicate",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "enchancement-fabric-26.3-r4.jar",
     "published": "2026-10-06"
   },
@@ -92,7 +92,11 @@
     "minecraft",
     "strawberrylib"
   ],
-  "lacks": 875,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @wrap-method and @wrap-operation into the game's classes; runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 719,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

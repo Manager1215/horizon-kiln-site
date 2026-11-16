@@ -10,26 +10,19 @@
   "description": "Permissions-based item crafting restrictions",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.minecraft.stats.ServerRecipeBook",
     "net.minecraft.stats.ServerRecipeBook.DisplayResolver",
     "net.minecraft.world.inventory.RecipeCraftingHolder",
-    "net.minecraft.world.item.crafting.display.SlotDisplayContext",
     "net.minecraft.world.level.block.CrafterBlock",
-    "ServerLifecycleEvents.END_DATA_PACK_RELOAD",
-    "ServerLifecycleEvents.SERVER_STARTED",
     "MinecraftServer.overworld()",
-    "ServerPlayer.resetRecipes()",
-    "PermissionLevel.byId()",
-    "SlotDisplay.resolveForStacks()"
+    "ServerPlayer.resetRecipes()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "restricted-crafting-fabric-mc26.1-1.0.0.jar",
     "published": "2026-10-14"
   },
@@ -58,7 +51,11 @@
     "luckperms",
     "minecraft"
   ],
-  "lacks": 13,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

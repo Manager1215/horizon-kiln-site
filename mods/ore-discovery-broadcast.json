@@ -12,34 +12,16 @@
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
     "Registry.iterator()",
-    "RegistryAccess.lookupOrThrow()",
     "MinecraftServer.isDedicatedServer()",
     "MinecraftServer.overworld()",
-    "Player.tickCount",
-    "Blocks.ANCIENT_DEBRIS",
-    "Blocks.COAL_ORE",
-    "Blocks.COPPER_ORE",
-    "Blocks.DEEPSLATE_COAL_ORE",
-    "Blocks.DEEPSLATE_COPPER_ORE",
-    "Blocks.DEEPSLATE_DIAMOND_ORE",
-    "Blocks.DEEPSLATE_EMERALD_ORE",
-    "Blocks.DEEPSLATE_GOLD_ORE",
-    "Blocks.DEEPSLATE_IRON_ORE",
-    "Blocks.DIAMOND_ORE",
-    "Blocks.EMERALD_ORE",
-    "Blocks.GOLD_ORE",
-    "Blocks.IRON_ORE",
-    "Blocks.LAPIS_ORE",
-    "Blocks.NETHER_GOLD_ORE",
-    "Blocks.NETHER_QUARTZ_ORE",
-    "Blocks.REDSTONE_ORE"
+    "Player.tickCount"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "orediscoverybroadcast-26.3.0-2.6.jar",
     "published": "2026-11-08"
   },
@@ -69,7 +51,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

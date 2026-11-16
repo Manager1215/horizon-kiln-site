@@ -20,9 +20,7 @@
     "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.chunk.SectionRenderDispatcher",
     "net.minecraft.client.renderer.extract.LevelExtractor",
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.world.entity.monster.Enemy",
-    "net.minecraft.world.level.storage.LevelResource",
     "org.lwjgl.sdl.SDLVideo",
     "org.lwjgl.sdl.SDL_DisplayMode",
     "NativeImage.writeToFile()",
@@ -33,16 +31,12 @@
     "VertexConsumer.addVertex()",
     "KeyMapping.click()",
     "KeyMapping.set()",
-    "Minecraft.execute()",
-    "Minecraft.getCurrentServer()",
     "Minecraft.getGpuUtilization()",
-    "Minecraft.getSingleplayerServer()",
     "Minecraft.isGameLoadFinished()",
     "Minecraft.isLocalServer()",
     "Minecraft.levelRenderer",
     "Minecraft.pauseGame()",
     "Minecraft.reloadResourcePacks()",
-    "Minecraft.setScreenAndShow()",
     "Options.ambientOcclusion()",
     "Options.biomeBlendRadius()",
     "Options.cloudRange()",
@@ -50,16 +44,22 @@
     "Options.cutoutLeaves()",
     "Options.enableVsync()",
     "Options.entityDistanceScaling()",
-    "and 19 more"
+    "Options.entityShadows()",
+    "Options.framerateLimit()",
+    "Options.improvedTransparency()",
+    "Options.particles()",
+    "Options.weatherRadius()",
+    "ClientLevel.getEntities()",
+    "and 9 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "loadshift-0.4.9+26.3.jar",
-    "published": "2026-11-15"
+    "published": "2026-11-16"
   },
   "reports": {
     "works": 0,
@@ -70,7 +70,7 @@
   "run": {
     "passed": false,
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "ticks": 0,
     "hud": false,
     "why": "Java did not start"
@@ -88,7 +88,11 @@
     "minecraft",
     "seamlessreload"
   ],
-  "lacks": 59,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 49,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

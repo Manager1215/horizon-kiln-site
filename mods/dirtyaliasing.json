@@ -14,10 +14,6 @@
     "com.mojang.renderpearl.backend.opengl.GlTexture",
     "net.minecraft.client.GraphicsPreset",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.gui.components.CycleButton",
-    "net.minecraft.client.gui.components.CycleButton.Builder",
-    "net.minecraft.client.gui.components.CycleButton.OnValueChange",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.resources.language.ClientLanguage",
     "org.lwjgl.opengl.GL11",
     "org.lwjgl.opengl.GL13",
@@ -29,8 +25,8 @@
     "org.lwjgl.system.MemoryUtil",
     "RenderTarget.destroyBuffers()",
     "RenderTarget.width",
-    "KeyMapping.getTranslatedKeyMessage()",
     "Options.graphicsPreset()",
+    "CycleButton.Builder.withTooltip()",
     "GameRenderState.levelRenderState",
     "CameraRenderState.projectionMatrix",
     "CameraRenderState.viewRotationMatrix",
@@ -43,7 +39,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "dirtyaliasing-26.3-fabric-1.1.0.jar",
     "published": "2026-11-01"
   },
@@ -71,7 +67,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 23,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

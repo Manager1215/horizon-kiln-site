@@ -9,43 +9,14 @@
   "author": "official.andy",
   "description": "EcoBal is a Economy API for fabric mods.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.minecraft.commands.arguments.GameProfileArgument",
-    "net.minecraft.network.chat.ClickEvent.CopyToClipboard",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.ClickEvent.RunCommand",
-    "net.minecraft.network.chat.ClickEvent.SuggestCommand",
-    "net.minecraft.network.chat.HoverEvent",
-    "net.minecraft.network.chat.HoverEvent.ShowText",
-    "net.minecraft.server.permissions.LevelBasedPermissionSet",
-    "net.minecraft.world.level.storage.LevelResource",
-    "ServerLifecycleEvents.SERVER_STARTING",
-    "ChatFormatting.getByCode()",
-    "CommandSourceStack.getPlayerOrException()",
-    "CommandSourceStack.getServer()",
-    "CommandSourceStack.getTextName()",
-    "EntityArgument.getPlayer()",
-    "EntityArgument.player()",
-    "MutableComponent.setStyle()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
-    "Style.withObfuscated()",
-    "Style.withStrikethrough()",
-    "Style.withUnderlined()",
-    "TextColor.parseColor()",
-    "MinecraftServer.getTickCount()",
-    "MinecraftServer.getWorldPath()",
-    "ServerPlayer.createCommandSourceStack()",
-    "ServerPlayer.sendSystemMessage()",
-    "PermissionSet.ALL_PERMISSIONS",
-    "PermissionSet.union()"
+    "MinecraftServer.getTickCount()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "EcoBal-1.0.2.jar",
     "published": "2026-09-15"
   },
@@ -74,7 +45,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 30,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

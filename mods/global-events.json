@@ -12,10 +12,6 @@
     "net.minecraft.world.entity.npc.wanderingtrader.WanderingTrader",
     "net.minecraft.world.item.trading.ItemCost",
     "net.minecraft.world.item.trading.MerchantOffer",
-    "CommandSourceStack.getPosition()",
-    "CommandSourceStack.getServer()",
-    "Commands.LEVEL_GAMEMASTERS",
-    "Commands.hasPermission()",
     "BlockPos.containing()",
     "MinecraftServer.getTickCount()",
     "MinecraftServer.overworld()",
@@ -26,30 +22,20 @@
     "ServerLevel.sendParticles()",
     "ServerPlayer.getBlockX()",
     "ServerPlayer.getBlockZ()",
-    "PlayerList.broadcastSystemMessage()",
     "SoundEvents.GENERIC_EXPLODE",
     "Mob.addTag()",
     "Mob.finalizeSpawn()",
     "Mob.snapTo()",
-    "Items.ENCHANTED_GOLDEN_APPLE",
-    "Items.HEART_OF_THE_SEA",
-    "Items.SHULKER_SHELL",
-    "Items.TOTEM_OF_UNDYING",
     "MerchantOffers.add()",
     "MerchantOffers.clear()",
-    "LevelAccessor.isClientSide()",
-    "Blocks.ANCIENT_DEBRIS",
-    "Blocks.DIAMOND_ORE",
-    "Blocks.GOLD_ORE",
-    "Blocks.IRON_ORE",
-    "Blocks.MAGMA_BLOCK"
+    "LevelAccessor.isClientSide()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "global-events-2.0.0+mc26.3.jar",
     "published": "2026-10-10"
   },
@@ -65,7 +51,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 34,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

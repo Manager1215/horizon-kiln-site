@@ -10,21 +10,15 @@
   "description": "Tips online boosters, and other online Autotip users. You send and receive tips, increasing your coin and experience gain.",
   "needs": [
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
-    "net.minecraft.network.chat.HoverEvent",
     "ClientReceiveMessageEvents.ALLOW_GAME",
-    "Minecraft.execute()",
-    "ClientPacketListener.getConnection()",
-    "Connection.getRemoteAddress()",
-    "Component.getContents()",
-    "Component.getSiblings()",
-    "Style.getHoverEvent()"
+    "Connection.getRemoteAddress()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "autotip-3.3.1+mc26.3.jar",
     "published": "2026-09-29"
   },
@@ -51,7 +45,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

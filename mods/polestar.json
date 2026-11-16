@@ -9,7 +9,6 @@
   "author": "veizakn1",
   "description": "Find the North Star through a vanilla Spyglass and use it to navigate without coordinates or a minimap.",
   "needs": [
-    "net.minecraft.client.CameraType",
     "net.minecraft.world.attribute.EnvironmentAttributeProbe",
     "net.minecraft.world.level.material.FogType",
     "Camera.attributeProbe()",
@@ -18,8 +17,6 @@
     "Camera.getViewRotationProjectionMatrix()",
     "Camera.isInitialized()",
     "Camera.yRot()",
-    "Options.getCameraType()",
-    "GuiGraphicsExtractor.blit()",
     "ClientLevel.clip()",
     "LocalPlayer.isAlive()",
     "LocalPlayer.isScoping()",
@@ -31,7 +28,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "polestar-26.3-fabric-1.1.0.jar",
     "published": "2026-10-23"
   },
@@ -59,7 +56,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

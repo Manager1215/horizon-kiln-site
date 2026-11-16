@@ -14,9 +14,7 @@
     "com.mojang.blaze3d.audio.Listener",
     "com.mojang.blaze3d.audio.ListenerTransform",
     "net.minecraft.client.OptionInstance.CaptionBasedToString",
-    "net.minecraft.client.OptionInstance.IntRange",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
     "net.minecraft.client.gui.screens.options.SoundOptionsScreen",
     "net.minecraft.client.resources.sounds.AbstractTickableSoundInstance",
@@ -27,26 +25,19 @@
     "net.minecraft.client.sounds.MusicManager",
     "net.minecraft.client.sounds.SoundBufferLibrary",
     "net.minecraft.network.protocol.game.ServerboundBlockEntityTagQueryPacket",
-    "net.minecraft.server.permissions.Permissions",
     "net.minecraft.world.entity.monster.Monster",
     "net.minecraft.world.item.JukeboxSong",
     "net.minecraft.world.item.JukeboxSongPlayer",
     "net.minecraft.world.level.block.JukeboxBlock",
     "net.minecraft.world.level.block.entity.JukeboxBlockEntity",
-    "Minecraft.execute()",
     "OptionInstance.<init>()",
     "OptionInstance.noTooltip()",
     "ClientPacketListener.send()",
-    "LocalPlayer.getRandom()",
     "LocalPlayer.permissions()",
     "SoundManager.isActive()",
-    "SoundManager.stop()",
-    "Holder.is()",
     "Registries.JUKEBOX_SONG",
     "ClientboundTagQueryPacket.getTag()",
     "ClientboundTagQueryPacket.getTransactionId()",
-    "MinecraftServer.execute()",
-    "DamageSource.is()",
     "LivingEntity.isAlive()",
     "Level.getEntitiesOfClass()",
     "LevelChunk.getBlockEntities()"
@@ -56,7 +47,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "music_tweaks-2.1.1+26.3-fabric.jar",
     "published": "2026-11-03"
   },
@@ -86,7 +77,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 40,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 31,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

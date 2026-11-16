@@ -9,15 +9,10 @@
   "author": "Jden7",
   "description": "Adds one tool to rule them all!",
   "needs": [
-    "net.minecraft.core.HolderSet.Direct",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.world.entity.projectile.ProjectileUtil",
     "net.minecraft.world.phys.EntityHitResult",
-    "HolderGetter.getOrThrow()",
-    "HolderSet.direct()",
     "NonNullList.iterator()",
     "BlockTransformer.transformBlock()",
-    "DataComponents.ITEM_MODEL",
     "BuiltInRegistries.acquireBootstrapRegistrationLookup()",
     "ServerPlayer.blockInteractionRange()",
     "ServerPlayer.entityInteractionRange()",
@@ -31,25 +26,16 @@
     "ItemEntity.getItem()",
     "ItemEntity.setItem()",
     "Player.isSecondaryUseActive()",
-    "Item.components()",
-    "Items.NETHERITE_AXE",
-    "Items.NETHERITE_HOE",
-    "Items.NETHERITE_PICKAXE",
-    "Items.NETHERITE_SHOVEL",
-    "Items.NETHERITE_SWORD",
     "Tool.Rule.deniesDrops()",
     "Tool.Rule.minesAndDrops()",
-    "Tool.Rule.overrideSpeed()",
-    "Block.builtInRegistryHolder()",
-    "Blocks.COBWEB",
-    "HitResult.getType()"
+    "Tool.Rule.overrideSpeed()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "all-purpose-tool-1.1.0.jar",
     "published": "2026-09-20"
   },
@@ -77,7 +63,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 34,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

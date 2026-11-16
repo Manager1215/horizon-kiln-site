@@ -9,29 +9,14 @@
   "author": "Gaozx12",
   "description": "A Minecraft chat translation mod that translates player messages in real time. Supports multiple languages, customizable target languages, and seamless communication between players from different countries on multiplayer servers.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
-    "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowChat",
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
     "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.Chat",
     "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents",
     "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.AllowChat",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
-    "net.minecraft.network.chat.PlayerChatMessage",
-    "ClientReceiveMessageEvents.ALLOW_CHAT",
     "ClientReceiveMessageEvents.ALLOW_GAME",
     "ClientReceiveMessageEvents.CHAT",
-    "Minecraft.execute()",
     "Minecraft.getGameProfile()",
-    "ClientPacketListener.sendChat()",
     "PlayerInfo.getProfile()",
-    "MutableComponent.withStyle()",
-    "Style.getClickEvent()",
-    "Style.getHoverEvent()",
-    "Style.isObfuscated()",
-    "Style.isStrikethrough()",
-    "Style.isUnderlined()",
-    "Style.withClickEvent()",
-    "Style.withHoverEvent()",
     "Style.withInsertion()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -39,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "chattranslation-fabric+26.3-1.0.5-alpha.1.jar",
     "published": "2026-11-11"
   },
@@ -69,7 +54,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 24,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

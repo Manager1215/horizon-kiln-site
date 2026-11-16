@@ -11,7 +11,6 @@
   "needs": [
     "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin",
     "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin.Context",
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
     "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
     "net.minecraft.client.renderer.entity.layers.WingsLayer",
     "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
@@ -21,16 +20,11 @@
     "net.minecraft.client.renderer.texture.atlas.SpriteSources",
     "net.minecraft.client.resources.model.EquipmentClientInfo",
     "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
-    "net.minecraft.data.AtlasIds",
     "net.minecraft.world.item.component.ChargedProjectiles",
     "net.minecraft.world.item.component.CustomModelData",
     "Object2IntMap.Entry.getKey()",
     "ItemStackRenderState.LayerRenderState.setItemTransform()",
     "TextureAtlas.LOCATION_ITEMS",
-    "TextureAtlasSprite.getU0()",
-    "TextureAtlasSprite.getU1()",
-    "TextureAtlasSprite.getV0()",
-    "TextureAtlasSprite.getV1()",
     "ItemTransform.NO_TRANSFORM",
     "ItemTransforms.getTransform()",
     "BakedQuad.packedUV()",
@@ -39,21 +33,16 @@
     "TextureSlots.getMaterial()",
     "DataComponents.CHARGED_PROJECTILES",
     "DataComponents.CUSTOM_MODEL_DATA",
-    "DataComponents.STORED_ENCHANTMENTS",
     "Tag.asString()",
     "ItemOwner.asLivingEntity()",
-    "ItemStack.getEnchantments()",
-    "Items.FIREWORK_ROCKET",
-    "CustomData.copyTag()",
-    "CustomData.isEmpty()",
-    "ItemEnchantments.entrySet()"
+    "ItemStack.getEnchantments()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "citfancy-26.3.jar",
     "published": "2026-09-19"
   },
@@ -81,7 +70,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 38,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 27,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,20 +9,14 @@
   "author": "NoSkinBadName",
   "description": "Makes Sponges overpowered",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-    "net.minecraft.world.level.block.SpongeBlock",
-    "ServerLifecycleEvents.SERVER_STOPPING",
-    "Blocks.KELP",
-    "Blocks.KELP_PLANT",
-    "Blocks.SEAGRASS",
-    "Blocks.TALL_SEAGRASS"
+    "net.minecraft.world.level.block.SpongeBlock"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "1.0.0+mc26.1-26.3.jar",
     "published": "2026-10-02"
   },
@@ -50,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite into the game's classes"
+  },
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

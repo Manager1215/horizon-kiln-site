@@ -14,7 +14,6 @@
     "net.minecraft.client.OptionInstance.CaptionBasedToString",
     "net.minecraft.client.OptionInstance.Enum",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
     "net.minecraft.client.Options.OptionAccess",
     "net.minecraft.client.ToggleKeyMapping",
@@ -27,11 +26,7 @@
     "net.minecraft.client.renderer.entity.player.AvatarRenderer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.LivingEntity.SwingDescription",
-    "net.minecraft.world.entity.Pose",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "org.lwjgl.sdl.SDLKeycode",
     "OptionInstance.<init>()",
     "OptionInstance.BOOLEAN_VALUES",
@@ -44,21 +39,24 @@
     "ModelPart.z",
     "AbstractClientPlayer.<init>()",
     "AbstractClientPlayer.hasPose()",
-    "MinecraftServer.execute()",
     "Mth.rotLerp()",
     "Mth.rotLerpRad()",
     "InteractionHand.asArm()",
     "Avatar.<init>()",
     "Avatar.getPose()",
     "Avatar.getSwimAmount()",
-    "and 5 more"
+    "Entity.<init>()",
+    "Player.getPose()",
+    "Player.getSwimAmount()",
+    "Player.yBodyRot",
+    "Player.yBodyRotO"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "crawl-mc26.3-fabric-0.15.0.jar",
     "published": "2026-09-27"
   },
@@ -88,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 45,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 39,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -9,27 +9,22 @@
   "author": "AccepTheCookies",
   "description": "This is one of the best waypoint mods. save your base, or any type of coordinate, in any dimension.",
   "needs": [
-    "net.minecraft.client.server.IntegratedServer",
     "net.minecraft.world.level.storage.WorldData",
     "Camera.forwardVector()",
     "Camera.xRot()",
     "Camera.yRot()",
-    "Minecraft.getCurrentServer()",
-    "Minecraft.getSingleplayerServer()",
-    "Screen.mouseScrolled()",
     "ClientLevel.clip()",
-    "ServerData.ip",
     "LocalPlayer.deathTime",
     "LocalPlayer.isAlive()",
     "GameRenderer.mainCamera()",
-    "HitResult.getType()"
+    "IntegratedServer.getWorldData()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "cookieswaypointss-1.6.1+mc26.3.jar",
     "published": "2026-11-04"
   },
@@ -58,7 +53,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

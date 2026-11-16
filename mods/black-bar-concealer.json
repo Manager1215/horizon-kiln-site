@@ -9,27 +9,17 @@
   "author": "Gerrygames",
   "description": "Conceals black bars of slim skins used on the wide model.",
   "needs": [
-    "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.core.ClientAsset.DownloadedTexture",
     "net.minecraft.util.CommonColors",
     "NativeImage.copyFrom()",
-    "NativeImage.copyRect()",
-    "NativeImage.format()",
-    "NativeImage.getHeight()",
-    "NativeImage.getPixel()",
-    "NativeImage.getWidth()",
-    "Rect2i.getHeight()",
-    "Rect2i.getWidth()",
-    "Rect2i.getX()",
-    "Rect2i.getY()",
-    "Identifier.withPath()"
+    "NativeImage.copyRect()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "blackbarconcealer-1.0.10.jar",
     "published": "2026-09-17"
   },
@@ -60,7 +50,11 @@
     "minecraft",
     "modmenu"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

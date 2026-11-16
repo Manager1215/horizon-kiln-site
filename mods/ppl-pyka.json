@@ -10,13 +10,10 @@
   "description": "This is a mod for the association called PYKA on the Pepeland server.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "net.minecraft.TracingExecutor",
     "net.minecraft.client.gui.components.PlayerSkinWidget",
     "net.minecraft.client.gui.components.PlayerTabOverlay",
     "net.minecraft.client.resources.DefaultPlayerSkin",
-    "Minecraft.execute()",
-    "Minecraft.gameDirectory",
     "Minecraft.getEntityModels()",
     "Minecraft.getSkinManager()",
     "Minecraft.services()",
@@ -26,9 +23,6 @@
     "EntityRenderState.nameTag",
     "EntityRenderState.nameTagAttachment",
     "SkinManager.createLookup()",
-    "Component.getSiblings()",
-    "MutableComponent.getSiblings()",
-    "MutableComponent.withStyle()",
     "Util.backgroundExecutor()",
     "Player.isInvisibleTo()"
   ],
@@ -37,7 +31,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "pyka-fabric-1.0+mc26.3.jar",
     "published": "2026-11-15"
   },
@@ -66,5 +60,9 @@
     "java",
     "minecraft"
   ],
-  "lacks": 21
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 15
 }

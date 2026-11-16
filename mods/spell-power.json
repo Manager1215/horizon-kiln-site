@@ -17,20 +17,13 @@
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
     "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
     "net.minecraft.world.entity.ai.attributes.RangedAttribute",
-    "net.minecraft.world.item.alchemy.Potion",
-    "net.minecraft.world.item.alchemy.Potions",
     "net.minecraft.world.item.enchantment.effects.EnchantmentAttributeEffect",
-    "Holder.is()",
-    "Registry.wrapAsHolder()",
     "BuiltInRegistries.ATTRIBUTE",
-    "BuiltInRegistries.POTION",
-    "DamageSource.is()",
     "MobEffect.addAttributeModifier()",
     "Entity.<init>()",
     "LivingEntity.getAttributes()",
     "LivingEntity.isDeadOrDying()",
     "AttributeInstance.addPermanentModifier()",
-    "Item.components()",
     "EnchantmentEffectComponents.ATTRIBUTES"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -38,7 +31,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "spell_power-fabric-1.6.2+26.3.jar",
     "published": "2026-09-28"
   },
@@ -68,7 +61,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 16,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

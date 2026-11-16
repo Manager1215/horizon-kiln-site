@@ -10,12 +10,11 @@
   "description": "Renders missing snow under various blocks [Client Side Only]",
   "needs": [
     "com.mojang.text2speech.Narrator",
-    "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
     "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
     "net.minecraft.world.level.block.SnowyBlock",
+    "ResourceLoader.registerBuiltinPack()",
     "BlockTags.AIR",
     "BlockTags.SNOW",
-    "Blocks.SNOW",
     "BlockState.isCollisionShapeFullBlock()",
     "BlockStateProperties.SNOWY"
   ],
@@ -24,7 +23,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "better-snow-coverage-0.4.2+mc26.2.jar",
     "published": "2026-06-16"
   },
@@ -55,7 +54,11 @@
     "sodium",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 8,
   "development": {
     "status": "no-plans",
     "statusLabel": "No plans yet",

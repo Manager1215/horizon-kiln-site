@@ -15,10 +15,6 @@
     "net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal",
     "net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal",
     "net.minecraft.world.item.component.DeathProtection",
-    "Commands.LEVEL_ADMINS",
-    "Commands.hasPermission()",
-    "DamageSource.getEntity()",
-    "DamageSource.isCreativePlayer()",
     "Entity.<init>()",
     "LivingEntity.getLastHurtByMob()",
     "LivingEntity.getLastHurtMob()",
@@ -26,7 +22,6 @@
     "TamableAnimal.getOwner()",
     "TamableAnimal.getOwnerReference()",
     "TamableAnimal.isOwnedBy()",
-    "Items.TOTEM_OF_UNDYING",
     "Level.broadcastEntityEvent()"
   ],
   "roadmap": "Code next to data (0.3)",
@@ -34,7 +29,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "petprotect-fabric-26.3-2.0.0.jar",
     "published": "2026-10-19"
   },
@@ -62,7 +57,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 19,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

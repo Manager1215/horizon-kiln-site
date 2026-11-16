@@ -21,7 +21,6 @@
     "net.fabricmc.fabric.api.event.registry.DynamicRegistries.SyncOption",
     "net.fabricmc.fabric.api.item.v1.BlockTransformerHelper",
     "net.fabricmc.fabric.impl.biome.TheEndBiomeData.Overrides",
-    "net.minecraft.SharedConstants",
     "net.minecraft.advancements.triggers.CriteriaTriggers",
     "net.minecraft.advancements.triggers.ItemUsedOnLocationTrigger",
     "net.minecraft.client.animation.AnimationChannel",
@@ -51,6 +50,7 @@
     "net.minecraft.client.particle.SpriteSet",
     "net.minecraft.client.renderer.entity.AbstractSkeletonRenderer",
     "net.minecraft.client.renderer.entity.AgeableMobRenderer",
+    "net.minecraft.client.renderer.entity.ArmorModelSet",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "promenade-fabric-6.0.2.jar",
     "published": "2026-10-15"
   },
@@ -87,7 +87,11 @@
     "fabric-api",
     "minecraft"
   ],
-  "lacks": 540,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+  },
+  "lacks": 452,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

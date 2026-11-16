@@ -48,17 +48,17 @@
     "net.minecraft.world.level.chunk.storage.SectionStorage",
     "net.minecraft.world.scores.PlayerTeam",
     "net.minecraft.world.scores.Team",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "Long2ObjectMap.Entry.getValue()",
-    "and 52 more"
+    "LongIterator.hasNext()",
+    "Object2LongMap.Entry.getKey()",
+    "and 42 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "vmp-fabric-mc26.3-0.2.0+beta.7.238-all.jar",
     "published": "2026-09-15"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 92,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect and @wrap-operation into the game's classes; runs threads of its own"
+  },
+  "lacks": 82,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -11,13 +11,11 @@
   "needs": [
     "an access widener",
     "Mixin: 51 points inside the game's methods",
-    "com.mojang.blaze3d.platform.cursor.CursorTypes",
     "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
     "com.mojang.blaze3d.vertex.BufferBuilder",
     "com.mojang.blaze3d.vertex.ByteBufferBuilder",
     "com.mojang.blaze3d.vertex.DefaultVertexFormat",
     "com.mojang.blaze3d.vertex.MeshData",
-    "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
     "net.fabricmc.fabric.api.attachment.v1.GlobalAttachmentsProvider",
     "net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents",
     "net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents.AllowResettingTime",
@@ -40,17 +38,19 @@
     "net.minecraft.client.data.models.model.ModelTemplate",
     "net.minecraft.client.data.models.model.ModelTemplates",
     "net.minecraft.client.gui.contextualbar.ContextualBar",
-    "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
-    "net.minecraft.client.gui.screens.inventory.CraftingScreen",
     "net.minecraft.client.gui.screens.inventory.EnchantmentNames",
     "net.minecraft.client.gui.screens.inventory.EnchantmentScreen",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.model.ambient.BatModel",
     "net.minecraft.client.model.geom.ModelLayers",
     "net.minecraft.client.model.monster.zombie.ZombieModel",
     "net.minecraft.client.multiplayer.CacheSlot",
     "net.minecraft.client.multiplayer.CacheSlot.Cleaner",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
+    "net.minecraft.client.renderer.DynamicGpuData",
+    "net.minecraft.client.renderer.SkyRenderer",
+    "net.minecraft.client.renderer.entity.CreeperRenderer",
+    "net.minecraft.client.renderer.entity.EntityRenderers",
+    "net.minecraft.client.renderer.entity.HumanoidMobRenderer",
+    "net.minecraft.client.renderer.entity.MobRenderer",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -58,7 +58,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "might_makes_everything-26.3.4.1.jar",
     "published": "2026-11-03"
   },
@@ -88,7 +88,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 931,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+  },
+  "lacks": 759,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

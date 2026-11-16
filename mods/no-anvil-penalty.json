@@ -9,15 +9,14 @@
   "author": "TMShader",
   "description": "Removes the repair and enchantment penalty (Prior Work penalty) from anvils",
   "needs": [
-    "Mixin: 1 point inside the game's methods",
-    "net.minecraft.world.inventory.AnvilMenu"
+    "Mixin: 1 point inside the game's methods"
   ],
-  "roadmap": "Machines (0.4), Mixin (0.5)",
+  "roadmap": "Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "NoAnvilPenalty-1.1.jar",
     "published": "2026-10-25"
   },
@@ -33,7 +32,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 1,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 0,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

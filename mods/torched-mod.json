@@ -10,17 +10,12 @@
   "description": "Throwable and sticky torches to light the path ahead of you.",
   "needs": [
     "an access widener",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.fabricmc.fabric.api.event.player.ItemEvents",
     "net.fabricmc.fabric.api.event.player.ItemEvents.UseCallback",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.entity.EntityRenderers",
     "net.minecraft.client.renderer.entity.ThrownItemRenderer",
     "net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "Minecraft.gameMode",
-    "Holder.is()",
-    "MinecraftServer.execute()",
+    "MultiPlayerGameMode.ensureHasSentCarriedItem()",
     "MinecraftServer.getTickCount()",
     "ServerLevel.sendParticles()",
     "SoundEvents.SLIME_BLOCK_PLACE",
@@ -28,19 +23,7 @@
     "LivingEntity.getEyeY()",
     "Player.isAlive()",
     "InventoryMenu.sendAllDataToRemote()",
-    "Items.COPPER_TORCH",
-    "Items.REDSTONE_TORCH",
-    "Items.SOUL_TORCH",
-    "Items.TORCH",
     "Level.addFreshEntity()",
-    "Blocks.COPPER_TORCH",
-    "Blocks.COPPER_WALL_TORCH",
-    "Blocks.REDSTONE_TORCH",
-    "Blocks.REDSTONE_WALL_TORCH",
-    "Blocks.SOUL_TORCH",
-    "Blocks.SOUL_WALL_TORCH",
-    "Blocks.TORCH",
-    "Blocks.WALL_TORCH",
     "BlockState.canBeReplaced()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -48,7 +31,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "torched-1.0.2+26.3.jar",
     "published": "2026-09-20"
   },
@@ -80,7 +63,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 32,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

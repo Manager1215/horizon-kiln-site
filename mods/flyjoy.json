@@ -16,14 +16,11 @@
     "net.fabricmc.fabric.api.event.player.UseEntityCallback",
     "net.minecraft.advancements.AdvancementNode",
     "net.minecraft.advancements.AdvancementTree",
-    "net.minecraft.client.CameraType",
     "net.minecraft.client.gui.components.WidgetSprites",
     "net.minecraft.client.gui.screens.advancements.AdvancementTab",
     "net.minecraft.client.gui.screens.advancements.AdvancementWidget",
     "net.minecraft.client.gui.screens.advancements.AdvancementsScreen",
-    "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
     "net.minecraft.client.gui.screens.recipebook.GhostSlots",
-    "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
     "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent.TabInfo",
     "net.minecraft.client.gui.screens.recipebook.RecipeCollection",
     "net.minecraft.client.model.HumanoidModel",
@@ -47,17 +44,20 @@
     "net.minecraft.server.ServerAdvancementManager",
     "net.minecraft.stats.ServerRecipeBook",
     "net.minecraft.world.SimpleMenuProvider",
-    "net.minecraft.world.entity.EntityDimensions",
     "net.minecraft.world.entity.EntityTypeIds",
     "net.minecraft.world.entity.LivingEntity.SwingDescription",
-    "and 78 more"
+    "net.minecraft.world.entity.npc.villager.Villager",
+    "net.minecraft.world.entity.npc.villager.VillagerData",
+    "net.minecraft.world.entity.npc.villager.VillagerProfession",
+    "net.minecraft.world.entity.player.Input",
+    "and 68 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "flyjoy-fabric-26.3-1.0.3.jar",
     "published": "2026-10-03"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 193,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 140,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

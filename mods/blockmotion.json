@@ -19,9 +19,7 @@
     "net.fabricmc.fabric.impl.client.indigo.renderer.mesh.QuadViewImpl",
     "net.fabricmc.fabric.impl.client.indigo.renderer.render.AltModelBlockRendererImpl",
     "net.minecraft.client.OptionInstance.CaptionBasedToString",
-    "net.minecraft.client.OptionInstance.IntRange",
     "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.OptionInstance.ValueSet",
     "net.minecraft.client.OptionInstance.ValueUpdateListener",
     "net.minecraft.client.gui.ActiveTextCollector",
     "net.minecraft.client.gui.ActiveTextCollector.Parameters",
@@ -36,7 +34,6 @@
     "net.minecraft.client.gui.render.GuiItemAtlas.SlotView",
     "net.minecraft.client.gui.screens.options.OptionsSubScreen",
     "net.minecraft.client.gui.screens.options.VideoSettingsScreen",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.multiplayer.chat.GuiMessage.Line",
     "net.minecraft.client.particle.Particle",
     "net.minecraft.client.particle.ParticleEngine",
@@ -50,6 +47,9 @@
     "net.minecraft.client.renderer.Panorama",
     "net.minecraft.client.renderer.block.ModelBlockRenderer",
     "net.minecraft.client.renderer.chunk.CompiledSectionMesh",
+    "net.minecraft.client.renderer.chunk.RenderSectionRegion",
+    "net.minecraft.client.renderer.chunk.SectionCompiler",
+    "net.minecraft.client.renderer.chunk.SectionCompiler.Results",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "BlockMotion-0.5.0.jar",
     "published": "2026-09-30"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 356,
+  "softOff": {
+    "class": "restart",
+    "why": "@modify-args and @redirect into the game's classes"
+  },
+  "lacks": 303,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

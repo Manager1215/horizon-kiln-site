@@ -9,28 +9,16 @@
   "author": "official.andy",
   "description": "See exactly what's on display! A Quality of Life HUD mod that shows you the tooltip of any item inside a shelf block just by looking at it",
   "needs": [
-    "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
     "net.minecraft.client.gui.screens.inventory.tooltip.TooltipRenderUtil",
-    "net.minecraft.world.item.TooltipFlag.Default",
-    "net.minecraft.world.item.component.ItemLore",
     "net.minecraft.world.level.block.ShelfBlock",
-    "net.minecraft.world.level.block.entity.ShelfBlockEntity",
-    "Minecraft.hitResult",
-    "DataComponents.LORE",
-    "CommonComponents.GUI_DONE",
-    "Component.getVisualOrderText()",
-    "Item.TooltipContext.of()",
-    "ItemStack.getTooltipLines()",
-    "TooltipFlag.ADVANCED",
-    "TooltipFlag.NORMAL",
-    "HitResult.getType()"
+    "net.minecraft.world.level.block.entity.ShelfBlockEntity"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "WhatIsInThatShelf-1.0.1.jar",
     "published": "2026-09-15"
   },
@@ -59,7 +47,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 15,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

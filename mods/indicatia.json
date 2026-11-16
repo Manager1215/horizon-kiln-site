@@ -14,16 +14,12 @@
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "net.fabricmc.fabric.api.client.screen.v1.Screens",
     "net.minecraft.client.gui.components.ImageButton",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.components.WidgetSprites",
     "net.minecraft.client.gui.font.FontOption",
     "net.minecraft.client.gui.screens.InBedChatScreen",
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
     "net.minecraft.client.gui.screens.packs.PackSelectionScreen",
-    "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
     "net.minecraft.client.model.object.skull.SkullModelBase",
     "net.minecraft.client.model.object.skull.SkullModelBase.State",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.renderer.BindGroupLayouts",
     "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
     "net.minecraft.client.renderer.blockentity.BannerRenderer",
@@ -50,14 +46,18 @@
     "net.minecraft.client.resources.DefaultPlayerSkin",
     "net.minecraft.network.chat.FontDescription",
     "net.minecraft.network.chat.FontDescription.Resource",
-    "and 37 more"
+    "net.minecraft.network.protocol.game.ServerboundClientCommandPacket",
+    "net.minecraft.network.protocol.game.ServerboundClientCommandPacket.Action",
+    "net.minecraft.world.TickRateManager",
+    "net.minecraft.world.level.block.SkullBlock",
+    "and 24 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "indicatia-mc26.3-v26.3.0-fabric.jar",
     "published": "2026-09-28"
   },
@@ -86,7 +86,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 77,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-operation into the game's classes"
+  },
+  "lacks": 64,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

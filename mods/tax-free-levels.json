@@ -10,27 +10,18 @@
   "description": "Flattens the ever-increasing anvil and enchantment costs and makes renaming items always cost 1 level",
   "needs": [
     "Mixin: 6 points inside the game's methods",
-    "net.minecraft.client.gui.screens.inventory.AnvilScreen",
-    "net.minecraft.client.server.IntegratedServer",
-    "net.minecraft.world.inventory.AnvilMenu",
     "net.minecraft.world.inventory.DataSlot",
     "net.minecraft.world.inventory.EnchantmentMenu",
-    "org.apache.logging.log4j.LogManager",
-    "org.apache.logging.log4j.Logger",
     "ServerConfigurationNetworking.send()",
-    "Minecraft.execute()",
-    "Minecraft.getSingleplayerServer()",
     "Minecraft.isLocalServer()",
-    "MinecraftServer.execute()",
-    "Player.<init>()",
-    "Player.giveExperiencePoints()"
+    "Player.<init>()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "TaxFreeLevels-1.5.5-fabric-26.1.jar",
     "published": "2026-11-15"
   },
@@ -60,7 +51,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 14,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

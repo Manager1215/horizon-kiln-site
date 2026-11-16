@@ -10,21 +10,12 @@
   "description": "Defy physics! Please stop removes creative flight drift so you stop when you let go. No more building like you’re wearing socks on a waxed floor.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.gui.components.Tooltip",
     "net.minecraft.client.gui.screens.options.controls.ControlsScreen",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
     "net.minecraft.client.player.ClientInput",
-    "net.minecraft.world.entity.Pose",
     "net.minecraft.world.entity.player.Input",
-    "Minecraft.gameMode",
-    "Minecraft.setScreenAndShow()",
-    "Font.split()",
-    "GuiGraphicsExtractor.centeredText()",
-    "Button.setTooltip()",
-    "Button.Builder.tooltip()",
+    "MultiPlayerGameMode.isSpectator()",
     "LocalPlayer.hurtTime",
     "LocalPlayer.input",
-    "LocalPlayer.isFallFlying()",
     "LocalPlayer.isPassenger()",
     "Entity.getEyeHeight()"
   ],
@@ -33,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "please-stop-1.0.0+26.3.jar",
     "published": "2026-11-01"
   },
@@ -61,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

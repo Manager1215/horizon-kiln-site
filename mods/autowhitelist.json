@@ -11,7 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 6 points inside the game's methods",
-    "com.mojang.authlib.GameProfile",
     "com.mojang.authlib.GameProfileRepository",
     "com.mojang.authlib.HttpDiscoveryService",
     "com.mojang.authlib.ProfileLookupCallback",
@@ -21,20 +20,14 @@
     "com.mojang.authlib.minecraft.client.ObjectMapper",
     "com.mojang.authlib.services.response.NameAndId",
     "net.fabricmc.api.DedicatedServerModInitializer",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents",
     "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents.QueryStart",
     "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking",
     "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginSynchronizer",
-    "net.minecraft.SharedConstants",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.data.PackOutput.PathProvider",
     "net.minecraft.data.PackOutput.Target",
     "net.minecraft.network.PacketSendListener",
-    "net.minecraft.network.chat.ComponentContents",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.network.protocol.ProtocolInfoBuilder",
     "net.minecraft.network.protocol.SimpleUnboundProtocol",
     "net.minecraft.network.protocol.game.ClientboundLevelChunkPacketData.BlockEntityInfo",
@@ -51,14 +44,21 @@
     "net.minecraft.server.jsonrpc.JsonRpcLogger",
     "net.minecraft.server.jsonrpc.api.PlayerDto",
     "net.minecraft.server.jsonrpc.api.ReferenceUtil",
-    "and 69 more"
+    "net.minecraft.server.jsonrpc.api.Schema",
+    "net.minecraft.server.jsonrpc.api.SchemaComponent",
+    "net.minecraft.server.jsonrpc.internalapi.MinecraftAllowListService",
+    "net.minecraft.server.jsonrpc.internalapi.MinecraftAllowListServiceImpl",
+    "net.minecraft.server.jsonrpc.internalapi.MinecraftApi",
+    "net.minecraft.server.jsonrpc.internalapi.MinecraftPlayerListService",
+    "net.minecraft.server.network.ServerConnectionListener",
+    "and 45 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "autowhitelist-2.0.0-alpha.2+26.3-rc-1.jar",
     "published": "2026-09-12"
   },
@@ -79,7 +79,11 @@
     "placeholder-api",
     "server_translations_api"
   ],
-  "lacks": 110,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 85,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

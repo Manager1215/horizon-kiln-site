@@ -9,28 +9,15 @@
   "author": "senseiwells",
   "description": "This mod provides you with a way to customize your player's name tags completely server-side with no need for any client mods.",
   "needs": [
-    "com.mojang.authlib.GameProfile",
     "com.mojang.util.UndashedUuid",
     "net.fabricmc.fabric.api.permission.v1.PermissionContextOwner",
-    "net.minecraft.commands.arguments.GameProfileArgument",
-    "net.minecraft.commands.arguments.GameProfileArgument.Result",
     "net.minecraft.core.UUIDUtil",
-    "net.minecraft.network.chat.ComponentSerialization",
-    "net.minecraft.network.chat.contents.PlainTextContents",
     "net.minecraft.world.scores.PlayerTeam",
-    "CommandSourceStack.getServer()",
-    "Component.getContents()",
-    "Component.getSiblings()",
     "Identifier.toShortString()",
     "MinecraftServer.registryAccess()",
     "ServerPlayer.entityTags()",
     "ServerPlayer.getGameProfile()",
     "ServerPlayer.getTeam()",
-    "ServerPlayer.nameAndId()",
-    "ServerPlayer.permissions()",
-    "PermissionLevel.byId()",
-    "PermissionLevel.id()",
-    "PlayerList.isOp()",
     "Entity.distanceToSqr()",
     "Entity.entityTags()",
     "Entity.getPassengers()",
@@ -42,7 +29,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "CustomNameTags-2.0.0+26.3.jar",
     "published": "2026-09-15"
   },
@@ -71,7 +58,11 @@
     "minecraft",
     "placeholder-api"
   ],
-  "lacks": 27,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
+  },
+  "lacks": 14,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

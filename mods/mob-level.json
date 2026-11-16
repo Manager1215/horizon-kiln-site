@@ -15,10 +15,8 @@
     "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath",
     "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents",
     "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents.StartTracking",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.particle.ParticleEngine",
     "net.minecraft.core.particles.DustParticleOptions",
-    "net.minecraft.network.chat.ClickEvent.OpenUrl",
     "net.minecraft.server.ServerScoreboard",
     "net.minecraft.util.TriState",
     "net.minecraft.world.entity.EntityAttachment",
@@ -51,14 +49,16 @@
     "net.minecraft.world.entity.npc.wanderingtrader.WanderingTrader",
     "net.minecraft.world.entity.projectile.ProjectileUtil",
     "net.minecraft.world.item.trading.ItemCost",
-    "and 62 more"
+    "net.minecraft.world.item.trading.MerchantOffer",
+    "net.minecraft.world.phys.EntityHitResult",
+    "and 58 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "moblevel-fabric-26.3-2.3.0.jar",
     "published": "2026-11-13"
   },
@@ -87,7 +87,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 119,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels"
+  },
+  "lacks": 98,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

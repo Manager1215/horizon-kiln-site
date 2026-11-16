@@ -10,19 +10,13 @@
   "description": "Stack Size Adjustergrants you full authority over item stack limits. Scale weapons, armor, blocks, and consumables dynamically at runtime.",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
     "net.minecraft.server.commands.GiveCommand",
     "net.minecraft.world.level.storage.ServerLevelData",
     "net.minecraft.world.level.storage.WorldData",
-    "ServerLifecycleEvents.SERVER_STARTED",
-    "Minecraft.execute()",
     "ItemInput.createItemStack()",
     "DataComponents.MAX_STACK_SIZE",
     "MinecraftServer.getGameRules()",
     "MinecraftServer.getWorldData()",
-    "ServerPlayer.drop()",
-    "ServerPlayer.getDisplayName()",
-    "ServerPlayer.getRandom()",
     "ExtraCodecs.intRange()",
     "RandomSource.triangle()",
     "EntityTypes.ITEM",
@@ -32,19 +26,17 @@
     "ItemEntity.setTarget()",
     "AbstractContainerMenu.broadcastFullState()",
     "InventoryMenu.broadcastFullState()",
-    "Item.components()",
-    "ItemStack.getDisplayName()",
     "Level.addFreshEntity()",
     "GameRule.getIdentifier()",
     "GameRules.get()",
     "GameRules.set()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "stack-size-adjuster-1.4.18+26.3.jar",
     "published": "2026-09-14"
   },
@@ -76,7 +68,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 28,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @redirect into the game's classes; has network channels"
+  },
+  "lacks": 20,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

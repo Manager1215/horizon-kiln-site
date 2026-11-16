@@ -9,19 +9,15 @@
   "author": "deanxbox",
   "description": "Adds a 'Cut All Stone' button in the stonecutter's UI to automatically convert all the stone material in the player's inventory to the player's selected type.",
   "needs": [
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
-    "net.minecraft.world.inventory.ContainerInput",
     "net.minecraft.world.inventory.StonecutterMenu",
-    "Minecraft.gameMode",
-    "Button.Builder.tooltip()"
+    "MultiPlayerGameMode.handleInventoryButtonClick()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "faststonecutter-1.0.2.jar",
     "published": "2026-09-16"
   },
@@ -48,7 +44,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 6,
+  "softOff": {
+    "class": "partial",
+    "why": "has network channels"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

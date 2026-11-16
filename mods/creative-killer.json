@@ -11,21 +11,18 @@
   "needs": [
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.minecraft.world.phys.EntityHitResult",
-    "DataComponents.CUSTOM_NAME",
     "ServerPlayer.getGameProfile()",
-    "PlayerList.isOp()",
     "LivingEntity.kill()",
     "Player.discard()",
     "Player.kill()",
-    "Player.nameAndId()",
-    "Items.NETHERITE_SWORD"
+    "Player.nameAndId()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "Creative_Killer-3.1.jar",
     "published": "2026-11-04"
   },
@@ -53,7 +50,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 10,
+  "softOff": {
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  },
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

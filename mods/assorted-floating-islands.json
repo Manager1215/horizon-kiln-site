@@ -9,10 +9,8 @@
   "author": "grim3212",
   "description": "Adds floating islands that hang over the land.",
   "needs": [
-    "net.minecraft.core.RegistrySetBuilder",
     "net.minecraft.data.worldgen.placement.PlacementUtils",
     "net.minecraft.util.random.WeightedList.Builder",
-    "net.minecraft.world.level.block.DoublePlantBlock",
     "net.minecraft.world.level.block.SnowyBlock",
     "net.minecraft.world.level.levelgen.feature.AbstractOreFeature",
     "net.minecraft.world.level.levelgen.feature.BlockReplacement",
@@ -25,14 +23,10 @@
     "BlockPos.MutableBlockPos.distManhattan()",
     "BlockPos.MutableBlockPos.get()",
     "BlockPos.MutableBlockPos.move()",
-    "Holder.is()",
-    "Registry.get()",
-    "RegistryAccess.lookupOrThrow()",
     "Registries.BIOME",
     "Registries.FEATURE_TYPE",
     "Registries.PLACEMENT_MODIFIER_TYPE",
     "BlockTags.SUBSTRATE_OVERWORLD",
-    "RandomSource.nextLong()",
     "WeightedList.builder()",
     "WeightedList.getRandomOrThrow()",
     "WeightedList.isEmpty()",
@@ -41,22 +35,16 @@
     "WorldGenLevel.getHeight()",
     "WorldGenLevel.getMaxY()",
     "WorldGenLevel.getMinY()",
-    "WorldGenLevel.isEmptyBlock()",
     "WorldGenLevel.registryAccess()",
     "WorldGenLevel.setBlock()",
-    "Blocks.ANDESITE",
-    "Blocks.AZALEA",
-    "Blocks.AZURE_BLUET",
-    "Blocks.BLUE_ORCHID",
-    "Blocks.BROWN_MUSHROOM",
-    "and 31 more"
+    "Blocks.DYED_TERRACOTTA"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "assortedfloatingislands-fabric-26.3-2.0.0.jar",
     "published": "2026-10-23"
   },
@@ -85,7 +73,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 79,
+  "softOff": {
+    "class": "partial",
+    "why": "generates in the world"
+  },
+  "lacks": 29,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

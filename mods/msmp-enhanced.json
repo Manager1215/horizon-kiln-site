@@ -18,10 +18,7 @@
     "io.netty.channel.epoll.EpollIoHandler",
     "io.netty.channel.epoll.EpollServerDomainSocketChannel",
     "io.netty.channel.unix.DomainSocketAddress",
-    "net.minecraft.network.chat.ComponentContents",
-    "net.minecraft.network.chat.ComponentSerialization",
     "net.minecraft.network.chat.ComponentUtils",
-    "net.minecraft.network.chat.contents.TranslatableContents",
     "net.minecraft.server.dedicated.DedicatedServer",
     "net.minecraft.server.jsonrpc.Connection",
     "net.minecraft.server.jsonrpc.IncomingRpcMethod",
@@ -34,27 +31,18 @@
     "net.minecraft.server.jsonrpc.internalapi.MinecraftServerStateServiceImpl",
     "net.minecraft.server.jsonrpc.methods.ClientInfo",
     "net.minecraft.server.jsonrpc.security.AuthenticationHandler",
-    "net.minecraft.server.permissions.LevelBasedPermissionSet",
     "net.minecraft.util.StrictJsonParser",
-    "CommandSource.NULL",
-    "Commands.getDispatcher()",
-    "Commands.performPrefixedCommand()",
     "BuiltInRegistries.INCOMING_RPC_METHOD",
-    "Component.getContents()",
-    "Component.getSiblings()",
-    "MutableComponent.create()",
-    "MutableComponent.setStyle()",
     "MinecraftServer.findRespawnDimension()",
     "MinecraftServer.getRespawnData()",
-    "LevelData.RespawnData.pos()",
-    "Vec2.ZERO"
+    "LevelData.RespawnData.pos()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "msmp-enhanced-0.1.1+26.3.jar",
     "published": "2026-09-15"
   },
@@ -81,7 +69,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 38,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 26,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -17,9 +17,6 @@
     "net.minecraft.server.packs.repository.FolderRepositorySource",
     "net.minecraft.server.packs.repository.PackRepository",
     "net.minecraft.server.packs.repository.PackSource",
-    "Minecraft.gameDirectory",
-    "Minecraft.setScreenAndShow()",
-    "Button.getMessage()",
     "LevelStorageSource.parseValidator()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
@@ -27,7 +24,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "oneworldfolder-1.1.4-26.3.jar",
     "published": "2026-09-20"
   },
@@ -55,7 +52,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 12,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite into the game's classes; runs threads of its own"
+  },
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

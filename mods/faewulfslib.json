@@ -11,12 +11,7 @@
   "needs": [
     "an access widener",
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
-    "net.minecraft.SharedConstants",
     "net.minecraft.client.multiplayer.ClientLevel.ClientLevelData",
-    "net.minecraft.server.packs.resources.ReloadableResourceManager",
-    "DefaultedRegistry.get()",
-    "Holder.Reference.is()",
     "Level.<init>()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -24,7 +19,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "faewulf_lib-fabric-26.3-1.4.0.jar",
     "published": "2026-09-29"
   },
@@ -54,7 +49,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own; generates in the world"
+  },
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

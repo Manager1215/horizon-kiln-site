@@ -10,35 +10,20 @@
   "description": "Upgrade your backpack easily in the crafting table - no smithing required!",
   "needs": [
     "net.minecraft.world.item.crafting.SimpleSmithingRecipe",
-    "net.minecraft.world.item.crafting.SmithingRecipeInput",
-    "net.minecraft.world.item.crafting.TransmuteRecipe",
-    "net.minecraft.world.item.crafting.display.ShapedCraftingRecipeDisplay",
-    "net.minecraft.world.item.crafting.display.SlotDisplay.ItemSlotDisplay",
-    "net.minecraft.world.item.crafting.display.SmithingRecipeDisplay",
-    "org.apache.logging.log4j.LogManager",
     "ItemStack.applyComponents()",
     "CraftingRecipe.CraftingBookInfo.MAP_CODEC",
     "CraftingRecipe.CraftingBookInfo.STREAM_CODEC",
     "Ingredient.OPTIONAL_CONTENTS_STREAM_CODEC",
-    "Ingredient.display()",
-    "Ingredient.optionalIngredientToDisplay()",
-    "Ingredient.testOptionalIngredient()",
     "PlacementInfo.createFromOptionals()",
     "Recipe.CommonInfo.MAP_CODEC",
-    "Recipe.CommonInfo.STREAM_CODEC",
-    "ShapedRecipePattern.MAP_CODEC",
-    "ShapedRecipePattern.STREAM_CODEC",
-    "ShapedRecipePattern.height()",
-    "ShapedRecipePattern.ingredients()",
-    "ShapedRecipePattern.matches()",
-    "ShapedRecipePattern.width()"
+    "Recipe.CommonInfo.STREAM_CODEC"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "travelersbackpacksimpleupgrading-fabric-26.3-1.0.0.jar",
     "published": "2026-09-25"
   },
@@ -70,7 +55,11 @@
     "minecraft",
     "travelersbackpack"
   ],
-  "lacks": 23,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

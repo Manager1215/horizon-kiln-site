@@ -13,7 +13,6 @@
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyCallback",
     "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyContext",
     "net.minecraft.server.level.ServerPlayerGameMode",
-    "net.minecraft.stats.ServerStatsCounter",
     "net.minecraft.world.food.FoodProperties",
     "net.minecraft.world.item.component.Consumable",
     "net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect",
@@ -21,18 +20,14 @@
     "net.minecraft.world.item.consume_effects.ConsumeEffect.Type",
     "DataComponents.CONSUMABLE",
     "DataComponents.FOOD",
-    "BuiltInRegistries.CONSUME_EFFECT_TYPE",
-    "ServerPlayer.getStats()",
-    "Stats.CUSTOM",
-    "Stats.EAT_CAKE_SLICE",
-    "Item.components()"
+    "BuiltInRegistries.CONSUME_EFFECT_TYPE"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "matcha-gluttony-26.3.jar",
     "published": "2026-10-07"
   },
@@ -61,7 +56,11 @@
     "matcha-flavoured",
     "minecraft"
   ],
-  "lacks": 17,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

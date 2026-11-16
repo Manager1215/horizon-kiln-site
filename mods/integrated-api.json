@@ -10,16 +10,12 @@
   "description": "Library mod for the Integrated Structures series",
   "needs": [
     "Mixin: 8 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
     "net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder",
     "net.fabricmc.fabric.api.event.registry.RegistryAttribute",
     "net.minecraft.client.gui.screens.inventory.StructureBlockEditScreen",
     "net.minecraft.client.renderer.blockentity.BlockEntityWithBoundingBoxRenderer",
     "net.minecraft.commands.arguments.ResourceOrTagKeyArgument",
     "net.minecraft.commands.arguments.ResourceOrTagKeyArgument.Result",
-    "net.minecraft.core.HolderSet.Direct",
-    "net.minecraft.core.HolderSet.Named",
     "net.minecraft.core.QuartPos",
     "net.minecraft.core.registries.codec.RegistryCodecs",
     "net.minecraft.data.worldgen.Pools",
@@ -50,6 +46,10 @@
     "net.minecraft.world.level.block.JigsawBlock",
     "net.minecraft.world.level.block.PoweredRailBlock",
     "net.minecraft.world.level.block.RailBlock",
+    "net.minecraft.world.level.block.SpawnerBlock",
+    "net.minecraft.world.level.block.TrialSpawnerBlock",
+    "net.minecraft.world.level.block.entity.StructureBlockEntity",
+    "net.minecraft.world.level.block.entity.trialspawner.TrialSpawnerConfig",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -57,7 +57,7 @@
   "library": true,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "integrated_api-fabric-26.3-1.9.2.jar",
     "published": "2026-11-11"
   },
@@ -85,7 +85,11 @@
     "midnightlib",
     "minecraft"
   ],
-  "lacks": 291,
+  "softOff": {
+    "class": "restart",
+    "why": "@overwrite and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; generates in the world"
+  },
+  "lacks": 248,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

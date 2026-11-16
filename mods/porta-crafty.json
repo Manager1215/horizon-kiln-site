@@ -11,8 +11,6 @@
   "needs": [
     "an access widener",
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.gui.screens.recipebook.CraftingRecipeBookComponent",
     "net.minecraft.recipebook.ServerPlaceRecipe",
     "net.minecraft.recipebook.ServerPlaceRecipe.CraftingMenuAccess",
@@ -20,16 +18,11 @@
     "net.minecraft.world.inventory.RecipeBookType",
     "net.minecraft.world.inventory.ResultContainer",
     "net.minecraft.world.inventory.ResultSlot",
-    "Screen.isFocused()",
     "LocalPlayer.closeContainer()",
     "NonNullList.subList()",
-    "Identifier.toLanguageKey()",
     "ServerLevel.enabledFeatures()",
-    "ServerPlayer.connection",
-    "ServerGamePacketListenerImpl.send()",
     "Inventory.add()",
     "Inventory.createInventoryUpdatePacket()",
-    "Player.drop()",
     "StackedItemContents.accountSimpleStack()",
     "AbstractContainerMenu.incrementStateId()",
     "AbstractContainerMenu.setRemoteSlot()",
@@ -43,7 +36,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "craftingslots-fabric-26.3-26.3.0.1.jar",
     "published": "2026-09-16"
   },
@@ -74,7 +67,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 26,
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 19,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

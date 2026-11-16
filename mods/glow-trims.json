@@ -11,13 +11,9 @@
   "needs": [
     "Mixin: 1 point inside the game's methods",
     "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
-    "net.minecraft.world.item.crafting.SmithingRecipe",
-    "net.minecraft.world.item.crafting.SmithingRecipeInput",
     "net.minecraft.world.item.equipment.trim.ArmorTrim",
     "net.minecraft.world.item.equipment.trim.TrimMaterial",
     "DataComponents.TRIM",
-    "CommonComponents.space()",
-    "Items.GLOW_INK_SAC",
     "PlacementInfo.createFromOptionals()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
@@ -25,7 +21,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "glow_trims-1.1+26.3.jar",
     "published": "2026-10-12"
   },
@@ -52,7 +48,11 @@
     "fabric-api",
     "fabricloader"
   ],
-  "lacks": 9,
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -19,11 +19,7 @@
     "VertexConsumer.setNormal()",
     "LevelRenderEvents.BEFORE_GIZMOS",
     "Camera.getFov()",
-    "Minecraft.execute()",
-    "Minecraft.hitResult",
-    "Minecraft.isSameThread()",
     "Gui.chatListener()",
-    "GuiGraphicsExtractor.blit()",
     "ClientLevel.clip()",
     "ClientLevel.noCollision()",
     "ClientLevel.setSectionDirtyWithNeighbors()",
@@ -46,17 +42,21 @@
     "ClientboundSectionBlocksUpdatePacket.runUpdates()",
     "ServerLevel.getEntity()",
     "Entity.getBoundingBox()",
-    "Entity.getDisplayName()",
     "Entity.getEyePosition()",
     "Entity.getInterpolation()",
-    "and 26 more"
+    "Entity.getPassengers()",
+    "Entity.getRootVehicle()",
+    "Entity.getVehicle()",
+    "Entity.isAlive()",
+    "Entity.isPassenger()",
+    "and 24 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "cinewolf-autodirector-2.0.36.jar",
     "published": "2026-11-15"
   },
@@ -85,7 +85,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 72,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 64,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

@@ -14,8 +14,6 @@
     "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
     "net.minecraft.client.gui.components.SplashRenderer",
-    "net.minecraft.client.gui.components.Tooltip",
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen",
     "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
     "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.model.geom.builders.CubeDeformation",
@@ -45,19 +43,21 @@
     "net.minecraft.client.resources.SplashManager",
     "net.minecraft.client.resources.model.EquipmentClientInfo",
     "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
-    "net.minecraft.world.entity.Pose",
     "net.minecraft.world.item.component.DyedItemColor",
     "net.minecraft.world.item.equipment.trim.ArmorTrim",
     "net.minecraft.world.item.equipment.trim.TrimMaterials",
     "net.minecraft.world.item.equipment.trim.TrimPatterns",
-    "and 60 more"
+    "BlendFunction.GLINT",
+    "RenderPipeline.builder()",
+    "RenderPipeline.getBindGroupLayouts()",
+    "and 42 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "davids-skin-over-armor-26.3-1.8.8+26.3.jar",
     "published": "2026-10-17"
   },
@@ -86,7 +86,11 @@
     "java",
     "minecraft"
   ],
-  "lacks": 106,
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect and @wrap-method into the game's classes"
+  },
+  "lacks": 82,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",

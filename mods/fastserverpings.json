@@ -22,12 +22,10 @@
     "io.netty.channel.socket.nio.NioSocketChannel",
     "net.minecraft.DetectedVersion",
     "net.minecraft.client.multiplayer.ServerStatusPinger",
-    "net.minecraft.network.chat.ComponentSerialization",
     "net.minecraft.network.protocol.status.ServerStatus",
     "net.minecraft.network.protocol.status.ServerStatus.Favicon",
     "net.minecraft.network.protocol.status.ServerStatus.Players",
     "net.minecraft.server.network.EventLoopGroupHolder",
-    "ServerData.ip",
     "ServerData.motd",
     "ServerData.ping",
     "ServerData.playerList",
@@ -44,7 +42,7 @@
   "library": false,
   "scanned": {
     "date": "2026-11-16",
-    "kiln": "0.4.1",
+    "kiln": "0.4.5",
     "file": "FastServerPings-1.1.5+26.4.jar",
     "published": "2026-11-14"
   },
@@ -70,7 +68,11 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 29,
+  "softOff": {
+    "class": "partial",
+    "why": "runs threads of its own"
+  },
+  "lacks": 27,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
