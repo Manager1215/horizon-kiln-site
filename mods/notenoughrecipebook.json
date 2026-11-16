@@ -1,7 +1,7 @@
 {
   "id": "notenoughrecipebook",
   "name": "Not Enough Recipe Book [NERB]",
-  "version": "0.6.1+26.3",
+  "version": "0.6.2+26.3",
   "status": "planned",
   "statusLabel": "Planned",
   "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,7 +10,7 @@
   "description": "Completely removes recipe book from the game, optimizing player data.",
   "needs": [
     "an access widener",
-    "Mixin: 4 points inside the game's methods",
+    "Mixin: 7 points inside the game's methods",
     "net.fabricmc.api.DedicatedServerModInitializer",
     "net.minecraft.client.ClientRecipeBook",
     "net.minecraft.client.gui.components.ImageButton",
@@ -41,10 +41,10 @@
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-11",
+    "date": "2026-11-16",
     "kiln": "0.4.1",
-    "file": "nerb-fabric-0.6.1+26.3.jar",
-    "published": "2026-11-07"
+    "file": "nerb-fabric-0.6.2+26.3.jar",
+    "published": "2026-11-11"
   },
   "reports": {
     "works": 0,
@@ -54,8 +54,8 @@
   },
   "run": {
     "passed": false,
-    "date": "2026-11-08",
-    "kiln": "0.4.0",
+    "date": "2026-11-12",
+    "kiln": "0.4.1",
     "ticks": 0,
     "hud": false,
     "why": "Java did not start"
@@ -80,30 +80,51 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "an access widener",
-      "Mixin",
+      "Mixin: 7 points inside the game's methods",
       "net.fabricmc.api.DedicatedServerModInitializer",
-      "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-      "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Join",
-      "net.minecraft.server.network.ServerGamePacketListenerImpl"
+      "net.minecraft.client.ClientRecipeBook",
+      "net.minecraft.client.gui.components.ImageButton",
+      "net.minecraft.client.gui.components.WidgetSprites",
+      "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
+      "net.minecraft.server.PlayerAdvancements",
+      "net.minecraft.server.ServerAdvancementManager",
+      "net.minecraft.stats.ServerRecipeBook",
+      "net.minecraft.stats.ServerRecipeBook.DisplayResolver",
+      "net.minecraft.stats.ServerRecipeBook.Packed",
+      "net.minecraft.world.item.crafting.RecipeManager.ServerDisplayInfo",
+      "net.minecraft.world.level.storage.WorldData",
+      "AdvancementHolder.value()",
+      "MinecraftServer.getAdvancements()",
+      "MinecraftServer.getWorldData()",
+      "ServerPlayer.awardRecipesByKey()",
+      "ServerPlayer.connection",
+      "ServerPlayer.getAdvancements()",
+      "ServerPlayer.getRecipeBook()",
+      "ServerGamePacketListenerImpl.send()",
+      "RecipeBookSettings.MAP_CODEC",
+      "RecipeBookSettings.copy()",
+      "Recipe.KEY_CODEC",
+      "Recipe.isSpecial()",
+      "RecipeManager.finalizeRecipeLoading()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "run": {
       "passed": false,
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "ticks": 0,
       "hud": false,
       "why": "Java did not start"
     },
     "url": "https://modrinth.com/mod/notenoughrecipebook",
-    "version": "0.5.1+26.3",
-    "lacks": 4,
+    "version": "0.6.2+26.3",
+    "lacks": 25,
     "scanned": {
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
-      "file": "nerb-fabric-0.5.1+26.3.jar",
-      "published": "2026-11-02"
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "file": "nerb-fabric-0.6.2+26.3.jar",
+      "published": "2026-11-11"
     },
-    "build": "development build 2026-11-05 (afb67d1)"
+    "build": "development build 2026-11-14 (fa70eeb)"
   }
 }

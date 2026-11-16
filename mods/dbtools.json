@@ -56,7 +56,7 @@
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-11",
+    "date": "2026-11-16",
     "kiln": "0.4.1",
     "file": "DBTools-2.4.3+MC26.3-AX6.1.5.jar",
     "published": "2026-10-30"
@@ -94,10 +94,11 @@
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "Mixin",
+      "Mixin: 1 point inside the game's methods",
       "com.mojang.blaze3d.vertex.DefaultVertexFormat",
+      "net.minecraft.client.gui.screens.LoadingOverlay",
+      "net.minecraft.client.renderer.texture.DynamicTexture",
       "net.minecraft.nbt.NbtAccounter",
-      "net.minecraft.nbt.NbtIo",
       "net.minecraft.world.level.EmptyBlockGetter",
       "net.minecraft.world.level.block.IronBarsBlock",
       "net.minecraft.world.level.block.Mirror",
@@ -112,6 +113,7 @@
       "org.lwjgl.system.MemoryUtil",
       "NativeImage.read()",
       "Window.handle()",
+      "RenderSystem.isOnRenderThread()",
       "PoseStack.last()",
       "PoseStack.Pose.pose()",
       "VertexConsumer.addVertex()",
@@ -122,6 +124,9 @@
       "FloatSet.size()",
       "Long2ObjectMap.Entry.getValue()",
       "Object2IntMap.Entry.getKey()",
+      "Font.split()",
+      "Gui.overlay()",
+      "GuiGraphicsExtractor.setTooltipForNextFrame()",
       "ChatComponent.addPlayerMessage()",
       "ClientLevel.getChunk()",
       "ClientLevel.getNoiseBiome()",
@@ -130,31 +135,26 @@
       "BlockPos.distSqr()",
       "BlockPos.get()",
       "BlockPos.getX()",
-      "BlockPos.getY()",
-      "BlockPos.getZ()",
-      "BlockPos.multiply()",
-      "BlockPos.offset()",
-      "BlockPos.relative()",
-      "and 35 more"
+      "and 36 more"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "run": {
       "passed": false,
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "ticks": 0,
       "hud": false,
       "why": "Java did not start"
     },
     "url": "https://modrinth.com/mod/dbtools",
     "version": "2.4.3+MC26.3-AX6.1.5",
-    "lacks": 118,
+    "lacks": 128,
     "scanned": {
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "file": "DBTools-2.4.3+MC26.3-AX6.1.5.jar",
       "published": "2026-10-30"
     },
-    "build": "development build 2026-11-05 (afb67d1)"
+    "build": "development build 2026-11-14 (fa70eeb)"
   }
 }

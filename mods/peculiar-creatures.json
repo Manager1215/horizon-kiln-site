@@ -56,7 +56,7 @@
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-11",
+    "date": "2026-11-16",
     "kiln": "0.4.1",
     "file": "peculiar_creatures-1.1.0+26.3.jar",
     "published": "2026-10-07"
@@ -99,10 +99,12 @@
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
-      "Mixin",
+      "Mixin: 7 points inside the game's methods",
       "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
+      "net.minecraft.network.protocol.game.ClientboundLevelChunkPacketData.BlockEntityInfo",
       "net.minecraft.network.protocol.game.ClientboundUpdateAttributesPacket.AttributeSnapshot",
-      "net.minecraft.server.network.ServerGamePacketListenerImpl",
+      "net.minecraft.server.level.ChunkMap",
+      "net.minecraft.util.EncoderCache.2",
       "net.minecraft.util.TimeUtil",
       "net.minecraft.world.entity.NeutralMob",
       "net.minecraft.world.entity.SpawnPlacementTypes",
@@ -128,38 +130,36 @@
       "net.minecraft.world.entity.ai.sensing.Sensing",
       "net.minecraft.world.entity.animal.happyghast.HappyGhast",
       "net.minecraft.world.entity.monster.Monster",
+      "net.minecraft.world.entity.monster.zombie.Zombie",
       "net.minecraft.world.item.BowItem",
       "net.minecraft.world.item.ItemCooldowns",
       "net.minecraft.world.item.ItemUseAnimation",
+      "net.minecraft.world.item.JukeboxSong",
+      "net.minecraft.world.item.JukeboxSongPlayer",
+      "net.minecraft.world.item.JukeboxSongPlayer.OnSongChanged",
       "net.minecraft.world.item.component.DyedItemColor",
       "net.minecraft.world.item.equipment.Equippable.Builder",
-      "ImmutableList.get()",
-      "BiomeModifications.addSpawn()",
-      "DataComponents.DYED_COLOR",
-      "Registries.JUKEBOX_SONG",
-      "SynchedEntityData.DataValue.create()",
-      "SoundEvents.CAT_AMBIENT_BABY",
-      "SoundEvents.CAT_DEATH_BABY",
-      "and 53 more"
+      "net.minecraft.world.level.block.entity.JukeboxBlockEntity",
+      "and 60 more"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
     "run": {
       "passed": false,
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "ticks": 0,
       "hud": false,
       "why": "Java did not start"
     },
     "url": "https://modrinth.com/mod/peculiar_creatures",
     "version": "1.1.0+26.3",
-    "lacks": 96,
+    "lacks": 105,
     "scanned": {
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "file": "peculiar_creatures-1.1.0+26.3.jar",
       "published": "2026-10-07"
     },
-    "build": "development build 2026-11-05 (afb67d1)"
+    "build": "development build 2026-11-14 (fa70eeb)"
   }
 }

@@ -55,7 +55,7 @@
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-11",
+    "date": "2026-11-16",
     "kiln": "0.4.1",
     "file": "osweather-26.3-fabric-1.1.jar",
     "published": "2026-11-10"
@@ -85,5 +85,73 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 57
+  "lacks": 57,
+  "development": {
+    "status": "planned",
+    "statusLabel": "Planned",
+    "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+    "evidence": "Not run: Java did not start.",
+    "needs": [
+      "com.mojang.authlib.GameProfile",
+      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
+      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
+      "net.minecraft.client.CloudStatus",
+      "net.minecraft.client.renderer.LevelRenderer",
+      "net.minecraft.client.renderer.SkyRenderer",
+      "net.minecraft.client.renderer.fog.FogData",
+      "net.minecraft.client.renderer.fog.FogRenderer",
+      "net.minecraft.client.renderer.state.level.SkyRenderState",
+      "net.minecraft.core.particles.BlockParticleOption",
+      "net.minecraft.core.particles.DustParticleOptions",
+      "net.minecraft.server.commands.WeatherCommand",
+      "net.minecraft.world.level.storage.LevelResource",
+      "ServerLifecycleEvents.SERVER_STARTED",
+      "ServerLifecycleEvents.SERVER_STOPPING",
+      "Options.getCloudStatus()",
+      "Options.getEffectiveRenderDistance()",
+      "ClientLevel.addEntity()",
+      "ClientLevel.getHeight()",
+      "ClientLevel.setRainLevel()",
+      "ClientLevel.setSkyFlashTime()",
+      "ClientLevel.setThunderLevel()",
+      "OptionsRenderState.cloudStatus",
+      "LevelRenderState.cloudColor",
+      "ParticleTypes.BLOCK",
+      "MinecraftServer.execute()",
+      "MinecraftServer.getWorldPath()",
+      "MinecraftServer.overworld()",
+      "MinecraftServer.setWeatherParameters()",
+      "ServerLevel.RAIN_DELAY",
+      "ServerLevel.RAIN_DURATION",
+      "ServerLevel.THUNDER_DURATION",
+      "ServerLevel.getBiome()",
+      "ServerLevel.getHeight()",
+      "ServerLevel.getOverworldClockTime()",
+      "ServerLevel.getSeed()",
+      "ServerPlayer.createCommandSourceStack()",
+      "ServerPlayer.getGameProfile()",
+      "SoundEvents.LIGHTNING_BOLT_THUNDER",
+      "ARGB.blueFloat()",
+      "and 9 more"
+    ],
+    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+    "run": {
+      "passed": false,
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "ticks": 0,
+      "hud": false,
+      "why": "Java did not start"
+    },
+    "url": "https://modrinth.com/mod/os-weather",
+    "version": "1.1-mc26.3-fabric",
+    "lacks": 49,
+    "scanned": {
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "file": "osweather-26.3-fabric-1.1.jar",
+      "published": "2026-11-10"
+    },
+    "build": "development build 2026-11-14 (fa70eeb)"
+  }
 }

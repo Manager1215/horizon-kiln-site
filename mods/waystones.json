@@ -1,7 +1,7 @@
 {
   "id": "waystones",
   "name": "Waystones",
-  "version": "26.3.0.2+fabric-26.3",
+  "version": "26.3.0.3+fabric-26.3",
   "status": "planned",
   "statusLabel": "Planned",
   "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,7 +9,7 @@
   "author": "BlayTheNinth",
   "description": "Teleport from waystone to waystone or craft magical scrolls to warp.",
   "needs": [
-    "Mixin: 1 point inside the game's methods",
+    "Mixin: 2 points inside the game's methods",
     "com.mojang.authlib.GameProfile",
     "net.minecraft.client.gui.ActiveTextCollector",
     "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
@@ -31,6 +31,7 @@
     "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
     "net.minecraft.core.UUIDUtil",
     "net.minecraft.core.particles.DustParticleOptions",
+    "net.minecraft.core.registries.codec.HolderSetCodec",
     "net.minecraft.network.chat.ClickEvent.SuggestCommand",
     "net.minecraft.network.chat.ComponentSerialization",
     "net.minecraft.network.chat.FontDescription",
@@ -49,17 +50,16 @@
     "net.minecraft.world.entity.ai.navigation.PathNavigation",
     "net.minecraft.world.entity.ai.village.poi.PoiType",
     "net.minecraft.world.entity.projectile.ProjectileUtil",
-    "net.minecraft.world.item.ItemUseAnimation",
-    "and 70 more"
+    "and 75 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-11",
+    "date": "2026-11-16",
     "kiln": "0.4.1",
-    "file": "waystones-fabric-26.3-26.3.0.2.jar",
-    "published": "2026-11-02"
+    "file": "waystones-fabric-26.3-26.3.0.3.jar",
+    "published": "2026-11-15"
   },
   "reports": {
     "works": 0,
@@ -69,8 +69,8 @@
   },
   "run": {
     "passed": false,
-    "date": "2026-11-05",
-    "kiln": "0.3.0",
+    "date": "2026-11-15",
+    "kiln": "0.4.1",
     "ticks": 0,
     "hud": false,
     "why": "Java did not start"
@@ -90,23 +90,18 @@
     "minecraft",
     "shogi"
   ],
-  "lacks": 232,
+  "lacks": 247,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "Mixin",
+      "Mixin: 1 point inside the game's methods",
       "com.mojang.authlib.GameProfile",
       "net.minecraft.client.gui.ActiveTextCollector",
       "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
-      "net.minecraft.client.gui.components.Button.Plain",
-      "net.minecraft.client.gui.components.ContainerObjectSelectionList",
-      "net.minecraft.client.gui.components.ContainerObjectSelectionList.Entry",
       "net.minecraft.client.gui.components.ImageButton",
-      "net.minecraft.client.gui.components.StringWidget",
-      "net.minecraft.client.gui.components.Tooltip",
       "net.minecraft.client.gui.components.WidgetSprites",
       "net.minecraft.client.gui.layouts.FrameLayout",
       "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
@@ -119,17 +114,17 @@
       "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
       "net.minecraft.core.UUIDUtil",
       "net.minecraft.core.particles.DustParticleOptions",
-      "net.minecraft.network.chat.ClickEvent.SuggestCommand",
       "net.minecraft.network.chat.ComponentSerialization",
       "net.minecraft.network.chat.FontDescription",
       "net.minecraft.network.chat.FontDescription.Resource",
       "net.minecraft.server.ServerScoreboard",
       "net.minecraft.server.level.ChunkResult",
-      "net.minecraft.server.permissions.Permissions",
-      "net.minecraft.server.players.PlayerList",
       "net.minecraft.util.ByIdMap",
       "net.minecraft.util.ByIdMap.OutOfBoundsStrategy",
       "net.minecraft.util.StringUtil",
+      "net.minecraft.util.filefix.access.FileRelation",
+      "net.minecraft.util.filefix.fixes.DimensionStorageFileFix",
+      "net.minecraft.util.filefix.operations.FileFixOperations",
       "net.minecraft.world.SimpleContainer",
       "net.minecraft.world.entity.EntitySelector",
       "net.minecraft.world.entity.ai.navigation.PathNavigation",
@@ -138,26 +133,31 @@
       "net.minecraft.world.item.ItemUseAnimation",
       "net.minecraft.world.level.block.Mirror",
       "net.minecraft.world.level.block.ObserverBlock",
-      "and 66 more"
+      "net.minecraft.world.level.levelgen.structure.pools.JigsawPlacement.Placer",
+      "net.minecraft.world.level.levelgen.structure.pools.LegacySinglePoolElement",
+      "net.minecraft.world.level.levelgen.structure.pools.SinglePoolElement",
+      "net.minecraft.world.level.material.PushReaction",
+      "net.minecraft.world.phys.EntityHitResult",
+      "and 62 more"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
     "run": {
       "passed": false,
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "ticks": 0,
       "hud": false,
       "why": "Java did not start"
     },
     "url": "https://modrinth.com/mod/waystones",
     "version": "26.3.0.2+fabric-26.3",
-    "lacks": 230,
+    "lacks": 198,
     "scanned": {
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "file": "waystones-fabric-26.3-26.3.0.2.jar",
       "published": "2026-11-02"
     },
-    "build": "development build 2026-11-05 (afb67d1)"
+    "build": "development build 2026-11-14 (fa70eeb)"
   }
 }

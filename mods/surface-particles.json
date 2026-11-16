@@ -43,7 +43,7 @@
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-11",
+    "date": "2026-11-16",
     "kiln": "0.4.1",
     "file": "surfaceparticles-fabric-26.3-1.0.02.jar",
     "published": "2026-09-16"
@@ -80,27 +80,54 @@
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "Mixin",
-      "net.minecraft.SharedConstants"
+      "net.minecraft.SharedConstants",
+      "net.minecraft.client.particle.ParticleEngine",
+      "net.minecraft.client.particle.SingleQuadParticle",
+      "net.minecraft.client.particle.SingleQuadParticle.Layer",
+      "net.minecraft.client.particle.TerrainParticle",
+      "net.minecraft.world.phys.shapes.Shapes.DoubleLineConsumer",
+      "Minecraft.getBlockColors()",
+      "Minecraft.particleEngine",
+      "BlockColors.getTintSource()",
+      "BlockTintSource.colorAsTerrainParticle()",
+      "BlockTintSource.colorInWorld()",
+      "Entity.getBbWidth()",
+      "Entity.getOnPosLegacy()",
+      "Entity.getRandom()",
+      "Blocks.MOVING_PISTON",
+      "BlockState.getRenderShape()",
+      "BlockState.getSeed()",
+      "BlockState.getShape()",
+      "BlockState.shouldSpawnTerrainParticles()",
+      "AABB.maxX",
+      "AABB.maxY",
+      "AABB.maxZ",
+      "AABB.minX",
+      "AABB.minY",
+      "AABB.minZ",
+      "VoxelShape.bounds()",
+      "VoxelShape.forAllBoxes()",
+      "VoxelShape.isEmpty()",
+      "VoxelShape.max()"
     ],
-    "roadmap": "Code next to data (0.3), Mixin (0.5)",
+    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
     "run": {
       "passed": false,
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "ticks": 0,
       "hud": false,
       "why": "Java did not start"
     },
     "url": "https://modrinth.com/mod/surface-particles",
     "version": "1.0.02",
-    "lacks": 1,
+    "lacks": 29,
     "scanned": {
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "file": "surfaceparticles-fabric-26.3-1.0.02.jar",
       "published": "2026-09-16"
     },
-    "build": "development build 2026-11-05 (afb67d1)"
+    "build": "development build 2026-11-14 (fa70eeb)"
   }
 }

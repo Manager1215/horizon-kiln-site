@@ -30,7 +30,7 @@
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-11",
+    "date": "2026-11-16",
     "kiln": "0.4.1",
     "file": "player-ping-26.x-1.2.0.jar",
     "published": "2026-11-06"
@@ -51,5 +51,35 @@
     "java",
     "minecraft"
   ],
-  "lacks": 16
+  "lacks": 16,
+  "development": {
+    "status": "planned",
+    "statusLabel": "Planned",
+    "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+    "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+    "needs": [
+      "net.fabricmc.api.DedicatedServerModInitializer",
+      "net.minecraft.world.scores.PlayerTeam",
+      "ServerboundPongPacket.getId()",
+      "MinecraftServer.getTickCount()",
+      "ServerPlayer.connection",
+      "ServerPlayer.getTeam()",
+      "ServerGamePacketListenerImpl.getRemoteAddress()",
+      "ServerGamePacketListenerImpl.latency()",
+      "ServerGamePacketListenerImpl.send()",
+      "PlayerList.broadcastAll()",
+      "PlayerList.getOpNames()"
+    ],
+    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+    "url": "https://modrinth.com/mod/player-ping",
+    "version": "1.2.0",
+    "lacks": 11,
+    "scanned": {
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "file": "player-ping-26.x-1.2.0.jar",
+      "published": "2026-11-06"
+    },
+    "build": "development build 2026-11-14 (fa70eeb)"
+  }
 }

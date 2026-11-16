@@ -1,7 +1,7 @@
 {
   "id": "distant-friends",
   "name": "Distant Friends",
-  "version": "0.17.0",
+  "version": "0.17.1",
   "status": "planned",
   "statusLabel": "Planned",
   "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -33,6 +33,7 @@
     "BlockPos.containing()",
     "ServerLevel.addFreshEntityWithPassengers()",
     "ServerLevel.broadcastEntityEvent()",
+    "ServerLevel.getBiome()",
     "ServerLevel.getHeight()",
     "ServerLevel.getNearbyPlayers()",
     "ServerLevel.getNearestPlayer()",
@@ -50,17 +51,16 @@
     "Items.IRON_AXE",
     "Items.IRON_HOE",
     "Items.IRON_PICKAXE",
-    "Items.IRON_SHOVEL",
-    "and 21 more"
+    "and 22 more"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-11",
+    "date": "2026-11-16",
     "kiln": "0.4.1",
-    "file": "DistantFriends-fabric-26.3-0.17.0.jar",
-    "published": "2026-10-17"
+    "file": "DistantFriends-fabric-26.3-0.17.1.jar",
+    "published": "2026-11-15"
   },
   "reports": {
     "works": 0,
@@ -70,8 +70,8 @@
   },
   "run": {
     "passed": false,
-    "date": "2026-11-05",
-    "kiln": "0.3.0",
+    "date": "2026-11-16",
+    "kiln": "0.4.1",
     "ticks": 0,
     "hud": false,
     "why": "Java did not start"
@@ -89,7 +89,7 @@
     "java",
     "minecraft"
   ],
-  "lacks": 61,
+  "lacks": 62,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -97,29 +97,30 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "an access widener",
-      "Mixin",
+      "Mixin: 1 point inside the game's methods",
       "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
       "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
-      "net.minecraft.commands.arguments.coordinates.Vec3Argument",
-      "net.minecraft.server.players.PlayerList",
       "net.minecraft.server.players.UserWhiteList",
       "net.minecraft.world.entity.Pose",
+      "net.minecraft.world.entity.SpawnPlacementType",
+      "net.minecraft.world.entity.SpawnPlacementTypes",
       "net.minecraft.world.entity.ai.targeting.TargetingConditions",
       "net.minecraft.world.entity.decoration.Mannequin",
       "net.minecraft.world.entity.player.PlayerSkin.Patch",
       "net.minecraft.world.item.component.ResolvableProfile",
       "net.minecraft.world.item.component.ResolvableProfile.Dynamic",
+      "net.minecraft.world.level.CustomSpawner",
+      "net.minecraft.world.level.LightLayer",
       "AttachmentRegistry.createPersistent()",
       "ServerLifecycleEvents.SERVER_STARTED",
-      "CommandSourceStack.getPosition()",
-      "Commands.LEVEL_GAMEMASTERS",
-      "Commands.hasPermission()",
       "BlockPos.containing()",
-      "MinecraftServer.getPlayerList()",
       "ServerLevel.addFreshEntityWithPassengers()",
       "ServerLevel.broadcastEntityEvent()",
+      "ServerLevel.getHeight()",
       "ServerLevel.getNearbyPlayers()",
       "ServerLevel.getNearestPlayer()",
+      "ServerLevel.getRandomPlayer()",
+      "PlayerList.getWhiteList()",
       "EntityReference.of()",
       "EntityTypes.MANNEQUIN",
       "Items.BOW",
@@ -137,27 +138,26 @@
       "Items.NETHERITE_AXE",
       "Items.NETHERITE_HOE",
       "Items.NETHERITE_PICKAXE",
-      "Items.NETHERITE_SHOVEL",
-      "and 12 more"
+      "and 16 more"
     ],
     "roadmap": "Code next to data (0.3), Mixin (0.5)",
     "run": {
       "passed": false,
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "ticks": 0,
       "hud": false,
       "why": "Java did not start"
     },
     "url": "https://modrinth.com/mod/distant-friends",
     "version": "0.17.0",
-    "lacks": 52,
+    "lacks": 56,
     "scanned": {
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "file": "DistantFriends-fabric-26.3-0.17.0.jar",
       "published": "2026-10-17"
     },
-    "build": "development build 2026-11-05 (afb67d1)"
+    "build": "development build 2026-11-14 (fa70eeb)"
   }
 }

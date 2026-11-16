@@ -52,7 +52,7 @@
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
-    "date": "2026-11-11",
+    "date": "2026-11-16",
     "kiln": "0.4.1",
     "file": "starlib-fabric-1.0.7.jar",
     "published": "2026-11-08"
@@ -88,9 +88,18 @@
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "Mixin",
+      "com.mojang.authlib.GameProfile",
       "net.fabricmc.fabric.api.event.registry.DynamicRegistries",
+      "net.minecraft.client.renderer.entity.layers.CapeLayer",
+      "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+      "net.minecraft.client.resources.SplashManager",
+      "net.minecraft.client.resources.model.EquipmentClientInfo",
+      "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
       "net.minecraft.core.registries.codec.RegistryFileCodec",
+      "net.minecraft.util.profiling.ProfilerFiller",
+      "Minecraft.gameDirectory",
+      "RenderTypes.entityTranslucent()",
+      "SkinTextureDownloader.downloadAndRegisterSkin()",
       "BlockPos.east()",
       "BlockPos.north()",
       "BlockPos.south()",
@@ -99,12 +108,10 @@
       "ByteBufCodecs.fromCodecWithRegistries()",
       "MinecraftServer.registryAccess()",
       "ServerLevel.sendParticles()",
-      "SoundEvents.BAMBOO_FALL",
       "TagKey.hashedCodec()",
       "ExtraCodecs.POSITIVE_FLOAT",
       "LivingEntity.getBoundingBox()",
       "Level.RESOURCE_KEY_CODEC",
-      "Level.isEmptyBlock()",
       "LiquidBlock.POSSIBLE_FLOW_DIRECTIONS",
       "BlockState.getCollisionShape()",
       "BlockState.getShape()",
@@ -117,24 +124,24 @@
       "AABB.minZ",
       "VoxelShape.bounds()"
     ],
-    "roadmap": "Code next to data (0.3), Mixin (0.5)",
+    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
     "run": {
       "passed": false,
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "ticks": 0,
       "hud": false,
       "why": "Java did not start"
     },
     "url": "https://modrinth.com/mod/starlib",
-    "version": "1.0.6",
-    "lacks": 27,
+    "version": "1.0.7+26.3-fabric",
+    "lacks": 35,
     "scanned": {
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
-      "file": "starlib-fabric-1.0.6.jar",
-      "published": "2026-10-28"
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "file": "starlib-fabric-1.0.7.jar",
+      "published": "2026-11-08"
     },
-    "build": "development build 2026-11-05 (afb67d1)"
+    "build": "development build 2026-11-14 (fa70eeb)"
   }
 }

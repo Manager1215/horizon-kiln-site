@@ -1,7 +1,7 @@
 {
   "id": "voxy-server-side",
   "name": "Voxy Server Side",
-  "version": "0.20.0",
+  "version": "0.21.0",
   "status": "planned",
   "statusLabel": "Planned",
   "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -57,10 +57,10 @@
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-11",
+    "date": "2026-11-16",
     "kiln": "0.4.1",
     "file": "voxy-server-side-fabric.jar",
-    "published": "2026-10-24"
+    "published": "2026-11-13"
   },
   "reports": {
     "works": 0,
@@ -70,8 +70,8 @@
   },
   "run": {
     "passed": false,
-    "date": "2026-11-05",
-    "kiln": "0.3.0",
+    "date": "2026-11-13",
+    "kiln": "0.4.1",
     "ticks": 0,
     "hud": false,
     "why": "Java did not start"
@@ -88,7 +88,7 @@
     "fabricloader",
     "minecraft"
   ],
-  "lacks": 295,
+  "lacks": 302,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -96,7 +96,7 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "an access widener",
-      "Mixin",
+      "Mixin: 3 points inside the game's methods",
       "com.mojang.authlib.GameProfile",
       "io.netty.channel.Channel",
       "io.netty.channel.ChannelConfig",
@@ -105,9 +105,6 @@
       "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
       "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
       "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents.EndTick",
-      "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents",
-      "net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.Disconnect",
       "net.fabricmc.fabric.api.networking.v1.context.PacketContextProvider",
       "net.minecraft.SharedConstants",
       "net.minecraft.client.model.EntityModel",
@@ -127,36 +124,39 @@
       "net.minecraft.core.IdMapper",
       "net.minecraft.core.RegistryAccess.ImmutableRegistryAccess",
       "net.minecraft.nbt.NbtAccounter",
-      "net.minecraft.nbt.NbtIo",
       "net.minecraft.nbt.TagType",
       "net.minecraft.nbt.TagTypes",
       "net.minecraft.network.VarInt",
-      "net.minecraft.network.chat.contents.TranslatableContents",
+      "net.minecraft.network.protocol.game.ServerboundMovePlayerPacket",
       "net.minecraft.network.protocol.ping.ServerboundPingRequestPacket",
+      "net.minecraft.server.MinecraftServer.MultiplayerScope",
       "net.minecraft.server.level.ChunkMap",
       "net.minecraft.server.level.ChunkTrackingView",
       "net.minecraft.server.network.PlayerChunkSender",
-      "net.minecraft.server.network.ServerGamePacketListenerImpl",
+      "net.minecraft.util.BitStorage",
+      "net.minecraft.util.debugchart.LocalSampleLogger",
+      "net.minecraft.util.thread.PriorityConsecutiveExecutor",
+      "net.minecraft.world.entity.ElytraAnimationState",
       "and 80 more"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "run": {
       "passed": false,
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "ticks": 0,
       "hud": false,
       "why": "Java did not start"
     },
     "url": "https://modrinth.com/mod/voxy-server-side",
-    "version": "0.20.0",
-    "lacks": 305,
+    "version": "0.21.0",
+    "lacks": 289,
     "scanned": {
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "file": "voxy-server-side-fabric.jar",
-      "published": "2026-10-24"
+      "published": "2026-11-13"
     },
-    "build": "development build 2026-11-05 (afb67d1)"
+    "build": "development build 2026-11-14 (fa70eeb)"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "primity",
   "name": "Primity",
-  "version": "0.2.2+26.3-fabric",
+  "version": "0.3.0-beta.2+26.3-fabric",
   "status": "planned",
   "statusLabel": "Planned",
   "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -14,14 +14,18 @@
     "net.minecraft.core.component.DataComponentInitializers.SingleComponentInitializer",
     "net.minecraft.tags.DamageTypeTags",
     "net.minecraft.tags.ItemTags",
+    "net.minecraft.world.item.FlintAndSteelItem",
     "net.minecraft.world.item.ShieldItem",
     "net.minecraft.world.item.component.BlocksAttacks",
     "net.minecraft.world.item.component.BlocksAttacks.DamageReduction",
     "net.minecraft.world.item.component.BlocksAttacks.ItemDamageFunction",
+    "net.minecraft.world.level.material.PushReaction",
+    "BiomeModifications.addFeature()",
     "HolderLookup.Provider.getOrThrow()",
     "Registry.get()",
     "DataComponents.BLOCKS_ATTACKS",
     "DataComponents.BREAK_SOUND",
+    "Registries.BIOME",
     "SoundEvents.SHIELD_BLOCK",
     "SoundEvents.SHIELD_BREAK",
     "Item.Properties.delayedComponent()",
@@ -29,6 +33,7 @@
     "Item.Properties.repairable()",
     "Item.Properties.spear()",
     "Items.FLINT",
+    "Items.FLINT_AND_STEEL",
     "Items.NETHERITE_SCRAP",
     "Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE",
     "Items.SHIELD",
@@ -37,17 +42,23 @@
     "Items.STONE_SPEAR",
     "Items.STONE_SWORD",
     "ToolMaterial.STONE",
+    "Block.canBeReplaced()",
+    "Block.column()",
     "Block.defaultDestroyTime()",
-    "Blocks.IRON_BLOCK"
+    "Block.updateShape()",
+    "Blocks.IRON_BLOCK",
+    "SoundType.POINTED_DRIPSTONE",
+    "SoundType.ROOTS",
+    "and 6 more"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-11",
+    "date": "2026-11-16",
     "kiln": "0.4.1",
-    "file": "primity-0.2.2+26.3-fabric.jar",
-    "published": "2026-09-20"
+    "file": "primity-0.3.0-beta.2+26.3-fabric.jar",
+    "published": "2026-11-14"
   },
   "reports": {
     "works": 0,
@@ -57,14 +68,15 @@
   },
   "run": {
     "passed": false,
-    "date": "2026-11-05",
-    "kiln": "0.3.0",
+    "date": "2026-11-15",
+    "kiln": "0.4.1",
     "ticks": 0,
     "hud": false,
     "why": "Java did not start"
   },
   "entrypoints": {
     "main": 1,
+    "client": 1,
     "modmenu": 1
   },
   "mixins": true,
@@ -76,19 +88,19 @@
     "minecraft",
     "yet_another_config_lib_v3"
   ],
-  "lacks": 30,
+  "lacks": 46,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "Mixin",
       "net.minecraft.core.HolderSet.Named",
       "net.minecraft.core.component.DataComponentInitializers",
       "net.minecraft.core.component.DataComponentInitializers.SingleComponentInitializer",
       "net.minecraft.tags.DamageTypeTags",
       "net.minecraft.tags.ItemTags",
+      "net.minecraft.world.item.FlintAndSteelItem",
       "net.minecraft.world.item.ShieldItem",
       "net.minecraft.world.item.component.BlocksAttacks",
       "net.minecraft.world.item.component.BlocksAttacks.DamageReduction",
@@ -104,34 +116,35 @@
       "Item.Properties.repairable()",
       "Item.Properties.spear()",
       "Items.FLINT",
+      "Items.FLINT_AND_STEEL",
       "Items.NETHERITE_SCRAP",
       "Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE",
-      "Items.SHIELD",
       "Items.STONE_AXE",
       "Items.STONE_HOE",
       "Items.STONE_SPEAR",
       "Items.STONE_SWORD",
       "ToolMaterial.STONE",
+      "Block.defaultDestroyTime()",
       "Blocks.IRON_BLOCK"
     ],
-    "roadmap": "Code next to data (0.3), Mixin (0.5)",
+    "roadmap": "Code next to data (0.3)",
     "run": {
       "passed": false,
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "ticks": 0,
       "hud": false,
       "why": "Java did not start"
     },
     "url": "https://modrinth.com/mod/primity",
-    "version": "0.2.2+26.3-fabric",
-    "lacks": 29,
+    "version": "0.3.0-beta.1+26.3-fabric",
+    "lacks": 31,
     "scanned": {
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
-      "file": "primity-0.2.2+26.3-fabric.jar",
-      "published": "2026-09-20"
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "file": "primity-0.3.0-beta.1+26.3-fabric.jar",
+      "published": "2026-11-12"
     },
-    "build": "development build 2026-11-05 (afb67d1)"
+    "build": "development build 2026-11-14 (fa70eeb)"
   }
 }

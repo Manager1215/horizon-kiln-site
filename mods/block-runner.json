@@ -32,7 +32,7 @@
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-11",
+    "date": "2026-11-16",
     "kiln": "0.4.1",
     "file": "blockrunner-v26.3.0-mc26.3.x+fabric.jar",
     "published": "2026-09-23"
@@ -72,27 +72,40 @@
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
       "an access widener",
-      "Mixin",
+      "Mixin: 2 points inside the game's methods",
+      "net.minecraft.core.HolderLookup.RegistryLookup.Delegate",
+      "net.minecraft.server.ReloadableServerResources",
+      "net.minecraft.world.entity.ai.attributes.AttributeMap",
+      "Entity.<init>()",
+      "LivingEntity.getBlockStateOn()",
+      "Attribute.sanitizeValue()",
+      "AttributeInstance.addTransientModifier()",
+      "AttributeInstance.getModifier()",
+      "AttributeInstance.getModifiers()",
+      "AttributeInstance.removeModifier()",
+      "Player.<init>()",
+      "Player.getAttributes()",
+      "Player.isScoping()",
       "Block.builtInRegistryHolder()"
     ],
     "roadmap": "Code next to data (0.3), Mixin (0.5)",
     "run": {
       "passed": false,
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "ticks": 0,
       "hud": false,
       "why": "Java did not start"
     },
     "url": "https://modrinth.com/mod/block-runner",
     "version": "26.3.0",
-    "lacks": 1,
+    "lacks": 14,
     "scanned": {
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "file": "blockrunner-v26.3.0-mc26.3.x+fabric.jar",
       "published": "2026-09-23"
     },
-    "build": "development build 2026-11-05 (afb67d1)"
+    "build": "development build 2026-11-14 (fa70eeb)"
   }
 }

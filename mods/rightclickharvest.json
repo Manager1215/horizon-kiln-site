@@ -1,7 +1,7 @@
 {
   "id": "rightclickharvest",
   "name": "RightClickHarvest",
-  "version": "4.6.2+26.3.x",
+  "version": "4.7.1+26.3.x",
   "status": "planned",
   "statusLabel": "Planned",
   "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,7 +10,9 @@
   "description": "Allows you to harvest crops with right click",
   "needs": [
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
+    "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
     "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
+    "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Canceled",
     "net.minecraft.tags.ItemTags",
     "BlockPos.distManhattan()",
     "BlockPos.relative()",
@@ -18,6 +20,7 @@
     "SoundEvents.CROP_PLANTED",
     "SoundEvents.NETHER_WART_PLANTED",
     "Stats.BLOCK_MINED",
+    "ExperienceOrb.award()",
     "Player.causeFoodExhaustion()",
     "Player.getRandom()",
     "Player.giveExperiencePoints()",
@@ -36,10 +39,10 @@
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-11",
+    "date": "2026-11-16",
     "kiln": "0.4.1",
-    "file": "rightclickharvest-fabric-4.6.2+26.3.x.jar",
-    "published": "2026-09-18"
+    "file": "rightclickharvest-fabric-4.7.1-26.3.x.jar",
+    "published": "2026-11-15"
   },
   "reports": {
     "works": 0,
@@ -49,8 +52,8 @@
   },
   "run": {
     "passed": false,
-    "date": "2026-11-05",
-    "kiln": "0.3.0",
+    "date": "2026-11-16",
+    "kiln": "0.4.1",
     "ticks": 0,
     "hud": false,
     "why": "Java did not start"
@@ -64,23 +67,23 @@
     "jamlib",
     "minecraft"
   ],
-  "lacks": 22,
+  "lacks": 25,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
-      "Mixin",
       "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
+      "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
       "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
+      "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Canceled",
       "net.minecraft.tags.ItemTags",
       "BlockPos.distManhattan()",
       "BlockPos.relative()",
-      "MutableComponent.withStyle()",
       "SoundEvents.CROP_PLANTED",
       "SoundEvents.NETHER_WART_PLANTED",
-      "Stats.BLOCK_MINED",
+      "ExperienceOrb.award()",
       "Player.causeFoodExhaustion()",
       "Player.getRandom()",
       "Player.giveExperiencePoints()",
@@ -89,30 +92,27 @@
       "Items.SUGAR_CANE",
       "BlockTransformers.HOE",
       "Block.getDrops()",
-      "Blocks.SUGAR_CANE",
-      "CropBlock.isMaxAge()",
       "BlockState.getCloneItemStack()",
-      "BlockState.spawnAfterBreak()",
-      "BlockHitResult.withPosition()"
+      "BlockState.spawnAfterBreak()"
     ],
-    "roadmap": "Code next to data (0.3), Mixin (0.5)",
+    "roadmap": "Code next to data (0.3)",
     "run": {
       "passed": false,
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "ticks": 0,
       "hud": false,
       "why": "Java did not start"
     },
     "url": "https://modrinth.com/mod/rightclickharvest",
-    "version": "4.6.2+26.3.x",
-    "lacks": 22,
+    "version": "4.7.0+26.3.x",
+    "lacks": 20,
     "scanned": {
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
-      "file": "rightclickharvest-fabric-4.6.2+26.3.x.jar",
-      "published": "2026-09-18"
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "file": "rightclickharvest-fabric-4.7.0+26.3.x.jar",
+      "published": "2026-11-12"
     },
-    "build": "development build 2026-11-05 (afb67d1)"
+    "build": "development build 2026-11-14 (fa70eeb)"
   }
 }

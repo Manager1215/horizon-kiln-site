@@ -1,7 +1,7 @@
 {
   "id": "distant-thunders",
   "name": "Distant thunders",
-  "version": "1.5.0",
+  "version": "1.5.2",
   "status": "planned",
   "statusLabel": "Planned",
   "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,6 +10,8 @@
   "description": "A realism mod that introduces speed-of-sound physics to Minecraft. Lightning strikes are no longer heard instantly; instead, the thunder reaches you with a delay based on your distance from the strike. It also features dynamic volume scaling and realistic",
   "needs": [
     "Mixin: 1 point inside the game's methods",
+    "net.minecraft.client.multiplayer.MultiPlayerGameMode",
+    "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.commands.arguments.coordinates.Vec3Argument",
     "Minecraft.execute()",
     "Options.getEffectiveRenderDistance()",
@@ -22,10 +24,10 @@
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-11",
+    "date": "2026-11-16",
     "kiln": "0.4.1",
-    "file": "distantthunders-mc26.3-fabric-1.5.0.jar",
-    "published": "2026-11-08"
+    "file": "distantthunders-mc26.3-fabric-1.5.2.jar",
+    "published": "2026-11-16"
   },
   "reports": {
     "works": 0,
@@ -35,7 +37,7 @@
   },
   "run": {
     "passed": false,
-    "date": "2026-11-09",
+    "date": "2026-11-16",
     "kiln": "0.4.1",
     "ticks": 0,
     "hud": false,
@@ -48,39 +50,45 @@
   },
   "mixins": true,
   "depends": [
+    "akilib",
     "architectury",
     "fabric-api",
     "fabricloader",
     "java",
     "minecraft"
   ],
-  "lacks": 7,
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "Mixin"
+      "Mixin: 1 point inside the game's methods",
+      "Options.getEffectiveRenderDistance()",
+      "ClientLevel.setSkyFlashTime()",
+      "LocalPlayer.distanceTo()",
+      "SoundEvents.LIGHTNING_BOLT_IMPACT",
+      "SoundEvents.LIGHTNING_BOLT_THUNDER"
     ],
-    "roadmap": "Mixin (0.5)",
+    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "run": {
       "passed": false,
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "ticks": 0,
       "hud": false,
       "why": "Java did not start"
     },
     "url": "https://modrinth.com/mod/distant-thunders",
-    "version": "1.1.1",
-    "lacks": 0,
+    "version": "1.5.0",
+    "lacks": 5,
     "scanned": {
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
-      "file": "distantthunders-mc26.3-fabric-1.1.1-dev.jar",
-      "published": "2026-11-04"
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "file": "distantthunders-mc26.3-fabric-1.5.0.jar",
+      "published": "2026-11-08"
     },
-    "build": "development build 2026-11-05 (afb67d1)"
+    "build": "development build 2026-11-14 (fa70eeb)"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "tntcountdown",
   "name": "TNT Countdown (TNT Timer)",
-  "version": "2.1.4+mc26.3",
+  "version": "2.1.5+mc26.3",
   "status": "planned",
   "statusLabel": "Planned",
   "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -12,6 +12,7 @@
     "net.minecraft.client.renderer.entity.TntRenderer",
     "net.minecraft.world.entity.EntityAttachment",
     "net.minecraft.world.entity.EntityAttachments",
+    "TntRenderState.isDiscrete",
     "TntRenderState.nameTag",
     "TntRenderState.nameTagAttachment",
     "PrimedTnt.getAttachments()",
@@ -21,10 +22,10 @@
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-11",
+    "date": "2026-11-16",
     "kiln": "0.4.1",
-    "file": "countdown-2.1.4+mc26.3.jar",
-    "published": "2026-11-01"
+    "file": "countdown-2.1.5+mc26.3.jar",
+    "published": "2026-11-16"
   },
   "reports": {
     "works": 0,
@@ -34,8 +35,8 @@
   },
   "run": {
     "passed": false,
-    "date": "2026-11-05",
-    "kiln": "0.3.0",
+    "date": "2026-11-16",
+    "kiln": "0.4.1",
     "ticks": 0,
     "hud": false,
     "why": "Java did not start"
@@ -49,33 +50,39 @@
     "minecraft",
     "oneconfigv1"
   ],
-  "lacks": 7,
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "Mixin"
+      "net.minecraft.client.renderer.entity.TntRenderer",
+      "net.minecraft.world.entity.EntityAttachment",
+      "net.minecraft.world.entity.EntityAttachments",
+      "TntRenderState.nameTag",
+      "TntRenderState.nameTagAttachment",
+      "PrimedTnt.getAttachments()",
+      "PrimedTnt.getYRot()"
     ],
-    "roadmap": "Mixin (0.5)",
+    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
     "run": {
       "passed": false,
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "ticks": 0,
       "hud": false,
       "why": "Java did not start"
     },
     "url": "https://modrinth.com/mod/tntcountdown",
     "version": "2.1.4+mc26.3",
-    "lacks": 0,
+    "lacks": 7,
     "scanned": {
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "file": "countdown-2.1.4+mc26.3.jar",
       "published": "2026-11-01"
     },
-    "build": "development build 2026-11-05 (afb67d1)"
+    "build": "development build 2026-11-14 (fa70eeb)"
   }
 }

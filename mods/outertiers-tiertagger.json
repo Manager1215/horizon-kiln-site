@@ -1,13 +1,13 @@
 {
   "id": "outertiers-tiertagger",
   "name": "TierTagger (OuterTiers)",
-  "version": "1.27",
+  "version": "1.38",
   "status": "planned",
   "statusLabel": "Planned",
   "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
   "url": "https://modrinth.com/mod/outertiers-tiertagger",
   "author": "Outversal",
-  "description": "Shows OuterTiers, MCTiers, PvPTiers and SubTiers tiers next to player names in the tab list and as a nametag badge above their head. Client-side, no server install required.",
+  "description": "Shows OuterTiers, MCTiers, PvPTiers, SubTiers, PVPHQ and MCPVP tiers next to player names in the tab list and as a nametag badge above their head. Client-side, no server install required.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
     "com.mojang.authlib.GameProfile",
@@ -23,6 +23,8 @@
     "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
     "net.minecraft.client.renderer.texture.DynamicTexture",
     "net.minecraft.world.entity.projectile.ProjectileUtil",
+    "net.minecraft.world.item.alchemy.PotionContents",
+    "net.minecraft.world.item.alchemy.Potions",
     "net.minecraft.world.phys.EntityHitResult",
     "NativeImage.getHeight()",
     "NativeImage.getWidth()",
@@ -40,6 +42,7 @@
     "ClientPacketListener.getCommands()",
     "PlayerInfo.getProfile()",
     "LocalPlayer.getGameProfile()",
+    "DataComponents.POTION_CONTENTS",
     "MutableComponent.setStyle()",
     "Entity.getBoundingBox()",
     "Entity.getEyeY()",
@@ -51,10 +54,10 @@
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-11",
+    "date": "2026-11-16",
     "kiln": "0.4.1",
-    "file": "OuterTiers-Tiertagger_26.3.jar",
-    "published": "2026-10-13"
+    "file": "OT-TierTagger_26.3.jar",
+    "published": "2026-11-13"
   },
   "reports": {
     "works": 0,
@@ -64,8 +67,8 @@
   },
   "run": {
     "passed": false,
-    "date": "2026-11-05",
-    "kiln": "0.3.0",
+    "date": "2026-11-13",
+    "kiln": "0.4.1",
     "ticks": 0,
     "hud": false,
     "why": "Java did not start"
@@ -81,37 +84,31 @@
     "java",
     "minecraft"
   ],
-  "lacks": 36,
+  "lacks": 39,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "Mixin",
+      "Mixin: 1 point inside the game's methods",
       "com.mojang.authlib.GameProfile",
-      "net.minecraft.client.gui.components.CycleButton",
-      "net.minecraft.client.gui.components.CycleButton.Builder",
-      "net.minecraft.client.gui.components.CycleButton.OnValueChange",
       "net.minecraft.client.gui.components.PlayerFaceExtractor",
-      "net.minecraft.client.gui.components.Tooltip",
+      "net.minecraft.client.gui.components.PlayerTabOverlay",
+      "net.minecraft.client.gui.screens.options.OptionsScreen",
+      "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
+      "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+      "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
       "net.minecraft.client.renderer.texture.DynamicTexture",
       "net.minecraft.world.entity.projectile.ProjectileUtil",
       "net.minecraft.world.phys.EntityHitResult",
       "NativeImage.getHeight()",
       "NativeImage.getWidth()",
       "NativeImage.read()",
-      "Minecraft.execute()",
-      "Minecraft.hitResult",
       "GuiGraphicsExtractor.blit()",
-      "AbstractWidget.setTooltip()",
-      "GuiEventListener.mouseScrolled()",
-      "Screen.mouseClicked()",
-      "Screen.mouseDragged()",
-      "Screen.mouseReleased()",
+      "ClientPacketListener.getCommands()",
       "PlayerInfo.getProfile()",
       "LocalPlayer.getGameProfile()",
-      "MutableComponent.setStyle()",
       "Entity.getBoundingBox()",
       "Entity.getEyeY()",
       "Entity.isSpectator()",
@@ -121,21 +118,21 @@
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "run": {
       "passed": false,
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "ticks": 0,
       "hud": false,
       "why": "Java did not start"
     },
     "url": "https://modrinth.com/mod/outertiers-tiertagger",
-    "version": "1.27",
-    "lacks": 28,
+    "version": "1.38",
+    "lacks": 22,
     "scanned": {
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
-      "file": "OuterTiers-Tiertagger_26.3.jar",
-      "published": "2026-10-13"
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "file": "OT-TierTagger_26.3.jar",
+      "published": "2026-11-13"
     },
-    "build": "development build 2026-11-05 (afb67d1)"
+    "build": "development build 2026-11-14 (fa70eeb)"
   }
 }

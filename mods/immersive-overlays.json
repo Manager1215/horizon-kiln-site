@@ -1,7 +1,7 @@
 {
   "id": "immersive-overlays",
   "name": "Immersive Overlays",
-  "version": "1.8.6+26.3-fabric",
+  "version": "1.8.7+26.3-fabric",
   "status": "planned",
   "statusLabel": "Planned",
   "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -13,6 +13,8 @@
     "net.fabricmc.fabric.api.tag.client.v1.ClientTags",
     "net.fabricmc.fabric.api.tag.convention.v2.ConventionalBiomeTags",
     "net.minecraft.client.gui.contextualbar.LocatorBar",
+    "net.minecraft.references.BlockItemId",
+    "net.minecraft.tags.BlockItemTagId",
     "net.minecraft.world.item.component.LodestoneTracker",
     "net.minecraft.world.level.MoonPhase",
     "org.apache.logging.log4j.LogManager",
@@ -22,7 +24,7 @@
     "DataComponents.LODESTONE_TRACKER",
     "Component.translatableWithFallback()",
     "MutableComponent.withStyle()",
-    "ResourceKey.mru$identifier()",
+    "ResourceKey.asphodel$identifier()",
     "EnvironmentAttributeSystem.getValue()",
     "EnvironmentAttributes.MOON_PHASE",
     "Level.getBiome()",
@@ -39,10 +41,10 @@
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-11",
+    "date": "2026-11-16",
     "kiln": "0.4.1",
-    "file": "immersiveoverlays-1.8.6+26.3-fabric.jar",
-    "published": "2026-10-20"
+    "file": "immersiveoverlays-1.8.7+26.3-fabric.jar",
+    "published": "2026-11-12"
   },
   "reports": {
     "works": 0,
@@ -52,8 +54,8 @@
   },
   "run": {
     "passed": false,
-    "date": "2026-11-05",
-    "kiln": "0.3.0",
+    "date": "2026-11-12",
+    "kiln": "0.4.1",
     "ticks": 0,
     "hud": false,
     "why": "Java did not start"
@@ -64,31 +66,31 @@
   },
   "mixins": true,
   "depends": [
+    "asphodel_api",
     "fabric-api",
     "fabricloader",
-    "minecraft",
-    "mru"
+    "minecraft"
   ],
-  "lacks": 24,
+  "lacks": 26,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "Mixin",
+      "Mixin: 1 point inside the game's methods",
       "net.fabricmc.fabric.api.tag.client.v1.ClientTags",
       "net.fabricmc.fabric.api.tag.convention.v2.ConventionalBiomeTags",
+      "net.minecraft.client.gui.contextualbar.LocatorBar",
+      "net.minecraft.references.BlockItemId",
+      "net.minecraft.tags.BlockItemTagId",
       "net.minecraft.world.item.component.LodestoneTracker",
       "net.minecraft.world.level.MoonPhase",
-      "org.apache.logging.log4j.LogManager",
-      "org.apache.logging.log4j.Logger",
       "LocalPlayer.getLastDeathLocation()",
       "LocalPlayer.getRootVehicle()",
       "DataComponents.LODESTONE_TRACKER",
       "Component.translatableWithFallback()",
-      "MutableComponent.withStyle()",
-      "ResourceKey.mru$identifier()",
+      "ResourceKey.asphodel$identifier()",
       "EnvironmentAttributeSystem.getValue()",
       "EnvironmentAttributes.MOON_PHASE",
       "Level.getBiome()",
@@ -104,21 +106,21 @@
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "run": {
       "passed": false,
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "ticks": 0,
       "hud": false,
       "why": "Java did not start"
     },
     "url": "https://modrinth.com/mod/immersive-overlays",
-    "version": "1.8.6+26.3-fabric",
+    "version": "1.8.7+26.3-fabric",
     "lacks": 23,
     "scanned": {
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
-      "file": "immersiveoverlays-1.8.6+26.3-fabric.jar",
-      "published": "2026-10-20"
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "file": "immersiveoverlays-1.8.7+26.3-fabric.jar",
+      "published": "2026-11-12"
     },
-    "build": "development build 2026-11-05 (afb67d1)"
+    "build": "development build 2026-11-14 (fa70eeb)"
   }
 }

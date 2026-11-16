@@ -1,7 +1,7 @@
 {
   "id": "fishing-rod-fix",
   "name": "Fishing Rod Fix",
-  "version": "26.3-v0.6",
+  "version": "26.3-v0.7",
   "status": "planned",
   "statusLabel": "Planned",
   "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -11,7 +11,9 @@
   "needs": [
     "Mixin: 4 points inside the game's methods",
     "net.minecraft.client.CameraType",
+    "net.minecraft.client.model.geom.builders.UVPair",
     "net.minecraft.client.multiplayer.MultiPlayerGameMode",
+    "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.entity.FishingHookRenderer",
     "net.minecraft.client.renderer.entity.layers.ItemInHandLayer",
     "net.minecraft.client.renderer.entity.state.AvatarRenderState",
@@ -19,8 +21,6 @@
     "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState",
     "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState.HandRenderSelection",
     "net.minecraft.client.renderer.state.level.PlayerRenderState",
-    "net.minecraft.client.renderer.texture.MissingTextureAtlasSprite",
-    "net.minecraft.data.AtlasIds",
     "net.minecraft.world.TickRateManager",
     "net.minecraft.world.entity.LivingEntity.SwingDescription",
     "net.minecraft.world.entity.Pose",
@@ -47,19 +47,19 @@
     "LocalPlayer.zo",
     "GameRenderer.mainCamera()",
     "EntityRenderDispatcher.camera",
+    "ItemStackRenderState.clear()",
     "GameRenderState.levelRenderState",
     "GameRenderState.optionsRenderState",
-    "OptionsRenderState.bobView",
-    "and 24 more"
+    "and 34 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "",
   "library": false,
   "scanned": {
-    "date": "2026-11-11",
+    "date": "2026-11-16",
     "kiln": "0.4.1",
-    "file": "fishingrodfix-26.3-v0.6.jar",
-    "published": "2026-09-24"
+    "file": "fishingrodfix-26.3-v0.7.jar",
+    "published": "2026-11-14"
   },
   "reports": {
     "works": 0,
@@ -74,17 +74,16 @@
     "java",
     "minecraft"
   ],
-  "lacks": 64,
+  "lacks": 74,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "",
     "needs": [
-      "Mixin",
-      "net.minecraft.client.CameraType",
-      "net.minecraft.client.multiplayer.MultiPlayerGameMode",
+      "Mixin: 4 points inside the game's methods",
       "net.minecraft.client.renderer.entity.FishingHookRenderer",
+      "net.minecraft.client.renderer.entity.layers.ItemInHandLayer",
       "net.minecraft.client.renderer.entity.state.AvatarRenderState",
       "net.minecraft.client.renderer.entity.state.FishingHookRenderState",
       "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState",
@@ -95,8 +94,6 @@
       "net.minecraft.world.TickRateManager",
       "net.minecraft.world.entity.LivingEntity.SwingDescription",
       "net.minecraft.world.entity.Pose",
-      "net.minecraft.world.entity.projectile.FishingHook",
-      "net.minecraft.world.item.FishingRodItem",
       "NativeImage.getPixel()",
       "NativeImage.getWidth()",
       "PoseStack.last()",
@@ -105,13 +102,10 @@
       "Camera.isDetached()",
       "Camera.isPanoramicMode()",
       "Camera.rotation()",
-      "Minecraft.gameMode",
       "Minecraft.getEntityRenderDispatcher()",
-      "Options.getCameraType()",
       "ClientLevel.tickRateManager()",
+      "MultiPlayerGameMode.isSpectator()",
       "AbstractClientPlayer.fishing",
-      "LocalPlayer.fishing",
-      "LocalPlayer.getMainArm()",
       "LocalPlayer.isSleeping()",
       "LocalPlayer.xo",
       "LocalPlayer.yo",
@@ -122,18 +116,24 @@
       "GameRenderState.optionsRenderState",
       "OptionsRenderState.bobView",
       "OptionsRenderState.screenEffectScale",
-      "and 23 more"
+      "CameraRenderState.cameraEntityPartialTicks",
+      "CameraRenderState.hudFov",
+      "CameraRenderState.projectionMatrix",
+      "LevelRenderState.playerRenderState",
+      "SpriteContents.getUniqueFrames()",
+      "SpriteContents.isAnimated()",
+      "and 17 more"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "url": "https://modrinth.com/mod/fishing-rod-fix",
     "version": "26.3-v0.6",
-    "lacks": 63,
+    "lacks": 57,
     "scanned": {
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "file": "fishingrodfix-26.3-v0.6.jar",
       "published": "2026-09-24"
     },
-    "build": "development build 2026-11-05 (afb67d1)"
+    "build": "development build 2026-11-14 (fa70eeb)"
   }
 }

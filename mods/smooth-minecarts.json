@@ -42,7 +42,7 @@
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-11",
+    "date": "2026-11-16",
     "kiln": "0.4.1",
     "file": "smooth-minecarts-0.3.0+26.1.jar",
     "published": "2026-07-09"
@@ -79,28 +79,53 @@
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
-      "Mixin",
       "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
-      "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.IntegerRuleBuilder"
+      "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.IntegerRuleBuilder",
+      "net.minecraft.world.level.block.BaseRailBlock",
+      "net.minecraft.world.level.block.PoweredRailBlock",
+      "net.minecraft.world.level.block.state.properties.RailShape",
+      "BlockPos.containing()",
+      "Direction.getUnitVec3i()",
+      "Vec3i.ZERO",
+      "Vec3i.above()",
+      "ServerLevel.getGameRules()",
+      "BlockTags.RAILS",
+      "Mth.rotLerp()",
+      "AbstractMinecart.activateMinecart()",
+      "AbstractMinecart.applyEffectsFromBlocks()",
+      "AbstractMinecart.exits()",
+      "AbstractMinecart.getCurrentBlockPosOrRailBelow()",
+      "AbstractMinecart.isFlipped()",
+      "AbstractMinecart.isOnRails()",
+      "AbstractMinecart.oldPosition()",
+      "AbstractMinecart.resetFallDistance()",
+      "AbstractMinecart.setOldPosAndRot()",
+      "AbstractMinecart.setOnRails()",
+      "AbstractMinecart.useExperimentalMovement()",
+      "NewMinecartBehavior.adjustToRails()",
+      "NewMinecartBehavior.lerpSteps",
+      "Blocks.ACTIVATOR_RAIL",
+      "GameRules.get()",
+      "Vec3.horizontal()"
     ],
-    "roadmap": "Code next to data (0.3), Mixin (0.5)",
+    "roadmap": "Code next to data (0.3)",
     "run": {
       "passed": false,
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "ticks": 0,
       "hud": false,
       "why": "Java did not start"
     },
     "url": "https://modrinth.com/mod/smooth-minecarts",
     "version": "0.3.0+26.1",
-    "lacks": 2,
+    "lacks": 28,
     "scanned": {
-      "date": "2026-11-05",
-      "kiln": "development build 2026-11-05 (afb67d1)",
+      "date": "2026-11-14",
+      "kiln": "development build 2026-11-14 (fa70eeb)",
       "file": "smooth-minecarts-0.3.0+26.1.jar",
       "published": "2026-07-09"
     },
-    "build": "development build 2026-11-05 (afb67d1)"
+    "build": "development build 2026-11-14 (fa70eeb)"
   }
 }
