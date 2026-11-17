@@ -1,7 +1,7 @@
 {
  "id": "redstone-tools",
  "name": "Redstone Tools",
- "version": "4.0.0+26.3",
+ "version": "4.0.1+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -18,7 +18,6 @@
   "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
   "net.minecraft.client.gui.components.CommandSuggestions",
   "net.minecraft.client.gui.components.CommandSuggestions.SuggestionsList",
-  "net.minecraft.client.gui.components.EditBox.TextFormatter",
   "net.minecraft.client.gui.components.OptionsList",
   "net.minecraft.client.gui.navigation.FocusNavigationEvent",
   "net.minecraft.client.gui.navigation.FocusNavigationEvent.ArrowNavigation",
@@ -27,11 +26,8 @@
   "net.minecraft.client.gui.screens.options.controls.ControlsScreen",
   "net.minecraft.client.renderer.LevelRenderer",
   "net.minecraft.server.commands.GiveCommand",
-  "net.minecraft.server.network.Filterable",
   "net.minecraft.util.CommonColors",
   "net.minecraft.world.item.component.BlockItemStateProperties",
-  "net.minecraft.world.item.component.ItemLore",
-  "net.minecraft.world.item.component.WrittenBookContent",
   "net.minecraft.world.level.block.LeverBlock",
   "net.minecraft.world.level.block.RedstoneLampBlock",
   "net.minecraft.world.level.block.RedstoneWireBlock",
@@ -50,16 +46,20 @@
   "NarratableEntry.getNarratables()",
   "ScreenDirection.getAxis()",
   "MultiPlayerGameMode.startDestroyBlock()",
-  "and 52 more"
+  "GameRenderer.mainCamera()",
+  "CommandBuildContext.simple()",
+  "CommandSourceStack.registryAccess()",
+  "SharedSuggestionProvider.MATCH_SPLITTER",
+  "and 36 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
-  "file": "redstonetools-4.0.0+26.3.jar",
-  "published": "2026-11-12"
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "redstonetools-4.0.1+26.3.jar",
+  "published": "2026-11-16"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +89,5 @@
   "class": "restart",
   "why": "@wrap-method into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
  },
- "lacks": 111
+ "lacks": 76
 }

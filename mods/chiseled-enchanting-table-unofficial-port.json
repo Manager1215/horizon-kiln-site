@@ -9,7 +9,6 @@
  "author": "JIAN_FISH_q14433686arch",
  "description": "Unofficial community port of Sacramentix's Chiseled Enchanting Table to Minecraft 26.1.2\\26.2 (Fabric). No-RNG enchanting via a custom table that unlocks enchantments from nearby chiseled bookshelves. Not affiliated with the original author.",
  "needs": [
-  "com.mojang.blaze3d.platform.TextInputManager",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin.Context",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelModifier",
@@ -20,9 +19,6 @@
   "net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.AfterSave",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
@@ -30,13 +26,10 @@
   "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyCallback",
   "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyContext",
   "net.fabricmc.fabric.api.permission.v1.PermissionPredicates",
-  "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
-  "net.minecraft.SharedConstants",
   "net.minecraft.client.color.ColorLerper",
   "net.minecraft.client.color.ColorLerper.Type",
   "net.minecraft.client.color.item.Dye",
   "net.minecraft.client.color.item.ItemTintSource",
-  "net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner",
   "net.minecraft.client.model.geom.ModelLayers",
   "net.minecraft.client.model.object.book.BookModel",
   "net.minecraft.client.model.object.book.BookModel.State",
@@ -44,19 +37,26 @@
   "net.minecraft.client.renderer.blockentity.state.EnchantTableRenderState",
   "net.minecraft.client.renderer.item.CuboidItemModelWrapper",
   "net.minecraft.client.renderer.item.CuboidItemModelWrapper.Unbaked",
-  "net.minecraft.client.server.IntegratedServer",
-  "net.minecraft.core.HolderSet.Named",
   "net.minecraft.core.Registry.PendingTags",
-  "net.minecraft.network.chat.ComponentSerialization",
   "net.minecraft.server.PlayerAdvancements",
-  "and 80 more"
+  "net.minecraft.server.ReloadableServerRegistries.LoadResult",
+  "net.minecraft.server.ServerAdvancementManager",
+  "net.minecraft.world.entity.npc.villager.AbstractVillager",
+  "net.minecraft.world.entity.npc.villager.Villager",
+  "net.minecraft.world.entity.npc.villager.VillagerData",
+  "net.minecraft.world.entity.npc.villager.VillagerProfession",
+  "net.minecraft.world.inventory.ContainerLevelAccess",
+  "net.minecraft.world.inventory.DataSlot",
+  "net.minecraft.world.inventory.EnchantmentMenu",
+  "net.minecraft.world.inventory.ItemCombinerMenu",
+  "and 79 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "chiseled-enchanting-table-1.1.0.jar",
   "published": "2026-10-28"
  },
@@ -92,5 +92,5 @@
   "class": "restart",
   "why": "@wrap-method into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 279
+ "lacks": 176
 }

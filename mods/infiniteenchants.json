@@ -1,7 +1,7 @@
 {
  "id": "infiniteenchants",
  "name": "Infinite Enchants",
- "version": "1.1.1+mc26.3",
+ "version": "1.1.2+mc26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,16 +10,12 @@
  "description": "Upgrade vanilla enchants infinitely!",
  "needs": [
   "Mixin: 22 points inside the game's methods",
-  "net.minecraft.client.gui.screens.inventory.AnvilScreen",
   "net.minecraft.network.chat.FontDescription",
   "net.minecraft.network.chat.FontDescription.Resource",
   "net.minecraft.server.commands.EnchantCommand",
-  "net.minecraft.tags.EnchantmentTags",
-  "net.minecraft.util.StringUtil",
   "net.minecraft.world.damagesource.CombatRules",
   "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
   "net.minecraft.world.entity.projectile.arrow.ThrownTrident",
-  "net.minecraft.world.inventory.AnvilMenu",
   "net.minecraft.world.inventory.DataSlot",
   "net.minecraft.world.inventory.ItemCombinerMenu",
   "net.minecraft.world.inventory.ResultContainer",
@@ -40,26 +36,30 @@
   "net.minecraft.world.level.storage.loot.predicates.BonusLevelTableCondition",
   "net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceWithEnchantedBonusCondition",
   "Object2IntMap.Entry.getKey()",
-  "Holder.is()",
-  "Registry.getOrThrow()",
-  "RegistryAccess.lookupOrThrow()",
-  "DataComponents.CUSTOM_NAME",
-  "DataComponents.REPAIR_COST",
-  "DataComponents.STORED_ENCHANTMENTS",
   "Style.withFont()",
   "RandomSource.createThreadSafe()",
-  "Entity.getRandom()",
-  "LivingEntity.getRandom()",
-  "and 28 more"
+  "LivingEntity.getSpeed()",
+  "LivingEntity.getTicksUsingItem()",
+  "LivingEntity.isUsingItem()",
+  "LivingEntity.registryAccess()",
+  "Player.hasInfiniteMaterials()",
+  "ItemStack.isValidRepairItem()",
+  "ItemStack.limitSize()",
+  "Enchantment.matchingSlot()",
+  "EnchantmentHelper.getEnchantmentLevel()",
+  "EnchantmentHelper.getItemEnchantmentLevel()",
+  "EnchantmentHelper.getPiercingCount()",
+  "EnchantmentHelper.getTridentReturnToOwnerAcceleration()",
+  "and 4 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
-  "file": "infinite-enchants-1.1.1+mc26.3.jar",
-  "published": "2026-10-22"
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "infinite-enchants-1.1.2+mc26.3.jar",
+  "published": "2026-11-15"
  },
  "reports": {
   "works": 0,
@@ -78,5 +78,5 @@
   "class": "restart",
   "why": "@redirect and @wrap-method and @wrap-operation into the game's classes"
  },
- "lacks": 68
+ "lacks": 44
 }

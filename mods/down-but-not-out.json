@@ -9,14 +9,12 @@
  "author": "phasmoware",
  "description": "Revive downed players: instead of dying, players drop to half a heart and crawl. Inspired by Call of Duty Zombies. Fully server-side and compatible with vanilla and Geyser Bedrock clients.",
  "needs": [
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterEntityChange",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Leave",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
@@ -26,18 +24,14 @@
   "net.minecraft.world.scores.Team",
   "net.minecraft.world.scores.Team.CollisionRule",
   "net.minecraft.world.scores.TeamColor",
-  "AttachmentRegistry.create()",
   "ServerPlayerEvents.JOIN",
   "ServerPlayerEvents.LEAVE",
-  "ServerLifecycleEvents.SERVER_STOPPING",
   "Component.tryCollapseToString()",
   "ServerLevel.getScoreboard()",
   "ServerPlayer.addTag()",
   "ServerPlayer.blockInteractionRange()",
   "ServerPlayer.distanceToSqr()",
   "ServerPlayer.entityInteractionRange()",
-  "ServerPlayer.getAttached()",
-  "ServerPlayer.getAttachedOrCreate()",
   "ServerPlayer.getBoundingBox()",
   "ServerPlayer.getEyePosition()",
   "ServerPlayer.getTeam()",
@@ -46,17 +40,23 @@
   "ServerPlayer.isInLava()",
   "ServerPlayer.removeAllEffects()",
   "ServerPlayer.removeTag()",
-  "ServerPlayer.setAttached()",
   "ServerPlayer.setGlowingTag()",
   "ServerPlayer.setPermanentlyInvulnerable()",
-  "and 19 more"
+  "ServerPlayer.stopRiding()",
+  "SoundEvents.TRIDENT_RETURN",
+  "SoundEvents.TURTLE_EGG_BREAK",
+  "SoundEvents.WARDEN_HEARTBEAT",
+  "DamageSources.wither()",
+  "Entity.entityTags()",
+  "Entity.remove()",
+  "and 10 more"
  ],
  "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "down-but-not-out-0.5.2+26.3.jar",
   "published": "2026-09-19"
  },
@@ -88,5 +88,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 59
+ "lacks": 50
 }

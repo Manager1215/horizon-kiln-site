@@ -10,7 +10,6 @@
  "description": "A simple and configurable drop-in mod to create a virtual text entity where a player logs off. Makes combat logging less effective and people with hacked clients less cool.",
  "needs": [
   "Mixin: 11 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Leave",
   "net.fabricmc.fabric.impl.base.event.ArrayBackedEvent",
@@ -23,7 +22,6 @@
   "net.minecraft.world.entity.Display.BlockDisplay",
   "net.minecraft.world.entity.Display.ItemDisplay",
   "net.minecraft.world.entity.Display.TextDisplay",
-  "net.minecraft.world.entity.EntityDimensions",
   "net.minecraft.world.entity.Interaction",
   "net.minecraft.world.entity.item.FallingBlockEntity",
   "net.minecraft.world.entity.monster.cubemob.AbstractCubeMob",
@@ -33,19 +31,18 @@
   "ServerPlayerEvents.JOIN",
   "ServerPlayerEvents.LEAVE",
   "MinecraftServer.getTickCount()",
-  "ServerPlayer.getDimensions()",
   "ServerPlayer.getGameProfile()",
   "ServerPlayer.getPose()",
   "ServerPlayer.hasDisconnected()",
   "PlayerList.getViewDistance()",
   "AABB.ofSize()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "panda-logoff-spot-1.0.2+26.3.jar",
   "published": "2026-10-19"
  },
@@ -77,5 +74,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 29
+ "lacks": 26
 }

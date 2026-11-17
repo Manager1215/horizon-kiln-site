@@ -11,9 +11,6 @@
  "needs": [
   "Mixin: 6 points inside the game's methods",
   "com.mojang.blaze3d.buffers.Std140Builder",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget.OnAttachedSet",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin.Context",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelModifier",
@@ -28,7 +25,6 @@
   "net.minecraft.client.renderer.GlobalSettingsUniform",
   "net.minecraft.client.renderer.ShaderManager",
   "net.minecraft.client.renderer.extract.LevelExtractor",
-  "net.minecraft.core.HolderSet.Direct",
   "net.minecraft.core.registries.codec.RegistryCodecs",
   "net.minecraft.gametest.framework.FunctionGameTestInstance",
   "net.minecraft.gametest.framework.GameTestHelper",
@@ -40,7 +36,6 @@
   "net.minecraft.gametest.framework.TestEnvironmentDefinition.Weather",
   "net.minecraft.gametest.framework.TestEnvironmentDefinition.Weather.Type",
   "net.minecraft.server.level.ChunkMap",
-  "net.minecraft.tags.ItemTags",
   "net.minecraft.world.entity.animal.pig.Pig",
   "net.minecraft.world.level.LightLayer",
   "net.minecraft.world.level.block.SnowLayerBlock",
@@ -50,14 +45,19 @@
   "net.minecraft.world.level.gameevent.GameEvent.Context",
   "net.minecraft.world.level.levelgen.PositionalRandomFactory",
   "net.minecraft.world.level.levelgen.XoroshiroRandomSource",
-  "and 63 more"
+  "net.minecraft.world.level.levelgen.feature.SnowAndFreezeFeature",
+  "net.minecraft.world.level.levelgen.synth.Noise",
+  "net.minecraft.world.level.levelgen.synth.NormalNoise",
+  "ShaderType.idConverter()",
+  "Minecraft.getBlockColors()",
+  "and 58 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "snow-3.0.1+26.3-fabric.jar",
   "published": "2026-11-02"
  },
@@ -93,5 +93,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
  },
- "lacks": 157
+ "lacks": 124
 }

@@ -1,0 +1,70 @@
+{
+ "id": "swordhitbox",
+ "name": "SwordHitbox",
+ "version": "1.0.3+fabric-26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/swordhitbox",
+ "author": "Zeffut",
+ "description": "Show entity hitboxes while holding a sword — a customizable, client-side PvP visual aid. Draws vanilla-style hitboxes (box, eye box, look line) of nearby players. No gameplay changes, works on any server. Fabric & NeoForge.",
+ "needs": [
+  "net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionEvents.EndExtraction",
+  "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
+  "net.minecraft.world.phys.EntityHitResult",
+  "VertexConsumer.addVertex()",
+  "VertexConsumer.setNormal()",
+  "LevelExtractionEvents.END_EXTRACTION",
+  "LevelRenderEvents.COLLECT_SUBMITS",
+  "ClientLevel.getEntities()",
+  "AbstractClientPlayer.isAlive()",
+  "LocalPlayer.getBoundingBox()",
+  "LevelRenderState.getData()",
+  "LevelRenderState.setData()",
+  "Entity.getBoundingBox()",
+  "Entity.getPosition()",
+  "Entity.getViewVector()",
+  "Entity.isAlive()",
+  "AABB.move()",
+  "Shapes.create()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "swordhitbox-fabric-26.3-1.0.3+26.3.jar",
+  "published": "2026-11-16"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": false,
+ "depends": [
+  "cloth-config",
+  "fabric-api",
+  "fabricloader",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 18
+}

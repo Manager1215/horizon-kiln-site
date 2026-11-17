@@ -10,7 +10,6 @@
  "description": "Downloads and converts tiles and synchronizes players, markers and area overlays from Bluemap, Dynmap, Pl3xMap or Squaremap with Xaero's Minimap and Worldmap. Also displays AFK time in the tab list.",
  "needs": [
   "an access widener",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.vertex.BufferBuilder",
   "net.fabricmc.api.DedicatedServerModInitializer",
   "net.fabricmc.fabric.api.client.networking.v1.ClientLoginConnectionEvents",
@@ -18,7 +17,6 @@
   "net.fabricmc.loader.api.metadata.ModOrigin",
   "net.minecraft.client.gui.components.PlayerTabOverlay",
   "net.minecraft.client.player.RemotePlayer",
-  "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.client.waypoints.ClientWaypointManager",
   "net.minecraft.commands.arguments.coordinates.ColumnPosArgument",
   "net.minecraft.world.level.block.AirBlock",
@@ -30,10 +28,6 @@
   "net.minecraft.world.waypoints.TrackedWaypoint.Type",
   "net.minecraft.world.waypoints.TrackedWaypoint.Vec3iWaypoint",
   "org.apache.commons.io.FileUtils",
-  "NativeImage.getHeight()",
-  "NativeImage.getPixel()",
-  "NativeImage.getWidth()",
-  "NativeImage.read()",
   "PoseStack.last()",
   "PoseStack.Pose.pose()",
   "Long2ObjectMap.isEmpty()",
@@ -41,23 +35,29 @@
   "LongSet.isEmpty()",
   "ObjectSet.stream()",
   "ModContainer.getOrigin()",
-  "Minecraft.getCurrentServer()",
-  "Minecraft.getSingleplayerServer()",
   "ClientLevel.clip()",
-  "ClientPacketListener.getConnection()",
   "ClientPacketListener.getWaypointManager()",
   "PlayerInfo.getProfile()",
-  "ServerData.ip",
   "AbstractClientPlayer.getGameProfile()",
-  "Registry.entrySet()",
-  "and 13 more"
+  "DynamicTexture.getTexture()",
+  "DynamicTexture.getTextureView()",
+  "Registry.getValueOrThrow()",
+  "Registries.BIOME",
+  "Util.sanitizeName()",
+  "Level.getMaxY()",
+  "Level.getMinY()",
+  "Biome.getGrassColor()",
+  "Biomes.PLAINS",
+  "Blocks.STAINED_GLASS",
+  "BlockState.isCollisionShapeFullBlock()",
+  "and 1 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "maplink-fabric-4.6.0-26.3.jar",
   "published": "2026-09-20"
  },
@@ -91,5 +91,5 @@
   "class": "partial",
   "why": "runs threads of its own"
  },
- "lacks": 53
+ "lacks": 41
 }

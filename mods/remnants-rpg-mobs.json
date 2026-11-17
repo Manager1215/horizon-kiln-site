@@ -10,12 +10,9 @@
  "description": "Monsters grow stronger the farther, deeper and longer you play, with levels, five ranks, sixteen traits and rare named Remnants with boss bars.",
  "needs": [
   "Mixin: 1 point inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.entity.FakePlayer",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.minecraft.commands.arguments.ResourceArgument",
   "net.minecraft.core.particles.DustParticleOptions",
   "net.minecraft.network.chat.FontDescription",
@@ -26,7 +23,6 @@
   "net.minecraft.world.damagesource.DamageTypes",
   "net.minecraft.world.entity.EntityAttachment",
   "net.minecraft.world.entity.EntityAttachments",
-  "net.minecraft.world.entity.EntityDimensions",
   "net.minecraft.world.entity.SpawnPlacements",
   "net.minecraft.world.entity.ai.navigation.PathNavigation",
   "net.minecraft.world.entity.monster.Enemy",
@@ -35,14 +31,8 @@
   "net.minecraft.world.item.SpyglassItem",
   "net.minecraft.world.item.component.BlocksAttacks",
   "net.minecraft.world.level.StructureManager",
-  "net.minecraft.world.level.storage.LevelResource",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerLifecycleEvents.SERVER_STOPPING",
   "Minecraft.crosshairPickEntity",
-  "Font.split()",
-  "GuiGraphicsExtractor.centeredText()",
   "GuiGraphicsExtractor.setTooltipForNextFrame()",
-  "GuiGraphicsExtractor.text()",
   "ClientLevel.clip()",
   "ClientLevel.getEntities()",
   "LocalPlayer.getUseItem()",
@@ -50,14 +40,24 @@
   "LocalPlayer.isUsingItem()",
   "EntityRenderState.distanceToCameraSq",
   "EntityRenderState.nameTag",
-  "and 46 more"
+  "CameraRenderState.orientation",
+  "BlockPos.containing()",
+  "Registry.getValueOrThrow()",
+  "DataComponents.BLOCKS_ATTACKS",
+  "BuiltInRegistries.ATTRIBUTE",
+  "BuiltInRegistries.REGISTRY",
+  "Registries.DIMENSION_TYPE",
+  "Registries.STRUCTURE",
+  "Style.withFont()",
+  "MinecraftServer.createCommandSourceStack()",
+  "and 41 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "remnant_mobs-fabric-26.3-3.2.0.jar",
   "published": "2026-11-11"
  },
@@ -91,5 +91,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
  },
- "lacks": 178
+ "lacks": 140
 }

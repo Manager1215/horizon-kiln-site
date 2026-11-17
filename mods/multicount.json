@@ -9,33 +9,29 @@
  "author": "DialingSpoon527",
  "description": "a Qol mod that allows players to create and switch between multiple saves",
  "needs": [
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.minecraft.client.gui.components.ImageButton",
   "net.minecraft.client.gui.components.WidgetSprites",
-  "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.nbt.NbtAccounter",
   "net.minecraft.server.MinecraftServer.MultiplayerScope",
-  "net.minecraft.world.level.storage.LevelResource",
   "net.minecraft.world.level.storage.PlayerDataStorage",
   "net.minecraft.world.level.storage.WorldData",
-  "ServerLifecycleEvents.SERVER_STARTED",
+  "IntegratedServer.getMultiplayerScope()",
   "Commands.sendCommands()",
   "NbtIo.readCompressed()",
   "MinecraftServer.<init>()",
   "MinecraftServer.getWorldData()",
-  "MinecraftServer.getWorldPath()",
   "MinecraftServer.isSingleplayerOwner()",
-  "ServerPlayer.connection",
   "ServerGamePacketListenerImpl.disconnect()",
   "ARGB.color()",
-  "Player.<init>()"
+  "Player.<init>()",
+  "LevelResource.id()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "multicount-fabric-1.2.4-26.3.jar",
   "published": "2026-09-16"
  },
@@ -69,5 +65,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 20
+ "lacks": 16
 }

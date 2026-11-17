@@ -10,10 +10,6 @@
  "description": "Highlight waxed copper blocks when holding honeycomb",
  "needs": [
   "Mixin: 8 points inside the game's methods",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget.OnAttachedSet",
   "net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientBlockEntityEvents.Load",
   "net.fabricmc.fabric.api.client.model.loading.v1.CompositeBlockStateModel",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin",
@@ -24,7 +20,6 @@
   "net.fabricmc.fabric.api.client.model.loading.v1.wrapper.WrapperBlockStateModel",
   "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback",
   "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback.RegistrationHelper",
-  "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys",
   "net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys.Client",
   "net.minecraft.client.data.models.ModelProvider.ItemInfoCollector",
@@ -41,7 +36,6 @@
   "net.minecraft.client.resources.model.BlockStateDefinitions",
   "net.minecraft.client.resources.model.BlockStateModelLoader",
   "net.minecraft.client.resources.model.BlockStateModelLoader.LoadedModels",
-  "net.minecraft.core.HolderSet.Direct",
   "net.minecraft.world.entity.animal.golem.AbstractGolem",
   "net.minecraft.world.entity.animal.golem.CopperGolem",
   "net.minecraft.world.item.HoneycombItem",
@@ -50,14 +44,20 @@
   "net.minecraft.world.level.block.ChainBlock",
   "net.minecraft.world.level.block.IronBarsBlock",
   "net.minecraft.world.level.block.LanternBlock",
-  "and 35 more"
+  "net.minecraft.world.level.block.LightningRodBlock",
+  "net.minecraft.world.level.block.PoweredRailBlock",
+  "net.minecraft.world.level.block.RailBlock",
+  "net.minecraft.world.level.block.StandingSignBlock",
+  "net.minecraft.world.level.block.WallHangingSignBlock",
+  "net.minecraft.world.level.block.WallSignBlock",
+  "and 25 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "waxyvision-1.1.1+mc26.3.jar",
   "published": "2026-09-15"
  },
@@ -91,5 +91,5 @@
   "class": "restart",
   "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
  },
- "lacks": 75
+ "lacks": 65
 }

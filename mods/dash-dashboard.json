@@ -10,8 +10,6 @@
  "description": "Self-hosted Minecraft operations for Paper, Fabric and NeoForge: live health, console, files, players, careful Autopilot, MCP access for your own AI, 2FA and passkeys, scheduled restarts, update trials, encrypted offsite backups and NeoDash fleet control.",
  "needs": [
   "net.fabricmc.api.DedicatedServerModInitializer",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
@@ -19,7 +17,6 @@
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowCommandMessage",
   "net.fabricmc.loader.api.metadata.ModOrigin",
   "net.fabricmc.loader.api.metadata.Person",
-  "net.minecraft.network.chat.PlayerChatMessage",
   "net.minecraft.server.level.ServerPlayerGameMode",
   "net.minecraft.server.players.UserBanList",
   "net.minecraft.server.players.UserBanListEntry",
@@ -27,19 +24,16 @@
   "net.minecraft.server.players.UserWhiteListEntry",
   "net.minecraft.world.CompoundContainer",
   "net.minecraft.world.inventory.PlayerEnderChestContainer",
-  "net.minecraft.world.level.storage.LevelResource",
   "org.apache.logging.log4j.core.LogEvent",
   "org.apache.logging.log4j.core.Logger",
   "org.apache.logging.log4j.core.appender.AbstractAppender",
   "org.apache.logging.log4j.core.config.Property",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerLifecycleEvents.SERVER_STOPPING",
   "ModContainer.getOrigin()",
   "ModMetadata.getAuthors()",
   "NonNullList.iterator()",
   "DataComponents.FOOD",
+  "PlayerChatMessage.signedContent()",
   "MinecraftServer.createCommandSourceStack()",
-  "MinecraftServer.execute()",
   "MinecraftServer.getAllLevels()",
   "MinecraftServer.getAverageTickTimeNanos()",
   "MinecraftServer.getLocalIp()",
@@ -48,15 +42,21 @@
   "MinecraftServer.getPort()",
   "MinecraftServer.getServerDirectory()",
   "MinecraftServer.getServerVersion()",
-  "MinecraftServer.getWorldPath()",
-  "and 37 more"
+  "MinecraftServer.halt()",
+  "MinecraftServer.overworld()",
+  "MinecraftServer.setMotd()",
+  "MinecraftServer.setUsingWhitelist()",
+  "ServerChunkCache.getLoadedChunksCount()",
+  "ServerLevel.getAllEntities()",
+  "ServerLevel.getDifficulty()",
+  "and 24 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "fabricdash-mc26.3-5.0.0.jar",
   "published": "2026-10-25"
  },
@@ -80,5 +80,5 @@
   "class": "partial",
   "why": "runs threads of its own"
  },
- "lacks": 77
+ "lacks": 64
 }

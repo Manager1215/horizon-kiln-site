@@ -10,12 +10,6 @@
  "description": "Pre-generates chunks fast, and safely: an adaptive throttle paces generation against server tick-health so it can run with players online. Builds Distant Horizons / voxy LOD data as it goes and serves it to clients. Fabric, Forge, NeoForge and Paper/Folia.",
  "needs": [
   "Mixin: 5 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
-  "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.commands.arguments.blocks.BlockStateParser",
   "net.minecraft.commands.arguments.blocks.BlockStateParser.BlockResult",
   "net.minecraft.nbt.visitors.CollectFields",
@@ -49,15 +43,21 @@
   "net.minecraft.world.level.entity.EntityPersistentStorage",
   "net.minecraft.world.level.entity.PersistentEntitySectionManager",
   "net.minecraft.world.level.lighting.LayerLightEventListener",
-  "net.minecraft.world.level.storage.LevelResource",
-  "and 60 more"
+  "Long2ObjectMap.Entry.getValue()",
+  "LongSet.size()",
+  "Commands.sendCommands()",
+  "RegistryAccess.Frozen.get()",
+  "SectionPos.of()",
+  "SectionPos.origin()",
+  "Registries.BIOME",
+  "and 53 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "chunksmith-4.9.0+26.3.jar",
   "published": "2026-11-13"
  },
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes; runs threads of its own; has network channels"
  },
- "lacks": 122
+ "lacks": 96
 }

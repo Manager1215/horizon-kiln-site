@@ -10,7 +10,6 @@
  "description": "Inventory Menu is a server side data-driven mod that allows players to create customizable, chest-style menus in Minecraft.",
  "needs": [
   "Mixin: 2 points inside the game's methods",
-  "net.minecraft.network.chat.ComponentSerialization",
   "net.minecraft.network.protocol.game.ServerboundContainerClickPacket",
   "net.minecraft.network.protocol.game.ServerboundInteractPacket",
   "net.minecraft.server.PlayerAdvancements",
@@ -19,21 +18,13 @@
   "net.minecraft.server.ServerInfo",
   "net.minecraft.server.ServerScoreboard",
   "net.minecraft.server.level.ServerPlayerGameMode",
-  "net.minecraft.world.SimpleContainer",
-  "net.minecraft.world.item.component.ItemLore",
   "net.minecraft.world.scores.ReadOnlyScoreInfo",
   "net.minecraft.world.scores.ScoreAccess",
   "AdvancementHolder.value()",
   "BlockPos.distChessboard()",
-  "HolderLookup.RegistryLookup.get()",
-  "DataComponents.CUSTOM_NAME",
-  "DataComponents.ITEM_MODEL",
-  "DataComponents.LORE",
   "BuiltInRegistries.CUSTOM_STAT",
   "BuiltInRegistries.STAT_TYPE",
-  "Registries.PREDICATE",
   "MinecraftServer.createCommandSourceStack()",
-  "MinecraftServer.execute()",
   "MinecraftServer.getAdvancements()",
   "MinecraftServer.getLocalIp()",
   "MinecraftServer.getMotd()",
@@ -47,17 +38,26 @@
   "ServerLevel.getLevelData()",
   "ServerLevel.getSeed()",
   "ServerPlayer.closeContainer()",
-  "ServerPlayer.connection",
-  "ServerPlayer.createCommandSourceStack()",
   "ServerPlayer.damageSources()",
-  "and 33 more"
+  "ServerPlayer.getAdvancements()",
+  "ServerPlayer.isWithinEntityInteractionRange()",
+  "ServerPlayer.resetLastActionTime()",
+  "ServerPlayer.teleportTo()",
+  "ServerPlayer.yHeadRot",
+  "ServerGamePacketListenerImpl.latency()",
+  "SoundEvents.BOOK_PAGE_TURN",
+  "SoundEvents.CHEST_CLOSE",
+  "SoundEvents.PLAYER_TELEPORT",
+  "SoundEvents.VILLAGER_NO",
+  "SoundEvents.VILLAGER_YES",
+  "and 9 more"
  ],
  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "inventory_menu-1.2.1.jar",
   "published": "2026-10-22"
  },
@@ -87,5 +87,5 @@
   "class": "partial",
   "why": "runs threads of its own"
  },
- "lacks": 79
+ "lacks": 49
 }

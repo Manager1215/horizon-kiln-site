@@ -10,7 +10,6 @@
  "description": "Adds a full screen world map which shows you what you have explored in the world. Works great together with Xaero's Minimap.",
  "needs": [
   "Mixin: 11 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.Blaze3D",
   "com.mojang.blaze3d.pipeline.TextureTarget",
   "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
@@ -24,7 +23,6 @@
   "com.mojang.realmsclient.util.task.LongRunningTask",
   "com.mojang.renderpearl.backend.opengl.GlBuffer",
   "net.fabricmc.api.DedicatedServerModInitializer",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.loader.api.metadata.ModOrigin",
   "net.fabricmc.loader.api.metadata.ModOrigin.Kind",
   "net.minecraft.IdentifierException",
@@ -40,24 +38,26 @@
   "net.minecraft.client.renderer.rendertype.RenderSetup.TextureBinding",
   "net.minecraft.client.renderer.texture.MissingTextureAtlasSprite",
   "net.minecraft.client.resources.DefaultPlayerSkin",
-  "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.core.IdMapper",
   "net.minecraft.core.UUIDUtil",
-  "net.minecraft.data.AtlasIds",
   "net.minecraft.nbt.NbtAccounter",
   "net.minecraft.server.dedicated.DedicatedServer",
   "net.minecraft.server.level.ChunkMap",
   "net.minecraft.server.packs.repository.Pack",
   "net.minecraft.server.packs.repository.PackRepository",
   "net.minecraft.util.BitStorage",
-  "and 80 more"
+  "net.minecraft.util.SimpleBitStorage",
+  "net.minecraft.util.SimpleBitStorage.InitializationException",
+  "net.minecraft.world.attribute.EnvironmentAttributeSystem.Builder",
+  "net.minecraft.world.entity.player.PlayerModelPart",
+  "and 76 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "xaeroworldmap-fabric-26.3-1.47.2.jar",
   "published": "2026-10-25"
  },
@@ -91,5 +91,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
  },
- "lacks": 209
+ "lacks": 173
 }

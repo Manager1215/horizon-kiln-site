@@ -10,8 +10,6 @@
  "description": "Clickable player chat links",
  "needs": [
   "Mixin: 1 point inside the game's methods",
-  "com.mojang.authlib.GameProfile",
-  "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowChat",
   "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.ModifyGame",
   "net.fabricmc.loader.api.VersionParsingException",
   "net.fabricmc.loader.api.metadata.ModOrigin",
@@ -24,11 +22,9 @@
   "net.minecraft.client.multiplayer.chat.LoggedChatMessage.Player",
   "net.minecraft.client.multiplayer.chat.LoggedChatMessage.System",
   "net.minecraft.client.multiplayer.chat.report.ReportingContext",
-  "net.minecraft.network.chat.PlayerChatMessage",
   "net.minecraft.util.StringDecomposer",
   "org.apache.commons.codec.digest.DigestUtils",
   "org.apache.commons.io.IOUtils",
-  "ClientReceiveMessageEvents.ALLOW_CHAT",
   "ClientReceiveMessageEvents.MODIFY_GAME",
   "ModContainer.getOrigin()",
   "Version.parse()",
@@ -38,16 +34,16 @@
   "ChatComponent.addPlayerMessage()",
   "GuiMessageTag.system()",
   "ChatType.Bound.decorateNarration()",
-  "Component.getSiblings()",
-  "MutableComponent.getSiblings()",
-  "TextColor.parseColor()"
+  "PlayerChatMessage.decoratedContent()",
+  "PlayerChatMessage.signature()",
+  "PlayerChatMessage.unsigned()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "RestoreChatLinks-0.2.7+26.1.jar",
   "published": "2026-09-21"
  },
@@ -76,5 +72,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 31
+ "lacks": 27
 }

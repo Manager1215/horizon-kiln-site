@@ -10,10 +10,8 @@
  "description": "Combines the most popular HUD, PvP, and quality-of-life features into a single lightweight mod.",
  "needs": [
   "Mixin: 22 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.pipeline.TextureTarget",
   "com.mojang.blaze3d.resource.CrossFrameResourcePool",
-  "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowChat",
   "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
   "net.fabricmc.fabric.api.client.rendering.v1.ClientTooltipComponentCallback",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
@@ -22,8 +20,6 @@
   "net.minecraft.client.ClientClockManager.ClientClockInstance",
   "net.minecraft.client.gui.components.BossHealthOverlay",
   "net.minecraft.client.gui.components.PlayerTabOverlay",
-  "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
-  "net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner",
   "net.minecraft.client.player.ItemActivation",
   "net.minecraft.client.renderer.LevelTargetBundle",
   "net.minecraft.client.renderer.LightmapRenderStateExtractor",
@@ -49,15 +45,19 @@
   "net.minecraft.client.renderer.feature.TextFeatureRenderer.Submit",
   "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState",
   "net.minecraft.client.renderer.state.level.PlayerRenderState",
-  "net.minecraft.client.renderer.texture.DynamicTexture",
-  "and 74 more"
+  "net.minecraft.client.renderer.texture.MipmapGenerator",
+  "net.minecraft.network.chat.numbers.StyledFormat",
+  "net.minecraft.network.protocol.ping.ServerboundPingRequestPacket",
+  "net.minecraft.world.clock.WorldClocks",
+  "net.minecraft.world.entity.monster.Enemy",
+  "and 67 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "clientify-1.0.2+26.3.jar",
   "published": "2026-10-11"
  },
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@modify-args and @wrap-method and @wrap-operation into the game's classes"
  },
- "lacks": 174
+ "lacks": 117
 }

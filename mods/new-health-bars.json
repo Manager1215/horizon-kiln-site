@@ -1,7 +1,7 @@
 {
  "id": "new-health-bars",
  "name": "Health Bars",
- "version": "26.3.0",
+ "version": "26.3.2",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,14 +10,20 @@
  "description": "See every mob's health in style. In the HUD and in-world. Clean, colorful, and customizable!",
  "needs": [
   "an access widener",
+  "com.mojang.blaze3d.vertex.DefaultVertexFormat",
+  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
+  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
   "net.minecraft.client.gui.Hud.HeartType",
   "net.minecraft.client.gui.components.BossHealthOverlay",
-  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.particle.Particle",
   "net.minecraft.client.particle.ParticleGroup",
   "net.minecraft.client.particle.ParticleProvider",
   "net.minecraft.client.particle.ParticleRenderType",
-  "net.minecraft.data.AtlasIds",
+  "net.minecraft.client.renderer.BindGroupLayouts",
+  "net.minecraft.client.renderer.oit.OitPipelineSet",
+  "net.minecraft.client.renderer.oit.OitPipelineSet.Builder",
+  "net.minecraft.client.renderer.rendertype.RenderSetup",
+  "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
   "net.minecraft.network.chat.contents.objects.AtlasSprite",
   "net.minecraft.world.entity.EntityAttachment",
   "net.minecraft.world.entity.EntityAttachments",
@@ -32,11 +38,10 @@
   "PoseStack.Pose.pose()",
   "VertexConsumer.addVertex()",
   "VertexConsumer.setLight()",
+  "DepthStencilState.DEFAULT",
+  "RenderPipeline.builder()",
   "Minecraft.getEntityRenderDispatcher()",
   "Options.getBackgroundColor()",
-  "Font.substrByWidth()",
-  "GuiGraphicsExtractor.<init>()",
-  "GuiGraphicsExtractor.blitSprite()",
   "ClientLevel.getEntity()",
   "LocalPlayer.blockInteractionRange()",
   "LocalPlayer.entityInteractionRange()",
@@ -44,22 +49,17 @@
   "LocalPlayer.getActiveItem()",
   "LocalPlayer.getTeam()",
   "GameRenderer.mainCamera()",
-  "Sheets.GUI_SHEET",
-  "EntityRenderDispatcher.camera",
-  "EntityRenderDispatcher.distanceToSqr()",
-  "EntityRenderState.distanceToCameraSq",
-  "EntityRenderState.nameTag",
-  "EntityRenderState.nameTagAttachment",
-  "and 39 more"
+  "RenderPipelines.TEXT_SEE_THROUGH",
+  "and 38 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
-  "file": "healthbars-v26.3.0-mc26.3.x+fabric.jar",
-  "published": "2026-09-24"
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "healthbars-v26.3.2-mc26.3.x+fabric.jar",
+  "published": "2026-11-14"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -91,5 +91,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 86
+ "lacks": 78
 }

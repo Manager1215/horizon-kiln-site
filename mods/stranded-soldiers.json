@@ -10,8 +10,6 @@
  "description": "Not all who wander through portals find their way home. Nether defenders guard ruined portals in escalating waves. Optional Mob Civil War pairing. Shipped: 1.21.4–1.21.11 and 26.1 / 26.1.2 / 26.2 / 26.3.",
  "needs": [
   "an access widener",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.minecraft.tags.EntityTypeTags",
   "net.minecraft.tags.StructureTags",
   "net.minecraft.world.entity.NeutralMob",
@@ -22,12 +20,7 @@
   "net.minecraft.world.entity.monster.Zoglin",
   "net.minecraft.world.entity.monster.zombie.ZombifiedPiglin",
   "net.minecraft.world.level.StructureManager",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerLifecycleEvents.SERVER_STOPPING",
-  "BlockPos.distSqr()",
   "BlockPos.toShortString()",
-  "Holder.Reference.is()",
-  "Component.translatableWithFallback()",
   "MinecraftServer.getAllLevels()",
   "MinecraftServer.setWeatherParameters()",
   "ServerLevel.getEntity()",
@@ -50,14 +43,21 @@
   "Mob.setTarget()",
   "Mob.snapTo()",
   "Mob.targetSelector",
-  "and 19 more"
+  "Player.isAlive()",
+  "Level.getNearestPlayer()",
+  "BlockState.isSolid()",
+  "BoundingBox.maxX()",
+  "BoundingBox.maxY()",
+  "BoundingBox.maxZ()",
+  "BoundingBox.minX()",
+  "and 5 more"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "stranded-soldiers-1.1.2-mc26.3.jar",
   "published": "2026-11-11"
  },
@@ -90,5 +90,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert)"
  },
- "lacks": 59
+ "lacks": 45
 }

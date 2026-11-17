@@ -11,7 +11,6 @@
  "needs": [
   "net.fabricmc.fabric.api.command.v2.ArgumentTypeRegistry",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.minecraft.commands.arguments.ResourceArgument",
   "net.minecraft.commands.arguments.StringRepresentableArgument",
   "net.minecraft.commands.arguments.blocks.BlockPredicateArgument",
@@ -24,21 +23,13 @@
   "net.minecraft.world.entity.monster.Monster",
   "net.minecraft.world.level.block.state.pattern.BlockInWorld",
   "ServerPlayerEvents.JOIN",
-  "ServerLifecycleEvents.SERVER_STOPPING",
   "CommandSourceStack.registryAccess()",
   "BlockPos.betweenClosedStream()",
-  "Holder.getRegisteredName()",
-  "Holder.tags()",
-  "Holder.Reference.is()",
-  "Registry.get()",
   "RegistryAccess.Frozen.get()",
-  "RegistryAccess.Frozen.lookupOrThrow()",
-  "DataComponents.CUSTOM_NAME",
   "TypedDataComponent.createUnchecked()",
   "TypedDataComponent.encodeValue()",
   "ListTag.add()",
   "MinecraftServer.clockManager()",
-  "MinecraftServer.execute()",
   "MinecraftServer.overworld()",
   "MinecraftServer.registryAccess()",
   "MinecraftServer.setWeatherParameters()",
@@ -49,14 +40,23 @@
   "ServerLevel.getMaxY()",
   "ServerLevel.getMinY()",
   "ServerLevel.getPlayers()",
-  "and 34 more"
+  "ServerPlayer.chunkPosition()",
+  "ServerPlayer.isInvulnerable()",
+  "ServerPlayer.isPermanentlyInvulnerable()",
+  "ServerPlayer.setExperienceLevels()",
+  "ServerPlayer.setPermanentlyInvulnerable()",
+  "ServerPlayer.teleportTo()",
+  "Entity.remove()",
+  "Entity.teleportTo()",
+  "EntityType.builtInRegistryHolder()",
+  "and 19 more"
  ],
  "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "ToolKit-fabric-26.3.0.1.jar",
   "published": "2026-09-19"
  },
@@ -87,5 +87,5 @@
   "class": "partial",
   "why": "runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 76
+ "lacks": 59
 }

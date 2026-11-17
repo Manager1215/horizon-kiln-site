@@ -10,33 +10,25 @@
  "description": "A reusable net that captures any passive or neutral mob — including modded ones — and releases them anywhere with full NBT preserved. Named pets, color variants, ages, and tame state all survive the trip.",
  "needs": [
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-  "net.minecraft.network.chat.ComponentSerialization",
   "net.minecraft.world.entity.boss.enderdragon.EnderDragon",
   "net.minecraft.world.entity.boss.wither.WitherBoss",
   "net.minecraft.world.entity.monster.warden.Warden",
-  "Holder.Reference.is()",
-  "DataComponents.ENCHANTMENT_GLINT_OVERRIDE",
+  "ComponentSerialization.STREAM_CODEC",
   "ServerLevel.sendParticles()",
-  "ServerPlayer.connection",
-  "ServerGamePacketListenerImpl.send()",
   "SoundEvents.BUNDLE_DROP_CONTENTS",
   "SoundEvents.BUNDLE_INSERT",
-  "ProblemReporter.DISCARDING",
   "Entity.setPos()",
   "EntityType.builtInRegistryHolder()",
   "EntityType.loadEntityRecursive()",
   "LivingEntity.discard()",
-  "LivingEntity.getBbHeight()",
-  "LivingEntity.saveAsPassenger()",
-  "DyeColor.byId()",
-  "DyeColor.getName()"
+  "LivingEntity.saveAsPassenger()"
  ],
  "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "capturenet-fabric-0.4.0.jar",
   "published": "2026-09-21"
  },
@@ -68,5 +60,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
  },
- "lacks": 21
+ "lacks": 13
 }

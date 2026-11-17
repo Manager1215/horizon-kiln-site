@@ -10,13 +10,10 @@
  "description": "Shared health, hunger, saturation. Synced jumps, synced effects, half-hearted mode.",
  "needs": [
   "Mixin: 17 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDamage",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.minecraft.advancements.triggers.ChangeDimensionTrigger",
   "net.minecraft.advancements.triggers.CriteriaTriggers",
   "net.minecraft.network.protocol.game.ServerboundContainerClickPacket",
@@ -29,7 +26,6 @@
   "net.minecraft.server.level.ServerPlayerGameMode",
   "net.minecraft.util.BlockUtil",
   "net.minecraft.util.BlockUtil.FoundRectangle",
-  "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.SimpleMenuProvider",
   "net.minecraft.world.clock.ServerClockManager",
   "net.minecraft.world.entity.ai.village.poi.PoiManager",
@@ -43,21 +39,25 @@
   "net.minecraft.world.inventory.PlayerEnderChestContainer",
   "net.minecraft.world.item.FireChargeItem",
   "net.minecraft.world.item.FlintAndSteelItem",
-  "net.minecraft.world.item.component.ItemLore",
   "net.minecraft.world.item.component.LodestoneTracker",
   "net.minecraft.world.item.component.ResolvableProfile",
   "net.minecraft.world.level.block.EndPortalBlock",
   "net.minecraft.world.level.block.FireBlock",
   "net.minecraft.world.level.block.NetherPortalBlock",
   "net.minecraft.world.level.dimension.BuiltinDimensionTypes",
-  "and 66 more"
+  "net.minecraft.world.level.dimension.end.EnderDragonFight",
+  "net.minecraft.world.level.levelgen.WorldGenSettings",
+  "net.minecraft.world.level.portal.PortalForcer",
+  "net.minecraft.world.scores.PlayerTeam",
+  "net.minecraft.world.scores.TeamColor",
+  "and 60 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "soullink-v1.4.1+26.3.jar",
   "published": "2026-09-18"
  },
@@ -89,5 +89,5 @@
   "class": "restart",
   "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
  },
- "lacks": 169
+ "lacks": 130
 }

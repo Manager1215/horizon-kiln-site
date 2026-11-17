@@ -1,7 +1,7 @@
 {
  "id": "crankshaft",
  "name": "CrankShaft",
- "version": "1.6.1+mc26.3",
+ "version": "1.7.0+mc26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,13 +10,21 @@
  "description": "An unofficial port of Flywheel",
  "needs": [
   "an access widener",
-  "Mixin: 40 points inside the game's methods",
+  "Mixin: 45 points inside the game's methods",
   "com.mojang.blaze3d.buffers.Std140Builder",
   "com.mojang.blaze3d.buffers.Std140SizeCalculator",
   "com.mojang.blaze3d.pipeline.PipelineCache",
   "com.mojang.blaze3d.resource.ResourceHandle",
   "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
+  "com.mojang.blaze3d.vertex.BufferBuilder",
   "com.mojang.blaze3d.vertex.DefaultVertexFormat",
+  "com.mojang.blaze3d.vertex.MeshData",
+  "com.mojang.blaze3d.vertex.MeshData.DrawState",
+  "com.mojang.blaze3d.vertex.TlsfAllocator",
+  "com.mojang.blaze3d.vertex.TlsfAllocator.Allocation",
+  "com.mojang.blaze3d.vertex.UberGpuBuffer",
+  "com.mojang.blaze3d.vertex.UberGpuBuffer.UploadCallback",
+  "com.mojang.blaze3d.vertex.VertexSorting",
   "com.mojang.renderpearl.api.GpuFormat.ComponentType",
   "com.mojang.renderpearl.api.commands.RenderPassDescriptor.Builder",
   "com.mojang.renderpearl.api.pipeline.BindGroupLayout.Builder",
@@ -36,31 +44,23 @@
   "com.mojang.renderpearl.backend.api.SpvModule.Reflection.Type",
   "com.mojang.renderpearl.backend.opengl.FrameBufferCache",
   "com.mojang.renderpearl.backend.opengl.GlBuffer",
+  "com.mojang.renderpearl.backend.opengl.GlBuffer.Direct",
   "com.mojang.renderpearl.backend.opengl.GlCommandEncoder",
+  "com.mojang.renderpearl.backend.opengl.GlConst",
   "com.mojang.renderpearl.backend.opengl.GlDevice",
   "com.mojang.renderpearl.backend.opengl.GlProgram",
   "com.mojang.renderpearl.backend.opengl.GlRenderPipeline",
   "com.mojang.renderpearl.backend.opengl.GlSampler",
-  "com.mojang.renderpearl.backend.opengl.GlStateManager",
-  "com.mojang.renderpearl.backend.opengl.GlStateManager.BlendState",
-  "com.mojang.renderpearl.backend.opengl.GlStateManager.BooleanState",
-  "com.mojang.renderpearl.backend.opengl.GlStateManager.ColorLogicState",
-  "com.mojang.renderpearl.backend.opengl.GlStateManager.CullState",
-  "com.mojang.renderpearl.backend.opengl.GlStateManager.DepthState",
-  "com.mojang.renderpearl.backend.opengl.GlStateManager.PolygonOffsetState",
-  "com.mojang.renderpearl.backend.opengl.GlStateManager.ScissorState",
-  "com.mojang.renderpearl.backend.opengl.GlStateManager.TextureState",
-  "com.mojang.renderpearl.backend.opengl.GlTexture",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
-  "file": "crankshaft-fabric-1.6.1+mc26.3.jar",
-  "published": "2026-10-16"
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "crankshaft-fabric-1.7.0+mc26.3.jar",
+  "published": "2026-11-14"
  },
  "reports": {
   "works": 0,
@@ -70,15 +70,16 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
  },
  "entrypoints": {
   "main": 1,
-  "client": 1
+  "client": 1,
+  "sodium:config_api_user": 1
  },
  "mixins": true,
  "depends": [
@@ -88,7 +89,7 @@
  ],
  "softOff": {
   "class": "restart",
-  "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; data pack files (recipes, loot, tags) stay"
+  "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 713
+ "lacks": 681
 }

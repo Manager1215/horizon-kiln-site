@@ -10,20 +10,15 @@
  "description": "A working voice chat in Minecraft!",
  "needs": [
   "Mixin: 3 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "io.netty.channel.local.LocalAddress",
-  "net.minecraft.SharedConstants",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
   "net.minecraft.client.gui.ActiveTextCollector",
   "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
   "net.minecraft.client.gui.screens.social.PlayerEntry",
   "net.minecraft.client.renderer.entity.player.AvatarRenderer",
   "net.minecraft.client.renderer.entity.state.AvatarRenderState",
-  "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.client.resources.DefaultPlayerSkin",
-  "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.commands.arguments.UuidArgument",
-  "net.minecraft.data.AtlasIds",
   "net.minecraft.network.chat.ComponentUtils",
   "net.minecraft.network.chat.contents.objects.AtlasSprite",
   "net.minecraft.server.MinecraftServer.MultiplayerScope",
@@ -50,14 +45,19 @@
   "org.lwjgl.openal.ALCapabilities",
   "org.lwjgl.openal.ALUtil",
   "org.lwjgl.openal.EXTFloat32",
-  "and 55 more"
+  "org.lwjgl.openal.EXTThreadLocalContext",
+  "org.lwjgl.openal.SOFTLoopback",
+  "PoseStack.translate()",
+  "SharedConstants.getCurrentVersion()",
+  "Camera.forwardVector()",
+  "and 29 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "voicechat-fabric-2.6.27+26.3.jar",
   "published": "2026-10-28"
  },
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
  },
- "lacks": 95
+ "lacks": 69
 }

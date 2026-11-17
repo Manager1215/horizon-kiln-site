@@ -9,12 +9,9 @@
  "author": "ThePlum",
  "description": "Never miss out on dungeon experience again! Each player gets their own spawner experience - disable spawners for yourself while keeping them active for friends who haven't explored yet",
  "needs": [
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.minecraft.core.particles.DustParticleOptions",
   "net.minecraft.server.level.ChunkMap",
   "net.minecraft.server.level.ServerPlayerGameMode",
-  "net.minecraft.world.item.SpawnEggItem",
   "net.minecraft.world.level.BaseSpawner",
   "net.minecraft.world.level.SpawnData",
   "net.minecraft.world.level.block.SpawnerBlock",
@@ -23,23 +20,15 @@
   "net.minecraft.world.level.block.entity.SpawnerBlockEntity",
   "net.minecraft.world.level.chunk.LevelChunk.BoundTickingBlockEntity",
   "net.minecraft.world.level.material.PushReaction",
-  "net.minecraft.world.level.storage.LevelResource",
-  "ServerLifecycleEvents.SERVER_STARTING",
-  "ServerLifecycleEvents.SERVER_STOPPING",
   "ClientLevel.levelEvent()",
-  "BlockPos.distSqr()",
   "ListTag.add()",
   "MinecraftServer.getTickCount()",
-  "MinecraftServer.getWorldPath()",
   "ServerChunkCache.chunkMap",
   "ServerChunkCache.getChunk()",
   "ServerLevel.sendParticles()",
-  "ServerPlayer.connection",
-  "ServerGamePacketListenerImpl.send()",
   "PlayerList.getViewDistance()",
   "SoundEvents.WITHER_HURT",
   "SoundEvents.WITHER_SHOOT",
-  "ProblemReporter.DISCARDING",
   "ItemEntity.setDefaultPickUpDelay()",
   "Player.isAlive()",
   "Level.addFreshEntity()",
@@ -47,16 +36,17 @@
   "Level.levelEvent()",
   "Level.players()",
   "Level.setBlockEntity()",
-  "Blocks.SPAWNER",
-  "Blocks.TORCH",
-  "and 6 more"
+  "BlockBehaviour.Properties.pushReaction()",
+  "ChunkSource.getChunk()",
+  "LevelChunk.getBlockEntities()",
+  "ValueInput.TypedInputList.forEach()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "Multiplayer Spawners - Fabric - 26.3 - 2.0.2.jar",
   "published": "2026-10-27"
  },
@@ -89,5 +79,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 46
+ "lacks": 31
 }

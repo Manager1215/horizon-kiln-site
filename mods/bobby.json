@@ -10,7 +10,6 @@
  "description": "Allows for render distances greater than the server's view-distance",
  "needs": [
   "Mixin: 10 points inside the game's methods",
-  "net.minecraft.SharedConstants",
   "net.minecraft.TracingExecutor",
   "net.minecraft.client.multiplayer.ClientChunkCache",
   "net.minecraft.client.renderer.LevelRenderer",
@@ -18,7 +17,6 @@
   "net.minecraft.client.renderer.fog.FogData",
   "net.minecraft.client.renderer.fog.FogRenderer",
   "net.minecraft.client.renderer.fog.FogRenderer.FogMode",
-  "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.nbt.NbtAccounter",
   "net.minecraft.server.level.ChunkMap",
   "net.minecraft.util.profiling.Profiler",
@@ -48,16 +46,18 @@
   "ObjectIterator.next()",
   "ObjectIterator.remove()",
   "ObjectSet.removeIf()",
-  "Minecraft.gameDirectory",
+  "SharedConstants.getCurrentVersion()",
   "Minecraft.getFixerUpper()",
-  "and 44 more"
+  "Minecraft.getLevelSource()",
+  "Minecraft.levelExtractor",
+  "and 42 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "bobby-5.2.16+mc26.3.jar",
   "published": "2026-10-06"
  },
@@ -89,5 +89,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
  },
- "lacks": 121
+ "lacks": 105
 }

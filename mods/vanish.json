@@ -10,7 +10,6 @@
  "description": "Fabric vanish mod to completely hide from other players using /vanish",
  "needs": [
   "Mixin: 48 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "io.netty.channel.ChannelFutureListener",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowChatMessage",
@@ -50,14 +49,15 @@
   "net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity",
   "net.minecraft.world.level.block.entity.trialspawner.PlayerDetector",
   "net.minecraft.world.level.gameevent.GameEvent.Context",
-  "and 27 more"
+  "net.minecraft.world.level.gameevent.vibrations.VibrationSystem",
+  "and 22 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "vanish-1.6.16+26.3.jar",
   "published": "2026-09-27"
  },
@@ -88,5 +88,5 @@
   "class": "restart",
   "why": "@overwrite and @redirect and @wrap-method and @wrap-operation into the game's classes; runs threads of its own; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 67
+ "lacks": 62
 }

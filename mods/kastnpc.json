@@ -10,17 +10,13 @@
  "description": "KastNPC — the best alternative to NewNPC. Create and customize poseable NPCs with skins, mobs, equipment, presets and animations.",
  "needs": [
   "Mixin: 11 points inside the game's methods",
-  "com.mojang.blaze3d.platform.TextInputManager",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
   "net.minecraft.client.Camera.NearPlane",
   "net.minecraft.client.ClientClockManager",
   "net.minecraft.client.ClientClockManager.ClientClockInstance",
-  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.ItemPickerMenu",
   "net.minecraft.client.model.ArmedModel",
   "net.minecraft.client.model.EntityModel",
   "net.minecraft.client.model.HumanoidModel",
@@ -50,14 +46,18 @@
   "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
   "net.minecraft.client.renderer.entity.state.ItemFrameRenderState",
   "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
+  "net.minecraft.client.renderer.extract.LevelExtractor",
+  "net.minecraft.client.renderer.feature.FlameFeatureRenderer",
+  "net.minecraft.client.renderer.feature.FlameFeatureRenderer.Submit",
+  "net.minecraft.client.renderer.feature.ModelFeatureRenderer.Submit",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "KastNPC-1.0.2.jar",
   "published": "2026-10-29"
  },
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
  },
- "lacks": 342
+ "lacks": 285
 }

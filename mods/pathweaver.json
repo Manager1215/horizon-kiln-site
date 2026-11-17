@@ -10,8 +10,6 @@
  "description": "Mob pathfinding runs on the server thread and causes tick spikes. PathWeaver moves it to spare CPU cores: mean tick roughly halved with 1024 mobs, worst-1% ticks down 55-61%. Server-side, clients need nothing. Read the warning before installing.",
  "needs": [
   "Mixin: 15 points inside the game's methods",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.registry.LandPathTypeRegistry",
   "net.fabricmc.fabric.api.registry.LandPathTypeRegistry.DynamicPathTypeProvider",
   "net.fabricmc.fabric.api.registry.LandPathTypeRegistry.StaticPathTypeProvider",
@@ -37,9 +35,6 @@
   "net.minecraft.world.level.pathfinder.PathfindingContext",
   "net.minecraft.world.level.pathfinder.SwimNodeEvaluator",
   "net.minecraft.world.level.pathfinder.WalkNodeEvaluator",
-  "ServerLifecycleEvents.SERVER_STARTING",
-  "ServerLifecycleEvents.SERVER_STOPPING",
-  "ModContainer.findPath()",
   "ModContainer.getContainingMod()",
   "ModContainer.getOrigin()",
   "ModContainer.getRootPaths()",
@@ -50,14 +45,19 @@
   "ServerLevel.getNearestPlayer()",
   "ServerLevel.getPathTypeCache()",
   "Mob.distanceToSqr()",
-  "and 10 more"
+  "Mob.getBrain()",
+  "Mob.getMaxFallDistance()",
+  "Mob.getNavigation()",
+  "Mob.getPathfindingMalus()",
+  "Mob.isAlive()",
+  "and 2 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "pathweaver-0.9.0+26.3.jar",
   "published": "2026-10-13"
  },
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@redirect and @wrap-operation into the game's classes"
  },
- "lacks": 50
+ "lacks": 42
 }

@@ -11,13 +11,10 @@
  "needs": [
   "an access widener",
   "Mixin: 3 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Leave",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
   "net.minecraft.client.player.RemotePlayer",
@@ -27,19 +24,14 @@
   "net.minecraft.network.protocol.game.ServerboundClientCommandPacket.Action",
   "net.minecraft.server.level.ServerPlayer.RespawnConfig",
   "net.minecraft.server.level.ServerPlayer.RespawnPosAngle",
-  "net.minecraft.world.SimpleContainer",
-  "net.minecraft.world.entity.EntityEquipment",
   "net.minecraft.world.level.block.entity.HopperBlockEntity",
   "ServerPlayerEvents.JOIN",
   "ServerPlayerEvents.LEAVE",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerLifecycleEvents.SERVER_STOPPING",
   "Minecraft.getGameProfile()",
   "AbstractContainerScreen.extractSlot()",
   "ClientPacketListener.send()",
   "LocalPlayer.respawn()",
   "BlockPos.atY()",
-  "DataComponents.CUSTOM_NAME",
   "MinecraftServer.getAllLevels()",
   "MinecraftServer.isHardcore()",
   "ServerBossEvent.setColor()",
@@ -51,14 +43,22 @@
   "ServerPlayer.destroyVanishingCursedItems()",
   "ServerPlayer.findRespawnPositionAndUseSpawnBlock()",
   "ServerPlayer.getBlockPosBelowThatAffectsMyMovement()",
-  "and 21 more"
+  "ServerPlayer.getLastDeathLocation()",
+  "ServerPlayer.getRespawnConfig()",
+  "ServerPlayer.isAlive()",
+  "ServerPlayer.needsSync",
+  "ServerPlayer.setPermanentlyInvulnerable()",
+  "ServerPlayer.setRespawnPosition()",
+  "Inventory.replaceWith()",
+  "Items.STAINED_GLASS_PANE",
+  "and 8 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "totem-on-death-26.3-0.1.15.jar",
   "published": "2026-09-28"
  },
@@ -91,5 +91,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 61
+ "lacks": 48
 }

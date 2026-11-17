@@ -11,7 +11,6 @@
  "needs": [
   "an access widener",
   "Mixin: 9 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.minecraft.MinecraftProfileTexture",
   "com.mojang.authlib.minecraft.MinecraftProfileTextures",
   "com.mojang.authlib.minecraft.SessionService",
@@ -24,8 +23,6 @@
   "net.fabricmc.fabric.api.client.networking.v1.ClientLoginConnectionEvents",
   "net.fabricmc.fabric.api.client.networking.v1.ClientLoginConnectionEvents.Init",
   "net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.fabric.impl.client.rendering.ArmorRendererRegistryImpl",
   "net.minecraft.client.animation.AnimationDefinition",
   "net.minecraft.client.animation.KeyframeAnimation",
@@ -51,14 +48,17 @@
   "net.minecraft.client.model.geom.ModelPart.Vertex",
   "net.minecraft.client.model.geom.PartPose",
   "net.minecraft.client.model.geom.builders.CubeDefinition",
+  "net.minecraft.client.model.geom.builders.CubeDeformation",
+  "net.minecraft.client.model.geom.builders.CubeListBuilder",
+  "net.minecraft.client.model.geom.builders.MaterialDefinition",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "minelittlepony-4.16.6+26.3.jar",
   "published": "2026-09-19"
  },
@@ -95,5 +95,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
  },
- "lacks": 417
+ "lacks": 382
 }

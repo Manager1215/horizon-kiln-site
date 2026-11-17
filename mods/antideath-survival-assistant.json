@@ -10,7 +10,6 @@
  "description": "Client-side survival assistant for Minecraft 1.21.x–26.x. Provides various quality-of-life tools for survival gameplay. Requires MaLiLib.",
  "needs": [
   "Mixin: 16 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.vertex.VertexSorting",
   "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
   "net.fabricmc.fabric.impl.client.registry.sync.ClientRegistrySyncHandler",
@@ -20,9 +19,6 @@
   "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
   "net.minecraft.client.gui.screens.ConnectScreen",
   "net.minecraft.client.gui.screens.LevelLoadingScreen",
-  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen.ItemPickerMenu",
-  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.gui.screens.inventory.ShulkerBoxScreen",
   "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
   "net.minecraft.client.gui.screens.multiplayer.ServerReconfigScreen",
@@ -38,7 +34,6 @@
   "net.minecraft.client.renderer.entity.state.ItemFrameRenderState",
   "net.minecraft.client.renderer.feature.RenderTypeFeatureRenderer.Group",
   "net.minecraft.client.renderer.rendertype.PreparedRenderType",
-  "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.network.PacketDecoder",
   "net.minecraft.network.codec.IdDispatchCodec",
   "net.minecraft.network.protocol.common.CommonPacketTypes",
@@ -50,14 +45,19 @@
   "net.minecraft.world.inventory.ShulkerBoxMenu",
   "net.minecraft.world.level.block.ShulkerBoxBlock",
   "net.minecraft.world.level.block.VaultBlock",
-  "and 48 more"
+  "net.minecraft.world.level.block.entity.SignBlockEntity",
+  "net.minecraft.world.level.block.entity.SignText",
+  "net.minecraft.world.level.block.entity.vault.VaultState",
+  "net.minecraft.world.level.chunk.LevelChunk.BoundTickingBlockEntity",
+  "net.minecraft.world.level.storage.WorldData",
+  "and 35 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "antideath-survival-assistant-v1.8.3-mc26.3.jar",
   "published": "2026-11-14"
  },
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own"
  },
- "lacks": 88
+ "lacks": 75
 }

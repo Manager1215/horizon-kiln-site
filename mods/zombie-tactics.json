@@ -1,0 +1,83 @@
+{
+ "id": "zombie-tactics",
+ "name": "Zombie Tactics",
+ "version": "1.3.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/zombie-tactics",
+ "author": "n643064",
+ "description": "An overhaul of zombie AI, which allows them to break blocks and improves their tracking.",
+ "needs": [
+  "net.minecraft.client.renderer.entity.EntityRenderers",
+  "net.minecraft.network.syncher.SynchedEntityData.Builder",
+  "net.minecraft.world.entity.NeutralMob",
+  "net.minecraft.world.entity.ai.goal.Goal",
+  "net.minecraft.world.entity.ai.goal.GoalSelector",
+  "net.minecraft.world.entity.ai.goal.MoveThroughVillageGoal",
+  "net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal",
+  "net.minecraft.world.entity.ai.goal.ZombieAttackGoal",
+  "net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal",
+  "net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal",
+  "net.minecraft.world.entity.ai.goal.target.ResetUniversalAngerTargetGoal",
+  "net.minecraft.world.entity.ai.navigation.PathNavigation",
+  "net.minecraft.world.entity.ai.targeting.TargetingConditions",
+  "net.minecraft.world.entity.ai.targeting.TargetingConditions.Selector",
+  "net.minecraft.world.entity.animal.golem.IronGolem",
+  "net.minecraft.world.entity.animal.turtle.Turtle",
+  "net.minecraft.world.entity.monster.Monster",
+  "net.minecraft.world.entity.monster.zombie.Zombie",
+  "net.minecraft.world.entity.monster.zombie.ZombifiedPiglin",
+  "net.minecraft.world.entity.npc.villager.Villager",
+  "net.minecraft.world.level.pathfinder.Path",
+  "BlockPos.containing()",
+  "BlockPos.distToCenterSqr()",
+  "Entity.<init>()",
+  "EntityType.Builder.canSpawnFarFromPlayer()",
+  "PathfinderMob.getInBlockState()",
+  "PathfinderMob.getNavigation()",
+  "PathfinderMob.swing()",
+  "Level.addFreshEntity()",
+  "Level.getEntities()",
+  "Block.defaultDestroyTime()",
+  "BlockState.isSolid()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "Zombie Tactics.jar",
+  "published": "2026-11-14"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1,
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@overwrite into the game's classes; registers blocks, items or entities (they stay, inert)"
+ },
+ "lacks": 32
+}

@@ -10,8 +10,6 @@
  "description": "Improves zombie leader and reinforcement mechanics and fixes a few bugs",
  "needs": [
   "Mixin: 4 points inside the game's methods",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
   "net.minecraft.client.model.EntityModel",
   "net.minecraft.client.model.geom.ModelLayers",
   "net.minecraft.client.model.monster.zombie.BabyZombieVillagerModel",
@@ -27,13 +25,11 @@
   "net.minecraft.world.entity.monster.zombie.Zombie",
   "net.minecraft.world.entity.monster.zombie.ZombieVillager",
   "net.minecraft.world.entity.monster.zombie.ZombifiedPiglin",
-  "AttachmentRegistry.create()",
   "ModelPart.getChild()",
   "ModelPart.hasChild()",
   "ModelPart.visible",
   "EntityRendererProvider.Context.bakeLayer()",
   "RenderTypes.energySwirl()",
-  "Holder.Reference.is()",
   "SoundEvents.DROWNED_AMBIENT",
   "SoundEvents.DROWNED_AMBIENT_WATER",
   "SoundEvents.DROWNED_DEATH",
@@ -50,14 +46,18 @@
   "SoundEvents.ZOMBIE_VILLAGER_DEATH",
   "SoundEvents.ZOMBIE_VILLAGER_HURT",
   "SoundEvents.ZOMBIFIED_PIGLIN_AMBIENT",
-  "and 8 more"
+  "SoundEvents.ZOMBIFIED_PIGLIN_ANGRY",
+  "SoundEvents.ZOMBIFIED_PIGLIN_DEATH",
+  "SoundEvents.ZOMBIFIED_PIGLIN_HURT",
+  "EntitySpawnReason.isSpawner()",
+  "and 2 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "zombieimprovements-fabric-1.2.3+26.3.jar",
   "published": "2026-10-21"
  },
@@ -90,5 +90,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert)"
  },
- "lacks": 48
+ "lacks": 42
 }

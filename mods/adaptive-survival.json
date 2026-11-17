@@ -1,0 +1,93 @@
+{
+ "id": "adaptive-survival",
+ "name": "Adaptive Survival",
+ "version": "1.0.1",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/adaptive-survival",
+ "author": "abfielder",
+ "description": "A Minecraft mod that scales mob difficulty based on progression. Look forward to fighting a wither skeleton with netherite gear! Watch out for cows who will defend the herd if attacked.",
+ "needs": [
+  "net.fabricmc.fabric.api.entity.event.v1.ServerEntityCombatEvents",
+  "net.fabricmc.fabric.api.entity.event.v1.ServerEntityCombatEvents.AfterKilledOtherEntity",
+  "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
+  "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDamage",
+  "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
+  "net.minecraft.client.model.QuadrupedModel",
+  "net.minecraft.client.model.animal.cow.CowModel",
+  "net.minecraft.client.model.animal.pig.PigModel",
+  "net.minecraft.client.model.animal.sheep.SheepModel",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
+  "net.minecraft.world.entity.ai.control.LookControl",
+  "net.minecraft.world.entity.ai.goal.Goal",
+  "net.minecraft.world.entity.ai.goal.Goal.Flag",
+  "net.minecraft.world.entity.ai.goal.GoalSelector",
+  "net.minecraft.world.entity.ai.navigation.PathNavigation",
+  "net.minecraft.world.entity.boss.enderdragon.EnderDragon",
+  "net.minecraft.world.entity.monster.Creeper",
+  "net.minecraft.world.entity.monster.illager.Pillager",
+  "net.minecraft.world.entity.monster.piglin.AbstractPiglin",
+  "net.minecraft.world.entity.monster.skeleton.AbstractSkeleton",
+  "net.minecraft.world.entity.monster.skeleton.WitherSkeleton",
+  "net.minecraft.world.entity.monster.spider.Spider",
+  "net.minecraft.world.entity.monster.zombie.Zombie",
+  "Object2IntMap.Entry.getKey()",
+  "ModelPart.getChild()",
+  "ModelPart.z",
+  "MinecraftServer.getTickCount()",
+  "MinecraftServer.overworld()",
+  "ServerLevel.getEntitiesOfClass()",
+  "ServerLevel.getOverworldClockTime()",
+  "ServerPlayer.isAlive()",
+  "ServerPlayer.knockback()",
+  "DamageSources.mobAttack()",
+  "EntityTypes.COW",
+  "EntityTypes.PIG",
+  "EntityTypes.SHEEP",
+  "LivingEntity.distanceToSqr()",
+  "LivingEntity.getSwingAnimation()",
+  "LivingEntity.isAlive()",
+  "and 27 more"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "progressivedifficulty-1.0.1.jar",
+  "published": "2026-09-18"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 67
+}

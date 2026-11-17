@@ -11,10 +11,7 @@
  "needs": [
   "an access widener",
   "Mixin: 3 points inside the game's methods",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.fabric.impl.resource.FabricResourceReloader",
-  "net.minecraft.SharedConstants",
   "net.minecraft.commands.synchronization.ArgumentTypeInfos",
   "net.minecraft.network.chat.OutgoingChatMessage",
   "net.minecraft.network.chat.OutgoingChatMessage.Disguised",
@@ -44,21 +41,24 @@
   "net.minecraft.world.level.levelgen.structure.structures.JigsawStructure.MaxDistance",
   "net.minecraft.world.level.levelgen.structure.templatesystem.LiquidSettings",
   "net.minecraft.world.phys.shapes.BooleanOp",
-  "ServerLifecycleEvents.SERVER_STARTED",
+  "SharedConstants.getCurrentVersion()",
   "CommandSourceStack.sendChatMessage()",
-  "BlockPos.distSqr()",
   "BlockPos.offset()",
   "BlockPos.subtract()",
-  "BlockPos.MutableBlockPos.setX()",
-  "BlockPos.MutableBlockPos.setY()",
-  "and 53 more"
+  "Registry.getOptional()",
+  "Registry.getValueOrThrow()",
+  "Vec3i.CODEC",
+  "Vec3i.ZERO",
+  "BuiltInRegistries.STRUCTURE_PLACEMENT",
+  "BuiltInRegistries.STRUCTURE_POOL_ELEMENT",
+  "and 50 more"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "filloaxlib-0.42.4-26.3-fabric.jar",
   "published": "2026-11-13"
  },
@@ -91,5 +91,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 112
+ "lacks": 102
 }

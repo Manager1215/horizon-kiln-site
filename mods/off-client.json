@@ -10,12 +10,10 @@
  "description": "MiniMap, Shoulder Surfing, Better F3, Zoom, Freecam, Mouse Tweaks & inventory sorting. Fullbright, Auto Totem, armor/HP HUDs, waypoints, chat heads & animations, entity hiding, day counter, stopwatch & reload splash hiding in one Fabric mod.",
  "needs": [
   "Mixin: 22 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.minecraft.UserApiService",
   "com.mojang.authlib.minecraft.UserApiService.UserProperties",
   "com.mojang.authlib.services.FriendsService",
   "com.mojang.authlib.services.MinecraftServicesDiscoveryService",
-  "net.minecraft.SharedConstants",
   "net.minecraft.client.gui.Font.PreparedText",
   "net.minecraft.client.gui.components.ChatComponent.DisplayMode",
   "net.minecraft.client.gui.components.ImageButton",
@@ -27,11 +25,9 @@
   "net.minecraft.client.gui.screens.LevelLoadingScreen",
   "net.minecraft.client.gui.screens.LoadingOverlay",
   "net.minecraft.client.gui.screens.ProgressScreen",
-  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
   "net.minecraft.client.gui.screens.multiplayer.ServerReconfigScreen",
   "net.minecraft.client.gui.screens.options.OptionsScreen",
-  "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
   "net.minecraft.client.gui.screens.social.PlayerSocialManager",
   "net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler",
   "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen",
@@ -50,14 +46,18 @@
   "net.minecraft.client.renderer.LevelRenderer",
   "net.minecraft.client.renderer.LightmapRenderStateExtractor",
   "net.minecraft.client.renderer.entity.layers.CapeLayer",
+  "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
+  "net.minecraft.client.renderer.entity.layers.WolfArmorLayer",
+  "net.minecraft.client.renderer.entity.player.AvatarRenderer",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
   "and 80 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "off-client-26.3-1.2.1.jar",
   "published": "2026-10-14"
  },
@@ -96,5 +96,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes; runs threads of its own; has network channels"
  },
- "lacks": 263
+ "lacks": 202
 }

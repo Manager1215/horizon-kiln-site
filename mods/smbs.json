@@ -10,8 +10,6 @@
  "description": "Makes mobs rarely spawn with buffs and drop rewards based on how strong they are",
  "needs": [
   "Mixin: 4 points inside the game's methods",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-  "net.minecraft.core.HolderSet.Named",
   "net.minecraft.world.entity.AreaEffectCloud",
   "net.minecraft.world.entity.DropChances",
   "net.minecraft.world.entity.monster.spider.Spider",
@@ -20,13 +18,8 @@
   "net.minecraft.world.level.block.entity.SculkCatalystBlockEntity",
   "net.minecraft.world.level.block.entity.SculkCatalystBlockEntity.CatalystListener",
   "net.minecraft.world.level.gameevent.GameEvent.Context",
-  "AttachmentRegistry.create()",
-  "Holder.Reference.is()",
-  "Registry.get()",
-  "Registry.listTagIds()",
-  "RegistryAccess.lookupOrThrow()",
+  "HolderSet.Named.forEach()",
   "ParticleTypes.ENTITY_EFFECT",
-  "Component.translatableWithFallback()",
   "SynchedEntityData.get()",
   "SynchedEntityData.set()",
   "ServerLevel.getCurrentDifficultyAt()",
@@ -35,29 +28,23 @@
   "Util.shuffle()",
   "DifficultyInstance.getEffectiveDifficulty()",
   "Entity.<init>()",
-  "Entity.getAttachedOrElse()",
-  "Entity.setAttached()",
   "EntityType.builtInRegistryHolder()",
   "LivingEntity.<init>()",
   "Mob.getDropChances()",
   "Mob.getOnPos()",
   "AttributeInstance.addOrReplacePermanentModifier()",
   "AttributeInstance.hasModifier()",
-  "Attributes.FOLLOW_RANGE",
-  "Items.ENCHANTED_BOOK",
-  "Enchantment.getMaxLevel()",
-  "Enchantment.getMinLevel()",
   "LevelAccessor.registryAccess()",
   "ServerLevelAccessor.getRandom()",
   "GameRules.MOB_DROPS",
-  "and 1 more"
+  "GameRules.get()"
  ],
  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "smbs-fabric-1.2.0+26.3.jar",
   "published": "2026-11-05"
  },
@@ -91,5 +78,5 @@
   "class": "restart",
   "why": "@wrap-method and @wrap-operation into the game's classes"
  },
- "lacks": 41
+ "lacks": 28
 }

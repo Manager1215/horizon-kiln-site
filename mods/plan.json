@@ -1,7 +1,7 @@
 {
  "id": "plan",
  "name": "Plan | Player Analytics",
- "version": "5.9+build.3786+fabric",
+ "version": "5.9+build.3867+fabric",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,7 +10,6 @@
  "description": "The Ultimate Tool to monitor Minecraft player activity! Bukkit/Sponge/Bungee/Velocity support.",
  "needs": [
   "Mixin: 3 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "io.netty.channel.local.LocalAddress",
   "io.netty.channel.unix.DomainSocketAddress",
   "net.fabricmc.api.DedicatedServerModInitializer",
@@ -18,8 +17,6 @@
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityCombatEvents.AfterKilledOtherEntity",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
   "net.fabricmc.loader.impl.FabricLoaderImpl",
@@ -39,27 +36,25 @@
   "net.minecraft.world.damagesource.DamageTypes",
   "net.minecraft.world.level.block.BedBlock",
   "net.minecraft.world.level.block.RespawnAnchorBlock",
-  "ServerLifecycleEvents.SERVER_STARTING",
-  "ServerLifecycleEvents.SERVER_STOPPING",
   "ServerChunkCache.getLoadedChunksCount()",
   "ServerLevel.getAllEntities()",
-  "ServerPlayer.connection",
   "ServerPlayer.gameMode",
-  "ServerPlayer.getDisplayName()",
   "ServerPlayer.getGameProfile()",
   "ServerGamePacketListenerImpl.getRemoteAddress()",
   "ServerGamePacketListenerImpl.latency()",
   "TamableAnimal.getOwner()",
-  "and 3 more"
+  "TamableAnimal.isTame()",
+  "Player.getGameProfile()",
+  "ItemStack.getItemName()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
-  "file": "PlanFabric-5.9-dev-build-3786.jar",
-  "published": "2026-11-07"
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "PlanFabric-5.9-build-3867.jar",
+  "published": "2026-11-15"
  },
  "reports": {
   "works": 0,
@@ -81,5 +76,5 @@
   "class": "partial",
   "why": "runs threads of its own"
  },
- "lacks": 43
+ "lacks": 36
 }

@@ -10,15 +10,12 @@
  "description": "This mod adds the ability to chain tools to break blocks and chain farming while holding down the chain button. If you break a block, the adjacent blocks will be destroyed together, or if you hold a seed, the adjacent farmland will also be planted.",
  "needs": [
   "Mixin: 2 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Canceled",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
   "net.minecraft.server.level.ServerPlayerGameMode",
-  "net.minecraft.tags.ItemTags",
   "net.minecraft.world.entity.Shearable",
   "net.minecraft.world.item.ShearsItem",
   "net.minecraft.world.level.block.AzaleaBlock",
@@ -32,11 +29,8 @@
   "net.minecraft.world.level.block.TallFlowerBlock",
   "net.minecraft.world.level.block.TallGrassBlock",
   "net.minecraft.world.phys.EntityHitResult",
-  "ServerLifecycleEvents.SERVER_STOPPING",
   "BlockPos.distManhattan()",
   "BlockPos.offset()",
-  "DefaultedRegistry.getTagOrEmpty()",
-  "Holder.Reference.is()",
   "MinecraftServer.getTickCount()",
   "ServerLevel.getDifficulty()",
   "ServerLevel.getEntitiesOfClass()",
@@ -45,19 +39,25 @@
   "ServerPlayer.gameMode",
   "ServerPlayer.getGameProfile()",
   "ServerPlayer.interactOn()",
-  "ServerPlayer.permissions()",
   "ServerPlayer.takeXpDelay",
-  "ProblemReporter.DISCARDING",
   "Entity.distanceToSqr()",
   "Entity.getBoundingBox()",
-  "and 26 more"
+  "Entity.getRemovalReason()",
+  "Entity.isAlive()",
+  "EntityType.builtInRegistryHolder()",
+  "EntityTypes.COW",
+  "EntityTypes.MOOSHROOM",
+  "ExperienceOrb.getValue()",
+  "ExperienceOrb.isAlive()",
+  "ExperienceOrb.playerTouch()",
+  "and 15 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "onekeyminer-fabric-1.6.9-26.3.jar",
   "published": "2026-09-19"
  },
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; has network channels"
  },
- "lacks": 66
+ "lacks": 55
 }

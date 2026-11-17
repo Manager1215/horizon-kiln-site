@@ -10,13 +10,7 @@
  "description": "Listen together in Minecraft. Play your music through speakers and boomboxes, in sync for every player.",
  "needs": [
   "com.mojang.blaze3d.audio.Channel",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-  "net.minecraft.client.StringSplitter",
   "net.minecraft.client.gui.components.PlayerFaceExtractor",
-  "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.client.resources.DefaultPlayerSkin",
   "net.minecraft.client.resources.sounds.AbstractTickableSoundInstance",
   "net.minecraft.client.resources.sounds.Sound",
@@ -30,11 +24,8 @@
   "net.minecraft.network.chat.ComponentUtils",
   "net.minecraft.util.valueproviders.ConstantFloat",
   "net.minecraft.world.entity.animal.allay.Allay",
-  "net.minecraft.world.flag.FeatureFlags",
-  "net.minecraft.world.inventory.MenuType.MenuSupplier",
   "net.minecraft.world.level.block.PowderSnowBlock",
   "net.minecraft.world.level.gameevent.GameEvent.Context",
-  "net.minecraft.world.level.storage.LevelResource",
   "org.lwjgl.BufferUtils",
   "org.lwjgl.PointerBuffer",
   "org.lwjgl.openal.AL10",
@@ -45,18 +36,27 @@
   "org.lwjgl.system.MemoryStack",
   "org.lwjgl.system.MemoryUtil",
   "JsonArray.forEach()",
-  "NativeImage.getHeight()",
-  "NativeImage.getWidth()",
-  "NativeImage.read()",
-  "FabricCreativeModeTabOutput.insertAfter()",
-  "and 48 more"
+  "ServerConfigurationNetworking.send()",
+  "Minecraft.getMusicManager()",
+  "Hud.setNowPlaying()",
+  "PlayerInfo.getSkin()",
+  "LocalPlayer.permissions()",
+  "SoundManager.isActive()",
+  "BlockPos.containing()",
+  "ByteBufCodecs.byteArray()",
+  "ByteBufCodecs.stringUtf8()",
+  "MinecraftServer.getServerDirectory()",
+  "ServerPlayer.distanceToSqr()",
+  "SoundEvents.STONE_BUTTON_CLICK_ON",
+  "LivingEntity.setRecordPlayingNearby()",
+  "and 17 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "phonon-fabric-26.3-0.4.0+mc26.3.jar",
   "published": "2026-11-13"
  },
@@ -90,5 +90,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 88
+ "lacks": 57
 }

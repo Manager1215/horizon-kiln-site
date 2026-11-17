@@ -11,7 +11,6 @@
  "needs": [
   "an access widener",
   "Mixin: 1 point inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
@@ -20,8 +19,6 @@
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
@@ -42,7 +39,6 @@
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
   "net.minecraft.server.PlayerAdvancements",
   "net.minecraft.server.ServerAdvancementManager",
-  "net.minecraft.world.entity.EntityDimensions",
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
   "net.minecraft.world.entity.ai.control.LookControl",
@@ -51,14 +47,18 @@
   "net.minecraft.world.entity.ai.goal.FloatGoal",
   "net.minecraft.world.entity.ai.goal.Goal",
   "net.minecraft.world.entity.ai.goal.Goal.Flag",
-  "and 79 more"
+  "net.minecraft.world.entity.ai.goal.GoalSelector",
+  "net.minecraft.world.entity.ai.goal.LookAtPlayerGoal",
+  "net.minecraft.world.entity.ai.goal.MeleeAttackGoal",
+  "net.minecraft.world.entity.ai.goal.RandomLookAroundGoal",
+  "and 73 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "tbos-fabric-26.3-1.0.1.jar",
   "published": "2026-11-03"
  },
@@ -91,5 +91,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
  },
- "lacks": 337
+ "lacks": 264
 }

@@ -1,7 +1,7 @@
 {
  "id": "streams-reflowing",
  "name": "Streams Reflowing",
- "version": "2.17.3",
+ "version": "2.17.5",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -14,9 +14,6 @@
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.Unload",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.event.registry.DynamicRegistries",
   "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
   "net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition",
@@ -33,7 +30,6 @@
   "net.minecraft.client.particle.SpriteSet",
   "net.minecraft.client.renderer.BiomeColors",
   "net.minecraft.client.resources.sounds.AbstractTickableSoundInstance",
-  "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.commands.arguments.blocks.BlockStateParser",
   "net.minecraft.commands.arguments.blocks.BlockStateParser.BlockResult",
   "net.minecraft.core.QuartPos",
@@ -51,16 +47,20 @@
   "net.minecraft.util.valueproviders.IntProviders",
   "net.minecraft.world.attribute.EnvironmentAttributeMap.Builder",
   "net.minecraft.world.entity.Display",
+  "net.minecraft.world.entity.Display.BlockDisplay",
+  "net.minecraft.world.entity.monster.Guardian",
+  "net.minecraft.world.entity.monster.zombie.Drowned",
+  "net.minecraft.world.entity.vehicle.boat.AbstractBoat",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
-  "file": "StreamsReflowing-26.3-fabric-2.17.3.jar",
-  "published": "2026-11-13"
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "StreamsReflowing-26.3-fabric-2.17.5.jar",
+  "published": "2026-11-15"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -79,6 +79,7 @@
  "entrypoints": {
   "main": 1,
   "client": 1,
+  "server": 1,
   "modmenu": 1
  },
  "mixins": true,
@@ -92,5 +93,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
  },
- "lacks": 362
+ "lacks": 281
 }

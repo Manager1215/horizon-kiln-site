@@ -10,8 +10,6 @@
  "description": "Adds emerald gear & proficiency (items grow with use). Upgrade Forge swaps materials (stone→iron). K-key UI & Binding Stones/Powder track items with timestamps. Craft bound items free every 24h to prevent loss. Early testing.",
  "needs": [
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.BeforeSave",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
@@ -25,8 +23,6 @@
   "net.minecraft.nbt.NbtAccounter",
   "net.minecraft.server.PlayerAdvancements",
   "net.minecraft.server.ServerAdvancementManager",
-  "net.minecraft.tags.ItemTags",
-  "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.SimpleMenuProvider",
   "net.minecraft.world.entity.animal.cow.MushroomCow",
   "net.minecraft.world.entity.animal.golem.SnowGolem",
@@ -35,7 +31,6 @@
   "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
   "net.minecraft.world.food.FoodProperties",
   "net.minecraft.world.food.FoodProperties.Builder",
-  "net.minecraft.world.inventory.MenuType.MenuSupplier",
   "net.minecraft.world.inventory.ResultContainer",
   "net.minecraft.world.inventory.ResultSlot",
   "net.minecraft.world.item.CrossbowItem",
@@ -43,20 +38,25 @@
   "net.minecraft.world.item.component.Consumable",
   "net.minecraft.world.item.component.Consumable.Builder",
   "net.minecraft.world.item.component.Consumables",
-  "net.minecraft.world.item.component.ItemLore",
   "net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect",
-  "net.minecraft.world.level.storage.LevelResource",
   "net.minecraft.world.phys.EntityHitResult",
   "ServerLifecycleEvents.BEFORE_SAVE",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "and 58 more"
+  "GuiGraphicsExtractor.setTooltipForNextFrame()",
+  "DataComponents.CONSUMABLE",
+  "DataComponents.DAMAGE",
+  "DataComponents.FOOD",
+  "DataComponents.MAX_DAMAGE",
+  "NbtIo.readCompressed()",
+  "MinecraftServer.getAdvancements()",
+  "MinecraftServer.registryAccess()",
+  "and 18 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "some_interesting-26.3-beta-0.3.3.jar",
   "published": "2026-09-29"
  },
@@ -90,5 +90,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 154
+ "lacks": 58
 }

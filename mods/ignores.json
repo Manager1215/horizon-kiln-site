@@ -10,12 +10,14 @@
  "description": "A simple drop-in solution to allow players to ignore other players. This exists because the vanilla mute won't work on NoChatReports servers.",
  "needs": [
   "Mixin: 1 point inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "net.minecraft.network.chat.OutgoingChatMessage",
-  "net.minecraft.network.chat.PlayerChatMessage",
   "net.minecraft.server.commands.MsgCommand",
   "net.minecraft.server.players.CachedUserNameToIdResolver",
   "ListTag.add()",
+  "PlayerChatMessage.decoratedContent()",
+  "PlayerChatMessage.hasExpiredServer()",
+  "PlayerChatMessage.hasSignature()",
+  "PlayerChatMessage.isFullyFiltered()",
   "MinecraftServer.getDataStorage()",
   "MinecraftServer.logChatMessage()",
   "MinecraftServer.overworld()",
@@ -25,12 +27,12 @@
   "NameAndId.<init>()",
   "PlayerList.CHAT_FILTERED_FULL"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "panda-ignore-1.2.1+26.3.jar",
   "published": "2026-10-19"
  },
@@ -62,5 +64,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes"
  },
- "lacks": 14
+ "lacks": 16
 }

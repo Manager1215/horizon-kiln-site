@@ -1,0 +1,58 @@
+{
+ "id": "minefy",
+ "name": "Minefy",
+ "version": "1.0.0+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/minefy",
+ "author": "TOP_G2026",
+ "description": "Play Spotify tracks on jukeboxes. Server-authoritative with a vanilla fallback, safe for unmodded clients, singleplayer compatible.",
+ "needs": [
+  "net.minecraft.world.item.component.CustomModelData",
+  "BlockPos.containing()",
+  "BlockPos.toShortString()",
+  "DataComponents.CUSTOM_MODEL_DATA",
+  "ByteBufCodecs.stringUtf8()"
+ ],
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "minefy-1.0.0+26.3.jar",
+  "published": "2026-10-15"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1,
+  "fabric-datagen": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
+ },
+ "lacks": 5
+}

@@ -9,10 +9,8 @@
  "author": "thflyer",
  "description": "Build servers. Store millions. Access from anywhere.",
  "needs": [
-  "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
@@ -20,7 +18,6 @@
   "net.minecraft.core.UUIDUtil",
   "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
   "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
-  "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.entity.npc.villager.VillagerProfession",
   "net.minecraft.world.inventory.ContainerData",
   "net.minecraft.world.inventory.SimpleContainerData",
@@ -36,7 +33,6 @@
   "net.minecraft.world.level.storage.loot.providers.number.ints.ConstantValue",
   "net.minecraft.world.level.storage.loot.providers.number.ints.UniformGenerator",
   "BiomeModifications.addFeature()",
-  "ServerLifecycleEvents.SERVER_STOPPING",
   "Screen.getTooltipFromItem()",
   "AbstractContainerScreen.containerTick()",
   "AbstractContainerScreen.extractContents()",
@@ -45,18 +41,22 @@
   "NonNullList.iterator()",
   "NonNullList.stream()",
   "NonNullList.subList()",
-  "DataComponentPatch.CODEC",
   "DataComponents.CONTAINER_LOOT",
   "BuiltInRegistries.FEATURE_TYPE",
   "BuiltInRegistries.PLACEMENT_MODIFIER_TYPE",
-  "and 45 more"
+  "BuiltInRegistries.TRIGGER_TYPES",
+  "BuiltInRegistries.VILLAGER_PROFESSION",
+  "Registries.POINT_OF_INTEREST_TYPE",
+  "Registries.TRADE_SET",
+  "Registries.VILLAGER_PROFESSION",
+  "and 30 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "cloudstorage-1.0.4.jar",
   "published": "2026-09-19"
  },
@@ -90,5 +90,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
  },
- "lacks": 85
+ "lacks": 70
 }

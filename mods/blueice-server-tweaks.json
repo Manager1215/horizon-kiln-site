@@ -1,7 +1,7 @@
 {
  "id": "blueice-server-tweaks",
  "name": "BlueIce Server Tweaks",
- "version": "2.4.4+26.3",
+ "version": "2.4.5+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,10 +9,8 @@
  "author": "BlueIceNeko",
  "description": "A simple mod that adds a few useful server-side features.",
  "needs": [
-  "Mixin: 34 points inside the game's methods",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
+  "Mixin: 35 points inside the game's methods",
   "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
-  "net.minecraft.tags.ItemTags",
   "net.minecraft.world.SimpleMenuProvider",
   "net.minecraft.world.clock.ServerClockManager",
   "net.minecraft.world.entity.ai.gossip.GossipType",
@@ -23,16 +21,13 @@
   "net.minecraft.world.entity.monster.Shulker",
   "net.minecraft.world.entity.monster.piglin.PiglinAi",
   "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
-  "net.minecraft.world.inventory.AnvilMenu",
   "net.minecraft.world.inventory.ContainerLevelAccess",
-  "net.minecraft.world.inventory.CraftingMenu",
   "net.minecraft.world.inventory.EnchantmentMenu",
   "net.minecraft.world.item.ArmorStandItem",
   "net.minecraft.world.item.BoneMealItem",
   "net.minecraft.world.item.CrossbowItem",
   "net.minecraft.world.item.EnderEyeItem",
   "net.minecraft.world.item.ProjectileWeaponItem",
-  "net.minecraft.world.item.component.ItemLore",
   "net.minecraft.world.item.component.LodestoneTracker",
   "net.minecraft.world.item.component.ResolvableProfile",
   "net.minecraft.world.item.component.SuspiciousStewEffects",
@@ -50,15 +45,20 @@
   "net.minecraft.world.level.block.RespawnAnchorBlock",
   "net.minecraft.world.level.block.SeaPickleBlock",
   "net.minecraft.world.level.block.StemBlock",
-  "and 69 more"
+  "net.minecraft.world.level.block.StrawBedBlock",
+  "net.minecraft.world.level.block.TripWireHookBlock",
+  "net.minecraft.world.level.block.WeatheringCopper",
+  "net.minecraft.world.level.block.entity.BeaconBlockEntity",
+  "net.minecraft.world.level.block.entity.ChiseledBookShelfBlockEntity",
+  "and 52 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
-  "file": "BlueIceServerTweaks-2.4.4+26.3.jar",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "BlueIceServerTweaks-2.4.5+26.3.jar",
   "published": "2026-11-14"
  },
  "reports": {
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@wrap-method and @wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 136
+ "lacks": 92
 }

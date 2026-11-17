@@ -11,10 +11,6 @@
  "needs": [
   "an access widener",
   "Mixin: 24 points inside the game's methods",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.minecraft.CrashReport",
-  "net.minecraft.CrashReportCategory",
   "net.minecraft.server.dedicated.ServerWatchdog",
   "net.minecraft.server.level.ChunkHolder",
   "net.minecraft.server.level.ChunkHolder.PlayerProvider",
@@ -51,14 +47,18 @@
   "net.minecraft.world.entity.ai.goal.GoalSelector",
   "net.minecraft.world.entity.ai.gossip.GossipContainer",
   "net.minecraft.world.entity.ai.memory.MemoryModuleType",
-  "and 64 more"
+  "net.minecraft.world.entity.ai.memory.MemoryStatus",
+  "net.minecraft.world.entity.ai.memory.NearestVisibleLivingEntities",
+  "net.minecraft.world.entity.ai.navigation.PathNavigation",
+  "net.minecraft.world.entity.ai.sensing.NearestItemSensor",
+  "and 57 more"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "async-fabric-0.2.5+alpha-26.3.jar",
   "published": "2026-10-04"
  },
@@ -91,5 +91,5 @@
   "class": "restart",
   "why": "@overwrite and @redirect and @wrap-method and @wrap-operation into the game's classes; runs threads of its own"
  },
- "lacks": 156
+ "lacks": 145
 }

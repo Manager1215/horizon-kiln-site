@@ -1,0 +1,58 @@
+{
+ "id": "chronos-rewards",
+ "name": "Chronos Rewards",
+ "version": "1.1.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/chronos-rewards",
+ "author": "TOP_G2026",
+ "description": "Playtime and daily rewards that you can customize",
+ "needs": [
+  "net.minecraft.network.protocol.game.ServerboundChatCommandPacket",
+  "net.minecraft.network.protocol.game.ServerboundChatCommandSignedPacket",
+  "net.minecraft.network.protocol.game.ServerboundContainerClickPacket",
+  "MinecraftServer.createCommandSourceStack()",
+  "MinecraftServer.overworld()",
+  "ServerPlayer.hasDisconnected()",
+  "Items.STAINED_GLASS_PANE",
+  "SavedDataStorage.scheduleSave()"
+ ],
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "chronos-rewards-1.1.0.jar",
+  "published": "2026-09-27"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 8
+}

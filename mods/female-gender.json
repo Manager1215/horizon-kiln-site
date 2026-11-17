@@ -11,16 +11,12 @@
  "needs": [
   "an access widener",
   "Mixin: 5 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.exceptions.AuthenticationException",
   "com.mojang.authlib.minecraft.SessionService",
   "com.mojang.authlib.services.MinecraftServicesDiscoveryService",
   "com.mojang.authlib.services.MinecraftServicesSessionService",
   "com.mojang.authlib.services.response.discovery.Service",
-  "com.mojang.blaze3d.platform.cursor.CursorType",
-  "com.mojang.blaze3d.platform.cursor.CursorTypes",
   "com.mojang.util.InstantTypeAdapter",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
   "net.fabricmc.fabric.api.client.networking.v1.ClientConfigurationConnectionEvents",
   "net.fabricmc.fabric.api.client.networking.v1.ClientConfigurationConnectionEvents.Init",
   "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback",
@@ -29,9 +25,7 @@
   "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents.StartTracking",
   "net.fabricmc.fabric.api.networking.v1.ServerConfigurationNetworking.ConfigurationPacketHandler",
   "net.fabricmc.fabric.api.networking.v1.ServerConfigurationNetworking.Context",
-  "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.minecraft.Optionull",
-  "net.minecraft.SharedConstants",
   "net.minecraft.TracingExecutor",
   "net.minecraft.client.entity.ClientMannequin",
   "net.minecraft.client.gui.ActiveTextCollector",
@@ -39,7 +33,6 @@
   "net.minecraft.client.gui.components.WidgetTooltipHolder",
   "net.minecraft.client.gui.components.debug.DebugScreenDisplayer",
   "net.minecraft.client.gui.components.debug.DebugScreenEntry",
-  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.model.HumanoidModel",
   "net.minecraft.client.model.geom.builders.CubeDeformation",
   "net.minecraft.client.model.geom.builders.MeshDefinition",
@@ -51,14 +44,21 @@
   "net.minecraft.client.renderer.entity.layers.RenderLayer",
   "net.minecraft.client.renderer.entity.player.AvatarRenderer",
   "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
+  "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
+  "net.minecraft.client.resources.model.EquipmentClientInfo",
+  "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
+  "net.minecraft.commands.arguments.StringRepresentableArgument",
+  "net.minecraft.core.UUIDUtil",
+  "net.minecraft.data.PackOutput.PathProvider",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "Female-Gender-Mod-5.0.0+mc26.3-fabric.jar",
   "published": "2026-09-30"
  },
@@ -100,5 +100,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
  },
- "lacks": 202
+ "lacks": 168
 }

@@ -9,23 +9,15 @@
  "author": "Kaworru",
  "description": "The easy mob farm is a server friendly way to capture different kind of animals and mobs to gather their loot. This mod provides several catching items and mob farms to make it more entertaining.",
  "needs": [
-  "com.mojang.authlib.GameProfile",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.loader.impl.FabricLoaderImpl",
-  "net.minecraft.client.StringSplitter",
-  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperties",
   "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperty",
   "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperties",
   "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty",
   "net.minecraft.core.UUIDUtil",
   "net.minecraft.server.PlayerAdvancements",
-  "net.minecraft.tags.ItemTags",
   "net.minecraft.util.ByIdMap",
   "net.minecraft.util.ByIdMap.OutOfBoundsStrategy",
-  "net.minecraft.world.SimpleContainer",
-  "net.minecraft.world.entity.EntityDimensions",
   "net.minecraft.world.entity.animal.bee.Bee",
   "net.minecraft.world.entity.animal.chicken.Chicken",
   "net.minecraft.world.entity.animal.chicken.ChickenVariants",
@@ -49,14 +41,22 @@
   "net.minecraft.world.entity.npc.villager.Villager",
   "net.minecraft.world.entity.npc.villager.VillagerData",
   "net.minecraft.world.entity.npc.villager.VillagerType",
-  "and 70 more"
+  "net.minecraft.world.entity.raid.Raid",
+  "net.minecraft.world.inventory.ContainerData",
+  "net.minecraft.world.inventory.SimpleContainerData",
+  "net.minecraft.world.item.ItemUseAnimation",
+  "net.minecraft.world.item.component.CustomModelData",
+  "org.apache.logging.log4j.core.LoggerContext",
+  "org.apache.logging.log4j.core.config.Configuration",
+  "org.apache.logging.log4j.core.config.LoggerConfig",
+  "and 60 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "easy_mob_farm-fabric-26.3-11.1.0.jar",
   "published": "2026-10-31"
  },
@@ -73,5 +73,5 @@
   "class": "restart",
   "why": "@modify-arg Kiln doesn't guard; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 241
+ "lacks": 140
 }

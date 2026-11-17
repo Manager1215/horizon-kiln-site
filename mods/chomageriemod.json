@@ -10,7 +10,6 @@
  "description": "Adding functionality to the server",
  "needs": [
   "Mixin: 4 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionEvents.EndExtraction",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.BeforeGizmos",
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
@@ -20,7 +19,6 @@
   "net.minecraft.server.ServerScoreboard",
   "net.minecraft.server.level.ServerPlayerGameMode",
   "net.minecraft.server.packs.repository.PackRepository",
-  "net.minecraft.tags.ItemTags",
   "net.minecraft.world.item.DebugStickItem",
   "net.minecraft.world.item.component.DebugStickState",
   "net.minecraft.world.level.block.FarmlandBlock",
@@ -33,8 +31,6 @@
   "LevelExtractionEvents.END_EXTRACTION",
   "LevelRenderContext.levelRenderer()",
   "LevelRenderEvents.BEFORE_GIZMOS",
-  "ChatFormatting.getByCode()",
-  "ClientPacketListener.getConnection()",
   "ClientPacketListener.send()",
   "LocalPlayer.isWithinBlockInteractionRange()",
   "LocalPlayer.permissions()",
@@ -42,22 +38,26 @@
   "CameraRenderState.cullFrustum",
   "LevelRenderState.getData()",
   "LevelRenderState.setData()",
-  "Holder.getRegisteredName()",
   "DataComponents.DEBUG_STICK_STATE",
   "BuiltInRegistries.GAME_RULE",
-  "Gizmos.cuboid()",
   "Connection.disconnect()",
   "RegistryFriendlyByteBuf.writeLongArray()",
   "Style.applyLegacyFormat()",
   "MinecraftServer.getPackRepository()",
-  "and 36 more"
+  "MinecraftServer.getScoreboard()",
+  "MinecraftServer.getTickCount()",
+  "MinecraftServer.reloadResources()",
+  "ServerLevel.getGameRules()",
+  "ServerLevel.levelEvent()",
+  "ServerPlayer.getGameProfile()",
+  "and 24 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "chomagerie-1.6.1.jar",
   "published": "2026-10-21"
  },
@@ -92,5 +92,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 89
+ "lacks": 64
 }

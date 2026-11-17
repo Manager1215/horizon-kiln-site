@@ -10,11 +10,7 @@
  "description": "Adds a chunk editor like MCASelector directly ingame! Select chunks by hand or rules (e.g. inhabit time), delete or extract them. Or just see your world in high speed!",
  "needs": [
   "Mixin: 1 point inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.Blaze3D",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.minecraft.SharedConstants",
   "net.minecraft.client.gui.components.PlayerFaceExtractor",
   "net.minecraft.client.gui.components.SpriteIconButton",
   "net.minecraft.client.gui.components.SpriteIconButton.Builder",
@@ -29,8 +25,6 @@
   "net.minecraft.client.gui.screens.worldselection.WorldSelectionList",
   "net.minecraft.client.gui.screens.worldselection.WorldSelectionList.WorldListEntry",
   "net.minecraft.client.renderer.BiomeColors",
-  "net.minecraft.client.renderer.texture.DynamicTexture",
-  "net.minecraft.core.HolderSet.Named",
   "net.minecraft.core.IdMap",
   "net.minecraft.core.LayeredRegistryAccess",
   "net.minecraft.core.UUIDUtil",
@@ -47,17 +41,23 @@
   "net.minecraft.server.WorldLoader.PackConfig",
   "net.minecraft.server.packs.repository.PackRepository",
   "net.minecraft.server.packs.repository.ServerPacksSource",
-  "net.minecraft.server.packs.resources.CloseableResourceManager",
   "net.minecraft.server.packs.resources.MultiPackResourceManager",
   "net.minecraft.tags.TagLoader",
-  "and 78 more"
+  "net.minecraft.tags.TagLoader.ElementLookup",
+  "net.minecraft.util.datafix.DataFixers",
+  "net.minecraft.world.level.EmptyBlockGetter",
+  "net.minecraft.world.level.WorldDataConfiguration",
+  "net.minecraft.world.level.chunk.storage.EntityStorage",
+  "net.minecraft.world.level.chunk.storage.RegionFileStorage",
+  "net.minecraft.world.level.chunk.storage.RegionFileVersion",
+  "and 69 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "chunk-editor-fabric-1.6.0.jar",
   "published": "2026-09-30"
  },
@@ -91,5 +91,5 @@
   "class": "partial",
   "why": "runs threads of its own; has network channels"
  },
- "lacks": 137
+ "lacks": 117
 }

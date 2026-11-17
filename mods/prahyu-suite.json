@@ -10,23 +10,12 @@
  "description": "Quality-of-life tweak suite for Minecraft: freecam, zoom, improved HUD, inventory management, and more, in a single JAR per version.",
  "needs": [
   "Mixin: 8 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.Blaze3D",
-  "com.mojang.blaze3d.platform.TextInputManager",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.AfterTranslucentFeatures",
   "net.minecraft.client.ClientClockManager",
   "net.minecraft.client.ClientClockManager.ClientClockInstance",
-  "net.minecraft.client.gui.screens.inventory.AbstractFurnaceScreen",
-  "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
-  "net.minecraft.client.gui.screens.inventory.BrewingStandScreen",
-  "net.minecraft.client.gui.screens.inventory.ContainerScreen",
-  "net.minecraft.client.gui.screens.inventory.CraftingScreen",
-  "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.gui.screens.inventory.MerchantScreen",
   "net.minecraft.client.gui.screens.inventory.StonecutterScreen",
-  "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
-  "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
   "net.minecraft.client.model.HumanoidModel",
   "net.minecraft.client.model.geom.PartPose",
   "net.minecraft.client.model.geom.builders.CubeDefinition",
@@ -50,14 +39,25 @@
   "net.minecraft.client.renderer.entity.layers.Deadmau5EarsLayer",
   "net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer",
   "net.minecraft.client.renderer.entity.player.AvatarRenderer",
-  "and 80 more"
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
+  "net.minecraft.client.renderer.fog.FogData",
+  "net.minecraft.client.renderer.fog.environment.AtmosphericFogEnvironment",
+  "net.minecraft.client.renderer.fog.environment.LavaFogEnvironment",
+  "net.minecraft.client.renderer.special.PlayerHeadSpecialRenderer",
+  "net.minecraft.client.renderer.state.LightmapRenderState",
+  "net.minecraft.client.resources.DefaultPlayerSkin",
+  "net.minecraft.network.chat.FontDescription",
+  "net.minecraft.network.chat.FontDescription.Resource",
+  "net.minecraft.network.protocol.game.ServerboundSelectTradePacket",
+  "and 70 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "prahyu-suite-26.3-1.0.7.1.jar",
   "published": "2026-11-07"
  },
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; runs threads of its own; has network channels"
  },
- "lacks": 162
+ "lacks": 111
 }

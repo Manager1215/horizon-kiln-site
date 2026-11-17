@@ -10,13 +10,10 @@
  "description": "Sync player data across Minecraft servers using NATS.",
  "needs": [
   "an access widener",
-  "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.AfterSave",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.networking.v1.ServerConfigurationConnectionEvents.Disconnect",
   "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents",
   "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents.Disconnect",
@@ -27,37 +24,29 @@
   "net.minecraft.nbt.NbtAccounter",
   "net.minecraft.server.PlayerAdvancements",
   "net.minecraft.server.network.ServerLoginPacketListenerImpl",
-  "net.minecraft.world.level.storage.LevelResource",
   "org.apache.commons.io.FileUtils",
   "ServerLifecycleEvents.AFTER_SAVE",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerLifecycleEvents.SERVER_STOPPING",
   "ServerConfigurationConnectionEvents.DISCONNECT",
   "NbtIo.read()",
   "NbtIo.readCompressed()",
   "NbtIo.write()",
   "NbtIo.writeCompressed()",
   "NbtUtils.getDataVersion()",
-  "MinecraftServer.execute()",
   "MinecraftServer.getFixerUpper()",
-  "MinecraftServer.getWorldPath()",
   "MinecraftServer.registryAccess()",
-  "ServerPlayer.connection",
   "ServerPlayer.isDeadOrDying()",
-  "ServerPlayer.saveWithoutId()",
   "ServerConfigurationPacketListenerImpl.getOwner()",
   "ServerGamePacketListenerImpl.disconnect()",
   "PlayerList.getPlayerAdvancements()",
   "PlayerList.getPlayerStats()",
-  "ProblemReporter.DISCARDING",
-  "and 1 more"
+  "DataFixTypes.updateToCurrentVersion()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "nats-player-data-bridge-1.0.0-beta.10.jar",
   "published": "2026-09-17"
  },
@@ -89,5 +78,5 @@
   "class": "partial",
   "why": "runs threads of its own"
  },
- "lacks": 41
+ "lacks": 30
 }

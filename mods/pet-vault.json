@@ -9,8 +9,6 @@
  "author": "Creativity0",
  "description": "Store, summon, and manage your tamed pets and mounts from one place.",
  "needs": [
-  "com.mojang.authlib.GameProfile",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
@@ -22,7 +20,6 @@
   "net.minecraft.core.UUIDUtil",
   "net.minecraft.resources.RegistryOps.RegistryInfoLookup",
   "net.minecraft.world.entity.EntityProcessor",
-  "net.minecraft.world.entity.EntitySpawnRequest",
   "net.minecraft.world.entity.ai.Brain",
   "net.minecraft.world.entity.ai.memory.MemoryModuleType",
   "net.minecraft.world.entity.ai.navigation.FlyingPathNavigation",
@@ -30,11 +27,8 @@
   "net.minecraft.world.entity.animal.allay.Allay",
   "net.minecraft.world.entity.animal.equine.AbstractHorse",
   "VertexConsumer.addVertexWith2DPose()",
-  "AttachmentRegistry.create()",
-  "KeyMapping.matches()",
   "Minecraft.getEntityRenderDispatcher()",
   "GuiGraphicsExtractor.entity()",
-  "ScreenRectangle.intersection()",
   "TextureSetup.noTexture()",
   "RenderPipelines.GUI",
   "EntityRenderDispatcher.getRenderer()",
@@ -43,20 +37,26 @@
   "EntityRenderState.boundingBoxWidth",
   "EntityRenderState.shadowPieces",
   "GuiRenderState.addGuiElement()",
-  "Holder.Reference.is()",
   "Component.keybind()",
   "ResourceKey.codec()",
   "ResourceKey.streamCodec()",
-  "MinecraftServer.execute()",
   "MinecraftServer.overworld()",
-  "and 40 more"
+  "ServerLevel.getEntityInAnyDimension()",
+  "ServerLevel.noCollision()",
+  "ServerLevel.sendParticles()",
+  "ServerPlayer.getGameProfile()",
+  "TicketType.PLAYER_LOADING",
+  "SoundEvents.BEACON_DEACTIVATE",
+  "Entity.addTag()",
+  "Entity.discard()",
+  "and 28 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "pet_vault-mc26.3-v1.7.0-fabric.jar",
   "published": "2026-10-24"
  },
@@ -90,5 +90,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
  },
- "lacks": 85
+ "lacks": 68
 }

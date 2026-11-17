@@ -9,7 +9,6 @@
  "author": "ogata-mizuki-99",
  "description": "日本語の説明があります。81-slot private locker for NeoForge 26.x — only the owner can open. Features a 3D skin head display on top.",
  "needs": [
-  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.PropertyMap",
   "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
@@ -23,8 +22,6 @@
   "net.minecraft.client.renderer.blockentity.SkullBlockRenderer",
   "net.minecraft.client.renderer.blockentity.state.SkullBlockRenderState",
   "net.minecraft.server.packs.repository.PackRepository",
-  "net.minecraft.world.SimpleContainer",
-  "net.minecraft.world.flag.FeatureFlags",
   "net.minecraft.world.item.component.ResolvableProfile",
   "net.minecraft.world.level.block.PlayerHeadBlock",
   "net.minecraft.world.level.block.SkullBlock",
@@ -34,6 +31,7 @@
   "net.minecraft.world.level.block.entity.ChestLidController",
   "net.minecraft.world.level.block.entity.SkullBlockEntity",
   "net.minecraft.world.level.block.state.properties.RotationSegment",
+  "GameProfile.properties()",
   "AbstractContainerScreen.extractContents()",
   "Model.setupAnim()",
   "ModelPart.getChild()",
@@ -43,20 +41,22 @@
   "NonNullList.iterator()",
   "DataComponents.PROFILE",
   "Registries.MENU",
-  "MinecraftServer.execute()",
   "MinecraftServer.getPackRepository()",
   "MinecraftServer.reloadResources()",
-  "ServerPlayer.createCommandSourceStack()",
-  "ServerPlayer.drop()",
   "ServerPlayer.getGameProfile()",
-  "and 13 more"
+  "SoundEvents.CHEST_CLOSE",
+  "Player.getProfile()",
+  "Player.preventsBlockDrops()",
+  "Item.Properties.equippableUnswappable()",
+  "ItemStack.limitSize()",
+  "and 6 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "privatechest-fabric-26.3-1.0.1.jar",
   "published": "2026-10-17"
  },
@@ -73,5 +73,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 53
+ "lacks": 46
 }

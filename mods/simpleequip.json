@@ -1,0 +1,92 @@
+{
+ "id": "simpleequip",
+ "name": "SimpleEquip",
+ "version": "1.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/simpleequip",
+ "author": "DimmuOmega",
+ "description": "This mod is a good option for using accessories without constantly filling your inventory, making it easier to use arrows, torches, totems, and elytra, and includes a feature to disable your armor so you can admire your in-game appearance.",
+ "needs": [
+  "an access widener",
+  "Mixin: 2 points inside the game's methods",
+  "net.minecraft.advancements.triggers.CriteriaTriggers",
+  "net.minecraft.advancements.triggers.UsedTotemTrigger",
+  "net.minecraft.client.model.player.PlayerModel",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer",
+  "net.minecraft.client.renderer.entity.layers.RenderLayer",
+  "net.minecraft.client.renderer.entity.layers.WingsLayer",
+  "net.minecraft.client.renderer.entity.player.AvatarRenderer",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
+  "net.minecraft.tags.DamageTypeTags",
+  "net.minecraft.world.item.component.DeathProtection",
+  "net.minecraft.world.item.component.ResolvableProfile",
+  "net.minecraft.world.item.enchantment.EnchantedItemInUse",
+  "net.minecraft.world.level.block.AbstractSkullBlock",
+  "net.minecraft.world.level.block.SkullBlock",
+  "net.minecraft.world.level.block.SkullBlock.Type",
+  "PoseStack.mulPose()",
+  "Axis.YN",
+  "Axis.rotateDegrees()",
+  "Object2IntMap.Entry.getKey()",
+  "ModelPart.translateAndRotate()",
+  "ClientLevel.getOverworldClockTime()",
+  "ItemModelResolver.updateForLiving()",
+  "ItemStackRenderState.clear()",
+  "GuiRenderState.nextStratum()",
+  "DataComponents.DEATH_PROTECTION",
+  "DataComponents.GLIDER",
+  "DataComponents.PROFILE",
+  "Util.getRandom()",
+  "Util.getRandomSafe()",
+  "EquipmentSlot.VALUES",
+  "Slot.setByPlayer()",
+  "ItemStack.nextDamageWillBreak()",
+  "Enchantment.matchingSlot()",
+  "Level.broadcastEntityEvent()",
+  "ValueInput.TypedInputList.iterator()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "SimpleEquip-1.3.jar",
+  "published": "2026-09-30"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1,
+  "lambdynlights:initializer": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; has network channels"
+ },
+ "lacks": 37
+}

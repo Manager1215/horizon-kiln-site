@@ -10,7 +10,6 @@
  "description": "A client-side rendering optimization mod for (Neo)Forge and Fabric, featuring asynchronous culling specifically for integrated graphics (Intel UHD/Iris Xe).",
  "needs": [
   "com.mojang.blaze3d.Blaze3D",
-  "net.minecraft.CrashReport",
   "net.minecraft.client.PreferredGraphicsApi",
   "net.minecraft.client.multiplayer.ClientChunkCache",
   "net.minecraft.client.particle.Particle",
@@ -19,7 +18,6 @@
   "net.minecraft.client.renderer.block.ModelBlockRenderer",
   "net.minecraft.client.renderer.entity.ItemFrameRenderer",
   "net.minecraft.client.renderer.entity.state.ItemFrameRenderState",
-  "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.world.entity.AreaEffectCloud",
   "net.minecraft.world.entity.ambient.AmbientCreature",
   "net.minecraft.world.entity.animal.fish.WaterAnimal",
@@ -27,7 +25,6 @@
   "net.minecraft.world.entity.decoration.ArmorStand",
   "net.minecraft.world.entity.decoration.ItemFrame",
   "net.minecraft.world.entity.monster.Monster",
-  "net.minecraft.world.level.storage.LevelResource",
   "org.lwjgl.BufferUtils",
   "org.lwjgl.opengl.GL",
   "org.lwjgl.opengl.GL11",
@@ -42,21 +39,24 @@
   "org.lwjgl.opengl.GLCapabilities",
   "org.lwjgl.system.MemoryStack",
   "org.lwjgl.system.MemoryUtil",
-  "Minecraft.getSingleplayerServer()",
   "Options.getEffectiveRenderDistance()",
   "Options.preferredGraphicsBackend()",
   "Options.startedCleanly",
   "ClientLevel.getChunkSource()",
   "Frustum.isVisible()",
   "ItemStackRenderState.clear()",
-  "and 13 more"
+  "CameraRenderState.projectionMatrix",
+  "CameraRenderState.viewRotationMatrix",
+  "CameraRenderState.xRot",
+  "CameraRenderState.yRot",
+  "and 3 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "Opticores-v1.1.2.1+26.x.jar",
   "published": "2026-11-12"
  },
@@ -91,5 +91,5 @@
   "class": "partial",
   "why": "runs threads of its own"
  },
- "lacks": 53
+ "lacks": 43
 }

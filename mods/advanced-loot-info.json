@@ -10,9 +10,6 @@
  "description": "EMI/JEI/REI plugin for displaying advanced information about loot tables and villager trades",
  "needs": [
   "an access widener",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.fabric.impl.networking.AbstractChanneledNetworkAddon",
   "net.fabricmc.fabric.impl.recipe.ingredient.builtin.CombinedIngredient",
   "net.fabricmc.fabric.impl.recipe.ingredient.builtin.ComponentsIngredient",
@@ -21,7 +18,6 @@
   "net.minecraft.advancements.predicates.BlockPredicate",
   "net.minecraft.advancements.predicates.DataComponentMatchers",
   "net.minecraft.advancements.predicates.ItemPredicate",
-  "net.minecraft.advancements.predicates.MinMaxBounds.Ints",
   "net.minecraft.advancements.predicates.MobEffectsPredicate",
   "net.minecraft.advancements.predicates.MobEffectsPredicate.MobEffectInstancePredicate",
   "net.minecraft.advancements.predicates.StatePropertiesPredicate",
@@ -30,12 +26,9 @@
   "net.minecraft.advancements.predicates.entity.EntityTypePredicate",
   "net.minecraft.advancements.predicates.entity.PlayerPredicate",
   "net.minecraft.advancements.predicates.entity.PlayerPredicate.AdvancementPredicate",
-  "net.minecraft.core.HolderSet.Direct",
-  "net.minecraft.core.HolderSet.Named",
   "net.minecraft.core.component.predicates.DataComponentPredicate",
   "net.minecraft.core.component.predicates.DataComponentPredicate.AnyValueType",
   "net.minecraft.core.component.predicates.DataComponentPredicate.Type",
-  "net.minecraft.server.packs.resources.PreparableReloadListener.StateKey",
   "net.minecraft.world.entity.ai.attributes.DefaultAttributes",
   "net.minecraft.world.inventory.SlotRange",
   "net.minecraft.world.item.JukeboxSong",
@@ -50,14 +43,21 @@
   "net.minecraft.world.item.trading.TradeCost",
   "net.minecraft.world.item.trading.TradeSet",
   "net.minecraft.world.item.trading.VillagerTrade",
+  "net.minecraft.world.level.storage.loot.IntLimit",
+  "net.minecraft.world.level.storage.loot.IntRangePredicate",
+  "net.minecraft.world.level.storage.loot.LootContext.EntityTarget",
+  "net.minecraft.world.level.storage.loot.entries.AlternativesEntry",
+  "net.minecraft.world.level.storage.loot.entries.CompositeEntryBase",
+  "net.minecraft.world.level.storage.loot.entries.DynamicLoot",
+  "net.minecraft.world.level.storage.loot.entries.EmptyLootItem",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "AdvancedLootInfo-fabric-26.3-2.5.0.jar",
   "published": "2026-10-16"
  },
@@ -95,5 +95,5 @@
   "class": "partial",
   "why": "has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 235
+ "lacks": 175
 }

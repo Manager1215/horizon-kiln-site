@@ -11,18 +11,11 @@
  "needs": [
   "an access widener",
   "Mixin: 52 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking",
   "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking.LoginQueryRequestHandler",
   "net.fabricmc.fabric.api.client.rendering.v1.ClientTooltipComponentCallback",
-  "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
-  "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AllowKeyRelease",
-  "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
-  "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseRelease",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
   "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Leave",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.event.registry.DynamicRegistries",
   "net.fabricmc.fabric.api.event.registry.DynamicRegistries.SyncOption",
   "net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder",
@@ -41,8 +34,6 @@
   "net.fabricmc.fabric.api.resource.v1.DataResourceStore",
   "net.fabricmc.fabric.api.resource.v1.DataResourceStore.Key",
   "net.fabricmc.fabric.api.resource.v1.DataResourceStore.Mutable",
-  "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-  "net.minecraft.SharedConstants",
   "net.minecraft.advancements.CriterionProgress",
   "net.minecraft.advancements.predicates.BlockPredicate",
   "net.minecraft.advancements.predicates.BlockPredicate.Builder",
@@ -51,14 +42,23 @@
   "net.minecraft.advancements.predicates.DistancePredicate",
   "net.minecraft.advancements.predicates.ItemPredicate",
   "net.minecraft.advancements.predicates.LocationPredicate",
+  "net.minecraft.advancements.predicates.LocationPredicate.Builder",
+  "net.minecraft.advancements.predicates.MobEffectsPredicate",
+  "net.minecraft.advancements.predicates.MobEffectsPredicate.Builder",
+  "net.minecraft.advancements.predicates.TagPredicate",
+  "net.minecraft.advancements.predicates.entity.EntityPredicate",
+  "net.minecraft.advancements.predicates.entity.EntityPredicate.Builder",
+  "net.minecraft.advancements.predicates.entity.EntitySubPredicate",
+  "net.minecraft.advancements.predicates.entity.PlayerPredicate",
+  "net.minecraft.advancements.predicates.entity.PlayerPredicate.StatMatcher",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "bingo-1.1.26.jar",
   "published": "2026-11-03"
  },
@@ -93,5 +93,5 @@
   "class": "restart",
   "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
  },
- "lacks": 443
+ "lacks": 340
 }

@@ -10,13 +10,10 @@
  "description": "Free your pets from the curse of having to sit, let 'em roam!",
  "needs": [
   "Mixin: 6 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
   "net.fabricmc.fabric.api.client.networking.v1.ClientConfigurationConnectionEvents",
   "net.fabricmc.fabric.api.client.networking.v1.ClientConfigurationConnectionEvents.Start",
   "net.fabricmc.fabric.api.networking.v1.ServerConfigurationNetworking.ConfigurationPacketHandler",
   "net.fabricmc.fabric.api.networking.v1.ServerConfigurationNetworking.Context",
-  "net.minecraft.core.HolderSet.Named",
   "net.minecraft.tags.InstrumentTags",
   "net.minecraft.world.entity.ai.Brain",
   "net.minecraft.world.entity.ai.goal.FollowMobGoal",
@@ -34,7 +31,6 @@
   "net.minecraft.world.entity.animal.parrot.Parrot.ParrotWanderGoal",
   "net.minecraft.world.item.Instrument",
   "net.minecraft.world.item.InstrumentItem",
-  "AttachmentRegistry.create()",
   "ClientConfigurationNetworking.canSend()",
   "ClientConfigurationNetworking.send()",
   "ServerConfigurationNetworking.registerGlobalReceiver()",
@@ -42,22 +38,26 @@
   "CommandSourceStack.registryAccess()",
   "SharedSuggestionProvider.suggestResource()",
   "BlockPos.betweenClosed()",
-  "BlockPos.distSqr()",
-  "BlockPos.MutableBlockPos.set()",
-  "BlockPos.MutableBlockPos.set()",
   "BlockPos.MutableBlockPos.setWithOffset()",
-  "Holder.getRegisteredName()",
-  "Registry.get()",
-  "RegistryAccess.lookupOrThrow()",
   "Registries.INSTRUMENT",
-  "and 25 more"
+  "ServerLevel.getEntities()",
+  "ServerLevel.getEntity()",
+  "ServerLevel.sendParticles()",
+  "Util.shuffle()",
+  "Entity.getY()",
+  "Entity.hasCustomName()",
+  "EntityReference.getUUID()",
+  "LivingEntity.<init>()",
+  "LivingEntity.getBrain()",
+  "PathfinderMob.getAirSupply()",
+  "and 9 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "indypets-1.5.8-26.3.jar",
   "published": "2026-11-11"
  },
@@ -91,5 +91,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); has network channels"
  },
- "lacks": 65
+ "lacks": 49
 }

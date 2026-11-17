@@ -11,9 +11,7 @@
  "needs": [
   "an access widener",
   "Mixin: 1 point inside the game's methods",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.minecraft.util.BitStorage",
-  "net.minecraft.world.flag.FeatureFlags",
   "net.minecraft.world.level.block.BaseRailBlock",
   "net.minecraft.world.level.block.PoweredRailBlock",
   "net.minecraft.world.level.block.SupportType",
@@ -23,17 +21,14 @@
   "net.minecraft.world.level.redstone.CollectingNeighborUpdater",
   "net.minecraft.world.level.redstone.CollectingNeighborUpdater.NeighborUpdates",
   "net.minecraft.world.level.redstone.NeighborUpdater",
-  "ServerLifecycleEvents.SERVER_STOPPING",
   "BlockPos.asLong()",
   "BlockPos.getX()",
   "BlockPos.getY()",
   "BlockPos.getZ()",
-  "BlockPos.MutableBlockPos.set()",
-  "BlockPos.MutableBlockPos.set()",
   "SectionPos.asLong()",
-  "MinecraftServer.execute()",
   "FullChunkStatus.isOrAfter()",
   "FeatureFlagSet.contains()",
+  "FeatureFlags.REDSTONE_EXPERIMENTS",
   "Level.enabledFeatures()",
   "Level.getMaxY()",
   "Level.getMinY()",
@@ -43,22 +38,24 @@
   "Level.neighborUpdater",
   "Level.updateNeighborsAtExceptFromFacing()",
   "Block.hasDynamicShape()",
-  "Blocks.ACTIVATOR_RAIL",
-  "Blocks.POWERED_RAIL",
   "BlockState.getDirectSignal()",
   "BlockState.getSignal()",
   "BlockState.hasAnalogOutputSignal()",
   "BlockState.isFaceSturdy()",
   "BlockState.isRedstoneConductor()",
   "BlockState.isSignalSource()",
-  "and 10 more"
+  "BlockState.updateIndirectNeighbourShapes()",
+  "BlockState.updateNeighbourShapes()",
+  "LevelChunk.getFullStatus()",
+  "LevelChunk.markUnsaved()",
+  "Orientation.withFront()"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "railoptimization-2.5-snapshot.1+mc26.1.2-fabric.jar",
   "published": "2026-10-14"
  },
@@ -89,5 +86,5 @@
   "class": "restart",
   "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own"
  },
- "lacks": 50
+ "lacks": 38
 }

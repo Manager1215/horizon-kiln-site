@@ -11,7 +11,6 @@
  "needs": [
   "an access widener",
   "Mixin: 10 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.math.Transformation",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin.Context",
@@ -25,15 +24,10 @@
   "net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
-  "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
   "net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRenderHandler",
   "net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariantAttributeHandler",
-  "net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariantAttributes",
   "net.minecraft.IdentifierException",
-  "net.minecraft.SharedConstants",
   "net.minecraft.advancements.triggers.ConsumeItemTrigger",
   "net.minecraft.advancements.triggers.CriteriaTriggers",
   "net.minecraft.client.color.item.ItemTintSource",
@@ -51,14 +45,20 @@
   "net.minecraft.client.multiplayer.ClientChunkCache",
   "net.minecraft.client.multiplayer.ClientChunkCache.Storage",
   "net.minecraft.client.particle.Particle",
+  "net.minecraft.client.particle.ParticleEngine",
+  "net.minecraft.client.particle.ParticleProvider",
+  "net.minecraft.client.particle.SimpleAnimatedParticle",
+  "net.minecraft.client.particle.SingleQuadParticle",
+  "net.minecraft.client.particle.SingleQuadParticle.FacingCameraMode",
+  "net.minecraft.client.particle.SingleQuadParticle.Layer",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "Steam_Rails-1.7.3.3+fly-mc26.3.jar",
   "published": "2026-11-09"
  },
@@ -95,5 +95,5 @@
   "class": "restart",
   "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
  },
- "lacks": 529
+ "lacks": 425
 }

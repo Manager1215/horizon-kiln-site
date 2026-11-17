@@ -10,7 +10,6 @@
  "description": "Fabric client for BoomSMP. Terrain claim map, translucent borders, prices, HUD and permission-based tools. Requires the compatible server bridge.",
  "needs": [
   "Mixin: 7 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
   "com.mojang.blaze3d.Blaze3D",
@@ -22,15 +21,10 @@
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionEvents.EndExtraction",
-  "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
-  "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseScroll",
   "net.fabricmc.fabric.api.client.screen.v1.Screens",
-  "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-  "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
   "net.fabricmc.loader.api.metadata.CustomValue",
   "net.fabricmc.loader.api.metadata.ModOrigin",
   "net.fabricmc.loader.api.metadata.ModOrigin.Kind",
-  "net.minecraft.CrashReport",
   "net.minecraft.client.GameNarrator",
   "net.minecraft.client.model.HumanoidModel",
   "net.minecraft.client.model.HumanoidModel.ArmPose",
@@ -50,14 +44,20 @@
   "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
   "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
   "net.minecraft.client.renderer.entity.state.ParrotRenderState",
-  "and 80 more"
+  "net.minecraft.client.renderer.entity.state.PhantomRenderState",
+  "net.minecraft.client.renderer.entity.state.SquidRenderState",
+  "net.minecraft.client.renderer.extract.LevelExtractor",
+  "net.minecraft.network.chat.FontDescription",
+  "net.minecraft.network.chat.FontDescription.Resource",
+  "net.minecraft.world.entity.EntitySelector",
+  "and 78 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "boommod-0.2.0+26.3.jar",
   "published": "2026-10-26"
  },
@@ -91,5 +91,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; runs threads of its own; has network channels"
  },
- "lacks": 183
+ "lacks": 158
 }

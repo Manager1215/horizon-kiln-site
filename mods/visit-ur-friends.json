@@ -9,8 +9,6 @@
  "author": "lutziano8",
  "description": "Visit friends without a server: throw a Destination Book into a Nether portal and step through to join your friend's singleplayer world.",
  "needs": [
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.minecraft.client.gui.screens.ConnectScreen",
   "net.minecraft.client.gui.screens.GenericMessageScreen",
   "net.minecraft.client.gui.screens.worldselection.SelectWorldScreen",
@@ -24,23 +22,16 @@
   "net.minecraft.world.level.block.entity.SignBlockEntity",
   "net.minecraft.world.level.block.entity.SignText",
   "net.minecraft.world.level.block.entity.SignText.Mutable",
-  "net.minecraft.world.level.storage.LevelResource",
   "net.minecraft.world.level.storage.LevelStorageSource.LevelDirectory",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerLifecycleEvents.SERVER_STOPPING",
   "Minecraft.createWorldOpenFlows()",
   "Minecraft.getLevelSource()",
-  "Minecraft.getSingleplayerServer()",
-  "ClientPacketListener.getConnection()",
   "Direction.get()",
   "ListTag.add()",
   "NbtIo.readCompressed()",
   "Connection.disconnect()",
   "ByteBufCodecs.compoundTagCodec()",
-  "MinecraftServer.execute()",
   "MinecraftServer.getAllLevels()",
   "MinecraftServer.getTickCount()",
-  "MinecraftServer.getWorldPath()",
   "MinecraftServer.isSingleplayerOwner()",
   "MinecraftServer.publishServer()",
   "MinecraftServer.setUsesAuthentication()",
@@ -49,14 +40,20 @@
   "ServerPlayer.registryAccess()",
   "ServerPlayer.setPortalCooldown()",
   "ServerPlayer.teleportTo()",
-  "and 14 more"
+  "ItemEntity.discard()",
+  "ItemEntity.getItem()",
+  "LevelStorageSource.createAccess()",
+  "LevelStorageSource.getBackupPath()",
+  "LevelStorageSource.getLevelPath()",
+  "LevelStorageSource.LevelStorageAccess.getLevelDirectory()",
+  "LevelStorageSource.LevelStorageAccess.hasWorldData()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "visiturfriends-0.3.0+26.3.jar",
   "published": "2026-10-21"
  },
@@ -89,5 +86,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 54
+ "lacks": 38
 }

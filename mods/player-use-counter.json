@@ -1,0 +1,91 @@
+{
+ "id": "player-use-counter",
+ "name": "Player Use Counter",
+ "version": "1.10.3+mc26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/player-use-counter",
+ "author": "Invisiblezappie",
+ "description": "Tracks observed golden apple, pearl, totem and cobweb use by other players, with configurable labels and duel resource alerts.",
+ "needs": [
+  "net.minecraft.client.renderer.entity.player.AvatarRenderer",
+  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.renderer.item.CuboidItemModelWrapper",
+  "net.minecraft.world.entity.EntityEvent",
+  "MultiPlayerGameMode.canHurtPlayer()",
+  "LocalPlayer.getAbsorptionAmount()",
+  "LocalPlayer.isAlive()",
+  "EntityRenderState.boundingBoxHeight",
+  "EntityRenderState.distanceToCameraSq",
+  "EntityRenderState.isInvisible",
+  "EntityRenderState.nameTagAttachment",
+  "EntityRenderState.scoreText",
+  "ItemModelResolver.updateForLiving()",
+  "CameraRenderState.orientation",
+  "ModelManager.getItemModel()",
+  "ClientboundAddEntityPacket.getData()",
+  "ClientboundAddEntityPacket.getType()",
+  "ClientboundAddEntityPacket.getUUID()",
+  "ClientboundAddEntityPacket.getX()",
+  "ClientboundAddEntityPacket.getY()",
+  "ClientboundAddEntityPacket.getZ()",
+  "ClientboundDamageEventPacket.getSource()",
+  "ClientboundEntityEventPacket.getEntity()",
+  "ClientboundEntityEventPacket.getEventId()",
+  "ClientboundSetEquipmentPacket.getEntity()",
+  "ClientboundSetEquipmentPacket.getSlots()",
+  "EntityTypes.ENDER_PEARL",
+  "Player.deathTime",
+  "Player.getGameProfile()",
+  "Player.getTicksUsingItem()",
+  "Player.getUseItem()",
+  "Player.getUsedItemHand()",
+  "Player.isAlive()",
+  "Player.isDeadOrDying()",
+  "Player.isUsingItem()",
+  "ItemStack.getUseDuration()",
+  "ItemStack.hasFoil()",
+  "AABB.clip()",
+  "AABB.contains()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "player-use-counter-1.10.3+mc26.3.jar",
+  "published": "2026-10-16"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 39
+}

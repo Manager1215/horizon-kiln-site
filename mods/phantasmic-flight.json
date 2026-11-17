@@ -10,9 +10,6 @@
  "description": "Early game flight via phantom corpses",
  "needs": [
   "Mixin: 12 points inside the game's methods",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
   "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityFeatureRenderEvents",
@@ -46,18 +43,21 @@
   "net.minecraft.client.renderer.entity.state.AvatarRenderState",
   "net.minecraft.world.entity.monster.Phantom",
   "net.minecraft.world.entity.projectile.ProjectileUtil",
-  "net.minecraft.world.item.FireworkRocketItem",
   "net.minecraft.world.level.NaturalSpawner",
   "net.minecraft.world.level.block.AbstractBedBlock",
-  "AttachmentRegistry.create()",
-  "and 39 more"
+  "Model.setupAnim()",
+  "EntityModelSet.bakeLayer()",
+  "ModelPart.getChild()",
+  "EntityRendererProvider.Context.getModelSet()",
+  "BlockPos.east()",
+  "and 21 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "phantomfall-1.3.3+mc26.3.jar",
   "published": "2026-09-15"
  },
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
  },
- "lacks": 79
+ "lacks": 61
 }

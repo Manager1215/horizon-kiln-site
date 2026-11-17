@@ -1,7 +1,7 @@
 {
  "id": "minecraft-sync",
  "name": "MC-Sync",
- "version": "2.2.17+26.3-fabric",
+ "version": "2.2.18+26.3-fabric",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,20 +10,13 @@
  "description": "Two-way chat between your Minecraft server and a Discord channel, plus server status, whitelist and alerts. No open port needed. Companion plugin for the Minecraft Sync Discord bot.",
  "needs": [
   "Mixin: 1 point inside the game's methods",
-  "com.mojang.blaze3d.platform.TextInputManager",
-  "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
-  "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AllowKeyPress",
-  "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents",
-  "net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents.AllowMouseClick",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
+  "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
   "net.fabricmc.loader.api.metadata.ModOrigin",
   "net.fabricmc.loader.api.metadata.ModOrigin.Kind",
-  "net.minecraft.client.StringSplitter",
   "net.minecraft.client.gui.Font.PreparedText",
   "net.minecraft.client.gui.Font.Provider",
   "net.minecraft.client.gui.components.ChatComponent.DisplayMode",
@@ -31,9 +24,6 @@
   "net.minecraft.client.gui.components.ChatComponent.DrawingFocusedGraphicsAccess",
   "net.minecraft.client.multiplayer.chat.ChatListener",
   "net.minecraft.client.multiplayer.chat.GuiMessage.Line",
-  "net.minecraft.client.renderer.texture.DynamicTexture",
-  "net.minecraft.network.chat.ComponentSerialization",
-  "net.minecraft.network.chat.PlayerChatMessage",
   "net.minecraft.network.syncher.EntityDataAccessor",
   "net.minecraft.server.level.ServerPlayerGameMode",
   "net.minecraft.world.entity.Display",
@@ -43,23 +33,33 @@
   "net.minecraft.world.entity.decoration.ArmorStand",
   "net.minecraft.world.entity.decoration.HangingEntity",
   "net.minecraft.world.entity.decoration.ItemFrame",
-  "net.minecraft.world.item.component.DyedItemColor",
   "net.minecraft.world.item.equipment.trim.ArmorTrim",
   "org.lwjgl.system.MemoryUtil",
   "JsonParseException.getMessage()",
-  "NativeImage.format()",
-  "NativeImage.getHeight()",
   "NativeImage.getPointer()",
-  "and 56 more"
+  "SamplerCache.getClampToEdge()",
+  "ModContainer.getOrigin()",
+  "Options.chatLineSpacing()",
+  "Options.chatOpacity()",
+  "Options.chatScale()",
+  "Options.chatVisibility()",
+  "Options.chatWidth()",
+  "Font.<init>()",
+  "Font.prepareText()",
+  "Gui.chatListener()",
+  "ChatComponent.getWidth()",
+  "EditBox.getScreenX()",
+  "ConfirmLinkScreen.confirmLinkNow()",
+  "and 24 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
-  "file": "mc-sync-fabric-26.3-2.2.17.jar",
-  "published": "2026-11-12"
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "mc-sync-fabric-26.3-2.2.18.jar",
+  "published": "2026-11-15"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -90,5 +90,5 @@
   "class": "partial",
   "why": "runs threads of its own; has network channels"
  },
- "lacks": 99
+ "lacks": 64
 }

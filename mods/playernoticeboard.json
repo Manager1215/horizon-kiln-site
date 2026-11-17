@@ -10,7 +10,6 @@
  "description": "A mod adding a notice board that allow players to create quests for others.",
  "needs": [
   "an access widener",
-  "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
@@ -23,12 +22,8 @@
   "net.minecraft.client.model.geom.builders.MeshDefinition",
   "net.minecraft.client.model.geom.builders.PartDefinition",
   "net.minecraft.core.UUIDUtil",
-  "net.minecraft.world.SimpleContainer",
-  "net.minecraft.world.flag.FeatureFlags",
-  "net.minecraft.world.inventory.MenuType.MenuSupplier",
   "PoseStack.mulPose()",
   "PoseStack.Pose.pose()",
-  "Minecraft.canInterruptScreen()",
   "Minecraft.getSkinManager()",
   "AbstractContainerScreen.extractSlot()",
   "AbstractContainerScreen.slotClicked()",
@@ -42,22 +37,23 @@
   "DefaultedRegistry.forEach()",
   "Registries.JUKEBOX_SONG",
   "ByteBufCodecs.fromCodecWithRegistries()",
-  "MinecraftServer.execute()",
   "MinecraftServer.getTickCount()",
   "MinecraftServer.overworld()",
   "ServerPlayer.getGameProfile()",
   "ServerPlayer.getLastHurtByPlayer()",
   "ServerPlayer.getLastHurtByPlayerMemoryTime()",
   "Container.startOpen()",
-  "MenuType.<init>()",
-  "and 4 more"
+  "Item.isEnabled()",
+  "Item.Properties.jukeboxPlayable()",
+  "Level.addFreshEntity()",
+  "BlockState.getMenuProvider()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "contrats-1.2-26.3.jar",
   "published": "2026-11-02"
  },
@@ -91,5 +87,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 44
+ "lacks": 37
 }

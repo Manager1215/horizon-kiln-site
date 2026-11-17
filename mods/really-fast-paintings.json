@@ -9,7 +9,6 @@
  "author": "awkwardusername",
  "description": "Block-backed paintings for Minecraft on Fabric.",
  "needs": [
-  "net.minecraft.data.AtlasIds",
   "net.minecraft.server.TickTask",
   "net.minecraft.tags.PaintingVariantTags",
   "net.minecraft.world.entity.decoration.HangingEntity",
@@ -32,16 +31,7 @@
   "Frustum.isVisible()",
   "RenderTypes.entitySolidZOffsetForward()",
   "CameraRenderState.cullFrustum",
-  "TextureAtlasSprite.atlasLocation()",
-  "TextureAtlasSprite.getU0()",
-  "TextureAtlasSprite.getU1()",
-  "TextureAtlasSprite.getV0()",
-  "TextureAtlasSprite.getV1()",
-  "BlockPos.MutableBlockPos.set()",
   "Direction.step()",
-  "Registry.getTagOrEmpty()",
-  "RegistryAccess.lookupOrThrow()",
-  "DataComponents.PAINTING_VARIANT",
   "Registries.PAINTING_VARIANT",
   "MinecraftServer.getAllLevels()",
   "MinecraftServer.getTickCount()",
@@ -49,14 +39,24 @@
   "ServerChunkCache.getChunk()",
   "ServerLevel.getAllEntities()",
   "ServerLevel.getEntity()",
-  "and 32 more"
+  "ServerLevel.getGameRules()",
+  "ServerLevel.getRespawnData()",
+  "ServerPlayer.getBlockX()",
+  "ServerPlayer.getBlockZ()",
+  "SoundEvents.PAINTING_BREAK",
+  "SoundEvents.PAINTING_PLACE",
+  "Util.getRandomSafe()",
+  "EntityTypes.PAINTING",
+  "ItemEntity.setDefaultPickUpDelay()",
+  "Player.hasInfiniteMaterials()",
+  "and 25 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "fast-paintings-2.0.0.jar",
   "published": "2026-09-27"
  },
@@ -89,5 +89,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
  },
- "lacks": 88
+ "lacks": 65
 }

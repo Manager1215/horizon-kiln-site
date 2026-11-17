@@ -10,19 +10,13 @@
  "description": "Configurable multiplayer Skyblock for Fabric with a protected shared HUB, circular player islands, selectable difficulty, optional party integration, and global End progression.",
  "needs": [
   "Mixin: 2 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.client.screen.v1.Screens",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents.AllowLoad",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SyncDataPackContents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-  "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.fabric.api.resource.v1.reloader.SimpleReloadListener",
   "net.fabricmc.loader.api.MappingResolver",
-  "net.minecraft.core.HolderSet.Named",
-  "net.minecraft.network.chat.ComponentSerialization",
   "net.minecraft.server.PlayerAdvancements",
   "net.minecraft.server.ServerAdvancementManager",
   "net.minecraft.server.ServerScoreboard",
@@ -42,22 +36,28 @@
   "net.minecraft.world.level.block.piston.PistonStructureResolver",
   "net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings",
   "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate",
-  "net.minecraft.world.level.storage.LevelResource",
   "net.minecraft.world.scores.PlayerScoreEntry",
   "net.minecraft.world.scores.ReadOnlyScoreInfo",
   "net.minecraft.world.scores.ScoreAccess",
   "ServerEntityEvents.ALLOW_LOAD",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerLifecycleEvents.SERVER_STOPPING",
   "ServerLifecycleEvents.SYNC_DATA_PACK_CONTENTS",
-  "and 56 more"
+  "FabricLoader.getMappingResolver()",
+  "ModContainer.getRootPaths()",
+  "AdvancementHolder.value()",
+  "BlockPos.containing()",
+  "DataComponents.MAX_STACK_SIZE",
+  "ComponentSerialization.STREAM_CODEC",
+  "MinecraftServer.createCommandSourceStack()",
+  "MinecraftServer.getAdvancements()",
+  "MinecraftServer.getAllLevels()",
+  "and 38 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "Skyblock-Multi-0.2.4-beta.jar",
   "published": "2026-11-05"
  },
@@ -91,5 +91,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
  },
- "lacks": 123
+ "lacks": 78
 }

@@ -10,24 +10,18 @@
  "description": "Disable Nether Portals, End Portals, and End Gateways at your will.",
  "needs": [
   "Mixin: 6 points inside the game's methods",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.minecraft.network.protocol.game.ClientboundLevelChunkPacketData.BlockEntityInfo",
   "net.minecraft.util.EncoderCache.2",
   "net.minecraft.world.level.block.EndGatewayBlock",
   "net.minecraft.world.level.block.EndPortalBlock",
-  "net.minecraft.world.level.block.NetherPortalBlock",
-  "net.minecraft.world.level.storage.LevelResource",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerLifecycleEvents.SERVER_STOPPING",
-  "MinecraftServer.getWorldPath()"
+  "net.minecraft.world.level.block.NetherPortalBlock"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "no-portals-26.3-1.1.11.jar",
   "published": "2026-09-27"
  },
@@ -60,5 +54,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; runs threads of its own; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 11
+ "lacks": 5
 }

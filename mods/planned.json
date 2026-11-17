@@ -10,7 +10,6 @@
  "description": "Simple server sided mod that allows players to teleport to a creative dimension where they can design builds and collaborate with invited players all from within the same server.",
  "needs": [
   "Mixin: 1 point inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "io.netty.channel.Channel",
   "io.netty.channel.ChannelHandlerContext",
   "io.netty.channel.ChannelInboundHandlerAdapter",
@@ -19,13 +18,9 @@
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.Unload",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-  "net.minecraft.SharedConstants",
   "net.minecraft.commands.arguments.ResourceOrTagKeyArgument",
   "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
   "net.minecraft.core.UUIDUtil",
@@ -50,14 +45,19 @@
   "net.minecraft.world.damagesource.DamageTypes",
   "net.minecraft.world.entity.SpawnGroupData",
   "net.minecraft.world.entity.monster.Enemy",
-  "and 71 more"
+  "net.minecraft.world.inventory.PlayerEnderChestContainer",
+  "net.minecraft.world.level.TicketStorage",
+  "net.minecraft.world.level.block.GameMasterBlock",
+  "net.minecraft.world.level.chunk.ChunkGeneratorStructureState",
+  "net.minecraft.world.level.dimension.BuiltinDimensionTypes",
+  "and 62 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "plan_15_fabric_26.3.jar",
   "published": "2026-10-17"
  },
@@ -88,5 +88,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes; runs threads of its own"
  },
- "lacks": 126
+ "lacks": 102
 }

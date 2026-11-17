@@ -10,10 +10,8 @@
  "description": "Core library mod by Café Leblanć. Provides shared systems and utilities used by other mods from the same studio. Not standalone — required only as a dependency.",
  "needs": [
   "Mixin: 2 points inside the game's methods",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
   "net.fabricmc.loader.api.metadata.ModDependency",
-  "net.minecraft.client.gui.screens.inventory.AnvilScreen",
   "net.minecraft.core.particles.DustParticleOptions",
   "net.minecraft.network.syncher.EntityDataAccessor",
   "net.minecraft.world.entity.Bucketable",
@@ -24,11 +22,8 @@
   "net.minecraft.world.entity.animal.equine.SkeletonHorse",
   "net.minecraft.world.entity.animal.feline.Ocelot",
   "net.minecraft.world.entity.animal.fox.Fox",
-  "net.minecraft.world.inventory.AnvilMenu",
   "net.minecraft.world.phys.EntityHitResult",
-  "ServerLifecycleEvents.SERVER_STARTED",
   "ModMetadata.getDependencies()",
-  "Holder.Reference.is()",
   "SynchedEntityData.get()",
   "SynchedEntityData.set()",
   "MinecraftServer.createCommandSourceStack()",
@@ -37,7 +32,6 @@
   "ServerLevel.sendParticles()",
   "Entity.fallDistance",
   "Entity.isAlive()",
-  "Entity.setDeltaMovement()",
   "Entity.setNoGravity()",
   "Entity.setPos()",
   "EntityReference.getUUID()",
@@ -50,14 +44,17 @@
   "ItemEntity.fallDistance",
   "ItemEntity.getItem()",
   "ItemEntity.isAlive()",
-  "and 5 more"
+  "ItemEntity.isNoGravity()",
+  "ItemEntity.setNoGravity()",
+  "ItemEntity.setPos()",
+  "ItemEntity.tickCount"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "cafecore-1.1.1.jar",
   "published": "2026-09-25"
  },
@@ -91,5 +88,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
  },
- "lacks": 45
+ "lacks": 38
 }

@@ -11,7 +11,6 @@
  "needs": [
   "an access widener",
   "Mixin: 3 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.GameProfileRepository",
   "com.mojang.authlib.ProfileLookupCallback",
   "com.mojang.authlib.properties.Property",
@@ -29,36 +28,37 @@
   "net.minecraft.server.network.ServerLoginPacketListenerImpl",
   "net.minecraft.server.network.ServerPlayerConnection",
   "net.minecraft.server.players.CachedUserNameToIdResolver",
-  "net.minecraft.util.StringUtil",
-  "net.minecraft.world.level.storage.LevelResource",
+  "GameProfile.<init>()",
+  "GameProfile.properties()",
   "Commands.sendCommands()",
   "FriendlyByteBuf.readNullable()",
   "FriendlyByteBuf.writeNullable()",
-  "Component.translatableWithFallback()",
-  "Component.translatableWithFallback()",
   "ClientboundGameEventPacket.LEVEL_CHUNKS_LOAD_START",
   "ClientboundPlayerInfoUpdatePacket.createPlayerInitializing()",
   "MinecraftServer.addTickable()",
-  "MinecraftServer.execute()",
   "MinecraftServer.getPlayerNames()",
   "MinecraftServer.getTickCount()",
-  "MinecraftServer.getWorldPath()",
   "MinecraftServer.services()",
   "MinecraftServer.usesAuthentication()",
   "ServerChunkCache.chunkMap",
-  "ServerPlayer.connection",
   "ServerPlayer.createCommonSpawnInfo()",
-  "ServerPlayer.getDisplayName()",
   "ServerPlayer.getGameProfile()",
   "ServerPlayer.getPassengers()",
-  "and 10 more"
+  "ServerPlayer.getVehicle()",
+  "ServerPlayer.isDeadOrDying()",
+  "ServerGamePacketListenerImpl.teleport()",
+  "PlayerList.broadcastAll()",
+  "PlayerList.sendActivePlayerEffects()",
+  "PlayerList.sendAllPlayerInfo()",
+  "PlayerList.sendLevelInfo()",
+  "and 2 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "skinrestorer-2.11.1+26.3-fabric.jar",
   "published": "2026-11-04"
  },
@@ -89,5 +89,5 @@
   "class": "partial",
   "why": "runs threads of its own; has network channels"
  },
- "lacks": 50
+ "lacks": 42
 }

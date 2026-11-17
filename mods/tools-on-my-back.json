@@ -10,7 +10,6 @@
  "description": "Displays the last used tool on the player's back. Adds immersive style to your adventures! 🪄 Now with an in-game editor and profile sharing! 🪄",
  "needs": [
   "an access widener",
-  "com.mojang.authlib.GameProfile",
   "net.minecraft.client.model.player.PlayerModel",
   "net.minecraft.client.multiplayer.chat.ChatListener",
   "net.minecraft.client.player.RemotePlayer",
@@ -20,11 +19,7 @@
   "net.minecraft.client.renderer.entity.state.AvatarRenderState",
   "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
   "net.minecraft.client.resources.DefaultPlayerSkin",
-  "net.minecraft.core.component.DataComponentPatch.Builder",
   "net.minecraft.core.component.DataComponentPatch.SplitResult",
-  "net.minecraft.network.chat.PlayerChatMessage",
-  "net.minecraft.tags.ItemTags",
-  "net.minecraft.world.entity.Pose",
   "net.minecraft.world.entity.player.PlayerModelPart",
   "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
   "net.minecraft.world.item.BowItem",
@@ -37,10 +32,7 @@
   "Axis.ZP",
   "Minecraft.getEntityRenderDispatcher()",
   "ClientAvatarState.tick()",
-  "Font.split()",
-  "GuiGraphicsExtractor.centeredText()",
   "GuiGraphicsExtractor.entity()",
-  "GuiGraphicsExtractor.setTooltipForNextFrame()",
   "ToastManager.getNotificationDisplayTimeMultiplier()",
   "Screen.getTooltipFromItem()",
   "ModelPart.translateAndRotate()",
@@ -49,15 +41,23 @@
   "LocalPlayer.isModelPartShown()",
   "EntityRenderDispatcher.extractEntity()",
   "DefaultedRegistry.iterator()",
-  "Holder.tags()",
-  "and 29 more"
+  "DataComponentPatch.split()",
+  "DataComponents.CUSTOM_MODEL_DATA",
+  "ChatType.Bound.decorate()",
+  "PlayerChatMessage.signature()",
+  "PlayerChatMessage.signedContent()",
+  "LivingEntity.setOldPosAndRot()",
+  "LivingEntity.setPose()",
+  "LivingEntity.setXRot()",
+  "LivingEntity.setYRot()",
+  "and 13 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "tools-on-my-back-1.1.5+26.3+fabric.jar",
   "published": "2026-10-25"
  },
@@ -91,5 +91,5 @@
   "class": "partial",
   "why": "runs threads of its own"
  },
- "lacks": 69
+ "lacks": 53
 }

@@ -1,7 +1,7 @@
 {
  "id": "bedrock-tools-armour",
  "name": "Bedrock-Tools-Armour",
- "version": "1.0.0",
+ "version": "1.2.0",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -17,19 +17,16 @@
   "net.minecraft.client.data.models.model.ModelTemplates",
   "net.minecraft.client.resources.model.EquipmentClientInfo",
   "net.minecraft.client.resources.model.EquipmentClientInfo.Builder",
-  "net.minecraft.core.HolderSet.Named",
   "net.minecraft.core.component.DataComponentInitializers",
   "net.minecraft.core.component.DataComponentInitializers.SingleComponentInitializer",
   "net.minecraft.data.PackOutput.PathProvider",
   "net.minecraft.data.PackOutput.Target",
-  "net.minecraft.tags.ItemTags",
   "net.minecraft.world.item.SmithingTemplateItem",
   "net.minecraft.world.item.component.DamageResistant",
-  "net.minecraft.world.item.component.ItemLore",
   "net.minecraft.world.item.equipment.ArmorMaterials",
   "HolderLookup.Provider.getOrThrow()",
   "DataComponents.DAMAGE_RESISTANT",
-  "DataComponents.LORE",
+  "DataComponents.MAX_DAMAGE",
   "DataProvider.saveAll()",
   "PackOutput.createPathProvider()",
   "SoundEvents.ARMOR_EQUIP_NETHERITE",
@@ -40,11 +37,6 @@
   "BlockTags.INCORRECT_FOR_WOODEN_TOOL",
   "Item.Properties.delayedComponent()",
   "Item.Properties.spear()",
-  "Blocks.CRYING_OBSIDIAN",
-  "Blocks.END_PORTAL_FRAME",
-  "Blocks.OBSIDIAN",
-  "Blocks.REINFORCED_DEEPSLATE",
-  "Blocks.RESPAWN_ANCHOR",
   "BlockBehaviour.Properties.overrideLootTable()",
   "LootPool.Builder.when()"
  ],
@@ -52,10 +44,10 @@
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
-  "file": "bedrock-tools-armour-1.0.0.jar",
-  "published": "2026-10-30"
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "bedrock-tools-armour-1.2.0.jar",
+  "published": "2026-11-16"
  },
  "reports": {
   "works": 0,
@@ -67,8 +59,8 @@
  "mixins": true,
  "depends": [],
  "softOff": {
-  "class": "partial",
-  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
  },
- "lacks": 38
+ "lacks": 30
 }

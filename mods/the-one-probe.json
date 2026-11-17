@@ -10,12 +10,9 @@
  "description": "TOP, a WAILA alternative that shows information about what you're looking at",
  "needs": [
   "an access widener",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-  "net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariantAttributes",
   "net.minecraft.client.renderer.entity.state.BoatRenderState",
   "net.minecraft.client.renderer.texture.MissingTextureAtlasSprite",
   "net.minecraft.core.UUIDUtil",
-  "net.minecraft.network.chat.ComponentSerialization",
   "net.minecraft.world.entity.animal.equine.Horse",
   "net.minecraft.world.entity.animal.wolf.Wolf",
   "net.minecraft.world.entity.decoration.ItemFrame",
@@ -38,26 +35,29 @@
   "net.minecraft.world.level.block.state.properties.ComparatorMode",
   "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
   "net.minecraft.world.phys.EntityHitResult",
-  "AttachmentRegistry.create()",
   "Minecraft.getEntityRenderDispatcher()",
-  "GuiGraphicsExtractor.blit()",
   "GuiGraphicsExtractor.entity()",
   "MultiPlayerGameMode.destroyProgress",
   "EntityRenderDispatcher.extractEntity()",
   "EntityRenderState.boundingBoxHeight",
-  "Holder.Reference.tags()",
   "DataComponentPatch.STREAM_CODEC",
-  "Component.getVisualOrderText()",
+  "ComponentSerialization.STREAM_CODEC",
   "ResourceKey.streamCodec()",
   "MinecraftServer.services()",
-  "and 33 more"
+  "ServerLevel.getEntity()",
+  "AgeableMob.getAge()",
+  "Entity.registryAccess()",
+  "Entity.snapTo()",
+  "EntityReference.getUUID()",
+  "EntityType.by()",
+  "and 17 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "theoneprobe-26.3-16.0.2-fabric.jar",
   "published": "2026-11-09"
  },
@@ -91,5 +91,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 73
+ "lacks": 57
 }

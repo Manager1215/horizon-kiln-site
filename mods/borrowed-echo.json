@@ -9,11 +9,8 @@
  "author": "not.unnamed",
  "description": "Something in your world has learned your friends’ faces, stolen their voices, might even be yours, and now it’s calling your name.",
  "needs": [
-  "com.mojang.authlib.GameProfile",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
   "net.minecraft.client.model.HumanoidModel",
   "net.minecraft.client.model.geom.PartPose",
@@ -30,7 +27,6 @@
   "net.minecraft.network.syncher.EntityDataAccessor",
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
-  "net.minecraft.server.network.Filterable",
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
   "net.minecraft.world.entity.ai.control.FlyingMoveControl",
@@ -42,21 +38,25 @@
   "net.minecraft.world.entity.ai.navigation.PathNavigation",
   "net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation",
   "net.minecraft.world.entity.ai.util.DefaultRandomPos",
-  "net.minecraft.world.item.component.WrittenBookContent",
   "net.minecraft.world.level.block.BedBlock",
   "net.minecraft.world.level.block.state.properties.BedPart",
-  "AttachmentRegistry.builder()",
-  "ServerLifecycleEvents.SERVER_STOPPING",
   "Minecraft.getEntityRenderDispatcher()",
   "ModelPart.getChild()",
-  "and 56 more"
+  "ModelPart.skipDraw",
+  "ModelPart.visible",
+  "ModelPart.x",
+  "ModelPart.xScale",
+  "ModelPart.y",
+  "ModelPart.yScale",
+  "ModelPart.z",
+  "and 51 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "borrowed-echo-1.0.5.jar",
   "published": "2026-10-20"
  },
@@ -92,5 +92,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 134
+ "lacks": 102
 }

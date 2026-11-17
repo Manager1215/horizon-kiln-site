@@ -10,14 +10,10 @@
  "description": "This mod adds the long-awaited (Since 2016) Fluid, Sand & Slime Physics!",
  "needs": [
   "Mixin: 11 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
   "com.mojang.blaze3d.Blaze3D",
   "com.mojang.blaze3d.pipeline.PipelineCache",
-  "com.mojang.blaze3d.platform.TextInputManager",
-  "com.mojang.blaze3d.platform.cursor.CursorType",
-  "com.mojang.blaze3d.platform.cursor.CursorTypes",
   "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
   "com.mojang.blaze3d.vertex.BufferBuilder",
   "com.mojang.blaze3d.vertex.QuadInstance",
@@ -43,21 +39,25 @@
   "net.minecraft.client.OptionInstance.CaptionBasedToString",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
   "net.minecraft.client.OptionInstance.ValueUpdateListener",
-  "net.minecraft.client.StringSplitter",
   "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
   "net.minecraft.client.gui.components.BossHealthOverlay",
   "net.minecraft.client.gui.components.LerpingBossEvent",
   "net.minecraft.client.gui.components.OptionsList",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
   "net.minecraft.client.gui.layouts.LinearLayout",
+  "net.minecraft.client.gui.screens.LevelLoadingScreen",
+  "net.minecraft.client.gui.screens.options.OptionsSubScreen",
+  "net.minecraft.client.gui.screens.options.VideoSettingsScreen",
+  "net.minecraft.client.multiplayer.ClientChunkCache",
+  "net.minecraft.client.renderer.CloudRenderer",
   "and 80 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "watery-1.2.2.jar",
   "published": "2026-10-23"
  },
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 414
+ "lacks": 359
 }

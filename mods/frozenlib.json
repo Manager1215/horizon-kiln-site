@@ -11,10 +11,7 @@
  "needs": [
   "an access widener",
   "Mixin: 133 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.audio.Channel",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget",
   "net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientBlockEntityEvents.Load",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
@@ -35,9 +32,6 @@
   "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents.TagsLoaded",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents.Load",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.Unload",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
@@ -51,14 +45,20 @@
   "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyConsumer",
   "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyContext",
   "net.fabricmc.fabric.api.item.v1.ItemComponentTooltipProviderRegistry",
+  "net.fabricmc.fabric.api.loot.v3.LootTableEvents.Loaded",
+  "net.fabricmc.fabric.api.loot.v3.LootTableEvents.ModifyDrops",
+  "net.fabricmc.fabric.api.loot.v3.LootTableEvents.Replace",
+  "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents",
+  "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents.StartTracking",
+  "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents.StopTracking",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "FrozenLib-3.0.3-mc26.3-fabric.jar",
   "published": "2026-10-09"
  },
@@ -94,5 +94,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
  },
- "lacks": 861
+ "lacks": 778
 }

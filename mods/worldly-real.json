@@ -10,7 +10,6 @@
  "description": "Worldly adds a collection of configurable Minecraft world types, from classic Skyblock and OneBlock to Chunklock, Backrooms, Random Drops, Mountaineering, Fishing Border, and more.",
  "needs": [
   "Mixin: 1 point inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityCombatEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityCombatEvents.AfterKilledOtherEntity",
@@ -19,7 +18,6 @@
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDamage",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
@@ -47,17 +45,19 @@
   "net.minecraft.client.gui.screens.worldselection.WorldSelectionList.Entry",
   "net.minecraft.client.gui.screens.worldselection.WorldSelectionList.WorldListEntry",
   "net.minecraft.commands.arguments.blocks.BlockStateParser",
-  "net.minecraft.core.HolderSet.Direct",
-  "net.minecraft.core.HolderSet.Named",
   "net.minecraft.core.QuartPos",
+  "net.minecraft.core.particles.DustParticleOptions",
+  "net.minecraft.nbt.NbtAccounter",
+  "net.minecraft.server.WorldLoader",
+  "net.minecraft.server.WorldLoader.DataLoadContext",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "worldly-0.1.12-26.3.jar",
   "published": "2026-09-29"
  },
@@ -90,5 +90,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
  },
- "lacks": 312
+ "lacks": 252
 }

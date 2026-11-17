@@ -1,7 +1,7 @@
 {
  "id": "ariente",
  "name": "Ariente",
- "version": "26.3-5.0.1-fabric",
+ "version": "26.3-5.0.2-fabric",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -31,7 +31,11 @@
   "net.fabricmc.fabric.api.client.model.loading.v1.UnbakedModelDeserializer",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
+  "net.fabricmc.fabric.api.client.renderer.v1.Renderer",
+  "net.fabricmc.fabric.api.client.renderer.v1.mesh.MutableQuadView",
+  "net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadAtlas",
   "net.fabricmc.fabric.api.client.renderer.v1.model.FabricBlockStateModel",
+  "net.fabricmc.fabric.api.client.renderer.v1.sprite.SpriteFinder",
   "net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer",
   "net.fabricmc.fabric.api.client.rendering.v1.AtlasRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
@@ -41,25 +45,21 @@
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
   "net.fabricmc.fabric.api.event.player.PlayerPickItemEvents",
   "net.fabricmc.fabric.api.event.player.PlayerPickItemEvents.PickItemFromBlock",
   "net.fabricmc.fabric.api.loot.v3.LootTableEvents.ModifyDrops",
-  "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents",
-  "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents.StartTracking",
-  "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
-  "file": "ariente-fabric-26.3-5.0.1-fabric.jar",
-  "published": "2026-11-12"
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "ariente-fabric-26.3-5.0.2-fabric.jar",
+  "published": "2026-11-14"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -78,6 +78,7 @@
  "entrypoints": {
   "main": 1,
   "client": 1,
+  "jei_mod_plugin": 1,
   "fabric-datagen": 1,
   "theoneprobe": 1
  },
@@ -96,5 +97,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
  },
- "lacks": 524
+ "lacks": 482
 }

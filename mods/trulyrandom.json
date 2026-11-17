@@ -11,11 +11,7 @@
  "needs": [
   "an access widener",
   "Mixin: 52 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
-  "com.mojang.blaze3d.platform.cursor.CursorTypes",
   "net.fabricmc.fabric.api.command.v2.ArgumentTypeRegistry",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SyncDataPackContents",
   "net.fabricmc.loader.api.VersionParsingException",
   "net.minecraft.advancements.predicates.DataComponentMatchers",
@@ -33,9 +29,6 @@
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
   "net.minecraft.client.gui.layouts.LayoutSettings",
   "net.minecraft.client.gui.screens.advancements.AdvancementWidgetType",
-  "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
-  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-  "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
   "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen",
   "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen.MoreTab",
   "net.minecraft.client.gui.screens.worldselection.WorldCreationContext",
@@ -51,14 +44,21 @@
   "net.minecraft.client.renderer.extract.LevelExtractor",
   "net.minecraft.client.renderer.special.ChestSpecialRenderer",
   "net.minecraft.commands.arguments.ResourceOrIdArgument",
+  "net.minecraft.commands.arguments.ResourceOrIdArgument.LootTableArgument",
+  "net.minecraft.commands.synchronization.ArgumentTypeInfo",
+  "net.minecraft.commands.synchronization.ArgumentTypeInfo.Template",
+  "net.minecraft.core.IdMapper",
+  "net.minecraft.core.UUIDUtil",
+  "net.minecraft.core.component.predicates.DataComponentPredicate",
+  "net.minecraft.core.component.predicates.DataComponentPredicate.Type",
   "and 80 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "trulyrandom-3.2.1+26.3-fabric.jar",
   "published": "2026-10-14"
  },
@@ -91,5 +91,5 @@
   "class": "restart",
   "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 319
+ "lacks": 225
 }

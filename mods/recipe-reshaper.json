@@ -10,7 +10,6 @@
  "description": "Dynamically replaces whole categories of recipes with (subjectively) improved ones. Data driven.",
  "needs": [
   "an access widener",
-  "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
   "net.minecraft.core.Registry.PendingTags",
   "net.minecraft.core.component.DataComponentInitializers",
@@ -18,7 +17,6 @@
   "net.minecraft.server.ReloadableServerRegistries.LoadResult",
   "net.minecraft.server.ReloadableServerResources",
   "net.minecraft.util.ExtraCodecs.StrictUnboundedMapCodec",
-  "net.minecraft.world.item.crafting.ShapelessRecipe",
   "ImmutableCollection.forEach()",
   "ImmutableCollection.stream()",
   "ImmutableList.get()",
@@ -26,23 +24,21 @@
   "ImmutableList.size()",
   "ImmutableList.stream()",
   "ImmutableSet.stream()",
+  "ResourceLoader.registerBuiltinPack()",
   "DefaultedRegistry.getId()",
   "Registry.getId()",
   "FileToIdConverter.json()",
-  "Identifier.isValidPath()",
   "SimpleJsonResourceReloadListener.<init>()",
   "ExtraCodecs.NON_EMPTY_STRING",
   "ExtraCodecs.intRange()",
-  "ExtraCodecs.strictUnboundedMap()",
-  "StringRepresentable.EnumCodec.optionalFieldOf()",
-  "CraftingBookCategory.CODEC"
+  "ExtraCodecs.strictUnboundedMap()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "recipe_reshaper-1.11.0+MC26.3.x.jar",
   "published": "2026-09-27"
  },
@@ -73,5 +69,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 26
+ "lacks": 22
 }

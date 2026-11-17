@@ -10,9 +10,6 @@
  "description": "Simple vanilla style storage mod",
  "needs": [
   "an access widener",
-  "com.mojang.authlib.GameProfile",
-  "com.mojang.blaze3d.platform.cursor.CursorType",
-  "com.mojang.blaze3d.platform.cursor.CursorTypes",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin",
@@ -26,7 +23,6 @@
   "net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadEmitter",
   "net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry",
   "net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents.Load",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
@@ -41,23 +37,27 @@
   "net.fabricmc.fabric.api.transfer.v1.storage.base.FilteringStorage",
   "net.fabricmc.fabric.api.transfer.v1.storage.base.SidedStorageBlockEntity",
   "net.fabricmc.fabric.impl.transfer.TransferApiImpl",
-  "net.minecraft.CrashReport",
-  "net.minecraft.CrashReportCategory",
-  "net.minecraft.ReportedException",
   "net.minecraft.advancements.triggers.CriteriaTriggers",
   "net.minecraft.advancements.triggers.ItemUsedOnLocationTrigger",
   "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
   "net.minecraft.client.gui.components.ImageButton",
   "net.minecraft.client.gui.components.WidgetSprites",
-  "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
+  "net.minecraft.client.gui.screens.recipebook.GhostSlots",
+  "net.minecraft.client.gui.screens.recipebook.GhostSlots.GhostSlot",
+  "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent.TabInfo",
+  "net.minecraft.client.gui.screens.recipebook.RecipeCollection",
+  "net.minecraft.client.gui.screens.recipebook.RecipeUpdateListener",
+  "net.minecraft.client.gui.screens.recipebook.SearchRecipeBookCategory",
+  "net.minecraft.client.gui.screens.recipebook.SlotSelectTime",
+  "net.minecraft.client.multiplayer.ClientHandshakePacketListenerImpl",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "toms_storage_fabric-26.3-2.12.2.jar",
   "published": "2026-10-15"
  },
@@ -94,5 +94,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 224
+ "lacks": 161
 }

@@ -10,11 +10,8 @@
  "description": "A client mod (Fabric, Quilt, NeoForge, Forge) plus a Paper plugin or server mod that brings real-time, 3D positional voice chat to Minecraft. Unlike other mods, SocketSVC completely drops UDP for WebSockets.",
  "needs": [
   "Mixin: 1 point inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.math.Transformation",
   "io.netty.channel.Channel",
-  "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents",
-  "net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents.AfterKeyPress",
   "net.fabricmc.loader.api.ObjectShare",
   "net.fabricmc.loader.api.metadata.ModOrigin",
   "net.fabricmc.loader.api.metadata.ModOrigin.Kind",
@@ -31,9 +28,7 @@
   "net.minecraft.client.renderer.entity.player.AvatarRenderer",
   "net.minecraft.client.renderer.entity.state.AvatarRenderState",
   "net.minecraft.client.renderer.entity.state.TextDisplayEntityRenderState",
-  "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.client.resources.DefaultPlayerSkin",
-  "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.server.MinecraftServer.MultiplayerScope",
   "net.minecraft.world.entity.Display",
   "net.minecraft.world.entity.Display.GenericInterpolator",
@@ -50,14 +45,19 @@
   "org.apache.logging.log4j.core.config.Configurator",
   "org.apache.logging.log4j.core.config.Property",
   "org.lwjgl.openal.AL10",
-  "and 60 more"
+  "org.lwjgl.sdl.SDLMouse",
+  "org.lwjgl.system.MemoryStack",
+  "PoseStack.mulPose()",
+  "PoseStack.Pose.normal()",
+  "PoseStack.Pose.pose()",
+  "and 36 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "socketsvc-client-fabric-0.2.7+mc26.3.jar",
   "published": "2026-11-08"
  },
@@ -90,5 +90,5 @@
   "class": "partial",
   "why": "runs threads of its own; has network channels"
  },
- "lacks": 100
+ "lacks": 76
 }

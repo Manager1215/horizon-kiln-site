@@ -9,9 +9,6 @@
  "author": "deanxbox",
  "description": "This project re-calculates the lighting of every chunk in your world! Useful if you've optimised your world and your LODs are broken.",
  "needs": [
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.nbt.NbtAccounter",
   "net.minecraft.server.level.ChunkGenerationTask",
   "net.minecraft.server.level.ChunkMap",
@@ -22,17 +19,10 @@
   "net.minecraft.world.level.chunk.ImposterProtoChunk",
   "net.minecraft.world.level.chunk.LevelChunk.UnsavedListener",
   "net.minecraft.world.level.chunk.storage.RegionFileVersion",
-  "net.minecraft.world.level.storage.LevelResource",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerLifecycleEvents.SERVER_STOPPING",
-  "Minecraft.getSingleplayerServer()",
   "SectionPos.of()",
-  "SectionPos.sectionToBlockCoord()",
   "NbtIo.read()",
-  "MinecraftServer.execute()",
   "MinecraftServer.getAllLevels()",
   "MinecraftServer.getAverageTickTimeNanos()",
-  "MinecraftServer.getWorldPath()",
   "ServerBossEvent.removeAllPlayers()",
   "ServerBossEvent.setName()",
   "ServerBossEvent.setVisible()",
@@ -43,20 +33,21 @@
   "ServerLevel.getMaxY()",
   "ServerLevel.getMinY()",
   "ServerLevel.getSectionYFromSectionIndex()",
-  "ServerPlayer.connection",
   "ServerPlayer.getChunkTrackingView()",
   "TicketType.FORCED",
   "ServerGamePacketListenerImpl.chunkSender",
   "LevelChunk.getSectionsCount()",
   "LevelChunk.markUnsaved()",
-  "and 3 more"
+  "LevelChunk.setLightCorrect()",
+  "LevelChunk.setUnsavedListener()",
+  "DimensionType.getStorageFolder()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "lighten-up-chunks-1.3.0.jar",
   "published": "2026-10-15"
  },
@@ -90,5 +81,5 @@
   "class": "partial",
   "why": "runs threads of its own"
  },
- "lacks": 43
+ "lacks": 32
 }

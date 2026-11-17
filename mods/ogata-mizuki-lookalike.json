@@ -9,7 +9,6 @@
  "author": "ogata-mizuki-99",
  "description": "日本語の説明があります。Temporarily disguise your skin as another player using command/item. Supports custom duration, scan list, werewolf integration, nickname priority, and hiding all overhead nametags in multiplayer.",
  "needs": [
-  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
   "net.minecraft.client.gui.components.PlayerFaceExtractor",
@@ -17,13 +16,12 @@
   "net.minecraft.world.entity.player.PlayerSkin.Patch",
   "net.minecraft.world.item.ItemUseAnimation",
   "net.minecraft.world.item.component.ResolvableProfile",
-  "ChatFormatting.stripFormatting()",
+  "GameProfile.<init>()",
+  "GameProfile.properties()",
   "Minecraft.getSkinManager()",
   "MouseHandler.grabMouse()",
   "MouseHandler.releaseMouse()",
   "MouseHandler.setIgnoreFirstMove()",
-  "Font.split()",
-  "GuiGraphicsExtractor.centeredText()",
   "ClientLevel.getPlayerByUUID()",
   "PlayerInfo.getSkin()",
   "LocalPlayer.getGameProfile()",
@@ -35,28 +33,27 @@
   "SynchedEntityData.get()",
   "SynchedEntityData.set()",
   "SynchedEntityData.DataValue.create()",
-  "MinecraftServer.execute()",
   "MinecraftServer.services()",
   "ServerLevel.sendParticles()",
-  "ServerPlayer.connection",
-  "ServerPlayer.createCommandSourceStack()",
   "ServerPlayer.getEntityData()",
   "ServerPlayer.getGameProfile()",
   "ServerPlayer.getProfile()",
   "ServerPlayer.setCustomName()",
   "ServerPlayer.setCustomNameVisible()",
-  "ServerGamePacketListenerImpl.send()",
   "ProfileResolver.fetchByNameOrId()",
   "SoundEvents.PORTAL_TRIGGER",
   "SoundEvents.WITCH_AMBIENT",
-  "and 4 more"
+  "Player.isSecondaryUseActive()",
+  "Player.startUsingItem()",
+  "PlayerSkin.with()",
+  "Item.interactLivingEntity()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "lookalike-fabric-26.3-1.0.1.jar",
   "published": "2026-10-17"
  },
@@ -73,5 +70,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 44
+ "lacks": 38
 }

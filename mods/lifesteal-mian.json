@@ -10,7 +10,6 @@
  "description": "A mod where killing other players steals their hearts.",
  "needs": [
   "an access widener",
-  "com.mojang.authlib.GameProfile",
   "net.minecraft.advancements.triggers.CriteriaTriggers",
   "net.minecraft.core.component.PatchedDataComponentMap",
   "net.minecraft.nbt.NbtAccounter",
@@ -27,13 +26,11 @@
   "net.minecraft.world.level.block.entity.BlockEntityTypes",
   "net.minecraft.world.level.block.entity.SkullBlockEntity",
   "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
-  "net.minecraft.world.level.storage.LevelResource",
   "ImmutableMap.forEach()",
   "Advancement.Builder.advancement()",
   "Advancement.Builder.build()",
   "LocalPlayer.displayItemActivation()",
   "LocalPlayer.getSoundSource()",
-  "DataComponents.CUSTOM_NAME",
   "DataComponents.FOOD",
   "DataComponents.PROFILE",
   "Registries.STRUCTURE",
@@ -46,18 +43,21 @@
   "MinecraftServer.isPublished()",
   "MinecraftServer.isSingleplayer()",
   "MinecraftServer.services()",
-  "MinecraftServer.storageSource",
   "ServerLevel.getRespawnData()",
-  "ServerPlayer.connection",
-  "ServerPlayer.drop()",
-  "and 28 more"
+  "ServerPlayer.gameMode",
+  "ServerPlayer.getAdvancements()",
+  "ServerPlayer.getGameProfile()",
+  "ServerPlayer.isDeadOrDying()",
+  "ServerPlayer.teleportTo()",
+  "ServerGamePacketListenerImpl.disconnect()",
+  "and 21 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "lifesteal-fabric-10.1.0-26.3.jar",
   "published": "2026-09-20"
  },
@@ -91,5 +91,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
  },
- "lacks": 68
+ "lacks": 61
 }

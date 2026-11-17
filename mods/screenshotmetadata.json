@@ -10,19 +10,16 @@
  "description": "A Minecraft Fabric mod that automatically adds comprehensive metadata to your screenshots, making them easier to organize and search.",
  "needs": [
   "net.minecraft.client.Screenshot",
-  "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.world.level.LightLayer",
   "net.minecraft.world.level.lighting.LayerLightEventListener",
   "net.minecraft.world.level.storage.WorldData",
   "net.minecraft.world.phys.EntityHitResult",
-  "Minecraft.getCurrentServer()",
   "Minecraft.getResourcePackRepository()",
-  "Minecraft.getSingleplayerServer()",
   "Minecraft.isLocalServer()",
   "Options.simulationDistance()",
   "ClientLevel.getLightEngine()",
-  "ServerData.ip",
-  "ServerData.name",
+  "IntegratedServer.getWorldData()",
+  "IntegratedServer.overworld()",
   "ServerLevel.getSeed()",
   "Util.ioPool()",
   "Entity.getCustomName()",
@@ -33,8 +30,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "screenshotmetadata-mc26.3-1.4.3.jar",
   "published": "2026-11-07"
  },
@@ -67,5 +64,5 @@
   "class": "partial",
   "why": "runs threads of its own"
  },
- "lacks": 19
+ "lacks": 16
 }

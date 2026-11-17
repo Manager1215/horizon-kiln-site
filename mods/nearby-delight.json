@@ -1,7 +1,7 @@
 {
  "id": "nearby-delight",
  "name": "Nearby Delight",
- "version": "1.5.0",
+ "version": "1.6.0",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,25 +10,30 @@
  "description": "Nearby Delight lets Farmer's Delight Cooking Pots automatically use ingredients from nearby storage. Pick a recipe, and the pot does the rest.",
  "needs": [
   "Mixin: 2 points inside the game's methods",
-  "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
   "net.minecraft.recipebook.ServerPlaceRecipe",
   "net.minecraft.recipebook.ServerPlaceRecipe.CraftingMenuAccess",
   "net.minecraft.world.inventory.RecipeBookMenu.PostPlaceAction",
-  "BlockPos.MutableBlockPos.set()",
+  "net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity",
+  "net.minecraft.world.level.block.entity.SmokerBlockEntity",
   "NonNullList.iterator()",
+  "ByteBufCodecs.CONTAINER_ID",
+  "MinecraftServer.getTickCount()",
+  "ServerChunkCache.getChunkNow()",
   "StackedItemContents.accountSimpleStack()",
   "StackedItemContents.accountStack()",
+  "SmokerMenu.handlePlacement()",
   "ItemStack.OPTIONAL_LIST_STREAM_CODEC",
-  "RecipeManager.byKey()"
+  "RecipeManager.byKey()",
+  "LevelChunk.getBlockEntities()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
-  "file": "nearby-delight-1.5.0.jar",
-  "published": "2026-10-03"
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "nearby-delight-1.6.0.jar",
+  "published": "2026-11-14"
  },
  "reports": {
   "works": 0,
@@ -38,8 +43,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -47,7 +52,8 @@
  "entrypoints": {
   "main": 1,
   "client": 1,
-  "modmenu": 1
+  "modmenu": 1,
+  "jei_mod_plugin": 1
  },
  "mixins": true,
  "depends": [
@@ -60,5 +66,5 @@
   "class": "partial",
   "why": "has network channels"
  },
- "lacks": 10
+ "lacks": 15
 }

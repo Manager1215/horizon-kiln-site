@@ -10,19 +10,14 @@
  "description": "Orbital+ is a feature-expanded orbital systems inspired by the Unstable SMP and other designs, focused on modularity and extended control.",
  "needs": [
   "Mixin: 3 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowChatMessage",
-  "net.minecraft.network.chat.PlayerChatMessage",
   "net.minecraft.world.clock.WorldClocks",
   "net.minecraft.world.damagesource.DamageTypes",
-  "net.minecraft.world.entity.Pose",
   "net.minecraft.world.entity.ai.Brain",
   "net.minecraft.world.entity.ai.memory.MemoryModuleType",
   "net.minecraft.world.entity.animal.wolf.Wolf",
@@ -43,21 +38,26 @@
   "net.minecraft.world.level.block.entity.HopperBlockEntity",
   "net.minecraft.world.level.block.entity.TickingBlockEntity",
   "net.minecraft.world.level.block.piston.PistonMovingBlockEntity",
-  "net.minecraft.world.level.storage.LevelResource",
   "net.minecraft.world.level.storage.WorldData",
   "net.minecraft.world.phys.EntityHitResult",
   "net.minecraft.world.ticks.LevelTickAccess",
-  "ServerLifecycleEvents.SERVER_STARTING",
-  "ServerLifecycleEvents.SERVER_STOPPING",
+  "GameProfile.<init>()",
   "Commands.sendCommands()",
-  "and 57 more"
+  "DataComponents.DAMAGE",
+  "Registries.WORLD_CLOCK",
+  "PlayerChatMessage.decoratedContent()",
+  "ClientboundPlayerInfoUpdatePacket.createPlayerInitializing()",
+  "MinecraftServer.createCommandSourceStack()",
+  "MinecraftServer.getAllLevels()",
+  "MinecraftServer.getLocalIp()",
+  "and 51 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "orbital-fabric-1.4-mc26.3.jar",
   "published": "2026-10-25"
  },
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes"
  },
- "lacks": 177
+ "lacks": 140
 }

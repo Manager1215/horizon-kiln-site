@@ -9,7 +9,6 @@
  "author": "Ded3ec",
  "description": "AuthCore is a high-performance, server-side Minecraft Fabric login and security framework for versions 1.16+. It secures offline and online servers against bots and griefers by comprehensively managing player sessions.",
  "needs": [
-  "com.mojang.authlib.GameProfile",
   "net.fabricmc.api.DedicatedServerModInitializer",
   "net.minecraft.commands.arguments.UuidArgument",
   "net.minecraft.network.protocol.game.ServerboundChatCommandPacket",
@@ -23,7 +22,6 @@
   "net.minecraft.server.level.ServerPlayerGameMode",
   "net.minecraft.server.network.ServerHandshakePacketListenerImpl",
   "net.minecraft.server.network.ServerLoginPacketListenerImpl",
-  "net.minecraft.world.entity.Pose",
   "net.minecraft.world.item.MapItem",
   "net.minecraft.world.level.block.CarpetBlock",
   "net.minecraft.world.level.block.HoneyBlock",
@@ -33,14 +31,12 @@
   "net.minecraft.world.level.block.VineBlock",
   "net.minecraft.world.phys.EntityHitResult",
   "BlockPos.mutable()",
-  "BlockPos.MutableBlockPos.move()",
   "DataComponents.MAP_ID",
   "NbtIo.writeCompressed()",
   "Connection.getRemoteAddress()",
   "Style.withShadowColor()",
   "Style.withoutShadow()",
   "MinecraftServer.createCommandSourceStack()",
-  "MinecraftServer.execute()",
   "MinecraftServer.overworld()",
   "MinecraftServer.usesAuthentication()",
   "ServerLevel.getAllEntities()",
@@ -48,15 +44,19 @@
   "ServerLevel.getHeight()",
   "ServerLevel.getMapData()",
   "ServerLevel.setMapData()",
-  "ServerPlayer.connection",
-  "and 36 more"
+  "ServerPlayer.gameMode",
+  "ServerPlayer.getBoundingBox()",
+  "ServerPlayer.getGameProfile()",
+  "ServerPlayer.getIpAddress()",
+  "ServerPlayer.getPose()",
+  "and 19 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "authcore-26.1-26.3-fabric-1.0.2.jar",
   "published": "2026-11-02"
  },
@@ -79,5 +79,5 @@
   "class": "partial",
   "why": "runs threads of its own"
  },
- "lacks": 76
+ "lacks": 59
 }

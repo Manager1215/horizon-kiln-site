@@ -10,8 +10,6 @@
  "description": "Make teammates glow for each other — and decide exactly who sees that glow, on which entities, and whether the locator bar follows the same rules.",
  "needs": [
   "Mixin: 4 points inside the game's methods",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.permission.v1.PermissionPredicates",
   "net.minecraft.network.protocol.game.ClientboundLevelChunkPacketData.BlockEntityInfo",
   "net.minecraft.network.syncher.EntityDataAccessor",
@@ -20,25 +18,18 @@
   "net.minecraft.server.level.ChunkTrackingView",
   "net.minecraft.server.waypoints.ServerWaypointManager",
   "net.minecraft.util.EncoderCache.2",
-  "net.minecraft.world.level.storage.LevelResource",
   "net.minecraft.world.scores.PlayerTeam",
   "net.minecraft.world.waypoints.WaypointTransmitter",
   "net.minecraft.world.waypoints.WaypointTransmitter.Connection",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerLifecycleEvents.SERVER_STOPPING",
   "SynchedEntityData.get()",
   "MinecraftServer.getAllLevels()",
   "MinecraftServer.getScoreboard()",
-  "MinecraftServer.getWorldPath()",
-  "MinecraftServer.isSameThread()",
   "ServerLevel.getAllEntities()",
   "ServerLevel.getEntity()",
   "ServerLevel.getGameRules()",
   "ServerLevel.getWaypointManager()",
-  "ServerPlayer.connection",
   "ServerPlayer.getChunkTrackingView()",
   "ServerPlayer.getTeam()",
-  "ServerGamePacketListenerImpl.send()",
   "Entity.chunkPosition()",
   "Entity.getEntityData()",
   "Entity.getTeam()",
@@ -53,8 +44,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "glow-my-teammates-1.2.1+26.3.jar",
   "published": "2026-09-16"
  },
@@ -85,5 +76,5 @@
   "class": "restart",
   "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 38
+ "lacks": 29
 }

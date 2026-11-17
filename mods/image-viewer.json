@@ -9,33 +9,24 @@
  "author": "shihyeon",
  "description": "A cross-platform (Fabric/NeoForge/Paper) mod and plugin that allows server operators to display full-resolution images to players through a native in-game viewer",
  "needs": [
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "org.lwjgl.stb.STBImage",
   "org.lwjgl.system.MemoryStack",
   "org.lwjgl.system.MemoryUtil",
-  "NativeImage.getHeight()",
   "NativeImage.getPointer()",
-  "NativeImage.getWidth()",
   "SamplerCache.getClampToEdge()",
   "DeviceLimits.maxTextureSizeForFormat()",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerLifecycleEvents.SERVER_STOPPING",
   "ServerPlayNetworking.createClientboundPacket()",
-  "Minecraft.gameDirectory",
   "GuiGraphicsExtractor.blit()",
   "ByteBufCodecs.byteArray()",
   "ByteBufCodecs.stringUtf8()",
-  "ServerPlayer.connection",
-  "ServerGamePacketListenerImpl.send()",
   "ServerGamePacketListenerImpl.send()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "imageviewer-fabric-0.2.1+mc26.3.jar",
   "published": "2026-09-17"
  },
@@ -67,5 +58,5 @@
   "class": "partial",
   "why": "runs threads of its own; has network channels"
  },
- "lacks": 20
+ "lacks": 11
 }

@@ -11,13 +11,10 @@
  "needs": [
   "an access widener",
   "Mixin: 2 points inside the game's methods",
-  "com.mojang.blaze3d.platform.cursor.CursorType",
-  "com.mojang.blaze3d.platform.cursor.CursorTypes",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
   "net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder",
   "net.fabricmc.fabric.api.event.registry.RegistryEntryAddedCallback",
-  "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys",
   "net.fabricmc.fabric.impl.resource.FabricResourceReloader",
   "net.minecraft.advancements.predicates.BlockPredicate",
@@ -39,7 +36,6 @@
   "net.minecraft.advancements.predicates.LightPredicate",
   "net.minecraft.advancements.predicates.LocationPredicate",
   "net.minecraft.advancements.predicates.LocationPredicate.PositionPredicate",
-  "net.minecraft.advancements.predicates.MinMaxBounds.Ints",
   "net.minecraft.advancements.predicates.MobEffectsPredicate",
   "net.minecraft.advancements.predicates.MobEffectsPredicate.MobEffectInstancePredicate",
   "net.minecraft.advancements.predicates.NbtPredicate",
@@ -51,14 +47,18 @@
   "net.minecraft.advancements.predicates.StatePropertiesPredicate.ValueMatcher",
   "net.minecraft.advancements.predicates.TagPredicate",
   "net.minecraft.advancements.predicates.entity.CubeMobPredicate",
+  "net.minecraft.advancements.predicates.entity.DistanceToPlayerPredicate",
+  "net.minecraft.advancements.predicates.entity.EntityEffectsPredicate",
+  "net.minecraft.advancements.predicates.entity.EntityEquipmentPredicate",
+  "net.minecraft.advancements.predicates.entity.EntityExactDataComponentsPredicate",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "researcher-0.5.0-beta.2+26.3.jar",
   "published": "2026-09-25"
  },
@@ -94,5 +94,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 344
+ "lacks": 275
 }

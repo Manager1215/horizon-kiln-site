@@ -1,0 +1,68 @@
+{
+ "id": "magikos-disenchantment",
+ "name": "Magikos - Disenchantment",
+ "version": "1.1.1",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/magikos-disenchantment",
+ "author": "Code-Arcanist",
+ "description": "The Magikos Disenchanting Mod introduces a powerful new way for players to manage enchantments in Minecraft.",
+ "needs": [
+  "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
+  "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.BooleanRuleBuilder",
+  "net.minecraft.world.flag.FeatureFlagRegistry",
+  "net.minecraft.world.inventory.ContainerData",
+  "net.minecraft.world.inventory.SimpleContainerData",
+  "PoseStack.rotate()",
+  "Axis.ZP",
+  "Object2IntMap.Entry.getKey()",
+  "BlockEntityRenderer.extractRenderState()",
+  "NonNullList.addAll()",
+  "MinecraftServer.getGameRules()",
+  "FeatureFlags.REGISTRY",
+  "ItemStack.getEnchantments()",
+  "EnchantmentHelper.updateEnchantments()",
+  "GameRuleCategory.MISC",
+  "GameRules.get()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "magikos-disenchantment_26.3_0.20.1-1.1.1.jar",
+  "published": "2026-11-15"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": false,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 16
+}

@@ -10,8 +10,6 @@
  "description": "A lightweight utility for replacing one block with another, both during worldgen and afterward.",
  "needs": [
   "Mixin: 2 points inside the game's methods",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
   "net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys",
   "net.minecraft.server.level.ChunkHolder",
   "net.minecraft.server.level.ChunkMap",
@@ -26,15 +24,6 @@
   "net.minecraft.world.level.levelgen.structure.structures.DesertPyramidPiece",
   "net.minecraft.world.level.levelgen.structure.structures.JungleTemplePiece",
   "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate",
-  "ServerLifecycleEvents.SERVER_STARTING",
-  "BlockPos.distSqr()",
-  "BlockPos.MutableBlockPos.set()",
-  "DefaultedRegistry.entrySet()",
-  "DefaultedRegistry.getTagOrEmpty()",
-  "Holder.is()",
-  "Registry.get()",
-  "RegistryAccess.lookupOrThrow()",
-  "SectionPos.sectionToBlockCoord()",
   "BuiltInRegistries.FEATURE_TYPE",
   "Registries.FEATURE_TYPE",
   "Registries.STRUCTURE",
@@ -50,14 +39,25 @@
   "LevelAccessor.getChunk()",
   "LevelAccessor.getLevelData()",
   "LevelAccessor.hasChunk()",
-  "and 34 more"
+  "LevelAccessor.registryAccess()",
+  "LevelAccessor.setBlock()",
+  "LevelHeightAccessor.isOutsideBuildHeight()",
+  "ChunkAccess.getAllReferences()",
+  "ChunkAccess.getAllStarts()",
+  "ChunkAccess.getBlockEntity()",
+  "ChunkAccess.getBlockEntityNbtForSaving()",
+  "ChunkAccess.getHeightAccessorForGeneration()",
+  "ChunkAccess.getNoiseBiome()",
+  "ChunkAccess.isUpgrading()",
+  "ChunkAccess.markUnsaved()",
+  "and 22 more"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "reliable_replacer-1.8.2+26.3-fabric.jar",
   "published": "2026-10-17"
  },
@@ -91,5 +91,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes"
  },
- "lacks": 74
+ "lacks": 62
 }

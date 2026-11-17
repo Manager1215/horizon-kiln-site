@@ -10,7 +10,6 @@
  "description": "Tame every regular Minecraft mob, then command, ride, store and upgrade your companions.",
  "needs": [
   "Mixin: 3 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.client.particle.v1.FabricSpriteSet",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
   "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
@@ -24,7 +23,6 @@
   "net.minecraft.advancements.triggers.TameAnimalTrigger",
   "net.minecraft.client.color.item.ItemTintSource",
   "net.minecraft.client.color.item.ItemTintSources",
-  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.model.HumanoidModel",
   "net.minecraft.client.particle.SingleQuadParticle",
   "net.minecraft.client.particle.SingleQuadParticle.Layer",
@@ -43,21 +41,23 @@
   "net.minecraft.server.PlayerAdvancements",
   "net.minecraft.server.ServerAdvancementManager",
   "net.minecraft.tags.DamageTypeTags",
-  "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.SimpleMenuProvider",
-  "net.minecraft.world.entity.EntityDimensions",
-  "net.minecraft.world.entity.EntitySpawnRequest",
   "net.minecraft.world.entity.NeutralMob",
-  "net.minecraft.world.entity.Pose",
   "net.minecraft.world.entity.WalkAnimationState",
+  "net.minecraft.world.entity.ai.Brain",
+  "net.minecraft.world.entity.ai.control.LookControl",
+  "net.minecraft.world.entity.ai.control.MoveControl",
+  "net.minecraft.world.entity.ai.goal.Goal",
+  "net.minecraft.world.entity.ai.goal.Goal.Flag",
+  "net.minecraft.world.entity.ai.goal.GoalSelector",
   "and 80 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "tame-every-mob-1.4.2.1-fabric-mc26.3-1.4.2.1.jar",
   "published": "2026-11-13"
  },
@@ -91,5 +91,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 536
+ "lacks": 380
 }

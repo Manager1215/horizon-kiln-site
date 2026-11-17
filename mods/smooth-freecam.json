@@ -9,7 +9,6 @@
  "author": "Zerw",
  "description": "A smooth spectator-style freecam. Fly the camera freely while your player stays frozen, then glide back into gameplay with a smooth transition.",
  "needs": [
-  "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
@@ -17,9 +16,10 @@
   "net.minecraft.client.player.KeyboardInput",
   "net.minecraft.client.player.RemotePlayer",
   "net.minecraft.world.entity.Marker",
-  "net.minecraft.world.entity.Pose",
   "net.minecraft.world.entity.WalkAnimationState",
   "net.minecraft.world.entity.player.Input",
+  "GameProfile.<init>()",
+  "GameProfile.properties()",
   "Camera.setEntity()",
   "Minecraft.setCameraEntity()",
   "Options.bobView()",
@@ -36,7 +36,6 @@
   "LocalPlayer.isDeadOrDying()",
   "LocalPlayer.isPassenger()",
   "LocalPlayer.noPhysics",
-  "LocalPlayer.setDeltaMovement()",
   "LocalPlayer.setPos()",
   "LocalPlayer.setXRot()",
   "LocalPlayer.setYHeadRot()",
@@ -49,14 +48,15 @@
   "LocalPlayer.xo",
   "LocalPlayer.yBob",
   "LocalPlayer.yBobO",
-  "and 12 more"
+  "LocalPlayer.yBodyRot",
+  "and 11 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "SmoothFreecam-26.3.jar",
   "published": "2026-09-24"
  },
@@ -88,5 +88,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 52
+ "lacks": 51
 }

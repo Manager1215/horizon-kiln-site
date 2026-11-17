@@ -10,7 +10,6 @@
  "description": "Fabric mod for support forward player data from velocity",
  "needs": [
   "Mixin: 1 point inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
   "net.fabricmc.api.DedicatedServerModInitializer",
@@ -22,20 +21,21 @@
   "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginSynchronizer",
   "net.fabricmc.fabric.impl.networking.PacketListenerExtensions",
   "net.fabricmc.fabric.impl.networking.server.ServerLoginNetworkAddon",
-  "net.minecraft.network.chat.PlayerChatMessage",
   "net.minecraft.network.protocol.game.ServerboundChatPacket",
   "net.minecraft.network.protocol.login.ServerboundHelloPacket",
   "net.minecraft.server.network.ServerLoginPacketListenerImpl",
+  "GameProfile.<init>()",
   "Connection.getRemoteAddress()",
   "Connection.send()",
+  "PlayerChatMessage.system()",
   "MinecraftServer.submit()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "FabricProxy-Lite-2.12.0.jar",
   "published": "2026-03-28"
  },

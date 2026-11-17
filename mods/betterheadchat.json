@@ -9,15 +9,10 @@
  "author": "Sansrus",
  "description": "Displays chat messages above players' heads. Supports vanilla chat, whispers, and configurable /tellraw patterns.",
  "needs": [
-  "com.mojang.authlib.GameProfile",
-  "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowChat",
   "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-  "net.minecraft.network.chat.PlayerChatMessage",
-  "ClientReceiveMessageEvents.ALLOW_CHAT",
   "ClientReceiveMessageEvents.ALLOW_GAME",
   "LevelRenderEvents.COLLECT_SUBMITS",
-  "Minecraft.gameDirectory",
   "Options.getBackgroundOpacity()",
   "LocalPlayer.distanceToSqr()",
   "Frustum.isVisible()",
@@ -26,9 +21,8 @@
   "CameraRenderState.orientation",
   "ChatType.MSG_COMMAND_INCOMING",
   "ChatType.MSG_COMMAND_OUTGOING",
-  "Component.getVisualOrderText()",
+  "PlayerChatMessage.signedContent()",
   "Player.getEyeHeight()",
-  "Player.getPlainTextName()",
   "Player.getPose()",
   "Player.xo",
   "Player.yo",
@@ -38,8 +32,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "BetterHead-chat-26.3-1.0.1.jar",
   "published": "2026-09-28"
  },
@@ -73,5 +67,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 24
+ "lacks": 18
 }

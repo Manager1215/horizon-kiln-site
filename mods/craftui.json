@@ -1,7 +1,7 @@
 {
  "id": "craftui",
  "name": "CraftUI",
- "version": "1.1.1",
+ "version": "1.2.0",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,16 +10,12 @@
  "description": "An implementation of Dear ImGui on top of Minecraft for in-game editors.",
  "needs": [
   "Mixin: 4 points inside the game's methods",
-  "com.mojang.blaze3d.platform.TextInputManager",
   "com.mojang.blaze3d.platform.Window.FramebufferSize",
   "com.mojang.blaze3d.platform.WindowEventHandler",
   "com.mojang.renderpearl.backend.opengl.DirectStateAccess",
   "com.mojang.renderpearl.backend.opengl.GlCommandEncoder",
   "com.mojang.renderpearl.frontend.FrontendRenderPass",
-  "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-  "net.minecraft.CrashReport",
   "net.minecraft.IdentifierException",
-  "net.minecraft.ReportedException",
   "net.minecraft.client.gui.layouts.GridLayout",
   "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
   "net.minecraft.client.gui.screens.options.OptionsScreen",
@@ -40,26 +36,28 @@
   "Window.queryFramebufferSize()",
   "RenderSystem.assertOnRenderThread()",
   "KeyMapping.releaseAll()",
-  "Minecraft.textInputManager()",
   "MouseHandler.grabMouse()",
   "MouseHandler.releaseMouse()",
+  "CameraRenderState.depthFar",
   "CameraRenderState.orientation",
   "CameraRenderState.projectionMatrix",
-  "Identifier.toLanguageKey()",
-  "PreparableReloadListener.SharedState.resourceManager()",
+  "CameraRenderState.viewRotationMatrix",
+  "LevelRenderState.worldPartialTicks",
   "Util.getPlatform()",
   "Util.ioPool()",
   "Entity.getViewVector()",
-  "and 4 more"
+  "Level.clip()",
+  "AABB.expandTowards()",
+  "AABB.ofSize()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
-  "file": "craftui-1.1.1.jar",
-  "published": "2026-09-22"
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "craftui-1.2.0.jar",
+  "published": "2026-11-15"
  },
  "reports": {
   "works": 0,
@@ -69,8 +67,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -91,5 +89,5 @@
   "class": "restart",
   "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own"
  },
- "lacks": 44
+ "lacks": 39
 }

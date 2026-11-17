@@ -9,11 +9,9 @@
  "author": "PaulNZ",
  "description": "Lightweight mod that automatically publishes singleplayer worlds for online play. Allows your friends to join without always having to remember to enable multiplayer first.",
  "needs": [
-  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.GameProfileRepository",
   "com.mojang.authlib.services.MinecraftServicesDiscoveryService",
   "com.mojang.authlib.services.response.NameAndId",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents",
   "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents.QueryStart",
   "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking",
@@ -25,7 +23,6 @@
   "net.minecraft.client.gui.screens.options.OptionsSubScreen",
   "net.minecraft.client.gui.screens.social.PlayerSocialManager",
   "net.minecraft.client.gui.screens.social.PresenceHandler",
-  "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.network.chat.ComponentUtils",
   "net.minecraft.server.MinecraftServer.MultiplayerScope",
   "net.minecraft.server.commands.BanIpCommands",
@@ -49,14 +46,17 @@
   "net.minecraft.server.players.ServerOpListEntry",
   "net.minecraft.server.players.StoredUserEntry",
   "net.minecraft.server.players.StoredUserList",
-  "and 26 more"
+  "net.minecraft.server.players.UserBanList",
+  "net.minecraft.server.players.UserBanListEntry",
+  "net.minecraft.server.players.UserWhiteList",
+  "and 28 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "alwaysmultiplayer-fabric-26.3-1.0.1.jar",
   "published": "2026-09-19"
  },
@@ -90,5 +90,5 @@
   "class": "partial",
   "why": "runs threads of its own"
  },
- "lacks": 66
+ "lacks": 68
 }

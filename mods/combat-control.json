@@ -10,8 +10,6 @@
  "description": "Bring back classic combat from 1.8.9 and earlier. Remove the attack cooldown, re-introduce sword blocking and more!",
  "needs": [
   "Mixin: 122 points inside the game's methods",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.minecraft.client.AttackIndicatorStatus",
   "net.minecraft.client.model.ArmedModel",
   "net.minecraft.client.model.HumanoidModel",
@@ -24,7 +22,6 @@
   "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
   "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState",
   "net.minecraft.client.renderer.state.level.PlayerRenderState",
-  "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.server.PlayerAdvancements",
   "net.minecraft.server.dedicated.DedicatedServer",
   "net.minecraft.server.level.ServerPlayerGameMode",
@@ -50,14 +47,17 @@
   "net.minecraft.world.entity.decoration.LeashFenceKnotEntity",
   "net.minecraft.world.entity.monster.Enderman",
   "net.minecraft.world.entity.monster.Shulker",
-  "and 80 more"
+  "net.minecraft.world.entity.monster.hoglin.Hoglin",
+  "net.minecraft.world.entity.monster.piglin.AbstractPiglin",
+  "net.minecraft.world.entity.monster.warden.Warden",
+  "and 70 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "combat-control-1.14.0+26.3.jar",
   "published": "2026-09-15"
  },
@@ -98,5 +98,5 @@
   "class": "restart",
   "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; @modify-arg Kiln doesn't guard; runs threads of its own; has network channels"
  },
- "lacks": 165
+ "lacks": 135
 }

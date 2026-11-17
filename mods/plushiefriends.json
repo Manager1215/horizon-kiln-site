@@ -9,14 +9,11 @@
  "author": "SodaSyrup",
  "description": "Turn any Minecraft player's skin into a collectible 3D plushie! Create custom player plushies to decorate your world, servers, and modpacks.",
  "needs": [
-  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
   "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedLayerDefinitionProvider",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.minecraft.client.model.geom.PartPose",
   "net.minecraft.client.model.geom.builders.CubeDeformation",
   "net.minecraft.client.model.geom.builders.CubeListBuilder",
@@ -30,9 +27,9 @@
   "net.minecraft.world.item.component.ResolvableProfile",
   "net.minecraft.world.level.block.Mirror",
   "net.minecraft.world.level.block.state.properties.RotationSegment",
+  "GameProfile.<init>()",
+  "GameProfile.properties()",
   "Axis.ZP",
-  "ServerLifecycleEvents.END_DATA_PACK_RELOAD",
-  "ServerLifecycleEvents.SERVER_STARTED",
   "Minecraft.playerSkinRenderCache()",
   "EntityModelSet.bakeLayer()",
   "ModelPart.getChild()",
@@ -46,17 +43,18 @@
   "ListTag.add()",
   "ListTag.compoundStream()",
   "FileToIdConverter.json()",
-  "MinecraftServer.execute()",
   "BlockItem.inventoryTick()",
   "TypedEntityData.copyTagWithoutId()",
-  "and 3 more"
+  "Blocks.WOOL",
+  "Rotation.rotate()",
+  "BlockStateProperties.ROTATION_16"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "plushie_friends-1.0.3+26.3-fabric.jar",
   "published": "2026-10-24"
  },
@@ -90,5 +88,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
  },
- "lacks": 43
+ "lacks": 39
 }

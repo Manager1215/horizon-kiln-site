@@ -10,9 +10,6 @@
  "description": "The world is (literally) your canvas!",
  "needs": [
   "Mixin: 8 points inside the game's methods",
-  "com.mojang.blaze3d.platform.cursor.CursorTypes",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
   "net.fabricmc.fabric.api.attachment.v1.GlobalAttachments",
   "net.fabricmc.fabric.api.client.debug.v1.renderer.DebugRendererRegistry",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin",
@@ -24,14 +21,12 @@
   "net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadAtlas",
   "net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadEmitter",
   "net.fabricmc.fabric.api.event.client.player.ClientPreAttackCallback",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.event.player.ItemEvents",
   "net.fabricmc.fabric.api.event.player.ItemEvents.UseCallback",
   "net.fabricmc.fabric.api.event.player.ItemEvents.UseOnCallback",
   "net.fabricmc.fabric.api.item.v1.ItemComponentTooltipProviderRegistry",
   "net.fabricmc.fabric.impl.client.indigo.renderer.mesh.EncodingFormat",
   "net.fabricmc.fabric.impl.client.indigo.renderer.mesh.MutableQuadViewImpl",
-  "net.minecraft.SharedConstants",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
   "net.minecraft.client.color.item.ItemTintSource",
   "net.minecraft.client.color.item.ItemTintSources",
@@ -50,14 +45,19 @@
   "net.minecraft.client.renderer.item.EmptyModel.Unbaked",
   "net.minecraft.client.renderer.item.RangeSelectItemModel",
   "net.minecraft.client.renderer.item.RangeSelectItemModel.Entry",
-  "and 76 more"
+  "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperties",
+  "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperty",
+  "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperties",
+  "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty",
+  "net.minecraft.nbt.NbtAccounter",
+  "and 71 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "paint_literally_anywhere-1.1.0-26.3.jar",
   "published": "2026-10-15"
  },
@@ -91,5 +91,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 140
+ "lacks": 113
 }

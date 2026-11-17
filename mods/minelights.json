@@ -1,7 +1,7 @@
 {
  "id": "minelights",
  "name": "MineLights",
- "version": "2.4.0+26.3-fabric",
+ "version": "2.4.1+26.3-fabric",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,16 +9,17 @@
  "author": "MegaBytesMe",
  "description": "MineLights is a Minecraft mod that brings RGB lighting integrations to Minecraft Java Edition and Horizon - OpenRGB, Corsair iCUE, Logitech G HUB, Razer Chroma, MSI Mystic Light, ASUS Aura, SteelSeries GameSense, and Wooting.",
  "needs": [
-  "net.minecraft.SharedConstants",
   "net.minecraft.client.gui.contextualbar.ExperienceBar",
   "net.minecraft.client.gui.contextualbar.JumpableVehicleBar",
   "net.minecraft.client.gui.contextualbar.LocatorBar",
   "net.minecraft.client.multiplayer.ClientLevel.ClientLevelData",
   "net.minecraft.client.renderer.EndFlashState",
   "net.minecraft.client.waypoints.ClientWaypointManager",
+  "net.minecraft.server.level.ServerPlayer.RespawnConfig",
   "net.minecraft.world.item.component.LodestoneTracker",
   "net.minecraft.world.level.LightLayer",
   "net.minecraft.world.waypoints.Waypoint.Icon",
+  "SharedConstants.getCurrentVersion()",
   "ClientLevel.endFlashState()",
   "ClientLevel.getBrightness()",
   "ClientLevel.getLevelData()",
@@ -30,9 +31,10 @@
   "LocalPlayer.getEyeY()",
   "LocalPlayer.getMaxAirSupply()",
   "LocalPlayer.hurtTime",
+  "IntegratedServer.submit()",
   "DataComponents.LODESTONE_TRACKER",
+  "ServerPlayer.getRespawnConfig()",
   "Player.getLastDeathLocation()",
-  "Items.COMPASS",
   "LevelData.RespawnData.dimension()",
   "LevelData.RespawnData.pos()",
   "TrackedWaypoint.distanceSquared()",
@@ -44,10 +46,10 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
-  "file": "minelights-2.4.0+26.3-fabric.jar",
-  "published": "2026-11-07"
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "minelights-2.4.1+26.3-fabric.jar",
+  "published": "2026-11-16"
  },
  "reports": {
   "works": 0,
@@ -57,8 +59,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -70,11 +72,12 @@
  "mixins": true,
  "depends": [
   "fabric-api",
+  "fabricloader",
   "minecraft"
  ],
  "softOff": {
   "class": "partial",
   "why": "runs threads of its own"
  },
- "lacks": 30
+ "lacks": 32
 }

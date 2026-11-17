@@ -10,8 +10,6 @@
  "description": "Personally created dimensions that exist as actual generated worlds, not shared with anyone, unless you want to! Persists even if you throw away mods and the regular minecraft worlds!",
  "needs": [
   "Mixin: 18 points inside the game's methods",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.minecraft.server.commands.TimeCommand",
   "net.minecraft.server.level.ChunkMap",
   "net.minecraft.server.level.ServerPlayer.RespawnConfig",
@@ -23,20 +21,13 @@
   "net.minecraft.world.level.dimension.BuiltinDimensionTypes",
   "net.minecraft.world.level.levelgen.RandomState",
   "net.minecraft.world.level.levelgen.WorldGenSettings",
-  "net.minecraft.world.level.storage.LevelResource",
   "net.minecraft.world.level.storage.WorldData",
   "JsonSyntaxException.getMessage()",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerLifecycleEvents.SERVER_STOPPING",
-  "BlockPos.MutableBlockPos.set()",
-  "Registry.get()",
-  "RegistryAccess.Frozen.lookupOrThrow()",
   "BuiltInRegistries.CHUNK_GENERATOR",
   "Registries.BIOME",
   "ListTag.add()",
   "MinecraftServer.getDataStorage()",
   "MinecraftServer.getWorldData()",
-  "MinecraftServer.getWorldPath()",
   "MinecraftServer.overworld()",
   "MinecraftServer.registryAccess()",
   "ServerChunkCache.getChunkNow()",
@@ -50,14 +41,23 @@
   "ServerPlayer.getRespawnConfig()",
   "ServerPlayer.isOnPortalCooldown()",
   "ServerPlayer.isPassenger()",
-  "and 23 more"
+  "ServerPlayer.setPortalCooldown()",
+  "ServerPlayer.teleport()",
+  "SoundEvents.BEACON_DEACTIVATE",
+  "SoundEvents.END_PORTAL_SPAWN",
+  "SoundEvents.NOTE_BLOCK_BASS",
+  "Level.getHeight()",
+  "Level.getMinY()",
+  "BiomeSource.CODEC",
+  "Biomes.THE_VOID",
+  "and 13 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "pocketislands-1.1.0.jar",
   "published": "2026-11-02"
  },
@@ -89,5 +89,5 @@
   "class": "restart",
   "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
  },
- "lacks": 63
+ "lacks": 53
 }

@@ -10,11 +10,7 @@
  "description": "Your mount follows you through every teleport — commands, plugins, portals, you name it. Stay seated, arrive together.",
  "needs": [
   "Mixin: 1 point inside the game's methods",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.loader.api.VersionParsingException",
-  "net.minecraft.world.entity.EntityDimensions",
-  "net.minecraft.world.entity.Pose",
   "net.minecraft.world.entity.animal.equine.AbstractHorse",
   "net.minecraft.world.entity.animal.equine.Llama",
   "net.minecraft.world.entity.animal.equine.TraderLlama",
@@ -28,8 +24,6 @@
   "net.minecraft.world.level.entity.EntitySectionStorage",
   "net.minecraft.world.level.entity.PersistentEntitySectionManager",
   "net.minecraft.world.level.gameevent.GameEvent.Context",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerLifecycleEvents.SERVER_STARTING",
   "Version.parse()",
   "SectionPos.asLong()",
   "BuiltInRegistries.TICKET_TYPE",
@@ -41,7 +35,6 @@
   "ServerLevel.getLogicalHeight()",
   "ServerLevel.getMaxY()",
   "ServerLevel.getMinY()",
-  "ServerPlayer.getRandom()",
   "ServerPlayer.getVehicle()",
   "ServerPlayer.isAlive()",
   "ServerPlayer.resetCurrentImpulseContext()",
@@ -50,14 +43,21 @@
   "ServerPlayer.teleport()",
   "SoundEvents.CHORUS_FRUIT_TELEPORT",
   "BlockTags.CONSUMABLE_DOES_NOT_TELEPORT_TO",
-  "and 34 more"
+  "Entity.chunkPosition()",
+  "Entity.getIndirectPassengers()",
+  "Entity.getSelfAndPassengers()",
+  "Entity.isAlive()",
+  "EntityDimensions.makeBoundingBox()",
+  "BlockState.getCollisionShape()",
+  "WorldBorder.getMaxX()",
+  "and 10 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "tpwithme-1.2.1.jar",
   "published": "2026-10-23"
  },
@@ -91,5 +91,5 @@
   "class": "restart",
   "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
  },
- "lacks": 74
+ "lacks": 50
 }

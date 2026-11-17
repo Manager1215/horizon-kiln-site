@@ -10,8 +10,6 @@
  "description": "New AFK management mod, with full AFK Time/Duration/Reason handling; and full Placeholder API formatting support.  Also works in Single Player; and can provide this information to other mods via Placeholder API.  Supports Luck Permissions.",
  "needs": [
   "Mixin: 8 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
-  "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.network.protocol.game.ServerboundMovePlayerPacket",
   "net.minecraft.server.dedicated.DedicatedServer",
   "net.minecraft.server.level.ServerPlayerGameMode",
@@ -19,12 +17,12 @@
   "net.minecraft.server.packs.repository.PackRepository",
   "net.minecraft.server.players.SleepStatus",
   "net.minecraft.world.level.levelgen.PhantomSpawner",
+  "IntegratedServer.getServerModName()",
   "CommandSourceStack.checkPermission()",
   "MinecraftServer.getPackRepository()",
   "MinecraftServer.getServerModName()",
   "MinecraftServer.sendSystemMessage()",
   "ServerPlayer.checkPermission()",
-  "ServerPlayer.connection",
   "ServerPlayer.gameMode",
   "ServerPlayer.getEyeY()",
   "ServerPlayer.getGameProfile()",
@@ -35,7 +33,6 @@
   "ServerGamePacketListenerImpl.disconnect()",
   "ServerGamePacketListenerImpl.isAcceptingMessages()",
   "PlayerList.broadcastAll()",
-  "Util.getMillis()",
   "Entity.<init>()",
   "Entity.checkPermission()",
   "Entity.isPushable()",
@@ -47,8 +44,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "afkplus-v1.7.17-mc26.3.jar",
   "published": "2026-09-23"
  },
@@ -81,5 +78,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes; runs threads of its own"
  },
- "lacks": 32
+ "lacks": 29
 }

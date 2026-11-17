@@ -1,7 +1,7 @@
 {
  "id": "status-player",
  "name": "Status Player",
- "version": "1.4.1+fabric+26.3",
+ "version": "1.4.2+fabric+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,31 +9,26 @@
  "author": "Teufel",
  "description": "Lightweight player status tags for Fabric, Forge, NeoForge & Quilt (1.21.11 → 26.3): colored TAB/nametag text, presets, per-world overrides, history, placeholders, admin GUI, Bedrock channels + optional dashboard sync.",
  "needs": [
-  "com.mojang.authlib.GameProfile",
+  "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
+  "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowChatMessage",
   "net.minecraft.network.chat.numbers.BlankFormat",
   "net.minecraft.server.ServerScoreboard",
   "net.minecraft.server.players.ServerOpList",
   "net.minecraft.server.players.ServerOpListEntry",
-  "net.minecraft.world.SimpleContainer",
-  "net.minecraft.world.item.component.ItemLore",
   "net.minecraft.world.item.component.ResolvableProfile",
   "net.minecraft.world.scores.PlayerTeam",
   "net.minecraft.world.scores.ScoreAccess",
-  "DataComponents.CUSTOM_NAME",
-  "DataComponents.LORE",
+  "SharedConstants.getCurrentVersion()",
   "DataComponents.PROFILE",
   "ListTag.add()",
-  "MinecraftServer.execute()",
+  "PlayerChatMessage.signedContent()",
   "MinecraftServer.getScoreboard()",
   "ServerBossEvent.getPlayers()",
   "ServerBossEvent.removeAllPlayers()",
   "ServerBossEvent.setName()",
   "ServerLevel.getEntitiesOfClass()",
-  "ServerPlayer.connection",
   "ServerPlayer.getBoundingBox()",
   "ServerPlayer.getGameProfile()",
-  "ServerPlayer.permissions()",
-  "ServerGamePacketListenerImpl.send()",
   "NameAndId.<init>()",
   "PlayerList.getOps()",
   "Container.startOpen()",
@@ -41,24 +36,21 @@
   "ItemEntity.discard()",
   "ItemEntity.getItem()",
   "AbstractContainerMenu.sendAllDataToRemote()",
-  "MenuType.GENERIC_9x3",
-  "MenuType.GENERIC_9x6",
-  "Items.ARROW",
-  "Items.BARRIER",
-  "Items.PAPER",
-  "AABB.inflate()",
   "Scoreboard.addObjective()",
   "Scoreboard.getObjective()",
-  "and 4 more"
+  "Scoreboard.getOrCreatePlayerScore()",
+  "Scoreboard.resetAllPlayerScores()",
+  "Scoreboard.setDisplayObjective()",
+  "ObjectiveCriteria.DUMMY"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+ "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
-  "file": "Statusmod-1.4.1-fabric-26.3.jar",
-  "published": "2026-10-15"
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "Statusmod-1.4.2-fabric-26.3.jar",
+  "published": "2026-11-15"
  },
  "reports": {
   "works": 0,
@@ -68,14 +60,15 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
  },
  "entrypoints": {
-  "main": 1
+  "main": 1,
+  "client": 1
  },
  "mixins": false,
  "depends": [
@@ -86,5 +79,5 @@
   "class": "partial",
   "why": "runs threads of its own"
  },
- "lacks": 44
+ "lacks": 33
 }

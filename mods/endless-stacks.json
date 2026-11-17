@@ -1,0 +1,56 @@
+{
+ "id": "endless-stacks",
+ "name": "Endless Stacks",
+ "version": "1.0.0+26.1-fabric",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/endless-stacks",
+ "author": "rcatlab",
+ "description": "Everything that stacks now stacks up to 1,000,000,000. Tools and other unstackables stay at 1.",
+ "needs": [
+  "Mixin: 11 points inside the game's methods",
+  "net.minecraft.server.commands.GiveCommand",
+  "net.minecraft.server.commands.ItemCommands",
+  "net.minecraft.server.commands.item.ItemCommands",
+  "DataComponents.MAX_STACK_SIZE",
+  "ExtraCodecs.intRange()"
+ ],
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "endlessstacks-1.0.0+mc26.1-26.3-fabric.jar",
+  "published": "2026-11-05"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 5
+}

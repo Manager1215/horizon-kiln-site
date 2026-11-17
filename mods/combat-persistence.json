@@ -9,13 +9,11 @@
  "author": "PottersGame",
  "description": "Stops combat logging on Fabric servers. Quit mid-fight and a copy of you stays behind with your gear. Kill it and take the loot. Server-side only, players don't need to install anything.",
  "needs": [
-  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
   "net.minecraft.core.UUIDUtil",
@@ -29,7 +27,6 @@
   "net.minecraft.world.inventory.BeaconMenu",
   "net.minecraft.world.inventory.CartographyTableMenu",
   "net.minecraft.world.inventory.EnchantmentMenu",
-  "net.minecraft.world.inventory.GrindstoneMenu",
   "net.minecraft.world.inventory.ItemCombinerMenu",
   "net.minecraft.world.inventory.LoomMenu",
   "net.minecraft.world.inventory.MerchantMenu",
@@ -37,26 +34,29 @@
   "net.minecraft.world.inventory.StonecutterMenu",
   "net.minecraft.world.item.component.ResolvableProfile",
   "net.minecraft.world.level.block.EnderChestBlock",
-  "net.minecraft.world.level.storage.LevelResource",
-  "ServerLifecycleEvents.SERVER_STOPPING",
+  "GameProfile.<init>()",
+  "GameProfile.properties()",
   "DataComponents.PROFILE",
   "NbtIo.readCompressed()",
   "NbtIo.writeCompressed()",
   "Connection.disconnect()",
   "ClientboundPlayerInfoUpdatePacket.createPlayerInitializing()",
   "SynchedEntityData.getNonDefaultValues()",
-  "MinecraftServer.execute()",
   "MinecraftServer.getAllLevels()",
   "MinecraftServer.getTickCount()",
-  "MinecraftServer.getWorldPath()",
-  "and 39 more"
+  "MinecraftServer.usesAuthentication()",
+  "ServerChunkCache.sendToTrackingPlayers()",
+  "ServerLevel.getEntity()",
+  "ServerPlayer.closeContainer()",
+  "ServerPlayer.createCommonSpawnInfo()",
+  "and 29 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "combatpersistence-1.10.0.jar",
   "published": "2026-11-06"
  },
@@ -88,5 +88,5 @@
   "class": "partial",
   "why": "runs threads of its own"
  },
- "lacks": 79
+ "lacks": 69
 }

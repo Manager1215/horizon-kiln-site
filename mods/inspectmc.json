@@ -9,7 +9,6 @@
  "author": "LevelsFR",
  "description": "Inspect blocks, entities, biomes, registries, datapacks and runtime data in-game, then export diagnostics to JSON, CSV, Excel and ZIP.",
  "needs": [
-  "net.minecraft.SharedConstants",
   "net.minecraft.commands.arguments.ResourceArgument",
   "net.minecraft.server.level.ServerPlayerGameMode",
   "net.minecraft.server.packs.repository.PackRepository",
@@ -18,11 +17,8 @@
   "net.minecraft.world.phys.EntityHitResult",
   "ImmutableList.size()",
   "JsonArray.forEach()",
-  "BlockPos.distSqr()",
+  "SharedConstants.getCurrentVersion()",
   "BlockPos.toShortString()",
-  "BlockPos.MutableBlockPos.set()",
-  "Holder.Reference.tags()",
-  "SectionPos.sectionToBlockCoord()",
   "Registries.BIOME",
   "Style.withInsertion()",
   "MinecraftServer.getAllLevels()",
@@ -49,14 +45,18 @@
   "Entity.getCustomName()",
   "Entity.getPassengers()",
   "Entity.getPose()",
-  "and 27 more"
+  "Entity.getVehicle()",
+  "Entity.hasCustomName()",
+  "Entity.isInvulnerable()",
+  "Entity.isNoGravity()",
+  "and 24 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "inspectmc-fabric-mc26.3-1.0.0.jar",
   "published": "2026-09-19"
  },
@@ -90,5 +90,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 72
+ "lacks": 64
 }

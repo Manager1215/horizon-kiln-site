@@ -1,7 +1,7 @@
 {
  "id": "easy-mob-spawn-control",
  "name": "Easy Mob Spawn Control",
- "version": "1.7.3",
+ "version": "1.7.4",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -11,21 +11,16 @@
  "needs": [
   "Mixin: 5 points inside the game's methods",
   "com.mojang.blaze3d.Blaze3D",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.minecraft.client.gui.layouts.LinearLayout",
   "net.minecraft.client.gui.layouts.LinearLayout.Orientation",
-  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.gui.screens.multiplayer.WarningScreen",
   "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
-  "net.minecraft.client.server.IntegratedServer",
   "net.minecraft.commands.arguments.selector.EntitySelectorParser",
   "net.minecraft.server.level.ServerPlayerGameMode",
   "net.minecraft.server.level.WorldGenRegion",
   "net.minecraft.tags.StructureTags",
   "net.minecraft.util.SpawnUtil",
   "net.minecraft.util.valueproviders.ConstantInt",
-  "net.minecraft.world.entity.Pose",
   "net.minecraft.world.entity.SpawnPlacements",
   "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
   "net.minecraft.world.entity.ai.attributes.DefaultAttributes",
@@ -39,27 +34,32 @@
   "net.minecraft.world.level.NaturalSpawner.SpawnState",
   "net.minecraft.world.level.StructureManager",
   "net.minecraft.world.level.dimension.end.EnderDragonFight",
-  "AttachmentRegistry.builder()",
   "BiomeModificationContext.MobSpawnSettingsContext.removeSpawnsOfEntityType()",
   "BiomeModifications.addSpawn()",
-  "ServerLifecycleEvents.SERVER_STARTING",
   "Minecraft.getEntityRenderDispatcher()",
-  "Minecraft.getSingleplayerServer()",
   "GuiGraphicsExtractor.entity()",
-  "GuiGraphicsExtractor.fakeItem()",
   "EntityRenderDispatcher.getRenderer()",
   "EntityRenderer.createRenderState()",
   "EntityRenderState.boundingBoxHeight",
-  "and 49 more"
+  "EntityRenderState.shadowPieces",
+  "IntegratedServer.executeBlocking()",
+  "IntegratedServer.getAllLevels()",
+  "DefaultedRegistry.iterator()",
+  "BuiltInRegistries.ATTRIBUTE",
+  "Registries.BIOME",
+  "Registries.STRUCTURE",
+  "ByteBufCodecs.BYTE_ARRAY",
+  "MinecraftServer.executeBlocking()",
+  "and 44 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
-  "file": "easy_mob_spawn_control-1.7.3.jar",
-  "published": "2026-11-13"
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "easy_mob_spawn_control-1.7.4.jar",
+  "published": "2026-11-14"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; runs threads of its own; has network channels; generates in the world"
  },
- "lacks": 103
+ "lacks": 86
 }

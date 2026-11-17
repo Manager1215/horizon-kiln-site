@@ -10,22 +10,13 @@
  "description": "Tool that allows hiding recipes to unlock under certain conditions, and giving players hints for how to unlock them",
  "needs": [
   "Mixin: 1 point inside the game's methods",
-  "com.mojang.authlib.GameProfile",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.minecraft.advancements.predicates.ItemPredicate",
   "net.minecraft.server.PlayerAdvancements",
   "net.minecraft.server.ServerAdvancementManager",
   "net.minecraft.util.profiling.ProfilerFiller",
-  "net.minecraft.world.inventory.CraftingMenu",
   "net.minecraft.world.item.crafting.RecipeManager.CachedCheck",
-  "net.minecraft.world.item.crafting.display.SlotDisplayContext",
   "net.minecraft.world.level.block.AbstractFurnaceBlock",
   "net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity",
-  "net.minecraft.world.level.storage.LevelResource",
-  "ServerLifecycleEvents.END_DATA_PACK_RELOAD",
-  "ServerLifecycleEvents.SERVER_STOPPING",
-  "Minecraft.getSingleplayerServer()",
   "NonNullList.iterator()",
   "RegistryAccess.fromRegistryOfRegistries()",
   "BuiltInRegistries.REGISTRY",
@@ -34,20 +25,18 @@
   "FileToIdConverter.json()",
   "FileToIdConverter.listMatchingResources()",
   "MinecraftServer.getAdvancements()",
-  "MinecraftServer.getWorldPath()",
   "MinecraftServer.overworld()",
   "ServerPlayer.getAdvancements()",
   "ServerPlayer.getGameProfile()",
   "GsonHelper.fromJson()",
-  "RecipeManager.byKey()",
-  "SlotDisplay.resolveForFirstStack()"
+  "RecipeManager.byKey()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "hidden_recipes-fabric-26.3-1.0.1.jar",
   "published": "2026-10-12"
  },
@@ -81,5 +70,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; has network channels"
  },
- "lacks": 31
+ "lacks": 20
 }

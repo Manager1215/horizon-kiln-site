@@ -10,20 +10,15 @@
  "description": "A Minecraft Mod that just tweaks some stuff and adds must-have features to the game, while keeping it super vanilla-friendly.",
  "needs": [
   "Mixin: 2 points inside the game's methods",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
   "net.minecraft.world.entity.decoration.ArmorStand",
   "net.minecraft.world.entity.monster.Enderman.EndermanTakeBlockGoal",
   "net.minecraft.world.entity.vehicle.minecart.Minecart",
-  "net.minecraft.world.inventory.AnvilMenu",
   "net.minecraft.world.inventory.ResultContainer",
   "net.minecraft.world.item.BowItem",
-  "net.minecraft.world.item.FireworkRocketItem",
   "net.minecraft.world.level.block.FarmlandBlock",
-  "ServerLifecycleEvents.SERVER_STARTING",
-  "Minecraft.getCurrentServer()",
   "Minecraft.isLocalServer()",
   "ClientLevel.setSectionDirtyWithNeighbors()",
   "LocalPlayer.permissions()",
@@ -36,28 +31,28 @@
   "EntityRenderState.LeashState.startBlockLight",
   "EntityRenderState.LeashState.startSkyLight",
   "MinecartRenderState.leashStates",
-  "Registry.getOrThrow()",
-  "RegistryAccess.lookupOrThrow()",
   "SectionPos.of()",
   "SectionPos.x()",
   "SectionPos.y()",
   "SectionPos.z()",
   "DataComponents.DAMAGE_RESISTANT",
   "ServerLevel.getEntity()",
-  "ServerPlayer.permissions()",
   "ItemEntity.getItem()",
   "Player.addItem()",
   "Player.isSecondaryUseActive()",
   "AbstractMinecart.getPosition()",
   "AbstractMinecart.isVehicle()",
-  "and 8 more"
+  "Enchantments.FEATHER_FALLING",
+  "Enchantments.INFINITY",
+  "Level.getEntity()",
+  "ValueInput.ValueInputList.iterator()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "justtweaks-fabric-26.3-v1.0.0.jar",
   "published": "2026-10-18"
  },
@@ -91,5 +86,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 48
+ "lacks": 36
 }

@@ -10,7 +10,6 @@
  "description": "SkyCubed is a Hypixel SkyBlock UI overhaul mod, changing all aspects of the UI in-game to be more inline into it looking like its own game",
  "needs": [
   "Mixin: 66 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.SignatureState",
   "com.mojang.authlib.minecraft.MinecraftProfileTexture",
   "com.mojang.authlib.minecraft.MinecraftProfileTextures",
@@ -20,7 +19,6 @@
   "com.mojang.authlib.services.MinecraftServicesSessionService",
   "com.mojang.blaze3d.buffers.Std140Builder",
   "com.mojang.blaze3d.buffers.Std140SizeCalculator",
-  "com.mojang.blaze3d.platform.cursor.CursorTypes",
   "com.mojang.blaze3d.vertex.BufferBuilder",
   "com.mojang.blaze3d.vertex.ByteBufferBuilder",
   "com.mojang.blaze3d.vertex.DefaultVertexFormat",
@@ -28,7 +26,6 @@
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
   "com.mojang.text2speech.Narrator",
-  "net.minecraft.client.StringSplitter",
   "net.minecraft.client.entity.ClientMannequin",
   "net.minecraft.client.gui.Font.PreparedTextBuilder",
   "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
@@ -43,21 +40,24 @@
   "net.minecraft.client.gui.layouts.FrameLayout",
   "net.minecraft.client.gui.layouts.Layout",
   "net.minecraft.client.gui.layouts.LayoutSettings",
-  "net.minecraft.client.gui.screens.inventory.ContainerScreen",
   "net.minecraft.client.gui.screens.inventory.EffectsInInventory",
-  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.gui.screens.options.controls.KeyBindsScreen",
   "net.minecraft.client.multiplayer.chat.ChatListener",
   "net.minecraft.client.multiplayer.chat.GuiMessage.Line",
   "net.minecraft.client.particle.ParticleEngine",
-  "and 80 more"
+  "net.minecraft.client.player.RemotePlayer",
+  "net.minecraft.client.renderer.BindGroupLayouts",
+  "net.minecraft.client.renderer.LevelRenderer",
+  "net.minecraft.client.renderer.ScreenEffectRenderer",
+  "net.minecraft.client.renderer.blockentity.SkullBlockRenderer",
+  "and 79 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "SkyCubed-1.10.0-26.3.jar",
   "published": "2026-10-19"
  },
@@ -95,5 +95,5 @@
   "class": "restart",
   "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
  },
- "lacks": 177
+ "lacks": 139
 }

@@ -10,7 +10,6 @@
  "description": "Use the power of Sculk to stream music, redstone, and voice chat across your world.",
  "needs": [
   "Mixin: 3 points inside the game's methods",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
   "net.fabricmc.fabric.api.event.player.BlockEvents",
   "net.fabricmc.fabric.api.event.player.BlockEvents.UseItemOnCallback",
   "net.fabricmc.fabric.api.event.player.BlockEvents.UseWithoutItemCallback",
@@ -21,7 +20,6 @@
   "net.minecraft.world.item.JukeboxSong",
   "net.minecraft.world.item.JukeboxSongPlayer",
   "net.minecraft.world.item.JukeboxSongPlayer.OnSongChanged",
-  "net.minecraft.world.item.component.ItemLore",
   "net.minecraft.world.level.block.CalibratedSculkSensorBlock",
   "net.minecraft.world.level.block.SculkShriekerBlock",
   "net.minecraft.world.level.block.entity.CalibratedSculkSensorBlockEntity",
@@ -32,11 +30,8 @@
   "net.minecraft.world.level.block.state.properties.SculkSensorPhase",
   "net.minecraft.world.level.gameevent.BlockPositionSource",
   "net.minecraft.world.level.gameevent.GameEvent.Context",
-  "ServerLifecycleEvents.SERVER_STARTED",
   "BlockPos.distChessboard()",
   "Registry.getId()",
-  "RegistryAccess.lookupOrThrow()",
-  "DataComponents.LORE",
   "Registries.JUKEBOX_SONG",
   "MinecraftServer.getAllLevels()",
   "MinecraftServer.getTickCount()",
@@ -45,19 +40,24 @@
   "ServerLevel.getDirectSignal()",
   "ServerLevel.getEntities()",
   "ServerLevel.sendParticles()",
-  "ServerPlayer.connection",
-  "ServerGamePacketListenerImpl.send()",
   "SoundEvents.AMETHYST_BLOCK_RESONATE",
   "SoundEvents.SCULK_CLICKING",
   "Entity.teleportTo()",
-  "and 34 more"
+  "Player.getUsedItemHand()",
+  "LevelAccessor.isClientSide()",
+  "LevelAccessor.registryAccess()",
+  "BlockState.getAnalogOutputSignal()",
+  "BlockState.getOwnSignal()",
+  "BlockState.getValueOrElse()",
+  "StateHolder.<init>()",
+  "and 18 more"
  ],
  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "SculkRadio-1.0.1+26.3.jar",
   "published": "2026-10-29"
  },
@@ -88,5 +88,5 @@
   "class": "restart",
   "why": "@wrap-method into the game's classes"
  },
- "lacks": 74
+ "lacks": 58
 }

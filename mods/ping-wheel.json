@@ -10,8 +10,6 @@
  "description": "Allows players to temporarily mark locations and entities",
  "needs": [
   "Mixin: 2 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
-  "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.minecraft.client.OptionInstance.CaptionBasedToString",
   "net.minecraft.client.OptionInstance.Enum",
   "net.minecraft.client.OptionInstance.SliderableValueSet",
@@ -19,8 +17,6 @@
   "net.minecraft.client.OptionInstance.ValueUpdateListener",
   "net.minecraft.client.gui.components.OptionsList",
   "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
-  "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
-  "net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner",
   "net.minecraft.client.gui.screens.options.OptionsSubScreen",
   "net.minecraft.client.renderer.state.level.PlayerRenderState",
   "net.minecraft.client.resources.sounds.AbstractTickableSoundInstance",
@@ -29,20 +25,15 @@
   "net.minecraft.world.scores.TeamColor",
   "PoseStack.last()",
   "PoseStack.Pose.pose()",
-  "KeyMapping.setKey()",
-  "Minecraft.getCurrentServer()",
   "OptionInstance.<init>()",
   "OptionInstance.<init>()",
   "OptionInstance.createBoolean()",
   "OptionInstance.noTooltip()",
   "OptionInstance.IntRange.xmap()",
-  "GuiGraphicsExtractor.blit()",
-  "GuiGraphicsExtractor.tooltip()",
   "Tooltip.toCharSequence()",
   "PlayerInfo.getProfile()",
   "PlayerInfo.getSkin()",
   "PlayerInfo.getTeam()",
-  "ServerData.ip",
   "LocalPlayer.getTeam()",
   "GameRenderState.levelRenderState",
   "GameRenderState.optionsRenderState",
@@ -50,14 +41,23 @@
   "OptionsRenderState.screenEffectScale",
   "CameraRenderState.projectionMatrix",
   "CameraRenderState.viewRotationMatrix",
-  "and 23 more"
+  "LevelRenderState.playerRenderState",
+  "ServerPlayer.getGameProfile()",
+  "Entity.getBoundingBox()",
+  "Entity.getEyePosition()",
+  "Entity.getPickRadius()",
+  "Entity.getPosition()",
+  "Entity.getViewVector()",
+  "Entity.isCrouching()",
+  "Entity.isSpectator()",
+  "and 10 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "Ping-Wheel-1.12.2-fabric-26.3.jar",
   "published": "2026-09-20"
  },
@@ -91,5 +91,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
  },
- "lacks": 63
+ "lacks": 50
 }

@@ -10,39 +10,27 @@
  "description": "Paper plugin and Fabric server mod to create fake player entries in a server. Able to relay players from another server, have fluctuating realistic pings, AI chats/personas and be compatible with TAB.",
  "needs": [
   "Mixin: 2 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
-  "net.minecraft.network.chat.ComponentSerialization",
-  "net.minecraft.network.chat.PlayerChatMessage",
   "net.minecraft.network.chat.RemoteChatSession",
   "net.minecraft.network.chat.RemoteChatSession.Data",
   "net.minecraft.network.protocol.game.ClientboundPlayerInfoUpdatePacket.Entry",
   "net.minecraft.network.protocol.status.ServerStatus",
   "net.minecraft.network.protocol.status.ServerStatus.Players",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerLifecycleEvents.SERVER_STOPPING",
-  "ChatFormatting.getByCode()",
-  "Component.getSiblings()",
-  "Component.translatableWithFallback()",
-  "MinecraftServer.execute()",
-  "ServerPlayer.connection",
-  "ServerPlayer.createCommandSourceStack()",
-  "ServerPlayer.getDisplayName()",
+  "GameProfile.<init>()",
+  "GameProfile.properties()",
+  "PlayerChatMessage.signedContent()",
   "ServerPlayer.getGameProfile()",
-  "ServerGamePacketListenerImpl.send()",
   "NameAndId.<init>()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "FauxPlayers-1.0.4-fabric-26.3.jar",
   "published": "2026-10-12"
  },
@@ -73,5 +61,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes; runs threads of its own"
  },
- "lacks": 26
+ "lacks": 14
 }

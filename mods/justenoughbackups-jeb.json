@@ -9,11 +9,6 @@
  "author": "frandm16",
  "description": "Backup mod that keeps your worlds safe with automatic and manual backups, with an easy in-game UI to create, manage, and restore them.",
  "needs": [
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-  "net.minecraft.SharedConstants",
-  "net.minecraft.world.level.storage.LevelResource",
   "net.minecraft.world.level.storage.WorldData",
   "org.apache.commons.compress.archivers.zip.DefaultBackingStoreSupplier",
   "org.apache.commons.compress.archivers.zip.ParallelScatterZipCreator",
@@ -23,28 +18,21 @@
   "org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream",
   "org.apache.commons.compress.archivers.zip.ZipFile",
   "org.apache.commons.compress.archivers.zip.ZipMethod",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerLifecycleEvents.SERVER_STARTING",
-  "ServerLifecycleEvents.SERVER_STOPPING",
-  "Minecraft.canInterruptScreen()",
-  "MinecraftServer.execute()",
+  "SharedConstants.getCurrentVersion()",
   "MinecraftServer.getAllLevels()",
   "MinecraftServer.getWorldData()",
-  "MinecraftServer.getWorldPath()",
   "MinecraftServer.halt()",
   "MinecraftServer.isAutoSave()",
-  "MinecraftServer.isSameThread()",
   "MinecraftServer.saveEverything()",
   "MinecraftServer.setAutoSave()",
-  "ServerLevel.noSave",
-  "ServerPlayer.createCommandSourceStack()"
+  "ServerLevel.noSave"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "justenoughbackups-1.2.0.10+26.3.jar",
   "published": "2026-11-01"
  },
@@ -78,5 +66,5 @@
   "class": "partial",
   "why": "runs threads of its own; has network channels"
  },
- "lacks": 29
+ "lacks": 17
 }

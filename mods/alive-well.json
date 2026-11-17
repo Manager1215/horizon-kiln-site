@@ -10,16 +10,12 @@
  "description": "Difficult survival mod specifically designed for the modpack 'Dangerous World'",
  "needs": [
   "Mixin: 12 points inside the game's methods",
-  "com.mojang.blaze3d.platform.cursor.CursorTypes",
   "net.fabricmc.fabric.api.client.screen.v1.Screens",
   "net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider.ItemTagsProvider",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.minecraft.client.gui.components.LockIconButton",
   "net.minecraft.client.gui.components.OptionsList",
   "net.minecraft.client.gui.screens.WorldOptionsScreen",
   "net.minecraft.client.gui.screens.WorldOptionsScreen.DifficultyButtons",
-  "net.minecraft.client.gui.screens.inventory.AnvilScreen",
   "net.minecraft.client.gui.screens.inventory.EnchantmentNames",
   "net.minecraft.client.gui.screens.inventory.EnchantmentScreen",
   "net.minecraft.client.gui.screens.inventory.ItemCombinerScreen",
@@ -50,14 +46,18 @@
   "net.minecraft.server.commands.TeleportCommand",
   "net.minecraft.server.commands.WeatherCommand",
   "net.minecraft.server.level.ChunkMap",
+  "net.minecraft.server.level.ServerPlayerGameMode",
+  "net.minecraft.tags.StructureTags",
+  "net.minecraft.util.CommonColors",
+  "net.minecraft.world.damagesource.CombatRules",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "AliveAndWell-3.0.16+mc26.3-fabric-public.jar",
   "published": "2026-11-02"
  },
@@ -91,5 +91,5 @@
   "class": "restart",
   "why": "@overwrite and @redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
  },
- "lacks": 505
+ "lacks": 351
 }

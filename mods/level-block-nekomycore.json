@@ -9,13 +9,10 @@
  "author": "nekomycore",
  "description": "An unofficial Fabric fan mod inspired by BastiGHG’s challenge: spend XP levels to unlock block columns and grow a shared survival area.",
  "needs": [
-  "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionEvents.EndExtraction",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.minecraft.server.PlayerAdvancements",
   "net.minecraft.server.ServerAdvancementManager",
   "net.minecraft.server.ServerScoreboard",
@@ -25,7 +22,6 @@
   "net.minecraft.world.entity.vehicle.DismountHelper",
   "net.minecraft.world.level.block.AbstractBedBlock",
   "net.minecraft.world.level.block.SnowLayerBlock",
-  "net.minecraft.world.level.storage.LevelResource",
   "net.minecraft.world.phys.shapes.BooleanOp",
   "net.minecraft.world.scores.PlayerScoreEntry",
   "net.minecraft.world.scores.ReadOnlyScoreInfo",
@@ -37,26 +33,30 @@
   "VertexConsumer.setOverlay()",
   "LevelExtractionEvents.END_EXTRACTION",
   "LevelRenderEvents.COLLECT_SUBMITS",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerLifecycleEvents.SERVER_STOPPING",
   "ClientLevel.getHeight()",
   "LocalPlayer.getBlockX()",
   "LocalPlayer.getBlockZ()",
   "RenderTypes.debugQuads()",
   "RenderTypes.entityTranslucentEmissive()",
-  "BlockPos.MutableBlockPos.set()",
   "ByteBufCodecs.collection()",
   "MinecraftServer.getAdvancements()",
   "MinecraftServer.getScoreboard()",
-  "MinecraftServer.getWorldPath()",
-  "and 41 more"
+  "MinecraftServer.overworld()",
+  "ServerLevel.getGameRules()",
+  "ServerLevel.getHeight()",
+  "ServerLevel.getMaxY()",
+  "ServerLevel.getMinY()",
+  "ServerLevel.getRespawnData()",
+  "ServerLevel.noCollision()",
+  "ServerLevel.sendParticles()",
+  "and 37 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "levelblock-3.0.4+mc26.3.jar",
   "published": "2026-10-05"
  },
@@ -89,5 +89,5 @@
   "class": "partial",
   "why": "has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 94
+ "lacks": 78
 }

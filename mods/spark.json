@@ -9,13 +9,9 @@
  "author": "lucko",
  "description": "spark is a performance profiler for Minecraft clients, servers and proxies.",
  "needs": [
-  "com.mojang.authlib.GameProfile",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.util.TriState",
   "net.fabricmc.loader.api.metadata.Person",
   "net.minecraft.client.multiplayer.ClientChunkCache",
-  "net.minecraft.network.chat.ComponentSerialization",
   "net.minecraft.server.packs.repository.Pack",
   "net.minecraft.server.packs.repository.PackRepository",
   "net.minecraft.server.packs.repository.PackSource",
@@ -23,8 +19,6 @@
   "net.minecraft.world.level.entity.LevelEntityGetter",
   "net.minecraft.world.level.entity.PersistentEntitySectionManager",
   "net.minecraft.world.level.entity.TransientEntitySectionManager",
-  "ServerLifecycleEvents.SERVER_STARTING",
-  "ServerLifecycleEvents.SERVER_STOPPING",
   "ModContainer.getRootPaths()",
   "ModMetadata.getAuthors()",
   "Minecraft.executeIfPossible()",
@@ -42,21 +36,21 @@
   "ServerChunkCache.getLoadedChunksCount()",
   "ServerLevel.getAllEntities()",
   "ServerLevel.getGameRules()",
-  "ServerPlayer.connection",
-  "ServerPlayer.createCommandSourceStack()",
   "ServerPlayer.getGameProfile()",
-  "ServerPlayer.permissions()",
   "ServerGamePacketListenerImpl.latency()",
   "Entity.chunkPosition()",
   "GameRule.defaultValue()",
-  "and 4 more"
+  "GameRule.id()",
+  "GameRule.serialize()",
+  "GameRules.availableRules()",
+  "GameRules.getAsString()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "spark-1.10.187-fabric.jar",
   "published": "2026-09-19"
  },
@@ -91,5 +85,5 @@
   "class": "partial",
   "why": "runs threads of its own"
  },
- "lacks": 44
+ "lacks": 35
 }

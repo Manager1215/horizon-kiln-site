@@ -9,17 +9,13 @@
  "author": "LukevonErden",
  "description": "Simple Status Mod is a lightweight server-side Minecraft mod that lets players set custom statuses displayed in chat, the tab list, and in front of their nametag.",
  "needs": [
-  "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowChatMessage",
-  "net.minecraft.network.chat.PlayerChatMessage",
   "net.minecraft.world.scores.PlayerTeam",
+  "PlayerChatMessage.decoratedContent()",
   "ServerLevel.getScoreboard()",
   "ServerPlayer.checkPermission()",
-  "ServerPlayer.connection",
   "ServerPlayer.getGameProfile()",
-  "ServerPlayer.permissions()",
-  "ServerGamePacketListenerImpl.send()",
   "PlayerList.sendAllPlayerInfo()",
   "Scoreboard.addPlayerTeam()",
   "Scoreboard.addPlayerToTeam()",
@@ -28,12 +24,12 @@
   "Scoreboard.removePlayerFromTeam()",
   "Scoreboard.removePlayerTeam()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "simplestatusmod-1.1.2.jar",
   "published": "2026-10-20"
  },
@@ -65,5 +61,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 18
+ "lacks": 14
 }

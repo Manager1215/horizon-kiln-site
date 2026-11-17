@@ -10,7 +10,6 @@
  "description": "A mod that modifies various vanilla HUD elements, such as the bossbar, action bar, sidebar / scoreboard, hotbar, title / subtitle, and more. By Polyfrost, best with OneClient.",
  "needs": [
   "Mixin: 17 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.minecraft.SessionService",
   "com.mojang.authlib.services.ProfileResult",
   "com.mojang.blaze3d.audio.ListenerTransform",
@@ -23,7 +22,6 @@
   "net.minecraft.client.gui.contextualbar.ContextualBar",
   "net.minecraft.client.gui.contextualbar.ExperienceBar",
   "net.minecraft.client.gui.contextualbar.LocatorBar",
-  "net.minecraft.client.renderer.texture.DynamicTexture",
   "net.minecraft.client.sounds.WeighedSoundEvents",
   "net.minecraft.client.waypoints.ClientWaypointManager",
   "net.minecraft.network.chat.numbers.BlankFormat",
@@ -33,13 +31,7 @@
   "net.minecraft.world.scores.PlayerTeam",
   "net.minecraft.world.scores.ScoreAccess",
   "net.minecraft.world.scores.Team",
-  "NativeImage.getHeight()",
-  "NativeImage.getWidth()",
-  "NativeImage.read()",
   "Minecraft.services()",
-  "Font.split()",
-  "GuiGraphicsExtractor.blit()",
-  "GuiGraphicsExtractor.blit()",
   "Hud.getBossOverlay()",
   "Hud.getTabList()",
   "ClientLevel.getScoreboard()",
@@ -50,14 +42,22 @@
   "PlayerInfo.getTeam()",
   "LocalPlayer.jumpableVehicle()",
   "SoundManager.getListenerTransform()",
-  "and 9 more"
+  "Services.sessionService()",
+  "Objective.getDisplayName()",
+  "Objective.getScoreboard()",
+  "Scoreboard.addObjective()",
+  "Scoreboard.getDisplayObjective()",
+  "Scoreboard.getOrCreatePlayerScore()",
+  "Scoreboard.getPlayersTeam()",
+  "Scoreboard.listPlayerScores()",
+  "and 1 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "vanillahud-3.5.10+26.3.jar",
   "published": "2026-10-24"
  },
@@ -89,5 +89,5 @@
   "class": "restart",
   "why": "@wrap-method and @wrap-operation into the game's classes"
  },
- "lacks": 49
+ "lacks": 41
 }

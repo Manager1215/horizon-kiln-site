@@ -10,18 +10,13 @@
  "description": "✋ Adds a portable functionality to certain items, which allows for quick access without placement. Works with beds, crafting tables, ender chests and shulker boxes among others.",
  "needs": [
   "net.minecraft.server.level.ServerPlayer.RespawnConfig",
-  "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.SimpleMenuProvider",
   "net.minecraft.world.attribute.BedRule",
-  "net.minecraft.world.entity.Pose",
   "net.minecraft.world.entity.player.Player.BedSleepingProblem",
   "net.minecraft.world.inventory.CartographyTableMenu",
   "net.minecraft.world.inventory.ContainerLevelAccess",
-  "net.minecraft.world.inventory.CraftingMenu",
-  "net.minecraft.world.inventory.GrindstoneMenu",
   "net.minecraft.world.inventory.PlayerEnderChestContainer",
   "net.minecraft.world.inventory.ShulkerBoxMenu",
-  "net.minecraft.world.inventory.SmithingMenu",
   "net.minecraft.world.inventory.StonecutterMenu",
   "net.minecraft.world.level.block.AbstractBedBlock",
   "net.minecraft.world.level.block.CartographyTableBlock",
@@ -32,7 +27,6 @@
   "net.minecraft.world.level.block.SmithingTableBlock",
   "net.minecraft.world.level.block.StonecutterBlock",
   "net.minecraft.world.level.block.state.properties.BedPart",
-  "DataComponents.CUSTOM_NAME",
   "SoundEvents.SHULKER_BOX_CLOSE",
   "SoundEvents.SHULKER_BOX_OPEN",
   "Player.clearSleepingPos()",
@@ -42,14 +36,17 @@
   "Player.setPos()",
   "Player.setPose()",
   "Player.startSleepInBed()",
-  "Player.teleportTo()"
+  "Player.teleportTo()",
+  "CraftingMenu.<init>()",
+  "GrindstoneMenu.<init>()",
+  "SmithingMenu.<init>()"
  ],
  "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "quickrightclick-26.3.0-3.0.jar",
   "published": "2026-10-20"
  },
@@ -83,5 +80,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 34
+ "lacks": 31
 }

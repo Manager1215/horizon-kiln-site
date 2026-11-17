@@ -10,7 +10,6 @@
  "description": "Adds a way to noclip in any game mode, like spectator mode",
  "needs": [
   "Mixin: 31 points inside the game's methods",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.StartDataPackReload",
   "net.minecraft.client.ToggleKeyMapping",
   "net.minecraft.client.player.ClientInput",
   "net.minecraft.client.renderer.ScreenEffectRenderer",
@@ -26,7 +25,6 @@
   "net.minecraft.world.effect.BadOmenMobEffect",
   "net.minecraft.world.effect.RaidOmenMobEffect",
   "net.minecraft.world.entity.EntitySelector",
-  "net.minecraft.world.entity.Pose",
   "net.minecraft.world.entity.ai.goal.LandOnOwnersShoulderGoal",
   "net.minecraft.world.entity.ai.village.VillageSiege",
   "net.minecraft.world.entity.projectile.ProjectileUtil",
@@ -42,22 +40,24 @@
   "net.minecraft.world.waypoints.WaypointTransmitter.EntityAzimuthConnection",
   "net.minecraft.world.waypoints.WaypointTransmitter.EntityBlockConnection",
   "net.minecraft.world.waypoints.WaypointTransmitter.EntityChunkConnection",
-  "ServerLifecycleEvents.START_DATA_PACK_RELOAD",
-  "GuiGraphicsExtractor.blit()",
   "MultiPlayerGameMode.canHurtPlayer()",
   "AbstractClientPlayer.<init>()",
   "LocalPlayer.travel()",
   "CameraRenderState.smartCull",
-  "Component.translatableWithFallback()",
   "TextColor.GRAY",
-  "and 12 more"
+  "ServerChunkCache.move()",
+  "ServerLevel.getGameRules()",
+  "ServerPlayer.gameMode",
+  "Entity.<init>()",
+  "Entity.collideBoundingBox()",
+  "and 5 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "noclip-1.5.0+26.3.jar",
   "published": "2026-10-04"
  },
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@modify-args and @wrap-method and @wrap-operation into the game's classes; has network channels"
  },
- "lacks": 52
+ "lacks": 45
 }

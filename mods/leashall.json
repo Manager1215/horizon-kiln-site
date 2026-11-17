@@ -9,10 +9,7 @@
  "author": "Nikrecs",
  "description": "Allows you to attach leads to every living entity (even player) in the game.",
  "needs": [
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.minecraft.core.UUIDUtil",
   "net.minecraft.core.particles.DustParticleOptions",
   "net.minecraft.network.protocol.PacketUtils",
@@ -24,11 +21,8 @@
   "net.minecraft.world.entity.vehicle.boat.Boat",
   "net.minecraft.world.level.LightLayer",
   "net.minecraft.world.level.gameevent.GameEvent.Context",
-  "net.minecraft.world.level.storage.LevelResource",
   "net.minecraft.world.phys.EntityHitResult",
-  "AttachmentRegistry.builder()",
   "LevelRenderEvents.COLLECT_SUBMITS",
-  "ServerLifecycleEvents.SERVER_STARTING",
   "ClientLevel.getBrightness()",
   "ClientPacketListener.send()",
   "GameRenderer.mainCamera()",
@@ -41,22 +35,28 @@
   "EntityRenderState.LeashState.startBlockLight",
   "EntityRenderState.LeashState.startSkyLight",
   "BlockPos.containing()",
-  "Holder.Reference.is()",
   "MinecraftServer.getAllLevels()",
   "MinecraftServer.getServerDirectory()",
-  "MinecraftServer.getWorldPath()",
   "ServerLevel.getAllEntities()",
   "ServerLevel.getEntity()",
   "ServerLevel.getEntity()",
   "ServerLevel.sendParticles()",
-  "and 37 more"
+  "BlockTags.FENCES",
+  "Entity.fallDistance",
+  "Entity.isAlive()",
+  "Entity.spawnAtLocation()",
+  "EntityType.builtInRegistryHolder()",
+  "EntityTypes.ALLAY",
+  "EntityTypes.BAT",
+  "EntityTypes.BEE",
+  "and 22 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "leashall-fabric-26.3-1.5.1.jar",
   "published": "2026-11-08"
  },
@@ -90,5 +90,5 @@
   "class": "partial",
   "why": "has network channels"
  },
- "lacks": 78
+ "lacks": 62
 }

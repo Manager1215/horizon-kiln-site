@@ -11,7 +11,6 @@
  "needs": [
   "an access widener",
   "Mixin: 23 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.minecraft.SessionService",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
@@ -26,7 +25,6 @@
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
   "com.mojang.util.InstantTypeAdapter",
   "io.netty.channel.ChannelHandlerContext",
-  "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowChat",
   "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
   "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents",
   "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.AllowChat",
@@ -34,9 +32,6 @@
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
   "net.fabricmc.loader.impl.FabricLoaderImpl",
-  "net.minecraft.CrashReport",
-  "net.minecraft.SharedConstants",
-  "net.minecraft.client.StringSplitter",
   "net.minecraft.client.StringSplitter.WidthProvider",
   "net.minecraft.client.gui.Font.PreparedText",
   "net.minecraft.client.gui.components.CommandSuggestions",
@@ -44,21 +39,26 @@
   "net.minecraft.client.gui.font.AtlasGlyphProvider",
   "net.minecraft.client.gui.font.SingleSpriteSource",
   "net.minecraft.client.gui.font.glyphs.BakedSheetGlyph",
-  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-  "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
-  "net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner",
   "net.minecraft.client.gui.screens.packs.PackSelectionScreen",
   "net.minecraft.client.multiplayer.ClientChunkCache",
   "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
   "net.minecraft.client.renderer.ScreenEffectRenderer",
+  "net.minecraft.client.renderer.blockentity.BeaconRenderer",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.SquidRenderer",
+  "net.minecraft.client.renderer.entity.layers.CustomHeadLayer",
+  "net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer",
+  "net.minecraft.client.renderer.entity.layers.PlayerItemInHandLayer",
+  "net.minecraft.client.renderer.entity.layers.WingsLayer",
+  "net.minecraft.client.renderer.entity.player.AvatarRenderer",
   "and 80 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "rfu-1.20.1+26.3.jar",
   "published": "2026-10-31"
  },
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
  },
- "lacks": 257
+ "lacks": 207
 }

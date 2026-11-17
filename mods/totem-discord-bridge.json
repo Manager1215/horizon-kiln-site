@@ -9,15 +9,10 @@
  "author": "Yunitrish",
  "description": "Connect Minecraft chat and server events to Discord, link player accounts, and manage an optional external bridge through in-game controls.",
  "needs": [
-  "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
-  "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-  "net.minecraft.network.chat.PlayerChatMessage",
   "net.minecraft.server.MinecraftServer.MultiplayerScope",
   "net.minecraft.server.PlayerAdvancements",
   "net.minecraft.server.commands.BanPlayerCommands",
@@ -32,13 +27,10 @@
   "net.minecraft.world.entity.npc.villager.VillagerData",
   "net.minecraft.world.entity.raid.Raid",
   "net.minecraft.world.entity.raid.Raids",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerLifecycleEvents.SERVER_STOPPING",
   "FabricLoader.getRawGameVersion()",
   "ModContainer.getRootPaths()",
   "AdvancementHolder.value()",
-  "Component.getSiblings()",
-  "MinecraftServer.execute()",
+  "PlayerChatMessage.decoratedContent()",
   "MinecraftServer.getServerVersion()",
   "MinecraftServer.getSingleplayerProfile()",
   "MinecraftServer.isDedicatedServer()",
@@ -49,14 +41,19 @@
   "ServerPlayer.getGameProfile()",
   "NameAndId.<init>()",
   "PlayerList.getMaxPlayers()",
-  "and 7 more"
+  "CombatTracker.getDeathMessage()",
+  "GameRule.id()",
+  "GameRule.serialize()",
+  "GameRule.valueClass()",
+  "GameRules.SHOW_ADVANCEMENT_MESSAGES",
+  "GameRules.get()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "totem-discord-bridge-0.1.15.jar",
   "published": "2026-09-17"
  },
@@ -90,5 +87,5 @@
   "class": "partial",
   "why": "runs threads of its own; has network channels"
  },
- "lacks": 47
+ "lacks": 38
 }

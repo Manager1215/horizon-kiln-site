@@ -10,13 +10,10 @@
  "description": "🛡️ Server-side AntiXray & ore obfuscation for Fabric/NeoForge. 💎 Hides unexposed ores from X-ray clients. 🚀 No client install. Minecraft 26.1–26.3.",
  "needs": [
   "Mixin: 1 point inside the game's methods",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
   "net.fabricmc.loader.api.metadata.ModOrigin",
   "net.fabricmc.loader.api.metadata.ModOrigin.Kind",
-  "net.minecraft.SharedConstants",
   "net.minecraft.core.IdMapper",
   "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
   "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
@@ -33,10 +30,8 @@
   "Long2ObjectMap.Entry.getValue()",
   "ShortIterator.hasNext()",
   "ShortIterator.remove()",
-  "ServerLifecycleEvents.SERVER_STARTED",
-  "ServerLifecycleEvents.SERVER_STOPPING",
   "ModContainer.getOrigin()",
-  "BlockPos.MutableBlockPos.set()",
+  "SharedConstants.getCurrentVersion()",
   "SectionPos.asLong()",
   "SectionPos.asLong()",
   "SectionPos.asLong()",
@@ -48,16 +43,21 @@
   "SectionPos.x()",
   "SectionPos.y()",
   "SectionPos.z()",
-  "MinecraftServer.execute()",
   "ServerChunkCache.blockChanged()",
-  "and 25 more"
+  "ServerChunkCache.getChunkNow()",
+  "ServerLevel.getLightEngine()",
+  "ServerLevel.getSectionIndexFromSectionY()",
+  "ServerLevel.getSectionYFromSectionIndex()",
+  "ServerLevel.getSeed()",
+  "Mth.ceillog2()",
+  "and 7 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "meowantixray-fabric-1.7.0.jar",
   "published": "2026-09-24"
  },
@@ -89,5 +89,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes; runs threads of its own"
  },
- "lacks": 65
+ "lacks": 47
 }

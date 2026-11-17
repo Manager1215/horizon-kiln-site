@@ -11,7 +11,6 @@
  "needs": [
   "an access widener",
   "Mixin: 38 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
   "net.minecraft.advancements.CriterionProgress",
@@ -20,10 +19,7 @@
   "net.minecraft.commands.execution.ExecutionContext",
   "net.minecraft.core.LayeredRegistryAccess",
   "net.minecraft.core.WritableRegistry",
-  "net.minecraft.core.component.DataComponentPatch.Builder",
-  "net.minecraft.network.chat.ComponentSerialization",
   "net.minecraft.network.chat.ComponentUtils",
-  "net.minecraft.network.chat.PlayerChatMessage",
   "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
   "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
   "net.minecraft.network.protocol.status.ServerStatus",
@@ -51,14 +47,18 @@
   "net.minecraft.world.entity.Display.TextDisplay",
   "net.minecraft.world.entity.projectile.ProjectileUtil",
   "net.minecraft.world.entity.vehicle.minecart.MinecartHopper",
-  "and 80 more"
+  "net.minecraft.world.inventory.ContainerLevelAccess",
+  "net.minecraft.world.inventory.EnchantmentMenu",
+  "net.minecraft.world.inventory.ItemCombinerMenu",
+  "net.minecraft.world.item.component.ResolvableProfile.Static",
+  "and 74 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "fuji-fabric-14.12.0-38824a5371-mc26.3.jar",
   "published": "2026-09-27"
  },
@@ -89,5 +89,5 @@
   "class": "restart",
   "why": "@modify-args and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
  },
- "lacks": 221
+ "lacks": 162
 }

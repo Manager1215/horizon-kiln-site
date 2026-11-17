@@ -1,7 +1,7 @@
 {
  "id": "houseki",
  "name": "Houseki",
- "version": "v5.3.1+26.3",
+ "version": "v5.4.0+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -11,10 +11,8 @@
  "needs": [
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-  "net.minecraft.core.HolderSet.Named",
   "net.minecraft.core.particles.ItemParticleOption",
   "net.minecraft.server.level.ServerPlayerGameMode",
-  "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.inventory.ContainerData",
   "net.minecraft.world.inventory.SimpleContainerData",
   "net.minecraft.world.item.SmithingTemplateItem",
@@ -49,16 +47,18 @@
   "net.minecraft.world.level.storage.loot.entries.TagEntry",
   "net.minecraft.world.level.storage.loot.functions.EnchantWithLevelsFunction",
   "net.minecraft.world.level.storage.loot.functions.EnchantWithLevelsFunction.Builder",
-  "and 60 more"
+  "BiomeModifications.addFeature()",
+  "MultiPlayerGameMode.handleInventoryButtonClick()",
+  "and 58 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
-  "file": "houseki-v5.3.1+26.3.jar",
-  "published": "2026-10-30"
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "houseki-v5.4.0+26.3.jar",
+  "published": "2026-11-16"
  },
  "reports": {
   "works": 0,
@@ -68,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -77,6 +77,8 @@
  "entrypoints": {
   "main": 1,
   "fabric-datagen": 1,
+  "jei_mod_plugin": 1,
+  "rei_client": 1,
   "client": 1
  },
  "mixins": false,
@@ -90,5 +92,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); generates in the world"
  },
- "lacks": 223
+ "lacks": 169
 }

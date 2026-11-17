@@ -10,15 +10,12 @@
  "description": "A mod that adds items for decrafting things",
  "needs": [
   "Mixin: 6 points inside the game's methods",
-  "com.mojang.blaze3d.platform.cursor.CursorType",
-  "com.mojang.blaze3d.platform.cursor.CursorTypes",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin.Context",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelModifier",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelModifier.AfterBakeBlock",
   "net.fabricmc.fabric.api.client.model.loading.v1.ModelModifier.AfterBakeBlock.Context",
   "net.fabricmc.fabric.api.client.model.loading.v1.wrapper.WrapperBlockStateModel",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
   "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents",
   "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyCallback",
   "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyContext",
@@ -39,25 +36,28 @@
   "net.minecraft.client.sounds.SoundBufferLibrary",
   "net.minecraft.client.sounds.WeighedSoundEvents",
   "net.minecraft.core.particles.BlockParticleOption",
-  "net.minecraft.tags.EnchantmentTags",
-  "net.minecraft.tags.ItemTags",
   "net.minecraft.util.valueproviders.ConstantFloat",
   "net.minecraft.util.valueproviders.SampledFloat",
-  "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.SimpleMenuProvider",
   "net.minecraft.world.entity.EntitySelector",
   "net.minecraft.world.entity.decoration.BlockAttachedEntity",
   "net.minecraft.world.entity.decoration.Cushion",
   "net.minecraft.world.entity.item.FallingBlockEntity",
   "net.minecraft.world.entity.monster.cubemob.SulfurCube",
+  "net.minecraft.world.entity.npc.wanderingtrader.WanderingTrader",
+  "net.minecraft.world.inventory.ContainerData",
+  "net.minecraft.world.inventory.ContainerLevelAccess",
+  "net.minecraft.world.inventory.DataSlot",
+  "net.minecraft.world.inventory.EnchantmentMenu",
+  "net.minecraft.world.inventory.ResultContainer",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "uncrafting-tools-1.0.0-beta.5+26.3.jar",
   "published": "2026-09-26"
  },
@@ -91,5 +91,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 256
+ "lacks": 187
 }

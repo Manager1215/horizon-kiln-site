@@ -11,12 +11,8 @@
  "needs": [
   "an access widener",
   "Mixin: 20 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.BooleanRuleBuilder",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.DoubleRuleBuilder",
@@ -28,13 +24,10 @@
   "net.minecraft.advancements.triggers.CriteriaTriggers",
   "net.minecraft.commands.arguments.TimeArgument",
   "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
-  "net.minecraft.core.HolderSet.Named",
   "net.minecraft.core.UUIDUtil",
-  "net.minecraft.core.component.DataComponentPatch.Builder",
   "net.minecraft.core.registries.codec.RegistryCodecs",
   "net.minecraft.core.registries.codec.RegistryFixedCodec",
   "net.minecraft.nbt.TagType",
-  "net.minecraft.network.chat.ComponentSerialization",
   "net.minecraft.network.chat.ComponentUtils",
   "net.minecraft.network.chat.FontDescription",
   "net.minecraft.network.chat.FontDescription.Resource",
@@ -51,14 +44,21 @@
   "net.minecraft.world.inventory.BrewingStandMenu.PotionSlot",
   "net.minecraft.world.item.ItemUseAnimation",
   "net.minecraft.world.item.component.Consumable",
-  "and 80 more"
+  "net.minecraft.world.item.component.Consumable.Builder",
+  "net.minecraft.world.item.component.CustomModelData",
+  "net.minecraft.world.item.component.ResolvableProfile.Static",
+  "net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect",
+  "net.minecraft.world.item.consume_effects.ClearAllStatusEffectsConsumeEffect",
+  "net.minecraft.world.item.consume_effects.ConsumeEffect",
+  "net.minecraft.world.level.block.CampfireBlock",
+  "and 72 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "brewery-0.17.1+26.3.jar",
   "published": "2026-10-07"
  },
@@ -95,5 +95,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 226
+ "lacks": 142
 }

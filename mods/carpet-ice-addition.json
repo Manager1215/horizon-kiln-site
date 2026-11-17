@@ -10,9 +10,6 @@
  "description": "A Carpet extension mod with practical tweaks and fixes.",
  "needs": [
   "Mixin: 23 points inside the game's methods",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.StartDataPackReload",
-  "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
   "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
   "net.minecraft.advancements.predicates.entity.EntityPredicate",
   "net.minecraft.client.gui.font.TextFieldHelper",
@@ -29,10 +26,7 @@
   "net.minecraft.stats.ServerRecipeBook",
   "net.minecraft.tags.DamageTypeTags",
   "net.minecraft.tags.EntityTypeTags",
-  "net.minecraft.tags.ItemTags",
-  "net.minecraft.util.StringUtil",
   "net.minecraft.util.valueproviders.ConstantInt",
-  "net.minecraft.world.SimpleContainer",
   "net.minecraft.world.damagesource.DamageTypes",
   "net.minecraft.world.entity.ConversionParams",
   "net.minecraft.world.entity.ConversionParams.AfterConversion",
@@ -50,14 +44,20 @@
   "net.minecraft.world.entity.ai.behavior.GoToWantedItem",
   "net.minecraft.world.entity.ai.behavior.LookAndFollowTradingPlayerSink",
   "net.minecraft.world.entity.ai.behavior.OneShot",
+  "net.minecraft.world.entity.ai.behavior.PoiCompetitorScan",
+  "net.minecraft.world.entity.ai.behavior.ResetProfession",
+  "net.minecraft.world.entity.ai.behavior.SetRaidStatus",
+  "net.minecraft.world.entity.ai.behavior.Swim",
+  "net.minecraft.world.entity.ai.behavior.UpdateActivityFromSchedule",
+  "net.minecraft.world.entity.ai.behavior.ValidateNearbyPoi",
   "and 80 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "Carpet-Ice-Addition-v3.6.2-mc26.3.jar",
   "published": "2026-11-07"
  },
@@ -89,5 +89,5 @@
   "class": "restart",
   "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
  },
- "lacks": 238
+ "lacks": 192
 }

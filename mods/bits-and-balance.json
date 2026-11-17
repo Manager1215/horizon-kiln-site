@@ -1,7 +1,7 @@
 {
  "id": "bits-and-balance",
  "name": "Bits and Balance",
- "version": "2.5.5",
+ "version": "2.5.7",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,8 +9,7 @@
  "author": "Pockett",
  "description": "Over 100 small mod ideas packed into one highly configurable mod. New features, balance changes, new gameplay mechanics, etc.",
  "needs": [
-  "Mixin: 49 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
+  "Mixin: 50 points inside the game's methods",
   "com.mojang.blaze3d.platform.FramerateLimitTracker",
   "com.mojang.blaze3d.vertex.QuadInstance",
   "com.mojang.math.Quadrant",
@@ -19,8 +18,6 @@
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath",
   "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents",
   "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents.TagsLoaded",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
   "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
@@ -33,12 +30,10 @@
   "net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents.ModifyContext",
   "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents",
   "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents.StartTracking",
-  "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
   "net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition",
   "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditionType",
   "net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions",
   "net.fabricmc.fabric.impl.client.indigo.renderer.aocalc.AoCalculator",
-  "net.minecraft.SharedConstants",
   "net.minecraft.TracingExecutor",
   "net.minecraft.advancements.triggers.CriteriaTriggers",
   "net.minecraft.advancements.triggers.ItemUsedOnLocationTrigger",
@@ -47,19 +42,24 @@
   "net.minecraft.client.gui.ActiveTextCollector",
   "net.minecraft.client.gui.ActiveTextCollector.Parameters",
   "net.minecraft.client.gui.GuiGraphicsExtractor.RenderingTextCollector",
-  "net.minecraft.client.gui.TextAlignment",
   "net.minecraft.client.gui.components.ChatComponent.DisplayMode",
   "net.minecraft.client.gui.components.ChatComponent.DrawingBackgroundGraphicsAccess",
+  "net.minecraft.client.gui.components.ChatComponent.DrawingFocusedGraphicsAccess",
+  "net.minecraft.client.gui.font.PlayerGlyphProvider.1.1",
+  "net.minecraft.client.gui.render.GuiItemAtlas",
+  "net.minecraft.client.gui.render.GuiItemAtlas.SlotView",
+  "net.minecraft.client.gui.screens.inventory.AbstractSignEditScreen",
+  "net.minecraft.client.gui.screens.options.controls.KeyBindsList",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
-  "file": "bitsandbalance-fabric-26.3-2.5.5.jar",
-  "published": "2026-11-13"
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "bitsandbalance-fabric-26.3-2.5.7.jar",
+  "published": "2026-11-15"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -93,5 +93,5 @@
   "class": "restart",
   "why": "@modify-args and @redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
  },
- "lacks": 1084
+ "lacks": 824
 }

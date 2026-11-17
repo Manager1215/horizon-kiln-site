@@ -9,19 +9,16 @@
  "author": "raeyd",
  "description": "LunaNPC is a Fabric-first NPC framework supporting combat, factions, spawning, trading, dialog, and custom models, in-game or through the API.",
  "needs": [
-  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.Property",
   "com.mojang.authlib.properties.PropertyMap",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDamage",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
   "net.minecraft.client.OptionInstance.TooltipSupplier",
   "net.minecraft.client.gui.components.PlayerFaceExtractor",
-  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.model.ArmedModel",
   "net.minecraft.client.model.EntityModel",
   "net.minecraft.client.model.HeadedModel",
@@ -49,14 +46,17 @@
   "net.minecraft.client.model.animal.wolf.AdultWolfModel",
   "net.minecraft.client.model.geom.ModelLayers",
   "net.minecraft.client.model.geom.ModelPart.Polygon",
+  "net.minecraft.client.model.geom.ModelPart.Vertex",
+  "net.minecraft.client.model.geom.PartPose",
+  "net.minecraft.client.model.monster.blaze.BlazeModel",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "LunaNPC.jar",
   "published": "2026-10-24"
  },
@@ -89,5 +89,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 320
+ "lacks": 269
 }

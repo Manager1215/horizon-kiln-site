@@ -10,20 +10,14 @@
  "description": "A modern remake of the classic all-in-one mod client, rebuilt for Fabric with support for the Lunar Client API.",
  "needs": [
   "Mixin: 9 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.blaze3d.font.TrueTypeGlyphProvider",
-  "com.mojang.blaze3d.platform.TextInputManager",
   "com.mojang.blaze3d.vertex.DefaultVertexFormat",
   "com.mojang.realmsclient.RealmsMainScreen",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-  "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
-  "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-  "net.minecraft.SharedConstants",
   "net.minecraft.client.ClientClockManager",
   "net.minecraft.client.ClientClockManager.ClientClockInstance",
-  "net.minecraft.client.OptionInstance.UnitDouble",
   "net.minecraft.client.gui.Font.Provider",
   "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
   "net.minecraft.client.gui.components.BossHealthOverlay",
@@ -34,7 +28,6 @@
   "net.minecraft.client.gui.layouts.GridLayout",
   "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
   "net.minecraft.client.gui.screens.LoadingOverlay",
-  "net.minecraft.client.gui.screens.inventory.ContainerScreen",
   "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
   "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList",
   "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList.Entry",
@@ -50,14 +43,21 @@
   "net.minecraft.client.model.geom.builders.MeshDefinition",
   "net.minecraft.client.model.geom.builders.PartDefinition",
   "net.minecraft.client.model.player.PlayerModel",
+  "net.minecraft.client.multiplayer.ProfileKeyPairManager",
+  "net.minecraft.client.renderer.BiomeColors",
+  "net.minecraft.client.renderer.CubeMap",
+  "net.minecraft.client.renderer.ScreenEffectRenderer",
+  "net.minecraft.client.renderer.debug.EntityHitboxDebugRenderer",
+  "net.minecraft.client.renderer.entity.LivingEntityRenderer",
+  "net.minecraft.client.renderer.entity.layers.CapeLayer",
   "and 80 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "CheatBreaker-MC26.3-1.2.6-all.jar",
   "published": "2026-10-06"
  },
@@ -91,5 +91,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
  },
- "lacks": 219
+ "lacks": 178
 }

@@ -10,9 +10,7 @@
  "description": "Simple, customisable punishment utility mod for Fabric",
  "needs": [
   "Mixin: 20 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.authlib.properties.PropertyMap",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowChatMessage",
   "net.fabricmc.fabric.api.permission.v1.MutablePermissionContext",
@@ -22,8 +20,6 @@
   "net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint",
   "net.fabricmc.loader.api.metadata.ContactInformation",
   "net.fabricmc.loader.api.metadata.Person",
-  "net.minecraft.core.component.DataComponentPatch.Builder",
-  "net.minecraft.network.chat.ComponentSerialization",
   "net.minecraft.network.chat.ComponentUtils",
   "net.minecraft.network.chat.LastSeenMessages.Update",
   "net.minecraft.network.chat.SignedMessageChain",
@@ -44,20 +40,24 @@
   "net.minecraft.server.players.UserBanListEntry",
   "net.minecraft.world.item.component.ResolvableProfile.Static",
   "net.minecraft.world.level.block.entity.SignBlockEntity",
-  "ServerLifecycleEvents.SERVER_STARTING",
+  "GameProfile.<init>()",
   "ModContainer.getPath()",
   "ModMetadata.getAuthors()",
   "ModMetadata.getContact()",
   "ModMetadata.getContributors()",
   "CommandSourceStack.checkPermission()",
-  "and 23 more"
+  "CommandSourceStack.checkPermission()",
+  "CommandSourceStack.checkPermission()",
+  "Style.withShadowColor()",
+  "MinecraftServer.close()",
+  "and 15 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "banhammer-0.19.0+26.3.jar",
   "published": "2026-09-11"
  },
@@ -89,5 +89,5 @@
   "class": "partial",
   "why": "runs threads of its own"
  },
- "lacks": 63
+ "lacks": 55
 }

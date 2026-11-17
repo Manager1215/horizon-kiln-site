@@ -10,14 +10,12 @@
  "description": "Complete overhaul of Minecarts. Attach them with chain and use the Furnace Minecart for faster travel!",
  "needs": [
   "Mixin: 2 points inside the game's methods",
-  "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
   "net.fabricmc.fabric.api.event.player.UseEntityCallback",
   "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents",
   "net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents.StartTracking",
   "net.minecraft.core.UUIDUtil",
   "net.minecraft.network.syncher.EntityDataSerializers",
   "net.minecraft.network.syncher.SynchedEntityData.Builder",
-  "net.minecraft.tags.ItemTags",
   "net.minecraft.world.entity.vehicle.DismountHelper",
   "net.minecraft.world.entity.vehicle.minecart.Minecart",
   "net.minecraft.world.entity.vehicle.minecart.MinecartChest",
@@ -36,7 +34,6 @@
   "VertexConsumer.setLight()",
   "VertexConsumer.setNormal()",
   "VertexConsumer.setOverlay()",
-  "AttachmentRegistry.create()",
   "Camera.rotation()",
   "Minecraft.crosshairPickEntity",
   "LocalPlayer.distanceToSqr()",
@@ -50,14 +47,17 @@
   "SynchedEntityData.set()",
   "ServerLevel.getEntity()",
   "ServerLevel.sendParticles()",
-  "and 40 more"
+  "ServerLevel.setChunkForced()",
+  "ServerPlayer.distanceTo()",
+  "ServerPlayer.isAlive()",
+  "and 38 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "ultimate_minecarts-26.3.jar",
   "published": "2026-10-28"
  },
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@modify-args into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 102
+ "lacks": 84
 }

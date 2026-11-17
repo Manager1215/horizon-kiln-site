@@ -10,7 +10,6 @@
  "description": "Shows CubeCraft player levels and rank colors in nametags and the tab list.",
  "needs": [
   "Mixin: 1 point inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
   "net.minecraft.client.OptionInstance.CaptionBasedToString",
   "net.minecraft.client.OptionInstance.Enum",
@@ -31,14 +30,9 @@
   "net.minecraft.world.entity.Display.TextDisplay.CachedInfo",
   "net.minecraft.world.entity.Display.TextDisplay.LineSplitter",
   "net.minecraft.world.entity.Display.TextDisplay.TextRenderState",
-  "net.minecraft.world.item.component.ItemLore",
   "net.minecraft.world.scores.PlayerTeam",
   "net.minecraft.world.scores.Team",
-  "KeyMappingHelper.getBoundKeyOf()",
   "ClientReceiveMessageEvents.ALLOW_GAME",
-  "KeyMapping.resetMapping()",
-  "KeyMapping.setKey()",
-  "Minecraft.getCurrentServer()",
   "Minecraft.isLocalServer()",
   "Minecraft.screen",
   "OptionInstance.BOOLEAN_TO_STRING",
@@ -48,16 +42,22 @@
   "ClientPacketListener.getServerData()",
   "PlayerInfo.getProfile()",
   "PlayerInfo.getTeam()",
-  "ServerData.ip",
-  "ServerData.isRealm()",
-  "and 21 more"
+  "LocalPlayer.getGameProfile()",
+  "LocalPlayer.getTeam()",
+  "EntityRenderState.distanceToCameraSq",
+  "EntityRenderState.nameTag",
+  "TextColor.formatValue()",
+  "ClientboundContainerSetSlotPacket.getItem()",
+  "Entity.distanceToSqr()",
+  "Entity.distanceToSqr()",
+  "and 8 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "lvl_rank-1.0+mc26.1-26.3.jar",
   "published": "2026-11-05"
  },
@@ -92,5 +92,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; runs threads of its own"
  },
- "lacks": 61
+ "lacks": 48
 }

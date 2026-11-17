@@ -9,23 +9,19 @@
  "author": "Ewy",
  "description": "Strips away blocks to reveal the underground world gen. A must have tool for all map-makers, pack-makers or developers.",
  "needs": [
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
   "net.minecraft.server.level.ThreadedLevelLightEngine",
   "net.minecraft.world.entity.ai.village.poi.PoiTypes",
   "net.minecraft.world.level.LightLayer",
   "net.minecraft.world.level.lighting.LayerLightEventListener",
   "net.minecraft.world.level.lighting.LightEngine",
   "net.minecraft.world.level.pathfinder.PathTypeCache",
-  "ServerLifecycleEvents.SERVER_STOPPING",
   "BlockPos.containing()",
   "BlockPos.toShortString()",
-  "BlockPos.MutableBlockPos.set()",
   "BlockPos.MutableBlockPos.toShortString()",
   "DefaultedRegistry.iterator()",
   "SectionPos.asLong()",
   "MinecraftServer.getGameRules()",
   "MinecraftServer.halt()",
-  "MinecraftServer.isSameThread()",
   "MinecraftServer.overworld()",
   "ServerChunkCache.blockChanged()",
   "ServerChunkCache.getLightEngine()",
@@ -43,20 +39,23 @@
   "Block.stateById()",
   "LevelChunk.getHeight()",
   "LevelChunk.getOrCreateHeightmapUnprimed()",
-  "LevelChunk.getSection()",
   "LevelChunk.getSkyLightSources()",
   "LevelChunk.markUnsaved()",
-  "LevelChunkSection.getBlockState()",
-  "LevelChunkSection.getStates()",
-  "LevelChunkSection.hasOnlyAir()",
-  "and 8 more"
+  "LevelChunkSection.maybeHas()",
+  "LevelChunkSection.setBlockState()",
+  "PalettedContainer.getAndSetUnchecked()",
+  "GameRules.RANDOM_TICK_SPEED",
+  "GameRules.set()",
+  "Heightmap.update()",
+  "ChunkSkyLightSources.update()",
+  "LevelData.RespawnData.pos()"
  ],
  "roadmap": "Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "worldstripper-26.3-6.0.0-fabric.jar",
   "published": "2026-10-25"
  },
@@ -89,5 +88,5 @@
   "class": "partial",
   "why": "has network channels"
  },
- "lacks": 48
+ "lacks": 40
 }

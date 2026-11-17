@@ -10,7 +10,6 @@
  "description": "This is a huge mod for 26.2+ related to Triple T.",
  "needs": [
   "Mixin: 7 points inside the game's methods",
-  "com.mojang.authlib.GameProfile",
   "com.mojang.renderpearl.api.pipeline.BindGroupLayout.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
@@ -22,14 +21,12 @@
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry",
-  "net.minecraft.client.StringSplitter",
   "net.minecraft.client.gui.components.ChatComponent.ClickableTextOnlyGraphicsAccess",
   "net.minecraft.client.gui.components.ChatComponent.DrawingBackgroundGraphicsAccess",
   "net.minecraft.client.gui.components.ChatComponent.DrawingFocusedGraphicsAccess",
   "net.minecraft.client.gui.components.LogoRenderer",
   "net.minecraft.client.gui.components.PlayerTabOverlay",
   "net.minecraft.client.gui.components.WidgetSprites",
-  "net.minecraft.client.gui.screens.inventory.InventoryScreen",
   "net.minecraft.client.model.ArmedModel",
   "net.minecraft.client.model.EntityModel",
   "net.minecraft.client.model.HeadedModel",
@@ -50,14 +47,17 @@
   "net.minecraft.client.renderer.entity.layers.StuckInBodyLayer",
   "net.minecraft.client.renderer.entity.player.AvatarRenderer",
   "net.minecraft.client.renderer.entity.state.AvatarRenderState",
+  "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
+  "net.minecraft.client.renderer.feature.phase.SimpleFeatureRenderPhase",
+  "net.minecraft.client.renderer.fog.FogData",
   "and 80 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "tungtungsahurmod-1.1.0-mc26.3.jar",
   "published": "2026-10-06"
  },
@@ -92,5 +92,5 @@
   "class": "restart",
   "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
  },
- "lacks": 541
+ "lacks": 382
 }

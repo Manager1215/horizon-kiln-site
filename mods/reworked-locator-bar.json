@@ -10,8 +10,6 @@
  "description": "Recreated concept of a player locator bar for Minecraft. Simple, clean bar at the top of your screen.",
  "needs": [
   "Mixin: 1 point inside the game's methods",
-  "com.mojang.authlib.GameProfile",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
   "net.minecraft.client.gui.contextualbar.ContextualBar",
   "net.minecraft.client.gui.contextualbar.ExperienceBar",
   "net.minecraft.client.gui.contextualbar.LocatorBar",
@@ -24,9 +22,6 @@
   "net.minecraft.world.scores.Team",
   "net.minecraft.world.scores.TeamColor",
   "net.minecraft.world.waypoints.Waypoint.Icon",
-  "ServerLifecycleEvents.SERVER_STARTING",
-  "GuiGraphicsExtractor.blit()",
-  "GuiGraphicsExtractor.blit()",
   "ClientPacketListener.getWaypointManager()",
   "MultiPlayerGameMode.hasExperience()",
   "PlayerInfo.getProfile()",
@@ -42,22 +37,21 @@
   "Player.getLastDeathLocation()",
   "Player.getTeam()",
   "Player.isCrouching()",
-  "Items.BUNDLE",
-  "Items.CARVED_PUMPKIN",
-  "Items.CREEPER_HEAD",
-  "Items.DRAGON_HEAD",
-  "Items.PIGLIN_HEAD",
-  "Items.WITHER_SKELETON_SKULL",
-  "Items.ZOMBIE_HEAD",
-  "CustomData.copyTag()",
-  "and 8 more"
+  "Level.getOverworldClockTime()",
+  "Level.getScoreboard()",
+  "Level.players()",
+  "Scoreboard.getPlayersTeam()",
+  "TrackedWaypoint.distanceSquared()",
+  "TrackedWaypoint.icon()",
+  "TrackedWaypoint.id()",
+  "TrackedWaypoint.yawAngleToCamera()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
   "file": "LocatorBar-fabric-1.2.4+26.3.x.jar",
   "published": "2026-09-24"
  },
@@ -90,5 +84,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes; has network channels"
  },
- "lacks": 48
+ "lacks": 35
 }

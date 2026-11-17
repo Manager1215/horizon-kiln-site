@@ -1,0 +1,75 @@
+{
+ "id": "tridentenchantmentsoverhaul",
+ "name": "Trident Enchantments Overhaul",
+ "version": "fabric-26.3-1.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/tridentenchantmentsoverhaul",
+ "author": "the_tizio",
+ "description": "Some improvements to trident enchantments",
+ "needs": [
+  "Mixin: 2 points inside the game's methods",
+  "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
+  "net.minecraft.world.entity.projectile.arrow.AbstractArrow.Pickup",
+  "net.minecraft.world.entity.projectile.arrow.ThrownTrident",
+  "net.minecraft.world.item.ProjectileItem",
+  "net.minecraft.world.item.TridentItem",
+  "net.minecraft.world.phys.EntityHitResult",
+  "RegistryAccess.getOrThrow()",
+  "SoundEvents.TRIDENT_THROW",
+  "DamageSources.trident()",
+  "Entity.hurtOrSimulate()",
+  "LivingEntity.getUsedItemHand()",
+  "Inventory.removeItem()",
+  "Player.hasInfiniteMaterials()",
+  "Player.isInWaterOrRain()",
+  "ItemStack.hurtAndBreak()",
+  "EnchantmentEffectComponents.TRIDENT_SOUND",
+  "EnchantmentHelper.doPostAttackEffectsWithItemSourceOnBreak()",
+  "EnchantmentHelper.getItemEnchantmentLevel()",
+  "EnchantmentHelper.modifyDamage()",
+  "EnchantmentHelper.pickHighestLevel()",
+  "Enchantments.IMPALING",
+  "Enchantments.LOYALTY",
+  "Level.addFreshEntity()"
+ ],
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "file": "tridentenchantmentsoverhaul-fabric-26.3-1.0.jar",
+  "published": "2026-11-16"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-17",
+  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 23
+}
