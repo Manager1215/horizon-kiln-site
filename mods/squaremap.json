@@ -1,7 +1,7 @@
 {
  "id": "squaremap",
  "name": "squaremap",
- "version": "1.4.3",
+ "version": "1.4.4",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -11,34 +11,8 @@
  "needs": [
   "an access widener",
   "Mixin: 6 points inside the game's methods",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.Unload",
-  "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
-  "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
-  "net.minecraft.TracingExecutor",
-  "net.minecraft.commands.arguments.selector.EntitySelectorParser",
-  "net.minecraft.commands.synchronization.ArgumentTypeInfos",
   "net.minecraft.commands.synchronization.ArgumentUtils",
-  "net.minecraft.core.QuartPos",
-  "net.minecraft.network.chat.ComponentUtils",
   "net.minecraft.network.protocol.game.ClientboundCommandsPacket.ArgumentNodeStub",
-  "net.minecraft.server.level.ChunkHolder",
-  "net.minecraft.server.level.ChunkLevel",
-  "net.minecraft.server.level.ChunkMap",
-  "net.minecraft.server.level.ChunkResult",
-  "net.minecraft.server.level.ServerPlayerGameMode",
-  "net.minecraft.server.level.Ticket",
-  "net.minecraft.util.BitStorage",
-  "net.minecraft.util.SimpleBitStorage",
-  "net.minecraft.util.SimpleBitStorage.InitializationException",
-  "net.minecraft.world.level.EmptyBlockGetter",
-  "net.minecraft.world.level.TicketStorage",
-  "net.minecraft.world.level.block.StainedGlassBlock",
-  "net.minecraft.world.level.block.StemBlock",
-  "net.minecraft.world.level.chunk.ImposterProtoChunk",
-  "net.minecraft.world.level.chunk.MissingPaletteEntryException",
-  "net.minecraft.world.level.chunk.storage.SerializableChunkData",
-  "net.minecraft.world.level.chunk.storage.SerializableChunkData.ChunkReadException",
-  "net.minecraft.world.level.levelgen.BelowZeroRetrogen",
   "RemovalNotification.getValue()",
   "ImmutableList.get()",
   "ImmutableList.isEmpty()",
@@ -49,18 +23,29 @@
   "ImmutableSet.stream()",
   "Multiset.isEmpty()",
   "Reference2IntMap.putAll()",
-  "ServerLevelEvents.UNLOAD",
-  "SharedConstants.getCurrentVersion()",
-  "and 48 more"
+  "TracingExecutor.forName()",
+  "QuartPos.toSection()",
+  "Registry.iterator()",
+  "NbtOps.getLongStream()",
+  "MinecraftServer.getMaxPlayers()",
+  "MinecraftServer.getRespawnData()",
+  "ServerPlayer.gameMode",
+  "SimpleBitStorage.InitializationException.getMessage()",
+  "LevelHeightAccessor.create()",
+  "TicketStorage.TYPE",
+  "BiomeManager.withDifferentSource()",
+  "ChunkAccess.getBelowZeroRetrogen()",
+  "ChunkStatus.CODEC",
+  "BelowZeroRetrogen.CODEC"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
-  "file": "squaremap-fabric-mc26.3-1.4.3.jar",
-  "published": "2026-10-16"
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
+  "file": "squaremap-fabric-mc26.3-1.4.4.jar",
+  "published": "2026-11-17"
  },
  "reports": {
   "works": 0,
@@ -70,8 +55,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -91,5 +76,5 @@
   "class": "restart",
   "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own; has network channels"
  },
- "lacks": 93
+ "lacks": 26
 }

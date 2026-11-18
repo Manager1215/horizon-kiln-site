@@ -9,26 +9,15 @@
  "author": "knabbiii",
  "description": "Take off at spawn without elytra wings, just like on Craft Attack. Double-jump to take off, press F for a speed boost. Perfect for large survival servers.",
  "needs": [
-  "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
-  "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
-  "net.minecraft.network.protocol.game.ServerboundPlayerAbilitiesPacket",
-  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
-  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
-  "net.minecraft.world.damagesource.DamageTypes",
-  "MinecraftServer.overworld()",
-  "ServerPlayer.gameMode()",
-  "ServerPlayer.startFallFlying()",
-  "ServerPlayer.stopFallFlying()",
-  "Level.getRespawnData()",
-  "Level.players()",
-  "LevelData.RespawnData.pos()"
+  "ServerboundPlayerAbilitiesPacket.isFlying()",
+  "Level.players()"
  ],
  "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "SpawnElytra-Fabric-1.2.2.jar",
   "published": "2026-09-29"
  },
@@ -59,5 +48,5 @@
   "class": "partial",
   "why": "runs threads of its own"
  },
- "lacks": 13
+ "lacks": 2
 }

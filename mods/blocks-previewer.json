@@ -9,22 +9,13 @@
  "author": "tricube",
  "description": "Client-side mod to preview how blocks will be orientated when placed!",
  "needs": [
-  "com.mojang.blaze3d.vertex.QuadInstance",
-  "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-  "net.minecraft.client.renderer.LevelRenderer",
-  "net.minecraft.client.renderer.block.ModelBlockRenderer",
-  "net.minecraft.world.level.block.BedBlock",
-  "net.minecraft.world.level.block.state.properties.BedPart",
   "Window.getAppropriateLineWidth()",
+  "QuadInstance.getColor()",
   "VertexConsumer.addVertex()",
-  "VertexConsumer.setColor()",
   "VertexConsumer.setNormal()",
-  "LevelRenderEvents.COLLECT_SUBMITS",
-  "FabricLoader.getRawGameVersion()",
-  "BlockColors.createDefault()",
-  "ClientLevel.getLightEngine()",
   "ClientLevel.isUnobstructed()",
   "GameRenderer.mainCamera()",
+  "ModelBlockRenderer.tesselateBlock()",
   "MovingBlockRenderState.biome",
   "MovingBlockRenderState.blockPos",
   "MovingBlockRenderState.blockState",
@@ -33,20 +24,15 @@
   "RenderTypes.translucentMovingBlock()",
   "BakedQuad.packedUV()",
   "BakedQuad.position()",
-  "ARGB.blueFloat()",
-  "ARGB.greenFloat()",
-  "ARGB.redFloat()",
   "BlockItem.updatePlacementContext()",
-  "BlockState.getCollisionShape()",
-  "CollisionContext.placementContext()",
-  "VoxelShape.isEmpty()"
+  "CollisionContext.placementContext()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "blocks_previewer-2.2.0+26.3-fabric.jar",
   "published": "2026-11-06"
  },
@@ -81,5 +67,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 31
+ "lacks": 17
 }

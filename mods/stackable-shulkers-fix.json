@@ -10,25 +10,14 @@
  "description": "Fixes issues with stackable shulker boxes in Carpet on 1.20.5+",
  "needs": [
   "Mixin: 8 points inside the game's methods",
-  "net.minecraft.world.entity.vehicle.minecart.AbstractMinecartContainer",
-  "net.minecraft.world.entity.vehicle.minecart.MinecartHopper",
-  "net.minecraft.world.level.block.ShulkerBoxBlock",
-  "net.minecraft.world.level.block.entity.HopperBlockEntity",
-  "DataComponents.MAX_STACK_SIZE",
-  "ItemEntity.discard()",
-  "ItemEntity.getItem()",
-  "ItemEntity.setItem()",
-  "ItemEntity.tickCount",
-  "ItemStack.getPrototype()",
-  "ItemStack.limitSize()",
-  "CustomData.update()"
+  "HopperBlockEntity.addItem()"
  ],
- "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "shulkerfix-1.7.10+26.3.jar",
   "published": "2026-11-05"
  },
@@ -60,5 +49,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes"
  },
- "lacks": 12
+ "lacks": 1
 }

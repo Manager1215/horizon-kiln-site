@@ -9,31 +9,14 @@
  "author": "Nikrecs",
  "description": "Swing through grass to hit mobs: attacks no longer get eaten by tall grass, ferns and plants, so your sword reaches the target through foliage. Lightweight, server-side, no client needed",
  "needs": [
-  "net.minecraft.network.protocol.PacketUtils",
-  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
-  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
-  "ServerGamePacketListenerImpl.ackBlockChangesUpTo()",
-  "Entity.getBoundingBox()",
-  "Entity.getPickRadius()",
-  "Entity.isAlive()",
-  "Entity.isPickable()",
-  "Entity.isSpectator()",
-  "Player.entityInteractionRange()",
-  "Player.getBoundingBox()",
-  "Player.getViewVector()",
-  "Level.clip()",
-  "Level.getEntities()",
-  "BlockState.getCollisionShape()",
-  "AABB.clip()",
-  "AABB.expandTowards()",
-  "VoxelShape.isEmpty()"
+  "ServerboundPlayerActionPacket.getSequence()"
  ],
  "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "swingthroughgrass-fabric-26.3-1.1.0.jar",
   "published": "2026-10-04"
  },
@@ -66,5 +49,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 18
+ "lacks": 1
 }

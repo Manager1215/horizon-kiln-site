@@ -9,23 +9,22 @@
  "author": "TheJoJoni",
  "description": "Makes popped Respawn Anchors fade out smoothly instead of disappearing instantly. The fade out and animation is customizable.",
  "needs": [
-  "com.mojang.blaze3d.vertex.QuadInstance",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.BeforeTranslucentTerrain",
-  "net.minecraft.world.level.block.RespawnAnchorBlock",
   "PoseStack.mulPose()",
+  "QuadInstance.setColor()",
+  "QuadInstance.setLightCoords()",
+  "QuadInstance.setOverlayCoords()",
   "VertexConsumer.putBakedQuad()",
   "LevelRenderEvents.BEFORE_TRANSLUCENT_TERRAIN",
   "BlockModelRenderState.scratchRandomSource()",
-  "RenderTypes.translucentMovingBlock()",
-  "BlockState.getSeed()",
-  "Shapes.empty()"
+  "RenderTypes.translucentMovingBlock()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "anchorfade-1.1.1.jar",
   "published": "2026-10-01"
  },
@@ -61,5 +60,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert)"
  },
- "lacks": 10
+ "lacks": 9
 }

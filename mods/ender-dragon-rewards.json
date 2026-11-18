@@ -9,34 +9,19 @@
  "author": "karfakiaspsn",
  "description": "Server-side Ender Dragon rewards with owner-only chests, scaling drop chances, and optional Discord-MC-Chat announcements.",
  "needs": [
-  "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
-  "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-  "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
-  "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-  "net.minecraft.core.UUIDUtil",
-  "net.minecraft.world.SimpleMenuProvider",
-  "net.minecraft.world.entity.boss.enderdragon.EnderDragon",
-  "net.minecraft.world.entity.decoration.ArmorStand",
-  "net.minecraft.world.level.block.entity.ChestBlockEntity",
-  "BlockPos.toShortString()",
-  "MinecraftServer.createCommandSourceStack()",
-  "MinecraftServer.getTickCount()",
   "ServerLevel.getEntitiesOfClass()",
-  "ServerLevel.getEntity()",
-  "ServerPlayer.distanceToSqr()",
-  "ServerPlayer.getGameProfile()",
   "NameAndId.<init>()",
-  "Entity.discard()",
   "EnchantmentHelper.updateEnchantments()",
-  "Enchantments.SWIFT_SNEAK",
-  "BlockState.isRedstoneConductor()"
+  "ChestBlockEntity.getContainerSize()",
+  "ChestBlockEntity.setChanged()",
+  "ChestBlockEntity.setItem()"
  ],
  "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "dragonrewards-26.3.0.jar",
   "published": "2026-10-06"
  },
@@ -68,5 +53,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 21
+ "lacks": 6
 }

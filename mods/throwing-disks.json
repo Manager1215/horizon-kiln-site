@@ -1,0 +1,67 @@
+{
+ "id": "throwing-disks",
+ "name": "Throwing Disks!",
+ "version": "1.2.0+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/throwing-disks",
+ "author": "grumtinudimov",
+ "description": "Add the throwing disks from the minecraft preview",
+ "needs": [
+  "IntSet.clear()",
+  "Object2IntMap.Entry.getKey()",
+  "EntityRendererProvider.Context.getItemModelResolver()",
+  "ItemModelResolver.updateForNonLiving()",
+  "EntityDataSerializers.FLOAT",
+  "ServerLevel.explode()",
+  "ServerLevel.getEntitiesOfClass()",
+  "SoundEvents.TRIDENT_THROW",
+  "SoundEvents.TRIDENT_THUNDER",
+  "Entity.isPassengerOfSameVehicle()",
+  "TamableAnimal.getJumpControl()",
+  "Projectile.addAdditionalSaveData()",
+  "Projectile.onSyncedDataUpdated()",
+  "DispenserBlockEntity.insertItem()",
+  "BlockState.onProjectileHit()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
+  "file": "throwing-discs-fabric-26.3-1.2.0.jar",
+  "published": "2026-11-16"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 15
+}

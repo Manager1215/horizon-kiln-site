@@ -1,0 +1,68 @@
+{
+ "id": "serversec-mintymc-xyz",
+ "name": "ServerSec",
+ "version": "1.0.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/serversec-mintymc.xyz",
+ "author": "MintyMC.xyz",
+ "description": "Server security GUI that intergrates common mods into one place.",
+ "needs": [
+  "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
+  "net.minecraft.client.gui.components.PlayerFaceExtractor",
+  "net.minecraft.client.gui.screens.reporting.ChatReportScreen",
+  "net.minecraft.server.commands.MsgCommand",
+  "net.minecraft.server.commands.TeamMsgCommand",
+  "ServerMessageEvents.CHAT_MESSAGE",
+  "ServerPlayer.gameMode",
+  "ServerGamePacketListenerImpl.latency()",
+  "UserBanList.getEntries()",
+  "UserBanListEntry.getCreated()",
+  "UserBanListEntry.getExpires()",
+  "UserBanListEntry.getReason()",
+  "UserBanListEntry.getSource()",
+  "UserBanListEntry.hasExpired()",
+  "UserWhiteList.getEntries()",
+  "ValueInput.TypedInputList.iterator()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
+  "file": "serversec-1.0.0.jar",
+  "published": "2026-09-21"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels"
+ },
+ "lacks": 16
+}

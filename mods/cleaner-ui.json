@@ -1,0 +1,79 @@
+{
+ "id": "cleaner-ui",
+ "name": "Cleaner-UI",
+ "version": "v0.0.2",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/cleaner-ui",
+ "author": "LikeCapitalism",
+ "description": "This is Just a Cleaner UI Project",
+ "needs": [
+  "Mixin: 6 points inside the game's methods",
+  "com.mojang.blaze3d.resource.RenderTargetDescriptor",
+  "com.mojang.blaze3d.resource.RenderTargetDescriptor.TextureProperties",
+  "com.mojang.blaze3d.vertex.DefaultVertexFormat",
+  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
+  "net.minecraft.client.renderer.BindGroupLayouts",
+  "net.minecraft.client.renderer.LevelTargetBundle",
+  "net.minecraft.client.renderer.PostChainConfig.TargetInput",
+  "net.minecraft.client.renderer.ShaderManager.CompilationException",
+  "net.minecraft.client.renderer.UniformValue.FloatUniform",
+  "net.minecraft.client.renderer.UniformValue.Vec2Uniform",
+  "org.lwjgl.util.tinyfd.TinyFileDialogs",
+  "RenderTarget.width",
+  "CrossFrameResourcePool.endFrame()",
+  "SamplerCache.getClampToEdge()",
+  "VertexConsumer.addVertexWith2DPose()",
+  "BlendFunction.TRANSLUCENT",
+  "RenderPipeline.builder()",
+  "Minecraft.getShaderManager()",
+  "GuiGraphicsExtractor.blit()",
+  "GuiGraphicsExtractor.blurBeforeThisStratum()",
+  "TextureSetup.noTexture()",
+  "GameRenderer.processBlurEffect()",
+  "PostChain.MAIN_TARGET_ID",
+  "PostChain.load()",
+  "PostChain.process()",
+  "GuiRenderState.addGuiElement()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
+  "file": "cleaner-ui-1.0.0-2.jar",
+  "published": "2026-09-22"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own"
+ },
+ "lacks": 26
+}

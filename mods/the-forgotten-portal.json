@@ -10,42 +10,16 @@
  "description": "Mojang built a portal frame in the ancient city and never lit it. Now it is the only way into the Nether.",
  "needs": [
   "Mixin: 1 point inside the game's methods",
-  "net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint",
-  "net.minecraft.util.BlockUtil",
-  "net.minecraft.util.BlockUtil.FoundRectangle",
-  "net.minecraft.world.level.StructureManager",
-  "net.minecraft.world.level.block.BaseFireBlock",
-  "net.minecraft.world.level.block.NetherPortalBlock",
-  "net.minecraft.world.level.chunk.ChunkGeneratorStructureState",
-  "net.minecraft.world.level.levelgen.structure.placement.RandomSpreadStructurePlacement",
-  "net.minecraft.world.level.levelgen.structure.placement.StructurePlacement",
-  "net.minecraft.world.level.portal.PortalForcer",
-  "net.minecraft.world.level.portal.PortalShape",
-  "BlockPos.mutable()",
-  "BlockPos.toShortString()",
-  "Registries.STRUCTURE",
-  "MinecraftServer.getRunningThread()",
-  "MinecraftServer.overworld()",
-  "ServerChunkCache.getGeneratorState()",
   "ServerLevel.findNearestMapStructure()",
-  "ServerLevel.getChunk()",
-  "ServerLevel.getHeight()",
-  "ServerLevel.getMinY()",
-  "ServerLevel.structureManager()",
-  "ChunkAccess.getAllStarts()",
-  "ChunkStatus.STRUCTURE_STARTS",
-  "BoundingBox.maxY()",
-  "BoundingBox.minY()",
-  "StructureStart.getBoundingBox()",
-  "StructureStart.getStructure()",
-  "StructureStart.isValid()"
+  "PortalShape.createPortalBlocks()",
+  "PortalShape.findEmptyPortalShape()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "forgotten-portal-mc26.3-fabric-1.0.4.jar",
   "published": "2026-11-13"
  },
@@ -77,5 +51,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; generates in the world"
  },
- "lacks": 29
+ "lacks": 3
 }

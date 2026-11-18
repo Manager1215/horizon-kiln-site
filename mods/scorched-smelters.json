@@ -9,11 +9,6 @@
  "author": "RealMikoto",
  "description": "Furnaces, smokers and blast furnaces now accumulate heat while smelting — glowing ever redder until they finally explode. Keep them cool with water, ice or snow!",
  "needs": [
-  "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
-  "net.minecraft.world.level.block.AbstractFurnaceBlock",
-  "net.minecraft.world.level.block.IceBlock",
-  "net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity",
-  "net.minecraft.world.level.block.entity.BlockEntityTypes",
   "VertexConsumer.addVertex()",
   "VertexConsumer.setNormal()",
   "BlockEntityRenderer.extractRenderState()",
@@ -22,14 +17,17 @@
   "OverlayTexture.v()",
   "ServerLevel.explode()",
   "DamageSources.lava()",
-  "Entity.hurt()"
+  "IceBlock.meltsInto()",
+  "BlockEntityTypes.BLAST_FURNACE",
+  "BlockEntityTypes.FURNACE",
+  "BlockEntityTypes.SMOKER"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "scorched-smelters-1.0.0.jar",
   "published": "2026-09-26"
  },
@@ -63,5 +61,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); has network channels"
  },
- "lacks": 14
+ "lacks": 12
 }

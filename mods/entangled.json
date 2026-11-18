@@ -10,15 +10,8 @@
  "description": "Entangled allows you to 'entangle' two blocks together!",
  "needs": [
   "an access widener",
-  "net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags",
-  "net.minecraft.client.renderer.item.CuboidItemModelWrapper",
-  "net.minecraft.core.IdMapper",
   "PoseStack.rotate()",
-  "Axis.ZP",
-  "Minecraft.getBlockColors()",
   "Minecraft.getBlockEntityRenderDispatcher()",
-  "BlockColors.getTintSources()",
-  "BlockTintSource.colorInWorld()",
   "BlockAndTintGetter.EMPTY",
   "BlockModelRenderState.clear()",
   "BlockModelRenderState.setupMesh()",
@@ -28,6 +21,8 @@
   "BlockEntityRenderer.extractRenderState()",
   "BlockEntityRenderState.breakProgress",
   "BlockEntityRenderState.lightCoords",
+  "CuboidItemModelWrapper.computeExtents()",
+  "CuboidItemModelWrapper.validateAtlasUsage()",
   "ItemStackRenderState.setAnimated()",
   "ItemStackRenderState.LayerRenderState.setItemTransform()",
   "ItemStackRenderState.LayerRenderState.setLocalTransform()",
@@ -36,28 +31,14 @@
   "LevelRenderState.setData()",
   "ItemTransforms.getTransform()",
   "ServerChunkCache.mainThread",
-  "Player.isCrouching()",
-  "Block.BLOCK_STATE_REGISTRY",
-  "Block.stateById()",
-  "BlockState.getAnalogOutputSignal()",
-  "BlockState.getDirectSignal()",
-  "BlockState.getOcclusionShape()",
-  "BlockState.getRenderShape()",
-  "BlockState.getSeed()",
-  "BlockState.getShape()",
-  "BlockState.getSignal()",
-  "BlockState.hasAnalogOutputSignal()",
-  "ChunkSource.getChunkNow()",
-  "MapColor.COLOR_BROWN",
-  "AABB.getXsize()",
-  "and 5 more"
+  "BlockState.getAnalogOutputSignal()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "entangled-1.3.21-fabric-mc26.3.jar",
   "published": "2026-09-15"
  },
@@ -93,5 +74,5 @@
   "class": "partial",
   "why": "data pack files (recipes, loot, tags) stay"
  },
- "lacks": 45
+ "lacks": 22
 }

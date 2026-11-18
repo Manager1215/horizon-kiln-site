@@ -11,10 +11,6 @@
  "needs": [
   "an access widener",
   "Mixin: 2 points inside the game's methods",
-  "com.mojang.authlib.minecraft.SessionService",
-  "com.mojang.authlib.properties.Property",
-  "com.mojang.authlib.properties.PropertyMap",
-  "com.mojang.authlib.services.ProfileResult",
   "io.netty.channel.Channel",
   "io.netty.channel.ChannelFuture",
   "io.netty.channel.ChannelHandler",
@@ -24,16 +20,7 @@
   "io.netty.channel.ChannelInitializer",
   "io.netty.channel.ChannelPipeline",
   "io.netty.channel.SimpleChannelInboundHandler",
-  "net.minecraft.DefaultUncaughtExceptionHandler",
-  "net.minecraft.commands.arguments.selector.EntitySelectorParser",
   "net.minecraft.network.protocol.handshake.ClientIntentionPacket",
-  "net.minecraft.network.protocol.login.ServerboundHelloPacket",
-  "net.minecraft.server.level.ChunkMap",
-  "net.minecraft.server.level.ChunkMap.TrackedEntity",
-  "net.minecraft.server.network.ServerConnectionListener",
-  "net.minecraft.server.network.ServerLoginPacketListenerImpl",
-  "net.minecraft.server.players.UserWhiteList",
-  "net.minecraft.server.players.UserWhiteListEntry",
   "org.apache.logging.log4j.core.config.Configurator",
   "RemovalNotification.getValue()",
   "ImmutableList.get()",
@@ -45,20 +32,17 @@
   "ImmutableSet.stream()",
   "Multiset.isEmpty()",
   "GameProfile.<init>()",
-  "GameProfile.properties()",
   "ObjectCollection.removeIf()",
-  "SharedConstants.getCurrentVersion()",
-  "Connection.disconnect()",
-  "Connection.getPacketListener()",
-  "ClientboundPlayerInfoUpdatePacket.createPlayerInitializing()",
-  "and 8 more"
+  "ServerGamePacketListenerImpl.disconnect()",
+  "ServerLoginPacketListenerImpl.startClientVerification()",
+  "UserWhiteList.remove()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "Floodgate-Fabric-2.2.7-b69.jar",
   "published": "2026-09-17"
  },
@@ -89,5 +73,5 @@
   "class": "partial",
   "why": "runs threads of its own; has network channels"
  },
- "lacks": 48
+ "lacks": 25
 }

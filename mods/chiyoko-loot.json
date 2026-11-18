@@ -10,43 +10,20 @@
  "description": "Reveals the next outcome for certain loot tables before they happen by simulating the exact steps the game takes to advance RNG.",
  "needs": [
   "Mixin: 1 point inside the game's methods",
-  "net.minecraft.client.gui.screens.inventory.EnchantmentScreen",
-  "net.minecraft.core.IdMap",
-  "net.minecraft.network.chat.ComponentUtils",
-  "net.minecraft.world.entity.monster.Shulker",
-  "net.minecraft.world.entity.monster.piglin.Piglin",
-  "net.minecraft.world.entity.monster.skeleton.WitherSkeleton",
-  "net.minecraft.world.inventory.EnchantmentMenu",
-  "net.minecraft.world.item.component.OminousBottleAmplifier",
-  "net.minecraft.world.item.enchantment.EnchantmentInstance",
-  "net.minecraft.world.level.block.VaultBlock",
-  "net.minecraft.world.level.block.entity.vault.VaultBlockEntity",
-  "net.minecraft.world.level.block.entity.vault.VaultSharedData",
-  "net.minecraft.world.level.block.entity.vault.VaultState",
-  "net.minecraft.world.level.levelgen.WorldGenSettings",
-  "net.minecraft.world.level.levelgen.WorldOptions",
   "GuiGraphicsExtractor.setTooltipForNextFrame()",
-  "ClientLevel.getBiomeManager()",
-  "LocalPlayer.getLuck()",
-  "LocalPlayer.isCrouching()",
-  "IntegratedServer.getWorldGenSettings()",
-  "Registry.asHolderIdMap()",
-  "BiomeTags.IS_JUNGLE",
-  "ItemEntity.getItem()",
-  "Player.fishing",
   "FishingHook.isOpenWaterFishing()",
-  "EnchantmentHelper.getItemEnchantmentLevel()",
-  "Enchantments.LUCK_OF_THE_SEA",
-  "Enchantments.SOUL_SPEED",
-  "Level.getBiome()",
-  "BiomeManager.obfuscateSeed()"
+  "EnchantmentMenu.enchantClue",
+  "EnchantmentMenu.levelClue",
+  "BiomeManager.obfuscateSeed()",
+  "VaultBlockEntity.getSharedData()",
+  "VaultSharedData.getDisplayItem()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "26.3-0.4.4+26.3.jar",
   "published": "2026-09-16"
  },
@@ -78,5 +55,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 30
+ "lacks": 7
 }

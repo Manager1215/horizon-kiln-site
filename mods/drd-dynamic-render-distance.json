@@ -10,39 +10,27 @@
  "description": "Automatically adjusts render distance based on FPS. Flash-free, Bobby-compatible, configurable via Mod Menu",
  "needs": [
   "Mixin: 6 points inside the game's methods",
-  "com.mojang.blaze3d.platform.FramerateLimitTracker",
   "com.mojang.blaze3d.platform.FramerateLimitTracker.FramerateThrottleReason",
-  "com.mojang.blaze3d.platform.VideoMode",
-  "net.minecraft.client.OptionInstance.CaptionBasedToString",
-  "net.minecraft.client.OptionInstance.TooltipSupplier",
-  "net.minecraft.client.OptionInstance.ValueUpdateListener",
-  "net.minecraft.client.gui.components.OptionsList",
-  "net.minecraft.client.gui.screens.options.OptionsSubScreen",
   "net.minecraft.client.gui.screens.options.VideoSettingsScreen",
-  "net.minecraft.client.renderer.LevelRenderer",
-  "net.minecraft.client.renderer.SectionOcclusionGraph",
-  "net.minecraft.client.renderer.extract.LevelExtractor",
+  "FramerateLimitTracker.getThrottleReason()",
+  "VideoMode.getRefreshRate()",
   "Window.getActiveVideoMode()",
   "Window.isIconified()",
   "Minecraft.getFramerateLimitTracker()",
   "Minecraft.levelRenderer",
   "OptionInstance.<init>()",
-  "OptionInstance.cachedConstantTooltip()",
-  "OptionInstance.createBoolean()",
   "OptionInstance.IntRange.<init>()",
-  "Options.enableVsync()",
-  "Options.framerateLimit()",
-  "Options.genericValueLabel()",
-  "Options.getEffectiveRenderDistance()",
   "Gui.overlay()",
-  "PlayerList.setSimulationDistance()"
+  "OptionsList.addHeader()",
+  "OptionsList.addSmall()",
+  "SectionOcclusionGraph.invalidate()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "drd-mc26.3-fabric-1.0.4.jar",
   "published": "2026-11-11"
  },
@@ -76,5 +64,5 @@
   "class": "restart",
   "why": "@wrap-method into the game's classes"
  },
- "lacks": 26
+ "lacks": 14
 }

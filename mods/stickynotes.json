@@ -10,17 +10,9 @@
  "description": "Place simple waypoints in the world (aka Sticky Notes)",
  "needs": [
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
-  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
   "net.fabricmc.fabric.api.client.rendering.v1.FeatureRendererRegistry",
   "net.fabricmc.fabric.api.client.rendering.v1.SubmitRenderPhases",
-  "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-  "net.minecraft.Optionull",
-  "net.minecraft.client.gui.ActiveTextCollector",
-  "net.minecraft.client.renderer.feature.submit.TranslucentSubmit",
-  "net.minecraft.client.renderer.rendertype.RenderSetup",
   "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
-  "net.minecraft.client.renderer.texture.MissingTextureAtlasSprite",
-  "net.minecraft.world.level.storage.WorldData",
   "PoseStack.last()",
   "PoseStack.Pose.copy()",
   "PoseStack.Pose.pose()",
@@ -28,28 +20,22 @@
   "ColorTargetState.DEFAULT",
   "DepthStencilState.DEFAULT",
   "RenderPipeline.builder()",
-  "LevelRenderEvents.COLLECT_SUBMITS",
-  "Options.getEffectiveRenderDistance()",
+  "ActiveTextCollector.acceptScrollingWithDefaultCenter()",
   "GuiGraphicsExtractor.textRenderer()",
-  "RenderPipelines.GUI_TEXTURED_SNIPPET",
   "Sheets.MAP_DECORATIONS_SHEET",
   "SubmitNodeCollector.submitCustom()",
   "FeatureRendererType.create()",
-  "RenderType.create()",
+  "TranslucentSubmit.computeDistanceToCameraSq()",
+  "RenderSetup.builder()",
   "CameraRenderState.xRot",
-  "CameraRenderState.yRot",
-  "IntegratedServer.getWorldData()",
-  "Entity.getEyePosition()",
-  "AABB.clip()",
-  "Vec3.CODEC",
-  "Vec3.relative()"
+  "CameraRenderState.yRot"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "StickyNotes-0.0.8+26.3.jar",
   "published": "2026-09-24"
  },
@@ -81,5 +67,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 34
+ "lacks": 20
 }

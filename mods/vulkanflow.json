@@ -9,27 +9,21 @@
  "author": "FrediFret",
  "description": "VulkanFlow brings bloom, shadows and shader like effects to Minecraft highly optimized for integrated GPUs and low end devices. Achieve stable 60 FPS on hardware like Intel UHD 620, fully compatible with Sodium.",
  "needs": [
-  "com.mojang.blaze3d.resource.GraphicsResourceAllocator",
-  "com.mojang.blaze3d.vertex.QuadInstance",
-  "net.minecraft.client.renderer.LevelRenderer",
-  "net.minecraft.client.renderer.PostChain",
-  "net.minecraft.client.renderer.ShaderManager",
-  "net.minecraft.client.renderer.block.BlockQuadOutput",
-  "net.minecraft.client.renderer.block.ModelBlockRenderer",
-  "ModContainer.getRootPaths()",
+  "GraphicsResourceAllocator.UNPOOLED",
+  "QuadInstance.getColor()",
+  "QuadInstance.setColor()",
   "Minecraft.getShaderManager()",
-  "LocalPlayer.getEyeY()",
-  "BlockPos.asLong()",
-  "Entity.getEyeY()",
-  "Entity.isAlive()",
+  "PostChain.MAIN_TARGET_ID",
+  "PostChain.process()",
+  "ShaderManager.getPostChain()",
   "Level.getEntitiesOfClass()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "vulkanflow-1.1.2.jar",
   "published": "2026-11-12"
  },
@@ -62,5 +56,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 14
+ "lacks": 8
 }

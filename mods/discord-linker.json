@@ -9,15 +9,6 @@
  "author": "Lianecx",
  "description": "Easiest Minecraft–Discord link! NO bot setup or configuration files! Add chat bridges, view stats and inventories, run commands and more!",
  "needs": [
-  "net.fabricmc.api.DedicatedServerModInitializer",
-  "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents",
-  "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents.QueryStart",
-  "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking",
-  "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginSynchronizer",
-  "net.minecraft.server.ServerScoreboard",
-  "net.minecraft.server.network.ServerLoginPacketListenerImpl",
-  "net.minecraft.world.level.storage.WorldData",
-  "net.minecraft.world.scores.Team",
   "org.apache.logging.log4j.core.Appender",
   "org.apache.logging.log4j.core.Layout",
   "org.apache.logging.log4j.core.LogEvent",
@@ -28,27 +19,18 @@
   "org.apache.logging.log4j.core.config.LoggerConfig",
   "org.apache.logging.log4j.core.layout.PatternLayout",
   "org.apache.logging.log4j.core.layout.PatternLayout.Builder",
-  "CommandSourceStack.withCallback()",
   "MinecraftServer.getMaxPlayers()",
-  "MinecraftServer.getScoreboard()",
-  "MinecraftServer.getServerDirectory()",
-  "MinecraftServer.getServerModName()",
-  "MinecraftServer.getWorldData()",
-  "MinecraftServer.overworld()",
-  "MinecraftServer.services()",
-  "MinecraftServer.usesAuthentication()",
-  "ServerLevel.getRespawnData()",
+  "ServerScoreboard.removePlayerFromTeam()",
   "ServerGamePacketListenerImpl.disconnect()",
-  "DamageSource.getLocalizedDeathMessage()",
-  "LevelData.RespawnData.pos()",
-  "Scoreboard.getPlayerTeam()"
+  "ServerLoginPacketListenerImpl.getUserName()",
+  "Team.getPlayers()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "discordlinker-4.4.1-26.3-fabric.jar",
   "published": "2026-11-01"
  },
@@ -72,5 +54,5 @@
   "class": "partial",
   "why": "runs threads of its own"
  },
- "lacks": 33
+ "lacks": 15
 }

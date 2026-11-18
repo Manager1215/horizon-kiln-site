@@ -10,36 +10,21 @@
  "description": "Sneak and use the Trial Key to reset Trial Vaults and Trial Spawners.",
  "needs": [
   "an access widener",
-  "net.minecraft.commands.functions.CommandFunction",
-  "net.minecraft.server.ServerFunctionManager",
-  "net.minecraft.server.TickTask",
-  "net.minecraft.world.item.BoneMealItem",
-  "MinecraftServer.getFunctions()",
-  "MinecraftServer.getTickCount()",
-  "ServerLevel.getGameRules()",
-  "ServerLevel.sendParticles()",
-  "ServerPlayer.takeXpDelay",
+  "ServerFunctionManager.execute()",
+  "ServerFunctionManager.get()",
+  "TickTask.getTick()",
   "LivingEntity.getExperienceReward()",
   "LivingEntity.getLastHurtByPlayer()",
-  "LivingEntity.getUseItem()",
-  "LivingEntity.getUseItemRemainingTicks()",
-  "LivingEntity.isUsingItem()",
   "LivingEntity.shouldDropExperience()",
   "LivingEntity.wasExperienceConsumed()",
-  "ItemEntity.getItem()",
-  "Player.gameMode()",
-  "Player.getUsedItemHand()",
-  "BlockPlaceContext.<init>()",
-  "LevelAccessor.setBlock()",
-  "GameRules.MOB_DROPS",
-  "GameRules.get()"
+  "BlockPlaceContext.<init>()"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "resettable_trial_chambers-1.1.0-fabric-26.3.jar",
   "published": "2026-10-21"
  },
@@ -72,5 +57,5 @@
   "class": "partial",
   "why": "data pack files (recipes, loot, tags) stay"
  },
- "lacks": 23
+ "lacks": 8
 }

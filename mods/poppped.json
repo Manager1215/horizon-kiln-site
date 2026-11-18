@@ -1,7 +1,7 @@
 {
  "id": "poppped",
  "name": "Popped!",
- "version": "1.2+26.3-fabric",
+ "version": "1.3+26.3-fabric",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,44 +9,25 @@
  "author": "Miguelki",
  "description": "Popped: Turn player skins into collectible vinyl Pop figures with display boxes, custom poses, and mini editions! Just like Funko-pops!",
  "needs": [
-  "net.minecraft.client.renderer.special.SpecialModelRenderer.Unbaked",
   "net.minecraft.client.renderer.special.SpecialModelRenderers",
-  "net.minecraft.client.resources.DefaultPlayerSkin",
-  "net.minecraft.world.item.component.DeathProtection",
-  "net.minecraft.world.item.component.ResolvableProfile",
   "PoseStack.last()",
-  "PoseStack.Pose.set()",
+  "PoseStack.Pose.pose()",
   "VertexConsumer.addVertex()",
   "VertexConsumer.setLight()",
   "VertexConsumer.setNormal()",
   "VertexConsumer.setOverlay()",
-  "Axis.ZP",
-  "LocalPlayer.displayItemActivation()",
   "BlockEntityRenderer.extractRenderState()",
-  "DataComponents.DEATH_PROTECTION",
-  "ClientboundEntityEventPacket.getEntity()",
   "ClientboundEntityEventPacket.getEventId()",
-  "MinecraftServer.services()",
-  "ServerLevel.sendParticles()",
-  "SoundEvents.ITEM_FRAME_ROTATE_ITEM",
-  "SoundEvents.SLIME_BLOCK_PLACE",
-  "Entity.<init>()",
-  "ItemEntity.setDefaultPickUpDelay()",
-  "Player.isCrouching()",
-  "TypedEntityData.copyTagWithoutId()",
-  "Level.addFreshEntity()",
-  "HorizontalDirectionalBlock.FACING",
-  "SoundType.SNOW",
-  "BlockStateProperties.ROTATION_16"
+  "DeathProtection.TOTEM_OF_UNDYING"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
-  "file": "popped-fabric-26.3-1.2.jar",
-  "published": "2026-10-03"
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
+  "file": "popped-fabric-26.3-1.3.jar",
+  "published": "2026-11-18"
  },
  "reports": {
   "works": 0,
@@ -56,8 +37,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -77,5 +58,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 29
+ "lacks": 10
 }

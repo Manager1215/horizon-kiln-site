@@ -10,23 +10,18 @@
  "description": "A simple client-side mod that fixes MC-260346 where custom music discs are cut off if they exceed the vanilla length.",
  "needs": [
   "Mixin: 3 points inside the game's methods",
-  "com.mojang.blaze3d.audio.Channel",
   "net.minecraft.client.renderer.LevelEventHandler",
-  "net.minecraft.client.renderer.extract.LevelExtractor",
-  "net.minecraft.client.sounds.ChannelAccess",
-  "net.minecraft.client.sounds.ChannelAccess.ChannelHandle",
-  "net.minecraft.world.item.JukeboxSong",
+  "Channel.disableAttenuation()",
+  "Channel.setRelative()",
   "Hud.setNowPlaying()",
-  "SimpleSoundInstance.forJukeboxSong()",
-  "DataComponents.JUKEBOX_PLAYABLE",
-  "ItemEntity.getItem()"
+  "SimpleSoundInstance.forJukeboxSong()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "client-side_custom_music_disc_fix-1.1.6+26.3.jar",
   "published": "2026-09-22"
  },
@@ -58,5 +53,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes"
  },
- "lacks": 10
+ "lacks": 5
 }

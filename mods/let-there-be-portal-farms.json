@@ -9,21 +9,17 @@
  "author": "seviq25",
  "description": "A Fabric mod for preventing mob despawning when they change dimensions or enter a portal. Fixing portal-based farms. \n[portal mob despawn farm fix]",
  "needs": [
-  "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterEntityChange",
   "JsonSyntaxException.getMessage()",
-  "ServerLevel.getEntity()",
-  "Entity.hasCustomName()",
-  "Mob.is()",
-  "Mob.isPersistenceRequired()",
-  "Mob.setPersistenceRequired()"
+  "ServerEntityLevelChangeEvents.AFTER_ENTITY_CHANGE_LEVEL",
+  "Mob.is()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "portal-fix-1.0.1.jar",
   "published": "2026-09-28"
  },
@@ -55,5 +51,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 8
+ "lacks": 4
 }

@@ -10,34 +10,20 @@
  "description": "Accidentally stripped your log? Use bark to unstrip it!",
  "needs": [
   "an access widener",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents.TagsLoaded",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SyncDataPackContents",
-  "net.minecraft.client.renderer.special.SpecialModelRenderer.Unbaked",
   "net.minecraft.client.renderer.special.SpecialModelRenderers",
-  "net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate",
-  "net.minecraft.world.level.levelgen.blockpredicates.MatchingBlockTagPredicate",
-  "net.minecraft.world.level.levelgen.blockpredicates.MatchingBlocksPredicate",
-  "net.minecraft.world.level.levelgen.feature.stateproviders.CopyPropertiesProvider",
-  "net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedStateProvider",
-  "net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedStateProvider.Rule",
-  "net.minecraft.world.level.levelgen.feature.stateproviders.SimpleStateProvider",
-  "net.minecraft.world.level.storage.loot.providers.number.ints.ConstantValue",
   "VertexConsumer.addVertex()",
   "VertexConsumer.setLight()",
   "VertexConsumer.setNormal()",
   "VertexConsumer.setOverlay()",
-  "ServerLifecycleEvents.SYNC_DATA_PACK_CONTENTS",
-  "Registries.BLOCK_TRANSFORMER",
-  "MinecraftServer.registryAccess()",
-  "Level.addFreshEntity()"
+  "MatchingBlockTagPredicate.tag",
+  "MatchingBlocksPredicate.blocks"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "unstriplog-26.3-fabric-26.3.0.2.jar",
   "published": "2026-10-29"
  },
@@ -71,5 +57,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 21
+ "lacks": 7
 }

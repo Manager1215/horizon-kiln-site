@@ -9,20 +9,18 @@
  "author": "Rynnavinx",
  "description": "Reintroduces vanilla-like smooth lighting to non-full blocks (e.g. dirt paths and how they have dark shading when directly next to a full block) when using Sodium.",
  "needs": [
-  "com.mojang.blaze3d.vertex.QuadInstance",
   "net.minecraft.client.renderer.block.BlockModelLighter",
-  "net.minecraft.world.level.block.PathBlock",
+  "QuadInstance.getColor()",
+  "QuadInstance.getLightCoords()",
   "Sheets.cutoutBlockItemGlintSheet()",
-  "Sheets.cutoutBlockItemGlintSpecialSheet()",
-  "ARGB.redFloat()",
-  "BlockState.propagatesSkylightDown()"
+  "Sheets.cutoutBlockItemGlintSpecialSheet()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "sodium-shadowy-path-blocks-fabric-8.0.0.jar",
   "published": "2026-09-17"
  },
@@ -54,5 +52,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 7
+ "lacks": 5
 }

@@ -10,24 +10,17 @@
  "description": "Adds bed based time skipping: sleep through the day to reach night, optionally skip night to day. Configurable modes and player percentage threshold.",
  "needs": [
   "Mixin: 2 points inside the game's methods",
-  "net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents",
   "net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents.AllowResettingTime",
-  "net.minecraft.world.attribute.BedRule",
-  "net.minecraft.world.entity.player.Player.BedSleepingProblem",
-  "MinecraftServer.createCommandSourceStack()",
-  "MinecraftServer.getAllLevels()",
-  "ServerPlayer.isSleeping()",
+  "EntitySleepEvents.ALLOW_RESETTING_TIME",
   "ServerPlayer.stopSleepInBed()",
-  "EnvironmentAttributes.BED_RULE",
-  "Level.getOverworldClockTime()",
-  "Level.isDarkOutside()"
+  "BedRule.asProblem()"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "daynap-fabric-26.3-1.1.1.jar",
   "published": "2026-11-08"
  },
@@ -60,5 +53,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 11
+ "lacks": 4
 }

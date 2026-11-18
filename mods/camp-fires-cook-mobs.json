@@ -10,26 +10,18 @@
  "description": "Mobs that die on camp fires drop cooked meat.",
  "needs": [
   "Mixin: 1 point inside the game's methods",
-  "net.fabricmc.loader.api.VersionParsingException",
-  "net.fabricmc.loader.api.metadata.version.VersionPredicate",
-  "net.minecraft.advancements.predicates.DamageSourcePredicate",
-  "net.minecraft.core.RegistrationInfo",
-  "net.minecraft.world.damagesource.DamageTypes",
-  "net.minecraft.world.level.block.BaseFireBlock",
-  "net.minecraft.world.level.block.CampfireBlock",
-  "net.minecraft.world.level.storage.loot.predicates.DamageSourceCondition",
+  "VersionPredicate.test()",
   "DamageSources.campfire()",
-  "Entity.hurt()",
+  "DamageTypes.CAMPFIRE",
   "EnchantmentEffectComponents.DAMAGE_IMMUNITY",
-  "EnchantmentHelper.getEnchantmentLevel()",
-  "Enchantments.FROST_WALKER"
+  "BaseFireBlock.fireIgnite()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "camp_fires_cook_mobs-1.11.0+MC26.3.x.jar",
   "published": "2026-09-24"
  },
@@ -61,5 +53,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 13
+ "lacks": 5
 }

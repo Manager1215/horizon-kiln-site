@@ -9,22 +9,19 @@
  "author": "lukasabbe",
  "description": "Adds a way to message a whole group if you don't have a microphone.\nWhen you are in a group you can now use /msgvc <message>",
  "needs": [
-  "net.fabricmc.api.DedicatedServerModInitializer",
-  "net.minecraft.commands.arguments.MessageArgument",
-  "net.minecraft.network.chat.OutgoingChatMessage",
+  "MessageArgument.resolveChatMessage()",
   "ChatType.TEAM_MSG_COMMAND_INCOMING",
   "ChatType.TEAM_MSG_COMMAND_OUTGOING",
   "ChatType.bind()",
   "ChatType.Bound.withTargetName()",
-  "ServerLevel.getPlayers()",
-  "ServerPlayer.sendChatMessage()"
+  "OutgoingChatMessage.create()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "VoiceChatGroupMsg-1.1+26.3.jar",
   "published": "2026-09-15"
  },
@@ -47,5 +44,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 9
+ "lacks": 6
 }

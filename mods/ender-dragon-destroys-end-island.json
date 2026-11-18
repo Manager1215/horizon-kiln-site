@@ -10,22 +10,14 @@
  "description": "The Ender Dragon now tears apart the End Island during battle, leaving massive destruction in its wake.",
  "needs": [
   "Mixin: 2 points inside the game's methods",
-  "net.minecraft.server.level.ChunkMap",
-  "net.minecraft.world.entity.boss.enderdragon.EnderDragon",
-  "net.minecraft.world.entity.boss.enderdragon.EnderDragonPart",
-  "net.minecraft.world.entity.item.FallingBlockEntity",
-  "net.minecraft.world.entity.monster.Enderman",
-  "net.minecraft.world.entity.projectile.hurtingprojectile.AbstractHurtingProjectile",
-  "net.minecraft.world.entity.projectile.hurtingprojectile.DragonFireball",
-  "ServerLevel.sendParticles()",
-  "SoundEvents.DRAGON_FIREBALL_EXPLODE"
+  "FallingBlockEntity.setHurtsEntities()"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "enderdragondestroysendisland-2.2.2+mc26.3-fabric.jar",
   "published": "2026-10-04"
  },
@@ -58,5 +50,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 9
+ "lacks": 1
 }

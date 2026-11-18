@@ -9,43 +9,25 @@
  "author": "Minehendrix",
  "description": "Enhance the Chaos Cubed drop with craftable nausea potions, sulfur fire and more!",
  "needs": [
-  "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry",
-  "net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry.PendingParticleProvider",
-  "net.fabricmc.fabric.api.particle.v1.FabricParticleTypes",
-  "net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry",
   "net.minecraft.client.particle.FlameParticle",
   "net.minecraft.client.particle.FlameParticle.Provider",
   "net.minecraft.client.renderer.blockentity.CampfireRenderer",
-  "net.minecraft.world.item.crafting.RecipeManager.CachedCheck",
-  "net.minecraft.world.level.block.BaseFireBlock",
-  "net.minecraft.world.level.block.CampfireBlock",
-  "net.minecraft.world.level.block.LanternBlock",
   "net.minecraft.world.level.block.PotentSulfurBlock",
-  "net.minecraft.world.level.block.TorchBlock",
-  "net.minecraft.world.level.block.WallTorchBlock",
-  "net.minecraft.world.level.block.entity.CampfireBlockEntity",
   "net.minecraft.world.level.block.entity.PotentSulfurBlockEntity",
   "net.minecraft.world.level.block.state.properties.PotentSulfurState",
-  "net.minecraft.world.level.material.PushReaction",
-  "Registries.PARTICLE_TYPE",
-  "SoundEvents.GEYSER_CONTINUOUS_ACTIVE",
-  "SoundEvents.GEYSER_ERUPTION_ACTIVE",
   "LivingEntity.is()",
   "Item.Properties.requiredFeatures()",
-  "RecipeManager.createCheck()",
-  "Block.getLootTable()",
   "Block.requiredFeatures()",
-  "BlockBehaviour.Properties.overrideDescription()",
-  "BlockBehaviour.Properties.overrideLootTable()",
-  "BlockBehaviour.Properties.pushReaction()",
-  "MapColor.COLOR_BLUE"
+  "CampfireBlockEntity.cookTick()",
+  "CampfireBlockEntity.cooldownTick()",
+  "CampfireBlockEntity.particleTick()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "BetterChaosCubed-1.0-Fabric.jar",
   "published": "2026-09-30"
  },
@@ -78,5 +60,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
  },
- "lacks": 30
+ "lacks": 12
 }

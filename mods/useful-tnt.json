@@ -10,36 +10,18 @@
  "description": "Cheaper TNT crafting plus TNT drop protection — item entities survive TNT explosions, so quarries and chain detonation recover more loot.",
  "needs": [
   "Mixin: 2 points inside the game's methods",
-  "net.minecraft.advancements.predicates.BlockPredicate",
-  "net.minecraft.advancements.predicates.DataComponentMatchers",
-  "net.minecraft.core.RegistrationInfo",
-  "net.minecraft.tags.DamageTypeTags",
-  "net.minecraft.world.entity.vehicle.minecart.MinecartTNT",
-  "net.minecraft.world.item.AdventureModePredicate",
-  "net.minecraft.world.level.block.TntBlock",
   "MappedRegistry.<init>()",
-  "MappedRegistry.freeze()",
-  "MappedRegistry.register()",
-  "DataComponents.CAN_BREAK",
-  "ServerLevel.getGameRules()",
-  "InteractionHand.asEquipmentSlot()",
   "PrimedTnt.setFuse()",
-  "PrimedTnt.tickCount",
-  "Player.blockInteractionRange()",
-  "Player.gameMode()",
-  "Player.getRootVehicle()",
-  "Player.hasInfiniteMaterials()",
-  "ItemStack.consume()",
   "Level.getEntitiesOfClass()",
-  "GameRules.TNT_EXPLODES",
-  "GameRules.get()"
+  "TntBlock.prime()",
+  "GameRules.TNT_EXPLODES"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "useful_tnt-3.1.0.jar",
   "published": "2026-10-29"
  },
@@ -72,5 +54,5 @@
   "class": "restart",
   "why": "@wrap-method and @wrap-operation into the game's classes"
  },
- "lacks": 23
+ "lacks": 5
 }

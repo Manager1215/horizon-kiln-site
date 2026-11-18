@@ -10,19 +10,9 @@
  "description": "Adds snow particles falling from snow, snow blocks, and powder snow when there's air or transparent blocks underneath, plus frost overlays on glass and other clear surfaces near snow.",
  "needs": [
   "com.mojang.blaze3d.vertex.DefaultVertexFormat",
-  "com.mojang.blaze3d.vertex.VertexSorting",
-  "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.AfterTranslucentTerrain",
   "net.minecraft.client.model.geom.builders.UVPair",
-  "net.minecraft.client.particle.Particle",
-  "net.minecraft.client.particle.ParticleEngine",
   "net.minecraft.client.renderer.DynamicGpuData",
-  "net.minecraft.client.renderer.StagedVertexBuffer.Draw",
   "net.minecraft.client.renderer.StagedVertexBuffer.ExecuteInfo",
-  "net.minecraft.world.level.LightLayer",
-  "net.minecraft.world.level.block.SignBlock",
-  "net.minecraft.world.level.block.StainedGlassBlock",
-  "net.minecraft.world.level.block.StainedGlassPaneBlock",
-  "net.minecraft.world.level.block.WallSignBlock",
   "ProjectionType.vertexSorting()",
   "RenderSystem.getCompiledPipeline()",
   "RenderSystem.getDynamicUniforms()",
@@ -31,16 +21,15 @@
   "SamplerCache.getClampToEdge()",
   "PoseStack.last()",
   "VertexConsumer.addVertex()",
-  "VertexConsumer.setColor()",
   "VertexConsumer.setLight()",
   "VertexConsumer.setOverlay()",
   "GpuBuffer.slice()",
   "RenderPipeline.getPrimitiveTopology()",
   "RenderPipeline.getVertexFormatBinding()",
   "VertexFormat.getVertexSize()",
-  "LevelRenderEvents.AFTER_TRANSLUCENT_TERRAIN",
   "Minecraft.particleEngine",
   "TextureSetup.singleTextureWithLightmap()",
+  "ParticleEngine.createParticle()",
   "RenderPipelines.ENTITY_TRANSLUCENT",
   "StagedVertexBuffer.appendDraw()",
   "StagedVertexBuffer.endFrame()",
@@ -49,14 +38,14 @@
   "StagedVertexBuffer.upload()",
   "AbstractTexture.getTextureView()",
   "BakedQuad.packedUV()",
-  "and 4 more"
+  "BakedQuad.position()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "wintery-atmosphere-2.0.0-mc26.3.jar",
   "published": "2026-10-31"
  },
@@ -89,5 +78,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 44
+ "lacks": 30
 }

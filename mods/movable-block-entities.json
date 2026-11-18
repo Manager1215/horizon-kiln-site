@@ -10,31 +10,19 @@
  "description": "Allows pistons to push block entities without the need of Carpet Mod",
  "needs": [
   "Mixin: 2 points inside the game's methods",
-  "net.minecraft.world.level.block.piston.MovingPistonBlock",
-  "net.minecraft.world.level.block.piston.PistonBaseBlock",
-  "net.minecraft.world.level.block.piston.PistonHeadBlock",
-  "net.minecraft.world.level.block.piston.PistonMovingBlockEntity",
-  "net.minecraft.world.level.block.piston.PistonStructureResolver",
-  "net.minecraft.world.level.block.state.properties.PistonType",
-  "net.minecraft.world.level.gameevent.GameEvent.Context",
-  "BlockTags.FIRE",
-  "Level.gameEvent()",
-  "Level.setBlockEntity()",
-  "Block.updateFromNeighbourShapes()",
-  "BlockEntity.components()",
-  "BlockEntity.saveCustomOnly()",
   "BlockEntity.setComponents()",
-  "BlockState.affectNeighborsAfterRemoval()",
-  "BlockState.updateIndirectNeighbourShapes()",
-  "BlockState.updateNeighbourShapes()",
-  "GameEvent.BLOCK_DESTROY"
+  "MovingPistonBlock.FACING",
+  "MovingPistonBlock.TYPE",
+  "MovingPistonBlock.newMovingBlockEntity()",
+  "PistonHeadBlock.TYPE",
+  "PistonStructureResolver.getPushDirection()"
  ],
  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "movable_tile_entities-fabric-1.0.0-26.3.jar",
   "published": "2026-11-15"
  },
@@ -66,5 +54,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 18
+ "lacks": 6
 }

@@ -9,27 +9,18 @@
  "author": "sylvxa",
  "description": "Protect tamed mobs from PvP.",
  "needs": [
-  "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
-  "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDeath",
-  "net.minecraft.world.entity.EntityEvent",
   "net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal",
   "net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal",
-  "net.minecraft.world.item.component.DeathProtection",
-  "Entity.<init>()",
-  "LivingEntity.getLastHurtByMob()",
-  "LivingEntity.getLastHurtMob()",
-  "LivingEntity.isAlwaysTicking()",
-  "TamableAnimal.getOwner()",
   "TamableAnimal.getOwnerReference()",
-  "TamableAnimal.isOwnedBy()",
-  "Level.broadcastEntityEvent()"
+  "DeathProtection.TOTEM_OF_UNDYING",
+  "DeathProtection.applyEffects()"
  ],
  "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "petprotect-fabric-26.3-2.0.0.jar",
   "published": "2026-10-19"
  },
@@ -61,5 +52,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 14
+ "lacks": 5
 }

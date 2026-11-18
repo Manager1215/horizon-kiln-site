@@ -10,7 +10,6 @@
  "description": "A lightweight server-side Fabric mod that replaces Minecraft's basic console input with JLine.",
  "needs": [
   "Mixin: 1 point inside the game's methods",
-  "net.minecraft.server.dedicated.DedicatedServer",
   "org.apache.logging.log4j.core.Appender",
   "org.apache.logging.log4j.core.Layout",
   "org.apache.logging.log4j.core.LogEvent",
@@ -20,14 +19,21 @@
   "org.apache.logging.log4j.core.config.AppenderRef",
   "org.apache.logging.log4j.core.config.Configuration",
   "org.apache.logging.log4j.core.config.LoggerConfig",
-  "org.apache.logging.log4j.core.config.Property"
+  "org.apache.logging.log4j.core.config.Property",
+  "DedicatedServer.createCommandSourceStack()",
+  "DedicatedServer.execute()",
+  "DedicatedServer.getCommands()",
+  "DedicatedServer.halt()",
+  "DedicatedServer.handleConsoleInput()",
+  "DedicatedServer.isRunning()",
+  "DedicatedServer.isStopped()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "better-console-line-1.0.1.jar",
   "published": "2026-07-15"
  },
@@ -59,5 +65,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; runs threads of its own"
  },
- "lacks": 11
+ "lacks": 17
 }

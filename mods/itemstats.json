@@ -1,7 +1,7 @@
 {
  "id": "itemstats",
  "name": "Item Stat Tracker",
- "version": "1.2.0+fabric-26.3",
+ "version": "1.2.1+fabric-26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,53 +9,30 @@
  "author": "Potota",
  "description": "Track usage stats on all of your gear!",
  "needs": [
-  "Mixin: 10 points inside the game's methods",
+  "Mixin: 12 points inside the game's methods",
   "net.fabricmc.fabric.api.event.registry.DynamicRegistrySetupCallback",
   "net.fabricmc.fabric.api.event.registry.DynamicRegistryView",
   "net.minecraft.client.renderer.entity.state.ItemEntityRenderState",
-  "net.minecraft.core.component.PatchedDataComponentMap",
-  "net.minecraft.tags.DamageTypeTags",
   "net.minecraft.world.damagesource.CombatRules",
-  "net.minecraft.world.entity.animal.sheep.Sheep",
-  "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
-  "net.minecraft.world.entity.projectile.arrow.Arrow",
-  "net.minecraft.world.entity.projectile.arrow.SpectralArrow",
-  "net.minecraft.world.entity.projectile.arrow.ThrownTrident",
-  "net.minecraft.world.item.ProjectileWeaponItem",
-  "net.minecraft.world.level.block.Block.UpdateFlags",
   "net.minecraft.world.level.block.LevelEvent.Value",
-  "net.minecraft.world.level.gameevent.GameEvent.Context",
-  "net.minecraft.world.level.levelgen.blockpredicates.MatchingBlocksPredicate",
   "Object2IntMap.Entry.getKey()",
   "Minecraft.getEntityRenderDispatcher()",
   "GuiGraphicsExtractor.entity()",
   "GuiGraphicsExtractor.setTooltipForNextFrame()",
   "EditBox.SEARCH_HINT_STYLE",
-  "NarrationElementOutput.add()",
   "EntityRenderDispatcher.getRenderer()",
-  "EntityRenderer.createRenderState()",
-  "Registry.getOptional()",
-  "DataComponents.MAX_STACK_SIZE",
-  "Registries.BLOCK_TRANSFORMER",
-  "Identifier.read()",
-  "DamageSource.getWeaponItem()",
-  "Entity.<init>()",
-  "LivingEntity.<init>()",
-  "LivingEntity.getEquipmentSlotForItem()",
-  "ItemStack.forEachModifier()",
-  "ItemStack.getItemName()",
+  "DamageTypeTags.BYPASSES_ENCHANTMENTS",
   "Enchantment.matchingSlot()",
-  "Enchantment.modifyDamageProtection()",
-  "BlockStateProvider.getOptionalState()"
+  "Enchantment.modifyDamageProtection()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
-  "file": "itemstats-1.2.0+fabric-26.3.jar",
-  "published": "2026-10-23"
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
+  "file": "itemstats-1.2.1+fabric-26.3.jar",
+  "published": "2026-11-18"
  },
  "reports": {
   "works": 0,
@@ -65,8 +42,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -86,5 +63,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
  },
- "lacks": 37
+ "lacks": 14
 }

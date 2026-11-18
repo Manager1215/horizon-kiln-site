@@ -9,36 +9,17 @@
  "author": "TOP_G2026",
  "description": "A server-side container protection mod for Fabric that locks blocks via standard [private] or [public] wall signs, utilizing packet-level correction to block griefing while offering team lists, decay systems, and intruder redstone traps.",
  "needs": [
-  "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
-  "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-  "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.server.ServerScoreboard",
-  "net.minecraft.server.level.ServerPlayerGameMode",
-  "net.minecraft.world.SimpleMenuProvider",
-  "net.minecraft.world.level.block.ChestBlock",
-  "net.minecraft.world.level.block.HopperBlock",
-  "net.minecraft.world.level.block.SignBlock",
-  "net.minecraft.world.level.block.WallSignBlock",
-  "net.minecraft.world.level.block.entity.Hopper",
-  "net.minecraft.world.level.block.entity.HopperBlockEntity",
-  "net.minecraft.world.level.block.entity.SignBlockEntity",
-  "net.minecraft.world.level.block.entity.SignText",
-  "net.minecraft.world.level.block.state.properties.ChestType",
-  "net.minecraft.world.scores.Team",
-  "BlockPos.toShortString()",
-  "ListTag.add()",
-  "NbtIo.readCompressed()",
-  "MinecraftServer.getScoreboard()",
-  "SoundEvents.CHEST_LOCKED",
-  "Container.startOpen()",
-  "LevelResource.DATA"
+  "HopperBlockEntity.getBlockPos()",
+  "HopperBlockEntity.getBlockState()",
+  "HopperBlockEntity.getLevel()",
+  "Team.getPlayers()"
  ],
  "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "viper-private-chests-1.0.0.jar",
   "published": "2026-09-26"
  },
@@ -72,5 +53,5 @@
   "class": "partial",
   "why": "runs threads of its own"
  },
- "lacks": 23
+ "lacks": 4
 }

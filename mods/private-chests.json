@@ -9,41 +9,17 @@
  "author": "Eloquence2781",
  "description": "Protect chests and barrels with wall signs! Add [private] to lock containers, list player names to share access. Blocks hoppers, explosions, and unauthorized opening. Server-side only.",
  "needs": [
-  "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
-  "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-  "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
-  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket",
-  "net.minecraft.network.protocol.game.ServerboundPlayerActionPacket.Action",
-  "net.minecraft.server.TickTask",
   "net.minecraft.server.network.FilteredText",
-  "net.minecraft.server.players.UserBanList",
-  "net.minecraft.world.level.block.BarrelBlock",
-  "net.minecraft.world.level.block.ChestBlock",
   "net.minecraft.world.level.block.DropperBlock",
-  "net.minecraft.world.level.block.FireBlock",
-  "net.minecraft.world.level.block.HopperBlock",
-  "net.minecraft.world.level.block.SignBlock",
-  "net.minecraft.world.level.block.WallSignBlock",
-  "net.minecraft.world.level.block.entity.Hopper",
-  "net.minecraft.world.level.block.entity.HopperBlockEntity",
-  "net.minecraft.world.level.block.entity.SignBlockEntity",
-  "net.minecraft.world.level.block.entity.SignText",
-  "net.minecraft.world.level.block.state.properties.ChestType",
-  "ListTag.add()",
-  "MinecraftServer.getTickCount()",
-  "MinecraftServer.overworld()",
-  "MinecraftServer.schedule()",
-  "PlayerList.getBans()",
-  "AbstractContainerMenu.sendAllDataToRemote()",
-  "BlockState.canBeReplaced()",
-  "BlockStateProperties.CHEST_TYPE"
+  "HopperBlockEntity.getBlockState()",
+  "SignBlockEntity.getUpdatePacket()"
  ],
  "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "private-chests-1.5.0+26.3.jar",
   "published": "2026-11-01"
  },
@@ -76,5 +52,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 28
+ "lacks": 4
 }

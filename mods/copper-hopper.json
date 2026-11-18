@@ -10,32 +10,29 @@
  "description": "Hopper that acts as a simple item filter.",
  "needs": [
   "Mixin: 2 points inside the game's methods",
-  "net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry",
   "net.minecraft.client.gui.screens.inventory.HopperScreen",
-  "net.minecraft.client.model.geom.ModelLayers",
   "net.minecraft.client.renderer.entity.MinecartRenderer",
-  "net.minecraft.world.entity.vehicle.minecart.MinecartHopper",
-  "net.minecraft.world.inventory.HopperMenu",
   "net.minecraft.world.item.MinecartItem",
-  "net.minecraft.world.level.block.HopperBlock",
-  "net.minecraft.world.level.block.WeatheringCopper",
-  "net.minecraft.world.level.block.WeatheringCopper.WeatherState",
-  "net.minecraft.world.level.block.entity.HopperBlockEntity",
   "org.apache.logging.log4j.core.config.Configurator",
-  "BlockPos.mutable()",
-  "BlockPos.MutableBlockPos.relative()",
+  "ModelLayers.HOPPER_MINECART",
   "EntityTypes.HOPPER_MINECART",
-  "ItemEntity.getItem()",
   "AbstractMinecart.createMinecart()",
-  "Item.BY_BLOCK",
-  "MapColor.COLOR_BROWN"
+  "MinecartHopper.<init>()",
+  "MinecartHopper.setPos()",
+  "MinecartHopper.xo",
+  "MinecartHopper.yo",
+  "MinecartHopper.zo",
+  "HopperBlock.getAnalogOutputSignal()",
+  "HopperBlockEntity.<init>()",
+  "HopperBlockEntity.getItem()",
+  "HopperBlockEntity.pushItemsTick()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "copperhopper-fabric-0.25.2+26.3.jar",
   "published": "2026-09-24"
  },
@@ -67,5 +64,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
  },
- "lacks": 19
+ "lacks": 16
 }

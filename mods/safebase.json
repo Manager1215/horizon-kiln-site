@@ -9,40 +9,15 @@
  "author": "PaulHamdinger",
  "description": "Create a safe zone around your base, allowing (or forbidding) other players. To designate a SafeBase, place a lectern on a wool platform, then add a book-and-quill with a list of player names.",
  "needs": [
-  "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
-  "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Leave",
-  "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
-  "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
-  "net.minecraft.core.particles.DustParticleOptions",
-  "net.minecraft.server.level.ServerPlayer.RespawnConfig",
-  "net.minecraft.world.item.component.WritableBookContent",
-  "net.minecraft.world.level.block.entity.LecternBlockEntity",
-  "ServerPlayerEvents.JOIN",
-  "ServerPlayerEvents.LEAVE",
-  "DataComponents.WRITABLE_BOOK_CONTENT",
-  "MinecraftServer.getAllLevels()",
-  "MinecraftServer.services()",
-  "ServerLevel.getLevelData()",
-  "ServerLevel.sendParticles()",
-  "ServerPlayer.getBlockX()",
-  "ServerPlayer.getBlockZ()",
-  "ServerPlayer.getRespawnConfig()",
-  "ServerPlayer.getRootVehicle()",
-  "ServerPlayer.getVehicle()",
-  "ServerPlayer.stopRiding()",
-  "ServerPlayer.teleportTo()",
-  "SoundEvents.ANVIL_LAND",
-  "Entity.ejectPassengers()",
-  "Entity.teleportTo()",
   "Blocks.WOOL",
-  "LevelData.RespawnData.pos()"
+  "LecternBlockEntity.hasBook()"
  ],
  "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "SafeBase-5.0.1.jar",
   "published": "2026-09-18"
  },
@@ -74,5 +49,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 27
+ "lacks": 2
 }

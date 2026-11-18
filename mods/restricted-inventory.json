@@ -10,33 +10,20 @@
  "description": "Restrict player inventory slots to specific items or item tags. Configure which slots accept which items via JSON config — server-wide or per-client. Restricted slots display a visual preview of what belongs there.",
  "needs": [
   "Mixin: 2 points inside the game's methods",
-  "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SyncDataPackContents",
-  "net.minecraft.client.gui.components.MultiLineEditBox",
   "net.minecraft.client.gui.components.MultiLineEditBox.Builder",
   "net.minecraft.client.gui.components.SpriteIconButton",
   "net.minecraft.client.gui.components.SpriteIconButton.Builder",
   "net.minecraft.client.renderer.state.gui.GuiItemRenderState",
-  "net.minecraft.core.component.DataComponentExactPredicate",
-  "net.minecraft.nbt.SnbtPrinterTagVisitor",
-  "net.minecraft.world.inventory.ArmorSlot",
-  "net.minecraft.world.item.ItemStackLinkedSet",
-  "net.minecraft.world.scores.PlayerTeam",
-  "ServerLifecycleEvents.SYNC_DATA_PACK_CONTENTS",
-  "ClientLevel.enabledFeatures()",
-  "NonNullList.iterator()",
-  "ByteBufCodecs.fromCodec()",
-  "Player.entityTags()",
-  "Player.getTeam()",
-  "Player.registryAccess()",
-  "CreativeModeTabs.tryRebuildTabContents()",
-  "ItemStack.applyComponents()"
+  "MultiLineEditBox.builder()",
+  "MultiLineEditBox.setValue()",
+  "MultiLineEditBox.setValueListener()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "restrictedinventory-fabric-26.3-26.3.0.1.jar",
   "published": "2026-09-26"
  },
@@ -70,5 +57,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; runs threads of its own; has network channels"
  },
- "lacks": 20
+ "lacks": 7
 }

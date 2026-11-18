@@ -10,30 +10,17 @@
  "description": "A server side mod to edit the default components of items using a command",
  "needs": [
   "Mixin: 3 points inside the game's methods",
-  "net.minecraft.core.component.DataComponentPatch.SplitResult",
-  "net.minecraft.core.component.PatchedDataComponentMap",
-  "net.minecraft.network.protocol.game.ServerboundSetCreativeModeSlotPacket",
-  "net.minecraft.world.item.component.UseRemainder",
   "PacketContext.SERVER_INSTANCE",
-  "PacketContext.get()",
-  "CommandSourceStack.registryAccess()",
-  "Holder.Reference.bindComponents()",
-  "DataComponentPatch.get()",
-  "DataComponentPatch.split()",
-  "DataComponentPatch.Builder.set()",
-  "DataComponents.CHARGED_PROJECTILES",
-  "DataComponents.USE_REMAINDER",
-  "NbtUtils.toPrettyComponent()",
-  "MinecraftServer.overworld()",
-  "InventoryMenu.broadcastFullState()",
-  "InventoryMenu.incrementStateId()"
+  "PatchedDataComponentMap.clearPatch()",
+  "PatchedDataComponentMap.toImmutableMap()",
+  "InventoryMenu.broadcastFullState()"
  ],
  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "DefaultComponentEditor-1.1.1.jar",
   "published": "2026-10-27"
  },
@@ -64,5 +51,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 17
+ "lacks": 4
 }

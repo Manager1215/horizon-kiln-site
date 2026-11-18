@@ -9,31 +9,29 @@
  "author": "PtolemaicQueen",
  "description": "A lightweight Fabric mod that automatically restocks loot chests after a configurable amount of time has passed.",
  "needs": [
-  "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
-  "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
-  "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-  "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-  "net.minecraft.world.entity.decoration.ItemFrame",
-  "net.minecraft.world.entity.vehicle.minecart.MinecartChest",
-  "net.minecraft.world.level.block.BarrelBlock",
-  "net.minecraft.world.level.block.ChestBlock",
-  "net.minecraft.world.level.block.entity.vault.VaultBlockEntity",
   "net.minecraft.world.level.block.entity.vault.VaultServerData",
-  "net.minecraft.world.phys.EntityHitResult",
-  "BlockPos.toShortString()",
-  "MinecraftServer.getAllLevels()",
   "ServerLevel.getEntitiesOfClass()",
-  "Containers.dropContents()",
+  "MinecartChest.blockPosition()",
+  "MinecartChest.clearContent()",
+  "MinecartChest.getContainerLootTable()",
+  "MinecartChest.getContainerLootTableSeed()",
+  "MinecartChest.getItemStacks()",
+  "MinecartChest.getStringUUID()",
+  "MinecartChest.getUUID()",
+  "MinecartChest.isEmpty()",
+  "MinecartChest.level()",
+  "MinecartChest.setChanged()",
+  "MinecartChest.setLootTable()",
+  "MinecartChest.unpackChestVehicleLootTable()",
   "Level.getEntitiesOfClass()",
-  "RandomizableContainerBlockEntity.setLootTable()",
-  "RandomizableContainerBlockEntity.unpackLootTable()"
+  "VaultBlockEntity.getServerData()"
  ],
  "roadmap": "Code next to data (0.3), Machines (0.4)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "LootRestock-1.0.3-26.3.jar",
   "published": "2026-10-17"
  },
@@ -50,5 +48,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 18
+ "lacks": 16
 }

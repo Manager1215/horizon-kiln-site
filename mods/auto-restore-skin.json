@@ -10,43 +10,25 @@
  "description": "Restore missing player skins from alternative launchers and skin services, with caching and local skin storage.",
  "needs": [
   "Mixin: 1 point inside the game's methods",
-  "com.mojang.authlib.properties.Property",
-  "com.mojang.authlib.properties.PropertyMap",
-  "net.minecraft.TracingExecutor",
-  "net.minecraft.client.entity.ClientMannequin",
   "net.minecraft.client.gui.components.SpriteIconButton",
   "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-  "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
-  "net.minecraft.core.ClientAsset.DownloadedTexture",
-  "net.minecraft.core.UUIDUtil",
-  "net.minecraft.world.entity.decoration.Mannequin",
-  "net.minecraft.world.item.component.ResolvableProfile",
   "net.minecraft.world.item.component.ResolvableProfile.Dynamic",
   "JsonSyntaxException.printStackTrace()",
-  "GameProfile.properties()",
   "NativeImage.copyFrom()",
   "NativeImage.copyRect()",
-  "Minecraft.getGameProfile()",
-  "Minecraft.getSkinManager()",
-  "Minecraft.playerSkinRenderCache()",
-  "PlayerInfo.getProfile()",
-  "AbstractClientPlayer.getGameProfile()",
+  "TracingExecutor.forName()",
+  "ClientMannequin.getProfile()",
   "SkinTextureDownloader.downloadAndRegisterSkin()",
   "SkinManager.createLookup()",
-  "SkinManager.get()",
-  "ServerLevel.getAllEntities()",
-  "ServerLevel.getEntity()",
-  "Util.nonCriticalIoPool()",
-  "Entity.get()",
   "Entity.setComponent()",
-  "PlayerSkin.insecure()"
+  "Mannequin.getProfile()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "ARS-1.1-beta.1-26.3.jar",
   "published": "2026-09-21"
  },
@@ -79,5 +61,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes; runs threads of its own; has network channels"
  },
- "lacks": 30
+ "lacks": 12
 }

@@ -10,44 +10,17 @@
  "description": "Instantly collect items from mined blocks directly into your inventory with the AutoPickup mod. Mob loot & more configurable!",
  "needs": [
   "Mixin: 2 points inside the game's methods",
-  "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
-  "net.minecraft.client.gui.components.tabs.TabManager",
-  "net.minecraft.server.level.ServerPlayerGameMode",
-  "net.minecraft.world.entity.decoration.ItemFrame",
-  "net.minecraft.world.entity.item.FallingBlockEntity",
-  "net.minecraft.world.level.block.entity.BrushableBlockEntity",
-  "net.minecraft.world.level.storage.WorldData",
-  "ClientReceiveMessageEvents.ALLOW_GAME",
-  "Minecraft.isLocalServer()",
-  "ClientPacketListener.getCommands()",
-  "IntegratedServer.getWorldData()",
-  "MinecraftServer.getWorldData()",
-  "MinecraftServer.isDedicatedServer()",
+  "TabManager.getCurrentTab()",
   "ServerLevel.getPlayerByUUID()",
-  "LivingEntity.getBoundingBox()",
-  "LivingEntity.getLootTable()",
   "LivingEntity.getLootTableSeed()",
-  "LivingEntity.isAlive()",
-  "ItemEntity.getItem()",
-  "ItemEntity.isAlive()",
-  "ItemEntity.removeTag()",
-  "ItemEntity.setItem()",
-  "Player.getLuck()",
-  "Level.addFreshEntity()",
-  "Block.getDrops()",
-  "LeavesBlock.DISTANCE",
-  "LeavesBlock.PERSISTENT",
-  "BlockState.spawnAfterBreak()",
-  "LootParams.Builder.withLuck()",
-  "LootTable.getRandomItems()",
-  "LootContextParamSets.ENTITY"
+  "LootTable.getRandomItems()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "autopickup-fabric-1.4.20+26.3.jar",
   "published": "2026-10-20"
  },
@@ -81,5 +54,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes"
  },
- "lacks": 31
+ "lacks": 4
 }

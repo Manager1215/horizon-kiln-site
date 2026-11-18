@@ -10,28 +10,17 @@
  "description": "Shulkerbox shift click opening and picking up items when in offhand.\nBundles shift click opening and picking up items no matter the inventory location.",
  "needs": [
   "Mixin: 1 point inside the game's methods",
-  "net.minecraft.world.SimpleMenuProvider",
-  "net.minecraft.world.inventory.ClickAction",
-  "net.minecraft.world.item.BundleItem",
-  "net.minecraft.world.item.component.BundleContents.Mutable",
-  "net.minecraft.world.level.block.ShulkerBoxBlock",
-  "net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity",
   "DefaultedRegistry.iterator()",
   "NonNullList.stream()",
-  "MinecraftServer.isSingleplayer()",
-  "ServerPlayer.closeContainer()",
-  "Container.startOpen()",
-  "AbstractContainerMenu.getItems()",
-  "AbstractContainerMenu.incrementStateId()",
-  "InventoryMenu.sendAllDataToRemote()",
+  "BundleItem.getFullnessDisplay()",
   "BundleContents.asMutable()"
  ],
- "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "shulker_bundle-1.9.jar",
   "published": "2026-10-25"
  },
@@ -63,5 +52,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; runs threads of its own; has network channels"
  },
- "lacks": 15
+ "lacks": 4
 }

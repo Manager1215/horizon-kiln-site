@@ -10,34 +10,24 @@
  "description": "A fabric mod that adds a bunch of useful multiplayer chat features to the game.",
  "needs": [
   "Mixin: 8 points inside the game's methods",
-  "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
-  "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowChatMessage",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowCommandMessage",
   "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
-  "net.fabricmc.fabric.api.permission.v1.PermissionContextOwner",
   "net.fabricmc.fabric.api.permission.v1.PermissionPredicates",
-  "net.minecraft.advancements.predicates.DistancePredicate",
-  "net.minecraft.commands.arguments.MessageArgument",
   "net.minecraft.server.commands.MsgCommand",
   "net.minecraft.server.network.FilteredText",
   "net.minecraft.server.network.TextFilter",
   "net.minecraft.util.filefix.fixes.PlayerStorageFileFix",
-  "RegistryAccess.fromRegistryOfRegistries()",
-  "BuiltInRegistries.REGISTRY",
+  "ServerMessageEvents.ALLOW_COMMAND_MESSAGE",
+  "PermissionContextOwner.checkPermission()",
+  "DistancePredicate.absolute()",
+  "DistancePredicate.horizontal()",
+  "MessageArgument.resolveChatMessage()",
   "ChatType.CHAT",
   "ChatType.bind()",
   "FilterMask.PASS_THROUGH",
   "FilterMask.apply()",
   "FilterMask.isEmpty()",
-  "PlayerChatMessage.decoratedContent()",
-  "PlayerChatMessage.filterMask()",
-  "PlayerChatMessage.signedContent()",
-  "PlayerChatMessage.timeStamp()",
   "Identifier.tryBySeparator()",
-  "MinecraftServer.registryAccess()",
-  "MinecraftServer.services()",
-  "ServerPlayer.getGameProfile()",
-  "ServerCommonPacketListenerImpl.send()",
   "PlayerList.broadcastChatMessage()",
   "Player.<init>()"
  ],
@@ -45,8 +35,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "advancedchat-1.8.7-26.3.jar",
   "published": "2026-09-15"
  },
@@ -78,5 +68,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes; runs threads of its own"
  },
- "lacks": 30
+ "lacks": 20
 }

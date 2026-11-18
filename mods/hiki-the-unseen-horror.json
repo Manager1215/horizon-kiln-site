@@ -1,0 +1,63 @@
+{
+ "id": "hiki-the-unseen-horror",
+ "name": "HIKI: The Unseen Horror",
+ "version": "1.1.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/hiki-the-unseen-horror",
+ "author": "TNK",
+ "description": "HIKI: The Unseen Horror - This mod adds new mobs and events",
+ "needs": [
+  "ModelLayers.PLAYER",
+  "EntityRendererProvider.Context.bakeLayer()",
+  "HumanoidMobRenderer.<init>()",
+  "HumanoidMobRenderer.extractRenderState()",
+  "ServerLevel.containsAnyLiquid()",
+  "ServerLevel.getEntities()",
+  "ServerLevel.getEntitiesOfClass()",
+  "ServerLevel.getHeightmapPos()",
+  "ServerLevel.noCollision()",
+  "SoundEvents.AMBIENT_CAVE",
+  "Level.getNearestPlayer()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
+  "file": "hiki-fabric-26.3-1.1.0.jar",
+  "published": "2026-11-17"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": false,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 11
+}

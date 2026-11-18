@@ -10,17 +10,14 @@
  "description": "Prevent minecraft from crashing while encountering deep nbt tags",
  "needs": [
   "Mixin: 4 points inside the game's methods",
-  "net.minecraft.nbt.NbtAccounter",
-  "net.minecraft.world.level.chunk.storage.RegionFile",
-  "net.minecraft.world.level.chunk.storage.RegionFileStorage",
-  "net.minecraft.world.level.chunk.storage.RegionStorageInfo"
+  "RegionFile.getPath()"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "LongNBTKiller-Fabric-26.3-1.1.0.jar",
   "published": "2026-11-09"
  },
@@ -52,5 +49,5 @@
   "class": "restart",
   "why": "@wrap-method and @wrap-operation into the game's classes"
  },
- "lacks": 4
+ "lacks": 1
 }

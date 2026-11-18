@@ -10,39 +10,24 @@
  "description": "Reduce GPU and CPU usage automatically when no user operation exists.",
  "needs": [
   "an access widener",
-  "com.mojang.blaze3d.platform.FramerateLimitTracker",
-  "com.mojang.blaze3d.platform.SDLEventHandler",
-  "net.minecraft.client.FramerateLimiter",
-  "net.minecraft.client.InactivityFpsLimit",
-  "net.minecraft.client.gui.components.ImageButton",
-  "net.minecraft.client.gui.components.OptionsList",
-  "net.minecraft.client.gui.components.WidgetSprites",
-  "net.minecraft.client.gui.components.WidgetTooltipHolder",
-  "net.minecraft.client.gui.screens.options.OptionsSubScreen",
   "net.minecraft.client.gui.screens.options.VideoSettingsScreen",
-  "net.minecraft.client.player.ClientInput",
-  "net.minecraft.world.entity.player.Input",
   "org.lwjgl.opengl.GL11",
-  "Window.handle()",
+  "FramerateLimitTracker.getFramerateLimit()",
+  "FramerateLimitTracker.setFramerateLimit()",
   "Window.isFocused()",
   "RenderSystem.pollEvents()",
   "Minecraft.getFramerateLimitTracker()",
   "Minecraft.sdlEventHandler",
-  "Options.framerateLimit()",
-  "Options.getSoundSourceOptionInstance()",
-  "Options.getSoundSourceVolume()",
-  "Options.inactivityFpsLimit()",
   "Gui.overlay()",
   "AbstractWidget.tooltip",
-  "NarrationElementOutput.add()",
-  "LocalPlayer.input"
+  "OptionsList.findOption()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "FpsReducer2-fabric-26.3-2.18.jar",
   "published": "2026-09-15"
  },
@@ -75,5 +60,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 26
+ "lacks": 11
 }

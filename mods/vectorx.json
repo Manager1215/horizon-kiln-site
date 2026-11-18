@@ -10,38 +10,26 @@
  "description": "Vectorizes specific Minecraft hot paths to make them faster",
  "needs": [
   "Mixin: 3 points inside the game's methods",
-  "net.minecraft.util.SimpleBitStorage",
   "net.minecraft.world.level.levelgen.carver.CanyonWorldCarver",
   "net.minecraft.world.level.levelgen.carver.WorldCarver.CarveSkipChecker",
-  "net.minecraft.world.level.levelgen.densityfunction.DensityBuffer",
-  "net.minecraft.world.level.levelgen.densityfunction.DensitySampler",
-  "net.minecraft.world.level.levelgen.densityfunction.DensityVolume",
-  "net.minecraft.world.level.levelgen.densityfunction.SamplerContext",
-  "net.minecraft.world.level.levelgen.densityfunction.ScopedDensityBuffer",
   "net.minecraft.world.level.levelgen.densityfunction.op.BinaryFunction",
   "net.minecraft.world.level.levelgen.densityfunction.op.BinaryFunction.ConstMaxSampler",
   "net.minecraft.world.level.levelgen.densityfunction.op.BinaryFunction.ConstMinSampler",
   "net.minecraft.world.level.levelgen.densityfunction.op.BinaryFunction.MaxSampler",
   "net.minecraft.world.level.levelgen.densityfunction.op.BinaryFunction.MinSampler",
-  "net.minecraft.world.level.levelgen.densityfunction.op.ClampFunction.Sampler",
   "net.minecraft.world.level.levelgen.densityfunction.op.LerpFunction",
   "net.minecraft.world.level.levelgen.densityfunction.op.LerpFunction.Sampler",
-  "net.minecraft.world.level.levelgen.densityfunction.op.RangeChoiceFunction.ConstSampler",
-  "net.minecraft.world.level.levelgen.densityfunction.op.RangeChoiceFunction.Sampler",
   "net.minecraft.world.level.levelgen.densityfunction.op.UnaryFunction",
   "net.minecraft.world.level.levelgen.densityfunction.op.UnaryFunction.LeakyReLUSampler",
   "net.minecraft.world.level.levelgen.densityfunction.op.UnaryFunction.SqueezeSampler",
-  "ChunkPos.getBlockX()",
-  "ChunkPos.getBlockZ()",
-  "WorldGenerationContext.getMinGenY()",
   "WorldCarver.carveEllipsoid()"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "vectorx-0.2.0.jar",
   "published": "2026-09-18"
  },
@@ -75,5 +63,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes"
  },
- "lacks": 25
+ "lacks": 13
 }

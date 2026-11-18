@@ -9,25 +9,32 @@
  "author": "Omegabird113",
  "description": "Fix macOS text navigation shortcuts in chat/books/signs/etc & allows  custom shortcuts: get native cmd + backspace, option + delete, cmd + arrows, and more!",
  "needs": [
-  "net.minecraft.client.gui.components.MultilineTextField",
   "net.minecraft.client.gui.components.MultilineTextField.StringView",
   "net.minecraft.client.gui.components.Whence",
-  "net.minecraft.client.gui.font.TextFieldHelper",
-  "net.minecraft.client.gui.screens.inventory.AbstractSignEditScreen",
-  "net.minecraft.world.level.block.entity.SignBlockEntity",
-  "org.apache.commons.io.FilenameUtils",
   "org.lwjgl.sdl.SDLScancode",
   "Minecraft.emergencySaveAndCrash()",
   "Font.bidirectionalShaping()",
-  "Font.isBidirectional()",
-  "GuiGraphicsExtractor.textHighlight()"
+  "GuiGraphicsExtractor.textHighlight()",
+  "TextFieldHelper.copy()",
+  "TextFieldHelper.cut()",
+  "TextFieldHelper.getCursorPos()",
+  "TextFieldHelper.getSelectionPos()",
+  "TextFieldHelper.insertText()",
+  "TextFieldHelper.moveByChars()",
+  "TextFieldHelper.paste()",
+  "TextFieldHelper.removeCharsFromCursor()",
+  "TextFieldHelper.selectAll()",
+  "TextFieldHelper.setCursorPos()",
+  "TextFieldHelper.setCursorToEnd()",
+  "TextFieldHelper.setCursorToStart()",
+  "TextFieldHelper.setSelectionRange()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4)",
+ "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "cmd_delete-1.5.0-rc.1+mc26.3-fabric.jar",
   "published": "2026-11-15"
  },
@@ -58,5 +65,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 12
+ "lacks": 19
 }

@@ -10,43 +10,25 @@
  "description": "Allows you to put multiple trims on your armor at once!",
  "needs": [
   "Mixin: 2 points inside the game's methods",
-  "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
-  "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.BooleanRuleBuilder",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.IntegerRuleBuilder",
-  "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
   "net.minecraft.client.resources.model.EquipmentClientInfo",
   "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
   "net.minecraft.client.resources.model.EquipmentClientInfo.TrimOverride",
   "net.minecraft.client.resources.model.EquipmentClientInfo.TrimPredicate",
-  "net.minecraft.client.resources.palette.PalettedTextureManager.Handle",
-  "net.minecraft.world.entity.decoration.ArmorStand",
-  "net.minecraft.world.inventory.ContainerLevelAccess",
-  "net.minecraft.world.inventory.ItemCombinerMenu",
-  "net.minecraft.world.inventory.ResultContainer",
-  "net.minecraft.world.item.equipment.trim.ArmorTrim",
-  "net.minecraft.world.item.equipment.trim.TrimMaterial",
-  "net.minecraft.world.item.equipment.trim.TrimPattern",
-  "net.minecraft.world.level.block.AnvilBlock",
-  "Minecraft.getPalettedTextureManager()",
+  "GameRuleBuilder.forInteger()",
   "RenderTypes.armorTrim()",
-  "PalettedTextureManager.getOrPrepare()",
-  "DataComponents.TRIM",
-  "Registries.TRIM_MATERIAL",
-  "Registries.TRIM_PATTERN",
-  "ByteBufCodecs.collection()",
-  "MinecraftServer.getGameRules()",
-  "ServerLevel.getEntities()",
-  "BlockTags.ANVIL",
-  "EntityTypes.ARMOR_STAND",
-  "GameRuleCategory.MISC",
-  "GameRules.get()"
+  "ArmorStand.setShowArms()",
+  "ItemCombinerMenu.<init>()",
+  "ArmorTrim.CODEC",
+  "ArmorTrim.STREAM_CODEC",
+  "TrimPattern.copyWithStyle()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "stackable-armor-trims-fabric-3.0.0+26.3.jar",
   "published": "2026-11-04"
  },
@@ -79,5 +61,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
  },
- "lacks": 30
+ "lacks": 12
 }

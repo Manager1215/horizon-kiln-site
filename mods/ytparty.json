@@ -9,10 +9,7 @@
  "author": "Zoey2936",
  "description": "A client-side Fabric mod fetches, decodes and plays YouTube audio itself (playlist, play/pause, volume, seek) and keeps the playlist order, current track and pause state in sync per \"party\".",
  "needs": [
-  "net.fabricmc.fabric.api.client.screen.v1.Screens",
-  "net.minecraft.client.gui.components.MultiLineEditBox",
   "net.minecraft.client.gui.components.MultiLineEditBox.Builder",
-  "net.minecraft.client.gui.components.MultiLineTextWidget",
   "org.apache.logging.log4j.core.config.Configurator",
   "org.lwjgl.openal.AL",
   "org.lwjgl.openal.AL10",
@@ -23,15 +20,21 @@
   "Window.isIconified()",
   "SamplerCache.getClampToEdge()",
   "GuiGraphicsExtractor.blit()",
-  "PlayerInfo.getProfile()",
+  "MultiLineEditBox.builder()",
+  "MultiLineEditBox.setCharacterLimit()",
+  "MultiLineEditBox.setLineLimit()",
+  "MultiLineEditBox.setValue()",
+  "MultiLineEditBox.setValueListener()",
+  "MultiLineTextWidget.getHeight()",
+  "MultiLineTextWidget.setMaxWidth()",
   "DynamicTexture.getTextureView()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "ytparty-2026-11-14-165-bundle.jar",
   "published": "2026-11-14"
  },
@@ -65,5 +68,5 @@
   "class": "partial",
   "why": "runs threads of its own; has network channels"
  },
- "lacks": 16
+ "lacks": 19
 }

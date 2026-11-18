@@ -9,41 +9,29 @@
  "author": "gublack",
  "description": "Selectively extract individual enchantments from tools, armor, and enchanted books using the Unbinding Table.",
  "needs": [
-  "net.minecraft.client.model.geom.ModelLayers",
   "net.minecraft.client.model.object.book.BookModel",
   "net.minecraft.client.model.object.book.BookModel.State",
-  "net.minecraft.client.renderer.SpriteMapper",
   "net.minecraft.client.renderer.blockentity.state.EnchantTableRenderState",
-  "net.minecraft.world.SimpleMenuProvider",
   "PoseStack.rotate()",
-  "Axis.ZP",
   "Object2IntMap.Entry.getKey()",
-  "MultiPlayerGameMode.handleInventoryButtonClick()",
+  "ModelLayers.BOOK",
   "Sheets.BLOCK_ENTITIES_MAPPER",
+  "SpriteMapper.apply()",
   "SubmitNodeCollector.submitModel()",
   "BlockEntityRenderer.extractRenderState()",
   "BlockEntityRendererProvider.Context.bakeLayer()",
   "SpriteId.renderType()",
   "NonNullList.stream()",
-  "ServerPlayer.addTag()",
-  "ServerPlayer.entityTags()",
-  "Container.startOpen()",
-  "Container.stopOpen()",
-  "Containers.dropContents()",
-  "AbstractContainerMenu.clicked()",
-  "ItemStack.hasNonDefault()",
-  "ItemStack.limitSize()",
   "EnchantmentHelper.hasAnyEnchantments()",
   "EnchantmentHelper.updateEnchantments()",
-  "Enchantments.INFINITY",
   "Level.getNearestPlayer()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "enchant-unbinder-1.0.1+26.3-fabric.jar",
   "published": "2026-10-11"
  },
@@ -76,5 +64,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
  },
- "lacks": 28
+ "lacks": 16
 }

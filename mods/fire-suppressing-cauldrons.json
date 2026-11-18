@@ -9,23 +9,17 @@
  "author": "fastcall22",
  "description": "Server-side fabric mod that prevents fire from spreading within 100+ blocks of cauldrons. For use by technical players in servers that have fire tick enabled.",
  "needs": [
-  "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.IntegerRuleBuilder",
-  "net.minecraft.world.entity.ai.village.poi.PoiManager",
-  "net.minecraft.world.entity.ai.village.poi.PoiManager.Occupancy",
-  "net.minecraft.world.entity.ai.village.poi.PoiTypes",
-  "MinecraftServer.getTickCount()",
-  "ServerLevel.getGameRules()",
-  "ServerLevel.getPoiManager()",
-  "GameRuleCategory.UPDATES",
-  "GameRules.get()"
+  "GameRuleBuilder.forInteger()",
+  "PoiManager.existsAtPosition()",
+  "PoiTypes.LEATHERWORKER"
  ],
  "roadmap": "Code next to data (0.3)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "firesuppressor-2.0.0+26.3.jar",
   "published": "2026-10-09"
  },
@@ -59,5 +53,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 10
+ "lacks": 4
 }

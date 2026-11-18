@@ -9,37 +9,26 @@
  "author": "YuYuJDK26",
  "description": "A Fabric mod that restructures Villager trading, adding infinite purchases, removing demand-based price fluctuations, and implementing QoL for players.",
  "needs": [
-  "net.minecraft.server.level.ServerPlayerGameMode",
-  "net.minecraft.world.entity.animal.golem.IronGolem",
-  "net.minecraft.world.entity.npc.villager.AbstractVillager",
-  "net.minecraft.world.entity.npc.villager.Villager",
-  "net.minecraft.world.entity.npc.villager.VillagerData",
-  "net.minecraft.world.entity.npc.villager.VillagerProfession",
-  "net.minecraft.world.inventory.MerchantMenu",
-  "net.minecraft.world.item.trading.ItemCost",
-  "net.minecraft.world.item.trading.MerchantOffer",
   "Object2IntMap.Entry.getKey()",
-  "BuiltInRegistries.VILLAGER_PROFESSION",
-  "ServerLevel.sendParticles()",
-  "ServerPlayer.hasCorrectToolForDrops()",
-  "ServerPlayer.onEquippedItemBroken()",
   "ServerPlayer.sendMerchantOffers()",
-  "ExperienceOrb.award()",
-  "ItemStack.hurtAndBreak()",
-  "EnchantmentHelper.getItemEnchantmentLevel()",
+  "Villager.restock()",
+  "Villager.setVillagerXp()",
+  "MerchantMenu.setOffers()",
+  "MerchantOffer.getSpecialPriceDiff()",
+  "MerchantOffer.getXp()",
+  "MerchantOffer.resetUses()",
+  "MerchantOffer.setSpecialPriceDiff()",
   "MerchantOffers.get()",
   "MerchantOffers.isEmpty()",
   "MerchantOffers.iterator()",
-  "MerchantOffers.size()",
-  "Block.getDrops()",
-  "LeavesBlock.PERSISTENT"
+  "MerchantOffers.size()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "villager-plus-2.5.0+mc26.2-26.3.jar",
   "published": "2026-10-17"
  },
@@ -74,5 +63,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 24
+ "lacks": 13
 }

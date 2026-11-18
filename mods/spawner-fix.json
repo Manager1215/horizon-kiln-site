@@ -10,28 +10,17 @@
  "description": "Bring back useful mob spawners! Spawner Fix removes the annoying 16-block proximity limit, extending the activation range to a full 128 blocks to match normal mob spawning.",
  "needs": [
   "Mixin: 2 points inside the game's methods",
-  "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
-  "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.BooleanRuleBuilder",
   "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.IntegerRuleBuilder",
-  "net.fabricmc.fabric.api.gamerule.v1.GameRuleEvents",
-  "net.fabricmc.fabric.api.gamerule.v1.GameRuleEvents.ValueUpdate",
   "net.minecraft.client.renderer.blockentity.SpawnerRenderer",
-  "net.minecraft.world.level.BaseSpawner",
-  "net.minecraft.world.level.block.SpawnerBlock",
-  "net.minecraft.world.level.block.entity.SpawnerBlockEntity",
-  "MinecraftServer.getGameRules()",
-  "ServerLevel.getGameRules()",
-  "EnchantmentHelper.getItemEnchantmentLevel()",
-  "BlockEntity.saveCustomOnly()",
-  "GameRuleCategory.SPAWNING",
-  "GameRules.get()"
+  "GameRuleBuilder.forInteger()",
+  "GameRuleCategory.SPAWNING"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "spawner-fix-1.1.2.jar",
   "published": "2026-09-30"
  },
@@ -63,5 +52,5 @@
   "class": "restart",
   "why": "@wrap-method and @wrap-operation into the game's classes; has network channels"
  },
- "lacks": 15
+ "lacks": 4
 }

@@ -10,37 +10,28 @@
  "description": "Reimplementation of the Gboard CAPS in Minecraft",
  "needs": [
   "net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer",
-  "net.minecraft.client.model.HumanoidModel",
-  "net.minecraft.client.model.geom.PartPose",
-  "net.minecraft.client.model.geom.builders.CubeDeformation",
   "net.minecraft.client.model.geom.builders.CubeListBuilder",
-  "net.minecraft.client.model.geom.builders.MeshDefinition",
-  "net.minecraft.client.model.geom.builders.PartDefinition",
-  "net.minecraft.client.renderer.entity.player.AvatarRenderer",
-  "net.minecraft.client.renderer.entity.state.AvatarRenderState",
-  "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
-  "net.minecraft.util.CommonColors",
   "net.minecraft.world.item.equipment.ArmorMaterials",
   "PoseStack.mulPose()",
   "ChatComponent.saveAsDraft()",
+  "HumanoidModel.hat",
   "ModelPart.getChild()",
   "ModelPart.loadPose()",
   "ModelPart.storePose()",
+  "PartPose.offset()",
+  "PartPose.offsetAndRotation()",
   "LayerDefinition.bakeRoot()",
   "LayerDefinition.create()",
-  "AbstractClientPlayer.getGameProfile()",
-  "LocalPlayer.getGameProfile()",
-  "LocalPlayer.getUsedItemHand()",
-  "LocalPlayer.getYHeadRot()",
-  "SubmitNodeCollector.submitModelPart()",
-  "Item.Properties.useItemDescriptionPrefix()"
+  "MeshDefinition.getRoot()",
+  "PartDefinition.addOrReplaceChild()",
+  "SubmitNodeCollector.submitModelPart()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-18",
+  "kiln": "development build 2026-11-18 (d1387ddf)",
   "file": "gcaps-fabric-1.1.1+26.3.jar",
   "published": "2026-10-10"
  },
@@ -72,5 +63,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 25
+ "lacks": 16
 }
