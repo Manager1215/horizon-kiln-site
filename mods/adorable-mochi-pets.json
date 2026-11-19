@@ -1,13 +1,13 @@
 {
  "id": "adorable-mochi-pets",
- "name": "Adorable Mochi Pets",
- "version": "0.23.0+26.3",
+ "name": "Mochi Pets",
+ "version": "0.25.0+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
  "url": "https://modrinth.com/mod/adorable-mochi-pets",
  "author": "emreconf",
- "description": "Adopt, name, breed and carry adorable Mochi companions. 24 pastel colour morphs, cheek pouches, cozy beds, armor & trims, crops, ore & danger sense, shoulder perching and treats. Original tameable GeckoLib pets.",
+ "description": "Raise your own Mochi: a chubby red-panda companion that levels up, guards you, mines, carries your loot and even becomes a rideable dragon. 24 colours, 46 animations, hand-drawn effects.",
  "needs": [
   "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback",
   "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback.RegistrationHelper",
@@ -15,6 +15,7 @@
   "net.minecraft.client.model.ambient.BatModel",
   "net.minecraft.client.model.animal.dolphin.DolphinModel",
   "net.minecraft.client.model.monster.skeleton.SkeletonModel",
+  "net.minecraft.client.particle.SingleQuadParticle.FacingCameraMode",
   "net.minecraft.client.renderer.entity.state.BatRenderState",
   "net.minecraft.client.renderer.entity.state.DolphinRenderState",
   "net.minecraft.client.renderer.entity.state.SkeletonRenderState",
@@ -23,13 +24,20 @@
   "net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal",
   "net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal",
   "net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal",
+  "RenderTarget.width",
+  "FabricParticleTypes.complex()",
   "Minecraft.getEntityRenderDispatcher()",
+  "Screenshot.grab()",
+  "Hud.toggle()",
   "AbstractContainerScreen.containerTick()",
-  "AbstractContainerScreen.extractContents()",
   "ModelLayers.BAT",
   "ModelLayers.DOLPHIN",
   "ModelLayers.SKELETON",
-  "ClientLevel.getEntitiesOfClass()",
+  "SingleQuadParticle.extract()",
+  "SingleQuadParticle.getFacingCameraMode()",
+  "SingleQuadParticle.getLightCoords()",
+  "SingleQuadParticle.tick()",
+  "SingleQuadParticle.Layer.TRANSLUCENT",
   "EntityRenderDispatcher.getRenderer()",
   "EntityRendererProvider.Context.bakeLayer()",
   "AvatarRenderState.id",
@@ -41,24 +49,16 @@
   "LivingEntityRenderState.xRot",
   "LivingEntityRenderState.yRot",
   "ItemModelResolver.updateForLiving()",
-  "ItemStackRenderState.isEmpty()",
-  "CameraRenderState.orientation",
-  "ServerLevel.getEntitiesOfClass()",
-  "ServerLevel.getEntitiesOfClass()",
-  "ServerLevel.getEntityInAnyDimension()",
-  "ServerLevel.getHeightmapPos()",
-  "ServerLevel.getNearestPlayer()",
-  "ServerLevel.isOutsideBuildHeight()",
-  "and 32 more"
+  "and 35 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-18",
-  "kiln": "development build 2026-11-18 (d1387ddf)",
-  "file": "mochipets-0.23.0+26.3.jar",
-  "published": "2026-10-21"
+  "date": "2026-11-19",
+  "kiln": "development build 2026-11-19 (aec290a0)",
+  "file": "mochipets-0.25.0+26.3.jar",
+  "published": "2026-11-19"
  },
  "reports": {
   "works": 0,
@@ -68,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-19",
+  "kiln": "development build 2026-11-19 (aec290a0)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -92,5 +92,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
  },
- "lacks": 72
+ "lacks": 81
 }

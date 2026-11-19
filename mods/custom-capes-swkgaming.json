@@ -1,7 +1,7 @@
 {
  "id": "custom-capes-swkgaming",
  "name": "Custom Capes",
- "version": "3.5.0",
+ "version": "3.5.2",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,7 +10,9 @@
  "description": "This Mod adds the ability to add custom capes to your player including gifs and normal images with a resolution up to 2048x1024 you can also see other capes and vice versa and it also works with elytra models and wavey capes",
  "needs": [
   "Mixin: 6 points inside the game's methods",
+  "com.mojang.blaze3d.textures.FilterMode",
   "com.mojang.blaze3d.vertex.SheetedDecalTextureGenerator",
+  "net.minecraft.client.renderer.ItemInHandRenderer",
   "net.minecraft.client.renderer.SkyRenderer",
   "net.minecraft.client.renderer.debug.EntityHitboxDebugRenderer",
   "net.minecraft.client.renderer.entity.AbstractBoatRenderer",
@@ -23,7 +25,9 @@
   "org.lwjgl.PointerBuffer",
   "org.lwjgl.system.MemoryStack",
   "org.lwjgl.util.tinyfd.TinyFileDialogs",
+  "SamplerCache.getRepeat()",
   "PoseStack.last()",
+  "PoseStack.mulPose()",
   "PoseStack.mulPose()",
   "PoseStack.Pose.copy()",
   "PoseStack.Pose.pose()",
@@ -38,27 +42,23 @@
   "HumanoidModel.leftLeg",
   "HumanoidModel.rightArm",
   "HumanoidModel.rightLeg",
-  "ClientLevel.getEntities()",
+  "HumanoidModel.root()",
   "AbstractClientPlayer.swinging",
+  "LocalPlayer.swinging",
   "Frustum.isVisible()",
   "RenderLayer.getParentModel()",
   "AvatarRenderState.ageInTicks",
   "AvatarRenderState.bodyRot",
   "AvatarRenderState.capeFlap",
-  "AvatarRenderState.capeLean2",
-  "AvatarRenderState.chestEquipment",
-  "AvatarRenderState.distanceToCameraSq",
-  "AvatarRenderState.id",
-  "AvatarRenderState.isCrouching",
-  "and 33 more"
+  "and 35 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-18",
-  "kiln": "development build 2026-11-18 (d1387ddf)",
-  "file": "Custom-Capes-3.5.0+fabric-26.1-26.3-obf.jar",
+  "date": "2026-11-19",
+  "kiln": "development build 2026-11-19 (aec290a0)",
+  "file": "Custom-Capes-3.5.2+fabric-26.1-26.3-obf.jar",
   "published": "2026-11-18"
  },
  "reports": {
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-18",
-  "kiln": "development build 2026-11-18 (d1387ddf)",
+  "date": "2026-11-19",
+  "kiln": "development build 2026-11-19 (aec290a0)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +89,5 @@
   "class": "restart",
   "why": "@redirect and @wrap-method into the game's classes; runs threads of its own"
  },
- "lacks": 75
+ "lacks": 80
 }

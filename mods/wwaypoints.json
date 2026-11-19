@@ -1,7 +1,7 @@
 {
  "id": "wwaypoints",
  "name": "wWaypoints",
- "version": "0.8.1",
+ "version": "0.9.0",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,7 +9,7 @@
  "author": "wSmoothie",
  "description": "The best waypoints mod.",
  "needs": [
-  "Mixin: 8 points inside the game's methods",
+  "Mixin: 12 points inside the game's methods",
   "com.mojang.blaze3d.vertex.DefaultVertexFormat",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.Chat",
@@ -22,7 +22,6 @@
   "org.lwjgl.PointerBuffer",
   "org.lwjgl.sdl.SDLDialog",
   "org.lwjgl.sdl.SDLError",
-  "org.lwjgl.sdl.SDLMouse",
   "org.lwjgl.sdl.SDLProperties",
   "org.lwjgl.sdl.SDLScancode",
   "org.lwjgl.sdl.SDL_DialogFileCallback",
@@ -45,21 +44,22 @@
   "ClientReceiveMessageEvents.CHAT",
   "Font.prepareText()",
   "EditBox.setCentered()",
-  "ClientPacketListener.send()",
+  "PlayerInfo.<init>()",
   "LocalPlayer.getLastDeathLocation()",
-  "LocalPlayer.getSkin()",
   "GameRenderer.mainCamera()",
   "LayeringTransform.VIEW_OFFSET_Z_LAYERING",
-  "and 6 more"
+  "RenderSetup.builder()",
+  "DefaultedRegistry.iterator()",
+  "and 8 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-18",
-  "kiln": "development build 2026-11-18 (d1387ddf)",
-  "file": "wWaypoints 0.8.1 Fabric 26.3.jar",
-  "published": "2026-10-05"
+  "date": "2026-11-19",
+  "kiln": "development build 2026-11-19 (aec290a0)",
+  "file": "wWaypoints 0.9.0 Fabric 26.3.jar",
+  "published": "2026-11-18"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-19",
+  "kiln": "development build 2026-11-19 (aec290a0)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -91,5 +91,5 @@
   "class": "restart",
   "why": "@modify-args and @redirect and @wrap-operation into the game's classes; runs threads of its own; has network channels"
  },
- "lacks": 46
+ "lacks": 48
 }

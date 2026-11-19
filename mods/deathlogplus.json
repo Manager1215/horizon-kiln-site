@@ -1,53 +1,25 @@
 {
  "id": "deathlogplus",
  "name": "DeathLogPlus",
- "version": "1.1.1",
- "status": "planned",
- "statusLabel": "Planned",
- "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
- "url": "https://modrinth.com/mod/deathlogplus",
- "author": "Nikrecs",
- "description": "Records your deaths with cause, location, date/time, and inventory snapshot.",
- "needs": [
-  "GuiGraphicsExtractor.setTooltipForNextFrame()"
- ],
- "roadmap": "Minecraft's libraries and client API (0.2)",
- "evidence": "Not run: Java did not start.",
- "library": false,
- "scanned": {
-  "date": "2026-11-18",
-  "kiln": "development build 2026-11-18 (d1387ddf)",
-  "file": "deathlogplus-fabric-26.3-1.1.1.jar",
-  "published": "2026-11-07"
- },
+ "version": "1.1.0",
+ "status": "works",
+ "statusLabel": "Works",
+ "statusMeaning": "Tried in the game with Kiln.",
+ "needs": [],
  "reports": {
   "works": 0,
   "partly": 0,
   "broken": 0,
   "latest": []
  },
- "run": {
-  "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
-  "ticks": 0,
-  "hud": false,
-  "why": "Java did not start"
- },
- "entrypoints": {
-  "client": 1
- },
- "mixins": false,
- "depends": [
-  "architectury",
-  "fabric-api",
-  "fabricloader",
-  "java",
-  "minecraft"
- ],
- "softOff": {
-  "class": "safe",
-  "why": "only events, HUD, keys, commands and guarded mixin handlers"
- },
- "lacks": 1
+ "works": "Records each death (cause, place, time, inventory) and shows the log in its own screen (a key with no default, or /deathlog).",
+ "note": "Not yet: Its screen's labels are its own drawing, which the try's label reader doesn't see (the screenshot and its deaths.json are checked).",
+ "url": "https://modrinth.com/mod/kmz8J4sz",
+ "checked": {
+  "kiln": "main",
+  "commit": "b123df2062e23a33e9a974e2928190cb8d1d3d26",
+  "date": "2026-11-18",
+  "horizon": "Nightly 2026-11-04 · 3fb4c31",
+  "by": "kiln/proof.py on the Linux PC"
+ }
 }

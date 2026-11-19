@@ -2,19 +2,19 @@
  "id": "jumble-mod",
  "name": "Jumble",
  "version": "1.1+26.3",
- "status": "not-checked",
- "statusLabel": "Not checked",
- "statusMeaning": "In the catalogue, not checked yet.",
+ "status": "works",
+ "statusLabel": "Works",
+ "statusMeaning": "Tried in the game with Kiln.",
  "url": "https://modrinth.com/mod/jumble-mod",
  "author": "fingerguns83",
  "description": "Randomly change blocks in your hotbar.",
  "needs": [],
  "roadmap": "",
- "evidence": "Everything its code calls is covered by Kiln development build 2026-11-18 (d1387ddf) (23 classes, 27 members). Not run yet.",
+ "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-18",
-  "kiln": "development build 2026-11-18 (d1387ddf)",
+  "date": "2026-11-19",
+  "kiln": "development build 2026-11-19 (aec290a0)",
   "file": "Jumble-1.1+26.3.jar",
   "published": "2026-09-27"
  },
@@ -45,5 +45,14 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 0
+ "lacks": 0,
+ "works": "Key R (held, polled each tick) turns Jumble mode on or off ('Jumble Mode Enabled' / 'Jumble Mode Disabled' in the action bar); while on, each block placed switches the selection to a random hotbar slot holding a block.",
+ "note": "Not yet: The random slot switch after placing a block is not checked: the random slot can be the one already selected, and it needs the client's UseBlockCallback.",
+ "checked": {
+  "kiln": "0.4.6",
+  "commit": "d1387ddf567d03424b94e458808d861bc67baebf",
+  "date": "2026-11-18",
+  "horizon": "Nightly 2026-11-04 · 3fb4c31",
+  "by": "kiln/proof.py on the Linux PC"
+ }
 }

@@ -2,22 +2,19 @@
  "id": "entity-tracker-hud",
  "name": "Entity Tracker Hud",
  "version": "1.0.2+26.3",
- "status": "planned",
- "statusLabel": "Planned",
- "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "status": "works",
+ "statusLabel": "Works",
+ "statusMeaning": "Tried in the game with Kiln.",
  "url": "https://modrinth.com/mod/entity-tracker-hud",
  "author": "ElmerLion",
  "description": "Adds a customizable and easy-to-read list of all specific entities near you",
- "needs": [
-  "GuiGraphicsExtractor.blit()",
-  "DefaultedRegistry.iterator()"
- ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
- "evidence": "Not run: Java did not start.",
+ "needs": [],
+ "roadmap": "",
+ "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-18",
-  "kiln": "development build 2026-11-18 (d1387ddf)",
+  "date": "2026-11-19",
+  "kiln": "development build 2026-11-19 (aec290a0)",
   "file": "entity-tracker-1.0.2+26.3.jar",
   "published": "2026-09-22"
  },
@@ -50,5 +47,14 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 2
+ "lacks": 2,
+ "works": "Counts the loaded mobs and animals by type and lists them in a panel at the top right (gui x 242..418, y 8.., one 18-px row per type, with the spawn-egg icon, name and count); no panel while none are near.",
+ "note": "Not yet: its settings screen doesn't open (no default key either); a mob with no item icon falls back to a texture, which Kiln doesn't draw",
+ "checked": {
+  "kiln": "0.4.6",
+  "commit": "d1387ddf567d03424b94e458808d861bc67baebf",
+  "date": "2026-11-18",
+  "horizon": "Nightly 2026-11-04 · 3fb4c31",
+  "by": "kiln/proof.py on the Linux PC"
+ }
 }

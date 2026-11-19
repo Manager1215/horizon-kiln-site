@@ -1,0 +1,55 @@
+{
+ "id": "better-revive-x-holy-ritual",
+ "name": "Better Revive X Holy Ritual",
+ "version": "1.0.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/better-revive-x-holy-ritual",
+ "author": "MrStilu2k6",
+ "description": "Better Revive X Holy Ritual is a Hardcore-only add-on for Better Revive. It lets players bring back someone who has permanently died in a Hardcore world by building a ritual cross with White Chalk and lighting a Holy Candle.",
+ "needs": [
+  "net.minecraft.client.gui.components.PlayerFaceExtractor",
+  "LootPool.Builder.when()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-19",
+  "kiln": "development build 2026-11-19 (aec290a0)",
+  "file": "Better Revive X Holy Ritual - 1.0.0 - Fabric - 26.3.jar",
+  "published": "2026-09-22"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-19",
+  "kiln": "development build 2026-11-19 (aec290a0)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": false,
+ "depends": [
+  "better_revive",
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 2
+}

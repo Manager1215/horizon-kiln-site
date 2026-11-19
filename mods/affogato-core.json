@@ -1,7 +1,7 @@
 {
  "id": "affogato-core",
  "name": "Affogato Core",
- "version": "26.3.0",
+ "version": "26.3.2",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,7 +10,7 @@
  "description": "Core mod used in my modpacks that provides features, tweaks, tools and utilities to modify game behavior which cannot be modified by regular means.",
  "needs": [
   "an access widener",
-  "Mixin: 68 points inside the game's methods",
+  "Mixin: 77 points inside the game's methods",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityCombatEvents",
   "net.fabricmc.fabric.api.entity.event.v1.ServerEntityCombatEvents.AfterKilledOtherEntity",
   "net.minecraft.client.gui.components.toasts.TutorialToast",
@@ -26,7 +26,9 @@
   "net.minecraft.world.level.block.entity.PotentSulfurBlockEntity",
   "net.minecraft.world.level.block.entity.vault.VaultServerData",
   "net.minecraft.world.level.dimension.end.EnderDragonFight",
+  "net.minecraft.world.level.levelgen.feature.MonsterRoomFeature",
   "net.minecraft.world.level.levelgen.feature.ScatteredOreFeature",
+  "net.minecraft.world.level.levelgen.structure.structures.MineshaftPieces.MineShaftCrossing",
   "net.minecraft.world.level.levelgen.structure.structures.WoodlandMansionStructure",
   "JsonArray.forEach()",
   "HolderSet.Named.forEach()",
@@ -37,10 +39,14 @@
   "LivingEntity.getExperienceReward()",
   "Inventory.contains()",
   "Player.<init>()",
+  "MinecartTNT.setInitialPos()",
   "ChestBlockEntity.setLootTable()",
   "VaultBlockEntity.getServerData()",
   "AbstractOreFeature.size()",
   "AbstractOreFeature.targetStates()",
+  "MineshaftStructure.Type.getFenceState()",
+  "MineshaftStructure.Type.getPlanksState()",
+  "MineshaftStructure.Type.getWoodState()",
   "ContextIntProviders.COOKING_TIME_WOOL",
   "ContextIntProviders.COOKING_TIME_WOOL_CARPETS",
   "ContextIntProviders.COOKING_TIME_WOOL_SLABS"
@@ -49,10 +55,10 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-18",
-  "kiln": "development build 2026-11-18 (d1387ddf)",
-  "file": "affogatocore-26.3.0.jar",
-  "published": "2026-11-14"
+  "date": "2026-11-19",
+  "kiln": "development build 2026-11-19 (aec290a0)",
+  "file": "affogatocore-26.3.2.jar",
+  "published": "2026-11-18"
  },
  "reports": {
   "works": 0,
@@ -62,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-19",
+  "kiln": "development build 2026-11-19 (aec290a0)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -83,5 +89,5 @@
   "class": "restart",
   "why": "@modify-args and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
  },
- "lacks": 33
+ "lacks": 39
 }

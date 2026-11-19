@@ -9,21 +9,24 @@
  "author": "jahsohsani",
  "description": "Replace your mouse cursor in Minecraft with anything you want.\nA diamond sword, a rainbow arrow, a heart… or your own image!",
  "needs": [
-  "org.lwjgl.sdl.SDLMouse",
   "org.lwjgl.sdl.SDLPixels",
   "org.lwjgl.sdl.SDLSurface",
   "org.lwjgl.sdl.SDL_Surface",
   "org.lwjgl.stb.STBImage",
   "org.lwjgl.system.MemoryStack",
   "org.lwjgl.system.MemoryUtil",
-  "Blaze3D.openPath()"
+  "Blaze3D.openPath()",
+  "SDLMouse.SDL_CreateColorCursor()",
+  "SDLMouse.SDL_DestroyCursor()",
+  "SDLMouse.SDL_GetDefaultCursor()",
+  "SDLMouse.SDL_SetCursor()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-18",
-  "kiln": "development build 2026-11-18 (d1387ddf)",
+  "date": "2026-11-19",
+  "kiln": "development build 2026-11-19 (aec290a0)",
   "file": "customcursor-1.0.0+26.3-fabric.jar",
   "published": "2026-09-25"
  },
@@ -55,5 +58,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 8
+ "lacks": 11
 }

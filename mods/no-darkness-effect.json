@@ -2,19 +2,19 @@
  "id": "no-darkness-effect",
  "name": "No darkness effect",
  "version": "0.0.2-26.2",
- "status": "not-checked",
- "statusLabel": "Not checked",
- "statusMeaning": "In the catalogue, not checked yet.",
+ "status": "works",
+ "statusLabel": "Works",
+ "statusMeaning": "Tried in the game with Kiln.",
  "url": "https://modrinth.com/mod/no-darkness-effect",
  "author": "OneSaw",
  "description": "Client-side mod which completely removes darkness effect.",
  "needs": [],
  "roadmap": "",
- "evidence": "Everything its code calls is covered by Kiln development build 2026-11-18 (d1387ddf) (8 classes, 7 members). Not run yet.",
+ "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-18",
-  "kiln": "development build 2026-11-18 (d1387ddf)",
+  "date": "2026-11-19",
+  "kiln": "development build 2026-11-19 (aec290a0)",
   "file": "removewardeneffect-0.0.2-26.2FB.jar",
   "published": "2026-08-24"
  },
@@ -46,5 +46,14 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 0
+ "lacks": 0,
+ "works": "Removes the Darkness effect (Warden, sculk shrieker) from the player on the client every tick, so the screen never darkens and no Darkness icon shows.",
+ "note": "Not yet: Only the client loses the effect; the server still counts it.",
+ "checked": {
+  "kiln": "0.4.6",
+  "commit": "d1387ddf567d03424b94e458808d861bc67baebf",
+  "date": "2026-11-18",
+  "horizon": "Nightly 2026-11-04 · 3fb4c31",
+  "by": "kiln/proof.py on the Linux PC"
+ }
 }

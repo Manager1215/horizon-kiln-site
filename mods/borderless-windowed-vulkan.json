@@ -1,22 +1,31 @@
 {
  "id": "borderless-windowed-vulkan",
  "name": "Borderless Windowed Vulkan",
- "version": "26.3",
- "status": "not-checked",
- "statusLabel": "Not checked",
- "statusMeaning": "In the catalogue, not checked yet.",
+ "version": "1.1.1",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
  "url": "https://modrinth.com/mod/borderless-windowed-vulkan",
  "author": "cutebow",
  "description": "Pretty much cubes without boarders mod but working with vulkan mod - This also works without vulkan incase you just prefer this mod",
- "needs": [],
- "roadmap": "",
- "evidence": "No classes at the top level of the file (only nested jars); not scanned.",
+ "needs": [
+  "net.minecraft.class_2561",
+  "net.minecraft.class_2960",
+  "org.lwjgl.PointerBuffer",
+  "org.lwjgl.glfw.GLFW",
+  "org.lwjgl.glfw.GLFWVidMode",
+  "org.lwjgl.sdl.SDLVideo",
+  "org.lwjgl.sdl.SDL_Rect",
+  "org.lwjgl.system.MemoryStack"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-18",
-  "kiln": "development build 2026-11-18 (d1387ddf)",
-  "file": "BorderlessVulkan-26.3.jar",
-  "published": "2026-09-17"
+  "date": "2026-11-19",
+  "kiln": "development build 2026-11-19 (aec290a0)",
+  "file": "BorderlessWindowedVulkan-1.21-26.3-1.1.1.jar",
+  "published": "2026-11-19"
  },
  "reports": {
   "works": 0,
@@ -24,16 +33,19 @@
   "broken": 0,
   "latest": []
  },
- "entrypoints": {},
- "mixins": false,
+ "entrypoints": {
+  "modmenu": 1
+ },
+ "mixins": true,
  "depends": [
-  "borderless_windowed_vulkan",
   "fabricloader",
-  "minecraft"
+  "java",
+  "minecraft",
+  "yet_another_config_lib_v3"
  ],
  "softOff": {
   "class": "safe",
-  "why": "no code"
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 0
+ "lacks": 8
 }

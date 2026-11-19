@@ -1,0 +1,78 @@
+{
+ "id": "drt",
+ "name": "Dungeon Run tracker",
+ "version": "1.1.0+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/drt",
+ "author": "vyirv",
+ "description": "This mod adds a simple run and profit tracker for hypixel skyblock dungeons",
+ "needs": [
+  "Mixin: 1 point inside the game's methods",
+  "com.mojang.authlib.exceptions.InvalidCredentialsException",
+  "com.mojang.renderpearl.backend.opengl.DirectStateAccess",
+  "com.mojang.renderpearl.backend.opengl.GlConst",
+  "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents",
+  "net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.AllowCommand",
+  "org.lwjgl.nanovg.NVGColor",
+  "org.lwjgl.nanovg.NanoVG",
+  "org.lwjgl.nanovg.NanoVGGL3",
+  "org.lwjgl.opengl.GL",
+  "org.lwjgl.opengl.GL33C",
+  "org.lwjgl.opengl.GLCapabilities",
+  "org.lwjgl.sdl.SDLError",
+  "org.lwjgl.sdl.SDLMisc",
+  "org.lwjgl.sdl.SDLScancode",
+  "org.lwjgl.sdl.SDLVideo",
+  "org.lwjgl.system.MemoryUtil",
+  "GlStateManager._disableCull()",
+  "GlStateManager._glBindFramebuffer()",
+  "GlStateManager._viewport()",
+  "GuiGraphicsExtractor.scissorStack",
+  "Hud.getTabList()",
+  "PictureInPictureRenderer.close()",
+  "EntityRenderState.nameTag",
+  "PlayerScoreEntry.isHidden()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-19",
+  "kiln": "development build 2026-11-19 (aec290a0)",
+  "file": "DungeonRunTracker-1.1.0+26.3.jar",
+  "published": "2026-11-18"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-19",
+  "kiln": "development build 2026-11-19 (aec290a0)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 24
+}
