@@ -1,0 +1,56 @@
+{
+ "id": "ardas-uncrafting-table",
+ "name": "Arda's Uncrafting Table [ Uncraft / Recycle / Deconstruct Mod ]",
+ "version": "1.4",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/ardas-uncrafting-table",
+ "author": "Ixra",
+ "description": "Arda's Uncrafting Table allows you to reverse crafting recipes seamlessly. Retrieve ingredients from unused items, supports damaged tools with a fair probability system, and works automatically with both vanilla and modded recipes.",
+ "needs": [
+  "NonNullList.getFirst()",
+  "Block.triggerEvent()"
+ ],
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-20",
+  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "file": "Arda's Uncrafting Table 1.4 [FABRIC] [26.3].jar",
+  "published": "2026-11-19"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-20",
+  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1,
+  "modmenu": 1,
+  "jei_mod_plugin": 1
+ },
+ "mixins": false,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 2
+}

@@ -1,0 +1,55 @@
+{
+ "id": "placechunk",
+ "name": "PlaceChunk",
+ "version": "1.0.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/placechunk",
+ "author": "Trivait",
+ "description": "Replaces all blocks in a chunk with the block you have placed",
+ "needs": [
+  "net.minecraft.client.gui.components.SpriteIconButton",
+  "net.minecraft.client.gui.components.SpriteIconButton.CenteredIcon",
+  "ServerLevel.isUnobstructed()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-20",
+  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "file": "PlaceChunk-1.0.0+mc-26.3.jar",
+  "published": "2026-11-12"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-20",
+  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "cloth-config2",
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 3
+}

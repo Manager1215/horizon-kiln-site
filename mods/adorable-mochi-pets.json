@@ -1,7 +1,7 @@
 {
  "id": "adorable-mochi-pets",
  "name": "Mochi Pets",
- "version": "0.25.0+26.3",
+ "version": "0.30.1+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -11,6 +11,7 @@
  "needs": [
   "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback",
   "net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback.RegistrationHelper",
+  "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
   "net.minecraft.client.model.HumanoidModel.ArmPose",
   "net.minecraft.client.model.ambient.BatModel",
   "net.minecraft.client.model.animal.dolphin.DolphinModel",
@@ -25,9 +26,13 @@
   "net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal",
   "net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal",
   "RenderTarget.width",
+  "Window.calculateScale()",
+  "Window.setGuiScale()",
   "FabricParticleTypes.complex()",
+  "Minecraft.createWorldOpenFlows()",
   "Minecraft.getEntityRenderDispatcher()",
   "Screenshot.grab()",
+  "GuiGraphicsExtractor.setTooltipForNextFrame()",
   "Hud.toggle()",
   "AbstractContainerScreen.containerTick()",
   "ModelLayers.BAT",
@@ -43,21 +48,16 @@
   "AvatarRenderState.id",
   "LivingEntityRenderState.ageInTicks",
   "LivingEntityRenderState.bodyRot",
-  "LivingEntityRenderState.isUpsideDown",
-  "LivingEntityRenderState.walkAnimationPos",
-  "LivingEntityRenderState.walkAnimationSpeed",
-  "LivingEntityRenderState.xRot",
-  "LivingEntityRenderState.yRot",
-  "ItemModelResolver.updateForLiving()",
-  "and 35 more"
+  "LivingEntityRenderState.isInvisible",
+  "and 36 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-19",
-  "kiln": "development build 2026-11-19 (aec290a0)",
-  "file": "mochipets-0.25.0+26.3.jar",
+  "date": "2026-11-20",
+  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "file": "mochipets-0.30.1+26.3.jar",
   "published": "2026-11-19"
  },
  "reports": {
@@ -68,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-19",
-  "kiln": "development build 2026-11-19 (aec290a0)",
+  "date": "2026-11-20",
+  "kiln": "development build 2026-11-20 (eda5a4a5)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -92,5 +92,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
  },
- "lacks": 81
+ "lacks": 99
 }

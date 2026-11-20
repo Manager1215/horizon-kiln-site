@@ -1,7 +1,7 @@
 {
  "id": "betternether",
  "name": "BetterNether",
- "version": "26.302.1",
+ "version": "26.302.2",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,22 +9,17 @@
  "author": "quiqueck",
  "description": "More Biomes, More Mobs, More Tools for the fiery Dimension",
  "needs": [
-  "an access widener",
-  "Mixin: 5 points inside the game's methods",
   "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "net.minecraft.client.model.geom.PartNames",
   "net.minecraft.client.model.geom.builders.CubeListBuilder",
   "net.minecraft.client.model.monster.skeleton.SkeletonModel",
   "net.minecraft.client.model.object.armorstand.ArmorStandArmorModel",
   "net.minecraft.client.renderer.entity.AbstractSkeletonRenderer",
-  "net.minecraft.client.renderer.entity.ArmorStandRenderer",
   "net.minecraft.client.renderer.entity.layers.EyesLayer",
   "net.minecraft.client.renderer.entity.state.SkeletonRenderState",
+  "net.minecraft.client.renderer.item.properties.select.TrimMaterialProperty",
   "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
   "net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal",
-  "net.minecraft.world.entity.animal.golem.CopperGolemAi",
-  "net.minecraft.world.level.levelgen.feature.DeltaFeature",
-  "net.minecraft.world.level.levelgen.structure.templatesystem.BlockAgeProcessor",
   "PoseStack.last()",
   "PoseStack.mulPose()",
   "PoseStack.Pose.normal()",
@@ -51,16 +46,19 @@
   "MeshDefinition.getRoot()",
   "PartDefinition.addOrReplaceChild()",
   "PartDefinition.getChild()",
+  "RenderPipelines.ENTITY_NO_LIGHTMAP_SNIPPET",
+  "RenderPipelines.EYES_SNIPPET",
+  "Variant.withYRot()",
   "and 31 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
- "evidence": "Not run: Java did not start.",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+ "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-19",
-  "kiln": "development build 2026-11-19 (aec290a0)",
-  "file": "better-nether-26.302.1.jar",
-  "published": "2026-11-01"
+  "date": "2026-11-20",
+  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "file": "better-nether-26.302.2.jar",
+  "published": "2026-11-19"
  },
  "reports": {
   "works": 0,
@@ -68,33 +66,9 @@
   "broken": 0,
   "latest": []
  },
- "run": {
-  "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
-  "ticks": 0,
-  "hud": false,
-  "why": "Java did not start"
- },
- "entrypoints": {
-  "main": 1,
-  "client": 1,
-  "wover.blocks": 1,
-  "wover.block.definitions": 1,
-  "fabric-datagen": 1,
-  "emi_disabled": 1,
-  "jei_mod_plugin": 1
- },
+ "entrypoints": {},
  "mixins": true,
- "depends": [
-  "bclib",
-  "fabric-api",
-  "fabricloader",
-  "java",
-  "minecraft",
-  "wover",
-  "wunderlib"
- ],
+ "depends": [],
  "softOff": {
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"

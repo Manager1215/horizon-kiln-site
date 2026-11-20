@@ -1,0 +1,60 @@
+{
+ "id": "server-sided-portals",
+ "name": "Server Sided Portals",
+ "version": "2.2.1",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/server-sided-portals",
+ "author": "CrystalSpider",
+ "description": "Create custom portals and dimensions compatible with any client!",
+ "needs": [
+  "Mixin: 6 points inside the game's methods",
+  "BlockGetter.getMinY()",
+  "GameType.CODEC",
+  "PortalShape.<init>()",
+  "PortalShape.createPortalBlocks()",
+  "PortalShape.findAnyShape()",
+  "PortalShape.findEmptyPortalShape()",
+  "PortalShape.isValid()"
+ ],
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": true,
+ "scanned": {
+  "date": "2026-11-20",
+  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "file": "server-sided-portals-fabric-26.3-2.2.1.jar",
+  "published": "2026-11-19"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-20",
+  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "cobweb",
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes"
+ },
+ "lacks": 7
+}
