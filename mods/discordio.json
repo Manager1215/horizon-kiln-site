@@ -9,23 +9,14 @@
   "author": "Hidde2727",
   "description": "Whitelist with discord, ban with discord. Get notified when the server starts/stops. Get minecraft messages in discord.\nFabric/Velocity",
   "needs": [
-    "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
-    "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Leave",
-    "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
-    "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
-    "net.minecraft.server.dedicated.DedicatedPlayerList",
-    "ServerPlayerEvents.JOIN",
-    "ServerPlayerEvents.LEAVE",
-    "PlayerChatMessage.signedContent()",
-    "MinecraftServer.sendSystemMessage()",
-    "MinecraftServer.usesAuthentication()"
+    "net.minecraft.server.dedicated.DedicatedPlayerList"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "discordio-fabric-0.9.0.jar",
     "published": "2026-06-06"
   },
@@ -56,28 +47,16 @@
     "class": "partial",
     "why": "runs threads of its own"
   },
-  "lacks": 10,
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
-      "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
-      "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Leave",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-      "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
       "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
-      "net.minecraft.network.chat.PlayerChatMessage",
       "net.minecraft.server.dedicated.DedicatedPlayerList",
-      "ServerPlayerEvents.JOIN",
-      "ServerPlayerEvents.LEAVE",
-      "ServerLifecycleEvents.SERVER_STARTED",
-      "ServerLifecycleEvents.SERVER_STOPPING",
-      "MinecraftServer.sendSystemMessage()",
-      "MinecraftServer.usesAuthentication()",
-      "ServerPlayer.getPlainTextName()"
+      "ServerMessageEvents.CHAT_MESSAGE"
     ],
     "roadmap": "Code next to data (0.3)",
     "run": {
@@ -90,13 +69,13 @@
     },
     "url": "https://modrinth.com/mod/discordio",
     "version": "0.9.0",
-    "lacks": 15,
+    "lacks": 3,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "discordio-fabric-0.9.0.jar",
       "published": "2026-06-06"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

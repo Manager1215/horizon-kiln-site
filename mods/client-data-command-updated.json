@@ -10,23 +10,16 @@
   "description": "Adds a client-side /data command",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
     "net.minecraft.server.commands.data.EntityDataAccessor",
-    "FabricClientCommandSource.getRotation()",
-    "ClientLevel.enabledFeatures()",
-    "ClientLevel.getEntities()",
-    "ClientLevel.getEntity()",
-    "AbstractClientPlayer.getGameProfile()",
-    "NbtPathArgument.nbtPath()",
-    "NbtPathArgument.NbtPath.get()",
-    "Level.isInWorldBounds()"
+    "BlockPosArgument.ERROR_NOT_LOADED",
+    "BlockPosArgument.ERROR_OUT_OF_WORLD"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "ClientDataCommandUpdated+26.3-1.6.0.jar",
     "published": "2026-09-18"
   },
@@ -57,7 +50,7 @@
     "class": "restart",
     "why": "@wrap-method and @wrap-operation into the game's classes"
   },
-  "lacks": 10,
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -65,19 +58,11 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "Mixin: 3 points inside the game's methods",
-      "com.mojang.authlib.GameProfile",
-      "net.minecraft.commands.arguments.coordinates.BlockPosArgument",
       "net.minecraft.server.commands.data.EntityDataAccessor",
-      "FabricClientCommandSource.getRotation()",
-      "ClientLevel.enabledFeatures()",
-      "ClientLevel.getEntities()",
-      "ClientLevel.getEntity()",
-      "AbstractClientPlayer.getGameProfile()",
-      "NbtPathArgument.nbtPath()",
-      "NbtPathArgument.NbtPath.get()",
-      "Level.isInWorldBounds()"
+      "BlockPosArgument.ERROR_NOT_LOADED",
+      "BlockPosArgument.ERROR_OUT_OF_WORLD"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+    "roadmap": "Code next to data (0.3), Mixin (0.5)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -88,13 +73,13 @@
     },
     "url": "https://modrinth.com/mod/client-data-command-updated",
     "version": "1.6.0",
-    "lacks": 11,
+    "lacks": 3,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "ClientDataCommandUpdated+26.3-1.6.0.jar",
       "published": "2026-09-18"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

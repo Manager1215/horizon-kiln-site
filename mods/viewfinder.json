@@ -10,11 +10,6 @@
   "description": "A shader debugging mod for Iris on Fabric that exposes an MCP server and in-game commands for external tools and scripts to inspect, test, and automate shader development workflows.",
   "needs": [
     "an access widener",
-    "com.mojang.renderpearl.backend.opengl.GlStateManager",
-    "com.mojang.renderpearl.backend.opengl.GlTexture",
-    "net.minecraft.client.Screenshot",
-    "net.minecraft.server.ServerTickRateManager",
-    "net.minecraft.world.clock.ServerClockManager",
     "org.lwjgl.opengl.GL11C",
     "org.lwjgl.opengl.GL20C",
     "org.lwjgl.opengl.GL30C",
@@ -23,30 +18,17 @@
     "org.lwjgl.opengl.GL43C",
     "org.lwjgl.system.MemoryStack",
     "org.lwjgl.system.MemoryUtil",
-    "ImmutableMap.forEach()",
-    "ImmutableMap.size()",
-    "ImmutableSet.forEach()",
-    "ImmutableSet.stream()",
-    "JsonArray.forEach()",
     "RenderTarget.width",
     "Window.isFocused()",
-    "SharedConstants.getCurrentVersion()",
-    "Minecraft.getGpuUtilization()",
-    "Options.fullscreen()",
-    "Options.getEffectiveRenderDistance()",
-    "Style.withInsertion()",
-    "MinecraftServer.clockManager()",
-    "MinecraftServer.setWeatherParameters()",
-    "MinecraftServer.tickRateManager()",
-    "ServerPlayer.teleportTo()",
-    "DimensionType.defaultClock()"
+    "GlStateManager.glLinkProgram()",
+    "ServerTickRateManager.stepGameIfPaused()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "viewfinder-26.3-2.1.4+26.3.jar",
     "published": "2026-10-03"
   },
@@ -80,7 +62,7 @@
     "class": "partial",
     "why": "runs threads of its own"
   },
-  "lacks": 30,
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -88,12 +70,6 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "an access widener",
-      "com.mojang.renderpearl.backend.opengl.GlStateManager",
-      "com.mojang.renderpearl.backend.opengl.GlTexture",
-      "net.minecraft.SharedConstants",
-      "net.minecraft.client.Screenshot",
-      "net.minecraft.server.ServerTickRateManager",
-      "net.minecraft.world.clock.ServerClockManager",
       "org.lwjgl.opengl.GL11C",
       "org.lwjgl.opengl.GL20C",
       "org.lwjgl.opengl.GL30C",
@@ -109,19 +85,8 @@
       "JsonArray.forEach()",
       "RenderTarget.width",
       "Window.isFocused()",
-      "Minecraft.gameDirectory",
-      "Minecraft.getGpuUtilization()",
-      "Minecraft.getSingleplayerServer()",
-      "Options.fullscreen()",
-      "Options.getEffectiveRenderDistance()",
-      "Style.withInsertion()",
-      "MinecraftServer.clockManager()",
-      "MinecraftServer.execute()",
-      "MinecraftServer.isSameThread()",
-      "MinecraftServer.setWeatherParameters()",
-      "MinecraftServer.tickRateManager()",
-      "ServerPlayer.teleportTo()",
-      "DimensionType.defaultClock()"
+      "GlStateManager.glLinkProgram()",
+      "ServerTickRateManager.stepGameIfPaused()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "run": {
@@ -134,13 +99,13 @@
     },
     "url": "https://modrinth.com/mod/viewfinder",
     "version": "v2.1.4+26.3",
-    "lacks": 34,
+    "lacks": 17,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "viewfinder-26.3-2.1.4+26.3.jar",
       "published": "2026-10-03"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

@@ -9,31 +9,17 @@
   "author": "not_panos",
   "description": "Minecraft fabric mod to manage locations (client/server)",
   "needs": [
-    "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
-    "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
-    "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
-    "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Leave",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents.AllowLoad",
-    "net.minecraft.world.waypoints.Waypoint.Icon",
     "net.minecraft.world.waypoints.WaypointStyleAssets",
-    "JsonParseException.getMessage()",
-    "ServerPlayerEvents.JOIN",
-    "ServerPlayerEvents.LEAVE",
-    "ServerEntityEvents.ALLOW_LOAD",
-    "BlockPos.toShortString()",
     "ClientboundTrackedWaypointPacket.addWaypointPosition()",
     "ClientboundTrackedWaypointPacket.removeWaypoint()",
-    "MinecraftServer.isDedicatedServer()",
-    "ServerPlayer.getGameProfile()",
-    "ServerPlayer.teleportTo()",
-    "Entity.entityTags()"
+    "Waypoint.Icon.style"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "coordmanager-2.0.0+26.3.jar",
     "published": "2026-10-10"
   },
@@ -65,38 +51,18 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 18,
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "com.mojang.authlib.GameProfile",
-      "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
-      "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterPlayerChange",
-      "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Join",
-      "net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents.Leave",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents.AllowLoad",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-      "net.minecraft.world.level.storage.LevelResource",
-      "net.minecraft.world.waypoints.Waypoint.Icon",
       "net.minecraft.world.waypoints.WaypointStyleAssets",
       "JsonParseException.getMessage()",
-      "ServerPlayerEvents.JOIN",
-      "ServerPlayerEvents.LEAVE",
-      "ServerEntityEvents.ALLOW_LOAD",
-      "ServerLifecycleEvents.SERVER_STARTED",
-      "BlockPos.toShortString()",
       "ClientboundTrackedWaypointPacket.addWaypointPosition()",
       "ClientboundTrackedWaypointPacket.removeWaypoint()",
-      "MinecraftServer.getWorldPath()",
-      "MinecraftServer.isDedicatedServer()",
-      "ServerPlayer.connection",
-      "ServerPlayer.getGameProfile()",
-      "ServerPlayer.teleportTo()",
-      "ServerGamePacketListenerImpl.send()",
-      "Entity.entityTags()"
+      "Waypoint.Icon.style"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
     "run": {
@@ -109,13 +75,13 @@
     },
     "url": "https://modrinth.com/mod/coord-manager",
     "version": "2.0.0+26.3",
-    "lacks": 25,
+    "lacks": 5,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "coordmanager-2.0.0+26.3.jar",
       "published": "2026-10-10"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

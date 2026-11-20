@@ -9,32 +9,14 @@
   "author": "kestalkayden",
   "description": "Wireless redstone for Minecraft 26.1.x. Pair transmitter and receiver blocks by channel + frequency — no wire, no spaghetti. Up to 128 blocks of range by default, configurable.",
   "needs": [
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents.Load",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.Unload",
-    "net.minecraft.world.inventory.ContainerData",
-    "net.minecraft.world.inventory.ContainerLevelAccess",
-    "net.minecraft.world.inventory.SimpleContainerData",
-    "net.minecraft.world.level.material.PushReaction",
-    "ServerBlockEntityEvents.BLOCK_ENTITY_LOAD",
-    "ServerLevelEvents.UNLOAD",
-    "AbstractContainerScreen.containerTick()",
-    "AbstractContainerScreen.extractLabels()",
-    "MultiPlayerGameMode.handleInventoryButtonClick()",
-    "BlockPos.distSqr()",
-    "ByteBufCodecs.idMapper()",
-    "Level.getSignal()",
-    "BaseEntityBlock.updateShape()",
-    "BlockEntity.applyImplicitComponents()",
-    "BlockEntity.collectImplicitComponents()",
-    "BlockBehaviour.Properties.overrideLootTable()",
-    "BlockBehaviour.Properties.pushReaction()"
+    "AbstractContainerScreen.containerTick()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "wirelessredstone-fabric-0.3.0.jar",
     "published": "2026-09-21"
   },
@@ -68,43 +50,17 @@
     "class": "partial",
     "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
   },
-  "lacks": 19,
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents.Load",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.Unload",
-      "net.minecraft.world.flag.FeatureFlags",
-      "net.minecraft.world.inventory.ContainerData",
-      "net.minecraft.world.inventory.ContainerLevelAccess",
-      "net.minecraft.world.inventory.MenuType.MenuSupplier",
-      "net.minecraft.world.inventory.SimpleContainerData",
-      "net.minecraft.world.level.material.PushReaction",
-      "FabricCreativeModeTabOutput.insertAfter()",
-      "ServerBlockEntityEvents.BLOCK_ENTITY_LOAD",
-      "ServerLevelEvents.UNLOAD",
       "AbstractContainerScreen.containerTick()",
-      "AbstractContainerScreen.extractLabels()",
-      "MultiPlayerGameMode.handleInventoryButtonClick()",
-      "BlockPos.distSqr()",
-      "ByteBufCodecs.idMapper()",
-      "MinecraftServer.isRunning()",
-      "ServerPlayer.connection",
-      "ServerGamePacketListenerImpl.send()",
-      "MenuType.<init>()",
-      "Items.REPEATER",
-      "Level.getSignal()",
-      "BaseEntityBlock.updateShape()",
-      "Blocks.REPEATER",
-      "BlockEntity.applyImplicitComponents()",
-      "BlockEntity.collectImplicitComponents()",
-      "BlockBehaviour.Properties.overrideLootTable()",
-      "BlockBehaviour.Properties.pushReaction()"
+      "Level.getSignal()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+    "roadmap": "Code next to data (0.3), Machines (0.4)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -115,13 +71,13 @@
     },
     "url": "https://modrinth.com/mod/wireless-redstone-lite",
     "version": "0.3.0+mc26.3",
-    "lacks": 28,
+    "lacks": 2,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "wirelessredstone-fabric-0.3.0.jar",
       "published": "2026-09-21"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

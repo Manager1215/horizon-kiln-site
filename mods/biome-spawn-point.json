@@ -9,33 +9,15 @@
   "author": "Serilum",
   "description": "🌲 Allows specifying which biome and dimension players will spawn in on new world creation.",
   "needs": [
-    "net.minecraft.commands.arguments.ResourceOrTagKeyArgument",
-    "net.minecraft.commands.arguments.ResourceOrTagKeyArgument.Result",
-    "net.minecraft.world.level.levelgen.WorldGenSettings",
-    "net.minecraft.world.level.levelgen.WorldOptions",
     "SharedSuggestionProvider.suggestResource()",
-    "SharedSuggestionProvider.suggestResource()",
-    "Registries.BIOME",
-    "Registries.LEVEL_STEM",
-    "MinecraftServer.getWorldGenSettings()",
-    "MinecraftServer.overworld()",
-    "MinecraftServer.registryAccess()",
-    "ServerLevel.getBiome()",
-    "ServerLevel.getRespawnData()",
-    "ServerLevel.getSeed()",
-    "ServerLevel.setRespawnData()",
-    "BiomeSource.possibleBiomes()",
-    "ChunkGenerator.getBiomeSource()",
-    "LevelStem.OVERWORLD",
-    "LevelData.RespawnData.of()",
-    "LevelData.RespawnData.pos()"
+    "WorldOptions.generateBonusChest()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "biomespawnpoint-26.3.0-4.1.jar",
     "published": "2026-11-07"
   },
@@ -69,39 +51,15 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 20,
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-      "net.minecraft.commands.arguments.ResourceOrTagKeyArgument",
-      "net.minecraft.commands.arguments.ResourceOrTagKeyArgument.Result",
-      "net.minecraft.world.level.levelgen.WorldGenSettings",
-      "net.minecraft.world.level.levelgen.WorldOptions",
-      "ServerLifecycleEvents.SERVER_STARTED",
       "SharedSuggestionProvider.suggestResource()",
-      "SharedSuggestionProvider.suggestResource()",
-      "Holder.is()",
-      "Registry.get()",
-      "RegistryAccess.lookupOrThrow()",
-      "RegistryAccess.Frozen.lookupOrThrow()",
-      "Registries.BIOME",
-      "Registries.LEVEL_STEM",
-      "MinecraftServer.getWorldGenSettings()",
-      "MinecraftServer.overworld()",
-      "MinecraftServer.registryAccess()",
-      "ServerLevel.getBiome()",
-      "ServerLevel.getRespawnData()",
-      "ServerLevel.getSeed()",
-      "ServerLevel.setRespawnData()",
-      "BiomeSource.possibleBiomes()",
-      "ChunkGenerator.getBiomeSource()",
-      "LevelStem.OVERWORLD",
-      "LevelData.RespawnData.of()",
-      "LevelData.RespawnData.pos()"
+      "WorldOptions.generateBonusChest()"
     ],
     "roadmap": "Code next to data (0.3)",
     "run": {
@@ -114,13 +72,13 @@
     },
     "url": "https://modrinth.com/mod/biome-spawn-point",
     "version": "26.3.0-4.1-fabric+forge+neo",
-    "lacks": 26,
+    "lacks": 2,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "biomespawnpoint-26.3.0-4.1.jar",
       "published": "2026-11-07"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

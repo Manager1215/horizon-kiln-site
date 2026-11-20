@@ -10,25 +10,22 @@
   "description": "Nickname and favorite your friends to get a clearer overview of your friends list with the Better Friends List mod!",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
     "net.minecraft.client.gui.screens.friends.AbstractFriendsEntryContainerWidget",
-    "net.minecraft.client.gui.screens.friends.FriendsOverlayScreen",
     "net.minecraft.client.gui.screens.social.PlayerSocialManager",
     "net.minecraft.client.gui.screens.social.PlayerSocialManager.PlayerData",
-    "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
-    "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "net.minecraft.client.renderer.state.gui.pip.GuiEntityRenderState",
-    "net.minecraft.world.item.component.ResolvableProfile",
-    "Minecraft.playerSkinRenderCache()",
     "GuiGraphicsExtractor.scissorStack",
-    "PlayerSkinRenderCache.getOrDefault()"
+    "FriendsOverlayScreen.refreshLists()",
+    "PlayerSkinRenderCache.getOrDefault()",
+    "PlayerSkinRenderCache.RenderInfo.gameProfile()",
+    "PlayerSkinRenderCache.RenderInfo.playerSkin()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "better-friends-list-0.2.2+26.3.jar",
     "published": "2026-09-16"
   },
@@ -60,7 +57,7 @@
     "class": "restart",
     "why": "@modify-args into the game's classes"
   },
-  "lacks": 12,
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -68,23 +65,19 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "Mixin: 2 points inside the game's methods",
-      "com.mojang.authlib.GameProfile",
-      "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
       "net.minecraft.client.gui.screens.friends.AbstractFriendsEntryContainerWidget",
-      "net.minecraft.client.gui.screens.friends.FriendsOverlayScreen",
       "net.minecraft.client.gui.screens.social.PlayerSocialManager",
       "net.minecraft.client.gui.screens.social.PlayerSocialManager.PlayerData",
-      "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
-      "net.minecraft.client.renderer.entity.state.AvatarRenderState",
       "net.minecraft.client.renderer.state.gui.pip.GuiEntityRenderState",
-      "net.minecraft.world.item.component.ResolvableProfile",
-      "Minecraft.playerSkinRenderCache()",
       "GuiGraphicsExtractor.scissorStack",
+      "FriendsOverlayScreen.refreshLists()",
       "PlayerSkinRenderCache.getOrDefault()",
-      "CommonComponents.GUI_CANCEL",
-      "CommonComponents.GUI_DONE"
+      "PlayerSkinRenderCache.RenderInfo.gameProfile()",
+      "PlayerSkinRenderCache.RenderInfo.playerSkin()",
+      "AvatarRenderState.showCape",
+      "AvatarRenderState.skin"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+    "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -95,13 +88,13 @@
     },
     "url": "https://modrinth.com/mod/better-friends-list",
     "version": "0.2.2",
-    "lacks": 15,
+    "lacks": 11,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "better-friends-list-0.2.2+26.3.jar",
       "published": "2026-09-16"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

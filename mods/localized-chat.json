@@ -9,35 +9,26 @@
   "author": "kreezxil",
   "description": "because you hate global chat, or don't want to hear what the neighbors are saying.",
   "needs": [
-    "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
-    "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowChatMessage",
-    "net.minecraft.commands.arguments.MessageArgument",
-    "net.minecraft.network.chat.OutgoingChatMessage",
     "net.minecraft.server.commands.EmoteCommands",
     "net.minecraft.server.commands.MsgCommand",
     "CommandSourceStack.sendChatMessage()",
     "CommandSourceStack.shouldFilterMessageTo()",
+    "MessageArgument.resolveChatMessage()",
     "ChatType.CHAT",
     "ChatType.EMOTE_COMMAND",
     "ChatType.MSG_COMMAND_INCOMING",
     "ChatType.MSG_COMMAND_OUTGOING",
     "ChatType.bind()",
-    "PlayerChatMessage.decoratedContent()",
-    "ServerPlayer.getGameProfile()",
-    "ServerPlayer.sendChatMessage()",
+    "OutgoingChatMessage.create()",
     "ServerPlayer.shouldFilterMessageTo()",
-    "NameAndId.<init>()",
-    "PlayerList.broadcastSystemMessage()",
-    "Player.getCustomName()",
-    "Player.hasCustomName()",
-    "FoodData.setFoodLevel()"
+    "PlayerList.broadcastSystemMessage()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "localizedchat-fabric-26.3-5.5.0.jar",
     "published": "2026-10-01"
   },
@@ -71,38 +62,26 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 22,
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
-      "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
-      "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowChatMessage",
-      "net.minecraft.commands.arguments.MessageArgument",
-      "net.minecraft.network.chat.OutgoingChatMessage",
-      "net.minecraft.network.chat.PlayerChatMessage",
       "net.minecraft.server.commands.EmoteCommands",
       "net.minecraft.server.commands.MsgCommand",
       "CommandSourceStack.sendChatMessage()",
       "CommandSourceStack.shouldFilterMessageTo()",
+      "MessageArgument.resolveChatMessage()",
       "ChatType.CHAT",
       "ChatType.EMOTE_COMMAND",
       "ChatType.MSG_COMMAND_INCOMING",
       "ChatType.MSG_COMMAND_OUTGOING",
       "ChatType.bind()",
-      "ServerPlayer.getDisplayName()",
-      "ServerPlayer.getGameProfile()",
-      "ServerPlayer.giveExperiencePoints()",
-      "ServerPlayer.sendChatMessage()",
+      "OutgoingChatMessage.create()",
       "ServerPlayer.shouldFilterMessageTo()",
-      "NameAndId.<init>()",
-      "PlayerList.broadcastSystemMessage()",
-      "Player.getCustomName()",
-      "Player.getDisplayName()",
-      "Player.hasCustomName()",
-      "FoodData.setFoodLevel()"
+      "PlayerList.broadcastSystemMessage()"
     ],
     "roadmap": "Code next to data (0.3)",
     "run": {
@@ -115,13 +94,13 @@
     },
     "url": "https://modrinth.com/mod/localized-chat",
     "version": "5.5.0",
-    "lacks": 25,
+    "lacks": 13,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "localizedchat-fabric-26.3-5.5.0.jar",
       "published": "2026-10-01"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

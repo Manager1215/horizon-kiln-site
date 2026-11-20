@@ -9,29 +9,19 @@
   "author": "Chiloven945",
   "description": "Continue the last save or server you played from the main screen. Continuation version of the Continue Button.",
   "needs": [
-    "net.minecraft.client.gui.screens.ConnectScreen",
     "net.minecraft.client.gui.screens.DisconnectedScreen",
-    "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
     "net.minecraft.client.gui.screens.worldselection.SelectWorldScreen",
     "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
-    "net.minecraft.client.multiplayer.ServerStatusPinger",
-    "net.minecraft.client.multiplayer.resolver.ServerAddress",
-    "net.minecraft.server.network.EventLoopGroupHolder",
-    "net.minecraft.world.level.storage.WorldData",
     "Minecraft.createWorldOpenFlows()",
-    "Minecraft.getLevelSource()",
-    "Options.useNativeTransport()",
-    "ServerData.motd",
-    "IntegratedServer.getWorldData()",
-    "CommonComponents.CONNECT_FAILED",
-    "LevelStorageSource.levelExists()"
+    "ConnectScreen.startConnecting()",
+    "CommonComponents.CONNECT_FAILED"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "continue-button-continued-fabric-1.1.0+26.3.jar",
     "published": "2026-10-03"
   },
@@ -63,34 +53,19 @@
     "class": "partial",
     "why": "runs threads of its own"
   },
-  "lacks": 16,
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "net.minecraft.client.gui.screens.ConnectScreen",
       "net.minecraft.client.gui.screens.DisconnectedScreen",
-      "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
       "net.minecraft.client.gui.screens.worldselection.SelectWorldScreen",
       "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
-      "net.minecraft.client.multiplayer.ServerStatusPinger",
-      "net.minecraft.client.multiplayer.resolver.ServerAddress",
-      "net.minecraft.client.server.IntegratedServer",
-      "net.minecraft.server.network.EventLoopGroupHolder",
-      "net.minecraft.world.level.storage.LevelResource",
-      "net.minecraft.world.level.storage.WorldData",
       "Minecraft.createWorldOpenFlows()",
-      "Minecraft.getCurrentServer()",
-      "Minecraft.getLevelSource()",
-      "Minecraft.getSingleplayerServer()",
-      "Options.useNativeTransport()",
-      "ServerData.ip",
-      "ServerData.motd",
-      "ServerData.name",
-      "CommonComponents.CONNECT_FAILED",
-      "LevelStorageSource.levelExists()"
+      "ConnectScreen.startConnecting()",
+      "CommonComponents.CONNECT_FAILED"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
     "run": {
@@ -103,13 +78,13 @@
     },
     "url": "https://modrinth.com/mod/continue-button-continued",
     "version": "1.1.0+26.3",
-    "lacks": 21,
+    "lacks": 6,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "continue-button-continued-fabric-1.1.0+26.3.jar",
       "published": "2026-10-03"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

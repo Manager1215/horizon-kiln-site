@@ -10,29 +10,15 @@
   "description": "Hypixel reward claiming in-game.",
   "needs": [
     "Mixin: 7 points inside the game's methods",
-    "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
-    "net.minecraft.client.gui.components.WidgetSprites",
-    "net.minecraft.client.gui.layouts.FrameLayout",
-    "net.minecraft.client.gui.layouts.Layout",
-    "net.minecraft.client.gui.layouts.LayoutSettings",
-    "net.minecraft.client.gui.layouts.LinearLayout",
-    "net.minecraft.client.gui.layouts.LinearLayout.Orientation",
-    "net.minecraft.client.gui.screens.inventory.BookViewScreen",
-    "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.ScreenEffectRenderer",
-    "net.minecraft.client.renderer.extract.LevelExtractor",
-    "net.minecraft.client.renderer.fog.FogRenderer",
-    "net.minecraft.server.dedicated.DedicatedServer",
-    "ClientReceiveMessageEvents.ALLOW_GAME",
-    "GuiGraphicsExtractor.blit()",
-    "GsonHelper.parse()"
+    "GuiGraphicsExtractor.blit()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "rewardclaim-2.6.0.jar",
     "published": "2026-09-22"
   },
@@ -64,7 +50,7 @@
     "class": "restart",
     "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
   },
-  "lacks": 16,
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -72,26 +58,18 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "Mixin: 7 points inside the game's methods",
-      "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
-      "net.minecraft.client.gui.components.WidgetSprites",
-      "net.minecraft.client.gui.layouts.FrameLayout",
-      "net.minecraft.client.gui.layouts.Layout",
-      "net.minecraft.client.gui.layouts.LayoutSettings",
-      "net.minecraft.client.gui.layouts.LinearLayout",
-      "net.minecraft.client.gui.layouts.LinearLayout.Orientation",
-      "net.minecraft.client.gui.screens.inventory.BookViewScreen",
-      "net.minecraft.client.renderer.LevelRenderer",
       "net.minecraft.client.renderer.ScreenEffectRenderer",
-      "net.minecraft.client.renderer.extract.LevelExtractor",
-      "net.minecraft.client.renderer.fog.FogRenderer",
-      "net.minecraft.server.dedicated.DedicatedServer",
-      "ClientReceiveMessageEvents.ALLOW_GAME",
-      "ChatFormatting.stripFormatting()",
       "GuiGraphicsExtractor.blit()",
-      "CommonComponents.NEW_LINE",
-      "GsonHelper.parse()"
+      "FrameLayout.addChild()",
+      "FrameLayout.centerInRectangle()",
+      "LayoutSettings.alignHorizontallyCenter()",
+      "LayoutSettings.defaults()",
+      "LinearLayout.addChild()",
+      "LinearLayout.addChild()",
+      "LinearLayout.spacing()",
+      "LinearLayout.vertical()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+    "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -102,13 +80,13 @@
     },
     "url": "https://modrinth.com/mod/reward-claim",
     "version": "2.6.0",
-    "lacks": 18,
+    "lacks": 10,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "rewardclaim-2.6.0.jar",
       "published": "2026-09-22"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

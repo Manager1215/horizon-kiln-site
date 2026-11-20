@@ -10,25 +10,14 @@
   "description": "A carpet extension mod and a port of JoaCarpet's insane behavior feature to the newer version of Minecraft. This is used to manipulate item entity RNG.",
   "needs": [
     "Mixin: 5 points inside the game's methods",
-    "net.minecraft.world.level.block.piston.PistonBaseBlock",
-    "net.minecraft.world.level.levelgen.RandomSupport",
-    "net.minecraft.world.level.levelgen.RandomSupport.Seed128bit",
-    "net.minecraft.world.level.levelgen.Xoroshiro128PlusPlus",
-    "ServerLevel.getGameRules()",
-    "EntityTypes.ITEM",
-    "ItemEntity.setDefaultPickUpDelay()",
-    "ItemEntity.setPos()",
-    "Level.addFreshEntity()",
-    "BlockState.spawnAfterBreak()",
-    "GameRules.BLOCK_DROPS",
-    "GameRules.get()"
+    "Xoroshiro128PlusPlus.nextLong()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "ibcarpet-26.3-26.09.18.jar",
     "published": "2026-09-18"
   },
@@ -61,7 +50,7 @@
     "class": "restart",
     "why": "@wrap-operation into the game's classes"
   },
-  "lacks": 12,
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -69,18 +58,7 @@
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
       "Mixin: 5 points inside the game's methods",
-      "net.minecraft.world.level.block.piston.PistonBaseBlock",
-      "net.minecraft.world.level.levelgen.RandomSupport",
-      "net.minecraft.world.level.levelgen.RandomSupport.Seed128bit",
-      "net.minecraft.world.level.levelgen.Xoroshiro128PlusPlus",
-      "ServerLevel.getGameRules()",
-      "EntityTypes.ITEM",
-      "ItemEntity.setDefaultPickUpDelay()",
-      "ItemEntity.setPos()",
-      "Level.addFreshEntity()",
-      "BlockState.spawnAfterBreak()",
-      "GameRules.BLOCK_DROPS",
-      "GameRules.get()"
+      "Xoroshiro128PlusPlus.nextLong()"
     ],
     "roadmap": "Code next to data (0.3), Mixin (0.5)",
     "run": {
@@ -93,13 +71,13 @@
     },
     "url": "https://modrinth.com/mod/ibcarpet",
     "version": "26.3-26.09.18",
-    "lacks": 12,
+    "lacks": 1,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "ibcarpet-26.3-26.09.18.jar",
       "published": "2026-09-18"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "intentional-pickup",
   "name": "Intentional Pickup",
-  "version": "fabric-1.0.0+mc26.2",
+  "version": "1.1.0+mc26.2",
   "status": "planned",
   "statusLabel": "Planned",
   "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,16 +9,17 @@
   "author": "VoxelBill",
   "description": "A simple mod that makes mobs only pickup items that are intentionally dropped by players.",
   "needs": [
-    "ItemEntity.getItem()"
+    "DataFixTypes.INTENTIONAL_PICKUP_SAVED_DATA_PICKUP_LISTS",
+    "References.reference()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
-    "file": "intentional_pickup-fabric-1.0.0+mc26.2.jar",
-    "published": "2026-08-16"
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
+    "file": "intentional_pickup-fabric-1.1.0+mc26.2.jar",
+    "published": "2026-11-19"
   },
   "reports": {
     "works": 0,
@@ -34,31 +35,29 @@
     "minecraft"
   ],
   "softOff": {
-    "class": "partial",
-    "why": "data pack files (recipes, loot, tags) stay"
+    "class": "safe",
+    "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 1,
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
-      "net.minecraft.core.HolderSet.Named",
-      "Registry.getOrThrow()",
-      "RegistryAccess.lookupOrThrow()",
-      "ItemEntity.getItem()"
+      "DataFixTypes.INTENTIONAL_PICKUP_SAVED_DATA_PICKUP_LISTS",
+      "References.reference()"
     ],
     "roadmap": "Code next to data (0.3)",
     "url": "https://modrinth.com/mod/intentional-pickup",
-    "version": "fabric-1.0.0+mc26.2",
-    "lacks": 4,
+    "version": "1.1.0+mc26.2",
+    "lacks": 2,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
-      "file": "intentional_pickup-fabric-1.0.0+mc26.2.jar",
-      "published": "2026-08-16"
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
+      "file": "intentional_pickup-fabric-1.1.0+mc26.2.jar",
+      "published": "2026-11-19"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

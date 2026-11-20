@@ -1,0 +1,63 @@
+{
+  "id": "infinite-containers",
+  "name": "Infinite Containers",
+  "version": "1.0",
+  "status": "planned",
+  "statusLabel": "Planned",
+  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "url": "https://modrinth.com/mod/infinite-containers",
+  "author": "snoozyhotdog123",
+  "description": "Make containers like dispensers, furnaces, hoppers, crafters and more infinite, with customized textures to easily tell them apart.",
+  "needs": [
+    "Mixin: 2 points inside the game's methods",
+    "net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityType",
+    "net.minecraft.world.level.block.DropperBlock",
+    "BlockEntityTypes.BLAST_FURNACE",
+    "BlockEntityTypes.CRAFTER",
+    "BlockEntityTypes.DISPENSER",
+    "BlockEntityTypes.DROPPER",
+    "BlockEntityTypes.FURNACE",
+    "BlockEntityTypes.HOPPER",
+    "BlockEntityTypes.SMOKER",
+    "CrafterBlockEntity.getItems()",
+    "HopperBlockEntity.getBlockState()"
+  ],
+  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "evidence": "Not run: Java did not start.",
+  "library": false,
+  "scanned": {
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
+    "file": "infinitecontainers-1.0-fabric-mc26.3.jar",
+    "published": "2026-10-29"
+  },
+  "reports": {
+    "works": 0,
+    "partly": 0,
+    "broken": 0,
+    "latest": []
+  },
+  "run": {
+    "passed": false,
+    "date": "2026-11-20",
+    "kiln": "0.4.6",
+    "ticks": 0,
+    "hud": false,
+    "why": "Java did not start"
+  },
+  "entrypoints": {
+    "main": 1
+  },
+  "mixins": true,
+  "depends": [
+    "fabric-api",
+    "fabricloader",
+    "java",
+    "minecraft"
+  ],
+  "softOff": {
+    "class": "restart",
+    "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
+  },
+  "lacks": 11
+}

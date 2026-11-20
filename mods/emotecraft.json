@@ -11,13 +11,9 @@
   "needs": [
     "an access widener",
     "Mixin: 5 points inside the game's methods",
-    "com.mojang.authlib.exceptions.AuthenticationException",
-    "com.mojang.authlib.minecraft.SessionService",
-    "com.mojang.blaze3d.Blaze3D",
     "io.netty.bootstrap.Bootstrap",
     "io.netty.channel.Channel",
     "io.netty.channel.ChannelFuture",
-    "io.netty.channel.ChannelFutureListener",
     "io.netty.channel.ChannelHandler",
     "io.netty.channel.ChannelHandlerContext",
     "io.netty.channel.ChannelInitializer",
@@ -51,14 +47,18 @@
     "io.netty.handler.codec.http.websocketx.WebSocketClientHandshaker",
     "io.netty.handler.codec.http.websocketx.WebSocketClientHandshakerFactory",
     "io.netty.handler.codec.http.websocketx.WebSocketCloseStatus",
-    "and 80 more"
+    "io.netty.handler.codec.http.websocketx.WebSocketFrame",
+    "io.netty.handler.codec.http.websocketx.WebSocketVersion",
+    "io.netty.handler.codec.http.websocketx.extensions.compression.WebSocketClientCompressionHandler",
+    "io.netty.handler.ssl.SslContext",
+    "and 41 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "emotecraft-for-MC26.3-3.5.0-b.build.179.jar",
     "published": "2026-11-04"
   },
@@ -97,7 +97,7 @@
     "class": "restart",
     "why": "@wrap-operation into the game's classes; runs threads of its own; has network channels"
   },
-  "lacks": 175,
+  "lacks": 81,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -106,16 +106,9 @@
     "needs": [
       "an access widener",
       "Mixin: 5 points inside the game's methods",
-      "com.mojang.authlib.GameProfile",
-      "com.mojang.authlib.exceptions.AuthenticationException",
-      "com.mojang.authlib.minecraft.SessionService",
-      "com.mojang.blaze3d.Blaze3D",
-      "com.mojang.blaze3d.platform.cursor.CursorType",
-      "com.mojang.blaze3d.platform.cursor.CursorTypes",
       "io.netty.bootstrap.Bootstrap",
       "io.netty.channel.Channel",
       "io.netty.channel.ChannelFuture",
-      "io.netty.channel.ChannelFutureListener",
       "io.netty.channel.ChannelHandler",
       "io.netty.channel.ChannelHandlerContext",
       "io.netty.channel.ChannelInitializer",
@@ -146,7 +139,14 @@
       "io.netty.handler.codec.http.websocketx.PongWebSocketFrame",
       "io.netty.handler.codec.http.websocketx.TextWebSocketFrame",
       "io.netty.handler.codec.http.websocketx.WebSocketClientHandshakeException",
-      "and 80 more"
+      "io.netty.handler.codec.http.websocketx.WebSocketClientHandshaker",
+      "io.netty.handler.codec.http.websocketx.WebSocketClientHandshakerFactory",
+      "io.netty.handler.codec.http.websocketx.WebSocketCloseStatus",
+      "io.netty.handler.codec.http.websocketx.WebSocketFrame",
+      "io.netty.handler.codec.http.websocketx.WebSocketVersion",
+      "io.netty.handler.codec.http.websocketx.extensions.compression.WebSocketClientCompressionHandler",
+      "io.netty.handler.ssl.SslContext",
+      "and 67 more"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "run": {
@@ -159,13 +159,13 @@
     },
     "url": "https://modrinth.com/mod/emotecraft",
     "version": "3.5.0-b.build.179",
-    "lacks": 216,
+    "lacks": 110,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "emotecraft-for-MC26.3-3.5.0-b.build.179.jar",
       "published": "2026-11-04"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

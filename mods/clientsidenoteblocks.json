@@ -10,17 +10,17 @@
   "description": "Removes lag when playing noteblocks",
   "needs": [
     "an access widener",
-    "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
-    "net.minecraft.world.level.block.NoteBlock",
-    "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
-    "Level.<init>()"
+    "NoteBlock.getPitchFromNote()",
+    "NoteBlockInstrument.getSoundEvent()",
+    "NoteBlockInstrument.hasCustomSound()",
+    "NoteBlockInstrument.worksAboveNoteBlock()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "clientsidenoteblocks-2.14.jar",
     "published": "2026-09-27"
   },
@@ -60,13 +60,10 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "an access widener",
-      "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
-      "net.minecraft.world.level.block.NoteBlock",
-      "net.minecraft.world.level.block.state.properties.NoteBlockInstrument",
-      "Component.translatableWithFallback()",
-      "RandomSource.nextLong()",
-      "Level.<init>()",
-      "Blocks.NOTE_BLOCK"
+      "NoteBlock.getPitchFromNote()",
+      "NoteBlockInstrument.getSoundEvent()",
+      "NoteBlockInstrument.hasCustomSound()",
+      "NoteBlockInstrument.worksAboveNoteBlock()"
     ],
     "roadmap": "Code next to data (0.3), Mixin (0.5)",
     "run": {
@@ -79,13 +76,13 @@
     },
     "url": "https://modrinth.com/mod/clientsidenoteblocks",
     "version": "2.14",
-    "lacks": 7,
+    "lacks": 4,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "clientsidenoteblocks-2.14.jar",
       "published": "2026-09-27"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

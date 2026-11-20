@@ -10,20 +10,13 @@
   "description": "The block outline that actually matches the block",
   "needs": [
     "com.mojang.blaze3d.platform.Transparency",
-    "net.fabricmc.fabric.api.client.renderer.v1.Renderer",
-    "net.fabricmc.fabric.api.client.renderer.v1.mesh.MutableQuadView",
-    "net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadAtlas",
-    "net.fabricmc.fabric.api.client.renderer.v1.model.ModelHelper",
-    "net.fabricmc.fabric.api.client.renderer.v1.sprite.SpriteFinder",
     "net.fabricmc.fabric.api.client.rendering.v1.InvalidateRenderStateCallback",
     "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.BeforeGizmos",
-    "net.minecraft.world.level.block.BedBlock",
-    "net.minecraft.world.level.block.ChestBlock",
-    "net.minecraft.world.level.block.state.properties.ChestType",
     "PoseStack.last()",
     "PoseStack.Pose.copy()",
     "VertexConsumer.addVertex()",
     "VertexConsumer.setNormal()",
+    "ModelHelper.computeTransparency()",
     "LevelRenderEvents.BEFORE_GIZMOS",
     "BlockStateModel.emitQuads()",
     "BlockStateModel.hasMaterialFlag()",
@@ -31,23 +24,14 @@
     "BlockOutlineRenderState.setData()",
     "SpriteContents.computeTransparency()",
     "TextureAtlas.spriteFinder()",
-    "RandomSource.createThreadLocalInstance()",
-    "BlockState.getOffset()",
-    "BlockState.getSeed()",
-    "AABB.maxX",
-    "AABB.maxY",
-    "AABB.maxZ",
-    "AABB.minX",
-    "AABB.minY",
-    "AABB.minZ",
-    "VoxelShape.toAabbs()"
+    "BedBlock.getConnectedDirection()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "accurate-block-outline-1.0.0.jar",
     "published": "2026-10-18"
   },
@@ -80,5 +64,48 @@
     "class": "partial",
     "why": "runs threads of its own"
   },
-  "lacks": 32
+  "lacks": 16,
+  "development": {
+    "status": "planned",
+    "statusLabel": "Planned",
+    "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+    "evidence": "Not run: Java did not start.",
+    "needs": [
+      "com.mojang.blaze3d.platform.Transparency",
+      "net.fabricmc.fabric.api.client.rendering.v1.InvalidateRenderStateCallback",
+      "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.BeforeGizmos",
+      "PoseStack.last()",
+      "PoseStack.Pose.copy()",
+      "VertexConsumer.addVertex()",
+      "VertexConsumer.setNormal()",
+      "ModelHelper.computeTransparency()",
+      "LevelRenderEvents.BEFORE_GIZMOS",
+      "BlockStateModel.emitQuads()",
+      "BlockStateModel.hasMaterialFlag()",
+      "BlockOutlineRenderState.getData()",
+      "BlockOutlineRenderState.setData()",
+      "SpriteContents.computeTransparency()",
+      "TextureAtlas.spriteFinder()",
+      "BedBlock.getConnectedDirection()"
+    ],
+    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+    "run": {
+      "passed": false,
+      "date": "2026-11-17",
+      "kiln": "development build 2026-11-17 (2aabcd3)",
+      "ticks": 0,
+      "hud": false,
+      "why": "Java did not start"
+    },
+    "url": "https://modrinth.com/mod/accurate-block-outline",
+    "version": "1.0.0",
+    "lacks": 16,
+    "scanned": {
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
+      "file": "accurate-block-outline-1.0.0.jar",
+      "published": "2026-10-18"
+    },
+    "build": "development build 2026-11-20 (eda5a4a5)"
+  }
 }

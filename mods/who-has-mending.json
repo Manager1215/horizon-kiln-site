@@ -9,32 +9,15 @@
   "author": "AcaciaTide",
   "description": "Displays villager trade information (only enchanted books and their costs) above their heads. Useful for finding mending books!",
   "needs": [
-    "net.minecraft.client.gui.screens.inventory.MerchantScreen",
-    "net.minecraft.client.renderer.entity.LivingEntityRenderer",
-    "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
-    "net.minecraft.world.entity.EntityAttachment",
-    "net.minecraft.world.entity.EntityAttachments",
-    "net.minecraft.world.entity.npc.villager.Villager",
-    "net.minecraft.world.entity.npc.villager.VillagerData",
-    "net.minecraft.world.inventory.MerchantMenu",
-    "net.minecraft.world.item.trading.MerchantOffer",
-    "net.minecraft.world.level.storage.WorldData",
-    "net.minecraft.world.phys.EntityHitResult",
-    "Object2IntMap.Entry.getKey()",
-    "ClientLevel.getEntitiesOfClass()",
-    "LocalPlayer.getBoundingBox()",
-    "IntegratedServer.getWorldData()",
-    "MerchantOffers.isEmpty()",
-    "MerchantOffers.iterator()",
-    "MerchantOffers.size()",
-    "AABB.inflate()"
+    "LivingEntityRenderState.nameTag",
+    "LivingEntityRenderState.nameTagAttachment"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "whohasmending-fabric-2.0.2-26.3.jar",
     "published": "2026-09-20"
   },
@@ -67,41 +50,21 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 19,
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "net.minecraft.client.gui.screens.inventory.MerchantScreen",
-      "net.minecraft.client.renderer.entity.LivingEntityRenderer",
-      "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
-      "net.minecraft.client.server.IntegratedServer",
-      "net.minecraft.world.entity.EntityAttachment",
-      "net.minecraft.world.entity.EntityAttachments",
-      "net.minecraft.world.entity.npc.villager.Villager",
-      "net.minecraft.world.entity.npc.villager.VillagerData",
-      "net.minecraft.world.inventory.MerchantMenu",
-      "net.minecraft.world.item.trading.MerchantOffer",
-      "net.minecraft.world.level.storage.WorldData",
-      "net.minecraft.world.phys.EntityHitResult",
       "Object2IntMap.Entry.getKey()",
-      "Minecraft.gameDirectory",
-      "Minecraft.getCurrentServer()",
-      "Minecraft.getSingleplayerServer()",
-      "ClientLevel.getEntitiesOfClass()",
-      "ServerData.ip",
-      "LocalPlayer.getBoundingBox()",
-      "Items.ENCHANTED_BOOK",
-      "EnchantmentHelper.getEnchantmentsForCrafting()",
-      "ItemEnchantments.entrySet()",
+      "LivingEntityRenderState.nameTag",
+      "LivingEntityRenderState.nameTagAttachment",
       "MerchantOffers.isEmpty()",
       "MerchantOffers.iterator()",
-      "MerchantOffers.size()",
-      "AABB.inflate()"
+      "MerchantOffers.size()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -112,13 +75,13 @@
     },
     "url": "https://modrinth.com/mod/who-has-mending",
     "version": "2.0.2",
-    "lacks": 26,
+    "lacks": 6,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "whohasmending-fabric-2.0.2-26.3.jar",
       "published": "2026-09-20"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

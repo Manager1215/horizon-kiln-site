@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Immersive Panoramas — Kiln mods</title>
-<meta name="description" content="Immersive Panoramas 1.0.1-26.3+fabric in Horizon through Kiln: Planned. Not run: Java did not start.">
+<meta name="description" content="Immersive Panoramas 1.1-26.3+fabric in Horizon through Kiln: Planned. Not run: Java did not start.">
 <link rel="canonical" href="https://horizon-kiln.cc/mods/immersive-panoramas.html">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3eee6">
@@ -47,7 +47,7 @@
     <div class="sheet-head">
       <p class="mod-page-status"><span class="mark mark-planned">Planned</span></p>
       <dl class="mod-facts">
-        <div><dt>Version</dt><dd>1.0.1-26.3+fabric</dd></div>
+        <div><dt>Version</dt><dd>1.1-26.3+fabric</dd></div>
         <div><dt>Author</dt><dd>Ersi</dd></div>
         <div><dt>Page</dt><dd><a href="https://modrinth.com/mod/immersive-panoramas" rel="noopener">modrinth.com/mod/immersive-panoramas</a></dd></div>
       </dl>
@@ -61,7 +61,7 @@
       </section>
       <section class="mod-section">
         <h2>What it needs from Kiln</h2>
-        <ul class="needs-list"><li>Mixin: 5 points inside the game&#x27;s methods</li><li>net.minecraft.TracingExecutor</li><li>net.minecraft.client.gui.screens.DisconnectedScreen</li><li>net.minecraft.client.gui.screens.GenericMessageScreen</li><li>net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen</li><li>net.minecraft.client.gui.screens.worldselection.SelectWorldScreen</li><li>net.minecraft.client.renderer.CubeMap</li><li>net.minecraft.client.renderer.DynamicGpuData</li><li>net.minecraft.client.renderer.LevelRenderer</li><li>net.minecraft.client.renderer.Panorama</li><li>net.minecraft.client.renderer.extract.LevelExtractor</li><li>net.minecraft.world.level.storage.WorldData</li><li>RenderTarget.resize()</li><li>NativeImage.copyRect()</li><li>NativeImage.getPixelBytes()</li><li>Window.setHeight()</li><li>Window.setWidth()</li><li>RenderSystem.getDynamicUniforms()</li><li>TransientMemory.uploadStaging()</li><li>Camera.disablePanoramicMode()</li><li>Camera.enablePanoramicMode()</li><li>Minecraft.isLocalServer()</li><li>Minecraft.levelExtractor</li><li>LocalPlayer.setXRot()</li><li>LocalPlayer.setYBodyRot()</li><li>LocalPlayer.setYHeadRot()</li><li>LocalPlayer.setYRot()</li><li>LocalPlayer.xRotO</li><li>LocalPlayer.yBodyRotO</li><li>LocalPlayer.yHeadRotO</li><li>LocalPlayer.yRotO</li><li>GameRenderer.extract()</li><li>GameRenderer.mainCamera()</li><li>GameRenderer.panorama()</li><li>GameRenderer.renderLevel()</li><li>GameRenderer.setRenderBlockOutline()</li><li>GameRenderer.update()</li><li>RenderPipelines.GUI_OPAQUE_TEXTURED_BACKGROUND</li><li>GameRenderState.shouldRenderLevel</li><li>IntegratedServer.getWorldData()</li><li>Util.ioPool()</li></ul><p>On the roadmap: Minecraft&#x27;s libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)</p>
+        <ul class="needs-list"><li>Mixin: 6 points inside the game&#x27;s methods</li><li>net.minecraft.client.gui.screens.ProgressScreen</li><li>net.minecraft.client.renderer.CubeMap</li><li>net.minecraft.client.renderer.DynamicGpuData</li><li>net.minecraft.client.renderer.Panorama</li><li>net.minecraft.client.renderer.state.gui.PanoramaRenderState</li><li>RenderTarget.width</li><li>NativeImage.copyRect()</li><li>NativeImage.getPixelBytes()</li><li>Window.setHeight()</li><li>Window.setWidth()</li><li>RenderSystem.getCompiledPipeline()</li><li>RenderSystem.getDynamicUniforms()</li><li>SamplerCache.getClampToEdge()</li><li>GpuBuffer.slice()</li><li>GpuBufferSlice.slice()</li><li>TransientMemory.uploadStaging()</li><li>CommandEncoder.createRenderPass()</li><li>Minecraft.levelExtractor</li><li>GameRenderer.extract()</li><li>GameRenderer.mainCamera()</li><li>GameRenderer.panorama()</li><li>GameRenderer.renderLevel()</li><li>GameRenderer.resize()</li><li>GameRenderer.setRenderBlockOutline()</li><li>GameRenderer.update()</li><li>RenderPipelines.TRACY_BLIT</li><li>EntityRenderState.shadowPieces</li><li>LevelExtractor.collectPerFrameMainThreadGizmos()</li><li>GameRenderState.guiRenderState</li><li>GameRenderState.shouldRenderLevel</li><li>GuiRenderState.panoramaRenderState</li></ul><p>On the roadmap: Minecraft&#x27;s libraries and client API (0.2), Mixin (0.5)</p>
       </section>
       <section class="mod-section">
         <h2>In the author&#x27;s words</h2>
@@ -69,7 +69,7 @@
       </section>
       <section class="mod-section">
         <h2>Scan</h2>
-        <p>Scanned on 16 November 2026 against Kiln 0.4.5, file immersivepanoramas-fabric-1.0.1-26.3.jar. The scan reads the mod&#x27;s classes; it does not run them.</p>
+        <p>Scanned on 20 November 2026 against Kiln 0.4.8, file immersivepanoramas-fabric-1.1-26.3.jar. The scan reads the mod&#x27;s classes; it does not run them.</p>
       </section>
       <section class="mod-section reports" id="reports" data-reports="immersive-panoramas">
         <h2>Reports from players</h2>
@@ -86,7 +86,7 @@
             <label><input type="radio" name="result" value="broken"> It doesn't work</label>
           </fieldset>
           <p class="report-field"><label for="report-build">Kiln build</label><select id="report-build" name="channel"><option value="release">The latest release</option><option value="dev">The current development build</option></select></p>
-          <p class="report-field"><label for="report-version">Mod version</label><input id="report-version" name="version" maxlength="64" autocomplete="off" spellcheck="false" value="1.0.1-26.3+fabric"></p>
+          <p class="report-field"><label for="report-version">Mod version</label><input id="report-version" name="version" maxlength="64" autocomplete="off" spellcheck="false" value="1.1-26.3+fabric"></p>
           <p class="report-field"><label for="report-text">What you saw, optional</label><textarea id="report-text" name="text" maxlength="400" rows="4"></textarea></p>
           <p class="report-note">Shown at once with your name and the date. One report per build: another for the same build replaces it.</p>
           <p class="report-actions"><button type="submit" class="report-send">Send the report</button> <button type="button" class="report-delete" data-report-delete hidden>Delete my report for this build</button> <span class="report-status" data-report-status aria-live="polite"></span></p>

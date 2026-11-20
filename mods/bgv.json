@@ -9,46 +9,23 @@
   "author": "kokiriglade",
   "description": "A mod that lets you see the actual biome grid",
   "needs": [
-    "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
-    "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "net.minecraft.client.gui.components.debug.DebugEntryNoop",
-    "net.minecraft.client.multiplayer.ClientChunkCache",
-    "net.minecraft.client.renderer.LevelRenderer",
     "net.minecraft.client.renderer.feature.CustomFeatureRenderer",
     "net.minecraft.client.renderer.feature.CustomFeatureRenderer.Submit",
-    "net.minecraft.client.renderer.feature.phase.SimpleFeatureRenderPhase",
-    "net.minecraft.client.renderer.rendertype.RenderSetup",
-    "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
-    "net.minecraft.core.QuartPos",
-    "net.minecraft.util.StrictJsonParser",
     "PoseStack.last()",
     "PoseStack.Pose.copy()",
-    "RenderPipeline.builder()",
-    "DebugScreenEntries.register()",
-    "ClientLevel.getChunkSource()",
-    "RenderPipelines.DEBUG_FILLED_SNIPPET",
     "SubmitNodeCollection.afterTerrain",
     "Frustum.getCamX()",
     "Frustum.getCamY()",
     "Frustum.getCamZ()",
-    "Frustum.isVisible()",
-    "RenderType.create()",
-    "TextColor.GREEN",
-    "MinecraftServer.executeIfPossible()",
-    "MinecraftServer.getResourceManager()",
-    "ExtraCodecs.intRange()",
-    "LevelChunk.getSectionIndexFromSectionY()",
-    "LevelChunk.getSectionYFromSectionIndex()",
-    "LevelChunk.getSections()",
-    "LevelChunkSection.getBiomes()",
-    "LevelChunkSection.getNoiseBiome()"
+    "Frustum.isVisible()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "biome-grid-viewer-1.0.1.jar",
     "published": "2026-09-18"
   },
@@ -81,5 +58,46 @@
     "class": "partial",
     "why": "has network channels; generates in the world"
   },
-  "lacks": 33
+  "lacks": 10,
+  "development": {
+    "status": "planned",
+    "statusLabel": "Planned",
+    "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+    "evidence": "Not run: Java did not start.",
+    "needs": [
+      "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
+      "net.minecraft.client.gui.components.debug.DebugEntryNoop",
+      "net.minecraft.client.renderer.feature.CustomFeatureRenderer",
+      "net.minecraft.client.renderer.feature.CustomFeatureRenderer.Submit",
+      "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
+      "PoseStack.last()",
+      "PoseStack.Pose.copy()",
+      "RenderPipeline.builder()",
+      "SubmitNodeCollection.afterTerrain",
+      "Frustum.getCamX()",
+      "Frustum.getCamY()",
+      "Frustum.getCamZ()",
+      "Frustum.isVisible()",
+      "RenderSetup.builder()"
+    ],
+    "roadmap": "Minecraft's libraries and client API (0.2)",
+    "run": {
+      "passed": false,
+      "date": "2026-11-17",
+      "kiln": "development build 2026-11-17 (2aabcd3)",
+      "ticks": 0,
+      "hud": false,
+      "why": "Java did not start"
+    },
+    "url": "https://modrinth.com/mod/bgv",
+    "version": "1.0.1",
+    "lacks": 14,
+    "scanned": {
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
+      "file": "biome-grid-viewer-1.0.1.jar",
+      "published": "2026-09-18"
+    },
+    "build": "development build 2026-11-20 (eda5a4a5)"
+  }
 }

@@ -10,23 +10,14 @@
   "description": "A mod that expands your enderchest from the vanilla 3 rows (27 slots) to up to 6 rows (54 slots).",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.loader.api.VersionParsingException",
-    "net.minecraft.world.SimpleMenuProvider",
-    "net.minecraft.world.entity.monster.piglin.PiglinAi",
-    "net.minecraft.world.inventory.PlayerEnderChestContainer",
-    "net.minecraft.world.level.block.EnderChestBlock",
-    "net.minecraft.world.level.block.entity.EnderChestBlockEntity",
-    "Version.parse()",
-    "ServerPlayer.getEnderChestInventory()",
-    "Player.getEnderChestInventory()",
-    "BlockState.isRedstoneConductor()"
+    "PlayerEnderChestContainer.setActiveChest()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Machines (0.4), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "xxlenderchest-1.1.8.jar",
     "published": "2026-10-21"
   },
@@ -59,7 +50,7 @@
     "class": "partial",
     "why": "runs threads of its own"
   },
-  "lacks": 10,
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -67,24 +58,9 @@
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
       "Mixin: 1 point inside the game's methods",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-      "net.fabricmc.loader.api.VersionParsingException",
-      "net.minecraft.world.SimpleMenuProvider",
-      "net.minecraft.world.entity.monster.piglin.PiglinAi",
-      "net.minecraft.world.inventory.PlayerEnderChestContainer",
-      "net.minecraft.world.level.block.EnderChestBlock",
-      "net.minecraft.world.level.block.entity.EnderChestBlockEntity",
-      "ServerLifecycleEvents.SERVER_STARTED",
-      "Version.parse()",
-      "ServerPlayer.getEnderChestInventory()",
-      "Player.getEnderChestInventory()",
-      "MenuType.GENERIC_9x3",
-      "MenuType.GENERIC_9x4",
-      "MenuType.GENERIC_9x5",
-      "MenuType.GENERIC_9x6",
-      "BlockState.isRedstoneConductor()"
+      "PlayerEnderChestContainer.setActiveChest()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+    "roadmap": "Machines (0.4), Mixin (0.5)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -95,13 +71,13 @@
     },
     "url": "https://modrinth.com/mod/xxlenderchest",
     "version": "1.1.8",
-    "lacks": 16,
+    "lacks": 1,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "xxlenderchest-1.1.8.jar",
       "published": "2026-10-21"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

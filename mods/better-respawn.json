@@ -10,30 +10,16 @@
   "description": "This mod adds a mechanic that lets you respawn near your death location.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.network.protocol.game.ServerboundClientCommandPacket",
-    "net.minecraft.network.protocol.game.ServerboundClientCommandPacket.Action",
     "net.minecraft.server.level.PlayerSpawnFinder",
-    "net.minecraft.server.level.ServerPlayer.RespawnConfig",
-    "BlockPos.containing()",
-    "BlockPos.distManhattan()",
-    "ServerLevel.getMinY()",
-    "ServerPlayer.findRespawnPositionAndUseSpawnBlock()",
-    "ServerPlayer.getRespawnConfig()",
-    "ServerPlayer.hasDisconnected()",
-    "ServerPlayer.setRespawnPosition()",
-    "ServerGamePacketListenerImpl.handleClientCommand()",
-    "Block.isFaceFull()",
-    "BlockState.getCollisionShape()",
-    "WorldBorder.clampToBounds()",
-    "LevelData.RespawnData.dimension()",
-    "LevelData.RespawnData.pos()"
+    "ServerboundClientCommandPacket.getAction()",
+    "ServerPlayer.RespawnConfig.CODEC"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "better-respawn-fabric-2.1.1+26.3.jar",
     "published": "2026-10-09"
   },
@@ -64,7 +50,7 @@
     "class": "partial",
     "why": "runs threads of its own"
   },
-  "lacks": 17,
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -72,24 +58,9 @@
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
       "Mixin: 1 point inside the game's methods",
-      "net.minecraft.network.protocol.game.ServerboundClientCommandPacket",
-      "net.minecraft.network.protocol.game.ServerboundClientCommandPacket.Action",
       "net.minecraft.server.level.PlayerSpawnFinder",
-      "net.minecraft.server.level.ServerPlayer.RespawnConfig",
-      "BlockPos.containing()",
-      "BlockPos.distManhattan()",
-      "ServerLevel.getMinY()",
-      "ServerPlayer.connection",
-      "ServerPlayer.findRespawnPositionAndUseSpawnBlock()",
-      "ServerPlayer.getRespawnConfig()",
-      "ServerPlayer.hasDisconnected()",
-      "ServerPlayer.setRespawnPosition()",
-      "ServerGamePacketListenerImpl.handleClientCommand()",
-      "Block.isFaceFull()",
-      "BlockState.getCollisionShape()",
-      "WorldBorder.clampToBounds()",
-      "LevelData.RespawnData.dimension()",
-      "LevelData.RespawnData.pos()"
+      "ServerboundClientCommandPacket.getAction()",
+      "ServerPlayer.RespawnConfig.CODEC"
     ],
     "roadmap": "Code next to data (0.3), Mixin (0.5)",
     "run": {
@@ -102,13 +73,13 @@
     },
     "url": "https://modrinth.com/mod/better-respawn",
     "version": "fabric-2.1.1+26.3",
-    "lacks": 18,
+    "lacks": 3,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "better-respawn-fabric-2.1.1+26.3.jar",
       "published": "2026-10-09"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

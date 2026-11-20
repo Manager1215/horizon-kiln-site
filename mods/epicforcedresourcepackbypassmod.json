@@ -10,26 +10,20 @@
   "description": "Fabric mod to reject and bypass forced resource packs.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.gui.layouts.LinearLayout",
     "net.minecraft.client.gui.screens.ConnectScreen.1",
     "net.minecraft.client.multiplayer.ClientCommonPacketListenerImpl.PackConfirmScreen",
     "net.minecraft.client.multiplayer.ClientCommonPacketListenerImpl.PackConfirmScreen.PendingRequest",
     "net.minecraft.client.multiplayer.ServerData.ServerPackStatus",
-    "net.minecraft.client.multiplayer.ServerList",
-    "net.minecraft.client.resources.server.DownloadedPackSource",
-    "net.minecraft.client.resources.server.ServerPackManager",
-    "net.minecraft.client.resources.server.ServerPackManager.PackPromptStatus",
-    "Minecraft.getDownloadedPackSource()",
     "ServerData.getResourcePackStatus()",
     "ServerData.setResourcePackStatus()",
-    "Connection.send()"
+    "ServerList.saveSingleServer()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "EpicForcedResourcePackBypassMod-1.9.jar",
     "published": "2026-07-31"
   },
@@ -48,7 +42,7 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 13,
+  "lacks": 7,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -56,30 +50,25 @@
     "evidence": "",
     "needs": [
       "Mixin: 2 points inside the game's methods",
-      "net.minecraft.client.gui.layouts.LinearLayout",
       "net.minecraft.client.gui.screens.ConnectScreen.1",
       "net.minecraft.client.multiplayer.ClientCommonPacketListenerImpl.PackConfirmScreen",
       "net.minecraft.client.multiplayer.ClientCommonPacketListenerImpl.PackConfirmScreen.PendingRequest",
       "net.minecraft.client.multiplayer.ServerData.ServerPackStatus",
-      "net.minecraft.client.multiplayer.ServerList",
-      "net.minecraft.client.resources.server.DownloadedPackSource",
-      "net.minecraft.client.resources.server.ServerPackManager",
-      "net.minecraft.client.resources.server.ServerPackManager.PackPromptStatus",
-      "Minecraft.getDownloadedPackSource()",
+      "LinearLayout.addChild()",
       "ServerData.getResourcePackStatus()",
       "ServerData.setResourcePackStatus()",
-      "Connection.send()"
+      "ServerList.saveSingleServer()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+    "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
     "url": "https://modrinth.com/mod/epicforcedresourcepackbypassmod",
     "version": "1.9",
-    "lacks": 13,
+    "lacks": 8,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "EpicForcedResourcePackBypassMod-1.9.jar",
       "published": "2026-07-31"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

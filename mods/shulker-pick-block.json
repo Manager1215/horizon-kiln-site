@@ -9,27 +9,14 @@
   "author": "PA9",
   "description": "Extend vanilla pick block to reach inside your carried shulker boxes, automatically pulling matching items into your hand without needing to place the box down first. This mod also integrates with Litematica's Easy Place.",
   "needs": [
-    "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.gui.layouts.GridLayout",
-    "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
-    "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
-    "net.minecraft.client.gui.layouts.LinearLayout",
-    "net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket",
-    "net.minecraft.world.level.block.ShulkerBoxBlock",
-    "CycleButton.Builder.withTooltip()",
-    "ClientPacketListener.send()",
-    "ByteBufCodecs.registry()",
-    "ServerPlayer.isAlive()",
-    "Inventory.getSuitableHotbarSlot()",
-    "InventoryMenu.sendAllDataToRemote()",
-    "BlockState.getCloneItemStack()"
+    "CycleButton.Builder.withTooltip()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "shulker-pick-block - 26.3 - 1.1.1.jar",
     "published": "2026-10-22"
   },
@@ -63,33 +50,26 @@
     "class": "partial",
     "why": "has network channels"
   },
-  "lacks": 14,
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "net.minecraft.client.OptionInstance.TooltipSupplier",
-      "net.minecraft.client.gui.layouts.GridLayout",
       "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
-      "net.minecraft.client.gui.layouts.HeaderAndFooterLayout",
-      "net.minecraft.client.gui.layouts.LinearLayout",
-      "net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket",
-      "net.minecraft.world.level.block.ShulkerBoxBlock",
-      "Minecraft.getSingleplayerServer()",
       "CycleButton.Builder.withTooltip()",
-      "ClientPacketListener.send()",
-      "CommonComponents.GUI_CANCEL",
-      "CommonComponents.GUI_DONE",
-      "ByteBufCodecs.registry()",
-      "MinecraftServer.execute()",
-      "ServerPlayer.isAlive()",
-      "Inventory.getSuitableHotbarSlot()",
-      "InventoryMenu.sendAllDataToRemote()",
-      "BlockState.getCloneItemStack()"
+      "GridLayout.createRowHelper()",
+      "GridLayout.spacing()",
+      "HeaderAndFooterLayout.addTitleHeader()",
+      "HeaderAndFooterLayout.addToContents()",
+      "HeaderAndFooterLayout.addToFooter()",
+      "HeaderAndFooterLayout.arrangeElements()",
+      "LinearLayout.addChild()",
+      "LinearLayout.horizontal()",
+      "LinearLayout.spacing()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+    "roadmap": "Minecraft's libraries and client API (0.2)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -100,13 +80,13 @@
     },
     "url": "https://modrinth.com/mod/shulker-pick-block",
     "version": "1.1.1",
-    "lacks": 18,
+    "lacks": 11,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "shulker-pick-block - 26.3 - 1.1.1.jar",
       "published": "2026-10-22"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

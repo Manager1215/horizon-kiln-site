@@ -10,29 +10,18 @@
   "description": "Nearby Delight lets Farmer's Delight Cooking Pots automatically use ingredients from nearby storage. Pick a recipe, and the pot does the rest.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.recipebook.ServerPlaceRecipe",
-    "net.minecraft.recipebook.ServerPlaceRecipe.CraftingMenuAccess",
-    "net.minecraft.world.inventory.RecipeBookMenu.PostPlaceAction",
-    "net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity",
-    "net.minecraft.world.level.block.entity.SmokerBlockEntity",
-    "BlockPos.distSqr()",
-    "NonNullList.iterator()",
     "ByteBufCodecs.CONTAINER_ID",
-    "MinecraftServer.getTickCount()",
-    "ServerChunkCache.getChunkNow()",
-    "StackedItemContents.accountSimpleStack()",
-    "StackedItemContents.accountStack()",
     "SmokerMenu.handlePlacement()",
-    "ItemStack.OPTIONAL_LIST_STREAM_CODEC",
-    "RecipeManager.byKey()",
-    "LevelChunk.getBlockEntities()"
+    "SmokerBlockEntity.getBlockPos()",
+    "SmokerBlockEntity.getItem()",
+    "SmokerBlockEntity.setChanged()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "nearby-delight-1.6.0.jar",
     "published": "2026-11-14"
   },
@@ -67,7 +56,7 @@
     "class": "partial",
     "why": "has network channels"
   },
-  "lacks": 16,
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -75,35 +64,30 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "Mixin: 2 points inside the game's methods",
-      "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
-      "net.minecraft.recipebook.ServerPlaceRecipe",
-      "net.minecraft.recipebook.ServerPlaceRecipe.CraftingMenuAccess",
-      "net.minecraft.world.inventory.RecipeBookMenu.PostPlaceAction",
-      "BlockPos.MutableBlockPos.set()",
-      "NonNullList.iterator()",
-      "StackedItemContents.accountSimpleStack()",
-      "StackedItemContents.accountStack()",
-      "ItemStack.OPTIONAL_LIST_STREAM_CODEC",
-      "RecipeManager.byKey()"
+      "ByteBufCodecs.CONTAINER_ID",
+      "SmokerMenu.handlePlacement()",
+      "SmokerBlockEntity.getBlockPos()",
+      "SmokerBlockEntity.getItem()",
+      "SmokerBlockEntity.setChanged()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+    "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
     "run": {
       "passed": false,
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-17",
+      "kiln": "development build 2026-11-17 (2aabcd3)",
       "ticks": 0,
       "hud": false,
       "why": "Java did not start"
     },
     "url": "https://modrinth.com/mod/nearby-delight",
-    "version": "1.5.0",
-    "lacks": 10,
+    "version": "1.6.0",
+    "lacks": 5,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
-      "file": "nearby-delight-1.5.0.jar",
-      "published": "2026-10-03"
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
+      "file": "nearby-delight-1.6.0.jar",
+      "published": "2026-11-14"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

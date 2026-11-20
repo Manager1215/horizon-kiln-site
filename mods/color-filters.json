@@ -10,20 +10,22 @@
   "description": "NVIDIA style color filters inside Minecraft, with presets. Control vibrance, saturation, contrast, sharpness and more, works with all shaderpacks and resource packs!",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.blaze3d.buffers.Std140Builder",
-    "com.mojang.blaze3d.resource.GraphicsResourceAllocator",
-    "net.minecraft.client.renderer.PostChain",
-    "net.minecraft.client.renderer.PostPass",
-    "net.minecraft.client.renderer.ShaderManager",
+    "Std140Builder.intoBuffer()",
+    "Std140Builder.putFloat()",
+    "Std140Builder.putInt()",
     "RenderTarget.width",
-    "Minecraft.getShaderManager()"
+    "GraphicsResourceAllocator.UNPOOLED",
+    "Minecraft.getShaderManager()",
+    "PostChain.MAIN_TARGET_ID",
+    "PostChain.process()",
+    "ShaderManager.getPostChain()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "KairosColorFilters-1.3.3+26.3.jar",
     "published": "2026-09-26"
   },
@@ -55,7 +57,7 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 7,
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -63,15 +65,15 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "Mixin: 1 point inside the game's methods",
-      "com.mojang.blaze3d.buffers.Std140Builder",
-      "com.mojang.blaze3d.resource.GraphicsResourceAllocator",
-      "net.minecraft.client.renderer.PostChain",
-      "net.minecraft.client.renderer.PostPass",
-      "net.minecraft.client.renderer.ShaderManager",
+      "Std140Builder.intoBuffer()",
+      "Std140Builder.putFloat()",
+      "Std140Builder.putInt()",
       "RenderTarget.width",
-      "KeyMapping.resetMapping()",
-      "KeyMapping.setKey()",
-      "Minecraft.getShaderManager()"
+      "GraphicsResourceAllocator.UNPOOLED",
+      "Minecraft.getShaderManager()",
+      "PostChain.MAIN_TARGET_ID",
+      "PostChain.process()",
+      "ShaderManager.getPostChain()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
     "run": {
@@ -86,11 +88,11 @@
     "version": "1.3.3+26.3",
     "lacks": 9,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "KairosColorFilters-1.3.3+26.3.jar",
       "published": "2026-09-26"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

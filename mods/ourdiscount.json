@@ -9,24 +9,16 @@
   "author": "LukysGaming",
   "description": "This mod allows a villager's discount to be shared with all players on the server.",
   "needs": [
-    "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-    "net.fabricmc.fabric.api.networking.v1.ServerConfigurationConnectionEvents.Disconnect",
-    "net.minecraft.server.network.ServerLoginPacketListenerImpl",
     "net.minecraft.world.entity.ai.gossip.GossipContainer",
     "net.minecraft.world.entity.ai.gossip.GossipType",
-    "net.minecraft.world.entity.npc.villager.Villager",
-    "ServerConfigurationConnectionEvents.DISCONNECT",
-    "MinecraftServer.getAllLevels()",
-    "MinecraftServer.getSingleplayerProfile()",
-    "MinecraftServer.isDedicatedServer()",
-    "ServerLevel.getAllEntities()"
+    "Villager.getGossips()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "ourdiscount-26.3.jar",
     "published": "2026-11-07"
   },
@@ -59,31 +51,18 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 11,
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
-      "com.mojang.authlib.GameProfile",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-      "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-      "net.fabricmc.fabric.api.networking.v1.ServerConfigurationConnectionEvents.Disconnect",
-      "net.minecraft.server.network.ServerLoginPacketListenerImpl",
       "net.minecraft.world.entity.ai.gossip.GossipContainer",
       "net.minecraft.world.entity.ai.gossip.GossipType",
-      "net.minecraft.world.entity.npc.villager.Villager",
-      "ServerLifecycleEvents.SERVER_STARTING",
-      "ServerConfigurationConnectionEvents.DISCONNECT",
-      "Connection.isConnected()",
-      "Connection.isMemoryConnection()",
-      "MinecraftServer.getAllLevels()",
-      "MinecraftServer.getSingleplayerProfile()",
-      "MinecraftServer.isDedicatedServer()",
-      "ServerLevel.getAllEntities()"
+      "Villager.getGossips()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+    "roadmap": "Code next to data (0.3)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -94,13 +73,13 @@
     },
     "url": "https://modrinth.com/mod/ourdiscount",
     "version": "26.3",
-    "lacks": 16,
+    "lacks": 3,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "ourdiscount-26.3.jar",
       "published": "2026-11-07"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

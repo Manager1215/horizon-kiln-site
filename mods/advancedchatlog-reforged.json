@@ -9,8 +9,6 @@
   "author": "flyingfinger.te",
   "description": "View and search your full, persistent chat history for AdvancedChat. Refurbished Minecraft 26.x version of DarkKronicle AdvancedChatLog.",
   "needs": [
-    "net.minecraft.client.gui.ActiveTextCollector",
-    "net.minecraft.client.gui.ActiveTextCollector.ClickableStyleFinder",
     "org.apache.logging.log4j.core.Logger",
     "org.apache.logging.log4j.core.LoggerContext",
     "org.apache.logging.log4j.core.appender.AbstractAppender",
@@ -21,16 +19,14 @@
     "org.apache.logging.log4j.core.appender.RollingRandomAccessFileAppender.Builder",
     "org.apache.logging.log4j.core.appender.rolling.OnStartupTriggeringPolicy",
     "org.apache.logging.log4j.core.appender.rolling.TimeBasedTriggeringPolicy",
-    "org.apache.logging.log4j.core.appender.rolling.TimeBasedTriggeringPolicy.Builder",
-    "PlayerInfo.getProfile()",
-    "Style.withInsertion()"
+    "org.apache.logging.log4j.core.appender.rolling.TimeBasedTriggeringPolicy.Builder"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "AdvancedChatLog-1.3.1-26.3.jar",
     "published": "2026-10-09"
   },
@@ -64,17 +60,13 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 15,
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "com.mojang.authlib.GameProfile",
-      "net.minecraft.client.gui.ActiveTextCollector",
-      "net.minecraft.client.gui.ActiveTextCollector.ClickableStyleFinder",
-      "net.minecraft.network.chat.ComponentSerialization",
       "org.apache.logging.log4j.core.Logger",
       "org.apache.logging.log4j.core.LoggerContext",
       "org.apache.logging.log4j.core.appender.AbstractAppender",
@@ -86,13 +78,9 @@
       "org.apache.logging.log4j.core.appender.rolling.OnStartupTriggeringPolicy",
       "org.apache.logging.log4j.core.appender.rolling.TimeBasedTriggeringPolicy",
       "org.apache.logging.log4j.core.appender.rolling.TimeBasedTriggeringPolicy.Builder",
-      "PlayerInfo.getProfile()",
-      "Component.getSiblings()",
-      "MutableComponent.getSiblings()",
-      "Style.withInsertion()",
-      "Util.getMillis()"
+      "ActiveTextCollector.ClickableStyleFinder.accept()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+    "roadmap": "Minecraft's libraries and client API (0.2)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -103,13 +91,13 @@
     },
     "url": "https://modrinth.com/mod/advancedchatlog-reforged",
     "version": "1.3.1-26.3",
-    "lacks": 20,
+    "lacks": 12,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "AdvancedChatLog-1.3.1-26.3.jar",
       "published": "2026-10-09"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

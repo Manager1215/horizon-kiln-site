@@ -10,32 +10,18 @@
   "description": "A Minecraft mod that adds more attributes to the game.",
   "needs": [
     "Mixin: 15 points inside the game's methods",
-    "net.minecraft.tags.DamageTypeTags",
-    "net.minecraft.world.damagesource.DamageTypes",
-    "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
-    "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
-    "net.minecraft.world.entity.ai.attributes.RangedAttribute",
-    "net.minecraft.world.entity.ai.targeting.TargetingConditions",
-    "net.minecraft.world.inventory.ItemCombinerMenu",
-    "net.minecraft.world.item.BowItem",
-    "net.minecraft.world.item.CrossbowItem",
-    "net.minecraft.world.item.MaceItem",
-    "net.minecraft.world.item.TridentItem",
-    "net.minecraft.world.level.storage.loot.functions.ApplyBonusCount",
-    "BuiltInRegistries.ATTRIBUTE",
+    "DamageTypeTags.BYPASSES_EFFECTS",
     "DamageSources.thorns()",
-    "OwnableEntity.getOwner()",
-    "Attribute.sanitizeValue()",
-    "Attribute.setSyncable()",
-    "LootContext.getOptional()",
-    "LootContext.getRandom()"
+    "DamageTypes.MAGIC",
+    "DamageTypes.THORNS",
+    "Attribute.sanitizeValue()"
   ],
-  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": true,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "puffish_attributes-0.8.3-26.3-fabric.jar",
     "published": "2026-09-23"
   },
@@ -67,7 +53,7 @@
     "class": "restart",
     "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
   },
-  "lacks": 19,
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -75,31 +61,12 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "Mixin: 15 points inside the game's methods",
-      "net.minecraft.tags.DamageTypeTags",
-      "net.minecraft.tags.ItemTags",
-      "net.minecraft.world.damagesource.DamageTypes",
-      "net.minecraft.world.entity.ai.attributes.AttributeSupplier",
-      "net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder",
-      "net.minecraft.world.entity.ai.attributes.RangedAttribute",
-      "net.minecraft.world.entity.ai.targeting.TargetingConditions",
-      "net.minecraft.world.inventory.AnvilMenu",
-      "net.minecraft.world.inventory.ItemCombinerMenu",
-      "net.minecraft.world.item.BowItem",
-      "net.minecraft.world.item.CrossbowItem",
-      "net.minecraft.world.item.MaceItem",
-      "net.minecraft.world.item.TridentItem",
-      "net.minecraft.world.level.storage.loot.functions.ApplyBonusCount",
-      "BuiltInRegistries.ATTRIBUTE",
-      "Identifier.toLanguageKey()",
+      "DamageTypeTags.BYPASSES_EFFECTS",
       "DamageSources.thorns()",
-      "OwnableEntity.getOwner()",
+      "DamageTypes.MAGIC",
+      "DamageTypes.THORNS",
       "Attribute.sanitizeValue()",
-      "Attribute.setSyncable()",
-      "Player.giveExperiencePoints()",
-      "Enchantments.FORTUNE",
-      "LootContext.getOptional()",
-      "LootContext.getRandom()",
-      "LootContextParams.THIS_ENTITY"
+      "ItemCombinerMenu.<init>()"
     ],
     "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
     "run": {
@@ -112,13 +79,13 @@
     },
     "url": "https://modrinth.com/mod/attributes",
     "version": "0.8.3",
-    "lacks": 25,
+    "lacks": 6,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "puffish_attributes-0.8.3-26.3-fabric.jar",
       "published": "2026-09-23"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

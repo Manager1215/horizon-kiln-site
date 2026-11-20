@@ -10,30 +10,18 @@
   "description": "Spawns a saddled horse near you when entering a world for the first time!",
   "needs": [
     "an access widener",
-    "net.minecraft.world.entity.animal.equine.AbstractChestedHorse",
-    "net.minecraft.world.entity.animal.equine.AbstractHorse",
-    "net.minecraft.world.entity.animal.equine.Horse",
-    "net.minecraft.world.entity.animal.equine.Llama",
-    "net.minecraft.world.entity.animal.equine.Llama.Variant",
-    "net.minecraft.world.entity.animal.equine.Markings",
-    "net.minecraft.world.entity.animal.equine.Variant",
-    "MinecraftServer.getDefaultGameType()",
-    "ServerLevel.getCurrentDifficultyAt()",
-    "LivingEntity.setCustomName()",
-    "LivingEntity.setPos()",
-    "Player.addItem()",
-    "Player.getBlockX()",
-    "Player.getBlockZ()",
-    "Items.CARPET",
-    "Level.getChunk()",
-    "Level.getHeight()"
+    "AbstractChestedHorse.createInventory()",
+    "AbstractChestedHorse.setChest()",
+    "AbstractHorse.setOwner()",
+    "Horse.setVariantAndMarkings()",
+    "Llama.setVariant()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "26.2-1.9.2.jar",
     "published": "2026-09-18"
   },
@@ -67,7 +55,7 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 17,
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -75,31 +63,11 @@
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
       "an access widener",
-      "net.minecraft.world.entity.animal.equine.AbstractChestedHorse",
-      "net.minecraft.world.entity.animal.equine.AbstractHorse",
-      "net.minecraft.world.entity.animal.equine.Horse",
-      "net.minecraft.world.entity.animal.equine.Llama",
-      "net.minecraft.world.entity.animal.equine.Llama.Variant",
-      "net.minecraft.world.entity.animal.equine.Markings",
-      "net.minecraft.world.entity.animal.equine.Variant",
-      "MinecraftServer.getDefaultGameType()",
-      "ServerLevel.getCurrentDifficultyAt()",
-      "LivingEntity.setCustomName()",
-      "LivingEntity.setPos()",
-      "Player.addItem()",
-      "Player.getBlockX()",
-      "Player.getBlockZ()",
-      "Player.getPlainTextName()",
-      "Items.CARPET",
-      "Items.COPPER_HORSE_ARMOR",
-      "Items.DIAMOND_HORSE_ARMOR",
-      "Items.GOLDEN_HORSE_ARMOR",
-      "Items.IRON_HORSE_ARMOR",
-      "Items.LEAD",
-      "Items.NETHERITE_HORSE_ARMOR",
-      "Items.SADDLE",
-      "Level.getChunk()",
-      "Level.getHeight()"
+      "AbstractChestedHorse.createInventory()",
+      "AbstractChestedHorse.setChest()",
+      "AbstractHorse.setOwner()",
+      "Horse.setVariantAndMarkings()",
+      "Llama.setVariant()"
     ],
     "roadmap": "Code next to data (0.3), Mixin (0.5)",
     "run": {
@@ -112,13 +80,13 @@
     },
     "url": "https://modrinth.com/mod/horse-spawn",
     "version": "1.9.2+26.2",
-    "lacks": 25,
+    "lacks": 5,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "26.2-1.9.2.jar",
       "published": "2026-09-18"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

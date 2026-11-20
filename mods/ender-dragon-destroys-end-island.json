@@ -10,22 +10,14 @@
   "description": "The Ender Dragon now tears apart the End Island during battle, leaving massive destruction in its wake.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.server.level.ChunkMap",
-    "net.minecraft.world.entity.boss.enderdragon.EnderDragon",
-    "net.minecraft.world.entity.boss.enderdragon.EnderDragonPart",
-    "net.minecraft.world.entity.item.FallingBlockEntity",
-    "net.minecraft.world.entity.monster.Enderman",
-    "net.minecraft.world.entity.projectile.hurtingprojectile.AbstractHurtingProjectile",
-    "net.minecraft.world.entity.projectile.hurtingprojectile.DragonFireball",
-    "ServerLevel.sendParticles()",
-    "SoundEvents.DRAGON_FIREBALL_EXPLODE"
+    "FallingBlockEntity.setHurtsEntities()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "enderdragondestroysendisland-2.2.2+mc26.3-fabric.jar",
     "published": "2026-10-04"
   },
@@ -58,7 +50,7 @@
     "class": "restart",
     "why": "@wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
   },
-  "lacks": 9,
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -66,16 +58,7 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "Mixin: 2 points inside the game's methods",
-      "net.minecraft.server.level.ChunkMap",
-      "net.minecraft.world.entity.boss.enderdragon.EnderDragon",
-      "net.minecraft.world.entity.boss.enderdragon.EnderDragonPart",
-      "net.minecraft.world.entity.item.FallingBlockEntity",
-      "net.minecraft.world.entity.monster.Enderman",
-      "net.minecraft.world.entity.projectile.hurtingprojectile.AbstractHurtingProjectile",
-      "net.minecraft.world.entity.projectile.hurtingprojectile.DragonFireball",
-      "ServerLevel.sendParticles()",
-      "SoundEvents.DRAGON_FIREBALL_EXPLODE",
-      "Blocks.SNOW"
+      "FallingBlockEntity.setHurtsEntities()"
     ],
     "roadmap": "Code next to data (0.3), Mixin (0.5)",
     "run": {
@@ -88,13 +71,13 @@
     },
     "url": "https://modrinth.com/mod/ender-dragon-destroys-end-island",
     "version": "2.2.2+mc26.3-fabric",
-    "lacks": 10,
+    "lacks": 1,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "enderdragondestroysendisland-2.2.2+mc26.3-fabric.jar",
       "published": "2026-10-04"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

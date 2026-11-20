@@ -9,26 +9,14 @@
   "author": "googler_ooeric",
   "description": "This mod aims to fix the long-standing Anvil balance issues Mojang refuses to fix.",
   "needs": [
-    "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
-    "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.BooleanRuleBuilder",
-    "net.minecraft.world.inventory.DataSlot",
-    "net.minecraft.world.inventory.ItemCombinerMenu",
-    "net.minecraft.world.inventory.ResultContainer",
-    "Object2IntMap.Entry.getKey()",
-    "ServerLevel.getGameRules()",
-    "ItemStack.isValidRepairItem()",
-    "GameRuleCategory.MISC",
-    "GameRuleTypeVisitor.visitBoolean()",
-    "GameRules.get()",
-    "GameRules.set()"
+    "Mixin: 1 point inside the game's methods"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "anvilfix-1.1.0+26.3-fabric.jar",
     "published": "2026-11-04"
   },
@@ -59,7 +47,7 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 12,
+  "lacks": 0,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -67,33 +55,10 @@
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
       "Mixin: 1 point inside the game's methods",
-      "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
-      "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.BooleanRuleBuilder",
-      "net.minecraft.client.gui.screens.inventory.AnvilScreen",
-      "net.minecraft.world.inventory.AnvilMenu",
-      "net.minecraft.world.inventory.DataSlot",
-      "net.minecraft.world.inventory.ItemCombinerMenu",
-      "net.minecraft.world.inventory.ResultContainer",
       "Object2IntMap.Entry.getKey()",
-      "DataComponents.CUSTOM_NAME",
-      "DataComponents.REPAIR_COST",
-      "DataComponents.STORED_ENCHANTMENTS",
-      "ServerLevel.getGameRules()",
-      "ItemStack.isValidRepairItem()",
-      "Items.ENCHANTED_BOOK",
-      "Enchantment.areCompatible()",
-      "Enchantment.canEnchant()",
-      "Enchantment.getMaxLevel()",
-      "EnchantmentHelper.getEnchantmentsForCrafting()",
-      "ItemEnchantments.entrySet()",
-      "ItemEnchantments.isEmpty()",
-      "ItemEnchantments.Mutable.set()",
-      "GameRuleCategory.MISC",
-      "GameRuleTypeVisitor.visitBoolean()",
-      "GameRules.get()",
-      "GameRules.set()"
+      "ItemCombinerMenu.<init>()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+    "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4), Mixin (0.5)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -104,13 +69,13 @@
     },
     "url": "https://modrinth.com/mod/anvilfix",
     "version": "1.1.0+26.3-fabric",
-    "lacks": 25,
+    "lacks": 2,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "anvilfix-1.1.0+26.3-fabric.jar",
       "published": "2026-11-04"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

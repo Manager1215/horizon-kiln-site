@@ -9,30 +9,17 @@
   "author": "Triky300",
   "description": "Speed up villager trading by marking specific trades, saving them separately for each villager, and automating repetitive clicks, all while keeping the vanilla trading experience.",
   "needs": [
-    "net.fabricmc.fabric.api.event.player.UseEntityCallback",
     "net.minecraft.client.gui.components.SpriteIconButton",
     "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-    "net.minecraft.client.gui.components.WidgetSprites",
-    "net.minecraft.client.gui.screens.inventory.MerchantScreen",
-    "net.minecraft.network.protocol.game.ServerboundSelectTradePacket",
-    "net.minecraft.world.inventory.MerchantMenu",
-    "net.minecraft.world.item.trading.Merchant",
-    "net.minecraft.world.item.trading.MerchantOffer",
-    "ClientPacketListener.send()",
-    "NonNullList.iterator()",
-    "Inventory.getFreeSlot()",
-    "Inventory.getSlotWithRemainingSpace()",
-    "MerchantOffers.get()",
-    "MerchantOffers.isEmpty()",
-    "MerchantOffers.iterator()",
-    "MerchantOffers.size()"
+    "MerchantMenu.setSelectionHint()",
+    "MerchantMenu.tryMoveItems()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "VillagerTradeAssist-1.0.6.jar",
     "published": "2026-10-15"
   },
@@ -64,26 +51,17 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 17,
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "net.fabricmc.fabric.api.event.player.UseEntityCallback",
       "net.minecraft.client.gui.components.SpriteIconButton",
       "net.minecraft.client.gui.components.SpriteIconButton.Builder",
-      "net.minecraft.client.gui.components.WidgetSprites",
-      "net.minecraft.client.gui.screens.inventory.MerchantScreen",
-      "net.minecraft.network.protocol.game.ServerboundSelectTradePacket",
-      "net.minecraft.world.inventory.MerchantMenu",
-      "net.minecraft.world.item.trading.Merchant",
-      "net.minecraft.world.item.trading.MerchantOffer",
-      "ClientPacketListener.send()",
-      "NonNullList.iterator()",
-      "Inventory.getFreeSlot()",
-      "Inventory.getSlotWithRemainingSpace()",
+      "MerchantMenu.setSelectionHint()",
+      "MerchantMenu.tryMoveItems()",
       "MerchantOffers.get()",
       "MerchantOffers.isEmpty()",
       "MerchantOffers.iterator()",
@@ -100,13 +78,13 @@
     },
     "url": "https://modrinth.com/mod/villagertradeassist",
     "version": "1.0.6+26.3",
-    "lacks": 17,
+    "lacks": 8,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "VillagerTradeAssist-1.0.6.jar",
       "published": "2026-10-15"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

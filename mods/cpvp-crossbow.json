@@ -9,19 +9,18 @@
   "author": "JelloHT3",
   "description": "If your only tipped arrow type is already loaded in the crossbow, the loaded-arrow indicator is hidden — it only shows when the loaded arrow is different from what you'd refill with.",
   "needs": [
-    "net.minecraft.world.item.component.ChargedProjectiles",
     "Minecraft.screen",
     "GuiGraphicsExtractor.blitSprite()",
     "RenderPipelines.GUI_TEXTURED",
-    "DataComponents.CHARGED_PROJECTILES",
-    "Player.getProjectile()"
+    "ChargedProjectiles.isEmpty()",
+    "ChargedProjectiles.itemCopies()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "cpvp-crossbow-26.1-1.2.3.jar",
     "published": "2026-10-03"
   },
@@ -53,24 +52,18 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 6,
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "net.minecraft.world.item.component.ChargedProjectiles",
       "Minecraft.screen",
       "GuiGraphicsExtractor.blitSprite()",
       "RenderPipelines.GUI_TEXTURED",
-      "DataComponents.CHARGED_PROJECTILES",
-      "Player.getProjectile()",
-      "Items.ARROW",
-      "Items.CROSSBOW",
-      "Items.FIREWORK_ROCKET",
-      "Items.SPECTRAL_ARROW",
-      "Items.TIPPED_ARROW"
+      "ChargedProjectiles.isEmpty()",
+      "ChargedProjectiles.itemCopies()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
     "run": {
@@ -83,13 +76,13 @@
     },
     "url": "https://modrinth.com/mod/cpvp-crossbow",
     "version": "1.2.3",
-    "lacks": 11,
+    "lacks": 5,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "cpvp-crossbow-26.1-1.2.3.jar",
       "published": "2026-10-03"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

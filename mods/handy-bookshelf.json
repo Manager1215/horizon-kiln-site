@@ -9,25 +9,21 @@
   "author": "dfox288",
   "description": "Enchanted books in chiseled bookshelves shimmer with enchantment glint, and aiming at a slot shows the enchantment name. Find Mending in a 30-shelf library at a glance.",
   "needs": [
-    "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
-    "net.minecraft.world.level.block.ChiseledBookShelfBlock",
-    "net.minecraft.world.level.block.entity.BlockEntityTypes",
-    "net.minecraft.world.level.block.entity.ChiseledBookShelfBlockEntity",
     "VertexConsumer.addVertex()",
     "VertexConsumer.setLight()",
     "VertexConsumer.setNormal()",
     "VertexConsumer.setOverlay()",
-    "Object2IntMap.Entry.getKey()",
     "Options.getBackgroundOpacity()",
     "RenderTypes.itemCutoutGlintSpecial()",
-    "CameraRenderState.orientation"
+    "CameraRenderState.orientation",
+    "ChiseledBookShelfBlock.FACING"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "handybookshelf-2.4.0.jar",
     "published": "2026-09-16"
   },
@@ -61,17 +57,13 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 12,
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry",
-      "net.minecraft.world.level.block.ChiseledBookShelfBlock",
-      "net.minecraft.world.level.block.entity.BlockEntityTypes",
-      "net.minecraft.world.level.block.entity.ChiseledBookShelfBlockEntity",
       "VertexConsumer.addVertex()",
       "VertexConsumer.setLight()",
       "VertexConsumer.setNormal()",
@@ -80,17 +72,9 @@
       "Options.getBackgroundOpacity()",
       "RenderTypes.itemCutoutGlintSpecial()",
       "CameraRenderState.orientation",
-      "DataComponents.CUSTOM_NAME",
-      "DataComponents.STORED_ENCHANTMENTS",
-      "Component.getVisualOrderText()",
-      "Items.ENCHANTED_BOOK",
-      "Items.WRITTEN_BOOK",
-      "Enchantment.getFullname()",
-      "ItemEnchantments.entrySet()",
-      "ItemEnchantments.isEmpty()",
-      "ItemEnchantments.size()"
+      "ChiseledBookShelfBlock.FACING"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -101,13 +85,13 @@
     },
     "url": "https://modrinth.com/mod/handy-bookshelf",
     "version": "2.4.0",
-    "lacks": 21,
+    "lacks": 9,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "handybookshelf-2.4.0.jar",
       "published": "2026-09-16"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

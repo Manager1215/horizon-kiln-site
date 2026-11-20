@@ -20,7 +20,6 @@
     "io.netty.channel.ChannelConfig",
     "io.netty.channel.ChannelDuplexHandler",
     "io.netty.channel.ChannelFuture",
-    "io.netty.channel.ChannelFutureListener",
     "io.netty.channel.ChannelHandler",
     "io.netty.channel.ChannelHandlerContext",
     "io.netty.channel.ChannelId",
@@ -50,14 +49,15 @@
     "io.netty.channel.epoll.EpollDatagramChannel",
     "io.netty.channel.epoll.EpollEventLoopGroup",
     "io.netty.channel.epoll.EpollIoHandler",
-    "and 37 more"
+    "io.netty.channel.kqueue.KQueueDatagramChannel",
+    "and 23 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "e4all-fabric-2.3.0-modern.jar",
     "published": "2026-10-27"
   },
@@ -88,7 +88,7 @@
     "class": "restart",
     "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own"
   },
-  "lacks": 115,
+  "lacks": 75,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -96,7 +96,6 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "Mixin: 18 points inside the game's methods",
-      "com.mojang.authlib.GameProfile",
       "io.netty.bootstrap.Bootstrap",
       "io.netty.bootstrap.ServerBootstrap",
       "io.netty.channel.AbstractChannel",
@@ -107,7 +106,6 @@
       "io.netty.channel.ChannelConfig",
       "io.netty.channel.ChannelDuplexHandler",
       "io.netty.channel.ChannelFuture",
-      "io.netty.channel.ChannelFutureListener",
       "io.netty.channel.ChannelHandler",
       "io.netty.channel.ChannelHandlerContext",
       "io.netty.channel.ChannelId",
@@ -136,7 +134,9 @@
       "io.netty.channel.VoidChannelPromise",
       "io.netty.channel.epoll.EpollDatagramChannel",
       "io.netty.channel.epoll.EpollEventLoopGroup",
-      "and 42 more"
+      "io.netty.channel.epoll.EpollIoHandler",
+      "io.netty.channel.kqueue.KQueueDatagramChannel",
+      "and 28 more"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "run": {
@@ -149,13 +149,13 @@
     },
     "url": "https://modrinth.com/mod/e4all",
     "version": "2.3.0-fabric-modern",
-    "lacks": 122,
+    "lacks": 80,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "e4all-fabric-2.3.0-modern.jar",
       "published": "2026-10-27"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

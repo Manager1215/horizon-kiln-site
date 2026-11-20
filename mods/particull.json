@@ -10,34 +10,21 @@
   "description": "Dynamic particle control for smoother gameplay: up to +30% FPS gain in heavy particle situations.",
   "needs": [
     "Mixin: 4 points inside the game's methods",
-    "com.mojang.blaze3d.platform.FramerateLimitTracker",
-    "com.mojang.blaze3d.platform.VideoMode",
-    "net.fabricmc.loader.api.metadata.ModOrigin",
-    "net.fabricmc.loader.api.metadata.ModOrigin.Kind",
-    "net.minecraft.client.OptionInstance.TooltipSupplier",
-    "net.minecraft.client.particle.Particle",
-    "net.minecraft.client.particle.ParticleEngine",
-    "net.minecraft.client.particle.ParticleGroup",
     "net.minecraft.client.particle.QuadParticleGroup",
-    "net.minecraft.client.particle.SingleQuadParticle",
+    "FramerateLimitTracker.getFramerateLimit()",
+    "VideoMode.getRefreshRate()",
     "Window.getActiveVideoMode()",
-    "ModContainer.getOrigin()",
-    "Camera.forwardVector()",
     "Minecraft.getFramerateLimitTracker()",
-    "Minecraft.particleEngine",
-    "Options.enableVsync()",
-    "Options.framerateLimit()",
     "CycleButton.Builder.withTooltip()",
     "GameRenderer.mainCamera()",
-    "Frustum.pointInFrustum()",
-    "Registry.iterator()"
+    "Frustum.pointInFrustum()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "PartiCull-fabric-26.3-v2.2.jar",
     "published": "2026-11-04"
   },
@@ -70,7 +57,7 @@
     "class": "restart",
     "why": "@redirect into the game's classes"
   },
-  "lacks": 21,
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -78,31 +65,20 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "Mixin: 4 points inside the game's methods",
-      "com.mojang.blaze3d.platform.FramerateLimitTracker",
-      "com.mojang.blaze3d.platform.VideoMode",
-      "net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener",
-      "net.fabricmc.loader.api.metadata.ModOrigin",
-      "net.fabricmc.loader.api.metadata.ModOrigin.Kind",
-      "net.minecraft.client.OptionInstance.TooltipSupplier",
-      "net.minecraft.client.particle.Particle",
-      "net.minecraft.client.particle.ParticleEngine",
-      "net.minecraft.client.particle.ParticleGroup",
       "net.minecraft.client.particle.QuadParticleGroup",
-      "net.minecraft.client.particle.SingleQuadParticle",
+      "FramerateLimitTracker.getFramerateLimit()",
+      "VideoMode.getRefreshRate()",
       "Window.getActiveVideoMode()",
-      "ModContainer.getOrigin()",
-      "Camera.forwardVector()",
-      "Minecraft.gameDirectory",
       "Minecraft.getFramerateLimitTracker()",
-      "Minecraft.isWindowActive()",
       "Minecraft.particleEngine",
-      "Options.enableVsync()",
-      "Options.framerateLimit()",
       "CycleButton.Builder.withTooltip()",
+      "Particle.isAlive()",
+      "Particle.remove()",
+      "ParticleEngine.countParticles()",
+      "ParticleEngine.createParticle()",
       "GameRenderer.mainCamera()",
       "Frustum.pointInFrustum()",
-      "Registry.iterator()",
-      "CommonComponents.GUI_CANCEL"
+      "Registry.iterator()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "run": {
@@ -115,13 +91,13 @@
     },
     "url": "https://modrinth.com/mod/particull",
     "version": "2.2",
-    "lacks": 25,
+    "lacks": 14,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "PartiCull-fabric-26.3-v2.2.jar",
       "published": "2026-11-04"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

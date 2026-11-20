@@ -9,21 +9,23 @@
   "author": "WhiterGG",
   "description": "This is a mod that beautifully styles vanilla tooltips and offers customization options.",
   "needs": [
-    "net.minecraft.client.gui.screens.inventory.tooltip.TooltipRenderUtil",
-    "net.minecraft.client.renderer.entity.LivingEntityRenderer",
-    "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
-    "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
-    "net.minecraft.world.entity.decoration.ArmorStand",
     "GuiGraphicsExtractor.entity()",
+    "TooltipRenderUtil.extractTooltipBackground()",
     "EntityRenderState.boundingBoxHeight",
-    "RenderTypes.entityTranslucent()"
+    "HumanoidRenderState.elytraRotX",
+    "HumanoidRenderState.elytraRotY",
+    "HumanoidRenderState.elytraRotZ",
+    "LivingEntityRenderState.boundingBoxHeight",
+    "LivingEntityRenderState.boundingBoxWidth",
+    "RenderTypes.entityTranslucent()",
+    "ArmorStand.setShowArms()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "VanillaTooltips-fabric-26.3-2.3.0.jar",
     "published": "2026-10-25"
   },
@@ -57,26 +59,27 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 8,
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-      "net.minecraft.client.gui.screens.inventory.tooltip.ClientTextTooltip",
-      "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
-      "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipPositioner",
-      "net.minecraft.client.gui.screens.inventory.tooltip.TooltipRenderUtil",
-      "net.minecraft.client.renderer.entity.LivingEntityRenderer",
-      "net.minecraft.client.renderer.entity.state.HumanoidRenderState",
-      "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
-      "net.minecraft.world.entity.decoration.ArmorStand",
       "GuiGraphicsExtractor.entity()",
+      "TooltipRenderUtil.extractTooltipBackground()",
       "EntityRenderState.boundingBoxHeight",
+      "HumanoidRenderState.elytraRotX",
+      "HumanoidRenderState.elytraRotY",
+      "HumanoidRenderState.elytraRotZ",
+      "LivingEntityRenderState.bodyRot",
+      "LivingEntityRenderState.boundingBoxHeight",
+      "LivingEntityRenderState.boundingBoxWidth",
+      "LivingEntityRenderState.scale",
+      "LivingEntityRenderState.xRot",
+      "LivingEntityRenderState.yRot",
       "RenderTypes.entityTranslucent()",
-      "ItemStack.getRarity()"
+      "ArmorStand.setShowArms()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
     "run": {
@@ -89,13 +92,13 @@
     },
     "url": "https://modrinth.com/mod/vanilla-tooltips",
     "version": "2.3.0",
-    "lacks": 13,
+    "lacks": 14,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "VanillaTooltips-fabric-26.3-2.3.0.jar",
       "published": "2026-10-25"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

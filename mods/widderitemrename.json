@@ -2,19 +2,19 @@
   "id": "widderitemrename",
   "name": "Item Rename",
   "version": "V1.0.0-26.3",
-  "status": "not-checked",
-  "statusLabel": "Not checked",
-  "statusMeaning": "In the catalogue, not checked yet.",
+  "status": "works",
+  "statusLabel": "Works",
+  "statusMeaning": "Tried in the game with Kiln.",
   "url": "https://modrinth.com/mod/widderitemrename",
   "author": "Widder",
   "description": "Rename your items with colors and styles!",
   "needs": [],
   "roadmap": "",
-  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers. Everything its code calls is covered by Kiln 0.4.5 (23 classes, 33 members). Not run yet.",
+  "evidence": "",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "itemrename-1.0.1.jar",
     "published": "2026-09-21"
   },
@@ -47,6 +47,15 @@
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
   "lacks": 0,
+  "works": "Server command /rename <text> (and /rename add <text>) that sets the held item's custom name, with colour and style codes.",
+  "note": "Not yet: It answers only on errors, so the try reads the held stick's saved custom_name (one styled part a letter, as the mod writes it).",
+  "checked": {
+    "kiln": "0.4.6",
+    "commit": "f0aef231b0dbb0ca77ccf2470ac6875586f83377",
+    "date": "2026-11-16",
+    "horizon": "Nightly 2026-11-04 · 3fb4c31",
+    "by": "kiln/proof.py on the Linux PC"
+  },
   "development": {
     "name": "Item Rename",
     "version": "V1.0.0-26.3",

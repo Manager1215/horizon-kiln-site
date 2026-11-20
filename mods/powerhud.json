@@ -10,33 +10,21 @@
   "description": "A modern, highly customizable HUD overlay mod for Minecraft",
   "needs": [
     "net.minecraft.client.gui.components.debug.DebugEntrySystemSpecs",
-    "net.minecraft.client.particle.ParticleEngine",
-    "net.minecraft.client.renderer.extract.LevelExtractor",
-    "net.minecraft.client.sounds.SoundBufferLibrary",
     "net.minecraft.client.sounds.SoundBufferLibrary.DebugOutput",
     "net.minecraft.client.sounds.SoundBufferLibrary.DebugOutput.Counter",
-    "net.minecraft.network.chat.FontDescription",
-    "net.minecraft.network.chat.FontDescription.Resource",
-    "net.minecraft.world.phys.EntityHitResult",
     "RenderSystem.tryGetDevice()",
     "Minecraft.levelExtractor",
-    "Minecraft.particleEngine",
-    "Options.simulationDistance()",
-    "LocalPlayer.getAirSupply()",
-    "LocalPlayer.getMaxAirSupply()",
-    "LocalPlayer.isCrouching()",
+    "LevelExtractor.entityStatistics()",
+    "LevelExtractor.sectionStatistics()",
     "SoundManager.getSoundCacheDebugStats()",
-    "Style.withFont()",
-    "BlockTags.MINEABLE_WITH_AXE",
-    "BlockTags.MINEABLE_WITH_HOE",
-    "BlockTags.MINEABLE_WITH_SHOVEL"
+    "FontDescription.DEFAULT"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "powerhud-1.14.1.jar",
     "published": "2026-10-02"
   },
@@ -68,7 +56,7 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 21,
+  "lacks": 9,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -76,32 +64,16 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "net.minecraft.client.gui.components.debug.DebugEntrySystemSpecs",
-      "net.minecraft.client.particle.ParticleEngine",
-      "net.minecraft.client.renderer.extract.LevelExtractor",
-      "net.minecraft.client.sounds.SoundBufferLibrary",
       "net.minecraft.client.sounds.SoundBufferLibrary.DebugOutput",
       "net.minecraft.client.sounds.SoundBufferLibrary.DebugOutput.Counter",
-      "net.minecraft.network.chat.FontDescription",
-      "net.minecraft.network.chat.FontDescription.Resource",
-      "net.minecraft.world.phys.EntityHitResult",
       "RenderSystem.tryGetDevice()",
       "Minecraft.levelExtractor",
       "Minecraft.particleEngine",
-      "Options.simulationDistance()",
-      "GuiGraphicsExtractor.blit()",
-      "LocalPlayer.getAirSupply()",
-      "LocalPlayer.getMaxAirSupply()",
-      "LocalPlayer.isCrouching()",
+      "ParticleEngine.countParticles()",
+      "LevelExtractor.entityStatistics()",
+      "LevelExtractor.sectionStatistics()",
       "SoundManager.getSoundCacheDebugStats()",
-      "Style.withFont()",
-      "BlockTags.MINEABLE_WITH_AXE",
-      "BlockTags.MINEABLE_WITH_HOE",
-      "BlockTags.MINEABLE_WITH_SHOVEL",
-      "Items.IRON_AXE",
-      "Items.IRON_HOE",
-      "Items.IRON_PICKAXE",
-      "Items.IRON_SHOVEL",
-      "Items.IRON_SWORD"
+      "FontDescription.DEFAULT"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
     "run": {
@@ -114,13 +86,13 @@
     },
     "url": "https://modrinth.com/mod/powerhud",
     "version": "1.14.1",
-    "lacks": 27,
+    "lacks": 11,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "powerhud-1.14.1.jar",
       "published": "2026-10-02"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

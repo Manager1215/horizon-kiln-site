@@ -10,35 +10,15 @@
   "description": "The status mod used on the Hermitcraft server.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking",
-    "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking.LoginQueryRequestHandler",
-    "net.fabricmc.fabric.api.networking.v1.LoginPacketSender",
-    "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents",
-    "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents.QueryStart",
-    "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking",
-    "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginQueryResponseHandler",
-    "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginSynchronizer",
-    "net.fabricmc.loader.api.metadata.CustomValue",
-    "net.fabricmc.loader.api.metadata.CustomValue.CvObject",
-    "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
     "net.minecraft.client.gui.components.PlayerFaceExtractor",
-    "net.minecraft.client.gui.components.PlayerTabOverlay",
-    "net.minecraft.network.chat.ComponentUtils",
-    "net.minecraft.server.network.ServerLoginPacketListenerImpl",
-    "net.minecraft.world.entity.player.Player.BedSleepingProblem",
-    "ModMetadata.getCustomValue()",
-    "GuiGraphicsExtractor.textRendererForWidget()",
-    "PlayerInfo.getProfile()",
-    "LocalPlayer.getGameProfile()",
-    "MinecraftServer.getServerDirectory()",
-    "LivingEntity.<init>()"
+    "ServerLoginPacketListenerImpl.getUserName()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "status-fabric-1.1.0+26.3.jar",
     "published": "2026-09-15"
   },
@@ -69,7 +49,7 @@
     "class": "restart",
     "why": "@redirect into the game's classes; runs threads of its own; has network channels"
   },
-  "lacks": 22,
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -77,35 +57,8 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "Mixin: 1 point inside the game's methods",
-      "com.mojang.authlib.GameProfile",
-      "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking",
-      "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking.LoginQueryRequestHandler",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-      "net.fabricmc.fabric.api.networking.v1.LoginPacketSender",
-      "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents",
-      "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents.QueryStart",
-      "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking",
-      "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginQueryResponseHandler",
-      "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginSynchronizer",
-      "net.fabricmc.loader.api.metadata.CustomValue",
-      "net.fabricmc.loader.api.metadata.CustomValue.CvObject",
-      "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
       "net.minecraft.client.gui.components.PlayerFaceExtractor",
-      "net.minecraft.client.gui.components.PlayerTabOverlay",
-      "net.minecraft.network.chat.ComponentUtils",
-      "net.minecraft.server.network.ServerLoginPacketListenerImpl",
-      "net.minecraft.world.entity.player.Player.BedSleepingProblem",
-      "ServerLifecycleEvents.SERVER_STARTING",
-      "ModMetadata.getCustomValue()",
-      "Minecraft.gameDirectory",
-      "GuiGraphicsExtractor.textRendererForWidget()",
-      "PlayerInfo.getProfile()",
-      "LocalPlayer.getGameProfile()",
-      "MinecraftServer.getServerDirectory()",
-      "ServerPlayer.connection",
-      "ServerPlayer.getDisplayName()",
-      "ServerGamePacketListenerImpl.send()",
-      "LivingEntity.<init>()"
+      "ServerLoginPacketListenerImpl.getUserName()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "run": {
@@ -118,13 +71,13 @@
     },
     "url": "https://modrinth.com/mod/status",
     "version": "fabric-1.1.0+26.3",
-    "lacks": 29,
+    "lacks": 2,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "status-fabric-1.1.0+26.3.jar",
       "published": "2026-09-15"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

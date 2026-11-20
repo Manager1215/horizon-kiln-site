@@ -10,36 +10,19 @@
   "description": "An offline skin patch for Minecraft that allows offline players to load custom skins and capes while maintaining compatibility with the official skin system for premium players./一个用于 Minecraft 的离线皮肤补丁，允许离线玩家加载自定义皮肤和披风，同时保持对正版玩家官方皮肤系统的兼容。",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.authlib.minecraft.MinecraftProfileTexture",
-    "com.mojang.authlib.minecraft.MinecraftProfileTexture.Type",
     "net.minecraft.client.gui.components.PlayerFaceExtractor",
-    "net.minecraft.client.gui.components.PlayerTabOverlay",
-    "net.minecraft.client.gui.font.GlyphRenderTypes",
-    "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
-    "net.minecraft.client.renderer.blockentity.SkullBlockRenderer",
-    "net.minecraft.network.chat.FontDescription",
-    "net.minecraft.network.chat.FontDescription.PlayerSprite",
-    "net.minecraft.world.entity.player.PlayerSkin.Patch",
-    "net.minecraft.world.item.component.ResolvableProfile",
-    "net.minecraft.world.level.block.entity.SkullBlockEntity",
-    "net.minecraft.world.scores.PlayerTeam",
-    "Minecraft.getSkinManager()",
-    "ClientPacketListener.onlineMode()",
-    "PlayerInfo.getProfile()",
-    "PlayerInfo.getSkin()",
-    "PlayerInfo.getTeam()",
-    "LocalPlayer.getGameProfile()",
+    "GlyphRenderTypes.createForColorTexture()",
+    "SkullBlockRenderer.getPlayerSkinRenderType()",
     "EntityRenderState.nameTag",
     "AbstractTexture.getTextureView()",
-    "SkinTextureDownloader.downloadAndRegisterSkin()",
-    "Style.getFont()"
+    "SkinTextureDownloader.downloadAndRegisterSkin()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "wskinloader-1.6.2.jar",
     "published": "2026-09-19"
   },
@@ -73,7 +56,7 @@
     "class": "restart",
     "why": "@redirect into the game's classes; runs threads of its own"
   },
-  "lacks": 23,
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -81,32 +64,14 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "Mixin: 1 point inside the game's methods",
-      "com.mojang.authlib.GameProfile",
-      "com.mojang.authlib.minecraft.MinecraftProfileTexture",
-      "com.mojang.authlib.minecraft.MinecraftProfileTexture.Type",
       "net.minecraft.client.gui.components.PlayerFaceExtractor",
-      "net.minecraft.client.gui.components.PlayerTabOverlay",
-      "net.minecraft.client.gui.font.GlyphRenderTypes",
-      "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
-      "net.minecraft.client.renderer.blockentity.SkullBlockRenderer",
-      "net.minecraft.network.chat.FontDescription",
-      "net.minecraft.network.chat.FontDescription.PlayerSprite",
-      "net.minecraft.world.entity.player.PlayerSkin.Patch",
-      "net.minecraft.world.item.component.ResolvableProfile",
-      "net.minecraft.world.level.block.entity.SkullBlockEntity",
-      "net.minecraft.world.scores.PlayerTeam",
-      "Minecraft.getSkinManager()",
-      "ClientPacketListener.onlineMode()",
-      "PlayerInfo.getProfile()",
-      "PlayerInfo.getSkin()",
-      "PlayerInfo.getTeam()",
-      "LocalPlayer.getGameProfile()",
+      "GlyphRenderTypes.createForColorTexture()",
+      "SkullBlockRenderer.getPlayerSkinRenderType()",
       "EntityRenderState.nameTag",
       "AbstractTexture.getTextureView()",
-      "SkinTextureDownloader.downloadAndRegisterSkin()",
-      "Style.getFont()"
+      "SkinTextureDownloader.downloadAndRegisterSkin()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+    "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -117,13 +82,13 @@
     },
     "url": "https://modrinth.com/mod/wskinloader",
     "version": "1.6.2",
-    "lacks": 24,
+    "lacks": 6,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "wskinloader-1.6.2.jar",
       "published": "2026-09-19"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

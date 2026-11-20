@@ -10,12 +10,7 @@
   "description": "Fabric gui module for ImGui",
   "needs": [
     "com.mojang.renderpearl.api.pipeline.BindGroupLayout.Builder",
-    "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
-    "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "com.mojang.renderpearl.api.vertex.VertexFormat.Builder",
-    "com.mojang.renderpearl.backend.opengl.FrameBufferCache",
-    "com.mojang.renderpearl.backend.opengl.GlStateManager",
-    "com.mojang.renderpearl.backend.opengl.GlTexture",
     "org.lwjgl.opengl.GL11C",
     "org.lwjgl.opengl.GL30",
     "org.lwjgl.opengl.GL30C",
@@ -23,27 +18,22 @@
     "org.lwjgl.sdl.SDLVideo",
     "org.lwjgl.sdl.SDL_Event",
     "RenderTarget.width",
-    "Window.handle()",
     "RenderSystem.assertOnRenderThread()",
     "RenderSystem.getCompiledPipelineNullable()",
     "GpuBuffer.slice()",
     "GpuBuffer.slice()",
     "CommandEncoder.createRenderPass()",
     "BindGroupLayout.builder()",
-    "RenderPipeline.builder()",
     "VertexFormat.builder()",
-    "Long2ObjectMap.Entry.getValue()",
-    "Object2LongMap.isEmpty()",
-    "ObjectIterator.hasNext()",
-    "ObjectIterator.next()",
-    "ObjectIterator.remove()"
+    "FrameBufferCache.getFbo()",
+    "GlStateManager._glBindFramebuffer()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "",
   "library": true,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "fabric-gui-imgui-26.3-1.2.1+imgui.1.92.7.1.jar",
     "published": "2026-09-27"
   },
@@ -64,7 +54,7 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 28,
+  "lacks": 18,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -73,11 +63,7 @@
     "needs": [
       "com.mojang.renderpearl.api.pipeline.BindGroupLayout.Builder",
       "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
-      "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
       "com.mojang.renderpearl.api.vertex.VertexFormat.Builder",
-      "com.mojang.renderpearl.backend.opengl.FrameBufferCache",
-      "com.mojang.renderpearl.backend.opengl.GlStateManager",
-      "com.mojang.renderpearl.backend.opengl.GlTexture",
       "org.lwjgl.opengl.GL11C",
       "org.lwjgl.opengl.GL30",
       "org.lwjgl.opengl.GL30C",
@@ -85,7 +71,6 @@
       "org.lwjgl.sdl.SDLVideo",
       "org.lwjgl.sdl.SDL_Event",
       "RenderTarget.width",
-      "Window.handle()",
       "RenderSystem.assertOnRenderThread()",
       "RenderSystem.getCompiledPipelineNullable()",
       "GpuBuffer.slice()",
@@ -94,6 +79,8 @@
       "BindGroupLayout.builder()",
       "RenderPipeline.builder()",
       "VertexFormat.builder()",
+      "FrameBufferCache.getFbo()",
+      "GlStateManager._glBindFramebuffer()",
       "Long2ObjectMap.Entry.getValue()",
       "Object2LongMap.isEmpty()",
       "ObjectIterator.hasNext()",
@@ -103,13 +90,13 @@
     "roadmap": "Minecraft's libraries and client API (0.2)",
     "url": "https://modrinth.com/mod/fabric-gui-imgui",
     "version": "26.3-1.2.1+imgui.1.92.7.1",
-    "lacks": 28,
+    "lacks": 25,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "fabric-gui-imgui-26.3-1.2.1+imgui.1.92.7.1.jar",
       "published": "2026-09-27"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

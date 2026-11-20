@@ -9,25 +9,21 @@
   "author": "not_zeox",
   "description": "Displays a health bar above players",
   "needs": [
-    "net.minecraft.client.renderer.entity.LivingEntityRenderer",
-    "net.minecraft.client.renderer.entity.player.AvatarRenderer",
-    "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
     "PoseStack.mulPose()",
     "PoseStack.Pose.pose()",
-    "VertexConsumer.addVertex()",
     "VertexConsumer.setLight()",
     "VertexConsumer.setOverlay()",
-    "AbstractClientPlayer.getAbsorptionAmount()",
-    "AbstractClientPlayer.isInvisibleTo()",
-    "AbstractClientPlayer.isLocalPlayer()",
+    "LivingEntityRenderState.boundingBoxHeight",
+    "LivingEntityRenderState.distanceToCameraSq",
+    "LivingEntityRenderState.nameTag",
     "CameraRenderState.orientation"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "PlayerHealthIndicators-1.1.1-26.3.jar",
     "published": "2026-10-04"
   },
@@ -59,30 +55,21 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 12,
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "net.minecraft.client.renderer.entity.LivingEntityRenderer",
-      "net.minecraft.client.renderer.entity.player.AvatarRenderer",
-      "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
       "PoseStack.mulPose()",
       "PoseStack.Pose.pose()",
-      "VertexConsumer.addVertex()",
       "VertexConsumer.setLight()",
       "VertexConsumer.setOverlay()",
-      "KeyMapping.resetMapping()",
-      "AbstractClientPlayer.getAbsorptionAmount()",
-      "AbstractClientPlayer.isInvisibleTo()",
-      "AbstractClientPlayer.isLocalPlayer()",
-      "CameraRenderState.orientation",
-      "TextureAtlasSprite.getU0()",
-      "TextureAtlasSprite.getU1()",
-      "TextureAtlasSprite.getV0()",
-      "TextureAtlasSprite.getV1()"
+      "LivingEntityRenderState.boundingBoxHeight",
+      "LivingEntityRenderState.distanceToCameraSq",
+      "LivingEntityRenderState.nameTag",
+      "CameraRenderState.orientation"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2)",
     "run": {
@@ -95,13 +82,13 @@
     },
     "url": "https://modrinth.com/mod/player-health-indicators-unofficial",
     "version": "1.1.2",
-    "lacks": 17,
+    "lacks": 8,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "PlayerHealthIndicators-1.1.1-26.3.jar",
       "published": "2026-10-04"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

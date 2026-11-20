@@ -10,32 +10,16 @@
   "description": "Resolves issues with shield sounds and corrects the animation glitch where the player's shield doesn't display blocking properly.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.model.HumanoidModel",
     "net.minecraft.client.model.HumanoidModel.ArmPose",
-    "net.minecraft.client.renderer.entity.player.AvatarRenderer",
     "net.minecraft.client.renderer.item.properties.conditional.IsUsingItem",
-    "net.minecraft.world.item.CrossbowItem",
-    "net.minecraft.world.item.ItemUseAnimation",
-    "DataComponents.ATTACK_ANIMATION",
-    "SoundEvents.SHIELD_BLOCK",
-    "SoundEvents.SHIELD_BREAK",
-    "LivingEntity.getSoundSource()",
-    "Player.distanceToSqr()",
-    "Player.getUseItemRemainingTicks()",
-    "Player.getUsedItemHand()",
-    "Player.getViewVector()",
-    "Player.isAlive()",
-    "Player.isSwinging()",
-    "ItemStack.getUseAnimation()",
-    "Level.getEntitiesOfClass()",
-    "Vec3.vectorTo()"
+    "SoundEvents.SHIELD_BREAK"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "ShieldFixes-2.1.0+26.3.jar",
     "published": "2026-10-09"
   },
@@ -67,7 +51,7 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 19,
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -75,27 +59,10 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "Mixin: 1 point inside the game's methods",
-      "net.minecraft.client.model.HumanoidModel",
       "net.minecraft.client.model.HumanoidModel.ArmPose",
-      "net.minecraft.client.renderer.entity.player.AvatarRenderer",
       "net.minecraft.client.renderer.item.properties.conditional.IsUsingItem",
-      "net.minecraft.tags.ItemTags",
-      "net.minecraft.world.item.CrossbowItem",
-      "net.minecraft.world.item.ItemUseAnimation",
-      "DataComponents.ATTACK_ANIMATION",
-      "SoundEvents.SHIELD_BLOCK",
       "SoundEvents.SHIELD_BREAK",
-      "LivingEntity.getSoundSource()",
-      "Player.distanceToSqr()",
-      "Player.getUseItemRemainingTicks()",
-      "Player.getUsedItemHand()",
-      "Player.getViewVector()",
-      "Player.isAlive()",
-      "Player.isSwinging()",
-      "ItemStack.getUseAnimation()",
-      "Items.CROSSBOW",
-      "Level.getEntitiesOfClass()",
-      "Vec3.vectorTo()"
+      "Level.getEntitiesOfClass()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "run": {
@@ -108,13 +75,13 @@
     },
     "url": "https://modrinth.com/mod/complete-shield-fixes",
     "version": "2.1.0+26.3",
-    "lacks": 21,
+    "lacks": 4,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "ShieldFixes-2.1.0+26.3.jar",
       "published": "2026-10-09"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

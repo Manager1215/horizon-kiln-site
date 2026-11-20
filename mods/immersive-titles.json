@@ -9,32 +9,15 @@
   "author": "DevGBX9",
   "description": "A mod that adds dynamic Immersive Titles for every biome or structure",
   "needs": [
-    "net.minecraft.client.gui.screens.Overlay",
-    "net.minecraft.world.level.StructureManager",
-    "net.minecraft.world.level.storage.WorldData",
-    "Gui.overlay()",
-    "ClientLevel.getHeight()",
-    "IntegratedServer.getWorldData()",
-    "BlockPos.containing()",
-    "Registries.BIOME",
-    "Registries.STRUCTURE",
-    "ServerLevel.clip()",
-    "ServerLevel.structureManager()",
-    "ServerPlayer.getViewVector()",
-    "BiomeTags.IS_END",
-    "BiomeTags.IS_NETHER",
-    "LevelReader.getBiome()",
-    "BoundingBox.isInside()",
-    "StructureStart.getBoundingBox()",
-    "StructureStart.getStructure()",
-    "StructureStart.isValid()"
+    "Overlay.isPausing()",
+    "StructureManager.getStructureWithPieceAt()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "immersive_titles-v0.1.0.jar",
     "published": "2026-11-13"
   },
@@ -66,44 +49,15 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 19,
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "net.minecraft.client.gui.screens.Overlay",
-      "net.minecraft.client.server.IntegratedServer",
-      "net.minecraft.core.HolderSet.Direct",
-      "net.minecraft.world.level.StructureManager",
-      "net.minecraft.world.level.storage.LevelResource",
-      "net.minecraft.world.level.storage.WorldData",
-      "Minecraft.getCurrentServer()",
-      "Minecraft.getSingleplayerServer()",
-      "Gui.overlay()",
-      "GuiGraphicsExtractor.blit()",
-      "GuiGraphicsExtractor.setTooltipForNextFrame()",
-      "ClientLevel.getHeight()",
-      "ServerData.ip",
-      "BlockPos.containing()",
-      "HolderSet.direct()",
-      "Registry.get()",
-      "Registry.getTagOrEmpty()",
-      "RegistryAccess.lookupOrThrow()",
-      "Registries.BIOME",
-      "Registries.STRUCTURE",
-      "ServerLevel.clip()",
-      "ServerLevel.structureManager()",
-      "ServerPlayer.getViewVector()",
-      "BiomeTags.IS_END",
-      "BiomeTags.IS_NETHER",
-      "Util.getMillis()",
-      "LevelReader.getBiome()",
-      "BoundingBox.isInside()",
-      "StructureStart.getBoundingBox()",
-      "StructureStart.getStructure()",
-      "StructureStart.isValid()"
+      "Overlay.isPausing()",
+      "StructureManager.getStructureWithPieceAt()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
     "run": {
@@ -116,13 +70,13 @@
     },
     "url": "https://modrinth.com/mod/immersive-titles",
     "version": "0.1.0",
-    "lacks": 31,
+    "lacks": 2,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "immersive_titles-v0.1.0.jar",
       "published": "2026-11-13"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

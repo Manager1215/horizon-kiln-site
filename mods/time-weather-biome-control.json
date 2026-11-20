@@ -9,18 +9,15 @@
   "author": "astrolddd",
   "description": "A Minecraft Fabric client-side mod that lets the player locally fake time, weather, and biome ambience.",
   "needs": [
-    "net.minecraft.client.ClientClockManager.ClientClockInstance",
-    "net.minecraft.client.renderer.LevelRenderer",
     "Minecraft.levelRenderer",
-    "Registries.BIOME",
-    "EnvironmentAttributeSystem.invalidateTickCache()"
+    "LevelRenderer.clearVisibleSections()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "time-weather-biome-control-1.0.4-mc26.3.jar",
     "published": "2026-10-24"
   },
@@ -53,22 +50,17 @@
     "class": "partial",
     "why": "runs threads of its own"
   },
-  "lacks": 5,
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "net.minecraft.client.ClientClockManager.ClientClockInstance",
-      "net.minecraft.client.renderer.LevelRenderer",
       "Minecraft.levelRenderer",
-      "Registry.get()",
-      "RegistryAccess.lookupOrThrow()",
-      "Registries.BIOME",
-      "EnvironmentAttributeSystem.invalidateTickCache()"
+      "LevelRenderer.clearVisibleSections()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+    "roadmap": "Minecraft's libraries and client API (0.2)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -79,13 +71,13 @@
     },
     "url": "https://modrinth.com/mod/time-weather-biome-control",
     "version": "1.0.4-mc26.3",
-    "lacks": 7,
+    "lacks": 2,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "time-weather-biome-control-1.0.4-mc26.3.jar",
       "published": "2026-10-24"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

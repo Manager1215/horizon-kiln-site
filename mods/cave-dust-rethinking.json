@@ -2,32 +2,19 @@
   "id": "cave-dust-rethinking",
   "name": "Cave Dust Rethinking",
   "version": "3.4.0+26.3",
-  "status": "planned",
-  "statusLabel": "Planned",
-  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "status": "not-checked",
+  "statusLabel": "Not checked",
+  "statusMeaning": "In the catalogue, not checked yet.",
   "url": "https://modrinth.com/mod/cave-dust-rethinking",
   "author": "Toffiks",
   "description": "Adds the white ash particles from the Basalt Deltas biome to caves.",
-  "needs": [
-    "net.minecraft.client.multiplayer.ClientLevel.ClientLevelData",
-    "net.minecraft.client.particle.ParticleEngine",
-    "net.minecraft.client.particle.SingleQuadParticle",
-    "net.minecraft.client.particle.SingleQuadParticle.Layer",
-    "net.minecraft.client.particle.SpriteSet",
-    "Minecraft.particleEngine",
-    "ClientLevel.getLevelData()",
-    "LocalPlayer.getBlockY()",
-    "LocalPlayer.getEyeY()",
-    "BlockPos.asLong()",
-    "BlockPos.MutableBlockPos.set()",
-    "Biomes.LUSH_CAVES"
-  ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
-  "evidence": "Not run: Java did not start.",
+  "needs": [],
+  "roadmap": "",
+  "evidence": "Everything its code calls is covered by Kiln 0.4.8 (45 classes, 91 members). Not run yet.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "cave_dust_rethinking-3.4.0+26.3-fabric-neoforge.jar",
     "published": "2026-09-25"
   },
@@ -61,33 +48,19 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 12,
+  "lacks": 0,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "net.minecraft.client.multiplayer.ClientLevel.ClientLevelData",
-      "net.minecraft.client.particle.ParticleEngine",
-      "net.minecraft.client.particle.SingleQuadParticle",
-      "net.minecraft.client.particle.SingleQuadParticle.Layer",
-      "net.minecraft.client.particle.SpriteSet",
-      "net.minecraft.data.AtlasIds",
       "Minecraft.particleEngine",
-      "ClientLevel.getLevelData()",
-      "LocalPlayer.getBlockY()",
-      "LocalPlayer.getEyeY()",
-      "BlockPos.asLong()",
-      "BlockPos.MutableBlockPos.set()",
-      "Biomes.LUSH_CAVES",
-      "Blocks.CAMPFIRE",
-      "Blocks.MAGMA_BLOCK",
-      "Blocks.SOUL_CAMPFIRE",
-      "Blocks.TORCH",
-      "Blocks.WALL_TORCH"
+      "ParticleEngine.add()",
+      "SingleQuadParticle.tick()",
+      "SingleQuadParticle.Layer.TRANSLUCENT"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+    "roadmap": "Minecraft's libraries and client API (0.2)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -98,13 +71,13 @@
     },
     "url": "https://modrinth.com/mod/cave-dust-rethinking",
     "version": "3.4.0+26.3",
-    "lacks": 18,
+    "lacks": 4,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "cave_dust_rethinking-3.4.0+26.3-fabric-neoforge.jar",
       "published": "2026-09-25"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

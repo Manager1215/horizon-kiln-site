@@ -11,28 +11,24 @@
   "needs": [
     "an access widener",
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.client.color.item.ItemTintSource",
-    "net.minecraft.client.color.item.ItemTintSources",
     "net.minecraft.client.renderer.entity.ArrowRenderer",
     "net.minecraft.client.renderer.entity.TippableArrowRenderer",
     "net.minecraft.client.renderer.entity.state.ArrowRenderState",
     "net.minecraft.client.renderer.entity.state.TippableArrowRenderState",
     "net.minecraft.client.resources.model.ClientItemInfoLoader",
     "net.minecraft.client.resources.model.ClientItemInfoLoader.PendingLoad",
-    "net.minecraft.world.entity.monster.skeleton.AbstractSkeleton",
-    "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
-    "net.minecraft.world.entity.projectile.arrow.Arrow",
-    "net.minecraft.world.item.component.ChargedProjectiles",
-    "DataComponents.CHARGED_PROJECTILES",
-    "ExtraCodecs.RGB_COLOR_CODEC",
-    "LivingEntity.getProjectile()"
+    "LivingEntity.getProjectile()",
+    "AbstractSkeleton.getArrow()",
+    "Arrow.getColor()",
+    "ChargedProjectiles.EMPTY",
+    "ChargedProjectiles.isEmpty()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "real-arrow-tip-0.3.1+mc26.3.jar",
     "published": "2026-09-16"
   },
@@ -64,7 +60,7 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 15,
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -73,25 +69,17 @@
     "needs": [
       "an access widener",
       "Mixin: 2 points inside the game's methods",
-      "net.minecraft.client.color.item.ItemTintSource",
-      "net.minecraft.client.color.item.ItemTintSources",
       "net.minecraft.client.renderer.entity.ArrowRenderer",
       "net.minecraft.client.renderer.entity.TippableArrowRenderer",
       "net.minecraft.client.renderer.entity.state.ArrowRenderState",
       "net.minecraft.client.renderer.entity.state.TippableArrowRenderState",
       "net.minecraft.client.resources.model.ClientItemInfoLoader",
       "net.minecraft.client.resources.model.ClientItemInfoLoader.PendingLoad",
-      "net.minecraft.world.entity.monster.skeleton.AbstractSkeleton",
-      "net.minecraft.world.entity.projectile.arrow.AbstractArrow",
-      "net.minecraft.world.entity.projectile.arrow.Arrow",
-      "net.minecraft.world.item.component.ChargedProjectiles",
-      "Holder.Reference.getRegisteredName()",
-      "DataComponents.CHARGED_PROJECTILES",
-      "ExtraCodecs.RGB_COLOR_CODEC",
       "LivingEntity.getProjectile()",
-      "Items.ARROW",
-      "Items.BOW",
-      "Items.TIPPED_ARROW"
+      "AbstractSkeleton.getArrow()",
+      "Arrow.getColor()",
+      "ChargedProjectiles.EMPTY",
+      "ChargedProjectiles.isEmpty()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "run": {
@@ -104,13 +92,13 @@
     },
     "url": "https://modrinth.com/mod/real-arrow-tip",
     "version": "0.3.1+mc26.3",
-    "lacks": 19,
+    "lacks": 11,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "real-arrow-tip-0.3.1+mc26.3.jar",
       "published": "2026-09-16"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

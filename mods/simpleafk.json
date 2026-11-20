@@ -9,24 +9,14 @@
   "author": "legenden",
   "description": "SimpleAFK is a mod that enables simple server AFK management",
   "needs": [
-    "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
-    "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
-    "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-    "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
-    "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
-    "net.minecraft.core.UUIDUtil",
-    "net.minecraft.server.players.SleepStatus",
-    "MinecraftServer.overworld()",
-    "ServerPlayer.isSleeping()",
-    "ServerGamePacketListenerImpl.disconnect()",
-    "Player.<init>()"
+    "net.minecraft.server.players.SleepStatus"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "simpleafk-fabric-26.3-1.5.2.jar",
     "published": "2026-10-27"
   },
@@ -59,24 +49,16 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 11,
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
-      "net.fabricmc.fabric.api.event.player.AttackBlockCallback",
-      "net.fabricmc.fabric.api.event.player.AttackEntityCallback",
-      "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-      "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
       "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
-      "net.minecraft.core.UUIDUtil",
       "net.minecraft.server.players.SleepStatus",
-      "MinecraftServer.overworld()",
-      "ServerPlayer.connection",
-      "ServerPlayer.getDisplayName()",
-      "ServerPlayer.isSleeping()",
+      "ServerMessageEvents.CHAT_MESSAGE",
       "ServerGamePacketListenerImpl.disconnect()",
       "Player.<init>()"
     ],
@@ -91,13 +73,13 @@
     },
     "url": "https://modrinth.com/mod/simpleafk",
     "version": "1.5.2",
-    "lacks": 13,
+    "lacks": 5,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "simpleafk-fabric-26.3-1.5.2.jar",
       "published": "2026-10-27"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

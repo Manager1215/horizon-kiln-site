@@ -9,17 +9,15 @@
   "author": "raylix2",
   "description": "Survival Ban & Pardon hammers, staff moderation, custom crafts and optional weapon effects. Configurable messages, safeguards and optional resource packs.",
   "needs": [
-    "net.minecraft.server.players.UserBanList",
-    "net.minecraft.server.players.UserBanListEntry",
-    "ServerGamePacketListenerImpl.disconnect()",
-    "PlayerList.getBans()"
+    "UserBanList.remove()",
+    "UserBanListEntry.<init>()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "BanHammer-1.2.0-alpha.1-26.3-fabric.jar",
     "published": "2026-10-15"
   },
@@ -51,29 +49,16 @@
     "class": "partial",
     "why": "runs threads of its own"
   },
-  "lacks": 4,
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-      "net.minecraft.server.players.UserBanList",
-      "net.minecraft.server.players.UserBanListEntry",
-      "net.minecraft.world.level.storage.LevelResource",
-      "ServerLifecycleEvents.SERVER_STARTED",
-      "ServerLifecycleEvents.SERVER_STOPPING",
-      "DataComponents.CUSTOM_NAME",
-      "MinecraftServer.execute()",
-      "MinecraftServer.getWorldPath()",
-      "ServerPlayer.connection",
-      "ServerPlayer.createCommandSourceStack()",
       "ServerGamePacketListenerImpl.disconnect()",
-      "PlayerList.getBans()",
-      "Items.MACE",
-      "CustomData.copyTag()"
+      "UserBanList.remove()",
+      "UserBanListEntry.<init>()"
     ],
     "roadmap": "Code next to data (0.3)",
     "run": {
@@ -86,13 +71,13 @@
     },
     "url": "https://modrinth.com/mod/banhamer",
     "version": "1.2.0-alpha.1+26.3.fabric",
-    "lacks": 16,
+    "lacks": 3,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "BanHammer-1.2.0-alpha.1-26.3-fabric.jar",
       "published": "2026-10-15"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

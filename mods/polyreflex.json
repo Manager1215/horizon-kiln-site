@@ -1,6 +1,6 @@
 {
   "id": "polyreflex",
-  "name": "PolyReflex",
+  "name": "PolyReflex (Reflex / Anti-Lag / Hit-Reg)",
   "version": "0.2.1",
   "status": "planned",
   "statusLabel": "Planned",
@@ -9,8 +9,6 @@
   "author": "Wyvest",
   "description": "Faithful NVIDIA Reflex / AMD Anti-Lag 2 implementation on 1.21.11+ Vulkan (with Polydium). By Polyfrost, best with OneClient.",
   "needs": [
-    "com.mojang.blaze3d.platform.FramerateLimitTracker",
-    "com.mojang.renderpearl.backend.vulkan.VulkanQueue",
     "com.mojang.renderpearl.backend.vulkan.VulkanQueue.Submission",
     "org.lwjgl.PointerBuffer",
     "org.lwjgl.system.JNI",
@@ -45,14 +43,15 @@
     "org.lwjgl.vulkan.VkSubmitInfo2",
     "org.lwjgl.vulkan.VkSubmitInfo2.Buffer",
     "org.lwjgl.vulkan.VkSurfaceCapabilitiesKHR",
-    "org.lwjgl.vulkan.VkSwapchainCreateInfoKHR"
+    "org.lwjgl.vulkan.VkSwapchainCreateInfoKHR",
+    "FramerateLimitTracker.getFramerateLimit()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "polyreflex-0.2.1+26.3.jar",
     "published": "2026-11-16"
   },
@@ -72,42 +71,31 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 37,
+  "lacks": 36,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "",
     "needs": [
-      "Mixin: 6 points inside the game's methods",
-      "com.mojang.blaze3d.platform.FramerateLimitTracker",
-      "com.mojang.renderpearl.backend.vulkan.VulkanBackend",
-      "com.mojang.renderpearl.backend.vulkan.VulkanGpuSurface",
-      "com.mojang.renderpearl.backend.vulkan.VulkanQueue",
       "com.mojang.renderpearl.backend.vulkan.VulkanQueue.Submission",
       "org.lwjgl.PointerBuffer",
+      "org.lwjgl.system.JNI",
       "org.lwjgl.system.MemoryStack",
-      "org.lwjgl.vulkan.AMDAntiLag",
+      "org.lwjgl.system.MemoryUtil",
       "org.lwjgl.vulkan.GOOGLEDisplayTiming",
       "org.lwjgl.vulkan.KHRPresentWait",
       "org.lwjgl.vulkan.KHRSurface",
-      "org.lwjgl.vulkan.NVLowLatency2",
       "org.lwjgl.vulkan.VK12",
       "org.lwjgl.vulkan.VKCapabilitiesDevice",
       "org.lwjgl.vulkan.VkAllocationCallbacks",
-      "org.lwjgl.vulkan.VkAntiLagDataAMD",
-      "org.lwjgl.vulkan.VkAntiLagPresentationInfoAMD",
       "org.lwjgl.vulkan.VkDevice",
       "org.lwjgl.vulkan.VkDeviceCreateInfo",
       "org.lwjgl.vulkan.VkExtensionProperties",
       "org.lwjgl.vulkan.VkExtensionProperties.Buffer",
-      "org.lwjgl.vulkan.VkLatencySleepInfoNV",
-      "org.lwjgl.vulkan.VkLatencySleepModeInfoNV",
-      "org.lwjgl.vulkan.VkLatencySubmissionPresentIdNV",
       "org.lwjgl.vulkan.VkPastPresentationTimingGOOGLE",
       "org.lwjgl.vulkan.VkPastPresentationTimingGOOGLE.Buffer",
       "org.lwjgl.vulkan.VkPhysicalDevice",
-      "org.lwjgl.vulkan.VkPhysicalDeviceAntiLagFeaturesAMD",
       "org.lwjgl.vulkan.VkPhysicalDeviceFeatures2",
       "org.lwjgl.vulkan.VkPhysicalDevicePresentIdFeaturesKHR",
       "org.lwjgl.vulkan.VkPhysicalDevicePresentWaitFeaturesKHR",
@@ -120,18 +108,23 @@
       "org.lwjgl.vulkan.VkRefreshCycleDurationGOOGLE",
       "org.lwjgl.vulkan.VkSemaphoreCreateInfo",
       "org.lwjgl.vulkan.VkSemaphoreTypeCreateInfo",
-      "and 7 more"
+      "org.lwjgl.vulkan.VkSemaphoreWaitInfo",
+      "org.lwjgl.vulkan.VkSubmitInfo2",
+      "org.lwjgl.vulkan.VkSubmitInfo2.Buffer",
+      "org.lwjgl.vulkan.VkSurfaceCapabilitiesKHR",
+      "org.lwjgl.vulkan.VkSwapchainCreateInfoKHR",
+      "FramerateLimitTracker.getFramerateLimit()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+    "roadmap": "Minecraft's libraries and client API (0.2)",
     "url": "https://modrinth.com/mod/polyreflex",
-    "version": "0.2.0",
-    "lacks": 47,
+    "version": "0.2.1",
+    "lacks": 36,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
-      "file": "polyreflex-0.2.0+26.3.jar",
-      "published": "2026-11-07"
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
+      "file": "polyreflex-0.2.1+26.3.jar",
+      "published": "2026-11-16"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

@@ -10,25 +10,16 @@
   "description": "♾ Prevents villager trades from locking up, making them always available. Trade away!",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.world.entity.npc.villager.AbstractVillager",
-    "net.minecraft.world.entity.npc.villager.Villager",
-    "net.minecraft.world.entity.npc.villager.VillagerData",
-    "net.minecraft.world.entity.npc.wanderingtrader.WanderingTrader",
-    "net.minecraft.world.inventory.MerchantContainer",
-    "net.minecraft.world.inventory.MerchantMenu",
-    "net.minecraft.world.inventory.MerchantResultSlot",
-    "net.minecraft.world.item.trading.Merchant",
-    "net.minecraft.world.item.trading.MerchantOffer",
     "ServerPlayer.sendMerchantOffers()",
-    "MerchantOffers.add()",
-    "MerchantOffers.iterator()"
+    "MerchantOffer.copy()",
+    "MerchantOffer.getMaxUses()"
   ],
-  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "infinitetrading-26.3.0-6.0.jar",
     "published": "2026-10-18"
   },
@@ -62,7 +53,7 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 12,
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -70,25 +61,13 @@
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
       "Mixin: 1 point inside the game's methods",
-      "net.minecraft.world.entity.npc.villager.AbstractVillager",
-      "net.minecraft.world.entity.npc.villager.Villager",
-      "net.minecraft.world.entity.npc.villager.VillagerData",
-      "net.minecraft.world.entity.npc.wanderingtrader.WanderingTrader",
-      "net.minecraft.world.inventory.MerchantContainer",
-      "net.minecraft.world.inventory.MerchantMenu",
-      "net.minecraft.world.inventory.MerchantResultSlot",
-      "net.minecraft.world.item.crafting.display.SlotDisplayContext",
-      "net.minecraft.world.item.trading.Merchant",
-      "net.minecraft.world.item.trading.MerchantOffer",
       "ServerPlayer.sendMerchantOffers()",
-      "Ingredient.display()",
-      "Recipe.isSpecial()",
-      "SlotDisplay.resolveForFirstStack()",
-      "SlotDisplay.resolveForStacks()",
+      "MerchantOffer.copy()",
+      "MerchantOffer.getMaxUses()",
       "MerchantOffers.add()",
       "MerchantOffers.iterator()"
     ],
-    "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+    "roadmap": "Code next to data (0.3), Mixin (0.5)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -99,13 +78,13 @@
     },
     "url": "https://modrinth.com/mod/infinite-trading",
     "version": "26.3.0-6.0-fabric+forge+neo",
-    "lacks": 17,
+    "lacks": 5,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "infinitetrading-26.3.0-6.0.jar",
       "published": "2026-10-18"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

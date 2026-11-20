@@ -9,20 +9,18 @@
   "author": "Rynnavinx",
   "description": "Reintroduces vanilla-like smooth lighting to non-full blocks (e.g. dirt paths and how they have dark shading when directly next to a full block) when using Sodium.",
   "needs": [
-    "com.mojang.blaze3d.vertex.QuadInstance",
     "net.minecraft.client.renderer.block.BlockModelLighter",
-    "net.minecraft.world.level.block.PathBlock",
+    "QuadInstance.getColor()",
+    "QuadInstance.getLightCoords()",
     "Sheets.cutoutBlockItemGlintSheet()",
-    "Sheets.cutoutBlockItemGlintSpecialSheet()",
-    "ARGB.redFloat()",
-    "BlockState.propagatesSkylightDown()"
+    "Sheets.cutoutBlockItemGlintSpecialSheet()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "sodium-shadowy-path-blocks-fabric-8.0.0.jar",
     "published": "2026-09-17"
   },
@@ -54,22 +52,20 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 7,
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "com.mojang.blaze3d.vertex.QuadInstance",
       "net.minecraft.client.renderer.block.BlockModelLighter",
-      "net.minecraft.world.level.block.PathBlock",
+      "QuadInstance.getColor()",
+      "QuadInstance.getLightCoords()",
       "Sheets.cutoutBlockItemGlintSheet()",
-      "Sheets.cutoutBlockItemGlintSpecialSheet()",
-      "ARGB.redFloat()",
-      "BlockState.propagatesSkylightDown()"
+      "Sheets.cutoutBlockItemGlintSpecialSheet()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+    "roadmap": "Minecraft's libraries and client API (0.2)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -80,13 +76,13 @@
     },
     "url": "https://modrinth.com/mod/sodium-shadowy-path-blocks",
     "version": "8.0.0-fabric",
-    "lacks": 7,
+    "lacks": 5,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "sodium-shadowy-path-blocks-fabric-8.0.0.jar",
       "published": "2026-09-17"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

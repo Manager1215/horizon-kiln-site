@@ -10,26 +10,18 @@
   "description": "Minecraft plugin/mod to set the server list MOTD using MiniMessage for formatting, supporting RGB colors.",
   "needs": [
     "Mixin: 6 points inside the game's methods",
-    "net.minecraft.commands.synchronization.ArgumentTypeInfos",
     "net.minecraft.commands.synchronization.ArgumentUtils",
     "net.minecraft.network.protocol.game.ClientboundCommandsPacket.ArgumentNodeStub",
     "net.minecraft.network.protocol.handshake.ClientIntentionPacket",
-    "net.minecraft.network.protocol.status.ServerStatus",
-    "net.minecraft.network.protocol.status.ServerStatus.Favicon",
-    "net.minecraft.network.protocol.status.ServerStatus.Players",
-    "net.minecraft.network.protocol.status.ServerStatus.Version",
-    "net.minecraft.server.ServerInfo",
     "net.minecraft.server.network.ServerHandshakePacketListenerImpl",
-    "net.minecraft.server.network.ServerStatusPacketListenerImpl",
-    "JsonArray.forEach()",
-    "MinecraftServer.getStatus()"
+    "net.minecraft.server.network.ServerStatusPacketListenerImpl"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "minimotd-fabric-mc26.3-2.2.5.jar",
     "published": "2026-09-18"
   },
@@ -61,7 +53,7 @@
     "class": "restart",
     "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own; has network channels"
   },
-  "lacks": 13,
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -69,23 +61,12 @@
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
       "Mixin: 6 points inside the game's methods",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-      "net.minecraft.commands.synchronization.ArgumentTypeInfos",
       "net.minecraft.commands.synchronization.ArgumentUtils",
       "net.minecraft.network.protocol.game.ClientboundCommandsPacket.ArgumentNodeStub",
       "net.minecraft.network.protocol.handshake.ClientIntentionPacket",
-      "net.minecraft.network.protocol.status.ServerStatus",
-      "net.minecraft.network.protocol.status.ServerStatus.Favicon",
-      "net.minecraft.network.protocol.status.ServerStatus.Players",
-      "net.minecraft.network.protocol.status.ServerStatus.Version",
-      "net.minecraft.server.ServerInfo",
       "net.minecraft.server.network.ServerHandshakePacketListenerImpl",
       "net.minecraft.server.network.ServerStatusPacketListenerImpl",
-      "JsonArray.forEach()",
-      "ServerLifecycleEvents.SERVER_STARTED",
-      "ServerLifecycleEvents.SERVER_STARTING",
-      "MinecraftServer.getStatus()"
+      "JsonArray.forEach()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "run": {
@@ -98,13 +79,13 @@
     },
     "url": "https://modrinth.com/mod/minimotd",
     "version": "2.2.5",
-    "lacks": 17,
+    "lacks": 6,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "minimotd-fabric-mc26.3-2.2.5.jar",
       "published": "2026-09-18"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

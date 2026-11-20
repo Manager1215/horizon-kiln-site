@@ -9,23 +9,14 @@
   "author": "SHUNCHA",
   "description": "A Fabric mod that displays the player's head at the moment a firework explodes.\n花火が爆発する瞬間に、使用したプレイヤーヘッドの持ち主の顔が浮かび上がる演出MODです。",
   "needs": [
-    "com.mojang.math.Transformation",
-    "net.minecraft.world.entity.Display",
-    "net.minecraft.world.entity.Display.ItemDisplay",
-    "net.minecraft.world.entity.projectile.FireworkRocketEntity",
-    "net.minecraft.world.item.component.ResolvableProfile",
-    "LocalPlayer.permissions()",
-    "DataComponents.PROFILE",
-    "ListTag.iterator()",
-    "MinecraftServer.getTickCount()",
-    "EntityTypes.ITEM_DISPLAY"
+    "Display.ItemDisplay.getSlot()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "headfirework-1.2.0.jar",
     "published": "2026-10-06"
   },
@@ -57,42 +48,16 @@
     "class": "partial",
     "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
   },
-  "lacks": 10,
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "com.mojang.math.Transformation",
-      "net.minecraft.world.entity.Display",
-      "net.minecraft.world.entity.Display.ItemDisplay",
-      "net.minecraft.world.entity.projectile.FireworkRocketEntity",
-      "net.minecraft.world.item.component.FireworkExplosion",
-      "net.minecraft.world.item.component.FireworkExplosion.Shape",
-      "net.minecraft.world.item.component.Fireworks",
-      "net.minecraft.world.item.component.ResolvableProfile",
-      "net.minecraft.world.item.crafting.FireworkRocketRecipe",
-      "net.minecraft.world.item.crafting.FireworkStarRecipe",
-      "LocalPlayer.permissions()",
-      "DataComponents.CUSTOM_NAME",
-      "DataComponents.DYE",
-      "DataComponents.FIREWORKS",
-      "DataComponents.FIREWORK_EXPLOSION",
-      "DataComponents.PROFILE",
-      "ListTag.iterator()",
-      "MinecraftServer.getTickCount()",
-      "ProblemReporter.DISCARDING",
-      "EntityTypes.ITEM_DISPLAY",
-      "DyeColor.getFireworkColor()",
-      "Items.FEATHER",
-      "Items.FIREWORK_ROCKET",
-      "Items.FIRE_CHARGE",
-      "Items.GUNPOWDER",
-      "Items.PAPER",
-      "CustomData.copyTag()"
+      "Display.ItemDisplay.getSlot()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+    "roadmap": "Code next to data (0.3)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -103,13 +68,13 @@
     },
     "url": "https://modrinth.com/mod/headfirework-mod",
     "version": "1.2.0",
-    "lacks": 27,
+    "lacks": 1,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "headfirework-1.2.0.jar",
       "published": "2026-10-06"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

@@ -1,0 +1,86 @@
+{
+  "id": "token-protector",
+  "name": "Token Protector",
+  "version": "1.0.5",
+  "status": "planned",
+  "statusLabel": "Planned",
+  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "url": "https://modrinth.com/mod/token-protector",
+  "author": "cev-api",
+  "description": "TokenProtector helps to prevent malicious mods from stealing your Minecraft session token. It sits between the game's authentication system and every mod in your instance, serving fake token data to unauthorized callers while keeping the game functional.",
+  "needs": [
+    "Mixin: 4 points inside the game's methods",
+    "com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService",
+    "net.minecraft.client.main.Main"
+  ],
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+  "evidence": "Not run: Java did not start.",
+  "library": false,
+  "scanned": {
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
+    "file": "tokenprotector-1.0.5.jar",
+    "published": "2026-11-18"
+  },
+  "reports": {
+    "works": 0,
+    "partly": 0,
+    "broken": 0,
+    "latest": []
+  },
+  "run": {
+    "passed": false,
+    "date": "2026-11-18",
+    "kiln": "0.4.6",
+    "ticks": 0,
+    "hud": false,
+    "why": "Java did not start"
+  },
+  "entrypoints": {
+    "client": 1,
+    "preLaunch": 1,
+    "modmenu": 1
+  },
+  "mixins": true,
+  "depends": [
+    "fabric-api",
+    "fabricloader",
+    "java",
+    "minecraft"
+  ],
+  "softOff": {
+    "class": "restart",
+    "why": "@redirect into the game's classes"
+  },
+  "lacks": 2,
+  "development": {
+    "status": "planned",
+    "statusLabel": "Planned",
+    "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+    "evidence": "Not run: Java did not start.",
+    "needs": [
+      "Mixin: 4 points inside the game's methods",
+      "com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService",
+      "net.minecraft.client.main.Main"
+    ],
+    "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+    "run": {
+      "passed": false,
+      "date": "2026-11-19",
+      "kiln": "development build 2026-11-19 (aec290a0)",
+      "ticks": 0,
+      "hud": false,
+      "why": "Java did not start"
+    },
+    "url": "https://modrinth.com/mod/token-protector",
+    "version": "1.0.5",
+    "lacks": 2,
+    "scanned": {
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
+      "file": "tokenprotector-1.0.5.jar",
+      "published": "2026-11-18"
+    },
+    "build": "development build 2026-11-20 (eda5a4a5)"
+  }
+}

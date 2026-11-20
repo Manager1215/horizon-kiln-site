@@ -10,36 +10,21 @@
   "description": "BashCraft is a Fabric mod that brings the best small ideas of bash to Minecraft commands.",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.minecraft.client.gui.components.CommandSuggestions",
     "net.minecraft.commands.execution.ChainModifiers",
     "net.minecraft.commands.execution.CustomCommandExecutor",
     "net.minecraft.commands.execution.CustomCommandExecutor.CommandAdapter",
-    "net.minecraft.commands.execution.ExecutionContext",
     "net.minecraft.commands.execution.ExecutionControl",
-    "net.minecraft.network.chat.SignableCommand",
-    "net.minecraft.server.ServerFunctionLibrary",
-    "net.minecraft.server.ServerTickRateManager",
     "net.minecraft.server.network.ServerCommandSuggestionsProvider",
-    "net.minecraft.world.level.storage.CommandStorage",
-    "ClientPacketListener.getCommands()",
-    "ClientPacketListener.getSuggestionsProvider()",
     "CommandResultCallback.EMPTY",
     "CommandSourceStack.callback()",
-    "CommandSourceStack.withCallback()",
-    "Style.getInsertion()",
-    "MinecraftServer.getCommandStorage()",
-    "MinecraftServer.getProfilePermissions()",
-    "MinecraftServer.tickRateManager()",
-    "ServerLevel.getHeight()",
-    "ServerPlayer.commandSource()",
-    "Player.nameAndId()"
+    "SignableCommand.hasSignableArguments()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "bashcraft-1.0.0.jar",
     "published": "2026-10-14"
   },
@@ -72,7 +57,7 @@
     "class": "restart",
     "why": "@wrap-operation into the game's classes; has network channels"
   },
-  "lacks": 23,
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -80,38 +65,16 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "Mixin: 3 points inside the game's methods",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-      "net.minecraft.client.gui.components.CommandSuggestions",
       "net.minecraft.commands.execution.ChainModifiers",
       "net.minecraft.commands.execution.CustomCommandExecutor",
       "net.minecraft.commands.execution.CustomCommandExecutor.CommandAdapter",
-      "net.minecraft.commands.execution.ExecutionContext",
       "net.minecraft.commands.execution.ExecutionControl",
-      "net.minecraft.network.chat.SignableCommand",
-      "net.minecraft.server.ServerFunctionLibrary",
-      "net.minecraft.server.ServerTickRateManager",
       "net.minecraft.server.network.ServerCommandSuggestionsProvider",
-      "net.minecraft.world.level.storage.CommandStorage",
-      "ServerLifecycleEvents.SERVER_STARTING",
-      "ClientPacketListener.getCommands()",
-      "ClientPacketListener.getSuggestionsProvider()",
       "CommandResultCallback.EMPTY",
       "CommandSourceStack.callback()",
-      "CommandSourceStack.withCallback()",
-      "Component.getSiblings()",
-      "Style.getInsertion()",
-      "MinecraftServer.execute()",
-      "MinecraftServer.getCommandStorage()",
-      "MinecraftServer.getProfilePermissions()",
-      "MinecraftServer.tickRateManager()",
-      "ServerLevel.getHeight()",
-      "ServerPlayer.commandSource()",
-      "ServerPlayer.createCommandSourceStack()",
-      "FormattedCharSequence.composite()",
-      "FormattedCharSequence.forward()",
-      "Player.nameAndId()"
+      "SignableCommand.hasSignableArguments()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+    "roadmap": "Code next to data (0.3), Mixin (0.5)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -122,13 +85,13 @@
     },
     "url": "https://modrinth.com/mod/bashcraft",
     "version": "1.0.0",
-    "lacks": 30,
+    "lacks": 8,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "bashcraft-1.0.0.jar",
       "published": "2026-10-14"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

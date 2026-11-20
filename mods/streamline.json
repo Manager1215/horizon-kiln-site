@@ -9,15 +9,12 @@
   "author": "MrDrak",
   "description": "Easily add essential features to your server or modded client. Choose only what YOU want! Built with performance in mind.",
   "needs": [
-    "com.mojang.authlib.properties.Property",
-    "com.mojang.authlib.properties.PropertyMap",
     "io.netty.bootstrap.Bootstrap",
     "io.netty.bootstrap.BootstrapConfig",
     "io.netty.channel.Channel",
     "io.netty.channel.ChannelConfig",
     "io.netty.channel.ChannelDuplexHandler",
     "io.netty.channel.ChannelFuture",
-    "io.netty.channel.ChannelFutureListener",
     "io.netty.channel.ChannelHandler",
     "io.netty.channel.ChannelHandler.Sharable",
     "io.netty.channel.ChannelHandlerContext",
@@ -49,14 +46,17 @@
     "io.netty.channel.socket.nio.NioSocketChannel",
     "io.netty.channel.unix.DomainSocketAddress",
     "io.netty.handler.ssl.OpenSsl",
-    "and 80 more"
+    "io.netty.handler.ssl.SslContext",
+    "io.netty.handler.ssl.SslContextBuilder",
+    "io.netty.handler.ssl.SslHandler",
+    "and 19 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "StreamlineCore-Fabric-263-2.6.1.10.jar",
     "published": "2026-11-12"
   },
@@ -89,23 +89,19 @@
     "class": "partial",
     "why": "runs threads of its own"
   },
-  "lacks": 146,
+  "lacks": 59,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "com.mojang.authlib.GameProfile",
-      "com.mojang.authlib.properties.Property",
-      "com.mojang.authlib.properties.PropertyMap",
       "io.netty.bootstrap.Bootstrap",
       "io.netty.bootstrap.BootstrapConfig",
       "io.netty.channel.Channel",
       "io.netty.channel.ChannelConfig",
       "io.netty.channel.ChannelDuplexHandler",
       "io.netty.channel.ChannelFuture",
-      "io.netty.channel.ChannelFutureListener",
       "io.netty.channel.ChannelHandler",
       "io.netty.channel.ChannelHandler.Sharable",
       "io.netty.channel.ChannelHandlerContext",
@@ -136,9 +132,13 @@
       "io.netty.channel.socket.nio.NioDatagramChannel",
       "io.netty.channel.socket.nio.NioSocketChannel",
       "io.netty.channel.unix.DomainSocketAddress",
-      "and 80 more"
+      "io.netty.handler.ssl.OpenSsl",
+      "io.netty.handler.ssl.SslContext",
+      "io.netty.handler.ssl.SslContextBuilder",
+      "io.netty.handler.ssl.SslHandler",
+      "and 25 more"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -149,13 +149,13 @@
     },
     "url": "https://modrinth.com/mod/streamline",
     "version": "2.6.1.10",
-    "lacks": 186,
+    "lacks": 65,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "StreamlineCore-Fabric-263-2.6.1.10.jar",
       "published": "2026-11-12"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

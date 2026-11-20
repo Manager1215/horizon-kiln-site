@@ -10,19 +10,20 @@
   "description": "Keeps your cape visible by hiding the equipped elytra model on the client.",
   "needs": [
     "net.minecraft.client.renderer.entity.layers.CapeLayer",
-    "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
     "net.minecraft.client.renderer.entity.layers.WingsLayer",
-    "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "net.minecraft.client.resources.model.EquipmentClientInfo",
     "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
+    "AvatarRenderState.chestEquipment",
+    "AvatarRenderState.isFallFlying",
+    "AvatarRenderState.isInvisible",
     "EquipmentAssetManager.get()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "hide-elytra-for-cape-1.2.2+26.3.jar",
     "published": "2026-09-21"
   },
@@ -55,7 +56,7 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 7,
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -63,11 +64,14 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "net.minecraft.client.renderer.entity.layers.CapeLayer",
-      "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
       "net.minecraft.client.renderer.entity.layers.WingsLayer",
-      "net.minecraft.client.renderer.entity.state.AvatarRenderState",
       "net.minecraft.client.resources.model.EquipmentClientInfo",
       "net.minecraft.client.resources.model.EquipmentClientInfo.LayerType",
+      "AvatarRenderState.chestEquipment",
+      "AvatarRenderState.isFallFlying",
+      "AvatarRenderState.isInvisible",
+      "AvatarRenderState.showCape",
+      "AvatarRenderState.skin",
       "EquipmentAssetManager.get()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2)",
@@ -81,13 +85,13 @@
     },
     "url": "https://modrinth.com/mod/cape-over-elytra",
     "version": "1.2.2+26.3",
-    "lacks": 7,
+    "lacks": 10,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "hide-elytra-for-cape-1.2.2+26.3.jar",
       "published": "2026-09-21"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

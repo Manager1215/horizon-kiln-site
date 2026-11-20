@@ -10,30 +10,14 @@
   "description": "Give individual players mob protection, keep inventory on death, and instant respawn with simple commands.",
   "needs": [
     "Mixin: 6 points inside the game's methods",
-    "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
-    "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
-    "net.minecraft.world.entity.ai.Brain",
-    "net.minecraft.world.entity.ai.memory.MemoryModuleType",
-    "ClientboundGameEventPacket.IMMEDIATE_RESPAWN",
-    "MinecraftServer.getResourceManager()",
-    "MinecraftServer.isHardcore()",
-    "ServerLevel.getEntitiesOfClass()",
-    "ServerLevel.getGameRules()",
-    "CombatTracker.getDeathMessage()",
-    "Mob.getBrain()",
-    "Mob.setTarget()",
-    "Player.getBoundingBox()",
-    "GameRules.IMMEDIATE_RESPAWN",
-    "GameRules.KEEP_INVENTORY",
-    "GameRules.get()",
-    "AABB.inflate()"
+    "GameRules.IMMEDIATE_RESPAWN"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "safetynet-26.3.jar",
     "published": "2026-10-23"
   },
@@ -66,7 +50,7 @@
     "class": "restart",
     "why": "@redirect into the game's classes"
   },
-  "lacks": 17,
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -74,34 +58,8 @@
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
       "Mixin: 6 points inside the game's methods",
-      "net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry.Builder",
-      "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
-      "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AllowDamage",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-      "net.minecraft.world.entity.ai.Brain",
-      "net.minecraft.world.entity.ai.memory.MemoryModuleType",
-      "AttachmentRegistry.create()",
-      "ServerLifecycleEvents.SERVER_STARTING",
-      "ClientboundGameEventPacket.IMMEDIATE_RESPAWN",
-      "MinecraftServer.getResourceManager()",
-      "MinecraftServer.isHardcore()",
       "ServerLevel.getEntitiesOfClass()",
-      "ServerLevel.getGameRules()",
-      "ServerPlayer.connection",
-      "ServerPlayer.getAttachedOrElse()",
-      "ServerPlayer.getDisplayName()",
-      "ServerPlayer.setAttached()",
-      "ServerGamePacketListenerImpl.send()",
-      "CombatTracker.getDeathMessage()",
-      "Mob.getBrain()",
-      "Mob.setTarget()",
-      "Player.getAttachedOrElse()",
-      "Player.getBoundingBox()",
-      "Player.setAttached()",
-      "GameRules.IMMEDIATE_RESPAWN",
-      "GameRules.KEEP_INVENTORY",
-      "GameRules.get()",
-      "AABB.inflate()"
+      "GameRules.IMMEDIATE_RESPAWN"
     ],
     "roadmap": "Code next to data (0.3), Mixin (0.5)",
     "run": {
@@ -114,13 +72,13 @@
     },
     "url": "https://modrinth.com/mod/safetynet",
     "version": "1.1.1",
-    "lacks": 28,
+    "lacks": 2,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "safetynet-26.3.jar",
       "published": "2026-10-23"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

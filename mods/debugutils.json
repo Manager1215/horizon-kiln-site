@@ -24,8 +24,6 @@
     "net.minecraft.client.renderer.debug.RedstoneWireOrientationsRenderer",
     "net.minecraft.client.renderer.debug.StructureRenderer",
     "net.minecraft.client.renderer.debug.VillageSectionsDebugRenderer",
-    "net.minecraft.client.renderer.extract.LevelExtractor",
-    "net.minecraft.commands.arguments.ResourceArgument",
     "net.minecraft.util.debug.DebugSubscriptions",
     "SharedConstants.DEBUG_BEES",
     "SharedConstants.DEBUG_BRAIN",
@@ -41,18 +39,14 @@
     "SharedConstants.DEBUG_STRUCTURES",
     "SharedConstants.DEBUG_VILLAGE_SECTIONS",
     "Minecraft.levelExtractor",
-    "BuiltInRegistries.DEBUG_SUBSCRIPTION",
-    "Registries.DEBUG_SUBSCRIPTION",
-    "ByteBufCodecs.registry()",
-    "ServerPlayer.getGameProfile()",
-    "Util.memoize()"
+    "LevelExtractor.debugRenderer"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "debugutils-26.2-1.0.9-fabric.jar",
     "published": "2026-08-21"
   },
@@ -82,7 +76,7 @@
     "class": "partial",
     "why": "has network channels"
   },
-  "lacks": 36,
+  "lacks": 30,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -90,8 +84,6 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "Mixin: 1 point inside the game's methods",
-      "com.mojang.authlib.GameProfile",
-      "net.minecraft.SharedConstants",
       "net.minecraft.client.multiplayer.ClientDebugSubscriber",
       "net.minecraft.client.renderer.debug.BeeDebugRenderer",
       "net.minecraft.client.renderer.debug.BrainDebugRenderer",
@@ -106,15 +98,22 @@
       "net.minecraft.client.renderer.debug.RedstoneWireOrientationsRenderer",
       "net.minecraft.client.renderer.debug.StructureRenderer",
       "net.minecraft.client.renderer.debug.VillageSectionsDebugRenderer",
-      "net.minecraft.client.renderer.extract.LevelExtractor",
-      "net.minecraft.commands.arguments.ResourceArgument",
       "net.minecraft.util.debug.DebugSubscriptions",
+      "SharedConstants.DEBUG_BEES",
+      "SharedConstants.DEBUG_BRAIN",
+      "SharedConstants.DEBUG_BREEZE_MOB",
+      "SharedConstants.DEBUG_ENTITY_BLOCK_INTERSECTION",
+      "SharedConstants.DEBUG_EXPERIMENTAL_REDSTONEWIRE_UPDATE_ORDER",
+      "SharedConstants.DEBUG_GAME_EVENT_LISTENERS",
+      "SharedConstants.DEBUG_GOAL_SELECTOR",
+      "SharedConstants.DEBUG_NEIGHBORSUPDATE",
+      "SharedConstants.DEBUG_PATHFINDING",
+      "SharedConstants.DEBUG_POI",
+      "SharedConstants.DEBUG_RAIDS",
+      "SharedConstants.DEBUG_STRUCTURES",
+      "SharedConstants.DEBUG_VILLAGE_SECTIONS",
       "Minecraft.levelExtractor",
-      "BuiltInRegistries.DEBUG_SUBSCRIPTION",
-      "Registries.DEBUG_SUBSCRIPTION",
-      "ByteBufCodecs.registry()",
-      "ServerPlayer.getGameProfile()",
-      "Util.memoize()"
+      "LevelExtractor.debugRenderer"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "run": {
@@ -127,13 +126,13 @@
     },
     "url": "https://modrinth.com/mod/debugutils",
     "version": "26.2-1.0.9-fabric",
-    "lacks": 25,
+    "lacks": 30,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "debugutils-26.2-1.0.9-fabric.jar",
       "published": "2026-08-21"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

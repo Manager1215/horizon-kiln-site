@@ -9,26 +9,17 @@
   "author": "ElmerLion",
   "description": "Lets you export all text from any book, save it to your clipboard and files and then import into another book.",
   "needs": [
-    "net.minecraft.client.gui.screens.inventory.BookEditScreen",
-    "net.minecraft.client.gui.screens.inventory.BookViewScreen",
-    "net.minecraft.client.gui.screens.inventory.BookViewScreen.BookAccess",
     "net.minecraft.client.gui.screens.inventory.LecternScreen",
-    "net.minecraft.network.protocol.game.ServerboundEditBookPacket",
-    "net.minecraft.server.network.Filterable",
-    "net.minecraft.world.inventory.LecternMenu",
-    "net.minecraft.world.item.component.WritableBookContent",
-    "net.minecraft.world.item.component.WrittenBookContent",
-    "ClientPacketListener.send()",
     "LocalPlayer.isTextFilteringEnabled()",
-    "DataComponents.WRITABLE_BOOK_CONTENT",
-    "DataComponents.WRITTEN_BOOK_CONTENT"
+    "LecternMenu.getBook()",
+    "WritableBookContent.getPages()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "book-extractor-1.0.4+26.3.jar",
     "published": "2026-10-02"
   },
@@ -60,28 +51,17 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 13,
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "net.minecraft.client.gui.screens.inventory.BookEditScreen",
-      "net.minecraft.client.gui.screens.inventory.BookViewScreen",
-      "net.minecraft.client.gui.screens.inventory.BookViewScreen.BookAccess",
       "net.minecraft.client.gui.screens.inventory.LecternScreen",
-      "net.minecraft.network.protocol.game.ServerboundEditBookPacket",
-      "net.minecraft.server.network.Filterable",
-      "net.minecraft.world.inventory.LecternMenu",
-      "net.minecraft.world.item.component.WritableBookContent",
-      "net.minecraft.world.item.component.WrittenBookContent",
-      "KeyMapping.matches()",
-      "Minecraft.gameDirectory",
-      "ClientPacketListener.send()",
       "LocalPlayer.isTextFilteringEnabled()",
-      "DataComponents.WRITABLE_BOOK_CONTENT",
-      "DataComponents.WRITTEN_BOOK_CONTENT"
+      "LecternMenu.getBook()",
+      "WritableBookContent.getPages()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
     "run": {
@@ -94,13 +74,13 @@
     },
     "url": "https://modrinth.com/mod/book-extractor",
     "version": "1.0.4+26.3",
-    "lacks": 15,
+    "lacks": 4,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "book-extractor-1.0.4+26.3.jar",
       "published": "2026-10-02"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

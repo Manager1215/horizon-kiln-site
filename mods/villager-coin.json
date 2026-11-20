@@ -9,21 +9,19 @@
   "author": "Monte_Carlo_Simulations",
   "description": "Swap emeralds for any item in villager trades.  Plugin with no client install required. Works in single-player too.",
   "needs": [
-    "net.minecraft.world.entity.npc.villager.AbstractVillager",
-    "net.minecraft.world.item.trading.ItemCost",
-    "net.minecraft.world.item.trading.MerchantOffer",
-    "MerchantOffers.addAll()",
-    "MerchantOffers.clear()",
-    "MerchantOffers.isEmpty()",
-    "MerchantOffers.iterator()",
-    "MerchantOffers.size()"
+    "MerchantOffer.getDemand()",
+    "MerchantOffer.getMaxUses()",
+    "MerchantOffer.getPriceMultiplier()",
+    "MerchantOffer.getSpecialPriceDiff()",
+    "MerchantOffer.getXp()",
+    "MerchantOffer.setSpecialPriceDiff()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "villager_coin-fabric-1.4.2.jar",
     "published": "2026-10-19"
   },
@@ -56,16 +54,19 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 8,
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "net.minecraft.world.entity.npc.villager.AbstractVillager",
-      "net.minecraft.world.item.trading.ItemCost",
-      "net.minecraft.world.item.trading.MerchantOffer",
+      "MerchantOffer.getDemand()",
+      "MerchantOffer.getMaxUses()",
+      "MerchantOffer.getPriceMultiplier()",
+      "MerchantOffer.getSpecialPriceDiff()",
+      "MerchantOffer.getXp()",
+      "MerchantOffer.setSpecialPriceDiff()",
       "MerchantOffers.addAll()",
       "MerchantOffers.clear()",
       "MerchantOffers.isEmpty()",
@@ -83,13 +84,13 @@
     },
     "url": "https://modrinth.com/mod/villager-coin",
     "version": "1.4.2",
-    "lacks": 8,
+    "lacks": 11,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "villager_coin-fabric-1.4.2.jar",
       "published": "2026-10-19"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

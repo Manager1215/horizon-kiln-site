@@ -10,31 +10,19 @@
   "description": "Improve Minecart and Boat recipes, control their drops! Data driven.",
   "needs": [
     "Mixin: 4 points inside the game's methods",
-    "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
-    "net.minecraft.world.entity.vehicle.boat.AbstractBoat",
-    "net.minecraft.world.entity.vehicle.boat.AbstractChestBoat",
-    "net.minecraft.world.entity.vehicle.minecart.MinecartTNT",
-    "net.minecraft.world.item.BoatItem",
     "net.minecraft.world.item.MinecartItem",
-    "ImmutableList.stream()",
-    "ResourceLoader.registerBuiltinPack()",
-    "Entity.<init>()",
-    "VehicleEntity.getLootTable()",
     "VehicleEntity.is()",
+    "AbstractBoat.destroy()",
     "AbstractMinecart.destroy()",
     "CraftingBookCategory.STREAM_CODEC",
-    "CraftingInput.ingredientCount()",
-    "PlacementInfo.create()",
-    "PlacementInfo.create()",
-    "LootTable.EMPTY",
-    "LootContextParamSets.ENTITY"
+    "PlacementInfo.create()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "sturdy_vehicles-2.7.0+MC26.3.x.jar",
     "published": "2026-09-30"
   },
@@ -65,7 +53,7 @@
     "class": "restart",
     "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
   },
-  "lacks": 18,
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -73,36 +61,13 @@
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
       "Mixin: 4 points inside the game's methods",
-      "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-      "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
-      "net.minecraft.world.entity.vehicle.boat.AbstractBoat",
-      "net.minecraft.world.entity.vehicle.boat.AbstractChestBoat",
-      "net.minecraft.world.entity.vehicle.minecart.MinecartTNT",
-      "net.minecraft.world.item.BoatItem",
       "net.minecraft.world.item.MinecartItem",
-      "net.minecraft.world.item.component.ItemLore",
-      "net.minecraft.world.item.crafting.display.ShapedCraftingRecipeDisplay",
-      "net.minecraft.world.item.crafting.display.ShapelessCraftingRecipeDisplay",
-      "net.minecraft.world.item.crafting.display.SlotDisplay.ItemSlotDisplay",
       "ImmutableList.stream()",
-      "DataComponents.CUSTOM_NAME",
-      "DataComponents.LORE",
-      "Entity.<init>()",
-      "VehicleEntity.getLootTable()",
       "VehicleEntity.is()",
+      "AbstractBoat.destroy()",
       "AbstractMinecart.destroy()",
-      "CraftingBookCategory.CODEC",
       "CraftingBookCategory.STREAM_CODEC",
-      "CraftingInput.ingredientCount()",
-      "Ingredient.display()",
-      "PlacementInfo.create()",
-      "PlacementInfo.create()",
-      "LootTable.EMPTY",
-      "LootContextParamSets.ENTITY",
-      "LootContextParams.ATTACKING_ENTITY",
-      "LootContextParams.DAMAGE_SOURCE",
-      "LootContextParams.DIRECT_ATTACKING_ENTITY",
-      "LootContextParams.THIS_ENTITY"
+      "PlacementInfo.create()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "run": {
@@ -115,13 +80,13 @@
     },
     "url": "https://modrinth.com/mod/sturdy-vehicles",
     "version": "2.7.0+MC26.3.x",
-    "lacks": 30,
+    "lacks": 7,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "sturdy_vehicles-2.7.0+MC26.3.x.jar",
       "published": "2026-09-30"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

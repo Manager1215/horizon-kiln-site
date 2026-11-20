@@ -10,18 +10,16 @@
   "description": "Shows a GUI after Minecraft crashes, immediately showing and analyzing all affected logs.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "com.mojang.blaze3d.Blaze3D",
-    "net.minecraft.util.NativeModuleLister",
     "org.apache.logging.log4j.core.LoggerContext",
     "org.lwjgl.glfw.GLFW",
     "org.lwjgl.opengl.GL11C"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "CrashAssistant-fabric-26.2-26.3-1.11.14.jar",
     "published": "2026-09-20"
   },
@@ -53,7 +51,7 @@
     "class": "partial",
     "why": "runs threads of its own"
   },
-  "lacks": 5,
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -61,17 +59,12 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "Mixin: 1 point inside the game's methods",
-      "com.mojang.blaze3d.Blaze3D",
-      "net.minecraft.CrashReport",
-      "net.minecraft.ReportedException",
-      "net.minecraft.client.server.IntegratedServer",
-      "net.minecraft.util.NativeModuleLister",
       "org.apache.logging.log4j.core.LoggerContext",
       "org.lwjgl.glfw.GLFW",
       "org.lwjgl.opengl.GL11C",
-      "Minecraft.getSingleplayerServer()"
+      "Blaze3D.youJustLostTheGame()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+    "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -82,13 +75,13 @@
     },
     "url": "https://modrinth.com/mod/crash-assistant",
     "version": "1.11.14",
-    "lacks": 9,
+    "lacks": 4,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "CrashAssistant-fabric-26.2-26.3-1.11.14.jar",
       "published": "2026-09-20"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

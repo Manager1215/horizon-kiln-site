@@ -10,31 +10,19 @@
   "description": "Mod that allows mining Spawners & Trial Spawners with Silk Touch.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.world.level.BaseSpawner",
-    "net.minecraft.world.level.SpawnData",
-    "net.minecraft.world.level.Spawner",
-    "net.minecraft.world.level.block.SpawnerBlock",
-    "net.minecraft.world.level.block.TrialSpawnerBlock",
-    "net.minecraft.world.level.block.entity.SpawnerBlockEntity",
-    "net.minecraft.world.level.block.entity.TrialSpawnerBlockEntity",
-    "net.minecraft.world.level.block.entity.trialspawner.TrialSpawner",
-    "net.minecraft.world.level.block.entity.trialspawner.TrialSpawner.FullConfig",
-    "net.minecraft.world.level.block.entity.trialspawner.TrialSpawnerConfig",
-    "net.minecraft.world.level.block.entity.trialspawner.TrialSpawnerState",
-    "net.minecraft.world.level.block.entity.trialspawner.TrialSpawnerStateData",
-    "net.minecraft.world.level.block.entity.trialspawner.TrialSpawnerStateData.Packed",
-    "WeightedList.getRandom()",
     "EntityType.CODEC",
     "EntityType.by()",
-    "CustomData.update()",
-    "EnchantmentHelper.getItemEnchantmentLevel()"
+    "SpawnData.getEntityToSpawn()",
+    "TrialSpawner.FullConfig.MAP_CODEC",
+    "TrialSpawnerStateData.apply()",
+    "TrialSpawnerStateData.pack()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "SilkSpawners-1.3.jar",
     "published": "2026-07-15"
   },
@@ -66,7 +54,7 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 18,
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -74,29 +62,12 @@
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
       "Mixin: 2 points inside the game's methods",
-      "net.minecraft.tags.ItemTags",
-      "net.minecraft.world.level.BaseSpawner",
-      "net.minecraft.world.level.SpawnData",
-      "net.minecraft.world.level.Spawner",
-      "net.minecraft.world.level.block.SpawnerBlock",
-      "net.minecraft.world.level.block.TrialSpawnerBlock",
-      "net.minecraft.world.level.block.entity.SpawnerBlockEntity",
-      "net.minecraft.world.level.block.entity.TrialSpawnerBlockEntity",
-      "net.minecraft.world.level.block.entity.trialspawner.TrialSpawner",
-      "net.minecraft.world.level.block.entity.trialspawner.TrialSpawner.FullConfig",
-      "net.minecraft.world.level.block.entity.trialspawner.TrialSpawnerConfig",
-      "net.minecraft.world.level.block.entity.trialspawner.TrialSpawnerState",
-      "net.minecraft.world.level.block.entity.trialspawner.TrialSpawnerStateData",
-      "net.minecraft.world.level.block.entity.trialspawner.TrialSpawnerStateData.Packed",
-      "Registry.getOrThrow()",
-      "RegistryAccess.lookupOrThrow()",
-      "DataComponents.ITEM_NAME",
-      "WeightedList.getRandom()",
       "EntityType.CODEC",
       "EntityType.by()",
-      "CustomData.copyTag()",
-      "CustomData.update()",
-      "EnchantmentHelper.getItemEnchantmentLevel()"
+      "SpawnData.getEntityToSpawn()",
+      "TrialSpawner.FullConfig.MAP_CODEC",
+      "TrialSpawnerStateData.apply()",
+      "TrialSpawnerStateData.pack()"
     ],
     "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
     "run": {
@@ -109,13 +80,13 @@
     },
     "url": "https://modrinth.com/mod/silktouch-spawners",
     "version": "1.3",
-    "lacks": 23,
+    "lacks": 6,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "SilkSpawners-1.3.jar",
       "published": "2026-07-15"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

@@ -9,27 +9,14 @@
   "author": "senseiwells",
   "description": "This mod provides you with a way to customize your player's name tags completely server-side with no need for any client mods.",
   "needs": [
-    "com.mojang.util.UndashedUuid",
-    "net.fabricmc.fabric.api.permission.v1.PermissionContextOwner",
-    "net.minecraft.core.UUIDUtil",
-    "net.minecraft.world.scores.PlayerTeam",
-    "Identifier.toShortString()",
-    "MinecraftServer.registryAccess()",
-    "ServerPlayer.entityTags()",
-    "ServerPlayer.getGameProfile()",
-    "ServerPlayer.getTeam()",
-    "Entity.distanceToSqr()",
-    "Entity.entityTags()",
-    "Entity.getPassengers()",
-    "Entity.isInvisibleTo()",
-    "Player.getGameProfile()"
+    "PermissionContextOwner.checkPermission()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "CustomNameTags-2.0.0+26.3.jar",
     "published": "2026-09-15"
   },
@@ -62,33 +49,16 @@
     "class": "restart",
     "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
   },
-  "lacks": 14,
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
-      "com.mojang.authlib.GameProfile",
-      "com.mojang.util.UndashedUuid",
-      "net.fabricmc.fabric.api.permission.v1.PermissionContextOwner",
-      "net.minecraft.core.UUIDUtil",
-      "net.minecraft.network.chat.ComponentSerialization",
-      "net.minecraft.world.scores.PlayerTeam",
-      "Component.getSiblings()",
-      "Identifier.toShortString()",
-      "MinecraftServer.registryAccess()",
-      "ServerPlayer.entityTags()",
-      "ServerPlayer.getGameProfile()",
-      "ServerPlayer.getTeam()",
-      "ServerPlayer.permissions()",
-      "Entity.distanceToSqr()",
-      "Entity.entityTags()",
-      "Entity.getPassengers()",
-      "Entity.isInvisibleTo()",
-      "Player.getGameProfile()"
+      "PermissionContextOwner.checkPermission()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+    "roadmap": "Code next to data (0.3)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -99,13 +69,13 @@
     },
     "url": "https://modrinth.com/mod/customnametags",
     "version": "2.0.0+26.3",
-    "lacks": 18,
+    "lacks": 1,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "CustomNameTags-2.0.0+26.3.jar",
       "published": "2026-09-15"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

@@ -10,28 +10,14 @@
   "description": "Move mob spawners in survival with Silk Touch. Give yourself any type of spawner with just one command.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
-    "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
-    "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-    "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Canceled",
-    "net.fabricmc.loader.api.VersionParsingException",
-    "net.minecraft.world.level.BaseSpawner",
-    "net.minecraft.world.level.SpawnData",
-    "net.minecraft.world.level.block.SpawnerBlock",
-    "net.minecraft.world.level.block.entity.SpawnerBlockEntity",
-    "Version.parse()",
-    "DefaultedRegistry.iterator()",
-    "ListTag.add()",
-    "TypedEntityData.copyTagWithoutId()",
-    "TypedEntityData.type()",
-    "EnchantmentHelper.getItemEnchantmentLevel()"
+    "SpawnData.getEntityToSpawn()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "getspawners-1.1.7.jar",
     "published": "2026-10-19"
   },
@@ -65,7 +51,7 @@
     "class": "restart",
     "why": "@redirect into the game's classes; runs threads of its own"
   },
-  "lacks": 15,
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -73,32 +59,10 @@
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
       "Mixin: 1 point inside the game's methods",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-      "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents",
-      "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.After",
-      "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Before",
-      "net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents.Canceled",
-      "net.fabricmc.loader.api.VersionParsingException",
-      "net.minecraft.world.level.BaseSpawner",
-      "net.minecraft.world.level.SpawnData",
-      "net.minecraft.world.level.block.SpawnerBlock",
-      "net.minecraft.world.level.block.entity.SpawnerBlockEntity",
-      "ServerLifecycleEvents.SERVER_STARTED",
-      "ServerLifecycleEvents.SERVER_STARTING",
-      "Version.parse()",
       "DefaultedRegistry.iterator()",
-      "Registry.getOrThrow()",
-      "RegistryAccess.lookupOrThrow()",
-      "ListTag.add()",
-      "ServerPlayer.drop()",
-      "Items.SPAWNER",
-      "TypedEntityData.copyTagWithoutId()",
-      "TypedEntityData.type()",
-      "EnchantmentHelper.getItemEnchantmentLevel()",
-      "Blocks.SPAWNER"
+      "SpawnData.getEntityToSpawn()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+    "roadmap": "Code next to data (0.3), Mixin (0.5)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -109,13 +73,13 @@
     },
     "url": "https://modrinth.com/mod/getspawners",
     "version": "1.1.7",
-    "lacks": 24,
+    "lacks": 2,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "getspawners-1.1.7.jar",
       "published": "2026-10-19"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

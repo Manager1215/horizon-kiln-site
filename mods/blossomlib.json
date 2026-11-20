@@ -10,10 +10,6 @@
   "description": "Library mod for Blossom-series Fabric mods",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.minecraft.commands.arguments.coordinates.RotationArgument",
-    "net.minecraft.network.protocol.game.ClientboundLevelChunkPacketData.BlockEntityInfo",
-    "net.minecraft.server.bossevents.CustomBossEvent",
-    "net.minecraft.server.bossevents.CustomBossEvents",
     "net.minecraft.util.EncoderCache.2",
     "org.apache.logging.log4j.core.Appender",
     "org.apache.logging.log4j.core.Filter",
@@ -28,18 +24,14 @@
     "org.apache.logging.log4j.core.config.builder.api.ConfigurationBuilderFactory",
     "org.apache.logging.log4j.core.config.builder.api.FilterComponentBuilder",
     "org.apache.logging.log4j.core.config.builder.api.LayoutComponentBuilder",
-    "org.apache.logging.log4j.core.config.builder.api.RootLoggerComponentBuilder",
-    "MinecraftServer.getCustomBossEvents()",
-    "ServerPlayer.teleportTo()",
-    "BossEvent.BossBarColor.getName()",
-    "Entity.createCommandSourceStackForNameResolution()"
+    "org.apache.logging.log4j.core.config.builder.api.RootLoggerComponentBuilder"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": true,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "blossom-lib-2.6.1+26.3.jar",
     "published": "2026-09-16"
   },
@@ -70,7 +62,7 @@
     "class": "restart",
     "why": "@wrap-operation into the game's classes; runs threads of its own; data pack files (recipes, loot, tags) stay"
   },
-  "lacks": 23,
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -78,10 +70,6 @@
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
       "Mixin: 3 points inside the game's methods",
-      "net.minecraft.commands.arguments.coordinates.RotationArgument",
-      "net.minecraft.network.protocol.game.ClientboundLevelChunkPacketData.BlockEntityInfo",
-      "net.minecraft.server.bossevents.CustomBossEvent",
-      "net.minecraft.server.bossevents.CustomBossEvents",
       "net.minecraft.util.EncoderCache.2",
       "org.apache.logging.log4j.core.Appender",
       "org.apache.logging.log4j.core.Filter",
@@ -96,15 +84,7 @@
       "org.apache.logging.log4j.core.config.builder.api.ConfigurationBuilderFactory",
       "org.apache.logging.log4j.core.config.builder.api.FilterComponentBuilder",
       "org.apache.logging.log4j.core.config.builder.api.LayoutComponentBuilder",
-      "org.apache.logging.log4j.core.config.builder.api.RootLoggerComponentBuilder",
-      "TextColor.parseColor()",
-      "MinecraftServer.getCustomBossEvents()",
-      "ServerPlayer.connection",
-      "ServerPlayer.teleportTo()",
-      "ServerGamePacketListenerImpl.send()",
-      "BossEvent.BossBarColor.getName()",
-      "Entity.createCommandSourceStackForNameResolution()",
-      "Player.getDisplayName()"
+      "org.apache.logging.log4j.core.config.builder.api.RootLoggerComponentBuilder"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "run": {
@@ -117,13 +97,13 @@
     },
     "url": "https://modrinth.com/mod/blossomlib",
     "version": "2.6.1+26.3",
-    "lacks": 27,
+    "lacks": 15,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "blossom-lib-2.6.1+26.3.jar",
       "published": "2026-09-16"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

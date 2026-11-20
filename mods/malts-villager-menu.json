@@ -10,26 +10,18 @@
   "description": "Adds a menu for villager inventory and status like grudges, gossip and your reputation. In creative, you can edit the values, or change the inventory.",
   "needs": [
     "an access widener",
-    "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-    "net.minecraft.client.gui.screens.inventory.MerchantScreen",
-    "net.minecraft.world.SimpleMenuProvider",
     "net.minecraft.world.entity.ai.gossip.GossipContainer",
     "net.minecraft.world.entity.ai.gossip.GossipType",
-    "net.minecraft.world.entity.npc.villager.Villager",
-    "net.minecraft.world.entity.npc.villager.VillagerData",
-    "LocalPlayer.closeContainer()",
-    "NonNullList.iterator()",
-    "ServerLevel.getEntity()",
-    "ServerPlayer.distanceToSqr()",
-    "Player.distanceToSqr()",
-    "MerchantOffers.isEmpty()"
+    "Villager.getGossips()",
+    "Villager.getPlayerReputation()",
+    "Villager.isTrading()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "villagermenu-fabric-1.0.1+26.3.jar",
     "published": "2026-09-27"
   },
@@ -62,7 +54,7 @@
     "class": "partial",
     "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
   },
-  "lacks": 13,
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -70,37 +62,14 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "an access widener",
-      "net.fabricmc.fabric.api.event.player.UseEntityCallback",
-      "net.minecraft.client.gui.screens.inventory.MerchantScreen",
-      "net.minecraft.world.SimpleContainer",
-      "net.minecraft.world.SimpleMenuProvider",
       "net.minecraft.world.entity.ai.gossip.GossipContainer",
       "net.minecraft.world.entity.ai.gossip.GossipType",
-      "net.minecraft.world.entity.npc.villager.Villager",
-      "net.minecraft.world.entity.npc.villager.VillagerData",
-      "net.minecraft.world.flag.FeatureFlags",
-      "net.minecraft.world.inventory.MenuType.MenuSupplier",
-      "GuiGraphicsExtractor.fakeItem()",
-      "GuiGraphicsExtractor.nextStratum()",
-      "LocalPlayer.closeContainer()",
-      "NonNullList.iterator()",
-      "ServerLevel.getEntity()",
-      "ServerPlayer.distanceToSqr()",
-      "Player.distanceToSqr()",
-      "MenuType.<init>()",
-      "Items.BARREL",
-      "Items.CARTOGRAPHY_TABLE",
-      "Items.FLETCHING_TABLE",
-      "Items.GRINDSTONE",
-      "Items.LEAD",
-      "Items.LECTERN",
-      "Items.LOOM",
-      "Items.NAME_TAG",
-      "Items.SMOKER",
-      "Items.VILLAGER_SPAWN_EGG",
+      "Villager.getGossips()",
+      "Villager.getPlayerReputation()",
+      "Villager.isTrading()",
       "MerchantOffers.isEmpty()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+    "roadmap": "Code next to data (0.3), Mixin (0.5)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -111,13 +80,13 @@
     },
     "url": "https://modrinth.com/mod/malts-villager-menu",
     "version": "v1.0.1-fabric-26.3",
-    "lacks": 29,
+    "lacks": 6,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "villagermenu-fabric-1.0.1+26.3.jar",
       "published": "2026-09-27"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

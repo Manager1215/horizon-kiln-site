@@ -10,7 +10,6 @@
   "description": "A lightweight server-side Fabric mod that replaces Minecraft's basic console input with JLine.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.server.dedicated.DedicatedServer",
     "org.apache.logging.log4j.core.Appender",
     "org.apache.logging.log4j.core.Layout",
     "org.apache.logging.log4j.core.LogEvent",
@@ -20,14 +19,21 @@
     "org.apache.logging.log4j.core.config.AppenderRef",
     "org.apache.logging.log4j.core.config.Configuration",
     "org.apache.logging.log4j.core.config.LoggerConfig",
-    "org.apache.logging.log4j.core.config.Property"
+    "org.apache.logging.log4j.core.config.Property",
+    "DedicatedServer.createCommandSourceStack()",
+    "DedicatedServer.execute()",
+    "DedicatedServer.getCommands()",
+    "DedicatedServer.halt()",
+    "DedicatedServer.handleConsoleInput()",
+    "DedicatedServer.isRunning()",
+    "DedicatedServer.isStopped()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "better-console-line-1.0.1.jar",
     "published": "2026-07-15"
   },
@@ -59,7 +65,7 @@
     "class": "restart",
     "why": "@wrap-operation into the game's classes; runs threads of its own"
   },
-  "lacks": 11,
+  "lacks": 17,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -67,8 +73,6 @@
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
       "Mixin: 1 point inside the game's methods",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-      "net.minecraft.server.dedicated.DedicatedServer",
       "org.apache.logging.log4j.core.Appender",
       "org.apache.logging.log4j.core.Layout",
       "org.apache.logging.log4j.core.LogEvent",
@@ -79,7 +83,13 @@
       "org.apache.logging.log4j.core.config.Configuration",
       "org.apache.logging.log4j.core.config.LoggerConfig",
       "org.apache.logging.log4j.core.config.Property",
-      "ServerLifecycleEvents.SERVER_STOPPING"
+      "DedicatedServer.createCommandSourceStack()",
+      "DedicatedServer.execute()",
+      "DedicatedServer.getCommands()",
+      "DedicatedServer.halt()",
+      "DedicatedServer.handleConsoleInput()",
+      "DedicatedServer.isRunning()",
+      "DedicatedServer.isStopped()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "run": {
@@ -92,13 +102,13 @@
     },
     "url": "https://modrinth.com/mod/better-console-line",
     "version": "1.0.1",
-    "lacks": 13,
+    "lacks": 17,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "better-console-line-1.0.1.jar",
       "published": "2026-07-15"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

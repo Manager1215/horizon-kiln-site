@@ -10,8 +10,6 @@
   "description": "Fixes Z-fighting issues caused by TTF font rendering in Minecraft, especially when using glow ink on signs. Optimized for third-party pixel fonts like 'Neo둥근모 Pro'. Some fonts may not display correctly due to inherent rendering limitations.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "com.mojang.blaze3d.font.GlyphInfo",
-    "net.minecraft.client.gui.font.glyphs.BakedSheetGlyph",
     "net.minecraft.client.renderer.blockentity.AbstractSignRenderer",
     "org.lwjgl.system.MemoryUtil",
     "NativeImage.getPointer()"
@@ -20,8 +18,8 @@
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "customfontfix-1.1.jar",
     "published": "2026-09-17"
   },
@@ -53,7 +51,7 @@
     "class": "restart",
     "why": "@wrap-operation into the game's classes"
   },
-  "lacks": 5,
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -61,14 +59,9 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "Mixin: 2 points inside the game's methods",
-      "com.mojang.blaze3d.font.GlyphInfo",
-      "net.minecraft.client.gui.font.glyphs.BakedSheetGlyph",
       "net.minecraft.client.renderer.blockentity.AbstractSignRenderer",
       "org.lwjgl.system.MemoryUtil",
-      "NativeImage.format()",
-      "NativeImage.getHeight()",
-      "NativeImage.getPointer()",
-      "NativeImage.getWidth()"
+      "NativeImage.getPointer()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
     "run": {
@@ -81,13 +74,13 @@
     },
     "url": "https://modrinth.com/mod/customfontfix",
     "version": "1.1",
-    "lacks": 8,
+    "lacks": 3,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "customfontfix-1.1.jar",
       "published": "2026-09-17"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

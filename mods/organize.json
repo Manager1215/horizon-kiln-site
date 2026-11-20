@@ -10,26 +10,16 @@
   "description": "Sort your resource packs into folders and browse them in the pack screen.",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.minecraft.client.gui.screens.packs.PackSelectionModel",
-    "net.minecraft.client.gui.screens.packs.PackSelectionModel.Entry",
-    "net.minecraft.client.gui.screens.packs.PackSelectionModel.EntryBase",
-    "net.minecraft.client.gui.screens.packs.PackSelectionScreen",
-    "net.minecraft.client.gui.screens.packs.PackSelectionScreen.Watcher",
-    "net.minecraft.client.gui.screens.packs.TransferableSelectionList",
-    "net.minecraft.client.gui.screens.packs.TransferableSelectionList.Entry",
-    "net.minecraft.server.packs.PackLocationInfo",
-    "net.minecraft.server.packs.repository.FolderRepositorySource",
-    "net.minecraft.server.packs.repository.Pack",
-    "net.minecraft.server.packs.repository.Pack.ResourcesSupplier",
-    "net.minecraft.server.packs.repository.PackCompatibility",
-    "Minecraft.getResourcePackDirectory()"
+    "PackSelectionModel.getSelected()",
+    "PackSelectionModel.Entry.canSelect()",
+    "PackSelectionModel.Entry.canUnselect()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "organize-1.1.1+26.3-fabric.jar",
     "published": "2026-11-14"
   },
@@ -50,7 +40,7 @@
     "class": "restart",
     "why": "@wrap-operation into the game's classes"
   },
-  "lacks": 13,
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -58,33 +48,27 @@
     "evidence": "",
     "needs": [
       "Mixin: 3 points inside the game's methods",
-      "net.minecraft.client.gui.screens.packs.PackSelectionModel",
-      "net.minecraft.client.gui.screens.packs.PackSelectionModel.Entry",
-      "net.minecraft.client.gui.screens.packs.PackSelectionModel.EntryBase",
-      "net.minecraft.client.gui.screens.packs.PackSelectionScreen",
-      "net.minecraft.client.gui.screens.packs.PackSelectionScreen.Watcher",
-      "net.minecraft.client.gui.screens.packs.TransferableSelectionList",
       "net.minecraft.client.gui.screens.packs.TransferableSelectionList.Entry",
-      "net.minecraft.client.renderer.texture.DynamicTexture",
-      "net.minecraft.server.packs.PackLocationInfo",
-      "net.minecraft.server.packs.repository.FolderRepositorySource",
-      "net.minecraft.server.packs.repository.Pack",
-      "net.minecraft.server.packs.repository.Pack.ResourcesSupplier",
-      "net.minecraft.server.packs.repository.PackCompatibility",
-      "NativeImage.read()",
-      "Minecraft.getResourcePackDirectory()",
-      "GuiGraphicsExtractor.setTooltipForNextFrame()"
+      "PackSelectionModel.getSelected()",
+      "PackSelectionModel.Entry.canSelect()",
+      "PackSelectionModel.Entry.canUnselect()",
+      "TransferableSelectionList.getSelected()",
+      "TransferableSelectionList.isFocused()",
+      "TransferableSelectionList.maxScrollAmount()",
+      "TransferableSelectionList.refreshScrollAmount()",
+      "TransferableSelectionList.scrollbarWidth()",
+      "TransferableSelectionList.setScrollAmount()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+    "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
     "url": "https://modrinth.com/mod/organize",
-    "version": "1.1.0+26.3-fabric",
-    "lacks": 16,
+    "version": "1.1.1+26.3-fabric",
+    "lacks": 10,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
-      "file": "organize-1.1.0+26.3-fabric.jar",
-      "published": "2026-11-09"
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
+      "file": "organize-1.1.1+26.3-fabric.jar",
+      "published": "2026-11-14"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

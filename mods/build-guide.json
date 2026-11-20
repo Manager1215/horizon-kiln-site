@@ -10,34 +10,23 @@
   "description": "A client-side only mod to project shapes like circles and spheres into the world. It works both in singleplayer and multiplayer, even if the server doesn't have the mod installed.",
   "needs": [
     "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
-    "com.mojang.blaze3d.vertex.BufferBuilder",
-    "com.mojang.blaze3d.vertex.ByteBufferBuilder",
-    "com.mojang.blaze3d.vertex.DefaultVertexFormat",
-    "com.mojang.blaze3d.vertex.MeshData",
-    "com.mojang.blaze3d.vertex.MeshData.DrawState",
-    "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
-    "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "net.minecraft.client.renderer.DynamicGpuData",
-    "net.minecraft.client.renderer.LevelRenderer",
-    "net.minecraft.util.profiling.Profiler",
-    "net.minecraft.util.profiling.ProfilerFiller",
-    "net.minecraft.world.level.storage.WorldData",
     "RenderSystem.getCompiledPipeline()",
     "RenderSystem.getDynamicUniforms()",
     "RenderSystem.getModelViewMatrixCopy()",
     "RenderSystem.getSequentialBuffer()",
+    "BufferBuilder.build()",
+    "MeshData.drawState()",
+    "MeshData.vertexBuffer()",
     "GpuBuffer.slice()",
-    "RenderPipeline.builder()",
-    "GameRenderer.mainCamera()",
-    "RenderPipelines.DEBUG_FILLED_SNIPPET",
-    "IntegratedServer.getWorldData()"
+    "GameRenderer.mainCamera()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "BuildGuide-26.3-0.4.9.jar",
     "published": "2026-10-03"
   },
@@ -70,7 +59,7 @@
     "class": "partial",
     "why": "runs threads of its own"
   },
-  "lacks": 22,
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -78,33 +67,21 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
-      "com.mojang.blaze3d.vertex.BufferBuilder",
-      "com.mojang.blaze3d.vertex.ByteBufferBuilder",
       "com.mojang.blaze3d.vertex.DefaultVertexFormat",
-      "com.mojang.blaze3d.vertex.MeshData",
-      "com.mojang.blaze3d.vertex.MeshData.DrawState",
       "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
-      "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
       "net.minecraft.client.renderer.DynamicGpuData",
-      "net.minecraft.client.renderer.LevelRenderer",
-      "net.minecraft.client.server.IntegratedServer",
-      "net.minecraft.util.profiling.Profiler",
-      "net.minecraft.util.profiling.ProfilerFiller",
-      "net.minecraft.world.level.storage.WorldData",
       "RenderSystem.getCompiledPipeline()",
       "RenderSystem.getDynamicUniforms()",
       "RenderSystem.getModelViewMatrixCopy()",
       "RenderSystem.getSequentialBuffer()",
+      "BufferBuilder.build()",
+      "MeshData.drawState()",
+      "MeshData.vertexBuffer()",
       "GpuBuffer.slice()",
       "RenderPipeline.builder()",
-      "Minecraft.getCurrentServer()",
-      "Minecraft.getSingleplayerServer()",
-      "ServerData.ip",
-      "GameRenderer.mainCamera()",
-      "RenderPipelines.DEBUG_FILLED_SNIPPET",
-      "Identifier.tryBuild()"
+      "GameRenderer.mainCamera()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+    "roadmap": "Minecraft's libraries and client API (0.2)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -115,13 +92,13 @@
     },
     "url": "https://modrinth.com/mod/build-guide",
     "version": "0.4.9-26.3",
-    "lacks": 26,
+    "lacks": 14,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "BuildGuide-26.3-0.4.9.jar",
       "published": "2026-10-03"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

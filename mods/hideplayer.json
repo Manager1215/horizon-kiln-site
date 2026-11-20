@@ -10,32 +10,19 @@
   "description": "Selectively hiding players from various server interfaces",
   "needs": [
     "Mixin: 18 points inside the game's methods",
-    "net.minecraft.network.PacketSendListener",
-    "net.minecraft.server.PlayerAdvancements",
-    "net.minecraft.server.ServerInterface",
-    "net.minecraft.server.ServerScoreboard",
     "net.minecraft.server.commands.MsgCommand",
     "net.minecraft.server.commands.RandomCommand",
     "net.minecraft.server.commands.TeamMsgCommand",
-    "net.minecraft.server.level.ChunkMap.TrackedEntity",
-    "net.minecraft.server.level.ServerPlayerGameMode",
     "net.minecraft.server.rcon.thread.QueryThreadGs4",
     "net.minecraft.world.damagesource.CombatEntry",
-    "net.minecraft.world.waypoints.WaypointTransmitter",
-    "ClientboundPlayerInfoUpdatePacket.createPlayerInitializing()",
-    "ServerPlayer.getGameProfile()",
-    "ServerPlayer.sendChatMessage()",
-    "ServerGamePacketListenerImpl.send()",
-    "PlayerList.broadcastAll()",
-    "LivingEntity.getKillCredit()",
-    "Player.<init>()"
+    "PacketSendListener.exceptionallySend()"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "HidePlayer-26.1-0.1.6.jar",
     "published": "2026-03-28"
   },
@@ -66,7 +53,7 @@
     "class": "restart",
     "why": "@redirect into the game's classes"
   },
-  "lacks": 19,
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -74,37 +61,16 @@
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
       "Mixin: 18 points inside the game's methods",
-      "com.mojang.authlib.GameProfile",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-      "net.minecraft.network.PacketSendListener",
-      "net.minecraft.server.PlayerAdvancements",
-      "net.minecraft.server.ServerInterface",
-      "net.minecraft.server.ServerScoreboard",
       "net.minecraft.server.commands.MsgCommand",
       "net.minecraft.server.commands.RandomCommand",
       "net.minecraft.server.commands.TeamMsgCommand",
-      "net.minecraft.server.level.ChunkMap.TrackedEntity",
-      "net.minecraft.server.level.ServerPlayerGameMode",
       "net.minecraft.server.rcon.thread.QueryThreadGs4",
       "net.minecraft.world.damagesource.CombatEntry",
-      "net.minecraft.world.waypoints.WaypointTransmitter",
-      "ServerLifecycleEvents.SERVER_STARTING",
-      "ServerLifecycleEvents.SERVER_STOPPING",
-      "Component.getSiblings()",
-      "Component.getVisualOrderText()",
-      "ClientboundPlayerInfoUpdatePacket.createPlayerInitializing()",
-      "ServerPlayer.connection",
-      "ServerPlayer.getGameProfile()",
-      "ServerPlayer.sendChatMessage()",
+      "PacketSendListener.exceptionallySend()",
       "ServerGamePacketListenerImpl.send()",
-      "ServerGamePacketListenerImpl.send()",
-      "PlayerList.broadcastAll()",
-      "LivingEntity.getDisplayName()",
-      "LivingEntity.getKillCredit()",
       "Player.<init>()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+    "roadmap": "Code next to data (0.3), Mixin (0.5)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -115,13 +81,13 @@
     },
     "url": "https://modrinth.com/mod/hideplayer",
     "version": "0.1.6",
-    "lacks": 29,
+    "lacks": 8,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "HidePlayer-26.1-0.1.6.jar",
       "published": "2026-03-28"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

@@ -9,23 +9,18 @@
   "author": "pcal43",
   "description": "Low-effort item sorting to keep your workshop organized.  Works with Vanilla clients!",
   "needs": [
-    "com.mojang.math.Transformation",
-    "net.minecraft.world.entity.Display",
-    "net.minecraft.world.entity.Display.ItemDisplay",
-    "net.minecraft.world.level.block.ChestBlock",
-    "net.minecraft.world.level.block.entity.ChestBlockEntity",
-    "net.minecraft.world.level.block.entity.HopperBlockEntity",
     "org.apache.logging.log4j.core.config.Configurator",
-    "ServerLevel.clip()",
-    "SoundEvents.UI_TOAST_OUT",
-    "EntityTypes.ITEM_DISPLAY"
+    "ChestBlockEntity.getBlockPos()",
+    "ChestBlockEntity.getContainerSize()",
+    "ChestBlockEntity.getLevel()",
+    "HopperBlockEntity.addItem()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "quicksort-fabric-0.26.0+26.3.jar",
     "published": "2026-09-24"
   },
@@ -57,26 +52,20 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 10,
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
-      "com.mojang.math.Transformation",
-      "net.minecraft.world.entity.Display",
-      "net.minecraft.world.entity.Display.ItemDisplay",
-      "net.minecraft.world.level.block.ChestBlock",
-      "net.minecraft.world.level.block.entity.ChestBlockEntity",
-      "net.minecraft.world.level.block.entity.HopperBlockEntity",
       "org.apache.logging.log4j.core.config.Configurator",
-      "DataComponents.STORED_ENCHANTMENTS",
-      "ServerLevel.clip()",
-      "SoundEvents.UI_TOAST_OUT",
-      "EntityTypes.ITEM_DISPLAY"
+      "ChestBlockEntity.getBlockPos()",
+      "ChestBlockEntity.getContainerSize()",
+      "ChestBlockEntity.getLevel()",
+      "HopperBlockEntity.addItem()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+    "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -87,13 +76,13 @@
     },
     "url": "https://modrinth.com/mod/quicksort",
     "version": "0.26.0+26.3",
-    "lacks": 11,
+    "lacks": 5,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "quicksort-fabric-0.26.0+26.3.jar",
       "published": "2026-09-24"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

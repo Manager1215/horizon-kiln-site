@@ -10,35 +10,17 @@
   "description": "Handles eating client-side, ensuring servers don't slow down the eating process",
   "needs": [
     "Mixin: 5 points inside the game's methods",
-    "net.minecraft.client.player.FirstPersonHandsAndItems",
-    "net.minecraft.world.entity.EntityEvent",
-    "net.minecraft.world.item.ItemCooldowns",
-    "net.minecraft.world.item.ItemUseAnimation",
-    "net.minecraft.world.item.component.Consumable",
-    "net.minecraft.world.item.consume_effects.ConsumeEffect",
-    "net.minecraft.world.item.consume_effects.PlaySoundConsumeEffect",
     "MultiPlayerGameMode.releaseUsingItem()",
-    "LocalPlayer.getCooldowns()",
-    "LocalPlayer.getEntityData()",
-    "LocalPlayer.getUseItem()",
-    "LocalPlayer.getUseItemRemainingTicks()",
-    "LocalPlayer.getUsedItemHand()",
-    "LocalPlayer.isUsingItem()",
-    "LocalPlayer.stopUsingItem()",
-    "DataComponents.CONSUMABLE",
-    "ClientboundEntityEventPacket.getEntity()",
     "ClientboundEntityEventPacket.getEventId()",
-    "ClientboundSoundPacket.getSound()",
-    "SynchedEntityData.assignValues()",
-    "Mth.nextFloat()",
-    "RandomSource.triangle()"
+    "RandomSource.triangle()",
+    "Consumable.emitParticlesAndSounds()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "ConsumableOptimizer-2.2.3+26.3.jar",
     "published": "2026-10-10"
   },
@@ -62,7 +44,7 @@
     "class": "restart",
     "why": "@redirect into the game's classes"
   },
-  "lacks": 22,
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -70,41 +52,21 @@
     "evidence": "",
     "needs": [
       "Mixin: 5 points inside the game's methods",
-      "net.minecraft.client.player.FirstPersonHandsAndItems",
-      "net.minecraft.world.entity.EntityEvent",
-      "net.minecraft.world.item.ItemCooldowns",
-      "net.minecraft.world.item.ItemUseAnimation",
-      "net.minecraft.world.item.component.Consumable",
-      "net.minecraft.world.item.consume_effects.ConsumeEffect",
-      "net.minecraft.world.item.consume_effects.PlaySoundConsumeEffect",
       "MultiPlayerGameMode.releaseUsingItem()",
-      "LocalPlayer.getCooldowns()",
-      "LocalPlayer.getEntityData()",
-      "LocalPlayer.getRandom()",
-      "LocalPlayer.getUseItem()",
-      "LocalPlayer.getUseItemRemainingTicks()",
-      "LocalPlayer.getUsedItemHand()",
-      "LocalPlayer.isUsingItem()",
-      "LocalPlayer.stopUsingItem()",
-      "DataComponents.CONSUMABLE",
-      "ClientboundEntityEventPacket.getEntity()",
       "ClientboundEntityEventPacket.getEventId()",
-      "ClientboundSoundPacket.getSound()",
-      "SynchedEntityData.assignValues()",
-      "Mth.nextFloat()",
       "RandomSource.triangle()",
-      "Items.HONEY_BOTTLE"
+      "Consumable.emitParticlesAndSounds()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "url": "https://modrinth.com/mod/consumableoptimizer",
     "version": "2.2.3+26.3",
-    "lacks": 24,
+    "lacks": 4,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "ConsumableOptimizer-2.2.3+26.3.jar",
       "published": "2026-10-10"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

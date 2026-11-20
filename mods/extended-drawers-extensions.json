@@ -9,13 +9,7 @@
   "author": "MattiDragon",
   "description": "Adds additional utilities that don't fit in the main Extended Drawers mod.",
   "needs": [
-    "com.mojang.math.OctahedralGroup",
     "net.fabricmc.fabric.api.item.v1.ItemComponentTooltipProviderRegistry",
-    "net.minecraft.references.BlockItemId",
-    "net.minecraft.world.level.block.BarrelBlock",
-    "net.minecraft.world.level.block.Block.UpdateFlags",
-    "net.minecraft.world.level.block.entity.BarrelBlockEntity",
-    "net.minecraft.world.level.block.entity.BlockEntityTypes",
     "PoseStack.rotate()",
     "VertexConsumer.addVertex()",
     "VertexConsumer.setLight()",
@@ -23,20 +17,20 @@
     "VertexConsumer.setOverlay()",
     "BlockEntityRenderer.extractRenderState()",
     "RenderTypes.entityTranslucent()",
-    "BlockPos.toShortString()",
-    "ExtraCodecs.VECTOR3F",
-    "Item.isFoil()",
+    "BarrelBlock.updateIndirectNeighbourShapes()",
+    "BarrelBlockEntity.<init>()",
+    "BarrelBlockEntity.clearRemoved()",
+    "BarrelBlockEntity.setChanged()",
+    "BarrelBlockEntity.setRemoved()",
     "BlockEntityType.addValidBlock()",
-    "MapColor.SAND",
-    "Vec3.toVector3f()",
-    "Shapes.rotate()"
+    "BlockEntityTypes.BARREL"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "ExtendedDrawersExtensions-5.2.0+mc.26.3.jar",
     "published": "2026-10-11"
   },
@@ -67,20 +61,14 @@
     "class": "partial",
     "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
   },
-  "lacks": 21,
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "com.mojang.math.OctahedralGroup",
       "net.fabricmc.fabric.api.item.v1.ItemComponentTooltipProviderRegistry",
-      "net.minecraft.references.BlockItemId",
-      "net.minecraft.world.level.block.BarrelBlock",
-      "net.minecraft.world.level.block.Block.UpdateFlags",
-      "net.minecraft.world.level.block.entity.BarrelBlockEntity",
-      "net.minecraft.world.level.block.entity.BlockEntityTypes",
       "PoseStack.rotate()",
       "VertexConsumer.addVertex()",
       "VertexConsumer.setLight()",
@@ -88,16 +76,13 @@
       "VertexConsumer.setOverlay()",
       "BlockEntityRenderer.extractRenderState()",
       "RenderTypes.entityTranslucent()",
-      "BlockPos.toShortString()",
-      "DataComponents.LORE",
-      "ExtraCodecs.VECTOR3F",
-      "Item.isFoil()",
+      "BarrelBlock.updateIndirectNeighbourShapes()",
+      "BarrelBlockEntity.<init>()",
+      "BarrelBlockEntity.clearRemoved()",
+      "BarrelBlockEntity.setChanged()",
+      "BarrelBlockEntity.setRemoved()",
       "BlockEntityType.addValidBlock()",
-      "MapColor.SAND",
-      "TagValueOutput.createWithoutContext()",
-      "TagValueOutput.store()",
-      "Vec3.toVector3f()",
-      "Shapes.rotate()"
+      "BlockEntityTypes.BARREL"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
     "run": {
@@ -110,13 +95,13 @@
     },
     "url": "https://modrinth.com/mod/extended-drawers-extensions",
     "version": "5.2.0+mc.26.3",
-    "lacks": 24,
+    "lacks": 15,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "ExtendedDrawersExtensions-5.2.0+mc.26.3.jar",
       "published": "2026-10-11"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

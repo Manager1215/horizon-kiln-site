@@ -10,41 +10,22 @@
   "description": "Trigger special effects live in-game! Multiple mod loaders supported!",
   "needs": [
     "com.mojang.text2speech.Narrator",
-    "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.AllowGame",
-    "net.minecraft.client.gui.screens.ConnectScreen",
     "net.minecraft.client.gui.screens.DirectJoinServerScreen",
     "net.minecraft.client.gui.screens.DisconnectedScreen",
-    "net.minecraft.client.gui.screens.inventory.BookViewScreen",
-    "net.minecraft.client.gui.screens.inventory.BookViewScreen.BookAccess",
-    "net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen",
-    "net.minecraft.client.gui.screens.worldselection.CreateWorldScreen",
     "net.minecraft.client.gui.screens.worldselection.SelectWorldScreen",
     "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
-    "net.minecraft.client.multiplayer.resolver.ServerAddress",
-    "net.minecraft.world.entity.player.PlayerModelPart",
-    "net.minecraft.world.item.component.WrittenBookContent",
-    "net.minecraft.world.level.storage.WorldData",
-    "ClientReceiveMessageEvents.ALLOW_GAME",
     "Minecraft.createWorldOpenFlows()",
-    "Minecraft.getLevelSource()",
-    "Minecraft.isLocalServer()",
-    "Minecraft.resizeGui()",
-    "Options.chatVisibility()",
-    "Options.gamma()",
-    "Options.getSoundSourceOptionInstance()",
-    "Options.isModelPartEnabled()",
     "Options.setModelPart()",
-    "ClientLevel.disconnect()",
-    "IntegratedServer.getWorldData()",
-    "DataComponents.WRITTEN_BOOK_CONTENT",
-    "LevelStorageSource.levelExists()"
+    "ConnectScreen.startConnecting()",
+    "BookViewScreen.BookAccess.fromItem()",
+    "CreateWorldScreen.openFresh()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "effectmc-fabric-26.3-3.1.0.jar",
     "published": "2026-11-15"
   },
@@ -76,5 +57,42 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 29
+  "lacks": 10,
+  "development": {
+    "status": "no-plans",
+    "statusLabel": "No plans yet",
+    "statusMeaning": "Calls something that is not on Kiln's roadmap yet. Parts of it may already run.",
+    "evidence": "Not run: Java did not start.",
+    "needs": [
+      "com.mojang.text2speech.Narrator",
+      "net.minecraft.client.gui.screens.DirectJoinServerScreen",
+      "net.minecraft.client.gui.screens.DisconnectedScreen",
+      "net.minecraft.client.gui.screens.worldselection.SelectWorldScreen",
+      "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
+      "Minecraft.createWorldOpenFlows()",
+      "Options.setModelPart()",
+      "ConnectScreen.startConnecting()",
+      "BookViewScreen.BookAccess.fromItem()",
+      "CreateWorldScreen.openFresh()"
+    ],
+    "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4)",
+    "run": {
+      "passed": false,
+      "date": "2026-11-17",
+      "kiln": "development build 2026-11-17 (2aabcd3)",
+      "ticks": 0,
+      "hud": false,
+      "why": "Java did not start"
+    },
+    "url": "https://modrinth.com/mod/effectmc",
+    "version": "Fabric-26.3-v3.1.0",
+    "lacks": 10,
+    "scanned": {
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
+      "file": "effectmc-fabric-26.3-3.1.0.jar",
+      "published": "2026-11-15"
+    },
+    "build": "development build 2026-11-20 (eda5a4a5)"
+  }
 }

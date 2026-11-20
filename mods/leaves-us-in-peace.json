@@ -10,29 +10,16 @@
   "description": "Leaf decay ignores different types of leaves and logs. Fast leaf decay. Configurable. Data driven.",
   "needs": [
     "Mixin: 7 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents.TagsLoaded",
-    "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
-    "net.fabricmc.loader.api.VersionParsingException",
-    "net.fabricmc.loader.api.metadata.version.VersionPredicate",
-    "net.minecraft.util.profiling.ProfilerFiller",
-    "net.minecraft.world.level.chunk.ChunkAccess.PackedTicks",
-    "net.minecraft.world.level.chunk.storage.SerializableChunkData",
-    "net.minecraft.world.ticks.LevelChunkTicks",
-    "net.minecraft.world.ticks.LevelTicks",
-    "net.minecraft.world.ticks.SavedTick",
-    "net.minecraft.world.ticks.ScheduledTick",
-    "ResourceLoader.registerBuiltinPack()",
-    "DefaultedRegistry.getId()",
-    "RandomSource.nextIntBetweenInclusive()",
-    "Level.<init>()"
+    "ChunkAccess.<init>()",
+    "SavedTick.codec()",
+    "ScheduledTick.<init>()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "leaves_us_in_peace-1.14.0+MC26.3.x.jar",
     "published": "2026-09-18"
   },
@@ -64,7 +51,7 @@
     "class": "restart",
     "why": "@wrap-method and @wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
   },
-  "lacks": 16,
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -72,24 +59,10 @@
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
       "Mixin: 7 points inside the game's methods",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents.TagsLoaded",
-      "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-      "net.fabricmc.fabric.api.resource.v1.pack.PackActivationType",
-      "net.fabricmc.loader.api.VersionParsingException",
-      "net.fabricmc.loader.api.metadata.version.VersionPredicate",
-      "net.minecraft.util.profiling.ProfilerFiller",
-      "net.minecraft.world.level.chunk.ChunkAccess.PackedTicks",
-      "net.minecraft.world.level.chunk.storage.SerializableChunkData",
-      "net.minecraft.world.ticks.LevelChunkTicks",
-      "net.minecraft.world.ticks.LevelTicks",
-      "net.minecraft.world.ticks.SavedTick",
-      "net.minecraft.world.ticks.ScheduledTick",
-      "DefaultedRegistry.get()",
-      "DefaultedRegistry.getId()",
-      "Identifier.withPrefix()",
-      "RandomSource.nextIntBetweenInclusive()",
-      "Level.<init>()"
+      "VersionPredicate.test()",
+      "ChunkAccess.<init>()",
+      "SavedTick.codec()",
+      "ScheduledTick.<init>()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "run": {
@@ -102,13 +75,13 @@
     },
     "url": "https://modrinth.com/mod/leaves-us-in-peace",
     "version": "1.14.0+MC26.3.x",
-    "lacks": 18,
+    "lacks": 4,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "leaves_us_in_peace-1.14.0+MC26.3.x.jar",
       "published": "2026-09-18"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

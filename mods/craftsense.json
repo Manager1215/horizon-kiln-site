@@ -10,28 +10,19 @@
   "description": "Autocomplete for the crafting table. It tracks what you craft, suggests recipes, and lets you take the result from the output slot without placing the rest of the ingredients!",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.gui.components.tabs.GridLayoutTab",
-    "net.minecraft.client.gui.components.tabs.MenuTabBar",
-    "net.minecraft.client.gui.components.tabs.Tab",
-    "net.minecraft.client.gui.layouts.GridLayout",
     "net.minecraft.client.gui.screens.achievement.StatsScreen",
-    "DefaultedRegistry.iterator()",
-    "NonNullList.iterator()",
-    "ByteBufCodecs.collection()",
+    "MenuTabBar.getTabs()",
+    "MenuTabBar.setTabActiveState()",
     "AbstractCraftingMenu.getResultSlot()",
-    "CraftingContainer.asCraftInput()",
     "InventoryMenu.getCraftSlots()",
-    "ItemStack.onCraftedBy()",
-    "PlacementInfo.isImpossibleToPlace()",
-    "RecipeHolder.STREAM_CODEC",
-    "RecipeManager.byKey()"
+    "RecipeHolder.STREAM_CODEC"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "craftsense-2.0.0-fabric-mc26.3.jar",
     "published": "2026-09-29"
   },
@@ -64,7 +55,7 @@
     "class": "partial",
     "why": "has network channels"
   },
-  "lacks": 15,
+  "lacks": 6,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -72,36 +63,15 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "Mixin: 1 point inside the game's methods",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-      "net.minecraft.client.gui.components.tabs.GridLayoutTab",
-      "net.minecraft.client.gui.components.tabs.MenuTabBar",
-      "net.minecraft.client.gui.components.tabs.Tab",
-      "net.minecraft.client.gui.layouts.GridLayout",
       "net.minecraft.client.gui.screens.achievement.StatsScreen",
-      "net.minecraft.client.gui.screens.inventory.AbstractRecipeBookScreen",
-      "net.minecraft.client.gui.screens.inventory.CraftingScreen",
-      "net.minecraft.client.gui.screens.inventory.InventoryScreen",
-      "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
-      "net.minecraft.world.inventory.CraftingMenu",
-      "net.minecraft.world.item.crafting.ShapelessRecipe",
-      "net.minecraft.world.item.crafting.display.SlotDisplayContext",
-      "InputConstants.isKeyDown()",
-      "ServerLifecycleEvents.END_DATA_PACK_RELOAD",
-      "GuiGraphicsExtractor.fakeItem()",
-      "GuiGraphicsExtractor.setTooltipForNextFrame()",
-      "ScreenRectangle.top()",
+      "MenuTabBar.getTabs()",
+      "MenuTabBar.setTabActiveState()",
+      "GridLayout.addChild()",
       "DefaultedRegistry.iterator()",
-      "NonNullList.iterator()",
-      "ByteBufCodecs.collection()",
-      "MinecraftServer.execute()",
       "AbstractCraftingMenu.getResultSlot()",
-      "CraftingContainer.asCraftInput()",
       "InventoryMenu.getCraftSlots()",
-      "ItemStack.onCraftedBy()",
       "PlacementInfo.isImpossibleToPlace()",
-      "RecipeHolder.STREAM_CODEC",
-      "RecipeManager.byKey()",
-      "SlotDisplay.resolveForFirstStack()"
+      "RecipeHolder.STREAM_CODEC"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
     "run": {
@@ -114,13 +84,13 @@
     },
     "url": "https://modrinth.com/mod/craftsense",
     "version": "2.0.0",
-    "lacks": 30,
+    "lacks": 9,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "craftsense-2.0.0-fabric-mc26.3.jar",
       "published": "2026-09-29"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

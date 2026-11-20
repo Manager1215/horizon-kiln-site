@@ -10,34 +10,14 @@
   "description": "Change and uncap stack sizes for any item, with sensible defaults",
   "needs": [
     "Mixin: 15 points inside the game's methods",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents.TagsLoaded",
-    "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SyncDataPackContents",
-    "net.minecraft.core.component.PatchedDataComponentMap",
-    "net.minecraft.world.inventory.FurnaceFuelSlot",
-    "net.minecraft.world.inventory.ItemCombinerMenu",
-    "net.minecraft.world.item.ItemCooldowns",
-    "net.minecraft.world.item.MinecartItem",
-    "net.minecraft.world.item.PotionItem",
-    "net.minecraft.world.item.ThrowablePotionItem",
-    "net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity",
-    "Reference2IntMap.putAll()",
-    "ServerLifecycleEvents.SYNC_DATA_PACK_CONTENTS",
-    "DefaultedRegistry.getValueOrThrow()",
-    "HolderSet.Named.forEach()",
-    "DataComponents.MAX_DAMAGE",
-    "DataComponents.MAX_STACK_SIZE",
-    "ByteBufCodecs.registry()",
-    "MinecraftServer.registryAccess()",
-    "Player.getCooldowns()",
-    "LevelAccessor.registryAccess()"
+    "net.minecraft.world.item.MinecartItem"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "sensible_stackables-fabric-3.1.2+26.3.jar",
     "published": "2026-10-24"
   },
@@ -71,7 +51,7 @@
     "class": "restart",
     "why": "@wrap-method and @wrap-operation into the game's classes; has network channels; data pack files (recipes, loot, tags) stay"
   },
-  "lacks": 21,
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -79,38 +59,10 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "Mixin: 15 points inside the game's methods",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents.TagsLoaded",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.SyncDataPackContents",
-      "net.minecraft.client.server.IntegratedServer",
-      "net.minecraft.core.HolderSet.Named",
-      "net.minecraft.core.component.PatchedDataComponentMap",
-      "net.minecraft.world.inventory.AnvilMenu",
-      "net.minecraft.world.inventory.FurnaceFuelSlot",
-      "net.minecraft.world.inventory.ItemCombinerMenu",
-      "net.minecraft.world.item.ItemCooldowns",
       "net.minecraft.world.item.MinecartItem",
-      "net.minecraft.world.item.PotionItem",
-      "net.minecraft.world.item.ThrowablePotionItem",
-      "net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity",
       "Reference2IntMap.putAll()",
-      "ServerLifecycleEvents.SYNC_DATA_PACK_CONTENTS",
-      "Minecraft.getSingleplayerServer()",
-      "DefaultedRegistry.getValueOrThrow()",
-      "DefaultedRegistry.listElementIds()",
-      "HolderLookup.RegistryLookup.get()",
-      "HolderLookup.RegistryLookup.get()",
-      "HolderLookup.RegistryLookup.listElements()",
-      "Registry.listTagIds()",
-      "RegistryAccess.lookupOrThrow()",
-      "DataComponents.MAX_DAMAGE",
-      "DataComponents.MAX_STACK_SIZE",
-      "ByteBufCodecs.registry()",
-      "MinecraftServer.registryAccess()",
-      "Player.getCooldowns()",
-      "Item.components()",
-      "Items.ENCHANTED_BOOK",
-      "LevelAccessor.registryAccess()"
+      "HolderSet.Named.forEach()",
+      "ItemCombinerMenu.<init>()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
     "run": {
@@ -123,13 +75,13 @@
     },
     "url": "https://modrinth.com/mod/sensible-stackables",
     "version": "3.1.2+26.3",
-    "lacks": 32,
+    "lacks": 4,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "sensible_stackables-fabric-3.1.2+26.3.jar",
       "published": "2026-10-24"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

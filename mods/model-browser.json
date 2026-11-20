@@ -10,26 +10,23 @@
   "description": "Adds a widget to the anvil GUI showing every model currently loaded by any resource packs. Clicking an item automatically sets its name in the anvil, making it easy to apply models using the Model Applier datapack.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.gui.components.ImageButton",
-    "net.minecraft.client.gui.components.WidgetSprites",
-    "net.minecraft.util.CommonColors",
-    "net.minecraft.world.flag.FeatureFlagRegistry",
-    "net.minecraft.world.item.equipment.Equippable.Builder",
     "EditBox.SEARCH_HINT_STYLE",
     "CreativeModeInventoryScreen.<init>()",
     "CreativeModeInventoryScreen.switchToPage()",
-    "LocalPlayer.closeContainer()",
-    "DataComponents.CREATIVE_SLOT_LOCK",
-    "DataComponents.RARITY",
-    "FeatureFlags.REGISTRY",
-    "Equippable.builder()"
+    "Equippable.Builder.setAllowedEntities()",
+    "Equippable.Builder.setCameraOverlay()",
+    "Equippable.Builder.setCanBeSheared()",
+    "Equippable.Builder.setDispensable()",
+    "Equippable.Builder.setEquipOnInteract()",
+    "Equippable.Builder.setShearingSound()",
+    "Equippable.Builder.setSwappable()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "modelbrowser-1.5.1.jar",
     "published": "2026-09-29"
   },
@@ -63,7 +60,7 @@
     "class": "partial",
     "why": "registers blocks, items or entities (they stay, inert); runs threads of its own"
   },
-  "lacks": 13,
+  "lacks": 10,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -71,31 +68,16 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "Mixin: 1 point inside the game's methods",
-      "net.fabricmc.fabric.api.resource.v1.ResourceLoader",
-      "net.minecraft.client.gui.components.ImageButton",
-      "net.minecraft.client.gui.components.WidgetSprites",
-      "net.minecraft.client.gui.screens.inventory.AnvilScreen",
-      "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen",
-      "net.minecraft.util.CommonColors",
-      "net.minecraft.util.StringUtil",
-      "net.minecraft.world.flag.FeatureFlagRegistry",
-      "net.minecraft.world.flag.FeatureFlags",
-      "net.minecraft.world.inventory.AnvilMenu",
-      "net.minecraft.world.item.equipment.Equippable.Builder",
       "EditBox.SEARCH_HINT_STYLE",
-      "EditBox.canConsumeInput()",
-      "ScreenRectangle.containsPoint()",
-      "LocalPlayer.closeContainer()",
-      "DataComponents.CREATIVE_SLOT_LOCK",
-      "DataComponents.CUSTOM_NAME",
-      "DataComponents.ENCHANTMENT_GLINT_OVERRIDE",
-      "DataComponents.ITEM_MODEL",
-      "DataComponents.ITEM_NAME",
-      "DataComponents.RARITY",
-      "Items.BARRIER",
-      "Items.BRUSH",
-      "CustomData.copyTag()",
-      "Equippable.builder()"
+      "CreativeModeInventoryScreen.<init>()",
+      "CreativeModeInventoryScreen.switchToPage()",
+      "Equippable.Builder.setAllowedEntities()",
+      "Equippable.Builder.setCameraOverlay()",
+      "Equippable.Builder.setCanBeSheared()",
+      "Equippable.Builder.setDispensable()",
+      "Equippable.Builder.setEquipOnInteract()",
+      "Equippable.Builder.setShearingSound()",
+      "Equippable.Builder.setSwappable()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
     "run": {
@@ -108,13 +90,13 @@
     },
     "url": "https://modrinth.com/mod/model-browser",
     "version": "1.5.1",
-    "lacks": 25,
+    "lacks": 10,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "modelbrowser-1.5.1.jar",
       "published": "2026-09-29"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

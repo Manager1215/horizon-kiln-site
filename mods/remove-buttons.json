@@ -9,19 +9,14 @@
   "author": "Suskese",
   "description": "Remove \"Friends\" and other buttons from title & pause screens",
   "needs": [
-    "net.minecraft.client.gui.components.FriendsButton",
-    "net.minecraft.client.gui.layouts.FrameLayout",
-    "net.minecraft.client.gui.layouts.GridLayout",
-    "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
-    "net.minecraft.client.gui.layouts.LayoutSettings",
-    "net.minecraft.client.gui.layouts.LinearLayout"
+    "net.minecraft.client.gui.components.FriendsButton"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "removebuttons-1.0.1.jar",
     "published": "2026-06-19"
   },
@@ -55,7 +50,7 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 6,
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -63,11 +58,16 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "net.minecraft.client.gui.components.FriendsButton",
-      "net.minecraft.client.gui.layouts.FrameLayout",
-      "net.minecraft.client.gui.layouts.GridLayout",
       "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
-      "net.minecraft.client.gui.layouts.LayoutSettings",
-      "net.minecraft.client.gui.layouts.LinearLayout"
+      "FrameLayout.alignInRectangle()",
+      "GridLayout.arrangeElements()",
+      "GridLayout.createRowHelper()",
+      "GridLayout.defaultCellSetting()",
+      "GridLayout.newCellSettings()",
+      "LayoutSettings.alignHorizontallyCenter()",
+      "LinearLayout.addChild()",
+      "LinearLayout.horizontal()",
+      "LinearLayout.spacing()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2)",
     "run": {
@@ -80,13 +80,13 @@
     },
     "url": "https://modrinth.com/mod/remove-buttons",
     "version": "1.0.1",
-    "lacks": 6,
+    "lacks": 11,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "removebuttons-1.0.1.jar",
       "published": "2026-06-19"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

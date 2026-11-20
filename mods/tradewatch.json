@@ -9,19 +9,14 @@
   "author": "duzzl",
   "description": "TradeWatch finds matching enchanted-book villager trades, highlights them, and plays a notification sound. Set desired enchantments, levels, and maximum prices without automating any trading actions.",
   "needs": [
-    "net.minecraft.client.gui.screens.inventory.MerchantScreen",
-    "net.minecraft.world.inventory.MerchantMenu",
-    "net.minecraft.world.item.trading.MerchantOffer",
-    "ItemStack.hashItemAndComponents()",
-    "MerchantOffers.isEmpty()",
-    "MerchantOffers.iterator()"
+    "MerchantOffer.getSpecialPriceDiff()"
   ],
-  "roadmap": "Code next to data (0.3), Machines (0.4)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "tradewatch-26.3.jar",
     "published": "2026-09-16"
   },
@@ -54,26 +49,18 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 6,
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "net.minecraft.client.gui.screens.inventory.MerchantScreen",
-      "net.minecraft.world.inventory.MerchantMenu",
-      "net.minecraft.world.item.trading.MerchantOffer",
-      "RegistryAccess.lookupOrThrow()",
-      "DataComponents.STORED_ENCHANTMENTS",
-      "ItemStack.hashItemAndComponents()",
-      "Items.ENCHANTED_BOOK",
-      "Enchantment.getMaxLevel()",
-      "ItemEnchantments.isEmpty()",
+      "MerchantOffer.getSpecialPriceDiff()",
       "MerchantOffers.isEmpty()",
       "MerchantOffers.iterator()"
     ],
-    "roadmap": "Code next to data (0.3), Machines (0.4)",
+    "roadmap": "Code next to data (0.3)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -84,13 +71,13 @@
     },
     "url": "https://modrinth.com/mod/tradewatch",
     "version": "26.3",
-    "lacks": 11,
+    "lacks": 3,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "tradewatch-26.3.jar",
       "published": "2026-09-16"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

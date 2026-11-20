@@ -10,31 +10,16 @@
   "description": "Automatically trade away specified items with one click!",
   "needs": [
     "io.netty.channel.ChannelHandlerContext",
-    "net.minecraft.network.protocol.game.ServerboundContainerClosePacket",
-    "net.minecraft.network.protocol.game.ServerboundInteractPacket",
-    "net.minecraft.network.protocol.game.ServerboundSelectTradePacket",
-    "net.minecraft.world.entity.npc.villager.Villager",
-    "net.minecraft.world.item.trading.ItemCost",
-    "net.minecraft.world.item.trading.MerchantOffer",
-    "net.minecraft.world.phys.EntityHitResult",
-    "ClientPacketListener.send()",
-    "MultiPlayerGameMode.interact()",
-    "LocalPlayer.closeContainer()",
-    "LocalPlayer.distanceTo()",
-    "LocalPlayer.entityInteractionRange()",
     "ClientboundMerchantOffersPacket.getOffers()",
-    "ClientboundOpenScreenPacket.getContainerId()",
-    "ClientboundOpenScreenPacket.getType()",
-    "ItemStack.getItemName()",
-    "MerchantOffers.indexOf()",
-    "MerchantOffers.iterator()"
+    "MerchantOffer.getMaxUses()",
+    "MerchantOffer.getSpecialPriceDiff()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "auto-trade-1.0.0+26.3.jar",
     "published": "2026-09-17"
   },
@@ -66,7 +51,7 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 19,
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -74,28 +59,13 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "io.netty.channel.ChannelHandlerContext",
-      "net.minecraft.network.protocol.game.ServerboundContainerClosePacket",
-      "net.minecraft.network.protocol.game.ServerboundInteractPacket",
-      "net.minecraft.network.protocol.game.ServerboundSelectTradePacket",
-      "net.minecraft.world.entity.npc.villager.Villager",
-      "net.minecraft.world.item.trading.ItemCost",
-      "net.minecraft.world.item.trading.MerchantOffer",
-      "net.minecraft.world.phys.EntityHitResult",
-      "Minecraft.gameDirectory",
-      "ClientPacketListener.send()",
-      "MultiPlayerGameMode.interact()",
-      "LocalPlayer.closeContainer()",
-      "LocalPlayer.distanceTo()",
-      "LocalPlayer.entityInteractionRange()",
       "ClientboundMerchantOffersPacket.getOffers()",
-      "ClientboundOpenScreenPacket.getContainerId()",
-      "ClientboundOpenScreenPacket.getType()",
-      "MenuType.MERCHANT",
-      "ItemStack.getItemName()",
+      "MerchantOffer.getMaxUses()",
+      "MerchantOffer.getSpecialPriceDiff()",
       "MerchantOffers.indexOf()",
       "MerchantOffers.iterator()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -106,13 +76,13 @@
     },
     "url": "https://modrinth.com/mod/auto-trade",
     "version": "1.0.0+26.3",
-    "lacks": 21,
+    "lacks": 6,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "auto-trade-1.0.0+26.3.jar",
       "published": "2026-09-17"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

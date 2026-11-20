@@ -10,23 +10,14 @@
   "description": "A Minecraft mod that prevents changing the spawner type in survival mode.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.fabricmc.loader.api.metadata.Person",
-    "net.minecraft.world.level.BaseSpawner",
-    "net.minecraft.world.level.Spawner",
-    "net.minecraft.world.level.block.entity.SpawnerBlockEntity",
-    "net.minecraft.world.level.block.entity.TrialSpawnerBlockEntity",
-    "net.minecraft.world.level.block.entity.trialspawner.TrialSpawner",
-    "net.minecraft.world.level.block.entity.trialspawner.TrialSpawnerStateData",
-    "net.minecraft.world.level.block.state.pattern.BlockInWorld",
-    "ModMetadata.getAuthors()",
-    "ItemStack.canPlaceOnBlockInAdventureMode()"
+    "TrialSpawnerStateData.hasMobToSpawn()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Machines (0.4), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "NoSpawnerChange-1.2.0-26.3.jar",
     "published": "2026-09-27"
   },
@@ -57,7 +48,7 @@
     "class": "partial",
     "why": "runs threads of its own"
   },
-  "lacks": 10,
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -65,21 +56,9 @@
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
       "Mixin: 1 point inside the game's methods",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-      "net.fabricmc.loader.api.metadata.Person",
-      "net.minecraft.world.item.SpawnEggItem",
-      "net.minecraft.world.level.BaseSpawner",
-      "net.minecraft.world.level.Spawner",
-      "net.minecraft.world.level.block.entity.SpawnerBlockEntity",
-      "net.minecraft.world.level.block.entity.TrialSpawnerBlockEntity",
-      "net.minecraft.world.level.block.entity.trialspawner.TrialSpawner",
-      "net.minecraft.world.level.block.entity.trialspawner.TrialSpawnerStateData",
-      "net.minecraft.world.level.block.state.pattern.BlockInWorld",
-      "ServerLifecycleEvents.END_DATA_PACK_RELOAD",
-      "ModMetadata.getAuthors()",
-      "ItemStack.canPlaceOnBlockInAdventureMode()"
+      "TrialSpawnerStateData.hasMobToSpawn()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+    "roadmap": "Machines (0.4), Mixin (0.5)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -90,13 +69,13 @@
     },
     "url": "https://modrinth.com/mod/nospawnerchange",
     "version": "1.2.0",
-    "lacks": 13,
+    "lacks": 1,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "NoSpawnerChange-1.2.0-26.3.jar",
       "published": "2026-09-27"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

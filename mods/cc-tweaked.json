@@ -1,7 +1,7 @@
 {
   "id": "cc-tweaked",
   "name": "CC: Tweaked",
-  "version": "1.121.0",
+  "version": "1.122.0",
   "status": "planned",
   "statusLabel": "Planned",
   "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -11,13 +11,8 @@
   "needs": [
     "an access widener",
     "Mixin: 5 points inside the game's methods",
-    "com.mojang.blaze3d.Blaze3D",
-    "com.mojang.blaze3d.audio.Channel",
     "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
-    "com.mojang.blaze3d.vertex.DefaultVertexFormat",
-    "com.mojang.blaze3d.vertex.QuadInstance",
     "com.mojang.blaze3d.vertex.SheetedDecalTextureGenerator",
-    "com.mojang.math.Transformation",
     "io.netty.bootstrap.Bootstrap",
     "io.netty.channel.Channel",
     "io.netty.channel.ChannelFuture",
@@ -51,16 +46,21 @@
     "io.netty.handler.codec.http.HttpResponse",
     "io.netty.handler.codec.http.HttpResponseStatus",
     "io.netty.handler.codec.http.HttpVersion",
+    "io.netty.handler.codec.http.LastHttpContent",
+    "io.netty.handler.codec.http.websocketx.BinaryWebSocketFrame",
+    "io.netty.handler.codec.http.websocketx.CloseWebSocketFrame",
+    "io.netty.handler.codec.http.websocketx.CorruptedWebSocketFrameException",
+    "io.netty.handler.codec.http.websocketx.TextWebSocketFrame",
     "and 80 more"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
-    "file": "cc-tweaked-26.3-fabric-1.121.0.jar",
-    "published": "2026-11-03"
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
+    "file": "cc-tweaked-26.3-fabric-1.122.0.jar",
+    "published": "2026-11-19"
   },
   "reports": {
     "works": 0,
@@ -70,8 +70,8 @@
   },
   "run": {
     "passed": false,
-    "date": "2026-11-05",
-    "kiln": "0.3.0",
+    "date": "2026-11-20",
+    "kiln": "0.4.6",
     "ticks": 0,
     "hud": false,
     "why": "Java did not start"
@@ -93,7 +93,7 @@
     "class": "partial",
     "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
   },
-  "lacks": 490,
+  "lacks": 221,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -102,14 +102,9 @@
     "needs": [
       "an access widener",
       "Mixin: 5 points inside the game's methods",
-      "com.mojang.authlib.GameProfile",
-      "com.mojang.blaze3d.Blaze3D",
-      "com.mojang.blaze3d.audio.Channel",
       "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
       "com.mojang.blaze3d.vertex.DefaultVertexFormat",
-      "com.mojang.blaze3d.vertex.QuadInstance",
       "com.mojang.blaze3d.vertex.SheetedDecalTextureGenerator",
-      "com.mojang.math.Transformation",
       "io.netty.bootstrap.Bootstrap",
       "io.netty.channel.Channel",
       "io.netty.channel.ChannelFuture",
@@ -142,26 +137,31 @@
       "io.netty.handler.codec.http.HttpObjectAggregator",
       "io.netty.handler.codec.http.HttpResponse",
       "io.netty.handler.codec.http.HttpResponseStatus",
+      "io.netty.handler.codec.http.HttpVersion",
+      "io.netty.handler.codec.http.LastHttpContent",
+      "io.netty.handler.codec.http.websocketx.BinaryWebSocketFrame",
+      "io.netty.handler.codec.http.websocketx.CloseWebSocketFrame",
+      "io.netty.handler.codec.http.websocketx.CorruptedWebSocketFrameException",
       "and 80 more"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
     "run": {
       "passed": false,
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "ticks": 0,
       "hud": false,
       "why": "Java did not start"
     },
     "url": "https://modrinth.com/mod/cc-tweaked",
-    "version": "1.121.0",
-    "lacks": 569,
+    "version": "1.122.0",
+    "lacks": 239,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
-      "file": "cc-tweaked-26.3-fabric-1.121.0.jar",
-      "published": "2026-11-03"
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
+      "file": "cc-tweaked-26.3-fabric-1.122.0.jar",
+      "published": "2026-11-19"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

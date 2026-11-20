@@ -9,28 +9,16 @@
   "author": "Thanatoros",
   "description": "Customize how allay differentiates between potions and tipped arrows. Optionally can make allays pick up items even when mob griefing is off and set time for how long allay likes noteblock.",
   "needs": [
-    "net.minecraft.util.profiling.Profiler",
-    "net.minecraft.util.profiling.ProfilerFiller",
-    "net.minecraft.world.entity.ai.Brain",
-    "net.minecraft.world.entity.ai.memory.MemoryModuleType",
-    "net.minecraft.world.entity.animal.allay.Allay",
     "net.minecraft.world.entity.animal.allay.AllayAi",
-    "ServerLevel.getGameRules()",
-    "LivingEntity.getBrain()",
-    "PathfinderMob.aiStep()",
-    "ItemEntity.getItem()",
-    "ItemEntity.hasPickUpDelay()",
-    "Level.getEntitiesOfClass()",
-    "GameRules.MOB_GRIEFING",
-    "GameRules.get()",
-    "AABB.inflate()"
+    "MemoryModuleType.LIKED_NOTEBLOCK_COOLDOWN_TICKS",
+    "MemoryModuleType.LIKED_NOTEBLOCK_POSITION"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "betterallay-FABRIC-1.6.0-26.3.jar",
     "published": "2026-11-09"
   },
@@ -62,31 +50,17 @@
     "class": "restart",
     "why": "@overwrite into the game's classes"
   },
-  "lacks": 15,
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "net.minecraft.util.profiling.Profiler",
-      "net.minecraft.util.profiling.ProfilerFiller",
-      "net.minecraft.world.SimpleContainer",
-      "net.minecraft.world.entity.ai.Brain",
-      "net.minecraft.world.entity.ai.memory.MemoryModuleType",
-      "net.minecraft.world.entity.animal.allay.Allay",
       "net.minecraft.world.entity.animal.allay.AllayAi",
-      "Holder.getRegisteredName()",
-      "ServerLevel.getGameRules()",
-      "LivingEntity.getBrain()",
-      "PathfinderMob.aiStep()",
-      "ItemEntity.getItem()",
-      "ItemEntity.hasPickUpDelay()",
-      "Items.TIPPED_ARROW",
-      "Level.getEntitiesOfClass()",
-      "GameRules.MOB_GRIEFING",
-      "GameRules.get()",
-      "AABB.inflate()"
+      "MemoryModuleType.LIKED_NOTEBLOCK_COOLDOWN_TICKS",
+      "MemoryModuleType.LIKED_NOTEBLOCK_POSITION",
+      "Level.getEntitiesOfClass()"
     ],
     "roadmap": "Code next to data (0.3)",
     "run": {
@@ -99,13 +73,13 @@
     },
     "url": "https://modrinth.com/mod/better-allay",
     "version": "1.6.0+fabric-26.3",
-    "lacks": 18,
+    "lacks": 4,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "betterallay-FABRIC-1.6.0-26.3.jar",
       "published": "2026-11-09"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

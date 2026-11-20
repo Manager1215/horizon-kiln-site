@@ -9,32 +9,21 @@
   "author": "Draycia",
   "description": "Carbon is a modern chat plugin built on channels, with just about every single setting and format configurable.",
   "needs": [
-    "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
-    "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowChatMessage",
     "net.fabricmc.loader.launch.common.FabricLauncher",
     "net.fabricmc.loader.launch.common.FabricLauncherBase",
-    "net.minecraft.network.chat.OutgoingChatMessage",
-    "net.minecraft.network.chat.OutgoingChatMessage.Player",
-    "PacketSender.sendPacket()",
     "CommandSourceStack.sendChatMessage()",
-    "Registries.CHAT_TYPE",
     "ChatType.bind()",
     "FilterMask.FULLY_FILTERED",
     "PlayerChatMessage.<init>()",
-    "PlayerChatMessage.link()",
-    "PlayerChatMessage.signature()",
     "PlayerChatMessage.signedBody()",
-    "MinecraftServer.createCommandSourceStack()",
-    "ServerPlayer.get()",
-    "ServerPlayer.getGameProfile()",
-    "ServerPlayer.sendChatMessage()"
+    "ServerPlayer.get()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "carbonchat-fabric-3.0.0-beta.39.jar",
     "published": "2026-09-18"
   },
@@ -68,41 +57,21 @@
     "class": "partial",
     "why": "runs threads of its own; data pack files (recipes, loot, tags) stay"
   },
-  "lacks": 19,
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
-      "com.mojang.authlib.GameProfile",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-      "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
-      "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.AllowChatMessage",
-      "net.fabricmc.loader.api.entrypoint.EntrypointContainer",
       "net.fabricmc.loader.launch.common.FabricLauncher",
       "net.fabricmc.loader.launch.common.FabricLauncherBase",
-      "net.minecraft.network.chat.OutgoingChatMessage",
-      "net.minecraft.network.chat.OutgoingChatMessage.Player",
-      "net.minecraft.network.chat.PlayerChatMessage",
-      "ServerLifecycleEvents.SERVER_STARTED",
-      "ServerLifecycleEvents.SERVER_STARTING",
-      "PacketSender.sendPacket()",
-      "FabricLoader.getEntrypointContainers()",
       "CommandSourceStack.sendChatMessage()",
-      "RegistryAccess.lookupOrThrow()",
-      "Registries.CHAT_TYPE",
       "ChatType.bind()",
       "FilterMask.FULLY_FILTERED",
-      "MinecraftServer.createCommandSourceStack()",
-      "MinecraftServer.execute()",
-      "MinecraftServer.operatorUserPermissions()",
-      "ServerPlayer.get()",
-      "ServerPlayer.getGameProfile()",
-      "ServerPlayer.sendChatMessage()",
-      "ItemStack.getDisplayName()",
-      "ItemStack.getRarity()"
+      "PlayerChatMessage.<init>()",
+      "PlayerChatMessage.signedBody()",
+      "ServerPlayer.get()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
     "run": {
@@ -115,13 +84,13 @@
     },
     "url": "https://modrinth.com/mod/carbon",
     "version": "3.0.0-beta.39",
-    "lacks": 28,
+    "lacks": 8,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "carbonchat-fabric-3.0.0-beta.39.jar",
       "published": "2026-09-18"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

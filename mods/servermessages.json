@@ -11,21 +11,10 @@
   "needs": [
     "an access widener",
     "Mixin: 3 points inside the game's methods",
-    "io.netty.channel.ChannelFutureListener",
-    "net.fabricmc.fabric.api.networking.v1.context.PacketContextProvider",
     "net.fabricmc.fabric.impl.networking.context.PacketContextImpl",
-    "net.fabricmc.loader.api.metadata.Person",
-    "net.minecraft.network.protocol.login.ClientboundLoginDisconnectPacket",
-    "net.minecraft.server.commands.BanIpCommands",
-    "net.minecraft.server.commands.BanPlayerCommands",
-    "net.minecraft.server.commands.DeOpCommands",
     "net.minecraft.server.commands.KickCommand",
-    "net.minecraft.server.commands.OpCommand",
-    "net.minecraft.server.commands.PardonCommand",
-    "net.minecraft.server.network.ServerLoginPacketListenerImpl",
-    "net.minecraft.util.CommonColors",
     "PacketContext.GAME_PROFILE",
-    "ModMetadata.getAuthors()",
+    "PacketContextProvider.getPacketContext()",
     "Connection.getPacketContext()",
     "Component.servermessages$getOriginal()",
     "ComponentContents.servermessages$canParse()",
@@ -35,12 +24,12 @@
     "TranslatableContents.servermessages$parse()",
     "PlayerList.getPlayersWithAddress()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "servermessages-1.1.1-26.2.jar",
     "published": "2026-06-27"
   },
@@ -71,7 +60,7 @@
     "class": "restart",
     "why": "@wrap-method and @wrap-operation into the game's classes"
   },
-  "lacks": 23,
+  "lacks": 12,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -80,26 +69,10 @@
     "needs": [
       "an access widener",
       "Mixin: 3 points inside the game's methods",
-      "com.mojang.authlib.GameProfile",
-      "io.netty.channel.ChannelFutureListener",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-      "net.fabricmc.fabric.api.networking.v1.context.PacketContextProvider",
       "net.fabricmc.fabric.impl.networking.context.PacketContextImpl",
-      "net.fabricmc.loader.api.metadata.Person",
-      "net.minecraft.network.protocol.login.ClientboundLoginDisconnectPacket",
-      "net.minecraft.server.commands.BanIpCommands",
-      "net.minecraft.server.commands.BanPlayerCommands",
-      "net.minecraft.server.commands.DeOpCommands",
       "net.minecraft.server.commands.KickCommand",
-      "net.minecraft.server.commands.OpCommand",
-      "net.minecraft.server.commands.PardonCommand",
-      "net.minecraft.server.network.ServerLoginPacketListenerImpl",
-      "net.minecraft.util.CommonColors",
-      "ServerLifecycleEvents.END_DATA_PACK_RELOAD",
-      "ServerLifecycleEvents.SERVER_STARTED",
       "PacketContext.GAME_PROFILE",
-      "ModMetadata.getAuthors()",
+      "PacketContextProvider.getPacketContext()",
       "Connection.getPacketContext()",
       "Component.servermessages$getOriginal()",
       "ComponentContents.servermessages$canParse()",
@@ -109,7 +82,7 @@
       "TranslatableContents.servermessages$parse()",
       "PlayerList.getPlayersWithAddress()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+    "roadmap": "Code next to data (0.3), Mixin (0.5)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -120,13 +93,13 @@
     },
     "url": "https://modrinth.com/mod/servermessages",
     "version": "1.1.1",
-    "lacks": 28,
+    "lacks": 12,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "servermessages-1.1.1-26.2.jar",
       "published": "2026-06-27"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

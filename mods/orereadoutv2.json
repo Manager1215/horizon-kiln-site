@@ -9,15 +9,14 @@
   "author": "veii",
   "description": "Have staff and console receive notifications whenever any player breaks a certain block (e.g. ores).",
   "needs": [
-    "org.apache.logging.log4j.core.config.Configurator",
-    "MinecraftServer.getTickCount()"
+    "org.apache.logging.log4j.core.config.Configurator"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "ore-readout-2.2.2-26.3.jar",
     "published": "2026-09-28"
   },
@@ -49,20 +48,16 @@
     "class": "partial",
     "why": "runs threads of its own; data pack files (recipes, loot, tags) stay"
   },
-  "lacks": 2,
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-      "org.apache.logging.log4j.core.config.Configurator",
-      "ServerLifecycleEvents.SERVER_STARTED",
-      "MinecraftServer.getTickCount()",
-      "Player.getPlainTextName()"
+      "org.apache.logging.log4j.core.config.Configurator"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+    "roadmap": "Minecraft's libraries and client API (0.2)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -73,13 +68,13 @@
     },
     "url": "https://modrinth.com/mod/orereadoutv2",
     "version": "2.2.2-26.3",
-    "lacks": 5,
+    "lacks": 1,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "ore-readout-2.2.2-26.3.jar",
       "published": "2026-09-28"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

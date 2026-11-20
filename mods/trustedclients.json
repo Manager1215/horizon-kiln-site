@@ -9,24 +9,14 @@
   "author": "NoahOnFyre",
   "description": "A lightweight anti-cheat/client-scanning mod which shows client installed mods on the server when a player joins.",
   "needs": [
-    "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking",
-    "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking.LoginQueryRequestHandler",
-    "net.fabricmc.fabric.api.networking.v1.FriendlyByteBufs",
-    "net.fabricmc.fabric.api.networking.v1.LoginPacketSender",
-    "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents",
-    "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents.QueryStart",
-    "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking",
-    "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginQueryResponseHandler",
-    "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginSynchronizer",
-    "net.minecraft.server.network.ServerLoginPacketListenerImpl",
-    "ModContainer.getContainingMod()"
+    "ServerLoginPacketListenerImpl.getUserName()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "trustedclients-0.7.0.jar",
     "published": "2026-10-07"
   },
@@ -60,30 +50,16 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 11,
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking",
-      "net.fabricmc.fabric.api.client.networking.v1.ClientLoginNetworking.LoginQueryRequestHandler",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-      "net.fabricmc.fabric.api.networking.v1.FriendlyByteBufs",
-      "net.fabricmc.fabric.api.networking.v1.LoginPacketSender",
-      "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents",
-      "net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents.QueryStart",
-      "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking",
-      "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginQueryResponseHandler",
-      "net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking.LoginSynchronizer",
-      "net.minecraft.server.network.ServerLoginPacketListenerImpl",
-      "ServerLifecycleEvents.SERVER_STARTED",
-      "ServerLifecycleEvents.SERVER_STOPPING",
-      "ModContainer.getContainingMod()"
+      "ServerLoginPacketListenerImpl.getUserName()"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+    "roadmap": "Code next to data (0.3)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -94,13 +70,13 @@
     },
     "url": "https://modrinth.com/mod/trustedclients",
     "version": "0.7.0",
-    "lacks": 15,
+    "lacks": 1,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "trustedclients-0.7.0.jar",
       "published": "2026-10-07"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

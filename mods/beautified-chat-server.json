@@ -9,13 +9,9 @@
   "author": "Serilum",
   "description": "💬 A highly configurable mod to change the style and colour of chat messages with optional ranks server-wide.",
   "needs": [
-    "net.minecraft.network.chat.OutgoingChatMessage",
-    "net.minecraft.network.chat.OutgoingChatMessage.Player",
-    "Registries.CHAT_TYPE",
     "ChatType.CHAT",
     "ChatType.bind()",
-    "PlayerChatMessage.decoratedContent()",
-    "PlayerChatMessage.sender()",
+    "OutgoingChatMessage.create()",
     "PlayerChatMessage.withUnsignedContent()",
     "ServerPlayer.getChatVisibility()"
   ],
@@ -23,8 +19,8 @@
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "beautifiedchatserver-26.3.0-4.0.jar",
     "published": "2026-11-03"
   },
@@ -58,21 +54,18 @@
     "class": "partial",
     "why": "data pack files (recipes, loot, tags) stay"
   },
-  "lacks": 9,
+  "lacks": 5,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
-      "net.minecraft.network.chat.OutgoingChatMessage",
-      "net.minecraft.network.chat.OutgoingChatMessage.Player",
-      "net.minecraft.network.chat.PlayerChatMessage",
-      "Registries.CHAT_TYPE",
       "ChatType.CHAT",
       "ChatType.bind()",
-      "ServerPlayer.getChatVisibility()",
-      "ServerPlayer.getDisplayName()"
+      "OutgoingChatMessage.create()",
+      "PlayerChatMessage.withUnsignedContent()",
+      "ServerPlayer.getChatVisibility()"
     ],
     "roadmap": "Code next to data (0.3)",
     "run": {
@@ -85,13 +78,13 @@
     },
     "url": "https://modrinth.com/mod/beautified-chat-server",
     "version": "26.3.0-4.0-fabric+forge+neo",
-    "lacks": 8,
+    "lacks": 5,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "beautifiedchatserver-26.3.0-4.0.jar",
       "published": "2026-11-03"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

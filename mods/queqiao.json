@@ -1,7 +1,7 @@
 {
   "id": "queqiao",
   "name": "QueQiao",
-  "version": "0.5.3+fabric-26.3",
+  "version": "0.6.0+fabric-26.3",
   "status": "planned",
   "statusLabel": "Planned",
   "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,32 +9,17 @@
   "author": "17TheWord",
   "description": "Minecraft Server Mod/Plugin for Real-time Player Events & API Broadcast Messaging.",
   "needs": [
-    "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
-    "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-    "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
-    "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
-    "net.minecraft.network.protocol.game.ServerboundChatCommandPacket",
-    "net.minecraft.network.protocol.game.ServerboundChatCommandSignedPacket",
-    "net.minecraft.server.PlayerAdvancements",
-    "AdvancementHolder.value()",
     "ChatType.CHAT",
-    "PlayerChatMessage.decoratedContent()",
-    "PlayerChatMessage.signedContent()",
-    "MinecraftServer.getServerVersion()",
-    "ServerPlayer.getIpAddress()",
-    "ServerPlayer.getSpeed()",
-    "ServerPlayer.hasDisconnected()",
-    "PlayerList.getPlayer()",
-    "DamageSource.getLocalizedDeathMessage()"
+    "ServerPlayer.getIpAddress()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
-    "file": "QueQiao-fabric+26.3-0.5.3.jar",
-    "published": "2026-10-14"
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
+    "file": "QueQiao-fabric+26.3-0.6.0.jar",
+    "published": "2026-11-17"
   },
   "reports": {
     "works": 0,
@@ -44,8 +29,8 @@
   },
   "run": {
     "passed": false,
-    "date": "2026-11-05",
-    "kiln": "0.3.0",
+    "date": "2026-11-18",
+    "kiln": "0.4.6",
     "ticks": 0,
     "hud": false,
     "why": "Java did not start"
@@ -64,56 +49,36 @@
     "class": "partial",
     "why": "runs threads of its own"
   },
-  "lacks": 17,
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
-      "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents",
-      "net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents.AfterDeath",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-      "net.fabricmc.fabric.api.message.v1.ServerMessageEvents",
       "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
-      "net.minecraft.network.chat.ComponentSerialization",
-      "net.minecraft.network.chat.PlayerChatMessage",
-      "net.minecraft.network.protocol.game.ServerboundChatCommandPacket",
-      "net.minecraft.network.protocol.game.ServerboundChatCommandSignedPacket",
-      "net.minecraft.server.PlayerAdvancements",
-      "ServerLifecycleEvents.SERVER_STARTED",
-      "ServerLifecycleEvents.SERVER_STOPPING",
-      "AdvancementHolder.value()",
+      "ServerMessageEvents.CHAT_MESSAGE",
       "ChatType.CHAT",
-      "MinecraftServer.getServerVersion()",
-      "ServerPlayer.connection",
-      "ServerPlayer.getIpAddress()",
-      "ServerPlayer.getSpeed()",
-      "ServerPlayer.hasDisconnected()",
-      "ServerPlayer.permissions()",
-      "ServerGamePacketListenerImpl.send()",
-      "PlayerList.getPlayer()",
-      "DamageSource.getLocalizedDeathMessage()"
+      "ServerPlayer.getIpAddress()"
     ],
     "roadmap": "Code next to data (0.3)",
     "run": {
       "passed": false,
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-18",
+      "kiln": "development build 2026-11-18 (d1387ddf)",
       "ticks": 0,
       "hud": false,
       "why": "Java did not start"
     },
     "url": "https://modrinth.com/mod/queqiao",
-    "version": "0.5.3+fabric-26.3",
-    "lacks": 24,
+    "version": "0.6.0+fabric-26.3",
+    "lacks": 4,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
-      "file": "QueQiao-fabric+26.3-0.5.3.jar",
-      "published": "2026-10-14"
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
+      "file": "QueQiao-fabric+26.3-0.6.0.jar",
+      "published": "2026-11-17"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

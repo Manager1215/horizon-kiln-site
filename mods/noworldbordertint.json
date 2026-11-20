@@ -10,15 +10,9 @@
   "description": "Removes the red vignette tint when close to a world border.",
   "needs": [
     "an access widener",
-    "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
-    "net.minecraft.util.Util.OS",
-    "org.apache.commons.io.FileUtils",
-    "org.lwjgl.sdl.SDLMouse",
     "VertexConsumer.addVertexWith2DPose()",
-    "StringSplitter.splitLines()",
-    "GuiGraphicsExtractor.innerBlit()",
-    "GuiGraphicsExtractor.innerFill()",
     "GuiGraphicsExtractor.scissorStack",
+    "GuiGraphicsExtractor.ScissorStack.stack",
     "TextureSetup.noTexture()",
     "RenderPipelines.GUI",
     "RenderPipelines.GUI_INVERT",
@@ -27,16 +21,15 @@
     "GameRenderState.guiRenderState",
     "GuiRenderState.addGuiElement()",
     "AbstractTexture.getTextureView()",
-    "ARGB.colorFromFloat()",
-    "Util.getPlatform()",
-    "ItemStack.getStyledHoverName()"
+    "SDLMouse.SDL_BUTTON_X1MASK",
+    "SDLMouse.SDL_BUTTON_X2MASK"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "noworldbordertint-fabric-26.3-1.2.0.jar",
     "published": "2026-10-16"
   },
@@ -70,7 +63,7 @@
     "class": "partial",
     "why": "runs threads of its own"
   },
-  "lacks": 20,
+  "lacks": 13,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -78,35 +71,9 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "an access widener",
-      "com.mojang.blaze3d.platform.TextInputManager",
-      "net.minecraft.client.StringSplitter",
-      "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
-      "net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent",
-      "net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner",
-      "net.minecraft.client.renderer.texture.DynamicTexture",
-      "net.minecraft.util.Util.OS",
-      "net.minecraft.world.item.TooltipFlag.Default",
-      "org.apache.commons.io.FileUtils",
-      "org.lwjgl.sdl.SDLMouse",
-      "InputConstants.getKey()",
-      "InputConstants.isKeyDown()",
-      "InputConstants.Key.getDisplayName()",
-      "NativeImage.setPixel()",
       "VertexConsumer.addVertexWith2DPose()",
-      "Minecraft.textInputManager()",
-      "Font.getSplitter()",
-      "Font.plainSubstrByWidth()",
-      "GuiGraphicsExtractor.<init>()",
-      "GuiGraphicsExtractor.blit()",
-      "GuiGraphicsExtractor.innerBlit()",
-      "GuiGraphicsExtractor.innerFill()",
       "GuiGraphicsExtractor.scissorStack",
-      "GuiGraphicsExtractor.tooltip()",
-      "ScreenRectangle.bottom()",
-      "ScreenRectangle.intersection()",
-      "ScreenRectangle.left()",
-      "ScreenRectangle.right()",
-      "ScreenRectangle.top()",
+      "GuiGraphicsExtractor.ScissorStack.stack",
       "TextureSetup.noTexture()",
       "RenderPipelines.GUI",
       "RenderPipelines.GUI_INVERT",
@@ -115,12 +82,10 @@
       "GameRenderState.guiRenderState",
       "GuiRenderState.addGuiElement()",
       "AbstractTexture.getTextureView()",
-      "Language.getVisualOrder()",
-      "Component.getSiblings()",
-      "ARGB.colorFromFloat()",
-      "and 5 more"
+      "SDLMouse.SDL_BUTTON_X1MASK",
+      "SDLMouse.SDL_BUTTON_X2MASK"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+    "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -131,13 +96,13 @@
     },
     "url": "https://modrinth.com/mod/noworldbordertint",
     "version": "1.2.0",
-    "lacks": 45,
+    "lacks": 13,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "noworldbordertint-fabric-26.3-1.2.0.jar",
       "published": "2026-10-16"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

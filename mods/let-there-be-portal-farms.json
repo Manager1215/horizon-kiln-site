@@ -9,21 +9,16 @@
   "author": "seviq25",
   "description": "A Fabric mod for preventing mob despawning when they change dimensions or enter a portal. Fixing portal-based farms. \n[portal mob despawn farm fix]",
   "needs": [
-    "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
     "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterEntityChange",
-    "JsonSyntaxException.getMessage()",
-    "ServerLevel.getEntity()",
-    "Entity.hasCustomName()",
-    "Mob.is()",
-    "Mob.isPersistenceRequired()",
-    "Mob.setPersistenceRequired()"
+    "ServerEntityLevelChangeEvents.AFTER_ENTITY_CHANGE_LEVEL",
+    "Mob.is()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "portal-fix-1.0.1.jar",
     "published": "2026-09-28"
   },
@@ -55,25 +50,17 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 8,
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
-      "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents",
       "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterEntityChange",
       "JsonSyntaxException.getMessage()",
-      "AttachmentRegistry.createPersistent()",
-      "ServerLevel.getEntity()",
-      "Entity.hasCustomName()",
-      "Mob.getAttachedOrElse()",
-      "Mob.hasAttached()",
-      "Mob.is()",
-      "Mob.isPersistenceRequired()",
-      "Mob.setAttached()",
-      "Mob.setPersistenceRequired()"
+      "ServerEntityLevelChangeEvents.AFTER_ENTITY_CHANGE_LEVEL",
+      "Mob.is()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
     "run": {
@@ -86,13 +73,13 @@
     },
     "url": "https://modrinth.com/mod/let-there-be-portal-farms",
     "version": "1.0.1",
-    "lacks": 12,
+    "lacks": 4,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "portal-fix-1.0.1.jar",
       "published": "2026-09-28"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

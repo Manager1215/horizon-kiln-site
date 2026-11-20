@@ -1,95 +1,43 @@
 {
   "id": "deathlogplus",
   "name": "DeathLogPlus",
-  "version": "1.1.1",
-  "status": "planned",
-  "statusLabel": "Planned",
-  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
-  "url": "https://modrinth.com/mod/deathlogplus",
-  "author": "Nikrecs",
-  "description": "Records your deaths with cause, location, date/time, and inventory snapshot.",
-  "needs": [
-    "net.minecraft.world.level.storage.WorldData",
-    "GuiGraphicsExtractor.setTooltipForNextFrame()",
-    "LocalPlayer.getCombatTracker()",
-    "LocalPlayer.isDeadOrDying()",
-    "IntegratedServer.getWorldData()",
-    "CombatTracker.getDeathMessage()"
-  ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
-  "evidence": "Not run: Java did not start.",
-  "library": false,
-  "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
-    "file": "deathlogplus-fabric-26.3-1.1.1.jar",
-    "published": "2026-11-07"
-  },
+  "version": "1.1.0",
+  "status": "works",
+  "statusLabel": "Works",
+  "statusMeaning": "Tried in the game with Kiln.",
+  "needs": [],
   "reports": {
     "works": 0,
     "partly": 0,
     "broken": 0,
     "latest": []
   },
-  "run": {
-    "passed": false,
-    "date": "2026-11-08",
-    "kiln": "0.4.0",
-    "ticks": 0,
-    "hud": false,
-    "why": "Java did not start"
+  "works": "Records each death (cause, place, time, inventory) and shows the log in its own screen (a key with no default, or /deathlog).",
+  "note": "Not yet: Its screen's labels are its own drawing, which the try's label reader doesn't see (the screenshot and its deaths.json are checked).",
+  "url": "https://modrinth.com/mod/kmz8J4sz",
+  "checked": {
+    "kiln": "0.4.8",
+    "commit": "b123df2062e23a33e9a974e2928190cb8d1d3d26",
+    "date": "2026-11-18",
+    "horizon": "Nightly 2026-11-04 · 3fb4c31",
+    "by": "kiln/proof.py on the Linux PC"
   },
-  "entrypoints": {
-    "client": 1
-  },
-  "mixins": false,
-  "depends": [
-    "architectury",
-    "fabric-api",
-    "fabricloader",
-    "java",
-    "minecraft"
-  ],
-  "softOff": {
-    "class": "safe",
-    "why": "only events, HUD, keys, commands and guarded mixin handlers"
-  },
-  "lacks": 6,
   "development": {
-    "status": "planned",
-    "statusLabel": "Planned",
-    "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
-    "evidence": "Not run: Java did not start.",
-    "needs": [
-      "net.minecraft.client.server.IntegratedServer",
-      "net.minecraft.world.level.storage.WorldData",
-      "Minecraft.getCurrentServer()",
-      "Minecraft.getSingleplayerServer()",
-      "GuiGraphicsExtractor.setTooltipForNextFrame()",
-      "ServerData.ip",
-      "ServerData.name",
-      "LocalPlayer.getCombatTracker()",
-      "LocalPlayer.isDeadOrDying()",
-      "CombatTracker.getDeathMessage()"
-    ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
-    "run": {
-      "passed": false,
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
-      "ticks": 0,
-      "hud": false,
-      "why": "Java did not start"
+    "status": "works",
+    "statusLabel": "Works",
+    "statusMeaning": "Tried in the game with Kiln.",
+    "needs": [],
+    "works": "Records each death (cause, place, time, inventory) and shows the log in its own screen (a key with no default, or /deathlog).",
+    "note": "Not yet: Its screen's labels are its own drawing, which the try's label reader doesn't see (the screenshot and its deaths.json are checked).",
+    "checked": {
+      "kiln": "main",
+      "commit": "b123df2062e23a33e9a974e2928190cb8d1d3d26",
+      "date": "2026-11-18",
+      "horizon": "Nightly 2026-11-04 · 3fb4c31",
+      "by": "kiln/proof.py on the Linux PC"
     },
-    "url": "https://modrinth.com/mod/deathlogplus",
-    "version": "1.1.1",
-    "lacks": 10,
-    "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
-      "file": "deathlogplus-fabric-26.3-1.1.1.jar",
-      "published": "2026-11-07"
-    },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "url": "https://modrinth.com/mod/kmz8J4sz",
+    "version": "1.1.0",
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

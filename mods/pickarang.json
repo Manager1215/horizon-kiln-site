@@ -1,0 +1,106 @@
+{
+  "id": "pickarang",
+  "name": "Pickarang",
+  "version": "1.0.2+mc26.1-26.3-fabric",
+  "status": "planned",
+  "statusLabel": "Planned",
+  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+  "url": "https://modrinth.com/mod/pickarang",
+  "author": "nicomods",
+  "description": "A standalone port of the Pickarang from Vazkii's Quark mod. Throw it like a boomerang to mine blocks at range – it picks up dropped items and returns everything to your inventory!",
+  "needs": [
+    "an access widener",
+    "net.fabricmc.fabric.api.item.v1.EnchantmentEvents.AllowEnchanting",
+    "PoseStack.mulPose()",
+    "EnchantmentEvents.ALLOW_ENCHANTING",
+    "EntityRendererProvider.Context.getItemModelResolver()",
+    "ServerPlayer.gameMode",
+    "MobEffectUtil.getDigSpeedAmplification()",
+    "MobEffectUtil.hasDigSpeed()",
+    "Entity.playerTouch()",
+    "LivingEntity.doHurtTarget()",
+    "Projectile.addAdditionalSaveData()",
+    "ProjectileUtil.getEntityHitResult()",
+    "Item.getItemDamageSource()"
+  ],
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "evidence": "Not run: Java did not start.",
+  "library": false,
+  "scanned": {
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
+    "file": "pickarang-fabric-1.0.2+mc26.1-26.3.jar",
+    "published": "2026-11-18"
+  },
+  "reports": {
+    "works": 0,
+    "partly": 0,
+    "broken": 0,
+    "latest": []
+  },
+  "run": {
+    "passed": false,
+    "date": "2026-11-19",
+    "kiln": "0.4.6",
+    "ticks": 0,
+    "hud": false,
+    "why": "Java did not start"
+  },
+  "entrypoints": {
+    "main": 1,
+    "client": 1
+  },
+  "mixins": true,
+  "depends": [
+    "fabric-api",
+    "fabricloader",
+    "java",
+    "minecraft"
+  ],
+  "softOff": {
+    "class": "partial",
+    "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+  },
+  "lacks": 12,
+  "development": {
+    "status": "planned",
+    "statusLabel": "Planned",
+    "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+    "evidence": "Not run: Java did not start.",
+    "needs": [
+      "an access widener",
+      "net.fabricmc.fabric.api.item.v1.EnchantmentEvents.AllowEnchanting",
+      "PoseStack.mulPose()",
+      "EnchantmentEvents.ALLOW_ENCHANTING",
+      "EntityRendererProvider.Context.getItemModelResolver()",
+      "ServerPlayer.gameMode",
+      "MobEffectUtil.getDigSpeedAmplification()",
+      "MobEffectUtil.hasDigSpeed()",
+      "Entity.playerTouch()",
+      "LivingEntity.doHurtTarget()",
+      "Projectile.addAdditionalSaveData()",
+      "ProjectileUtil.getEntityHitResult()",
+      "Item.getItemDamageSource()",
+      "Level.getEntitiesOfClass()"
+    ],
+    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+    "run": {
+      "passed": false,
+      "date": "2026-11-19",
+      "kiln": "development build 2026-11-19 (aec290a0)",
+      "ticks": 0,
+      "hud": false,
+      "why": "Java did not start"
+    },
+    "url": "https://modrinth.com/mod/pickarang",
+    "version": "1.0.2+mc26.1-26.3-fabric",
+    "lacks": 13,
+    "scanned": {
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
+      "file": "pickarang-fabric-1.0.2+mc26.1-26.3.jar",
+      "published": "2026-11-18"
+    },
+    "build": "development build 2026-11-20 (eda5a4a5)"
+  }
+}

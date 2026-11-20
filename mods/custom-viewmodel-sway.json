@@ -10,32 +10,28 @@
   "description": "Customize the sway and bobbing on your viewmodel",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.gui.components.MultiLineEditBox",
     "net.minecraft.client.gui.components.MultiLineEditBox.Builder",
-    "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState",
     "org.lwjgl.sdl.SDLDialog",
     "org.lwjgl.sdl.SDL_DialogFileCallback",
     "org.lwjgl.sdl.SDL_DialogFileFilter",
     "org.lwjgl.sdl.SDL_DialogFileFilter.Buffer",
     "org.lwjgl.system.MemoryUtil",
-    "Window.handle()",
-    "Axis.ZP",
-    "KeyMapping.setAll()",
     "Gui.isPausing()",
-    "LocalPlayer.getViewXRot()",
-    "LocalPlayer.getViewYRot()",
-    "LocalPlayer.isAlive()",
-    "LocalPlayer.isCrouching()",
-    "LocalPlayer.onClimbable()",
-    "LocalPlayer.xo",
-    "LocalPlayer.zo"
+    "MultiLineEditBox.builder()",
+    "MultiLineEditBox.setCharacterLimit()",
+    "MultiLineEditBox.setValue()",
+    "MultiLineEditBox.setValueListener()",
+    "FirstPersonHandsAndItemsRenderState.viewXRot",
+    "FirstPersonHandsAndItemsRenderState.viewYRot",
+    "FirstPersonHandsAndItemsRenderState.xBob",
+    "FirstPersonHandsAndItemsRenderState.yBob"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "custom-viewmodel-bobbing-n-sway-1.1.0+26.3.jar",
     "published": "2026-10-09"
   },
@@ -69,7 +65,7 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 19,
+  "lacks": 15,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -77,29 +73,21 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "Mixin: 1 point inside the game's methods",
-      "net.minecraft.client.gui.components.MultiLineEditBox",
       "net.minecraft.client.gui.components.MultiLineEditBox.Builder",
-      "net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState",
-      "net.minecraft.client.server.IntegratedServer",
       "org.lwjgl.sdl.SDLDialog",
       "org.lwjgl.sdl.SDL_DialogFileCallback",
       "org.lwjgl.sdl.SDL_DialogFileFilter",
       "org.lwjgl.sdl.SDL_DialogFileFilter.Buffer",
       "org.lwjgl.system.MemoryUtil",
-      "Window.handle()",
-      "Axis.ZP",
-      "KeyMapping.setAll()",
-      "Minecraft.getSingleplayerServer()",
-      "Font.split()",
       "Gui.isPausing()",
-      "GuiGraphicsExtractor.text()",
-      "LocalPlayer.getViewXRot()",
-      "LocalPlayer.getViewYRot()",
-      "LocalPlayer.isAlive()",
-      "LocalPlayer.isCrouching()",
-      "LocalPlayer.onClimbable()",
-      "LocalPlayer.xo",
-      "LocalPlayer.zo"
+      "MultiLineEditBox.builder()",
+      "MultiLineEditBox.setCharacterLimit()",
+      "MultiLineEditBox.setValue()",
+      "MultiLineEditBox.setValueListener()",
+      "FirstPersonHandsAndItemsRenderState.viewXRot",
+      "FirstPersonHandsAndItemsRenderState.viewYRot",
+      "FirstPersonHandsAndItemsRenderState.xBob",
+      "FirstPersonHandsAndItemsRenderState.yBob"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
     "run": {
@@ -112,13 +100,13 @@
     },
     "url": "https://modrinth.com/mod/custom-viewmodel-sway",
     "version": "1.1.0",
-    "lacks": 23,
+    "lacks": 15,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "custom-viewmodel-bobbing-n-sway-1.1.0+26.3.jar",
       "published": "2026-10-09"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

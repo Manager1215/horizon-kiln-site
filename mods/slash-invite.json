@@ -9,21 +9,16 @@
   "author": "Mizuhara",
   "description": "Let your friends easily whitelist their friends to the summer SMP with a simple /invite command - all without OP privileges! (+invite logs for admins!)",
   "needs": [
-    "net.fabricmc.fabric.api.util.TriState",
-    "net.minecraft.server.players.UserWhiteList",
-    "net.minecraft.server.players.UserWhiteListEntry",
-    "MinecraftServer.getServerDirectory()",
     "MinecraftServer.isUsingWhitelist()",
-    "MinecraftServer.sendSystemMessage()",
-    "PlayerList.getWhiteList()",
-    "PlayerList.reloadWhiteList()"
+    "UserWhiteList.isWhiteListed()",
+    "UserWhiteList.remove()"
   ],
   "roadmap": "Code next to data (0.3)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "invitation-fabric-26.3-0.3.3.jar",
     "published": "2026-09-25"
   },
@@ -56,28 +51,16 @@
     "class": "partial",
     "why": "runs threads of its own"
   },
-  "lacks": 8,
+  "lacks": 3,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarting",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStopping",
-      "net.fabricmc.fabric.api.util.TriState",
-      "net.minecraft.server.players.UserWhiteList",
-      "net.minecraft.server.players.UserWhiteListEntry",
-      "ServerLifecycleEvents.SERVER_STARTING",
-      "ServerLifecycleEvents.SERVER_STOPPING",
-      "ChatFormatting.getByCode()",
-      "MinecraftServer.execute()",
-      "MinecraftServer.getServerDirectory()",
       "MinecraftServer.isUsingWhitelist()",
-      "MinecraftServer.sendSystemMessage()",
-      "ServerPlayer.getPlainTextName()",
-      "PlayerList.getWhiteList()",
-      "PlayerList.reloadWhiteList()"
+      "UserWhiteList.isWhiteListed()",
+      "UserWhiteList.remove()"
     ],
     "roadmap": "Code next to data (0.3)",
     "run": {
@@ -90,13 +73,13 @@
     },
     "url": "https://modrinth.com/mod/slash-invite",
     "version": "0.3.3-fabric",
-    "lacks": 15,
+    "lacks": 3,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "invitation-fabric-26.3-0.3.3.jar",
       "published": "2026-09-25"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

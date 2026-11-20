@@ -10,27 +10,21 @@
   "description": "Adds gamerules to change how Wind Charges work",
   "needs": [
     "Mixin: 3 points inside the game's methods",
-    "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.DoubleRuleBuilder",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.IntegerRuleBuilder",
-    "net.minecraft.world.entity.projectile.hurtingprojectile.windcharge.BreezeWindCharge",
-    "net.minecraft.world.entity.projectile.hurtingprojectile.windcharge.WindCharge",
-    "net.minecraft.world.item.ItemCooldowns",
-    "MinecraftServer.getGameRules()",
-    "EntityTypes.BREEZE_WIND_CHARGE",
-    "EntityTypes.WIND_CHARGE",
+    "GameRuleBuilder.forDouble()",
+    "GameRuleBuilder.forInteger()",
     "ExplosionDamageCalculator.getKnockbackMultiplier()",
     "ServerExplosion.getDamageSource()",
     "GameRuleCategory.MOBS",
-    "GameRuleCategory.PLAYER",
-    "GameRules.get()"
+    "GameRuleCategory.PLAYER"
   ],
   "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "customizable_wind_charges-6.0.0.jar",
     "published": "2026-09-18"
   },
@@ -62,7 +56,7 @@
     "class": "restart",
     "why": "@redirect into the game's classes"
   },
-  "lacks": 14,
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -70,23 +64,14 @@
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
       "Mixin: 3 points inside the game's methods",
-      "net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.ServerStarted",
-      "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
       "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.DoubleRuleBuilder",
       "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.IntegerRuleBuilder",
-      "net.minecraft.world.entity.projectile.hurtingprojectile.windcharge.BreezeWindCharge",
-      "net.minecraft.world.entity.projectile.hurtingprojectile.windcharge.WindCharge",
-      "net.minecraft.world.item.ItemCooldowns",
-      "ServerLifecycleEvents.SERVER_STARTED",
-      "MinecraftServer.getGameRules()",
-      "EntityTypes.BREEZE_WIND_CHARGE",
-      "EntityTypes.WIND_CHARGE",
-      "Items.WIND_CHARGE",
+      "GameRuleBuilder.forDouble()",
+      "GameRuleBuilder.forInteger()",
       "ExplosionDamageCalculator.getKnockbackMultiplier()",
       "ServerExplosion.getDamageSource()",
       "GameRuleCategory.MOBS",
-      "GameRuleCategory.PLAYER",
-      "GameRules.get()"
+      "GameRuleCategory.PLAYER"
     ],
     "roadmap": "Code next to data (0.3), Mixin (0.5)",
     "run": {
@@ -99,13 +84,13 @@
     },
     "url": "https://modrinth.com/mod/customizable-wind-charges",
     "version": "6.0.0",
-    "lacks": 17,
+    "lacks": 8,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "customizable_wind_charges-6.0.0.jar",
       "published": "2026-09-18"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

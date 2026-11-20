@@ -10,29 +10,15 @@
   "description": "Stop hunting through an entire storage room for one missing item. StorageGuide lets a server define one shared storage wall, assign items to chest slots, and highlight exactly where players should go, you can also catch players who dont sort.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.world.CompoundContainer",
-    "net.minecraft.world.level.block.ShulkerBoxBlock",
-    "net.minecraft.world.level.block.entity.ChestBlockEntity",
-    "LocalPlayer.blockInteractionRange()",
-    "Gizmos.cuboid()",
     "MinecraftServer.getFile()",
-    "MinecraftServer.isSingleplayerOwner()",
-    "ServerPlayer.getGameProfile()",
-    "ServerGamePacketListenerImpl.disconnect()",
-    "NameAndId.<init>()",
-    "ARGB.colorFromFloat()",
-    "ARGB.srgbLerp()",
-    "CreativeModeTabs.tabs()",
-    "CreativeModeTabs.tryRebuildTabContents()",
-    "AABB.clip()",
-    "AABB.inflate()"
+    "ChestBlockEntity.getBlockPos()"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "storageguide-2.5.0.jar",
     "published": "2026-11-15"
   },
@@ -66,5 +52,36 @@
     "class": "restart",
     "why": "@redirect into the game's classes; has network channels"
   },
-  "lacks": 16
+  "lacks": 2,
+  "development": {
+    "status": "planned",
+    "statusLabel": "Planned",
+    "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+    "evidence": "Not run: Java did not start.",
+    "needs": [
+      "Mixin: 1 point inside the game's methods",
+      "MinecraftServer.getFile()",
+      "ServerGamePacketListenerImpl.disconnect()",
+      "ChestBlockEntity.getBlockPos()"
+    ],
+    "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+    "run": {
+      "passed": false,
+      "date": "2026-11-17",
+      "kiln": "development build 2026-11-17 (2aabcd3)",
+      "ticks": 0,
+      "hud": false,
+      "why": "Java did not start"
+    },
+    "url": "https://modrinth.com/mod/storageguide",
+    "version": "2.5.0",
+    "lacks": 3,
+    "scanned": {
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
+      "file": "storageguide-2.5.0.jar",
+      "published": "2026-11-15"
+    },
+    "build": "development build 2026-11-20 (eda5a4a5)"
+  }
 }

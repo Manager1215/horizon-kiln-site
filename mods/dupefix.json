@@ -10,32 +10,15 @@
   "description": "A simple drop-in mod to prevent all forms of duping. TNT-Duping, Gravity block duping, and much more will not work with this mod enabled.",
   "needs": [
     "Mixin: 8 points inside the game's methods",
-    "net.minecraft.network.protocol.game.ServerboundEditBookPacket",
-    "net.minecraft.world.entity.animal.bee.Bee",
-    "net.minecraft.world.entity.item.FallingBlockEntity",
-    "net.minecraft.world.inventory.AbstractMountInventoryMenu",
-    "net.minecraft.world.level.block.BaseRailBlock",
-    "net.minecraft.world.level.block.LecternBlock",
-    "net.minecraft.world.level.block.ShulkerBoxBlock",
-    "net.minecraft.world.level.block.TripWireBlock",
-    "net.minecraft.world.level.block.entity.BeehiveBlockEntity",
-    "net.minecraft.world.level.block.entity.HopperBlockEntity",
-    "net.minecraft.world.level.block.entity.LecternBlockEntity",
-    "net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity",
-    "net.minecraft.world.level.block.piston.PistonBaseBlock",
-    "ServerPlayer.getTicksUsingItem()",
-    "ServerPlayer.getUseItemRemainingTicks()",
-    "LivingEntity.isAlive()",
-    "Inventory.isHotbarSlot()",
-    "Player.isAlive()",
-    "AbstractContainerMenu.sendAllDataToRemote()"
+    "LecternBlock.resetBookState()",
+    "ShulkerBoxBlockEntity.clearContent()"
   ],
   "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "panda-anti-dupe-1.1.4+26.3.jar",
     "published": "2026-10-19"
   },
@@ -67,7 +50,7 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 19,
+  "lacks": 2,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -75,29 +58,8 @@
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
       "Mixin: 8 points inside the game's methods",
-      "net.minecraft.network.protocol.game.ServerboundEditBookPacket",
-      "net.minecraft.world.SimpleContainer",
-      "net.minecraft.world.entity.animal.bee.Bee",
-      "net.minecraft.world.entity.item.FallingBlockEntity",
-      "net.minecraft.world.inventory.AbstractMountInventoryMenu",
-      "net.minecraft.world.level.block.BaseRailBlock",
-      "net.minecraft.world.level.block.LecternBlock",
-      "net.minecraft.world.level.block.ShulkerBoxBlock",
-      "net.minecraft.world.level.block.TripWireBlock",
-      "net.minecraft.world.level.block.entity.BeehiveBlockEntity",
-      "net.minecraft.world.level.block.entity.HopperBlockEntity",
-      "net.minecraft.world.level.block.entity.LecternBlockEntity",
-      "net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity",
-      "net.minecraft.world.level.block.piston.PistonBaseBlock",
-      "ServerPlayer.getTicksUsingItem()",
-      "ServerPlayer.getUseItemRemainingTicks()",
-      "LivingEntity.isAlive()",
-      "Inventory.isHotbarSlot()",
-      "Player.isAlive()",
-      "AbstractContainerMenu.sendAllDataToRemote()",
-      "Items.WRITABLE_BOOK",
-      "Blocks.LECTERN",
-      "LootContextParams.BLOCK_ENTITY"
+      "LecternBlock.resetBookState()",
+      "ShulkerBoxBlockEntity.clearContent()"
     ],
     "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
     "run": {
@@ -110,13 +72,13 @@
     },
     "url": "https://modrinth.com/mod/dupefix",
     "version": "1.1.4+26.3",
-    "lacks": 23,
+    "lacks": 2,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "panda-anti-dupe-1.1.4+26.3.jar",
       "published": "2026-10-19"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

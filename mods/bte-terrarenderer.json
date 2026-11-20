@@ -10,14 +10,9 @@
   "description": "Map renderer for the BuildTheEarth project. Updated fork because the original owner vanished.",
   "needs": [
     "an access widener",
-    "com.mojang.blaze3d.Blaze3D",
-    "com.mojang.blaze3d.vertex.DefaultVertexFormat",
-    "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
-    "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
     "io.netty.bootstrap.Bootstrap",
     "io.netty.channel.Channel",
     "io.netty.channel.ChannelFuture",
-    "io.netty.channel.ChannelFutureListener",
     "io.netty.channel.ChannelHandler",
     "io.netty.channel.ChannelHandler.Sharable",
     "io.netty.channel.ChannelHandlerContext",
@@ -47,17 +42,22 @@
     "io.netty.handler.ssl.util.InsecureTrustManagerFactory",
     "io.netty.handler.timeout.ReadTimeoutHandler",
     "io.netty.handler.timeout.WriteTimeoutHandler",
-    "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-    "net.minecraft.client.ComponentCollector",
-    "net.minecraft.client.gui.GuiGraphicsExtractor.ScissorStack",
-    "and 42 more"
+    "net.minecraft.client.renderer.BindGroupLayouts",
+    "org.apache.commons.codec.binary.Hex",
+    "VertexConsumer.addVertex()",
+    "VertexConsumer.addVertexWith2DPose()",
+    "VertexConsumer.setLight()",
+    "VertexConsumer.setNormal()",
+    "VertexConsumer.setOverlay()",
+    "BlendFunction.TRANSLUCENT",
+    "and 13 more"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "bteterrarenderer-1.5.1-fabric26.3.jar",
     "published": "2026-10-04"
   },
@@ -90,7 +90,7 @@
     "class": "partial",
     "why": "runs threads of its own"
   },
-  "lacks": 82,
+  "lacks": 53,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -98,15 +98,11 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "an access widener",
-      "com.mojang.blaze3d.Blaze3D",
-      "com.mojang.blaze3d.platform.TextInputManager",
       "com.mojang.blaze3d.vertex.DefaultVertexFormat",
       "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
-      "com.mojang.renderpearl.api.pipeline.RenderPipeline.Snippet",
       "io.netty.bootstrap.Bootstrap",
       "io.netty.channel.Channel",
       "io.netty.channel.ChannelFuture",
-      "io.netty.channel.ChannelFutureListener",
       "io.netty.channel.ChannelHandler",
       "io.netty.channel.ChannelHandler.Sharable",
       "io.netty.channel.ChannelHandlerContext",
@@ -136,11 +132,15 @@
       "io.netty.handler.ssl.util.InsecureTrustManagerFactory",
       "io.netty.handler.timeout.ReadTimeoutHandler",
       "io.netty.handler.timeout.WriteTimeoutHandler",
-      "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.CollectSubmits",
-      "net.minecraft.client.ComponentCollector",
-      "and 57 more"
+      "net.minecraft.client.renderer.BindGroupLayouts",
+      "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
+      "org.apache.commons.codec.binary.Hex",
+      "BiMap.get()",
+      "BiMap.putIfAbsent()",
+      "VertexConsumer.addVertex()",
+      "and 20 more"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+    "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -151,13 +151,13 @@
     },
     "url": "https://modrinth.com/mod/bte-terrarenderer",
     "version": "1.5.1",
-    "lacks": 97,
+    "lacks": 60,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "bteterrarenderer-1.5.1-fabric26.3.jar",
       "published": "2026-10-04"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

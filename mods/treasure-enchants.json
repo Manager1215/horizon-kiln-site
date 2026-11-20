@@ -10,20 +10,15 @@
   "description": "Adds unobtainable enchanted books as rare chest loot and mob drops",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.minecraft.world.level.block.entity.BrushableBlockEntity",
-    "net.minecraft.world.level.storage.loot.entries.EmptyLootItem",
-    "net.minecraft.world.level.storage.loot.functions.SetEnchantmentsFunction",
     "net.minecraft.world.level.storage.loot.functions.SetEnchantmentsFunction.Builder",
-    "MinecraftServer.registryAccess()",
-    "ReloadableServerRegistries.Holder.lookup()",
     "LootContextParamSets.ARCHAEOLOGY"
   ],
-  "roadmap": "Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "treasure_enchants-1.0.0+26.3.jar",
     "published": "2026-10-27"
   },
@@ -55,5 +50,35 @@
     "class": "restart",
     "why": "@wrap-operation into the game's classes"
   },
-  "lacks": 7
+  "lacks": 2,
+  "development": {
+    "status": "planned",
+    "statusLabel": "Planned",
+    "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+    "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+    "needs": [
+      "Mixin: 2 points inside the game's methods",
+      "net.minecraft.world.level.storage.loot.functions.SetEnchantmentsFunction.Builder",
+      "LootContextParamSets.ARCHAEOLOGY"
+    ],
+    "roadmap": "Code next to data (0.3), Mixin (0.5)",
+    "run": {
+      "passed": false,
+      "date": "2026-11-17",
+      "kiln": "development build 2026-11-17 (2aabcd3)",
+      "ticks": 0,
+      "hud": false,
+      "why": "Java did not start"
+    },
+    "url": "https://modrinth.com/mod/treasure-enchants",
+    "version": "1.0.0+26.3",
+    "lacks": 2,
+    "scanned": {
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
+      "file": "treasure_enchants-1.0.0+26.3.jar",
+      "published": "2026-10-27"
+    },
+    "build": "development build 2026-11-20 (eda5a4a5)"
+  }
 }

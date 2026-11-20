@@ -9,30 +9,24 @@
   "author": "tr7zw",
   "description": "Swap named wolves and cats with tiny players.",
   "needs": [
-    "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
-    "net.minecraft.client.renderer.entity.LivingEntityRenderer",
-    "net.minecraft.client.renderer.entity.state.AvatarRenderState",
     "net.minecraft.client.renderer.entity.state.FelineRenderState",
-    "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
     "net.minecraft.client.renderer.entity.state.WolfRenderState",
-    "net.minecraft.world.item.component.DyedItemColor",
-    "net.minecraft.world.item.component.ResolvableProfile",
     "Minecraft.getEntityRenderDispatcher()",
-    "Minecraft.playerSkinRenderCache()",
-    "Minecraft.services()",
     "PlayerSkinRenderCache.lookup()",
+    "PlayerSkinRenderCache.RenderInfo.playerSkin()",
     "EntityRenderDispatcher.getRenderer()",
     "EntityRenderer.createRenderState()",
-    "DataComponents.DYED_COLOR",
-    "Util.nonCriticalIoPool()",
-    "LivingEntity.getCustomName()"
+    "AvatarRenderState.chestEquipment",
+    "AvatarRenderState.isCrouching",
+    "AvatarRenderState.isPassenger",
+    "LivingEntityRenderState.isInvisible"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+  "roadmap": "Minecraft's libraries and client API (0.2)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "minimepets-fabric-1.2.1-mc26.3.jar",
     "published": "2026-11-07"
   },
@@ -63,36 +57,29 @@
     "class": "partial",
     "why": "runs threads of its own; has network channels"
   },
-  "lacks": 17,
+  "lacks": 11,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
     "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
     "evidence": "Not run: Java did not start.",
     "needs": [
-      "net.minecraft.client.gui.screens.recipebook.RecipeBookComponent",
-      "net.minecraft.client.renderer.PlayerSkinRenderCache.RenderInfo",
-      "net.minecraft.client.renderer.entity.LivingEntityRenderer",
-      "net.minecraft.client.renderer.entity.state.AvatarRenderState",
       "net.minecraft.client.renderer.entity.state.FelineRenderState",
-      "net.minecraft.client.renderer.entity.state.LivingEntityRenderState",
       "net.minecraft.client.renderer.entity.state.WolfRenderState",
-      "net.minecraft.world.item.component.DyedItemColor",
-      "net.minecraft.world.item.component.ResolvableProfile",
       "Minecraft.getEntityRenderDispatcher()",
-      "Minecraft.playerSkinRenderCache()",
-      "Minecraft.services()",
       "PlayerSkinRenderCache.lookup()",
+      "PlayerSkinRenderCache.RenderInfo.playerSkin()",
       "EntityRenderDispatcher.getRenderer()",
       "EntityRenderer.createRenderState()",
-      "DataComponents.DYED_COLOR",
-      "CommonComponents.GUI_DONE",
-      "Util.nonCriticalIoPool()",
-      "LivingEntity.getCustomName()",
-      "Items.BARRIER",
-      "Items.LEATHER_CHESTPLATE"
+      "AvatarRenderState.chestEquipment",
+      "AvatarRenderState.isBaby",
+      "AvatarRenderState.isCrouching",
+      "AvatarRenderState.isPassenger",
+      "AvatarRenderState.scale",
+      "AvatarRenderState.skin",
+      "LivingEntityRenderState.isInvisible"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+    "roadmap": "Minecraft's libraries and client API (0.2)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -103,13 +90,13 @@
     },
     "url": "https://modrinth.com/mod/minimepets",
     "version": "1.2.1",
-    "lacks": 21,
+    "lacks": 14,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "minimepets-fabric-1.2.1-mc26.3.jar",
       "published": "2026-11-07"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

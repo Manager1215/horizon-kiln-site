@@ -10,28 +10,17 @@
   "description": "Bring back useful mob spawners! Spawner Fix removes the annoying 16-block proximity limit, extending the activation range to a full 128 blocks to match normal mob spawning.",
   "needs": [
     "Mixin: 2 points inside the game's methods",
-    "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
-    "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.BooleanRuleBuilder",
     "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.IntegerRuleBuilder",
-    "net.fabricmc.fabric.api.gamerule.v1.GameRuleEvents",
-    "net.fabricmc.fabric.api.gamerule.v1.GameRuleEvents.ValueUpdate",
     "net.minecraft.client.renderer.blockentity.SpawnerRenderer",
-    "net.minecraft.world.level.BaseSpawner",
-    "net.minecraft.world.level.block.SpawnerBlock",
-    "net.minecraft.world.level.block.entity.SpawnerBlockEntity",
-    "MinecraftServer.getGameRules()",
-    "ServerLevel.getGameRules()",
-    "EnchantmentHelper.getItemEnchantmentLevel()",
-    "BlockEntity.saveCustomOnly()",
-    "GameRuleCategory.SPAWNING",
-    "GameRules.get()"
+    "GameRuleBuilder.forInteger()",
+    "GameRuleCategory.SPAWNING"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
   "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "spawner-fix-1.1.2.jar",
     "published": "2026-09-30"
   },
@@ -63,7 +52,7 @@
     "class": "restart",
     "why": "@wrap-method and @wrap-operation into the game's classes; has network channels"
   },
-  "lacks": 15,
+  "lacks": 4,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -71,27 +60,12 @@
     "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
     "needs": [
       "Mixin: 2 points inside the game's methods",
-      "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder",
-      "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.BooleanRuleBuilder",
       "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.IntegerRuleBuilder",
-      "net.fabricmc.fabric.api.gamerule.v1.GameRuleEvents",
-      "net.fabricmc.fabric.api.gamerule.v1.GameRuleEvents.ValueUpdate",
       "net.minecraft.client.renderer.blockentity.SpawnerRenderer",
-      "net.minecraft.world.level.BaseSpawner",
-      "net.minecraft.world.level.block.SpawnerBlock",
-      "net.minecraft.world.level.block.entity.SpawnerBlockEntity",
-      "Registry.getOrThrow()",
-      "RegistryAccess.lookupOrThrow()",
-      "DataComponents.ITEM_NAME",
-      "MinecraftServer.getGameRules()",
-      "ServerLevel.getGameRules()",
-      "EnchantmentHelper.getItemEnchantmentLevel()",
-      "Blocks.SPAWNER",
-      "BlockEntity.saveCustomOnly()",
-      "GameRuleCategory.SPAWNING",
-      "GameRules.get()"
+      "GameRuleBuilder.forInteger()",
+      "GameRuleCategory.SPAWNING"
     ],
-    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+    "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
     "run": {
       "passed": false,
       "date": "2026-11-14",
@@ -102,13 +76,13 @@
     },
     "url": "https://modrinth.com/mod/spawner-fix",
     "version": "1.1.2",
-    "lacks": 19,
+    "lacks": 4,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "spawner-fix-1.1.2.jar",
       "published": "2026-09-30"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

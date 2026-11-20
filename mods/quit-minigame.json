@@ -10,17 +10,21 @@
   "description": "A small mod that disables the quit button unless you press the confirm button. Perfect if you often break your redstone",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
-    "net.minecraft.client.gui.components.MultiLineTextWidget",
-    "GuiGraphicsExtractor.textRendererForWidget()",
-    "NarrationElementOutput.add()"
+    "GuiGraphicsExtractor.HoveredTextEffects.notClickable()",
+    "MultiLineTextWidget.getHeight()",
+    "MultiLineTextWidget.getMessage()",
+    "MultiLineTextWidget.getWidth()",
+    "MultiLineTextWidget.setMaxRows()",
+    "MultiLineTextWidget.setMaxWidth()",
+    "MultiLineTextWidget.setPosition()",
+    "MultiLineTextWidget.visitLines()"
   ],
   "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "quitminigame-1.4.1-1.26.3.jar",
     "published": "2026-09-19"
   },
@@ -52,7 +56,7 @@
     "class": "safe",
     "why": "only events, HUD, keys, commands and guarded mixin handlers"
   },
-  "lacks": 4,
+  "lacks": 8,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -60,13 +64,14 @@
     "evidence": "Not run: Java did not start.",
     "needs": [
       "Mixin: 1 point inside the game's methods",
-      "net.minecraft.client.StringSplitter",
-      "net.minecraft.client.gui.GuiGraphicsExtractor.HoveredTextEffects",
-      "net.minecraft.client.gui.components.MultiLineTextWidget",
-      "Font.getSplitter()",
-      "GuiGraphicsExtractor.blitSprite()",
-      "GuiGraphicsExtractor.textRendererForWidget()",
-      "NarrationElementOutput.add()"
+      "GuiGraphicsExtractor.HoveredTextEffects.notClickable()",
+      "MultiLineTextWidget.getHeight()",
+      "MultiLineTextWidget.getMessage()",
+      "MultiLineTextWidget.getWidth()",
+      "MultiLineTextWidget.setMaxRows()",
+      "MultiLineTextWidget.setMaxWidth()",
+      "MultiLineTextWidget.setPosition()",
+      "MultiLineTextWidget.visitLines()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
     "run": {
@@ -79,13 +84,13 @@
     },
     "url": "https://modrinth.com/mod/quit-minigame",
     "version": "1.4.1-1.26.3",
-    "lacks": 7,
+    "lacks": 8,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "quitminigame-1.4.1-1.26.3.jar",
       "published": "2026-09-19"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }

@@ -10,31 +10,14 @@
   "description": "Adds Drank, a purple berry drink you sip in three stages. Each sip gives a stacking “Sauced” effect with a woozy screen wobble and a soft purple tint.",
   "needs": [
     "Mixin: 1 point inside the game's methods",
-    "net.minecraft.client.gui.screens.inventory.EffectsInInventory",
-    "net.minecraft.client.model.HumanoidModel",
-    "net.minecraft.client.model.HumanoidModel.ArmPose",
-    "net.minecraft.client.renderer.entity.player.AvatarRenderer",
-    "net.minecraft.world.item.ItemUseAnimation",
-    "net.minecraft.world.item.component.Consumable",
-    "net.minecraft.world.item.component.Consumable.Builder",
-    "net.minecraft.world.level.storage.loot.predicates.LootItemKilledByPlayerCondition",
-    "net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceWithEnchantedBonusCondition",
-    "DataComponents.CONSUMABLE",
-    "SoundEvents.EMPTY",
-    "Avatar.getUseItemRemainingTicks()",
-    "Avatar.getUsedItemHand()",
-    "EntityType.getDefaultLootTable()",
-    "EntityTypes.WITCH",
-    "Item.finishUsingItem()",
-    "Item.Properties.usingConvertsTo()",
-    "LootPool.Builder.when()"
+    "net.minecraft.client.model.HumanoidModel.ArmPose"
   ],
-  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
   "evidence": "Not run: Java did not start.",
   "library": false,
   "scanned": {
-    "date": "2026-11-16",
-    "kiln": "0.4.5",
+    "date": "2026-11-20",
+    "kiln": "0.4.8",
     "file": "drank-1.0.0.jar",
     "published": "2026-11-02"
   },
@@ -67,7 +50,7 @@
     "class": "partial",
     "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
   },
-  "lacks": 18,
+  "lacks": 1,
   "development": {
     "status": "planned",
     "statusLabel": "Planned",
@@ -76,22 +59,12 @@
     "needs": [
       "Mixin: 1 point inside the game's methods",
       "net.minecraft.client.gui.screens.inventory.EffectsInInventory",
-      "net.minecraft.client.model.HumanoidModel",
       "net.minecraft.client.model.HumanoidModel.ArmPose",
-      "net.minecraft.client.renderer.entity.player.AvatarRenderer",
-      "net.minecraft.world.item.ItemUseAnimation",
-      "net.minecraft.world.item.component.Consumable",
-      "net.minecraft.world.item.component.Consumable.Builder",
-      "net.minecraft.world.level.storage.loot.predicates.LootItemKilledByPlayerCondition",
-      "net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceWithEnchantedBonusCondition",
-      "DataComponents.CONSUMABLE",
-      "SoundEvents.EMPTY",
-      "Avatar.getUseItemRemainingTicks()",
-      "Avatar.getUsedItemHand()",
-      "EntityType.getDefaultLootTable()",
-      "EntityTypes.WITCH",
-      "Item.finishUsingItem()",
       "Item.Properties.usingConvertsTo()",
+      "Consumable.builder()",
+      "Consumable.Builder.animation()",
+      "Consumable.Builder.hasConsumeParticles()",
+      "Consumable.Builder.sound()",
       "LootPool.Builder.when()"
     ],
     "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
@@ -105,13 +78,13 @@
     },
     "url": "https://modrinth.com/mod/drank",
     "version": "1.0.0",
-    "lacks": 18,
+    "lacks": 8,
     "scanned": {
-      "date": "2026-11-14",
-      "kiln": "development build 2026-11-14 (fa70eeb)",
+      "date": "2026-11-20",
+      "kiln": "development build 2026-11-20 (eda5a4a5)",
       "file": "drank-1.0.0.jar",
       "published": "2026-11-02"
     },
-    "build": "development build 2026-11-14 (fa70eeb)"
+    "build": "development build 2026-11-20 (eda5a4a5)"
   }
 }
