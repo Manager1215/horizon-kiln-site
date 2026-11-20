@@ -87,6 +87,13 @@ def check_catalogue(folder):
         raise Bad("mods.json has no mods")
     if not isinstance(index.get("statuses"), dict):
         raise Bad("mods.json has no statuses")
+    # A scan of a repository whose verified list names a project by its id, not its slug, lists the mod twice: the
+    # scanned project (candidate, planned, not-checked) and the hand entry (works or the like). The hand entry
+    # stays, the scanned one goes.
+    scanned = ("not-checked", "planned")
+    hand_ids = {r.get("id") for r in mods if isinstance(r, dict) and r.get("status") not in scanned}
+    mods = index["mods"] = [r for r in mods if not (isinstance(r, dict) and r.get("status") in scanned
+                                                    and r.get("id") in hand_ids)]
     details = {}
     seen = set()
     for row in mods:
