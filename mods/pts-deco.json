@@ -1,7 +1,7 @@
 {
  "id": "pts-deco",
  "name": "PTS-Deco",
- "version": "2026.16.0-fabric26.3",
+ "version": "2026.17.0-fabric26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,15 +10,20 @@
  "description": "This Mod adds over 2000 Decorations models with that you can decorate your world",
  "needs": [
   "an access widener",
-  "Mixin: 5 points inside the game's methods",
+  "Mixin: 21 points inside the game's methods",
   "com.mojang.blaze3d.platform.Transparency",
+  "net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorageUtil",
+  "net.fabricmc.fabric.api.transfer.v1.fluid.base.SingleFluidStorage",
   "net.minecraft.client.gui.components.CycleButton.DisplayState",
   "net.minecraft.client.gui.components.CycleButton.SpriteSupplier",
   "net.minecraft.client.model.geom.builders.UVPair",
   "net.minecraft.client.renderer.FaceInfo",
   "net.minecraft.client.renderer.FaceInfo.VertexInfo",
+  "net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition",
+  "net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition.Operation",
   "net.minecraft.client.renderer.entity.EntityRenderers",
-  "net.minecraft.client.renderer.entity.NoopRenderer",
+  "net.minecraft.client.resources.model.SimpleModelWrapper",
+  "net.minecraft.client.resources.model.geometry.BakedQuad.MaterialFlags",
   "net.minecraft.client.resources.model.geometry.QuadCollection.Builder",
   "net.minecraft.core.RegistrySetBuilder.PatchedRegistries",
   "net.minecraft.core.registries.MultiRegistryBootstrap",
@@ -31,6 +36,7 @@
   "net.minecraft.data.registries.RegistryPatchGenerator",
   "net.minecraft.data.tags.VanillaBlockTagsProvider",
   "net.minecraft.data.tags.VanillaItemTagsProvider",
+  "net.minecraft.world.entity.OminousItemSpawner",
   "PoseStack.Pose.copy()",
   "PoseStack.Pose.normal()",
   "PoseStack.Pose.pose()",
@@ -44,23 +50,17 @@
   "Advancement.Builder.save()",
   "Advancement.Builder.sendsTelemetryEvent()",
   "AdvancementRequirements.allOf()",
-  "TextureMapping.layer0()",
-  "GuiGraphicsExtractor.setTooltipForNextFrame()",
-  "CycleButton.Builder.displayState()",
-  "CycleButton.Builder.withSprite()",
-  "CycleButton.Builder.withTooltip()",
-  "Tooltip.toCharSequence()",
-  "AbstractContainerScreen.containerTick()",
-  "and 32 more"
+  "ModelTemplates.FLAT_HANDHELD_ROD_ITEM",
+  "and 44 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
-  "file": "PTS-Deco-2026.16.0-Fabric26.3.jar",
-  "published": "2026-10-30"
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
+  "file": "PTS-Deco-2026.17.0-Fabric26.3.jar",
+  "published": "2026-11-20"
  },
  "reports": {
   "works": 0,
@@ -70,15 +70,15 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
  },
  "entrypoints": {
-  "main": 1,
-  "client": 1,
+  "main": 2,
+  "client": 2,
   "fabric-datagen": 1
  },
  "mixins": true,
@@ -92,5 +92,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
  },
- "lacks": 72
+ "lacks": 84
 }

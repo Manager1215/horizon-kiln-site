@@ -10,12 +10,10 @@
  "description": "Source Engine Movement and Bhopping in Minecraft for a Better Parkour Experience",
  "needs": [
   "Mixin: 7 points inside the game's methods",
-  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "net.minecraft.client.gui.components.spectator.SpectatorGui",
   "net.minecraft.client.gui.contextualbar.ExperienceBar",
   "net.minecraft.client.gui.screens.multiplayer.ServerSelectionList.LANHeader",
   "net.minecraft.client.model.geom.builders.CubeListBuilder",
-  "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
   "net.minecraft.network.protocol.game.ServerboundMovePlayerPacket.Pos",
   "Window.getAppropriateLineWidth()",
   "PoseStack.last()",
@@ -24,8 +22,6 @@
   "VertexConsumer.addVertex()",
   "VertexConsumer.setLight()",
   "VertexConsumer.setOverlay()",
-  "RenderPipeline.builder()",
-  "Long2ObjectMap.Entry.getValue()",
   "Screenshot.grab()",
   "GuiGraphicsExtractor.item()",
   "GuiGraphicsExtractor.scissorStack",
@@ -44,20 +40,24 @@
   "MeshDefinition.getRoot()",
   "PartDefinition.addOrReplaceChild()",
   "PartDefinition.getChild()",
-  "ClientLevel.getPlayerByUUID()",
   "ServerList.swap()",
   "GameRenderer.mainCamera()",
   "GameRenderer.useImprovedTransparency()",
   "RenderPipelines.OIT_DEBUG_QUADS",
   "EntityRendererProvider.Context.bakeLayer()",
-  "and 27 more"
+  "MobRenderer.shouldRender()",
+  "AvatarRenderer.<init>()",
+  "AvatarRenderer.shouldRender()",
+  "AvatarRenderState.nameTag",
+  "LayeringTransform.VIEW_OFFSET_Z_LAYERING",
+  "and 24 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
   "file": "minehop-fabric-26.3-1.1.8.jar",
   "published": "2026-10-17"
  },
@@ -93,5 +93,5 @@
   "class": "restart",
   "why": "@overwrite into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
  },
- "lacks": 77
+ "lacks": 64
 }

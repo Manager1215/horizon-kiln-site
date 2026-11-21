@@ -11,8 +11,6 @@
  "needs": [
   "Mixin: 12 points inside the game's methods",
   "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
-  "com.mojang.blaze3d.vertex.DefaultVertexFormat",
-  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "net.minecraft.client.renderer.BindGroupLayouts",
   "net.minecraft.client.renderer.DynamicGpuData",
   "net.minecraft.client.renderer.SkyRenderer",
@@ -40,24 +38,26 @@
   "PoseStack.Pose.pose()",
   "GpuBuffer.slice()",
   "BlendFunction.TRANSLUCENT",
-  "RenderPipeline.builder()",
   "VertexFormat.getVertexSize()",
   "ResourceManagerHelper.registerBuiltinResourcePack()",
   "EditBox.<init>()",
-  "ClientLevel.getHeightmapPos()",
-  "ParticleRenderType.SINGLE_QUADS",
-  "SingleQuadParticle.getLightCoords()",
-  "SingleQuadParticle.remove()",
-  "SingleQuadParticle.Layer.TRANSLUCENT",
   "CloudRenderer.endFrame()",
-  "and 10 more"
+  "CloudRenderer.markForRebuild()",
+  "CloudRenderer.prepare()",
+  "CloudRenderer.render()",
+  "CloudRenderer.renderOit()",
+  "GameRenderer.mainCamera()",
+  "TextureAtlas.LOCATION_PARTICLES",
+  "EnvironmentAttributes.FOG_START_DISTANCE",
+  "EnvironmentAttributes.WATER_FOG_START_DISTANCE",
+  "and 1 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
   "file": "atmospherics-2.6.8-mc-26.3.jar",
   "published": "2026-10-22"
  },
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@modify-args and @redirect into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
  },
- "lacks": 50
+ "lacks": 41
 }

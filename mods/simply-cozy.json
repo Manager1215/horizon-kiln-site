@@ -10,7 +10,6 @@
  "description": "This mod adds loads of cozy features to minecraft. Crops, Decorations and more!",
  "needs": [
   "Mixin: 4 points inside the game's methods",
-  "net.minecraft.client.gui.screens.inventory.EffectsInInventory",
   "net.minecraft.client.model.object.boat.BoatModel",
   "net.minecraft.client.renderer.blockentity.ShulkerBoxRenderer",
   "net.minecraft.client.renderer.entity.BoatRenderer",
@@ -21,18 +20,12 @@
   "org.lwjgl.openal.AL10",
   "GuiGraphicsExtractor.blit()",
   "GuiGraphicsExtractor.setTooltipForNextFrame()",
-  "SingleQuadParticle.Layer.OPAQUE",
-  "SingleQuadParticle.Layer.TRANSLUCENT",
   "Sheets.SHULKER_SHEET",
   "Sheets.getShulkerBoxSprite()",
   "BlockEntityRenderer.extractRenderState()",
   "ItemStackRenderState.isEmpty()",
-  "NonNullList.add()",
   "BuiltInRegistries.ENCHANTMENT_ENTITY_EFFECT_TYPE",
   "BuiltInRegistries.ENCHANTMENT_LOCATION_BASED_EFFECT_TYPE",
-  "ServerLevel.getBestNeighborSignal()",
-  "ServerLevel.getEntitiesOfClass()",
-  "ServerLevel.getRawBrightness()",
   "ServerPlayer.resetRecipes()",
   "SoundEvents.HARNESS_EQUIP",
   "SoundEvents.LLAMA_CARPET_UNEQUIP",
@@ -43,21 +36,28 @@
   "Painting.playPlacementSound()",
   "Painting.survives()",
   "ResultContainer.awardUsedRecipes()",
-  "Item.Properties.usingConvertsTo()",
   "Consumable.startConsuming()",
   "CraftingRecipe.defaultCraftingReminder()",
   "RecipeBookCategories.STONECUTTER",
   "SelectableRecipe.SingleInputSet.acceptsInput()",
   "SelectableRecipe.SingleInputSet.noRecipeCodec()",
   "Equippable.Builder.setAllowedEntities()",
-  "and 21 more"
+  "Equippable.Builder.setCanBeSheared()",
+  "Equippable.Builder.setEquipOnInteract()",
+  "Equippable.Builder.setShearingSound()",
+  "Mirror.mirror()",
+  "BlockEntityType.addValidBlock()",
+  "BlockEntityTypes.SHULKER_BOX",
+  "GameEvent.BLOCK_ACTIVATE",
+  "FluidState.isFull()",
+  "and 1 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
   "file": "B - Simply Cozy 1.9.61.jar",
   "published": "2026-11-17"
  },
@@ -92,5 +92,5 @@
   "class": "restart",
   "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
  },
- "lacks": 61
+ "lacks": 41
 }

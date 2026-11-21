@@ -10,8 +10,6 @@
  "description": "Live item position editor for flatscreen and VR :D",
  "needs": [
   "Mixin: 3 points inside the game's methods",
-  "com.mojang.blaze3d.vertex.DefaultVertexFormat",
-  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "net.minecraft.client.renderer.BindGroupLayouts",
   "net.minecraft.client.renderer.feature.CustomFeatureRenderer",
   "net.minecraft.client.renderer.feature.CustomFeatureRenderer.Submit",
@@ -26,7 +24,6 @@
   "net.minecraft.client.renderer.item.SelectItemModel.Unbaked",
   "net.minecraft.client.renderer.item.SpecialModelWrapper",
   "net.minecraft.client.renderer.item.SpecialModelWrapper.Unbaked",
-  "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
   "net.minecraft.client.resources.model.ClientItemInfoLoader",
   "net.minecraft.client.resources.model.ClientItemInfoLoader.LoadedClientInfos",
   "org.apache.logging.log4j.core.config.Configurator",
@@ -39,7 +36,6 @@
   "VertexConsumer.addVertex()",
   "VertexConsumer.setNormal()",
   "BlendFunction.TRANSLUCENT",
-  "RenderPipeline.builder()",
   "Minecraft.getEntityRenderDispatcher()",
   "GameRenderer.mainCamera()",
   "SubmitNodeCollection.afterTerrain",
@@ -50,14 +46,18 @@
   "SubmitNodeCollection.submitNameTag()",
   "SubmitNodeCollection.submitShadow()",
   "SubmitNodeCollection.submitText()",
-  "and 21 more"
+  "SubmitNodeCollection.submitTextBackground()",
+  "SubmitNodeStorage.getSubmitsPerOrder()",
+  "SubmitNodeStorage.order()",
+  "AvatarRenderState.mainArm",
+  "and 15 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
   "file": "eip-fabric-26.3-1.0.1.jar",
   "published": "2026-11-13"
  },
@@ -91,5 +91,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes"
  },
- "lacks": 61
+ "lacks": 55
 }

@@ -1,0 +1,82 @@
+{
+ "id": "travelers-waystones",
+ "name": "Traveler's Waystones",
+ "version": "1.0.0-fabric-mc26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/travelers-waystones",
+ "author": "SuperMartijn642",
+ "description": "Allows teleporting between waystones through a fancy screen!",
+ "needs": [
+  "an access widener",
+  "Mixin: 10 points inside the game's methods",
+  "net.fabricmc.fabric.api.client.renderer.v1.model.ModelStateHelper",
+  "net.minecraft.client.renderer.DynamicGpuData",
+  "net.minecraft.client.renderer.item.CompositeModel",
+  "net.minecraft.client.resources.model.geometry.BakedQuad.MaterialFlags",
+  "RenderSystem.getDynamicUniforms()",
+  "PoseStack.rotate()",
+  "ConventionalItemTags.NETHER_STARS",
+  "Minecraft.levelRenderer",
+  "LevelRenderer.isSectionCompiledAndVisible()",
+  "RenderPipelines.ITEM_TRANSLUCENT",
+  "RenderPipelines.OIT_ITEM",
+  "BlockAndTintGetter.EMPTY",
+  "BlockModelRenderState.clear()",
+  "BlockModelRenderState.renderType",
+  "BlockModelRenderState.setupMesh()",
+  "BlockModelRenderState.tintLayers()",
+  "BlockStateModel.createGeometryKey()",
+  "BlockStateModel.emitQuads()",
+  "BlockStateModel.hasMaterialFlag()",
+  "BlockStateModel.materialFlags()",
+  "BlockStateModel.particleMaterial()",
+  "CuboidItemModelWrapper.validateAtlasUsage()",
+  "TextureTransform.createMatrix()",
+  "FriendlyByteBuf.readVarIntArray()",
+  "ServerPlayer.mayInteract()",
+  "Inventory.contains()",
+  "Mirror.mirror()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
+  "file": "travelerswaystones-1.0.0-fabric-mc26.3.jar",
+  "published": "2026-11-20"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft",
+  "supermartijn642corelib"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 27
+}

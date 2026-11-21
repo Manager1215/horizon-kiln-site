@@ -10,13 +10,11 @@
  "description": "A utility mod for MCDiamondFire aiming to make me specifically more efficient.",
  "needs": [
   "Mixin: 2 points inside the game's methods",
-  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "net.minecraft.client.gui.components.StringWidget.TextOverflow",
   "net.minecraft.client.renderer.DynamicGpuData",
   "net.minecraft.client.renderer.StagedVertexBuffer.ExecuteInfo",
   "net.minecraft.network.protocol.game.ServerboundMovePlayerPacket.Pos",
   "org.lwjgl.system.MemoryUtil",
-  "JsonArray.forEach()",
   "ProjectionType.vertexSorting()",
   "RenderSystem.getCompiledPipeline()",
   "RenderSystem.getDynamicUniforms()",
@@ -30,14 +28,8 @@
   "GpuBuffer.slice()",
   "GpuBuffer.slice()",
   "GpuBufferSlice.map()",
-  "RenderPipeline.builder()",
-  "RenderPipeline.getPrimitiveTopology()",
-  "RenderPipeline.getVertexFormatBinding()",
   "VertexFormat.getVertexSize()",
-  "Int2ObjectMap.isEmpty()",
-  "VersionPredicate.test()",
   "GuiGraphicsExtractor.setTooltipForNextFrame()",
-  "StringWidget.visitLines()",
   "WidgetTooltipHolder.get()",
   "WidgetTooltipHolder.refreshTooltipForNextRenderPass()",
   "TextureSetup.noTexture()",
@@ -50,14 +42,22 @@
   "MappableRingBuffer.currentBuffer()",
   "MappableRingBuffer.size()",
   "RenderPipelines.GUI",
-  "and 10 more"
+  "StagedVertexBuffer.appendDraw()",
+  "StagedVertexBuffer.endFrame()",
+  "StagedVertexBuffer.getExecuteInfo()",
+  "StagedVertexBuffer.getVertexBuilder()",
+  "StagedVertexBuffer.upload()",
+  "GuiRenderState.addGuiElement()",
+  "CameraRenderState.viewRotationMatrix",
+  "NbtAccounter.uncompressedQuota()",
+  "and 2 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
   "file": "MilloMod2-1.7.4.jar",
   "published": "2026-10-30"
  },
@@ -89,5 +89,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes; runs threads of its own; has network channels"
  },
- "lacks": 50
+ "lacks": 42
 }

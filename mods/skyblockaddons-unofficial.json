@@ -11,16 +11,12 @@
  "needs": [
   "an access widener",
   "Mixin: 30 points inside the game's methods",
-  "com.mojang.blaze3d.vertex.DefaultVertexFormat",
   "com.mojang.renderpearl.api.pipeline.BindGroupLayout.Builder",
-  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "io.netty.channel.ChannelHandlerContext",
   "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.GameCanceled",
-  "net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.ModifyGame",
   "net.fabricmc.loader.impl.util.version.VersionParser",
   "net.minecraft.client.gui.components.PlayerFaceExtractor",
   "net.minecraft.client.gui.components.debug.DebugEntrySystemSpecs",
-  "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
   "net.minecraft.client.gui.screens.DisconnectedScreen",
   "net.minecraft.client.particle.SuspendedTownParticle",
   "net.minecraft.client.particle.WakeParticle",
@@ -34,7 +30,6 @@
   "net.minecraft.client.renderer.entity.EndermanRenderer",
   "net.minecraft.client.renderer.entity.state.EndermanRenderState",
   "net.minecraft.client.renderer.rendertype.PreparedRenderType",
-  "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
   "net.minecraft.client.renderer.special.ChestSpecialRenderer",
   "net.minecraft.client.renderer.state.gui.GlyphRenderState",
   "org.lwjgl.Version",
@@ -42,7 +37,6 @@
   "org.lwjgl.sdl.SDLClipboard",
   "org.lwjgl.system.MemoryStack",
   "org.lwjgl.system.MemoryUtil",
-  "Blaze3D.openPath()",
   "Std140Builder.intoBuffer()",
   "Std140Builder.putFloat()",
   "Std140SizeCalculator.get()",
@@ -51,14 +45,20 @@
   "PoseStack.Pose.pose()",
   "PoseStack.Pose.translate()",
   "VertexConsumer.addVertex()",
-  "and 51 more"
+  "VertexConsumer.addVertexWith2DPose()",
+  "BindGroupLayout.builder()",
+  "BlendFunction.TRANSLUCENT",
+  "ClientReceiveMessageEvents.GAME_CANCELED",
+  "Camera.getCullFrustum()",
+  "KeyMapping.Category.SORT_ORDER",
+  "and 46 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
   "file": "SkyblockAddons-2.5.3+1244-for-MC-26.3.jar",
   "published": "2026-10-25"
  },
@@ -94,5 +94,5 @@
   "class": "restart",
   "why": "@modify-args and @redirect and @wrap-method and @wrap-operation into the game's classes; runs threads of its own"
  },
- "lacks": 114
+ "lacks": 91
 }

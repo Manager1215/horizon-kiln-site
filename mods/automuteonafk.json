@@ -2,50 +2,24 @@
  "id": "automuteonafk",
  "name": "AutoMuteOnAfk",
  "version": "1.1.1",
- "status": "not-checked",
- "statusLabel": "Not checked",
- "statusMeaning": "In the catalogue, not checked yet.",
- "url": "https://modrinth.com/mod/automuteonafk",
- "author": "Nikrecs",
- "description": "Automatically mutes Minecraft when the window loses focus (alt-tab / AFK) and restores your exact volume when you return.",
+ "status": "works",
+ "statusLabel": "Works",
+ "statusMeaning": "Tried in the game with Kiln.",
  "needs": [],
- "roadmap": "",
- "evidence": "Everything its code calls is covered by Kiln development build 2026-11-20 (eda5a4a5) (18 classes, 27 members). Not run yet.",
- "library": false,
- "scanned": {
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
-  "file": "automuteonafk-fabric-26.3-1.1.1.jar",
-  "published": "2026-10-31"
- },
  "reports": {
   "works": 0,
   "partly": 0,
   "broken": 0,
   "latest": []
  },
- "run": {
-  "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
-  "ticks": 0,
-  "hud": false,
-  "why": "Java did not start"
- },
- "entrypoints": {
-  "client": 1
- },
- "mixins": false,
- "depends": [
-  "architectury",
-  "fabric-api",
-  "fabricloader",
-  "java",
-  "minecraft"
- ],
- "softOff": {
-  "class": "safe",
-  "why": "only events, HUD, keys, commands and guarded mixin handlers"
- },
- "lacks": 0
+ "works": "Mutes the game when the window loses focus ('Game muted while unfocused', Master Volume OFF); its toggle key answers.",
+ "note": "Not yet: Its restore on the window's return isn't seen: the try's offscreen window can't keep the focus (D-232).",
+ "url": "https://modrinth.com/mod/nnanu926",
+ "checked": {
+  "kiln": "main",
+  "commit": "PENDING",
+  "date": "2026-11-20",
+  "horizon": "Nightly 2026-11-04 · 3fb4c31",
+  "by": "kiln/proof.py on the Linux PC"
+ }
 }

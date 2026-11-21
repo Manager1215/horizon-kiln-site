@@ -10,9 +10,7 @@
  "description": "Play as any character with custom 3D player models and animations, fully synced in multiplayer.",
  "needs": [
   "Mixin: 17 points inside the game's methods",
-  "com.mojang.blaze3d.vertex.DefaultVertexFormat",
   "com.mojang.renderpearl.api.pipeline.BindGroupLayout.Builder",
-  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "com.mojang.renderpearl.api.vertex.VertexFormat.Builder",
   "com.mojang.renderpearl.backend.opengl.GlSampler",
   "com.mojang.renderpearl.backend.opengl.GlTextureView",
@@ -28,7 +26,6 @@
   "net.minecraft.client.renderer.BindGroupLayouts",
   "net.minecraft.client.renderer.entity.ParrotRenderer",
   "net.minecraft.client.renderer.entity.state.ParrotRenderState",
-  "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
   "org.lwjgl.BufferUtils",
   "org.lwjgl.opengl.GL",
   "org.lwjgl.opengl.GL11",
@@ -50,14 +47,17 @@
   "InputConstants.Key.getNumericKeyValue()",
   "NativeImage.writeToFile()",
   "RenderSystem.assertOnRenderThread()",
-  "and 57 more"
+  "RenderSystem.getCompiledPipeline()",
+  "RenderSystem.getCompiledPipelineNullable()",
+  "SamplerCache.getClampToEdge()",
+  "and 54 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
   "file": "better-player-model-26.3-1.1.5a.jar",
   "published": "2026-11-19"
  },
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 161
+ "lacks": 113
 }

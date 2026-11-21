@@ -11,7 +11,6 @@
  "needs": [
   "Mixin: 1 point inside the game's methods",
   "io.netty.channel.embedded.EmbeddedChannel",
-  "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
   "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
   "net.minecraft.client.model.geom.builders.CubeListBuilder",
   "net.minecraft.client.model.object.boat.BoatModel",
@@ -25,8 +24,6 @@
   "net.minecraft.client.renderer.state.level.SkyRenderState",
   "net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal",
   "net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal",
-  "Object2IntMap.isEmpty()",
-  "ServerMessageEvents.CHAT_MESSAGE",
   "Minecraft.levelExtractor",
   "KeyframeAnimation.apply()",
   "EntityModel.setupAnim()",
@@ -41,23 +38,26 @@
   "EntityRendererProvider.Context.bakeLayer()",
   "HumanoidMobRenderer.<init>()",
   "HumanoidMobRenderer.extractRenderState()",
-  "MobRenderer.extractRenderState()",
-  "MobRenderer.submit()",
-  "AvatarRenderState.id",
   "AvatarRenderState.isInvisible",
   "AvatarRenderState.mainArm",
-  "AvatarRenderState.showCape",
-  "AvatarRenderState.showHat",
-  "AvatarRenderState.showJacket",
-  "AvatarRenderState.showLeftPants",
-  "and 35 more"
+  "LivingEntityRenderState.ageInTicks",
+  "LevelExtractor.setSectionDirtyWithNeighbors()",
+  "FirstPersonHandsAndItemsRenderState.isScoping",
+  "PlayerRenderState.avatarRenderState",
+  "MinecraftServer.setDifficultyLocked()",
+  "ServerGamePacketListenerImpl.handleAcceptPlayerLoad()",
+  "SoundEvents.AMBIENT_CAVE",
+  "SoundEvents.SHIELD_BREAK",
+  "BiomeTags.SPAWNS_SNOW_FOXES",
+  "BlockTags.EDIBLE_FOR_SHEEP",
+  "and 25 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
   "file": "hardcore-winter-1.5+26.3-fabric.jar",
   "published": "2026-10-26"
  },
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
  },
- "lacks": 100
+ "lacks": 65
 }

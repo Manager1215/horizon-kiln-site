@@ -1,0 +1,76 @@
+{
+ "id": "lost-worlds-lc",
+ "name": "Lost Worlds LC",
+ "version": "26.3-5.0.0-fabric",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/lost-worlds-lc",
+ "author": "McJty",
+ "description": "Lost Worlds is a companion mod for Lost Cities. It adds a new world preset that you can select during world creation and allows for five different types of worlds",
+ "needs": [
+  "an access widener",
+  "net.minecraft.client.gui.screens.worldselection.PresetEditor",
+  "net.minecraft.client.gui.screens.worldselection.WorldCreationContext",
+  "net.minecraft.client.gui.screens.worldselection.WorldCreationContext.DimensionsUpdater",
+  "net.minecraft.client.gui.screens.worldselection.WorldCreationUiState",
+  "net.minecraft.client.gui.screens.worldselection.WorldCreationUiState.WorldTypeEntry",
+  "net.minecraft.client.renderer.SkyRenderer",
+  "net.minecraft.client.renderer.state.level.SkyRenderState",
+  "CreateWorldScreen.getUiState()",
+  "Registries.NOISE_SETTINGS",
+  "StructureManager.level",
+  "StructureManager.setStartForStructure()",
+  "MultiNoiseBiomeSource.createFromPreset()",
+  "ChunkGeneratorStructureState.possibleStructureSets()",
+  "ChunkGeneratorStructureState.randomState()",
+  "NoiseBasedChunkGenerator.buildSurface()",
+  "NoiseBasedChunkGenerator.doFill()",
+  "NoiseBasedChunkGenerator.generateCarvers()",
+  "WorldDimensions.overworld()",
+  "WorldDimensions.replaceOverworldGenerator()",
+  "DensityBuffer.setRange()",
+  "StructureStart.getReferences()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
+  "file": "lostworlds-fabric-26.3-26.3-5.0.0-fabric.jar",
+  "published": "2026-11-20"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "forgeconfigapiport",
+  "java",
+  "lostcities",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+ },
+ "lacks": 21
+}

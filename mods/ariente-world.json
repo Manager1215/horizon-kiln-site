@@ -10,15 +10,12 @@
  "description": "Companion mod for Ariente that adds a full dimension and progression",
  "needs": [
   "an access widener",
-  "com.mojang.blaze3d.vertex.DefaultVertexFormat",
-  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "net.minecraft.client.model.AnimationUtils",
   "net.minecraft.client.model.HumanoidModel.ArmPose",
   "net.minecraft.client.model.geom.builders.CubeListBuilder",
   "net.minecraft.client.model.monster.phantom.PhantomModel",
   "net.minecraft.client.renderer.entity.state.PhantomRenderState",
   "net.minecraft.client.renderer.fog.FogData",
-  "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
   "net.minecraft.client.renderer.state.level.SkyRenderState",
   "net.minecraft.world.attribute.GaussianSampler",
   "net.minecraft.world.attribute.GaussianSampler.Accumulator",
@@ -34,7 +31,6 @@
   "PoseStack.Pose.pose()",
   "BlendFunction.ADDITIVE",
   "BlendFunction.TRANSLUCENT",
-  "RenderPipeline.builder()",
   "HumanoidModel.createMesh()",
   "HumanoidModel.setupAnim()",
   "ModelLayers.PHANTOM",
@@ -50,14 +46,18 @@
   "EntityRendererProvider.Context.getModelSet()",
   "HumanoidMobRenderer.<init>()",
   "HumanoidMobRenderer.extractRenderState()",
-  "and 38 more"
+  "RenderTypes.debugQuads()",
+  "RenderTypes.lightning()",
+  "CameraRenderState.fogType",
+  "CameraRenderState.viewRotationMatrix",
+  "and 17 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
   "file": "arienteworld-fabric-26.3-5.0.1-fabric.jar",
   "published": "2026-11-14"
  },
@@ -96,5 +96,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); generates in the world"
  },
- "lacks": 79
+ "lacks": 57
 }

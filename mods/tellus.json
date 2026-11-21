@@ -10,8 +10,6 @@
  "description": "Tellus is a mod that recreates real-world terrain, buildings and roads in Minecraft by generating Earth-scale landscapes from geographic and OSM data.",
  "needs": [
   "Mixin: 5 points inside the game's methods",
-  "com.mojang.blaze3d.vertex.DefaultVertexFormat",
-  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "net.minecraft.client.gui.screens.LevelLoadingScreen",
   "net.minecraft.client.gui.screens.LevelLoadingScreen.Reason",
   "net.minecraft.client.gui.screens.worldselection.PresetEditor",
@@ -26,12 +24,8 @@
   "net.minecraft.world.level.levelgen.feature.HugeBrownMushroomFeature",
   "net.minecraft.world.level.levelgen.feature.HugeRedMushroomFeature",
   "net.minecraft.world.level.levelgen.structure.structures.OceanMonumentStructure",
-  "RemovalNotification.getValue()",
-  "UncheckedExecutionException.getCause()",
   "BlendFunction.OVERLAY",
   "BlendFunction.TRANSLUCENT",
-  "RenderPipeline.builder()",
-  "Long2ObjectMap.Entry.getValue()",
   "SharedConstants.DEBUG_DISABLE_CARVERS",
   "TracingExecutor.forName()",
   "CycleButton.Builder.withTooltip()",
@@ -43,21 +37,27 @@
   "BlockPos.PACKED_HORIZONTAL_LENGTH",
   "BlockPos.PACKED_Y_LENGTH",
   "BlockPos.getFlatIndex()",
-  "HolderSet.iterator()",
   "LayeredRegistryAccess.replaceFrom()",
-  "MappedRegistry.<init>()",
   "Registries.NOISE_SETTINGS",
   "MiscOverworldFeatures.BONUS_CHEST",
   "WorldGenRegion.getMaxY()",
   "BiomeTags.IS_SAVANNA",
-  "and 36 more"
+  "BlockTags.UNCARVABLE",
+  "EntityType.create()",
+  "LevelHeightAccessor.create()",
+  "NaturalSpawner.spawnMobsForChunkGeneration()",
+  "BiomeGenerationSettings.PlainBuilder.addCarver()",
+  "BiomeGenerationSettings.PlainBuilder.addFeature()",
+  "BiomeManager.withDifferentSource()",
+  "ChunkAccess.fillBiomesFromNoise()",
+  "and 30 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
   "file": "Tellus-fabric-26.3-0.8.4.jar",
   "published": "2026-11-02"
  },
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@overwrite and @redirect into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
  },
- "lacks": 83
+ "lacks": 70
 }

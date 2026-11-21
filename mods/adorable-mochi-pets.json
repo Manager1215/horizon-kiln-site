@@ -1,7 +1,7 @@
 {
  "id": "adorable-mochi-pets",
  "name": "Mochi Pets",
- "version": "0.30.1+26.3",
+ "version": "0.31.1+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -16,7 +16,6 @@
   "net.minecraft.client.model.ambient.BatModel",
   "net.minecraft.client.model.animal.dolphin.DolphinModel",
   "net.minecraft.client.model.monster.skeleton.SkeletonModel",
-  "net.minecraft.client.particle.SingleQuadParticle.FacingCameraMode",
   "net.minecraft.client.renderer.entity.state.BatRenderState",
   "net.minecraft.client.renderer.entity.state.DolphinRenderState",
   "net.minecraft.client.renderer.entity.state.SkeletonRenderState",
@@ -29,36 +28,37 @@
   "Window.calculateScale()",
   "Window.setGuiScale()",
   "FabricParticleTypes.complex()",
+  "ConventionalBiomeTags.IS_CAVE",
+  "ConventionalBiomeTags.IS_DRY",
+  "ConventionalBiomeTags.IS_FLORAL",
+  "ConventionalBiomeTags.IS_FOREST",
+  "ConventionalBiomeTags.IS_HILL",
+  "ConventionalBiomeTags.IS_ICY",
+  "ConventionalBiomeTags.IS_JUNGLE",
+  "ConventionalBiomeTags.IS_OCEAN",
+  "ConventionalBiomeTags.IS_PLAINS",
+  "ConventionalBiomeTags.IS_PLATEAU",
+  "ConventionalBiomeTags.IS_RIVER",
+  "ConventionalBiomeTags.IS_SAVANNA",
+  "ConventionalBiomeTags.IS_SNOWY",
+  "ConventionalBiomeTags.IS_SNOWY_PLAINS",
+  "ConventionalBiomeTags.IS_SWAMP",
+  "ConventionalBiomeTags.IS_TAIGA",
+  "ConventionalBiomeTags.IS_UNDERGROUND",
+  "ConventionalBiomeTags.IS_VEGETATION_SPARSE",
+  "ConventionalBiomeTags.IS_WINDSWEPT",
   "Minecraft.createWorldOpenFlows()",
   "Minecraft.getEntityRenderDispatcher()",
-  "Screenshot.grab()",
-  "GuiGraphicsExtractor.setTooltipForNextFrame()",
-  "Hud.toggle()",
-  "AbstractContainerScreen.containerTick()",
-  "ModelLayers.BAT",
-  "ModelLayers.DOLPHIN",
-  "ModelLayers.SKELETON",
-  "SingleQuadParticle.extract()",
-  "SingleQuadParticle.getFacingCameraMode()",
-  "SingleQuadParticle.getLightCoords()",
-  "SingleQuadParticle.tick()",
-  "SingleQuadParticle.Layer.TRANSLUCENT",
-  "EntityRenderDispatcher.getRenderer()",
-  "EntityRendererProvider.Context.bakeLayer()",
-  "AvatarRenderState.id",
-  "LivingEntityRenderState.ageInTicks",
-  "LivingEntityRenderState.bodyRot",
-  "LivingEntityRenderState.isInvisible",
-  "and 36 more"
+  "and 35 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
-  "file": "mochipets-0.30.1+26.3.jar",
-  "published": "2026-11-19"
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
+  "file": "mochipets-0.31.1+26.3.jar",
+  "published": "2026-11-20"
  },
  "reports": {
   "works": 0,
@@ -68,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -78,7 +78,9 @@
   "main": 1,
   "client": 1,
   "jade": 1,
-  "modmenu": 1
+  "modmenu": 1,
+  "jei_mod_plugin": 1,
+  "voicechat": 1
  },
  "mixins": false,
  "depends": [
@@ -92,5 +94,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
  },
- "lacks": 99
+ "lacks": 92
 }

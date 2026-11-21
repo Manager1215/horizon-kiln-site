@@ -10,14 +10,11 @@
  "description": "Two-way chat between your Minecraft server and a Discord channel, plus server status, whitelist and alerts. No open port needed. Companion plugin for the Minecraft Sync Discord bot.",
  "needs": [
   "Mixin: 1 point inside the game's methods",
-  "net.fabricmc.fabric.api.message.v1.ServerMessageEvents.ChatMessage",
   "net.minecraft.client.gui.components.ChatComponent.DrawingBackgroundGraphicsAccess",
   "net.minecraft.client.gui.components.ChatComponent.DrawingFocusedGraphicsAccess",
   "org.lwjgl.system.MemoryUtil",
-  "JsonParseException.getMessage()",
   "NativeImage.getPointer()",
   "SamplerCache.getClampToEdge()",
-  "ServerMessageEvents.CHAT_MESSAGE",
   "Options.chatLineSpacing()",
   "Options.chatOpacity()",
   "Options.chatScale()",
@@ -27,16 +24,14 @@
   "ChatComponent.DisplayMode.foreground",
   "EditBox.getScreenX()",
   "ConfirmLinkScreen.confirmLinkNow()",
-  "MinecraftServer.getMaxPlayers()",
-  "ServerPlayer.gameMode",
-  "Level.getEntities()"
+  "ServerPlayer.gameMode"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
   "file": "mc-sync-fabric-26.3-2.2.19.jar",
   "published": "2026-11-17"
  },
@@ -69,5 +64,5 @@
   "class": "partial",
   "why": "runs threads of its own; has network channels"
  },
- "lacks": 20
+ "lacks": 15
 }

@@ -1,7 +1,7 @@
 {
  "id": "emc-ragdolls",
  "name": "EMC's Ragdolls",
- "version": "1.0.1",
+ "version": "1.0.2",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,8 +9,7 @@
  "author": "emiliomanco",
  "description": "This mod adds player and mob ragdolls to Minecraft",
  "needs": [
-  "Mixin: 16 points inside the game's methods",
-  "net.minecraft.client.gui.layouts.GridLayout.RowHelper",
+  "Mixin: 17 points inside the game's methods",
   "net.minecraft.client.renderer.entity.layers.PlayerItemInHandLayer",
   "org.lwjgl.openal.AL10",
   "org.lwjgl.openal.ALC10",
@@ -23,10 +22,6 @@
   "OptionsList.addBig()",
   "OptionsList.addHeader()",
   "OptionsList.addSmall()",
-  "HeaderAndFooterLayout.addToFooter()",
-  "LinearLayout.addChild()",
-  "LinearLayout.horizontal()",
-  "LinearLayout.spacing()",
   "OptionsSubScreen.addFooter()",
   "HumanoidModel.renderType()",
   "Model.root()",
@@ -50,16 +45,21 @@
   "EntityRendererProvider.Context.bakeLayer()",
   "EntityRendererProvider.Context.getEquipmentRenderer()",
   "EntityRendererProvider.Context.getModelSet()",
-  "and 25 more"
+  "HumanoidMobRenderer.extractHumanoidRenderState()",
+  "LivingEntityRenderState.boundingBoxHeight",
+  "LivingEntityRenderState.boundingBoxWidth",
+  "LivingEntityRenderState.nameTag",
+  "LivingEntityRenderState.scoreText",
+  "and 15 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
-  "file": "emiliomancos-ragdolls-fabric-26.3-1.0.1.jar",
-  "published": "2026-11-09"
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
+  "file": "emiliomancos-ragdolls-fabric-26.3-1.0.2.jar",
+  "published": "2026-11-20"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels"
  },
- "lacks": 76
+ "lacks": 55
 }

@@ -10,8 +10,6 @@
  "description": "Library mod for EvilCraft, Integrated Dynamics and others.",
  "needs": [
   "an access widener",
-  "com.mojang.blaze3d.vertex.DefaultVertexFormat",
-  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "net.fabricmc.fabric.impl.gametest.FabricGameTestModInitializer",
   "net.minecraft.client.gui.screens.ErrorScreen",
   "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
@@ -22,17 +20,12 @@
   "VertexConsumer.addVertex()",
   "VertexConsumer.setNormal()",
   "DepthStencilState.DEFAULT",
-  "RenderPipeline.builder()",
   "Networking.CODEC_BY_ID",
   "SimpleCriterionTrigger.trigger()",
   "Minecraft.createWorldOpenFlows()",
-  "Minecraft.particleEngine",
-  "ParticleEngine.add()",
-  "ParticleEngine.createParticle()",
   "RenderPipelines.GUI_OPAQUE_TEXTURED_BACKGROUND",
   "RenderPipelines.TRANSLUCENT_PARTICLE",
   "TextureAtlas.LOCATION_PARTICLES",
-  "NonNullList.add()",
   "BuiltInRegistries.ENCHANTMENT_ENTITY_EFFECT_TYPE",
   "BuiltInRegistries.LOOT_SCORE_PROVIDER_TYPE",
   "BuiltInRegistries.TEST_INSTANCE_TYPE",
@@ -49,15 +42,21 @@
   "FurnaceResultSlot.removeCount",
   "RecipeManager.byKeyTyped()",
   "RecipeManager.recipeToDisplay",
-  "Level.getPlayerByUUID()",
-  "and 10 more"
+  "Level.recipeAccess()",
+  "LecternBlock.FACING",
+  "LecternBlock.resetBookState()",
+  "LecternBlock.tryPlaceBook()",
+  "GameRules.IMMEDIATE_RESPAWN",
+  "WorldPreset.createWorldDimensions()",
+  "WorldPresets.FLAT",
+  "LevelStorageSource.LevelStorageAccess.safeClose()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
   "file": "cyclopscore-26.3-fabric-1.30.0-1250.jar",
   "published": "2026-11-15"
  },
@@ -88,5 +87,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
  },
- "lacks": 50
+ "lacks": 40
 }

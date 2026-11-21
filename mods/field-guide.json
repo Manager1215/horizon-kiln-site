@@ -1,7 +1,7 @@
 {
  "id": "field-guide",
  "name": "Field Guide",
- "version": "1.24.1+26.3-fabric",
+ "version": "1.25.0+26.3-fabric",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -11,19 +11,16 @@
  "needs": [
   "Mixin: 1 point inside the game's methods",
   "com.mojang.blaze3d.pipeline.TextureTarget",
-  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
   "net.fabricmc.fabric.api.client.renderer.v1.render.FabricOrderedSubmitNodeCollector",
   "net.minecraft.advancements.CriteriaTriggers",
   "net.minecraft.client.gui.screens.recipebook.CraftingRecipeBookComponent",
   "net.minecraft.client.renderer.entity.player.PlayerRenderer",
-  "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
   "net.minecraft.world.level.storage.loot.entries.LootTableReference",
   "net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceWithLootingCondition",
   "net.minecraft.world.level.storage.loot.providers.number.ConstantValue",
   "net.minecraft.world.level.storage.loot.providers.number.UniformGenerator",
   "org.lwjgl.system.MemoryStack",
   "org.lwjgl.system.MemoryUtil",
-  "JsonArray.forEach()",
   "Std140Builder.get()",
   "Std140Builder.onStack()",
   "Std140Builder.putVec3()",
@@ -38,28 +35,31 @@
   "QuadInstance.setOverlayCoords()",
   "VertexConsumer.putBakedQuad()",
   "GpuBuffer.slice()",
-  "RenderPipeline.builder()",
-  "RenderPipeline.getBindGroupLayouts()",
-  "RenderPipeline.getColorTargetStates()",
-  "RenderPipeline.getDepthStencilState()",
-  "RenderPipeline.getPrimitiveTopology()",
-  "RenderPipeline.getVertexFormatBindings()",
-  "RenderPipeline.isCull()",
-  "RenderPipeline.pushConstantSize()",
   "VertexFormat.contains()",
-  "IntList.isEmpty()",
-  "IntList.size()",
   "Minecraft.getEntityRenderDispatcher()",
-  "and 33 more"
+  "Screen.getTooltipFromItem()",
+  "GameRenderer.featureRenderDispatcher()",
+  "GameRenderer.mainCamera()",
+  "SubmitNodeStorage.getSubmitsPerOrder()",
+  "BlockModelRenderState.tintLayers()",
+  "Frustum.isVisible()",
+  "EntityRenderDispatcher.extractEntity()",
+  "EntityRenderDispatcher.getRenderer()",
+  "EntityRenderDispatcher.submit()",
+  "EntityRenderState.x",
+  "EntityRenderState.y",
+  "EntityRenderState.z",
+  "RenderType.hasBlending()",
+  "and 31 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
-  "file": "fieldguide-1.24.1+26.3-fabric.jar",
-  "published": "2026-11-16"
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
+  "file": "fieldguide-1.25.0+26.3-fabric.jar",
+  "published": "2026-11-20"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -93,5 +93,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 88
+ "lacks": 71
 }

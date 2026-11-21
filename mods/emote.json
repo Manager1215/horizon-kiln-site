@@ -1,7 +1,7 @@
 {
  "id": "emote",
  "name": "Emote",
- "version": "3.0.0+26.3",
+ "version": "3.1.0+26.3-beta1",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,6 +9,8 @@
  "author": "hanhy06",
  "description": "Server-side emote platform for Minecraft",
  "needs": [
+  "net.fabricmc.fabric.api.permission.v1.PermissionPredicates",
+  "net.minecraft.client.renderer.BindGroupLayouts",
   "net.minecraft.server.MinecraftServer.ServerResourcePackInfo",
   "net.minecraft.server.dialog.ActionButton",
   "net.minecraft.server.dialog.CommonButtonData",
@@ -18,10 +20,8 @@
   "net.minecraft.server.dialog.action.StaticAction",
   "net.minecraft.server.dialog.body.PlainMessage",
   "net.minecraft.server.dialog.input.TextInput",
-  "JsonArray.forEach()",
-  "SamplerCache.getClampToEdge()",
   "Transformation.slerp()",
-  "GuiGraphicsExtractor.blit()",
+  "BlendFunction.TRANSLUCENT",
   "EditBox.SEARCH_HINT_STYLE",
   "AvatarRenderState.chestEquipment",
   "AvatarRenderState.feetEquipment",
@@ -30,12 +30,11 @@
   "AvatarRenderState.legsEquipment",
   "AvatarRenderState.rightHandItemStack",
   "ItemStackRenderState.clear()",
-  "DynamicTexture.getTextureView()",
   "TimeArgument.time()",
   "ResolutionContext.create()",
   "SynchedEntityData.DataValue.create()",
   "ServerScoreboard.getObjectives()",
-  "ServerLevel.getPlayerByUUID()",
+  "ServerPlayer.checkPermission()",
   "ServerPlayer.getLastActionTime()",
   "ServerPlayer.getLastClientInput()",
   "ServerPlayer.openDialog()",
@@ -51,10 +50,10 @@
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
-  "file": "emote-3.0.0.jar",
-  "published": "2026-10-28"
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
+  "file": "emote-3.1.0+26.3.jar",
+  "published": "2026-11-20"
  },
  "reports": {
   "works": 0,
@@ -64,8 +63,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -77,7 +76,7 @@
  "mixins": true,
  "depends": [
   "fabric-api",
-  "fabric-permissions-api-v0",
+  "fabric-permission-api-v1",
   "fabricloader",
   "java",
   "minecraft"
@@ -86,5 +85,5 @@
   "class": "partial",
   "why": "runs threads of its own; has network channels"
  },
- "lacks": 37
+ "lacks": 36
 }

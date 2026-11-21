@@ -1,7 +1,7 @@
 {
  "id": "custom-block-highlight",
  "name": "Custom Block Highlight (Outline / Overlay)",
- "version": "2.93+26.3",
+ "version": "2.94+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,16 +9,15 @@
  "author": "Tektonikal",
  "description": "Revitalize the block outline.",
  "needs": [
-  "com.mojang.blaze3d.vertex.DefaultVertexFormat",
-  "com.mojang.renderpearl.api.pipeline.RenderPipeline.Builder",
+  "com.mojang.blaze3d.pipeline.TextureTarget",
   "net.fabricmc.fabric.api.client.rendering.v1.FeatureRendererRegistry",
+  "net.fabricmc.fabric.api.client.rendering.v1.SubmitRenderPhase",
   "net.fabricmc.fabric.api.client.rendering.v1.SubmitRenderPhases",
-  "net.fabricmc.fabric.impl.client.rendering.PictureInPictureRendererRegistryImpl",
   "net.minecraft.client.renderer.DynamicGpuData",
   "net.minecraft.client.renderer.StagedVertexBuffer.ExecuteInfo",
-  "net.minecraft.client.renderer.rendertype.RenderSetup.RenderSetupBuilder",
-  "net.minecraft.client.resources.model.SimpleModelWrapper",
+  "org.lwjgl.opengl.GL14",
   "ProjectionType.vertexSorting()",
+  "RenderTarget.width",
   "RenderSystem.getCompiledPipeline()",
   "RenderSystem.getDynamicUniforms()",
   "RenderSystem.getModelViewMatrixCopy()",
@@ -29,17 +28,16 @@
   "PoseStack.Pose.pose()",
   "PoseStack.Pose.rotate()",
   "PoseStack.Pose.scale()",
+  "PoseStack.Pose.translate()",
   "VertexConsumer.addVertex()",
   "VertexConsumer.addVertex()",
   "VertexConsumer.setNormal()",
   "GpuBuffer.slice()",
   "BlendFunction.TRANSLUCENT",
-  "RenderPipeline.builder()",
-  "Minecraft.getEntityRenderDispatcher()",
   "GameRenderer.mainCamera()",
   "GameRenderer.useImprovedTransparency()",
   "RenderPipelines.DEBUG_QUADS",
-  "RenderPipelines.LINES",
+  "RenderPipelines.LINES_TRANSLUCENT",
   "StagedVertexBuffer.appendDraw()",
   "StagedVertexBuffer.appendDraw()",
   "StagedVertexBuffer.endFrame()",
@@ -47,18 +45,20 @@
   "StagedVertexBuffer.getVertexBuilder()",
   "StagedVertexBuffer.upload()",
   "SubmitNodeCollector.submitCustom()",
-  "EntityRenderDispatcher.camera",
   "FeatureRendererType.create()",
-  "and 6 more"
+  "LayeringTransform.VIEW_OFFSET_Z_LAYERING",
+  "PictureInPictureRenderState.getBounds()",
+  "Direction.getUnitVec3()",
+  "and 2 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
-  "file": "blockhighlight-2.93+26.3.jar",
-  "published": "2026-10-20"
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
+  "file": "blockhighlight-2.94+26.3.jar",
+  "published": "2026-11-21"
  },
  "reports": {
   "works": 0,
@@ -68,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -83,6 +83,7 @@
  "depends": [
   "fabric-api",
   "fabricloader",
+  "java",
   "minecraft",
   "yet_another_config_lib_v3"
  ],
@@ -90,5 +91,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 46
+ "lacks": 42
 }

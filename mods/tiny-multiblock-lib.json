@@ -10,7 +10,6 @@
  "description": "A Tiny Lib for easy creation of Multiblocks with a built-in ghost system. Made to be packaged with other mods",
  "needs": [
   "Mixin: 7 points inside the game's methods",
-  "com.mojang.blaze3d.vertex.DefaultVertexFormat",
   "net.fabricmc.fabric.impl.client.indigo.renderer.render.AltModelBlockRendererImpl",
   "net.fabricmc.fabric.impl.client.renderer.VanillaBlockModelPartEncoder",
   "net.minecraft.client.renderer.feature.FeatureRendererMap",
@@ -32,12 +31,8 @@
   "VertexConsumer.setNormal()",
   "VertexConsumer.setNormal()",
   "VertexConsumer.setOverlay()",
-  "RenderPipeline.getPrimitiveTopology()",
-  "RenderPipeline.getVertexFormatBinding()",
-  "CharSet.isEmpty()",
   "Minecraft.getBlockEntityRenderDispatcher()",
   "Minecraft.levelExtractor",
-  "ClientLevel.isUnobstructed()",
   "GameRenderer.renderBuffers()",
   "Sheets.translucentBlockItemSheet()",
   "SubmitNodeStorage.submitModel()",
@@ -50,14 +45,19 @@
   "FeatureRendererType.create()",
   "RenderTypeFeatureRenderer.finishExecute()",
   "TranslucentSubmit.computeDistanceToCameraSq()",
-  "and 26 more"
+  "RenderType.outline()",
+  "RenderTypes.entityTranslucent()",
+  "RenderTypes.translucentMovingBlock()",
+  "Vec3i.subtract()",
+  "Block.rotate()",
+  "and 25 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
   "file": "tiny-multiblock-lib-fabric-26.3-4.0.1.jar",
   "published": "2026-09-18"
  },
@@ -91,5 +91,5 @@
   "class": "restart",
   "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
  },
- "lacks": 75
+ "lacks": 69
 }

@@ -1,55 +1,25 @@
 {
  "id": "autoswap",
  "name": "AutoSwap",
- "version": "1.6.0",
- "status": "planned",
- "statusLabel": "Planned",
- "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
- "url": "https://modrinth.com/mod/autoswap",
- "author": "Nikrecs",
- "description": "Automatic tool, weapon, armor and totem swapping — equips the right item, auto-replaces broken gear, refills depleted stacks, and deploys your elytra on a double jump. Fully client-side.",
- "needs": [
-  "GuiGraphicsExtractor.setTooltipForNextFrame()",
-  "ItemStack.<init>()",
-  "ItemStack.is()"
- ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
- "evidence": "Not run: Java did not start.",
- "library": false,
- "scanned": {
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
-  "file": "autoswap-fabric-26.3-1.6.0.jar",
-  "published": "2026-11-10"
- },
+ "version": "1.5.2",
+ "status": "works",
+ "statusLabel": "Works",
+ "statusMeaning": "Tried in the game with Kiln.",
+ "needs": [],
  "reports": {
   "works": 0,
   "partly": 0,
   "broken": 0,
   "latest": []
  },
- "run": {
-  "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
-  "ticks": 0,
-  "hud": false,
-  "why": "Java did not start"
- },
- "entrypoints": {
-  "client": 1
- },
- "mixins": false,
- "depends": [
-  "architectury",
-  "fabric-api",
-  "fabricloader",
-  "java",
-  "minecraft"
- ],
- "softOff": {
-  "class": "safe",
-  "why": "only events, HUD, keys, commands and guarded mixin handlers"
- },
- "lacks": 3
+ "works": "Swaps to the best tool for the block being mined (stone: sword to pickaxe); /autoswap toggle answers.",
+ "note": "Not yet: Its other swaps (armour, elytra, totems, refills) and its config screen weren't tried; a mod's own tools mine at 1 in its scoring (only the game's tools are read, D-232).",
+ "url": "https://modrinth.com/mod/5L23JpyR",
+ "checked": {
+  "kiln": "main",
+  "commit": "PENDING",
+  "date": "2026-11-20",
+  "horizon": "Nightly 2026-11-04 · 3fb4c31",
+  "by": "kiln/proof.py on the Linux PC"
+ }
 }
