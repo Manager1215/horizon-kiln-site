@@ -1,22 +1,27 @@
 {
  "id": "hud-better-widgets",
  "name": "Better HUD widgets",
- "version": "4.1.0",
- "status": "not-checked",
- "statusLabel": "Not checked",
- "statusMeaning": "In the catalogue, not checked yet.",
+ "version": "4.2.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
  "url": "https://modrinth.com/mod/hud-better-widgets",
  "author": "USeAr3658",
  "description": "Build your own HUD with fully customizable, draggable, interactive widgets",
- "needs": [],
- "roadmap": "",
- "evidence": "Everything its code calls is covered by Kiln development build 2026-11-21 (3f1dc50b) (74 classes, 195 members). Not run yet.",
+ "needs": [
+  "Mixin: 1 point inside the game's methods",
+  "net.minecraft.client.gui.contextualbar.ContextualBar",
+  "net.minecraft.client.gui.contextualbar.ExperienceBar",
+  "net.minecraft.client.gui.contextualbar.JumpableVehicleBar"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-21",
-  "kiln": "development build 2026-11-21 (3f1dc50b)",
-  "file": "[26.3]HUD_BW-4.1.0.jar",
-  "published": "2026-10-26"
+  "date": "2026-11-22",
+  "kiln": "development build 2026-11-21 (7ae1d6b0)",
+  "file": "[26.3]HUD_BW-4.2.0.jar",
+  "published": "2026-11-21"
  },
  "reports": {
   "works": 0,
@@ -26,8 +31,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-22",
+  "kiln": "development build 2026-11-21 (7ae1d6b0)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -44,8 +49,8 @@
   "minecraft"
  ],
  "softOff": {
-  "class": "safe",
-  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  "class": "restart",
+  "why": "@redirect into the game's classes"
  },
- "lacks": 0
+ "lacks": 3
 }

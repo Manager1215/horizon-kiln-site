@@ -1,7 +1,7 @@
 {
  "id": "practical-enchantments",
  "name": "Practical Enchantments",
- "version": "1.8.3-fabric-26.3",
+ "version": "1.9.0-fabric-26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,24 +9,30 @@
  "author": "Huziyang520",
  "description": "This mod adds a series of imaginative mods.",
  "needs": [
+  "an access widener",
   "Mixin: 4 points inside the game's methods",
   "net.minecraft.client.model.HumanoidModel.ArmPose",
+  "BlockEntityRenderer.extractRenderState()",
+  "BlockEntityRenderState.lightCoords",
+  "LightningBolt.setCause()",
   "LivingEntity.damageCooldownTime",
-  "LivingEntity.getExperienceReward()",
   "LivingEntity.getProjectile()",
   "AbstractArrow.getWeaponItem()",
   "ThrownTrident.getWeaponItem()",
+  "AbstractContainerMenu.addDataSlots()",
+  "AbstractContainerMenu.checkContainerSize()",
   "ChargedProjectiles.isEmpty()",
-  "ChargedProjectiles.ofNonEmpty()"
+  "ChargedProjectiles.ofNonEmpty()",
+  "EnchantmentHelper.updateEnchantments()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-21",
-  "kiln": "development build 2026-11-21 (3f1dc50b)",
-  "file": "practical_enchantments-1.8.3.263-fabric-26.3.jar",
-  "published": "2026-11-15"
+  "date": "2026-11-22",
+  "kiln": "development build 2026-11-21 (7ae1d6b0)",
+  "file": "practical_enchantments-1.9.0.263-fabric-26.3.jar",
+  "published": "2026-11-21"
  },
  "reports": {
   "works": 0,
@@ -36,8 +42,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-22",
+  "kiln": "development build 2026-11-21 (7ae1d6b0)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -45,7 +51,9 @@
  "entrypoints": {
   "main": 1,
   "client": 1,
-  "modmenu": 1
+  "modmenu": 1,
+  "jei_mod_plugin": 1,
+  "jade": 1
  },
  "mixins": true,
  "depends": [
@@ -57,7 +65,7 @@
  ],
  "softOff": {
   "class": "restart",
-  "why": "@redirect into the game's classes; data pack files (recipes, loot, tags) stay"
+  "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 8
+ "lacks": 13
 }

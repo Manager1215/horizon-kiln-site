@@ -2,19 +2,19 @@
  "id": "smart-refill",
  "name": "Smart Refill",
  "version": "1.0.2",
- "status": "not-checked",
- "statusLabel": "Not checked",
- "statusMeaning": "In the catalogue, not checked yet.",
+ "status": "works",
+ "statusLabel": "Works",
+ "statusMeaning": "Tried in the game with Kiln.",
  "url": "https://modrinth.com/mod/smart-refill",
  "author": "adamjaroui23",
  "description": "Automatically refills empty hotbar slots with matching items from your inventory. Works in both Survival and Creative mode!",
  "needs": [],
  "roadmap": "",
- "evidence": "Everything its code calls is covered by Kiln development build 2026-11-21 (3f1dc50b) (23 classes, 45 members). Not run yet.",
+ "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-21",
-  "kiln": "development build 2026-11-21 (3f1dc50b)",
+  "date": "2026-11-22",
+  "kiln": "development build 2026-11-21 (7ae1d6b0)",
   "file": "smartrefill-1.0.2+26.3.jar",
   "published": "2026-10-22"
  },
@@ -46,5 +46,14 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 0
+ "lacks": 0,
+ "works": "When a hotbar slot runs empty it refills it with the same item from the inventory; in creative (setting creativeInfinite, on by default) it puts back a full stack of the item that was there. The Up arrow key (default code 82) toggles it with '§aSmart Refill Enabled' / '§cSmart Refill Disabled'.",
+ "note": "Not yet: the survival path (moving a matching stack from the inventory) wasn't tried.",
+ "checked": {
+  "kiln": "main",
+  "commit": "866de5b585d8309fa1fd2384c8443054a3cee1e7",
+  "date": "2026-11-21",
+  "horizon": "Nightly 2026-11-04 · 3fb4c31",
+  "by": "kiln/proof.py on the Linux PC"
+ }
 }

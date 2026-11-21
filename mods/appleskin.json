@@ -2,19 +2,19 @@
  "id": "appleskin",
  "name": "AppleSkin",
  "version": "3.0.10+mc26.3",
- "status": "not-checked",
- "statusLabel": "Not checked",
- "statusMeaning": "In the catalogue, not checked yet.",
+ "status": "works",
+ "statusLabel": "Works",
+ "statusMeaning": "Tried in the game with Kiln.",
  "url": "https://modrinth.com/mod/appleskin",
  "author": "squeek502",
  "description": "Food/hunger-related HUD improvements",
  "needs": [],
  "roadmap": "",
- "evidence": "Everything its code calls is covered by Kiln development build 2026-11-21 (3f1dc50b) (77 classes, 110 members). Not run yet.",
+ "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-21",
-  "kiln": "development build 2026-11-21 (3f1dc50b)",
+  "date": "2026-11-22",
+  "kiln": "development build 2026-11-21 (7ae1d6b0)",
   "file": "appleskin-fabric-mc26.3-3.0.10.jar",
   "published": "2026-09-17"
  },
@@ -47,5 +47,14 @@
   "class": "partial",
   "why": "has network channels"
  },
- "lacks": 0
+ "lacks": 0,
+ "works": "Food values on the HUD: holding food previews what it restores on the hunger bar.",
+ "note": "From Modrinth, unchanged. Its saturation overlay draws too (the trace shows its ops) but the try's saturation was nil and its server-side sync (natural regeneration, ServerLevel.getGameRules) is not covered.",
+ "checked": {
+  "kiln": "main",
+  "commit": "930eabb5e3f3c994a4cb7f1c18c71ab00dbabc30",
+  "date": "2026-11-21",
+  "horizon": "Nightly 2026-11-04 · 3fb4c31",
+  "by": "kiln/proof.py on the Linux PC"
+ }
 }

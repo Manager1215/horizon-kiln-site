@@ -1,0 +1,62 @@
+{
+ "id": "easy-villager-reset",
+ "name": "easy villager reset",
+ "version": "1.4",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/easy-villager-reset",
+ "author": "valenyqs",
+ "description": "reset villager trades effortlessly—even after they've been locked in",
+ "needs": [
+  "MemoryModuleType.POTENTIAL_JOB_SITE",
+  "Villager.refreshBrain()",
+  "Villager.releasePoi()",
+  "Villager.setOffers()",
+  "Villager.setVillagerXp()",
+  "VillagerData.withProfession()"
+ ],
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-22",
+  "kiln": "development build 2026-11-21 (7ae1d6b0)",
+  "file": "easy-villager-reset-1.4.jar",
+  "published": "2026-11-21"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-22",
+  "kiln": "development build 2026-11-21 (7ae1d6b0)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "fabric-datagen": 1,
+  "client": 1,
+  "modmenu": 1,
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "cloth-config",
+  "fabric-api",
+  "fabric-language-kotlin",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 6
+}

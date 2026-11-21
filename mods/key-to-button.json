@@ -9,17 +9,20 @@
  "author": "WNFU",
  "description": "Bind any controller button to any keyboard key. Press the button and the game receives that key, as if you pressed it on your keyboard. Works alongside Controllable.",
  "needs": [
-  "org.lwjgl.sdl.SDLGamepad",
-  "org.lwjgl.sdl.SDLInit",
   "org.lwjgl.sdl.SDLKeyboard",
-  "org.lwjgl.sdl.SDLStdinc"
+  "org.lwjgl.sdl.SDLStdinc",
+  "SDLGamepad.SDL_GamepadConnected()",
+  "SDLGamepad.SDL_GetGamepadAxis()",
+  "SDLGamepad.SDL_GetGamepadButton()",
+  "SDLGamepad.SDL_GetGamepadName()",
+  "SDLGamepad.SDL_UpdateGamepads()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-21",
-  "kiln": "development build 2026-11-21 (3f1dc50b)",
+  "date": "2026-11-22",
+  "kiln": "development build 2026-11-21 (7ae1d6b0)",
   "file": "key-to-button-fabric-26.3-1.0.0.jar",
   "published": "2026-11-15"
  },
@@ -52,5 +55,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 4
+ "lacks": 7
 }

@@ -14,8 +14,6 @@
   "com.mojang.logging.LogQueues",
   "com.mojang.logging.plugins.QueueLogAppender",
   "com.mojang.renderpearl.frontend.shaders.PipelineBuilder",
-  "io.netty.channel.Channel",
-  "io.netty.channel.local.LocalChannel",
   "net.fabricmc.fabric.impl.loot.LootUtil",
   "net.fabricmc.fabric.impl.permission.EntityPermissionContext",
   "net.minecraft.client.gui.font.FontManager.FontDefinitionFile",
@@ -51,14 +49,16 @@
   "net.minecraft.commands.arguments.item.ItemParser.State",
   "net.minecraft.commands.arguments.item.ItemParser.Visitor",
   "net.minecraft.commands.arguments.item.ItemPredicateArgument.ComponentWrapper",
+  "net.minecraft.commands.arguments.item.ItemPredicateArgument.Context",
+  "net.minecraft.commands.arguments.item.ItemPredicateArgument.PredicateWrapper",
   "and 80 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-21",
-  "kiln": "development build 2026-11-21 (3f1dc50b)",
+  "date": "2026-11-22",
+  "kiln": "development build 2026-11-21 (7ae1d6b0)",
   "file": "command-crafter-0.8.3+26.3.jar",
   "published": "2026-10-24"
  },
@@ -96,5 +96,5 @@
   "class": "restart",
   "why": "@wrap-method and @wrap-operation into the game's classes; @modify-arg Kiln doesn't guard; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
  },
- "lacks": 221
+ "lacks": 205
 }

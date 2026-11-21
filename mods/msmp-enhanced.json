@@ -10,14 +10,8 @@
  "description": "Extends the Minecraft Server Management Protocol (MSMP), including new JSON RPC methods and Unix socket support",
  "needs": [
   "Mixin: 3 points inside the game's methods",
-  "io.netty.bootstrap.AbstractBootstrap",
-  "io.netty.bootstrap.ServerBootstrap",
-  "io.netty.channel.Channel",
-  "io.netty.channel.ChannelHandlerContext",
-  "io.netty.channel.MultiThreadIoEventLoopGroup",
   "io.netty.channel.epoll.EpollIoHandler",
   "io.netty.channel.epoll.EpollServerDomainSocketChannel",
-  "io.netty.channel.unix.DomainSocketAddress",
   "net.minecraft.server.jsonrpc.Connection",
   "net.minecraft.server.jsonrpc.IncomingRpcMethod.IncomingRpcMethodBuilder",
   "net.minecraft.server.jsonrpc.IncomingRpcMethod.RpcMethodFunction",
@@ -38,8 +32,8 @@
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-21",
-  "kiln": "development build 2026-11-21 (3f1dc50b)",
+  "date": "2026-11-22",
+  "kiln": "development build 2026-11-21 (7ae1d6b0)",
   "file": "msmp-enhanced-0.1.1+26.3.jar",
   "published": "2026-09-15"
  },
@@ -70,5 +64,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert)"
  },
- "lacks": 23
+ "lacks": 17
 }

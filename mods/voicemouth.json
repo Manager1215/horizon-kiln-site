@@ -1,0 +1,59 @@
+{
+ "id": "voicemouth",
+ "name": "VoiceMouth",
+ "version": "1.1.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/voicemouth",
+ "author": "ginterloper",
+ "description": "Plugin for Simple Voice Chat / Plasmo Voice which shows mouth on player model while he is talking",
+ "needs": [
+  "PoseStack.Pose.normal()",
+  "PoseStack.Pose.pose()",
+  "VertexConsumer.setLight()",
+  "VertexConsumer.setOverlay()",
+  "EntityModel.getChildPart()",
+  "RenderLayer.getParentModel()",
+  "LivingEntityRenderState.nameTag"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-22",
+  "kiln": "development build 2026-11-21 (7ae1d6b0)",
+  "file": "voice-mouth-1.1.0-26.3.jar",
+  "published": "2026-11-21"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-22",
+  "kiln": "development build 2026-11-21 (7ae1d6b0)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1,
+  "voicechat": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; has network channels"
+ },
+ "lacks": 7
+}

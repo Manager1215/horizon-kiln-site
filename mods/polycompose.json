@@ -1,22 +1,65 @@
 {
  "id": "polycompose",
  "name": "PolyCompose",
- "version": "v2.1.0+compose.1.13.0-alpha02",
- "status": "not-checked",
- "statusLabel": "Not checked",
- "statusMeaning": "In the catalogue, not checked yet.",
+ "version": "v3.0.1",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
  "url": "https://modrinth.com/mod/polycompose",
  "author": "Wyvest",
- "description": "Library mod for building Minecraft screens and HUDs with Jetpack Compose. Made by Polyfrost.",
- "needs": [],
- "roadmap": "",
- "evidence": "No classes at the top level of the file (only nested jars); not scanned.",
+ "description": "Library mod for building Minecraft screens and HUDs with Jetpack Compose. Made by Polyfrost. Formerly known as Compose Multiplatform.",
+ "needs": [
+  "an access widener",
+  "com.mojang.blaze3d.pipeline.TextureTarget",
+  "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
+  "com.mojang.renderpearl.api.pipeline.BindGroupLayout.Builder",
+  "com.mojang.renderpearl.backend.opengl.DirectStateAccess",
+  "org.lwjgl.BufferUtils",
+  "org.lwjgl.opengl.ARBFramebufferObject",
+  "org.lwjgl.opengl.ARBTimerQuery",
+  "org.lwjgl.opengl.EXTFramebufferBlit",
+  "org.lwjgl.opengl.EXTFramebufferObject",
+  "org.lwjgl.opengl.GL",
+  "org.lwjgl.opengl.GL11",
+  "org.lwjgl.opengl.GL13",
+  "org.lwjgl.opengl.GL14",
+  "org.lwjgl.opengl.GL15",
+  "org.lwjgl.opengl.GL20",
+  "org.lwjgl.opengl.GL30",
+  "org.lwjgl.opengl.GL33",
+  "org.lwjgl.opengl.GLCapabilities",
+  "org.lwjgl.sdl.SDLClipboard",
+  "org.lwjgl.sdl.SDLEvents",
+  "org.lwjgl.sdl.SDLKeyboard",
+  "org.lwjgl.sdl.SDLVideo",
+  "org.lwjgl.sdl.SDL_Event",
+  "org.lwjgl.sdl.SDL_EventFilter",
+  "org.lwjgl.sdl.SDL_EventFilterI",
+  "org.lwjgl.sdl.SDL_MouseWheelEvent",
+  "org.lwjgl.stb.STBTTBitmap",
+  "org.lwjgl.stb.STBTTFontinfo",
+  "org.lwjgl.stb.STBTTVertex",
+  "org.lwjgl.stb.STBTTVertex.Buffer",
+  "org.lwjgl.stb.STBTruetype",
+  "org.lwjgl.system.JNI",
+  "org.lwjgl.system.MemoryStack",
+  "org.lwjgl.system.MemoryUtil",
+  "org.lwjgl.system.SharedLibrary",
+  "org.lwjgl.system.macosx.ObjCRuntime",
+  "PipelineCache.insert()",
+  "RenderTarget.destroyBuffers()",
+  "RenderTarget.width",
+  "NativeImage.getPointer()",
+  "and 36 more"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-21",
-  "kiln": "development build 2026-11-21 (3f1dc50b)",
-  "file": "compose-bundle-2.1.0+compose.1.13.0-alpha02.jar",
-  "published": "2026-10-30"
+  "date": "2026-11-22",
+  "kiln": "development build 2026-11-21 (7ae1d6b0)",
+  "file": "polycompose-26.3-fabric-3.0.1.jar",
+  "published": "2026-11-21"
  },
  "reports": {
   "works": 0,
@@ -24,15 +67,28 @@
   "broken": 0,
   "latest": []
  },
- "entrypoints": {},
- "mixins": false,
+ "run": {
+  "passed": false,
+  "date": "2026-11-22",
+  "kiln": "development build 2026-11-21 (7ae1d6b0)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1,
+  "controlify": 1
+ },
+ "mixins": true,
  "depends": [
   "fabric-language-kotlin",
-  "fabricloader"
+  "fabricloader",
+  "java",
+  "minecraft"
  ],
  "softOff": {
-  "class": "safe",
-  "why": "no code"
+  "class": "restart",
+  "why": "@wrap-method into the game's classes; runs threads of its own"
  },
- "lacks": 0
+ "lacks": 76
 }

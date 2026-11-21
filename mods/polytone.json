@@ -1,7 +1,7 @@
 {
  "id": "polytone",
  "name": "Polytone",
- "version": "26.3-6.8.6-alpha",
+ "version": "26.3-6.9.0",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,7 +10,7 @@
  "description": "Customize Map Color, Block Colors, Colormaps and Block Sounds, Biome Colors, dynamic colored lights, Dye Colors. Supports Optifine format. For Resource Packs",
  "needs": [
   "an access widener",
-  "Mixin: 38 points inside the game's methods",
+  "Mixin: 53 points inside the game's methods",
   "com.mojang.blaze3d.framegraph.FrameGraphBuilder",
   "com.mojang.blaze3d.pipeline.TextureTarget",
   "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
@@ -22,6 +22,7 @@
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.BeforeGizmos",
   "net.fabricmc.fabric.impl.client.rendering.ColorResolverRegistryImpl",
   "net.fabricmc.fabric.impl.registry.sync.RegistrySyncManager",
+  "net.minecraft.client.color.item.Firework",
   "net.minecraft.client.gui.components.CycleButton.DisplayState",
   "net.minecraft.client.gui.components.ResettableOptionWidget",
   "net.minecraft.client.gui.components.SpriteIconButton",
@@ -30,20 +31,18 @@
   "net.minecraft.client.gui.contextualbar.ContextualBar",
   "net.minecraft.client.model.HumanoidModel.ArmPose",
   "net.minecraft.client.model.geom.builders.CubeListBuilder",
+  "net.minecraft.client.particle.FireworkParticles.Starter",
   "net.minecraft.client.particle.QuadParticleGroup",
   "net.minecraft.client.particle.TerrainParticle",
   "net.minecraft.client.renderer.BindGroupLayouts",
   "net.minecraft.client.renderer.DynamicGpuData",
-  "net.minecraft.client.renderer.DynamicGpuData.ChunkSectionInfo",
   "net.minecraft.client.renderer.LevelTargetBundle",
   "net.minecraft.client.renderer.PostChain.TargetBundle",
   "net.minecraft.client.renderer.PostPass.TargetInput",
   "net.minecraft.client.renderer.SkyRenderer",
-  "net.minecraft.client.renderer.chunk.ChunkSectionLayerGroup",
-  "net.minecraft.client.renderer.chunk.SectionMesh",
-  "net.minecraft.client.renderer.chunk.SectionMesh.SectionDraw",
-  "net.minecraft.client.renderer.chunk.SectionRenderDispatcher.RenderSectionBufferSlice",
+  "net.minecraft.client.renderer.blockentity.AbstractSignRenderer",
   "net.minecraft.client.renderer.entity.ExperienceOrbRenderer",
+  "net.minecraft.client.renderer.entity.LightningBoltRenderer",
   "net.minecraft.client.renderer.entity.PaintingRenderer",
   "net.minecraft.client.renderer.feature.LeashFeatureRenderer",
   "net.minecraft.client.renderer.feature.ShadowFeatureRenderer",
@@ -51,16 +50,17 @@
   "net.minecraft.client.renderer.fog.environment.AtmosphericFogEnvironment",
   "net.minecraft.client.renderer.fog.environment.BlindnessFogEnvironment",
   "net.minecraft.client.renderer.fog.environment.DarknessFogEnvironment",
-  "and 78 more"
+  "net.minecraft.client.renderer.fog.environment.PowderedSnowFogEnvironment",
+  "and 73 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-21",
-  "kiln": "development build 2026-11-21 (3f1dc50b)",
-  "file": "polytone-26.3-6.8.6-fabric.jar",
-  "published": "2026-10-10"
+  "date": "2026-11-22",
+  "kiln": "development build 2026-11-21 (7ae1d6b0)",
+  "file": "polytone-26.3-6.9.0-fabric.jar",
+  "published": "2026-11-21"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-22",
+  "kiln": "development build 2026-11-21 (7ae1d6b0)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@redirect and @wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
  },
- "lacks": 196
+ "lacks": 198
 }

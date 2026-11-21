@@ -1,19 +1,18 @@
 {
  "id": "challenge-hub",
  "name": "Challenge Hub",
- "version": "0.3.2",
+ "version": "0.4.0",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
  "url": "https://modrinth.com/mod/challenge-hub",
  "author": "NeoAorus",
- "description": "A collection of exciting and varied Minecraft challenges, including an In-game Selection Menu, Full Multiplayer Support, and more!",
+ "description": "All-in-One Challenge Mod with multiple game modes, a customizable timer, and more!",
  "needs": [
-  "Mixin: 2 points inside the game's methods",
+  "Mixin: 3 points inside the game's methods",
   "net.minecraft.client.gui.screens.worldselection.SelectWorldScreen",
   "net.minecraft.client.gui.screens.worldselection.WorldOpenFlows",
   "net.minecraft.client.renderer.fog.FogData",
-  "org.lwjgl.glfw.GLFW",
   "AdvancementProgress.getCompletedCriteria()",
   "Minecraft.createWorldOpenFlows()",
   "GuiGraphicsExtractor.blit()",
@@ -23,7 +22,6 @@
   "MultiLineTextWidget.setMaxWidth()",
   "MultiLineTextWidget.setPosition()",
   "CreateWorldScreen.openFresh()",
-  "ItemStackRenderState.clear()",
   "CameraRenderState.depthFar",
   "CameraRenderState.fogData",
   "ServerboundMovePlayerPacket.getX()",
@@ -33,19 +31,35 @@
   "ServerboundMovePlayerPacket.hasRotation()",
   "PlayerAdvancements.revoke()",
   "ServerTickRateManager.updateJoiningPlayer()",
+  "ServerLevel.findNearestMapStructure()",
+  "ServerLevel.uncachedBiomeResolver()",
   "ServerPlayer.setLastClientInput()",
-  "EntityTypes.GLOW_SQUID",
-  "ChunkPos.distanceSquared()",
-  "TeleportTransition.PLACE_PORTAL_TICKET"
+  "PoiTypeTags.VILLAGE",
+  "EntityTypeIds.BLAZE",
+  "EntityTypeIds.CHICKEN",
+  "EntityTypeIds.COD",
+  "EntityTypeIds.CREEPER",
+  "EntityTypeIds.DROWNED",
+  "EntityTypeIds.ELDER_GUARDIAN",
+  "EntityTypeIds.ENDERMAN",
+  "EntityTypeIds.ENDER_DRAGON",
+  "EntityTypeIds.GHAST",
+  "EntityTypeIds.GLOW_SQUID",
+  "EntityTypeIds.GUARDIAN",
+  "EntityTypeIds.IRON_GOLEM",
+  "EntityTypeIds.MAGMA_CUBE",
+  "EntityTypeIds.PIG",
+  "EntityTypeIds.PIGLIN",
+  "and 13 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-21",
-  "kiln": "development build 2026-11-21 (3f1dc50b)",
-  "file": "challenge-hub-mc26.3-0.3.2.jar",
-  "published": "2026-09-17"
+  "date": "2026-11-22",
+  "kiln": "development build 2026-11-21 (7ae1d6b0)",
+  "file": "challenge-hub-mc26.3-0.4.0.jar",
+  "published": "2026-11-21"
  },
  "reports": {
   "works": 0,
@@ -55,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-22",
+  "kiln": "development build 2026-11-21 (7ae1d6b0)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -76,5 +90,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes; runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 27
+ "lacks": 53
 }
