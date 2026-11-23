@@ -10,10 +10,7 @@
  "description": "A rework of enchanting, centered around leveling up enchantments through usage",
  "needs": [
   "Mixin: 26 points inside the game's methods",
-  "net.fabricmc.fabric.api.item.v1.ItemComponentTooltipProviderRegistry",
   "net.minecraft.client.gui.font.providers.BitmapProvider.Definition",
-  "net.minecraft.client.gui.screens.inventory.CyclingSlotBackground",
-  "net.minecraft.client.model.object.book.BookModel",
   "net.minecraft.commands.arguments.SlotSourceArgument",
   "net.minecraft.commands.arguments.SlotSourceArgument.Result",
   "net.minecraft.server.commands.item.ItemAccessor",
@@ -21,12 +18,8 @@
   "net.minecraft.world.entity.animal.equine.SkeletonTrapGoal",
   "net.minecraft.world.item.enchantment.providers.SingleEnchantment",
   "GuiGraphicsExtractor.book()",
-  "AbstractContainerScreen.containerTick()",
-  "EntityModelSet.bakeLayer()",
-  "ModelLayers.BOOK",
   "LocalPlayer.experienceDisplayStartTick",
   "DataComponentMap.Builder.contains()",
-  "RegistryCodecs.holderSet()",
   "LivingEntity.is()",
   "Player.onEnchantmentPerformed()",
   "Enchantment.CODEC",
@@ -35,7 +28,6 @@
   "SlotCollection.modifySlots()",
   "ChiseledBookShelfBlock.SLOT_0_OCCUPIED",
   "BlockState.getProvidedEnchantmentPower()",
-  "LootPool.CODEC",
   "LootPool.Builder.add()",
   "LootPool.Builder.when()",
   "LootTable.Builder.apply()",
@@ -44,12 +36,12 @@
   "LootItemFunction.apply()",
   "LootItemFunctions.CODEC"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-22",
-  "kiln": "development build 2026-11-21 (7ae1d6b0)",
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
   "file": "penchant-0.6.1+mc26.3.jar",
   "published": "2026-11-08"
  },
@@ -83,5 +75,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 33
+ "lacks": 25
 }

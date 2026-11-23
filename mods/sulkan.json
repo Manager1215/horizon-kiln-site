@@ -10,12 +10,8 @@
  "description": "Native Vulkan shaders for Minecraft 26.2. Client-side Fabric mod powered by Sodium, with a built-in shader pack and support for native Sulkan packs.",
  "needs": [
   "Mixin: 7 points inside the game's methods",
-  "com.mojang.blaze3d.framegraph.FrameGraphBuilder",
   "com.mojang.blaze3d.resource.RenderTargetDescriptor",
   "com.mojang.blaze3d.resource.RenderTargetDescriptor.TextureProperties",
-  "com.mojang.renderpearl.api.commands.RenderPassDescriptor.Builder",
-  "com.mojang.renderpearl.api.pipeline.BindGroupLayout.Builder",
-  "com.mojang.renderpearl.api.vertex.VertexFormat.Builder",
   "com.mojang.renderpearl.backend.vulkan.VulkanConst",
   "com.mojang.renderpearl.backend.vulkan.VulkanFeatureSets",
   "com.mojang.renderpearl.backend.vulkan.VulkanGpuSampler",
@@ -25,16 +21,9 @@
   "com.mojang.renderpearl.frontend.shaders.GlslCompiler",
   "com.mojang.renderpearl.frontend.shaders.SPIRVModule",
   "com.mojang.renderpearl.util.ShaderCompileException",
-  "net.minecraft.client.renderer.BindGroupLayouts",
   "net.minecraft.client.renderer.ShaderDefines.Builder",
-  "net.minecraft.client.renderer.SkyRenderer",
   "net.minecraft.client.renderer.StagedVertexBuffer.ExecuteInfo",
-  "net.minecraft.client.renderer.WeatherEffectRenderer",
   "net.minecraft.client.renderer.chunk.ChunkSectionLayerGroup",
-  "net.minecraft.client.renderer.fog.FogData",
-  "net.minecraft.client.renderer.rendertype.PreparedRenderType",
-  "net.minecraft.client.renderer.rendertype.PreparedRenderType.Texture",
-  "net.minecraft.client.renderer.state.level.SkyRenderState",
   "net.minecraft.client.renderer.state.level.WeatherRenderState",
   "org.lwjgl.PointerBuffer",
   "org.lwjgl.system.MemoryStack",
@@ -50,14 +39,25 @@
   "org.lwjgl.vulkan.VkBufferMemoryBarrier",
   "org.lwjgl.vulkan.VkBufferMemoryBarrier.Buffer",
   "org.lwjgl.vulkan.VkClearColorValue",
-  "and 80 more"
+  "org.lwjgl.vulkan.VkCommandBuffer",
+  "org.lwjgl.vulkan.VkComputePipelineCreateInfo",
+  "org.lwjgl.vulkan.VkComputePipelineCreateInfo.Buffer",
+  "org.lwjgl.vulkan.VkCopyDescriptorSet",
+  "org.lwjgl.vulkan.VkCopyDescriptorSet.Buffer",
+  "org.lwjgl.vulkan.VkDescriptorBufferInfo",
+  "org.lwjgl.vulkan.VkDescriptorBufferInfo.Buffer",
+  "org.lwjgl.vulkan.VkDescriptorImageInfo",
+  "org.lwjgl.vulkan.VkDescriptorImageInfo.Buffer",
+  "org.lwjgl.vulkan.VkDescriptorPoolCreateInfo",
+  "org.lwjgl.vulkan.VkDescriptorPoolSize",
+  "and 64 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-22",
-  "kiln": "development build 2026-11-21 (7ae1d6b0)",
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
   "file": "sulkan-0.6.0-26.3.jar",
   "published": "2026-10-15"
  },
@@ -90,5 +90,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 157
+ "lacks": 117
 }

@@ -10,19 +10,11 @@
  "description": "LOD terrain beyond your render distance, built from the chunks you have explored. OpenGL and Vulkan.",
  "needs": [
   "Mixin: 7 points inside the game's methods",
-  "com.mojang.blaze3d.platform.Transparency",
-  "com.mojang.blaze3d.systems.RenderSystem.AutoStorageIndexBuffer",
   "com.mojang.blaze3d.vertex.StagingBuffer",
   "com.mojang.blaze3d.vertex.StagingBuffer.BufferHandle",
   "com.mojang.blaze3d.vertex.StagingBuffer.Uploader",
-  "com.mojang.renderpearl.api.commands.RenderPassDescriptor.Builder",
   "com.mojang.renderpearl.api.device.GpuOutOfMemoryException",
-  "com.mojang.renderpearl.api.pipeline.BindGroupLayout.Builder",
-  "net.minecraft.client.model.geom.builders.UVPair",
   "net.minecraft.client.renderer.block.dispatch.WeightedVariants",
-  "net.minecraft.client.renderer.blockentity.BeaconRenderer",
-  "net.minecraft.client.renderer.chunk.CompiledSectionMesh",
-  "net.minecraft.client.renderer.fog.FogData",
   "org.lwjgl.opengl.ARBBufferStorage",
   "org.lwjgl.opengl.ARBClipControl",
   "org.lwjgl.opengl.ARBDrawIndirect",
@@ -50,14 +42,22 @@
   "org.lwjgl.vulkan.EXTMemoryBudget",
   "org.lwjgl.vulkan.VK10",
   "org.lwjgl.vulkan.VK11",
-  "and 70 more"
+  "org.lwjgl.vulkan.VkDevice",
+  "org.lwjgl.vulkan.VkExtensionProperties",
+  "org.lwjgl.vulkan.VkExtensionProperties.Buffer",
+  "org.lwjgl.vulkan.VkMemoryHeap",
+  "org.lwjgl.vulkan.VkPhysicalDevice",
+  "org.lwjgl.vulkan.VkPhysicalDeviceLimits",
+  "org.lwjgl.vulkan.VkPhysicalDeviceMemoryBudgetPropertiesEXT",
+  "org.lwjgl.vulkan.VkPhysicalDeviceMemoryProperties",
+  "and 43 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-22",
-  "kiln": "development build 2026-11-21 (7ae1d6b0)",
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
   "file": "eminus-0.10.7+mc26.3.jar",
   "published": "2026-11-20"
  },
@@ -90,5 +90,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; runs threads of its own"
  },
- "lacks": 118
+ "lacks": 83
 }

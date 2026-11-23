@@ -1,7 +1,7 @@
 {
  "id": "gitup",
  "name": "Gitup",
- "version": "1.0.0",
+ "version": "26.3.1.0",
  "status": "not-checked",
  "statusLabel": "Not checked",
  "statusMeaning": "In the catalogue, not checked yet.",
@@ -10,13 +10,13 @@
  "description": "This project adds Git™-based backups of servers and clients to Minecraft",
  "needs": [],
  "roadmap": "",
- "evidence": "Everything its code calls is covered by Kiln development build 2026-11-21 (7ae1d6b0) (12 classes, 13 members). Not run yet.",
+ "evidence": "Everything its code calls is covered by Kiln development build 2026-11-23 (5434d019) (10 classes, 11 members). Not run yet.",
  "library": false,
  "scanned": {
-  "date": "2026-11-22",
-  "kiln": "development build 2026-11-21 (7ae1d6b0)",
-  "file": "gitup-1.0.0.jar",
-  "published": "2026-10-03"
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
+  "file": "gitup-fabric-26.3-26.3.1.0.jar",
+  "published": "2026-11-22"
  },
  "reports": {
   "works": 0,
@@ -26,26 +26,26 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-19",
-  "kiln": "development build 2026-11-19 (aec290a0)",
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
  },
  "entrypoints": {
-  "main": 1,
-  "client": 1
+  "main": 1
  },
  "mixins": true,
  "depends": [
+  "cloth-config",
   "fabric-api",
   "fabricloader",
   "java",
   "minecraft"
  ],
  "softOff": {
-  "class": "safe",
-  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  "class": "partial",
+  "why": "runs threads of its own"
  },
  "lacks": 0
 }

@@ -1,7 +1,7 @@
 {
  "id": "architects-akilib",
  "name": "Aki Lib",
- "version": "0.1.0",
+ "version": "0.3.0",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,20 +10,16 @@
  "description": "Shared library for the mods of akicater: custom block and item models, shading, item poses and compat helpers.",
  "needs": [
   "QuadEmitter.postMaterialBake()",
-  "ItemStackRenderState.LayerRenderState.emitter()",
-  "ItemStackRenderState.LayerRenderState.setFoilType()",
-  "ItemStackRenderState.LayerRenderState.setItemTransform()",
-  "ItemStackRenderState.LayerRenderState.setParticleMaterial()",
-  "ItemStackRenderState.LayerRenderState.setUsesBlockLight()"
+  "ItemStackRenderState.LayerRenderState.emitter()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-22",
-  "kiln": "development build 2026-11-21 (7ae1d6b0)",
-  "file": "akilib-mc26.3-fabric-0.1.0-dev.jar",
-  "published": "2026-11-09"
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
+  "file": "akilib-mc26.3-fabric-0.3.0.jar",
+  "published": "2026-11-22"
  },
  "reports": {
   "works": 0,
@@ -33,8 +29,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-21",
-  "kiln": "development build 2026-11-21 (3f1dc50b)",
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -51,8 +47,8 @@
   "minecraft"
  ],
  "softOff": {
-  "class": "safe",
-  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  "class": "partial",
+  "why": "runs threads of its own"
  },
- "lacks": 6
+ "lacks": 2
 }

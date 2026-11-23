@@ -1,0 +1,59 @@
+{
+ "id": "instant-auth",
+ "name": "Instant Auth",
+ "version": "1.0.4+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/instant-auth",
+ "author": "Eloxad",
+ "description": "Refresh Microsoft accounts in-game before you join, without a launcher restart. Keeps the account you launched with.",
+ "needs": [
+  "an access widener",
+  "Mixin: 1 point inside the game's methods",
+  "com.mojang.authlib.services.MinecraftServicesUserApiService",
+  "MinecraftServicesDiscoveryService.createOffline()",
+  "Minecraft.playerSocialManager",
+  "PlayerFaceExtractor.extractRenderState()",
+  "PlayerSkinRenderCache.lookup()",
+  "IntegratedServer.setSingleplayerProfile()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
+  "file": "instantauth-1.0.4+26.3.jar",
+  "published": "2026-11-22"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 6
+}

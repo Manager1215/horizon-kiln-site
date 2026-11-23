@@ -1,0 +1,61 @@
+{
+ "id": "harder-than-hard",
+ "name": "Harder than Hard",
+ "version": "2.1+mc26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/harder-than-hard",
+ "author": "Beveyboygames",
+ "description": "It's definitely harder than hard.",
+ "needs": [
+  "Mixin: 27 points inside the game's methods",
+  "net.minecraft.world.entity.ai.goal.BreakDoorGoal",
+  "net.minecraft.world.entity.monster.hoglin.HoglinAi",
+  "net.minecraft.world.entity.monster.piglin.PiglinBruteAi",
+  "net.minecraft.world.item.ServerItemCooldowns",
+  "DamageSources.explosion()",
+  "EntityTypes.GIANT",
+  "AttributeInstance.addOrReplacePermanentModifier()",
+  "ProjectileUtil.getHitEntitiesAlong()",
+  "AttackRange.defaultFor()",
+  "NodeEvaluator.mob"
+ ],
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
+  "file": "harder-than-hard-2.1+mc26.3.jar",
+  "published": "2026-11-22"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@modify-args and @redirect into the game's classes"
+ },
+ "lacks": 10
+}

@@ -1,7 +1,7 @@
 {
  "id": "xnet",
  "name": "XNet",
- "version": "26.3-10.0.1-fabric",
+ "version": "26.3-10.0.2-fabric",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,29 +10,19 @@
  "description": "A highly optimized networking cable system for items, energy, fluids, information, etc.",
  "needs": [
   "an access widener",
-  "net.minecraft.client.model.geom.builders.UVPair",
-  "net.minecraft.client.resources.model.geometry.QuadCollection.Builder",
-  "PoseStack.last()",
-  "PoseStack.Pose.pose()",
-  "GameRenderer.mainCamera()",
-  "ModelState.transformation()",
-  "TextureAtlasSprite.transparency()",
-  "UnbakedModel.ambientOcclusion()",
-  "UnbakedModel.guiLight()",
-  "UnbakedModel.parent()",
-  "UnbakedModel.textureSlots()",
-  "UnbakedModel.transforms()",
-  "BakedQuad.MaterialInfo.of()",
-  "MaterialBaker.resolveSlot()"
+  "EntityBlock.COLOR",
+  "EntityBlock.calculateState()",
+  "EntityBlock.getStateForPlacement()",
+  "EntityBlock.popResource()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-22",
-  "kiln": "development build 2026-11-21 (7ae1d6b0)",
-  "file": "xnet-fabric-26.3-10.0.1-fabric.jar",
-  "published": "2026-10-29"
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
+  "file": "xnet-fabric-26.3-10.0.2-fabric.jar",
+  "published": "2026-11-22"
  },
  "reports": {
   "works": 0,
@@ -42,8 +32,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -68,5 +58,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 14
+ "lacks": 4
 }

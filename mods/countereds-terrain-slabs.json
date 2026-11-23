@@ -1,7 +1,7 @@
 {
  "id": "countereds-terrain-slabs",
  "name": "Countered's Terrain Slabs",
- "version": "3.5.0",
+ "version": "3.5.1",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,29 +9,45 @@
  "author": "Countered",
  "description": "A world generation mod that improves the terrain by adding slabs",
  "needs": [
-  "Mixin: 4 points inside the game's methods",
+  "Mixin: 7 points inside the game's methods",
   "net.fabricmc.fabric.impl.client.indigo.renderer.aocalc.AoCalculator",
-  "net.minecraft.client.resources.model.geometry.BakedQuad.MaterialFlags",
+  "net.minecraft.data.worldgen.features.NetherFeatures",
   "net.minecraft.world.level.levelgen.feature.DeltaFeature",
   "net.minecraft.world.level.levelgen.feature.SnowAndFreezeFeature",
   "ResourceManagerHelper.registerBuiltinResourcePack()",
   "BlockTintSources.grassBlock()",
   "BlockStateModel.createGeometryKey()",
   "BlockStateModel.emitQuads()",
-  "WorldGenRegion.getBlockState()",
+  "VegetationPlacements.GRASS_BONEMEAL",
   "WorldGenRegion.setBlock()",
   "WorldGenRegion.setBlock()",
+  "BlockItemTags.SMELTS_TO_GLASS",
+  "BlockTags.AXOLOTLS_SPAWNABLE_ON",
+  "BlockTags.AZALEA_ROOT_REPLACEABLE",
+  "BlockTags.BENEATH_TREE_PODZOL_REPLACEABLE",
   "BlockTags.CANNOT_SUPPORT_SNOW_LAYER",
+  "BlockTags.FROGS_SPAWNABLE_ON",
+  "BlockTags.MANGROVE_LOGS_CAN_GROW_THROUGH",
+  "BlockTags.MANGROVE_ROOTS_CAN_GROW_THROUGH",
+  "BlockTags.SNIFFER_DIGGABLE_BLOCK",
+  "BlockTags.VALID_SPAWN",
+  "BonemealableBlock.TYPE",
+  "BonemealableBlock.WATERLOGGED",
+  "Fallable.TYPE",
+  "Fallable.WATERLOGGED",
+  "Fallable.asItem()",
+  "Fallable.defaultBlockState()",
+  "Fallable.popResource()",
   "BulkSectionAccess.getBlockState()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-22",
-  "kiln": "development build 2026-11-21 (7ae1d6b0)",
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
   "file": "Terrain Slabs v3.5.0-26.3-fabric.jar",
-  "published": "2026-11-15"
+  "published": "2026-11-22"
  },
  "reports": {
   "works": 0,
@@ -41,8 +57,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -65,5 +81,5 @@
   "class": "restart",
   "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
  },
- "lacks": 13
+ "lacks": 29
 }

@@ -10,23 +10,20 @@
  "description": "Ferrite — A Rust-powered Minecraft mod improving chunk generation performance, with 7× faster terrain compute proven on equivalent workloads. Low-end hardware testing needed to ship the full optimization.",
  "needs": [
   "Mixin: 10 points inside the game's methods",
-  "net.minecraft.client.gui.screens.worldselection.WorldCreationUiState",
-  "net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal",
   "net.minecraft.world.level.PathNavigationRegion",
   "net.minecraft.world.level.chunk.status.ChunkStatusTasks",
   "net.minecraft.world.level.entity.PersistentEntitySectionManager.Callback",
   "net.minecraft.world.level.entity.TransientEntitySectionManager.Callback",
-  "net.minecraft.world.level.levelgen.material.condition.BiomeCondition",
   "net.minecraft.world.level.levelgen.material.condition.NotCondition",
   "net.minecraft.world.level.levelgen.material.rule.BlockRule",
   "net.minecraft.world.level.levelgen.placement.FeaturePlacer",
   "net.minecraft.world.level.levelgen.structure.templatesystem.AllOfRuleTest",
   "net.minecraft.world.level.levelgen.structure.templatesystem.AnyOfRuleTest",
-  "net.minecraft.world.level.levelgen.structure.templatesystem.BlockStateMatchTest",
   "net.minecraft.world.level.levelgen.structure.templatesystem.HeightMatchTest",
   "net.minecraft.world.level.levelgen.structure.templatesystem.NotRuleTest",
   "net.minecraft.world.level.levelgen.synth.SmearedPerlinNoise",
   "net.minecraft.world.level.pathfinder.PathFinder",
+  "WorldCreationUiState.getTargetFolder()",
   "ServerChunkCache.addTicketAndLoadWithRadius()",
   "WorldGenRegion.ensureCanWrite()",
   "WorldGenRegion.getMaxY()",
@@ -34,7 +31,6 @@
   "WorldGenRegion.getMinY()",
   "WorldGenRegion.getSectionsCount()",
   "Util.runNamed()",
-  "FeatureFlags.REDSTONE_EXPERIMENTS",
   "Climate.ParameterPoint.fitness()",
   "SignBlockEntity.getPlayerWhoMayEdit()",
   "BlockState.getTicker()",
@@ -51,8 +47,8 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-22",
-  "kiln": "development build 2026-11-21 (7ae1d6b0)",
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
   "file": "ferrite-0.7.5-alpha+26.3.jar",
   "published": "2026-10-23"
  },
@@ -85,5 +81,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
  },
- "lacks": 36
+ "lacks": 32
 }

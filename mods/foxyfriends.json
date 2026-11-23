@@ -10,11 +10,6 @@
  "description": "Make foxes your friends: tame them, dress them in armor and let them guard you",
  "needs": [
   "Mixin: 4 points inside the game's methods",
-  "net.fabricmc.fabric.api.entity.event.v1.ServerEntityLevelChangeEvents.AfterEntityChange",
-  "net.minecraft.client.renderer.entity.FoxRenderer",
-  "net.minecraft.client.renderer.entity.state.FoxRenderState",
-  "net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal",
-  "net.minecraft.world.entity.ai.goal.target.TargetGoal",
   "net.minecraft.world.entity.animal.fox.Fox.DefendTrustedTargetGoal",
   "net.minecraft.world.entity.animal.fox.Fox.FoxAlertableEntitiesSelector",
   "net.minecraft.world.entity.animal.fox.Fox.FoxFollowParentGoal",
@@ -22,25 +17,19 @@
   "net.minecraft.world.entity.animal.fox.Fox.FoxSearchForItemsGoal",
   "net.minecraft.world.entity.animal.fox.Fox.SeekShelterGoal",
   "net.minecraft.world.entity.animal.fox.Fox.SleepGoal",
-  "net.minecraft.world.item.NameTagItem",
-  "net.minecraft.world.item.equipment.ArmorMaterials",
-  "ServerEntityLevelChangeEvents.AFTER_ENTITY_CHANGE_LEVEL",
   "AvatarRenderState.setData()",
   "EntityRenderState.getData()",
+  "FoxRenderState.getData()",
+  "FoxRenderState.setData()",
   "DamageTypeTags.NO_WOLF_RETALIATION",
   "EntityReference.codec()",
   "EntityReference.getEntity()",
   "EntityReference.streamCodec()",
   "LivingEntity.getLastDamageSource()",
   "LivingEntity.is()",
-  "MoveTowardsRestrictionGoal.canContinueToUse()",
-  "MoveTowardsRestrictionGoal.canUse()",
-  "TargetingConditions.DEFAULT",
-  "Fox.clearHome()",
   "Fox.getInLoveTime()",
   "Fox.getLastDamageSource()",
   "Fox.getWalkTargetValue()",
-  "Fox.setGuaranteedDrop()",
   "Fox.setIsCrouching()",
   "Fox.setIsInterested()",
   "Fox.setIsPouncing()",
@@ -48,16 +37,14 @@
   "Equippable.Builder.setAllowedEntities()",
   "Equippable.Builder.setCanBeSheared()",
   "Equippable.Builder.setShearingSound()",
-  "WalkNodeEvaluator.getPathTypeStatic()",
-  "Validatable.validateHolder()",
-  "and 1 more"
+  "ValidationContextSource.entityContext()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-22",
-  "kiln": "development build 2026-11-21 (7ae1d6b0)",
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
   "file": "foxyfriends-fabric-26.3-0.3.1.jar",
   "published": "2026-11-14"
  },
@@ -91,5 +78,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 41
+ "lacks": 28
 }

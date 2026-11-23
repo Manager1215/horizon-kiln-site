@@ -1,0 +1,67 @@
+{
+ "id": "vistas",
+ "name": "Vistas",
+ "version": "3.2.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/vistas",
+ "author": "Prospector",
+ "description": "Allows the addition of new title screen panoramas",
+ "needs": [
+  "an access widener",
+  "Mixin: 5 points inside the game's methods",
+  "net.minecraft.client.renderer.Panorama",
+  "net.minecraft.client.renderer.state.gui.PanoramaRenderState",
+  "net.minecraft.client.renderer.texture.CubeMapTexture",
+  "GlStateManager._blendFuncSeparate()",
+  "GlStateManager._disableBlend()",
+  "Options.panoramaSpeed()",
+  "GameRenderer.panorama()",
+  "Projection.setupPerspective()",
+  "RenderPipelines.PANORAMA",
+  "GuiRenderState.panoramaRenderState",
+  "TextureManager.registerAndLoad()",
+  "TextureManager.registerForNextReload()",
+  "Musics.MENU"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": true,
+ "scanned": {
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
+  "file": "vistas-3.2.0.jar",
+  "published": "2026-11-22"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": true,
+ "depends": [
+  "cloth-config",
+  "fabric-api",
+  "fabricloader",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 13
+}

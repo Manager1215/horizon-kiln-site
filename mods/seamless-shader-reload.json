@@ -1,0 +1,66 @@
+{
+ "id": "seamless-shader-reload",
+ "name": "Seamless Shader Reload",
+ "version": "0.3.6+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/seamless-shader-reload",
+ "author": "mikovogel2008",
+ "description": "Reloads and applies new shader settings without loading time",
+ "needs": [
+  "Mixin: 1 point inside the game's methods",
+  "org.lwjgl.BufferUtils",
+  "org.lwjgl.opengl.ARBParallelShaderCompile",
+  "org.lwjgl.opengl.GL",
+  "org.lwjgl.opengl.GL20C",
+  "org.lwjgl.opengl.GL30C",
+  "org.lwjgl.opengl.GL33",
+  "org.lwjgl.opengl.GL41C",
+  "org.lwjgl.opengl.GL43C",
+  "org.lwjgl.opengl.GLCapabilities",
+  "org.lwjgl.opengl.KHRParallelShaderCompile",
+  "org.lwjgl.sdl.SDLVideo",
+  "org.lwjgl.system.MemoryStack",
+  "org.lwjgl.system.MemoryUtil",
+  "Minecraft.levelRenderer",
+  "LevelExtractor.lastViewDistance()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
+  "file": "seamless-shader-reload-0.3.6+26.3.jar",
+  "published": "2026-11-19"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 15
+}

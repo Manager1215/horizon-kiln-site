@@ -2,19 +2,19 @@
  "id": "idisplay",
  "name": "IDisplay",
  "version": "1.3-SNAPSHOT",
- "status": "not-checked",
- "statusLabel": "Not checked",
- "statusMeaning": "In the catalogue, not checked yet.",
+ "status": "works",
+ "statusLabel": "Works",
+ "statusMeaning": "Tried in the game with Kiln.",
  "url": "https://modrinth.com/mod/idisplay",
  "author": "Enabify",
  "description": "Just a simple mod: hold V key while hovering over an item in your inventory to see more details",
  "needs": [],
  "roadmap": "",
- "evidence": "Everything its code calls is covered by Kiln development build 2026-11-21 (7ae1d6b0) (16 classes, 16 members). Not run yet.",
+ "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-22",
-  "kiln": "development build 2026-11-21 (7ae1d6b0)",
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
   "file": "idisplay-1.3-SNAPSHOT.jar",
   "published": "2026-09-22"
  },
@@ -47,5 +47,13 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 0
+ "lacks": 0,
+ "works": "Hold V while hovering an item to add its id and component changes to its tooltip. Hovering a diamond sword with damage 40 while V is held (pressed before the inventory opened): the tooltip adds 'minecraft:diamond_sword' and '[minecraft:damage=40]'; without V it has neither.",
+ "checked": {
+  "kiln": "main",
+  "commit": "fb5b5cad7ae8d3204eaf2cb4653198505d31a063",
+  "date": "2026-11-21",
+  "horizon": "Nightly 2026-11-04 · 3fb4c31",
+  "by": "kiln/proof.py on the Linux PC"
+ }
 }

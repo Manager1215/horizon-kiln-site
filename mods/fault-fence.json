@@ -10,22 +10,19 @@
  "description": "Isolates data pack errors so valid recipes, advancements, tags, and loot can still load",
  "needs": [
   "Mixin: 9 points inside the game's methods",
-  "net.minecraft.resources.ResourceManagerRegistryLoadTask",
-  "net.minecraft.server.PlayerAdvancements.TriggerInstanceKey",
   "AdvancementHolder.<init>()",
   "PlayerPredicate.CODEC",
   "KnownPack.isVanilla()",
   "Resource.knownPackInfo()",
   "TagEntry.verifyIfPresent()",
-  "AllOfCondition.allOf()",
-  "AnyOfCondition.Builder.or()"
+  "AllOfCondition.allOf()"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-22",
-  "kiln": "development build 2026-11-21 (7ae1d6b0)",
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
   "file": "faultfence-fabric-0.1.1+26.3.jar",
   "published": "2026-11-09"
  },
@@ -59,5 +56,5 @@
   "class": "restart",
   "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own"
  },
- "lacks": 9
+ "lacks": 6
 }

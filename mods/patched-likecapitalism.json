@@ -1,0 +1,72 @@
+{
+ "id": "patched-likecapitalism",
+ "name": "Patched",
+ "version": "0.0.1",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/patched-likecapitalism",
+ "author": "LikeCapitalism",
+ "description": "This Project adds simple Patches to the Vanilla game to make your experience better",
+ "needs": [
+  "Mixin: 11 points inside the game's methods",
+  "net.minecraft.client.gui.components.ChatComponent.DrawingBackgroundGraphicsAccess",
+  "net.minecraft.client.gui.components.ChatComponent.DrawingFocusedGraphicsAccess",
+  "net.minecraft.client.renderer.LightmapRenderStateExtractor",
+  "net.minecraft.client.renderer.ScreenEffectRenderer",
+  "net.minecraft.client.renderer.fog.environment.LavaFogEnvironment",
+  "net.minecraft.client.renderer.fog.environment.WaterFogEnvironment",
+  "net.minecraft.client.renderer.state.level.PlayerRenderState.WaterOverlay",
+  "net.minecraft.client.renderer.state.level.WeatherRenderState",
+  "SubmitRenderPhases.SOLID",
+  "Hud.getDebugOverlay()",
+  "OptionsList.addBig()",
+  "ServerSelectionList.setSelected()",
+  "PlayerModel.translateToHead()",
+  "SubmitNodeCollector.submitCustom()",
+  "LightmapRenderState.brightness",
+  "LightmapRenderState.needsUpdate",
+  "LightmapRenderState.nightVisionColor",
+  "LightmapRenderState.nightVisionEffectIntensity",
+  "BlockPos.offset()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
+  "file": "patched-1.0.0.jar",
+  "published": "2026-11-15"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes"
+ },
+ "lacks": 19
+}

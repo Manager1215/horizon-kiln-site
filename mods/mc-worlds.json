@@ -1,7 +1,7 @@
 {
  "id": "mc-worlds",
  "name": "Worlds: Multiverse for Fabric",
- "version": "2.2.2+26.3",
+ "version": "2.3.0+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,11 +9,9 @@
  "author": "Wroud",
  "description": "Run unlimited worlds on one Fabric server, like Multiverse on Paper, World Manager or Multiworld. Each world has its own time, weather and rules. Groups add linked portals and separate inventories, Trinkets included, and temporary worlds run minigames.",
  "needs": [
-  "Mixin: 65 points inside the game's methods",
-  "net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder.EnumRuleBuilder",
+  "Mixin: 66 points inside the game's methods",
   "net.fabricmc.fabric.impl.attachment.AttachmentTargetImpl",
   "net.fabricmc.fabric.impl.gamerule.EnumRuleCommand",
-  "net.minecraft.client.gui.screens.options.InWorldGameRulesScreen",
   "net.minecraft.client.gui.screens.worldselection.AbstractGameRulesScreen.RuleList.1",
   "net.minecraft.client.renderer.item.properties.select.ContextDimension",
   "net.minecraft.nbt.NbtFormatException",
@@ -25,41 +23,43 @@
   "net.minecraft.server.commands.WeatherCommand",
   "net.minecraft.server.level.PlayerSpawnFinder",
   "net.minecraft.server.level.ServerPlayer.SavedPosition",
-  "net.minecraft.util.filefix.FileFixerUpper",
-  "net.minecraft.util.filefix.FileFixerUpper.Builder",
   "net.minecraft.util.worldupdate.RegionStorageUpgrader",
   "net.minecraft.util.worldupdate.RegionStorageUpgrader.Builder",
   "net.minecraft.util.worldupdate.RegionStorageUpgrader.TagModifier",
   "net.minecraft.world.RandomSequences",
   "net.minecraft.world.clock.ClockTimeMarkers",
-  "net.minecraft.world.clock.ServerClockManager.MoveResult",
   "net.minecraft.world.entity.ai.village.VillageSiege",
   "net.minecraft.world.entity.npc.CatSpawner",
   "net.minecraft.world.entity.npc.wanderingtrader.WanderingTraderSpawner",
-  "net.minecraft.world.level.block.FrostedIceBlock",
-  "net.minecraft.world.level.dimension.end.EnderDragonFight",
   "net.minecraft.world.level.levelgen.PatrolSpawner",
   "net.minecraft.world.level.levelgen.PhantomSpawner",
   "net.minecraft.world.level.levelgen.feature.EndGatewayFeature",
   "net.minecraft.world.level.levelgen.feature.EndPlatformFeature",
   "net.minecraft.world.level.saveddata.WanderingTraderData",
-  "GameRuleBuilder.forEnum()",
   "SharedConstants.DEBUG_ONLY_GENERATE_HALF_THE_WORLD",
   "SharedConstants.DEBUG_WORLD_RECREATE",
   "SharedConstants.ILLEGAL_FILE_CHARACTERS",
   "CommandBuildContext.enabledFeatures()",
-  "ResourceKeyArgument.getRegistryKey()",
   "MiscOverworldFeatures.BONUS_CHEST",
-  "and 53 more"
+  "MinecraftServer.getProxy()",
+  "MinecraftServer.getRespawnData()",
+  "MinecraftServer.isCurrentlySaving()",
+  "MinecraftServer.onGameRuleChanged()",
+  "MinecraftServer.setRespawnData()",
+  "ChunkMap.hasWork()",
+  "ServerChunkCache.addTicketAndLoadWithRadius()",
+  "ServerChunkCache.deactivateTicketsOnClosing()",
+  "ServerLevel.<init>()",
+  "and 46 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-22",
-  "kiln": "development build 2026-11-21 (7ae1d6b0)",
-  "file": "worlds-2.2.2+26.3.jar",
-  "published": "2026-11-19"
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
+  "file": "worlds-2.3.0+26.3.jar",
+  "published": "2026-11-22"
  },
  "reports": {
   "works": 0,
@@ -69,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -89,5 +89,5 @@
   "class": "restart",
   "why": "@overwrite and @redirect and @wrap-method and @wrap-operation into the game's classes; @modify-arg Kiln doesn't guard; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
  },
- "lacks": 139
+ "lacks": 114
 }

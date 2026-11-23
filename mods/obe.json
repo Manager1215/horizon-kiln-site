@@ -1,7 +1,7 @@
 {
  "id": "obe",
  "name": "Optimized Block Entities [OBE]",
- "version": "1.2.13",
+ "version": "1.2.14",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -11,32 +11,18 @@
  "needs": [
   "an access widener",
   "Mixin: 3 points inside the game's methods",
-  "com.mojang.blaze3d.platform.Transparency",
-  "net.minecraft.client.model.geom.builders.UVPair",
-  "net.minecraft.client.model.object.banner.BannerFlagModel",
   "net.minecraft.client.renderer.blockentity.AbstractSignRenderer",
-  "net.minecraft.client.renderer.blockentity.BannerRenderer",
   "net.minecraft.client.renderer.blockentity.BellRenderer",
   "net.minecraft.client.renderer.blockentity.CopperGolemStatueBlockRenderer",
   "net.minecraft.client.renderer.blockentity.ShulkerBoxRenderer",
   "net.minecraft.client.renderer.blockentity.WallAndGroundTransformations",
   "net.minecraft.client.renderer.blockentity.state.BannerRenderState",
-  "net.minecraft.client.renderer.blockentity.state.ChestRenderState.ChestMaterialType",
-  "net.minecraft.client.renderer.chunk.SectionCompiler.Results",
   "net.minecraft.client.renderer.entity.CushionRenderer",
-  "net.minecraft.client.resources.model.SimpleModelWrapper",
-  "net.minecraft.client.resources.model.geometry.BakedQuad.MaterialFlags",
-  "net.minecraft.client.resources.model.geometry.QuadCollection.Builder",
-  "net.minecraft.world.level.block.TrappedChestBlock",
   "BufferBuilder.putBlockBakedQuad()",
-  "PoseStack.last()",
-  "PoseStack.mulPose()",
-  "PoseStack.Pose.normal()",
-  "PoseStack.Pose.pose()",
+  "PoseStack.rotateAround()",
   "Minecraft.getBlockEntityRenderDispatcher()",
   "Minecraft.isTextFilteringEnabled()",
   "Minecraft.levelExtractor",
-  "EntityModelSet.bakeLayer()",
   "ModelLayers.BELL",
   "ModelLayers.CHEST",
   "ModelLayers.COPPER_GOLEM",
@@ -51,16 +37,30 @@
   "ModelLayers.PIGLIN_HEAD",
   "ModelLayers.PLAYER_HEAD",
   "ModelLayers.SHULKER_BOX",
-  "and 37 more"
+  "ModelLayers.SKELETON_SKULL",
+  "ModelLayers.STANDING_BANNER",
+  "ModelLayers.WALL_BANNER",
+  "ModelLayers.WITHER_SKELETON_SKULL",
+  "ModelLayers.ZOMBIE_HEAD",
+  "ModelPart.Vertex.worldX()",
+  "ModelPart.Vertex.worldY()",
+  "ModelPart.Vertex.worldZ()",
+  "MultiblockChestResources.select()",
+  "Sheets.BANNER_BASE",
+  "Sheets.CHEST_COPPER",
+  "Sheets.CHEST_REGULAR",
+  "Sheets.CHEST_TRAPPED",
+  "Sheets.DECORATED_POT_BASE",
+  "and 20 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-22",
-  "kiln": "development build 2026-11-21 (7ae1d6b0)",
-  "file": "obe+26.3-1.2.13.jar",
-  "published": "2026-11-19"
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
+  "file": "obe+26.3-1.2.14.jar",
+  "published": "2026-11-22"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-20",
-  "kiln": "development build 2026-11-20 (eda5a4a5)",
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -94,5 +94,5 @@
   "class": "restart",
   "why": "@wrap-method and @wrap-operation into the game's classes"
  },
- "lacks": 88
+ "lacks": 60
 }

@@ -14,23 +14,17 @@
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType.Builder",
   "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType.Builder.Mob",
-  "net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal",
   "net.minecraft.world.entity.monster.spider.Spider.SpiderAttackGoal",
   "net.minecraft.world.entity.monster.spider.Spider.SpiderTargetGoal",
-  "net.minecraft.world.level.BlockCollisions",
   "net.minecraft.world.level.pathfinder.BinaryHeap",
   "net.minecraft.world.level.pathfinder.PathFinder",
   "ServerEntity.tickCount",
   "ServerEntity.updateInterval",
   "Entity.MovementEmission.emitsAnything()",
-  "EntityType.spawn()",
   "Mob.canStandOnFluid()",
-  "Mob.getJumpControl()",
   "Mob.getMaxFallDistance()",
   "GroundPathNavigation.createPath()",
-  "GroundPathNavigation.doStuckDetection()",
   "PathNavigation.canCutCorner()",
-  "Spider.createAttributes()",
   "Node.cameFrom",
   "Node.createHash()",
   "Node.distanceManhattan()",
@@ -49,16 +43,19 @@
   "Path.getDistToTarget()",
   "Path.getEntityPosAtNode()",
   "Path.getNextEntityPos()",
-  "Path.isDone()",
   "Path.setNextNodeIndex()",
-  "and 6 more"
+  "Target.getBestNode()",
+  "Target.setReached()",
+  "Target.updateBest()",
+  "WalkNodeEvaluator.done()",
+  "WalkNodeEvaluator.prepare()"
  ],
  "roadmap": "Code next to data (0.3), Mixin (0.5)",
  "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
  "library": false,
  "scanned": {
-  "date": "2026-11-22",
-  "kiln": "development build 2026-11-21 (7ae1d6b0)",
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
   "file": "Spiders-2.0-1.1.1+26.3.jar",
   "published": "2026-10-01"
  },
@@ -90,5 +87,5 @@
   "class": "restart",
   "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; generates in the world"
  },
- "lacks": 46
+ "lacks": 38
 }

@@ -1,0 +1,73 @@
+{
+ "id": "musket-mod-reloaded",
+ "name": "Musket Mod Reloaded",
+ "version": "1.6.5",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/musket-mod-reloaded",
+ "author": "Lufurrius",
+ "description": "Fork of ewewukek's Musket Mod with continued support for modern versions of Minecraft.",
+ "needs": [
+  "an access widener",
+  "net.minecraft.world.entity.ai.goal.RangedCrossbowAttackGoal",
+  "MultiPlayerGameMode.releaseUsingItem()",
+  "HumanoidRenderState.isUsingItem",
+  "HumanoidRenderState.leftArmPose",
+  "HumanoidRenderState.leftHandItemStack",
+  "HumanoidRenderState.rightArmPose",
+  "HumanoidRenderState.rightHandItemStack",
+  "SkeletonRenderState.isUsingItem",
+  "SkeletonRenderState.leftArmPose",
+  "SkeletonRenderState.rightArmPose",
+  "EntityType.Builder.alwaysUpdateVelocity()",
+  "Inventory.removeItem()",
+  "AbstractHurtingProjectile.defineSynchedData()",
+  "SmithingTemplateItem.DESCRIPTION_FORMAT",
+  "TntBlock.prime()",
+  "LootTable.createStackSplitter()",
+  "LootContextParamSets.SELECTOR",
+  "ScoreAccess.increment()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
+  "file": "musketmod_reloaded-26.3-fabric-1.6.5.jar",
+  "published": "2026-11-22"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": true,
+ "depends": [
+  "cloth-config",
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 18
+}

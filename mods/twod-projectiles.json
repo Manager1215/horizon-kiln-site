@@ -10,28 +10,19 @@
  "description": "Makes projectiles (arrows, firework rockets, trident, etc.) look 2D!",
  "needs": [
   "Mixin: 5 points inside the game's methods",
-  "net.minecraft.client.renderer.entity.ArrowRenderer",
   "net.minecraft.client.renderer.entity.FireworkEntityRenderer",
-  "net.minecraft.client.renderer.entity.ThrownItemRenderer",
-  "net.minecraft.client.renderer.entity.ThrownTridentRenderer",
-  "net.minecraft.client.renderer.entity.layers.ArrowLayer",
-  "net.minecraft.client.renderer.entity.layers.StuckInBodyLayer",
-  "net.minecraft.client.renderer.entity.state.ArrowRenderState",
   "net.minecraft.client.renderer.entity.state.FireworkRocketRenderState",
-  "net.minecraft.client.renderer.entity.state.ThrownItemRenderState",
-  "net.minecraft.client.renderer.entity.state.ThrownTridentRenderState",
-  "EntityRendererProvider.Context.getItemModelResolver()",
-  "ItemModelResolver.updateForNonLiving()",
+  "ArrowRenderState.shake",
+  "ThrownTridentRenderState.xRot",
   "Arrow.getColor()",
-  "ThrownTrident.getWeaponItem()",
   "ThrownTrident.shakeTime"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-22",
-  "kiln": "development build 2026-11-21 (7ae1d6b0)",
+  "date": "2026-11-23",
+  "kiln": "development build 2026-11-23 (5434d019)",
   "file": "twod_projectiles-fabric-26.3-1.1.1.jar",
   "published": "2026-11-02"
  },
@@ -64,5 +55,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes"
  },
- "lacks": 15
+ "lacks": 6
 }
