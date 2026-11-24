@@ -1,0 +1,67 @@
+{
+ "id": "mochi-backup",
+ "name": "Mochi Backup",
+ "version": "3.0.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/mochi-backup",
+ "author": "leafspeak",
+ "description": "a cute, simple, and reliable backup mod for Fabric.",
+ "needs": [
+  "org.apache.commons.compress.archivers.tar.TarArchiveEntry",
+  "org.apache.commons.compress.archivers.tar.TarArchiveInputStream",
+  "org.apache.commons.compress.archivers.tar.TarArchiveOutputStream",
+  "org.apache.commons.compress.archivers.zip.ParallelScatterZipCreator",
+  "org.apache.commons.compress.archivers.zip.Zip64Mode",
+  "org.apache.commons.compress.archivers.zip.ZipArchiveEntry",
+  "org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream",
+  "org.apache.commons.compress.archivers.zip.ZipFile",
+  "org.apache.commons.compress.compressors.CompressorException",
+  "org.apache.commons.compress.compressors.CompressorStreamFactory",
+  "org.apache.commons.compress.compressors.gzip.GzipCompressorInputStream",
+  "org.apache.commons.compress.compressors.gzip.GzipCompressorOutputStream",
+  "org.apache.commons.compress.parallel.InputStreamSupplier",
+  "org.apache.commons.compress.utils.IOUtils",
+  "LevelStorageSource.LevelDirectory.directoryName()",
+  "LevelStorageSource.LevelStorageAccess.getLevelDirectory()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-24",
+  "kiln": "development build 2026-11-24 (73dc2fb1)",
+  "file": "mochi-3.0.0.jar",
+  "published": "2026-10-05"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-24",
+  "kiln": "development build 2026-11-24 (73dc2fb1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "modmenu": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own"
+ },
+ "lacks": 16
+}

@@ -1,7 +1,7 @@
 {
  "id": "countereds-accurate-hitboxes",
  "name": "Countered's Accurate Hitboxes",
- "version": "2.0.2",
+ "version": "2.2.1",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,17 +9,23 @@
  "author": "Countered",
  "description": "A mod that changes hit calculation to use the actual entity model",
  "needs": [
-  "Mixin: 2 points inside the game's methods",
-  "Options.keyDebugShowHitboxes"
+  "Mixin: 5 points inside the game's methods",
+  "Options.keyDebugShowHitboxes",
+  "RenderTypes.dragonRays()",
+  "RenderTypes.linesDepthBias()",
+  "RenderTypes.linesTranslucent()",
+  "RenderTypes.linesTranslucentNoDepthWrite()",
+  "Entity.getHeadLookAngle()",
+  "EnderDragon.head"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-23",
-  "kiln": "development build 2026-11-23 (5434d019)",
-  "file": "accurate_hitboxes-fabric-2.0.2.jar",
-  "published": "2026-10-08"
+  "date": "2026-11-24",
+  "kiln": "development build 2026-11-24 (73dc2fb1)",
+  "file": "accurate_hitboxes-fabric-2.2.1.jar",
+  "published": "2026-11-23"
  },
  "reports": {
   "works": 0,
@@ -29,13 +35,14 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-24",
+  "kiln": "development build 2026-11-24 (73dc2fb1)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
  },
  "entrypoints": {
+  "main": 1,
   "client": 1
  },
  "mixins": true,
@@ -50,5 +57,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes"
  },
- "lacks": 1
+ "lacks": 7
 }

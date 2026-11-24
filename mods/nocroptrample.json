@@ -13,10 +13,10 @@
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-23",
-  "kiln": "development build 2026-11-23 (5434d019)",
-  "file": "nocroptrample-fabric-1.6-26.3.jar",
-  "published": "2026-09-16"
+  "date": "2026-11-24",
+  "kiln": "development build 2026-11-24 (73dc2fb1)",
+  "file": "nocroptrample-fabric-1.7-26.3.jar",
+  "published": "2026-11-23"
  },
  "reports": {
   "works": 0,
@@ -26,14 +26,15 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-24",
+  "kiln": "development build 2026-11-24 (73dc2fb1)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
  },
  "entrypoints": {
   "main": 1,
+  "client": 1,
   "modmenu": 1
  },
  "mixins": true,
@@ -44,10 +45,10 @@
   "minecraft"
  ],
  "softOff": {
-  "class": "safe",
-  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 0,
+ "lacks": 2,
  "works": "Server command /nocroptrample: status and switches of the prevention of trampling crops by players and mobs.",
  "note": "From Modrinth, unchanged",
  "checked": {

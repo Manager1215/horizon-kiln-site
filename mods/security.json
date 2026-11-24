@@ -1,0 +1,91 @@
+{
+ "id": "security",
+ "name": "Security",
+ "version": "26.3-0.1.7-alpha",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/security",
+ "author": "Kilhaden",
+ "description": "Adds security features to protect your buildings, valuables, and yourself from threats.",
+ "needs": [
+  "ExtendedMenuProvider.getBlockPos()",
+  "ExtendedMenuProvider.getBlockState()",
+  "ExtendedMenuProvider.getLevel()",
+  "ExtendedMenuProvider.hasLevel()",
+  "ExtendedMenuProvider.isOwnedBy()",
+  "ExtendedMenuProvider.isOwnedBy()",
+  "ExtendedMenuProvider.level",
+  "ExtendedMenuProvider.setChanged()",
+  "ExtendedMenuProvider.worldPosition",
+  "BiomeColors.getAverageGrassColor()",
+  "RenderTypes.leash()",
+  "ServerboundContainerClosePacket.getContainerId()",
+  "ServerPlayer.gameMode",
+  "DamageSources.lava()",
+  "DamageSources.lightningBolt()",
+  "Inventory.placeItemBackInInventory()",
+  "AbstractContainerMenu.setRemoteSlot()",
+  "Level.recipeAccess()",
+  "BaseEntityBlock.removeConnections()",
+  "ButtonBlock.removeConnections()",
+  "ButtonBlock.sendWireSignal()",
+  "DispenserBlock.TRIGGERED",
+  "DispenserBlock.getDispenseMethod()",
+  "DoorBlock.WIRE_POWERED",
+  "DoorBlock.removeConnections()",
+  "LeverBlock.POWERED",
+  "LeverBlock.removeConnections()",
+  "LeverBlock.sendWireSignal()",
+  "TrapDoorBlock.WIRE_POWERED",
+  "TrapDoorBlock.playSound()",
+  "TrapDoorBlock.removeConnections()",
+  "BlockEntity.isOwnedBy()",
+  "BlockEntity.isOwnedBy()",
+  "BlockEntity.isOwnedBy()",
+  "DispenserBlockEntity.getRandomSlot()",
+  "FlowingFluid.createFluidStateDefinition()",
+  "FluidState.getValue()",
+  "ValueInput.contains()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-24",
+  "kiln": "development build 2026-11-24 (73dc2fb1)",
+  "file": "security-26.3-0.1.7-alpha.jar",
+  "published": "2026-11-23"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-24",
+  "kiln": "development build 2026-11-24 (73dc2fb1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1,
+  "fabric-datagen": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 38
+}

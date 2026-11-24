@@ -1,0 +1,59 @@
+{
+ "id": "kroia-stockmarket",
+ "name": "StockMarket",
+ "version": "26.3-2.2.0-fabric",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/kroia_stockmarket",
+ "author": "KROIA",
+ "description": "StockMarket is a Minecraft mod that brings a better way for trading to the game. It enables players to trade items on a virtual stock market, making it ideal for multiplayer servers with active economies.",
+ "needs": [
+  "ServerPlayer.gameMode",
+  "Item.Properties.arch$tab()",
+  "ItemCost.withComponents()",
+  "MerchantOffer.copy()",
+  "MerchantOffer.getSpecialPriceDiff()"
+ ],
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-24",
+  "kiln": "development build 2026-11-24 (73dc2fb1)",
+  "file": "stockmarket-fabric-26.3-2.2.0.jar",
+  "published": "2026-11-23"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-24",
+  "kiln": "development build 2026-11-24 (73dc2fb1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "jei_mod_plugin": 1
+ },
+ "mixins": true,
+ "depends": [
+  "architectury",
+  "banksystem",
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "runs threads of its own; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 5
+}

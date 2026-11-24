@@ -1,22 +1,24 @@
 {
  "id": "better-revive-x-trinkets",
  "name": "Better Revive X Trinkets",
- "version": "1.0.2",
- "status": "not-checked",
- "statusLabel": "Not checked",
- "statusMeaning": "In the catalogue, not checked yet.",
+ "version": "1.0.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
  "url": "https://modrinth.com/mod/better-revive-x-trinkets",
  "author": "MrStilu2k6",
  "description": "Safely stores equipped Trinkets items in Better Revive graves and restores them to their exact original slots.",
- "needs": [],
- "roadmap": "",
- "evidence": "Everything its code calls is covered by Kiln development build 2026-11-23 (5434d019) (20 classes, 56 members). Not run yet.",
+ "needs": [
+  "References.TEXT_COMPONENT"
+ ],
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-23",
-  "kiln": "development build 2026-11-23 (5434d019)",
-  "file": "Better Revive X Trinkets - 1.0.2 - Fabric - 26.3.jar",
-  "published": "2026-10-25"
+  "date": "2026-11-24",
+  "kiln": "development build 2026-11-24 (73dc2fb1)",
+  "file": "Better Revive X Trinkets - 1.0.3 - Fabric - 26.3.jar",
+  "published": "2026-11-23"
  },
  "reports": {
   "works": 0,
@@ -26,8 +28,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-24",
+  "kiln": "development build 2026-11-24 (73dc2fb1)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -35,7 +37,7 @@
  "entrypoints": {
   "main": 1
  },
- "mixins": false,
+ "mixins": true,
  "depends": [
   "better_revive",
   "fabric-api",
@@ -48,5 +50,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 0
+ "lacks": 1
 }

@@ -1,7 +1,7 @@
 {
  "id": "totem-villagers-workforce",
  "name": "Totem Villagers",
- "version": "0.1.39",
+ "version": "0.1.40",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,8 +9,12 @@
  "author": "Yunitrish",
  "description": "Build a working village economy with stocked trades, material-backed professions, woodcutters, builders, guard posts, and mangrove villages.",
  "needs": [
+  "Mixin: 2 points inside the game's methods",
   "net.minecraft.client.model.npc.VillagerModel",
+  "net.minecraft.world.entity.ai.behavior.AssignProfessionFromJobSite",
+  "net.minecraft.world.entity.ai.behavior.HarvestFarmland",
   "VillagerRenderState.heldItem",
+  "BlockPos.withinManhattan()",
   "ServerLevel.getEntityInAnyDimension()",
   "ServerLevel.isRaided()",
   "StructureTags.ON_BURIED_TRIAL_CHAMBERS_MAPS",
@@ -24,32 +28,38 @@
   "StructureTags.ON_TAIGA_VILLAGE_MAPS",
   "StructureTags.ON_WOODLAND_MANSION_MAPS",
   "DamageSources.starve()",
+  "DamageTypes.FREEZE",
   "MemoryModuleType.DANGER_DETECTED_RECENTLY",
+  "PathNavigation.createPath()",
+  "PoiManager.findAllClosestFirstWithType()",
+  "PoiManager.release()",
   "PoiManager.take()",
+  "Animal.getLastHurtByPlayerMemoryTime()",
   "Villager.getTicksUsingItem()",
   "Villager.playWorkSound()",
   "VillagerData.withType()",
   "VillagerProfession.getTrades()",
   "MerchantMenu.canRestock()",
   "MerchantMenu.getTraderXp()",
+  "MapDecorations.EMPTY",
   "MerchantOffer.setToOutOfStock()",
   "Level.recipeAccess()",
   "ComposterBlock.insertItem()",
+  "FurnaceBlockEntity.isLocked()",
   "JigsawBlockEntity.EMPTY_ID",
   "JigsawBlockEntity.POOL_CODEC",
   "JigsawBlockEntity.JointType.CODEC",
   "Path.getEntityPosAtNode()",
-  "LootContextParamSets.VILLAGER_TRADE",
-  "LootContextParams.ADDITIONAL_COST_COMPONENT_ALLOWED"
+  "and 3 more"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-23",
-  "kiln": "development build 2026-11-23 (5434d019)",
-  "file": "totem-villagers-0.1.39.jar",
-  "published": "2026-09-17"
+  "date": "2026-11-24",
+  "kiln": "development build 2026-11-24 (73dc2fb1)",
+  "file": "totem-villagers-0.1.40.jar",
+  "published": "2026-11-23"
  },
  "reports": {
   "works": 0,
@@ -59,8 +69,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-24",
+  "kiln": "development build 2026-11-24 (73dc2fb1)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -82,5 +92,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
  },
- "lacks": 32
+ "lacks": 43
 }

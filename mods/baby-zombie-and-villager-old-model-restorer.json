@@ -1,18 +1,18 @@
 {
  "id": "baby-zombie-and-villager-old-model-restorer",
  "name": "Baby Zombie and villager old model restorer",
- "version": "1.0.0-26.3.x",
+ "version": "2.0.0-26.3.x",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
  "url": "https://modrinth.com/mod/baby-zombie-and-villager-old-model-restorer",
  "author": "McAffe13",
- "description": "A Minecraft mod that restores the 1.21.11 pre-Tiny Takeover baby models for baby zombie, husk, drowned, villager, and zombie villager entirely client sided.",
+ "description": "A Minecraft mod that restores the 1.21.11 pre-Tiny Takeover baby models for everybody, but you can toggle it on or off entirely client sided.",
  "needs": [
-  "Mixin: 2 points inside the game's methods",
+  "Mixin: 4 points inside the game's methods",
+  "net.minecraft.client.model.AdultAndBabyModelPair",
   "net.minecraft.client.model.geom.builders.MeshTransformer",
   "net.minecraft.client.model.monster.zombie.BabyDrownedModel",
-  "net.minecraft.client.model.monster.zombie.BabyZombieModel",
   "net.minecraft.client.model.monster.zombie.BabyZombieVillagerModel",
   "net.minecraft.client.model.npc.BabyVillagerModel",
   "net.minecraft.client.model.npc.VillagerModel",
@@ -20,7 +20,9 @@
   "HumanoidModel.BABY_TRANSFORMER",
   "HumanoidModel.createArmorMeshSet()",
   "ModelLayers.DROWNED_BABY_ARMOR",
+  "ModelLayers.HUSK_BABY",
   "ModelLayers.HUSK_BABY_ARMOR",
+  "ModelLayers.ZOMBIE_BABY",
   "ModelLayers.ZOMBIE_BABY_ARMOR",
   "ModelLayers.ZOMBIE_VILLAGER_BABY_ARMOR",
   "LayerDefinition.apply()",
@@ -36,10 +38,10 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-23",
-  "kiln": "development build 2026-11-23 (5434d019)",
-  "file": "old_baby_villager_and_zombie-1.0.0-26.3.x.jar",
-  "published": "2026-10-10"
+  "date": "2026-11-24",
+  "kiln": "development build 2026-11-24 (73dc2fb1)",
+  "file": "old_baby_villager_and_zombie-2.0.0-26.3.x.jar",
+  "published": "2026-11-23"
  },
  "reports": {
   "works": 0,
@@ -49,8 +51,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-24",
+  "kiln": "development build 2026-11-24 (73dc2fb1)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -71,5 +73,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes"
  },
- "lacks": 21
+ "lacks": 23
 }

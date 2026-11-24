@@ -1,0 +1,77 @@
+{
+ "id": "vector3",
+ "name": "Vector3",
+ "version": "1.1.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/vector3",
+ "author": "ryan100c",
+ "description": "Rendering shapes, texts and event move blocks directly inside flashback !",
+ "needs": [
+  "Mixin: 6 points inside the game's methods",
+  "net.minecraft.client.particle.QuadParticleGroup",
+  "org.lwjgl.stb.STBTTFontinfo",
+  "org.lwjgl.stb.STBTruetype",
+  "org.lwjgl.system.MemoryStack",
+  "org.lwjgl.system.MemoryUtil",
+  "Std140Builder.onStack()",
+  "RenderTarget.blitAndBlendToTexture()",
+  "RenderTarget.copyColorFrom()",
+  "RenderSystem.AutoStorageIndexBuffer.requestIndexCount()",
+  "RenderSystem.AutoStorageIndexBuffer.resizeToRequestedIndexCount()",
+  "MeshData.SortState.writeSortedIndexBuffer()",
+  "VertexConsumer.putBlockBakedQuad()",
+  "VertexSorting.DISTANCE_TO_ORIGIN",
+  "VertexSorting.byDistance()",
+  "RenderPassDescriptor.Builder.withDepthAttachment()",
+  "Minecraft.getBlockEntityRenderDispatcher()",
+  "RenderPipelines.CUTOUT_BLOCK",
+  "RenderPipelines.SOLID_BLOCK",
+  "RenderPipelines.TRANSLUCENT_BLOCK",
+  "FluidRenderer.tesselate()",
+  "ModelBlockRenderer.tesselateBlock()",
+  "RenderTypes.outline()",
+  "FontDescription.DEFAULT"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-24",
+  "kiln": "development build 2026-11-24 (73dc2fb1)",
+  "file": "vector3-1.1.0.jar",
+  "published": "2026-09-25"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-24",
+  "kiln": "development build 2026-11-24 (73dc2fb1)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "flashback",
+  "java",
+  "minecraft",
+  "ryansrenderingkit"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 23
+}
