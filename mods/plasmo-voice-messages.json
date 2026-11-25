@@ -1,0 +1,57 @@
+{
+ "id": "plasmo-voice-messages",
+ "name": "Plasmo Voice Messages",
+ "version": "1.3.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/plasmo-voice-messages",
+ "author": "QURATOR",
+ "description": "Adds voice messages to the Minecraft chat with Plasmo Voice integration. Includes a custom chat widget, recording UI, global/local/private message types, permissions,chunked audio transfer. Requires both client mod and server plugin.",
+ "needs": [
+  "Mixin: 2 points inside the game's methods",
+  "net.minecraft.client.gui.components.ChatComponent.DrawingBackgroundGraphicsAccess",
+  "net.minecraft.client.gui.components.ChatComponent.DrawingFocusedGraphicsAccess"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
+  "file": "voicemessages-1.2.0.jar",
+  "published": "2026-11-24"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft",
+  "plasmovoice"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect into the game's classes; runs threads of its own; has network channels"
+ },
+ "lacks": 2
+}

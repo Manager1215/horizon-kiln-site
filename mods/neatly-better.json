@@ -1,7 +1,7 @@
 {
  "id": "neatly-better",
  "name": "Neatly Better",
- "version": "0.9.8+26.3-fabric",
+ "version": "0.9.9+26.3-fabric",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,15 +10,16 @@
  "description": "Better.. How better? Neatly Better!",
  "needs": [
   "an access widener",
-  "Mixin: 68 points inside the game's methods",
+  "Mixin: 76 points inside the game's methods",
   "com.mojang.blaze3d.platform.FramerateLimitTracker.FramerateThrottleReason",
   "net.fabricmc.fabric.api.client.model.loading.v1.wrapper.WrapperBakedItemModel",
   "net.fabricmc.fabric.api.transfer.v1.fluid.CauldronFluidContent",
   "net.minecraft.client.gui.components.FriendsButton",
   "net.minecraft.client.gui.screens.inventory.BeaconScreen.BeaconPowerButton",
-  "net.minecraft.client.main.Main",
+  "net.minecraft.client.model.object.projectile.ArrowModel",
   "net.minecraft.client.renderer.ScreenEffectRenderer",
   "net.minecraft.client.renderer.blockentity.AbstractSignRenderer",
+  "net.minecraft.client.renderer.blockentity.state.BannerRenderState",
   "net.minecraft.client.renderer.fog.environment.LavaFogEnvironment",
   "net.minecraft.client.renderer.state.level.CameraEntityRenderState",
   "net.minecraft.client.telemetry.ClientTelemetryManager",
@@ -46,21 +47,20 @@
   "net.minecraft.world.inventory.StonecutterMenu.2",
   "net.minecraft.world.level.block.entity.vault.VaultServerData",
   "net.minecraft.world.level.levelgen.PhantomSpawner",
+  "net.minecraft.world.level.saveddata.maps.MapBanner",
   "FramerateLimitTracker.onInputReceived()",
   "ModelModifier.WRAP_PHASE",
   "BlockColorRegistry.register()",
-  "Minecraft.getFramerateLimitTracker()",
-  "Minecraft.getMapRenderer()",
-  "and 55 more"
+  "and 57 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-24",
-  "kiln": "development build 2026-11-24 (73dc2fb1)",
-  "file": "neatly-better-0.9.8+26.3-fabric.jar",
-  "published": "2026-10-08"
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
+  "file": "neatly-better-0.9.9+26.3-fabric.jar",
+  "published": "2026-11-24"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -93,5 +93,5 @@
   "class": "restart",
   "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 129
+ "lacks": 143
 }

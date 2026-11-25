@@ -1,7 +1,7 @@
 {
  "id": "quickcraft-yiyihehe",
  "name": "QuickCraft",
- "version": "1.0.4+mc26.3",
+ "version": "1.0.5+mc26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,7 +9,7 @@
  "author": "yiyihehe",
  "description": "Craft faster, manage containers smarter, and build from Litematica schematics with less friction.",
  "needs": [
-  "Mixin: 11 points inside the game's methods",
+  "Mixin: 23 points inside the game's methods",
   "net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents.BeforeGizmos",
   "net.minecraft.client.renderer.feature.FeatureRenderDispatcher.PreparedGroup",
   "net.minecraft.nbt.NbtAccounterException",
@@ -44,22 +44,22 @@
   "SharedConstants.DEBUG_SHUFFLE_MODELS",
   "Minecraft.getBlockEntityRenderDispatcher()",
   "Minecraft.levelRenderer",
-  "RecipeCollection.isCraftable()",
+  "EditBox.<init>()",
   "LocalPlayer.isWithinEntityInteractionRange()",
   "LocalPlayer.raycastHitResult()",
   "GameRenderer.renderBuffers()",
   "LevelRenderer.collectPerFrameRenderThreadGizmos()",
   "Projection.getMatrix()",
-  "and 28 more"
+  "and 33 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-24",
-  "kiln": "development build 2026-11-24 (73dc2fb1)",
-  "file": "quickcraft-mc26.3-1.0.4.jar",
-  "published": "2026-10-23"
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
+  "file": "quickcraft-mc26.3-1.0.5.jar",
+  "published": "2026-11-25"
  },
  "reports": {
   "works": 0,
@@ -69,15 +69,15 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
  },
  "entrypoints": {
   "main": 1,
-  "client": 17,
+  "client": 18,
   "modmenu": 1,
   "mm:early_risers": 1
  },
@@ -91,7 +91,7 @@
  ],
  "softOff": {
   "class": "restart",
-  "why": "@wrap-operation into the game's classes; runs threads of its own; has network channels"
+  "why": "@wrap-method and @wrap-operation into the game's classes; runs threads of its own; has network channels"
  },
- "lacks": 68
+ "lacks": 75
 }

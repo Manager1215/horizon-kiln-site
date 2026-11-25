@@ -1,7 +1,7 @@
 {
  "id": "kaleidoscope-cookery-refabricated",
  "name": "Kaleidoscope Cookery Refabricated",
- "version": "1.6.0.9-fabric+mc26.3",
+ "version": "1.7.0-fabric+mc26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,9 +10,10 @@
  "description": "The unofficial fabric continuation for Kaleidoscope Cookery mod",
  "needs": [
   "an access widener",
-  "Mixin: 14 points inside the game's methods",
+  "Mixin: 15 points inside the game's methods",
   "net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorage.CombinedItemApiProvider",
   "net.fabricmc.fabric.impl.serialization.SpecialCodecs",
+  "net.minecraft.client.renderer.entity.EndCrystalRenderer",
   "net.minecraft.client.renderer.entity.ParrotRenderer",
   "net.minecraft.world.entity.ai.behavior.GiveGiftToHero",
   "PoseStack.rotateAround()",
@@ -27,40 +28,39 @@
   "FilteringStorage.insertOnlyOf()",
   "DistanceTrigger.trigger()",
   "ModelLayers.PARROT",
+  "LevelRenderer.entityRenderDispatcher()",
+  "BlockEntityRenderer.getBaseModelDisplay()",
+  "EnderDragonRenderer.submitCrystalBeams()",
+  "ArmedEntityRenderState.leftHandItemStack",
+  "ArmedEntityRenderState.rightHandItemStack",
   "HumanoidRenderState.leftHandItemStack",
   "HumanoidRenderState.rightHandItemStack",
   "LivingEntityRenderState.getDataOrDefault()",
   "LivingEntityRenderState.setData()",
   "ParrotRenderState.variant",
   "ItemModel.BakingContext.missingItemModel()",
+  "LevelRenderState.getDataOrDefault()",
+  "LevelRenderState.setData()",
   "OverlayTexture.u()",
+  "ScalableParticleOptionsBase.SCALE",
   "ByteBufCodecs.TRUSTED_COMPOUND_TAG",
   "ServerLevel.broadcastDamageEvent()",
+  "ServerLevel.noBlockCollision()",
   "ServerPlayer.gameMode",
   "SoundEvents.HONEY_DRINK",
   "BlockTags.ENDERMAN_DOES_NOT_TELEPORT_TO",
   "BlockTags.GRASS_BLOCKS",
-  "Entity.removePassenger()",
-  "EntityReference.get()",
-  "EntityReference.getLivingEntity()",
-  "EntityReference.readWithOldOwnerConversion()",
-  "LivingEntity.invulnerableTime",
-  "Cat.setLying()",
-  "TropicalFish.COMMON_VARIANTS",
-  "ShoulderRidingEntity.canSitOnShoulder()",
-  "Projectile.mayInteract()",
-  "ItemStack.getCraftingRemainder()",
-  "CraftingRecipe.defaultCraftingReminder()",
-  "and 13 more"
+  "WorldlyContainer.getBlockPos()",
+  "and 25 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-24",
-  "kiln": "development build 2026-11-24 (73dc2fb1)",
-  "file": "kaleidoscope_cookery-1.6.0.9-fabric+mc26.3.jar",
-  "published": "2026-11-14"
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
+  "file": "kaleidoscope_cookery-1.7.0-fabric+mc26.3.jar",
+  "published": "2026-11-24"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -99,5 +99,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
  },
- "lacks": 53
+ "lacks": 86
 }

@@ -1,7 +1,7 @@
 {
  "id": "zombified-player",
  "name": "Zombified Player - Kill Your Inner Zombie",
- "version": "1.6.1-Fabric-mc26.3",
+ "version": "2.0.0-Fabric-mc26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,25 +10,39 @@
  "description": "This Mod spawns a zombified version of the player after death.",
  "needs": [
   "Mixin: 1 point inside the game's methods",
+  "net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry.TexturedArmorModelSetProvider",
+  "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType",
+  "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType.Builder",
+  "net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType.Builder.Mob",
+  "net.minecraft.world.entity.ai.goal.BreakDoorGoal",
   "net.minecraft.world.entity.ai.goal.ZombieAttackGoal",
-  "ModelLayers.ZOMBIE",
-  "ModelLayers.ZOMBIE_ARMOR",
-  "ModelLayers.ZOMBIE_BABY",
-  "ModelLayers.ZOMBIE_BABY_ARMOR",
-  "PlayerSkinRenderCache.lookup()",
-  "AbstractZombieRenderer.<init>()",
-  "AbstractZombieRenderer.extractRenderState()",
+  "net.minecraft.world.entity.ai.util.GoalUtils",
+  "BiomeSelectors.spawnsOneOf()",
+  "ModelLayerRegistry.registerArmorModelLayers()",
+  "HumanoidModel.createArmorMeshSet()",
+  "ZombieModel.getArm()",
   "ArmorModelSet.bake()",
-  "EquipmentSlot.BY_ID"
+  "ArmorModelSet.map()",
+  "EntityRendererProvider.Context.getPlayerSkinRenderCache()",
+  "HumanoidMobRenderer.usesSpearPose()",
+  "MobRenderer.isShaking()",
+  "ZombieRenderState.isAggressive",
+  "ZombieRenderState.isConverting",
+  "ZombieRenderState.leftArmPose",
+  "ZombieRenderState.rightArmPose",
+  "UUIDUtil.LENIENT_CODEC",
+  "Zombie.dropFromLootTable()",
+  "Zombie.dropFromLootTable()",
+  "Zombie.isUnderWaterConverting()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-24",
-  "kiln": "development build 2026-11-24 (73dc2fb1)",
-  "file": "ZombifiedPlayer-1.6.1-Fabric-mc26.3.jar",
-  "published": "2026-09-19"
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
+  "file": "ZombifiedPlayer-2.0.0-Fabric-mc26.3.jar",
+  "published": "2026-11-24"
  },
  "reports": {
   "works": 0,
@@ -38,8 +52,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -60,7 +74,7 @@
  ],
  "softOff": {
   "class": "partial",
-  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; generates in the world"
  },
- "lacks": 10
+ "lacks": 24
 }

@@ -1,7 +1,7 @@
 {
  "id": "rpg-adventurer",
  "name": "RPG Adventurer",
- "version": "0.3.0",
+ "version": "0.4.1",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,7 +10,9 @@
  "description": "Turns minecraft into an RPG with levels, stats, new weapons, useful items, blocks, mobs and a LOT of other features.",
  "needs": [
   "an access widener",
-  "Mixin: 30 points inside the game's methods",
+  "Mixin: 35 points inside the game's methods",
+  "net.fabricmc.fabric.api.event.client.player.ClientPlayerBlockBreakEvents",
+  "net.fabricmc.fabric.api.event.client.player.ClientPlayerBlockBreakEvents.After",
   "net.minecraft.client.model.object.armorstand.ArmorStandArmorModel",
   "net.minecraft.client.particle.FlameParticle",
   "net.minecraft.client.particle.FlameParticle.Provider",
@@ -18,6 +20,7 @@
   "net.minecraft.client.renderer.blockentity.AbstractEndPortalRenderer",
   "net.minecraft.client.renderer.entity.ItemFrameRenderer",
   "net.minecraft.client.renderer.state.level.ParticlesRenderState",
+  "net.minecraft.world.entity.SteppedInterpolationHandler",
   "net.minecraft.world.entity.animal.wolf.WolfSoundVariants.SoundSet",
   "net.minecraft.world.inventory.GrindstoneMenu.2",
   "net.minecraft.world.inventory.GrindstoneMenu.3",
@@ -35,6 +38,7 @@
   "ModelLayers.PLAYER_SLIM_ARMOR",
   "ModelLayers.SHIELD",
   "PartPose.scaled()",
+  "LocalPlayer.cannotAttackWithItem()",
   "BiomeColors.getAverageWaterColor()",
   "MultiblockChestResources.map()",
   "MultiblockChestResources.select()",
@@ -47,20 +51,16 @@
   "CreeperRenderer.extractRenderState()",
   "EntityRendererProvider.Context.getPlayerSkinRenderCache()",
   "MobRenderer.scale()",
-  "RenderLayer.submit()",
-  "SpinAttackEffectLayer.TEXTURE",
-  "ArmedEntityRenderState.extractArmedEntityRenderState()",
-  "ArmorStandRenderState.isMarker",
-  "and 32 more"
+  "and 35 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-24",
-  "kiln": "development build 2026-11-24 (73dc2fb1)",
-  "file": "RPG_Adventurer-fabric-26.3-0.3.0-beta.jar",
-  "published": "2026-11-14"
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
+  "file": "RPG_Adventurer-fabric-26.3-0.4.1-beta.jar",
+  "published": "2026-11-25"
  },
  "reports": {
   "works": 0,
@@ -70,8 +70,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -95,5 +95,5 @@
   "class": "restart",
   "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
  },
- "lacks": 189
+ "lacks": 241
 }

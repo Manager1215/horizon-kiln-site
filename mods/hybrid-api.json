@@ -1,0 +1,54 @@
+{
+ "id": "hybrid-api",
+ "name": "Hybrid API [HAPI]",
+ "version": "mc26.3-1.2.0-fabric",
+ "status": "not-checked",
+ "statusLabel": "Not checked",
+ "statusMeaning": "In the catalogue, not checked yet.",
+ "url": "https://modrinth.com/mod/hybrid-api",
+ "author": "MysticKoko",
+ "description": "A library mod that helps integrate all Hybrid Labs mods with each other and allows the creation of addons",
+ "needs": [],
+ "roadmap": "",
+ "evidence": "Everything its code calls is covered by Kiln development build 2026-11-25 (8dfda948) (61 classes, 99 members). Not run yet.",
+ "library": true,
+ "scanned": {
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
+  "file": "hapi-fabric-26.3-1.2.0.jar",
+  "published": "2026-11-24"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1,
+  "fabric-datagen": 1,
+  "preLaunch": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabric-language-kotlin",
+  "geckolib",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 0
+}

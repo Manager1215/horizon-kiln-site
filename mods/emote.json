@@ -1,7 +1,7 @@
 {
  "id": "emote",
  "name": "Emote",
- "version": "3.1.0+26.3-beta1",
+ "version": "3.1.0+26.3-beta2",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,30 +9,45 @@
  "author": "hanhy06",
  "description": "Server-side emote platform for Minecraft",
  "needs": [
+  "Mixin: 1 point inside the game's methods",
   "net.fabricmc.fabric.api.permission.v1.PermissionPredicates",
+  "net.minecraft.network.PacketBundleUnpacker",
+  "net.minecraft.network.PacketEncoder",
+  "net.minecraft.network.Varint21LengthFieldPrepender",
   "net.minecraft.server.MinecraftServer.ServerResourcePackInfo",
   "Transformation.slerp()",
+  "PacketContext.CONNECTION",
+  "PacketContext.orElseThrow()",
   "AvatarRenderState.leftHandItemStack",
   "AvatarRenderState.rightHandItemStack",
   "TimeArgument.time()",
+  "CompressionEncoder.getThreshold()",
   "ResolutionContext.create()",
+  "EntityDataSerializers.BLOCK_STATE",
+  "EntityDataSerializers.COMPONENT",
+  "EntityDataSerializers.OPTIONAL_BLOCK_STATE",
+  "SynchedEntityData.packDirty()",
   "SynchedEntityData.DataValue.create()",
+  "MinecraftServer.getScaledTrackingDistance()",
+  "ServerScoreboard.entityRemoved()",
+  "ChunkMap.isChunkTracked()",
   "ServerPlayer.checkPermission()",
   "ServerPlayer.getLastActionTime()",
   "ServerPlayer.getLastClientInput()",
+  "ServerPlayer.requestedViewDistance()",
   "ServerGamePacketListenerImpl.getPacketContext()",
   "Mth.packDegrees()",
   "Marker.getOrDefault()",
   "TypedEntityData.loadInto()"
  ],
- "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": true,
  "scanned": {
-  "date": "2026-11-24",
-  "kiln": "development build 2026-11-24 (73dc2fb1)",
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
   "file": "emote-3.1.0+26.3.jar",
-  "published": "2026-11-20"
+  "published": "2026-11-25"
  },
  "reports": {
   "works": 0,
@@ -42,8 +57,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-21",
-  "kiln": "development build 2026-11-21 (3f1dc50b)",
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -61,8 +76,8 @@
   "minecraft"
  ],
  "softOff": {
-  "class": "partial",
-  "why": "runs threads of its own; has network channels"
+  "class": "restart",
+  "why": "@wrap-method into the game's classes; runs threads of its own; has network channels"
  },
- "lacks": 15
+ "lacks": 29
 }

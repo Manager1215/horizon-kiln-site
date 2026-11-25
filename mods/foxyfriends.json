@@ -1,7 +1,7 @@
 {
  "id": "foxyfriends",
  "name": "FoxyFriends",
- "version": "0.3.1",
+ "version": "0.4.0",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,7 +9,7 @@
  "author": "senzifox",
  "description": "Make foxes your friends: tame them, dress them in armor and let them guard you",
  "needs": [
-  "Mixin: 4 points inside the game's methods",
+  "Mixin: 5 points inside the game's methods",
   "net.minecraft.world.entity.animal.fox.Fox.DefendTrustedTargetGoal",
   "net.minecraft.world.entity.animal.fox.Fox.FoxAlertableEntitiesSelector",
   "net.minecraft.world.entity.animal.fox.Fox.FoxFollowParentGoal",
@@ -20,7 +20,9 @@
   "AvatarRenderState.setData()",
   "EntityRenderState.getData()",
   "FoxRenderState.getData()",
+  "FoxRenderState.isSleeping",
   "FoxRenderState.setData()",
+  "BiomeTags.IS_SAVANNA",
   "DamageTypeTags.NO_WOLF_RETALIATION",
   "EntityReference.codec()",
   "EntityReference.getEntity()",
@@ -43,10 +45,10 @@
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-24",
-  "kiln": "development build 2026-11-24 (73dc2fb1)",
-  "file": "foxyfriends-fabric-26.3-0.3.1.jar",
-  "published": "2026-11-14"
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
+  "file": "foxyfriends-fabric-26.3-0.4.0.jar",
+  "published": "2026-11-24"
  },
  "reports": {
   "works": 0,
@@ -56,8 +58,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-17",
-  "kiln": "development build 2026-11-17 (2aabcd3)",
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -75,8 +77,8 @@
   "minecraft"
  ],
  "softOff": {
-  "class": "partial",
-  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+  "class": "restart",
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
  },
- "lacks": 28
+ "lacks": 30
 }

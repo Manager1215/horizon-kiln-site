@@ -1,0 +1,67 @@
+{
+ "id": "christmas-dweller",
+ "name": "Christmas Dweller",
+ "version": "1.12.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/christmas-dweller",
+ "author": "shadowmech027",
+ "description": "The Christmas dweller is a modification inspired by Gargin's Cave dweller. Beware, this festive character will track and seize you when the chance arises.\n\nNOTE: GeckoLib is required for this mod to work.",
+ "needs": [
+  "an access widener",
+  "net.minecraft.util.SpawnUtil",
+  "net.minecraft.util.SpawnUtil.Strategy",
+  "net.minecraft.world.entity.ai.goal.BreakDoorGoal",
+  "ConventionalBiomeTags.IS_CAVE",
+  "ConventionalBiomeTags.IS_UNDERGROUND",
+  "Vec3i.offset()",
+  "GoalSelector.tick()",
+  "PathNavigation.isStuck()",
+  "WallClimberNavigation.setMaxVisitedNodesMultiplier()",
+  "Monster.swingForAttack()",
+  "Node.cloneAndMove()",
+  "Node.distanceTo()",
+  "Path.replaceNode()"
+ ],
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
+  "file": "santa_dweller-26.3-1.12.0-fabric.jar",
+  "published": "2026-11-25"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": false,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "geckolib",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; generates in the world"
+ },
+ "lacks": 13
+}

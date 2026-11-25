@@ -1,0 +1,62 @@
+{
+ "id": "nomowanderer",
+ "name": "NoMoWanderer",
+ "version": "v2.2.0",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/nomowanderer",
+ "author": "J-Dill",
+ "description": "Provides the player with a few blocks/items to prevent and/or control Wandering Trader spawns.",
+ "needs": [
+  "GameTestHelper.assertEntitiesPresent()",
+  "GameTestHelper.assertEntityNotPresent()",
+  "GameTestHelper.assertEntityNotPresent()",
+  "GameTestHelper.makeMockPlayer()",
+  "GameTestHelper.succeedWhenEntityNotPresent()",
+  "GameTestHelper.succeedWhenEntityPresent()",
+  "Identifier.tryBySeparator()",
+  "ServerLevel.removePlayerImmediately()",
+  "TraderLlama.removeFreeWill()",
+  "WanderingTrader.removeFreeWill()"
+ ],
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
+  "file": "nomowanderer-fabric-26.3-2.2.0.jar",
+  "published": "2026-11-24"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-25",
+  "kiln": "development build 2026-11-25 (8dfda948)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 2,
+  "client": 1
+ },
+ "mixins": false,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 10
+}
