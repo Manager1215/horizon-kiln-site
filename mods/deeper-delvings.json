@@ -1,0 +1,70 @@
+{
+ "id": "deeper-delvings",
+ "name": "Deeper Delvings",
+ "version": "1.0.0+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/deeper-delvings",
+ "author": "pajic",
+ "description": "Vanilla themed underground content and worldgen tweaks",
+ "needs": [
+  "Mixin: 9 points inside the game's methods",
+  "net.minecraft.client.renderer.entity.layers.SpiderEyesLayer",
+  "net.minecraft.world.level.levelgen.feature.MonsterRoomFeature",
+  "net.minecraft.world.level.levelgen.structure.structures.WoodlandMansionStructure",
+  "ModelLayers.CAVE_SPIDER",
+  "SpiderRenderer.addLayer()",
+  "SpiderRenderer.layers",
+  "SpiderRenderer.shadowRadius",
+  "AmbientMoodSettings.LEGACY_CAVE_SETTINGS",
+  "CaveSpider.createCaveSpider()",
+  "OreFeature.size()",
+  "OreFeature.targetStates()",
+  "StructurePiece.getMirror()",
+  "StructurePiece.getRotation()",
+  "StructurePiecesBuilder.isEmpty()",
+  "MineshaftStructure.findGenerationPoint()",
+  "MineshaftStructure.Type.getWoodState()"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-26",
+  "kiln": "development build 2026-11-25 (8dfda948)",
+  "file": "deeper_delvings-fabric-1.0.0+26.3.jar",
+  "published": "2026-11-22"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-26",
+  "kiln": "development build 2026-11-25 (8dfda948)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "client": 1,
+  "main": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "fzzy_config",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@wrap-method and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 16
+}

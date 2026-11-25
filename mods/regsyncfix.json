@@ -1,0 +1,44 @@
+{
+ "id": "regsyncfix",
+ "name": "RegSyncFix",
+ "version": "1.1.0+26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/regsyncfix",
+ "author": "ILikeFood971",
+ "description": "Bypass Fabric API registry sync errors",
+ "needs": [
+  "net.fabricmc.fabric.impl.client.registry.sync.ClientRegistrySyncHandler",
+  "net.fabricmc.fabric.impl.registry.sync.RegistrySyncManager"
+ ],
+ "roadmap": "Code next to data (0.3)",
+ "evidence": "",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-26",
+  "kiln": "development build 2026-11-25 (8dfda948)",
+  "file": "regsyncfix-1.1.0+26.3.jar",
+  "published": "2026-11-25"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "entrypoints": {
+  "mixinsquared": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabric-registry-sync-v0",
+  "fabricloader",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 2
+}

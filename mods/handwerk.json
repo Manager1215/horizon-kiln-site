@@ -1,7 +1,7 @@
 {
  "id": "handwerk",
  "name": "Handwerk – AoE Tools, Vein Miner, Ore Variants & Building Blocks",
- "version": "0.16.5-26.3+build.1",
+ "version": "0.17.0-26.3+build.1",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -12,20 +12,22 @@
   "Mixin: 3 points inside the game's methods",
   "net.minecraft.world.level.levelgen.feature.ScatteredOreFeature",
   "net.minecraft.world.level.levelgen.placement.FeaturePlacer",
+  "BiomeColors.getAverageGrassColor()",
   "BlockTags.HEIGHT_SPECIFIC_ORE_REPLACEABLES",
+  "Item.mineBlock()",
   "StairBlock.isStairs()",
   "WeatheringCopper.getPrevious()",
   "WeatheringCopperCollection.registerBlocks()",
   "AbstractOreFeature.targetStates()"
  ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-25",
+  "date": "2026-11-26",
   "kiln": "development build 2026-11-25 (8dfda948)",
-  "file": "handwerk-0.16.5-26.3+build.1.jar",
-  "published": "2026-11-12"
+  "file": "handwerk-0.17.0-26.3+build.1.jar",
+  "published": "2026-11-25"
  },
  "reports": {
   "works": 0,
@@ -35,8 +37,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-14",
-  "kiln": "development build 2026-11-14 (fa70eeb)",
+  "date": "2026-11-26",
+  "kiln": "development build 2026-11-25 (8dfda948)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -56,7 +58,7 @@
  ],
  "softOff": {
   "class": "restart",
-  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; generates in the world"
+  "why": "@wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
  },
- "lacks": 7
+ "lacks": 9
 }
