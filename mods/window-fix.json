@@ -9,24 +9,25 @@
  "author": "huanmeng-qwq",
  "description": "Used to fix the issue of main loop hang/freeze that may occur in Minecraft under Windows after operating the system menu of the window title bar (right-clicking the title bar, minimizing, restoring, etc.).",
  "needs": [
-  "org.lwjgl.sdl.SDLEvents",
   "org.lwjgl.sdl.SDLProperties",
-  "org.lwjgl.sdl.SDLVideo",
-  "org.lwjgl.sdl.SDL_Event",
   "org.lwjgl.system.APIUtil",
   "org.lwjgl.system.JNI",
   "org.lwjgl.system.MemoryStack",
   "org.lwjgl.system.MemoryUtil",
   "org.lwjgl.system.Pointer",
   "org.lwjgl.system.windows.User32",
-  "org.lwjgl.system.windows.WindowProc"
+  "org.lwjgl.system.windows.WindowProc",
+  "SDLEvents.SDL_PushEvent()",
+  "SDLEvents.SDL_RegisterEvents()",
+  "SDLVideo.SDL_GetWindowProperties()",
+  "SDL_Event.calloc()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-26",
-  "kiln": "development build 2026-11-25 (8dfda948)",
+  "date": "2026-11-27",
+  "kiln": "development build 2026-11-26 (cdf45c68)",
   "file": "windowfix-fabric-1.0.1+mc26.3.jar",
   "published": "2026-10-11"
  },
@@ -55,5 +56,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 11
+ "lacks": 12
 }

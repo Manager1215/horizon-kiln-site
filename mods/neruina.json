@@ -2,22 +2,19 @@
  "id": "neruina",
  "name": "Neruina - Ticking Entity Fixer",
  "version": "3.3.5",
- "status": "planned",
- "statusLabel": "Planned",
- "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "status": "works",
+ "statusLabel": "Works",
+ "statusMeaning": "Tried in the game with Kiln.",
  "url": "https://modrinth.com/mod/neruina",
  "author": "Bawnorton",
  "description": "A Mod that prevents ticking-related crashes from bricking worlds",
- "needs": [
-  "Mixin: 8 points inside the game's methods",
-  "net.minecraft.world.level.chunk.LevelChunk.BoundTickingBlockEntity"
- ],
- "roadmap": "Code next to data (0.3), Mixin (0.5)",
- "evidence": "Not run: Java did not start.",
+ "needs": [],
+ "roadmap": "",
+ "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-26",
-  "kiln": "development build 2026-11-25 (8dfda948)",
+  "date": "2026-11-27",
+  "kiln": "development build 2026-11-26 (cdf45c68)",
   "file": "neruina-3.3.5+26.3-fabric.jar",
   "published": "2026-10-17"
  },
@@ -49,5 +46,14 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; runs threads of its own; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 1
+ "lacks": 1,
+ "works": "Entities and block entities that crash while ticking are removed instead of crashing the world.",
+ "note": "From Modrinth, unchanged",
+ "checked": {
+  "kiln": "main",
+  "commit": "e3c60a2c97587d7cd25edbd873ae307f15c7abcf",
+  "date": "2026-11-25",
+  "horizon": "Nightly 2026-11-04 · 3fb4c31",
+  "by": "kiln/proof.py on the Linux PC"
+ }
 }

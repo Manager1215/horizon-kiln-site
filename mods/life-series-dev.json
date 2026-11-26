@@ -1,7 +1,7 @@
 {
  "id": "life-series-dev",
  "name": "Life Series Dev",
- "version": "fabric-1.5.10-pre1+26.3",
+ "version": "fabric-1.5.11.3+finallife-beta1+",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -10,18 +10,21 @@
  "description": "Development versions of the Life Series mod.",
  "needs": [
   "an access widener",
-  "Mixin: 28 points inside the game's methods",
+  "Mixin: 35 points inside the game's methods",
   "net.minecraft.client.renderer.entity.SnowGolemRenderer",
   "net.minecraft.client.renderer.state.level.ParticlesRenderState",
   "net.minecraft.network.chat.ResolutionContext.Builder",
   "net.minecraft.server.commands.GameRuleCommand",
+  "net.minecraft.server.commands.MsgCommand",
   "net.minecraft.server.commands.WorldBorderCommand",
   "net.minecraft.server.players.SleepStatus",
   "net.minecraft.world.entity.npc.wanderingtrader.WanderingTraderSpawner",
   "net.minecraft.world.level.EntityBasedExplosionDamageCalculator",
   "net.minecraft.world.level.SimpleExplosionDamageCalculator",
   "net.minecraft.world.level.chunk.status.ChunkStatusTasks",
+  "FrontendCommandEncoder.backend()",
   "AgeableMobRenderer.<init>()",
+  "AbstractSoundInstance.soundEvent",
   "EntityBoundSoundInstance.entity",
   "ChatType.bind()",
   "RemoteChatSession.asData()",
@@ -43,24 +46,21 @@
   "ARGB.color()",
   "ServerClockManager.createFullSyncPacket()",
   "DamageSources.anvil()",
+  "DamageSources.explosion()",
   "DamageSources.lightningBolt()",
   "DamageSources.wither()",
   "DamageTypes.OUTSIDE_BORDER",
-  "EntityFluidInteraction.isInFluid()",
-  "EntityType.Builder.immuneTo()",
-  "LivingEntity.onEffectsRemoved()",
-  "TamableAnimal.getRootOwner()",
-  "WalkAnimationState.setSpeed()",
-  "and 13 more"
+  "Entity.canBeHitByProjectile()",
+  "and 24 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-26",
-  "kiln": "development build 2026-11-25 (8dfda948)",
-  "file": "lifeseries-1.5.10-pre1+26.3-fabric.jar",
-  "published": "2026-10-22"
+  "date": "2026-11-27",
+  "kiln": "development build 2026-11-26 (cdf45c68)",
+  "file": "lifeseries-1.5.11.3+finallife-beta1+26.3-fabric.jar",
+  "published": "2026-11-26"
  },
  "reports": {
   "works": 0,
@@ -82,5 +82,5 @@
   "class": "restart",
   "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own"
  },
- "lacks": 53
+ "lacks": 64
 }

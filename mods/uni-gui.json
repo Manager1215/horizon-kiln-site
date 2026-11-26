@@ -1,0 +1,93 @@
+{
+ "id": "uni-gui",
+ "name": "Uni GUI",
+ "version": "1.7.0-fabric-26.3",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/uni-gui",
+ "author": "Sixik",
+ "description": "A library for UI designed for maximum performance",
+ "needs": [
+  "Mixin: 10 points inside the game's methods",
+  "com.mojang.renderpearl.backend.opengl.GlSampler",
+  "net.minecraft.client.gui.render.pip.GuiEntityRenderer",
+  "org.lwjgl.BufferUtils",
+  "org.lwjgl.opengl.ARBInstancedArrays",
+  "org.lwjgl.opengl.GL",
+  "org.lwjgl.opengl.GL11",
+  "org.lwjgl.opengl.GL15",
+  "org.lwjgl.opengl.GL20",
+  "org.lwjgl.opengl.GL30",
+  "org.lwjgl.opengl.GL31",
+  "org.lwjgl.opengl.GL33",
+  "org.lwjgl.opengl.GLCapabilities",
+  "org.lwjgl.sdl.SDLKeyboard",
+  "org.lwjgl.system.MemoryStack",
+  "org.lwjgl.system.MemoryUtil",
+  "Lighting.UBO_SIZE",
+  "Window.getActiveVideoMode()",
+  "Window.selectCursor()",
+  "CursorType.createStandardCursor()",
+  "RenderSystem.queueFencedTask()",
+  "PoseStack.isEmpty()",
+  "QuadInstance.getColor()",
+  "ShaderSource.CachedIncludeSource.createError()",
+  "GlConst.glFormatChannelCount()",
+  "GlConst.isFormatNormalized()",
+  "GlConst.isGlFormatInteger()",
+  "GlConst.toGl()",
+  "GlConst.toGlExternalId()",
+  "GlConst.toGlType()",
+  "GlStateManager._blendFuncSeparate()",
+  "GlStateManager._colorMask()",
+  "GlStateManager._depthMask()",
+  "GlStateManager._disableBlend()",
+  "GlStateManager._disableCull()",
+  "GlStateManager._disableDepthTest()",
+  "GlStateManager._disableScissorTest()",
+  "GlStateManager._enableBlend()",
+  "GlStateManager._enableScissorTest()",
+  "GlStateManager._enableVertexAttribArray()",
+  "GlStateManager._glBindBuffer()",
+  "and 16 more"
+ ],
+ "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
+ "evidence": "Not run: Java did not start.",
+ "library": true,
+ "scanned": {
+  "date": "2026-11-27",
+  "kiln": "development build 2026-11-26 (cdf45c68)",
+  "file": "unigui-fabric-26.3-1.7.0.jar",
+  "published": "2026-11-26"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-27",
+  "kiln": "development build 2026-11-26 (cdf45c68)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "restart",
+  "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own"
+ },
+ "lacks": 56
+}

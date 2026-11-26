@@ -10,11 +10,8 @@
  "description": "Draws the text your IME is composing inside the text field itself, instead of the floating box vanilla shows next to it.\n擺脫醜醜的聊天欄輸入框",
  "needs": [
   "an access widener",
-  "org.lwjgl.sdl.SDLEvents",
   "org.lwjgl.sdl.SDLKeyboard",
   "org.lwjgl.sdl.SDLProperties",
-  "org.lwjgl.sdl.SDLVideo",
-  "org.lwjgl.sdl.SDL_Event",
   "org.lwjgl.sdl.SDL_Rect",
   "org.lwjgl.sdl.SDL_Rect.Buffer",
   "org.lwjgl.sdl.SDL_UserEvent",
@@ -31,14 +28,20 @@
   "MultilineTextField.selectCursor",
   "MultilineTextField.width",
   "TextFieldHelper.getSelectionPos()",
-  "TextFieldHelper.setSelectionRange()"
+  "TextFieldHelper.setSelectionRange()",
+  "SDLEvents.SDL_PushEvent()",
+  "SDLEvents.SDL_RegisterEvents()",
+  "SDLVideo.SDL_GetWindowID()",
+  "SDLVideo.SDL_GetWindowProperties()",
+  "SDL_Event.calloc()",
+  "SDL_Event.user()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-26",
-  "kiln": "development build 2026-11-25 (8dfda948)",
+  "date": "2026-11-27",
+  "kiln": "development build 2026-11-26 (cdf45c68)",
   "file": "inlineime-1.0.5+26.3.jar",
   "published": "2026-11-24"
  },
@@ -70,5 +73,5 @@
   "class": "safe",
   "why": "only events, HUD, keys, commands and guarded mixin handlers"
  },
- "lacks": 22
+ "lacks": 25
 }

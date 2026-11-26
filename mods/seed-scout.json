@@ -1,7 +1,7 @@
 {
  "id": "seed-scout",
  "name": "SeedScout",
- "version": "0.4.1+26.3",
+ "version": "0.5.0+26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -9,26 +9,38 @@
  "author": "cjh1126",
  "description": "A client-side Fabric mod that puts a Chunkbase-style seed map inside the game.",
  "needs": [
+  "net.minecraft.world.level.EmptyStructureManager",
+  "net.minecraft.world.level.levelgen.feature.MonsterRoomFeature",
   "net.minecraft.world.level.levelgen.structure.structures.OceanMonumentStructure",
   "net.minecraft.world.level.levelgen.structure.structures.StrongholdStructure",
   "net.minecraft.world.level.levelgen.structure.structures.WoodlandMansionStructure",
+  "Minecraft.createWorldOpenFlows()",
+  "WorldOpenFlows.createFreshLevel()",
   "Sheets.MAP_DECORATIONS_SHEET",
+  "QuartPos.toSection()",
   "BiomeTags.REQUIRED_OCEAN_MONUMENT_SURROUNDING",
   "LevelHeightAccessor.create()",
+  "LevelSettings.DifficultySettings.DEFAULT",
+  "WorldDataConfiguration.DEFAULT",
   "BiomeResolver.getBiomesWithin()",
   "ChunkGeneratorStructureState.possibleStructureSets()",
+  "ProtoChunk.getHeight()",
+  "ProtoChunk.getMinY()",
+  "ProtoChunk.getPos()",
   "NoiseBasedChunkGenerator.createState()",
   "WorldgenRandom.setDecorationSeed()",
-  "WorldgenRandom.setFeatureSeed()"
+  "WorldgenRandom.setFeatureSeed()",
+  "WorldPresets.createNormalWorldDimensions()",
+  "StructurePiece.postProcess()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-26",
-  "kiln": "development build 2026-11-25 (8dfda948)",
-  "file": "seedscout-fabric-0.4.1+26.3.jar",
-  "published": "2026-11-18"
+  "date": "2026-11-27",
+  "kiln": "development build 2026-11-26 (cdf45c68)",
+  "file": "seedscout-fabric-0.5.0+26.3.jar",
+  "published": "2026-11-26"
  },
  "reports": {
   "works": 0,
@@ -38,8 +50,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-19",
-  "kiln": "development build 2026-11-19 (aec290a0)",
+  "date": "2026-11-27",
+  "kiln": "development build 2026-11-26 (cdf45c68)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -56,8 +68,8 @@
   "minecraft"
  ],
  "softOff": {
-  "class": "safe",
-  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+  "class": "partial",
+  "why": "runs threads of its own"
  },
- "lacks": 11
+ "lacks": 23
 }

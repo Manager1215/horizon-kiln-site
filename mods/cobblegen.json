@@ -1,0 +1,63 @@
+{
+ "id": "cobblegen",
+ "name": "CobbleGen",
+ "version": "5.4.12+26.3b5D9XBL",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/cobblegen",
+ "author": "null2264",
+ "description": "An MC mod that allows you to customize cobblestone (stone and basalt) generators",
+ "needs": [
+  "Mixin: 3 points inside the game's methods",
+  "net.minecraft.gametest.framework.FunctionGameTestInstance",
+  "net.minecraft.gametest.framework.GameTestEnvironments",
+  "net.minecraft.network.protocol.common.custom.CustomPacketPayload.1",
+  "net.minecraft.world.level.levelgen.structure.templatesystem.loader.TemplateSource",
+  "Registries.TEST_ENVIRONMENT",
+  "Registries.TEST_INSTANCE",
+  "GameTestHelper.setBlock()",
+  "TestData.<init>()",
+  "NbtUtils.snbtToStructure()"
+ ],
+ "roadmap": "Code next to data (0.3), Mixin (0.5)",
+ "evidence": "Server-side mod: Kiln runs mods' code on Horizon's single-player server, not on dedicated servers.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-27",
+  "kiln": "development build 2026-11-26 (cdf45c68)",
+  "file": "cobblegen-5.4.12+26.3b5D9XBL.jar",
+  "published": "2026-11-26"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-27",
+  "kiln": "development build 2026-11-26 (cdf45c68)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "preLaunch": 1,
+  "main": 1,
+  "jei_mod_plugin": 1,
+  "cobblegen_plugin": 2,
+  "fabric-gametest": 1
+ },
+ "mixins": true,
+ "depends": [
+  "fabricloader",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); generates in the world"
+ },
+ "lacks": 9
+}
