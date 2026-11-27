@@ -1,0 +1,64 @@
+{
+ "id": "modern-portal-gun",
+ "name": "Modern Portal Gun",
+ "version": "1.0.2",
+ "status": "planned",
+ "statusLabel": "Planned",
+ "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
+ "url": "https://modrinth.com/mod/modern-portal-gun",
+ "author": "craisinlord",
+ "description": "Faithful see-through Portal Guns from the Portal games for modern Minecraft",
+ "needs": [
+  "InsideBlockEffectApplier.NOOP",
+  "ThrowableItemProjectile.applyEffectsFromBlocks()",
+  "Item.triggerAnim()",
+  "ShapelessRecipe.MAP_CODEC",
+  "BlockEntity.portalGun$getFaceRecord()",
+  "BlockEntity.portalGun$loadFaceRecords()",
+  "BlockEntity.portalGun$putFaceRecord()",
+  "BlockEntity.portalGun$restoreMasterFaces()",
+  "BlockEntity.portalGun$saveFaceRecords()",
+  "BlockState.entityInside()"
+ ],
+ "roadmap": "Code next to data (0.3), Machines (0.4)",
+ "evidence": "Not run: Java did not start.",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-28",
+  "kiln": "development build 2026-11-27 (90fcc9da)",
+  "file": "portal_gun-fabric-26.3-1.0.2.jar",
+  "published": "2026-10-20"
+ },
+ "reports": {
+  "works": 0,
+  "partly": 0,
+  "broken": 0,
+  "latest": []
+ },
+ "run": {
+  "passed": false,
+  "date": "2026-11-28",
+  "kiln": "development build 2026-11-27 (90fcc9da)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "main": 1,
+  "client": 1
+ },
+ "mixins": true,
+ "depends": [
+  "anthology",
+  "fabric-api",
+  "fabricloader",
+  "geckolib",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "partial",
+  "why": "registers blocks, items or entities (they stay, inert); has network channels; data pack files (recipes, loot, tags) stay"
+ },
+ "lacks": 10
+}

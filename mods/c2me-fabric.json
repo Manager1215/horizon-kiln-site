@@ -1,20 +1,20 @@
 {
  "id": "c2me-fabric",
  "name": "Concurrent Chunk Management Engine (Fabric)",
- "version": "0.4.2-alpha.0.126+26.3",
- "status": "not-checked",
- "statusLabel": "Not checked",
- "statusMeaning": "In the catalogue, not checked yet.",
+ "version": "0.4.2-alpha.0.119+26.3",
+ "status": "works",
+ "statusLabel": "Works",
+ "statusMeaning": "Tried in the game with Kiln.",
  "url": "https://modrinth.com/mod/c2me-fabric",
  "author": "ishland",
  "description": "A Fabric mod designed to improve the chunk performance of Minecraft.",
  "needs": [],
  "roadmap": "",
- "evidence": "Everything its code calls is covered by Kiln development build 2026-11-26 (cdf45c68) (6 classes, 14 members). Not run yet.",
+ "evidence": "",
  "library": false,
  "scanned": {
-  "date": "2026-11-27",
-  "kiln": "development build 2026-11-26 (cdf45c68)",
+  "date": "2026-11-28",
+  "kiln": "development build 2026-11-27 (90fcc9da)",
   "file": "c2me-fabric-mc26.3-0.4.2-alpha.0.126.jar",
   "published": "2026-11-25"
  },
@@ -47,5 +47,14 @@
   "class": "restart",
   "why": "@overwrite and @redirect and @wrap-method and @wrap-operation into the game's classes; runs threads of its own; has network channels"
  },
- "lacks": 0
+ "lacks": 0,
+ "works": "Starts with its mixins applied; the world loads as usual. Chunk generation and loading are Horizon's own, so its speed-up does not apply.",
+ "note": "From Modrinth, unchanged",
+ "checked": {
+  "kiln": "main",
+  "commit": "90ea50dd824eeec8f478bb918afc0d48fbb526c0",
+  "date": "2026-11-27",
+  "horizon": "Nightly 2026-11-04 · 3fb4c31",
+  "by": "kiln/proof.py on the Linux PC"
+ }
 }

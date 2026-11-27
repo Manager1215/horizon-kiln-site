@@ -9,31 +9,33 @@
  "author": "ryan100c",
  "description": "Rendering shapes, texts and event move blocks directly inside flashback !",
  "needs": [
-  "Mixin: 15 points inside the game's methods",
+  "Mixin: 18 points inside the game's methods",
   "net.minecraft.client.particle.QuadParticleGroup",
   "net.minecraft.world.entity.boss.enderdragon.DragonFlightHistory.Sample",
   "org.lwjgl.openal.AL10",
+  "org.lwjgl.sdl.SDLError",
+  "org.lwjgl.sdl.SDLKeyboard",
+  "org.lwjgl.sdl.SDL_MouseButtonEvent",
+  "org.lwjgl.sdl.SDL_MouseMotionEvent",
+  "org.lwjgl.sdl.SDL_Rect",
   "org.lwjgl.stb.STBTTFontinfo",
   "org.lwjgl.stb.STBTruetype",
   "org.lwjgl.system.MemoryStack",
   "org.lwjgl.system.MemoryUtil",
   "Channel.setVolume()",
   "Std140Builder.onStack()",
-  "RenderTarget.blitAndBlendToTexture()",
+  "Std140Builder.putIVec4()",
   "RenderTarget.copyColorFrom()",
   "RenderSystem.AutoStorageIndexBuffer.requestIndexCount()",
   "RenderSystem.AutoStorageIndexBuffer.resizeToRequestedIndexCount()",
-  "SamplerCache.getClampToEdge()",
   "BufferBuilder.putBlockBakedQuad()",
   "MeshData.SortState.writeSortedIndexBuffer()",
   "VertexConsumer.putBlockBakedQuad()",
   "VertexSorting.DISTANCE_TO_ORIGIN",
   "VertexSorting.byDistance()",
   "RenderPassDescriptor.Builder.withDepthAttachment()",
+  "GpuSurface.PresentMode.getSupportedVsyncMode()",
   "BindGroupLayout.Builder.withUniform()",
-  "Minecraft.createWorldOpenFlows()",
-  "Minecraft.getBlockEntityRenderDispatcher()",
-  "Minecraft.levelRenderer",
   "WorldOpenFlows.createFreshLevel()",
   "GameRenderer.render()",
   "RenderPipelines.CUTOUT_BLOCK",
@@ -46,20 +48,18 @@
   "ModelBlockRenderer.tesselateBlock()",
   "EnderDragonRenderState.getHistoricalPos()",
   "FeatureRenderDispatcher.PreparedFrame.executeSolid()",
-  "RenderTypes.outline()",
-  "Tag.asByteArray()",
-  "Tag.asIntArray()",
-  "Tag.asLongArray()",
-  "and 6 more"
+  "BlockPos.max()",
+  "BlockPos.min()",
+  "and 21 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-27",
-  "kiln": "development build 2026-11-26 (cdf45c68)",
+  "date": "2026-11-28",
+  "kiln": "development build 2026-11-27 (90fcc9da)",
   "file": "vector3-1.4.0-26.3.jar",
-  "published": "2026-11-26"
+  "published": "2026-11-27"
  },
  "reports": {
   "works": 0,
@@ -69,17 +69,18 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-27",
-  "kiln": "development build 2026-11-26 (cdf45c68)",
+  "date": "2026-11-28",
+  "kiln": "development build 2026-11-27 (90fcc9da)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
  },
  "entrypoints": {
-  "client": 1
+  "client": 2
  },
  "mixins": true,
  "depends": [
+  "emergency_exit",
   "fabric-api",
   "fabricloader",
   "flashback",
@@ -89,7 +90,7 @@
  ],
  "softOff": {
   "class": "restart",
-  "why": "@wrap-operation into the game's classes; runs threads of its own"
+  "why": "@redirect and @wrap-operation into the game's classes; runs threads of its own"
  },
- "lacks": 46
+ "lacks": 61
 }

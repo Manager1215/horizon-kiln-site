@@ -9,8 +9,6 @@
  "author": "emreconf",
  "description": "Raise your own Mochi: a chubby red-panda companion that levels up, guards you, mines, carries your loot and even becomes a rideable dragon. 24 colours, 46 animations, hand-drawn effects.",
  "needs": [
-  "net.minecraft.client.model.ambient.BatModel",
-  "net.minecraft.client.renderer.entity.state.BatRenderState",
   "FabricParticleTypes.complex()",
   "ConventionalBiomeTags.IS_CAVE",
   "ConventionalBiomeTags.IS_DRY",
@@ -31,8 +29,8 @@
   "ConventionalBiomeTags.IS_UNDERGROUND",
   "ConventionalBiomeTags.IS_VEGETATION_SPARSE",
   "ConventionalBiomeTags.IS_WINDSWEPT",
-  "Minecraft.createWorldOpenFlows()",
   "Screenshot.grab()",
+  "BatModel.setupAnim()",
   "DolphinModel.setupAnim()",
   "ModelLayers.BAT",
   "ModelLayers.DOLPHIN",
@@ -41,22 +39,24 @@
   "SkeletonModel.translateToHand()",
   "DolphinRenderState.isMoving",
   "SkeletonRenderState.isHoldingBow",
-  "SkeletonRenderState.isUsingItem",
-  "SkeletonRenderState.leftArmPose",
-  "SkeletonRenderState.rightArmPose",
-  "SkeletonRenderState.ticksUsingItem",
-  "SkeletonRenderState.useItemHand",
   "EntityDataSerializers.OPTIONAL_BLOCK_POS",
   "ServerLevel.areEntitiesActuallyLoadedAndTicking()",
   "ServerLevel.getEntityInAnyDimension()",
-  "and 22 more"
+  "ServerPlayer.getLastClientInput()",
+  "ServerPlayer.mayInteract()",
+  "BiomeTags.IS_SAVANNA",
+  "BiomeTags.SPAWNS_COLD_VARIANT_FARM_ANIMALS",
+  "DamageTypes.CRAMMING",
+  "DamageTypes.DRY_OUT",
+  "AreaEffectCloud.isWaiting()",
+  "and 17 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-27",
-  "kiln": "development build 2026-11-26 (cdf45c68)",
+  "date": "2026-11-28",
+  "kiln": "development build 2026-11-27 (90fcc9da)",
   "file": "mochipets-0.32.4+26.3.jar",
   "published": "2026-11-22"
  },
@@ -94,5 +94,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
  },
- "lacks": 65
+ "lacks": 57
 }

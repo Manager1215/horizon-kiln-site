@@ -1,7 +1,7 @@
 {
  "id": "just-enough-structures",
  "name": "Just Enough Structures",
- "version": "1.2.0-fabric-26.3",
+ "version": "1.3.0-fabric-26.3",
  "status": "planned",
  "statusLabel": "Planned",
  "statusMeaning": "Calls something that is on Kiln's roadmap. Parts of it may already run.",
@@ -14,11 +14,14 @@
   "net.minecraft.client.renderer.block.BlockModelLighter",
   "org.lwjgl.system.MemoryStack",
   "Std140Builder.intoBuffer()",
-  "SamplerCache.getClampToEdge()",
+  "InputConstants.grabMouse()",
+  "InputConstants.releaseMouse()",
+  "RenderSystem.queueFencedTask()",
   "BufferBuilder.putBlockBakedQuad()",
   "ByteBufferBuilder.build()",
   "ClientPlayNetworking.getSendable()",
-  "Minecraft.getBlockEntityRenderDispatcher()",
+  "MouseHandler.resyncMousePosition()",
+  "Options.invertMouseX()",
   "RenderPipelines.CUTOUT_BLOCK",
   "RenderPipelines.SOLID_BLOCK",
   "RenderPipelines.TRANSLUCENT_BLOCK",
@@ -27,6 +30,11 @@
   "ModelBlockRenderer.tesselateBlock()",
   "ChunkSectionLayer.vertexFormat()",
   "FogRenderer.FOG_UBO_SIZE",
+  "WorldGenRegion.addFreshEntity()",
+  "WorldGenRegion.getBlockTicks()",
+  "WorldGenRegion.getFluidTicks()",
+  "WorldGenRegion.setBlock()",
+  "WorldGenRegion.setCurrentlyGenerating()",
   "PathPackResources.getResource()",
   "PathPackResources.listResources()",
   "TrialSpawnerBlock.STATE",
@@ -38,16 +46,19 @@
   "StructurePlacement.CODEC",
   "StructureTemplatePool.DIRECT_CODEC",
   "StructureTemplateManager.remove()",
-  "LootTable.getRandomItems()"
+  "LootContext.EntityTarget.getByName()",
+  "LootTable.getRandomItems()",
+  "SDLMouse.SDL_GetRelativeMouseState()",
+  "SDLMouse.SDL_SetWindowRelativeMouseMode()"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-27",
-  "kiln": "development build 2026-11-26 (cdf45c68)",
-  "file": "JustEnoughStructures-fabric-26.3-1.2.0.jar",
-  "published": "2026-11-05"
+  "date": "2026-11-28",
+  "kiln": "development build 2026-11-27 (90fcc9da)",
+  "file": "JustEnoughStructures-fabric-26.3-1.3.0.jar",
+  "published": "2026-11-27"
  },
  "reports": {
   "works": 0,
@@ -57,8 +68,8 @@
  },
  "run": {
   "passed": false,
-  "date": "2026-11-21",
-  "kiln": "development build 2026-11-21 (3f1dc50b)",
+  "date": "2026-11-28",
+  "kiln": "development build 2026-11-27 (90fcc9da)",
   "ticks": 0,
   "hud": false,
   "why": "Java did not start"
@@ -81,5 +92,5 @@
   "class": "restart",
   "why": "@wrap-operation into the game's classes; runs threads of its own; has network channels"
  },
- "lacks": 29
+ "lacks": 40
 }

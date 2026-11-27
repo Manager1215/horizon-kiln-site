@@ -10,14 +10,12 @@
  "description": "A client side GUI Mod to edit Items, Entities, Potions, Fireworks + More!",
  "needs": [
   "Mixin: 5 points inside the game's methods",
-  "net.minecraft.client.renderer.blockentity.AbstractSignRenderer",
   "net.minecraft.world.entity.Display.TextDisplay.TextRenderState",
   "net.minecraft.world.entity.ai.gossip.GossipType",
   "org.lwjgl.system.MemoryStack",
   "Std140Builder.onStack()",
   "Std140Builder.putVec3()",
   "Lighting.UBO_SIZE",
-  "Minecraft.getBlockEntityRenderDispatcher()",
   "GuiGraphicsExtractor.bannerPattern()",
   "CommandSuggestions.extractSuggestions()",
   "CommandSuggestions.isVisible()",
@@ -27,9 +25,9 @@
   "TextFieldHelper.setCursorPos()",
   "TextFieldHelper.setSelectionRange()",
   "BookViewScreen.handleClickEvent()",
+  "AbstractSignRenderer.getDarkColor()",
   "DisplayEntityRenderState.cameraXRot",
   "DisplayEntityRenderState.cameraYRot",
-  "ItemStackRenderState.getModelBoundingBox()",
   "Commands.createValidationContext()",
   "CompoundTag.forEach()",
   "ClickEvent.CODEC",
@@ -50,14 +48,16 @@
   "ArmorStand.getLeftArmPose()",
   "ArmorStand.getLeftLegPose()",
   "ArmorStand.getRightArmPose()",
-  "and 19 more"
+  "ArmorStand.getRightLegPose()",
+  "ArmorStand.isSmall()",
+  "and 17 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-27",
-  "kiln": "development build 2026-11-26 (cdf45c68)",
+  "date": "2026-11-28",
+  "kiln": "development build 2026-11-27 (90fcc9da)",
   "file": "EditEverything-26.3.0.jar",
   "published": "2026-10-13"
  },
@@ -91,5 +91,5 @@
   "class": "restart",
   "why": "@redirect into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels"
  },
- "lacks": 59
+ "lacks": 57
 }

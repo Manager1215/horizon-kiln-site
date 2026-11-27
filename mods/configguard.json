@@ -5,16 +5,53 @@
  "status": "works",
  "statusLabel": "Works",
  "statusMeaning": "Tried in the game with Kiln.",
+ "url": "https://modrinth.com/mod/configguard",
+ "author": "FNT_1",
+ "description": "Automatic snapshots of your config folder with a line-by-line diff and one-click restore. Undo any config change, on the client or on a server.",
  "needs": [],
+ "roadmap": "",
+ "evidence": "",
+ "library": false,
+ "scanned": {
+  "date": "2026-11-28",
+  "kiln": "development build 2026-11-27 (90fcc9da)",
+  "file": "configguard-fabric-26.3-1.2.0.jar",
+  "published": "2026-11-20"
+ },
  "reports": {
   "works": 0,
   "partly": 0,
   "broken": 0,
   "latest": []
  },
+ "run": {
+  "passed": false,
+  "date": "2026-11-21",
+  "kiln": "development build 2026-11-21 (3f1dc50b)",
+  "ticks": 0,
+  "hud": false,
+  "why": "Java did not start"
+ },
+ "entrypoints": {
+  "preLaunch": 1,
+  "main": 1,
+  "client": 1,
+  "modmenu": 1
+ },
+ "mixins": false,
+ "depends": [
+  "fabric-api",
+  "fabricloader",
+  "java",
+  "minecraft"
+ ],
+ "softOff": {
+  "class": "safe",
+  "why": "only events, HUD, keys, commands and guarded mixin handlers"
+ },
+ "lacks": 0,
  "works": "/configguard snapshot snapshots the config folder; list shows the snapshots.",
  "note": "From Modrinth, unchanged",
- "url": "https://modrinth.com/mod/configguard",
  "checked": {
   "kiln": "main",
   "commit": "5434d01902161611e83ce7b41408df3dae04dd42",

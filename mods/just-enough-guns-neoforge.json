@@ -10,7 +10,6 @@
  "description": "A fork from just enough guns. It can run on neoforge/fabric",
  "needs": [
   "Mixin: 9 points inside the game's methods",
-  "net.minecraft.client.model.monster.phantom.PhantomModel",
   "net.minecraft.client.particle.FlameParticle",
   "net.minecraft.client.particle.FlameParticle.Provider",
   "net.minecraft.client.particle.SmokeParticle.Provider",
@@ -18,23 +17,19 @@
   "net.minecraft.client.renderer.entity.layers.PhantomEyesLayer",
   "net.minecraft.client.renderer.entity.state.PhantomRenderState",
   "net.minecraft.world.level.levelgen.structure.pieces.StructurePieceType.ContextlessType",
-  "PoseStack.rotateAround()",
   "AdvancementProgress.grantProgress()",
   "AdvancementProgress.update()",
   "InventoryChangeTrigger.trigger()",
   "Options.invertMouseX()",
   "Screenshot.grab()",
   "ModelLayers.PHANTOM",
-  "ArmedEntityRenderState.leftArmPose",
   "ArmedEntityRenderState.leftHandItemStack",
-  "ArmedEntityRenderState.rightArmPose",
   "ArmedEntityRenderState.rightHandItemStack",
   "TrackingItemStackRenderState.setOversizedInGui()",
   "CameraRenderState.hudFov",
   "ServerboundRecipeBookChangeSettingsPacket.getBookType()",
   "ServerboundRecipeBookChangeSettingsPacket.isOpen()",
   "ServerLevel.getMoonBrightness()",
-  "ServerPlayer.gameMode",
   "ServerPlayer.swingAndResetAttackStrength()",
   "ServerRecipeBook.contains()",
   "DamageSources.explosion()",
@@ -50,14 +45,19 @@
   "ItemFrame.setItem()",
   "AbstractPiglin.setImmuneToZombification()",
   "DismountHelper.canDismountTo()",
-  "and 15 more"
+  "SpawnEggItem.spawnOffspringFromSpawnEgg()",
+  "ChargedProjectiles.isEmpty()",
+  "RecipeManager.getSynchronizedItemProperties()",
+  "RecipeManager.getSynchronizedStonecutterRecipes()",
+  "Equippable.Builder.setAllowedEntities()",
+  "and 6 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-27",
-  "kiln": "development build 2026-11-26 (cdf45c68)",
+  "date": "2026-11-28",
+  "kiln": "development build 2026-11-27 (90fcc9da)",
   "file": "jegn-1.8.4+fabric26.3.jar",
   "published": "2026-11-19"
  },
@@ -91,5 +91,5 @@
   "class": "restart",
   "why": "@redirect and @wrap-operation into the game's classes; registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; generates in the world"
  },
- "lacks": 55
+ "lacks": 46
 }

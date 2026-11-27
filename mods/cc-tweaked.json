@@ -15,7 +15,6 @@
   "io.netty.handler.proxy.Socks4ProxyHandler",
   "io.netty.handler.proxy.Socks5ProxyHandler",
   "net.minecraft.client.gui.components.debug.DebugEntryLookingAt",
-  "net.minecraft.client.renderer.entity.ItemFrameRenderer",
   "net.minecraft.commands.arguments.selector.options.EntitySelectorOptions",
   "net.minecraft.util.datafix.fixes.AbstractUUIDFix",
   "net.minecraft.util.datafix.schemas.V1460",
@@ -25,7 +24,6 @@
   "Channel.linearAttenuation()",
   "Channel.pumpBuffers()",
   "Channel.stopped()",
-  "PoseStack.rotateAround()",
   "VertexConsumer.setNormal()",
   "PrimitiveTopology.indexCount()",
   "TextureSetup.singleTextureWithLightmap()",
@@ -33,14 +31,11 @@
   "FirstPersonHandsAndItemsRenderer.renderMapHand()",
   "FirstPersonHandsAndItemsRenderer.renderPlayerArm()",
   "ItemFrameRenderState.getData()",
-  "ItemFrameRenderState.isGlowFrame",
   "ItemFrameRenderState.setData()",
   "PreparedRenderType.drawFromBufferOit()",
-  "RenderType.affectsCrumbling()",
   "FirstPersonHandsAndItemsRenderState.offHandItem",
   "PlayerRenderState.avatarRenderState",
   "PlayerRenderState.firstPersonHandsAndItems",
-  "ModelBakery.DESTROY_TYPES",
   "ModelManager.getModel()",
   "SoundBufferLibrary.getStream()",
   "EntitySelectorParser.ERROR_EXPECTED_END_OF_OPTIONS",
@@ -49,16 +44,21 @@
   "DataComponentType.STREAM_CODEC",
   "DedicatedServerProperties.enableJmxMonitoring",
   "ServerLevel.isCommandBlockEnabled()",
-  "ServerPlayer.gameMode",
   "ExtraCodecs.retrieveContext()",
-  "and 26 more"
+  "Util.writeAndReadTypedOrThrow()",
+  "ItemStackComponentizationFix.fixItemStack()",
+  "ItemStackComponentizationFix.ItemStackData.is()",
+  "ItemStackComponentizationFix.ItemStackData.read()",
+  "ItemStackComponentizationFix.ItemStackData.removeTag()",
+  "ItemStackComponentizationFix.ItemStackData.tag",
+  "and 19 more"
  ],
  "roadmap": "Minecraft's libraries and client API (0.2), Code next to data (0.3), Machines (0.4), Mixin (0.5)",
  "evidence": "Not run: Java did not start.",
  "library": false,
  "scanned": {
-  "date": "2026-11-27",
-  "kiln": "development build 2026-11-26 (cdf45c68)",
+  "date": "2026-11-28",
+  "kiln": "development build 2026-11-27 (90fcc9da)",
   "file": "cc-tweaked-26.3-fabric-1.122.0.jar",
   "published": "2026-11-19"
  },
@@ -93,5 +93,5 @@
   "class": "partial",
   "why": "registers blocks, items or entities (they stay, inert); runs threads of its own; has network channels; data pack files (recipes, loot, tags) stay"
  },
- "lacks": 66
+ "lacks": 59
 }
